@@ -1,18 +1,13 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.pop
 ---
 
 {{JSRef}}
 
-The **`pop()`** method removes the **last**
+The **`pop()`** method of {{jsxref("Array")}} instances removes the **last**
 element from an array and returns that element. This method changes the length of the
 array.
 
@@ -23,6 +18,10 @@ array.
 ```js-nolint
 pop()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -46,7 +45,7 @@ The following code creates the `myFish` array containing four elements, then
 removes its last element.
 
 ```js
-const myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+const myFish = ["angel", "clown", "mandarin", "sturgeon"];
 
 const popped = myFish.pop();
 
@@ -101,13 +100,13 @@ const collection = {
     // Returning what pop returns; that is
     // the removed element.
     return [].pop.call(this);
-  }
-}
+  },
+};
 
 collection.addElements(10, 20, 30);
-console.log(collection.length);  // 3
+console.log(collection.length); // 3
 collection.removeElement();
-console.log(collection.length);  // 2
+console.log(collection.length); // 2
 ```
 
 ## Specifications
@@ -120,6 +119,8 @@ console.log(collection.length);  // 2
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.unshift()")}}

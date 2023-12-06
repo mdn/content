@@ -1,14 +1,7 @@
 ---
 title: Game over
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - Graphics
-  - JavaScript
-  - Tutorial
-  - game over
+page-type: guide
 ---
 
 {{GamesSidebar}}

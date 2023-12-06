@@ -1,14 +1,8 @@
 ---
-title: IdleDeadline.timeRemaining()
+title: "IdleDeadline: timeRemaining() method"
+short-title: timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
 page-type: web-api-instance-method
-tags:
-  - API
-  - Background Tasks API
-  - IdleDeadline
-  - Method
-  - Reference
-  - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
 

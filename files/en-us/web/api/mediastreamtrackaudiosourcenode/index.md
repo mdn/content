@@ -7,7 +7,7 @@ browser-compat: api.MediaStreamTrackAudioSourceNode
 
 {{APIRef("Web Audio API")}}
 
-The **`MediaStreamTrackAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which represents a source of audio data taken from a specific {{domxref("MediaStreamTrack")}} obtained through the [WebRTC](/en-US/docs/Web/API/WebRTC_API) or [Media Capture and Streams](/en-US/docs/Web/API/Media_Streams_API) APIs.
+The **`MediaStreamTrackAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which represents a source of audio data taken from a specific {{domxref("MediaStreamTrack")}} obtained through the [WebRTC](/en-US/docs/Web/API/WebRTC_API) or [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API) APIs.
 
 The audio itself might be input from a microphone or other audio sampling device, or might be received through a {{domxref("RTCPeerConnection")}}, among other possible options.
 
@@ -52,7 +52,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example) for example code that uses this object.
+See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#examples) for example code that uses this object.
 
 ## Specifications
 
@@ -66,5 +66,5 @@ See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStreamAudioSourceNode")}}

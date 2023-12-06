@@ -2,12 +2,6 @@
 title: list-style-image
 slug: Web/CSS/list-style-image
 page-type: css-property
-tags:
-  - CSS
-  - CSS Lists
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.list-style-image
 ---
 
@@ -46,7 +40,7 @@ list-style-image: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : A valid image to use as the marker.
 - `none`
-  - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead.
+  - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead. This is the default value for {{cssxref("list-style")}}.
 
 ## Formal definition
 
@@ -59,6 +53,8 @@ list-style-image: unset;
 ## Examples
 
 ### Using a url value
+
+This example has a star as a marker, which we include using the {{cssxref("url", "url()")}} image function.
 
 #### HTML
 
@@ -82,6 +78,8 @@ ul {
 {{ EmbedLiveSample('Using_a_url_value') }}
 
 ### Using a gradient
+
+This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
 
 #### HTML
 
@@ -115,5 +113,9 @@ ul {
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-type")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("url", "url()")}} function
+- {{Cssxref("list-style")}} shorthand
+- {{Cssxref("list-style-type")}} property
+- {{Cssxref("list-style-position")}} property
+- {{cssxref("::marker")}} pseudo-element
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

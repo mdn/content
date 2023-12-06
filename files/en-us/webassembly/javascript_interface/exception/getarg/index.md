@@ -1,15 +1,8 @@
 ---
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Reference
-  - WebAssembly
-  - getArg
-  - Exception
-browser-compat: javascript.builtins.WebAssembly.Exception.getArg
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Exception.getArg
 ---
 
 {{WebAssemblySidebar}}
@@ -75,7 +68,7 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
 )
 ```
 
-The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
+The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.
@@ -85,9 +78,9 @@ const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
 
 // Note: the import object properties match the import statement in WebAssembly code!
 const importObject = {
-  "extmod": {
-    "exttag": tagToImport
-  }
+  extmod: {
+    exttag: tagToImport,
+  },
 };
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)

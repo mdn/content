@@ -1,10 +1,7 @@
 ---
-title: Guidelines for styling HTML code examples
+title: Guidelines for writing HTML code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -30,12 +27,12 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 You should use the HTML5 doctype. It is short, easy to remember, and backwards compatible.
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 ### Document language
 
-Set the document language using the {{htmlattrxref('lang')}} attribute on your {{htmlelement("html")}} element:
+Set the document language using the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute on your {{htmlelement("html")}} element:
 
 ```html example-good
 <html lang="en-US"></html>
@@ -51,7 +48,7 @@ You should also define your document's characterset like so:
 <meta charset="utf-8" />
 ```
 
-Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document. In addition, you should always specify the characterset as early as possible within your HTML's {{HTMLElement("head")}} block (within the first kilobyte), as it protects against a rather [nasty Internet Explorer security vulnerability](https://docs.microsoft.com/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page).
+Use UTF-8 unless you have a very good reason not to; it will cover all character needs pretty much regardless of what language you are using in your document.
 
 ### Viewport meta tag
 
@@ -81,16 +78,16 @@ Omitting quotes can also cause problems. In the above example, the `alt` attribu
 
 ## Boolean attributes
 
-Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
+Don't include values for boolean attributes (but do include values for {{glossary("enumerated")}} attributes); you can just write the attribute name to set it. For example, you can write:
 
 ```html example-good
-required
+<input required />
 ```
 
-This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
+This is perfectly understandable and works fine. If a boolean HTML attribute is present, the value is true. While including a value will work, it is not necessary and incorrect:
 
-```html-nolint example-bad
-required="required"
+```html example-bad
+<input required="required" />
 ```
 
 ## Case
@@ -107,7 +104,7 @@ Use lowercase for all element names and attribute names/values because it looks 
 
 ## Class and ID names
 
-Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase. For example:
+Use semantic class/ID names, and separate multiple words with hyphens ({{Glossary("kebab_case", "kebab case")}}). Don't use {{Glossary("camel_case", "camel case")}}. For example:
 
 ```html example-good
 <p class="editorial-summary">Blah blah blah</p>
@@ -115,18 +112,6 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 
 ```html example-bad
 <p class="bigRedBox">Blah blah blah</p>
-```
-
-## Double quotes
-
-Use double quotes for HTML, not single quotes, like so:
-
-```html example-good
-<p class="important">Yes</p>
-```
-
-```html-nolint example-bad
-<p class='important'>Nope</p>
 ```
 
 ## Entity references
@@ -145,8 +130,6 @@ Instead of:
 <p>&copy; 2018 Me</p>
 ```
 
-This is fine as long as you declare a UTF-8 character set.
-
 ## HTML elements
 
 There are some rules for writing about HTML elements on MDN Web Docs. Adhering to these rules produces consistent descriptions of elements and their components and also ensures correct linking to detailed documentation.
@@ -155,5 +138,4 @@ There are some rules for writing about HTML elements on MDN Web Docs. Adhering t
   If you don't want to create a link, **enclose the name in angle brackets** and use the "Inline Code" style (e.g., `<title>`).
 - **Attribute names**: Use "Inline Code" style to put attribute names in `code font`.
   Additionally, put them in **`bold face`** when the attribute is mentioned in association with an explanation of what it does or when it is used for the first time on the page.
-- **Attribute definitions**: Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., `\{{htmlattrdef("type")}})` for the definition term. This allows the term definition to be linked from other pages easily by using the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., `\{{htmlattrxref("type","element")}}`).
 - **Attribute values**: Use the "Inline Code" style to apply `<code>` to attribute values, and don't use quotation marks around string values, unless needed by the syntax of a code sample. For example, "When the `type` attribute of an `<input>` element is set to `email` or `tel` ...".

@@ -1,16 +1,13 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.do_while
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`do...while` statement** creates a loop that executes a
+The **`do...while`** statement creates a loop that executes a
 specified statement until the test condition evaluates to false. The condition is
 evaluated after executing the statement, resulting in the specified statement executing
 at least once.
@@ -22,7 +19,7 @@ at least once.
 ```js-nolint
 do
   statement
-while (condition)
+while (condition);
 ```
 
 - `statement`
@@ -40,7 +37,7 @@ while (condition)
     the `do...while`.
 
     Note: Use the {{jsxref("Statements/break", "break")}} statement to stop a loop before `condition` evaluates
-    to true.
+    to false.
 
 ## Examples
 
@@ -50,13 +47,12 @@ In the following example, the `do...while` loop iterates at least once and
 reiterates until `i` is no longer less than 5.
 
 ```js
-let result = '';
+let result = "";
 let i = 0;
 do {
   i += 1;
   result += `${i} `;
-}
-while (i > 0 && i < 5);
+} while (i > 0 && i < 5);
 // Despite i === 0 this will still loop as it starts off without the test
 
 console.log(result);
@@ -64,7 +60,15 @@ console.log(result);
 
 ### Using an assignment as a condition
 
-In some cases, it can make sense to use an assignment as a condition — but when you do, there's a right way to do it, and a wrong way; the [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with an example showing a general best-practice syntax you should know about and follow.
+In some cases, it can make sense to use an assignment as a condition, such as this:
+
+```js
+do {
+  // …
+} while ((match = regexp.exec(str)));
+```
+
+But when you do, there are readability tradeoffs. The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) documentation has a [Using an assignment as a condition](/en-US/docs/Web/JavaScript/Reference/Statements/while#using_an_assignment_as_a_condition) section with our recommendations.
 
 ## Specifications
 

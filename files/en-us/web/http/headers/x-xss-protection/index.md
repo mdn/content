@@ -1,13 +1,9 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
-tags:
-  - HTTP
-  - Reference
-  - Security
-  - XSS
-  - header
-  - Non-standard
+page-type: http-header
+status:
+  - non-standard
 browser-compat: http.headers.X-XSS-Protection
 ---
 
@@ -20,7 +16,7 @@ The HTTP **`X-XSS-Protection`** response header is a feature of Internet Explore
 > **Note:**
 >
 > - Chrome has [removed their XSS Auditor](https://chromestatus.com/feature/5021976655560704)
-> - Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
+> - Firefox has not, and [will not implement `X-XSS-Protection`](https://bugzil.la/528661)
 > - Edge has [retired their XSS filter](https://blogs.windows.com/windows-insider/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)
 >
 > This means that if you do not need to support legacy browsers, it is recommended that you use [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) without allowing `unsafe-inline` scripts instead.
@@ -92,7 +88,7 @@ header("X-XSS-Protection: 1; mode=block");
 
 Apache (.htaccess)
 
-```
+```apacheconf
 <IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
@@ -100,7 +96,7 @@ Apache (.htaccess)
 
 Nginx
 
-```
+```nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 

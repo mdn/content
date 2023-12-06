@@ -1,17 +1,12 @@
 ---
-title: Request.method
+title: "Request: method property"
+short-title: method
 slug: Web/API/Request/method
 page-type: web-api-instance-property
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - request
 browser-compat: api.Request.method
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`method`** read-only property of the
 {{domxref("Request")}} interface contains the request's method (`GET`,
@@ -28,7 +23,7 @@ In the following snippet, we create a new request using the
 the script), then save the method of the request in a variable:
 
 ```js
-const myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 const myMethod = myRequest.method; // GET
 ```
 

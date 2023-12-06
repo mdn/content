@@ -1,10 +1,7 @@
 ---
 title: content_security_policy
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.content_security_policy
 ---
 
@@ -208,7 +205,7 @@ Enable the use of [WebAssembly](/en-US/docs/WebAssembly):
 
 - Manifest V2
 
-  For backward compatibility, Manifest V2 extensions in Firefox can use WebAssembly without the use of `'wasm-unsafe-eval'`. However, this behavior isn't guaranteed. See {{bug(1770909)}}. Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP. See [WebAssembly](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
+  For backward compatibility, Manifest V2 extensions in Firefox can use WebAssembly without the use of `'wasm-unsafe-eval'`. However, this behavior isn't guaranteed. See [Firefox bug 1770909](https://bugzil.la/1770909). Extensions using WebAssembly are therefore encouraged to declare `'wasm-unsafe-eval'` in their CSP. See [WebAssembly](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#webassembly) on the Content Security Policy page for more information.
 
   ```json
   "content_security_policy": "script-src 'self' 'wasm-unsafe-eval'"

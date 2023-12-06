@@ -1,10 +1,7 @@
 ---
 title: pointsAtX
 slug: Web/SVG/Attribute/pointsAtX
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feSpotLight.pointsAtX
 ---
 

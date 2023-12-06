@@ -1,12 +1,7 @@
 ---
 title: Right shift
 slug: WebAssembly/Reference/Numeric/Right_shift
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

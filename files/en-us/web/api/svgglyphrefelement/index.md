@@ -2,12 +2,8 @@
 title: SVGGlyphRefElement
 slug: Web/API/SVGGlyphRefElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGGlyphRefElement
 ---
 

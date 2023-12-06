@@ -1,19 +1,12 @@
 ---
-title: caches
+title: caches global property
+short-title: caches
 slug: Web/API/caches
 page-type: web-api-global-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - Service Workers
-  - Web Workers
-  - Window
 browser-compat: api.caches
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
 
 The global **`caches`** read-only property returns the {{domxref("CacheStorage")}} object associated with the current context.
 This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
@@ -45,8 +38,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```

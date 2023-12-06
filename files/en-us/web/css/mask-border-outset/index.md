@@ -2,14 +2,6 @@
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.mask-border-outset
 ---
 
@@ -26,10 +18,10 @@ mask-border-outset: 1rem;
 /* <number> value */
 mask-border-outset: 1.5;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 mask-border-outset: 1 1.2;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 mask-border-outset: 30px 2 45px;
 
 /* top | right | bottom | left */

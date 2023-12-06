@@ -1,17 +1,14 @@
 ---
 title: "BatteryManager: chargingtimechange event"
+short-title: chargingtimechange
 slug: Web/API/BatteryManager/chargingtimechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
 browser-compat: api.BatteryManager.chargingtimechange_event
 ---
 
-{{APIRef("Battery API")}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-The **`chargingtimechange`** event of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is fired when the battery {{domxref("BatteryManager.chargingTime","chargingTime")}} is updated.
+The **`chargingtimechange`** event of the {{domxref("Battery Status API", "", "", "nocode")}} is fired when the battery {{domxref("BatteryManager.chargingTime", "chargingTime")}} property is updated.
 
 ## Syntax
 
@@ -29,14 +26,14 @@ _A generic {{domxref("Event")}}._
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <div id="level">(battery level unknown)</div>
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
@@ -60,4 +57,4 @@ navigator.getBattery().then((battery) => {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

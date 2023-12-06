@@ -1,17 +1,10 @@
 ---
-title: BluetoothCharacteristicProperties.read
+title: "BluetoothCharacteristicProperties: read property"
+short-title: read
 slug: Web/API/BluetoothCharacteristicProperties/read
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - read
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.read
 ---
 

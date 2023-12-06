@@ -1,18 +1,14 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - Response
-  - header
-  - tracking
-  - Deprecated
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Tk
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`Tk`** response header indicates the tracking status that
 applied to the corresponding request.

@@ -2,11 +2,6 @@
 title: CSSCounterStyleRule
 slug: Web/API/CSSCounterStyleRule
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Counter Styles
-  - Interface
-  - Reference
 browser-compat: api.CSSCounterStyleRule
 ---
 
@@ -58,3 +53,4 @@ _This interface doesn't implement any specific method but inherits methods from 
 ## See also
 
 - {{CSSxRef("@counter-style")}}
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

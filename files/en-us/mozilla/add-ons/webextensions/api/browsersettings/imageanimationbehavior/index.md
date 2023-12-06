@@ -1,14 +1,7 @@
 ---
 title: browserSettings.imageAnimationBehavior
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - browserSettings
-  - imageAnimationBehavior
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.imageAnimationBehavior
 ---
 

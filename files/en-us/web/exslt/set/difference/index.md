@@ -1,10 +1,7 @@
 ---
 title: set:difference()
 slug: Web/EXSLT/set/difference
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -32,4 +29,4 @@ A node-set containing the nodes that are in `nodeSet1` but not in `nodeSet2`.
 
 ## Specifications
 
-[EXSLT - SET:DIFFERENCE](http://exslt.org/set/functions/difference/index.html)
+[EXSLT - SET:DIFFERENCE](https://exslt.github.io/set/functions/difference/index.html)

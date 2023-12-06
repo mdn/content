@@ -1,13 +1,7 @@
 ---
 title: Sec-Fetch-Dest
 slug: Web/HTTP/Headers/Sec-Fetch-Dest
-tags:
-  - Sec-Fetch-Dest
-  - Fetch Metadata Request Headers
-  - HTTP
-  - HTTP Headers
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Dest
 ---
 
@@ -87,7 +81,7 @@ Servers should ignore this header if it contains any other value.
 - `image`
   - : The destination is an image. This might originate from an HTML {{HTMLElement("image")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
 - `manifest`
-  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Link_types/manifest).
+  - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Attributes/rel/manifest).
 - `object`
   - : The destination is an object. This might originate from an HTML {{HTMLElement("object")}} tag.
 - `paintworklet`
@@ -137,5 +131,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

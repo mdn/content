@@ -2,14 +2,8 @@
 title: RTCIdentityAssertion
 slug: Web/API/RTCIdentityAssertion
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - RTCIdentityAssertion
-  - Reference
-  - WebRTC
-  - WebRTC API
+status:
+  - experimental
 browser-compat: api.RTCIdentityAssertion
 ---
 

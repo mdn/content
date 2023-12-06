@@ -1,13 +1,7 @@
 ---
 title: How to highlight the first line of a paragraph
 slug: Learn/CSS/Howto/Highlight_first_line
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}
@@ -30,9 +24,11 @@ In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It s
 
 ## Combining pseudo-elements with other selectors
 
-In the example above, the pseudo-element selects the first line of every paragraph. To select only the first line of the first paragraph, you can combine it with another selector. That could be a class, or in this case the {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "pseudo-class")}}. This allows us to select the first line of the first-child of `.wrapper`.
+In the example above, the pseudo-element selects the first line of every paragraph. To select only the first line of the first paragraph, you can combine it with another selector. In this case, we use the {{cssxref(":first-child")}} {{cssxref("pseudo-classes", "pseudo-class")}}. This allows us to select the first line of the first child of `.wrapper` if that first child is a paragraph.
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
+
+> **Note:** When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.
 
 ## See also
 

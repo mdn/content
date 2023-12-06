@@ -1,17 +1,9 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-webkit-slider-thumb
 ---
 
@@ -22,7 +14,9 @@ The **`::-webkit-slider-thumb`** CSS [pseudo-element](/en-US/docs/Web/CSS/Pseudo
 ## Syntax
 
 ```css
-::-webkit-slider-thumb
+::-webkit-slider-thumb {
+  /* ... */
+}
 ```
 
 ## Specifications
@@ -39,7 +33,6 @@ Not part of any standard.
 - Similar pseudo-elements used by other browsers:
 
   - {{cssxref("::-moz-range-thumb")}}
-  - {{cssxref("::-ms-thumb")}}
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

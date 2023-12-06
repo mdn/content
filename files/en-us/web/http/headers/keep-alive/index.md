@@ -1,12 +1,7 @@
 ---
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Keep-Alive
 ---
 

@@ -1,26 +1,23 @@
 ---
-title: Keyboard.lock()
+title: "Keyboard: lock() method"
+short-title: lock()
 slug: Web/API/Keyboard/lock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Method
-  - Reference
-  - keyboard
-  - lock()
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Keyboard.lock
 ---
 
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
 capture of keypresses for any or all of the keys on the physical keyboard. This method
 can only capture keys that are granted access by the underlying operating
 system.
+
+If `lock()` is called multiple times then only the key codes specified in the most recent call will be locked.
+Any keys locked by a previous call to `lock()` are unlocked.
 
 ## Syntax
 
@@ -37,7 +34,16 @@ lock(keyCodes)
 
 ### Return value
 
-A {{jsxref('Promise')}}.
+A {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}} when the lock was successful.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if a new call to `lock()` is made before the current one has finished.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if any key in keyCodes is not a valid key code attribute value.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `lock()` is not called in an active top-level browsing context.
 
 ## Security
 

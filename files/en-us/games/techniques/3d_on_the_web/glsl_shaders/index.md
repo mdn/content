@@ -1,14 +1,7 @@
 ---
 title: GLSL Shaders
 slug: Games/Techniques/3D_on_the_web/GLSL_Shaders
-tags:
-  - Beginner
-  - GLSL
-  - OpenGL
-  - Shader
-  - texture shader
-  - three.js
-  - vertex shader
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -54,7 +47,7 @@ To start with the WebGL shaders you don't need much. You should:
 Here's the HTML structure we will use.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

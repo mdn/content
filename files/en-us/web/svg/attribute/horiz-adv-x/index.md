@@ -1,10 +1,9 @@
 ---
 title: horiz-adv-x
 slug: Web/SVG/Attribute/horiz-adv-x
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.horiz-adv-x
 ---
 

@@ -1,13 +1,8 @@
 ---
-title: Selection.removeRange()
+title: "Selection: removeRange() method"
+short-title: removeRange()
 slug: Web/API/Selection/removeRange
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
 browser-compat: api.Selection.removeRange
 ---
 
@@ -38,9 +33,9 @@ None ({{jsxref("undefined")}}).
  * This will remove all ranges except the first. */
 const s = window.getSelection();
 if (s.rangeCount > 1) {
- for (let i = 1; i < s.rangeCount; i++) {
-  s.removeRange(s.getRangeAt(i));
- }
+  for (let i = 1; i < s.rangeCount; i++) {
+    s.removeRange(s.getRangeAt(i));
+  }
 }
 ```
 

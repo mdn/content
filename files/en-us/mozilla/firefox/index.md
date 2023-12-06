@@ -1,10 +1,7 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
+page-type: landing-page
 ---
 
 {{FirefoxSidebar}}
@@ -22,7 +19,7 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 - Firefox add-on guide
   - : The [Add-on guide](/en-US/docs/Mozilla/Add-ons) provides information about developing and deploying Firefox extensions.
 - Developer release notes
-  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
+  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both websites and add-ons arrive in each version of Firefox.
 
 ## Firefox channels
 
@@ -32,7 +29,7 @@ Firefox is available in five **channels**.
 
 Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
-[Download Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
+[Download Firefox Nightly](https://www.mozilla.org/firefox/channel/desktop/#nightly)
 
 ### Firefox Developer Edition
 
@@ -50,13 +47,13 @@ Every four weeks, we take the features that are stable enough, and create a new 
 
 After stabilizing for another four weeks in Beta, we're ready to ship the new features to hundreds of millions of users in a new release version of Firefox.
 
-[Download Firefox](https://www.mozilla.org/firefox/channel/#firefox)
+[Download Firefox](https://www.mozilla.org/firefox/new/)
 
 ### Firefox Extended Support Release (ESR)
 
 Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-[Download Firefox ESR](https://www.mozilla.org/en-US/firefox/all/#product-desktop-esr)
+[Download Firefox ESR](https://www.mozilla.org/firefox/all/#product-desktop-esr)
 
 ## Contents
 

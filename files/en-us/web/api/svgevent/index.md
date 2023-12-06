@@ -2,11 +2,6 @@
 title: SVGEvent
 slug: Web/API/SVGEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - WebAPI
 ---
 
 {{deprecated_header}}{{APIRef("SVG")}}

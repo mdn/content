@@ -1,15 +1,10 @@
 ---
-title: MouseEvent.layerX
+title: "MouseEvent: layerX property"
+short-title: layerX
 slug: Web/API/MouseEvent/layerX
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - MouseEvent
-  - Non-standard
+status:
+  - non-standard
 browser-compat: api.MouseEvent.layerX
 ---
 

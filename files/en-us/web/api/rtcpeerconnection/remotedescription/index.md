@@ -1,14 +1,8 @@
 ---
-title: RTCPeerConnection.remoteDescription
+title: "RTCPeerConnection: remoteDescription property"
+short-title: remoteDescription
 slug: Web/API/RTCPeerConnection/remoteDescription
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - remoteDescription
 browser-compat: api.RTCPeerConnection.remoteDescription
 ---
 
@@ -34,8 +28,7 @@ On a more fundamental level, the returned value is the value of
 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} if that property isn't
 `null`; otherwise, the value of
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} is returned. See
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}} for details on this algorithm and why it's used.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 
@@ -49,8 +42,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.remoteDescription;
 if (sd) {
   alert(`Remote session: type='${sd.type}'; sdp description='${sd.sdp}'`);
-}
-else {
+} else {
   alert("No remote session yet.");
 }
 ```

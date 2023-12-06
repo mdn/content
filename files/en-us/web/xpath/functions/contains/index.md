@@ -1,18 +1,16 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `contains` function determines whether the first argument string contains the second argument string and returns boolean true or false.
 
 ### Syntax
 
-```
+```plain
 contains(haystack, needle)
 ```
 

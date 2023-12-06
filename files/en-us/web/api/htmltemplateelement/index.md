@@ -2,13 +2,6 @@
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.HTMLTemplateElement
 ---
 

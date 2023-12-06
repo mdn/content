@@ -1,19 +1,13 @@
 ---
-title: RTCDTMFToneChangeEvent()
+title: "RTCDTMFToneChangeEvent: RTCDTMFToneChangeEvent() constructor"
+short-title: RTCDTMFToneChangeEvent()
 slug: Web/API/RTCDTMFToneChangeEvent/RTCDTMFToneChangeEvent
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - DTMF
-  - Media
-  - RTCDTMFToneChangeEvent
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCDTMFToneChangeEvent.RTCDTMFToneChangeEvent
 ---
 
 {{APIRef("WebRTC")}}
+
 The **`RTCDTMFToneChangeEvent()`** constructor creates a new
 {{domxref("RTCDTMFToneChangeEvent")}} object.
 

@@ -2,11 +2,6 @@
 title: Web Workers API
 slug: Web/API/Web_Workers_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Web Workers
 spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 ---
 
@@ -22,7 +17,9 @@ In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of func
 
 Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's `data` property). The data is copied rather than shared.
 
-Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
+
+In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 
@@ -32,7 +29,7 @@ There are a number of different types of workers:
 - {{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
 - [Service Workers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
-> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see {{bug(1188141)}}. This has been implemented in Firefox 42.
+> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141). This has been implemented in Firefox 42.
 
 ### Worker global contexts and functions
 
@@ -49,8 +46,12 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("queueMicrotask()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("structuredClone()")}}
+- {{domxref("window.requestAnimationFrame")}} (dedicated workers only)
+- {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
@@ -76,10 +77,13 @@ The following Web APIs are available to workers:
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}} (only works in workers!)
 - {{domxref("FormData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("OffscreenCanvas")}} (and all the canvas context APIs)
 - {{domxref("Performance_API","Performance API")}}, including:
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
@@ -87,11 +91,10 @@ The following Web APIs are available to workers:
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
-- [WebGL](/en-US/docs/Web/API/WebGL_API) with {{domxref("OffscreenCanvas")}}
+- {{domxref('WebCodecs_API','','','true')}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 

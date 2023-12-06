@@ -1,16 +1,8 @@
 ---
-title: FetchEvent.request
+title: "FetchEvent: request property"
+short-title: request
 slug: Web/API/FetchEvent/request
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Workers
-  - request
 browser-compat: api.FetchEvent.request
 ---
 
@@ -65,7 +57,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```

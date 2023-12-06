@@ -1,18 +1,14 @@
 ---
-title: NavigatorUAData.platform
+title: "NavigatorUAData: platform property"
+short-title: platform
 slug: Web/API/NavigatorUAData/platform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - platform
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.platform
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.
 

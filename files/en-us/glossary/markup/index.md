@@ -1,11 +1,10 @@
 ---
-title: markup
-slug: Glossary/markup
-tags:
-  - Intro
-  - Markup
-  - NeedsContent
+title: Markup
+slug: Glossary/Markup
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A markup language is one that is designed for defining and presenting text. {{glossary("HTML")}} (HyperText Markup Language), is an example of a markup language.
 

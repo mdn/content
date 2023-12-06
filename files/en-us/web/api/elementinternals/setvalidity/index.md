@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.setValidity()
+title: "ElementInternals: setValidity() method"
+short-title: setValidity()
 slug: Web/API/ElementInternals/setValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.setValidity
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface sets the validity of the element.
 
@@ -30,21 +25,21 @@ setValidity(flags, message, anchor)
   - : A dictionary object containing one or more flags indicating the validity state of the element:
 
     - `valueMissing`
-      - : A boolean value that is `true` if the element has a {{htmlattrxref("required", "input")}} attribute, but no value, or `false` otherwise. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+      - : A boolean value that is `true` if the element has a [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, but no value, or `false` otherwise. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
     - `typeMismatch`
-      - : A boolean value that is `true` if the value is not in the required syntax (when {{htmlattrxref("type", "input")}} is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+      - : A boolean value that is `true` if the value is not in the required syntax (when [`type`](/en-US/docs/Web/HTML/Element/input#type) is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
     - `patternMismatch`
-      - : A boolean value that is `true` if the value does not match the specified {{htmlattrxref("pattern", "input")}}, and `false` if it does match. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
+      - : A boolean value that is `true` if the value does not match the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), and `false` if it does match. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
     - `tooLong`
       - : A boolean value that is `true` if the value exceeds the specified `maxlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is less than or equal to the maximum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `tooShort`
       - : A boolean value that is `true` if the value fails to meet the specified `minlength` for {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} objects, or `false` if its length is greater than or equal to the minimum length. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `rangeUnderflow`
-      - : A boolean value that is `true` if the value is less than the minimum specified by the {{htmlattrxref("min", "input")}} attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+      - : A boolean value that is `true` if the value is less than the minimum specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `rangeOverflow`
-      - : A boolean value that is `true` if the value is greater than the maximum specified by the {{htmlattrxref("max", "input")}} attribute, or `false` if it is less than or equal to the maximum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} and CSS pseudo-classes.
+      - : A boolean value that is `true` if the value is greater than the maximum specified by the [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, or `false` if it is less than or equal to the maximum. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} and CSS pseudo-classes.
     - `stepMismatch`
-      - : A boolean value that is `true` if the value does not fit the rules determined by the {{htmlattrxref("step", "input")}} attribute (that is, it's not evenly divisible by the step value), or `false` if it does fit the step rule. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
+      - : A boolean value that is `true` if the value does not fit the rules determined by the [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute (that is, it's not evenly divisible by the step value), or `false` if it does fit the step rule. If `true`, the element matches the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} CSS pseudo-classes.
     - `badInput`
       - : A boolean value that is `true` if the user has provided input that the browser is unable to convert.
     - `customError`
@@ -81,7 +76,7 @@ this.internals_.setValidity({});
 In the following example `setValidity` is called with the flag `valueMissing` set to `true`. A `message` parameter must then also be passed containing a message.
 
 ```js
-this.internals_.setValidity({'valueMissing':true},"my message");
+this.internals_.setValidity({ valueMissing: true }, "my message");
 ```
 
 ## Specifications

@@ -1,17 +1,8 @@
 ---
-title: SVGImageElement.y
+title: "SVGImageElement: y property"
+short-title: "y"
 slug: Web/API/SVGImageElement/y
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - 'y'
 browser-compat: api.SVGImageElement.y
 ---
 

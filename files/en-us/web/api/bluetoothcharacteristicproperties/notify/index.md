@@ -1,17 +1,10 @@
 ---
-title: BluetoothCharacteristicProperties.notify
+title: "BluetoothCharacteristicProperties: notify property"
+short-title: notify
 slug: Web/API/BluetoothCharacteristicProperties/notify
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - notify
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
 

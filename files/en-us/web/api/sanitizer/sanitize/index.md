@@ -1,12 +1,10 @@
 ---
-title: Sanitizer.sanitize()
+title: "Sanitizer: sanitize() method"
+short-title: sanitize()
 slug: Web/API/Sanitizer/sanitize
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - sanitize
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Sanitizer.sanitize
 ---
 
@@ -47,10 +45,10 @@ None.
 To sanitize data from an iframe with id `userFrame`:
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Get the frame and its Document object
-const frame_element = document.getElementById("userFrame")
+const frame_element = document.getElementById("userFrame");
 const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // Sanitize the document tree and update the frame.

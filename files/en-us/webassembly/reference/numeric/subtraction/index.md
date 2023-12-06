@@ -1,12 +1,7 @@
 ---
 title: Subtraction
 slug: WebAssembly/Reference/Numeric/Subtraction
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

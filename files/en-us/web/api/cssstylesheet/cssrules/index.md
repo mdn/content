@@ -1,19 +1,8 @@
 ---
-title: CSSStyleSheet.cssRules
+title: "CSSStyleSheet: cssRules property"
+short-title: cssRules
 slug: Web/API/CSSStyleSheet/cssRules
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Object Model
-  - Property
-  - Read-only
-  - Reference
-  - StyleSheet
 browser-compat: api.CSSStyleSheet.cssRules
 ---
 
@@ -38,7 +27,7 @@ Individual rules within the stylesheet can then be accessed by index:
 ```js
 const ruleList = document.styleSheets[0].cssRules;
 
-for (let i=0; i < ruleList.length; i++) {
+for (let i = 0; i < ruleList.length; i++) {
   processRule(ruleList[i]);
 }
 ```

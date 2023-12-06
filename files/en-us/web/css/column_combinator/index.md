@@ -2,13 +2,8 @@
 title: Column combinator
 slug: Web/CSS/Column_combinator
 page-type: css-combinator
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Selector
-  - Selectors
-  - Tables
+status:
+  - experimental
 browser-compat: css.selectors.column
 ---
 
@@ -25,8 +20,9 @@ col.selected||td {
 
 ## Syntax
 
-```css
-column-selector||cell-selector {
+```css-nolint
+/* The white space around the || combinator is optional but recommended. */
+column-selector || cell-selector {
   /* style properties */
 }
 ```
@@ -87,5 +83,5 @@ col.selected||td {
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}
 - {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-last-of-type")}}

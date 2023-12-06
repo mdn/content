@@ -1,17 +1,8 @@
 ---
-title: AudioBufferSourceNode.start()
+title: "AudioBufferSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioBufferSourceNode/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBufferSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - start
 browser-compat: api.AudioBufferSourceNode.start
 ---
 
@@ -84,7 +75,7 @@ worth of sound starting 3 seconds into the audio buffer.
 source.start(audioCtx.currentTime + 1, 3, 10);
 ```
 
-> **Note:** For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [run the code example live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> **Note:** For a more complete example showing `start()` in use, check out our {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} example. You can also [run the code example live](https://mdn.github.io/webaudio-examples/decode-audio-data/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data).
 
 ## Specifications
 

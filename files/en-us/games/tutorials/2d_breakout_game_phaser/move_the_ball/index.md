@@ -1,15 +1,7 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - moving
+page-type: guide
 ---
 
 {{GamesSidebar}}

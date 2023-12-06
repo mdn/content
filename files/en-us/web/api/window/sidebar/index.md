@@ -1,14 +1,11 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 ---
 
 {{APIRef}} {{Deprecated_Header}}
@@ -102,5 +99,5 @@ Mozilla-specific. Not part of any standard.
 
 ## Browser compatibility
 
-Moved behind preference in Firefox 102.
+Removed in Firefox 102.
 For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).

@@ -1,12 +1,7 @@
 ---
 title: An overview of HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Overview
-  - WebMechanics
-  - "l10n:priority"
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -60,7 +55,7 @@ The browser translates these directions into HTTP requests, and further interpre
 ### The Web server
 
 On the opposite side of the communication channel is the server, which _serves_ the document as requested by the client.
-A server appears as only a single machine virtually; but it may actually be a collection of servers sharing the load (load balancing), or a complex piece of software interrogating other computers (like cache, a DB server, or e-commerce servers), totally or partially generating the document on demand.
+A server appears as only a single machine virtually; but it may actually be a collection of servers sharing the load (load balancing), or other software (such as caches, a database server, or e-commerce servers), totally or partially generating the document on demand.
 
 A server is not necessarily a single machine, but several server software instances can be hosted on the same machine.
 With HTTP/1.1 and the {{HTTPHeader("Host")}} header, they may even share the same IP address.
@@ -83,7 +78,7 @@ Proxies may perform numerous functions:
 
 ### HTTP is simple
 
-HTTP is generally designed to be simple and human readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
+HTTP is generally designed to be simple and human-readable, even with the added complexity introduced in HTTP/2 by encapsulating HTTP messages into frames.
 HTTP messages can be read and understood by humans, providing easier testing for developers, and reduced complexity for newcomers.
 
 ### HTTP is extensible
@@ -123,24 +118,24 @@ The ability to relax the _origin constraint_, by contrast, was only added in the
 
 Here is a list of common features controllable with HTTP:
 
-- _[Caching](/en-US/docs/Web/HTTP/Caching)_
+- _[Caching](/en-US/docs/Web/HTTP/Caching)_:
   How documents are cached can be controlled by HTTP.
   The server can instruct proxies and clients about what to cache and for how long.
   The client can instruct intermediate cache proxies to ignore the stored document.
-- _Relaxing the origin constraint_
-  To prevent snooping and other privacy invasions, Web browsers enforce strict separation between Web sites.
+- _Relaxing the origin constraint_:
+  To prevent snooping and other privacy invasions, Web browsers enforce strict separation between websites.
   Only pages from the **same origin** can access all the information of a Web page.
   Though such a constraint is a burden to the server, HTTP headers can relax this strict separation on the server side, allowing a document to become a patchwork of information sourced from different domains; there could even be security-related reasons to do so.
-- _Authentication_
+- _Authentication_:
   Some pages may be protected so that only specific users can access them.
   Basic authentication may be provided by HTTP, either using the {{HTTPHeader("WWW-Authenticate")}} and similar headers, or by setting a specific session using [HTTP cookies](/en-US/docs/Web/HTTP/Cookies).
-- _[Proxy and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)_
+- _[Proxy and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)_:
   Servers or clients are often located on intranets and hide their true IP address from other computers.
   HTTP requests then go through proxies to cross this network barrier.
   Not all proxies are HTTP proxies.
   The SOCKS protocol, for example, operates at a lower level.
   Other protocols, like ftp, can be handled by these proxies.
-- _Sessions_
+- _Sessions_:
   Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.
   This is useful not only for e-commerce shopping baskets, but also for any site allowing user configuration of the output.

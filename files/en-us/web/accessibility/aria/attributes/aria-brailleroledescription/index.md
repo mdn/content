@@ -1,12 +1,7 @@
 ---
 title: aria-brailleroledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-brailleroledescription
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-brailleroledescription
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-brailleroledescription
 ---
 
@@ -76,8 +71,9 @@ Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Rol
 - [`Element.ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription)
 
 <section id="Quick_links">
+
 1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
 
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 
 </section>

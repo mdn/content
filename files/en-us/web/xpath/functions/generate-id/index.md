@@ -1,18 +1,16 @@
 ---
 title: generate-id
 slug: Web/XPath/Functions/generate-id
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `generate-id` function generates a unique id for the first node in a given node-set and returns a string containing that id.
 
 ### Syntax
 
-```
+```plain
 generate-id( [node-set] )
 ```
 

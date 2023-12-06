@@ -1,11 +1,7 @@
 ---
 title: <mspace>
 slug: Web/MathML/Element/mspace
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+page-type: mathml-element
 browser-compat: mathml.elements.mspace
 ---
 
@@ -24,11 +20,11 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `width`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired width of the space.
 
-> **Note:** For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
-```html
+```html-nolint
 <math display="block">
   <mn>1</mn>
   <mspace depth="40px" height="20px" width="100px"
@@ -37,7 +33,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('mspace_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

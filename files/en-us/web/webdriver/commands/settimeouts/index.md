@@ -1,11 +1,7 @@
 ---
 title: Set Timeouts
 slug: Web/WebDriver/Commands/SetTimeouts
-tags:
-  - Command
-  - Get Timeouts
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.SetTimeouts
 ---
 
@@ -51,5 +47,4 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object:
 ## See also
 
 - [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object
-- [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) command
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Commands)

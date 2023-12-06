@@ -1,13 +1,10 @@
 ---
-title: Sanitizer()
+title: "Sanitizer: Sanitizer() constructor"
+short-title: Sanitizer()
 slug: Web/API/Sanitizer/Sanitizer
 page-type: web-api-constructor
-tags:
-  - Sanitizer
-  - Constructor
-  - HTML Sanitizer API
-  - sanitize
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Sanitizer.Sanitizer
 ---
 

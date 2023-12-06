@@ -1,11 +1,7 @@
 ---
 title: Get Window Handles
 slug: Web/WebDriver/Commands/GetWindowHandles
-tags:
-  - Command
-  - Get Window Handles
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetWindowHandles
 ---
 

@@ -1,13 +1,7 @@
 ---
-title: "aria-valuenow"
+title: aria-valuenow
 slug: Web/Accessibility/ARIA/Attributes/aria-valuenow
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuenow
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
 

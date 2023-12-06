@@ -2,12 +2,6 @@
 title: max-content
 slug: Web/CSS/max-content
 page-type: css-keyword
-tags:
-  - CSS
-  - CSS Grid
-  - Reference
-  - max-content
-  - sizing
 browser-compat: css.properties.width.max-content
 ---
 
@@ -26,13 +20,6 @@ block-size: max-content;
 
 /* used in grid tracks */
 grid-template-columns: 200px 1fr max-content;
-
-/* Global values */
-max-content: inherit;
-max-content: initial;
-max-content: revert;
-max-content: revert-layer;
-max-content: unset;
 ```
 
 ## Examples

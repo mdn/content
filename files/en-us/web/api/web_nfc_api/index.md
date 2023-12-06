@@ -2,11 +2,8 @@
 title: Web NFC API
 slug: Web/API/Web_NFC_API
 page-type: web-api-overview
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFReader
 ---
 

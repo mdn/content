@@ -1,13 +1,7 @@
 ---
-title: 'Django Tutorial Part 6: Generic list and detail views'
+title: "Django Tutorial Part 6: Generic list and detail views"
 slug: Learn/Server-side/Django/Generic_views
-tags:
-  - Beginner
-  - Learn
-  - Tutorial
-  - django
-  - django templates
-  - django views
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
@@ -19,17 +13,13 @@ This tutorial extends our [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tu
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
-          >Django Tutorial Part 5: Creating our home page</a
-        >.
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand where and how to use generic class-based views, and how to
-        extract patterns from URLs and pass the information to views.
+        To understand where and how to use generic class-based views, and how to extract patterns from URLs and pass the information to views.
       </td>
     </tr>
   </tbody>
@@ -126,7 +116,7 @@ When doing this it is important to follow the pattern used above:
 - Then add your new context information.
 - Then return the new (updated) context.
 
-> **Note:** Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
+> **Note:** Check out [Built-in class-based generic views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/generic-display/) (Django docs) for many more examples of what you can do.
 
 ### Creating the List View template
 
@@ -135,19 +125,20 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_list.html** 
 Templates for generic views are just like any other templates (although of course the context/information passed to the template may differ).
 As with our _index_ template, we extend our base template in the first line and then replace the block named `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Book List</h1>
   {% if book_list %}
-  <ul>
-    {% for book in book_list %}
+    <ul>
+      {% for book in book_list %}
       <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a>
+        (\{{book.author}})
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   {% else %}
     <p>There are no books in the library.</p>
   {% endif %}
@@ -158,11 +149,11 @@ The view passes the context (list of books) by default as `object_list` and `boo
 
 #### Conditional execution
 
-We use the [`if`](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#if), `else`, and `endif` template tags to check whether the `book_list` has been defined and is not empty.
+We use the [`if`](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#if), `else`, and `endif` template tags to check whether the `book_list` has been defined and is not empty.
 If `book_list` is empty, then the `else` clause displays text explaining that there are no books to list.
 If `book_list` is not empty, then we iterate through the list of books.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -171,25 +162,25 @@ If `book_list` is not empty, then we iterate through the list of books.
 ```
 
 The condition above only checks for one case, but you can test on additional conditions using the `elif` template tag (e.g. `{% elif var2 %}`).
-For more information about conditional operators see: [if](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/) (Django Docs).
+For more information about conditional operators see: [if](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#ifequal-and-ifnotequal), and [ifchanged](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#ifchanged) in [Built-in template tags and filters](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/) (Django Docs).
 
 #### For loops
 
-The template uses the [for](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below.
+The template uses the [for](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#for) and `endfor` template tags to loop through the book list, as shown below.
 Each iteration populates the `book` template variable with information for the current list item.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
 You might also use the `{% empty %}` template tag to define what happens if the book list is empty (although our template chooses to use a conditional instead):
 
-```html
+```django
 <ul>
   {% for book in book_list %}
-    <li> <!-- code here get information from each book item --> </li>
+    <li><!-- code here get information from each book item --></li>
   {% empty %}
     <p>There are no books in the library.</p>
   {% endfor %}
@@ -203,7 +194,7 @@ For example, you can test the `forloop.last` variable to perform conditional pro
 
 The code inside the loop creates a list item for each book that shows both the title (as a link to the yet-to-be-created detail view) and the author.
 
-```html
+```django
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
@@ -217,7 +208,7 @@ We can also call _functions_ in the model from within our template — in this c
 
 Open the base template (**/locallibrary/catalog/templates/_base_generic.html_**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
 
-```python
+```django
 <li><a href="{% url 'index' %}">Home</a></li>
 <li><a href="{% url 'books' %}">All books</a></li>
 <li><a href="">All authors</a></li>
@@ -246,7 +237,7 @@ urlpatterns = [
 
 For the _book-detail_ path the URL pattern uses a special syntax to capture the specific id of the book that we want to see.
 The syntax is very simple: angle brackets define the part of the URL to be captured, enclosing the name of the variable that the view can use to access the captured data.
-For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
+For example, **\<something>**, will capture the marked pattern and pass the value to the view as a variable "something". You can optionally precede the variable name with a [converter specification](https://docs.djangoproject.com/en/4.2/topics/http/urls/#path-converters) that defines the type of data (int, str, slug, uuid, path).
 
 In this case we use `'<int:pk>'` to capture the book id, which must be a specially formatted string and pass it to the view as a parameter named `pk` (short for primary key). This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
@@ -258,7 +249,7 @@ In this case we use `'<int:pk>'` to capture the book id, which must be a special
 
 > **Note:** You won't need this section to complete the tutorial! We provide it because knowing this option is likely to be useful in your Django-centric future.
 
-The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.re_path) method.
+The pattern matching provided by `path()` is simple and useful for the (very common) cases where you just want to capture _any_ string or integer. If you need more refined filtering (for example, to filter only strings that have a certain number of characters) then you can use the [re_path()](https://docs.djangoproject.com/en/4.2/ref/urls/#django.urls.re_path) method.
 
 This method is used just like `path()` except that it allows you to specify a pattern using a [Regular expression](https://docs.python.org/3/library/re.html). For example, the previous path could have been written as shown below:
 
@@ -317,7 +308,7 @@ The main parts of the syntax you will need to know for declaring the pattern mat
     <tr>
       <td>( )</td>
       <td>
-        Capture the part of the pattern inside the brackets. Any captured values
+        Capture the part of the pattern inside the parentheses. Any captured values
         will be passed to the view as unnamed parameters (if multiple patterns
         are captured, the associated parameters will be supplied in the order
         that the captures were declared).
@@ -410,12 +401,12 @@ You can capture multiple patterns in the one match, and hence encode lots of dif
 
 #### Passing additional options in your URL maps
 
-One feature that we haven't used here, but which you may find valuable, is that you can pass a [dictionary containing additional options](https://docs.djangoproject.com/en/4.0/topics/http/urls/#views-extra-options) to the view (using the third un-named argument to the `path()` function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.
+One feature that we haven't used here, but which you may find valuable, is that you can pass a [dictionary containing additional options](https://docs.djangoproject.com/en/4.2/topics/http/urls/#views-extra-options) to the view (using the third un-named argument to the `path()` function). This approach can be useful if you want to use the same view for multiple resources, and pass data to configure its behavior in each case.
 
-For example, given the path shown below, for a request to `/myurl/halibut/` Django will call `views.my_view(request, fish=halibut, my_template_name='some_path')`.
+For example, given the path shown below, for a request to `/myurl/halibut/` Django will call `views.my_view(request, fish='halibut', my_template_name='some_path')`.
 
 ```python
-path('myurl/<int:fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
+path('myurl/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
 > **Note:** Both named captured patterns and dictionary options are passed to the view as _named_ arguments. If you use the **same name** for both a capture pattern and a dictionary key, then the dictionary option will be used.
@@ -451,7 +442,8 @@ def book_detail_view(request, primary_key):
 
 The view first tries to get the specific book record from the model. If this fails the view should raise an `Http404` exception to indicate that the book is "not found". The final step is then, as usual, to call `render()` with the template name and the book data in the `context` parameter (as a dictionary).
 
-Alternatively, we can use the `get_object_or_404()` function as a shortcut to raise an `Http404` exception if the record is not found.
+Another way you could do this if you were not using a generic view would be to call the `get_object_or_404()` function.
+This is a shortcut to raise an `Http404` exception if the record is not found.
 
 ```python
 from django.shortcuts import get_object_or_404
@@ -465,13 +457,14 @@ def book_detail_view(request, primary_key):
 
 Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Title: \{{ book.title }}</h1>
 
-  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p> <!-- author detail link not yet defined -->
+  <p><strong>Author:</strong> <a href="">\{{ book.author }}</a></p>
+  <!-- author detail link not yet defined -->
   <p><strong>Summary:</strong> \{{ book.summary }}</p>
   <p><strong>ISBN:</strong> \{{ book.isbn }}</p>
   <p><strong>Language:</strong> \{{ book.language }}</p>
@@ -481,8 +474,9 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}
-      <hr>
-      <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+      <hr />
+      <p
+        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
         \{{ copy.get_status_display }}
       </p>
       {% if copy.status != 'a' %}
@@ -500,13 +494,13 @@ Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html*
 >
 > - Use the `url` template tag to reverse the 'author-detail' URL (defined in the URL mapper), passing it the author instance for the book:
 >
->   ```python
+>   ```django
 >   <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
 >   ```
 >
 > - Call the author model's `get_absolute_url()` method (this performs the same reversing operation):
 >
->   ```plain
+>   ```django
 >   <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
 >   ```
 >
@@ -521,7 +515,7 @@ Though a little larger, almost everything in this template has been described pr
 
 The first interesting thing we haven't seen before is the function `book.bookinstance_set.all()`. This method is "automagically" constructed by Django in order to return the set of `BookInstance` records associated with a particular `Book`.
 
-```python
+```django
 {% for copy in book.bookinstance_set.all %}
   <!-- code to iterate across each copy/instance of a book -->
 {% endfor %}
@@ -539,7 +533,7 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
 > ```
 >
-> That happens because the [paginator object](https://docs.djangoproject.com/en/4.0/topics/pagination/#paginator-objects) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
+> That happens because the [paginator object](https://docs.djangoproject.com/en/4.2/topics/pagination/#paginator-objects) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
 >
 > This tutorial hasn't covered **Pagination** (yet!), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
@@ -573,12 +567,12 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 The second interesting (and non-obvious) thing in the template is where we display the status text for each book instance ("available", "maintenance", etc.).
 Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
-```python
+```django
  <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
  \{{ copy.get_status_display }} </p>
 ```
 
-This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/4.0/ref/models/fields/#choices).
+This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/4.2/ref/models/fields/#choices).
 Django automatically creates a method `get_FOO_display()` for every choices field "`Foo`" in a model, which can be used to get the current value of the field.
 
 ## What does it look like?
@@ -620,13 +614,13 @@ Now that the data is paginated, we need to add support to the template to scroll
 
 Open **/locallibrary/catalog/templates/_base_generic.html_** and find the "content block" (as shown below).
 
-```python
+```django
 {% block content %}{% endblock %}
 ```
 
 Copy in the following pagination block immediately following the `{% endblock %}`. The code first checks if pagination is enabled on the current page. If so, it adds _next_ and _previous_ links as appropriate (and the current page number).
 
-```python
+```django
 {% block pagination %}
     {% if is_paginated %}
         <div class="pagination">
@@ -646,7 +640,7 @@ Copy in the following pagination block immediately following the `{% endblock %}
   {% endblock %}
 ```
 
-The `page_obj` is a [Paginator](https://docs.djangoproject.com/en/4.0/topics/pagination/#paginator-objects) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
+The `page_obj` is a [Paginator](https://docs.djangoproject.com/en/4.2/topics/pagination/#paginator-objects) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
 
 We use `\{{ request.path }}` to get the current page URL for creating the pagination links. This is useful because it is independent of the object that we're paginating.
 
@@ -676,9 +670,11 @@ The code required for the URL mappers and the views should be virtually identica
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL).
 >   The recommended way to do this is to call `get_absolute_url()` on the author model as shown below.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a></p>
->
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="\{{ book.author.get_absolute_url }}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.
@@ -697,29 +693,11 @@ In our next articles, we'll extend this library to support user accounts, and th
 
 ## See also
 
-- [Built-in class-based generic views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-display/) (Django docs)
-- [Generic display views](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-display/) (Django docs)
-- [Introduction to class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/) (Django docs)
-- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.0/ref/templates/builtins/) (Django docs)
-- [Pagination](https://docs.djangoproject.com/en/4.0/topics/pagination/) (Django docs)
-- [Making queries > Related objects](https://docs.djangoproject.com/en/4.0/topics/db/queries/#related-objects) (Django docs)
+- [Built-in class-based generic views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/generic-display/) (Django docs)
+- [Generic display views](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-display/) (Django docs)
+- [Introduction to class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/intro/) (Django docs)
+- [Built-in template tags and filters](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/) (Django docs)
+- [Pagination](https://docs.djangoproject.com/en/4.2/topics/pagination/) (Django docs)
+- [Making queries > Related objects](https://docs.djangoproject.com/en/4.2/topics/db/queries/#related-objects) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/en-US/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/en-US/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/en-US/docs/Learn/Server-side/Django/Home_page)
-- **Django Tutorial Part 6: Generic list and detail views**
-- [Django Tutorial Part 7: Sessions framework](/en-US/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/en-US/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/en-US/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/en-US/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/en-US/docs/Learn/Server-side/Django/django_assessment_blog)

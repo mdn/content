@@ -1,38 +1,29 @@
 ---
-title: RTCPeerConnection.sctp
+title: "RTCPeerConnection: sctp property"
+short-title: sctp
 slug: Web/API/RTCPeerConnection/sctp
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCPeerConnection
-  - Reference
-  - SCTP
-  - WebRTC
 browser-compat: api.RTCPeerConnection.sctp
 ---
 
 {{APIRef("WebRTC")}}
 
-The read-only **`sctp`** property on the
-{{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}}
-describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and
-received. If SCTP hasn't been negotiated, this value is `null`.
+The read-only **`sctp`** property on the {{domxref("RTCPeerConnection")}} interface returns an {{domxref("RTCSctpTransport")}} describing the {{Glossary("SCTP")}} transport over which SCTP data is being sent and
+received.
+If SCTP hasn't been negotiated, this value is `null`.
 
-The SCTP transport is used for transmitting and receiving data for any and all
-{{domxref("RTCDataChannel")}}s on the peer connection.
+The SCTP transport is used for transmitting and receiving data for any and all {{domxref("RTCDataChannel")}}s on the peer connection.
 
 ## Value
 
-A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by
-the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data
-channels, or `null` if SCTP negotiation hasn't happened.
+A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data channels, or `null` if SCTP negotiation hasn't happened.
 
 ## Example
 
 ```js
-const pc = new RTCPeerConnection();
+const peerConnection = new RTCPeerConnection();
 
-const channel = pc.createDataChannel("Mydata");
+const channel = peerConnection.createDataChannel("Mydata");
 channel.onopen = (event) => {
   channel.send("sending a message");
 };
@@ -42,7 +33,7 @@ channel.onmessage = (event) => {
 
 // Determine the largest message size that can be sent
 
-const sctp = pc.sctp;
+const sctp = peerConnection.sctp;
 const maxMessageSize = sctp.maxMessageSize;
 ```
 

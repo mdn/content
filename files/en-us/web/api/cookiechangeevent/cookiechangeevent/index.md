@@ -1,13 +1,10 @@
 ---
-title: CookieChangeEvent()
+title: "CookieChangeEvent: CookieChangeEvent() constructor"
+short-title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CookieChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
 

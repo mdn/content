@@ -1,14 +1,8 @@
 ---
-title: Touch.clientY
+title: "Touch: clientY property"
+short-title: clientY
 slug: Web/API/Touch/clientY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.clientY
 ---
 
@@ -20,8 +14,8 @@ scroll offset.
 
 ## Value
 
-A `long` value representing the Y coordinate of the touch point relative to
-the viewport, not including any scroll offset.
+A `double` floating point value representing the Y coordinate of the touch point
+relative to the viewport, not including any scroll offset.
 
 ## Examples
 
@@ -45,24 +39,32 @@ const src = document.getElementById("source");
 let clientX;
 let clientY;
 
-src.addEventListener('touchstart', (e) => {
-  // Cache the client X/Y coordinates
-  clientX = e.touches[0].clientX;
-  clientY = e.touches[0].clientY;
-}, false);
+src.addEventListener(
+  "touchstart",
+  (e) => {
+    // Cache the client X/Y coordinates
+    clientX = e.touches[0].clientX;
+    clientY = e.touches[0].clientY;
+  },
+  false,
+);
 
-src.addEventListener('touchend', (e) => {
-  let deltaX;
-  let deltaY;
+src.addEventListener(
+  "touchend",
+  (e) => {
+    let deltaX;
+    let deltaY;
 
-  // Compute the change in X and Y coordinates.
-  // The first touch point in the changedTouches
-  // list is the touch point that was just removed from the surface.
-  deltaX = e.changedTouches[0].clientX - clientX;
-  deltaY = e.changedTouches[0].clientY - clientY;
+    // Compute the change in X and Y coordinates.
+    // The first touch point in the changedTouches
+    // list is the touch point that was just removed from the surface.
+    deltaX = e.changedTouches[0].clientX - clientX;
+    deltaY = e.changedTouches[0].clientY - clientY;
 
-  // Process the data…
-}, false);
+    // Process the data…
+  },
+  false,
+);
 ```
 
 ## Specifications

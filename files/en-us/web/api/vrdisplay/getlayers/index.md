@@ -1,19 +1,11 @@
 ---
-title: VRDisplay.getLayers()
+title: "VRDisplay: getLayers() method"
+short-title: getLayers()
 slug: Web/API/VRDisplay/getLayers
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getLayers()
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getLayers
 ---
 

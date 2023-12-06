@@ -1,11 +1,7 @@
 ---
 title: Shapes from images
-slug: Web/CSS/CSS_Shapes/Shapes_From_Images
+slug: Web/CSS/CSS_shapes/Shapes_from_images
 page-type: guide
-tags:
-  - CSS
-  - CSS Shapes
-  - Guide
 ---
 
 {{CSSRef}}
@@ -50,7 +46,7 @@ You do need something to float, but that could be some generated content as in t
 
 ## Creating shapes using a gradient
 
-Because a [CSS gradient](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) is treated as an image, you can use a gradient to generate a shape by having transparent or semi-transparent areas as part of the gradient.
+Because a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) is treated as an image, you can use a gradient to generate a shape by having transparent or semi-transparent areas as part of the gradient.
 
 The next example uses generated content. The content has been floated, giving it a background image of a linear gradient. I am using that same value as the value of {{cssxref("shape-outside")}}. The linear gradient goes from purple to transparent. By changing the value of {{cssxref("shape-image-threshold")}}, you can decide how transparent the pixels need to be that create the shape. You can play with that value in the example below to see how the diagonal line will move across the shape depending on that value.
 

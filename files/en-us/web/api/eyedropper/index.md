@@ -2,13 +2,8 @@
 title: EyeDropper
 slug: Web/API/EyeDropper
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - EyeDropper
-  - Interface
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.EyeDropper
 ---
 
@@ -43,22 +38,26 @@ This example shows how to open an eyedropper tool and wait for the user to eithe
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'Your browser does not support the EyeDropper API';
+    resultElement.textContent =
+      "Your browser does not support the EyeDropper API";
     return;
   }
 
   const eyeDropper = new EyeDropper();
 
-  eyeDropper.open().then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open()
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 });
 ```
 
@@ -79,23 +78,27 @@ This example shows that the eyedropper mode can also be aborted before the user 
 #### JavaScript
 
 ```js
-document.getElementById('start-button').addEventListener('click', () => {
-  const resultElement = document.getElementById('result');
+document.getElementById("start-button").addEventListener("click", () => {
+  const resultElement = document.getElementById("result");
 
   if (!window.EyeDropper) {
-    resultElement.textContent = 'Your browser does not support the EyeDropper API';
+    resultElement.textContent =
+      "Your browser does not support the EyeDropper API";
     return;
   }
 
   const eyeDropper = new EyeDropper();
   const abortController = new AbortController();
 
-  eyeDropper.open({ signal: abortController.signal }).then((result) => {
-    resultElement.textContent = result.sRGBHex;
-    resultElement.style.backgroundColor = result.sRGBHex;
-  }).catch((e) => {
-    resultElement.textContent = e;
-  });
+  eyeDropper
+    .open({ signal: abortController.signal })
+    .then((result) => {
+      resultElement.textContent = result.sRGBHex;
+      resultElement.style.backgroundColor = result.sRGBHex;
+    })
+    .catch((e) => {
+      resultElement.textContent = e;
+    });
 
   setTimeout(() => {
     abortController.abort();

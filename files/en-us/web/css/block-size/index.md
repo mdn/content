@@ -2,12 +2,6 @@
 title: block-size
 slug: Web/CSS/block-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.block-size
 ---
 
@@ -32,6 +26,7 @@ block-size: 75%;
 /* Keyword values */
 block-size: max-content;
 block-size: min-content;
+block-size: fit-content;
 block-size: fit-content(20em);
 block-size: auto;
 

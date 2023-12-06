@@ -1,12 +1,7 @@
 ---
 title: Upgrade
 slug: Web/HTTP/Headers/Upgrade
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Upgrade
+page-type: http-header
 browser-compat: http.headers.Upgrade
 ---
 
@@ -53,7 +48,7 @@ If the server decides to upgrade the connection, it must:
 
 1. Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
 
-   ```
+   ```http
    HTTP/1.1 101 Switching Protocols
    Upgrade: foo/2
    Connection: Upgrade

@@ -2,11 +2,6 @@
 title: TrustedScriptURL
 slug: Web/API/TrustedScriptURL
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedScriptURL
 browser-compat: api.TrustedScriptURL
 ---
 
@@ -28,7 +23,9 @@ The value of a **TrustedScriptURL** object is set when the object is created and
 The constant `sanitized` is an object created via a Trusted Types policy.
 
 ```js
-const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+const sanitized = scriptPolicy.createScriptURL(
+  "https://example.com/my-script.js",
+);
 console.log(sanitized); /* a TrustedScriptURL object */
 ```
 
@@ -42,4 +39,4 @@ console.log(sanitized); /* a TrustedScriptURL object */
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)

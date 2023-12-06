@@ -1,19 +1,12 @@
 ---
-title: CSSUnitValue()
+title: "CSSUnitValue: CSSUnitValue() constructor"
+short-title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 page-type: web-api-constructor
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnitValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`CSSUnitValue()`** constructor creates a
 new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}
@@ -40,8 +33,9 @@ individual `CSSUnitValue` constructors.
 
 ```js
 let pos = new CSSPositionValue(
-    new CSSUnitValue(5, "px"),
-    new CSSUnitValue(10, "px"));
+  new CSSUnitValue(5, "px"),
+  new CSSUnitValue(10, "px"),
+);
 ```
 
 ## Specifications

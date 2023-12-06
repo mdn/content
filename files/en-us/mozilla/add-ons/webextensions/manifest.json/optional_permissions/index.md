@@ -1,11 +1,7 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_permissions
 ---
 
@@ -31,8 +27,7 @@ browser-compat: webextensions.manifest.optional_permissions
         <pre class="brush: json">
 "optional_permissions": [
   "webRequest"
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>
@@ -55,7 +50,7 @@ These are the same as the host permissions you can specify in the [`permissions`
 > **Note:** When using Manifest V3 or higher:
 >
 > - in Chrome, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
-> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzilla.mozilla.org/show_bug.cgi?id=1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
+> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzil.la/1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
 
 ## API permissions
 
@@ -65,12 +60,17 @@ You can include any of the following here, but not in all browsers: check the co
 - `background`
 - `bookmarks`
 - `browserSettings`
+- `browsingData`
 - `clipboardRead`
 - `clipboardWrite`
 - `contentSettings`
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
+- `devtools`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -81,14 +81,19 @@ You can include any of the following here, but not in all browsers: check the co
 - `nativeMessaging`
 - `notifications`
 - `pageCapture`
+- `pkcs11`
 - `privacy`
-- `scripting` (Manifest V3 or higher)
+- `proxy`
+- `scripting`
+- `sessions`
 - `tabHide`
 - `tabs`
 - `topSites`
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 Note that this is a subset of the API permissions allowed in [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
@@ -99,6 +104,8 @@ Of this set, the following permissions are granted silently, without a user prom
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 ## Example
 

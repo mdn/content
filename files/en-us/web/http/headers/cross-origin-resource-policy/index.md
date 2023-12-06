@@ -1,12 +1,7 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Cross-Origin-Resource-Policy
 ---
 
@@ -56,6 +51,6 @@ For more examples, see <https://resourcepolicy.fyi/>.
 
 ## See also
 
-- [Cross-Origin Resource Policy (CORP) explainer](</en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)>)
+- [Cross-Origin Resource Policy (CORP) explainer](/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy)
 - [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - {{httpheader("Access-Control-Allow-Origin")}}

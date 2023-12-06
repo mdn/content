@@ -1,13 +1,8 @@
 ---
-title: Document()
+title: "Document: Document() constructor"
+short-title: Document()
 slug: Web/API/Document/Document
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - Document
-  - Reference
 browser-compat: api.Document.Document
 ---
 

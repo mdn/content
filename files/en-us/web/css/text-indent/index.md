@@ -2,15 +2,6 @@
 title: text-indent
 slug: Web/CSS/text-indent
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Indent
-  - Layout
-  - Reference
-  - recipe:css-property
-  - text-indent
 browser-compat: css.properties.text-indent
 ---
 
@@ -99,7 +90,7 @@ p {
 
 A common typographic practice when paragraph indentation is present is to skip the indentation for the first paragraph. As the _The Chicago Manual of Style_ puts it, "the first line of text following a subhead may begin flush left or be indented by the usual paragraph indention."
 
-Treating first paragraphs differently from subsequent paragraphs can be done using the [adjacent sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator), as in the following example:
+Treating first paragraphs differently from subsequent paragraphs can be done using the [next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator), as in the following example:
 
 #### HTML
 
@@ -210,5 +201,5 @@ p {
   - [`text-transform`](/en-US/docs/Web/CSS/text-transform)
   - {{cssxref('hanging-punctuation')}}
 
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_Text_Decoration) CSS module
-- [CSS Text module](/en-US/docs/Web/CSS/CSS_Text)
+- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
+- [CSS Text module](/en-US/docs/Web/CSS/CSS_text)

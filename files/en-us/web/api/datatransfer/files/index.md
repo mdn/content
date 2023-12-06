@@ -1,19 +1,14 @@
 ---
-title: DataTransfer.files
+title: "DataTransfer: files property"
+short-title: files
 slug: Web/API/DataTransfer/files
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - drag and drop
 browser-compat: api.DataTransfer.files
 ---
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`files`** property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) objects is a {{domxref("FileList","list of the files")}} in the drag operation. If the operation includes no files, the list is empty.
+The **`files`** read-only property of [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) objects is a {{domxref("FileList","list of the files")}} in the drag operation. If the operation includes no files, the list is empty.
 
 This feature can be used to drag files from a user's desktop to the browser.
 

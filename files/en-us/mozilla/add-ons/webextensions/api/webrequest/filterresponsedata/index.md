@@ -1,15 +1,7 @@
 ---
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - filterResponseData
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 
@@ -21,7 +13,12 @@ You typically call this function from a `webRequest` event listener.
 
 Firefox uses an optimized byte cache for script requests. This optimized byte cache overrides the normal request caching. Data from this cache is not available in a form useful to extensions. If your extension needs to filter scripts, create your filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}}. Doing this ensures that the filter is created prior to the attempt to load from cache, thereby avoiding the optimized cache.
 
-To use this API you must have the `"webRequestBlocking"` [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), as well as the normal permissions needed for the event listener (the `"webRequest"` permission and the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host).
+## Permissions
+
+To use this API, you must have the `"webRequest"` and `"webRequestBlocking"` [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), and for the event listener, the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the host. In addition:
+
+- From Firefox 95, to use this API to intercept requests related to the loading of service worker scripts, the `"webRequestFilterResponse.serviceWorkerScript"` permission is also required.
+- From Firefox 110, Manifest V3 extensions must also request the `"webRequestFilterResponse"` permission to use this API.
 
 ## Syntax
 
@@ -59,7 +56,7 @@ filter.onstop = (event) => {
 };
 ```
 
-This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
+This example, taken from the [http-response](https://github.com/mdn/webextensions-examples/tree/main/http-response) example extension, creates a filter in {{WebExtAPIRef("webRequest.onBeforeRequest")}} and uses it, to modify the first chunk of the response:
 
 ```js
 function listener(details) {
@@ -68,27 +65,27 @@ function listener(details) {
   let encoder = new TextEncoder();
 
   filter.ondata = (event) => {
-    let str = decoder.decode(event.data, {stream: true});
+    let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   return {};
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
 {{WebExtExamples}}
 
-> **Note:** that this example only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
+> **Note:** The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
 
 ## Browser compatibility
 

@@ -2,13 +2,6 @@
 title: SVG API
 slug: Web/API/SVG_API
 page-type: web-api-overview
-tags:
-  - API
-  - SVG
-  - Guide
-  - Overview
-  - Reference
-  - Web
 spec-urls: https://svgwg.org/svg2-draft/
 ---
 
@@ -134,7 +127,6 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 - {{DOMxRef("SVGAnimatedLengthList")}}
 - {{DOMxRef("SVGAnimatedNumber")}}
 - {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPoints")}}
 - {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
 - {{DOMxRef("SVGAnimatedRect")}}
 - {{DOMxRef("SVGAnimatedString")}}

@@ -1,20 +1,13 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - set
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.clear
 ---
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a
-`Set` object.
+The **`clear()`** method of {{jsxref("Set")}} instances removes all elements from this set.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
@@ -24,9 +17,13 @@ The **`clear()`** method removes all elements from a
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -37,13 +34,13 @@ const mySet = new Set();
 mySet.add(1);
 mySet.add("foo");
 
-console.log(mySet.size);       // 2
+console.log(mySet.size); // 2
 console.log(mySet.has("foo")); // true
 
 mySet.clear();
 
-console.log(mySet.size);       // 0
-console.log(mySet.has("bar")); // false
+console.log(mySet.size); // 0
+console.log(mySet.has("foo")); // false
 ```
 
 ## Specifications

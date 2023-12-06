@@ -1,12 +1,8 @@
 ---
-title: Document.firstElementChild
+title: "Document: firstElementChild property"
+short-title: firstElementChild
 slug: Web/API/Document/firstElementChild
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
 browser-compat: api.Document.firstElementChild
 ---
 

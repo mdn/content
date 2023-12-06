@@ -1,16 +1,10 @@
 ---
 title: aria-busy
 slug: Web/Accessibility/ARIA/Attributes/aria-busy
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - aria-busy
-  - aria live regions
-  - aria state
+page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-busy
-  - https://w3c.github.io/aria-practices/#feed
+  - https://www.w3.org/TR/wai-aria-1.2/#aria-busy
 ---
 
 Used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), the global `aria-busy` state indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.

@@ -2,13 +2,6 @@
 title: ShadowRoot
 slug: Web/API/ShadowRoot
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ShadowRoot
-  - Web Components
-  - shadow dom
 browser-compat: api.ShadowRoot
 ---
 
@@ -36,13 +29,15 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.innerHTML")}}
   - : Sets or returns a reference to the DOM tree inside the `ShadowRoot`.
 - {{domxref("ShadowRoot.mode")}} {{ReadOnlyInline}}
-  - : The mode of the `ShadowRoot` — either `open` or `closed`.
+  - : The mode of the `ShadowRoot`, either `open` or `closed`.
     This defines whether or not the shadow root's internal features are accessible from JavaScript.
 - {{DOMxRef("ShadowRoot.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} within the shadow tree that is currently being presented in picture-in-picture mode.
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- {{DOMxRef("ShadowRoot.slotAssignment")}} {{ReadOnlyInline}}
+  - : Returns a string containing the type of slot assignment, either `manual` or `named`.
 - {{domxref("ShadowRoot.styleSheets")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('StyleSheetList')}} of {{domxref('CSSStyleSheet')}} objects for stylesheets explicitly linked into, or embedded in a shadow tree.
 
@@ -52,9 +47,9 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Returns an array of all {{DOMxRef("Animation")}} objects currently in effect, whose target elements are descendants of the shadow tree.
 - {{domxref("ShadowRoot.getSelection()")}} {{Non-standard_Inline}}
   - : Returns a {{domxref('Selection')}} object representing the range of text selected by the user, or the current position of the caret.
-- {{domxref("ShadowRoot.elementFromPoint()")}}
+- {{domxref("ShadowRoot.elementFromPoint()")}} {{Non-standard_Inline}}
   - : Returns the topmost element at the specified coordinates.
-- {{domxref("ShadowRoot.elementsFromPoint()")}}
+- {{domxref("ShadowRoot.elementsFromPoint()")}} {{Non-standard_Inline}}
   - : Returns an array of all elements at the specified coordinates.
 
 ## Events
@@ -90,12 +85,12 @@ function updateStyle(elem) {
   const shadow = elem.shadowRoot;
   const childNodes = shadow.childNodes;
   for (const node of childNodes) {
-    if (node.nodeName === 'STYLE') {
+    if (node.nodeName === "STYLE") {
       node.textContent = `
 div {
-  width: ${elem.getAttribute('l')}px;
-  height: ${elem.getAttribute('l')}px;
-  background-color: ${elem.getAttribute('c')};
+  width: ${elem.getAttribute("l")}px;
+  height: ${elem.getAttribute("l")}px;
+  background-color: ${elem.getAttribute("c")};
 }
       `;
     }

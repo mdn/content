@@ -1,11 +1,7 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - accesskey
+page-type: html-attribute
 browser-compat: html.global_attributes.accesskey
 ---
 
@@ -29,61 +25,47 @@ The way to activate the accesskey depends on the browser and its platform:
     </tr>
     <tr>
       <th>Firefox</th>
-      <td colspan="2">
-        <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
-      </td>
+      <td colspan="2"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
       <td>
-        On Firefox 57 or newer: <kbd>Control</kbd> + <kbd>Option</kbd> +
+        <ul>
+          <li>Firefox 57+: <kbd>Control</kbd> + <kbd>Option</kbd> +
         <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd
-        ><br />On Firefox 14 or newer: <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd
-        ><br />On Firefox 13 or older: <kbd>Control</kbd> +
-        <kbd><em>key</em></kbd>
+        <kbd><em>key</em></kbd></li>
+          <li>Firefox 14-56: <kbd>Control</kbd> + <kbd>Alt</kbd> +
+        <kbd><em>key</em></kbd></li>
+          <li>Firefox 13 or older: <kbd>Control</kbd> +
+        <kbd><em>key</em></kbd></li>
+        </ul>
       </td>
-    </tr>
-    <tr>
-      <th>Internet Explorer</th>
-      <td rowspan="3">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td colspan="2">N/A</td>
     </tr>
     <tr>
       <th>Edge</th>
-      <td>N/A</td>
-      <td rowspan="3">
-        <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd
-        ><br /><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
+      <td rowspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+      <td rowspan="2">
+        <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd><br>or <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
         <kbd><em>key</em></kbd>
       </td>
+      <td>n/a</td>
     </tr>
     <tr>
       <th>Google Chrome</th>
-      <td>
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
+      <td><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
       <th>Safari</th>
-      <td colspan="2">N/A</td>
+      <td colspan="2">n/a</td>
+      <td><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
       <th>Opera 15+</th>
-      <td colspan="2">
-        <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
-      <td>
-        <kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd>
-      </td>
+      <td colspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+      <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
       <th>Opera 12</th>
       <td colspan="3">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens a contents list which are
-        accessible by accesskey, then, can choose an item by pressing
-        <kbd><em>key</em></kbd>
+        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens a list of available accesskeys. Choose an item from the list by pressing
+        the <kbd><em>key</em></kbd>.
       </td>
     </tr>
   </tbody>
@@ -112,7 +94,7 @@ Because of these issues, it is generally advised not to use `accesskey`s for mos
 
 ## See also
 
-- {{domxref("Element.accessKey")}}
+- {{domxref("HTMLElement.accessKey")}}
 - {{domxref("HTMLElement.accessKeyLabel")}}
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 - [`aria-keyshortcuts`](https://www.w3.org/TR/wai-aria-1.1/#aria-keyshortcuts)

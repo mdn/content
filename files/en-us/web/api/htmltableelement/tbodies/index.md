@@ -1,14 +1,8 @@
 ---
-title: HTMLTableElement.tBodies
+title: "HTMLTableElement: tBodies property"
+short-title: tBodies
 slug: Web/API/HTMLTableElement/tBodies
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLTableElement.tBodies
 ---
 

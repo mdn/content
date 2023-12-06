@@ -1,10 +1,10 @@
 ---
 title: Digital certificate
 slug: Glossary/Digital_certificate
-tags:
-  - Cryptography
-  - Security
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A digital certificate is a data file that binds a publicly known {{Glossary("Key", "cryptographic key")}} to an organization.
 

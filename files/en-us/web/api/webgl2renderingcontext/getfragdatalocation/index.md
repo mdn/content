@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.getFragDataLocation()
+title: "WebGL2RenderingContext: getFragDataLocation() method"
+short-title: getFragDataLocation()
 slug: Web/API/WebGL2RenderingContext/getFragDataLocation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getFragDataLocation
 ---
 
@@ -41,7 +36,7 @@ otherwise.
 ```js
 // program is a linked WebGLProgram
 
-gl.getFragDataLocation(program, 'fragColor');
+gl.getFragDataLocation(program, "fragColor");
 ```
 
 ## Specifications

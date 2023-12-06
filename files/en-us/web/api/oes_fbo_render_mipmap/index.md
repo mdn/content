@@ -1,13 +1,8 @@
 ---
-title: OES_fbo_render_mipmap
+title: OES_fbo_render_mipmap extension
+short-title: OES_fbo_render_mipmap
 slug: Web/API/OES_fbo_render_mipmap
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
 browser-compat: api.OES_fbo_render_mipmap
 ---
 

@@ -1,13 +1,12 @@
 ---
 title: JavaScript APIs
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - WebExtensions
+page-type: landing-page
 ---
 
 {{AddonSidebar}}
 
-JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) and in any other documents bundled with the extension, including [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popups, [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or [new tab pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts). (See the [list in the content script guide](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).)
+JavaScript APIs for WebExtensions can be used inside the extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) and in any other documents bundled with the extension, including [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popups, [sidebars](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or [new tab pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A few of these APIs can also be accessed by an extension's [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts). (See the [list in the content script guide](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis).)
 
 To use the more powerful APIs, you need to [request permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in your extension's `manifest.json`.
 
@@ -15,27 +14,25 @@ You can access the APIs using the `browser` namespace:
 
 ```js
 function logTabs(tabs) {
-  console.log(tabs)
+  console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs)
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Many of the APIs are asynchronous, returning a {{JSxRef("Promise")}}:
 
 ```js
 function logCookie(c) {
-  console.log(c)
+  console.log(c);
 }
 
 function logError(e) {
-  console.error(e)
+  console.error(e);
 }
 
-let setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
-setCookie.then(logCookie, logError)
+let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
+setCookie.then(logCookie, logError);
 ```
 
 ## Browser API differences

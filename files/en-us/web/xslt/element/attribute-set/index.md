@@ -1,14 +1,10 @@
 ---
 title: <xsl:attribute-set>
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - attribute-set
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:attribute-set>` element creates a named set of attributes, which can then be applied as whole to the output document, in a manner similar to named styles in CSS.
 

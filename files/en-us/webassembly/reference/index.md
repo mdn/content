@@ -1,11 +1,7 @@
 ---
 title: WebAssembly instruction reference
 slug: WebAssembly/Reference
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
+page-type: landing-page
 ---
 
 {{WebAssemblySidebar}}

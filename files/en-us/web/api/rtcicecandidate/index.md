@@ -2,20 +2,6 @@
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
 page-type: web-api-interface
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Interface
-  - Media
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - Web RTC
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate
 ---
 

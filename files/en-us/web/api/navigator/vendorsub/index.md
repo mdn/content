@@ -1,13 +1,10 @@
 ---
-title: Navigator.vendorSub
+title: "Navigator: vendorSub property"
+short-title: vendorSub
 slug: Web/API/Navigator/vendorSub
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Property
-  - Read-only
+status:
+  - deprecated
 browser-compat: api.Navigator.vendorSub
 ---
 

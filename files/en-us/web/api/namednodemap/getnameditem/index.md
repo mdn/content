@@ -1,10 +1,8 @@
 ---
-title: NamedNodeMap.getNamedItem()
+title: "NamedNodeMap: getNamedItem() method"
+short-title: getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.getNamedItem
 ---
 

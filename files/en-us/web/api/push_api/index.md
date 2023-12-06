@@ -2,20 +2,12 @@
 title: Push API
 slug: Web/API/Push_API
 page-type: web-api-overview
-tags:
-  - API
-  - Experimental
-  - Landing
-  - Notifications
-  - Push
-  - Reference
-  - Service Workers
 browser-compat:
   - api.PushEvent
   - api.PushMessageData
 ---
 
-{{ApiRef("Push API")}}
+{{DefaultAPISidebar("Push API")}}
 
 The **Push API** gives web applications the ability to receive messages pushed to them from a server, whether or not the web app is in the foreground, or even currently loaded, on a user agent. This lets developers deliver asynchronous notifications and updates to users that opt in, resulting in better engagement with timely new content.
 
@@ -75,7 +67,5 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 ## See also
 
 - [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/)
-- [Push notifications overview](https://web.dev/push-notifications-overview/)
+- [Push notifications overview](https://web.dev/articles/push-notifications-overview)
 - [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-
-{{DefaultAPISidebar("Push API")}}

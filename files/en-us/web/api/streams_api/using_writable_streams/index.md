@@ -2,17 +2,9 @@
 title: Using writable streams
 slug: Web/API/Streams_API/Using_writable_streams
 page-type: guide
-tags:
-  - API
-  - Controller
-  - Guide
-  - Streams
-  - WritableStream
-  - writable streams
-  - writer
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
@@ -36,23 +28,18 @@ To create a writable stream, we use the {{domxref("WritableStream.WritableStream
 The syntax skeleton looks like this:
 
 ```js
-const stream = new WritableStream({
-  start(controller) {
-
+const stream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {},
+    close(controller) {},
+    abort(reason) {},
   },
-  write(chunk, controller) {
-
+  {
+    highWaterMark: 3,
+    size: () => 1,
   },
-  close(controller) {
-
-  },
-  abort(reason) {
-
-  }
-}, {
-  highWaterMark: 3,
-  size: () => 1
-});
+);
 ```
 
 The constructor takes two objects as parameters. The first object is required, and creates a model in JavaScript of the underlying sink the data is being written to. The second object is optional, and allows you to specify a [custom queueing strategy](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) to use for your stream, which takes the form of an instance of {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}.
@@ -70,30 +57,33 @@ The constructor call in our example looks like this:
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      const buffer = new ArrayBuffer(1);
-      const view = new Uint8Array(buffer);
-      view[0] = chunk;
-      const decoded = decoder.decode(view, { stream: true });
-      const listItem = document.createElement('li');
-      listItem.textContent = `Chunk decoded: ${decoded}`;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.error("Sink error:", err);
+    },
   },
-  close() {
-    const listItem = document.createElement('li');
-    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.error("Sink error:", err);
-  },
-}, queuingStrategy);
+  queuingStrategy,
+);
 ```
 
 - The `write()` method contains a promise including code that decodes each written chunk into a format that can be written to the UI. This is called when each chunk is actually written (see the next section).

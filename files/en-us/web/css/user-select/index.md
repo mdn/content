@@ -2,14 +2,6 @@
 title: user-select
 slug: Web/CSS/user-select
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - Reference
-  - Selection
-  - recipe:css-property
-  - user-select
 browser-compat: css.properties.user-select
 ---
 
@@ -58,11 +50,10 @@ user-select: unset;
 - `all`
   - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
 - `contain`
-  - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
-- `element` {{non-standard_inline}} (IE-specific alias)
-  - : Same as `contain`. Supported only in Internet Explorer.
 
-> **Note:** CSS UI 4 [renames `user-select: element` to `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+  - : Enables selection to start within the element; however, the selection will be contained by the bounds of that element.
+
+    > **Note:** CSS UI 4 [renamed](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05) the `element` value to `contain`.
 
 ## Formal definition
 
@@ -87,18 +78,14 @@ user-select: unset;
 ```css
 .unselectable {
   -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10+ */
   user-select: none;
 }
 
 .all {
   -webkit-user-select: all;
-  -ms-user-select: all;
   user-select: all;
 }
 ```
-
-> **Note:** `-webkit-user-select: all;` doesn't work in Safari; use only "none" or "text", or else it will allow typing in the `<html>` container. See the [browser compatibility table](#browser-compatibility) for up-to-date information.
 
 ### Result
 

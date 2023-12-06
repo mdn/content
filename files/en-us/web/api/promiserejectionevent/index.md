@@ -2,15 +2,6 @@
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Reference
-  - events
 browser-compat: api.PromiseRejectionEvent
 ---
 
@@ -18,7 +9,7 @@ browser-compat: api.PromiseRejectionEvent
 
 The **`PromiseRejectionEvent`** interface represents events which are sent to the global script context when JavaScript {{jsxref("Promise")}}s are rejected. These events are particularly useful for telemetry and debugging purposes.
 
-For details on promise rejection events, see {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}.
+For details, see [Promise rejection events](/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events).
 
 {{InheritanceDiagram}}
 
@@ -54,7 +45,7 @@ This simple example catches unhandled promise rejections and logs them for debug
 ```js
 window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## Specifications
@@ -67,7 +58,6 @@ window.onunhandledrejection = (e) => {
 
 ## See also
 
-- [Promises](/en-US/docs/Archive/Add-ons/Techniques/Promises)
 - [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
 - {{jsxref("Promise")}}
 - {{domxref("Window/rejectionhandled_event", "rejectionhandled")}}

@@ -1,14 +1,10 @@
 ---
-title: ImageDecoder.decode()
+title: "ImageDecoder: decode() method"
+short-title: decode()
 slug: Web/API/ImageDecoder/decode
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - decode
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.decode
 ---
 
@@ -57,7 +53,7 @@ If an error occurs, the promise will resolve with following exception:
 The following example decodes the second frame (at index `1`) and prints the resulting {{domxref("VideoFrame")}} to the console.
 
 ```js
-let result = await imageDecoder.decode({frameIndex: 1});
+let result = await imageDecoder.decode({ frameIndex: 1 });
 console.log(result.image);
 ```
 
@@ -71,7 +67,7 @@ while (!complete) {
   // The promise returned by `decode()` will only resolve when a new
   // level of detail is available or the frame is complete. I.e.,
   // calling `decode()` in a loop like this is won't needlessly spin.
-  let result = await imageDecode.decode({completeFramesOnly: false});
+  let result = await imageDecode.decode({ completeFramesOnly: false });
 
   // Do something with `result.image`.
 

@@ -2,19 +2,12 @@
 title: <resolution>
 slug: Web/CSS/resolution
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.resolution
 ---
 
 {{CSSRef}}
 
-The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/Media_Queries), denotes the pixel density of an output device, i.e., its resolution.
+The **`<resolution>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [resolutions](/en-US/docs/Web/CSS/@media/resolution) in [media queries](/en-US/docs/Web/CSS/CSS_media_queries), denotes the pixel density of an output device, i.e., its resolution.
 
 On screens, the units are related to _CSS_ inches, centimeters, or pixels, not physical values.
 
@@ -73,4 +66,4 @@ ten dpi    The number must use digits only.
 
 - [resolution](/en-US/docs/Web/CSS/@media/resolution) media feature
 - The {{cssxref("image-resolution")}} property
-- [Using @media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using @media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

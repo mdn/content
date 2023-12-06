@@ -1,17 +1,10 @@
 ---
-title: VRLayerInit.leftBounds
+title: "VRLayerInit: leftBounds property"
+short-title: leftBounds
 slug: Web/API/VRLayerInit/leftBounds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - leftBounds
+status:
+  - deprecated
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}

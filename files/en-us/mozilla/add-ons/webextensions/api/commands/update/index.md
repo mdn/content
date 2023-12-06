@@ -1,15 +1,7 @@
 ---
 title: commands.update()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Update
-  - WebExtensions
-  - commands
+page-type: webextension-api-function
 browser-compat: webextensions.api.commands.update
 ---
 
@@ -57,16 +49,16 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 Updates the command named "my-command" with the given shortcut value, when the user clicks "update":
 
 ```js
-const commandName = 'my-command';
+const commandName = "my-command";
 
 function updateShortcut() {
   browser.commands.update({
     name: commandName,
-    shortcut: document.querySelector('#shortcut').value
+    shortcut: document.querySelector("#shortcut").value,
   });
 }
 
-document.querySelector('#update').addEventListener('click', updateShortcut);
+document.querySelector("#update").addEventListener("click", updateShortcut);
 ```
 
 {{WebExtExamples}}

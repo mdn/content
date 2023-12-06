@@ -1,12 +1,8 @@
 ---
-title: WEBGL_draw_buffers
+title: WEBGL_draw_buffers extension
+short-title: WEBGL_draw_buffers
 slug: Web/API/WEBGL_draw_buffers
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_draw_buffers
 ---
 
@@ -43,7 +39,7 @@ This extension exposes one new method.
 Enabling the extension:
 
 ```js
-const ext = gl.getExtension('WEBGL_draw_buffers');
+const ext = gl.getExtension("WEBGL_draw_buffers");
 ```
 
 Binding multiple textures (to a `tx[]` array) to different framebuffer color attachments:
@@ -51,10 +47,34 @@ Binding multiple textures (to a `tx[]` array) to different framebuffer color att
 ```js
 const fb = gl.createFramebuffer();
 gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT0_WEBGL, gl.TEXTURE_2D, tx[0], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT1_WEBGL, gl.TEXTURE_2D, tx[1], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT2_WEBGL, gl.TEXTURE_2D, tx[2], 0);
-gl.framebufferTexture2D(gl.FRAMEBUFFER, ext.COLOR_ATTACHMENT3_WEBGL, gl.TEXTURE_2D, tx[3], 0);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT0_WEBGL,
+  gl.TEXTURE_2D,
+  tx[0],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT1_WEBGL,
+  gl.TEXTURE_2D,
+  tx[1],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT2_WEBGL,
+  gl.TEXTURE_2D,
+  tx[2],
+  0,
+);
+gl.framebufferTexture2D(
+  gl.FRAMEBUFFER,
+  ext.COLOR_ATTACHMENT3_WEBGL,
+  gl.TEXTURE_2D,
+  tx[3],
+  0,
+);
 ```
 
 Mapping the color attachments to draw buffer slots that the fragment shader will write to using `gl_FragData`:
@@ -64,7 +84,7 @@ ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
-  ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
+  ext.COLOR_ATTACHMENT3_WEBGL, // gl_FragData[3]
 ]);
 ```
 

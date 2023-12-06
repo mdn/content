@@ -1,9 +1,7 @@
 ---
 title: keySplines
 slug: Web/SVG/Attribute/keySplines
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#KeySplinesAttribute
 ---
 
@@ -18,7 +16,6 @@ If there are any errors in the keySplines specification (bad values, too many or
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
@@ -88,7 +85,7 @@ The attribute value is a semicolon-separated list of control point descriptions.
     The values of `x1 y1 x2 y2` must all be in the range 0 to 1.
 
 - Safari issues
-  - :`keyTimes` values should be separated with semicolon without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
+  - : `keyTimes` values should be separated with semicolon without space before, f.e: `keyTimes="0; 0.25; 0.5; 0.75; 1"`
 
 ## Specifications
 

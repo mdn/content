@@ -1,14 +1,8 @@
 ---
-title: MediaRecorder.state
+title: "MediaRecorder: state property"
+short-title: state
 slug: Web/API/MediaRecorder/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media Recorder API
-  - MediaRecording
-  - Property
-  - Reference
-  - state
 browser-compat: api.MediaRecorder.state
 ---
 
@@ -37,7 +31,7 @@ record.onclick = () => {
   console.log(mediaRecorder.state);
   // Will return "recording"
   console.log("recorder started");
-}
+};
 ```
 
 ## Specifications
@@ -50,7 +44,7 @@ record.onclick = () => {
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).

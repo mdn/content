@@ -1,10 +1,8 @@
 ---
-title: Event()
+title: "Event: Event() constructor"
+short-title: Event()
 slug: Web/API/Event/Event
 page-type: web-api-constructor
-tags:
-  - Constructor
-  - Reference
 browser-compat: api.Event.Event
 ---
 
@@ -45,7 +43,7 @@ A new {{domxref("Event")}} object.
 ```js
 // create a look event that bubbles up and cannot be canceled
 
-const evt = new Event("look", {"bubbles":true, "cancelable":false});
+const evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // event can be dispatched from any element, not only the document

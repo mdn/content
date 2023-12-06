@@ -1,15 +1,10 @@
 ---
-title: XRFrame.getHitTestResults()
+title: "XRFrame: getHitTestResults() method"
+short-title: getHitTestResults()
 slug: Web/API/XRFrame/getHitTestResults
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getHitTestResults
 ---
 
@@ -40,15 +35,17 @@ To request a hit test source, start an {{domxref("XRSession")}} with the `hit-te
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 let hitTestSource = null;
-xrSession.requestHitTestSource({
-  space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay : new XRRay({y: 0.5})
-}).then((viewerHitTestSource) => {
-  hitTestSource = viewerHitTestSource;
-});
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
 // frame loop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResults(hitTestSource);

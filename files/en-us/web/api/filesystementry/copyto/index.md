@@ -1,17 +1,11 @@
 ---
-title: FileSystemEntry.copyTo()
+title: "FileSystemEntry: copyTo() method"
+short-title: copyTo()
 slug: Web/API/FileSystemEntry/copyTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries APIs
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - copyTo
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.copyTo
 ---
 
@@ -74,11 +68,21 @@ This example shows how a temporary log file might be moved into a more permanent
 directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, (fileEntry) => {
-  workingDirectory.getDirectory("log", {}, (dirEntry) => {
-    fileEntry.copyTo(dirEntry);
-  }, handleError);
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    workingDirectory.getDirectory(
+      "log",
+      {},
+      (dirEntry) => {
+        fileEntry.copyTo(dirEntry);
+      },
+      handleError,
+    );
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility

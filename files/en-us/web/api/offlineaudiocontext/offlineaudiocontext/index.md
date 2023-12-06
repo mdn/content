@@ -1,15 +1,8 @@
 ---
-title: OfflineAudioContext()
+title: "OfflineAudioContext: OfflineAudioContext() constructor"
+short-title: OfflineAudioContext()
 slug: Web/API/OfflineAudioContext/OfflineAudioContext
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Audio Contexts
-  - Constructor
-  - OfflineAudioContext
-  - Reference
-  - Web Audio API
 browser-compat: api.OfflineAudioContext.OfflineAudioContext
 ---
 
@@ -79,7 +72,7 @@ const source = offlineCtx.createBufferSource();
 ```
 
 For a full working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/)
-GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/master/offline-audio-context-promise/index.html) too.)
+GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/index.html) too.)
 
 ## Specifications
 

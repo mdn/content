@@ -1,14 +1,8 @@
 ---
-title: AudioNode.channelInterpretation
+title: "AudioNode: channelInterpretation property"
+short-title: channelInterpretation
 slug: Web/API/AudioNode/channelInterpretation
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioNode
-  - Property
-  - Reference
-  - Web Audio API
-  - channelInterpretation
 browser-compat: api.AudioNode.channelInterpretation
 ---
 

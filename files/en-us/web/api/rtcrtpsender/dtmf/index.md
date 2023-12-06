@@ -1,17 +1,8 @@
 ---
-title: RTCRtpSender.dtmf
+title: "RTCRtpSender: dtmf property"
+short-title: dtmf
 slug: Web/API/RTCRtpSender/dtmf
 page-type: web-api-instance-property
-tags:
-  - DTMF
-  - Media
-  - NeedsExample
-  - Property
-  - RTCRtpSender
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCRtpSender.dtmf
 ---
 

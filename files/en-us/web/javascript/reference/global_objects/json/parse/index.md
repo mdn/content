@@ -1,18 +1,13 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - ECMAScript 5
-  - JSON
-  - JavaScript
-  - Method
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.JSON.parse
 ---
 
 {{JSRef}}
 
-The **`JSON.parse()`** method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
+The **`JSON.parse()`** static method parses a JSON string, constructing the JavaScript value or object described by the string. An optional _reviver_ function can be provided to perform a transformation on the resulting object before it is returned.
 
 {{EmbedInteractiveExample("pages/js/json-parse.html")}}
 
@@ -45,15 +40,27 @@ The {{jsxref("Object")}}, {{jsxref("Array")}}, string, number, boolean, or `null
 
 ## Description
 
-`JSON.parse()` parses a JSON string according to the [JSON grammar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar), then evaluates the string as if it's a JavaScript expression. The only instance where a piece of JSON text represents a different value from the same JavaScript expression is when dealing with the `"__proto__"` key — see [Object literal syntax vs. JSON](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#object_literal_syntax_vs._json).
+`JSON.parse()` parses a JSON string according to the [JSON grammar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON#full_json_grammar), then evaluates the string as if it's a JavaScript expression. The only instance where a piece of JSON text represents a different value from the same JavaScript expression is when dealing with the `"__proto__"` key — see [Object literal syntax vs. JSON](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#object_literal_syntax_vs._json).
 
 ### The reviver parameter
 
 If a `reviver` is specified, the value computed by parsing is _transformed_ before being returned. Specifically, the computed value and all its properties (in a [depth-first](https://en.wikipedia.org/wiki/Depth-first_search) fashion, beginning with the most nested properties and proceeding to the original value itself) are individually run through the `reviver`.
 
-The `reviver` is called with the object containing the property being processed as `this`, and two arguments: `key` and `value`, representing the property name as a string (even for arrays) and the property value. If the `reviver` function returns {{jsxref("undefined")}} (or returns no value — for example, if execution falls off the end of the function), the property is deleted from the object. Otherwise, the property is redefined to be the return value. If the `reviver` only transforms some values and not others, be certain to return all untransformed values as-is — otherwise, they will be deleted from the resulting object.
+The `reviver` is called with the object containing the property being processed as `this` (unless you define the `reviver` as an arrow function, in which case there's no separate `this` binding) and two arguments: `key` and `value`, representing the property name as a string (even for arrays) and the property value. If the `reviver` function returns {{jsxref("undefined")}} (or returns no value — for example, if execution falls off the end of the function), the property is deleted from the object. Otherwise, the property is redefined to be the return value. If the `reviver` only transforms some values and not others, be certain to return all untransformed values as-is — otherwise, they will be deleted from the resulting object.
 
-Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, `reviver` will be last called on the root object with an empty string as the `key` and the root object as the `value`. For JSON text parsing to primitive values, `reviver` will be called once.
+Similar to the `replacer` parameter of {{jsxref("JSON.stringify()")}}, for arrays and objects, `reviver` will be last called on the root value with an empty string as the `key` and the root object as the `value`. For other valid JSON values, `reviver` works similarly and is called once with an empty string as the `key` and the value itself as the `value`.
+
+If you return another value from `reviver`, that value will completely replace the originally parsed value. This even applies to the root value. For example:
+
+```js
+const transformedObj1 = JSON.parse('[1,5,{"s":1}]', (key, value) => {
+  return typeof value === "object" ? undefined : value;
+});
+
+console.log(transformedObj1); // undefined
+```
+
+There is no way to work around this generically. You cannot specially handle the case where `key` is an empty string, because JSON objects can also contain keys that are empty strings. You need to know very precisely what kind of transformation is needed for each key when implementing the reviver.
 
 Note that `reviver` is run after the value is parsed. So, for example, numbers in JSON text will have already been converted to JavaScript numbers, and may lose precision in the process. To transfer large numbers without loss of precision, serialize them as strings, and revive them to [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt), or other appropriate arbitrary precision formats.
 
@@ -79,14 +86,12 @@ JSON.parse(
       ? value * 2 // return value * 2 for numbers
       : value, // return everything else unchanged
 );
-
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-  console.log(key); // log the current property name, the last is "".
-  return value; // return the unchanged property value.
+  console.log(key);
+  return value;
 });
-
 // 1
 // 2
 // 4
@@ -109,17 +114,15 @@ const map = new Map([
   [3, "three"],
 ]);
 
-const jsonText = JSON.stringify(
-  map,
-  (key, value) => (value instanceof Map ? Array.from(value.entries()) : value),
+const jsonText = JSON.stringify(map, (key, value) =>
+  value instanceof Map ? Array.from(value.entries()) : value,
 );
 
 console.log(jsonText);
 // [[1,"one"],[2,"two"],[3,"three"]]
 
-const map2 = JSON.parse(
-  jsonText,
-  (key, value) => (key === "" ? new Map(value) : value),
+const map2 = JSON.parse(jsonText, (key, value) =>
+  Array.isArray(value) ? new Map(value) : value,
 );
 
 console.log(map2);

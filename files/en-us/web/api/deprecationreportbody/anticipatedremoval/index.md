@@ -1,14 +1,10 @@
 ---
-title: DeprecationReportBody.anticipatedRemoval
+title: "DeprecationReportBody: anticipatedRemoval property"
+short-title: anticipatedRemoval
 slug: Web/API/DeprecationReportBody/anticipatedRemoval
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - anticipatedRemoval
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.anticipatedRemoval
 ---
 
@@ -26,9 +22,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];

@@ -1,14 +1,10 @@
 ---
-title: CSSPrimitiveValue.setFloatValue()
+title: "CSSPrimitiveValue: setFloatValue() method"
+short-title: setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setFloatValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
 

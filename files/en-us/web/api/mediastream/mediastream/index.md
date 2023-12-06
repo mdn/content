@@ -1,21 +1,8 @@
 ---
-title: MediaStream()
+title: "MediaStream: MediaStream() constructor"
+short-title: MediaStream()
 slug: Web/API/MediaStream/MediaStream
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - MediaStream
-  - Reference
-  - Streams
-  - Tracks
-  - Video
-  - WebRTC
-  - streaming
 browser-compat: api.MediaStream.MediaStream
 ---
 

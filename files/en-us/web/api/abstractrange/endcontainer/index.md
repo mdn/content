@@ -1,11 +1,8 @@
 ---
-title: AbstractRange.endContainer
+title: "AbstractRange: endContainer property"
+short-title: endContainer
 slug: Web/API/AbstractRange/endContainer
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.AbstractRange.endContainer
 ---
 

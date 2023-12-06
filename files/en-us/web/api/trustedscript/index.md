@@ -2,11 +2,6 @@
 title: TrustedScript
 slug: Web/API/TrustedScript
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - TrustedScript
 browser-compat: api.TrustedScript
 ---
 
@@ -42,4 +37,4 @@ console.log(sanitized); /* a TrustedScript object */
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)

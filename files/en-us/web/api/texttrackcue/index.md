@@ -2,21 +2,6 @@
 title: TextTrackCue
 slug: Web/API/TextTrackCue
 page-type: web-api-interface
-tags:
-  - API
-  - Accessibility
-  - Draft
-  - HTML
-  - Interface
-  - Media
-  - NeedsContent
-  - TextTrack
-  - TextTrackCue
-  - WebVTT
-  - a11y
-  - cue
-  - track
-  - vtt
 browser-compat: api.TextTrackCue
 ---
 

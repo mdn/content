@@ -1,15 +1,11 @@
 ---
-title: AudioWorkletProcessor.parameterDescriptors (static getter)
+title: "AudioWorkletProcessor: parameterDescriptors property"
+short-title: parameterDescriptors
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - parameterDescriptors
-browser-compat: api.AudioWorkletProcessor.parameterDescriptors
+status:
+  - experimental
+spec-urls: https://webaudio.github.io/web-audio-api/#audioworkletprocess-callback-parameters
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
@@ -48,10 +44,6 @@ See [`AudioWorkletNode.parameters`](/en-US/docs/Web/API/AudioWorkletNode/paramet
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

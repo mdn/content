@@ -2,14 +2,6 @@
 title: <angle-percentage>
 slug: Web/CSS/angle-percentage
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - angle-percentage
-  - units
-  - values
 browser-compat: css.types.angle-percentage
 ---
 
@@ -38,5 +30,5 @@ Refer to the documentation for {{Cssxref("angle")}} and {{Cssxref("percentage")}
 ## See also
 
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) and [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient)

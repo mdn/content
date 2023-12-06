@@ -1,17 +1,10 @@
 ---
-title: USBDevice.productId
+title: "USBDevice: productId property"
+short-title: productId
 slug: Web/API/USBDevice/productID
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - productID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.productId
 ---
 

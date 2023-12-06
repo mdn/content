@@ -1,13 +1,7 @@
 ---
 title: CSS first steps overview
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Landing
-  - Learn
-  - Module
-  - first steps
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

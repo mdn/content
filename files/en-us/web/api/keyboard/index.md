@@ -2,15 +2,8 @@
 title: Keyboard
 slug: Web/API/Keyboard
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Keyboard API
-  - Keyboard Lock
-  - Keyboard Map
-  - Reference
-  - keyboard
+status:
+  - experimental
 browser-compat: api.Keyboard
 ---
 
@@ -42,9 +35,8 @@ The following example demonstrates how to get the location- or layout-specific s
 ```js
 if (navigator.keyboard) {
   const keyboard = navigator.keyboard;
-  keyboard.getLayoutMap()
-  .then((keyboardLayoutMap) => {
-    const upKey = keyboardLayoutMap.get('KeyW');
+  keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+    const upKey = keyboardLayoutMap.get("KeyW");
     window.alert(`Press ${upKey} to move up.`);
   });
 } else {

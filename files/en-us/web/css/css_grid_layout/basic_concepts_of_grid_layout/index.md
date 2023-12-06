@@ -1,17 +1,12 @@
 ---
 title: Basic concepts of grid layout
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 page-type: guide
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-  - Layout
 ---
 
 {{CSSRef}}
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
 
 ## What is a grid?
 
@@ -37,7 +32,7 @@ Grid contains alignment features so we can control how the items align once plac
 
 More than one item can be placed into a grid cell or area and they can partially overlap each other. This layering may then be controlled with the {{cssxref("z-index")}} property.
 
-Grid is a powerful specification that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), can help you create layouts that were previously impossible to build in CSS. It all starts by creating a grid in your **grid container**.
+Grid is a powerful specification that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), can help you create layouts that were previously impossible to build in CSS. It all starts by creating a grid in your **grid container**.
 
 ## Grid container
 
@@ -95,9 +90,11 @@ If we want to start making this more grid-like we need to add column tracks.
 
 ## Grid tracks
 
-We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.
+We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two adjacent lines on the grid. The image below shows a highlighted track – this is the first-row track in our grid.
 
 ![A box with 3 grid items. Above the three items is a solid light green area which is the track.](1_grid_track.png)
+
+Grid tracks are defined in the explicit grid by using the `grid-template-columns` and `grid-template-rows` properties or the shorthand `grid` or `grid-template` properties. Tracks are also created in the implicit grid by positioning a grid item outside of the tracks created in the explicit grid.
 
 ### Basic example
 
@@ -614,6 +611,7 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
+  gap: 3px;
   background-color: #fff4e6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -645,11 +643,9 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 ### Subgrid
 
-In the working draft of the Level 2 Grid specification there is a feature called _subgrid_, which would let us create nested grids that use the track definition of the parent grid.
+In addition to regular grids, _subgrid_ lets us create nested grids that use the track definition of the parent grid.
 
-> **Note:** This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.
-
-In the current specification, we would edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid will then use the parent grid tracks to layout items.
+To use them, we edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid then use the parent grid tracks to layout items.
 
 ```css
 .box1 {
@@ -786,4 +782,4 @@ We can control the order in which items stack up by using the `z-index` property
 
 ## Next steps
 
-In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout), where we will really start to dig into the details of CSS Grid Layout.
+In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), where we will really start to dig into the details of CSS Grid Layout.

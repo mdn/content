@@ -2,12 +2,8 @@
 title: Web Serial API
 slug: Web/API/Web_Serial_API
 page-type: web-api-overview
-tags:
-  - API
-  - Web Serial
-  - Overview
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Serial
 ---
 
@@ -23,10 +19,17 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 
 ## Interfaces
 
-- {{domxref("Serial")}}
+- {{domxref("Serial")}} {{Experimental_Inline}}
   - : Provides attributes and methods for finding and connecting to serial ports from a web page.
-- {{domxref("SerialPort")}}
+- {{domxref("SerialPort")}} {{Experimental_Inline}}
   - : Provides access to a serial port on the host device.
+
+## Extensions to other interfaces
+
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 
 ## Examples
 
@@ -41,11 +44,11 @@ The `connect` and `disconnect` events let sites react when a device is connected
 If the site doesn't have access to any connected ports it has to wait until it has user activation to proceed. In this example we use a {{domxref("Element.click_event", "click")}} event handler on a button for this task. A filter is passed to {{domxref("Serial.requestPort()","requestPort()")}} with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer.
 
 ```js
-navigator.serial.addEventListener('connect', (e) => {
+navigator.serial.addEventListener("connect", (e) => {
   // Connect to `e.target` or add it to a list of available ports.
 });
 
-navigator.serial.addEventListener('disconnect', (e) => {
+navigator.serial.addEventListener("disconnect", (e) => {
   // Remove `e.target` from the list of available ports.
 });
 
@@ -53,13 +56,16 @@ navigator.serial.getPorts().then((ports) => {
   // Initialize the list of available ports with `ports` on page load.
 });
 
-button.addEventListener('click', () => {
-  const usbVendorId = 0xABCD;
-  navigator.serial.requestPort({ filters: [{ usbVendorId }]}).then((port) => {
-    // Connect to `port` or add it to the list of available ports.
-  }).catch((e) => {
-    // The user didn't select a port.
-  });
+button.addEventListener("click", () => {
+  const usbVendorId = 0xabcd;
+  navigator.serial
+    .requestPort({ filters: [{ usbVendorId }] })
+    .then((port) => {
+      // Connect to `port` or add it to the list of available ports.
+    })
+    .catch((e) => {
+      // The user didn't select a port.
+    });
 });
 ```
 
@@ -98,5 +104,5 @@ while (port.readable) {
 
 ## See also
 
-- [Read from and write to a serial port](https://web.dev/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/articles/serial/)
 - [Getting started with the Web Serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

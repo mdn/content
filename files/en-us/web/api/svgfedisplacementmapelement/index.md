@@ -2,12 +2,6 @@
 title: SVGFEDisplacementMapElement
 slug: Web/API/SVGFEDisplacementMapElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEDisplacementMapElement
 ---
 

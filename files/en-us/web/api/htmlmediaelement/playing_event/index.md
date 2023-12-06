@@ -1,13 +1,8 @@
 ---
-title: 'HTMLMediaElement: playing event'
+title: "HTMLMediaElement: playing event"
+short-title: playing
 slug: Web/API/HTMLMediaElement/playing_event
 page-type: web-api-event
-tags:
-  - API
-  - HTMLMediaElement
-  - Reference
-  - playing
-  - Event
 browser-compat: api.HTMLMediaElement.playing_event
 ---
 
@@ -22,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('playing', (event) => {});
+addEventListener("playing", (event) => {});
 
-onplaying = (event) => { };
+onplaying = (event) => {};
 ```
 
 ## Event type
@@ -38,20 +33,20 @@ These examples add an event listener for the HTMLMediaElement's `playing` event,
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('playing', (event) => {
-  console.log('Video is no longer paused');
+video.addEventListener("playing", (event) => {
+  console.log("Video is no longer paused");
 });
 ```
 
 Using the `onplaying` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onplaying = (event) => {
-  console.log('Video is no longer paused.');
+  console.log("Video is no longer paused.");
 };
 ```
 

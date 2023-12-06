@@ -1,12 +1,9 @@
 ---
 title: <tref>
 slug: Web/SVG/Element/tref
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
-  - Deprecated
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.tref
 ---
 
@@ -32,7 +29,7 @@ The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) elem
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

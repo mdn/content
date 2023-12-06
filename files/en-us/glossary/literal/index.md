@@ -1,10 +1,10 @@
 ---
 title: Literal
 slug: Glossary/Literal
-tags:
-  - Literal
-  - JavaScript
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
 
@@ -29,7 +29,7 @@ The following are examples of string literals:
 "bar";
 "1234";
 "one line \n new line";
-"John's cat";
+"Joyo's cat";
 ```
 
 ### Object literals

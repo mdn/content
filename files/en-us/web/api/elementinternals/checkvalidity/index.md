@@ -1,19 +1,14 @@
 ---
-title: ElementInternals.checkValidity()
+title: "ElementInternals: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/ElementInternals/checkValidity
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - checkValidity
-  - ElementInternals
 browser-compat: api.ElementInternals.checkValidity
 ---
 
-{{DefaultAPISidebar("")}}
+{{APIRef("DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) rules applied to it.
+The **`checkValidity()`** method of the {{domxref("ElementInternals")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
 If `checkValidity` returns `false` then a cancelable [invalid event](/en-US/docs/Web/API/HTMLInputElement/invalid_event) is fired on the element.
 
@@ -42,7 +37,7 @@ In the following example {{domxref("ElementInternals.setValidity()")}} is used t
 
 ```js
 let element = document.getElementById("join-checkbox");
-element.internals_.setValidity({'valueMissing':true},"my message");
+element.internals_.setValidity({ valueMissing: true }, "my message");
 console.log(element.internals_.checkValidity()); // false
 element.internals_.setValidity({});
 console.log(element.internals_.checkValidity()); // true

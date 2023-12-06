@@ -2,13 +2,6 @@
 title: TouchEvent
 slug: Web/API/TouchEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent
 ---
 
@@ -117,4 +110,3 @@ See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_eve
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
-- {{domxref("MSGestureEvent")}}

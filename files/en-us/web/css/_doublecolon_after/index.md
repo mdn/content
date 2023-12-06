@@ -1,14 +1,7 @@
 ---
-title: '::after (:after)'
+title: "::after"
 slug: Web/CSS/::after
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.after
 ---
 
@@ -22,9 +15,14 @@ In CSS, **`::after`** creates a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elem
 
 ## Syntax
 
+```css-nolint
+::after {
+  content: /* value */;
+  /* properties */
+}
 ```
-::after
-```
+
+If the [`content`](/en-US/docs/Web/CSS/content) property is not specified, has an invalid value, or has `normal` or `none` as a value, then the `::after` pseudo-element is not rendered. It behaves as if `display: none` is set.
 
 > **Note:** CSS introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:after`, introduced earlier.
 
@@ -105,8 +103,8 @@ We can also support keyboard users with this technique, by adding a `tabindex` o
   </span>
   with a few
   <span tabindex="0" data-descr="small popups that appear when hovering">
-    tooltips
-  </span>.
+    tooltips</span
+  >.
 </p>
 ```
 

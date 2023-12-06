@@ -1,14 +1,8 @@
 ---
-title: CSSKeyframeRule.style
+title: "CSSKeyframeRule: style property"
+short-title: style
 slug: Web/API/CSSkeyframeRule/style
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframeRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframeRule.style
 ---
 
@@ -32,7 +26,7 @@ A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
 ## Examples
 
 The CSS includes a {{cssxref("@keyframes")}} at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual `CSSKeyFrame` objects for each keyframe.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrameRule")}} objects for each keyframe.
 
 ```css
 @keyframes slidein {

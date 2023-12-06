@@ -1,13 +1,8 @@
 ---
-title: URLSearchParams.forEach()
+title: "URLSearchParams: forEach() method"
+short-title: forEach()
 slug: Web/API/URLSearchParams/forEach
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - forEach
 browser-compat: api.URLSearchParams.forEach
 ---
 
@@ -60,7 +55,7 @@ searchParams.forEach((value, key) => {
 
 The result is:
 
-```
+```plain
 value1 key1
 value2 key2
 ```

@@ -1,14 +1,10 @@
 ---
-title: KeyboardEvent.charCode
+title: "KeyboardEvent: charCode property"
+short-title: charCode
 slug: Web/API/KeyboardEvent/charCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.charCode
 ---
 
@@ -39,11 +35,13 @@ A number that represents the Unicode value of the character key that was pressed
 ### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.querySelector('#log');
+const input = document.querySelector("input");
+const log = document.querySelector("#log");
 
-input.addEventListener('keypress', (e) => {
-  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${e.charCode}`;
+input.addEventListener("keypress", (e) => {
+  log.innerText = `Key pressed: ${String.fromCharCode(e.charCode)}\ncharCode: ${
+    e.charCode
+  }`;
 });
 ```
 
@@ -72,11 +70,11 @@ input.addEventListener('keypress', (e) => {
   {{domxref("Element/keyup_event", "keyup")}} events. In these cases, `keyCode` is set instead.
 - To get the code of the key regardless of whether it was stored in
   `keyCode` or `charCode`, query the {{
-    domxref("KeyboardEvent.which", "which") }} property.
+    domxref("UIEvent/which", "which") }} property.
 - Characters entered through an IME do not register through `keyCode` or
   `charCode`.
 - For a list of the `charCode` values associated with particular keys, run
-  [Example 7: Displaying Event Object Properties](/en-US/docs/Web/API/Document_Object_Model/Examples#example_7:_displaying_event_object_properties) and view the resulting HTML table.
+  [Example 7: Displaying Event Object Properties](/en-US/docs/Web/API/Document_Object_Model/Examples#example_7_displaying_event_object_properties) and view the resulting HTML table.
 
 ## Specifications
 

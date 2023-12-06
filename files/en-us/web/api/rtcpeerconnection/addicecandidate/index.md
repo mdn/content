@@ -1,25 +1,14 @@
 ---
-title: RTCPeerConnection.addIceCandidate()
+title: "RTCPeerConnection: addIceCandidate() method"
+short-title: addIceCandidate()
 slug: Web/API/RTCPeerConnection/addIceCandidate
 page-type: web-api-instance-method
-tags:
-  - API
-  - ICE
-  - Media
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - Web
-  - WebRTC
-  - WebRTC API
-  - addIceCandidate
 browser-compat: api.RTCPeerConnection.addIceCandidate
 ---
 
 {{APIRef("WebRTC")}}
 
-When a web site or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
+When a website or app using {{domxref("RTCPeerConnection")}} receives a new ICE candidate from the remote peer over its signaling channel, it delivers the newly-received candidate to the browser's {{Glossary("ICE")}} agent by calling **`RTCPeerConnection.addIceCandidate()`**.
 This adds this new remote candidate to the `RTCPeerConnection`'s remote description, which describes the state of the remote end of the connection.
 
 If the `candidate` parameter is missing or a value of `null` is given when calling `addIceCandidate()`, the added ICE candidate is an "end-of-candidates" indicator.
@@ -35,7 +24,8 @@ This is covered in more detail in the articles [WebRTC connectivity](/en-US/docs
 
 ```js-nolint
 addIceCandidate(candidate)
-addIceCandidate(candidate, successCallback)
+
+addIceCandidate(candidate, successCallback) // deprecated
 addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 ```
 
@@ -56,12 +46,12 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-        ```
-        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```plain
+        a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
         ```
 
         the corresponding `candidate` string's value will be
-        `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
+        `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`.
 
         The {{Glossary("user agent")}} always prefers candidates with the highest {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal.
         In the example above, the priority is `2043278322`. The attributes are all separated by a single space character, and are in a specific order.
@@ -71,7 +61,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
         - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
         - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
         - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
         - {{domxref("RTCIceCandidate.port", "port")}} = 44323
         - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
@@ -108,7 +98,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
     If no `candidate` object is specified, or its value is `null`, an end-of-candidates signal is sent to the remote peer using the `end-of-candidates` a-line, formatted like this:
 
-    ```
+    ```plain
     a=end-of-candidates
     ```
 
@@ -117,7 +107,7 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 In older code and documentation, you may see a callback-based version of this function.
 This has been deprecated and its use is **strongly** discouraged. You
 should update any existing code to use the {{jsxref("Promise")}}-based version of
-`addIceCandidate()` instead. The parameters for this form of
+`addIceCandidate()` instead. The parameters for the older form of
 `addIceCandidate()` are described below, to aid in updating existing code.
 
 - `successCallback` {{deprecated_inline}}
@@ -180,7 +170,7 @@ signalingChannel.onmessage = (receivedString) => {
   if (message.ice) {
     // A typical value of ice here might look something like this:
     //
-    // {candidate: "candidate:0 1 UDP 2122154243 192.168.1.9 53421 typ host", sdpMid: "0", …}
+    // {candidate: "candidate:0 1 UDP 2122154243 192.0.2.43 53421 typ host", sdpMid: "0", …}
     //
     // Pass the whole thing to addIceCandidate:
 
@@ -190,7 +180,7 @@ signalingChannel.onmessage = (receivedString) => {
   } else {
     // handle other things you might be signaling, like sdp
   }
-}
+};
 ```
 
 The last candidate to be signaled this way by the remote peer will be a special
@@ -198,7 +188,7 @@ candidate denoting end-of-candidates. Out of interest, end-of-candidates may be
 manually indicated as follows:
 
 ```js
-pc.addIceCandidate({candidate:''});
+pc.addIceCandidate({ candidate: "" });
 ```
 
 However, in most cases you won't need to look for this explicitly, since the events

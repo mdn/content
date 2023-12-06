@@ -1,11 +1,9 @@
 ---
 title: method
 slug: Web/SVG/Attribute/method
-tags:
-  - Experimental
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - experimental
 spec-urls: https://svgwg.org/svg2-draft/text.html#TextPathElementMethodAttribute
 ---
 

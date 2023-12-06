@@ -1,17 +1,10 @@
 ---
-title: KeyboardEvent.keyCode
+title: "KeyboardEvent: keyCode property"
+short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - KeyboardEvent
-  - Property
-  - Read-only
-  - Reference
-  - keyCode
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.keyCode
 ---
 
@@ -28,25 +21,29 @@ You should avoid using this if possible; it's been deprecated for some time. Ins
 ## Examples
 
 ```js
-window.addEventListener("keydown", (event) => {
-  if (event.defaultPrevented) {
-    return; // Should do nothing if the default action has been cancelled
-  }
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Should do nothing if the default action has been cancelled
+    }
 
-  let handled = false;
-  if (event.key !== undefined) {
-    // Handle the event with KeyboardEvent.key
-    handled = true;
-  } else if (event.keyCode !== undefined) {
-    // Handle the event with KeyboardEvent.keyCode
-    handled = true;
-  }
+    let handled = false;
+    if (event.key !== undefined) {
+      // Handle the event with KeyboardEvent.key
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // Handle the event with KeyboardEvent.keyCode
+      handled = true;
+    }
 
-  if (handled) {
-    // Suppress "double action" if event handled
-    event.preventDefault();
-  }
-}, true);
+    if (handled) {
+      // Suppress "double action" if event handled
+      event.preventDefault();
+    }
+  },
+  true,
+);
 ```
 
 ## Specifications
@@ -67,7 +64,7 @@ IE just exposes the native virtual keycode value as `KeyboardEvent.keyCode`.
 
 Google Chrome, Chromium and Safari must decide the value from the input character. If the inputting character can be inputted with the US keyboard layout, they use the `keyCode` value on the US keyboard layout.
 
-Firefox gets `keyCode` values from ASCII characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
+Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
 
 1. If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
 2. If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
@@ -1155,7 +1152,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x11 (17)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSLeft"</code></th>
+      <th scope="row"><code>"MetaLeft"</code></th>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
@@ -1166,7 +1163,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x5B (91)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSRight"</code></th>
+      <th scope="row"><code>"MetaRight"</code></th>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5D (93)</code>⚠️</td>
@@ -2314,7 +2311,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        {{bug(969247)}}.)
+        [Firefox bug 969247](https://bugzil.la/969247).)
       </td>
     </tr>
     <tr>

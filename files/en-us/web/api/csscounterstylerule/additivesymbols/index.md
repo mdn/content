@@ -1,13 +1,8 @@
 ---
-title: CSSCounterStyleRule.additiveSymbols
+title: "CSSCounterStyleRule: additiveSymbols property"
+short-title: additiveSymbols
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - additiveSymbols
-  - CSSCounterStyleRule
 browser-compat: api.CSSCounterStyleRule.additiveSymbols
 ---
 
@@ -26,7 +21,10 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols:
+    V 5,
+    IV 4,
+    I 1;
 }
 ```
 

@@ -1,21 +1,13 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Number
-  - isNaN
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isNaN
 ---
 
 {{JSRef}}
 
-The **`Number.isNaN()`** method determines whether the passed
-value is {{jsxref("NaN")}} and its type is {{jsxref("Number")}}. It is a more robust
-version of the original, global {{jsxref("isNaN", "isNaN()")}}.
+The **`Number.isNaN()`** static method determines whether the passed value is the number value {{jsxref("NaN")}}, and returns `false` if the input is not of the Number type. It is a more robust version of the original, global {{jsxref("isNaN()")}} function.
 
 {{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 
@@ -36,11 +28,11 @@ The boolean value `true` if the given value is a number with value {{jsxref("NaN
 
 ## Description
 
-Due to both equality operators, [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) and [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality), evaluating to `false` when checking if {{jsxref("NaN")}} _is_ {{jsxref("NaN")}}, the function `Number.isNaN()` has become necessary. This situation is unlike all other possible value comparisons in JavaScript.
+The function `Number.isNaN()` provides a convenient way to check for equality with `NaN`. Note that you cannot test for equality with `NaN` using either the [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) or [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) operators, because unlike all other value comparisons in JavaScript, these evaluate to `false` whenever one operand is {{jsxref("NaN")}}, even if the other operand is also {{jsxref("NaN")}}.
 
 Since `x !== x` is only true for `NaN` among all possible JavaScript values, `Number.isNaN(x)` can also be replaced with a test for `x !== x`, despite the latter being less readable.
 
-As opposed to the global {{jsxref("isNaN", "isNaN()")}} function, the `Number.isNaN()` method doesn't force-convert the parameter to a number. This makes it safe to pass values that would normally convert to {{jsxref("NaN")}} but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the Number type that are also {{jsxref("NaN")}} return `true`.
+As opposed to the global {{jsxref("isNaN()")}} function, the `Number.isNaN()` method doesn't force-convert the parameter to a number. This makes it safe to pass values that would normally convert to {{jsxref("NaN")}} but aren't actually the same value as {{jsxref("NaN")}}. This also means that only values of the Number type that are also {{jsxref("NaN")}} return `true`.
 
 ## Examples
 
@@ -70,7 +62,7 @@ Number.isNaN("");
 Number.isNaN(" ");
 ```
 
-The global {{jsxref("isNaN", "isNaN()")}} coerces its parameter to a number:
+The global {{jsxref("isNaN()")}} coerces its parameter to a number:
 
 ```js
 isNaN("NaN"); // true
@@ -97,4 +89,4 @@ isNaN(" "); // false, this is coerced to 0
 
 - [Polyfill of `Number.isNaN` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

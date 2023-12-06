@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
+title: "CanvasRenderingContext2D: lineJoin property"
+short-title: lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
 

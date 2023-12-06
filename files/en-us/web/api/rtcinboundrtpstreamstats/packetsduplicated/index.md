@@ -1,22 +1,8 @@
 ---
-title: RTCInboundRtpStreamStats.packetsDuplicated
+title: "RTCInboundRtpStreamStats: packetsDuplicated property"
+short-title: packetsDuplicated
 slug: Web/API/RTCInboundRtpStreamStats/packetsDuplicated
 page-type: web-api-instance-property
-tags:
-  - API
-  - Duplicate
-  - Packets
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Repeat
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - packetsDuplicated
-  - stream
 browser-compat: api.RTCInboundRtpStreamStats.packetsDuplicated
 ---
 

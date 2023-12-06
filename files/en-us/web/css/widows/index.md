@@ -2,19 +2,16 @@
 title: widows
 slug: Web/CSS/widows
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.widows
 ---
 
 {{CSSRef}}
 
-The **`widows`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`widows`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
+
+In typography, a _widow_ is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)
+
+## Syntax
 
 ```css
 /* <integer> values */
@@ -28,10 +25,6 @@ widows: revert;
 widows: revert-layer;
 widows: unset;
 ```
-
-In typography, a _widow_ is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)
-
-## Syntax
 
 ### Values
 
@@ -99,4 +92,4 @@ p:first-child {
 ## See also
 
 - {{cssxref("orphans")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)

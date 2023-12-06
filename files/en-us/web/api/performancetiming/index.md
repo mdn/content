@@ -2,22 +2,12 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 page-type: web-api-interface
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Interface
-  - Navigation Timing
-  - Navigation Timing API
-  - Optimization
-  - Performance
-  - Reference
-  - Timing
-  - legacy
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming
 ---
 
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
@@ -80,7 +70,7 @@ These properties are listed in the order in which they occur during the navigati
 
 _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 
-- {{Deprecated_Inline}} {{domxref("PerformanceTiming.toJSON()")}}
+- {{domxref("PerformanceTiming.toJSON()")}} {{Deprecated_Inline}}
   - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PerformanceTiming` object.
 
 ## Specifications
@@ -95,3 +85,4 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 ## See also
 
 - The {{domxref("Performance.timing")}} property that creates such an object.
+- {{domxref("PerformanceNavigationTiming")}} (part of Navigation Timing Level 2) that has superseded this API.

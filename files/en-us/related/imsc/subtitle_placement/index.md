@@ -1,14 +1,7 @@
 ---
 title: Subtitle placement in IMSC
 slug: Related/IMSC/Subtitle_placement
-tags:
-  - Guide
-  - IMSC
-  - Layout
-  - Positioning
-  - captions
-  - region
-  - subtitles
+page-type: guide
 ---
 
 IMSC allows for very explicit positioning of the text over the video content you are displaying it against. There are a few tricks and best practices that can be used in order to simplify the placement of the on-screen text.

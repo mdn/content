@@ -1,17 +1,10 @@
 ---
-title: USBDevice.deviceVersionMinor
+title: "USBDevice: deviceVersionMinor property"
+short-title: deviceVersionMinor
 slug: Web/API/USBDevice/deviceVersionMinor
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceVersionMinor
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceVersionMinor
 ---
 

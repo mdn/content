@@ -2,11 +2,6 @@
 title: Encoding API Encodings
 slug: Web/API/Encoding_API/Encodings
 page-type: guide
-tags:
-  - API
-  - Encoding
-  - Overview
-  - Reference
 ---
 
 {{DefaultAPISidebar("Encoding API")}}

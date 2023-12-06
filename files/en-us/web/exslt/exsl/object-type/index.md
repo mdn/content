@@ -1,10 +1,7 @@
 ---
 title: exsl:object-type()
 slug: Web/EXSLT/exsl/object-type
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -37,4 +34,4 @@ The object's type, which will be one of the following:
 
 ## Specifications
 
-[EXSLT - EXSL:OBJECT-TYPE](http://exslt.org/exsl/functions/object-type/index.html)
+[EXSLT - EXSL:OBJECT-TYPE](https://exslt.github.io/exsl/functions/object-type/index.html)

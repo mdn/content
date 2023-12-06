@@ -1,13 +1,10 @@
 ---
-title: CSSPrimitiveValue.getRGBColorValue()
+title: "CSSPrimitiveValue: getRGBColorValue() method"
+short-title: getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRGBColorValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
 

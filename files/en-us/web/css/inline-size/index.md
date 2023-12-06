@@ -2,12 +2,6 @@
 title: inline-size
 slug: Web/CSS/inline-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.inline-size
 ---
 
@@ -32,6 +26,7 @@ inline-size: 75%;
 /* Keyword values */
 inline-size: max-content;
 inline-size: min-content;
+inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 

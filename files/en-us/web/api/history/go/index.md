@@ -1,14 +1,8 @@
 ---
-title: History.go()
+title: "History: go() method"
+short-title: go()
 slug: Web/API/History/go
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
 browser-compat: api.History.go
 ---
 
@@ -47,13 +41,13 @@ To move back one page (the equivalent of calling {{domxref("History.back",
   "back()")}}):
 
 ```js
-history.go(-1)
+history.go(-1);
 ```
 
 To move forward a page, just like calling {{domxref("History.forward", "forward()")}}:
 
 ```js
-history.go(1)
+history.go(1);
 ```
 
 To move forward two pages:

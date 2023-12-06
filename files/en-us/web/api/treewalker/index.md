@@ -2,9 +2,6 @@
 title: TreeWalker
 slug: Web/API/TreeWalker
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
 browser-compat: api.TreeWalker
 ---
 
@@ -41,7 +38,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                              |
 
 - {{domxref("TreeWalker.filter")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
+  - : Returns a `NodeFilter` used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 
@@ -75,7 +72,10 @@ _This interface doesn't inherit any method._
     But if we do:
 
     ```js
-    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ELEMENT);
+    let walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_ELEMENT,
+    );
     let node = walker.firstChild(); // nodeName: "DIV"
     ```
 
@@ -103,4 +103,4 @@ _This interface doesn't inherit any method._
 ## See also
 
 - The creator method: {{domxref("Document.createTreeWalker()")}}.
-- Related interfaces: {{domxref("NodeFilter")}}, {{domxref("NodeIterator")}}.
+- Related interface: {{domxref("NodeIterator")}}.

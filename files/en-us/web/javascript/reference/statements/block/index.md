@@ -1,17 +1,13 @@
 ---
-title: block
+title: Block statement
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.block
 ---
 
 {{jsSidebar("Statements")}}
 
-A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly brackets") and contains a list of zero or more statements and declarations.
+A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
 
 {{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
 

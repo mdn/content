@@ -1,14 +1,8 @@
 ---
-title: Document.documentElement
+title: "Document: documentElement property"
+short-title: documentElement
 slug: Web/API/Document/documentElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Reference
-  - root
 browser-compat: api.Document.documentElement
 ---
 
@@ -31,7 +25,7 @@ const firstTier = rootElement.childNodes;
 // such as <head> and <body>
 
 for (const child of firstTier) {
-   // do something with each direct child of the root element
+  // do something with each direct child of the root element
 }
 ```
 

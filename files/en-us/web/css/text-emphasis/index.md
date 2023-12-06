@@ -2,12 +2,6 @@
 title: text-emphasis
 slug: Web/CSS/text-emphasis
 page-type: css-shorthand-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text Decoration
-  - Reference
-  - recipe:css-shorthand-property
 browser-compat: css.properties.text-emphasis
 ---
 

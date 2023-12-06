@@ -2,13 +2,6 @@
 title: offset-rotate
 slug: Web/CSS/offset-rotate
 page-type: css-property
-tags:
-  - CSS
-  - CSS Motion Path
-  - CSS Property
-  - Reference
-  - offset-rotate
-  - recipe:css-property
 browser-compat: css.properties.offset-rotate
 ---
 

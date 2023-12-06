@@ -1,14 +1,10 @@
 ---
-title: CookieStoreManager.subscribe()
+title: "CookieStoreManager: subscribe() method"
+short-title: subscribe()
 slug: Web/API/CookieStoreManager/subscribe
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - subscribe
-  - CookieStoreManager
-  - Experimental
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.subscribe
 ---
 
@@ -47,16 +43,16 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subs
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
 ```
 
 The URL passed to the `subscribe()` method, may be narrower than the service worker registration scope. In the following example the subscription is for `/path/one/`, so it will receive change events for changes on the first cookie, but not the second.
 
 ```js
-registration.cookies.subscribe([{name: 'cookie1', url: '/path/one/'}]); // subscription
-cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/one/'}); // receives a change event
-cookieStore.set({name: 'cookie1', value: 'cookie-value', path: '/path/two/'}); // does not receive a change event
+registration.cookies.subscribe([{ name: "cookie1", url: "/path/one/" }]); // subscription
+cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/one/" }); // receives a change event
+cookieStore.set({ name: "cookie1", value: "cookie-value", path: "/path/two/" }); // does not receive a change event
 ```
 
 ## Specifications

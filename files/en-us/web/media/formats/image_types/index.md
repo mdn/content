@@ -1,30 +1,7 @@
 ---
 title: Image file type and format guide
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - AVIF
-  - gif
-  - icon
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -48,7 +25,7 @@ The image file formats that are most commonly used on the web are listed below.
   <tbody>
     <tr>
       <th scope="row">
-        <a href="#APNG_Animated_Portable_Network_Graphics">APNG</a>
+        <a href="#apng_animated_portable_network_graphics">APNG</a>
       </th>
       <th scope="row">Animated Portable Network Graphics</th>
       <td><code>image/apng</code></td>
@@ -60,7 +37,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#AVIF_image">AVIF</a></th>
+      <th scope="row"><a href="#avif_image">AVIF</a></th>
       <th scope="row">AV1 Image File Format</th>
       <td><code>image/avif</code></td>
       <td><code>.avif</code></td>
@@ -70,12 +47,12 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Opera, Firefox (still images only: animated images not implemented).
+          <strong>Supported:</strong> Chrome, Firefox (still images only: animated images not implemented), Opera, Safari.
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#GIF_Graphics_Interchange_Format">GIF</a></th>
+      <th scope="row"><a href="#gif_graphics_interchange_format">GIF</a></th>
       <th scope="row">Graphics Interchange Format</th>
       <td><code>image/gif</code></td>
       <td><code>.gif</code></td>
@@ -87,7 +64,7 @@ The image file formats that are most commonly used on the web are listed below.
     </tr>
     <tr>
       <th scope="row">
-        <a href="#JPEG_Joint_Photographic_Experts_Group_image">JPEG</a>
+        <a href="#jpeg_joint_photographic_experts_group_image">JPEG</a>
       </th>
       <th scope="row">Joint Photographic Expert Group image</th>
       <td><code>image/jpeg</code></td>
@@ -105,7 +82,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#PNG_Portable_Network_Graphics">PNG</a></th>
+      <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
       <th scope="row">Portable Network Graphics</th>
       <td><code>image/png</code></td>
       <td><code>.png</code></td>
@@ -118,7 +95,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#SVG_Scalable_Vector_Graphics">SVG</a></th>
+      <th scope="row"><a href="#svg_scalable_vector_graphics">SVG</a></th>
       <th scope="row">Scalable Vector Graphics</th>
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
@@ -128,7 +105,7 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#WebP_image">WebP</a></th>
+      <th scope="row"><a href="#webp_image">WebP</a></th>
       <th scope="row">Web Picture format</th>
       <td><code>image/webp</code></td>
       <td><code>.webp</code></td>
@@ -153,26 +130,26 @@ The following list includes image formats that appear on the web, but which shou
       <th scope="row">File format</th>
       <th scope="col">MIME type</th>
       <th scope="col">File extension(s)</th>
-      <th scope="col">Description</th>
+      <th scope="col">Supported browsers</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="#BMP_Bitmap_file">BMP</a></th>
+      <th scope="row"><a href="#bmp_bitmap_file">BMP</a></th>
       <th scope="row">Bitmap file</th>
       <td><code>image/bmp</code></td>
       <td><code>.bmp</code></td>
       <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#ICO_Microsoft_Windows_icon">ICO</a></th>
+      <th scope="row"><a href="#ico_microsoft_windows_icon">ICO</a></th>
       <th scope="row">Microsoft Icon</th>
       <td><code>image/x-icon</code></td>
       <td><code>.ico</code>, <code>.cur</code></td>
       <td>Chrome, Edge, Firefox, IE, Opera, Safari</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#TIFF_Tagged_Image_File_Format">TIFF</a></th>
+      <th scope="row"><a href="#tiff_tagged_image_file_format">TIFF</a></th>
       <th scope="row">Tagged Image File Format</th>
       <td><code>image/tiff</code></td>
       <td><code>.tif</code>, <code>.tiff</code></td>
@@ -185,7 +162,7 @@ The following list includes image formats that appear on the web, but which shou
 
 > **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
-> See the [Chromium bug](https://bugs.chromium.org/p/chromium/issues/detail?id=791658), and [Firefox bug](https://bugzilla.mozilla.org/show_bug.cgi?id=895131) for more information.
+> See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
 
 ## Image file type details
 
@@ -312,7 +289,7 @@ However it also has disadvantages for some cases, as video and image encoding ha
 The format offers:
 
 - Excellent lossy compression compared to JPG and PNG for visually similar compression levels (e.g. lossy AVIF images are around 50% smaller than JPEG images).
-- Generally AVIF has better compression than WebP — median 50% vs 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
+- Generally, AVIF has better compression than WebP — median 50% vs. 30% compression for the same JPG set (source: [AVIF WebP Comparison](https://www.ctrl.blog/entry/webp-avif-comparison.html) (CTRL Blog)).
 - Lossless compression.
 - Animation/multi-image storage (similar to animated GIFs, but with much better compression)
 - Alpha channel support (i.e. for transparency).
@@ -323,7 +300,7 @@ AVIF does not support progressive rendering, so files must be fully downloaded b
 This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
-AVIF is supported on desktop in Chrome, Opera and Firefox (Firefox supports still images but not animations).
+AVIF is supported in Chrome, Opera, Safari and Firefox (Firefox supports still images but not animations), but not on Edge or IE.
 As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
@@ -349,7 +326,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Chrome 85, Opera 71, and Firefox 93.
+        Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
         <ul>
           <li>
             Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
@@ -396,7 +373,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Royalty free. Licensing information is available at http://aomedia.org/license/ .
+        Royalty free. Licensing information is available at <a href="https://aomedia.org/license/">License Page</a>.
       </td>
     </tr>
   </tbody>
@@ -406,7 +383,7 @@ As support is not yet comprehensive (and has little historical depth) you should
 
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
-> **Warning:** You should typically avoid using BMP files for web site content.
+> **Warning:** You should typically avoid using BMP files for website content.
 > The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
 > More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
@@ -531,7 +508,7 @@ GIF supports simple animation, in which following an initial full-size frame, a 
 GIF has been extremely popular for decades, due to its simplicity and compatibility.
 Its animation support caused a resurgence in its popularity in the social media era, when animated GIFs began to be widely used for short "videos", memes, and other simple animation sequences.
 
-Another popular feature of GIF is support for [interlacing](https://en.wikipedia.org/wiki/Interlacing_(bitmaps)), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
+Another popular feature of GIF is support for [interlacing](<https://en.wikipedia.org/wiki/Interlacing_(bitmaps)>), where rows of pixels are stored out of order so that partially-received files can be displayed in lower quality.
 This is particularly useful when network connections are slow.
 
 GIF is a good choice for simple images and animations, although converting full color images to GIF can result in unsatisfactory dithering.
@@ -623,7 +600,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
 ### ICO (Microsoft Windows icon)
 
 The ICO (Microsoft Windows icon) file format was designed by Microsoft for desktop icons of Windows systems.
-However, early versions of Internet Explorer introduced the ability for a web site to provide a ICO file named `favicon.ico` in a web site's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
+However, early versions of Internet Explorer introduced the ability for a website to provide an ICO file named `favicon.ico` in a website's root directory to specify a **[favicon](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site)** — an icon to be displayed in the Favorites menu, and other places where an iconic representation of the site would be useful.
 
 An ICO file can contain multiple icons, and begins with a directory listing details about each.
 Following the directory comes the data for the icons.
@@ -631,7 +608,7 @@ Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file 
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
 > **Warning:** ICO files _should not_ be used in web content.
-> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in {{SectionOnPage("/en-US/docs/Web/HTML/Element/link", "Providing icons for different usage contexts")}}.
+> Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
   <tbody>
@@ -1021,10 +998,10 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>, <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a> rules apply. No known royalty-bearing patents.
       </td>
     </tr>
   </tbody>
@@ -1135,11 +1112,11 @@ It's not generally useful for strictly bitmap or photographic images, although i
         >, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>,
         <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
-        <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>,
+        <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a>
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a>
         rules apply. No known royalty-bearing patents.
       </td>
     </tr>
@@ -1289,7 +1266,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
 ### WebP image
 
 WebP supports lossy compression via predictive coding based on the VP8 video codec, and lossless compression that uses substitutions for repeating data.
-Lossy WebP images average 25–35% smaller than JPEG images of visually similar compression levels.
+Lossy WebP images are on average 25–35% smaller than JPEG images of visually similar compression levels.
 Lossless WebP images are typically 26% smaller than the same images in PNG format.
 
 WebP also supports animation: in a lossy WebP file, the image data is represented by a VP8 bitstream, which may contain multiple frames.
@@ -1386,7 +1363,7 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
   </tbody>
 </table>
 
-> **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+> **Note:** On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
 
 ### XBM (X Window System Bitmap file)
 
@@ -1599,4 +1576,4 @@ You can specify as many `<source>`s as you wish, though typically 2 or 3 is all 
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs)
 - The {{Glossary("HTML")}} {{HTMLElement("img")}} and {{HTMLElement("picture")}} elements
 - The CSS {{cssxref("background-image")}} property
-- The {{domxref("HTMLImageElement.Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface
+- The {{domxref("HTMLImageElement.Image()", "Image()")}} constructor and the {{domxref("HTMLImageElement")}} interface

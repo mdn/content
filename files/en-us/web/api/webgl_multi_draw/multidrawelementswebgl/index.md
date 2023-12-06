@@ -1,12 +1,8 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsWEBGL() method"
+short-title: multiDrawElementsWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsWEBGL
 page-type: webgl-extension-method
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsWEBGL
 ---
 
@@ -96,7 +92,15 @@ None.
 ```js
 const counts = new Int32Array(/* … */);
 const offsets = new Int32Array(/* … */);
-ext.multiDrawElementsWEBGL(gl.TRIANGLES, counts, 0, gl.UNSIGNED_SHORT, offsets, 0, counts.length);
+ext.multiDrawElementsWEBGL(
+  gl.TRIANGLES,
+  counts,
+  0,
+  gl.UNSIGNED_SHORT,
+  offsets,
+  0,
+  counts.length,
+);
 ```
 
 ## Specifications

@@ -1,14 +1,8 @@
 ---
-title: DOMImplementation.createHTMLDocument()
+title: "DOMImplementation: createHTMLDocument() method"
+short-title: createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createHTMLDocument
 ---
 
@@ -88,12 +82,12 @@ which we'll be injecting the new content. The next two lines handle importing th
 contents of our new document into the new document's context. Finally, line 20 actually
 replaces the contents of the frame with the new document's contents.
 
-[View Live Examples](https://media.prod.mdn.mozit.cloud/samples/domref/createHTMLDocument.html)
+[View Live Examples](https://mdn.dev/archives/media/samples/domref/createHTMLDocument.html)
 
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

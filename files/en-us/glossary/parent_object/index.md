@@ -1,10 +1,10 @@
 ---
 title: Parent object
 slug: Glossary/Parent_object
-tags:
-  - CodingScripting
-  - NeedsContent
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 The {{glossary("object")}} to which a given {{glossary("property")}} or {{glossary("method")}} belongs.
 

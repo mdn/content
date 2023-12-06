@@ -1,15 +1,9 @@
 ---
-title: ':-moz-first-node'
+title: ":-moz-first-node"
 slug: Web/CSS/:-moz-first-node
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -21,7 +15,9 @@ The **`:-moz-first-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs
 ## Syntax
 
 ```css
-:-moz-first-node
+:-moz-first-node {
+  /* ... */
+}
 ```
 
 ## Examples

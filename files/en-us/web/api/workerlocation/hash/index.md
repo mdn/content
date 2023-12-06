@@ -1,13 +1,8 @@
 ---
-title: WorkerLocation.hash
+title: "WorkerLocation: hash property"
+short-title: hash
 slug: Web/API/WorkerLocation/hash
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.hash
 ---
 

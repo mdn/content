@@ -1,14 +1,8 @@
 ---
-title: URL.password
+title: "URL: password property"
+short-title: password
 slug: Web/API/URL/password
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-  - password
 browser-compat: api.URL.password
 ---
 
@@ -29,8 +23,10 @@ A string.
 ## Examples
 
 ```js
-const url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
-console.log(url.password) // Logs "flabada"
+const url = new URL(
+  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password",
+);
+console.log(url.password); // Logs "flabada"
 ```
 
 ## Specifications

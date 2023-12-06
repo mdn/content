@@ -1,13 +1,7 @@
 ---
 title: "ARIA: window role"
 slug: Web/Accessibility/ARIA/Roles/window_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - ARIA Role
-  - ARIA window
-  - Reference
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#window
 ---
 

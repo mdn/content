@@ -1,10 +1,10 @@
 ---
 title: Compile time
 slug: Glossary/Compile_time
-tags:
-  - CodingScripting
-  - JavaScript
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 The _compile time_ is the time from when the program is first loaded until the program is {{Glossary("parse","parsed")}}.
 

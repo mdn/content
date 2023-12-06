@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.arc()
+title: "CanvasRenderingContext2D: arc() method"
+short-title: arc()
 slug: Web/API/CanvasRenderingContext2D/arc
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.arc
 ---
 
@@ -69,8 +64,8 @@ make a full circle, the arc begins at an angle of 0 radians (0**°**), and
 ends at an angle of 2π radians (360**°**).
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.arc(100, 75, 50, 0, 2 * Math.PI);
@@ -90,19 +85,19 @@ This example draws various shapes to show what is possible with `arc()`.
 ```
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 // Draw shapes
 for (let i = 0; i <= 3; i++) {
   for (let j = 0; j <= 2; j++) {
     ctx.beginPath();
-    let x             = 25 + j * 50;                 // x coordinate
-    let y             = 25 + i * 50;                 // y coordinate
-    let radius        = 20;                          // Arc radius
-    let startAngle    = 0;                           // Starting point on circle
-    let endAngle      = Math.PI + (Math.PI * j) / 2; // End point on circle
-    let counterclockwise = i % 2 === 1;                  // Draw counterclockwise
+    let x = 25 + j * 50; // x coordinate
+    let y = 25 + i * 50; // y coordinate
+    let radius = 20; // Arc radius
+    let startAngle = 0; // Starting point on circle
+    let endAngle = Math.PI + (Math.PI * j) / 2; // End point on circle
+    let counterclockwise = i % 2 === 1; // Draw counterclockwise
 
     ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
 

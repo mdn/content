@@ -1,16 +1,8 @@
 ---
-title: FontFaceSet.ready
+title: "FontFaceSet: ready property"
+short-title: ready
 slug: Web/API/FontFaceSet/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSFontLoading API
-  - CSSOM
-  - FontFaceSet
-  - Fonts
-  - Property
-  - Ready
-  - Reference
 browser-compat: api.FontFaceSet.ready
 ---
 

@@ -2,12 +2,7 @@
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - Reference
-  - Trusted Types
-spec-urls: https://w3c.github.io/webappsec-trusted-types/dist/spec/
+spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 ---
 
 {{DefaultAPISidebar("Trusted Types API")}}
@@ -62,7 +57,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<")
+  createHTML: (string) => string.replace(/>/g, "<"),
 });
 
 let el = document.getElementById("myDiv");
@@ -71,7 +66,7 @@ console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
 ```
 
-Read more about this example, and discover other ways to sanitize input in the article [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
+Read more about this example, and discover other ways to sanitize input in the article [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types).
 
 ## Specifications
 
@@ -83,5 +78,5 @@ See the compatibility data for each of the Trusted Types API interfaces.
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
-- [Trusted Types polyfill](https://github.com/w3c/webappsec-trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
+- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))

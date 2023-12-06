@@ -1,13 +1,8 @@
 ---
-title: Window.print()
+title: "Window: print() method"
+short-title: print()
 slug: Web/API/Window/print
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.print
 ---
 
@@ -43,6 +38,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Printing](/en-US/docs/Web/Guide/Printing)
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event
 - {{ domxref("window.afterprint_event", "afterprint") }} event

@@ -1,16 +1,8 @@
 ---
-title: Sensor.start()
+title: "Sensor: start() method"
+short-title: start()
 slug: Web/API/Sensor/start
 page-type: web-api-instance-method
-tags:
-  - API
-  - Generic Sensor API
-  - Method
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - start()
 browser-compat: api.Sensor.start
 ---
 

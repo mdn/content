@@ -1,13 +1,8 @@
 ---
-title: SVGPointList.replaceItem()
+title: "SVGPointList: replaceItem() method"
+short-title: replaceItem()
 slug: Web/API/SVGPointList/replaceItem
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - replaceItem
-  - SVGPointList
 browser-compat: api.SVGPointList.replaceItem
 ---
 
@@ -58,7 +53,7 @@ let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.replaceItem(svgpoint,1));
+console.log(example.points.replaceItem(svgpoint, 1));
 ```
 
 ## Specifications

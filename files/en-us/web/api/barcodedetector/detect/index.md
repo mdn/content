@@ -1,18 +1,14 @@
 ---
-title: BarcodeDetector.detect()
+title: "BarcodeDetector: detect() method"
+short-title: detect()
 slug: Web/API/BarcodeDetector/detect
 page-type: web-api-instance-method
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Method
-  - barcode
-  - shape detection
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector.detect
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`detect()`** method of the
 {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which fulfills
@@ -27,9 +23,7 @@ detect(imageBitmapSource)
 ### Parameters
 
 - `imageBitmapSource`
-  - : Receives an `ImageBitmapSource` as a parameter. This can be an
-    {{HTMLElement('img', ' element')}}, a {{domxref('Blob')}} of type image or an
-    {{domxref('ImageData')}} object.
+  - : Receives an image source as a parameter. This can be a {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, a {{domxref("HTMLVideoElement")}}, a {{domxref("HTMLCanvasElement")}}, an {{domxref("ImageBitmap")}}, an {{domxref("OffscreenCanvas")}}, a {{domxref("VideoFrame")}}, a {{domxref('Blob')}} of type image or an {{domxref('ImageData')}} object.
 
 ### Return value
 
@@ -55,6 +49,10 @@ Returns a {{jsxref('Promise')}} which fulfills with an array of
 - {{jsxref("TypeError")}}
   - : No parameter is specified or the `type` is not that of an
     `ImageBitmapSource`.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the `imageBitmapSource` has an origin and is not the same as the document's origin, or if the `imageBitmapSource` is a {{domxref('HTMLCanvasElement')}} and its [origin-clean](https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-origin-clean) flag is set to `false`.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `imageBitmapSource` is an {{domxref('HTMLImageElement')}} and is not fully decoded or decoding failed, or is an {{domxref('HTMLVideoElement')}} and its {{domxref('HTMLMediaElement.readyState', 'readyState')}} is `HAVE_NOTHING` or `HAVE_METADATA`.
 
 ## Examples
 

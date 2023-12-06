@@ -1,20 +1,7 @@
 ---
 title: Operable
 slug: Web/Accessibility/Understanding_WCAG/Operable
-tags:
-  - Accessibility
-  - Focus
-  - Navigation
-  - Principle 2
-  - Timing
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - headings
-  - keyboard
-  - keyboard trap
-  - labels
-  - operable
-  - seizures
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -209,7 +196,7 @@ This guideline covers situations in which functionality may have a time limit. F
         <p>
           If there is a timeout (caused by user inactivity) warn users at the
           start of a process so they will not be surprised that a timeout exists
-          (or only allow the timeout to occur after 20 hours of inactivity.
+          (or only allow the timeout to occur after 20 hours of inactivity).
         </p>
       </td>
       <td>
@@ -349,7 +336,7 @@ The conformance criteria under this guideline relate to ways in which users can 
       <td>
         <p>
           You should provide at least two general navigation mechanisms to find
-          pages on your web site, for example navigation menu, breadcrumb trail,
+          pages on your website, for example navigation menu, breadcrumb trail,
           site search, site map, list of related links, etc.
         </p>
         <p>
@@ -473,6 +460,43 @@ The conformance criteria under this guideline relate to ways in which users can 
         </p>
       </td>
     </tr>
+    <tr>
+    <td> 2.4.11 Focus not obscured (Minimum) (AA)</td>
+    <td>
+    <p> When a user interface component receives keyboard focus, the component is not entirely hidden due to containing author-created content.</p>
+    <p> <strong>Note:</strong> If the interface's content can be repositioned by the user, then only the initial position of the user-movable content is considered for testing to conform to this standard. Also, content opened by the user may obscure the component receiving focus. Furthermore, if the user can reveal the focused component without changing keyboard focus, the component with focus is not considered hidden for conformance and testing purposes.</p>
+    </td>
+    <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">Understanding focus not obscured (Minimum)</a> to learn more about this standard.</p>
+    </td>
+    </tr>
+    <tr>
+    <td> 2.4.12 Focus not obscured (Enhanced) (AAA) </td>
+    <td>
+    <p> Follows the rules as 2.4.11 except when a user interface component receives focus, no part of the component can be hidden by author-created content. If the interface is configurable, only the initial positions of user-movable content are considered for testing and meeting of this standard.</p>
+    </td>
+    <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">Understanding focus not obscured (Enhanced) (Level AAA)</a> to learn more about this standard.</p> </td>
+    </td>
+    </tr>
+<tr>
+  <td> 2.4.13 Focus appearance (AAA)</td>
+  <td>
+    <p>When the keyboard focus indicator is visible, the area of the focus indicator meets all the following:</p>
+    <ul>
+      <li>Must be at least as large as the area of a <code>2px</code> thick perimeter of the unfocused component or sub-component, which includes component's content, border, and background, excluding outer shadows or glow effects.</li>
+      <li>Needs to have a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states</li>
+    </ul>
+    <p> The exceptions to this are:</p>
+    <ul>
+      <li>The focus indicator is determined by the user and cannot be adjusted by the author.</li>
+      <li>The focus indicator and the indicator's background color are not modified by the author.</li>
+    </ul>
+  </td>
+  <td>
+    <p> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html">Understanding focus appearance (Level AAA)</a> to learn more about this standard.</p>
+  </td>
+</tr>
   </tbody>
 </table>
 
@@ -520,6 +544,19 @@ The conformance criteria under this guideline ensures that users are able to int
    <td>2.5.6 Concurrent Input Mechanisms (AAA) <em><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1">added in 2.1</a></em></td>
    <td>Make sure people can use and switch between different modes of input when interacting with digital content including touchscreen, keyboard, mouse, voice commands, or alternative input devices. An essential exception exists. </td>
    <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/concurrent-input-mechanisms.html">Understanding Concurrent Input Mechanism</a></td>
+ </tr>
+ <tr>
+ <td> 2.5.8 Target size minimum (AA)</td>
+ <td> Target size for pointer inputs should be at least `24px` wide by `24px` tall except for the following areas:
+ <ul>
+  <li> <strong>Spacing:</strong>Targets that are less than `24px x 24px` are positioned so that if a `24px` diameter circle is centered on each target's bounding box, the circles do not intersect with any other target or the circle for another undersized target.</li>
+  <li> <strong>Equivalent:</strong> A separate control that achieves the same function that meets this standard is available on the same page.</li>
+  <li> <strong>Inline:</strong> The target is located within a line of text with its size constrained by the line height or surrounding non-target text.</li>
+  <li> <strong>User agent control:</strong> The target's size is determined by the user agent and has not been modified by the author.</li>
+  <li> <strong>Essential:</strong> A particular presentation of the target is essential or legally required for the information being conveyed.</li>
+ </ul>
+ <td> Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">Understanding target size minimum</a> </td>
+</tr>
   </tr>
  </tbody>
 </table>

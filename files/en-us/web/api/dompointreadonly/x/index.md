@@ -1,19 +1,8 @@
 ---
-title: DOMPointReadOnly.x
+title: "DOMPointReadOnly: x property"
+short-title: x
 slug: Web/API/DOMPointReadOnly/x
 page-type: web-api-instance-property
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - x
 browser-compat: api.DOMPointReadOnly.x
 ---
 

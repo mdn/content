@@ -2,15 +2,6 @@
 title: min()
 slug: Web/CSS/min
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Calculate
-  - Compute
-  - Function
-  - Layout
-  - Reference
-  - min
 browser-compat: css.types.min
 ---
 
@@ -20,7 +11,7 @@ The **`min()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 {{EmbedInteractiveExample("pages/css/function-min.html")}}
 
-In the first above example, the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). In other words, the maximum width is 200px. Think of the `min()` value as providing the _maximum_ value a property can have.
+In the first above example, the width will be at most 200px, but will be smaller if the viewport is less than 400px wide (in which case 1vw would be 4px, so 50vw would be 200px). This technique uses an absolute unit to specify a fixed maximum value for the property, and a relative unit to allow the value to shrink to suit smaller viewports.
 
 ## Syntax
 
@@ -53,7 +44,7 @@ When using `min()` to set a maximum font size, ensure that the font can still be
 
 ### Setting a maximum size for a label and input
 
-Another use case for CSS functions is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of the form shrinks.
+Another use case for `min()` is to set a maximum size on responsive form controls: enabling the width of labels and inputs to shrink as the width of the form shrinks.
 
 Let's look at some CSS:
 

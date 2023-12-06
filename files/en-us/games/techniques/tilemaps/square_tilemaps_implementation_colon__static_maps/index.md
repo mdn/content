@@ -1,16 +1,7 @@
 ---
 title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - Static
-  - atlas
-  - spritesheet
-  - tilemap
-  - tilemaps
-  - tiles
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -94,7 +85,7 @@ for (let c = 0; c < map.cols; c++) {
         c * map.tsize, // target x
         r * map.tsize, // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

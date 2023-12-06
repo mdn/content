@@ -1,11 +1,7 @@
 ---
 title: Store
 slug: WebAssembly/Reference/Memory/Store
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Memory
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

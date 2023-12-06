@@ -1,12 +1,7 @@
 ---
 title: OR
 slug: WebAssembly/Reference/Numeric/OR
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

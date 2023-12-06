@@ -1,12 +1,7 @@
 ---
 title: type
 slug: Web/SVG/Attribute/type
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - filter
+page-type: svg-attribute
 ---
 
 {{SVGRef}}

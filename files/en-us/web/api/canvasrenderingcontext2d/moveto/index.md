@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.moveTo()
+title: "CanvasRenderingContext2D: moveTo() method"
+short-title: moveTo()
 slug: Web/API/CanvasRenderingContext2D/moveTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.moveTo
 ---
 

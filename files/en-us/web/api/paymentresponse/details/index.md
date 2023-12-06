@@ -1,16 +1,8 @@
 ---
-title: PaymentResponse.details
+title: "PaymentResponse: details property"
+short-title: details
 slug: Web/API/PaymentResponse/details
 page-type: web-api-instance-property
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentResponse
-  - Property
-  - Reference
-  - Secure context
-  - details
 browser-compat: api.PaymentResponse.details
 ---
 
@@ -39,7 +31,7 @@ payment.show().then((paymentResponse) => {
     // payment details as you requested
     details: paymentResponse.details,
     // shipping address information
-    address: toDict(paymentResponse.shippingAddress)
+    address: toDict(paymentResponse.shippingAddress),
   };
   // Send information to the server
 });

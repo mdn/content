@@ -1,15 +1,10 @@
 ---
-title: SyncManager.getTags()
+title: "SyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/SyncManager/getTags
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - ServiceWorker
-  - SyncManager
-  - getTags
+status:
+  - experimental
 browser-compat: api.SyncManager.getTags
 ---
 
@@ -33,6 +28,10 @@ None.
 
 A {{jsxref("Promise")}} that resolves to an array of strings
 containing developer-defined identifiers for `SyncManager` registrations.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,18 +1,11 @@
 ---
-title: AudioWorkletProcessor.process()
+title: "AudioWorkletProcessor: process() method"
+short-title: process()
 slug: Web/API/AudioWorkletProcessor/process
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - AudioWorkletProcessor
-  - Experimental
-  - Method
-  - Process
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletProcessor.process
+status:
+  - experimental
+spec-urls: https://webaudio.github.io/web-audio-api/#process
 ---
 
 {{APIRef("Web Audio API")}}
@@ -200,7 +193,7 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## Browser compatibility
 
-{{Compat}}
+This is not a method provided by browsers, but a callback method that must be written in client code.
 
 ## See also
 

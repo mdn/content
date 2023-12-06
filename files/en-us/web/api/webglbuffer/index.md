@@ -2,10 +2,6 @@
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - WebGL
 browser-compat: api.WebGLBuffer
 ---
 
@@ -29,8 +25,8 @@ The `WebGLBuffer` object does not define any methods or properties of its own an
 ### Creating a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 ```
 

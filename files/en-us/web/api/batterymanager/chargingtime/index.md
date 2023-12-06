@@ -1,19 +1,16 @@
 ---
-title: BatteryManager.chargingTime
+title: "BatteryManager: chargingTime property"
+short-title: chargingTime
 slug: Web/API/BatteryManager/chargingTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
 browser-compat: api.BatteryManager.chargingTime
 ---
 
-{{APIRef("Battery API")}}
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged or `0` if the battery is already fully charged. If the battery is currently
-discharging, its value is
-[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity). When its value changes, the [`chargingtimechange`](/en-US/docs/Web/API/BatteryManager/chargingtimechange_event) event is fired.
+The **`BatteryManager.chargingTime`** property indicates the amount of time, in seconds, that remain until the battery is fully charged, or `0` if the battery is already fully charged or the user agent is unable to report the battery status information.
+If the battery is currently discharging, its value is {{jsxref("Infinity")}}.
+When its value changes, the {{domxref("BatteryManager/chargingtimechange_event", "chargingtimechange")}} event is fired.
 
 > **Note:** Even if the time returned is precise to the second,
 > browsers round them to a higher interval
@@ -25,21 +22,20 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="chargingTime">(charging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 navigator.getBattery().then((battery) => {
   const time = battery.chargingTime;
 
-  document.querySelector(
-    "#chargingTime"
-  ).textContent = `Time to fully charge the battery: ${time}s`;
+  document.querySelector("#chargingTime").textContent =
+    `Time to fully charge the battery: ${time}s`;
 });
 ```
 
@@ -56,4 +52,4 @@ navigator.getBattery().then((battery) => {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

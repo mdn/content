@@ -2,13 +2,6 @@
 title: ":only-child"
 slug: Web/CSS/:only-child
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.only-child
 ---
 
@@ -18,12 +11,12 @@ The **`:only-child`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) rep
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
 
-> **Note:** As originally defined, the selected element had to have a parent. Beginning with Selectors Level 4, this is no longer required.
-
 ## Syntax
 
-```
-:only-child
+```css
+:only-child {
+  /* ... */
+}
 ```
 
 ## Examples

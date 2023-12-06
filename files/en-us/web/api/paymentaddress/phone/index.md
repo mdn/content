@@ -1,23 +1,11 @@
 ---
-title: PaymentAddress.phone
+title: "PaymentAddress: phone property"
+short-title: phone
 slug: Web/API/PaymentAddress/phone
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Phone
-  - Phone Number
-  - Property
-  - Read-only
-  - Reference
-  - Telephone
-  - payment
-  - paymentAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.phone
 ---
 

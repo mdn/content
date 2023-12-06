@@ -1,14 +1,8 @@
 ---
-title: ReadableByteStreamController.byobRequest
+title: "ReadableByteStreamController: byobRequest property"
+short-title: byobRequest
 slug: Web/API/ReadableByteStreamController/byobRequest
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - byobRequest
 browser-compat: api.ReadableByteStreamController.byobRequest
 ---
 
@@ -54,3 +48,4 @@ if (controller.byobRequest) {
 ## See also
 
 - [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

@@ -1,18 +1,16 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `substring-after` function returns a string that is the rest of a given string after a given substring.
 
 ### Syntax
 
-```
+```plain
 substring-after( haystack, needle )
 ```
 

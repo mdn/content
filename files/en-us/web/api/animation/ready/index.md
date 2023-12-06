@@ -1,16 +1,8 @@
 ---
-title: Animation.ready
+title: "Animation: ready property"
+short-title: ready
 slug: Web/API/Animation/ready
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Ready
-  - Ready Promise
-  - Reference
-  - Web Animations
-  - web animations api
 browser-compat: api.Animation.ready
 ---
 

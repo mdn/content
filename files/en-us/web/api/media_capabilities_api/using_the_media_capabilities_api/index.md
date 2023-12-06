@@ -2,16 +2,6 @@
 title: Using the Media Capabilities API
 slug: Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API
 page-type: guide
-tags:
-  - API
-  - Audio
-  - Guide
-  - Intermediate
-  - Media
-  - Media Capabilities
-  - Media Capabilities API
-  - Video
-  - capabilities
 browser-compat: api.MediaCapabilities
 ---
 
@@ -21,7 +11,7 @@ The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provide
 
 These features include:
 
-- The ability to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details. With the Media Capabilities API, you can determine not just if the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource.isTypeSupported", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.
+- The ability to query the browser to determine its ability to encode or decode media given a specified set of encoding parameters. These parameters may include the codecs, resolutions, bit rates, frame rates, and other such details. With the Media Capabilities API, you can determine not just if the browser can support a given format, but whether or not it can do so efficiently and smoothly. In short, this API replaces—and improves upon—the {{domxref("MediaSource")}} method {{domxref("MediaSource/isTypeSupported_static", "isTypeSupported()")}} or the {{domxref("HTMLMediaElement")}} method {{domxref("HTMLMediaElement.canPlayType","canPlayType()")}}.
 - More and more finely-detailed information about the display's properties, so that informed decisions can be made when choosing the best format to play on the user's device. For example, you can use the API to ensure that you don't try to play High Dynamic Range (HDR) content on a Standard Dynamic Range (SDR) screen.
 - Support for getting real-time feedback about the playback of media, so your code can make informed decisions about adapting the stream's quality or other settings to manage the user's perceived media performance and quality. One feature of this is the ability to detect when the device switches GPUs, so you can make appropriate adjustments based on the new GPU's capabilities.
 
@@ -57,13 +47,13 @@ In our example, we are testing the decoding capabilities of a video configuratio
 ```js
 const videoConfiguration = {
   type: "file",
-    video: {
-      contentType: "video/webm;codecs=vp8",
-      width: 800,
-      height: 600,
-      bitrate: 10000,
-      framerate: 15
-   }
+  video: {
+    contentType: "video/webm;codecs=vp8",
+    width: 800,
+    height: 600,
+    bitrate: 10000,
+    framerate: 15,
+  },
 };
 ```
 
@@ -72,12 +62,12 @@ Had we been querying the decodability of an audio file, we would create an audio
 ```js
 const audioConfiguration = {
   type: "file",
-    audio: {
-      contentType: "audio/ogg",
-      channels: 2,
-      bitrate: 132700,
-      samplerate: 5200
-   }
+  audio: {
+    contentType: "audio/ogg",
+    channels: 2,
+    bitrate: 132700,
+    samplerate: 5200,
+  },
 };
 ```
 
@@ -100,9 +90,11 @@ Instead of the assigning the promise to a variable, we can output the values ret
 
 ```js
 navigator.mediaCapabilities.decodingInfo(videoConfiguration).then((result) => {
-  console.log(`This configuration is ${result.supported ? '' : 'not '}supported,`);
-  console.log(`${result.smooth ? '' : 'not '}smooth, and`);
-  console.log(`${result.powerEfficient ? '' : 'not '}power efficient.`);
+  console.log(
+    `This configuration is ${result.supported ? "" : "not "}supported,`,
+  );
+  console.log(`${result.smooth ? "" : "not "}smooth, and`);
+  console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
 });
 ```
 
@@ -116,11 +108,10 @@ In our video decoding example, a {{jsxref("TypeError")}} would be raised if the 
 The error can be due to the `type` not being one of the two possible values, the `contentType` not being a valid codec MIME type, or invalid or omitted definitions being omitted from the video configuration object.
 
 ```js
-navigator.mediaCapabilities.decodingInfo(videoConfiguration).then(
-  console.log('It worked')
-).catch((error) =>
-  console.error(`It failed: ${error}`)
-);
+navigator.mediaCapabilities
+  .decodingInfo(videoConfiguration)
+  .then(console.log("It worked"))
+  .catch((error) => console.error(`It failed: ${error}`));
 ```
 
 ## Media Capabilities live example
@@ -198,48 +189,57 @@ li {
 
 ```js
 let mc = {
-  videoConfiguration : new Object(),
+  videoConfiguration: new Object(),
 
   tryIt() {
-   mc.createConfiguration();
-   mc.testIt();
+    mc.createConfiguration();
+    mc.testIt();
   },
 
   createConfiguration() {
-    const size = document.getElementById('size').value.split('x');
+    const size = document.getElementById("size").value.split("x");
     mc.videoConfiguration = {
-      type: 'file',
+      type: "file",
       video: {
-        contentType: document.getElementById('codec').value,
+        contentType: document.getElementById("codec").value,
         width: size[0],
         height: size[1],
-        bitrate: document.getElementById('bitrate').value,
-        framerate: document.getElementById('framerate').value,
-      }
-    }
+        bitrate: document.getElementById("bitrate").value,
+        framerate: document.getElementById("framerate").value,
+      },
+    };
   },
 
   testIt() {
-    let content = '';
-    navigator.mediaCapabilities.decodingInfo(mc.videoConfiguration).then((result) => {
-      const li = document.createElement('li'),
-        mcv = mc.videoConfiguration.video;
-      content = `A ${mcv.width}x${mcv.height}, ${mcv.contentType} at ${mcv.framerate}fps and ${mcv.bitrate} bps video ${result.supported ? ' IS ' : 'IS NOT '} supported,`;
-      content += `${result.smooth ? ' IS ' : ' is NOT '} smooth, and`;
-      content += `${result.powerEfficient ? ' IS ' : ' IS NOT '}power efficient.`;
-      const ul = document.getElementById("results")
-      li.innerHTML = content;
-      ul.appendChild(li);
-    }).catch((error) => {
-        const li = document.createElement('li'),
-            ul = document.getElementById("results");
+    let content = "";
+    navigator.mediaCapabilities
+      .decodingInfo(mc.videoConfiguration)
+      .then((result) => {
+        const li = document.createElement("li"),
+          mcv = mc.videoConfiguration.video;
+        content = `A ${mcv.width}x${mcv.height}, ${mcv.contentType} at ${
+          mcv.framerate
+        }fps and ${mcv.bitrate} bps video ${
+          result.supported ? " IS " : "IS NOT "
+        } supported,`;
+        content += `${result.smooth ? " IS " : " is NOT "} smooth, and`;
+        content += `${
+          result.powerEfficient ? " IS " : " IS NOT "
+        }power efficient.`;
+        const ul = document.getElementById("results");
+        li.innerHTML = content;
+        ul.appendChild(li);
+      })
+      .catch((error) => {
+        const li = document.createElement("li"),
+          ul = document.getElementById("results");
         li.textContent = `Codec ${mc.videoConfiguration.video.contentType} threw an error: ${error}`;
         ul.appendChild(li);
-    });
-  }
-}
+      });
+  },
+};
 
-document.getElementById('try-it').addEventListener('click', mc.tryIt);
+document.getElementById("try-it").addEventListener("click", mc.tryIt);
 ```
 
 ### Live Result

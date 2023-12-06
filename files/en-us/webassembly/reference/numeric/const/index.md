@@ -1,11 +1,7 @@
 ---
 title: Const
 slug: WebAssembly/Reference/Numeric/Const
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

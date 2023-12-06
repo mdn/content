@@ -1,18 +1,16 @@
 ---
-title: InputDeviceCapabilities.firesTouchEvents
+title: "InputDeviceCapabilities: firesTouchEvents property"
+short-title: firesTouchEvents
 slug: Web/API/InputDeviceCapabilities/firesTouchEvents
 page-type: web-api-instance-property
-tags:
-  - needsTags
-  - Experimental
+status:
+  - experimental
 browser-compat: api.InputDeviceCapabilities.firesTouchEvents
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
-The **`InputDeviceCapabilities.firesTouchEvents`** read-only
-property returns a boolean value that indicates whether the device dispatches
-touch events.
+The **`firesTouchEvents`** read-only property of the {{domxref("InputDeviceCapabilities")}} interface returns a boolean value that indicates whether the device dispatches touch events.
 
 You can use this property to detect mouse events that represent an action that may
 already have been handled by touch event handlers. This doesn't necessarily mean the
@@ -32,9 +30,8 @@ A {{jsxref('Boolean')}}
 ## Example
 
 ```js
-myButton.addEventListener('mousedown', (e) => {
-  if (!e.sourceCapabilities.firesTouchEvents)
-    myButton.classList.add("pressed");
+myButton.addEventListener("mousedown", (e) => {
+  if (!e.sourceCapabilities.firesTouchEvents) myButton.classList.add("pressed");
 });
 ```
 

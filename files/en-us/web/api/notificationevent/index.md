@@ -2,14 +2,6 @@
 title: NotificationEvent
 slug: Web/API/NotificationEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - NotificationEvent
-  - Notifications
-  - Reference
-  - Service Workers
-  - ServiceWorker
 browser-compat: api.NotificationEvent
 ---
 
@@ -45,22 +37,24 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 ## Example
 
 ```js
-self.addEventListener('notificationclick', (event) => {
+self.addEventListener("notificationclick", (event) => {
   console.log(`On notification click: ${event.notification.tag}`);
   event.notification.close();
 
   // This looks to see if the current is already open and
   // focuses if it is
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then((clientList) => {
-    for (const client of clientList) {
-      if (client.url === '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url === "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

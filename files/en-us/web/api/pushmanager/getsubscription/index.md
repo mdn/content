@@ -1,13 +1,8 @@
 ---
-title: PushManager.getSubscription()
+title: "PushManager: getSubscription() method"
+short-title: getSubscription()
 slug: Web/API/PushManager/getSubscription
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - PushManager
-  - Reference
-  - Service Workers
 browser-compat: api.PushManager.getSubscription
 ---
 
@@ -37,35 +32,36 @@ This code snippet is taken from a [push messaging and notification sample](https
 
 ```js
 // We need the service worker registration to check for a subscription
-  navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
-    // Do we already have a push message subscription?
-    serviceWorkerRegistration.pushManager.getSubscription()
-      .then((subscription) => {
-        // Enable any UI which subscribes / unsubscribes from
-        // push messages.
-        const pushButton = document.querySelector('.js-push-button');
-        pushButton.disabled = false;
+navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+  // Do we already have a push message subscription?
+  serviceWorkerRegistration.pushManager
+    .getSubscription()
+    .then((subscription) => {
+      // Enable any UI which subscribes / unsubscribes from
+      // push messages.
+      const pushButton = document.querySelector(".js-push-button");
+      pushButton.disabled = false;
 
-        if (!subscription) {
-          // We aren't subscribed to push, so set UI
-          // to allow the user to enable push
-          return;
-        }
+      if (!subscription) {
+        // We aren't subscribed to push, so set UI
+        // to allow the user to enable push
+        return;
+      }
 
-        // Keep your server in sync with the latest subscriptionId
-        sendSubscriptionToServer(subscription);
+      // Keep your server in sync with the latest subscriptionId
+      sendSubscriptionToServer(subscription);
 
-        showCurlCommand(subscription);
+      showCurlCommand(subscription);
 
-        // Set your UI to show they have subscribed for
-        // push messages
-        pushButton.textContent = 'Disable Push Messages';
-        isPushEnabled = true;
-      })
-      .catch((err) => {
-        console.error(`Error during getSubscription(): ${err}`);
-      });
-  });
+      // Set your UI to show they have subscribed for
+      // push messages
+      pushButton.textContent = "Disable Push Messages";
+      isPushEnabled = true;
+    })
+    .catch((err) => {
+      console.error(`Error during getSubscription(): ${err}`);
+    });
+});
 ```
 
 ## Specifications

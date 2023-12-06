@@ -1,15 +1,8 @@
 ---
-title: IntersectionObserver.unobserve()
+title: "IntersectionObserver: unobserve() method"
+short-title: unobserve()
 slug: Web/API/IntersectionObserver/unobserve
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - Reference
-  - unobserve
 browser-compat: api.IntersectionObserver.unobserve
 ---
 

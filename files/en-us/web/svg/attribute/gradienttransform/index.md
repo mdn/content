@@ -1,9 +1,7 @@
 ---
 title: gradientTransform
 slug: Web/SVG/Attribute/gradientTransform
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.linearGradient.gradientTransform
 ---
 

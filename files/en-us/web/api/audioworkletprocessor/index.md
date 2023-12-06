@@ -2,15 +2,6 @@
 title: AudioWorkletProcessor
 slug: Web/API/AudioWorkletProcessor
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - AudioWorkletProcessor
-  - Interface
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioWorkletProcessor
 ---
 
@@ -92,7 +83,7 @@ const audioContext = new AudioContext();
 await audioContext.audioWorklet.addModule("white-noise-processor.js");
 const whiteNoiseNode = new AudioWorkletNode(
   audioContext,
-  "white-noise-processor"
+  "white-noise-processor",
 );
 whiteNoiseNode.connect(audioContext.destination);
 ```

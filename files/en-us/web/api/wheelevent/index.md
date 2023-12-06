@@ -2,12 +2,6 @@
 title: WheelEvent
 slug: Web/API/WheelEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - WheelEvent
 browser-compat: api.WheelEvent
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: Mouse controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Beginner
-  - Canvas
-  - Controls
-  - Games
-  - JavaScript
-  - Tutorial
-  - mouse
+page-type: guide
 ---
 
 {{GamesSidebar}}

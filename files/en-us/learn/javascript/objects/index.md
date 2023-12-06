@@ -1,16 +1,7 @@
 ---
 title: Introducing JavaScript objects
 slug: Learn/JavaScript/Objects
-tags:
-  - Article
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Guide
-  - JavaScript
-  - Learn
-  - Objects
-  - Tutorial
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

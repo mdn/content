@@ -1,15 +1,7 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - RemovalOptions
-  - Type
-  - WebExtensions
-  - browsingData
+page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.RemovalOptions
 ---
 
@@ -23,7 +15,7 @@ Values of this type are objects. They contain the following properties:
 
 - `cookieStoreId` {{optional_inline}}
 
-  - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID.
+  - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 
     > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 

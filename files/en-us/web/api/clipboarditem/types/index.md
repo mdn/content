@@ -1,23 +1,12 @@
 ---
-title: ClipboardItem.types
+title: "ClipboardItem: types property"
+short-title: types
 slug: Web/API/ClipboardItem/types
 page-type: web-api-instance-property
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Property
-  - Read-only
-  - Reference
-  - Types
-  - copy
-  - paste
 browser-compat: api.ClipboardItem.types
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The read-only
 **`types`** property of the {{domxref("ClipboardItem")}}
@@ -65,4 +54,4 @@ async function getClipboardContents() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

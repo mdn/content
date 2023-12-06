@@ -2,16 +2,6 @@
 title: PaymentMethodChangeEvent
 slug: Web/API/PaymentMethodChangeEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Handler
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
-  - payment
 browser-compat: api.PaymentMethodChangeEvent
 ---
 

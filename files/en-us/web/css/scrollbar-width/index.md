@@ -2,13 +2,6 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - CSS scrollbars
-  - recipe:css-property
-  - scrollbar-width
 browser-compat: css.properties.scrollbar-width
 ---
 
@@ -34,7 +27,7 @@ scrollbar-width: unset;
 
 ### Values
 
-- _\<scrollbar-width>_
+- `<scrollbar-width>`
 
   - : Defines the width of the scrollbar as a keyword. It must be one of the following values:
 
@@ -58,7 +51,7 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-    > **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
+> **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
 ## Accessibility concerns
 
@@ -67,7 +60,7 @@ Use this property with caution — setting `scrollbar-width` to `thin` or `none`
 WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on basic keyboard accessibility, and this should include scrolling of content areas. And introduced in WCAG 2.1, criterion 2.5.5 (Target Size) advises that touch targets should be at least 44px in width and height (although the problem is compounded on high-resolution screens; thorough testing is advised).
 
 - [MDN Understanding WCAG, Guideline 2.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.1_—_keyboard_accessible_make_all_functionality_available_from_a_keyboard)
-- [MDN Understanding WCAG, Guideline 2.5 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard.s/)
+- [MDN Understanding WCAG, Guideline 2.5 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.5_input_modalities_make_it_easier_for_users_to_operate_functionality_through_various_inputs_beyond_keyboard)
 - [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 
@@ -120,5 +113,8 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ## See also
 
-- {{CSSxRef("-ms-overflow-style")}}
-- {{CSSxRef("::-webkit-scrollbar")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-color")}}

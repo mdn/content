@@ -1,9 +1,7 @@
 ---
 title: systemLanguage
 slug: Web/SVG/Attribute/systemLanguage
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.conditional_processing.systemLanguage
 ---
 
@@ -14,9 +12,7 @@ The **`systemLanguage`** attribute represents a list of supported language tags.
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("audio")}}
@@ -25,7 +21,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
 - {{SVGElement("defs")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}

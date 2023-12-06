@@ -2,19 +2,6 @@
 title: background-color
 slug: Web/CSS/background-color
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Graphics
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styles
-  - Styling HTML
-  - background-color
-  - recipe:css-property
 browser-compat: css.properties.background-color
 ---
 
@@ -40,17 +27,12 @@ background-color: #11ffeeff; /* Fully opaque */
 background-color: #1fef; /* Fully opaque shorthand */
 
 /* RGB value */
-background-color: rgb(255, 255, 128); /* Fully opaque */
-background-color: rgba(117, 190, 218, 0.5); /* 50% transparent */
+background-color: rgb(255 255 128); /* Fully opaque */
+background-color: rgb(117 190 218 / 0.5); /* 50% transparent */
 
 /* HSL value */
-background-color: hsl(50, 33%, 25%); /* Fully opaque */
-background-color: hsla(
-  50,
-  33%,
-  25%,
-  0.75
-); /* 75% opaque, i.e. 25% transparent */
+background-color: hsl(50 33% 25%); /* Fully opaque */
+background-color: hsl(50 33% 25% / 0.75); /* 75% opaque, i.e. 25% transparent */
 
 /* Special keyword values */
 background-color: currentcolor;
@@ -133,7 +115,7 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 
 ## See also
 
-- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

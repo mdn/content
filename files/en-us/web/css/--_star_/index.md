@@ -2,11 +2,6 @@
 title: "Custom properties (--*): CSS variables"
 slug: Web/CSS/--*
 page-type: guide
-tags:
-  - CSS
-  - CSS Custom Properties
-  - Guide
-  - Reference
 browser-compat: css.properties.custom-property
 ---
 
@@ -93,3 +88,4 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 - [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - The {{cssxref("var", "var()")}} function
+- {{cssxref("@property")}} at-rule

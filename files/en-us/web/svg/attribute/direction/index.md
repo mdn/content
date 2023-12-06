@@ -1,9 +1,7 @@
 ---
 title: direction
 slug: Web/SVG/Attribute/direction
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.direction
 ---
 
@@ -19,7 +17,6 @@ In many cases, the bidirectional Unicode algorithm produces the desired result a
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}

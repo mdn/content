@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.rect()
+title: "CanvasRenderingContext2D: rect() method"
+short-title: rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.rect
 ---
 

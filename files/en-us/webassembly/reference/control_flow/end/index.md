@@ -1,12 +1,7 @@
 ---
 title: end
 slug: WebAssembly/Reference/Control_flow/end
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

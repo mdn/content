@@ -1,12 +1,9 @@
 ---
 title: <glyph>
 slug: Web/SVG/Element/glyph
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
-  - Deprecated
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.glyph
 ---
 

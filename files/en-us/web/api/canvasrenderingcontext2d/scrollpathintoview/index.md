@@ -1,14 +1,10 @@
 ---
-title: CanvasRenderingContext2D.scrollPathIntoView()
+title: "CanvasRenderingContext2D: scrollPathIntoView() method"
+short-title: scrollPathIntoView()
 slug: Web/API/CanvasRenderingContext2D/scrollPathIntoView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Experimental
-  - Method
-  - Reference
+status:
+  - experimental
 browser-compat: api.CanvasRenderingContext2D.scrollPathIntoView
 ---
 

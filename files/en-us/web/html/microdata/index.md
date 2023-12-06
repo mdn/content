@@ -1,15 +1,10 @@
 ---
 title: Microdata
 slug: Web/HTML/Microdata
-tags:
-  - Composing
-  - Example
-  - HTML
-  - Microdata
-  - Reference
-  - SEO
-  - Search
+page-type: guide
 ---
+
+{{HTMLSidebar}}
 
 Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a simpler way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
@@ -57,7 +52,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 
 [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) – The `itemscope` attribute (usually) works along with [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) to specify that the HTML contained in a block is about a particular item. The `itemscope` attribute creates the _`Item`_ and defines the scope of the itemtype associated with it. The `itemtype` attribute is a valid URL of a vocabulary (such as [schema.org](https://schema.org/)) that describes the item and its properties context.
 
-[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype will be active.
+[`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype) – Specifies the URL of the vocabulary that will be used to define `itemprop`'s (item properties) in the data structure. The [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) attribute is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 
 ## Example
 
@@ -159,5 +154,3 @@ Supported in Firefox 16. Removed in Firefox 49.
 ## See also
 
 - [Global Attributes](/en-US/docs/Web/HTML/Global_attributes)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}

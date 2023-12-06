@@ -1,18 +1,12 @@
 ---
-title: CanvasRenderingContext2D.fontStretch
+title: "CanvasRenderingContext2D: fontStretch property"
+short-title: fontStretch
 slug: Web/API/CanvasRenderingContext2D/fontStretch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.fontStretch
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`CanvasRenderingContext2D.fontStretch`** property of the [Canvas API](/en-US/docs/Web/API/Canvas_API) specifies how the font may be expanded or condensed when drawing text.
 
@@ -55,7 +49,7 @@ We then add this to the document's [`FontFaceSet`](/en-US/docs/Web/API/FontFaceS
 const fontFile = new FontFace(
   "Inconsolata",
   'url(https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2) format("woff2")',
-  { stretch: "50% 200%" }
+  { stretch: "50% 200%" },
 );
 
 document.fonts.add(fontFile);
@@ -103,7 +97,7 @@ document.fonts.load("30px Inconsolata").then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 

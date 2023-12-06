@@ -1,13 +1,8 @@
 ---
-title: StyleSheet.title
+title: "StyleSheet: title property"
+short-title: title
 slug: Web/API/StyleSheet/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.title
 ---
 

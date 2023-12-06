@@ -1,15 +1,8 @@
 ---
-title: Element.ariaSelected
+title: "Element: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/Element/ariaSelected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaSelected
 ---
 
@@ -26,7 +19,7 @@ A string with one of the following values:
 - `"false"`
   - : The item is not selected.
 - `"undefined"`
-  - : The item is not
+  - : The item is not selectable.
 
 ## Examples
 
@@ -39,7 +32,7 @@ In this example the `aria-selected` attribute on the element with an ID of `tab-
 ```
 
 ```js
-let el = document.getElementById('tab-id');
+let el = document.getElementById("tab-id");
 console.log(el.ariaSelected); // true
 el.ariaSelected = "false";
 console.log(el.ariaSelected); // false

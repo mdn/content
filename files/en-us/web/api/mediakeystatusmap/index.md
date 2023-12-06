@@ -2,18 +2,12 @@
 title: MediaKeyStatusMap
 slug: Web/API/MediaKeyStatusMap
 page-type: web-api-interface
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - NeedsContent
-  - Reference
 browser-compat: api.MediaKeyStatusMap
 ---
 
 {{APIRef("EncryptedMediaExtensions")}}
 
-The **`MediaKeyStatusMap`** interface of the [EncryptedMediaExtensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
+The **`MediaKeyStatusMap`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
 
 ## Instance properties
 

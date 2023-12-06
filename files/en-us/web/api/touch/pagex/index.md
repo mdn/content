@@ -1,13 +1,8 @@
 ---
-title: Touch.pageX
+title: "Touch: pageX property"
+short-title: pageX
 slug: Web/API/Touch/pageX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - touch
 browser-compat: api.Touch.pageX
 ---
 
@@ -18,8 +13,8 @@ coordinate of the touch point relative to the viewport, including any scroll off
 
 ## Value
 
-A `long` representing the X coordinate of the touch point relative to the
-viewport, including any scroll offset.
+A `double` floating point value representing the X coordinate of the touch point
+relative to the viewport, including any scroll offset.
 
 ## Examples
 
@@ -40,14 +35,18 @@ are accessed via the event's {{domxref("TouchEvent.changedTouches")}} list.
 // Register a touchmove listeners for the 'source' element
 const src = document.getElementById("source");
 
-src.addEventListener('touchmove', (e) => {
-  // Iterate through the touch points that have moved and log each
-  // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
-  for (let i = 0; i < e.changedTouches.length; i++) {
-    console.log(`touchpoint[${i}].pageX = ${e.changedTouches[i].pageX}`);
-    console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
-  }
-}, false);
+src.addEventListener(
+  "touchmove",
+  (e) => {
+    // Iterate through the touch points that have moved and log each
+    // of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
+    for (let i = 0; i < e.changedTouches.length; i++) {
+      console.log(`touchpoint[${i}].pageX = ${e.changedTouches[i].pageX}`);
+      console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

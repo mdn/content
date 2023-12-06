@@ -1,14 +1,8 @@
 ---
-title: CSSImportRule.media
+title: "CSSImportRule: media property"
+short-title: media
 slug: Web/API/CSSImportRule/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Read-only
 browser-compat: api.CSSImportRule.media
 ---
 

@@ -2,14 +2,8 @@
 title: color-contrast()
 slug: Web/CSS/color_value/color-contrast
 page-type: css-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - Web
-  - color-contrast
-  - Experimental
+status:
+  - experimental
 browser-compat: css.types.color.color-contrast
 ---
 
@@ -26,11 +20,19 @@ color-contrast(#008080 vs olive, var(--myColor), #d2691e)
 
 ### Values
 
-- Functional notation: `color-contrast( <color> vs <color>#{2,} )`
+Functional notation: `color-contrast(color vs color-list)`
 
-  - : `<color>` is any valid {{cssxref("color_value","color")}}.
+- `color`
 
-    `<color>#{2,}` is a comma-separated list of color values to compare with the first value.
+  - : Any valid {{CSSXref("&lt;color&gt;")}}.
+
+- `vs`
+
+  - : A literal token as a component of the syntax.
+
+- `color-list`
+
+  - : A comma-separated list of at least two color values to compare with the first value.
 
 ## Specifications
 

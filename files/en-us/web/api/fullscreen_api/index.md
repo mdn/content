@@ -2,27 +2,12 @@
 title: Fullscreen API
 slug: Web/API/Fullscreen_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Full
-  - fullscreen
-  - Fullscreen API
-  - Games
-  - Graphics
-  - Guide
-  - Intermediate
-  - Overview
-  - Reference
-  - View
-  - fullscreen
-  - screen
 browser-compat:
-  - api.Document.fullscreen
   - api.Document.fullscreenElement
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
+  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -57,7 +42,7 @@ _The {{DOMxRef("Document")}} interface provides properties that can be used to d
 
 - {{DOMxRef("Document.fullscreenElement")}} / {{DOMxRef("ShadowRoot.fullscreenElement")}}
   - : The `fullscreenElement` property tells you the {{DOMxRef("Element")}} that's currently being displayed in fullscreen mode on the DOM (or shadow DOM). If this is `null`, the document (or shadow DOM) is not in fullscreen mode.
-- {{DOMxRef("document.fullscreenEnabled")}}
+- {{DOMxRef("Document.fullscreenEnabled")}}
   - : The `fullscreenEnabled` property tells you whether or not it is possible to engage fullscreen mode. This is `false` if fullscreen mode is not available for any reason (such as the `"fullscreen"` feature not being allowed, or fullscreen mode not being supported).
 
 ### Obsolete properties
@@ -79,9 +64,7 @@ _The Fullscreen API defines two events which can be used to detect when fullscre
 
 ## Controlling access
 
-The availability of fullscreen mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allow-list value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
+The availability of fullscreen mode can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). The fullscreen mode feature is identified by the string `"fullscreen"`, with a default allowlist value of `"self"`, meaning that fullscreen mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Usage notes
 
@@ -102,11 +85,15 @@ In this example, a video is presented in a web page. Pressing the <kbd>Enter</kb
 When the page is loaded, this code is run to set up an event listener to watch for the <kbd>Enter</kbd> key.
 
 ```js
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
 ```
 
 #### Toggling fullscreen mode
@@ -137,10 +124,9 @@ If fullscreen mode is already active (`fullscreenElement` is not `null`), we cal
 
 ## See also
 
-- [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API)
 - {{DOMxRef("Element.requestFullscreen()")}}
 - {{DOMxRef("Document.exitFullscreen()")}}
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen)

@@ -1,11 +1,7 @@
 ---
 title: <rect>
 slug: Web/SVG/Element/rect
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
+page-type: svg-element
 browser-compat: svg.elements.rect
 ---
 

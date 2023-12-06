@@ -1,10 +1,7 @@
 ---
-title: Guidelines for styling JavaScript code examples
+title: Guidelines for writing JavaScript code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -26,10 +23,6 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 ### Using modern JavaScript features
 
 You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
-
-### Spacing and indentation
-
-Mark indentation with _2 spaces_. Don't use the tab character. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
 ## Arrays
 
@@ -232,7 +225,7 @@ array.forEach((value /* , index, array */) => {
 
 ### Function names
 
-For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
 The following is a correct example of a function name:
 
@@ -308,7 +301,7 @@ function doIt() {
   };
   ```
 
-- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _expression body_) when possible:
 
   ```js example-good
   arr.map((e) => e.id);
@@ -533,12 +526,12 @@ Switch statements can be a little tricky.
 - When defining an object instance, either a literal or via a constructor, use _camelCase_, starting with lower-case character, for the instance name. For example:
 
   ```js example-good
-  const hanSolo = new Person("Han Solo", 25, "male");
+  const hanSolo = new Person("Han Solo", 25, "he/him");
 
   const luke = {
     name: "Luke Skywalker",
     age: 25,
-    gender: "male",
+    pronouns: "he/him",
   };
   ```
 
@@ -566,10 +559,10 @@ const object = new Object();
 
   ```js example-good
   class Person {
-    constructor(name, age, gender) {
+    constructor(name, age, pronouns) {
       this.name = name;
       this.age = age;
-      this.gender = gender;
+      this.pronouns = pronouns;
     }
 
     greeting() {
@@ -639,7 +632,7 @@ This section lists our recommendations of which operators to use and when.
 
 ### Conditional operators
 
-When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
+When you want to store to a variable a literal value depending on a condition, use a [conditional (ternary) operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) instead of an `if...else` statement. This rule also applies when returning a value. Write:
 
 ```js example-good
 const x = condition ? 1 : 2;
@@ -665,14 +658,14 @@ Prefer the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Stri
 Use the strict equality and inequality operators like this:
 
 ```js example-good
-name === "Chris";
+name === "Shilpa";
 age !== 25;
 ```
 
 Don't use the loose equality and inequality operators, as shown below:
 
 ```js example-bad
-name == "Chris";
+name == "Shilpa";
 age != 25;
 ```
 
@@ -693,15 +686,15 @@ For inserting values into strings, use [template literals](/en-US/docs/Web/JavaS
 - Here is an example of the recommended way to use template literals. Their use prevents a lot of spacing errors.
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(`Hi! I'm ${name}!`);
   ```
 
   Don't concatenate strings like this:
 
   ```js example-bad
-  const name = "Chris";
-  console.log("Hi! I'm" + name + "!"); // Hi! I'mChris!
+  const name = "Shilpa";
+  console.log("Hi! I'm" + name + "!"); // Hi! I'mShilpa!
   ```
 
 - Don't overuse template literals. If there are no substitutions, use a normal string literal instead.
@@ -741,7 +734,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - If a variable will not be reassigned, prefer `const`, like so:
 
   ```js example-good
-  const name = "Chris";
+  const name = "Shilpa";
   console.log(name);
   ```
 
@@ -756,8 +749,8 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 - The example below uses `let` where it should be `const`. The code will work, but we want to avoid this usage in MDN Web Docs code examples.
 
   ```js example-bad
-  let name = "Chris";
-  console.log(myName);
+  let name = "Shilpa";
+  console.log(name);
   ```
 
 - The example below uses `const` for a variable that gets reassigned. The reassignment will throw an error.
@@ -772,7 +765,7 @@ When declaring variables and constants, use the [`let`](/en-US/docs/Web/JavaScri
 
   ```js example-bad
   var age = 40;
-  var name = "Chris";
+  var name = "Shilpa";
   ```
 
 - Declare one variable per line, like so:

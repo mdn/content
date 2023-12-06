@@ -1,15 +1,8 @@
 ---
-title: Animation.finished
+title: "Animation: finished property"
+short-title: finished
 slug: Web/API/Animation/finished
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - finished
-  - web animations api
 browser-compat: api.Animation.finished
 ---
 
@@ -29,7 +22,7 @@ The following code waits until all animations running on the element `elem` have
 
 ```js
 Promise.all(elem.getAnimations().map((animation) => animation.finished)).then(
-  () => elem.remove()
+  () => elem.remove(),
 );
 ```
 

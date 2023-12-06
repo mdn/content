@@ -2,12 +2,6 @@
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLHRElement
 ---
 

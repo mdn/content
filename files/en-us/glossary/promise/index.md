@@ -1,11 +1,10 @@
 ---
 title: Promise
 slug: Glossary/Promise
-tags:
-  - Promise
-  - Promises
-  - asynchronous
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A **{{jsxref("Promise")}}** is an {{Glossary("object")}} that's returned by a {{Glossary("function")}} that has not yet completed its work. The promise literally represents a promise made by the function that it will eventually return a result through the promise object.
 

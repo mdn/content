@@ -1,12 +1,7 @@
 ---
 title: An overview of accessible web applications and widgets
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-tags:
-  - ARIA
-  - Accessibility
-  - Guide
-  - Web apps
-  - Widget
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -87,7 +82,7 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 </div>
 ```
 
-ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers, including Firefox, Safari, Opera, Chrome, and Internet Explorer, and many assistive technologies.
+ARIA is [well supported](https://caniuse.com/#feat=wai-aria) by all major browsers and many assistive technologies.
 
 ### Presentational changes
 
@@ -182,4 +177,4 @@ So, for the Tabs widget example above, the user should be able to navigate into 
 - [ARIA](/en-US/docs/Web/Accessibility/ARIA)
 - [Writing Keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria-1.1/)
-- [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/)
+- [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)

@@ -1,20 +1,10 @@
 ---
-title: XRView.isFirstPersonObserver
+title: "XRView: isFirstPersonObserver property"
+short-title: isFirstPersonObserver
 slug: Web/API/XRView/isFirstPersonObserver
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reference
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRView
-  - Augmented Reality
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRView.isFirstPersonObserver
 ---
 
@@ -34,23 +24,25 @@ The `isFirstPersonObserver` property then allows you to check which secondary vi
 
 ```js
 // Make sure to enable "secondary-view"
-navigator.xr.requestSession("immersive-ar", {
-  optionalFeatures: ["secondary-views"]
-}).then((session) => {
-  // …
+navigator.xr
+  .requestSession("immersive-ar", {
+    optionalFeatures: ["secondary-views"],
+  })
+  .then((session) => {
+    // …
 
-  session.requestAnimationFrame((frame) => {
-    const views = frame.getViewerPose(space);
-    // Make sure to iterate over all views
-    for (const view of views) {
-      if (view.isFirstPersonObserver) {
-        renderFPO();
-      } else {
-        render();
+    session.requestAnimationFrame((frame) => {
+      const views = frame.getViewerPose(space);
+      // Make sure to iterate over all views
+      for (const view of views) {
+        if (view.isFirstPersonObserver) {
+          renderFPO();
+        } else {
+          render();
+        }
       }
-    }
+    });
   });
-});
 ```
 
 ## Specifications

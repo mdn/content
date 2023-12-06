@@ -2,11 +2,6 @@
 title: CompressionStream
 slug: Web/API/CompressionStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - CompressionStream
 browser-compat: api.CompressionStream
 ---
 
@@ -32,7 +27,7 @@ In this example a stream is compressed using gzip compression.
 
 ```js
 const compressedReadableStream = inputReadableStream.pipeThrough(
-  new CompressionStream("gzip")
+  new CompressionStream("gzip"),
 );
 ```
 

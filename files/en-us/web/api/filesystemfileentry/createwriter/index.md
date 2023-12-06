@@ -1,17 +1,11 @@
 ---
-title: FileSystemFileEntry.createWriter()
+title: "FileSystemFileEntry: createWriter() method"
+short-title: createWriter()
 slug: Web/API/FileSystemFileEntry/createWriter
 page-type: web-api-instance-method
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemFileEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - createWriter
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
 
@@ -50,13 +44,16 @@ text string to the file corresponding to the passed-in directory entry.
 
 ```js
 function writeToFileEntry(entry, text) {
-  entry.createWriter((fileWriter) => {
-    let data = Blob([text], { type: "text/plain" });
+  entry.createWriter(
+    (fileWriter) => {
+      let data = Blob([text], { type: "text/plain" });
 
-    fileWriter.write(data);
-  }, (fileError) => {
-    /* do whatever to handle the error */
-  });
+      fileWriter.write(data);
+    },
+    (fileError) => {
+      /* do whatever to handle the error */
+    },
+  );
 }
 ```
 

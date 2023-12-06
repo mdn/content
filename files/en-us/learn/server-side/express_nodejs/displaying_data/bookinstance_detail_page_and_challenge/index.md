@@ -1,13 +1,7 @@
 ---
 title: BookInstance detail page and challenge
-slug: >-
-  Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
+slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge
+page-type: learn-module-chapter
 ---
 
 ## BookInstance detail page
@@ -21,30 +15,30 @@ Find the exported `bookinstance_detail()` controller method and replace it with 
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = (req, res, next) => {
-  BookInstance.findById(req.params.id)
+exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
+  const bookInstance = await BookInstance.findById(req.params.id)
     .populate("book")
-    .exec((err, bookinstance) => {
-      if (err) {
-        return next(err);
-      }
-      if (bookinstance == null) {
-        // No results.
-        const err = new Error("Book copy not found");
-        err.status = 404;
-        return next(err);
-      }
-      // Successful, so render.
-      res.render("bookinstance_detail", {
-        title: `Copy: ${bookinstance.book.title}`,
-        bookinstance,
-      });
-    });
-};
+    .exec();
+
+  if (bookInstance === null) {
+    // No results.
+    const err = new Error("Book copy not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  res.render("bookinstance_detail", {
+    title: "Book:",
+    bookinstance: bookInstance,
+  });
+});
 ```
 
-The method calls `BookInstance.findById()` with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: `req.params.id`).
+The implementation is very similar to that used for the other model detail pages.
+The route controller function calls `BookInstance.findById()` with the ID of a specific book instance extracted from the URL (using the route), and accessed within the controller via the request parameters: `req.params.id`.
 It then calls `populate()` to get the details of the associated `Book`.
+If a matching `BookInstance` is not found an error is sent to the Express middleware.
+Otherwise the returned data is rendered using the **bookinstance_detail.pug** view.
 
 ### View
 

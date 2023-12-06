@@ -1,14 +1,8 @@
 ---
-title: AudioParam.setValueAtTime()
+title: "AudioParam: setValueAtTime() method"
+short-title: setValueAtTime()
 slug: Web/API/AudioParam/setValueAtTime
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
 
@@ -42,7 +36,7 @@ implementations of this interface return {{jsxref('undefined')}}.
 ## Examples
 
 This simple example features a media element source with two control buttons (see our
-[webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is
+[webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/)). When the buttons are pressed, the `currGain` variable is
 incremented/decremented by 0.25, then the `setValueAtTime()` method is used
 to set the gain value equal to `currGain`, one second from now
 (`audioCtx.currentTime + 1`.)

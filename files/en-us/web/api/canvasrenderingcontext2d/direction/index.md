@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.direction
+title: "CanvasRenderingContext2D: direction property"
+short-title: direction
 slug: Web/API/CanvasRenderingContext2D/direction
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.direction
 ---
 

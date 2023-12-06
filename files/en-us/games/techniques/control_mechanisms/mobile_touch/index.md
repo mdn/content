@@ -1,20 +1,14 @@
 ---
 title: Mobile touch controls
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
-tags:
-  - Controls
-  - Games
-  - JavaScript
-  - Mobile
-  - pointer
-  - touch
+page-type: guide
 ---
 
 {{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}
 
-The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Web/Apps/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
+The future of mobile gaming is definitely web, and many developers choose the [mobile first](/en-US/docs/Glossary/Mobile_First) approach in their game development process — in the modern world, this generally also involves implementing touch controls. In this tutorial, we will see how easy it is to implement mobile controls in an HTML game, and enjoy playing on a mobile touch-enabled device.
 
 > **Note:** The game [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's entirely up to you which approach you to choose.
 
@@ -43,7 +37,7 @@ This way, touching the game's {{htmlelement("canvas")}} on the mobile screen wou
 
 Let's implement the mobile support in a [little demo](https://github.com/end3r/JavaScript-Game-Controls/) available on GitHub, so we can move the player's ship by touching the screen on a mobile device.
 
-We will use two events: `touchstart` and,`touchmove` both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
+We will use two events: `touchstart` and `touchmove`, both handled by one function. Why? The function `touchHandler` will assign proper variables to the ship's position so that we can use it for both cases: when the player touches the screen but doesn't move it (`touchstart`), and when the finger is moved on the screen (`touchmove`):
 
 ```js
 document.addEventListener("touchstart", touchHandler);
@@ -121,7 +115,7 @@ const buttonEnclave = this.add.button(
   10,
   "logo-enclave",
   this.clickEnclave,
-  this
+  this,
 );
 ```
 
@@ -135,7 +129,7 @@ this.buttonShoot = this.add.button(
   0,
   "button-alpha",
   null,
-  this
+  this,
 );
 this.buttonShoot.onInputDown.add(this.goShootPressed, this);
 this.buttonShoot.onInputUp.add(this.goShootReleased, this);

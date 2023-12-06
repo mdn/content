@@ -1,11 +1,7 @@
 ---
 title: Invalid selector
 slug: Web/WebDriver/Errors/InvalidSelector
-tags:
-  - Error
-  - Reference
-  - WebDriver
-  - invalid selector
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

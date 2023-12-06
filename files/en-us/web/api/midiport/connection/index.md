@@ -1,19 +1,14 @@
 ---
-title: MIDIPort.connection
+title: "MIDIPort: connection property"
+short-title: connection
 slug: Web/API/MIDIPort/connection
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - connection
-  - MIDIPort
 browser-compat: api.MIDIPort.connection
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
-The **`connection`** property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
+The **`connection`** read-only property of the {{domxref("MIDIPort")}} interface returns the connection state of the port.
 
 ## Value
 
@@ -24,7 +19,7 @@ Returns a string containing the connection state of the port, one of:
 - `"closed"`
   - : The device that this `MIDIPort` represents has not been opened, or has been closed.
 - `"pending"`
-  - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
+  - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected.
 
 ## Examples
 

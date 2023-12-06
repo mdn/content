@@ -1,16 +1,8 @@
 ---
-title: IDBKeyRange.upperOpen
+title: "IDBKeyRange: upperOpen property"
+short-title: upperOpen
 slug: Web/API/IDBKeyRange/upperOpen
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - upperOpen
 browser-compat: api.IDBKeyRange.upperOpen
 ---
 

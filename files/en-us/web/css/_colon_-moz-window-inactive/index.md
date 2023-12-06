@@ -1,14 +1,9 @@
 ---
-title: ':-moz-window-inactive'
+title: ":-moz-window-inactive"
 slug: Web/CSS/:-moz-window-inactive
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-window-inactive
 ---
 
@@ -23,7 +18,9 @@ The **`:-moz-window-inactive`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-window-inactive
+:-moz-window-inactive {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -73,4 +70,4 @@ Not part of any standard.
 
   - [`:active`](/en-US/docs/Web/CSS/:active)
 
-- The {{domxref("Document.activeElement")}} property for regular DOM, and the {{domxref("ShadowRoot.activeElement")}} property for [shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM) roots.
+- The {{domxref("Document.activeElement")}} property for regular DOM, and the {{domxref("ShadowRoot.activeElement")}} property for [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) roots.

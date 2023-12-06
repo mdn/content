@@ -1,10 +1,7 @@
 ---
 title: Using an external spell checker
 slug: Mozilla/Firefox/Releases/3/Using_an_external_spell_checker
-tags:
-  - Extensions
-  - Guide
-  - NeedsExample
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

@@ -1,8 +1,7 @@
 ---
 title: ARIA guides
 slug: Web/Accessibility/ARIA/ARIA_Guides
-tags:
-  - ARIA
+page-type: landing-page
 ---
 
 <section id="Quick_links">
@@ -12,7 +11,7 @@ tags:
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>
@@ -27,20 +26,23 @@ tags:
   </ol>
 </section>
 
-Accessible Rich Internet Applications (**ARIA**) defines ways to make the Web more accessible to people with disabilities. A few guidelines to follow that ensure better accessibility, like using drag and drop for placement of the widgets.
+Accessible Rich Internet Applications (**ARIA**) define ways to make the web more accessible to people with disabilities.
+This page lists the guides that you can use to help improve the accessibility of web page features such as tables, forms, and keyboard-navigation.
 
-- Error Handling in Forms
-- Labeling widgets
-- Labeling Composite Widgets and Regions
-- Managing Focus in Composite Widgets (`aria-activedescendant` vs roving tabindex)
-- Using Landmark Roles
-- Handling Dynamic Updates & Live Regions
-- Virtual vs. Non Virtual Mode in AT Products
-- Using Drag & Drop
-- Notifying users of Non-ARIA Screen Readers
-- Fixing structure with presentation role
-- Hiding Layout tables
-- Managing Modal and Non Modal Dialogs
-- Using ARIA with HTML5
-- How to test ARIA
-- ARIA on Mobile Devices
+- [Designing accessible forms](https://www.w3.org/WAI/tutorials/forms/)
+- [Understanding WAI-ARIA basics](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Creating keyboard-navigable JavaScript widgets](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
+- [Using ARIA for labels with embedded fields inside them](/en-US/docs/Web/Accessibility/ARIA/Multipart_labels)
+- [Managing focus in composite widgets](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/) (`aria-activedescendant` vs. roving tabindex)
+- [Testing ARIA](https://www.w3.org/WAI/test-evaluate/)
+- [Displaying accessible tables](https://www.w3.org/WAI/tutorials/tables/)
+
+## See also
+
+The following references are helpful for common accessibility use cases:
+
+- [Labeling widgets](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role)
+- [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [ARIA: presentation role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)

@@ -1,15 +1,7 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter
-  - Type
-  - WebExtensions
-  - webRequest
+page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.StreamFilter
 ---
 
@@ -33,7 +25,7 @@ You can listen to each event by assigning a listener function to its attribute:
 ```js
 filter.onstart = (event) => {
   console.log("started");
-}
+};
 ```
 
 Note that the request is blocked during the execution of any event listeners.
@@ -91,25 +83,25 @@ function listener(details) {
 
   filter.onstart = (event) => {
     console.log("started");
-  }
+  };
 
   filter.ondata = (event) => {
     console.log(event.data);
     filter.write(event.data);
-  }
+  };
 
   filter.onstop = (event) => {
     console.log("finished");
     filter.disconnect();
-  }
+  };
 
   //return {}; // not needed
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

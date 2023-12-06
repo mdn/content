@@ -1,18 +1,8 @@
 ---
-title: MouseEvent.movementY
+title: "MouseEvent: movementY property"
+short-title: movementY
 slug: Web/API/MouseEvent/movementY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - MovementY
-  - Property
-  - Read-only
-  - Reference
-  - mouse lock
-  - pointer lock
 browser-compat: api.MouseEvent.movementY
 ---
 
@@ -25,7 +15,7 @@ In other words, the value of the property is computed like this: `currentEvent.m
 
 ## Value
 
-A number.
+A number. Always zero on any {{domxref("MouseEvent")}} other than `mousemove`.
 
 ## Examples
 
@@ -44,8 +34,8 @@ function logMovement(event) {
   log.innerText = `movement: ${event.movementX}, ${event.movementY}\n${log.innerText}`;
 }
 
-const log = document.getElementById('log');
-document.addEventListener('mousemove', logMovement);
+const log = document.getElementById("log");
+document.addEventListener("mousemove", logMovement);
 ```
 
 ### Result

@@ -2,15 +2,6 @@
 title: AudioParamDescriptor
 slug: Web/API/AudioParamDescriptor
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioParamDescriptor
-  - AudioWorkletProcessor
-  - Dictionary
-  - Reference
-  - Web Audio API
-  - parameterDescriptors
 browser-compat: api.AudioParamDescriptor
 ---
 

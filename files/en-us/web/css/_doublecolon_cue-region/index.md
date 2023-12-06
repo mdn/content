@@ -1,17 +1,9 @@
 ---
-title: '::cue-region'
+title: "::cue-region"
 slug: Web/CSS/::cue-region
 page-type: css-pseudo-element
-tags:
-  - '::cue-region'
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
-  - Selector
-  - Web Video Text Tracks
-  - WebVTT
 browser-compat: css.selectors.cue-region
+spec-urls: https://w3c.github.io/webvtt/#the-cue-region-pseudo-element
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -29,8 +21,10 @@ The properties are applied to the entire set of cues as if they were a single un
 
 ## Syntax
 
-```
-::cue-region | ::cue-region( <selector> )
+```css-nolint
+::cue-region | ::cue-region(<selector>) {
+  /* ... */
+}
 ```
 
 ## Permitted properties
@@ -77,7 +71,7 @@ Rules whose selectors include this element may only use the following CSS proper
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 

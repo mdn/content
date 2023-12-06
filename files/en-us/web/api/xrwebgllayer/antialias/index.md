@@ -1,28 +1,10 @@
 ---
-title: XRWebGLLayer.antialias
+title: "XRWebGLLayer: antialias property"
+short-title: antialias
 slug: Web/API/XRWebGLLayer/antialias
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Drawing
-  - Graphics
-  - Quality
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - anti-aliasing
-  - antialias
-  - appearance
-  - augmented
-  - rendering
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.antialias
 ---
 
@@ -30,10 +12,10 @@ browser-compat: api.XRWebGLLayer.antialias
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`antialias`** is a Boolean value which is `true`
-if the rendering layer's frame buffer supports antialiasing. Otherwise, this
-property's value is `false`. The specific antialiasing technique used is left
+if the rendering layer's frame buffer supports anti-aliasing. Otherwise, this
+property's value is `false`. The specific anti-aliasing technique used is left
 to the {{Glossary("user agent", "user agent's")}} discretion and cannot be specified by
-the web site or web app.
+the website or web app.
 
 ## Syntax
 
@@ -44,7 +26,7 @@ xrWebGLLayer.antialias
 ### Value
 
 A Boolean value which is `true` if the WebGL rendering layer's frame buffer
-is configured to support antialiasing. Otherwise, this property is `false`.
+is configured to support anti-aliasing. Otherwise, this property is `false`.
 
 When the [WebXR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is enabled, this value corresponds to the value of the
 `antialias` property on the object returned by the WebGL context's
@@ -53,15 +35,15 @@ method.
 
 ## Usage notes
 
-Since this is a read-only property, you can set the antialiasing mode only when
+Since this is a read-only property, you can set the anti-aliasing mode only when
 initially creating the `XRWebGLLayer`, by specifying the `antialias`
 property in the {{domxref("XRWebGLLayer.XRWebGLLayer", "XRWebGLLayer()")}}
-constructor's `layerInit` configuration object.
+constructor's `options` configuration object.
 
 ## Examples
 
 This snippet checks the value of `antialias` to see if it should perform
-additional work to attempt to compensate for the lack of antialiasing on the WebGL
+additional work to attempt to compensate for the lack of anti-aliasing on the WebGL
 layer.
 
 ```js
@@ -71,7 +53,7 @@ gl.bindFrameBuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 /* .. */
 
 if (!glLayer.antialias) {
-  /* compensate for lack of antialiasing */
+  /* compensate for lack of anti-aliasing */
 }
 ```
 
@@ -86,4 +68,3 @@ if (!glLayer.antialias) {
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

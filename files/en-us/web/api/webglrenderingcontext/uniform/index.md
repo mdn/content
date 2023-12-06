@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.uniform[1234][fi][v]()
+title: "WebGLRenderingContext: uniform[1234][fi][v]() method"
+short-title: uniform[1234][fi][v]()
 slug: Web/API/WebGLRenderingContext/uniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.uniform1f
 ---
 
@@ -22,7 +17,7 @@ object, when they are once again initialized to 0.
 
 > **Note:** Many of the functions described here have expanded WebGL 2 interfaces, which can be
 > found under
-> {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform).
 
 ## Syntax
 

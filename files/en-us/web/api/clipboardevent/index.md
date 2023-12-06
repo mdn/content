@@ -2,15 +2,6 @@
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - Cut
-  - Event
-  - Interface
-  - copy
-  - paste
 browser-compat: api.ClipboardEvent
 ---
 
@@ -49,4 +40,4 @@ _No specific methods; inherits methods from its parent {{domxref("Event")}}_.
 - Copy-related events: {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

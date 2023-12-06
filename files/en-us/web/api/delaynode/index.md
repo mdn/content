@@ -2,13 +2,6 @@
 title: DelayNode
 slug: Web/API/DelayNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DelayNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.DelayNode
 ---
 
@@ -67,7 +60,7 @@ _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}
 
 ## Example
 
-See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#example) for example code.
+See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples) for example code.
 
 ## Specifications
 

@@ -1,9 +1,7 @@
 ---
 title: clip-rule
 slug: Web/SVG/Attribute/clip-rule
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.clip-rule
 ---
 
@@ -76,13 +74,13 @@ As a presentation attribute, it also can be used as a property directly inside a
 
   <!-- Left: evenodd -->
   <clipPath id="emptyStar">
-    <use xlink:href="#star" clip-rule="evenodd" />
+    <use href="#star" clip-rule="evenodd" />
   </clipPath>
   <rect clip-path="url(#emptyStar)" width="50" height="90" fill="blue" />
 
   <!-- Right: nonzero -->
   <clipPath id="filledStar">
-    <use xlink:href="#star" clip-rule="nonzero" />
+    <use href="#star" clip-rule="nonzero" />
   </clipPath>
   <rect clip-path="url(#filledStar)" width="50" height="90" x="50" fill="red" />
 </svg>

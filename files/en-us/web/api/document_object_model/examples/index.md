@@ -2,9 +2,6 @@
 title: Examples of web and XML development using the DOM
 slug: Web/API/Document_Object_Model/Examples
 page-type: guide
-tags:
-  - DOM
-  - DOM Reference
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -16,7 +13,7 @@ This chapter provides some longer examples of web and XML development using the 
 The following example shows the use of the `height` and `width` properties alongside images of varying dimensions:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>width/height example</title>
@@ -83,7 +80,7 @@ The following example shows the use of the `height` and `width` properties along
 ## Example 2: Image Attributes
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Modifying an image border</title>
@@ -125,7 +122,7 @@ The following example shows the use of the `height` and `width` properties along
 In this simple example, some basic style properties of an HTML paragraph element are accessed using the style object on the element and that object's CSS style properties, which can be retrieved and set from the DOM. In this case, you are manipulating the individual styles directly. In the next example (see Example 4), you can use stylesheets and their rules to change styles for whole documents.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Changing color and font-size example</title>
@@ -183,7 +180,7 @@ p {
 
 This script outputs the following:
 
-```
+```plain
 BODY
 P
 #LUMPY
@@ -196,7 +193,7 @@ This example demonstrates how events fire and are handled in the DOM in a very s
 However, stopEvent also calls an event object method, {{domxref("event.stopPropagation")}}, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an {{domxref("Element.click_event","onclick")}} event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Event Propagation</title>
@@ -247,7 +244,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>getComputedStyle example</title>
@@ -314,7 +311,7 @@ The properties of event objects differs greatly between browsers, the [WHATWG DO
 Put the following code into a blank text file and load it into a variety of browsers, you'll be surprised at the different number and names of properties. You might also like to add some elements in the page and call this function from different event handlers.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

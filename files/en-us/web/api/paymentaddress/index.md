@@ -2,16 +2,9 @@
 title: PaymentAddress
 slug: Web/API/PaymentAddress
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - paymentAddress
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress
 ---
 
@@ -19,7 +12,7 @@ browser-compat: api.PaymentAddress
 
 The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is used to store shipping or payment address information.
 
-It may be useful to refer to the Universal Postal Union web site's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
+It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
 ## Instance properties
 

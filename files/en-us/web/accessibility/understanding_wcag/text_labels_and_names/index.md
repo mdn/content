@@ -1,10 +1,7 @@
 ---
 title: Text labels and names
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
-tags:
-  - Accessibility
-  - WCAG
-  - text labels
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -84,7 +81,7 @@ If the dialog box doesn't have a heading, you can instead use `aria-label` to co
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
-- [Dialog authoring practices](https://www.w3.org/TR/wai-aria-practices/#dialog_roles_states_props)
+- [Dialog authoring practices](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
 
 ## Documents must have a title
 
@@ -132,7 +129,7 @@ The following example shows code for a figure with a caption. The `alt` attribut
 ```html
 <figure>
   <img
-    src="milkweed.jgp"
+    src="milkweed.jpg"
     alt="Black and white close-up photo of milkweed flowers" />
   <figcaption>Asclepias verticillata</figcaption>
 </figure>
@@ -277,7 +274,7 @@ If you define more than one toolbar in a web application using the ARIA `toolbar
 
 ### See also
 
-- [W3C ARIA toolbar example](https://www.w3.org/TR/wai-aria-practices/examples/toolbar/toolbar.html)
+- [W3C ARIA toolbar example](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/)
 
 ## Related WCAG success criteria
 

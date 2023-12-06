@@ -1,11 +1,8 @@
 ---
-title: Text.wholeText
+title: "Text: wholeText property"
+short-title: wholeText
 slug: Web/API/Text/wholeText
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Text.wholeText
 ---
 
@@ -46,7 +43,7 @@ paragraph.removeChild(para.childNodes[1]); // Delete the strong element
 Now you end up with _"Through-hiking is great! However, casting a ballot is tricky."_, with two nodes before the hyperlink:
 
 1. A {{domxref("Text")}} containing the string `"Through-hiking is great!"`
-2. A second `Text`node containing the string `" However, "`
+2. A second `Text` node containing the string `" However, "`
 
 To get those two nodes at once, you would call `para.childNodes[0].wholeText`:
 

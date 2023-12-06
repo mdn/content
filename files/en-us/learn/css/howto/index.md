@@ -1,10 +1,7 @@
 ---
 title: Use CSS to solve common problems
 slug: Learn/CSS/Howto
-tags:
-  - Beginner
-  - CSS
-  - Learn
+page-type: landing-page
 ---
 
 {{LearnSidebar}}
@@ -17,7 +14,7 @@ This page rounds up questions and answers, and other material on the MDN site th
   - : Shadows can be added to boxes with the {{cssxref("box-shadow")}} property. This tutorial explains how it works and shows an example.
 - [How do I fill a box with an image without distorting the image?](/en-US/docs/Learn/CSS/Howto/Fill_a_box_with_an_image)
   - : The {{cssxref("object-fit")}} property provides different ways to fit an image into a box which has a different aspect ratio, and you can find out how to use them in this tutorial.
-- [Which methods can be used to style boxes?](/en-US/docs/Learn/CSS/Howto/create_fancy_boxes)
+- [Which methods can be used to style boxes?](/en-US/docs/Learn/CSS/Howto/Create_fancy_boxes)
   - : A rundown of the different properties that might be useful when styling boxes using CSS.
 - [How can I make elements semi-transparent?](/en-US/docs/Learn/CSS/Howto/Make_box_transparent)
   - : The {{cssxref("opacity")}} property and color values with an alpha channel can be used for this; find out which one to use when.
@@ -52,9 +49,9 @@ This page rounds up questions and answers, and other material on the MDN site th
 
 ### Layout guides
 
-- [Using CSS Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
-- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
-- [Using CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [Using CSS Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Using CSS multi-column layouts](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [Using CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
-> **Note:** We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks.
+> **Note:** We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.

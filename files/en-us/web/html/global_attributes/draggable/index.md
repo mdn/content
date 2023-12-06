@@ -1,16 +1,13 @@
 ---
 title: draggable
 slug: Web/HTML/Global_attributes/draggable
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.draggable
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **draggable** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that indicates whether the element can be dragged, either with native browser behavior or the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
+The **`draggable`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that indicates whether the element can be dragged, either with native browser behavior or the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 The `draggable` attribute may be applied to elements that strictly fall under the [HTML namespace](/en-US/docs/Glossary/Namespace), which means that it cannot be applied to [SVGs](/en-US/docs/Web/SVG).
 For more information about what namespace declarations look like, and what they do, see [Namespace crash course](/en-US/docs/Web/SVG/Namespaces_Crash_Course).

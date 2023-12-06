@@ -1,20 +1,12 @@
 ---
 title: Web forms — Working with user data
 slug: Learn/Forms
-tags:
-  - Beginner
-  - Featured
-  - Forms
-  - Guide
-  - HTML
-  - Landing
-  - Learn
-  - Web
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
 
-This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
+This module provides a series of articles that will help you master the essentials of web forms. Web forms are a very powerful tool for interacting with users — most commonly they are used for collecting data from users, or allowing them to control a user interface. However, for historical and technical reasons, it's not always obvious how to use them to their full potential. In the articles listed below, we'll cover all the essential aspects of Web forms including marking up their HTML structure, styling form controls, validating form data, and submitting data to the server.
 
 > **Callout:**
 >
@@ -74,7 +66,7 @@ The following articles aren't essential to the learning pathway, but they'll pro
 - [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
   - : You'll come across some cases where the native form widgets just don't provide what you need, e.g. because of styling or functionality. In such cases, you may need to build your own form widget out of raw HTML. This article explains how you'd do this and the considerations you need to be aware of when doing so, with a practical case study.
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-  - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects).)
+  - : This article looks at ways to use a form to assemble an HTTP request and send it via custom JavaScript, rather than standard form submission. It also looks at why you'd want to do this, and the implications of doing so. (See also [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).)
 - [CSS property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
   - : This last article provides a handy reference allowing you to look up what CSS properties are compatible with what form elements.
 
@@ -83,3 +75,4 @@ The following articles aren't essential to the learning pathway, but they'll pro
 - [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms)
 - [HTML \<input> types reference](/en-US/docs/Web/HTML/Element/input)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [User input methods and controls](/en-US/docs/Learn/Forms/User_input_methods)

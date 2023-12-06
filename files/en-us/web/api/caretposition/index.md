@@ -2,12 +2,8 @@
 title: CaretPosition
 slug: Web/API/CaretPosition
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM View
-  - Experimental
-  - Interface
-  - Reference
+status:
+  - experimental
 browser-compat: api.CaretPosition
 ---
 

@@ -2,15 +2,6 @@
 title: FontFaceSetLoadEvent
 slug: Web/API/FontFaceSetLoadEvent
 page-type: web-api-interface
-tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Event
-  - FontFaceLoadEvent
-  - Fonts
-  - Interface
-  - Reference
 browser-compat: api.FontFaceSetLoadEvent
 ---
 

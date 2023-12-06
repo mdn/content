@@ -1,10 +1,7 @@
 ---
 title: MathML fractions and roots
 slug: Learn/MathML/First_steps/Fractions_and_roots
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps/Scripts", "Learn/MathML/First_steps")}}
@@ -178,7 +175,9 @@ Here is a simple exercise to verify whether you understood the relation between 
 
 ```css hidden
 math {
-  font-family: Latin Modern Math, STIX Two Math;
+  font-family:
+    Latin Modern Math,
+    STIX Two Math;
   font-size: 200%;
 }
 math .highlight {
@@ -216,7 +215,7 @@ function verifyOption(checkbox) {
     }
   }
   const finished = checkboxes.every(
-    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight
+    (checkbox) => !!checkbox.checked === !!checkbox.dataset.highlight,
   );
   status.textContent = finished
     ? "Congratulations, you checked all the correct answers!"
@@ -280,7 +279,7 @@ Some mathematical concepts are sometimes written using fraction-like notations s
     <mo>)</mo>
   </mrow>
   <mo>=</mo>
-  <mn>6</mn>
+  <mn>3</mn>
   <mo>≠</mo>
   <mfrac>
     <mn>3</mn>

@@ -2,9 +2,6 @@
 title: How to document a CSS property
 slug: MDN/Writing_guidelines/Howto/Document_a_CSS_property
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -27,7 +24,7 @@ If the implementation and specification diverge, feel free to mention it in the 
 
 ## Step 2 — Check the database of CSS properties
 
-Several characteristics of a CSS property, such as its syntax or if it can be animated, are mentioned in several pages and are therefore, stored in an ad hoc database. Macros that you'll use on the page need information about the property that is stored there, so start by [checking that this information is there](/en-US/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB).
+Several characteristics of a CSS property, such as its syntax or if it can be animated, are mentioned in several pages and are therefore, stored in an ad hoc database. Macros that you'll use on the page need information about the property that is stored there, so start by [checking that this information is there](https://github.com/mdn/data/blob/main/docs/updating_css_json.md).
 
 ## Step 3 — Create the CSS property page
 

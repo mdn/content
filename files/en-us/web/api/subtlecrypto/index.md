@@ -2,15 +2,6 @@
 title: SubtleCrypto
 slug: Web/API/SubtleCrypto
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Cryptography
-  - Encryption
-  - Interface
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
 browser-compat: api.SubtleCrypto
 ---
 
@@ -53,7 +44,7 @@ _This interface doesn't inherit any methods, as it has no parent interface._
 - {{domxref("SubtleCrypto.importKey()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}} corresponding to the format, the algorithm, raw key data, usages, and extractability given as parameters.
 - {{domxref("SubtleCrypto.exportKey()")}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with a buffer containing the key in the requested format.
+  - : Returns a {{jsxref("Promise")}} that fulfills with the raw key data containing the key in the requested format.
 - {{domxref("SubtleCrypto.wrapKey()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with a wrapped symmetric key for usage (transfer and storage) in insecure environments. The wrapped key matches the format specified in the given parameters, and wrapping is done by the given wrapping key, using the specified algorithm.
 - {{domxref("SubtleCrypto.unwrapKey()")}}
@@ -73,7 +64,7 @@ These are the functions you can use to implement security features such as priva
 
 ### Key management functions
 
-Except for {{DOMxRef("SubtleCrypto.digest","digest()")}}, all the cryptography functions in the API use cryptographic keys. In the `SubtleCrypto` API a cryptographic key is represented using a {{DOMxRef("CryptoKey","CryptoKey")}} object. To perform operations like signing and encrypting, you pass a {{DOMxRef("CryptoKey","CryptoKey")}} object into the {{DOMxRef("SubtleCrypto.sign","sign()")}} or {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} function.
+Except for {{DOMxRef("SubtleCrypto.digest","digest()")}}, all the cryptography functions in the API use cryptographic keys. In the `SubtleCrypto` API a cryptographic key is represented using a {{DOMxRef("CryptoKey")}} object. To perform operations like signing and encrypting, you pass a {{DOMxRef("CryptoKey")}} object into the {{DOMxRef("SubtleCrypto.sign","sign()")}} or {{DOMxRef("SubtleCrypto.encrypt","encrypt()")}} function.
 
 #### Generating and deriving keys
 

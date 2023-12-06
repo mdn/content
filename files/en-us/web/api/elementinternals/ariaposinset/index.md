@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaPosInSet
+title: "ElementInternals: ariaPosInSet property"
+short-title: ariaPosInSet
 slug: Web/API/ElementInternals/ariaPosInSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPosInSet
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaPosInSet
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaPosInSet`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) attribute, which defines an element's number or position in the current set of listitems or treeitems.
 

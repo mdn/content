@@ -1,13 +1,10 @@
 ---
-title: IdleDetector()
+title: "IdleDetector: IdleDetector() constructor"
+short-title: IdleDetector()
 slug: Web/API/IdleDetector/IdleDetector
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - IdleDetector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.IdleDetector.IdleDetector
 ---
 

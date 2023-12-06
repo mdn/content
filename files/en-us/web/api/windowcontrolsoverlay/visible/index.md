@@ -1,15 +1,10 @@
 ---
-title: WindowControlsOverlay.visible
+title: "WindowControlsOverlay: visible property"
+short-title: visible
 slug: Web/API/WindowControlsOverlay/visible
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WindowControlsOverlay
-  - Progressive Web Apps
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay.visible
 ---
 

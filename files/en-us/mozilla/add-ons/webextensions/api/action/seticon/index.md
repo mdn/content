@@ -1,16 +1,7 @@
 ---
 title: action.setIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/action/setIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - action
-  - setIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.action.setIcon
 ---
 
@@ -48,11 +39,13 @@ let settingIcon = browser.action.setIcon(
 
         Use a dictionary object to specify multiple `ImageData` objects in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `imageData` is a dictionary, the value of each property is an `ImageData` object, and its name is its size, like this:
 
-        ```json
-        {
-          16: image16,
-          32: image32
-        }
+        ```js
+        let settingIcon = browser.action.setIcon({
+          imageData: {
+            16: image16,
+            32: image32,
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -63,11 +56,13 @@ let settingIcon = browser.action.setIcon(
 
         Use a dictionary object to specify multiple icon files in different sizes, so the icon does not have to be scaled for a device with a different pixel density. If `path` is a dictionary, the value of each property is a relative path, and its name is its size, like this:
 
-        ```json
-        {
-          16: "path/to/image16.jpg",
-          32: "path/to/image32.jpg"
-        }
+        ```js
+        let settingIcon = browser.action.setIcon({
+          path: {
+            16: "path/to/image16.jpg",
+            32: "path/to/image32.jpg",
+          },
+        });
         ```
 
         The browser will choose the image to use depending on the screen's pixel density. See [Choosing icon sizes](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) for more information on this.
@@ -104,15 +99,15 @@ function logResponseHeaders(requestDetails) {
 function startListening() {
   browser.webRequest.onHeadersReceived.addListener(
     logResponseHeaders,
-    {urls: ["<all_urls>"]},
-    ["responseHeaders"]
+    { urls: ["<all_urls>"] },
+    ["responseHeaders"],
   );
-  browser.action.setIcon({path: "icons/listening-on.svg"});
+  browser.action.setIcon({ path: "icons/listening-on.svg" });
 }
 
 function stopListening() {
   browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.action.setIcon({path: "icons/listening-off.svg"});
+  browser.action.setIcon({ path: "icons/listening-off.svg" });
 }
 
 function toggleListener() {
@@ -140,7 +135,7 @@ function getImageData() {
 }
 
 browser.action.onClicked.addListener(() => {
-  browser.action.setIcon({imageData: getImageData()});
+  browser.action.setIcon({ imageData: getImageData() });
 });
 ```
 
@@ -149,7 +144,8 @@ The following snippet updates the icon when the user clicks it, but only for the
 ```js
 browser.action.onClicked.addListener((tab) => {
   browser.action.setIcon({
-    tabId: tab.id, path: "icons/updated-48.png"
+    tabId: tab.id,
+    path: "icons/updated-48.png",
   });
 });
 ```
@@ -161,8 +157,6 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

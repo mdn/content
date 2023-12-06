@@ -2,11 +2,6 @@
 title: Child combinator
 slug: Web/CSS/Child_combinator
 page-type: css-combinator
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.child
 ---
 
@@ -25,8 +20,9 @@ Elements matched by the second selector must be the immediate children of the el
 
 ## Syntax
 
-```css
-selector1 > selector2 { style properties }
+```css-nolint
+/* The white space around the > combinator is optional but recommended. */
+selector1 > selector2 { /* style properties */ }
 ```
 
 ## Examples
@@ -47,7 +43,8 @@ div > span {
 
 ```html
 <div>
-  <span>Span #1, in the div.
+  <span>
+    Span #1, in the div.
     <span>Span #2, in the span that's in the div.</span>
   </span>
 </div>

@@ -2,13 +2,8 @@
 title: PresentationAvailability
 slug: Web/API/PresentationAvailability
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Presentation API
-  - PresentationAvailability
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationAvailability
 ---
 

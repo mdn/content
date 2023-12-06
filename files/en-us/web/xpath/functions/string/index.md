@@ -1,18 +1,16 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `string` function converts the given argument to a string.
 
 ### Syntax
 
-```
+```plain
 string( [object] )
 ```
 

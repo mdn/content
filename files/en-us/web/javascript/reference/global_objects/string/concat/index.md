@@ -1,25 +1,21 @@
 ---
 title: String.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/String/concat
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.concat
 ---
 
 {{JSRef}}
 
-The **`concat()`** method concatenates
-the string arguments to the calling string and returns a new string.
+The **`concat()`** method of {{jsxref("String")}} values concatenates
+the string arguments to this string and returns a new string.
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
 ## Syntax
 
 ```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -27,7 +23,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value
@@ -52,18 +48,18 @@ The `concat()` method is very similar to the [addition/string concatenation oper
 The following example combines strings into a new string.
 
 ```js
-const hello = 'Hello, ';
-console.log(hello.concat('Kevin', '. Have a nice day.'));
+const hello = "Hello, ";
+console.log(hello.concat("Kevin", ". Have a nice day."));
 // Hello, Kevin. Have a nice day.
 
-const greetList = ['Hello', ' ', 'Venkat', '!'];
-"".concat(...greetList)  // "Hello Venkat!"
+const greetList = ["Hello", " ", "Venkat", "!"];
+"".concat(...greetList); // "Hello Venkat!"
 
-"".concat({})    // [object Object]
-"".concat([])    // ""
-"".concat(null)  // "null"
-"".concat(true)  // "true"
-"".concat(4, 5)  // "45"
+"".concat({}); // "[object Object]"
+"".concat([]); // ""
+"".concat(null); // "null"
+"".concat(true); // "true"
+"".concat(4, 5); // "45"
 ```
 
 ## Specifications
@@ -77,4 +73,4 @@ const greetList = ['Hello', ' ', 'Venkat', '!'];
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

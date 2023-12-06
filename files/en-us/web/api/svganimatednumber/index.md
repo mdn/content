@@ -2,12 +2,6 @@
 title: SVGAnimatedNumber
 slug: Web/API/SVGAnimatedNumber
 page-type: web-api-interface
-tags:
-  - API
-  - HTML
-  - NeedsExample
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedNumber
 ---
 

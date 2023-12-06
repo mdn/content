@@ -1,11 +1,7 @@
 ---
 title: Async scripts for asm.js
 slug: Games/Techniques/Async_scripts
-tags:
-  - Games
-  - JavaScript
-  - asm.js
-  - async
+page-type: guide
 ---
 
 {{GamesSidebar}}

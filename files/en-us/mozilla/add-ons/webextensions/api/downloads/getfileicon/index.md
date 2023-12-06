@@ -1,16 +1,7 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
+page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
 
@@ -66,16 +57,16 @@ function onError(error) {
 }
 
 function getIcon(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-      gettingIcon.then(gotIcon, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    let gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
+    gettingIcon.then(gotIcon, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(getIcon, onError);
@@ -84,8 +75,6 @@ searching.then(getIcon, onError);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-getFileIcon) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,16 +1,10 @@
 ---
 title: "ARIA: separator role"
 slug: Web/Accessibility/ARIA/Roles/separator_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#separator
-  - https://w3c.github.io/aria-practices/#range_related_properties
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-editor/
 ---
 
 The `separator` role indicates the element is a divider that separates and distinguishes sections of content or groups of menuitems. The implicit ARIA role the native thematic break {{HTMLElement('hr')}} element is `separator`.
@@ -129,7 +123,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ## See Also
 
 - Thematic break HTML {{HTMLElement('hr')}} element
-- [Example separator in a menubar](https://w3c.github.io/aria-practices/examples/menubar/menubar-editor.html)
+- [Example separator in a menubar](https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-editor/)
 
 <section id="Quick_links">
 

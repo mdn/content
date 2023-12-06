@@ -2,16 +2,10 @@
 title: Blob
 slug: Web/API/Blob
 page-type: web-api-interface
-tags:
-  - API
-  - Blob
-  - File API
-  - Interface
-  - Reference
 browser-compat: api.Blob
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
 
@@ -30,20 +24,20 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 ## Instance properties
 
-- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.size")}} {{ReadOnlyInline}}
   - : The size, in bytes, of the data contained in the `Blob` object.
-- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
+- {{DOMxRef("Blob.type")}} {{ReadOnlyInline}}
   - : A string indicating the MIME type of the data contained in the `Blob`. If the type is unknown, this string is empty.
 
 ## Instance methods
 
-- {{DOMxRef("Blob.prototype.arrayBuffer()")}}
+- {{DOMxRef("Blob.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
-- {{DOMxRef("Blob.prototype.slice()")}}
+- {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
-- {{DOMxRef("Blob.prototype.stream()")}}
+- {{DOMxRef("Blob.stream()")}}
   - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
-- {{DOMxRef("Blob.prototype.text()")}}
+- {{DOMxRef("Blob.text()")}}
   - : Returns a promise that resolves with a string containing the entire contents of the `Blob` interpreted as UTF-8 text.
 
 ## Examples
@@ -61,7 +55,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ### Creating a URL representing the contents of a typed array
 
-The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
+The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) and creates a new `Blob` containing the typed array's data. It then calls {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} to convert the blob into a {{glossary("URL")}}.
 
 #### HTML
 
@@ -75,7 +69,7 @@ The following code creates a JavaScript [typed array](/en-US/docs/Web/JavaScript
 
 #### JavaScript
 
-The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's {{htmlattrxref("src", "img")}} attribute (assuming the data contains an image, of course).
+The main piece of this code for example purposes is the `typedArrayToURL()` function, which creates a `Blob` from the given typed array and returns an object URL for it. Having converted the data into an object URL, it can be used in a number of ways, including as the value of the {{HTMLElement("img")}} element's [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute (assuming the data contains an image, of course).
 
 ```js
 function showViewLiveResultButton() {
@@ -97,7 +91,7 @@ function showViewLiveResultButton() {
 if (!showViewLiveResultButton()) {
   function typedArrayToURL(typedArray, mimeType) {
     return URL.createObjectURL(
-      new Blob([typedArray.buffer], { type: mimeType })
+      new Blob([typedArray.buffer], { type: mimeType }),
     );
   }
   const bytes = new Uint8Array(59);
@@ -138,7 +132,7 @@ Another way to read content from a `Blob` is to use a {{domxref("Response")}}. T
 const text = await new Response(blob).text();
 ```
 
-Or by using {{DOMxRef("Blob.prototype.text()")}}:
+Or by using {{DOMxRef("Blob.text()")}}:
 
 ```js
 const text = await blob.text();
@@ -158,5 +152,5 @@ By using other methods of `FileReader`, it is possible to read the contents of a
 
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
-- {{DOMxRef("URL.createObjectURL")}}
+- {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)

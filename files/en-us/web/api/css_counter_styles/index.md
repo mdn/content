@@ -2,10 +2,6 @@
 title: CSS Counter Styles
 slug: Web/API/CSS_Counter_Styles
 page-type: web-api-overview
-tags:
-  - CSS
-  - CSS Counter Styles
-  - Overview
 browser-compat: api.CSSCounterStyleRule
 ---
 
@@ -28,4 +24,5 @@ The CSS Counter Styles module allows to define custom counter styles, which can 
 
 ## See also
 
-- [Using CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)

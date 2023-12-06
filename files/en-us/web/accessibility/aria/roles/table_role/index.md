@@ -1,18 +1,10 @@
 ---
 title: "ARIA: table role"
 slug: Web/Accessibility/ARIA/Roles/table_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA Table
-  - ARIA Table Role
-  - Accessibility
-  - Reference
-  - Table Role
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#table
-  - https://w3c.github.io/aria-practices/#table
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
 The `table` value of the ARIA `role` attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native {{HTMLElement('table')}} HTML element.

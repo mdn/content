@@ -1,18 +1,8 @@
 ---
-title: SourceBuffer.changeType()
+title: "SourceBuffer: changeType() method"
+short-title: changeType()
 slug: Web/API/SourceBuffer/changeType
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media
-  - Media Source
-  - Media Source Extensions
-  - Method
-  - SourceBuffer
-  - Video
-  - changeType
 browser-compat: api.SourceBuffer.changeType
 ---
 
@@ -61,9 +51,8 @@ None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
-If the parent {{domxref("MediaSource")}} is in its `"ended"`
-{{domxref("MediaSource.readyState", "readyState")}}, calling `changeType()`
-will transition the media source to the `"open"` `readyState` and
+If the {{domxref("MediaSource.readyState", "readyState")}} property of the parent {{domxref("MediaSource")}} is set to `"ended"`, calling `changeType()`
+will set the `readyState` property to`"open"` and
 fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
 
 ## Browser compatibility

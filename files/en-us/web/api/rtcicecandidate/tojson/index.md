@@ -1,19 +1,8 @@
 ---
-title: RTCIceCandidate.toJSON()
+title: "RTCIceCandidate: toJSON() method"
+short-title: toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Candidate
-  - ICE
-  - JSON
-  - Method
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - toJSON
 browser-compat: api.RTCIceCandidate.toJSON
 ---
 

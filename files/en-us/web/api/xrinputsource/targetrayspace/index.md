@@ -1,31 +1,8 @@
 ---
-title: XRInputSource.targetRaySpace
+title: "XRInputSource: targetRaySpace property"
+short-title: targetRaySpace
 slug: Web/API/XRInputSource/targetRaySpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Controller
-  - Input
-  - Mixed
-  - Property
-  - Ray
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - XRReferenceSpace
-  - XRSpace
-  - augmented
-  - source
-  - space
-  - target
 browser-compat: api.XRInputSource.targetRaySpace
 ---
 

@@ -1,18 +1,12 @@
 ---
-title: FormData.entries()
+title: "FormData: entries() method"
+short-title: entries()
 slug: Web/API/FormData/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Iterator
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string object, and the value is either a string or a {{domxref("Blob")}}.
 
@@ -35,8 +29,8 @@ An [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of {{dom
 ## Examples
 
 ```js
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // Display the key/value pairs
 for (const pair of formData.entries()) {
@@ -46,7 +40,7 @@ for (const pair of formData.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```
@@ -61,5 +55,5 @@ key2, value2
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

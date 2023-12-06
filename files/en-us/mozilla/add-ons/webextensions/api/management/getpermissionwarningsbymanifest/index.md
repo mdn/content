@@ -1,14 +1,7 @@
 ---
 title: management.getPermissionWarningsByManifest()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsByManifest
-  - management
+page-type: webextension-api-function
 browser-compat: webextensions.api.management.getPermissionWarningsByManifest
 ---
 
@@ -49,11 +42,11 @@ Log the permission warnings for the given manifest file:
 
 ```js
 let manifest = {
-  "manifest_version": 2,
-  "name": "test",
-  "version": "1.0",
-  "permissions": ["management", "<all_urls>"]
-}
+  manifest_version: 2,
+  name: "test",
+  version: "1.0",
+  permissions: ["management", "<all_urls>"],
+};
 
 let manifestString = JSON.stringify(manifest);
 
@@ -65,15 +58,14 @@ function gotError(error) {
   console.log(`Error: ${error}`);
 }
 
-let gettingWarnings = browser.management.getPermissionWarningsByManifest(manifestString);
+let gettingWarnings =
+  browser.management.getPermissionWarningsByManifest(manifestString);
 gettingWarnings.then(gotWarnings, gotError);
 ```
 
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-getPermissionWarningsByManifest) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

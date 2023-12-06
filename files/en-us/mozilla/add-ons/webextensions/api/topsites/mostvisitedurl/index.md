@@ -1,16 +1,7 @@
 ---
 title: topSites.MostVisitedURL
 slug: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MostVisitedURL
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - topSites
+page-type: webextension-api-type
 browser-compat: webextensions.api.topSites.MostVisitedURL
 ---
 
@@ -38,8 +29,6 @@ Values of this type are objects. They contain the following properties:
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

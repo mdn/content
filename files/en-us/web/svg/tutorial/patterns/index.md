@@ -1,11 +1,10 @@
 ---
 title: Patterns
 slug: Web/SVG/Tutorial/Patterns
-tags:
-  - Advanced
-  - SVG
-  - SVG:Tutorial
+page-type: guide
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}
 
@@ -79,6 +78,6 @@ Neither of these uses is what one would normally think of when you think of a pa
 
 Of course, this means the pattern won't scale if you change your object size later. All three of the preceding examples are shown below on a rectangle that has been slightly elongated to a `height` of `300px`, but I should note that it's not an exhaustive picture, and there are other options available depending on your application.
 
-![](svg_pattern_comparison_of_units.png)
+![Three examples showing patternUnits values of default and userSpaceOnUse and patternContentUnits values of default and objectBoundingBox. When both are set to default, the aspect ratio is maintained with white space visible. Setting patternContentUnits to objectBoundingBox effects the aspect ratio to remove white space. Setting patternUnits to userSpaceOnUse maintains the aspect ratio while eliminating white space.](svg_pattern_comparison_of_units.png)
 
 {{ PreviousNext("Web/SVG/Tutorial/Gradients", "Web/SVG/Tutorial/Texts") }}

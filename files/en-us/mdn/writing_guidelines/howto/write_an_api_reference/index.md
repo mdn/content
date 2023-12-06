@@ -2,9 +2,6 @@
 title: How to write an API reference
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -169,7 +166,6 @@ These articles should all be created as subpages of the API overview page. For e
 - [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 - [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 
 #### Examples
@@ -226,7 +222,6 @@ The features of a landing page are outlined below:
 5. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 6. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 7. **See also**: The "See also" section is a good place to include further links that may be useful when learning about this technology, including MDN (and external) tutorials, examples, libraries, etc.
-8. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
 
 ### Structure of an interface page
 
@@ -263,8 +258,6 @@ Now you should be ready to start writing your interface pages. Each interface re
     - Do not put author names — we are a writer-neutral documentation site. Link to the document; the author name will be displayed there.
     - Pay special attention to blog posts: they tend to become outdated (old syntax, wrong compat information). Link to them only if they have a clear added value that can't be found in a maintained document.
     - Do not use action verb like "See … for more information" or "Click to…", you don't know if your reader is able to see, or to click on the link (like on a paper version of the document).
-
-11. **Tags**: There is a set of standard tags you should include for each reference page — see the "Tags" section for more.
 
 #### Interface page examples
 
@@ -305,7 +298,6 @@ Property pages must have the following sections:
 7. **Specifications table**: At this point you need to include a specifications table — see the "Creating a spec reference table" section for more details.
 8. **Browser compatibility**: Now you need to include a browser compatibility table. See [Compatibility tables](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for details.
 9. **See also**: The "See also" section is a good place to include further links that may be useful when using this technology: like methods and properties affected by a change of this property or events thrown in relation to it. More links useful when learning about this technology, including MDN (and external) tutorials, examples, libraries,… can be added, though it may be useful to consider adding them on the interface reference page instead.
-10. **Tags**: There is a set of standard tags you should include for each property page — see the "Tags" section for more.
 
 #### Property page examples
 
@@ -320,7 +312,7 @@ Create your method pages as subpages of the interface they are implemented on. C
 
 Method pages need the following sections:
 
-1. **Title**: the title of the page must be **InterfaceName.method()** (with the two terminal parentheses), but the slug (the end of the page URL) must not include the brackets. Also the interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
+1. **Title**: the title of the page must be **InterfaceName.method()** (with the two terminal parentheses), but the slug (the end of the page URL) must not include the parentheses. Also the interface name must start with a capital. Although an interface is implemented in JavaScript on the prototype of objects, we don't put `.prototype.` in the title, like we do in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference).
 2. **\\{{APIRef}}**: Include the \\{{APIRef}} macro in the first line of each method page, including the name of the API as an argument, so for example \\{{APIRef("Web Audio API")}}. This macro serves to construct a reference menu on the left-hand side of the interface page, including properties and methods, and other quick links as defined in the [GroupData](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) macro (ask someone to add your API to an existing GroupData entry, or to create a new one, if it isn't already listed there). The menu will look something like the below screenshot.
    ![This screenshot shows a vertical navigation menu for the OscillatorNode interface, with multiple sublists for methods and properties, as generated by the APIRef macro ](apiref-links.png)
 3. **Standardization status**: Next, the banner indicating the standardization status should be added (these can be placed on the same line as the \\{{APIRef}} macro):
@@ -357,39 +349,6 @@ The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
 - {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-
-## Tagging
-
-For API reference pages, there are standard tags that all pages should have:
-
-- "API"
-- "Reference"
-- Name of API (e.g. "Web Audio API")
-- Any pertinent related keywords (e.g. "audio")
-
-For Interface pages, also add:
-
-- "Interface"
-- The name of the interface, e.g. "AudioContext"
-
-For method pages, also add:
-
-- "Method"
-- The name of the interface the method relates to, e.g. "AudioContext"
-- The name of the method, e.g. "createBuffer"
-
-For property pages, also add:
-
-- "Property"
-- The name of the interface the property relates to, e.g. "AudioContext"
-- The name of the property, e.g. "currentTime"
-
-In all cases, also add a keyword indicating the standardization status:
-
-- Deprecated
-- Non-standard
-
-These tags will be used to generate correct quicklinks, with nice icons. See [How to properly tag pages](/en-US/docs/MDN/Writing_guidelines/Howto/Tag) for additional information on tagging, as well as about other tags you may find useful.
 
 ## Sidebars
 

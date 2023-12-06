@@ -1,16 +1,7 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.theme
 ---
 
@@ -53,7 +44,7 @@ Use the theme key to define a static theme to apply to Firefox.
 
 > **Note:** If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
-> **Note:** Since May 2019, themes need to be signed to be installed ({{bug(1545109)}}). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
+> **Note:** Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
 > **Note:** A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
@@ -157,7 +148,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           before Firefox 60. Note also that in Firefox 60 onwards, any
           {{cssxref("text-shadow")}} applied to the header text is
           removed if no <code>headerURL</code> is specified (see
-          {{bug(1404688)}}).
+          [Firefox bug 1404688](https://bugzil.la/1404688)).
         </p>
         <p>
           In Firefox for Android, <code>headerURL</code> or
@@ -248,7 +239,7 @@ All these properties can be specified as either a string containing any valid [C
 > In Firefox for Android colors can be specified using:
 >
 > - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value#syntax_2) (RGB arrays) for themes targeting Firefox 68.2 or later.
+> - [Functional notation](/en-US/docs/Web/CSS/color_value#rgb_syntax_variations) (RGB arrays) for themes targeting Firefox 68.2 or later.
 >
 > Colors for Firefox for Android themes cannot be specified using color names.
 
@@ -491,13 +482,29 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_background": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. The background of the page is red." src="ntp-background.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_card_background</code></td>
+      <td>
+        <p>The new tab page card background color.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_card_background": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red." src="ntp-card-background.png" /></p>
       </td>
     </tr>
     <tr>
@@ -507,7 +514,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            that used in <code>ntp_background</code>.
+            that used in <code>ntp_background</code> and <code>ntp_card_background</code>.
           </p>
         </div>
         <details open>
@@ -515,13 +522,12 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_text": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. On the page, the text is in red." src="ntp-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -666,7 +672,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -683,7 +689,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="sidebar-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -701,7 +707,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="sidebar-highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -725,7 +731,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="sidebar-highlight-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -751,7 +757,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -851,7 +857,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab a animated loading indicator is red." src="theme-tab_loading.gif" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>

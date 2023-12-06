@@ -1,24 +1,18 @@
 ---
 title: AsyncGenerator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/throw
-tags:
-  - ECMAScript 2018
-  - AsyncGenerator
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.throw
 ---
 
 {{JSRef}}
 
-The **`throw()`** method of an async generator acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
+The **`throw()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `throw` statement is inserted in the generator's body at the current suspended position, which informs the generator of an error condition and allows it to handle the error, or perform cleanup and close itself.
 
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.throw(exception)
+asyncGeneratorInstance.throw(exception)
 ```
 
 ### Parameters
@@ -30,7 +24,7 @@ asyncGeneratorObject.throw(exception)
 
 If the thrown error is not caught, it will return a {{jsxref("Promise")}} which rejects with the exception passed in.
 
-If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return a {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return a {{jsxref("Promise")}} which resolves with an {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:
@@ -66,9 +60,10 @@ async function* createAsyncGenerator() {
 }
 
 const asyncGen = createAsyncGenerator();
-asyncGen.next(1).then((res) => console.log(res));    // { value: 42, done: false }
-asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wrong
-  .then((res) => console.log(res));                  // { value: 42, done: false }
+asyncGen.next(1).then((res) => console.log(res)); // { value: 42, done: false }
+asyncGen
+  .throw(new Error("Something went wrong")) // Error: Something went wrong
+  .then((res) => console.log(res)); // { value: 42, done: false }
 ```
 
 ## Specifications
@@ -82,4 +77,4 @@ asyncGen.throw(new Error('Something went wrong'))    // Error: Something went wr
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

@@ -1,12 +1,7 @@
 ---
 title: Count leading zeros
 slug: WebAssembly/Reference/Numeric/Count_leading_zeros
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

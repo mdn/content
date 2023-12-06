@@ -1,17 +1,7 @@
 ---
 title: Understanding client-side web development tools
 slug: Learn/Tools_and_testing/Understanding_client-side_tools
-tags:
-  - Beginner
-  - CSS
-  - Deployment
-  - HTML
-  - JavaScript
-  - Learn
-  - Tools
-  - Transformation
-  - client-side
-  - linting
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

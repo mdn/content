@@ -1,17 +1,10 @@
 ---
-title: XREquirectLayer.upperVerticalAngle
+title: "XREquirectLayer: upperVerticalAngle property"
+short-title: upperVerticalAngle
 slug: Web/API/XREquirectLayer/upperVerticalAngle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.upperVerticalAngle
 ---
 
@@ -37,7 +30,7 @@ const equirectLayer = xrGlBinding.createEquirectLayer({
   centralHorizontalAngle: 2 * Math.PI,
   upperVerticalAngle: Math.PI / 2.0,
   lowerVerticalAngle: -Math.PI / 2.0,
-  radius: 0
+  radius: 0,
 });
 
 equirectLayer.upperVerticalAngle; // 1.5707963267948966

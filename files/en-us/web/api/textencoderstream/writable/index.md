@@ -1,14 +1,8 @@
 ---
-title: TextEncoderStream.writable
+title: "TextEncoderStream: writable property"
+short-title: writable
 slug: Web/API/TextEncoderStream/writable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - TextEncoderStream
-  - Read-only
 browser-compat: api.TextEncoderStream.writable
 ---
 
@@ -26,7 +20,7 @@ The following example demonstrates how to return a `WritableStream` from a `Text
 
 ```js
 stream = new TextEncoderStream();
-console.log(stream.writeable); //a WritableStream
+console.log(stream.writable); // A WritableStream
 ```
 
 ## Specifications

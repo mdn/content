@@ -1,9 +1,7 @@
 ---
 title: Information contained in a WebIDL file
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
-tags:
-  - meta
-  - writing-guide
+page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
@@ -106,7 +104,7 @@ See the following two pages that document `HTMLHyperlinkElementUtils.hash` accor
 - [`HTMLAnchorElement.hash`](/en-US/docs/Web/API/HTMLAnchorElement/hash)
 - [`HTMLAreaElement.hash`](/en-US/docs/Web/API/HTMLAreaElement/hash)
 
-For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines.md).
+For compat data, consult the [data guideline for mixins in BCD](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md).
 
 ### Old mixin syntax
 
@@ -127,7 +125,7 @@ MyInterface implements MyMixin;
 
 Availability in Web workers (of any type) and on the Window scope is defined using an annotation: `[Exposed=(Window,Worker)]`. The annotation applies to the partial interface it is listed with.
 
-```
+```webidl
 [Exposed=(Window,Worker)]
 interface Performance {
    [DependsOn=DeviceState, Affects=Nothing]
@@ -160,7 +158,7 @@ The most common values for the `[Exposed]` are:
 - `ServiceWorker`
   - : The partial interface is available to the {{domxref('ServiceWorkerGlobalScope')}} only.
 
-Another value is possible, like `System`, but this has a [special meaning](/en-US/docs/Mozilla/WebIDL_bindings#exposed) and doesn't need to be documented.
+Another value is possible, like `System`, but this has a [special meaning](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html#custom-extended-attributes) and doesn't need to be documented.
 
 Note that these possible values are themselves defined in WebIDL files. Interfaces may have a `[Global=xyz]` annotation. It means that when an object of this type is used as a global scope, any interface, property or method, with `xyz` as a value of `[Exposed]` is available.
 
@@ -459,7 +457,7 @@ The iterator will iterate over values of type _valueType_, with keys of type _ke
 - `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (of type _keyType_). E.g. {{domxref('FormData.entries()')}}
 - `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('FormData.values()')}}
 - `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
-- Once {{bug(1216751)}} lands, `forEach()`.
+- Once [Firefox bug 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 

@@ -1,16 +1,12 @@
 ---
-title: Navigator.userActivation
+title: "Navigator: userActivation property"
+short-title: userActivation
 slug: Web/API/Navigator/userActivation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.Navigator.userActivation
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The read-only **`userActivation`** property of the {{domxref("Navigator")}} interface returns a {{domxref("UserActivation")}} object which contains information about the current window's user activation state.
 
@@ -22,7 +18,7 @@ A {{domxref("UserActivation")}} object.
 
 ### Checking if a user gesture was recently performed
 
-Use {{domxref("UserActivation.isActive")}} to check wether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
+Use {{domxref("UserActivation.isActive")}} to check whether the user is currently interacting with the page ({{Glossary("Transient activation")}}).
 
 ```js
 if (navigator.userActivation.isActive) {
@@ -32,7 +28,7 @@ if (navigator.userActivation.isActive) {
 
 ### Checking if a user gesture was ever performed
 
-Use {{domxref("UserActivation.hasBeenActive")}} to check wether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
+Use {{domxref("UserActivation.hasBeenActive")}} to check whether the user has ever interacted with the page ({{Glossary("Sticky activation")}}).
 
 ```js
 if (navigator.userActivation.hasBeenActive) {

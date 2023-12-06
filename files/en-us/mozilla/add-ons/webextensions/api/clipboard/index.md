@@ -1,13 +1,7 @@
 ---
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
-tags:
-  - API
-  - Add-ons
-  - Clipboard
-  - Extensions
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.clipboard
 ---
 

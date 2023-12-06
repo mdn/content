@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.getRenderbufferParameter()
+title: "WebGLRenderingContext: getRenderbufferParameter() method"
+short-title: getRenderbufferParameter()
 slug: Web/API/WebGLRenderingContext/getRenderbufferParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getRenderbufferParameter
 ---
 
@@ -80,8 +75,8 @@ getRenderbufferParameter(target, pname)
 
     - `gl.RENDERBUFFER_SAMPLES`
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of samples of the image of the currently bound
-          renderbuffer.
+        indicating the number of samples of the image of the currently bound
+        renderbuffer.
 
 ### Return value
 

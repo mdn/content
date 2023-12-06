@@ -1,14 +1,8 @@
 ---
-title: CanvasRenderingContext2D.createLinearGradient()
+title: "CanvasRenderingContext2D: createLinearGradient() method"
+short-title: createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createLinearGradient
 ---
 
@@ -19,7 +13,7 @@ The
 method of the Canvas 2D API creates a gradient along the line connecting two given
 coordinates.
 
-![](mdn-canvas-lineargradient.png)
+![The gradient transitions colors along the gradient line, starting at point x0, y0 and going to x1, y1, even if those points extend the gradient line beyond the edges of the element on which the gradient is drawn.](mdn-canvas-lineargradient.png)
 
 This method returns a linear {{domxref("CanvasGradient")}}. To be applied to a shape,
 the gradient must first be assigned to the

@@ -2,14 +2,6 @@
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
 page-type: css-property
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Logical Properties
-  - CSS Property
-  - Reference
-  - overscroll-behavior-inline
-  - recipe:css-property
 browser-compat: css.properties.overscroll-behavior-inline
 ---
 
@@ -18,6 +10,8 @@ browser-compat: css.properties.overscroll-behavior-inline
 The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -33,8 +27,6 @@ overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
-## Syntax
-
 The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
 
 ### Values
@@ -42,7 +34,7 @@ The `overscroll-behavior-inline` property is specified as a keyword chosen from 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 

@@ -2,15 +2,9 @@
 title: MouseScrollEvent
 slug: Web/API/MouseScrollEvent
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Event
-  - Interface
-  - Reference
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MouseScrollEvent
 ---
 
@@ -24,7 +18,7 @@ The **`MouseScrollEvent`** interface represents events that occur due to the use
 
 ## Method overview
 
-```
+```webidl
 void initMouseScrollEvent(
   in DOMString typeArg,
   in boolean canBubbleArg,

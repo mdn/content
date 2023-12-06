@@ -1,10 +1,9 @@
 ---
 title: xlink:title
 slug: Web/SVG/Attribute/xlink:title
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.xlink.xlink_title
 ---
 
@@ -19,9 +18,7 @@ The use of this information is highly dependent on the type of processing being 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}

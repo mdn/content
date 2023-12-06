@@ -1,12 +1,7 @@
 ---
 title: Wrap
 slug: WebAssembly/Reference/Numeric/Wrap
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

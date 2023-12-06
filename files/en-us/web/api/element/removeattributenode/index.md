@@ -1,14 +1,8 @@
 ---
-title: Element.removeAttributeNode()
+title: "Element: removeAttributeNode() method"
+short-title: removeAttributeNode()
 slug: Web/API/Element/removeAttributeNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
 browser-compat: api.Element.removeAttributeNode
 ---
 

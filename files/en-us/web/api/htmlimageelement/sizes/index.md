@@ -1,19 +1,8 @@
 ---
-title: HTMLImageElement.sizes
+title: "HTMLImageElement: sizes property"
+short-title: sizes
 slug: Web/API/HTMLImageElement/sizes
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Property
-  - Reference
-  - Responsive Design
-  - Responsive Images
-  - size
-  - sizes
-  - width
 browser-compat: api.HTMLImageElement.sizes
 ---
 
@@ -27,7 +16,7 @@ aspect ratios—as the document state changes to match different media
 conditions.
 
 Each condition is specified using the same conditional format used
-by [media queries](/en-US/docs/Web/CSS/Media_Queries).
+by [media queries](/en-US/docs/Web/CSS/CSS_media_queries).
 
 ## Value
 
@@ -43,7 +32,7 @@ Each source size descriptor consists of a media condition as defined by the medi
 queries standard. Because a source size descriptor is used to specify the width to use
 for the image during layout of the page, the media condition is typically (but not
 necessarily) based entirely on width information. See
-{{SectionOnPage("/en-US/docs/Web/CSS/Media_Queries/Using_media_queries", "Syntax")}} for
+[Using media queries, Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax) for
 details on how to construct a media condition.
 
 ### Source size values
@@ -63,7 +52,7 @@ unit, which lets you specify the width as a percentage of the viewport width
 
 ### Selecting an image to fit window width
 
-In this example, a blog-like layout is created, displaying some text and an image which
+In this example, a blog-like layout is created, displaying some text and an image
 for which three size points are specified, depending on the width of the window. Three
 versions of the image are also available, with their widths specified. The browser takes
 all of this information and selects an image and width that best meets the specified
@@ -117,7 +106,12 @@ article {
   border: 4em solid #880e4f;
   border-radius: 7em;
   padding: 1.5em;
-  font: 16px "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+  font:
+    16px "Open Sans",
+    Verdana,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 article img {
@@ -141,11 +135,15 @@ const image = document.querySelector("article img");
 const break40 = document.getElementById("break40");
 const break50 = document.getElementById("break50");
 
-break40.addEventListener("click",
-    () => image.sizes = image.sizes.replace(/50em,/, "40em,"));
+break40.addEventListener(
+  "click",
+  () => (image.sizes = image.sizes.replace(/50em,/, "40em,")),
+);
 
-break50.addEventListener("click",
-    () => image.sizes = image.sizes.replace(/40em,/, "50em,"));
+break50.addEventListener(
+  "click",
+  () => (image.sizes = image.sizes.replace(/40em,/, "50em,")),
+);
 ```
 
 #### Result
@@ -164,7 +162,7 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)

@@ -1,13 +1,8 @@
 ---
-title: MouseEvent.pageY
+title: "MouseEvent: pageY property"
+short-title: pageY
 slug: Web/API/MouseEvent/pageY
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MouseEvent.pageY
 ---
 
@@ -37,3 +32,4 @@ let pageY = event.pageY;
 ## See also
 
 - {{domxref("MouseEvent.pageX")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

@@ -1,87 +1,17 @@
 ---
-title: '<kbd>: The Keyboard Input element'
+title: "<kbd>: The Keyboard Input element"
 slug: Web/HTML/Element/kbd
-tags:
-  - Displaying Input
-  - Displaying Keys
-  - Displaying Keystrokes
-  - Displaying User Input
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Keyboard Input
-  - Keystroke
-  - Reference
-  - Web
-  - keyboard
-  - user input
+page-type: html-element
 browser-compat: html.elements.kbd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
 
 {{EmbedInteractiveExample("pages/tabbed/kbd.html", "tabbed-shorter")}}
 
 `<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -108,6 +38,8 @@ Other elements can be used in tandem with `<kbd>` to represent more specific sce
 </p>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example', 350, 80) }}
 
 ### Representing keystrokes within an input
@@ -122,8 +54,8 @@ First, let's look at what this looks like as just plain HTML.
 
 ```html
 <p>
-  You can also create a new document using the keyboard shortcut
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  You can also create a new document using the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> keyboard shortcut.
 </p>
 ```
 
@@ -148,7 +80,7 @@ We can make more sense of this by adding some CSS:
 We add a new selector for nested `<kbd>` elements, `kbd>kbd`, which we can apply when rendering keyboard keys:
 
 ```css
-kbd>kbd {
+kbd > kbd {
   border-radius: 3px;
   padding: 1px 2px 0;
   border: 1px solid black;
@@ -161,8 +93,8 @@ Then we update the HTML to use this class on the keys in the output to be presen
 
 ```html
 <p>
-  You can also create a new document by pressing
-  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd>.
+  You can also create a new document by pressing the
+  <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> shortcut.
 </p>
 ```
 
@@ -186,6 +118,8 @@ Nesting a `<kbd>` element inside a {{HTMLElement("samp")}} element represents in
 </blockquote>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Echoed_input", 650, 100)}}
 
 ### Representing onscreen input options
@@ -194,11 +128,10 @@ Nesting a `<samp>` element inside a `<kbd>` element represents input which is ba
 
 For example, you can explain how to choose the "New Document" option in the "File" menu using HTML that looks like this:
 
-```html
+```html-nolint
 <p>
-  To create a new file, choose the menu option
-  <kbd
-    ><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>.
+  To create a new file, choose the <kbd><kbd><samp>File</samp></kbd>
+  ⇒<kbd><samp>New Document</samp></kbd></kbd> menu option.
 </p>
 
 <p>
@@ -212,6 +145,53 @@ This does some interesting nesting. For the menu option description, the entire 
 #### Result
 
 {{EmbedLiveSample("Representing_onscreen_input_options", 650, 120)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

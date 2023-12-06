@@ -1,17 +1,10 @@
 ---
-title: USBDevice.open()
+title: "USBDevice: open() method"
+short-title: open()
 slug: Web/API/USBDevice/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - open
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.open
 ---
 

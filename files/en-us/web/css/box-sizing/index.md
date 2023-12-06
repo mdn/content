@@ -2,20 +2,6 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 page-type: css-property
-tags:
-  - Boxes
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Reference
-  - border-box
-  - box model
-  - box-sizing
-  - content-box
-  - height
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.box-sizing
 ---
 
@@ -25,7 +11,7 @@ The **`box-sizing`** [CSS](/en-US/docs/Web/CSS) property sets how the total widt
 
 {{EmbedInteractiveExample("pages/css/box-sizing.html")}}
 
-By default in the [CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), the `width` and `height` you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the `width` and `height` to arrive at the size of the box that's rendered on the screen. This means that when you set `width` and `height`, you have to adjust the value you give to allow for any border or padding that may be added. For example, if you have four boxes with `width: 25%;`, if any has left or right padding or a left or right border, they will not by default fit on one line within the constraints of the parent container.
+By default in the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), the `width` and `height` you assign to an element is applied only to the element's content box. If the element has any border or padding, this is then added to the `width` and `height` to arrive at the size of the box that's rendered on the screen. This means that when you set `width` and `height`, you have to adjust the value you give to allow for any border or padding that may be added. For example, if you have four boxes with `width: 25%;`, if any has left or right padding or a left or right border, they will not by default fit on one line within the constraints of the parent container.
 
 The `box-sizing` property can be used to adjust this behavior:
 
@@ -130,4 +116,4 @@ div {
 
 ## See also
 
-- [CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)

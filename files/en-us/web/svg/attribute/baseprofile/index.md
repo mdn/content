@@ -1,10 +1,9 @@
 ---
 title: baseProfile
 slug: Web/SVG/Attribute/baseProfile
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
 ---
 

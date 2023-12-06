@@ -2,14 +2,6 @@
 title: XRHand
 slug: Web/API/XRHand
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
 browser-compat: api.XRHand
 ---
 
@@ -21,7 +13,7 @@ The **`XRHand`** interface is pair iterator (an ordered map) with the key being 
 
 ## Instance properties
 
-- `size` {{ReadOnlyInline}}
+- `size` {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `25`, the size of the pair iterator.
 
 ## Instance methods
@@ -29,19 +21,19 @@ The **`XRHand`** interface is pair iterator (an ordered map) with the key being 
 The `XRhand` object is a pair iterator. It can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure. `for (const joint of myHand)` is equivalent to `for (const joint of myHand.entries())`.
 However, it's not a map-like object, so you don't have the `clear()`, `delete()`, `has()`, and `set()` methods.
 
-- `entries()`
+- `entries()` {{Experimental_Inline}}
   - : Returns an iterator with the hand joints/{{domxref("XRJointSpace")}} pairs for each element.
     See {{jsxref("Map.prototype.entries()")}} for more details.
-- `forEach()`
+- `forEach()` {{Experimental_Inline}}
   - : Runs a provided function once per each hand joint/{{domxref("XRJointSpace")}} pair.
     See {{jsxref("Map.prototype.forEach()")}} for more details.
-- `get()`
+- `get()` {{Experimental_Inline}}
   - : Returns a {{domxref("XRJointSpace")}} for a given hand joint or {{jsxref("undefined")}} if no such hand joint key is in the map.
     See {{jsxref("Map.prototype.get()")}} for more details.
-- `keys()`
+- `keys()` {{Experimental_Inline}}
   - : Returns an iterator with all the hand joint keys.
     See {{jsxref("Map.prototype.keys()")}} for more details.
-- `values()`
+- `values()` {{Experimental_Inline}}
   - : Returns an iterator with all the {{domxref("XRJointSpace")}} values.
     See {{jsxref("Map.prototype.values()")}} for more details.
 

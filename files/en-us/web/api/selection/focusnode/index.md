@@ -1,14 +1,8 @@
 ---
-title: Selection.focusNode
+title: "Selection: focusNode property"
+short-title: focusNode
 slug: Web/API/Selection/focusNode
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
 browser-compat: api.Selection.focusNode
 ---
 

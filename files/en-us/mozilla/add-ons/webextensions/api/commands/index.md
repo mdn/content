@@ -1,14 +1,7 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
+page-type: webextension-api
 browser-compat: webextensions.api.commands
 ---
 
@@ -32,20 +25,20 @@ Listen for the user executing commands that you have registered using the [`comm
 
 ## Events
 
+- {{WebExtAPIRef("commands.onChanged")}}
+  - : Fired when the keyboard shortcut for a command is changed.
 - {{WebExtAPIRef("commands.onCommand")}}
   - : Fired when a command is executed using its associated keyboard shortcut.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 
 > **Note:**
 >
 > This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

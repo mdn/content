@@ -2,13 +2,6 @@
 title: <custom-ident>
 slug: Web/CSS/custom-ident
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 spec-urls:
   - https://drafts.csswg.org/css-values/#custom-idents
   - https://drafts.csswg.org/css-will-change/#valdef-will-change-custom-ident
@@ -35,7 +28,7 @@ Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they ar
 
 ### Forbidden values
 
-A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit or another hyphen.
+A `<custom-ident>` must not be placed between single or double quotes as this would be identical to a {{CSSxRef("&lt;string&gt;")}}. Moreover, the first character must not be a decimal digit, nor a hyphen (`-`) followed by a decimal digit.
 
 To prevent ambiguity, each property that uses `<custom-ident>` forbids the use of specific values:
 
@@ -44,6 +37,7 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
+
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values:
 
     - `none`
@@ -107,8 +101,11 @@ To prevent ambiguity, each property that uses `<custom-ident>` forbids the use o
     - `upper-armenian`
     - `disclosure-open`
     - `disclosure-close`
+
 - {{CSSxRef("grid-row-start")}}, {{CSSxRef("grid-row-end")}}, {{CSSxRef("grid-column-start")}}, {{CSSxRef("grid-column-end")}}
   - : Forbids the `span` value.
+- {{CSSxRef("view-transition-name")}}
+  - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as `none`.
 - {{CSSxRef("will-change")}}
   - : Forbids the global CSS values (`unset`, `initial`, and `inherit`), as well as the values `will-change`, `auto`, `scroll-position`, and `contents`.
 
@@ -131,7 +128,6 @@ bili\.bob         A correctly escaped period
 34rem             It must not start with a decimal digit.
 -12rad            It must not start with a dash followed by a decimal digit.
 bili.bob          Only alphanumeric characters, _, and - needn't be escaped.
---toto            It must not start with two dashes. This would be a custom property.
 'bilibob'         This would be a <string>.
 "bilibob"         This would be a <string>.
 ```
@@ -146,4 +142,5 @@ _As this type is not a real type but a convenience type used to simplify the des
 
 ## See also
 
-- {{CSSxRef("&lt;ident&gt;")}}
+- [&lt;ident&gt;](/en-US/docs/Web/CSS/ident)
+- [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident)

@@ -2,12 +2,6 @@
 title: DOMQuad
 slug: Web/API/DOMQuad
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - DOMQuad
-  - Geometry
 browser-compat: api.DOMQuad
 ---
 

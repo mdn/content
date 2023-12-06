@@ -1,15 +1,8 @@
 ---
-title: Element.ariaPosInSet
+title: "Element: ariaPosInSet property"
+short-title: ariaPosInSet
 slug: Web/API/Element/ariaPosInSet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPosInSet
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaPosInSet
 ---
 
@@ -31,9 +24,9 @@ In this example the `aria-posinset` attribute on the element with an ID of `arti
 ```
 
 ```js
-let el = document.getElementById('article2');
+let el = document.getElementById("article2");
 console.log(el.ariaPosInSet); // "2"
-el.ariaPosInSet = "3"
+el.ariaPosInSet = "3";
 console.log(el.ariaPosInSet); // "3"
 ```
 

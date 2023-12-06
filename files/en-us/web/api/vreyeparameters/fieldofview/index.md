@@ -1,18 +1,11 @@
 ---
-title: VREyeParameters.fieldOfView
+title: "VREyeParameters: fieldOfView property"
+short-title: fieldOfView
 slug: Web/API/VREyeParameters/fieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - fieldOfView
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.fieldOfView
 ---
 

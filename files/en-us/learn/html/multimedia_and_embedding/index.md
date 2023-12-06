@@ -1,26 +1,7 @@
 ---
 title: Multimedia and embedding
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Assessment
-  - Audio
-  - Beginner
-  - CodingScripting
-  - Embedding
-  - Guide
-  - HTML
-  - Images
-  - Landing
-  - Learn
-  - Multimedia
-  - SVG
-  - Vector Graphics
-  - Video
-  - Web
-  - iframes
-  - imagemaps
-  - img
-  - responsive
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

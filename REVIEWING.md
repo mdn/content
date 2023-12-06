@@ -25,7 +25,7 @@ out-of-date. This is being handled as follows:
    review owners", meaning that when a pull request comes in related to a
    particular topic area of the site (e.g. the CSS reference, or the learning
    area), it will be assigned to that area's topic review owner(s) and they
-   will receive an e-mail notification asking for a review. This is being
+   will receive an email notification asking for a review. This is being
    handled using a [CODEOWNERS](https://github.com/mdn/content/blob/main/.github/CODEOWNERS)
    file, in which particular content directories are assigned to the topics
    review owner's GitHub usernames.
@@ -42,11 +42,11 @@ perfectly in accordance with all of these points immediately. It is more
 important to make sure the content is readable, useful, correct, and not
 inappropriate, than it is to follow every guideline to the letter.
 
-1. Familiarize yourself with the [MDN Code example guidelines](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)
+1. Familiarize yourself with the [MDN Code example guidelines][]
    and make sure that code examples follow the guidelines. You'll get used to
    them eventually, and we are intending to automatically lint against our
    guidelines at some point in the future.
-2. Familiarize yourself with the [MDN Writing style guide](https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide),
+2. Familiarize yourself with the [MDN Writing style guide][],
    and use it to inform your reviews of new text content.
 3. Familiarize yourself with the MDN [pull request guidelines](https://github.com/mdn/content/blob/main/README.md#pull-request-etiquette).
    The key points here are
@@ -100,11 +100,11 @@ inappropriate, than it is to follow every guideline to the letter.
    assigned already. In such cases, the PR should be linked to an issue
    that explains all these details. If you are not sure, ask the submitter
    if they need a review of the content, and where the rationale behind the
-   change is explained. Ping our team on [MDN Web Docs chat room](https://chat.mozilla.org/#/room/#mdn:mozilla.org) to ask for help if you are still not sure, or if you think the
-   content is suspicious.
+   change is explained. Ping our team in the [MDN Web Docs chat rooms][] to ask for help if you are still not sure, or
+   if you think the content is suspicious.
 
-Note: You may encounter merge conflicts as you review pull requests, if a
-another pull request that touches some of the same files got merged before
+Note: You may encounter merge conflicts as you review pull requests, if another
+pull request that touches some of the same files got merged before
 the one you are reviewing.
 [Addressing merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts)
 is a useful resource to help you. Feel free also to ask your team(s) for help
@@ -134,7 +134,7 @@ then don't review the pull request — just wait for an approval request.
 The following specific topic areas are being reviewed by the kind souls listed
 underneath them. Be kind to them, and thank them for all the help they give
 to this project. If you would like to help with MDN content reviews,
-[get in touch with us](https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#Step_4_Ask_for_help).
+[get in touch with us][].
 
 Note that changes to any content areas not explicitly listed below will be
 handled by the [@core-yari-content](https://github.com/orgs/mdn/teams/core-yari-content)
@@ -206,3 +206,8 @@ longer have the time to contribute; we want to give them our sincere thanks
 for all their help.
 
 - [@vkWeb](https://github.com/vkWeb/)
+
+[get in touch with us]: https://developer.mozilla.org/en-US/docs/MDN/Community/Contributing/Getting_started#what_can_i_do_to_help
+[mdn code example guidelines]: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+[mdn writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[MDN Web Docs chat rooms]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels

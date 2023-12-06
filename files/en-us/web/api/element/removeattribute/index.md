@@ -1,15 +1,8 @@
 ---
-title: Element.removeAttribute()
+title: "Element: removeAttribute() method"
+short-title: removeAttribute()
 slug: Web/API/Element/removeAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - remove
-  - removeAttribute
 browser-compat: api.Element.removeAttribute
 ---
 
@@ -48,8 +41,8 @@ You should use `removeAttribute()` instead of setting the attribute value to
 ## Examples
 
 ```js
-// Given: <div id="div1" align="left" width="200px">
-document.getElementById("div1").removeAttribute("align");
+// Given: <div id="div1" disabled width="200px">
+document.getElementById("div1").removeAttribute("disabled");
 // Now: <div id="div1" width="200px">
 ```
 

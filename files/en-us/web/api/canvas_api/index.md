@@ -2,17 +2,10 @@
 title: Canvas API
 slug: Web/API/Canvas_API
 page-type: web-api-overview
-tags:
-  - API
-  - Canvas
-  - Graphics
-  - JavaScript
-  - Overview
-  - Reference
 browser-compat: html.elements.canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US/docs/Web/JavaScript) and the [HTML](/en-US/docs/Web/HTML) {{HtmlElement("canvas")}} element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
 
@@ -92,6 +85,7 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 - [Rekapi](https://github.com/jeremyckahn/rekapi) is an animation key-framing API for Canvas.
 - [Scrawl-canvas](https://scrawl.rikweb.org.uk/) is an open-source JavaScript library for creating and manipulating 2D canvas elements.
 - The [ZIM](https://zimjs.com) framework provides conveniences, components, and controls for coding creativity on the canvas — includes accessibility and hundreds of colorful tutorials.
+- [Sprig](https://github.com/hackclub/sprig) is a beginner-friendly, open-source, tile-based game development library that uses Canvas.
 
 > **Note:** See the [WebGL API](/en-US/docs/Web/API/WebGL_API) for 2D and 3D libraries that use WebGL.
 

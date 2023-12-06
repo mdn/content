@@ -1,19 +1,8 @@
 ---
-title: Element.querySelectorAll()
+title: "Element: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSS Selectors
-  - DOM
-  - Element
-  - Finding Elements
-  - Method
-  - Reference
-  - Searching Elements
-  - Selecting Elements
-  - Selectors
-  - querySelector
 browser-compat: api.Element.querySelectorAll
 ---
 
@@ -33,16 +22,19 @@ querySelectorAll(selectors)
 ### Parameters
 
 - `selectors`
+
   - : A string containing one or more selectors to match against. This
-    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors)
+    string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
     string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
 
+    Note that the selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
+
 > **Note:** Characters which are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping,
 > special care must be taken when writing string literals using these characters. See
-> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#escape_sequences) for more information.
+> [Escaping special characters](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences) for more information.
 
 ### Return value
 
@@ -71,7 +63,9 @@ each descendant node that matches at least one of the specified selectors.
 
 ```js
 // dataset selectors
-const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`)];
+const refs = [
+  ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
+];
 
 // attribute selectors
 // const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
@@ -142,46 +136,80 @@ highlightedItems.forEach((userItem) => {
 > have array methods like `slice`, `some`, `map`, etc. To convert it into an array, try
 > `Array.from(nodeList)`.
 
-## User notes
+### Selector scope
 
-`querySelectorAll()` behaves differently than most common JavaScript DOM
-libraries, which might lead to unexpected results.
+The `querySelectorAll()` method applies its selectors to the whole document: they are not scoped to the element on which the method is called. To scope the selectors, include the [`:scope`](/en-US/docs/Web/CSS/:scope) pseudo-class at the start of the selector string.
 
-### HTML
+#### HTML
 
-Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.
+In this example the HTML contains:
+
+- two buttons: `#select` and `#select-scope`
+- three nested `<div>` elements:`#outer`, `#subject`, and `#inner`
+- a `<pre>` element which the example uses for output.
 
 ```html
-<div class="outer">
-  <div class="select">
-    <div class="inner"></div>
+<button id="select">Select</button>
+<button id="select-scope">Select with :scope</button>
+
+<div id="outer">
+  .outer
+  <div id="subject">
+    .subject
+    <div id="inner">.inner</div>
   </div>
 </div>
+
+<pre id="output"></pre>
 ```
 
-### JavaScript
+```css hidden
+div {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 3px #20b2aa solid;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+pre,
+button {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+```
+
+#### JavaScript
+
+In the JavaScript, we first select the `#subject` element.
+
+When the `#select` button is pressed, we call `querySelectorAll()` on `#subject`, passing `"#outer #inner"` as the selector string.
+
+When the `#select-scope` button is pressed, we again call `querySelectorAll()` on `#subject`, but this time we pass `":scope #outer #inner"` as the selector string.
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, not 0!
+const subject = document.querySelector("#subject");
+
+const select = document.querySelector("#select");
+select.addEventListener("click", () => {
+  const selected = subject.querySelectorAll("#outer #inner");
+  output.textContent = `Selection count: ${selected.length}`;
+});
+
+const selectScope = document.querySelector("#select-scope");
+selectScope.addEventListener("click", () => {
+  const selected = subject.querySelectorAll(":scope #outer #inner");
+  output.textContent = `Selection count: ${selected.length}`;
+});
 ```
 
-In this example, when selecting `".outer .inner"` in the context the
-`<div>` with the class `"select"`, the element with the
-class `".inner"` is still found, even though `.outer` is not a
-descendant of the base element on which the search is performed
-(`".select"`). By default, `querySelectorAll()` only verifies that
-the last element in the selector is within the search scope.
+#### Result
 
-The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching
-selectors on descendants of the base element:
+{{EmbedLiveSample("Selector scope", "", 300)}}
 
-```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0
-```
+When we press "Select", the selector selects all elements with an ID of `inner` that also have an ancestor with an ID of `outer`. Note that even though `#outer` is outside the `#subject` element, it is still used in selection, so our `#inner` element is found.
+
+When we press "Select with :scope", the `:scope` pseudo-class restricts the selector scope to `#subject`, so `#outer` is not used in selector matching, and we don't find the `#inner` element.
 
 ## Specifications
 

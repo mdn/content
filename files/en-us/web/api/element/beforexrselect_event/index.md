@@ -1,12 +1,10 @@
 ---
-title: "beforexrselect event"
+title: "Element: beforexrselect event"
+short-title: beforexrselect
 slug: Web/API/Element/beforexrselect_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Element.beforexrselect_event
 ---
 

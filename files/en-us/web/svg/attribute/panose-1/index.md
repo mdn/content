@@ -1,10 +1,9 @@
 ---
 title: panose-1
 slug: Web/SVG/Attribute/panose-1
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.panose-1
 ---
 

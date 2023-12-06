@@ -1,21 +1,8 @@
 ---
-title: RTCIceCandidate.relatedPort
+title: "RTCIceCandidate: relatedPort property"
+short-title: relatedPort
 slug: Web/API/RTCIceCandidate/relatedPort
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - Candidate
-  - ICE
-  - IP
-  - Media
-  - Property
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - relatedPort
 browser-compat: api.RTCIceCandidate.relatedPort
 ---
 
@@ -49,8 +36,8 @@ reasons, but if present can be a useful tool during debugging. See the [Example]
 Here's an {{Glossary("SDP")}} attribute line (a-line) describing an ICE candidate
 discovered by the STUN server:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.100.45 rport 32768 generation 0
 ```
 
 The remote port, `relatedPort`, is the number immediately following the `"rport"` label on the a-line, or 32768.
@@ -70,7 +57,9 @@ const relIP = candidate.relatedAddress;
 const relPort = candidate.relatedPort;
 
 if (relIP && relPort) {
-  console.log(`Candidate type '${type}' — contact address: ${ip} ${port}, related address: ${relIP} ${relPort}`);
+  console.log(
+    `Candidate type '${type}' — contact address: ${ip} ${port}, related address: ${relIP} ${relPort}`,
+  );
 } else {
   console.log(`Host candidate address is ${ip} ${port}`);
 }

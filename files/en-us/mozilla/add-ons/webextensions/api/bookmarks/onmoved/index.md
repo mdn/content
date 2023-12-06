@@ -1,16 +1,7 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
+page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onMoved
 ---
 
@@ -30,7 +21,7 @@ browser.bookmarks.onMoved.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -41,14 +32,14 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed these arguments:
 
     - `id`
       - : `string`. ID of the item that was moved.
     - `moveInfo`
-      - : [`object`](#moveinfo). Object containing more details about the move.
+      - : `object`. Object containing more details about the move. See the [moveInfo](#moveinfo_2) section for more details.
 
 ## Additional objects
 
@@ -88,8 +79,6 @@ browser.browserAction.onClicked.addListener(handleClick);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#event-onMoved) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

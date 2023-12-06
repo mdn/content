@@ -1,13 +1,10 @@
 ---
-title: WindowControlsOverlayGeometryChangeEvent()
+title: "WindowControlsOverlayGeometryChangeEvent: WindowControlsOverlayGeometryChangeEvent() constructor"
+short-title: WindowControlsOverlayGeometryChangeEvent()
 slug: Web/API/WindowControlsOverlayGeometryChangeEvent/WindowControlsOverlayGeometryChangeEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Events
-  - WindowControlsOverlayGeometryChangeEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverlayGeometryChangeEvent
 ---
 
@@ -28,12 +25,12 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
 {{domxref("Event.Event", "Event()")}}._
 
 - `type`
-  - : A string indicating the event type. Its value must be `geometrychange` and is case-sensitive.
+  - : A string indicating the event type. It is case-sensitive and browsers set it to `geometrychange`.
 - `options`
   - : An object with the following properties:
     - `visible`
-      - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
-    - `titleBarAreaRect`
+      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0.
+    - `titlebarAreaRect`
       - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
 ## Specifications

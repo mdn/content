@@ -1,27 +1,21 @@
 ---
-title: Element.ariaLive
+title: "Element: ariaLive property"
+short-title: ariaLive
 slug: Web/API/Element/ariaLive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaLive
-  - AriaAttributes
-  - Element
 browser-compat: api.Element.ariaLive
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+The **`ariaLive`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute, which indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions).
 
 ## Value
 
 A string with one of the following values:
 
 - `"assertive"`
-  - : Indicates that updates to the region have the highest priority and should be presented the user immediately.
+  - : Indicates that updates to the region have the highest priority and should be presented to the user immediately.
 - `"off"`
   - : Indicates that updates to the region should not be presented to the user unless the user is currently focused on that region.
 - `"polite"`
@@ -29,7 +23,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to "polite". We then update the value to "assertive".
+In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) attribute on the element with an ID of `planetInfo` is set to `"polite"`. We then update the value to `"assertive"`.
 
 ```html
 <div role="region" id="planetInfo" aria-live="polite">
@@ -39,10 +33,10 @@ In this example the [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/
 ```
 
 ```js
-let el = document.getElementById('planetInfo');
+let el = document.getElementById("planetInfo");
 console.log(el.ariaLive); // "polite"
 el.ariaLive = "assertive";
-console.log(el.ariaLive); // assertive
+console.log(el.ariaLive); // "assertive"
 ```
 
 ## Specifications

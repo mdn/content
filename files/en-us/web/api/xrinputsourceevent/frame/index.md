@@ -1,26 +1,8 @@
 ---
-title: XRInputSourceEvent.frame
+title: "XRInputSourceEvent: frame property"
+short-title: frame
 slug: Web/API/XRInputSourceEvent/frame
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - events
 browser-compat: api.XRInputSourceEvent.frame
 ---
 
@@ -64,8 +46,10 @@ at anything when the select was triggered.
 
 ```js
 xrSession.onselectstart = (event) => {
-  let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                            myRefSpace);
+  let targetRayPose = event.frame.getPose(
+    event.inputSource.targetRaySpace,
+    myRefSpace,
+  );
   if (targetRayPose) {
     checkAndHandleHit(targetRayPose.transform);
   }

@@ -1,18 +1,10 @@
 ---
 title: "ARIA: alert role"
 slug: Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Alert
-  - Live region
-  - Accessibility
-  - ARIA Role
-  - ARIA alert
-  - ARIA widget
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alert
-  - https://w3c.github.io/aria-practices/#log
+  - https://www.w3.org/TR/wai-aria-1.2/#alert
 ---
 
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
@@ -63,7 +55,9 @@ If the content _inside_ the element with `role="alert"` is initially hidden usin
 
 ```js
 // removing the 'hidden' class makes the content inside the element visible, which will make the screen reader announce the alert:
-document.getElementById("expirationWarning").firstChild.classList.remove("hidden");
+document
+  .getElementById("expirationWarning")
+  .firstChild.classList.remove("hidden");
 ```
 
 ### Example 2: Dynamically changing the content inside an element with an alert role
@@ -76,9 +70,10 @@ Using JavaScript, you can dynamically change the content _inside_ the element wi
 
 ```js
 // clear the contents of the container
-document.getElementById('alertContainer').innerHTML = "";
+document.getElementById("alertContainer").innerHTML = "";
 // inject the new alert message
-document.getElementById('alertContainer').innerHTML ="Your session will expire in " + expiration + " minutes";
+document.getElementById("alertContainer").innerHTML =
+  "Your session will expire in " + expiration + " minutes";
 ```
 
 ### Example 3: Visually hidden alert container for screen reader notifications
@@ -105,9 +100,10 @@ However, make sure that the container is not hidden using `display:none`, as thi
 
 ```js
 // clear the contents of the container
-document.getElementById('hiddenAlertContainer').innerHTML = "";
+document.getElementById("hiddenAlertContainer").innerHTML = "";
 // inject the new alert message
-document.getElementById('hiddenAlertContainer').innerHTML ="All items were removed from your inventory.";
+document.getElementById("hiddenAlertContainer").innerHTML =
+  "All items were removed from your inventory.";
 ```
 
 ## Specifications
@@ -125,7 +121,7 @@ document.getElementById('hiddenAlertContainer').innerHTML ="All items were remov
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
-- [ARIA Practices alert example](https://w3c.github.io/aria-practices/examples/alert/alert.html)
+- [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)
 
 <section id="Quick_links">
 

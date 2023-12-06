@@ -2,11 +2,6 @@
 title: NodeList
 slug: Web/API/NodeList
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - NodeList
 browser-compat: api.NodeList
 ---
 
@@ -27,10 +22,10 @@ In some cases, the `NodeList` is _live_, which means that changes in the DOM aut
 For example, {{domxref("Node.childNodes")}} is live:
 
 ```js
-const parent = document.getElementById('parent');
+const parent = document.getElementById("parent");
 let childNodes = parent.childNodes;
 console.log(childNodes.length); // let's assume "2"
-parent.appendChild(document.createElement('div'));
+parent.appendChild(document.createElement("div"));
 console.log(childNodes.length); // outputs "3"
 ```
 
@@ -42,7 +37,7 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 
 ## Instance properties
 
-- {{domxref("NodeList.length")}}
+- {{domxref("NodeList.length")}} {{ReadOnlyInline}}
   - : The number of nodes in the `NodeList`.
 
 ## Instance methods
@@ -77,7 +72,7 @@ for (let i = 0; i < myNodeList.length; i++) {
 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops loop over `NodeList` objects correctly:
 
 ```js
-const list = document.querySelectorAll('input[type=checkbox]');
+const list = document.querySelectorAll("input[type=checkbox]");
 for (const checkbox of list) {
   checkbox.checked = true;
 }

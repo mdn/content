@@ -1,17 +1,10 @@
 ---
-title: Keyboard.getLayoutMap()
+title: "Keyboard: getLayoutMap() method"
+short-title: getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
 page-type: web-api-instance-method
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Keyboard Map
-  - Method
-  - Reference
-  - getLayoutMap()
-  - keyboard
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Keyboard.getLayoutMap
 ---
 
@@ -37,6 +30,11 @@ None.
 A {{jsxref('Promise')}} that resolves with an instance of
 {{domxref('KeyboardLayoutMap')}}.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call is blocked by a [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example demonstrates how to get the location- or layout-specific string
@@ -44,11 +42,10 @@ associated with the key that corresponds to the 'W' key on an English QWERTY key
 
 ```js
 const keyboard = navigator.keyboard;
-keyboard.getLayoutMap()
-.then((keyboardLayoutMap) => {
-  const upKey = keyboardLayoutMap.get('KeyW');
+keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  const upKey = keyboardLayoutMap.get("KeyW");
   window.alert(`Press ${upKey} to move up.`);
-})
+});
 ```
 
 ## Specifications

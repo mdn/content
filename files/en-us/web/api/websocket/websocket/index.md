@@ -1,13 +1,8 @@
 ---
-title: WebSocket()
+title: "WebSocket: WebSocket() constructor"
+short-title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.WebSocket
 ---
 

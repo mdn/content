@@ -1,11 +1,7 @@
 ---
 title: <text>
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Text Content
+page-type: svg-element
 browser-compat: svg.elements.text
 ---
 
@@ -105,4 +101,4 @@ svg {
 
 ## Related
 
-- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}, {{SVGElement("altGlyph")}}
+- Other SVG text related elements: **{{SVGElement("tspan")}}**, {{SVGElement("tref")}}

@@ -2,12 +2,6 @@
 title: Gamepad
 slug: Web/API/Gamepad
 page-type: web-api-interface
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - Interface
-  - Reference
 browser-compat: api.Gamepad
 ---
 
@@ -31,7 +25,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An enum defining what hand the controller is being held in, or is most likely to be held in.
 - {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
-- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{ReadOnlyInline}}
   - : A string containing identifying information about the controller.
@@ -48,9 +42,13 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
-  console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
-  e.gamepad.index, e.gamepad.id,
-  e.gamepad.buttons.length, e.gamepad.axes.length);
+  console.log(
+    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
+    e.gamepad.index,
+    e.gamepad.id,
+    e.gamepad.buttons.length,
+    e.gamepad.axes.length,
+  );
 });
 ```
 

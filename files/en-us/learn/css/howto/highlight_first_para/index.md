@@ -1,13 +1,7 @@
 ---
 title: How to highlight the first paragraph
 slug: Learn/CSS/Howto/Highlight_first_para
-tags:
-  - Basic
-  - Beginner
-  - CSS
-  - CSS:Getting_Started
-  - Guide
-  - Web
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

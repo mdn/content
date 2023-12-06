@@ -2,19 +2,12 @@
 title: ":invalid"
 slug: Web/CSS/:invalid
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.invalid
 ---
 
 {{CSSRef}}
 
-The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Constraint_validation).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
 
@@ -22,8 +15,10 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
-```
-:invalid
+```css
+:invalid {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -92,7 +87,7 @@ input:required:invalid {
 
 ### Showing sections in stages
 
-In this example we use `:invalid` along with `~`, the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
+In this example we use `:invalid` along with `~`, the [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
 
 #### HTML
 

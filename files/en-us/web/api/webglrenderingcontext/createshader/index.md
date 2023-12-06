@@ -1,14 +1,8 @@
 ---
-title: WebGLRenderingContext.createShader()
+title: "WebGLRenderingContext: createShader() method"
+short-title: createShader()
 slug: Web/API/WebGLRenderingContext/createShader
 page-type: web-api-instance-method
-tags:
-  - API
-  - Graphics
-  - Method
-  - Reference
-  - Shader
-  - WebGL
 browser-compat: api.WebGLRenderingContext.createShader
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: <mpadded>
 slug: Web/MathML/Element/mpadded
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mpadded
 ---
 
@@ -26,17 +22,17 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `voffset`
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the vertical location of the positioning point of the child content with respect to the positioning point of the `<mpadded>` element.
 - `width`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the `<mpadded>` element.
+  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired horizontal length of the `<mpadded>` element.
 
 ### Legacy syntax
 
 For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some browsers may instead accept a more complex syntax:
 
 1. An optional `+` or `-` sign as a prefix, specifying an increment or decrement to the corresponding dimension (if absent, the corresponding dimension is set directly to specified value).
-2. Followed by an [`<unsigned-number>`](/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types) (let's call it α below).
+2. Followed by an [`<unsigned-number>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) (let's call it α below).
 3. Optionally followed by a value (if absent, the specified value is interpreted as "100 times α percent").
-   - A [unit](/en-US/docs/Web/MathML/Attribute/Values#units). The specified value is interpreted the same as [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
-   - A [namedspace constant](/en-US/docs/Web/MathML/Attribute/Values#constants). The specified value is interpreted as α times the constant.
+   - A [unit](/en-US/docs/Web/MathML/Values#units). The specified value is interpreted the same as [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+   - A [namedspace constant](/en-US/docs/Web/MathML/Values#constants). The specified value is interpreted as α times the constant.
    - A pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α times the corresponding dimension of the content.
    - A percent sign followed by a pseudo-unit `width`, `height` or `depth`. The specified value is interpreted as α% the corresponding dimension of the content.
 
@@ -44,7 +40,7 @@ For the `depth`, `height`, `lspace`, `voffset` and `width` attributes, some brow
 
 ### Dimensions and offsets
 
-```html
+```html-nolint
 <math display="block">
   <mpadded width="400px" height="5em" depth="4em"
            lspace="300px" voffset="-2em"

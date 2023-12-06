@@ -1,18 +1,13 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.isExtensible
 ---
 
 {{JSRef}}
 
-The **`Object.isExtensible()`** method determines if an object
+The **`Object.isExtensible()`** static method determines if an object
 is extensible (whether it can have new properties added to it).
 
 {{EmbedInteractiveExample("pages/js/object-isextensible.html")}}
@@ -43,19 +38,19 @@ Objects are extensible by default: they can have new properties added to them, a
 ```js
 // New objects are extensible.
 const empty = {};
-Object.isExtensible(empty); // === true
+Object.isExtensible(empty); // true
 
 // They can be made un-extensible
 Object.preventExtensions(empty);
-Object.isExtensible(empty); // === false
+Object.isExtensible(empty); // false
 
 // Sealed objects are by definition non-extensible.
 const sealed = Object.seal({});
-Object.isExtensible(sealed); // === false
+Object.isExtensible(sealed); // false
 
 // Frozen objects are also by definition non-extensible.
 const frozen = Object.freeze({});
-Object.isExtensible(frozen); // === false
+Object.isExtensible(frozen); // false
 ```
 
 ### Non-object argument

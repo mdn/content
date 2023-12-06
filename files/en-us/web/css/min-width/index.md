@@ -2,18 +2,6 @@
 title: min-width
 slug: Web/CSS/min-width
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Horizontal
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - min-width
-  - recipe:css-property
-  - size
-  - width
 browser-compat: css.properties.min-width
 ---
 
@@ -37,6 +25,7 @@ min-width: 10%;
 /* Keyword values */
 min-width: max-content;
 min-width: min-content;
+min-width: fit-content;
 min-width: fit-content(20em);
 
 /* Global values */
@@ -59,7 +48,9 @@ min-width: unset;
   - : The intrinsic preferred `min-width`.
 - `min-content`
   - : The intrinsic minimum `min-width`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ## Formal definition
@@ -95,4 +86,4 @@ form {
 ## See also
 
 - {{Cssxref("width")}}, {{Cssxref("max-width")}}
-- The [box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}
+- The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}

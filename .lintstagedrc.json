@@ -1,5 +1,10 @@
 {
-  "*": "prettier --ignore-unknown --write",
-  "*.md": "markdownlint-cli2-fix",
+  "!*.md": "prettier --ignore-unknown --write",
+  "*.md": [
+    "markdownlint-cli2 --fix",
+    "node scripts/front-matter_linter.js --fix true",
+    "prettier --write"
+  ],
+  "tests/**/*.*": "yarn test:front-matter-linter",
   "*.{svg,png,jpeg,jpg,gif}": "yarn filecheck"
 }

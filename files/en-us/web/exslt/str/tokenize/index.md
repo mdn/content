@@ -1,10 +1,7 @@
 ---
 title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -47,7 +44,7 @@ Returns a node set like this:
 
 ## Specifications
 
-[EXSLT - STR:TOKENIZE](http://exslt.org/str/functions/tokenize/index.html)
+[EXSLT - STR:TOKENIZE](https://exslt.github.io/str/functions/tokenize/index.html)
 
 ## See also
 

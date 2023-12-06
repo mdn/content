@@ -1,21 +1,8 @@
 ---
-title: AudioContext.createMediaStreamSource()
+title: "AudioContext: createMediaStreamSource() method"
+short-title: createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - AudioNode
-  - Media
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - createMediastreamSource
 browser-compat: api.AudioContext.createMediaStreamSource
 ---
 
@@ -59,7 +46,7 @@ The range slider below the {{ htmlelement("video") }} element controls the amoun
 gain given to the lowpass filter — increase the value of the slider to make the audio
 sound more bass heavy!
 
-> **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/master/stream-source-buffer).
+> **Note:** You can see this [example running live](https://mdn.github.io/webaudio-examples/stream-source-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/stream-source-buffer).
 
 ```js
 const pre = document.querySelector("pre");

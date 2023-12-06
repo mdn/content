@@ -1,32 +1,25 @@
 ---
-title: 'Document: scroll event'
+title: "Document: scroll event"
+short-title: scroll
 slug: Web/API/Document/scroll_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - Document
-  - Event
-  - Reference
-  - Scroll
-  - UIEvent
 browser-compat: api.Document.scroll_event
 ---
 
 {{APIRef}}
 
-The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.
-
-> **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
+The **`scroll`** event fires when the document view has been scrolled.
+To detect when scrolling has completed, see the {{domxref("Document/scrollend_event", "Document: scrollend event")}}.
+For element scrolling, see {{domxref("Element/scroll_event", "Element: scroll event")}}.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('scroll', (event) => {});
+addEventListener("scroll", (event) => {});
 
-onscroll = (event) => { };
+onscroll = (event) => {};
 ```
 
 ## Event type
@@ -41,8 +34,6 @@ Since `scroll` events can fire at a high rate, the event handler shouldn't execu
 
 Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the `scroll` event for `requestAnimationFrame`.
 
-<!--Reference: http://www.html5rocks.com/en/tutorials/speed/animations/ no longer exists. -->
-
 ```js
 let lastKnownScrollPosition = 0;
 let ticking = false;
@@ -51,7 +42,7 @@ function doSomething(scrollPos) {
   // Do something with the scroll position
 }
 
-document.addEventListener('scroll', (e) => {
+document.addEventListener("scroll", (event) => {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
@@ -65,8 +56,6 @@ document.addEventListener('scroll', (e) => {
 });
 ```
 
-See more, similar examples on the [`resize`](/en-US/docs/Web/API/Window/resize_event) event page.
-
 ## Specifications
 
 {{Specifications}}
@@ -77,4 +66,6 @@ See more, similar examples on the [`resize`](/en-US/docs/Web/API/Window/resize_e
 
 ## See also
 
+- [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event)
 - [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)
+- [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event)

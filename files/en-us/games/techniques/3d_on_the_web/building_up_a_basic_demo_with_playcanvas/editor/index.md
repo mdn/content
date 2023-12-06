@@ -1,20 +1,7 @@
 ---
 title: Building up a basic demo with PlayCanvas editor
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Lightning
-  - Online
-  - PlayCanvas
-  - Tutorial
-  - WebGL
-  - camera
-  - editor
-  - rendering
+page-type: guide
 ---
 
 Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.

@@ -1,18 +1,11 @@
 ---
-title: VRFieldOfView.downDegrees
+title: "VRFieldOfView: downDegrees property"
+short-title: downDegrees
 slug: Web/API/VRFieldOfView/downDegrees
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - VRFieldOfView
-  - Virtual Reality
-  - WebVR
-  - downDegrees
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFieldOfView.downDegrees
 ---
 

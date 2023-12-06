@@ -1,9 +1,10 @@
 ---
 title: PAC
 slug: Glossary/PAC
-tags:
-  - CodingScripting
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A Proxy Auto-Configuration file (**PAC file**) is a file which contains a function, `FindProxyForURL()`, which is used by the browser to determine whether requests (including HTTP, HTTPS, and FTP) should go directly to the destination or if they need to be forwarded through a web proxy server.
 

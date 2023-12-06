@@ -1,9 +1,10 @@
 ---
 title: Signature
 slug: Glossary/Signature
-tags:
-  - Disambiguation
+page-type: glossary-disambiguation
 ---
+
+{{GlossarySidebar}}
 
 The term **signature** can have several meanings depending on the context. It may refer to:
 

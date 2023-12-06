@@ -2,17 +2,10 @@
 title: Report
 slug: Web/API/Report
 page-type: web-api-interface
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - Report
-  - Reporting API
 browser-compat: api.Report
 ---
 
-{{SeeCompatTable}}{{APIRef("Reporting API")}}
+{{APIRef("Reporting API")}}
 
 The `Report` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents a single report.
 
@@ -24,11 +17,11 @@ Reports can be accessed in a number of ways:
 
 ## Instance properties
 
-- {{domxref("Report.body")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("Report.body")}} {{ReadOnlyInline}}
   - : The body of the report, which is a `ReportBody` object containing the detailed report information.
-- {{domxref("Report.type")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("Report.type")}} {{ReadOnlyInline}}
   - : The type of report generated, e.g. `deprecation` or `intervention`.
-- {{domxref("Report.url")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("Report.url")}} {{ReadOnlyInline}}
   - : The URL of the document that generated the report.
 
 ## Instance methods
@@ -45,9 +38,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -68,20 +61,22 @@ The report details are displayed via the `displayReports()` function, which take
 
 ```js
 function displayReports(reports) {
-  const outputElem = document.querySelector('.output');
-  const list = document.createElement('ul');
+  const outputElem = document.querySelector(".output");
+  const list = document.createElement("ul");
   outputElem.appendChild(list);
 
   reports.forEach((report, i) => {
-    let listItem = document.createElement('li');
-    let textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
+    let listItem = document.createElement("li");
+    let textNode = document.createTextNode(
+      `Report ${i + 1}, type: ${report.type}`,
+    );
     listItem.appendChild(textNode);
-    let innerList = document.createElement('ul');
+    let innerList = document.createElement("ul");
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
     for (const key in report.body) {
-      const innerListItem = document.createElement('li');
+      const innerListItem = document.createElement("li");
       const keyValue = report.body[key];
       innerListItem.textContent = `${key}: ${keyValue}`;
       innerList.appendChild(innerListItem);

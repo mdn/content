@@ -1,14 +1,10 @@
 ---
-title: BackgroundFetchRegistration.matchAll()
+title: "BackgroundFetchRegistration: matchAll() method"
+short-title: matchAll()
 slug: Web/API/BackgroundFetchRegistration/matchAll
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - matchAll
-  - BackgroundFetchRegistration
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.matchAll
 ---
 
@@ -19,15 +15,16 @@ The **`matchAll()`** method of the {{domxref("BackgroundFetchRegistration")}} in
 ## Syntax
 
 ```js-nolint
+matchAll()
 matchAll(request)
 matchAll(request,options)
 ```
 
 ### Parameters
 
-- `request`
+- `request` {{optional_inline}}
   - : The {{domxref("Request")}} for which you are attempting to find records.
-    This can be a {{domxref("Request")}} object or a URL.
+    This can be a {{domxref("Request")}} object or a URL. If this parameter is omitted, all records are included in the result.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation. The available

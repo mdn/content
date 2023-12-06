@@ -1,19 +1,11 @@
 ---
-title: 'Element: DOMMouseScroll event'
+title: "Element: DOMMouseScroll event"
+short-title: DOMMouseScroll
 slug: Web/API/Element/DOMMouseScroll_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - DOMMouseScroll
-  - Deprecated
-  - Element
-  - Event
-  - Input
-  - Non-standard
-  - Reference
-  - mouse
-  - scrolling
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.DOMMouseScroll_event
 ---
 
@@ -32,16 +24,16 @@ Use the standardized {{domxref("Element/wheel_event","wheel")}} event if availab
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('DOMMouseScroll', (event) => {});
+addEventListener("DOMMouseScroll", (event) => {});
 
-onDOMMouseScroll = (event) => { };
+onDOMMouseScroll = (event) => {};
 ```
 
 ## Event type
 
-A {{domxref("MouseWheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
 
-{{InheritanceDiagram("MouseWheelEvent")}}
+{{InheritanceDiagram("WheelEvent")}}
 
 ## Event properties
 

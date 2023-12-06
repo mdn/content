@@ -2,14 +2,6 @@
 title: Sensor
 slug: Web/API/Sensor
 page-type: web-api-interface
-tags:
-  - API
-  - Generic Sensor API
-  - Interface
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
 browser-compat: api.Sensor
 ---
 
@@ -17,7 +9,7 @@ browser-compat: api.Sensor
 
 The **`Sensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) is the base class for all the other sensor interfaces. This interface cannot be used directly. Instead it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
 
-If a feature policy blocks use of a feature it is because your code is inconsistent with the policies set on your server. This is not something that would ever be shown to a user. The {{httpheader('Feature-Policy')}} HTTP header article contains implementation instructions.
+This feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 {{InheritanceDiagram}}
 
@@ -44,7 +36,7 @@ Below is a list of interfaces based on the `Sensor` interface.
 - {{domxref('Sensor.hasReading')}} {{ReadOnlyInline}}
   - : Returns a boolean value indicating whether the sensor has a reading.
 - {{domxref('Sensor.timestamp')}} {{ReadOnlyInline}}
-  - : Returns the time stamp of the latest sensor reading.
+  - : Returns the timestamp of the latest sensor reading.
 
 ## Instance methods
 

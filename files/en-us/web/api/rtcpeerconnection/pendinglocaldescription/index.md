@@ -1,17 +1,8 @@
 ---
-title: RTCPeerConnection.pendingLocalDescription
+title: "RTCPeerConnection: pendingLocalDescription property"
+short-title: pendingLocalDescription
 slug: Web/API/RTCPeerConnection/pendingLocalDescription
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - pendingLocalDescription
 browser-compat: api.RTCPeerConnection.pendingLocalDescription
 ---
 
@@ -25,8 +16,7 @@ currently stands, but as it may exist in the near future. Use
 {{domxref("RTCPeerConnection.currentLocalDescription")}} or
 {{domxref("RTCPeerConnection.localDescription")}} to get the current state of the
 endpoint. For details on the difference, see
-{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-  descriptions")}}.
+[Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
 ## Value
 
@@ -45,8 +35,7 @@ const pc = new RTCPeerConnection();
 const sd = pc.pendingLocalDescription;
 if (sd) {
   // There's a description change underway!
-}
-else {
+} else {
   // No description change pending
 }
 ```

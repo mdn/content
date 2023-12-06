@@ -1,11 +1,8 @@
 ---
-title: Node.childNodes
+title: "Node: childNodes property"
+short-title: childNodes
 slug: Web/API/Node/childNodes
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.childNodes
 ---
 
@@ -18,6 +15,12 @@ comments.
 
 > **Note:** The {{domxref("NodeList")}} being live means that its content is changed each time
 > new children are added or removed.
+>
+> Browsers insert text nodes into a document to represent whitespace in the source markup.
+> Therefore a node obtained, for example, using `Node.childNodes[0]`
+> may refer to a whitespace text node rather than the actual element the author intended to get.
+>
+> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
 
 The items in the collection of nodes are objects, not strings. To get data from node
 objects, use their properties. For example, to get the name of the first
@@ -61,8 +64,8 @@ if (parg.hasChildNodes()) {
 // This is one way to remove all children from a node
 // box is an object reference to an element
 while (box.firstChild) {
-    //The list is LIVE so it will re-index each call
-    box.removeChild(box.firstChild);
+  // The list is LIVE so it will re-index each call
+  box.removeChild(box.firstChild);
 }
 ```
 

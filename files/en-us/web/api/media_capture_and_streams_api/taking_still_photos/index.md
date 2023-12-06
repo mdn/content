@@ -1,18 +1,7 @@
 ---
 title: Taking still photos with getUserMedia()
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - API
-  - Advanced
-  - Example
-  - Photos
-  - Sample code
-  - Still Photos
-  - Video
-  - camera
-  - MediaDevices
-  - getusermedia
-  - webcam
+page-type: guide
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -110,14 +99,15 @@ First, we grab references to the major elements we need to be able to access.
 The next task is to get the media stream:
 
 ```js
-    navigator.mediaDevices.getUserMedia({ video: true, audio: false })
-      .then((stream) => {
-        video.srcObject = stream;
-        video.play();
-      })
-      .catch((err) => {
-        console.error(`An error occurred: ${err}`);
-      });
+navigator.mediaDevices
+  .getUserMedia({ video: true, audio: false })
+  .then((stream) => {
+    video.srcObject = stream;
+    video.play();
+  })
+  .catch((err) => {
+    console.error(`An error occurred: ${err}`);
+  });
 ```
 
 Here, we're calling {{domxref("MediaDevices.getUserMedia()")}} and requesting a video stream (without audio). It returns a promise which we attach success and failure callbacks to.
@@ -133,17 +123,21 @@ The error callback is called if opening the stream doesn't work. This will happe
 After calling [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) on the {{HTMLElement("video")}}, there's a (hopefully brief) period of time that elapses before the stream of video begins to flow. To avoid blocking until that happens, we add an event listener to `video` for the {{domxref("HTMLMediaElement/canplay_event", "canplay")}} event, which is delivered when the video playback actually begins. At that point, all the properties in the `video` object have been configured based on the stream's format.
 
 ```js
-    video.addEventListener('canplay', (ev) => {
-      if (!streaming) {
-        height = video.videoHeight / video.videoWidth * width;
+video.addEventListener(
+  "canplay",
+  (ev) => {
+    if (!streaming) {
+      height = (video.videoHeight / video.videoWidth) * width;
 
-        video.setAttribute('width', width);
-        video.setAttribute('height', height);
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
-        streaming = true;
-      }
-    }, false);
+      video.setAttribute("width", width);
+      video.setAttribute("height", height);
+      canvas.setAttribute("width", width);
+      canvas.setAttribute("height", height);
+      streaming = true;
+    }
+  },
+  false,
+);
 ```
 
 This callback does nothing unless it's the first time it's been called; this is tested by looking at the value of our `streaming` variable, which is `false` the first time this method is run.
@@ -157,10 +151,14 @@ Finally, the `width` and `height` of both the video and the canvas are set to ma
 To capture a still photo each time the user clicks the `startbutton`, we need to add an event listener to the button, to be called when the {{domxref("Element/click_event", "click")}} event is issued:
 
 ```js
-    startbutton.addEventListener('click', (ev) => {
-      takepicture();
-      ev.preventDefault();
-    }, false);
+startbutton.addEventListener(
+  "click",
+  (ev) => {
+    takepicture();
+    ev.preventDefault();
+  },
+  false,
+);
 ```
 
 This method is simple enough: it just calls our `takepicture()` function, defined below in the section [Capturing a frame from the stream](#capturing_a_frame_from_the_stream), then calls {{domxref("Event.preventDefault()")}} on the received event to prevent the click from being handled more than once.
@@ -181,14 +179,14 @@ This is where we call the `clearphoto()` method we'll describe below in the sect
 Clearing the photo box involves creating an image, then converting it into a format usable by the {{HTMLElement("img")}} element that displays the most recently captured frame. That code looks like this:
 
 ```js
-  function clearphoto() {
-    const context = canvas.getContext('2d');
-    context.fillStyle = "#AAA";
-    context.fillRect(0, 0, canvas.width, canvas.height);
+function clearphoto() {
+  const context = canvas.getContext("2d");
+  context.fillStyle = "#AAA";
+  context.fillRect(0, 0, canvas.width, canvas.height);
 
-    const data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
-  }
+  const data = canvas.toDataURL("image/png");
+  photo.setAttribute("src", data);
+}
 ```
 
 We start by getting a reference to the hidden {{HTMLElement("canvas")}} element that we use for offscreen rendering. Next we set the `fillStyle` to `#AAA` (a fairly light grey), and fill the entire canvas with that color by calling {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.
@@ -200,19 +198,19 @@ Last in this function, we convert the canvas into a PNG image and call {{domxref
 There's one last function to define, and it's the point to the entire exercise: the `takepicture()` function, whose job it is to capture the currently displayed video frame, convert it into a PNG file, and display it in the captured frame box. The code looks like this:
 
 ```js
-  function takepicture() {
-    const context = canvas.getContext('2d');
-    if (width && height) {
-      canvas.width = width;
-      canvas.height = height;
-      context.drawImage(video, 0, 0, width, height);
+function takepicture() {
+  const context = canvas.getContext("2d");
+  if (width && height) {
+    canvas.width = width;
+    canvas.height = height;
+    context.drawImage(video, 0, 0, width, height);
 
-      const data = canvas.toDataURL('image/png');
-      photo.setAttribute('src', data);
-    } else {
-      clearphoto();
-    }
+    const data = canvas.toDataURL("image/png");
+    photo.setAttribute("src", data);
+  } else {
+    clearphoto();
   }
+}
 ```
 
 As is the case any time we need to work with the contents of a canvas, we start by getting the {{domxref("CanvasRenderingContext2D","2D drawing context")}} for the hidden canvas.
@@ -341,20 +339,23 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
       const button = document.createElement("button");
       button.textContent = "View live result of the example code above";
       document.body.append(button);
-      button.addEventListener('click', () => window.open(location.href));
+      button.addEventListener("click", () => window.open(location.href));
       return true;
     }
     return false;
   }
 
   function startup() {
-    if (showViewLiveResultButton()) { return; }
-    video = document.getElementById('video');
-    canvas = document.getElementById('canvas');
-    photo = document.getElementById('photo');
-    startbutton = document.getElementById('startbutton');
+    if (showViewLiveResultButton()) {
+      return;
+    }
+    video = document.getElementById("video");
+    canvas = document.getElementById("canvas");
+    photo = document.getElementById("photo");
+    startbutton = document.getElementById("startbutton");
 
-    navigator.mediaDevices.getUserMedia({video: true, audio: false})
+    navigator.mediaDevices
+      .getUserMedia({ video: true, audio: false })
       .then((stream) => {
         video.srcObject = stream;
         video.play();
@@ -363,29 +364,37 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
         console.error(`An error occurred: ${err}`);
       });
 
-    video.addEventListener('canplay', (ev) => {
-      if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
+    video.addEventListener(
+      "canplay",
+      (ev) => {
+        if (!streaming) {
+          height = video.videoHeight / (video.videoWidth / width);
 
-        // Firefox currently has a bug where the height can't be read from
-        // the video, so we will make assumptions if this happens.
+          // Firefox currently has a bug where the height can't be read from
+          // the video, so we will make assumptions if this happens.
 
-        if (isNaN(height)) {
-          height = width / (4/3);
+          if (isNaN(height)) {
+            height = width / (4 / 3);
+          }
+
+          video.setAttribute("width", width);
+          video.setAttribute("height", height);
+          canvas.setAttribute("width", width);
+          canvas.setAttribute("height", height);
+          streaming = true;
         }
+      },
+      false,
+    );
 
-        video.setAttribute('width', width);
-        video.setAttribute('height', height);
-        canvas.setAttribute('width', width);
-        canvas.setAttribute('height', height);
-        streaming = true;
-      }
-    }, false);
-
-    startbutton.addEventListener('click', (ev) => {
-      takepicture();
-      ev.preventDefault();
-    }, false);
+    startbutton.addEventListener(
+      "click",
+      (ev) => {
+        takepicture();
+        ev.preventDefault();
+      },
+      false,
+    );
 
     clearphoto();
   }
@@ -394,12 +403,12 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // captured.
 
   function clearphoto() {
-    const context = canvas.getContext('2d');
+    const context = canvas.getContext("2d");
     context.fillStyle = "#AAA";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
-    const data = canvas.toDataURL('image/png');
-    photo.setAttribute('src', data);
+    const data = canvas.toDataURL("image/png");
+    photo.setAttribute("src", data);
   }
 
   // Capture a photo by fetching the current contents of the video
@@ -409,14 +418,14 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   // other changes before drawing it.
 
   function takepicture() {
-    const context = canvas.getContext('2d');
+    const context = canvas.getContext("2d");
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
 
-      const data = canvas.toDataURL('image/png');
-      photo.setAttribute('src', data);
+      const data = canvas.toDataURL("image/png");
+      photo.setAttribute("src", data);
     } else {
       clearphoto();
     }
@@ -424,7 +433,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
 
   // Set up our event listener to run the startup process
   // once loading is complete.
-  window.addEventListener('load', startup, false);
+  window.addEventListener("load", startup, false);
 })();
 ```
 
@@ -446,5 +455,5 @@ You can, if needed, restrict the set of permitted video sources to a specific de
 
 - [Sample code on GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images", "Using frames from a video")}}
+- [Using frames from a video](/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#using_frames_from_a_video) in the Canvas tutorial
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

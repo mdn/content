@@ -1,14 +1,8 @@
 ---
-title: MediaKeyMessageEvent.messageType
+title: "MediaKeyMessageEvent: messageType property"
+short-title: messageType
 slug: Web/API/MediaKeyMessageEvent/messageType
 page-type: web-api-instance-property
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyMessageEvent
-  - Property
-  - Reference
-  - messageType
 browser-compat: api.MediaKeyMessageEvent.messageType
 ---
 

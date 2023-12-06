@@ -1,11 +1,9 @@
 ---
 title: prefer_related_applications
 slug: Web/Manifest/prefer_related_applications
-tags:
-  - Manifest
-  - Web
-  - prefer_related_applications
-  - Experimental
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.prefer_related_applications
 ---
 
@@ -16,10 +14,6 @@ browser-compat: html.manifest.prefer_related_applications
     <tr>
       <th scope="row">Type</th>
       <td><code>Boolean</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

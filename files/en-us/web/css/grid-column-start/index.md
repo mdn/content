@@ -2,12 +2,6 @@
 title: grid-column-start
 slug: Web/CSS/grid-column-start
 page-type: css-property
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.grid-column-start
 ---
 
@@ -170,5 +164,5 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 ## See also
 
 - Related CSS properties: {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)_
+- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
 - Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_

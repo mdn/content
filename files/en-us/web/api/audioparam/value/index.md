@@ -1,16 +1,8 @@
 ---
-title: AudioParam.value
+title: "AudioParam: value property"
+short-title: value
 slug: Web/API/AudioParam/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioParam
-  - Parameter
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
-  - value
 browser-compat: api.AudioParam.value
 ---
 

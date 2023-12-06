@@ -1,10 +1,7 @@
 ---
 title: HTTP request methods
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Methods
-  - Reference
+page-type: landing-page
 browser-compat: http.methods
 ---
 

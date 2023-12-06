@@ -1,12 +1,7 @@
 ---
 title: call
 slug: WebAssembly/Reference/Control_flow/call
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

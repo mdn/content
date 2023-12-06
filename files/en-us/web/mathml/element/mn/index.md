@@ -1,11 +1,7 @@
 ---
 title: <mn>
 slug: Web/MathML/Element/mn
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+page-type: mathml-element
 browser-compat: mathml.elements.mn
 ---
 

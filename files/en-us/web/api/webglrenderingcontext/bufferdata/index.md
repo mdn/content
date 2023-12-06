@@ -1,15 +1,8 @@
 ---
-title: WebGLRenderingContext.bufferData()
+title: "WebGLRenderingContext: bufferData() method"
+short-title: bufferData()
 slug: Web/API/WebGLRenderingContext/bufferData
 page-type: web-api-instance-method
-tags:
-  - API
-  - Buffer
-  - Graphics
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bufferData
 ---
 
@@ -137,8 +130,8 @@ None ({{jsxref("undefined")}}).
 ### Using bufferData
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.bufferData(gl.ARRAY_BUFFER, 1024, gl.STATIC_DRAW);

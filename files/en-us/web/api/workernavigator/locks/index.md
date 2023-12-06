@@ -1,13 +1,8 @@
 ---
-title: WorkerNavigator.locks
+title: "WorkerNavigator: locks property"
+short-title: locks
 slug: Web/API/WorkerNavigator/locks
 page-type: web-api-instance-property
-tags:
-  - API
-  - LockManager
-  - Property
-  - Reference
-  - Web Locks API
 browser-compat: api.WorkerNavigator.locks
 ---
 

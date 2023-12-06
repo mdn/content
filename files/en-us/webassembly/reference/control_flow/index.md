@@ -1,12 +1,7 @@
 ---
 title: WebAssembly control flow instructions
 slug: WebAssembly/Reference/Control_flow
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: landing-page
 ---
 
 {{WebAssemblySidebar}}

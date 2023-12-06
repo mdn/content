@@ -2,14 +2,9 @@
 title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
 page-type: guide
-tags:
-  - Overview
-  - Tutorial
-  - WebGL
-  - WebGL API
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 This tutorial describes how to use the {{HTMLElement("canvas")}} element to draw WebGL graphics, starting with the basics. The examples provided should give you some clear ideas of what you can do with WebGL and will provide code snippets that may get you started in building your own content.
 

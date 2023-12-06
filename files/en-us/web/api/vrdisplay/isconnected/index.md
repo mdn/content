@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.isConnected
+title: "VRDisplay: isConnected property"
+short-title: isConnected
 slug: Web/API/VRDisplay/isConnected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isConnected
 ---
 
@@ -35,14 +28,14 @@ navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
 
     // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       // Only request presentation if the display is still connected.
       if (vrDisplay.isConnected) {
         vrDisplay.requestPresent([{ source: canvas }]).then(() => {
           // start rendering the app, etc.
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }

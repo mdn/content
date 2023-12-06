@@ -1,10 +1,7 @@
 ---
 title: <feDiffuseLighting>
 slug: Web/SVG/Element/feDiffuseLighting
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feDiffuseLighting
 ---
 

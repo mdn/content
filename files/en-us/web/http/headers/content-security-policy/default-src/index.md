@@ -1,16 +1,7 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - default
-  - default-src
-  - source
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.default-src
 ---
 
@@ -107,4 +98,3 @@ Content-Security-Policy: connect-src 'self';
   - {{Glossary("Reporting directive")}}
   - [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
   - [`block-all-mixed-content`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`require-sri-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for) {{experimental_inline}}

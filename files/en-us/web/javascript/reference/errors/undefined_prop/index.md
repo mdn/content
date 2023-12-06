@@ -1,12 +1,7 @@
 ---
 title: 'ReferenceError: reference to undefined property "x"'
 slug: Web/JavaScript/Reference/Errors/Undefined_prop
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - ReferenceError
-  - Strict Mode
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -16,7 +11,7 @@ to access an object property which doesn't exist.
 
 ## Message
 
-```
+```plain
 ReferenceError: reference to undefined property "x" (Firefox)
 ```
 
@@ -28,8 +23,7 @@ ReferenceError: reference to undefined property "x" (Firefox)
 ## What went wrong?
 
 The script attempted to access an object property which doesn't exist. There are two
-ways to access properties; see the {{jsxref("Operators/Property_Accessors", "property
-  accessors", 0, 1)}} reference page to learn more about them.
+ways to access properties; see the [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) reference page to learn more about them.
 
 ## Examples
 
@@ -55,16 +49,16 @@ const foo = {};
 
 // Define the bar property
 
-foo.bar = 'moon';
+foo.bar = "moon";
 console.log(foo.bar); // "moon"
 
 // Test to be sure bar exists before accessing it
 
-if (Object.hasOwn(foo, 'bar')) {
+if (Object.hasOwn(foo, "bar")) {
   console.log(foo.bar);
 }
 ```
 
 ## See also
 
-- {{jsxref("Operators/Property_Accessors", "property accessors", 0, 1)}}
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)

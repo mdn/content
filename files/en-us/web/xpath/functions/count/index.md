@@ -1,18 +1,16 @@
 ---
 title: count
 slug: Web/XPath/Functions/count
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `count` function counts the number of nodes in a node-set and returns an integer.
 
 ### Syntax
 
-```
+```plain
 count( node-set )
 ```
 

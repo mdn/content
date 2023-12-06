@@ -1,21 +1,8 @@
 ---
-title: RTCOutboundRtpStreamStats.perDscpPacketsSent
+title: "RTCOutboundRtpStreamStats: perDscpPacketsSent property"
+short-title: perDscpPacketsSent
 slug: Web/API/RTCOutboundRtpStreamStats/perDscpPacketsSent
 page-type: web-api-instance-property
-tags:
-  - API
-  - DSCP
-  - Media
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - Services
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - perDscpPacketsSent
 browser-compat: api.RTCOutboundRtpStreamStats.perDscpPacketsSent
 ---
 

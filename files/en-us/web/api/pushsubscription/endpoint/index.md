@@ -1,16 +1,8 @@
 ---
-title: PushSubscription.endpoint
+title: "PushSubscription: endpoint property"
+short-title: endpoint
 slug: Web/API/PushSubscription/endpoint
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Push
-  - Push API
-  - PushSubscription
-  - Reference
-  - Service Workers
-  - endPoint
 browser-compat: api.PushSubscription.endpoint
 ---
 
@@ -33,14 +25,14 @@ A string.
 
 ```js
 navigator.serviceWorker.ready.then((reg) => {
-  reg.pushManager.subscribe({userVisibleOnly: true}).then((subscription) => {
+  reg.pushManager.subscribe({ userVisibleOnly: true }).then((subscription) => {
     console.log(subscription.endpoint);
 
-      // At this point you would most likely send the subscription
-      // endpoint to your server, save it, then use it to send a
-      // push message at a later date
-  })
-})
+    // At this point you would most likely send the subscription
+    // endpoint to your server, save it, then use it to send a
+    // push message at a later date
+  });
+});
 ```
 
 ## Specifications

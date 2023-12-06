@@ -2,16 +2,6 @@
 title: MediaError
 slug: Web/API/MediaError
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Errors
-  - HTML DOM
-  - Interface
-  - Media
-  - MediaError
-  - Reference
-  - Video
 browser-compat: api.MediaError
 ---
 

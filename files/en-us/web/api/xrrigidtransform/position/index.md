@@ -1,23 +1,8 @@
 ---
-title: XRRigidTransform.position
+title: "XRRigidTransform: position property"
+short-title: position
 slug: Web/API/XRRigidTransform/position
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Coordinates
-  - Location
-  - Point
-  - Position
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - XR
-  - XRRigidTransform
-  - transform
 browser-compat: api.XRRigidTransform.position
 ---
 
@@ -50,11 +35,14 @@ function onSessionStarted(xrSession) {
   xrSession.updateRenderState({ baseLayer: glLayer });
 
   if (immersiveSession) {
-    xrSession.requestReferenceSpace("bounded-floor").then((refSpace) => {
-      refSpaceCreated(refSpace);
-    }).catch(() => {
-      session.requestReferenceSpace("local-floor").then(refSpaceCreated);
-    });
+    xrSession
+      .requestReferenceSpace("bounded-floor")
+      .then((refSpace) => {
+        refSpaceCreated(refSpace);
+      })
+      .catch(() => {
+        session.requestReferenceSpace("local-floor").then(refSpaceCreated);
+      });
   } else {
     session.requestReferenceSpace("viewer").then(refSpaceCreated);
   }

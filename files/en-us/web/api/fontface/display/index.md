@@ -1,16 +1,8 @@
 ---
-title: FontFace.display
+title: "FontFace: display property"
+short-title: display
 slug: Web/API/FontFace/display
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - FontFace
-  - Fonts
-  - Property
-  - Reference
-  - display
 browser-compat: api.FontFace.display
 ---
 

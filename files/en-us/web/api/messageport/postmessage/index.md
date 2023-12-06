@@ -1,14 +1,8 @@
 ---
-title: MessagePort.postMessage()
+title: "MessagePort: postMessage() method"
+short-title: postMessage()
 slug: Web/API/MessagePort/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Channel messaging
-  - MessagePort
-  - Method
-  - Reference
-  - postMessage
 browser-compat: api.MessagePort.postMessage
 ---
 
@@ -23,18 +17,19 @@ transfers ownership of objects to other browsing contexts.
 ## Syntax
 
 ```js-nolint
-postMessage(message, transferList)
+postMessage(message)
+postMessage(message, options)
+postMessage(message, transfer)
 ```
 
 ### Parameters
 
 - `message`
-  - : The message you want to send through the channel. This can be of any basic data
-    type. Multiple data items can be sent as an array.
-- `transferList` {{optional_inline}}
-  - : {{Glossary("Transferable Objects")}} to be transferred — these objects have their
-    ownership transferred to the receiving browsing context, so are no longer usable by
-    the sending browsing context.
+  - : The message you want to send through the channel. This can be of any basic data type. Multiple data items can be sent as an array.
+- `options` {{optional_inline}}
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+- `transfer` {{optional_inline}}
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 
@@ -53,15 +48,15 @@ The `handleMessage` handler then responds to a message being sent back from the 
 
 ```js
 const channel = new MessageChannel();
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-const ifr = document.querySelector('iframe');
+const ifr = document.querySelector("iframe");
 const otherWindow = ifr.contentWindow;
 
 ifr.addEventListener("load", iframeLoaded, false);
 
 function iframeLoaded() {
-  otherWindow.postMessage('Transferring message port', '*', [channel.port2]);
+  otherWindow.postMessage("Transferring message port", "*", [channel.port2]);
 }
 
 channel.port1.onmessage = handleMessage;
@@ -71,7 +66,7 @@ function handleMessage(e) {
 
 // in the iframe…
 
-window.addEventListener('message', (event) => {
+window.addEventListener("message", (event) => {
   const messagePort = event.ports?.[0];
   messagePort.postMessage("Hello from the iframe!");
 });

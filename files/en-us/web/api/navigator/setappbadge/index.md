@@ -1,19 +1,12 @@
 ---
-title: Navigator.setAppBadge()
+title: "Navigator: setAppBadge() method"
+short-title: setAppBadge()
 slug: Web/API/Navigator/setAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - setAppBadge
-  - Navigator
-  - Experimental
 browser-compat: api.Navigator.setAppBadge
 ---
 
-{{APIRef("Badging API")}}{{SeeCompatTable}}
+{{APIRef("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
 
 The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
@@ -35,8 +28,12 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : The {{domxref("Navigator")}} does not have a document that this action can be acted on.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 
 ## Examples
 
@@ -57,4 +54,5 @@ navigator.setAppBadge(unread);
 
 ## See also
 
+- [Badging API](/en-US/docs/Web/API/Badging_API)
 - [Badging for app icons](https://web.dev/badging-api/)

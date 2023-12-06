@@ -1,12 +1,8 @@
 ---
-title: 'Window: deviceorientation event'
+title: "Window: deviceorientation event"
+short-title: deviceorientation
 slug: Web/API/Window/deviceorientation_event
 page-type: web-api-event
-tags:
-  - Device Orientation API
-  - Sensors
-  - Window Event
-  - events
 browser-compat: api.Window.deviceorientation_event
 ---
 
@@ -23,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('deviceorientation', (event) => { });
+addEventListener("deviceorientation", (event) => {});
 
-ondeviceorientation = (event) => { };
+ondeviceorientation = (event) => {};
 ```
 
 ## Event type
@@ -53,13 +49,17 @@ A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```js
 if (window.DeviceOrientationEvent) {
-   window.addEventListener("deviceorientation", (event) => {
-     const rotateDegrees = event.alpha; // alpha: rotation around z-axis
-     const leftToRight = event.gamma; // gamma: left to right
-     const frontToBack = event.beta; // beta: front back motion
+  window.addEventListener(
+    "deviceorientation",
+    (event) => {
+      const rotateDegrees = event.alpha; // alpha: rotation around z-axis
+      const leftToRight = event.gamma; // gamma: left to right
+      const frontToBack = event.beta; // beta: front back motion
 
-     handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-   }, true);
+      handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+    },
+    true,
+  );
 }
 
 const handleOrientationEvent = (frontToBack, leftToRight, rotateDegrees) => {

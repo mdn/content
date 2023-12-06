@@ -1,13 +1,7 @@
 ---
 title: Build the brick field
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-tags:
-  - Beginner
-  - Canvas
-  - Games
-  - Graphics
-  - JavaScript
-  - Tutorial
+page-type: guide
 ---
 
 {{GamesSidebar}}

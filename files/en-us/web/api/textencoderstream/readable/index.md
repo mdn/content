@@ -1,14 +1,8 @@
 ---
-title: TextEncoderStream.readable
+title: "TextEncoderStream: readable property"
+short-title: readable
 slug: Web/API/TextEncoderStream/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - TextEncoderStream
-  - Read-only
 browser-compat: api.TextEncoderStream.readable
 ---
 

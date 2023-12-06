@@ -1,15 +1,8 @@
 ---
-title: TransitionEvent.pseudoElement
+title: "TransitionEvent: pseudoElement property"
+short-title: pseudoElement
 slug: Web/API/TransitionEvent/pseudoElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Transitions
-  - CSSOM
-  - Property
-  - Reference
-  - TransitionEvent
 browser-compat: api.TransitionEvent.pseudoElement
 ---
 
@@ -18,7 +11,7 @@ browser-compat: api.TransitionEvent.pseudoElement
 The **`TransitionEvent.pseudoElement`** read-only property is a
 string, starting with `'::'`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on.
 If the transition doesn't run on a pseudo-element but on the element, an empty string:
-` ''``. `
+`''``.`
 
 ## Value
 
@@ -34,7 +27,7 @@ A string.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}.

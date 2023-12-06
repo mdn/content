@@ -1,15 +1,10 @@
 ---
-title: XRWebGLBinding.createCubeLayer()
+title: "XRWebGLBinding: createCubeLayer() method"
+short-title: createCubeLayer()
 slug: Web/API/XRWebGLBinding/createCubeLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.createCubeLayer
 ---
 
@@ -28,7 +23,7 @@ createCubeLayer(init)
 - `init`
   - : An object to configure the {{domxref("XRCubeLayer")}}. It must have the `space`, `viewPixelHeight`, and `viewPixelWidth` properties. `init` has the following properties:
     - `colorFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the color texture data. Possible values:
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the color texture data. Possible values:
         - `gl.RGB`
         - `gl.RGBA` (Default)
           Additionally, for contexts with the {{domxref("EXT_sRGB")}} extension enabled:
@@ -49,7 +44,7 @@ createCubeLayer(init)
           Additionally, for contexts with the {{domxref("WEBGL_compressed_texture_astc")}} extension enabled:
         - All of the [formats](/en-US/docs/Web/API/WEBGL_compressed_texture_astc#constants) the extension supports.
     - `depthFormat` {{optional_inline}}
-      - : A {{domxref("GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
+      - : A {{domxref("WebGL_API/Types", "GLenum")}} defining the data type of the depth texture data or `0` indicating that the layer should not provide a depth texture. (In that case {{domxref("XRProjectionLayer.ignoreDepthValues")}} will be `true`.)
         Possible values for {{domxref("WebGLRenderingContext")}} contexts with the {{domxref("WEBGL_depth_texture")}} extension enabled, or for {{domxref("WebGL2RenderingContext")}} contexts (no extension required):
         - `gl.DEPTH_COMPONENT` (Default)
         - `gl.DEPTH_STENCIL`
@@ -95,10 +90,10 @@ function onXRSessionStarted(xrSession) {
   const cubeLayer = xrGlBinding.createCubeLayer({
     space: xrReferenceSpace,
     viewPixelHeight: 512,
-    viewPixelWidth: 512
+    viewPixelWidth: 512,
   });
   xrSession.updateRenderState({
-    layers: [cubeLayer]
+    layers: [cubeLayer],
   });
 }
 ```

@@ -1,16 +1,8 @@
 ---
-title: OVR_multiview2.framebufferTextureMultiviewOVR()
+title: "OVR_multiview2: framebufferTextureMultiviewOVR() method"
+short-title: framebufferTextureMultiviewOVR()
 slug: Web/API/OVR_multiview2/framebufferTextureMultiviewOVR
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Multiview
-  - VR
-  - WebGL
-  - WebGL extensions
-  - WebVR
-  - WebXR
 browser-compat: api.OVR_multiview2.framebufferTextureMultiviewOVR
 ---
 
@@ -100,7 +92,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-ext.framebufferTextureMultiviewOVR(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT0, colorTex, 0, 0, 2);
+ext.framebufferTextureMultiviewOVR(
+  gl.DRAW_FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  colorTex,
+  0,
+  0,
+  2,
+);
 ```
 
 ## Specifications

@@ -1,11 +1,7 @@
 ---
 title: How to turn off form autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-tags:
-  - Forms
-  - Guide
-  - Security
-  - Web Development
+page-type: guide
 ---
 
 This article explains how a website can disable autocomplete for form fields.
@@ -26,7 +22,7 @@ autocomplete="off"
 
 You can do this either for an entire form, or for specific input elements in a form:
 
-```html
+```html-nolint
 <form method="post" action="/form" autocomplete="off">
   …
 </form>
@@ -62,12 +58,10 @@ For this reason, many modern browsers do not support `autocomplete="off"` for lo
 - If a site sets `autocomplete="off"` for a {{HTMLElement("form")}}, and the form includes username and password input fields, then the browser still offers to remember this login, and if the user agrees, the browser will autofill those fields the next time the user visits the page.
 - If a site sets `autocomplete="off"` for username and password {{HTMLElement("input")}} fields, then the browser still offers to remember this login, and if the user agrees, the browser will autofill those fields the next time the user visits the page.
 
-This is the behavior in Firefox (since version 38), Google Chrome (since 34), and Internet Explorer (since version 11).
-
 ### Preventing autofilling with autocomplete="new-password"
 
 If you are defining a user management page where a user can specify a new password for another person, and therefore you want to prevent autofilling of password fields, you can use `autocomplete="new-password"`.
 
-This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see {{bug(1119063)}}) stopped autofilling in this case; however, Firefox 70 (see {{bug(1565407)}}) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/en-US/docs/Web/HTML/Attributes/autocomplete#browser_compatibility) for more details.
+This is a hint, which browsers are not required to comply with. However modern browsers have stopped autofilling `<input>` elements with `autocomplete="new-password"` for this very reason. For example, Firefox version 67 (see [Firefox bug 1119063](https://bugzil.la/1119063)) stopped autofilling in this case; however, Firefox 70 (see [Firefox bug 1565407](https://bugzil.la/1565407)) can suggest securely-generated passwords, but does not autofill a saved password. See the [`autocomplete` compat table](/en-US/docs/Web/HTML/Attributes/autocomplete#browser_compatibility) for more details.
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

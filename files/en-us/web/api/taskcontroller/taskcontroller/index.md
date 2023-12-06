@@ -1,12 +1,8 @@
 ---
-title: TaskController()
+title: "TaskController: TaskController() constructor"
+short-title: TaskController()
 slug: Web/API/TaskController/TaskController
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - TaskController
 browser-compat: api.TaskController.TaskController
 ---
 
@@ -44,7 +40,7 @@ const controller = new TaskController();
 To construct a task controller that has a specific signal priority, pass the `priority` as a property of the optional argument.
 
 ```js
-controller2 = new TaskController({priority: 'user-blocking'});
+controller2 = new TaskController({ priority: "user-blocking" });
 ```
 
 ## Specifications

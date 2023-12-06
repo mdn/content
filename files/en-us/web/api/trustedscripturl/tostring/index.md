@@ -1,13 +1,8 @@
 ---
-title: TrustedScriptURL.toString()
+title: "TrustedScriptURL: toString() method"
+short-title: toString()
 slug: Web/API/TrustedScriptURL/toString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - toString
-  - TrustedScriptURL
 browser-compat: api.TrustedScriptURL.toString
 ---
 
@@ -34,7 +29,9 @@ A string containing the sanitized URL
 The constant `sanitized` is an object created via a Trusted Types policy. The `toString()` method returns a string to safely use to load a third party script.
 
 ```js
-const sanitized = scriptPolicy.createScriptURL("https://example.com/my-script.js");
+const sanitized = scriptPolicy.createScriptURL(
+  "https://example.com/my-script.js",
+);
 console.log(sanitized.toString());
 ```
 

@@ -1,17 +1,10 @@
 ---
-title: ContentIndex.getAll()
+title: "ContentIndex: getAll() method"
+short-title: getAll()
 slug: Web/API/ContentIndex/getAll
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content indexing
-  - getAll
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.getAll
 ---
 
@@ -40,36 +33,38 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
 
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
 
-    - `id`: A unique {{jsxref('String')}} identifier.
-    - `title`: A {{jsxref('String')}} title for the item. Used in
-      user-visible lists of content.
-    - `title`: A {{jsxref('String')}} title of the item. Used in
-      user-visible lists of content.
-    - `description`: A {{jsxref('String')}} description of the item. Used
-      in user-visible lists of content.
-    - `url`: A {{jsxref('String')}} containing the URL of the corresponding
-      HTML document. Needs to be under the scope of the current
-      {{domxref('ServiceWorker','service worker')}}.
-    - `category` {{Optional_Inline}}: A {{jsxref('String')}} defining the
-      category of content. Can be:
+    - `id`
+      - : A unique {{jsxref('String')}} identifier.
+    - `title`
+      - : A {{jsxref('String')}} title of the item.
+        Used in user-visible lists of content.
+    - `description`
+      - : A {{jsxref('String')}} description of the item.
+        Used in user-visible lists of content.
+    - `url`
+      - : A {{jsxref('String')}} containing the URL of the corresponding HTML document.
+        Needs to be under the scope of the current {{domxref('ServiceWorker','service worker')}}.
+    - `category` {{Optional_Inline}}
 
-      - `''` An empty {{jsxref('String')}}, this is the default.
-      - `homepage`
-      - `article`
-      - `video`
-      - `audio`
+      - : A {{jsxref('String')}} defining the category of content.
+        Can be:
 
-    - `icons` {{Optional_Inline}}: An {{jsxref('Array')}} of image
-      resources, defined as an {{jsxref('Object')}} with the following data:
+        - `''` An empty {{jsxref('String')}}, this is the default.
+        - `homepage`
+        - `article`
+        - `video`
+        - `audio`
 
-      - `src`
-        - : A URL {{jsxref('String')}} of the source image.
-      - `sizes` {{Optional_Inline}}
-        - : A {{jsxref('String')}}
-          representation of the image size.
-      - `type` {{Optional_Inline}}
-        - : The {{Glossary("MIME type")}} of the
-          image.
+    - `icons` {{Optional_Inline}}
+
+      - : An {{jsxref('Array')}} of image resources, defined as an {{jsxref('Object')}} with the following data:
+
+        - `src`
+          - : A URL {{jsxref('String')}} of the source image.
+        - `sizes` {{Optional_Inline}}
+          - : A {{jsxref('String')}} representation of the image size.
+        - `type` {{Optional_Inline}}
+          - : The {{Glossary("MIME type")}} of the image.
 
 ### Exceptions
 
@@ -91,36 +86,32 @@ async function createReadingList() {
   const entries = await registration.index.getAll();
 
   // create a containing element
-  const readingListElem = document.createElement('div');
+  const readingListElem = document.createElement("div");
 
   // test for entries
   if (!Array.length) {
-
     // if there are no entries, display a message
-    const message = document.createElement('p');
-    message.innerText = 'You currently have no articles saved for offline reading.'
+    const message = document.createElement("p");
+    message.innerText =
+      "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
-
   } else {
-
     // if entries are present, display in a list of links to the content
-    const listElem = document.createElement('ul');
+    const listElem = document.createElement("ul");
 
     for (const entry of entries) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
 
-      const anchorElem = document.createElement('a');
+      const anchorElem = document.createElement("a");
       anchorElem.innerText = entry.title;
-      anchorElem.setAttribute('href', entry.url);
+      anchorElem.setAttribute("href", entry.url);
 
       listElem.append(listItem);
-
     }
 
     readingListElem.append(listElem);
   }
-
 }
 ```
 
@@ -134,6 +125,6 @@ async function createReadingList() {
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

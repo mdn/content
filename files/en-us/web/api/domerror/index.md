@@ -2,13 +2,8 @@
 title: DOMError
 slug: Web/API/DOMError
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DOMError
-  - Deprecated
-  - Interface
-  - Reference
+status:
+  - deprecated
 browser-compat: api.DOMError
 ---
 

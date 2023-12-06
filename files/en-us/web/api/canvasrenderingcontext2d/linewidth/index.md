@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.lineWidth
+title: "CanvasRenderingContext2D: lineWidth property"
+short-title: lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.lineWidth
 ---
 

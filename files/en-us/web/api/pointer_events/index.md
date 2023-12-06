@@ -2,14 +2,6 @@
 title: Pointer events
 slug: Web/API/Pointer_events
 page-type: web-api-overview
-tags:
-  - API
-  - Interface
-  - Landing
-  - Overview
-  - Pointer Events
-  - Web
-  - events
 browser-compat: api.PointerEvent
 ---
 
@@ -21,7 +13,7 @@ Much of today's web content assumes the user's pointing device will be a mouse. 
 
 Pointer events are DOM events that are fired for a pointing device. They are designed to create a single DOM event model to handle pointing input devices such as a mouse, pen/stylus or touch (such as one or more fingers).
 
-The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating Web sites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
+The _[pointer](#pointer)_ is a hardware-agnostic device that can target a specific set of screen coordinates. Having a single event model for pointers can simplify creating websites and applications and provide a good user experience regardless of the user's hardware. However, for scenarios when device-specific handling is desired, pointer events defines a {{domxref("PointerEvent.pointerType","pointerType property")}} to inspect the device type which produced the event.
 
 The events needed to handle generic pointer input are analogous to {{domxref("MouseEvent","mouse events")}} (`mousedown`/`pointerdown`, `mousemove`/`pointermove`, etc.). Consequently, pointer event types are intentionally similar to mouse event types.
 
@@ -101,7 +93,7 @@ Below is a short description of each event type.
 | {{domxref('Element/pointerover_event', 'pointerover')}}               | Fired when a pointer is moved into an element's [hit test](#hit_test) boundaries.                                                                                                                                                                                                                                                         |
 | {{domxref('Element/pointerenter_event', 'pointerenter')}}             | Fired when a pointer is moved into the [hit test](#hit_test) boundaries of an element or one of its descendants, including as a result of a pointerdown event from a device that does not support hover (see `pointerdown`).                                                                                                              |
 | {{domxref('Element/pointerdown_event', 'pointerdown')}}               | Fired when a pointer becomes _active buttons state_.                                                                                                                                                                                                                                                                                      |
-| {{domxref('Element/pointermove_event', 'pointermove')}}               | Fired when a pointer changes coordinates. This event is also used if the change in pointer state can not be reported by other events.                                                                                                                                                                                                     |
+| {{domxref('Element/pointermove_event', 'pointermove')}}               | Fired when a pointer changes coordinates. This event is also used if the change in pointer state cannot be reported by other events.                                                                                                                                                                                                      |
 | {{domxref('Element/pointerup_event', 'pointerup')}}                   | Fired when a pointer is no longer _active buttons state_.                                                                                                                                                                                                                                                                                 |
 | {{domxref('Element/pointercancel_event', 'pointercancel')}}           | A browser fires this event if it concludes the pointer will no longer be able to generate events (for example the related device is deactivated).                                                                                                                                                                                         |
 | {{domxref('Element/pointerout_event', 'pointerout')}}                 | Fired for several reasons including: pointer is moved out of the [hit test](#hit_test) boundaries of an element; firing the pointerup event for a device that does not support hover (see pointerup); after firing the `pointercancel` event (see `pointercancel`); when a pen stylus leaves the hover range detectable by the digitizer. |
@@ -242,13 +234,13 @@ This example illustrates accessing all of a pointer event's properties.
 
 ## Determining the Primary Pointer
 
-In some scenarios there may be multiple pointers (for example a device with both a touchscreen and a mouse) or a pointer supports multiple contact points (for example a touchscreen that supports multiple finger touches). The application can use the {{domxref("PointerEvent.isPrimary","isPrimary")}} property to identify a master pointer among the set of _active pointers_ for each pointer type. If an application only wants to support a primary pointer, it can ignore all pointer events that are not primary.
+In some scenarios there may be multiple pointers (for example a device with both a touchscreen and a mouse), or a pointer that supports multiple contact points (for example a touchscreen that supports multiple finger touches). The application can use the {{domxref("PointerEvent.isPrimary","isPrimary")}} property to identify a master pointer among the set of _active pointers_ for each pointer type. If an application only wants to support a primary pointer, it can ignore all pointer events that are not primary.
 
-For mouse there is only one pointer, so it will always be the primary pointer. For touch input, a pointer is considered primary if the user touched the screen when there were no other active touches. For pen and stylus input, a pointer is considered primary if the user's pen initially contacted the screen when there were no other active pens contacting the screen.
+A mouse has only one pointer, so it will always be the primary pointer. For touch input, a pointer is considered primary if the user touched the screen when there were no other active touches. For pen and stylus input, a pointer is considered primary if the user's pen initially contacted the screen when there were no other active pens contacting the screen.
 
 ## Determining button states
 
-Some pointer devices, such as mouse and pen, support multiple buttons and the button presses can be _chorded_ i.e. pressing an additional button while another button on the pointer device is already pressed.
+Some pointer devices (such as mouse and pen) support multiple buttons, and the button presses can be _chorded_ (i.e. pressing an additional button while another button on the pointer device is already pressed).
 
 To determine the state of button presses, pointer events uses the {{domxref("MouseEvent.button","button")}} and {{domxref("MouseEvent.buttons","buttons")}} properties of the {{domxref("MouseEvent")}} interface (that {{domxref("PointerEvent")}} inherits from).
 

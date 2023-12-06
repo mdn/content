@@ -1,13 +1,8 @@
 ---
-title: MediaKeyMessageEvent()
+title: "MediaKeyMessageEvent: MediaKeyMessageEvent() constructor"
+short-title: MediaKeyMessageEvent()
 slug: Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - EncryptedMediaExtensions
-  - MediaKeyMessageEvent
-  - Reference
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
 

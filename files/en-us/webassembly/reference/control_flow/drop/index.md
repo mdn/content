@@ -1,11 +1,7 @@
 ---
 title: Drop
 slug: WebAssembly/Reference/Control_flow/Drop
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

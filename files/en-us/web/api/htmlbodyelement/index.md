@@ -2,12 +2,6 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLBodyElement
 ---
 

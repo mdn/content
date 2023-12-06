@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.getActiveUniforms()
+title: "WebGL2RenderingContext: getActiveUniforms() method"
+short-title: getActiveUniforms()
 slug: Web/API/WebGL2RenderingContext/getActiveUniforms
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.getActiveUniforms
 ---
 
@@ -65,8 +60,16 @@ Depends on which information is requested using the `pname` parameter.
 ## Examples
 
 ```js
-const uniformIndices = gl.getUniformIndices(program, ['UBORed', 'UBOGreen', 'UBOBlue']);
-const uniformOffsets = gl.getActiveUniforms(program, uniformIndices, gl.UNIFORM_OFFSET);
+const uniformIndices = gl.getUniformIndices(program, [
+  "UBORed",
+  "UBOGreen",
+  "UBOBlue",
+]);
+const uniformOffsets = gl.getActiveUniforms(
+  program,
+  uniformIndices,
+  gl.UNIFORM_OFFSET,
+);
 ```
 
 ## Specifications

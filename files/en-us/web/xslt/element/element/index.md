@@ -1,13 +1,10 @@
 ---
 title: <xsl:element>
 slug: Web/XSLT/Element/element
-tags:
-  - Element
-  - Reference
-  - XSLT
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:element>` element creates an element in the output document.
 

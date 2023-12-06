@@ -1,17 +1,8 @@
 ---
-title: Animation.finish()
+title: "Animation: finish() method"
+short-title: finish()
 slug: Web/API/Animation/finish
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Finish
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
 browser-compat: api.Animation.finish
 ---
 

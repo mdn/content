@@ -1,17 +1,7 @@
 ---
 title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Method
-  - Extensions
-  - Reference
-  - WebExtensions
-  - createSidebarPane
-  - devtools.panels
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
 
@@ -23,7 +13,7 @@ The HTML/CSS inspector, called the [Page Inspector](https://firefox-source-docs.
 
 The `createSidebarPane()` function adds a new pane to the sidebar. For example, the screenshot below shows a new pane titled "My pane", that displays a JSON object:
 
-![](inspector-sidebar.png)
+![Image showing a new pane titled "My pane", that displays a JSON object](inspector-sidebar.png)
 
 This function takes one argument, which is a string representing the pane's title. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to an [`ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) object representing the new pane. You can use that object to define the pane's content and behavior.
 
@@ -59,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

@@ -1,15 +1,7 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - HTTP
-  - HTTP Header
-  - Privacy
-  - Reference
-  - Referrer-Policy
-  - Response
-  - Response Header
-  - referrer
+page-type: http-header
 browser-compat: http.headers.Referrer-Policy
 ---
 
@@ -74,7 +66,7 @@ Referrer-Policy: unsafe-url
 
 ## Integration with HTML
 
-You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#attr-name) of `referrer`:
+You can also set referrer policies inside HTML. For example, you can set the referrer policy for the entire document with a {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Element/meta#name) of `referrer`:
 
 ```html
 <meta name="referrer" content="origin" />
@@ -86,7 +78,7 @@ You can specify the `referrerpolicy` attribute on {{HTMLElement("a")}}, {{HTMLEl
 <a href="http://example.com" referrerpolicy="origin">…</a>
 ```
 
-Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/Link_types) on an `a`, `area`, or `link` elements:
+Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/Attributes/rel) on an `a`, `area`, or `link` elements:
 
 ```html
 <a href="http://example.com" rel="noreferrer">…</a>

@@ -1,28 +1,10 @@
 ---
-title: 'XRSession: squeezeend event'
+title: "XRSession: squeezeend event"
+short-title: squeezeend
 slug: Web/API/XRSession/squeezeend_event
 page-type: web-api-event
-tags:
-  - API
-  - AR
-  - Event
-  - Input Sources
-  - Mixed
-  - Primary Squeeze Actions
-  - Reality
-  - Reference
-  - Squeeze Actions
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRSession
-  - actions
-  - augmented
-  - squeezeend
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRSession.squeezeend_event
 ---
 
@@ -37,9 +19,9 @@ Primary squeeze actions include things like users pressing triggers or buttons, 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('squeezeend', (event) => { })
+addEventListener("squeezeend", (event) => {});
 
-onsqueezeend = (event) => { }
+onsqueezeend = (event) => {};
 ```
 
 ## Event type

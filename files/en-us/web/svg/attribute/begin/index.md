@@ -1,33 +1,26 @@
 ---
 title: begin
 slug: Web/SVG/Attribute/begin
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-spec-urls:
-  - https://svgwg.org/specs/animations/#DiscardElementBeginAttribute
-  - https://svgwg.org/specs/animations/#BeginAttribute
+page-type: svg-attribute
+spec-urls: https://svgwg.org/specs/animations/#BeginAttribute
 ---
 
 {{SVGRef}}
 
-The **`begin`** attribute defines when an animation should begin or when an element should be discarded.
+The **`begin`** attribute defines when an animation should begin.
 
-The attribute value is a semicolon separated list of values. The interpretation of a list of start times is detailed in the SMIL specification in ["Evaluation of begin and end time lists"](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists). Each individual value can be one of the following : `<offset-value>`, `<syncbase-value>`, `<event-value>`, `<repeat-value>`, `<accessKey-value>`, `<wallclock-sync-value>` or the keyword `indefinite`.
+The attribute value is a semicolon separated list of values. The interpretation of a list of start times is detailed in the SMIL specification in ["Evaluation of begin and end time lists"](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#Timing-EvaluationOfBeginEndTimeLists). Each individual value can be one of the following: `<offset-value>`, `<syncbase-value>`, `<event-value>`, `<repeat-value>`, `<accessKey-value>`, `<wallclock-sync-value>` or the keyword `indefinite`.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("discard")}}
 - {{SVGElement("set")}}
 
-## animate, animateColor, animateMotion, animateTransform, set
+## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `begin` defines when the element should begin, i.e. become active.
 
 <table class="properties">
   <tbody>
@@ -51,10 +44,13 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
 - `<offset-value>`
   - : This value defines a [clock-value](/en-US/docs/Web/SVG/Content_type#clock-value) that represents a point in time relative to the beginning of the SVG document (usually the {{domxref("Window/load_event", "load")}} or {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event). Negative values are valid.
 - `<syncbase-value>`
+
   - : This value defines a _syncbase_ and an optional offset from that _syncbase_. The element's animation start time is defined relative to the begin or active end of another animation.
 
     A valid syncbase-value consists of an ID reference to another animation element followed by a dot and either `begin` or `end` to identify whether to synchronize with the beginning or active end of the referenced animation element. An optional offset value as defined in `<offset-value>` can be appended.
+
 - `<event-value>`
+
   - : This value defines an event and an optional offset that determines the time at which the element's animation should begin. The animation start time is defined relative to the time that the specified event is fired.
 
     A valid event-value consists of an element ID followed by a dot and one of the supported events for that element. All valid events (not necessarily supported by all elements) are defined by the DOM and HTML specifications. Those are:
@@ -85,7 +81,7 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     - {{domxref("Window/load_event", "load")}}
     - {{domxref("Window/unload_event", "unload")}}
     - {{domxref("HTMLMediaElement/abort_event", "abort")}}
-    - {{domxref("Element/error_event", "error")}}
+    - {{domxref("HTMLElement/error_event", "error")}}
     - {{domxref("HTMLInputElement/select_event", "select")}}
     - {{domxref("Window/resize_event", "resize")}}
     - {{domxref("Element/scroll_event", "scroll")}}
@@ -96,50 +92,25 @@ The `<begin-value-list>` is a semicolon-separated list of values. Each value can
     An optional offset value as defined in `<offset-value>` can be appended.
 
 - `<repeat-value>`
+
   - : This value defines a qualified repeat event. The element animation start time is defined relative to the time that the repeat event is raised with the specified iteration value.
 
     A valid repeat value consists of an element ID followed by a dot and the function `repeat()` with an integer value specifying the number of repetitions as parameter. An optional offset value as defined in `<offset-value>` can be appended.
+
 - `<accessKey-value>`
+
   - : This value defines an access key that should trigger the animation. The element animation will begin when the user presses the specified key.
 
     A valid accessKey-value consists of the function `accessKey()` with the character to be input as parameter. An optional offset value as defined in `<offset-value>` can be appended.
+
 - `<wallclock-sync-value>`
+
   - : This value defines the animation start time as a real-world clock time.
 
     A valid wallclock-sync-value consists of the function `wallclock()` with a time value as parameter. The time syntax is based upon the syntax defined in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html).
+
 - `indefinite`
   - : The begin of the animation will be determined by a `beginElement()` method call or a hyperlink targeted to the element.
-
-## discard
-
-For {{SVGElement("discard")}}, `begin` defines when the target element will be discarded.
-
-The `<discard>` element has an implicit simple duration of `indefinite`. As soon as the element's active duration starts, the element identified by the {{SVGAttr("href")}} attribute is discarded. The behavior is the same as if {{domxref("Node.removeChild()")}} were called on the parent of the target element with the target element as parameter.
-
-After removal of the target element, the `<discard>` element is no longer useful, therefore it is also discarded after the target element's removal. If the `href` attribute has an invalid URL reference (e.g. the target element did not exist), the `<discard>` element itself is still removed after the activation.
-
-Seeking backwards in the timeline doesn't re-insert the discarded elements. So, authors are encouraged to set the {{SVGAttr("playbackorder")}} attribute to `forwardonly` when using the `<discard>` element.
-
-The `<discard>` element itself can be discarded prior to its activation, in which case it will never trigger the removal of its own target element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td><code>&#x3C;begin-value-list></code></td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><code>0s</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-The definition of `<begin-value-list>` is the [same as for the other animation elements](#animate_animatecolor_animatemotion_animatetransform_set).
 
 ## Examples
 

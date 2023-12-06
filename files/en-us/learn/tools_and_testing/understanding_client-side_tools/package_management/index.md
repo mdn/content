@@ -1,20 +1,12 @@
 ---
 title: Package management basics
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
-tags:
-  - Beginner
-  - Learn
-  - Tools
-  - dependency
-  - npm
-  - package manager
-  - package repository
-  - yarn
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In this article we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.
+In this article, we'll look at package managers in some detail to understand how we can use them in our own projects — to install project tool dependencies, keep them up-to-date, and more.
 
 <table>
   <tbody>
@@ -44,9 +36,9 @@ A simple example of a useful dependency that your project might need is some cod
 
 A project dependency can be an entire JavaScript library or framework — such as React or Vue — or a very small utility like our human-readable date library, or it can be a command line tool such as Prettier or ESLint, which we talked about in previous articles.
 
-Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is the term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
+Without modern build tools, dependencies like this might be included in your project using a simple [`<script>`](/en-US/docs/Web/HTML/Element/script) element, but this might not work right out of the box and you will likely need some modern tooling to bundle your code and dependencies together when they are released on the web. A bundle is a term that's generally used to refer to a single file on your web server that contains all the JavaScript for your software — typically compressed as much as possible to help reduce the time it takes to get your software downloaded and displayed in your visitors' browser.
 
-In addition, what happens if you find a better tool that you want to use instead of the current one, or a new version of your dependency is released that you want to update to? This is not too painful for a couple of dependencies, but in larger projects with many dependencies this kind of thing can become really challenging to keep track of. It makes more sense to use a **package manager** such as npm, as this will guarantee that the code is added and removed cleanly, as well as a host of other advantages.
+In addition, what happens if you find a better tool that you want to use instead of the current one, or a new version of your dependency is released that you want to update to? This is not too painful for a couple of dependencies, but in larger projects with many dependencies, this kind of thing can become really challenging to keep track of. It makes more sense to use a **package manager** such as npm, as this will guarantee that the code is added and removed cleanly, as well as a host of other advantages.
 
 ## What exactly is a package manager?
 
@@ -54,7 +46,7 @@ We've met [npm](https://www.npmjs.com/) already, but stepping back from npm itse
 
 The package manager will provide a method to install new dependencies (also referred to as "packages"), manage where packages are stored on your file system, and offer capabilities for you to publish your own packages.
 
-In theory you may not need a package manager and you could manually download and store your project dependencies, but a package manager will seamlessly handle installing and uninstalling packages. If you didn't use one, you'd have to manually handle:
+In theory, you may not need a package manager and you could manually download and store your project dependencies, but a package manager will seamlessly handle installing and uninstalling packages. If you didn't use one, you'd have to manually handle:
 
 - Finding all the correct package JavaScript files.
 - Checking them to make sure they don't have any known vulnerabilities.
@@ -75,7 +67,7 @@ To see local dependencies really shine, all you need to do is try to download an
 
 ## Package registries
 
-For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place that a package is published to and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
+For a package manager to work, it needs to know where to install packages from, and this comes in the form of a package registry. The registry is a central place where a package is published and thus can be installed from. npm, as well as being a package manager, is also the name of the most commonly-used package registry for JavaScript packages. The npm registry exists at [npmjs.com](https://www.npmjs.com/).
 
 npm is not the only option. You could manage your own package registry — products like [Microsoft Azure](https://azure.microsoft.com/) allow you to create proxies to the npm registry (so you can override or lock certain packages), [GitHub also offers a package registry service](https://github.com/features/packages), and there will be likely more options appearing as time goes on.
 
@@ -184,7 +176,7 @@ Once that's done _All The Things_, we're now ready for some "modern client-side 
 }
 ```
 
-This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same set up by running the command `npm install`, and npm will look at the dependencies and install them for you.
+This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same setup by running the command `npm install`, and npm will look at the dependencies and install them for you.
 
 One disadvantage is that Parcel is only available inside our `parcel-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
 
@@ -192,12 +184,12 @@ One disadvantage is that Parcel is only available inside our `parcel-experiment`
 
 Anyway, on with the setup.
 
-Parcel expects an `index.html` and an `index.js` file to work with, but otherwise it is very unopinionated about how you structure your project. Other tools can be very different, but at least Parcel makes it easy for our initial experiment.
+Parcel expects an `index.html` and an `index.js` file to work with, but otherwise, it is very unopinionated about how you structure your project. Other tools can be very different, but at least Parcel makes it easy for our initial experiment.
 
 So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -209,17 +201,17 @@ So now we need to add an `index.html` file to our working directory. Create `ind
 </html>
 ```
 
-Next, we need to add an `index.js` file in the same directory as `index.html`. For now `index.js` can be empty; it just needs to exist. Create this now.
+Next, we need to add an `index.js` file in the same directory as `index.html`. For now, `index.js` can be empty; it just needs to exist. Create this now.
 
 ### Having fun with Parcel
 
 Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
 
 ```bash
- parcel index.html
+ npx parcel index.html
 ```
 
-You should see something like this printed to your terminal:
+You should see something like this printed in your terminal:
 
 ```bash
 Server running at http://localhost:1234
@@ -243,7 +235,7 @@ document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
 
 Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
 
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field have been updated for us:
+What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field has been updated for us:
 
 ```json
 "dependencies": {
@@ -261,7 +253,7 @@ So long as we know the package name, we can use it in our code and Parcel will g
 
 ### Building our code for production
 
-However, this code is not ready for production. Most build tooling systems will have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage, but are not very useful in production. In production, they will just bloat your site.
+However, this code is not ready for production. Most build tooling systems will have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
 
 Now stop the previous Parcel command using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
@@ -270,7 +262,7 @@ We can now prepare our bare bones example site for an imaginary deployment. Parc
 Run the following command:
 
 ```bash
-parcel build index.html
+npx parcel build index.html
 ```
 
 You should see an output like so:
@@ -287,7 +279,7 @@ Again, the destination for our production files is the `dist` directory.
 
 ### Reducing your app's file size
 
-However, as with all tools that "help" developers there's often a tradeoff. In this particular case it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure, there's some calculation, but we definitely don't need 195K worth of JavaScript to do this!
+However, as with all tools that "help" developers there's often a tradeoff. In this particular case, it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure, there's some calculation, but we definitely don't need 195K worth of JavaScript to do this!
 
 When you use development tooling it's worth questioning whether they're doing the right thing for you. In this case, the bundle is nearly 200K because it has in fact included the entire `date-fns` library, not just the function we're using.
 
@@ -306,7 +298,7 @@ Although the list grows by the month, there are three main offerings for tools t
 Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
 
 ```bash
-parcel build index.html --experimental-scope-hoisting
+npx parcel build index.html --experimental-scope-hoisting
 ```
 
 You'll see that this makes a huge difference:
@@ -336,11 +328,11 @@ The list will grow over time, but at the time of writing, the following main pac
 - pnpm at [pnpm.js.org](https://pnpm.js.org/)
 - Yarn at [yarnpkg.com](https://yarnpkg.com/)
 
-npm and pnpm are similar from a command line point of view — in fact pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
+npm and pnpm are similar from a command line point of view — in fact, pnpm aims to have full parity over the argument options that npm offers. It differs in that it uses a different method for downloading and storing the packages on your computer, aiming to reduce the overall disk space required.
 
 Where npm is shown in the examples below, pnpm can be swapped in and the command will work.
 
-Yarn is often thought to be quicker than npm in terms of installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).
+Yarn is often thought to be quicker than npm in terms of the installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).
 
 > **Note:** The npm package manager is **not** required to install packages from the npm registry, even though they share the same name. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
 
@@ -353,7 +345,7 @@ npm init
 yarn init
 ```
 
-As shown above, this will prompt and walk you through a series of questions to describe your project (name, license, description and so on) then generate a `package.json` for you that contains meta information about your project and its dependencies.
+As shown above, this will prompt and walk you through a series of questions to describe your project (name, license, description, and so on) then generate a `package.json` for you that contains meta-information about your project and its dependencies.
 
 ### Installing dependencies
 
@@ -375,7 +367,7 @@ yarn upgrade
 
 This will look at the currently installed dependencies and update them, if there is an update available, within the range that's specified in the package.
 
-The range is specified in the version of the dependency in your `package.json`, such as `date-fns@^2.0.1` — in this case the caret character `^` means all minor and patch releases after and including 2.0.1, up to but excluding 3.0.0.
+The range is specified in the version of the dependency in your `package.json`, such as `date-fns@^2.0.1` — in this case, the caret character `^` means all minor and patch releases after and including 2.0.1, up to but excluding 3.0.0.
 
 This is determined using a system called [semver](https://semver.org/), which might look a bit complicated from the documentation but can be simplified by considering only the summary information and that a version is represented by `MAJOR.MINOR.PATCH`, such as 2.0.1 being major version 2 with patch version 1. An excellent way to try out semver values is to use the [semver calculator](https://semver.npmjs.com/).
 
@@ -399,9 +391,9 @@ npm ls date-fns
 yarn why date-fns
 ```
 
-This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top level, package could have pulled in `date-fns`. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the [lodash](https://lodash.com/) package, as it's so useful).
+This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top-level, package could have pulled in `date-fns`. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the [lodash](https://lodash.com/) package, as it's so useful).
 
-Although the package manager will do it's best to deduplicate packages you may want to investigate exactly which version is installed.
+Although the package manager will do its best to deduplicate packages you may want to investigate exactly which version is installed.
 
 ### More commands
 
@@ -470,11 +462,3 @@ This brings us to the end of our tour of package managers. Our next move is to b
 
 - [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
 - [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
-
-## In this module
-
-- [Client-side tooling overview](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- **Package management basics**
-- [Introducing a complete toolchain](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

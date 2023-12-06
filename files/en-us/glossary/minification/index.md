@@ -1,11 +1,10 @@
 ---
-title: minification
-slug: Glossary/minification
-tags:
-  - Performance
-  - Reference
-  - Web Performance
+title: Minification
+slug: Glossary/Minification
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **Minification** is the process of removing unnecessary or redundant data without affecting how a resource is processed by the browser.
 

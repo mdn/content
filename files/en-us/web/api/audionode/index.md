@@ -2,12 +2,6 @@
 title: AudioNode
 slug: Web/API/AudioNode
 page-type: web-api-interface
-tags:
-  - API
-  - AudioNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.AudioNode
 ---
 
@@ -55,7 +49,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ### The audio routing graph
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasics.png)
+![AudioNodes participating in an AudioContext create an audio routing graph.](webaudiobasics.png)
 
 Each `AudioNode` has inputs and outputs, and multiple audio nodes are connected to build a _processing graph_. This graph is contained in an {{domxref("AudioContext")}}, and each audio node can only belong to one audio context.
 
@@ -100,7 +94,7 @@ _Brief history:_ The first version of the Web Audio spec only defined the factor
 
 ## Example
 
-This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
+This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 
 ```js
 const audioCtx = new AudioContext();

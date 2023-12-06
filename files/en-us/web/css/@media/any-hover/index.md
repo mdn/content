@@ -2,18 +2,12 @@
 title: any-hover
 slug: Web/CSS/@media/any-hover
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
 browser-compat: css.at-rules.media.any-hover
 ---
 
 {{CSSRef}}
 
-The **`any-hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test whether _any_ available input mechanism can hover over elements.
+The **`any-hover`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test whether _any_ available input mechanism can hover over elements.
 
 ## Syntax
 

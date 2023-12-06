@@ -1,25 +1,21 @@
 ---
-title: '::first-line (:first-line)'
+title: "::first-line"
 slug: Web/CSS/::first-line
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - Layout
-  - Pseudo-element
-  - Reference
-  - Selector
 browser-compat: css.selectors.first-line
 ---
 
 {{CSSRef}}
 
-The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes).
+The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
 
 The effects of `::first-line` are limited by the length and content of the first line of text in the element. The length of the first line depends on many factors, including the width of the element, the width of the document, and the font size of the text. `::first-line` has no effect when the first child of the element, which would be the first part of the first line, is an inline block-level element, such as an inline table.
 
 > **Note:** [Selectors Level 3](https://drafts.csswg.org/selectors-3/#first-line) introduced the double-colon notation (`::`) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements), which are single-colon `:`. Browsers accept both `::first-line` and `:first-line`, which was introduced in CSS2.
+
+For the purposes of CSS {{CSSXref("background")}}, the `::first-line` pseudo-element is like an inline-level element meaning that in a left-justified first line, the background may not extend all the way to the right margin.
 
 ## Allowable properties
 
@@ -33,8 +29,10 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 ## Syntax
 
-```
-::first-line
+```css
+::first-line {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -48,8 +46,8 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 </p>
 
 <span>
-  The first line of this text will not receive special styling because it is
-  not a block-level element.
+  The first line of this text will not receive special styling because it is not
+  a block-level element.
 </span>
 ```
 

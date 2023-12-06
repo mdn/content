@@ -1,17 +1,12 @@
 ---
-title: FormData.has()
+title: "FormData: has() method"
+short-title: has()
 slug: Web/API/FormData/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XMLHttpRequest
 browser-compat: api.FormData.has
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`has()`** method of the {{domxref("FormData")}} interface returns whether a `FormData` object contains a certain key.
 
@@ -37,9 +32,9 @@ has(name)
 The following snippet shows the results of testing for the existence of `username` in a `FormData` object, before and after appending a `username` value to it with {{domxref("FormData.append", "append()")}}:
 
 ```js
-formData.has('username'); // Returns false
-formData.append('username', 'Chris');
-formData.has('username'); // Returns true
+formData.has("username"); // Returns false
+formData.append("username", "Chris");
+formData.has("username"); // Returns true
 ```
 
 ## Specifications
@@ -52,5 +47,5 @@ formData.has('username'); // Returns true
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,12 +1,7 @@
 ---
 title: Basic shapes
-slug: Web/CSS/CSS_Shapes/Basic_Shapes
+slug: Web/CSS/CSS_shapes/Basic_shapes
 page-type: guide
-tags:
-  - CSS
-  - CSS Shapes
-  - Guide
-  - Reference
 ---
 
 {{CSSRef}}
@@ -20,13 +15,13 @@ Before looking at shapes, it is worth understanding two pieces of information th
 
 ## The \<basic-shape> type
 
-The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by brackets, inside of which are additional values used to describe the shape.
+The `<basic-shape>` type is used as the value for all of our basic shapes. This type uses Functional Notation: the type of shape is followed by parenthese, inside of which are additional values used to describe the shape.
 
 The arguments which are accepted vary depending on the shape that you are creating. We will cover these in the examples below.
 
 ## The reference box
 
-Understanding the reference box used by CSS Shapes is important when using basic shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values), which directly uses the reference box to create the shape.
+Understanding the reference box used by CSS Shapes is important when using basic shapes, as it defines each shape's coordinate system. You have already met the reference box in [the guide on creating shapes from Box Values](/en-US/docs/Web/CSS/CSS_shapes/From_box_values), which directly uses the reference box to create the shape.
 
 The Firefox Shapes Inspector helpfully shows the reference box in use when you inspect a shape. In the screenshot below I have created a circle, using `shape-outside: circle(50%)`. The floated element has 20 pixels of padding, border and margin applied, and the Shapes Inspector highlights these reference boxes. When using a basic shape, the reference box used by default is the margin-box. You can see in the screenshot that the shape is being defined with reference to that part of the Box Model.
 

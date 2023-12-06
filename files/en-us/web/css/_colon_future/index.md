@@ -17,8 +17,10 @@ The **`:future`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ## Syntax
 
-```
-:future
+```css
+:future {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -48,7 +50,7 @@ The **`:future`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ### WebVTT
 
-```
+```plain
 WEBVTT FILE
 
 1

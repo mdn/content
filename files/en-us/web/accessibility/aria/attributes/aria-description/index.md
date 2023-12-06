@@ -1,13 +1,7 @@
 ---
-title: "aria-description"
+title: aria-description
 slug: Web/Accessibility/ARIA/Attributes/aria-description
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-description
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
@@ -60,3 +54,11 @@ Used in **ALL** roles.
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+
+<section id="Quick_links">
+
+1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
+
+</section>

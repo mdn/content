@@ -1,12 +1,8 @@
 ---
-title: WEBGL_compressed_texture_s3tc_srgb
+title: WEBGL_compressed_texture_s3tc_srgb extension
+short-title: WEBGL_compressed_texture_s3tc_srgb
 slug: Web/API/WEBGL_compressed_texture_s3tc_srgb
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
 ---
 
@@ -36,12 +32,20 @@ The compressed texture formats are exposed by four constants and can be used in 
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_compressed_texture_s3tc_srgb');
+const ext = gl.getExtension("WEBGL_compressed_texture_s3tc_srgb");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_SRGB_S3TC_DXT1_EXT, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_SRGB_S3TC_DXT1_EXT,
+  512,
+  512,
+  0,
+  textureData,
+);
 
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);

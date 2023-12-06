@@ -2,13 +2,6 @@
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 page-type: css-property
-tags:
-  - Blending
-  - CSS
-  - CSS Property
-  - Compositing
-  - Compositing and Blending
-  - recipe:css-property
 browser-compat: css.properties.mix-blend-mode
 ---
 
@@ -591,25 +584,57 @@ body {
   isolation: isolate;
 }
 
-.normal .item      { mix-blend-mode: normal; }
-.multiply .item    { mix-blend-mode: multiply; }
-.screen .item      { mix-blend-mode: screen; }
-.overlay .item     { mix-blend-mode: overlay; }
-.darken .item      { mix-blend-mode: darken; }
-.lighten .item     { mix-blend-mode: lighten; }
-.color-dodge .item { mix-blend-mode: color-dodge; }
-.color-burn .item  { mix-blend-mode: color-burn; }
-.hard-light .item  { mix-blend-mode: hard-light; }
-.soft-light .item  { mix-blend-mode: soft-light; }
-.difference .item  { mix-blend-mode: difference; }
-.exclusion .item   { mix-blend-mode: exclusion; }
-.hue .item         { mix-blend-mode: hue; }
-.saturation .item  { mix-blend-mode: saturation; }
-.color .item       { mix-blend-mode: color; }
-.luminosity .item  { mix-blend-mode: luminosity; }
+.normal .item {
+  mix-blend-mode: normal;
+}
+.multiply .item {
+  mix-blend-mode: multiply;
+}
+.screen .item {
+  mix-blend-mode: screen;
+}
+.overlay .item {
+  mix-blend-mode: overlay;
+}
+.darken .item {
+  mix-blend-mode: darken;
+}
+.lighten .item {
+  mix-blend-mode: lighten;
+}
+.color-dodge .item {
+  mix-blend-mode: color-dodge;
+}
+.color-burn .item {
+  mix-blend-mode: color-burn;
+}
+.hard-light .item {
+  mix-blend-mode: hard-light;
+}
+.soft-light .item {
+  mix-blend-mode: soft-light;
+}
+.difference .item {
+  mix-blend-mode: difference;
+}
+.exclusion .item {
+  mix-blend-mode: exclusion;
+}
+.hue .item {
+  mix-blend-mode: hue;
+}
+.saturation .item {
+  mix-blend-mode: saturation;
+}
+.color .item {
+  mix-blend-mode: color;
+}
+.luminosity .item {
+  mix-blend-mode: luminosity;
+}
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", "1600px")}}
 
 ### Using mix-blend-mode with HTML
 
@@ -713,7 +738,9 @@ This example uses `mix-blend-mode` to blend text color with the background color
 }
 
 p {
-  font: 4rem "Rubik Moonrocks", cursive;
+  font:
+    4rem "Rubik Moonrocks",
+    cursive;
   font-weight: bold;
   color: orange;
   padding: 0.5rem;

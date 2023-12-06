@@ -1,9 +1,7 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Attribute/stroke-linecap
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-linecap
 ---
 
@@ -15,7 +13,6 @@ The **`stroke-linecap`** attribute is a presentation attribute defining the shap
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polyline')}}
 - {{SVGElement('line')}}

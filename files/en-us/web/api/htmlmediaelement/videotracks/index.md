@@ -1,19 +1,8 @@
 ---
-title: HTMLMediaElement.videoTracks
+title: "HTMLMediaElement: videoTracks property"
+short-title: videoTracks
 slug: Web/API/HTMLMediaElement/videoTracks
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Media
-  - Property
-  - Reference
-  - Tracks
-  - Video
-  - Video Tracks
-  - Web
-  - videoTracks
 browser-compat: api.HTMLMediaElement.videoTracks
 ---
 
@@ -27,8 +16,8 @@ objects representing the media element's video tracks.
 The returned list is _live_; that is, as tracks are added to and removed from
 the media element, the list's contents change dynamically. Once you have a reference to
 the list, you can monitor it for changes to detect when new video tracks are added or
-existing ones removed. See {{SectionOnPage("/en-US/docs/Web/API/VideoTrackList", "Event
-  handlers")}} to learn more about watching for changes to a media element's track list.
+existing ones removed. See [VideoTrackList events](/en-US/docs/Web/API/VideoTrackList#events)
+to learn more about watching for changes to a media element's track list.
 
 ## Value
 
@@ -49,6 +38,6 @@ information about the track.
 
 ## See also
 
-- The interface defining it, {{DOMxRef("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.videoTracks` property
 - {{HTMLElement("video")}}
-- {{DOMxRef("VideoTrack")}} and {{DOMxRef("VideoTrackList")}}
+- {{DOMxRef("VideoTrack")}}, {{DOMxRef("VideoTrackList")}}

@@ -2,12 +2,6 @@
 title: EcKeyImportParams
 slug: Web/API/EcKeyImportParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcKeyImportParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyImportParams
 ---
 

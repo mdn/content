@@ -2,12 +2,6 @@
 title: SVGAnimationElement
 slug: Web/API/SVGAnimationElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimationElement
 ---
 
@@ -45,7 +39,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGElement")}}
 - {{domxref("SVGAnimationElement.endElement()")}}
   - : Creates an end instance time for the current time. The new instance time is added to the end instance times list. The behavior of this method is equivalent to `endElementAt(0)`.
 - {{domxref("SVGAnimationElement.endElementAt()")}}
-  - : Creates a end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.
+  - : Creates an end instance time for the current time plus the specified offset. The new instance time is added to the end instance times list.
 
 ## Events
 

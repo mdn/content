@@ -1,12 +1,7 @@
 ---
 title: Remainder
 slug: WebAssembly/Reference/Numeric/Remainder
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

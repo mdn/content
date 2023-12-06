@@ -1,19 +1,12 @@
 ---
-title: indexedDB
+title: indexedDB global property
+short-title: indexedDB
 slug: Web/API/indexedDB
 page-type: web-api-global-property
-tags:
-  - API
-  - Database
-  - IndexedDB
-  - Property
-  - Read-only
-  - Reference
-  - Storage
 browser-compat: api.indexedDB
 ---
 
-{{ APIRef() }}
+{{APIRef("IndexedDB")}}{{AvailableInWorkers}}
 
 The global **`indexedDB`** read-only property provides a mechanism for applications to
 asynchronously access the capabilities of indexed databases.
@@ -30,10 +23,10 @@ which the database is opened when the request's `onsuccess` handler is fired:
 ```js
 let db;
 function openDB() {
- const DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = (e) => {
-   db = DBOpenRequest.result;
- }
+  const DBOpenRequest = window.indexedDB.open("toDoList");
+  DBOpenRequest.onsuccess = (e) => {
+    db = DBOpenRequest.result;
+  };
 }
 ```
 

@@ -2,13 +2,6 @@
 title: WritableStreamDefaultController
 slug: Web/API/WritableStreamDefaultController
 page-type: web-api-interface
-tags:
-  - API
-  - Fetch
-  - Interface
-  - Reference
-  - Streams
-  - WritableStreamDefaultController
 browser-compat: api.WritableStreamDefaultController
 ---
 
@@ -22,7 +15,8 @@ None. `WritableStreamDefaultController` instances are created automatically duri
 
 ## Instance properties
 
-None.
+- {{domxref("WritableStreamDefaultController.signal")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("AbortSignal")}} associated with the controller.
 
 ## Instance methods
 
@@ -37,7 +31,7 @@ const writableStream = new WritableStream({
     // do stuff with controller
 
     // error stream if necessary
-    controller.error('My stream is broken');
+    controller.error("My stream is broken");
   },
   write(chunk, controller) {
     // ...
@@ -47,7 +41,7 @@ const writableStream = new WritableStream({
   },
   abort(err) {
     // ...
-  }
+  },
 });
 ```
 

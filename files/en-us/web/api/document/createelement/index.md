@@ -1,14 +1,8 @@
 ---
-title: Document.createElement()
+title: "Document: createElement() method"
+short-title: createElement()
 slug: Web/API/Document/createElement
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createElement
 browser-compat: api.Document.createElement
 ---
 
@@ -48,7 +42,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

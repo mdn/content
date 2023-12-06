@@ -1,11 +1,7 @@
 ---
 title: Local tee
 slug: WebAssembly/Reference/Variables/Local_tee
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

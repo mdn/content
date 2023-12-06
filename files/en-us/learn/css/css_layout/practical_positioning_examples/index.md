@@ -1,22 +1,12 @@
 ---
 title: Practical positioning examples
 slug: Learn/CSS/CSS_layout/Practical_positioning_examples
-tags:
-  - Article
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Guide
-  - Layout
-  - Learn
-  - absolute
-  - fixed
-  - relative
+page-type: guide
 ---
 
 {{LearnSidebar}}
 
-This article shows how to build some real world examples to illustrate what kinds of things you can do with positioning.
+This article shows how to build some real-world examples to illustrate what kinds of things you can do with positioning.
 
 <table>
   <tbody>
@@ -54,7 +44,7 @@ To start with, we'd like you to make a local copy of the starting HTML file — 
 ```html
 <section class="info-box">
   <ul>
-    <li><a href="#" class="active">Tab 1</a></li>
+    <li><a href="#" class="active-tab">Tab 1</a></li>
     <li><a href="#">Tab 2</a></li>
     <li><a href="#">Tab 3</a></li>
   </ul>
@@ -170,7 +160,7 @@ Add the following CSS:
 }
 ```
 
-Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
+Finally for this section we'll set some styles on the link states. First, we'll set the `:focus` and `:hover` states of the tabs to look different when they are focused/hovered, providing users with some visual feedback. Secondly, we'll set a rule that puts the same styling on one of the tabs when a `class` of `active-tab` is present on it. We will set this using JavaScript when a tab is clicked on. Place the following CSS below your other styles:
 
 ```css
 .info-box li a:focus,
@@ -179,7 +169,7 @@ Finally for this section we'll set some styles on the link states. First, we'll 
   color: white;
 }
 
-.info-box li a.active {
+.info-box li a.active-tab {
   background-color: #a60000;
   color: white;
 }
@@ -237,7 +227,7 @@ function setTabHandler(tab, tabPos) {
       tab.className = "";
     }
 
-    tab.className = "active";
+    tab.className = "active-tab";
 
     for (const panel of panels) {
       panel.className = "";
@@ -255,7 +245,7 @@ This code does the following:
 - In the `setTabHandler()` function, the tab has an `onclick` event handler set on it, so that when the tab is clicked, the following occurs:
 
   - A `for` loop is used to cycle through all the tabs and remove any classes that are present on them.
-  - A `class` of `active` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
+  - A `class` of `active-tab` is set on the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets the same {{cssxref("color")}} and {{cssxref("background-color")}} on the tab as the panels are styled with.
   - A `for` loop is used to cycle through all the panels and remove any classes that are present on them.
   - A class of `active-panel` is set on the panel that corresponds to the tab that was clicked on — remember from earlier that this class has an associated rule in the CSS that sets its {{cssxref("z-index")}} to 1, making it appear over the top of the other panels.
 
@@ -273,7 +263,7 @@ As a starting point, you can use your completed example from the first section o
 
 ### HTML additions
 
-First of all, we need some additional HTML to represent the web site main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
+First of all, we need some additional HTML to represent the website main content. Add the following {{htmlelement("section")}} just below your opening {{htmlelement("body")}} tag, just before the existing section:
 
 ```html
 <section class="fake-content">
@@ -352,9 +342,9 @@ Our finished example will look like this:
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
-```html
+```html-nolint
 <label for="toggle">❔</label>
-<input type="checkbox" id="toggle">
+<input type="checkbox" id="toggle" />
 <aside>
 
 …
@@ -445,18 +435,3 @@ So there you have it — a rather clever JavaScript-free way to create a togglin
 ## Summary
 
 So that rounds off our look at positioning — by now, you should have an idea of how the basic mechanics work, as well as understanding how to start applying these to build some interesting UI features. Don't worry if you didn't get this all immediately — positioning is a fairly advanced topic, and you can always work through the articles again to aid your understanding.
-
-## In this module
-
-- [Introduction to CSS layout](/en-US/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

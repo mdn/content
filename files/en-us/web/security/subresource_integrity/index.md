@@ -1,16 +1,13 @@
 ---
 title: Subresource Integrity
 slug: Web/Security/Subresource_Integrity
-tags:
-  - HTML
-  - HTTP
-  - Intro
-  - Networking
-  - Security
+page-type: guide
 browser-compat:
   - html.elements.link.integrity
   - html.elements.script.integrity
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 **Subresource Integrity** (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a [CDN](/en-US/docs/Glossary/CDN)) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.
 
@@ -32,7 +29,7 @@ An `integrity` value begins with at least one string, with each string including
 
 Example `integrity` string with base64-encoded sha384 hash:
 
-```
+```plain
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
@@ -42,24 +39,17 @@ So `oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` is the "ha
 
 ### Tools for generating SRI hashes
 
+#### SRI Hash Generator
+
 The [SRI Hash Generator](https://www.srihash.org/) is an online tool you can use to generate SRI hashes.
 
-You can generate SRI hashes from the command-line with **openssl** using a command invocation such as:
+#### Using OpenSSL
+
+You can generate SRI hashes from the command-line using **OpenSSL** with a command invocation such as:
 
 ```bash
 cat FILENAME.js | openssl dgst -sha384 -binary | openssl base64 -A
 ```
-
-…or with **shasum** using a command invocation such as:
-
-```bash
-shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
-```
-
-> **Note:**
->
-> - The pipe-through-`xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
-> - The pipe-through-`awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 In a Windows environment, you can create a tool for generating SRI hashes with the following code:
 
@@ -79,6 +69,19 @@ To use that code:
 2. Right-click a file in the File Explorer, select **Send to…**, and then select `sri-hash`. You will see the integrity value in a command box.
 3. Select the integrity value and right-click to copy it to the Clipboard.
 4. Press any key to dismiss the command box.
+
+> **Note:** If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
+
+#### Using shasum
+
+You can generate SRI hashes using [**shasum**](https://linux.die.net/man/1/shasum) with a command invocation such as:
+
+```bash
+shasum -b -a 384 FILENAME.js | awk '{ print $1 }' | xxd -r -p | base64
+```
+
+- The pipe-through `xxd` step takes the hexadecimal output from `shasum` and converts it to binary.
+- The pipe-through `awk` step is necessary because `shasum` will pass the hashed filename in its output to `xxd`. That can have disastrous consequences if the filename happens to have valid hex characters in it — because `xxd` will also decode that and pass it to `base64`.
 
 ### Cross-Origin Resource Sharing and Subresource Integrity
 
@@ -111,7 +114,7 @@ Browsers handle SRI by doing the following:
 
 1. When a browser encounters a {{HTMLElement("script")}} or {{HTMLElement("link")}} element with an `integrity` attribute, before executing the script or before applying any stylesheet specified by the {{HTMLElement("link")}} element, the browser must first compare the script or stylesheet to the expected hash given in the `integrity` value.
 
-    For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
+   For subresource-integrity verification of a resource served from an origin other than the document in which it's embedded, browsers additionally check the resource using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), to ensure the origin serving the resource allows it to be shared with the requesting origin.
 
 2. If the script or stylesheet doesn't match its associated `integrity` value, the browser must refuse to execute the script or apply the stylesheet, and must instead return a network error indicating that fetching of that script or stylesheet failed.
 
@@ -125,10 +128,8 @@ Browsers handle SRI by doing the following:
 
 ## See also
 
-- Content Security Policy
-- {{httpheader("Content-Security-Policy")}}
+- [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
+- The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederik-braun.com/using-subresource-integrity.html)
 - [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

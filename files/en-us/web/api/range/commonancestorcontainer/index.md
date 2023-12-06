@@ -1,12 +1,8 @@
 ---
-title: Range.commonAncestorContainer
+title: "Range: commonAncestorContainer property"
+short-title: commonAncestorContainer
 slug: Web/API/Range/commonAncestorContainer
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Range
 browser-compat: api.Range.commonAncestorContainer
 ---
 
@@ -33,8 +29,8 @@ A {{domxref("Node")}} object.
 
 ## Examples
 
-In this example, we create an event listener to handle {{domxref("Document/pointerup_event", "pointerup")}} events on
-a list. The listener gets the common ancestors of each piece of selected text, and
+In this example, we create an event listener to handle {{domxref("Element/pointerup_event", "pointerup")}} events on
+a list. The listener gets the common ancestors of each piece of selected text and
 triggers an animation to highlight them.
 
 ### HTML
@@ -93,10 +89,10 @@ body {
 ### JavaScript
 
 ```js
-document.addEventListener('pointerup', (e) => {
+document.addEventListener("pointerup", (e) => {
   const selection = window.getSelection();
 
-  if (selection.type === 'Range') {
+  if (selection.type === "Range") {
     for (let i = 0; i < selection.rangeCount; i++) {
       const range = selection.getRangeAt(i);
       playAnimation(range.commonAncestorContainer);
@@ -109,9 +105,9 @@ function playAnimation(el) {
     el = el.parentNode;
   }
 
-  el.classList.remove('highlight');
+  el.classList.remove("highlight");
   setTimeout(() => {
-    el.classList.add('highlight');
+    el.classList.add("highlight");
   }, 0);
 }
 ```

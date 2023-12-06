@@ -1,17 +1,8 @@
 ---
-title: FetchEvent.preloadResponse
+title: "FetchEvent: preloadResponse property"
+short-title: preloadResponse
 slug: Web/API/FetchEvent/preloadResponse
 page-type: web-api-instance-property
-tags:
-  - API
-  - FetchEvent
-  - Offline
-  - Property
-  - Reference
-  - Service Workers
-  - Web Performance
-  - Workers
-  - request
 browser-compat: api.FetchEvent.preloadResponse
 ---
 
@@ -53,7 +44,7 @@ addEventListener("fetch", (event) => {
 
       // Else try the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

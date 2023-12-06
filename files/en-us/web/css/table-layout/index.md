@@ -2,12 +2,6 @@
 title: table-layout
 slug: Web/CSS/table-layout
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS Tables
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.table-layout
 ---
 
@@ -35,12 +29,21 @@ table-layout: unset;
 ### Values
 
 - `auto`
-  - : By default, most browsers use an automatic table layout algorithm. The widths of the table and its cells are adjusted to fit the content.
+
+  - : The automatic table layout algorithm is used. The widths of the table and its cells are adjusted to fit the content. Most browsers use this algorithm by default.
+
 - `fixed`
 
-  - : Table and column widths are set by the widths of `table` and `col` elements or by the width of the first row of cells. Cells in subsequent rows do not affect column widths.
+  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the [`width`](/en-US/docs/Web/CSS/width) property. If the value of the `width` property is set to `auto`or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
+    The fixed table layout algorithm is faster than the automatic layout algorithm because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells because it depends only on explicitly set widths.
 
-    Under the "fixed" layout method, the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
+    In the fixed table layout algorithm, the width of each column is determined as follows:
+
+    - A column element with explicit width sets the width for that column.
+    - Otherwise, a cell in the first row with explicit width determines the width for that column.
+    - Otherwise, the column gets the width from the shared remaining horizontal space.
+
+    With this algorithm the entire table can be rendered once the first table row has been downloaded and analyzed. This can speed up rendering time over the "automatic" layout method, but subsequent cell content might not fit in the column widths provided. Cells use the {{Cssxref("overflow")}} property to determine whether to clip any overflowing content, but only if the table has a known width; otherwise, they won't overflow the cells.
 
 ## Formal definition
 

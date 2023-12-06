@@ -1,12 +1,7 @@
 ---
 title: WebAssembly numeric instructions
 slug: WebAssembly/Reference/Numeric
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Numeric
+page-type: landing-page
 ---
 
 {{WebAssemblySidebar}}
@@ -97,7 +92,7 @@ WebAssembly numeric instructions.
 - [`Left shift`](/en-US/docs/WebAssembly/Reference/Numeric/Left_shift)
   - : Used for performing a bitwise left-shift.
 - [`Right shift`](/en-US/docs/WebAssembly/Reference/Numeric/Right_shift)
-  - : Used for performing a bitwise left-shift.
+  - : Used for performing a bitwise right-shift.
 - [`Left rotate`](/en-US/docs/WebAssembly/Reference/Numeric/Left_rotate)
   - : Used for performing a bitwise left-rotate.
 - [`Right rotate`](/en-US/docs/WebAssembly/Reference/Numeric/Right_rotate)

@@ -1,15 +1,7 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - bouncing
+page-type: guide
 ---
 
 {{GamesSidebar}}

@@ -1,13 +1,7 @@
 ---
 title: The add-on bar
 slug: Mozilla/Firefox/Releases/4/The_add-on_bar
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox 4
-  - Guide
-  - NeedsExample
-  - Toolbar
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -58,12 +52,12 @@ if (firstrun) {
 } else {
   try {
     var installedVersion = Services.prefs.getCharPref(
-      "extensions.YOUREXT.installedVersion"
+      "extensions.YOUREXT.installedVersion",
     );
     if (curVersion > installedVersion) {
       Services.prefs.setCharPref(
         "extensions.YOUREXT.installedVersion",
-        curVersion
+        curVersion,
       );
       /* Code related to upgrade */
     }
@@ -77,7 +71,7 @@ if (firstrun) {
 
 Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#manifest_flags):
 
-```
+```plain
 overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
 overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlay.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion>=4.0
 ```

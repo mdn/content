@@ -2,17 +2,6 @@
 title: line-height
 slug: Web/CSS/line-height
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Layout
-  - Reference
-  - Text
-  - Vertical
-  - height
-  - recipe:css-property
-  - size
 browser-compat: css.properties.line-height
 ---
 
@@ -63,8 +52,6 @@ The `line-height` property is specified as any one of the following:
   - : The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height. Values given in **em** units may produce unexpected results (see example below).
 - `<percentage>`
   - : Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. **Percentage** values may produce unexpected results (see the second example below).
-- `-moz-block-height` {{non-standard_inline}}
-  - : Sets the line height to the content height of the current block.
 
 ## Accessibility concerns
 
@@ -107,7 +94,10 @@ div {
 
 /* font shorthand */
 div {
-  font: 10pt/1.2 Georgia, "Bitstream Charter", serif;
+  font:
+    10pt/1.2 Georgia,
+    "Bitstream Charter",
+    serif;
 }
 ```
 

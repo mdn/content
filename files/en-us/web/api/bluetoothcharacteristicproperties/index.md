@@ -2,14 +2,8 @@
 title: BluetoothCharacteristicProperties
 slug: Web/API/BluetoothCharacteristicProperties
 page-type: web-api-interface
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - Interface
-  - Reference
-  - Web Bluetooth API
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties
 ---
 
@@ -56,7 +50,7 @@ if (characteristic.properties.notify) {
     "characteristicvaluechanged",
     async (event) => {
       console.log(`Received heart rate measurement: ${event.target.value}`);
-    }
+    },
   );
   await characteristic.startNotifications();
 }

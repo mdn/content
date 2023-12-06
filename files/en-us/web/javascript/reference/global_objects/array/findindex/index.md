@@ -1,64 +1,38 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.findIndex
 ---
 
 {{JSRef}}
 
-The **`findIndex()`** method returns the index of the first element in an array that satisfies the provided testing function.
+The **`findIndex()`** method of {{jsxref("Array")}} instances returns the index of the first element in an array that satisfies the provided testing function.
 If no elements satisfy the testing function, -1 is returned.
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html","shorter")}}
-
 See also the {{jsxref("Array/find", "find()")}} method, which returns the first element that satisfies the testing function (rather than its index).
+
+{{EmbedInteractiveExample("pages/js/array-findindex.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
-// Arrow function
-findIndex((element) => { /* … */ } )
-findIndex((element, index) => { /* … */ } )
-findIndex((element, index, array) => { /* … */ } )
-
-// Callback function
 findIndex(callbackFn)
 findIndex(callbackFn, thisArg)
-
-// Inline callback function
-findIndex(function(element) { /* … */ })
-findIndex(function(element, index) { /* … */ })
-findIndex(function(element, index, array){ /* … */ })
-findIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### Parameters
 
 - `callbackFn`
-
-  - : A function used to test elements in the array.
-
-    The function is called with the following arguments:
-
+  - : A function to execute for each element in the array. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `element`
       - : The current element being processed in the array.
     - `index`
       - : The index of the current element being processed in the array.
     - `array`
       - : The array `findIndex()` was called upon.
-
-    The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate an appropriate element has been found.
-    The index of this element is then returned by `findIndex()`.
-
 - `thisArg` {{optional_inline}}
-  - : Optional object to use as `this` when executing `callbackFn`.
+  - : A value to use as `this` when executing `callbackFn`. See [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods).
 
 ### Return value
 
@@ -66,30 +40,9 @@ The index of the first element in the array that passes the test. Otherwise, `-1
 
 ## Description
 
-The `findIndex()` method executes the `callbackFn` function once for every index in the array, in ascending order, until it finds the one where `callbackFn` returns a {{Glossary("truthy")}} value.
-
-If such an element is found, `findIndex()` immediately returns the element's index.
-If `callbackFn` never returns a truthy value (or the array's `length` is `0`), `findIndex()` returns `-1`.
+The `findIndex()` is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findIndex()` then returns the index of that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findIndex()` returns `-1`. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
-
-`callbackFn` is invoked with three arguments:
-
-1. The value of the element
-2. The index of the element
-3. The Array object being traversed
-
-If a `thisArg` parameter is passed to `findIndex()`, it will be used as the `this` inside each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
-
-The range of elements processed by `findIndex()` is set before the first invocation of `callbackFn`.
-Elements which are assigned to indexes already visited, or to indexes outside the range, will not be visited by `callbackFn`.
-`callbackFn` will not process the elements appended to the array after the call to `findIndex()` begins.
-If an existing, unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time `findIndex()`
-visits the element's index.
-Elements that are {{jsxref("Operators/delete", "deleted")}} are still visited.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
 
 The `findIndex()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -116,6 +69,24 @@ console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1, not found
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2 (array[2] is 7)
 ```
 
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `findIndex()` to find the first element that is less than its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const firstTrough = numbers
+  .filter((num) => num > 0)
+  .findIndex((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(firstTrough); // 2
+```
+
 ### Using findIndex() on sparse arrays
 
 You can search for `undefined` in a sparse array and get the index of an empty slot.
@@ -126,11 +97,12 @@ console.log([1, , 3].findIndex((x) => x === undefined)); // 1
 
 ### Calling findIndex() on non-array objects
 
-The `findIndex()` method reads the `length` property of `this` and then accesses each integer index.
+The `findIndex()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
   length: 3,
+  "-1": 0.1, // ignored by findIndex() since -1 < 0
   0: 2,
   1: 7.3,
   2: 4,
@@ -151,5 +123,11 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.findIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
+- {{jsxref("Array.prototype.findLast()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}
 - {{jsxref("Array.prototype.indexOf()")}}
+- {{jsxref("Array.prototype.lastIndexOf()")}}
+- {{jsxref("TypedArray.prototype.findIndex()")}}

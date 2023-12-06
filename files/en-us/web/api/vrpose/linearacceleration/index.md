@@ -1,24 +1,17 @@
 ---
-title: VRPose.linearAcceleration
+title: "VRPose: linearAcceleration property"
+short-title: linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - linearAcceleration
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.linearAcceleration
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second per second.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 

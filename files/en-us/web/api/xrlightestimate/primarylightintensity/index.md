@@ -1,17 +1,10 @@
 ---
-title: XRLightEstimate.primaryLightIntensity
+title: "XRLightEstimate: primaryLightIntensity property"
+short-title: primaryLightIntensity
 slug: Web/API/XRLightEstimate/primaryLightIntensity
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRLightEstimate.primaryLightIntensity
 ---
 

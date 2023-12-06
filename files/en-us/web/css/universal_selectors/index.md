@@ -2,11 +2,6 @@
 title: Universal selectors
 slug: Web/CSS/Universal_selectors
 page-type: css-selector
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
 browser-compat: css.selectors.universal
 ---
 
@@ -98,5 +93,5 @@ example|* {
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

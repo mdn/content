@@ -2,20 +2,14 @@
 title: masonry-auto-flow
 slug: Web/CSS/masonry-auto-flow
 page-type: css-property
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - masonry
-  - masonry-auto-flow
+status:
+  - experimental
 browser-compat: css.properties.masonry-auto-flow
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout).
+The **`masonry-auto-flow`** CSS property modifies how items are placed when using [masonry](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 ## Syntax
 
@@ -118,7 +112,7 @@ This property may take one of two forms:
 ```
 
 ```js
-const selectElem = document.querySelector('select');
+const selectElem = document.querySelector("select");
 
 function changeMasonryFlow() {
   const grid = document.getElementById("grid");
@@ -128,7 +122,7 @@ function changeMasonryFlow() {
   grid.style.masonryAutoFlow = masonryAutoFlow;
 }
 
-selectElem.addEventListener('change', changeMasonryFlow);
+selectElem.addEventListener("change", changeMasonryFlow);
 ```
 
 #### Result

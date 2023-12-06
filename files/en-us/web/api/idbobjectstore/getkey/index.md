@@ -1,14 +1,8 @@
 ---
-title: IDBObjectStore.getKey()
+title: "IDBObjectStore: getKey() method"
+short-title: getKey()
 slug: Web/API/IDBObjectStore/getKey
 page-type: web-api-instance-method
-tags:
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - Web API
 browser-compat: api.IDBObjectStore.getKey
 ---
 
@@ -37,8 +31,9 @@ getKey(key)
 
 ### Return Value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is the key for the first record matching the given key or key range.
 
 ### Exceptions
 

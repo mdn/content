@@ -1,13 +1,8 @@
 ---
-title: DOMImplementation.createDocumentType()
+title: "DOMImplementation: createDocumentType() method"
+short-title: createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Method
-  - Reference
 browser-compat: api.DOMImplementation.createDocumentType
 ---
 
@@ -42,8 +37,16 @@ A [`DocumentType`](/en-US/docs/Web/API/DocumentType).
 ## Examples
 
 ```js
-const dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');
-const d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'svg:svg', dt);
+const dt = document.implementation.createDocumentType(
+  "svg:svg",
+  "-//W3C//DTD SVG 1.1//EN",
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+);
+const d = document.implementation.createDocument(
+  "http://www.w3.org/2000/svg",
+  "svg:svg",
+  dt,
+);
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 

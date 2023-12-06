@@ -2,12 +2,8 @@
 title: SVGFontElement
 slug: Web/API/SVGFontElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+status:
+  - deprecated
 browser-compat: api.SVGFontElement
 ---
 

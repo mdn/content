@@ -1,16 +1,7 @@
 ---
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getVisits
+page-type: webextension-api-function
 browser-compat: webextensions.api.history.getVisits
 ---
 
@@ -61,7 +52,7 @@ function listVisits(historyItems) {
   if (historyItems.length) {
     console.log(`URL ${historyItems[0].url}`);
     const gettingVisits = browser.history.getVisits({
-      url: historyItems[0].url
+      url: historyItems[0].url,
     });
     gettingVisits.then(gotVisits);
   }
@@ -70,7 +61,7 @@ function listVisits(historyItems) {
 let searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(listVisits);
@@ -79,8 +70,6 @@ searching.then(listVisits);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/history/#method-getVisits) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

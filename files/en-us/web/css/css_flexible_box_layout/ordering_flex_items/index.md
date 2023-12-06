@@ -1,16 +1,7 @@
 ---
 title: Ordering flex items
-slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Ordering_flex_items
 page-type: guide
-tags:
-  - Accessibility
-  - CSS
-  - Flex
-  - Guide
-  - direction
-  - flexbox
-  - order
-  - reverse
 ---
 
 {{CSSRef}}

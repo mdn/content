@@ -1,15 +1,7 @@
 ---
 title: tabs.warmup()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/warmup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - tabs
-  - warmup
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.warmup
 ---
 
@@ -57,17 +49,15 @@ function onFailure(error) {
 }
 
 async function warmupMDN() {
-
   const mdnTabs = await browser.tabs.query({
     currentWindow: true,
-    url: "https://developer.mozilla.org/*"
+    url: "https://developer.mozilla.org/*",
   });
 
   if (mdnTabs.length > 0) {
     const warming = browser.tabs.warmup(mdnTabs[0].id);
     warming.then(onSuccess, onFailure);
   }
-
 }
 
 browser.browserAction.onClicked.addListener(warmupMDN);

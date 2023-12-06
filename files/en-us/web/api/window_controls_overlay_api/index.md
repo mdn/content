@@ -2,13 +2,8 @@
 title: Window Controls Overlay API
 slug: Web/API/Window_Controls_Overlay_API
 page-type: web-api-overview
-tags:
-  - API
-  - Window Controls Overlay
-  - Overview
-  - Reference
-  - Progressive Web Apps
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay
 ---
 
@@ -65,6 +60,6 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 ## See also
 
-- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)

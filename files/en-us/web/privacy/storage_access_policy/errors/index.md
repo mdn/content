@@ -1,11 +1,7 @@
 ---
 title: Errors
 slug: Web/Privacy/Storage_Access_Policy/Errors
-tags:
-  - Cookies
-  - Errors
-  - Storage
-  - storage access policy
+page-type: landing-page
 ---
 
 {{QuicklinksWithSubPages}}

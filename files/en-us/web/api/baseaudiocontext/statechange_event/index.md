@@ -1,16 +1,8 @@
 ---
 title: "BaseAudioContext: statechange event"
+short-title: statechange
 slug: Web/API/BaseAudioContext/statechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - BaseAudioContext
-  - Event Handler
-  - Reference
-  - Web Audio API
-  - statechange
 browser-compat: api.BaseAudioContext.statechange_event
 ---
 

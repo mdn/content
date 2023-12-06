@@ -1,16 +1,8 @@
 ---
-title: Client.postMessage()
+title: "Client: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Client/postMessage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Client
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - postMessage
 browser-compat: api.Client.postMessage
 ---
 
@@ -26,17 +18,18 @@ message is received in the "`message`" event on
 
 ```js-nolint
 postMessage(message)
+postMessage(message, options)
 postMessage(message, transferables)
 ```
 
 ### Parameters
 
 - `message`
-  - : The message to send to the client. This can be any [structured-clonable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+  - : The message to send to the client. This can be any [structured-cloneable type](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- `options` {{optional_inline}}
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 - `transferables` {{optional_inline}}
-  - : A sequence of objects that are [transferred](/en-US/docs/Web/API/Transferable) with the message. The
-    ownership of these objects is given to the destination side and they are no longer
-    usable on the sending side.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 
@@ -44,35 +37,36 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-Sending a message from a service worker to a client:
+The code below sends a message from a service worker to a client. The client is fetched using the {{domxref("Clients.get()", "get()")}} method on {{domxref("ServiceWorkerGlobalScope.clients", "clients")}}, which is a global in service worker scope.
 
 ```js
-addEventListener('fetch', (event) => {
-  event.waitUntil((async () => {
-    // Exit early if we don't have access to the client.
-    // Eg, if it's cross-origin.
-    if (!event.clientId) return;
+addEventListener("fetch", (event) => {
+  event.waitUntil(
+    (async () => {
+      // Exit early if we don't have access to the client.
+      // Eg, if it's cross-origin.
+      if (!event.clientId) return;
 
-    // Get the client.
-    const client = await clients.get(event.clientId);
-    // Exit early if we don't get the client.
-    // Eg, if it closed.
-    if (!client) return;
+      // Get the client.
+      const client = await self.clients.get(event.clientId);
+      // Exit early if we don't get the client.
+      // Eg, if it closed.
+      if (!client) return;
 
-    // Send a message to the client.
-    client.postMessage({
-      msg: "Hey I just got a fetch from you!",
-      url: event.request.url
-    });
-
-  })());
+      // Send a message to the client.
+      client.postMessage({
+        msg: "Hey I just got a fetch from you!",
+        url: event.request.url,
+      });
+    })(),
+  );
 });
 ```
 
 Receiving that message:
 
 ```js
-navigator.serviceWorker.addEventListener('message', (event) => {
+navigator.serviceWorker.addEventListener("message", (event) => {
   console.log(event.data.msg, event.data.url);
 });
 ```

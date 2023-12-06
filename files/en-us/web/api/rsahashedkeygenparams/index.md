@@ -2,12 +2,6 @@
 title: RsaHashedKeyGenParams
 slug: Web/API/RsaHashedKeyGenParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Reference
-  - RsaHashedKeyGenParams
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-RsaHashedKeyGenParams
 ---
 

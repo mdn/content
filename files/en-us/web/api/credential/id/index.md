@@ -1,15 +1,8 @@
 ---
-title: Credential.id
+title: "Credential: id property"
+short-title: id
 slug: Web/API/Credential/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Credential
-  - Credential Management API
-  - Property
-  - Reference
-  - credential management
-  - id
 browser-compat: api.Credential.id
 ---
 

@@ -1,17 +1,8 @@
 ---
-title: MediaDevices.getSupportedConstraints()
+title: "MediaDevices: getSupportedConstraints() method"
+short-title: getSupportedConstraints()
 slug: Web/API/MediaDevices/getSupportedConstraints
 page-type: web-api-instance-method
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-  - getSupportedConstraints
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
@@ -52,7 +43,9 @@ This example outputs a list of the constraints supported by your browser.
 
 ```css hidden
 body {
-  font: 15px Arial, sans-serif;
+  font:
+    15px Arial,
+    sans-serif;
 }
 ```
 

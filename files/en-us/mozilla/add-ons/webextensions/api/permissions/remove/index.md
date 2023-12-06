@@ -1,14 +1,7 @@
 ---
 title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - remove
+page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.remove
 ---
 
@@ -47,14 +40,13 @@ This code adds a click handler that removes a given permission.
 
 ```js
 const permissionToRemove = {
-  permissions: ["history"]
-}
+  permissions: ["history"],
+};
 
-function remove() {
+async function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then((result) => {
-    console.log(result);
-  });
+  const removed = await browser.permissions.remove(permissionToRemove);
+  console.log(removed);
 }
 
 document.querySelector("#remove").addEventListener("click", remove);
@@ -63,5 +55,3 @@ document.querySelector("#remove").addEventListener("click", remove);
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

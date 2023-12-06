@@ -1,15 +1,10 @@
 ---
-title: XRFrame.getDepthInformation()
+title: "XRFrame: getDepthInformation() method"
+short-title: getDepthInformation()
 slug: Web/API/XRFrame/getDepthInformation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame.getDepthInformation
 ---
 
@@ -53,8 +48,8 @@ const session = navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["cpu-optimized", "gpu-optimized"],
-    formatPreference: ["luminance-alpha", "float32"]
-  }
+    formatPreference: ["luminance-alpha", "float32"],
+  },
 });
 
 // …

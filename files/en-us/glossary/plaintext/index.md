@@ -1,10 +1,10 @@
 ---
 title: Plaintext
 slug: Glossary/Plaintext
-tags:
-  - Cryptography
-  - Security
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 Plaintext refers to information that is being used as an input to an {{Glossary("encryption")}} {{Glossary("algorithm")}}, or to {{Glossary("ciphertext")}} that has been decrypted.
 

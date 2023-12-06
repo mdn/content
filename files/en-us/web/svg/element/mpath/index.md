@@ -1,12 +1,7 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Animation
+page-type: svg-element
 browser-compat: svg.elements.mpath
 ---
 
@@ -27,7 +22,7 @@ The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element pr
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 
@@ -75,7 +70,7 @@ This element implements the {{domxref("SVGMPathElement")}} interface.
     stroke-width="7.06">
     <!-- Define the motion path animation -->
     <animateMotion dur="6s" repeatCount="indefinite" rotate="auto">
-      <mpath xlink:href="#path1" />
+      <mpath href="#path1" />
     </animateMotion>
   </path>
 </svg>
@@ -83,7 +78,7 @@ This element implements the {{domxref("SVGMPathElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample("Example", 250, 165)}}
+{{EmbedLiveSample("Example", 250, 400)}}
 
 ## Specifications
 

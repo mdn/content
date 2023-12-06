@@ -1,17 +1,10 @@
 ---
-title: BluetoothCharacteristicProperties.broadcast
+title: "BluetoothCharacteristicProperties: broadcast property"
+short-title: broadcast
 slug: Web/API/BluetoothCharacteristicProperties/broadcast
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - broadcast
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.broadcast
 ---
 

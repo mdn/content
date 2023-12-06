@@ -1,19 +1,12 @@
 ---
-title: Navigator.clearAppBadge()
+title: "Navigator: clearAppBadge() method"
+short-title: clearAppBadge()
 slug: Web/API/Navigator/clearAppBadge
 page-type: web-api-instance-method
-tags:
-  - API
-  - Badging API
-  - Method
-  - Reference
-  - clearAppBadge
-  - Navigator
-  - Experimental
 browser-compat: api.Navigator.clearAppBadge
 ---
 
-{{APIRef("Badging API")}}{{SeeCompatTable}}
+{{APIRef("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
 
 The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to `nothing`. The value `nothing` indicates that no badge is currently set, and the status of the badge is _cleared_.
 
@@ -33,15 +26,19 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigator")}} does not have a document that this action can be acted on.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 
 ## Examples
 
 Once all messages in an application have been read, call `clearAppBadge()` to clear the badge and remove the notification.
 
 ```js
-navigator.clearAppBadge()
+navigator.clearAppBadge();
 ```
 
 ## Specifications
@@ -54,4 +51,5 @@ navigator.clearAppBadge()
 
 ## See also
 
+- [Badging API](/en-US/docs/Web/API/Badging_API)
 - [Badging for app icons](https://web.dev/badging-api/)

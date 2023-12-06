@@ -1,15 +1,8 @@
 ---
-title: 'DeviceMotionEventRotationRate: gamma'
+title: "DeviceMotionEventRotationRate: gamma property"
+short-title: gamma
 slug: Web/API/DeviceMotionEventRotationRate/gamma
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation
-  - Property
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
 browser-compat: api.DeviceMotionEventRotationRate.gamma
 ---
 

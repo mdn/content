@@ -1,10 +1,8 @@
 ---
-title: Event.preventDefault()
+title: "Event: preventDefault() method"
+short-title: preventDefault()
 slug: Web/API/Event/preventDefault
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.Event.preventDefault
 ---
 
@@ -107,11 +105,11 @@ invalid key:
 #### JavaScript
 
 And here's the JavaScript code that does the job. First, listen for
-{{domxref("Element/keypress_event", "keypress")}} events:
+{{domxref("Element/keydown_event", "keydown")}} events:
 
 ```js
 const myTextbox = document.getElementById("my-textbox");
-myTextbox.addEventListener("keypress", checkName, false);
+myTextbox.addEventListener("keydown", checkName, false);
 ```
 
 The `checkName()` function, which looks at the pressed key and decides
@@ -119,14 +117,13 @@ whether to allow it:
 
 ```js
 function checkName(evt) {
-  const charCode = evt.charCode;
-  if (charCode !== 0) {
-    if (charCode < 97 || charCode > 122) {
-      evt.preventDefault();
-      displayWarning(
-        "Please use lowercase letters only.\n" + `charCode: ${charCode}\n`
-      );
-    }
+  const key = evt.key;
+  const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+  if (!lowerCaseAlphabet.includes(key)) {
+    evt.preventDefault();
+    displayWarning(
+      "Please use lowercase letters only.\n" + `Key pressed: ${key}\n`,
+    );
   }
 }
 ```

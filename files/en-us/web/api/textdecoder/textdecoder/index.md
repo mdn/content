@@ -1,13 +1,8 @@
 ---
-title: TextDecoder()
+title: "TextDecoder: TextDecoder() constructor"
+short-title: TextDecoder()
 slug: Web/API/TextDecoder/TextDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Reference
-  - TextDecoder
 browser-compat: api.TextDecoder.TextDecoder
 ---
 
@@ -33,8 +28,13 @@ new TextDecoder(label, options)
   - : An object with the property:
 
     - `fatal`
+
       - : A boolean value indicating if the {{DOMxRef("TextDecoder.decode()")}} method must throw a {{jsxref("TypeError")}} when decoding invalid data.
         It defaults to `false`, which means that the decoder will substitute malformed data with a replacement character.
+
+    - `ignoreBOM`
+      - : A boolean value indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) is ignored.
+        It defaults to `false`.
 
 ### Exceptions
 

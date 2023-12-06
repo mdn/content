@@ -1,15 +1,10 @@
 ---
-title: Navigator.connection
+title: "Navigator: connection property"
+short-title: connection
 slug: Web/API/Navigator/connection
 page-type: web-api-instance-property
-tags:
-  - API
-  - Connection
-  - Experimental
-  - Navigator
-  - Network Information API
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.Navigator.connection
 ---
 

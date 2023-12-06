@@ -1,13 +1,8 @@
 ---
-title: WebSocket.bufferedAmount
+title: "WebSocket: bufferedAmount property"
+short-title: bufferedAmount
 slug: Web/API/WebSocket/bufferedAmount
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.bufferedAmount
 ---
 

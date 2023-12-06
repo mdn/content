@@ -2,14 +2,8 @@
 title: BackgroundFetchManager
 slug: Web/API/BackgroundFetchManager
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
+status:
+  - experimental
 browser-compat: api.BackgroundFetchManager
 ---
 
@@ -32,7 +26,7 @@ None.
 
 ## Examples
 
-The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download a video in the background.
+The example below shows how to get an instance of {{domxref("BackgroundFetchManager")}} from a {{domxref("ServiceWorkerRegistration")}} object and calls `fetch()` to download an audio file in the background.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -49,7 +43,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
 });
 ```

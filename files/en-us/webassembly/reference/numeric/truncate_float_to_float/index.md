@@ -1,12 +1,7 @@
 ---
 title: Truncate (float to float)
 slug: WebAssembly/Reference/Numeric/Truncate_float_to_float
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

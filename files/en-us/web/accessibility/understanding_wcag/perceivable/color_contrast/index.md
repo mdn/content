@@ -1,11 +1,7 @@
 ---
 title: Color contrast
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - Accessibility
-  - WCAG
-  - contrast
-  - perceivable
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -56,9 +52,7 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
 ### Good Contrast
 
 ```html
-<div class="good">
-  Good contrast
-</div>
+<div class="good">Good contrast</div>
 ```
 
 ```css
@@ -74,7 +68,7 @@ div {
 }
 
 .good {
-background-color: #fae6fa;
+  background-color: #fae6fa;
 }
 ```
 
@@ -85,9 +79,7 @@ The "bad" `<div>` on the other hand has a very dark purple background, which mak
 ### Bad Contrast
 
 ```html
-<div class="bad">
-  Bad contrast
-</div>
+<div class="bad">Bad contrast</div>
 ```
 
 ```css
@@ -103,7 +95,7 @@ div {
 }
 
 .bad {
-background-color: #400064;
+  background-color: #400064;
 }
 ```
 
@@ -115,9 +107,9 @@ When choosing a color scheme for your website, choose foreground and background 
 
 If you are including non-text content such as video or animation, you should follow 1.4.11 (again, see below).
 
-To check your contrast as you make your color choices, use a tool such as WebAIM's [Color Contrast Checker](http://webaim.org/resources/contrastchecker/).
+To check your contrast as you make your color choices, use a tool such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
-You can also check color contrast on the fly using Firefox's Developer Tools — see our [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) guide, and in particular the section [Check for accessibility issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues). Try using it on the live examples in the description section.
+You can also check color contrast on the fly using Firefox's Developer Tools — see the [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) guide, and in particular the section [Check for accessibility issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues). Try using it on the live examples in the description section.
 
 ## Related WCAG success criteria
 

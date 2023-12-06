@@ -2,13 +2,6 @@
 title: clip-path
 slug: Web/CSS/clip-path
 page-type: css-property
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
 browser-compat: css.properties.clip-path
 ---
 
@@ -82,13 +75,13 @@ The `clip-path` property is specified as one or a combination of the values list
   - : If specified in combination with a `<basic-shape>`, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a {{cssxref("border-radius")}}), to be the clipping path. The geometry box can be one of the following values:
 
     - `margin-box`
-      - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box) as the reference box.
+      - : Uses the [margin box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) as the reference box.
     - `border-box`
-      - : Uses the [border box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box) as the reference box.
+      - : Uses the [border box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#border-box) as the reference box.
     - `padding-box`
-      - : Uses the [padding box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box) as the reference box.
+      - : Uses the [padding box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#padding-box) as the reference box.
     - `content-box`
-      - : Uses the [content box](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box) as the reference box.
+      - : Uses the [content box](/en-US/docs/Web/CSS/CSS_shapes/From_box_values#content-box) as the reference box.
     - `fill-box`
       - : Uses the object bounding box as the reference box.
     - `stroke-box`
@@ -99,7 +92,7 @@ The `clip-path` property is specified as one or a combination of the values list
 - `none`
   - : No clipping path is created.
 
-> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
@@ -472,7 +465,9 @@ body {
 }
 
 .view-box {
-  box-shadow: 1rem 1rem 0 #efefef inset, -1rem -1rem 0 #efefef inset;
+  box-shadow:
+    1rem 1rem 0 #efefef inset,
+    -1rem -1rem 0 #efefef inset;
 }
 
 .container.view-box::after {
@@ -509,15 +504,33 @@ p {
     "M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z"
   );
 }
-.shape1 { clip-path: circle(25%); }
-.shape2 { clip-path: circle(25% at 25% 25%); }
-.shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
-.shape4 { clip-path: stroke-box  circle(25% at 25% 25%); }
-.shape5 { clip-path: view-box    circle(25% at 25% 25%); }
-.shape6 { clip-path: margin-box  circle(25% at 25% 25%); }
-.shape7 { clip-path: border-box  circle(25% at 25% 25%); }
-.shape8 { clip-path: padding-box circle(25% at 25% 25%); }
-.shape9 { clip-path: content-box circle(25% at 25% 25%); }
+.shape1 {
+  clip-path: circle(25%);
+}
+.shape2 {
+  clip-path: circle(25% at 25% 25%);
+}
+.shape3 {
+  clip-path: fill-box circle(25% at 25% 25%);
+}
+.shape4 {
+  clip-path: stroke-box circle(25% at 25% 25%);
+}
+.shape5 {
+  clip-path: view-box circle(25% at 25% 25%);
+}
+.shape6 {
+  clip-path: margin-box circle(25% at 25% 25%);
+}
+.shape7 {
+  clip-path: border-box circle(25% at 25% 25%);
+}
+.shape8 {
+  clip-path: padding-box circle(25% at 25% 25%);
+}
+.shape9 {
+  clip-path: content-box circle(25% at 25% 25%);
+}
 
 .defs {
   width: 0;
@@ -551,7 +564,7 @@ svg text.em {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", 800, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Comparison_of_HTML_and_SVG", "100%", "800px")}}
 
 ### Complete example
 

@@ -1,16 +1,8 @@
 ---
-title: 'Element: touchmove event'
+title: "Element: touchmove event"
+short-title: touchmove
 slug: Web/API/Element/touchmove_event
 page-type: web-api-event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchmove
 browser-compat: api.Element.touchmove_event
 ---
 
@@ -23,9 +15,9 @@ The `touchmove` event is fired when one or more touch points are moved along the
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchmove', (event) => {});
+addEventListener("touchmove", (event) => {});
 
-ontouchmove = (event) => { };
+ontouchmove = (event) => {};
 ```
 
 ## Event type
@@ -73,4 +65,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("Element/mousemove_event", "mousemove")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchmove_event", "touchmove")}}

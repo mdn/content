@@ -1,13 +1,7 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-tags:
-  - Closure
-  - ES5
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
+page-type: guide
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -20,9 +14,9 @@ Consider the following example code:
 
 ```js
 function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
+  var name = "Mozilla"; // name is a local variable created by init
   function displayName() {
-    // displayName() is the inner function, a closure
+    // displayName() is the inner function, that forms the closure
     console.log(name); // use variable declared in the parent function
   }
   displayName();
@@ -70,7 +64,7 @@ Consider the following code example:
 
 ```js
 function makeFunc() {
-  const name = 'Mozilla';
+  const name = "Mozilla";
   function displayName() {
     console.log(name);
   }
@@ -107,7 +101,7 @@ In this example, we have defined a function `makeAdder(x)`, that takes a single 
 
 In essence, `makeAdder` is a function factory. It creates functions that can add a specific value to their argument. In the above example, the function factory creates two new functions—one that adds five to its argument, and one that adds 10.
 
-`add5` and `add10` are both closures. They share the same function body definition, but store different lexical environments. In `add5`'s lexical environment, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
+`add5` and `add10` both form closures. They share the same function body definition, but store different lexical environments. In `add5`'s lexical environment, `x` is 5, while in the lexical environment for `add10`, `x` is 10.
 
 ## Practical closures
 
@@ -150,27 +144,27 @@ const size14 = makeSizer(14);
 const size16 = makeSizer(16);
 ```
 
-`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
+`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons as demonstrated in the following code example.
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
-<a href="#" id="size-12">12</a>
-<a href="#" id="size-14">14</a>
-<a href="#" id="size-16">16</a>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-16">16</button>
 ```
 
-Run the code using [JSFiddle](https://jsfiddle.net/vnkuZ/7726/).
+Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
 
 ## Emulating private methods with closures
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
@@ -210,7 +204,7 @@ In previous examples, each closure had its own lexical environment. Here though,
 
 The shared lexical environment is created in the body of an anonymous function, _which is executed as soon as it has been defined_ (also known as an [IIFE](/en-US/docs/Glossary/IIFE)). The lexical environment contains two private items: a variable called `privateCounter`, and a function called `changeBy`. You can't access either of these private members from outside the anonymous function. Instead, you can access them using the three public functions that are returned from the anonymous wrapper.
 
-Those three public functions are closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
+Those three public functions form closures that share the same lexical environment. Thanks to JavaScript's lexical scoping, they each have access to the `privateCounter` variable and the `changeBy` function.
 
 ```js
 const makeCounter = function () {
@@ -276,7 +270,7 @@ function sum(a) {
   };
 }
 
-console.log(sum(1)(2)(3)(4)); // log 20
+console.log(sum(1)(2)(3)(4)); // 20
 ```
 
 You can also write without anonymous functions:
@@ -300,7 +294,7 @@ const sum2 = sum(1);
 const sum3 = sum2(2);
 const sum4 = sum3(3);
 const result = sum4(4);
-console.log(result); //log 20
+console.log(result); // 20
 ```
 
 In the example above, there's a series of nested functions, all of which have access to the outer functions' scope. In this context, we can say that closures have access to _all_ outer function scopes.
@@ -309,14 +303,16 @@ Closures can capture variables in block scopes and module scopes as well. For ex
 
 ```js
 function outer() {
-  const x = 5;
-  if (Math.random() > 0.5) {
+  let getY;
+  {
     const y = 6;
-    return () => console.log(x, y);
+    getY = () => y;
   }
+  console.log(typeof y); // undefined
+  console.log(getY()); // 6
 }
 
-outer()(); // logs 5 6
+outer();
 ```
 
 Closures over modules can be more interesting.
@@ -327,7 +323,7 @@ let x = 5;
 export const getX = () => x;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 Here, the module exports a pair of getter-setter functions, which close over the module-scoped variable `x`. Even when `x` is not directly accessible from other modules, it can be read and written with the functions.
@@ -340,14 +336,14 @@ setX(6);
 console.log(getX()); // 6
 ```
 
-Closures can close over imported values as well, which are regarded as _live bindings_, because when the original value changes, the imported one changes accordingly.
+Closures can close over imported values as well, which are regarded as _live {{Glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
 
 ```js
 // myModule.js
 export let x = 1;
 export const setX = (val) => {
   x = val;
-}
+};
 ```
 
 ```js
@@ -372,21 +368,21 @@ Prior to the introduction of the [`let`](/en-US/docs/Web/JavaScript/Reference/St
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Email: <input type="text" id="email" name="email" /></p>
 <p>Name: <input type="text" id="name" name="name" /></p>
 <p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -407,13 +403,13 @@ The `helpText` array defines three helpful hints, each associated with the ID of
 
 If you try this code out, you'll see that it doesn't work as expected. No matter what field you focus on, the message about your age will be displayed.
 
-The reason for this is that the functions assigned to `onfocus` are closures; they consist of the function definition and the captured environment from the `setupHelp` function's scope. Three closures have been created by the loop, but each one shares the same single lexical environment, which has a variable with changing values (`item`). This is because the variable `item` is declared with `var` and thus has function scope due to hoisting. The value of `item.help` is determined when the `onfocus` callbacks are executed. Because the loop has already run its course by that time, the `item` variable object (shared by all three closures) has been left pointing to the last entry in the `helpText` list.
+The reason for this is that the functions assigned to `onfocus` form closures; they consist of the function definition and the captured environment from the `setupHelp` function's scope. Three closures have been created by the loop, but each one shares the same single lexical environment, which has a variable with changing values (`item`). This is because the variable `item` is declared with `var` and thus has function scope due to hoisting. The value of `item.help` is determined when the `onfocus` callbacks are executed. Because the loop has already run its course by that time, the `item` variable object (shared by all three closures) has been left pointing to the last entry in the `helpText` list.
 
 One solution in this case is to use more closures: in particular, to use a function factory as described earlier:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function makeHelpCallback(help) {
@@ -424,9 +420,9 @@ function makeHelpCallback(help) {
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -446,14 +442,14 @@ One other way to write the above using anonymous closures is:
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (var i = 0; i < helpText.length; i++) {
@@ -473,14 +469,14 @@ If you don't want to use more closures, you can use the [`let`](/en-US/docs/Web/
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -500,14 +496,14 @@ Another alternative could be to use `forEach()` to iterate over the `helpText` a
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your email address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   helpText.forEach(function (text) {

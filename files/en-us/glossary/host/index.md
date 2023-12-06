@@ -1,11 +1,10 @@
 ---
 title: Host
 slug: Glossary/Host
-tags:
-  - Intermediate
-  - Web
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A host is a device connected to the {{glossary("Internet")}} (or a local network). Some hosts called {{glossary("server","servers")}} offer additional services like serving webpages or storing files and emails.
 

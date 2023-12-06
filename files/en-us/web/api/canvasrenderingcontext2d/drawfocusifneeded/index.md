@@ -1,14 +1,8 @@
 ---
-title: CanvasRenderingContext2D.drawFocusIfNeeded()
+title: "CanvasRenderingContext2D: drawFocusIfNeeded() method"
+short-title: drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 page-type: web-api-instance-method
-tags:
-  - API
-  - Accessibility
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
 
@@ -56,14 +50,14 @@ is used to draw a focus ring when appropriate.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const button1 = document.getElementById('button1');
-const button2 = document.getElementById('button2');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
 
-document.addEventListener('focus', redraw, true);
-document.addEventListener('blur', redraw, true);
-canvas.addEventListener('click', handleClick, false);
+document.addEventListener("focus", redraw, true);
+document.addEventListener("blur", redraw, true);
+canvas.addEventListener("click", handleClick, false);
 redraw();
 
 function redraw() {
@@ -96,14 +90,14 @@ function drawButton(el, x, y) {
   const height = 40;
 
   // Button background
-  ctx.fillStyle = active ? 'pink' : 'lightgray';
+  ctx.fillStyle = active ? "pink" : "lightgray";
   ctx.fillRect(x, y, width, height);
 
   // Button text
-  ctx.font = '15px sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillStyle = active ? 'blue' : 'black';
+  ctx.font = "15px sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = active ? "blue" : "black";
   ctx.fillText(el.textContent, x + width / 2, y + height / 2);
 
   // Define clickable area

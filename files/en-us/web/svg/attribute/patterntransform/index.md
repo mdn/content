@@ -1,9 +1,7 @@
 ---
 title: patternTransform
 slug: Web/SVG/Attribute/patternTransform
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.pattern.patternTransform
 ---
 

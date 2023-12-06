@@ -1,11 +1,7 @@
 ---
 title: Anatomy of a video game
 slug: Games/Anatomy
-tags:
-  - Games
-  - JavaScript
-  - Main Loop
-  - requestAnimationFrame
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -30,7 +26,7 @@ Modern JavaScript — as described in the next sections — thankfully makes it 
 
 JavaScript works best with events and callback functions. Modern browsers strive to call methods right as they are needed and idle (or do their other tasks) in the gaps. It is an excellent idea to attach your code to the moments that are appropriate for them. Think about whether your function really needs to be called on a strict interval of time, every frame, or only after something else happens. Being more specific with the browser about when your function needs to be called allows the browser to optimize when it is called. Also, it will probably make your job easier.
 
-Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, `{{ domxref("window.requestAnimationFrame()") }}` will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
+Some code needs to be run frame-by-frame so why attach that function to anything other than the browser's redraw schedule? On the Web, {{ domxref("window.requestAnimationFrame()") }} will be the foundation of most well-programmed per-frame main loops. A callback function must be passed in to it when it is called. That callback function will be executed at a suitable time before the next repaint. Here is an example of a simple main loop:
 
 ```js
 window.main = () => {
@@ -54,7 +50,7 @@ But do not immediately assume animations require frame-by-frame control. Simple 
 
 ## Building a better main loop in JavaScript
 
-There are two obvious issues with our previous main loop: `main()` pollutes the `{{ domxref("window") }}` object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
+There are two obvious issues with our previous main loop: `main()` pollutes the {{ domxref("window") }} object (where all global variables are stored) and the example code did not leave us with a way to _stop_ the loop unless the whole tab is closed or refreshed. For the first issue, if you want the main loop to just run and you do not need easy (direct) access to it, you could create it as an Immediately-Invoked Function Expression (IIFE).
 
 <!-- prettier-ignore-start -->
 ```js
@@ -81,7 +77,7 @@ When the browser comes across this IIFE, it will define your main loop and immed
 
 > **Note:** In practice, it is more common to prevent the next `requestAnimationFrame()` with an if-statement, rather than calling `cancelAnimationFrame()`.
 
-For the second issue, stopping the main loop, you will need to cancel the call to `main()` with `{{ domxref("window.cancelAnimationFrame()") }}`. You will need to pass `cancelAnimationFrame()` the ID token given by `requestAnimationFrame()` when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called `MyGame`. Expanding our last example, the main loop would now look like:
+For the second issue, stopping the main loop, you will need to cancel the call to `main()` with {{ domxref("window.cancelAnimationFrame()") }}. You will need to pass `cancelAnimationFrame()` the ID token given by `requestAnimationFrame()` when it was last called. Let us assume that your game's functions and variables are built on a namespace that you called `MyGame`. Expanding our last example, the main loop would now look like:
 
 <!-- prettier-ignore-start -->
 ```js

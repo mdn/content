@@ -2,14 +2,6 @@
 title: SpeechSynthesisEvent
 slug: Web/API/SpeechSynthesisEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent
 ---
 
@@ -19,12 +11,19 @@ The **`SpeechSynthesisEvent`** interface of the [Web Speech API](/en-US/docs/Web
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisEvent.SpeechSynthesisEvent", "SpeechSynthesisEvent()")}}
+  - : Creates a new `SpeechSynthesisEvent`.
+
 ## Instance properties
 
 _The {{domxref("SpeechSynthesisEvent")}} interface also inherits properties from its parent interface, {{domxref("Event")}}._
 
 - {{domxref("SpeechSynthesisEvent.charIndex")}} {{ReadOnlyInline}}
   - : Returns the index position of the character in the {{domxref("SpeechSynthesisUtterance.text")}} that was being spoken when the event was triggered.
+- {{domxref("SpeechSynthesisEvent.charLength")}} {{ReadOnlyInline}}
+  - : Returns the number of characters left to be spoken after the `charIndex` position, if the speaking engine supports it. Returns 0 if the speaking engine can't provide the information.
 - {{domxref("SpeechSynthesisEvent.elapsedTime")}} {{ReadOnlyInline}}
   - : Returns the elapsed time in seconds after the {{domxref("SpeechSynthesisUtterance.text")}} started being spoken that the event was triggered at.
 - {{domxref("SpeechSynthesisEvent.name")}} {{ReadOnlyInline}}
@@ -41,12 +40,16 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 ```js
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 
 utterThis.onboundary = (event) => {
-  console.log(`${event.name} boundary reached after ${event.elapsedTime} seconds.`);
-}
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

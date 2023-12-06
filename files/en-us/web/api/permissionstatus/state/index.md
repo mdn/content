@@ -1,16 +1,8 @@
 ---
-title: PermissionStatus.state
+title: "PermissionStatus: state property"
+short-title: state
 slug: Web/API/PermissionStatus/state
 page-type: web-api-instance-property
-tags:
-  - API
-  - Event Handler
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Property
-  - Reference
-  - status
 browser-compat: api.PermissionStatus.state
 ---
 
@@ -32,12 +24,16 @@ One of the following:
 ## Examples
 
 ```js
-navigator.permissions.query({ name: 'geolocation' }).then((permissionStatus) => {
-  console.log(`geolocation permission state is ${permissionStatus.state}`);
-  permissionStatus.onchange = () => {
-    console.log(`geolocation permission status has changed to ${permissionStatus.state}`);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission state is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission status has changed to ${permissionStatus.state}`,
+      );
+    };
+  });
 ```
 
 ## Specifications

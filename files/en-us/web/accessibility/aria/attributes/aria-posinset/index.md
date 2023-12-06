@@ -1,13 +1,7 @@
 ---
-title: "aria-posinset"
+title: aria-posinset
 slug: Web/Accessibility/ARIA/Attributes/aria-posinset
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-posinset
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-posinset
 ---
 
@@ -22,8 +16,8 @@ If all the items in a list are present in the DOM, the browser can calculate the
 The following example shows a listbox with four element options out of the 118 in the periodic table of chemical elements.
 
 ```html
-<h2 id="periodictable">Periodic table of chemical elements</h2>
-<ul role="listbox" aria-labelledby="periodictable">
+<h2 id="periodic-table">Periodic table of chemical elements</h2>
+<ul role="listbox" aria-labelledby="periodic-table">
   <li role="option" aria-setsize="118" aria-posinset="1">Hydrogen</li>
   <li role="option" aria-setsize="118" aria-posinset="3">Lithium</li>
   <li role="option" aria-setsize="118" aria-posinset="11">Sodium</li>
@@ -56,8 +50,8 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 Used in roles:
 
 - [`article`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role)
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
-- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemvalue_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`associationlistitemvalue`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`listitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`menuitem`](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitem_role)

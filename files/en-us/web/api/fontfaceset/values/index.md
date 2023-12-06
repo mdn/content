@@ -1,13 +1,8 @@
 ---
-title: FontFaceSet.values()
+title: "FontFaceSet: values() method"
+short-title: values()
 slug: Web/API/FontFaceSet/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - values
-  - FontFaceSet
 browser-compat: api.FontFaceSet.values
 ---
 

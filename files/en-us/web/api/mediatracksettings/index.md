@@ -2,19 +2,6 @@
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Constraints
-  - Dictionary
-  - Interface
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSettings
-  - NeedsExample
-  - Reference
-  - Video
 browser-compat: api.MediaTrackSettings
 ---
 
@@ -22,7 +9,7 @@ browser-compat: api.MediaTrackSettings
 
 The **`MediaTrackSettings`** dictionary is used to return the current values configured for each of a {{domxref("MediaStreamTrack")}}'s settings. These values will adhere as closely as possible to any constraints previously described using a {{domxref("MediaTrackConstraints")}} object and set using {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}, and will adhere to the default constraints for any properties whose constraints haven't been changed, or whose customized constraints couldn't be matched.
 
-To learn more about how constraints and settings work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints).
+To learn more about how constraints and settings work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
 ## Instance properties
 
@@ -31,7 +18,7 @@ Some or all of the following will be included in the object, either because it's
 ### Instance properties of all media tracks
 
 - {{domxref("MediaTrackSettings.deviceId", "deviceId")}}
-  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is a origin-unique string identifying the source of the track; this is usually a {{Glossary("GUID")}}. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
+  - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is an origin-unique string identifying the source of the track; this is usually a [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 - {{domxref("MediaTrackSettings.groupId", "groupId")}}
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.groupId", "groupId")}} property. The group ID is a browsing session-unique string identifying the source group of the track. Two devices (as identified by the {{domxref("MediaTrackSettings.deviceId", "deviceId")}}) are considered part of the same group if they are from the same physical device. For instance, the audio input and output devices for the speaker and microphone built into a phone would share the same group ID, since they're part of the same physical device. The microphone on a headset would have a different ID, though. This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
 

@@ -1,15 +1,7 @@
 ---
 title: "ARIA: none role"
 slug: Web/Accessibility/ARIA/Roles/none_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
-  - none role
-  - presentation role
+page-type: aria-role
 ---
 
 The `none` role is a synonym for the [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role) role; they both remove an element's implicit ARIA semantics from being exposed to the accessibility tree.

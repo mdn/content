@@ -1,14 +1,10 @@
 ---
-title: AudioData.clone()
+title: "AudioData: clone() method"
+short-title: clone()
 slug: Web/API/AudioData/clone
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clone
-  - AudioData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.AudioData.clone
 ---
 
@@ -33,7 +29,7 @@ The cloned {{domxref("AudioData")}} object.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `AudioData` object has been {{Glossary("Transferable Objects","transferred")}}.
+  - : Thrown if the `AudioData` object has been [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Examples
 

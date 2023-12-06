@@ -1,14 +1,7 @@
 ---
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
-tags:
-  - Animation
-  - Animations
-  - CSS
-  - FPS
-  - JavaScript
-  - Performance
-  - Transitions
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -19,8 +12,8 @@ Animations are critical for a pleasurable user experience on many applications. 
 
 Both CSS transitions and animations can be used to write animation. They each have their own user scenarios:
 
-- CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) for more details.
-- CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) for more details.
+- CSS {{cssxref("transition","transitions")}} provide an easy way to make animations occur between the current style and an end CSS state, e.g., a resting button state and a hover state. Even if an element is in the middle of a transition, the new transition starts from the current style immediately instead of jumping to the end CSS state. See [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) for more details.
+- CSS {{cssxref("animation","animations")}}, on the other hand, allow developers to make animations between a set of starting property values and a final set rather than between two states. CSS animations consist of two components: a style describing the CSS animation, and a set of key frames that indicate the start and end states of the animation's style, as well as possible intermediate points. See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for more details.
 
 In terms of performance, there is no difference between implementing an animation with CSS transitions or animations. Both of them are classified under the same CSS-based umbrella in this article.
 
@@ -43,10 +36,10 @@ In this section we'll walk you through a performance test, using Firefox, to see
 Before going through the example, please enable FPS tools first to see the current frame rate:
 
 1. In the URL bar, enter _about:config_; click the `I'll be careful, I promise!` button to enter the config screen.
-    ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
+   ![Warning screen that changing settings can be risky, with a button to accept risks.](pic1.png)
 2. In the search bar, search for the `layers.acceleration.draw-fps` preference.
 3. Double-click the entry to set the value to `true`. Now you will be able to see three little purple boxes in the upper left corner of the Firefox window. The first box represents FPS.
-    ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
+   ![Entering the search term filters the options. Only the layers.acceleration.draw-fps preference is showing and is set to true. Three numbers (001, 001, and 108) are appearing in the upper left corner of the browser, overlaying its UI.](pic2.png)
 
 ### Running the performance test
 
@@ -54,34 +47,33 @@ Initially in the test seen below, a total of 1000 {{htmlelement("div")}} element
 
 ```js
 const boxes = [];
-const button = document.getElementById('toggle-button');
-const boxContainer = document.getElementById('box-container');
-const animationType = document.getElementById('type');
+const button = document.getElementById("toggle-button");
+const boxContainer = document.getElementById("box-container");
+const animationType = document.getElementById("type");
 
 // create boxes
 for (let i = 0; i < 1000; i++) {
-  const div = document.createElement('div');
-  div.classList.add('css-animation');
-  div.classList.add('box');
+  const div = document.createElement("div");
+  div.classList.add("css-animation");
+  div.classList.add("box");
   boxContainer.appendChild(div);
   boxes.push(div.style);
 }
 
 let toggleStatus = true;
 let rafId;
-button.addEventListener('click', () => {
+button.addEventListener("click", () => {
   if (toggleStatus) {
-    animationType.textContent = ' requestAnimationFrame';
+    animationType.textContent = " requestAnimationFrame";
     for (const child of boxContainer.children) {
-      child.classList.remove('css-animation');
+      child.classList.remove("css-animation");
     }
     rafId = window.requestAnimationFrame(animate);
-
   } else {
     window.cancelAnimationFrame(rafId);
-    animationType.textContent = ' CSS animation';
+    animationType.textContent = " CSS animation";
     for (const child of boxContainer.children) {
-      child.classList.add('css-animation');
+      child.classList.add("css-animation");
     }
   }
   toggleStatus = !toggleStatus;
@@ -105,9 +97,13 @@ function animate(time) {
     let transform;
     if (progress >= 1) {
       x = (2 - progress) * translateX;
-      transform = `translateX(${ x }px) rotate(${ (2 - progress) * rotate }deg) scale(${ (0.6 + (2 - progress) * scale ) })`;
+      transform = `translateX(${x}px) rotate(${
+        (2 - progress) * rotate
+      }deg) scale(${0.6 + (2 - progress) * scale})`;
     } else {
-      transform = `translateX(${ x }px) rotate(${ progress * rotate }deg) scale(${ (0.6 + progress * scale ) })`;
+      transform = `translateX(${x}px) rotate(${progress * rotate}deg) scale(${
+        0.6 + progress * scale
+      })`;
     }
 
     for (const box of boxes) {

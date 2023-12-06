@@ -1,21 +1,14 @@
 ---
-title: Element.ariaAtomic
+title: "Element: ariaAtomic property"
+short-title: ariaAtomic
 slug: Web/API/Element/ariaAtomic
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAtomic
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaAtomic
 ---
 
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the {{domxref("aria-relevant")}} attribute.
+The **`ariaAtomic`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
 
 ## Value
 
@@ -35,9 +28,9 @@ In this example the `aria-atomic` attribute on the element with an ID of `"clock
 ```
 
 ```js
-let el = document.getElementById('clock');
+let el = document.getElementById("clock");
 console.log(el.ariaAtomic); // true
-el.ariaAtomic = "false"
+el.ariaAtomic = "false";
 console.log(el.ariaAtomic); // false
 ```
 

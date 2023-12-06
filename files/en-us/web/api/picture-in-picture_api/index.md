@@ -2,29 +2,19 @@
 title: Picture-in-Picture API
 slug: Web/API/Picture-in-Picture_API
 page-type: web-api-overview
-tags:
-  - API
-  - DOM
-  - Graphics
-  - Guide
-  - Overview
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - View
-  - pip
 browser-compat: api.PictureInPictureWindow
 ---
 
 {{DefaultAPISidebar("Picture-in-Picture API")}}
 
-The **Picture-in-Picture API** allow websites to create a floating video window always on top of other windows so that users may continue consuming media while they interact with other content sites, or applications on their device.
+The **Picture-in-Picture API** allow websites to create a floating, always-on-top video window. This allows users to continue consuming media while they interact with other sites or applications on their device.
+
+> **Note:** The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
-  - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/onresize", "onresize")}} event handler property.
+  - : Represents the floating video window; contains {{domxref("PictureInPictureWindow/width", "width")}} and {{domxref("PictureInPictureWindow/height", "height")}} properties, and an {{domxref("PictureInPictureWindow/resize_event", "onresize")}} event handler property.
 
 ## Instance methods
 
@@ -46,15 +36,13 @@ The Picture-in-Picture API augments the {{DOMxRef("HTMLVideoElement")}}, {{DOMxR
 
 ### Instance properties on the HTMLVideoElement interface
 
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
-  - : The `autoPictureInPicture` property will automatically enter and leave the picture-in-picture mode for a video element when the user switches tab and/or applications.
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
   - : The `disablePictureInPicture` property will provide a hint to the user agent to not suggest the picture-in-picture to users or to request it automatically.
 
 ### Instance properties on the Document interface
 
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
-  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Feature-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
+  - : The `pictureInPictureEnabled` property tells you whether or not it is possible to engage picture-in-picture mode. This is `false` if picture-in-picture mode is not available for any reason (e.g. the [`"picture-in-picture"` feature](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/picture-in-picture) has been disallowed, or picture-in-picture mode is not supported).
 
 ### Instance properties on the Document or ShadowRoot interfaces
 
@@ -82,9 +70,7 @@ The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-U
 
 ## Controlling access
 
-The availability of picture-in-picture mode can be controlled using [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy). The fullscreen mode feature is identified by the string `"picture-in-picture"`, with a default allow-list value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
-
-See [Using Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) to learn more about using Feature Policy to control access to an API.
+The availability of picture-in-picture mode can be controlled using [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy). The fullscreen mode feature is identified by the string `"picture-in-picture"`, with a default allowlist value of `"self"`, meaning that picture-in-picture mode is permitted in top-level document contexts, as well as to nested browsing contexts loaded from the same origin as the top-most document.
 
 ## Examples
 
@@ -123,9 +109,9 @@ If the value is `null`, no video is in the floating window. So we can request a 
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}
 - {{CSSxRef(":picture-in-picture")}}
+- The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API)

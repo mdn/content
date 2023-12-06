@@ -1,13 +1,8 @@
 ---
-title: KeyboardEvent()
+title: "KeyboardEvent: KeyboardEvent() constructor"
+short-title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM
-  - KeyboardEvent
-  - Reference
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
 

@@ -1,28 +1,8 @@
 ---
-title: XRReferenceSpace.getOffsetReferenceSpace()
+title: "XRReferenceSpace: getOffsetReferenceSpace() method"
+short-title: getOffsetReferenceSpace()
 slug: Web/API/XRReferenceSpace/getOffsetReferenceSpace
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Mixed
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - Rotate
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpace
-  - augmented
-  - getOffsetReferenceSpace
-  - move
-  - movement
-  - Method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
 
@@ -84,11 +64,11 @@ Upon first creating a scene, you may need to set the user's position within the 
 world. You can do that using `getOffsetReferenceSpace()`.
 
 ```js
-xrSession.requestReferenceSpace("local")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(startPosition, {x:0, y:0, z:1.0, w: 1.0}));
+    new XRRigidTransform(startPosition, { x: 0, y: 0, z: 1.0, w: 1.0 }),
+  );
   xrSession.requestAnimationFrame(drawFrame);
 });
 ```
@@ -119,7 +99,9 @@ events. This prevents the right-clicks from causing the context menu from appear
 the browser.
 
 ```js
-canvas.oncontextmenu = (event) => { event.preventDefault(); };
+canvas.oncontextmenu = (event) => {
+  event.preventDefault();
+};
 canvas.addEventListener("mousemove", (event) => {
   if (event.buttons & 2) {
     rotateViewBy(event.movementX, event.movementY);
@@ -164,9 +146,15 @@ function applyMouseMovement(refSpace) {
   quat.rotateX(inverseOrientation, inverseOrientation, -mousePitch);
   quat.rotateY(inverseOrientation, inverseOrientation, -mouseYaw);
 
-  let newTransform = new XRRigidTransform({x: 0, y:  0, z: 0},
-                         {x: inverseOrientation[0], y: inverseOrientation[1],
-                          z: inverseOrientation[2], w: inverseOrientation[3]});
+  let newTransform = new XRRigidTransform(
+    { x: 0, y: 0, z: 0 },
+    {
+      x: inverseOrientation[0],
+      y: inverseOrientation[1],
+      z: inverseOrientation[2],
+      w: inverseOrientation[3],
+    },
+  );
 
   return refSpace.getOffsetReferenceSpace(newTransform);
 }

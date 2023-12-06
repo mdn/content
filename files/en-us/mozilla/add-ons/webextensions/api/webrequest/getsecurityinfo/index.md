@@ -1,15 +1,7 @@
 ---
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getSecurityInfo
-  - webRequest
+page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.getSecurityInfo
 ---
 
@@ -60,20 +52,23 @@ This example listens for all HTTPS requests to "mozilla.org" or its subdomains, 
 ```js
 async function logSubject(details) {
   try {
-    let securityInfo = await browser.webRequest.getSecurityInfo(details.requestId, {});
+    let securityInfo = await browser.webRequest.getSecurityInfo(
+      details.requestId,
+      {},
+    );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
       console.log(securityInfo.certificates[0].subject);
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logSubject,
-  {urls: ["https://*.mozilla.org/*"]},
-  ["blocking"]
+browser.webRequest.onHeadersReceived.addListener(
+  logSubject,
+  { urls: ["https://*.mozilla.org/*"] },
+  ["blocking"],
 );
 ```
 
@@ -84,21 +79,23 @@ async function logRoot(details) {
   try {
     let securityInfo = await browser.webRequest.getSecurityInfo(
       details.requestId,
-      {"certificateChain": true}
+      { certificateChain: true },
     );
     console.log(details.url);
     if (securityInfo.state === "secure" || securityInfo.state === "weak") {
-      console.log(securityInfo.certificates[securityInfo.certificates.length - 1].issuer);
+      console.log(
+        securityInfo.certificates[securityInfo.certificates.length - 1].issuer,
+      );
     }
-  }
-  catch (error) {
+  } catch (error) {
     console.error(error);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(logRoot,
-  {urls: ["https://*.mozilla.org/*"]},
-  ["blocking"]
+browser.webRequest.onHeadersReceived.addListener(
+  logRoot,
+  { urls: ["https://*.mozilla.org/*"] },
+  ["blocking"],
 );
 ```
 

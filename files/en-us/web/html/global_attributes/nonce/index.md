@@ -1,10 +1,7 @@
 ---
 title: nonce
 slug: Web/HTML/Global_attributes/nonce
-tags:
-  - Global attributes
-  - HTML
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.nonce
 ---
 
@@ -17,17 +14,17 @@ be allowed to proceed for a given element.
 
 ## Description
 
-The `nonce` attribute is useful to allow-list specific elements, such as a particular inline script or style elements.
-It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allow-list _all_ inline scripts or styles.
+The `nonce` attribute is useful to allowlist specific elements, such as a particular inline script or style elements.
+It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allowlist _all_ inline scripts or styles.
 
 > **Note:** Only use `nonce` for cases where you have no way around using unsafe inline script
 > or style contents. If you don't need `nonce`, don't use it. If your script is static, you could also use a CSP hash instead.
 > (See usage notes on [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).)
 > Always try to take full advantage of [CSP](/en-US/docs/Web/HTTP/CSP) protections and avoid nonces or unsafe inline scripts whenever possible.
 
-### Using nonce to allow-list a \<script> element
+### Using nonce to allowlist a \<script> element
 
-There are a few steps involved to allow-list an inline script using the nonce mechanism:
+There are a few steps involved to allowlist an inline script using the nonce mechanism:
 
 #### Generating values
 
@@ -40,9 +37,9 @@ crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```
 
-#### Allow-listing inline script
+#### Allowlisting inline script
 
-The nonce generated on your backend code should now be used for the inline script that you'd like to allow-list:
+The nonce generated on your backend code should now be used for the inline script that you'd like to allowlist:
 
 ```html
 <script nonce="8IBTHwOdqNKAWeKl7plt8g==">

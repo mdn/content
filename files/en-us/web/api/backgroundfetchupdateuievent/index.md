@@ -2,12 +2,8 @@
 title: BackgroundFetchUpdateUIEvent
 slug: Web/API/BackgroundFetchUpdateUIEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - BackgroundFetchUpdateUIEvent
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BackgroundFetchUpdateUIEvent
 ---
 
@@ -56,7 +52,7 @@ addEventListener("backgroundfetchsuccess", (event) => {
 
       // Update the progress notification.
       event.updateUI({ title: "Episode 5 ready to listen!" });
-    })()
+    })(),
   );
 });
 ```

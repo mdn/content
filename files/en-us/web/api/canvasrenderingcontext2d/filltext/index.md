@@ -1,21 +1,8 @@
 ---
-title: CanvasRenderingContext2D.fillText()
+title: "CanvasRenderingContext2D: fillText() method"
+short-title: fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Draw String
-  - Draw Text
-  - Drawing Strings
-  - Drawing Text
-  - Fill Text
-  - Filling Text
-  - Method
-  - Reference
-  - Text
-  - fillText
 browser-compat: api.CanvasRenderingContext2D.fillText
 ---
 

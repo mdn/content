@@ -1,11 +1,7 @@
 ---
 title: 303 See Other
 slug: Web/HTTP/Status/303
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
+page-type: http-status-code
 browser-compat: http.status.303
 ---
 
@@ -18,7 +14,7 @@ redirected page is always {{HTTPMethod("GET")}}.
 
 ## Status
 
-```
+```http
 303 See Other
 ```
 

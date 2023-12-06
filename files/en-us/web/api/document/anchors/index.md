@@ -1,14 +1,10 @@
 ---
-title: Document.anchors
+title: "Document: anchors property"
+short-title: anchors
 slug: Web/API/Document/anchors
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.Document.anchors
 ---
 
@@ -33,7 +29,7 @@ The following is an example that auto populates a Table of Contents with every a
 on the page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

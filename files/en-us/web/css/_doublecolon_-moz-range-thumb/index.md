@@ -1,14 +1,9 @@
 ---
-title: '::-moz-range-thumb'
+title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
 page-type: css-pseudo-element
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+status:
+  - non-standard
 browser-compat: css.selectors.-moz-range-thumb
 ---
 
@@ -20,8 +15,10 @@ The **`::-moz-range-thumb`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/
 
 ## Syntax
 
-```
-::-moz-range-thumb
+```css
+::-moz-range-thumb {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -46,7 +43,7 @@ input[type="range"]::-moz-range-thumb {
 
 A progress bar using this style might look something like this:
 
-![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![The thumb of the 'input type=right' styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Specifications
 
@@ -66,7 +63,6 @@ Not part of any standard.
 - Similar pseudo-elements used by other browsers:
 
   - {{cssxref("::-webkit-slider-thumb")}}, pseudo-element supported by WebKit and Blink (Safari, Chrome, and Opera)
-  - {{cssxref("::-ms-thumb")}}, pseudo-element supported by Internet Explorer and Edge
 
 - [CSS-Tricks: Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 - [QuirksMode: Styling and scripting sliders](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

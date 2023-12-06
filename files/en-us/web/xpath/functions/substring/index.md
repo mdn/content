@@ -1,18 +1,16 @@
 ---
 title: substring
 slug: Web/XPath/Functions/substring
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `substring` function returns a part of a given string.
 
 ### Syntax
 
-```
+```plain
 substring(string, start)
 substring(string, start, length)
 ```

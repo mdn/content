@@ -1,16 +1,10 @@
 ---
-title: Keyboard.unlock()
+title: "Keyboard: unlock() method"
+short-title: unlock()
 slug: Web/API/Keyboard/unlock
 page-type: web-api-instance-method
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Method
-  - Reference
-  - keyboard
-  - unLock
-  - Experimental
+status:
+  - experimental
 browser-compat: api.Keyboard.unlock
 ---
 

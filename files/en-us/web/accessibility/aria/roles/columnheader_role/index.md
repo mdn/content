@@ -1,16 +1,10 @@
 ---
 title: "ARIA: columnheader role"
 slug: Web/Accessibility/ARIA/Roles/columnheader_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - document structure role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#columnheader
-  - https://w3c.github.io/aria-practices/#table
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
 
 The `columnheader` value of the ARIA role attribute identifies an element as being a cell in a row contains header information for a column, similar to the native {{HTMLElement('th')}} element with column scope.

@@ -1,21 +1,8 @@
 ---
-title: VideoPlaybackQuality.droppedVideoFrames
+title: "VideoPlaybackQuality: droppedVideoFrames property"
+short-title: droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
 page-type: web-api-instance-property
-tags:
-  - API
-  - Data Loss
-  - Frames
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Playback
-  - Property
-  - Quality
-  - Reference
-  - Video
-  - VideoPlaybackQuality
-  - droppedVideoFrames
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
 ---
 
@@ -48,7 +35,8 @@ const videoElem = document.getElementById("my_vid");
 const percentElem = document.getElementById("percent");
 const quality = videoElem.getVideoPlaybackQuality();
 
-const dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
+const dropPercent =
+  (quality.droppedVideoFrames / quality.totalVideoFrames) * 100;
 percentElem.innerText = Math.trunc(dropPercent).toString(10);
 ```
 

@@ -1,14 +1,8 @@
 ---
-title: Element.shadowRoot
+title: "Element: shadowRoot property"
+short-title: shadowRoot
 slug: Web/API/Element/shadowRoot
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - Property
-  - Reference
-  - ShadowRoot
-  - shadow DOM
 browser-compat: api.Element.shadowRoot
 ---
 
@@ -40,12 +34,12 @@ parameter.
 ```js
 class Square extends HTMLElement {
   connectedCallback() {
-    console.log('Custom square element added to page.');
+    console.log("Custom square element added to page.");
     updateStyle(this);
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('Custom square element attributes changed.');
+    console.log("Custom square element attributes changed.");
     updateStyle(this);
   }
 }
@@ -62,12 +56,12 @@ function updateStyle(elem) {
   const childNodes = Array.from(shadow.childNodes);
 
   childNodes.forEach((childNode) => {
-    if (childNode.nodeName === 'STYLE') {
+    if (childNode.nodeName === "STYLE") {
       childNode.textContent = `
         div {
-          width: ${elem.getAttribute('l')}px;
-          height: ${elem.getAttribute('l')}px;
-          background-color: ${elem.getAttribute('c')};
+          width: ${elem.getAttribute("l")}px;
+          height: ${elem.getAttribute("l")}px;
+          background-color: ${elem.getAttribute("c")};
         }
       `;
     }
@@ -82,7 +76,3 @@ function updateStyle(elem) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{DOMxRef("Element.openOrClosedShadowRoot")}} {{non-standard_inline}}

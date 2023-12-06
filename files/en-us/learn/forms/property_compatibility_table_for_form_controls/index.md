@@ -1,15 +1,7 @@
 ---
 title: CSS property compatibility table for form controls
 slug: Learn/Forms/Property_compatibility_table_for_form_controls
-tags:
-  - Advanced
-  - CSS
-  - Forms
-  - Guide
-  - HTML
-  - Junk
-  - NeedsUpdate
-  - Web
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}
@@ -44,28 +36,12 @@ For each property there are two possible renderings:
 * {
   /* Turn off the native look and feel */
   appearance: none;
-
-  /* for Internet Explorer */
-  background: none;
 }
 ```
 
 ## Compatibility tables
 
-### Global behaviors
-
-Some behaviors are common to many browsers at a global level:
-
-- {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, {{cssxref("height")}}
-  - : Using one of these properties can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
-- {{cssxref("line-height")}}
-  - : This property is supported inconsistently across browsers and you should avoid it.
-- {{cssxref("text-decoration")}}
-  - : This property is not supported by Opera on form widgets.
-- {{cssxref("text-overflow")}}
-  - : Opera, Safari, and IE9 do not support this property on form widgets.
-- {{cssxref("text-shadow")}}
-  - : Opera does not support {{cssxref("text-shadow")}} on form widgets and IE9 does not support it at all.
+Altering the appearance of form controls with CSS, such as with {{cssxref("border")}}, {{cssxref("background")}}, {{cssxref("border-radius")}}, and {{cssxref("height")}} can partially or fully turn off the native look & feel of widgets on some browsers. Be careful when you use them.
 
 ### Text fields
 
@@ -102,7 +78,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("height")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -112,12 +88,8 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -127,7 +99,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -137,12 +109,8 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -164,7 +132,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("padding")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -174,12 +142,8 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
           <li>
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
-            <code>-webkit-appearance:none</code> to be able to apply this
+            <code>appearance:none</code> to be able to apply this
             property to search fields.
-          </li>
-          <li>
-            On Windows 7, Internet Explorer 9 does not apply the border unless
-            <code>background:none</code> is applied.
           </li>
         </ol>
       </td>
@@ -335,8 +299,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
             <code>-webkit-appearance:none</code> to be able to apply this
-            property to search fields. On Windows 7, Internet Explorer 9 does
-            not apply the border unless <code>background:none</code> is applied.
+            property to search fields.
           </li>
         </ol>
       </td>
@@ -346,7 +309,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
         {{cssxref("border-radius")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
         ✅ Yes
@@ -357,12 +320,7 @@ See the `{{htmlelement("input/text", "text")}}`, `{{htmlelement("input/search", 
             WebKit browsers (mostly on Mac OSX and iOS) use the native look
             &#x26; feel for the search fields. Therefore, it's required to use
             <code>-webkit-appearance:none</code> to be able to apply this
-            property to search fields. On Windows 7, Internet Explorer 9 does
-            not apply the border unless <code>background:none</code> is applied.
-          </li>
-          <li>
-            On Opera the {{cssxref("border-radius")}} property is
-            applied only if an explicit border is set.
+            property to search fields.
           </li>
         </ol>
       </td>
@@ -1276,25 +1234,6 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
     </tr>
     <tr>
       <th scope="row" style="white-space: nowrap; vertical-align: top">
-        {{cssxref("text-align")}}
-      </th>
-      <td style="text-align: center; vertical-align: top">
-        ❌ No<sup>[1]</sup>
-      </td>
-      <td style="text-align: center; vertical-align: top">
-        ❌ No<sup>[1]</sup>
-      </td>
-      <td>
-        <ol>
-          <li>
-            IE9 on Windows 7 and WebKit based browsers on Mac OSX do not support
-            this property on this widget.
-          </li>
-        </ol>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row" style="white-space: nowrap; vertical-align: top">
         {{cssxref("text-decoration")}}
       </th>
       <td style="text-align: center; vertical-align: top">
@@ -1306,8 +1245,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
       <td>
         <ol>
           <li>
-            Only Firefox provides full support for this property. Opera does not
-            support this property at all and other browsers only support it on
+            Only Firefox provides full support for this property. Other browsers only support it on
             the <code>{{htmlelement("select")}}</code> element.
           </li>
         </ol>
@@ -1318,10 +1256,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-indent")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1329,7 +1267,6 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
             Most of the browsers only support this property on the
             <code>{{htmlelement("select")}}</code> element.
           </li>
-          <li>IE9 does not support this property.</li>
         </ol>
       </td>
     </tr>
@@ -1350,10 +1287,10 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
         {{cssxref("text-shadow")}}
       </th>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td style="text-align: center; vertical-align: top">
-        ⚠️ Partial<sup>[1][2]</sup>
+        ⚠️ Partial<sup>[1]</sup>
       </td>
       <td>
         <ol>
@@ -1361,7 +1298,6 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
             Most of the browsers only support this property on the
             <code>{{htmlelement("select")}}</code> element.
           </li>
-          <li>IE9 does not support this property.</li>
         </ol>
       </td>
     </tr>
@@ -1586,7 +1522,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
       <td>
         <ol>
           <li>
-            IE9 on Windows 7 and WebKit based browser on Mac OSX do not support
+            WebKit based browser on Mac OSX do not support
             this property on this widget.
           </li>
         </ol>
@@ -1720,7 +1656,7 @@ See the `{{htmlelement("select")}}`, `{{htmlelement("optgroup")}}` and `{{htmlel
 
 ### Datalist
 
-See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list` attribute](/en-US/docs/Web/HTML/Attributes/list).
+See the `{{htmlelement("datalist")}}` and `{{htmlelement("input")}}` elements and the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute.
 
 <table>
   <thead>
@@ -2918,8 +2854,7 @@ See the `{{htmlelement("input/range", "range")}}` input type. There is no standa
       <td>
         <ol>
           <li>
-            Chrome and Opera add some extra space around the widget, whereas
-            Opera on Windows 7 stretches the range grip.
+            Chrome and Opera add some extra space around the widget.
           </li>
         </ol>
       </td>
@@ -3319,4 +3254,4 @@ See the `{{htmlelement("input/image", "image")}}` input type:
 - [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- **Property compatibility table for form widgets**

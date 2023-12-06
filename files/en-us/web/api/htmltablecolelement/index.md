@@ -2,12 +2,6 @@
 title: HTMLTableColElement
 slug: Web/API/HTMLTableColElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
 browser-compat: api.HTMLTableColElement
 ---
 
@@ -28,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
   - : A string representing the offset for the alignment character.
 - {{domxref("HTMLTableColElement.span")}}
-  - : An `unsigned long` that reflects the {{htmlattrxref("span", "col")}} HTML attribute, indicating the number of columns to apply this object's attributes to. Must be a positive integer.
+  - : An `unsigned long` that reflects the [`span`](/en-US/docs/Web/HTML/Element/col#span) HTML attribute, indicating the number of columns to apply this object's attributes to. Must be a positive integer.
 - {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
   - : A string that indicates the vertical alignment of the cell data in the column.
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}

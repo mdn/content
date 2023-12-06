@@ -2,11 +2,6 @@
 title: Server-sent events
 slug: Web/API/Server-sent_events
 page-type: web-api-overview
-tags:
-  - API
-  - Overview
-  - SSE
-  - Server-sent events
 spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events
 ---
 
@@ -16,7 +11,7 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 {{AvailableInWorkers}}
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See {{bug(1681218)}}.
+> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See [Firefox bug 1681218](https://bugzil.la/1681218).
 
 ## Concepts and usage
 
@@ -48,11 +43,10 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ### Related Topics
 
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
+- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 
 ### Other resources
 
 - A [Twitter like application](https://hacks.mozilla.org/2011/06/a-wall-powered-by-eventsource-and-server-sent-events/) powered by server-sent events and [its code on GitHub](https://github.com/mozilla/webowonder-demos/tree/master/demos/friends%20timeline).
-- [HTML5 and Server-sent events](https://dsheiko.com/weblog/html5-and-server-sent-events/)

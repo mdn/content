@@ -1,11 +1,9 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - Manifest
-  - Web
-  - related_applications
-  - Experimental
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.related_applications
 ---
 
@@ -16,10 +14,6 @@ browser-compat: html.manifest.related_applications
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -39,13 +33,16 @@ The `related_applications` field is an array of objects specifying native applic
   }, {
     "platform": "itunes",
     "url": "https://itunes.apple.com/app/example-app1/id123456789"
+  }, {
+    "platform": "windows",
+    "url": "https://apps.microsoft.com/store/detail/example-app1/id123456789"
   }
 ]
 ```
 
-## Related application values
+## Related application properties
 
-Application objects may contain the following values:
+Application objects may contain the following properties:
 
 | Member     | Description                                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------ |

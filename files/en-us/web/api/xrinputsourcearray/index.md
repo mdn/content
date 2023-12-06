@@ -2,26 +2,8 @@
 title: XRInputSourceArray
 slug: Web/API/XRInputSourceArray
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Interface
-  - Mixed
-  - Reality
-  - Reference
-  - Sources
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - list
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray
 ---
 

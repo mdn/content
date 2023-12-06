@@ -1,14 +1,8 @@
 ---
-title: ChannelMergerNode()
+title: "ChannelMergerNode: ChannelMergerNode() constructor"
+short-title: ChannelMergerNode()
 slug: Web/API/ChannelMergerNode/ChannelMergerNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - ChannelMergerNode
-  - Constructor
-  - Reference
-  - Web Audio API
 browser-compat: api.ChannelMergerNode.ChannelMergerNode
 ---
 

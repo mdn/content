@@ -1,13 +1,8 @@
 ---
 title: WebAssembly.Tag() constructor
 slug: WebAssembly/JavaScript_interface/Tag/Tag
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-  - Tag
-browser-compat: javascript.builtins.WebAssembly.Tag.Tag
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Tag.Tag
 ---
 
 {{WebAssemblySidebar}}
@@ -31,14 +26,12 @@ new WebAssembly.Tag(type)
 
 ### Exceptions
 
-- {{jsxref("TypeError")}}:
+- {{jsxref("TypeError")}}
 
   - : Thrown if at least one of these conditions are met:
     - The `type` parameter is not an object.
     - The `type.parameters` property is not supplied.
     - The `type.parameters` contains an unsupported data type.
-
-- A {{jsxref("TypeError")}} will be thrown if `type` is not an object, the `type.parameters` property is not supplied, or `type.parameters` contains an unsupported data type.
 
 ## Examples
 

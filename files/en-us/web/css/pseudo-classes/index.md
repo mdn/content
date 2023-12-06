@@ -2,13 +2,6 @@
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
 page-type: landing-page
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
 spec-urls:
   - https://html.spec.whatwg.org/multipage/#pseudo-classes
   - https://drafts.csswg.org/selectors/
@@ -26,7 +19,7 @@ button:hover {
 }
 ```
 
-A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parenthesis to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
+A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g., `:hover`). A functional pseudo-class also contains a pair of parentheses to define the arguments (e.g., `:dir()`). The element that a pseudo-class is attached to is defined as an _anchor element_ (e.g., `button` in case `button:hover`).
 
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
@@ -79,6 +72,8 @@ These pseudo-classes relate to form elements, and enable selecting elements base
   - : Matches when a form element is required.
 - {{CSSxRef(":optional")}}
   - : Matches when a form element is optional.
+- {{CSSxRef(":user-valid")}}
+  - : Represents an element with correct input, but only when the user has interacted with it.
 - {{CSSxRef(":user-invalid")}}
   - : Represents an element with incorrect input, but only when the user has interacted with it.
 
@@ -86,9 +81,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir()")}}
+- {{CSSxRef(":dir", ":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang()")}}
+- {{CSSxRef(":lang", ":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes
@@ -176,14 +171,14 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 ## Functional pseudo-classes
 
-These pseudo-classes accept a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
+These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list#selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
 
 - [`:is()`](/en-US/docs/Web/CSS/:is)
-  - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided.
+  - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
 - [`:not()`](/en-US/docs/Web/CSS/:not)
   - : The negation, or matches-none, pseudo-class represents any element that is not represented by its argument.
 - [`:where()`](/en-US/docs/Web/CSS/:where)
-  - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight.
+  - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight. The list is forgiving.
 - [`:has()`](/en-US/docs/Web/CSS/:has)
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
 
@@ -233,11 +228,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -271,9 +266,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -287,9 +280,9 @@ O
 P
 
 - {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
 
 R

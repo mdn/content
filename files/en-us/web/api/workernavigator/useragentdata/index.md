@@ -1,18 +1,14 @@
 ---
-title: WorkerNavigator.userAgentData
+title: "WorkerNavigator: userAgentData property"
+short-title: userAgentData
 slug: Web/API/WorkerNavigator/userAgentData
 page-type: web-api-instance-property
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - NavigatorUAData
-  - Experimental
+status:
+  - experimental
 browser-compat: api.WorkerNavigator.userAgentData
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`userAgentData`** read-only property of the {{domxref("WorkerNavigator")}} interface returns an {{domxref("NavigatorUAData")}} object
 which can be used to access the {{domxref("User-Agent Client Hints API")}}.
@@ -39,4 +35,4 @@ console.log(navigator.userAgentData.brands);
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/articles/user-agent-client-hints/)

@@ -2,15 +2,6 @@
 title: Using bounded reference spaces
 slug: Web/API/WebXR_Device_API/Bounded_reference_spaces
 page-type: guide
-tags:
-  - 3D
-  - Graphics
-  - Guide
-  - Reference Space
-  - WebXR
-  - WebXR Device API
-  - XRBoundedReferenceSpace
-  - space
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -21,7 +12,7 @@ There are many uses for bounded reference spaces, including projects such as vir
 
 ## Introduction
 
-A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real world environment that are available for their movement while in the simulation.
+A bounded reference space is one which represents an XR environment in which the user is able to move around physically in the real world while being tracked by the XR hardware, with their movements being then transposed into the simulation. The boundaries established by the bounded reference space, then, represent the edges of the safely passable, tracked space in the user's real-world environment that are available for their movement while in the simulation.
 
 ### Requirements
 
@@ -73,13 +64,15 @@ Before actually attempting to create a bounded reference space, you need to crea
 ```js
 async function onActivateXRButton(event) {
   if (!xrSession) {
-    navigator.xr.requestSession("immersive-vr", {
-      requiredFeatures: ["local-floor"],
-      optionalFeatures: ["bounded-floor"]
-    }).then((session) => {
-      xrSession = session;
-      startSessionAnimation();
-    });
+    navigator.xr
+      .requestSession("immersive-vr", {
+        requiredFeatures: ["local-floor"],
+        optionalFeatures: ["bounded-floor"],
+      })
+      .then((session) => {
+        xrSession = session;
+        startSessionAnimation();
+      });
   }
 }
 ```
@@ -103,19 +96,21 @@ function onSessionStarted(session) {
   xrSession = session;
 
   spaceType = "bounded-floor";
-  xrSession.requestReferenceSpace(spaceType)
-  .then(onRefSpaceCreated)
-  .catch(() => {
-    spaceType = "local-floor";
-    xrSession.requestReferenceSpace(spaceType)
+  xrSession
+    .requestReferenceSpace(spaceType)
     .then(onRefSpaceCreated)
-    .catch(handleError);
-  });
+    .catch(() => {
+      spaceType = "local-floor";
+      xrSession
+        .requestReferenceSpace(spaceType)
+        .then(onRefSpaceCreated)
+        .catch(handleError);
+    });
 }
 
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   // Now set up matrices, create a secondary reference space to
@@ -135,20 +130,21 @@ It's important, however, to keep in mind that while a `local-floor` space provid
 
 If upon attempting to create a `local-floor` reference space, the user's XR device doesn't have built-in support for determining floor level, the WebXR layer will still create a `local-floor` space. However, the floor level will be simulated by choosing and emulating the floor level and shifting the view upward by a fixed amount in order to ensure that the scene's contents render in the right place.
 
-Keep in mind that by default, the viewer's position is placed _immediately_ above the floor, like a camera lying on the ground. If you wish to simulate a human's perspective on the scene, you probably want to move the viewpoint upward by a distance that approximates human eye level by transforming it by providing an appropriate transform matrix to the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.requestOffsetReferenceSpace", "requestOffsetReferenceSpace()")}}.
+Keep in mind that by default, the viewer's position is placed _immediately_ above the floor, like a camera lying on the ground. If you wish to simulate a human's perspective on the scene, you probably want to move the viewpoint upward by a distance that approximates human eye level by transforming it by providing an appropriate transform matrix to the {{domxref("XRReferenceSpace")}} method {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}.
 
 This would change the `onRefSpaceCreated()` method from the above snippet to:
 
 ```js
 function onRefSpaceCreated(refSpace) {
   xrSession.updateRenderState({
-    baseLayer: new XRWebGLLayer(xrSession, gl)
+    baseLayer: new XRWebGLLayer(xrSession, gl),
   });
 
   let startPosition = vec3.fromValues(0, 1.5, 0);
   const startOrientation = vec3.fromValues(0, 0, 1.0);
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-          new XRRigidTransform(startPosition, startOrientation));
+    new XRRigidTransform(startPosition, startOrientation),
+  );
 
   xrSession.requestAnimationFrame(onDrawFrame);
 }
@@ -156,7 +152,7 @@ function onRefSpaceCreated(refSpace) {
 
 In this code, executed after the reference space has been created, we create an {{domxref("XRRigidTransform")}} representing the transform that will move the viewpoint upward by 1.5 meters. This approximates human height, though it assumes we've previously transformed the coordinate system so that the value of each coordinate is no longer constrained to -1 to 1, while maintaining the definition that a value of 1 represents one meter).
 
-The new transform is passed into `requestOffsetReferenceFrame()` to obtain a reference frame which maps the coordinates between the base coordinate system and that of the rendered image. The new reference space replaces the original one. Finally, drawing begins by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
+The new transform is passed into `getOffsetReferenceSpace()` to obtain a reference space that maps the coordinates between the base coordinate system and that of the rendered image. The new reference space replaces the original one. Finally, drawing begins by calling the {{domxref("XRSession")}} method {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}.
 
 ## See also
 

@@ -1,18 +1,8 @@
 ---
-title: RTCTrackEvent.transceiver
+title: "RTCTrackEvent: transceiver property"
+short-title: transceiver
 slug: Web/API/RTCTrackEvent/transceiver
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCTrackEvent
-  - RTP
-  - Reference
-  - Transceiver
-  - WebRTC
-  - WebRTC API
-  - events
 browser-compat: api.RTCTrackEvent.transceiver
 ---
 

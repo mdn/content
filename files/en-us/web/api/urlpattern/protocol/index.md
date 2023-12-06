@@ -1,14 +1,10 @@
 ---
-title: URLPattern.protocol
+title: "URLPattern: protocol property"
+short-title: protocol
 slug: Web/API/URLPattern/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.protocol
 ---
 
@@ -31,7 +27,7 @@ The below example creates a {{domxref("URLPattern")}} object with `http{s}?` for
 the `protocol` part. This pattern matches the `http` and `https` protocols.
 
 ```js
-const pattern = new URLPattern({ protocol: 'http{s}?' });
+const pattern = new URLPattern({ protocol: "http{s}?" });
 console.log(pattern.protocol); // 'http{s}?'
 ```
 

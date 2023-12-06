@@ -1,14 +1,10 @@
 ---
-title: DeprecationReportBody.sourceFile
+title: "DeprecationReportBody: sourceFile property"
+short-title: sourceFile
 slug: Web/API/DeprecationReportBody/sourceFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - sourceFile
-  - DeprecationReportBody
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody.sourceFile
 ---
 
@@ -28,9 +24,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe depr
 
 ```js
 let options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 let observer = new ReportingObserver((reports, observer) => {
   let firstReport = reports[0];

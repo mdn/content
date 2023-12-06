@@ -1,18 +1,16 @@
 ---
 title: number
 slug: Web/XPath/Functions/number
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `number` function converts an object to a number and returns the number.
 
 ### Syntax
 
-```
+```plain
 number( [object] )
 ```
 

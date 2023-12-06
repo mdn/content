@@ -1,10 +1,10 @@
 ---
 title: Database
 slug: Glossary/Database
-tags:
-  - Database
-  - Sql
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 A **database** is a storing system that collects organized data, to make some works easier like searching, structure, and extend.
 

@@ -2,12 +2,6 @@
 title: background-position
 slug: Web/CSS/background-position
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-position
 ---
 
@@ -36,7 +30,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Multiple images */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Edge offsets values */
 background-position: bottom 10px right 20px;
@@ -60,18 +56,18 @@ The `background-position` property is specified as one or more `<position>` valu
 
   - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s).
 
-    **1-value syntax:** the value may be:
+    **1-value syntax:** The value may be:
 
     - The keyword value `center`, which centers the image.
-    - One of the keyword values `top`, `left`, `bottom`, `right`. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.
+    - One of the keyword values `top`, `left`, `bottom`, or `right`. This specifies an edge against which to place the item. The other dimension is then set to 50%, so the item is placed in the middle of the edge specified.
     - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. This specifies the X coordinate relative to the left edge, with the Y coordinate set to 50%.
 
-    **2-value syntax:** one value defines X and the other defines Y. Each value may be:
+    **2-value syntax:** One value defines X and the other defines Y. Each value may be:
 
-    - One of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X and the other given value defines Y. If `top` or `bottom` are given, then this defines Y and the other value defines X.
+    - One of the keyword values `top`, `left`, `bottom`, or `right`. If `left` or `right` is given, then this defines X and the other given value defines Y. If `top` or `bottom` is given, then this defines Y and the other value defines X.
     - A {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}}. If the other value is `left` or `right`, then this value defines Y, relative to the top edge. If the other value is `top` or `bottom`, then this value defines X, relative to the left edge. If both values are `<length>` or `<percentage>` values, then the first defines X and the second Y.
     - Note that: If one value is `top` or `bottom`, then the other value may not be `top` or `bottom`. If one value is `left` or `right`, then the other value may not be `left` or `right`. This means, e.g., that `top top` and `left right` are not valid.
-    - Order: when pairing keywords, placement is not important as the browser can reorder it, the value `top left` or `left top` will yield the same result. With pairing {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} with a keyword the placement is important, the value defining X should come first followed by Y, the value `right 20px` is not the same as `20px right` the former is valid but the latter is invalid. The value `left 20%` or `20% bottom` is valid as X and Y values are clearly defined and the placement is right.
+    - Order: When pairing keywords, placement is not important as the browser can reorder it; the value `top left` or `left top` will yield the same result. With pairing {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} with a keyword, the placement is important, the value defining X should come first followed by Y, the value `right 20px` is not the same as `20px right` the former is valid but the latter is invalid. The value `left 20%` or `20% bottom` is valid as X and Y values are clearly defined and the placement is right.
     - The default value is `left top` or `0% 0%`.
 
     **3-value syntax:** Two values are keyword values, and the third is the offset for the preceding value:
@@ -80,9 +76,9 @@ The `background-position` property is specified as one or more `<position>` valu
     - The {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} value, if it is the second value, is the offset for the first value. If it is the third value, it is the offset for the second value.
     - The single length or percentage value is an offset for the keyword value that precedes it. The combination of one keyword with two {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values is not valid.
 
-    **4-value syntax:** The first and third values are keyword value defining X and Y. The second and fourth values are offsets for the preceding X and Y keyword values:
+    **4-value syntax:** The first and third values are keyword values defining X and Y. The second and fourth values are offsets for the preceding X and Y keyword values:
 
-    - The first value and third values one of the keyword values `top`, `left`, `bottom`, `right`. If `left` or `right` are given here, then this defines X. If `top` or `bottom` are given, then this defines Y and the other keyword value defines X.
+    - The first and third values are equal to one of the keyword values `top`, `left`, `bottom`, or `right`. If `left` or `right` is given for the first value, then this defines X and the other value defines Y. If `top` or `bottom` is given for the first value, then this defines Y and the other keyword value defines X.
     - The second and fourth values are {{cssxref("&lt;length&gt;")}} or {{cssxref("&lt;percentage&gt;")}} values. The second value is the offset for the first keyword. The fourth value is the offset for the second keyword.
 
 ### Regarding Percentages
@@ -91,20 +87,20 @@ The percentage offset of the given background image's position is relative to th
 
 Essentially what happens is the background image dimension is _subtracted_ from the corresponding container dimension, and then a percentage of the resulting value is used as the direct offset from the left (or top) edge.
 
-```
+```plain
 (container width - image width) * (position x%) = (x offset value)
 (container height - image height) * (position y%) = (y offset value)
 ```
 
-Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with background-size set to auto:
+Using the X axis for an example, let's say we have an image that is 300px wide and we are using it in a container that is 100px wide, with `background-size` set to auto:
 
-```
+```plain
 100px - 300px = -200px (container & image difference)
 ```
 
 So that with position percentages of -25%, 0%, 50%, 100%, 125%, we get these image-to-container edge offset values:
 
-```
+```plain
 -200px * -25% = 50px
 -200px * 0% = 0px
 -200px * 50% = -100px
@@ -120,7 +116,7 @@ So with these resultant values for our example, the **left edge** of the **image
 - \-200px (left image edge 200px to the left of the container, in this example that means the right image edge is coincident with the right container edge)
 - \-250px (left image edge 250px to the left of the container, in this example that puts the right edge of the 300px-wide image in the center of the container)
 
-It's worth mentioning that if your background-size is equal to the container size for a given axis, then a _percentage_ position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.
+It's worth mentioning that if your `background-size` is equal to the container size for a given axis, then a _percentage_ position for that axis will have no effect because the "container-image difference" will be zero. You will need to offset using absolute values.
 
 ## Formal definition
 
@@ -168,7 +164,9 @@ div {
    corresponding position, from first specified to last. */
 .examplethree {
   background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, right 3em bottom 2em;
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 
@@ -188,5 +186,5 @@ div {
 
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - {{cssxref("transform-origin")}}

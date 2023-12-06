@@ -1,14 +1,8 @@
 ---
-title: PointerEvent.pointerId
+title: "PointerEvent: pointerId property"
+short-title: pointerId
 slug: Web/API/PointerEvent/pointerId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.pointerId
 ---
 
@@ -32,11 +26,15 @@ one of the {{domxref("Element/pointerdown_event", "pointerdown")}} event that wa
 ```js
 let id; // Let's assume that this is a previously saved pointerId
 
-target.addEventListener('pointerdown', (event) => {
-  // Compare previous event's ID that was cached
-  // to current event's ID and handle accordingly
-  if (id === event.pointerId) process_event(event);
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    // Compare previous event's ID that was cached
+    // to current event's ID and handle accordingly
+    if (id === event.pointerId) process_event(event);
+  },
+  false,
+);
 ```
 
 ## Specifications

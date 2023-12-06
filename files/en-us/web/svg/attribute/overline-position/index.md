@@ -1,12 +1,10 @@
 ---
 title: overline-position
 slug: Web/SVG/Attribute/overline-position
-tags:
-  - Attribute
-  - Reference
-  - SVG
-  - font
+page-type: svg-attribute
 ---
+
+{{SVGRef}}
 
 The `overline-position` attribute represents the ideal vertical position of the overline. The overline position is expressed in the font's coordinate system.
 

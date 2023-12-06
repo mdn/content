@@ -2,12 +2,6 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Interface
-  - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
 
@@ -58,7 +52,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (let i = styleObj.length; i--;) {
+for (let i = styleObj.length; i--; ) {
   const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
@@ -73,7 +67,3 @@ console.log(styleObj.cssText);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)

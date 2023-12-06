@@ -1,22 +1,12 @@
 ---
-title: HTMLVideoElement.requestPictureInPicture()
+title: "HTMLVideoElement: requestPictureInPicture() method"
+short-title: requestPictureInPicture()
 slug: Web/API/HTMLVideoElement/requestPictureInPicture
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Method
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Picture-in-Picture API")}}
 
 The **{{domxref("HTMLVideoElement")}}** method
 **`requestPictureInPicture()`** issues an asynchronous request
@@ -42,9 +32,20 @@ None.
 A {{jsxref("Promise")}} that will resolve to a {{domxref("PictureInPictureWindow")}}
 object that can be used to listen when a user will resize that floating window.
 
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the feature is not supported (for example, disabled by a user preference or by a platform limitation).
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the video element's `readState` is `HAVE_NOTHING`, or if the video element has no video track, or if the video element's `disablePictureInPicture` attribute is `true`.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if `document.pictureInPictureElement` is `null` and the document does not have {{Glossary("transient activation")}}.
+
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element for this feature to work.
 
 ## Examples
 
@@ -53,10 +54,13 @@ listener to handle the floating window resizing.
 
 ```js
 function enterPictureInPicture() {
-  videoElement.requestPictureInPicture()
-    .then((pictureInPictureWindow) => {
-      pictureInPictureWindow.addEventListener("resize", () => onPipWindowResize(), false);
-    })
+  videoElement.requestPictureInPicture().then((pictureInPictureWindow) => {
+    pictureInPictureWindow.addEventListener(
+      "resize",
+      () => onPipWindowResize(),
+      false,
+    );
+  });
 }
 ```
 
@@ -71,7 +75,6 @@ function enterPictureInPicture() {
 ## See also
 
 - The {{HTMLElement("video")}} element
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

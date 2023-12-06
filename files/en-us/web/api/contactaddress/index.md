@@ -2,18 +2,14 @@
 title: ContactAddress
 slug: Web/API/ContactAddress
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ContactAddress
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContactAddress
 ---
 
 {{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
-The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contact Picker API','','true')}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactManager.getProperties()")}}.
+The **`ContactAddress`** interface of the {{domxref('contact_picker_api','Contact Picker API','','true')}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactsManager.getProperties()")}}.
 
 It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 

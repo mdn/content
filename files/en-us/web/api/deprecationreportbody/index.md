@@ -2,13 +2,8 @@
 title: DeprecationReportBody
 slug: Web/API/DeprecationReportBody
 page-type: web-api-interface
-tags:
-  - API
-  - DeprecationReportBody
-  - Experimental
-  - Interface
-  - Reference
-  - Reporting API
+status:
+  - experimental
 browser-compat: api.DeprecationReportBody
 ---
 
@@ -54,9 +49,9 @@ In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-ap
 
 ```js
 const options = {
-  types: ['deprecation'],
-  buffered: true
-}
+  types: ["deprecation"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   reportBtn.onclick = () => displayReports(reports);
@@ -77,20 +72,22 @@ The report details are displayed via the `displayReports()` function, which take
 
 ```js
 function displayReports(reports) {
-  const outputElem = document.querySelector('.output');
-  const list = document.createElement('ul');
+  const outputElem = document.querySelector(".output");
+  const list = document.createElement("ul");
   outputElem.appendChild(list);
 
   reports.forEach((report, i) => {
-    const listItem = document.createElement('li');
-    const textNode = document.createTextNode(`Report ${i + 1}, type: ${report.type}`);
+    const listItem = document.createElement("li");
+    const textNode = document.createTextNode(
+      `Report ${i + 1}, type: ${report.type}`,
+    );
     listItem.appendChild(textNode);
-    const innerList = document.createElement('ul');
+    const innerList = document.createElement("ul");
     listItem.appendChild(innerList);
     list.appendChild(listItem);
 
     for (const [key, value] of Object.entries(report.body)) {
-      const innerListItem = document.createElement('li');
+      const innerListItem = document.createElement("li");
       innerListItem.textContent = `${key}: ${value}`;
       innerList.appendChild(innerListItem);
     }
@@ -111,4 +108,4 @@ The `reports` parameter contains an array of all the reports in the observer's r
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/articles/reporting-api/)

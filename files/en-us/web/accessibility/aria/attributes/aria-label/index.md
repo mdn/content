@@ -1,13 +1,7 @@
 ---
-title: "aria-label"
+title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-label
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
@@ -38,13 +32,15 @@ In cases where an interactive element has no accessible name, or an accessible n
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
-By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#attr-alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
+By default, a button's accessible name is the content between the opening and closing {{HTMLElement('button')}} tags, an image's accessible name is the content of its [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute, and a form input's accessible name is the content of the associated {{HTMLElement('label')}} element.
 
 If none of these options are available, or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 
 `aria-label` can be used in cases where text that could label the element is _not_ visible. If there is visible text that labels an element, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) instead.
 
 The purpose of `aria-label` is the same as `aria-labelledby`. Both provide an accessible name for an element. If there is no visible name for the element you can reference, use `aria-label` to provide the user with a recognizable accessible name. If the label text is available in the DOM, and referencing the DOM content and acceptable user experience, prefer to use `aria-labelledby`. Don't include both. If both are present on the same element, `aria-labelledby` will take precedence over `aria-label`.
+
+> **Note:** While `aria-label` is allowed on any element that can have an accessible name, in practice, `aria-label` is only supported on interactive elements, widgets, landmarks, images and iframes.
 
 The `aria-label` attribute can be used with regular, semantic HTML elements; it is not limited to elements that have an [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Roles) assigned.
 
@@ -100,6 +96,7 @@ The `aria-label` attribute is **NOT** supported in:
 
 - {{HTMLElement('label')}} element
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [Using HTML landmark roles to improve accessibility](/en-US/blog/aria-accessibility-html-landmark-roles/) on MDN blog (2023)
 
 <section id="Quick_links">
 <strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>

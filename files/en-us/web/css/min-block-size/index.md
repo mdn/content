@@ -2,13 +2,6 @@
 title: min-block-size
 slug: Web/CSS/min-block-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - min-block-size
-  - recipe:css-property
 browser-compat: css.properties.min-block-size
 ---
 
@@ -33,6 +26,7 @@ min-block-size: 10%;
 /* Keyword values */
 min-block-size: max-content;
 min-block-size: min-content;
+min-block-size: fit-content;
 min-block-size: fit-content(20em);
 
 /* Global values */

@@ -1,18 +1,12 @@
 ---
-title: CanvasRenderingContext2D.reset()
+title: "CanvasRenderingContext2D: reset() method"
+short-title: reset()
 slug: Web/API/CanvasRenderingContext2D/reset
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
-  - Experimental
 browser-compat: api.CanvasRenderingContext2D.reset
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`CanvasRenderingContext2D.reset()`** method of the Canvas 2D API resets the rendering context to its default state, allowing it to be reused for drawing something else without having to explicitly reset all the properties.
 

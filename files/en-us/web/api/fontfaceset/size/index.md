@@ -1,13 +1,8 @@
 ---
-title: FontFaceSet.size
+title: "FontFaceSet: size property"
+short-title: size
 slug: Web/API/FontFaceSet/size
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - size
-  - FontFaceSet
 browser-compat: api.FontFaceSet.size
 ---
 

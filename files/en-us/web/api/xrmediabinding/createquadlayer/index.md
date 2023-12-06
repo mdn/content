@@ -1,15 +1,10 @@
 ---
-title: XRMediaBinding.createQuadLayer()
+title: "XRMediaBinding: createQuadLayer() method"
+short-title: createQuadLayer()
 slug: Web/API/XRMediaBinding/createQuadLayer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRMediaBinding.createQuadLayer
 ---
 
@@ -66,15 +61,15 @@ Create an {{domxref("XRMediaBinding")}} and use an {{domxref("HTMLVideoElement")
 ```js
 function onXRSessionStarted(xrSession) {
   const xrMediaBinding = new XRMediaBinding(xrSession);
-  const video = document.createElement('video');
-  video.src = 'just-fascination.mp4';
+  const video = document.createElement("video");
+  video.src = "just-fascination.mp4";
 
   const videoLayer = xrMediaBinding.createQuadLayer(video, {
-    space: xrReferenceSpace
+    space: xrReferenceSpace,
   });
 
   xrSession.updateRenderState({
-    layers: [videoLayer]
+    layers: [videoLayer],
   });
 }
 ```

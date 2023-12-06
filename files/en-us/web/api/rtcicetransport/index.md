@@ -2,17 +2,6 @@
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - RTCIceTransport
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceTransport
 ---
 

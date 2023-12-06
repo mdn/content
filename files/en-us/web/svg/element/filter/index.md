@@ -1,10 +1,7 @@
 ---
 title: <filter>
 slug: Web/SVG/Element/filter
-tags:
-  - Element
-  - Reference
-  - SVG
+page-type: svg-element
 browser-compat: svg.elements.filter
 ---
 
@@ -35,7 +32,7 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 - {{SVGAttr("filterRes")}} {{Deprecated_Inline}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("primitiveUnits")}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

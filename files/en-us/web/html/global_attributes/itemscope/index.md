@@ -1,13 +1,7 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
+page-type: html-attribute
 browser-compat: html.global_attributes.itemscope
 ---
 
@@ -23,7 +17,7 @@ Every HTML element may have an `itemscope` attribute specified. An `itemscope` e
 
 ### itemscope id attributes
 
-When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an {{htmlattrxref("id")}} attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
+When you specify the `itemscope` attribute for an element, a new item is created. The item consists of a group of name-value pairs. For elements with an `itemscope` attribute and an `itemtype` attribute, you may also specify an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute. You can use the `id` attribute to set a global identifier for the new item. A global identifier allows the item to relate to other items found on pages across the Web.
 
 ## Examples
 
@@ -60,8 +54,8 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
     </tr>
     <tr>
       <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
       <td>Trailer</td>
+      <td>https://youtu.be/0AY1XIkX7bY</td>
     </tr>
   </tbody>
 </table>
@@ -69,8 +63,10 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
 ```html
 <div itemscope itemtype="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director: <span itemprop="director">James Cameron</span> (born August 16,
-    1954)</span>
+  <span>
+    Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -100,7 +96,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
     <tr>
       <td>itemprop</td>
       <td>datePublished</td>
-      <td>2009-11-05</td>
+      <td>2022-11-05</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -145,7 +141,7 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
       <td>recipeInstructions</td>
       <td>
         1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        for tart apples.
       </td>
     </tr>
     <tr>
@@ -215,10 +211,13 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   </p>
   <p>
     Published:
-    <time datetime="2009-11-05" itemprop="datePublished">November 5, 2009</time>
+    <time datetime="2022-11-05" itemprop="datePublished">
+      November 5, 20022
+    </time>
   </p>
-  <span itemprop="description">This is my grandmother's apple pie recipe. I like to add a dash of
-    nutmeg.</span>
+  <span itemprop="description">
+    This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.
+  </span>
   <br />
   <span
     itemprop="aggregateRating"

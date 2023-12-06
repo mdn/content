@@ -1,12 +1,7 @@
 ---
 title: <feFuncR>
 slug: Web/SVG/Element/feFuncR
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFuncR
 ---
 

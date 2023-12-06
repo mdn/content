@@ -1,13 +1,8 @@
 ---
-title: FontFaceSet.add()
+title: "FontFaceSet: add() method"
+short-title: add()
 slug: Web/API/FontFaceSet/add
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - add
-  - FontFaceSet
 browser-compat: api.FontFaceSet.add
 ---
 

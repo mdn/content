@@ -1,21 +1,8 @@
 ---
-title: 'RTCPeerConnection: icegatheringstatechange event'
+title: "RTCPeerConnection: icegatheringstatechange event"
+short-title: icegatheringstatechange
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Connection
-  - Connectivity
-  - Gathering
-  - ICE
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - Event
-  - icegatheringstatechange
-  - state
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
 ---
 
@@ -35,9 +22,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('iceconnectionstatechange', (event) => { });
+addEventListener("icegatheringstatechange", (event) => {});
 
-oniceconnectionstatechange = (event) => { };
+onicegatheringstatechange = (event) => {};
 ```
 
 ## Event type
@@ -52,7 +39,7 @@ This example creates a handler for `icegatheringstatechange` events.
 pc.onicegatheringstatechange = (ev) => {
   let connection = ev.target;
 
-  switch(connection.iceGatheringState) {
+  switch (connection.iceGatheringState) {
     case "gathering":
       /* collection of candidates has begun */
       break;
@@ -60,24 +47,28 @@ pc.onicegatheringstatechange = (ev) => {
       /* collection of candidates is finished */
       break;
   }
-}
+};
 ```
 
 Likewise, you can use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add a listener for `icegatheringstatechange` events:
 
 ```js
-pc.addEventListener("icegatheringstatechange", (ev) => {
-  let connection = ev.target;
+pc.addEventListener(
+  "icegatheringstatechange",
+  (ev) => {
+    let connection = ev.target;
 
-  switch(connection.iceGatheringState) {
-    case "gathering":
-      /* collection of candidates has begun */
-      break;
-    case "complete":
-      /* collection of candidates is finished */
-      break;
-  }
-}, false);
+    switch (connection.iceGatheringState) {
+      case "gathering":
+        // collection of candidates has begun
+        break;
+      case "complete":
+        // collection of candidates is finished
+        break;
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

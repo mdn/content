@@ -1,19 +1,14 @@
 ---
-title: VideoEncoder()
+title: "VideoEncoder: VideoEncoder() constructor"
+short-title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoEncoder
-  - Experimental
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
-The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
+The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `options.output` callback assigned as the output callback, the provided `options.error` callback as the error callback, and sets the {{domxref("VideoEncoder.state")}} to `"unconfigured"`.
 
 ## Syntax
 
@@ -27,7 +22,7 @@ new VideoEncoder(options)
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
-        - `decoderconfig` {{Optional_Inline}}
+        - `decoderConfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
               - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
@@ -42,7 +37,7 @@ new VideoEncoder(options)
             - `displayAspectHeight` {{Optional_Inline}}
               - : An integer representing the vertical dimension of the {{domxref("VideoFrame")}}'s aspect ratio when displayed.
             - `colorSpace` {{Optional_Inline}}
-              - : An object you pass to the {{domxref("VideoColorSpace")}} constructor as the `init` argument, configuring the {{domxref("VideoFrame.colorSpace")}} for {{domxref("VideoFrame","VideoFrames")}} associated with this `decoderconfig` object. If `colorSpace` exists, the provided values will override any in-band values from the bitstream.
+              - : An object you pass to the {{domxref("VideoColorSpace")}} constructor as the `init` argument, configuring the {{domxref("VideoFrame.colorSpace")}} for {{domxref("VideoFrame","VideoFrames")}} associated with this `decoderConfig` object. If `colorSpace` exists, the provided values will override any in-band values from the bitstream.
             - `hardwareAcceleration` {{Optional_Inline}}
               - : A string that configures hardware acceleration for this codec. Defaults to `"no-preference"`. Options are:
                 - `"no-preference"`
@@ -64,8 +59,14 @@ In the following example a `VideoEncoder` is created with the two required callb
 
 ```js
 const videoEncoder = new VideoEncoder({
-  output: processVideo,
-  error: onEncoderError,
+  output(chunk, metadata) {
+    console.log(chunk.timestamp);
+    console.log(chunk.byteLength);
+    console.log(JSON.stringify(metadata));
+  },
+  error(error) {
+    console.log(error);
+  },
 });
 ```
 

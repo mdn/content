@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.isFramebuffer()
+title: "WebGLRenderingContext: isFramebuffer() method"
+short-title: isFramebuffer()
 slug: Web/API/WebGLRenderingContext/isFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isFramebuffer
 ---
 
@@ -37,8 +32,8 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the fram
 ### Checking a frame buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const framebuffer = gl.createFramebuffer();
 
 gl.isFramebuffer(framebuffer);

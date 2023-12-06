@@ -1,13 +1,10 @@
 ---
 title: "HID: connect event"
+short-title: connect
 slug: Web/API/HID/connect_event
 page-type: web-api-event
-tags:
-  - API
-  - Reference
-  - Event
-  - HID
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HID.connect_event
 ---
 
@@ -20,9 +17,9 @@ The **`connect`** event of the {{domxref("HID")}} interface fires when the user 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connect', (event) => { })
+addEventListener("connect", (event) => {});
 
-onconnect = (event) => { }
+onconnect = (event) => {};
 ```
 
 ## Event type
@@ -43,7 +40,7 @@ _In addition to the properties listed below, properties from the parent interfac
 In the following example an event listener is registered to listen for the connection of a device. The name of the device is then printed to the console using {{domxref("HIDDevice.productName")}}.
 
 ```js
-navigator.hid.addEventListener('connect', ({device}) => {
+navigator.hid.addEventListener("connect", ({ device }) => {
   console.log(`HID connected: ${device.productName}`);
 });
 ```

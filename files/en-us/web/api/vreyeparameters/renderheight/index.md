@@ -1,18 +1,11 @@
 ---
-title: VREyeParameters.renderHeight
+title: "VREyeParameters: renderHeight property"
+short-title: renderHeight
 slug: Web/API/VREyeParameters/renderHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - renderHeight
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.renderHeight
 ---
 

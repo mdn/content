@@ -2,13 +2,8 @@
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
 page-type: web-api-interface
-tags:
-  - API
-  - HTML-DOM
-  - HTMLFrameSetElement
-  - Interface
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLFrameSetElement
 ---
 

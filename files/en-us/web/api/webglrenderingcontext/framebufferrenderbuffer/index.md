@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.framebufferRenderbuffer()
+title: "WebGLRenderingContext: framebufferRenderbuffer() method"
+short-title: framebufferRenderbuffer()
 slug: Web/API/WebGLRenderingContext/framebufferRenderbuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.framebufferRenderbuffer
 ---
 
@@ -40,8 +35,7 @@ framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
 
     - `gl.DRAW_FRAMEBUFFER`
       - : Equivalent to `gl.FRAMEBUFFER`.
-          Used as a destination for drawing, rendering, clearing, and writing
-          operations.
+        Used as a destination for drawing, rendering, clearing, and writing operations.
     - `gl.READ_FRAMEBUFFER`
       - : Used as a source for reading operations.
 
@@ -94,7 +88,12 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.RENDERBUFFER, renderbuffer);
+gl.framebufferRenderbuffer(
+  gl.FRAMEBUFFER,
+  gl.COLOR_ATTACHMENT0,
+  gl.RENDERBUFFER,
+  renderbuffer,
+);
 ```
 
 ## Specifications

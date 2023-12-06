@@ -1,18 +1,14 @@
 ---
-title: SerialPort.readable
+title: "SerialPort: readable property"
+short-title: readable
 slug: Web/API/SerialPort/readable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - readable
-  - SerialPort
-  - Experimental
+status:
+  - experimental
 browser-compat: api.SerialPort.readable
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
 
 The **`readable`** read-only property of the {{domxref("SerialPort")}} interface returns a {{domxref("ReadableStream")}} for receiving data from the device connected to the port. Chunks read from this stream are instances of {{jsxref("Uint8Array")}}. This property is non-null as long as the port is open and has not encountered a fatal error.
 

@@ -1,13 +1,7 @@
 ---
-title: 'HTML attribute: step'
+title: "HTML attribute: step"
 slug: Web/HTML/Attributes/step
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Reference
-  - step
+page-type: html-attribute
 browser-compat: html.elements.input.step
 ---
 
@@ -106,7 +100,7 @@ Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integ
 
 > **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses
 
-See [Client-side validation](/en-US/docs/Web/Guide/HTML/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
+See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
 
 ## Accessibility concerns
 
@@ -124,8 +118,8 @@ Provide instructions to help users understand how to complete the form and use i
 
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - [`min`](/en-US/docs/Web/HTML/Attributes/min)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.stepMismatch')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

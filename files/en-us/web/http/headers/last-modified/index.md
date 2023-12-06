@@ -1,11 +1,7 @@
 ---
 title: Last-Modified
 slug: Web/HTTP/Headers/Last-Modified
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Last-Modified
 ---
 
@@ -17,6 +13,8 @@ as a validator to determine if the resource is the same as the previously stored
 than an {{HTTPHeader("ETag")}} header, it is a fallback mechanism. Conditional requests
 containing {{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}
 headers make use of this field.
+
+`Last-Modified` is also used by [crawlers](/en-US/docs/Glossary/Crawler) to adjust crawl frequency, by browsers in [heuristic caching](/en-US/docs/Web/HTTP/Caching#heuristic_caching), and by content management systems (CMS) to display the time the content was last modified.
 
 <table class="properties">
   <tbody>

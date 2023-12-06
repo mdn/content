@@ -1,15 +1,7 @@
 ---
 title: browserSettings.colorManagement
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/colorManagement
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - colorManagement
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.colorManagement
 ---
 

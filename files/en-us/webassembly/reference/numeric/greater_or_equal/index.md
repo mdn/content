@@ -1,12 +1,7 @@
 ---
 title: Greater or equal
 slug: WebAssembly/Reference/Numeric/Greater_or_equal
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Comparison
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

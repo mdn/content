@@ -2,12 +2,6 @@
 title: background-size
 slug: Web/CSS/background-size
 page-type: css-property
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.background-size
 ---
 
@@ -160,7 +154,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-See [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images) for more examples.
+See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) for more examples.
 
 ## Specifications
 
@@ -172,6 +166,6 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders
 
 ## See also
 
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images)
+- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
 - [Scaling of SVG backgrounds](/en-US/docs/Web/CSS/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

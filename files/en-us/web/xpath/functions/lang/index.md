@@ -1,18 +1,16 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `lang` function determines whether the context node matches the given language and returns boolean true or false.
 
 ### Syntax
 
-```
+```plain
 lang(string )
 ```
 
@@ -50,7 +48,7 @@ And this part of an XSL template:
 
 The output might be:
 
-```
+```plain
 3
 1
 1

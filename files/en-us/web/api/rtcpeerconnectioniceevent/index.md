@@ -2,12 +2,6 @@
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - RTCIceCandidateEvent
-  - Reference
-  - WebRTC
 browser-compat: api.RTCPeerConnectionIceEvent
 ---
 
@@ -39,7 +33,9 @@ _A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this 
 
 ```js
 pc.onicecandidate = (ev) => {
-  console.log(`The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`);
+  console.log(
+    `The ICE candidate (trsp addr: '${ev.candidate.candidate}') added to connection.`,
+  );
 };
 ```
 

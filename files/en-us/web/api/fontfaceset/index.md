@@ -2,19 +2,14 @@
 title: FontFaceSet
 slug: Web/API/FontFaceSet
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Font Loading API
-  - CSSOM
-  - Fonts
-  - Interface
-  - Reference
 browser-compat: api.FontFaceSet
 ---
 
 {{APIRef("CSS Font Loading API")}}
 
 The **`FontFaceSet`** interface of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) manages the loading of font-faces and querying of their download status.
+
+A `FontFaceSet` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold an ordered set of {{domxref("FontFace")}} objects.
 
 This property is available as {{domxref("Document.fonts")}}, or `self.fonts` in [web workers](/en-US/docs/Web/API/Web_Workers_API).
 

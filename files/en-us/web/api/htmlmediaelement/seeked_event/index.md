@@ -1,14 +1,8 @@
 ---
-title: 'HTMLMediaElement: seeked event'
+title: "HTMLMediaElement: seeked event"
+short-title: seeked
 slug: Web/API/HTMLMediaElement/seeked_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Video
 browser-compat: api.HTMLMediaElement.seeked_event
 ---
 
@@ -23,9 +17,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('seeked', (event) => {});
+addEventListener("seeked", (event) => {});
 
-onseeked = (event) => { };
+onseeked = (event) => {};
 ```
 
 ## Event type
@@ -39,20 +33,20 @@ These examples add an event listener for the HTMLMediaElement's `seeked` event, 
 Using `addEventListener()`:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
-video.addEventListener('seeked', (event) => {
-  console.log('Video found the playback position it was looking for.');
+video.addEventListener("seeked", (event) => {
+  console.log("Video found the playback position it was looking for.");
 });
 ```
 
 Using the `onseeked` event handler property:
 
 ```js
-const video = document.querySelector('video');
+const video = document.querySelector("video");
 
 video.onseeked = (event) => {
-  console.log('Video found the playback position it was looking for.');
+  console.log("Video found the playback position it was looking for.");
 };
 ```
 

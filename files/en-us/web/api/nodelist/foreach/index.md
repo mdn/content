@@ -1,15 +1,8 @@
 ---
-title: NodeList.prototype.forEach()
+title: "NodeList: forEach() method"
+short-title: forEach()
 slug: Web/API/NodeList/forEach
 page-type: web-api-instance-method
-tags:
-  - DOM
-  - Iterable
-  - Method
-  - NodeList
-  - Reference
-  - Web
-  - Polyfill
 browser-compat: api.NodeList.forEach
 ---
 
@@ -65,17 +58,14 @@ node.appendChild(kid3);
 
 const list = node.childNodes;
 
-list.forEach(
-  function (currentValue, currentIndex, listObj) {
-    console.log(`${currentValue}, ${currentIndex}, ${this}`);
-  },
-  'myThisArg'
-);
+list.forEach(function (currentValue, currentIndex, listObj) {
+  console.log(`${currentValue}, ${currentIndex}, ${this}`);
+}, "myThisArg");
 ```
 
 The above code results in the following:
 
-```
+```plain
 [object HTMLParagraphElement], 0, myThisArg
 [object Text], 1, myThisArg
 [object HTMLSpanElement], 2, myThisArg

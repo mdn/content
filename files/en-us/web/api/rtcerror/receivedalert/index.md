@@ -1,20 +1,8 @@
 ---
-title: RTCError.receivedAlert
+title: "RTCError: receivedAlert property"
+short-title: receivedAlert
 slug: Web/API/RTCError/receivedAlert
 page-type: web-api-instance-property
-tags:
-  - API
-  - DTLS
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - receivedAlert
 browser-compat: api.RTCError.receivedAlert
 ---
 

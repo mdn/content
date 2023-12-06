@@ -1,10 +1,9 @@
 ---
 title: clip
 slug: Web/SVG/Attribute/clip
-tags:
-  - SVG
-  - SVG Attribute
-  - Deprecated
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.attributes.presentation.clip
 ---
 

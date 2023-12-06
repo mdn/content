@@ -2,11 +2,6 @@
 title: SVGRadialGradientElement
 slug: Web/API/SVGRadialGradientElement
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGRadialGradientElement
 ---
 
@@ -22,7 +17,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGradient
 
 - {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cx")}} attribute of the given {{SVGElement("RadialGradient")}} element.
-- {{domxref("SVGRadialGradientElement.cx")}} {{ReadOnlyInline}}
+- {{domxref("SVGRadialGradientElement.cy")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("cy")}} attribute of the given {{SVGElement("RadialGradient")}} element.
 - {{domxref("SVGRadialGradientElement.r")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("r")}} attribute of the given {{SVGElement("RadialGradient")}} element.

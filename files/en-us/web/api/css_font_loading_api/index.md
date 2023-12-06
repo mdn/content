@@ -2,13 +2,6 @@
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
 page-type: web-api-overview
-tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Fonts
-  - NeedsContent
-  - Reference
 browser-compat: api.FontFace
 ---
 
@@ -148,7 +141,7 @@ We then log the font status, which should be `unloaded`.
 ```js
 const bitterFontFace = new FontFace(
   "FontFamily Bitter",
-  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)"
+  "url(https://fonts.gstatic.com/s/bitter/v7/HEpP8tJXlWaYHimsnXgfCOvvDin1pK8aKteLpeZ5c0A.woff2)",
 );
 document.fonts.add(bitterFontFace);
 log.textContent += `Bitter font: ${bitterFontFace.status}\n`; // > Bitter font: unloaded
@@ -168,7 +161,7 @@ bitterFontFace.load().then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 
@@ -207,7 +200,7 @@ const ctx = canvas.getContext("2d");
 
 const oxygenFontFace = new FontFace(
   "FontFamily Oxygen",
-  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)"
+  "url(https://fonts.gstatic.com/s/oxygen/v5/qBSyz106i5ud7wkBU-FrPevvDin1pK8aKteLpeZ5c0A.woff2)",
 );
 document.fonts.add(oxygenFontFace);
 log.textContent += `Oxygen status: ${oxygenFontFace.status}\n`;
@@ -228,7 +221,7 @@ document.fonts.load("36px FontFamily Oxygen").then(
   },
   (err) => {
     console.error(err);
-  }
+  },
 );
 ```
 

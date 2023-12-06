@@ -1,10 +1,7 @@
 ---
 title: diffuseConstant
 slug: Web/SVG/Attribute/diffuseConstant
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDiffuseLighting.diffuseConstant
 ---
 

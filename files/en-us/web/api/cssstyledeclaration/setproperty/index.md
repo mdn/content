@@ -1,12 +1,8 @@
 ---
-title: CSSStyleDeclaration.setProperty()
+title: "CSSStyleDeclaration: setProperty() method"
+short-title: setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
 browser-compat: api.CSSStyleDeclaration.setProperty
 ---
 
@@ -55,7 +51,7 @@ If `priority` can be omitted, JavaScript has a special simpler
 syntax for setting a CSS property on a style declaration object:
 
 ```js
-style.cssPropertyName = 'value';
+style.cssPropertyName = "value";
 ```
 
 ## Examples
@@ -147,13 +143,13 @@ div button {
 ### JavaScript
 
 ```js
-const borderBtn = document.querySelector('.border');
-const bgColorBtn = document.querySelector('.bgcolor');
-const colorBtn = document.querySelector('.color');
-const box = document.querySelector('.box');
+const borderBtn = document.querySelector(".border");
+const bgColorBtn = document.querySelector(".bgcolor");
+const colorBtn = document.querySelector(".color");
+const box = document.querySelector(".box");
 
-function random(min,max) {
-  const num = Math.floor(Math.random()*(max-min)) + min;
+function random(min, max) {
+  const num = Math.floor(Math.random() * (max - min)) + min;
   return num;
 }
 
@@ -162,26 +158,28 @@ function randomColor() {
 }
 
 const stylesheet = document.styleSheets[1];
-const boxParaRule = [...stylesheet.cssRules].find((r) => r.selectorText === ".box p");
+const boxParaRule = [...stylesheet.cssRules].find(
+  (r) => r.selectorText === ".box p",
+);
 
 function setRandomBorder() {
   const newBorder = `${random(1, 50)}px solid ${randomColor()}`;
-  boxParaRule.style.setProperty('border', newBorder);
+  boxParaRule.style.setProperty("border", newBorder);
 }
 
 function setRandomBgColor() {
   const newBgColor = randomColor();
-  boxParaRule.style.setProperty('background-color', newBgColor);
+  boxParaRule.style.setProperty("background-color", newBgColor);
 }
 
 function setRandomColor() {
   const newColor = randomColor();
-  boxParaRule.style.setProperty('color', newColor);
+  boxParaRule.style.setProperty("color", newColor);
 }
 
-borderBtn.addEventListener('click', setRandomBorder);
-bgColorBtn.addEventListener('click', setRandomBgColor);
-colorBtn.addEventListener('click', setRandomColor);
+borderBtn.addEventListener("click", setRandomBorder);
+bgColorBtn.addEventListener("click", setRandomBgColor);
+colorBtn.addEventListener("click", setRandomColor);
 ```
 
 ### Result

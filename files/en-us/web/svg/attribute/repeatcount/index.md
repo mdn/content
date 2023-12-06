@@ -1,9 +1,7 @@
 ---
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.animate.repeatCount
 ---
 
@@ -14,7 +12,6 @@ The **`repeatCount`** attribute indicates the number of times an animation will 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}

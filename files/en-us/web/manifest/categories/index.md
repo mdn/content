@@ -1,11 +1,9 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - Manifest
-  - Web
-  - categories
-  - Experimental
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.categories
 ---
 
@@ -16,10 +14,6 @@ browser-compat: html.manifest.categories
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code> of <code>String</code>s</td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -2,15 +2,8 @@
 title: XRHitTestResult
 slug: Web/API/XRHitTestResult
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - WebXR
-  - XR
-  - AR
-  - VR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRHitTestResult
 ---
 
@@ -37,17 +30,19 @@ In addition to showing `XRHitTestResult` within a frame loop, this example demon
 
 ```js
 const xrSession = navigator.xr.requestSession("immersive-ar", {
-   requiredFeatures: ["local", "hit-test"]
+  requiredFeatures: ["local", "hit-test"],
 });
 
 let hitTestSource = null;
 
-xrSession.requestHitTestSource({
-  space : viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
-  offsetRay : new XRRay({y: 0.5})
-}).then((viewerHitTestSource) => {
-  hitTestSource = viewerHitTestSource;
-});
+xrSession
+  .requestHitTestSource({
+    space: viewerSpace, // obtained from xrSession.requestReferenceSpace("viewer");
+    offsetRay: new XRRay({ y: 0.5 }),
+  })
+  .then((viewerHitTestSource) => {
+    hitTestSource = viewerHitTestSource;
+  });
 
 // frame loop
 function onXRFrame(time, xrFrame) {
@@ -74,11 +69,14 @@ if (hitTestResults.length > 0) {
 Once you find intersections on real-world surfaces using hit testing, you can create an {{domxref("XRAnchor")}} to attach a virtual object to that location.
 
 ```js
-hitTestResult.createAnchor().then((anchor) => {
-  // add anchored objects to the scene
-}, (error) => {
-  console.error(`Could not create anchor: ${error}`);
-});
+hitTestResult.createAnchor().then(
+  (anchor) => {
+    // add anchored objects to the scene
+  },
+  (error) => {
+    console.error(`Could not create anchor: ${error}`);
+  },
+);
 ```
 
 ## Specifications

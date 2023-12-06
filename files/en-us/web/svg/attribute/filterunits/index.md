@@ -1,11 +1,7 @@
 ---
 title: filterUnits
 slug: Web/SVG/Attribute/filterUnits
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-  - SVG Filter
+page-type: svg-attribute
 browser-compat: svg.elements.filter.filterUnits
 ---
 

@@ -1,17 +1,10 @@
 ---
-title: Box alignment for block, absolutely positioned and table layout
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
+title: Box alignment for block, absolutely positioned, and table layouts
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 page-type: guide
-tags:
-  - Block
-  - CSS
-  - Guide
-  - absolutely positioned
-  - box alignment
-  - table
 ---
 
-The [Box Alignment Specification](/en-US/docs/Web/CSS/CSS_Box_Alignment) details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main [Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment) page, which details the common features of box alignment across layout methods.
+The [box alignment specification](/en-US/docs/Web/CSS/CSS_box_alignment) details how alignment works in various layout methods. In this page we explore how box alignment works in the context of block layout, including floated, positioned, and table elements. As this page aims to detail things which are specific to block layout and box alignment, it should be read in conjunction with the main [box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) page, which details the common features of box alignment across layout methods.
 
 > **Note:** At the time of writing (May 2018), there is no real support for the box alignment properties in block layout. This document details how the specification expects these properties to be implemented for completeness, and is likely to change as the specification and browser implementations develop.
 

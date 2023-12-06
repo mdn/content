@@ -1,11 +1,7 @@
 ---
 title: Load
 slug: WebAssembly/Reference/Memory/Load
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Memory
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

@@ -2,17 +2,12 @@
 title: BarcodeDetector
 slug: Web/API/BarcodeDetector
 page-type: web-api-interface
-tags:
-  - Barcode Detection API
-  - BarcodeDetector
-  - Interface
-  - barcode
-  - barcode detector
-  - Experimental
+status:
+  - experimental
 browser-compat: api.BarcodeDetector
 ---
 
-{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 
@@ -23,7 +18,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 
 ## Static methods
 
-- {{domxref('BarcodeDetector.getSupportedFormats', 'getSupportedFormats()')}} {{Experimental_Inline}}
+- {{domxref('BarcodeDetector/getSupportedFormats_static', 'getSupportedFormats()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} which fulfills with an {{jsxref('Array')}} of supported [barcode format types](/en-US/docs/Web/API/Barcode_Detection_API#supported_barcode_formats).
 
 ## Instance methods
@@ -44,16 +39,16 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 This example creates a new barcode detector object, with specified supported formats and tests for browser compatibility.
 
 ```js
-// create new detector
-const barcodeDetector = new BarcodeDetector({
-  formats: ["code_39", "codabar", "ean_13"],
-});
-
 // check compatibility
-if (barcodeDetector) {
-  console.log("Barcode Detector supported!");
-} else {
+if (!("BarcodeDetector" in globalThis)) {
   console.log("Barcode Detector is not supported by this browser.");
+} else {
+  console.log("Barcode Detector supported!");
+
+  // create new detector
+  const barcodeDetector = new BarcodeDetector({
+    formats: ["code_39", "codabar", "ean_13"],
+  });
 }
 ```
 
@@ -76,7 +71,7 @@ This example uses the `detect()` method to detect the barcodes within the given 
 barcodeDetector
   .detect(imageEl)
   .then((barcodes) => {
-    barcodes.forEach((barcode) => console.log(barcode.rawData));
+    barcodes.forEach((barcode) => console.log(barcode.rawValue));
   })
   .catch((err) => {
     console.log(err);
@@ -94,4 +89,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [Accelerated Shape Detection in Images](https://web.dev/shape-detection/#barcodedetector)
+- [Accelerated Shape Detection in Images](https://developer.chrome.com/articles/shape-detection/#barcodedetector)

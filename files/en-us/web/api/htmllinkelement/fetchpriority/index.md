@@ -1,21 +1,12 @@
 ---
-title: HTMLLinkElement.fetchPriority
+title: "HTMLLinkElement: fetchPriority property"
+short-title: fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - Link
-  - Preload API
-  - Property
-  - Reference
-  - fetchPriority
-  - Experimental
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
 
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the
 {{domxref("HTMLLinkElement")}} interface represents a hint given to the browser

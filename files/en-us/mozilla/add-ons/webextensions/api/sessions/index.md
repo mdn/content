@@ -1,14 +1,7 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sessions
+page-type: webextension-api
 browser-compat: webextensions.api.sessions
 ---
 
@@ -71,8 +64,6 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/doc
 {{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

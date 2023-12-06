@@ -1,21 +1,8 @@
 ---
-title: RTCIceCandidate.relatedAddress
+title: "RTCIceCandidate: relatedAddress property"
+short-title: relatedAddress
 slug: Web/API/RTCIceCandidate/relatedAddress
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - IP
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - STUN
-  - TURN
-  - WebRTC
-  - WebRTC API
-  - relatedAddress
 browser-compat: api.RTCIceCandidate.relatedAddress
 ---
 
@@ -50,12 +37,12 @@ addresses. `relatedAddress` can also be used by Quality-of-Service (QoS) mechani
 
 Here's an [SDP](/en-US/docs/Web/API/WebRTC_API/Protocols#sdp) attribute line (a-line) describing an ICE candidate discovered by the STUN server:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 6502 typ srflx raddr 192.168.2.77 rport 32768 generation 0
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 6502 typ srflx raddr 198.51.100.45 rport 32768 generation 0
 ```
 
 The remote address, `relatedAddress`, is the dotted quad (for IPv4) or
-colon-delineated 64-bit address (for IPv6) immediately following the text `"raddr"`, or `"192.168.2.77"`.
+colon-delineated 64-bit address (for IPv6) immediately following the text `"raddr"`, or `"198.51.100.45"`.
 
 ## Examples
 
@@ -64,18 +51,24 @@ checked, and then debugging output is presented, based on the candidate type, in
 the candidate's {{domxref("RTCIceCandidate/address", "ip")}} and `relatedAddress`.
 
 ```js
-switch(candidate.type) {
+switch (candidate.type) {
   case "host":
     console.log(`Host candidate's IP address is ${candidate.ip}`);
     break;
   case "srflx":
-    console.log(`Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
+    console.log(
+      `Server reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+    );
     break;
   case "prflx":
-    console.log(`Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
+    console.log(
+      `Peer reflexive candidate's base address is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+    );
     break;
   case "relay":
-    console.log(`Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`);
+    console.log(
+      `Relay candidate's address assigned by the TURN server is ${candidate.relatedAddress}; reachable at ${candidate.ip}`,
+    );
     break;
 }
 ```

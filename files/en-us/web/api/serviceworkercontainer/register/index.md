@@ -1,16 +1,8 @@
 ---
-title: ServiceWorkerContainer.register()
+title: "ServiceWorkerContainer: register() method"
+short-title: register()
 slug: Web/API/ServiceWorkerContainer/register
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServiceWorkerContainer
-  - register
 browser-compat: api.ServiceWorkerContainer.register
 ---
 
@@ -40,7 +32,7 @@ register(scriptURL, options)
 
 - `scriptURL`
   - : The URL of the service worker script. The registered service worker file needs to
-    have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#javascript_types).
+    have a valid [JavaScript MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript).
 - `options` {{optional_inline}}
 
   - : An object containing registration options. Currently available options are:
@@ -94,16 +86,19 @@ control `example.com/index.html`, as well as pages underneath it, like
 `example.com/product/description.html`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
-  navigator.serviceWorker.register('/sw.js').then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`Service worker registration failed: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js").then(
+    (registration) => {
+      console.log("Service worker registration succeeded:", registration);
+    },
+    (error) => {
+      console.error(`Service worker registration failed: ${error}`);
+    },
+  );
 } else {
-  console.error('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 
@@ -117,15 +112,18 @@ at `example.com/product/sw.js`, then the service worker would only apply to
 resources under `example.com/product`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: './'}).then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`Service worker registration failed: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "./" }).then(
+    (registration) => {
+      console.log("Service worker registration succeeded:", registration);
+    },
+    (error) => {
+      console.error(`Service worker registration failed: ${error}`);
+    },
+  );
 } else {
-  console.error('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 
@@ -137,19 +135,22 @@ The following code, if included in `example.com/index.html`, at the root of
 a site, would only apply to resources under `example.com/product`.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // declaring scope manually
-  navigator.serviceWorker.register('/sw.js', {scope: '/product/'}).then((registration) => {
-    console.log('Service worker registration succeeded:', registration);
-  }, /*catch*/ (error) => {
-    console.error(`Service worker registration failed: ${error}`);
-  });
+  navigator.serviceWorker.register("/sw.js", { scope: "/product/" }).then(
+    (registration) => {
+      console.log("Service worker registration succeeded:", registration);
+    },
+    (error) => {
+      console.error(`Service worker registration failed: ${error}`);
+    },
+  );
 } else {
-  console.error('Service workers are not supported.');
+  console.error("Service workers are not supported.");
 }
 ```
 
-However, Servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
+However, servers can remove this restriction by setting a [Service-Worker-Allowed](https://w3c.github.io/ServiceWorker/#service-worker-allowed) header on the service
 worker script, and then you can specify a max scope for that service worker above the
 service worker's location.
 
@@ -160,3 +161,9 @@ service worker's location.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [ServiceWorkerRegistration: `unregister()` method](/en-US/docs/Web/API/ServiceWorkerRegistration/unregister)
+- [Service worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Using service workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

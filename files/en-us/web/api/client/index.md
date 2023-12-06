@@ -2,15 +2,6 @@
 title: Client
 slug: Web/API/Client
 page-type: web-api-interface
-tags:
-  - API
-  - Client
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerClient
-  - ServiceWorkers
 browser-compat: api.Client
 ---
 
@@ -25,10 +16,12 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
 
 ## Instance properties
 
+- {{domxref("Client.frameType")}} {{ReadOnlyInline}}
+  - : The client's frame type as a string. It can be `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`.
 - {{domxref("Client.id")}} {{ReadOnlyInline}}
   - : The universally unique identifier of the client as a string.
 - {{domxref("Client.type")}} {{ReadOnlyInline}}
-  - : The client's type as a string. It can be "`window"`, "`worker"`, or "`sharedworker"`.
+  - : The client's type as a string. It can be `"window"`, `"worker"`, or `"sharedworker"`.
 - {{domxref("Client.url")}} {{ReadOnlyInline}}
   - : The URL of the client as a string.
 

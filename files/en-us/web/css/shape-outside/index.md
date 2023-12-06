@@ -2,19 +2,6 @@
 title: shape-outside
 slug: Web/CSS/shape-outside
 page-type: css-property
-tags:
-  - Boundaries
-  - CSS
-  - CSS Property
-  - CSS Shapes
-  - Float Area
-  - Property
-  - Reference
-  - Shape
-  - margin
-  - recipe:css-property
-  - shape-outside
-  - wrapping
 browser-compat: css.properties.shape-outside
 ---
 
@@ -39,15 +26,13 @@ shape-outside: circle();
 shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
-shape-outside: path(
-  "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
-);
+shape-outside: path("M100,0 A100,100 0 1,1 100,200 A100,100 0 1,1 100,0");
 
 /* <url> value */
 shape-outside: url(image.png);
 
 /* <gradient> value */
-shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
+shape-outside: linear-gradient(45deg, #fff 150px, red 150px);
 
 /* Global values */
 shape-outside: inherit;
@@ -65,10 +50,10 @@ The `shape-outside` property is specified using the values from the list below, 
   - : The float area is unaffected. Inline content wraps around the element's margin box, like usual.
 - `<shape-box>`
 
-  - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
+  - : The float area is computed according to the shape of a float element's edges (as defined by the [CSS box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)). This can be `margin-box`, `border-box`, `padding-box`, or `content-box`. The shape includes any curvature created by the {{cssxref("border-radius")}} property (behavior which is similar to {{cssxref("background-clip")}}).
 
     - `margin-box`
-      - : Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the `border-radius / margin` ratio is `1` or more, then the margin box corner radius is `border-radius + margin`. If the ratio is less than `1`, then the margin box corner radius is `border-radius + (margin * (1 + (ratio-1)^3))`.
+      - : Defines the shape enclosed by the outside margin edge. The corner radii of this shape are determined by the corresponding {{cssxref("border-radius")}} and {{cssxref("margin")}} values. If the `border-radius / margin` ratio is `1` or more, then the margin box corner radius is `border-radius + margin`. If the ratio is less than `1`, then the margin box corner radius is `border-radius + (margin * (1 + (ratio - 1) ^ 3))`.
     - `border-box`
       - : Defines the shape enclosed by the outside border edge. The shape follows the normal border radius shaping rules for the outside of the border.
     - `padding-box`
@@ -81,17 +66,7 @@ The `shape-outside` property is specified using the values from the list below, 
 - {{cssxref("&lt;image&gt;")}}
   - : The float area is extracted and computed based on the alpha channel of the specified {{cssxref("&lt;image&gt;")}} as defined by {{cssxref("shape-image-threshold")}}.
 
-> **Note:** {{glossary("User agent", "User agents")}} must use the potentially CORS-enabled fetch method defined by the HTML specification for all URLs in a `shape-outside` value. When fetching, user agents must use "Anonymous" mode, set the referrer source to the stylesheet's URL, and set the origin to the URL of the containing document. If this results in network errors such that there is no valid fallback image, the effect is as if the value **`none`** had been specified.
-
-## Interpolation
-
-When animating between one `<basic-shape>` and a second, the rules below are applied. The values in the shape functions interpolate as a simple list. The list values interpolate as {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, or {{cssxref("calc", "calc()")}} where possible. If list values are not one of those types but are identical (such as finding `nonzero` in the same list position in both lists), those values do interpolate.
-
-- Both shapes must use the same reference box.
-- If both shapes are the same type, that type is `ellipse()` or `circle()`, and none of the radii use the `closest-side` or `farthest-side` keywords, interpolate between each value in the shape functions.
-- If both shapes are of type `inset()`, interpolate between each value in the shape functions.
-- If both shapes are of type `polygon()`, both polygons have the same number of vertices, and use the same `<fill-rule>`, interpolate between each value in the shape functions.
-- In all other cases no interpolation occurs.
+> **Note:** If the image is invalid, the effect is as if the keyword `none` had been specified. Additionally, the image must be served with {{Glossary("CORS")}} headers allowing its use.
 
 ## Formal definition
 
@@ -128,25 +103,21 @@ When animating between one `<basic-shape>` and a second, the rules below are app
 
 .left,
 .right {
-  width: 40%;
-  height: 12ex;
   background-color: lightgray;
+  height: 12ex;
+  width: 40%;
 }
 
 .left {
-  -webkit-shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  float: left;
-  -webkit-clip-path: polygon(0 0, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
+  float: left;
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
 }
 
 .right {
-  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
-  float: right;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
 }
 
 p {
@@ -156,7 +127,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample("Funneling_text", "100%", 130)}}
+{{EmbedLiveSample("funneling_text", "100%", 130)}}
 
 ## Specifications
 
@@ -168,11 +139,8 @@ p {
 
 ## See also
 
-- [CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes)
-- [Overview of CSS Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
-- [Shapes from Box Values](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values)
-- [Basic Shapes](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
-- [Shapes from Images](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes)
+- [Overview of shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - {{cssxref("&lt;basic-shape&gt;")}}
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-image-threshold")}}

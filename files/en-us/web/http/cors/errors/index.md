@@ -1,16 +1,7 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - Same-origin
-  - Security
-  - console
-  - troubleshooting
+page-type: landing-page
 ---
 
 {{HTTPSidebar}}
@@ -23,14 +14,14 @@ If the CORS configuration isn't setup correctly, the browser console will presen
 
 To understand the underlying issue with the CORS configuration, you need to find out which request is at fault and why. These steps may help you do so:
 
-1. Navigate to the web site or web app in question and open the [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
+1. Navigate to the website or web app in question and open the [Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
 2. Now try to reproduce the failing transaction and check the [console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) if you are seeing a CORS violation error message. It will probably look like this:
 
 ![Firefox console showing CORS error](cors-error2.png)
 
 The text of the error message will be something similar to the following:
 
-```
+```plain
 Cross-Origin Request Blocked: The Same Origin Policy disallows
 reading the remote resource at https://some-url-here. (Reason:
 additional information here).

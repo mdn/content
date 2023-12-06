@@ -2,17 +2,6 @@
 title: VideoTrackList
 slug: Web/API/VideoTrackList
 page-type: web-api-interface
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - list
 browser-compat: api.VideoTrackList
 ---
 

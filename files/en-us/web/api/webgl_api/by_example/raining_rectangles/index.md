@@ -2,15 +2,6 @@
 title: Raining rectangles
 slug: Web/API/WebGL_API/By_example/Raining_rectangles
 page-type: guide
-tags:
-  - Beginner
-  - Example
-  - Game
-  - Graphics
-  - Learn
-  - Scissoring
-  - Tutorial
-  - WebGL
 ---
 
 {{PreviousNext("Learn/WebGL/By_example/Scissor_animation","Learn/WebGL/By_example/Hello_GLSL")}}
@@ -120,8 +111,12 @@ function playerClick(evt) {
     position[0] - rainingRect.position[0],
     position[1] - rainingRect.position[1],
   ];
-  if (diffPos[0] >= 0 && diffPos[0] < rainingRect.size[0]
-      && diffPos[1] >= 0 && diffPos[1] < rainingRect.size[1]) {
+  if (
+    diffPos[0] >= 0 &&
+    diffPos[0] < rainingRect.size[0] &&
+    diffPos[1] >= 0 &&
+    diffPos[1] < rainingRect.size[1]
+  ) {
     score += 1;
     scoreDisplay.textContent = score;
     rainingRect = new Rectangle();
@@ -137,10 +132,7 @@ function Rectangle() {
   // because we want horizontal size, vertical size and
   // position to be determined independently.
   const randNums = getRandomVector();
-  rect.size = [
-    5 + 120 * randNums[0],
-    5 + 120 * randNums[1],
-  ];
+  rect.size = [5 + 120 * randNums[0], 5 + 120 * randNums[1]];
   rect.position = [
     randNums[2] * (gl.drawingBufferWidth - rect.size[0]),
     gl.drawingBufferHeight,
@@ -159,18 +151,15 @@ function getRenderingContext() {
   const canvas = document.querySelector("canvas");
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
-  const gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+  const gl =
+    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
   if (!gl) {
     const paragraph = document.querySelector("p");
-    paragraph.textContent = "Failed. Your browser or device may not support WebGL.";
+    paragraph.textContent =
+      "Failed. Your browser or device may not support WebGL.";
     return null;
   }
-  gl.viewport(
-    0,
-    0,
-    gl.drawingBufferWidth,
-    gl.drawingBufferHeight,
-  );
+  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
   return gl;

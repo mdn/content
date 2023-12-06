@@ -1,18 +1,8 @@
 ---
 title: "ARIA: grid role"
 slug: Web/Accessibility/ARIA/Roles/grid_role
-tags:
-  - ARIA
-  - HTML
-  - Accessibility
-  - roles
-  - Reference
-  - ARIA roles
-  - grid role
-  - composite widget role
-  - NeedsContent
-spec-urls:
-  - https://w3c.github.io/aria/#grid
+page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#grid
 ---
 
 The grid role is for a widget that contains one or more rows of cells. The position of each cell is significant and can be focused using keyboard input.
@@ -262,7 +252,7 @@ trs.forEach((gridrow) => {
 
 function moveto(newrow, newcol) {
   const tgt = document.querySelector(
-    `[data-row="${newrow}"][data-col="${newcol}"]`
+    `[data-row="${newrow}"][data-col="${newcol}"]`,
   );
   if (tgt?.getAttribute("role") === "gridcell") {
     document.querySelectorAll("[role=gridcell]").forEach((el) => {
@@ -331,8 +321,8 @@ document.querySelector("table").addEventListener("keydown", (event) => {
         moveto(
           row,
           document.querySelector(
-            `[data-row="${event.target.dataset.row}"]:last-of-type`
-          ).dataset.col
+            `[data-row="${event.target.dataset.row}"]:last-of-type`,
+          ).dataset.col,
         );
       }
       break;

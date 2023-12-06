@@ -1,14 +1,8 @@
 ---
-title: SubtleCrypto.sign()
+title: "SubtleCrypto: sign() method"
+short-title: sign()
 slug: Web/API/SubtleCrypto/sign
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - sign
 browser-compat: api.SubtleCrypto.sign
 ---
 
@@ -144,7 +138,7 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   "RSASSA-PKCS1-v1_5",
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -173,7 +167,7 @@ let signature = await window.crypto.subtle.sign(
     saltLength: 32,
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -199,10 +193,10 @@ let encoded = getMessageEncoding();
 let signature = await window.crypto.subtle.sign(
   {
     name: "ECDSA",
-    hash: {name: "SHA-384"},
+    hash: { name: "SHA-384" },
   },
   privateKey,
-  encoded
+  encoded,
 );
 ```
 
@@ -225,11 +219,7 @@ function getMessageEncoding() {
 }
 
 let encoded = getMessageEncoding();
-let signature = await window.crypto.subtle.sign(
-  "HMAC",
-  key,
-  encoded
-);
+let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 ```
 
 ## Specifications

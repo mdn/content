@@ -1,17 +1,10 @@
 ---
-title: ContentIndex.add()
+title: "ContentIndex: add() method"
+short-title: add()
 slug: Web/API/ContentIndex/add
 page-type: web-api-instance-method
-tags:
-  - Content
-  - Content Index API
-  - Index
-  - Interface
-  - Method
-  - PWA
-  - content index
-  - content indexing
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ContentIndex.add
 ---
 
@@ -36,9 +29,6 @@ add(contentDescription)
       - : A unique {{jsxref('String')}} identifier.
     - `title`
       - : A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.
-    - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
         user-visible lists of content.
     - `description`
       - : A {{jsxref('String')}} description of the item. Used
@@ -84,7 +74,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
       contain a {{domxref('FetchEvent')}}.
     - The `id`, `title`, `description` or
       `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The items referenced by `icons` are not of image type.
+    - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error.
 
 ## Examples
 
@@ -95,16 +85,19 @@ function which uses the `add` method to register it with the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 // our asynchronous function to add indexed content
@@ -120,7 +113,7 @@ async function registerContent(data) {
   try {
     await registration.index.add(data);
   } catch (e) {
-    console.log('Failed to register content: ', e.message);
+    console.log("Failed to register content: ", e.message);
   }
 }
 ```
@@ -131,16 +124,19 @@ The `add` method can also be used within the
 ```js
 // our content
 const item = {
-  id: 'post-1',
-  url: '/posts/amet.html',
-  title: 'Amet consectetur adipisicing',
-  description: 'Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.',
-  icons: [{
-    src: '/media/dark.png',
-    sizes: '128x128',
-    type: 'image/png',
-  }],
-  category: 'article'
+  id: "post-1",
+  url: "/posts/amet.html",
+  title: "Amet consectetur adipisicing",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  icons: [
+    {
+      src: "/media/dark.png",
+      sizes: "128x128",
+      type: "image/png",
+    },
+  ],
+  category: "article",
 };
 
 self.registration.index.add(item);
@@ -156,6 +152,6 @@ self.registration.index.add(item);
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

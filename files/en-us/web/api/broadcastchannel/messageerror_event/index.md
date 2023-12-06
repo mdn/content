@@ -1,9 +1,8 @@
 ---
 title: "BroadcastChannel: messageerror event"
+short-title: messageerror
 slug: Web/API/BroadcastChannel/messageerror_event
 page-type: web-api-event
-tags:
-  - Event
 browser-compat: api.BroadcastChannel.messageerror_event
 ---
 

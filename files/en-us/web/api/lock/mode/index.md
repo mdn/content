@@ -1,14 +1,8 @@
 ---
-title: Locks.mode
+title: "Locks: mode property"
+short-title: mode
 slug: Web/API/Lock/mode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
 browser-compat: api.Lock.mode
 ---
 
@@ -31,10 +25,18 @@ The following examples show how the mode property is passed in the call to {{dom
 navigator.locks.request("my_resource", show_lock_properties);
 
 // Should show "exclusive"
-navigator.locks.request("my_resource", {mode: "exclusive"}, show_lock_properties);
+navigator.locks.request(
+  "my_resource",
+  { mode: "exclusive" },
+  show_lock_properties,
+);
 
 // Should show "shared"
-navigator.locks.request("my_resource", {mode: "shared"}, show_lock_properties);
+navigator.locks.request(
+  "my_resource",
+  { mode: "shared" },
+  show_lock_properties,
+);
 
 function show_lock_properties(lock) {
   console.log(`The lock name is: ${lock.name}`);

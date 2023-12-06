@@ -1,12 +1,7 @@
 ---
 title: Accept-Ranges
 slug: Web/HTTP/Headers/Accept-Ranges
-tags:
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Response Header
+page-type: http-header
 browser-compat: http.headers.Accept-Ranges
 ---
 
@@ -44,7 +39,7 @@ Accept-Ranges: none
 - `<range-unit>`
   - : Defines the range unit that the server supports. Though `bytes` is the only
     range unit formally defined by {{RFC("7233")}}, additional range units may be
-    registered in the[HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
+    registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
 - `none`
   - : Indicates that no range unit is supported. This makes the header equivalent of its own absence
     and is therefore, rarely used. Although in some browsers, like IE9, this setting is used to

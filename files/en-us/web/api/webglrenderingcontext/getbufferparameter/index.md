@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.getBufferParameter()
+title: "WebGLRenderingContext: getBufferParameter() method"
+short-title: getBufferParameter()
 slug: Web/API/WebGLRenderingContext/getBufferParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getBufferParameter
 ---
 
@@ -60,14 +55,17 @@ getBufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating the size
         of the buffer in bytes.
     - `gl.BUFFER_USAGE`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the
         usage pattern of the buffer. One of the following:
+
         - `gl.STATIC_DRAW`
         - `gl.DYNAMIC_DRAW`
         - `gl.STREAM_DRAW`
 
         When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
         the following values are available additionally:
+
         - `gl.STATIC_READ`
         - `gl.DYNAMIC_READ`
         - `gl.STREAM_READ`

@@ -1,26 +1,15 @@
 ---
-title: Document.pictureInPictureElement
+title: "Document: pictureInPictureElement property"
+short-title: pictureInPictureElement
 slug: Web/API/Document/pictureInPictureElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - Graphics
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Property
-  - Read-only
-  - Reference
-  - pictureInPictureElement
-  - pip
 browser-compat: api.Document.pictureInPictureElement
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-The
-**`Document.pictureInPictureElement`** read-only
-property returns the {{ domxref("Element") }} that is currently being
+The read-only **`pictureInPictureElement`** property of the {{domxref("Document")}}
+interface returns the {{ domxref("Element") }} that is currently being
 presented in picture-in-picture mode in this document, or `null` if
 picture-in-picture mode is not currently in use.
 
@@ -60,7 +49,6 @@ function exitPictureInPicture() {
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

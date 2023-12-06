@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.blitFramebuffer()
+title: "WebGL2RenderingContext: blitFramebuffer() method"
+short-title: blitFramebuffer()
 slug: Web/API/WebGL2RenderingContext/blitFramebuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.blitFramebuffer
 ---
 
@@ -56,9 +51,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.blitFramebuffer(0, 0, canvas.width, canvas.height,
-                   0, 0, canvas.width, canvas.height,
-                   gl.COLOR_BUFFER_BIT, gl.NEAREST);
+gl.blitFramebuffer(
+  0,
+  0,
+  canvas.width,
+  canvas.height,
+  0,
+  0,
+  canvas.width,
+  canvas.height,
+  gl.COLOR_BUFFER_BIT,
+  gl.NEAREST,
+);
 ```
 
 ## Specifications

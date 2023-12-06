@@ -1,22 +1,8 @@
 ---
-title: RTCIceCandidateStats.relayProtocol
+title: "RTCIceCandidateStats: relayProtocol property"
+short-title: relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - relayProtocol
-  - rtc
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
 

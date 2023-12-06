@@ -1,17 +1,7 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onHidden
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
-tags:
-  - API
-  - Add-ons
-  - ExtensionSidebarPane
-  - Extensions
-  - Event
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onHidden
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
+page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
 
@@ -29,7 +19,7 @@ browser.devtools.panels.onHidden.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback)`
+- `addListener(listener)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stops listening to this event. The `listener` argument is the listener to remove.
@@ -40,7 +30,7 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
   - : Function called when this event occurs. This function will be passed no arguments.
 
 ## Browser compatibility
@@ -53,7 +43,6 @@ Create a sidebar pane, and log show and hide events.
 
 ```js
 function onCreated(sidebarPane) {
-
   sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
@@ -61,7 +50,6 @@ function onCreated(sidebarPane) {
   sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

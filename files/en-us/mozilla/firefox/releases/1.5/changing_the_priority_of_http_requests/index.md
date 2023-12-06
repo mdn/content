@@ -1,8 +1,7 @@
 ---
 title: Changing the Priority of HTTP Requests (Non-Standard)
 slug: Mozilla/Firefox/Releases/1.5/Changing_the_priority_of_HTTP_requests
-tags:
-  - HTTP
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -10,7 +9,7 @@ tags:
 > **Warning:** The approach described in this topic is non-standard, and not recommended.
 >
 > The best way to request resources over HTTP is to use [`fetch()`](/en-US/docs/Web/API/fetch), which allows you to specify the priority in [`Request.priority`](/en-US/docs/Web/API/Request/priority).
-> You can also set the HTTP priority on [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement/fetchPriority), [`HTMLIFrameElement`](/en-US/docs/Web/API/HTMLIFrameElement/fetchPriority), and [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement/fetchPriority) elements (and associated tags) using the `fetchpriority` attribute.
+> You can also set the HTTP priority on [`HTMLLinkElement`](/en-US/docs/Web/API/HTMLLinkElement/fetchPriority), [`HTMLIFrameElement`](/en-US/docs/Web/API/HTMLIFrameElement), and [`HTMLImageElement`](/en-US/docs/Web/API/HTMLImageElement/fetchPriority) elements (and associated tags) using the `fetchpriority` attribute.
 
 In [Firefox 1.5](/en-US/docs/Mozilla/Firefox/Releases/1.5), an API was added to support changing the priority of [HTTP](/en-US/docs/Web/HTTP) requests. Prior to this, there was no way to directly indicate that a request was of a different priority. The API is defined in `nsISupportsPriority`, but is defined in very generic terms so that any object can implement this interface to enable the concept of priority. This article deals specifically with using that interface to change the priority of HTTP requests.
 
@@ -26,7 +25,7 @@ To change the priority of an HTTP request, you need access to the `nsIChannel` t
 
 ```js
 var ios = Components.classes["@mozilla.org/network/io-service;1"].getService(
-  Components.interfaces.nsIIOService
+  Components.interfaces.nsIIOService,
 );
 var ch = ios.newChannel("https://www.example.com/", null, null);
 ```

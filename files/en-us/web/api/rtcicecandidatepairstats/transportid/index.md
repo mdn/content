@@ -1,22 +1,8 @@
 ---
-title: RTCIceCandidatePairStats.transportId
+title: "RTCIceCandidatePairStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCIceCandidatePairStats/transportId
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - RTCIceTransport
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - transportID
 browser-compat: api.RTCIceCandidatePairStats.transportId
 ---
 

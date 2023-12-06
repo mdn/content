@@ -1,12 +1,10 @@
 ---
 title: UDP (User Datagram Protocol)
 slug: Glossary/UDP
-tags:
-  - Infrastructure
-  - Networking
-  - Protocols
-  - UDP
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
 
 **UDP** (User Datagram Protocol) is a long standing {{glossary("protocol")}} used together with {{glossary("IPv6","IP")}} for sending data when transmission speed and efficiency matter more than security and reliability.
 

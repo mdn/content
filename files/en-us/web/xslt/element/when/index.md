@@ -1,14 +1,10 @@
 ---
 title: <xsl:when>
 slug: Web/XSLT/Element/when
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - when
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:when>` element always appears within an `<xsl:choose>` element, acting like a case statement.
 

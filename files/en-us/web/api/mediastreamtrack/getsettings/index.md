@@ -1,14 +1,8 @@
 ---
-title: MediaStreamTrack.getSettings()
+title: "MediaStreamTrack: getSettings() method"
+short-title: getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
 page-type: web-api-instance-method
-tags:
-  - API
-  - Constraints
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Method
-  - Reference
 browser-compat: api.MediaStreamTrack.getSettings
 ---
 
@@ -19,7 +13,7 @@ The **`getSettings()`** method of the
 object containing the current values of each of the constrainable properties for the
 current `MediaStreamTrack`.
 
-See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on how to work with constrainable properties.
+See [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for details on how to work with constrainable properties.
 
 ## Syntax
 

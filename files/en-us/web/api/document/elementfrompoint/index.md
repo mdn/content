@@ -1,13 +1,8 @@
 ---
-title: Document.elementFromPoint()
+title: "Document: elementFromPoint() method"
+short-title: elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 page-type: web-api-instance-method
-tags:
-  - API
-  - Coordinates
-  - Document
-  - Method
-  - Reference
 browser-compat: api.Document.elementFromPoint
 ---
 

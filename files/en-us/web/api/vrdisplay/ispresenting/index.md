@@ -1,18 +1,11 @@
 ---
-title: VRDisplay.isPresenting
+title: "VRDisplay: isPresenting property"
+short-title: isPresenting
 slug: Web/API/VRDisplay/isPresenting
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isPresenting
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isPresenting
 ---
 
@@ -29,21 +22,23 @@ A boolean value; `true` means the display is presenting; `false` means it isn't.
 ## Examples
 
 ```js
-function onVRExitPresent () {
+function onVRExitPresent() {
   // No sense in exiting presentation if we're not actually presenting.
   // (This may happen if we get an event like vrdisplaydeactivate when
   // we weren't presenting.)
-  if (!vrDisplay.isPresenting)
-    return;
-  vrDisplay.exitPresent().then(() => {
-    // Nothing to do because we're handling things in onVRPresentChange.
-  }, (err) => {
-    let errMsg = "exitPresent failed.";
-    if (err && err.message) {
-      errMsg += `<br/>${err.message}`;
-    }
-    VRSamplesUtil.addError(errMsg, 2000);
-  });
+  if (!vrDisplay.isPresenting) return;
+  vrDisplay.exitPresent().then(
+    () => {
+      // Nothing to do because we're handling things in onVRPresentChange.
+    },
+    (err) => {
+      let errMsg = "exitPresent failed.";
+      if (err && err.message) {
+        errMsg += `<br/>${err.message}`;
+      }
+      VRSamplesUtil.addError(errMsg, 2000);
+    },
+  );
 }
 ```
 

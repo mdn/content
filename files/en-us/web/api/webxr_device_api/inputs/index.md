@@ -2,22 +2,6 @@
 title: Inputs and input sources
 slug: Web/API/WebXR_Device_API/Inputs
 page-type: guide
-tags:
-  - API
-  - AR
-  - Controls
-  - Graphics
-  - Guide
-  - Input
-  - Input Sources
-  - Inputs
-  - Sources
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - controllers
 ---
 
 {{APIRef("WebXR Device API")}}{{SecureContext_Header}}
@@ -88,8 +72,7 @@ The {{domxref("XRSpace")}} used to describe the position and orientation of the 
 You can easily obtain the target ray corresponding to the `targetRaySpace` from within the drawing handler for a given frame using {{domxref("XRFrame")}}'s {{domxref("XRFrame.getPose", "getPose()")}} method. The returned {{domxref("XRPose")}}'s {{domxref("XRPose.transform", "transform")}} is the transform corresponding to the target ray. Thus, for an input controller `primaryInput`:
 
 ```js
-let targetRayPose = frame.getPose(primaryInput.targetRaySpace,
-                       viewerRefSpace);
+let targetRayPose = frame.getPose(primaryInput.targetRaySpace, viewerRefSpace);
 let targetRayOrigin = targetRayPose.transform.position;
 let targetRayVector = targetRayPose.transform.orientation;
 ```
@@ -164,13 +147,13 @@ xrSession.addEventListener("inputsourceschange", (event) => {
   inputSourceList = event.session.inputSources;
 
   inputSourceList.forEach((source) => {
-    switch(source) {
+    switch (source) {
       case "left":
         leftHandSource = source;
         break;
       case "right":
-       rightHandSource = source;
-       break;
+        rightHandSource = source;
+        break;
     }
   });
 });
@@ -243,30 +226,30 @@ For example, the `generic-trigger-squeeze-touchpad` profile name can be used to 
 
 ```json
 {
-    "profileId": "generic-trigger-squeeze-touchpad",
-    "fallbackProfileIds": [],
-    "layouts" : {
-        "left-right-none" : {
-            "selectComponentId": "xr-standard-trigger",
-            "components": {
-                "xr-standard-trigger": { "type": "trigger" },
-                "xr-standard-squeeze": { "type": "squeeze" },
-                "xr-standard-touchpad": { "type": "touchpad" }
-            },
-            "gamepad": {
-                "mapping": "xr-standard",
-                "buttons": [
-                    "xr-standard-trigger",
-                    "xr-standard-squeeze",
-                    "xr-standard-touchpad"
-                ],
-                "axes":[
-                    { "componentId": "xr-standard-touchpad", "axis": "x-axis"},
-                    { "componentId": "xr-standard-touchpad", "axis": "y-axis"}
-                ]
-            }
-        }
+  "profileId": "generic-trigger-squeeze-touchpad",
+  "fallbackProfileIds": [],
+  "layouts": {
+    "left-right-none": {
+      "selectComponentId": "xr-standard-trigger",
+      "components": {
+        "xr-standard-trigger": { "type": "trigger" },
+        "xr-standard-squeeze": { "type": "squeeze" },
+        "xr-standard-touchpad": { "type": "touchpad" }
+      },
+      "gamepad": {
+        "mapping": "xr-standard",
+        "buttons": [
+          "xr-standard-trigger",
+          "xr-standard-squeeze",
+          "xr-standard-touchpad"
+        ],
+        "axes": [
+          { "componentId": "xr-standard-touchpad", "axis": "x-axis" },
+          { "componentId": "xr-standard-touchpad", "axis": "y-axis" }
+        ]
+      }
     }
+  }
 }
 ```
 
@@ -536,7 +519,7 @@ The corresponding code for keyboard input might look something like this:
 
 ```js
 document.addEventListener("keydown", (event) => {
-  switch(event.key) {
+  switch (event.key) {
     case "a":
     case "A":
       avatar.posDelta.x -= ACCEL_X;
@@ -585,13 +568,16 @@ The `applyExternalInputs()` method takes the `avatar` object replaces its `refer
 ```js
 function applyExternalInputs(avatar) {
   if (!avatar.posDelta.x && !avatar.posDelta.y && !avatar.posDelta.z) {
-    return;  // Player hasn't moved with keyboard
+    return; // Player hasn't moved with keyboard
   }
 
-  let newTransform = new XRRigidTransform(
-        { x: avatar.posDelta.x, y: avatar.posDelta.y, z: avatar.posDelta.z }
-  );
-  avatar.referenceSpace = avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
+  let newTransform = new XRRigidTransform({
+    x: avatar.posDelta.x,
+    y: avatar.posDelta.y,
+    z: avatar.posDelta.z,
+  });
+  avatar.referenceSpace =
+    avatar.referenceSpace.getOffsetReferenceSpace(newTransform);
 }
 ```
 

@@ -1,14 +1,8 @@
 ---
-title: ReadableStreamBYOBRequest.respondWithNewView()
+title: "ReadableStreamBYOBRequest: respondWithNewView() method"
+short-title: respondWithNewView()
 slug: Web/API/ReadableStreamBYOBRequest/respondWithNewView
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - respondWithNewView
 browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 ---
 
@@ -16,7 +10,7 @@ browser-compat: api.ReadableStreamBYOBRequest.respondWithNewView
 
 The **`respondWithNewView()`** method of the {{domxref("ReadableStreamBYOBRequest")}} interface specifies a new view that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
 
-The new view must be an {{domxref("ArrayBufferView")}} that provides a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}}.
+The new view must be a {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that provides a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}}.
 After this method is called, the view that was passed into the method will be transferred and no longer modifiable.
 
 The method is intended for use cases where an underlying byte source needs to transfer a `byobRequest.view` internally before finishing its response.
@@ -32,7 +26,7 @@ respondWithNewView(view)
 
 - `view`
 
-  - : A {{domxref("ArrayBufferView")}} that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} that the consumer of the associated readable byte stream should write to instead of {{domxref("ReadableStreamBYOBRequest.view")}}.
 
     This must be a view onto the same backing memory region as {{domxref("ReadableStreamBYOBRequest.view")}} and occupy the same or less memory.
     Specifically, it must be either the view's buffer or a transferred version, must have the same `byteOffset`, and a `byteLength` (number of bytes written) that is less than or equal to that of the view.
@@ -61,7 +55,9 @@ For example, we might define the view and respond as shown below:
 ```js
 const v = controller.byobRequest.view;
 bytesRead = socket.readInto(v.buffer, v.byteOffset, v.byteLength);
-byobRequest.respondWithNewView(byobRequest.view.subarray(v.byteOffset, bytesRead));
+byobRequest.respondWithNewView(
+  byobRequest.view.subarray(v.byteOffset, bytesRead),
+);
 ```
 
 ## Specifications

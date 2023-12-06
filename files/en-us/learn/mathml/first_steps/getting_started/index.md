@@ -1,10 +1,7 @@
 ---
 title: Getting started with MathML
 slug: Learn/MathML/First_steps/Getting_started
-tags:
-  - Beginner
-  - MathML
-  - Landing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/MathML/First_steps/Text_containers", "Learn/MathML/First_steps")}}
@@ -45,7 +42,7 @@ In this article, we will take a simple HTML document and see how to add MathML f
 MathML uses the same syntax as HTML to represent a tree of elements and attributes. In particular, each mathematical formula is represented by an element `<math>` which can be placed inside an HTML page. In the following document, it is inside a paragraph of text:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <title>My first math page</title>
@@ -76,7 +73,7 @@ The `<mfrac>` element specifies a fraction with a numerator (its first child) an
 Note that in the previous example, the formula is on the same line as the text of the paragraph. However, it is quite common to instead render large mathematical formulas centered on their own line as shown below. To achieve that, you need to attach a `display="block"` attribute on the `<math>` element.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <title>My first math page</title>

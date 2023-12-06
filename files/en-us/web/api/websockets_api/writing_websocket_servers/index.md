@@ -2,16 +2,6 @@
 title: Writing WebSocket servers
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
-tags:
-  - Guide
-  - HTML
-  - NeedsContent
-  - NeedsExample
-  - NeedsMarkupWork
-  - Tutorial
-  - WebSocket
-  - WebSocket API
-  - WebSockets
 ---
 
 {{APIRef("Websockets API")}}
@@ -115,9 +105,21 @@ Frame format:
      +---------------------------------------------------------------+
 ```
 
+This means that a frame contains the following bytes:
+
+- First byte:
+  - bit 0: FIN
+  - bit 1: RSV1
+  - bit 2: RSV2
+  - bit 3: RSV3
+  - bits 4-7 OPCODE
+- Bytes 2-10: payload length (see [Decoding Payload Length](#decoding_payload_length))
+- If masking is used, the next 4 bytes contain the masking key (see [Reading and unmasking the data](#reading_and_unmasking_the_data))
+- All subsequent bytes are payload
+
 The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
 
-The opcode field defines how to interpret the payload data: `0x0` for continuation, 0x1 for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
+The opcode field defines how to interpret the payload data: `0x0` for continuation, `0x1` for text (which is always encoded in UTF-8), `0x2` for binary, and other so-called "control codes" that will be discussed later. In this version of WebSockets, `0x3` to `0x7` and `0xB` to `0xF` have no meaning.
 
 The FIN bit tells whether this is the last message in a series. If it's 0, then the server keeps listening for more parts of the message; otherwise, the server should consider the message delivered. More on this later.
 
@@ -138,7 +140,7 @@ const MASK = [1, 2, 3, 4]; // 4-byte mask
 const ENCODED = [105, 103, 111, 104, 110]; // encoded string "hello"
 
 // Create the byte Array of decoded payload
-const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ mask[i % 4]); // Perform an XOR on the mask
+const DECODED = Uint8Array.from(ENCODED, (elt, i) => elt ^ MASK[i % 4]); // Perform an XOR on the mask
 ```
 
 Now you can figure out what **DECODED** means depending on your application.
@@ -149,7 +151,7 @@ The FIN and opcode fields work together to send a message split up into separate
 
 Recall that the opcode tells what a frame is meant to do. If it's `0x1`, the payload is text. If it's `0x2`, the payload is binary data. However, if it's `0x0,` the frame is a continuation frame; this means the server should concatenate the frame's payload to the last frame it received from that client. Here is a rough sketch, in which a server reacts to a client sending text messages. The first message is sent in a single frame, while the second message is sent across three frames. FIN and opcode details are shown only for the client:
 
-```
+```plain
 Client: FIN=1, opcode=0x1, msg="hello"
 Server: (process complete message immediately) Hi.
 Client: FIN=0, opcode=0x1, msg="and a"
@@ -182,7 +184,7 @@ WebSocket extensions and subprotocols are negotiated via headers during [the han
 
 ### Extensions
 
-Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
+Think of an extension as compressing a file before emailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 
 > **Note:** Extensions are explained in sections 5.8, 9, 11.3.2, and 11.4 of the spec.
 

@@ -1,14 +1,8 @@
 ---
-title: MediaKeyStatusMap.entries()
+title: "MediaKeyStatusMap: entries() method"
+short-title: entries()
 slug: Web/API/MediaKeyStatusMap/entries
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - entries()
 browser-compat: api.MediaKeyStatusMap.entries
 ---
 

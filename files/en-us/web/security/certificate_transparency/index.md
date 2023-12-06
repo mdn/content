@@ -1,10 +1,10 @@
 ---
 title: Certificate Transparency
 slug: Web/Security/Certificate_Transparency
-tags:
-  - Security
-  - Web
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 **Certificate Transparency** is an open framework designed to protect against and monitor for certificate mis-issuances. It's defined in [RFC 9162](https://www.rfc-editor.org/rfc/rfc9162). With certificate transparency, newly-issued certificates are 'logged' to publicly-run, often independent _CT logs_ — which maintain an append-only, cryptographically-assured record of issued TLS certificates.
 
@@ -38,4 +38,4 @@ Google Chrome requires CT log inclusion for all certificates issues with a notBe
 
 Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
-Firefox [does not](https://bugzilla.mozilla.org/show_bug.cgi?id=1281469) currently check or require the use of CT logs for sites that users visit.
+Firefox [does not](https://bugzil.la/1281469) currently check or require the use of CT logs for sites that users visit.

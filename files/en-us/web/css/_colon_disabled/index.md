@@ -2,13 +2,6 @@
 title: ":disabled"
 slug: Web/CSS/:disabled
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.disabled
 ---
 
@@ -20,8 +13,10 @@ The **`:disabled`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-```
-:disabled
+```css
+:disabled {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -69,7 +64,7 @@ document.addEventListener(
     // Attach `change` event listener to checkbox
     document.getElementById("billing-checkbox").onchange = toggleBilling;
   },
-  false
+  false,
 );
 
 function toggleBilling() {

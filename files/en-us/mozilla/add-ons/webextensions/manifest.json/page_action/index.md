@@ -1,10 +1,7 @@
 ---
 title: page_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.page_action
 ---
 
@@ -29,7 +26,6 @@ browser-compat: webextensions.manifest.page_action
       <td>
         <pre class="brush: json">
 "page_action": {
-  "browser_style": true,
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -70,41 +66,31 @@ The `page_action` key is an object that may have any of three properties, all op
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}} in Manifest V3.
       </td>
       <td><code>Boolean</code></td>
       <td>
         <p>Optional. Defaults to <code>false</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> in order to make your popups consistent with the
-          look of the rest of the browser user interface.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
-          <code>chrome://browser/content/extension.css</code>, or
+          <code>chrome://browser/content/extension.css</code> or
           <code>chrome://browser/content/extension-mac.css</code> on macOS.
         </p>
         <p>
           The
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the popup in order
-          to get particular styles.
-        </p>
-        <p>
-          The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -286,7 +272,7 @@ The `page_action` key is an object that may have any of three properties, all op
 A page action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.pageAction.onClicked.addListener(handleClick);
+browser.pageAction.onClicked.addListener(handleClick);
 ```
 
 ```json

@@ -1,10 +1,9 @@
 ---
 title: units-per-em
 slug: Web/SVG/Attribute/units-per-em
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.units-per-em
 ---
 

@@ -1,17 +1,12 @@
 ---
-title: VideoColorSpace()
+title: "VideoColorSpace: VideoColorSpace() constructor"
+short-title: VideoColorSpace()
 slug: Web/API/VideoColorSpace/VideoColorSpace
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoColorSpace
-  - Experimental
 browser-compat: api.VideoColorSpace.VideoColorSpace
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}
 
 The **`VideoColorSpace()`** constructor creates a new {{domxref("VideoColorSpace")}} object which represents a video color space.
 
@@ -54,8 +49,8 @@ The following example creates a new `VideoColorSpace` object with {{domxref("Vid
 ```js
 const options = {
   primaries: "bt709",
-  fullRange: true
-}
+  fullRange: true,
+};
 
 const colorSpace = new VideoColorSpace(options);
 console.log(colorSpace);

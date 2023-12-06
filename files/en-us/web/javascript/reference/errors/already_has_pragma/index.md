@@ -1,12 +1,7 @@
 ---
-title: 'Warning: -file- is being assigned a //# sourceMappingURL, but already has one'
+title: "Warning: -file- is being assigned a //# sourceMappingURL, but already has one"
 slug: Web/JavaScript/Reference/Errors/Already_has_pragma
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - Source maps
-  - Warning
+page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
@@ -15,7 +10,7 @@ The JavaScript warning "-file- is being assigned a //# sourceMappingURL, but alr
 
 ## Message
 
-```
+```plain
 Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 ```
 
@@ -47,5 +42,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## See also
 
-- [How to use a source map – Firefox Tools documentation](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html)
-- [Introduction to source maps (2012)](https://developer.chrome.com/blog/sourcemaps/)
+- [Use a source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html) in the Firefox source docs
+- [Introduction to JavaScript source maps](https://developer.chrome.com/blog/sourcemaps/) on developer.chrome.com (2012)

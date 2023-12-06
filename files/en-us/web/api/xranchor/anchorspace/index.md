@@ -1,16 +1,10 @@
 ---
-title: XRAnchor.anchorSpace
+title: "XRAnchor: anchorSpace property"
+short-title: anchorSpace
 slug: Web/API/XRAnchor/anchorSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRAnchor.anchorSpace
 ---
 

@@ -1,12 +1,8 @@
 ---
-title: CloseEvent.wasClean
+title: "CloseEvent: wasClean property"
+short-title: wasClean
 slug: Web/API/CloseEvent/wasClean
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
 browser-compat: api.CloseEvent.wasClean
 ---
 

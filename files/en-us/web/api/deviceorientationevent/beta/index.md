@@ -1,16 +1,8 @@
 ---
-title: DeviceOrientationEvent.beta
+title: "DeviceOrientationEvent: beta property"
+short-title: beta
 slug: Web/API/DeviceOrientationEvent/beta
 page-type: web-api-instance-property
-tags:
-  - API
-  - Device Orientation API
-  - DeviceOrientationEvent
-  - NeedsBetterSpecLink
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.DeviceOrientationEvent.beta
 ---
 

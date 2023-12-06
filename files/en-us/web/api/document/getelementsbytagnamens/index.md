@@ -1,15 +1,8 @@
 ---
-title: Document.getElementsByTagNameNS()
+title: "Document: getElementsByTagNameNS() method"
+short-title: getElementsByTagNameNS()
 slug: Web/API/Document/getElementsByTagNameNS
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
-  - getElementsByTagNameNS
 browser-compat: api.Document.getElementsByTagNameNS
 ---
 
@@ -39,9 +32,9 @@ getElementsByTagNameNS(namespace, name)
 A live {{DOMxRef("NodeList")}} (but see the note below) of
 found elements in the order they appear in the tree.
 
-> **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} both in Gecko and Internet Explorer.
+> **Note:** While the W3C specification says returned value is a `NodeList`, this method returns a {{DOMxRef("HTMLCollection")}} in Firefox.
 > Opera returns a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. As of January 2012, only in WebKit browsers is the returned value a pure `NodeList`.
-> See [bug 14869](https://bugzilla.mozilla.org/show_bug.cgi?id=14869) for details.
+> See [bug 14869](https://bugzil.la/14869) for details.
 
 > **Note:** Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
 > See the [developer release note for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in {{domxref("Element.getElementsByTagNameNS")}} for details.
@@ -68,7 +61,7 @@ extension.
       function getAllParaElems() {
         const allParas = document.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = allParas.length;
         alert(`There are ${num} &lt;p&gt; elements in this document`);
@@ -78,7 +71,7 @@ extension.
         const div1 = document.getElementById("div1");
         const div1Paras = div1.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div1Paras.length;
         alert(`There are ${num} &lt;p&gt; elements in div1 element`);
@@ -88,7 +81,7 @@ extension.
         const div2 = document.getElementById("div2");
         const div2Paras = div2.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div2Paras.length;
         alert(`There are ${num} &lt;p&gt; elements in div2 element`);

@@ -1,14 +1,10 @@
 ---
-title: 'Element: keypress event'
+title: "Element: keypress event"
+short-title: keypress
 slug: Web/API/Element/keypress_event
 page-type: web-api-event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - keypress
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Element.keypress_event
 ---
 
@@ -25,9 +21,9 @@ Examples of keys that produce a character value are alphabetic, numeric, and pun
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('keypress', (event) => {});
+addEventListener("keypress", (event) => {});
 
-onkeypress = (event) => { };
+onkeypress = (event) => {};
 ```
 
 ## Event type
@@ -58,14 +54,8 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
-
-  - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
-
-    > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
-
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
-  - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown above in [Keyboard locations](#keyboard_locations).
+  - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown in [Keyboard locations](/en-US/docs/Web/API/KeyboardEvent#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
 
   - : Returns a boolean value that is `true` if the <kbd>Meta</kbd> key (on Mac keyboards, the <kbd>⌘ Command</kbd> key; on Windows keyboards, the Windows key (<kbd>⊞</kbd>)) was active when the key event was generated.
@@ -91,10 +81,10 @@ This example logs the {{domxref("KeyboardEvent.code")}} value whenever you press
 ```
 
 ```js
-const log = document.getElementById('log');
-const input = document.querySelector('input');
+const log = document.getElementById("log");
+const input = document.querySelector("input");
 
-input.addEventListener('keypress', logKey);
+input.addEventListener("keypress", logKey);
 
 function logKey(e) {
   log.textContent += ` ${e.code}`;

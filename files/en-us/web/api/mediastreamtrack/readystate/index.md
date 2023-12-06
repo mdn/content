@@ -1,15 +1,8 @@
 ---
-title: MediaStreamTrack.readyState
+title: "MediaStreamTrack: readyState property"
+short-title: readyState
 slug: Web/API/MediaStreamTrack/readyState
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.MediaStreamTrack.readyState
 ---
 
@@ -37,6 +30,6 @@ It takes one of the following values:
 
 ## See also
 
-- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - The {{domxref("MediaStreamTrack.ended_event", "ended")}} event

@@ -2,19 +2,13 @@
 title: "-moz-image-rect"
 slug: Web/CSS/-moz-image-rect
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - CSS Images
-  - CSS:Mozilla Extensions
-  - Function
-  - Non-standard
-  - Reference
-  - Experimental
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.types.-moz-image-rect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}{{SeeCompatTable}}
+{{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 
@@ -165,4 +159,4 @@ Not part of any standard.
 ## See also
 
 - [Mozilla CSS extensions](/en-US/docs/Web/CSS/Mozilla_Extensions)
-- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [CSS Backgrounds and Borders module](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)

@@ -2,13 +2,8 @@
 title: device-height
 slug: Web/CSS/@media/device-height
 page-type: css-media-feature
-tags:
-  - "@media"
-  - CSS
-  - Deprecated
-  - Media Queries
-  - Reference
-  - media feature
+status:
+  - deprecated
 browser-compat: css.at-rules.media.device-height
 ---
 
@@ -16,7 +11,7 @@ browser-compat: css.at-rules.media.device-height
 
 > **Note:** To query for the height of the viewport, developers should use the [`height`](/en-US/docs/Web/CSS/@media/height) media feature instead.
 
-The **`device-height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the height of an output device's rendering surface.
+The **`device-height`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the height of an output device's rendering surface.
 
 ## Syntax
 
@@ -43,5 +38,5 @@ The `device-height` feature is specified as a {{cssxref("&lt;length&gt;")}} valu
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

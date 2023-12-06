@@ -2,18 +2,6 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 page-type: web-api-interface
-tags:
-  - API
-  - Coordinate
-  - Coordinates
-  - DOM
-  - DOMPoint
-  - Geometry
-  - Geometry Interfaces
-  - Interface
-  - Point
-  - Reference
-  - VR
 browser-compat: api.DOMPoint
 ---
 
@@ -28,7 +16,7 @@ In general, a positive `x` component represents a position to the right of the o
 ## Constructor
 
 - {{domxref("DOMPoint.DOMPoint","DOMPoint()")}}
-  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint()")}} static method.
+  - : Creates and returns a new `DOMPoint` object given the values of zero or more of its coordinate components and optionally the `w` perspective value. You can also use an existing `DOMPoint` or `DOMPointReadOnly` or an object to create a new point by calling the {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}} static method.
 
 ## Instance properties
 
@@ -51,7 +39,7 @@ _`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOn
 
 _`DOMPoint` may also inherit static methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
-- {{domxref("DOMPoint.fromPoint()", "DOMPoint.fromPoint()")}}
+- {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
   - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
 
 ## Examples
@@ -66,9 +54,17 @@ function onXRFrame(time, xrFrame) {
     let position = viewerPose.transform.position;
     let orientation = viewerPose.transform.orientation;
 
-    console.log(`XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(position.y)}, z: ${roundToTwo(position.z)}`);
+    console.log(
+      `XR Viewer Position: {x: ${roundToTwo(position.x)}, y: ${roundToTwo(
+        position.y,
+      )}, z: ${roundToTwo(position.z)}`,
+    );
 
-    console.log(`XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(orientation.y)}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`);
+    console.log(
+      `XR Viewer Orientation: {x: ${roundToTwo(orientation.x)}, y: ${roundToTwo(
+        orientation.y,
+      )}, z: ${roundToTwo(orientation.z)}, w: ${roundToTwo(orientation.w)}`,
+    );
   }
 }
 ```

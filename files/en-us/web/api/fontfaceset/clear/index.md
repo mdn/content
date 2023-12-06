@@ -1,13 +1,8 @@
 ---
-title: FontFaceSet.clear()
+title: "FontFaceSet: clear() method"
+short-title: clear()
 slug: Web/API/FontFaceSet/clear
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - clear
-  - FontFaceSet
 browser-compat: api.FontFaceSet.clear
 ---
 

@@ -2,20 +2,14 @@
 title: justify-tracks
 slug: Web/CSS/justify-tracks
 page-type: css-property
-tags:
-  - CSS
-  - Experimental
-  - CSS Property
-  - Reference
-  - grid
-  - justify-tracks
-  - masonry
+status:
+  - experimental
 browser-compat: css.properties.justify-tracks
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`justify-tracks`** CSS property sets the alignment in the masonry axis for grid containers that have [masonry](/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) in their inline axis.
+The **`justify-tracks`** CSS property sets the alignment in the masonry axis for grid containers that have [masonry](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) in their inline axis.
 
 ## Syntax
 

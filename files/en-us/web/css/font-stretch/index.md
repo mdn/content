@@ -2,12 +2,6 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-stretch
 ---
 
@@ -20,12 +14,12 @@ The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, con
 ## Syntax
 
 ```css
-/* Keyword values */
+/* <font-stretch-css3> keyword values */
+font-stretch: normal;
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
 font-stretch: semi-condensed;
-font-stretch: normal;
 font-stretch: semi-expanded;
 font-stretch: expanded;
 font-stretch: extra-expanded;
@@ -44,7 +38,7 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-This property may be specified as a single keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
+This property may be specified as a single `<font-stretch-css3>` keyword value or a single {{cssxref("&lt;percentage&gt;")}} value.
 
 ### Values
 
@@ -60,7 +54,7 @@ This property may be specified as a single keyword value or a single {{cssxref("
 
 ### Keyword to numeric mapping
 
-The table below shows the mapping between keyword values and numeric percentages:
+The table below shows the mapping between the `<font-stretch-css3>` keyword values and numeric percentages:
 
 | Keyword           | Percentage |
 | ----------------- | ---------- |
@@ -89,13 +83,15 @@ The table below demonstrates the effect of supplying various different percentag
 ```css hidden
 @font-face {
   font-family: "Inconsolata";
-  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/inconsolata/v31/QlddNThLqRwH-OJ1UHjlKENVzlm-WkL3GZQmAwPyya15.woff2")
+    format("woff2");
   font-stretch: 50% 200%;
 }
 
 @font-face {
   font-family: "Anek Malayalam";
-  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/anekmalayalam/v4/6qLUKZActRTs_mZAJUZWWkhke0nYa-f6__Azq3-gP1W7db9_.woff2")
+    format("woff2");
   font-stretch: 75% 125%;
 }
 
@@ -105,36 +101,47 @@ td {
 }
 
 #inconsolata td {
-  font: 90px Inconsolata, sans-serif;
+  font:
+    90px Inconsolata,
+    sans-serif;
 }
 #anek-malayalam td {
-  font: 90px 'Anek Malayalam';
+  font: 90px "Anek Malayalam";
 }
-#inconsolata td:nth-child(2), #anek-malayalam td:nth-child(2) {
+#inconsolata td:nth-child(2),
+#anek-malayalam td:nth-child(2) {
   font-stretch: 50%;
 }
-#inconsolata td:nth-child(3), #anek-malayalam td:nth-child(3) {
+#inconsolata td:nth-child(3),
+#anek-malayalam td:nth-child(3) {
   font-stretch: 62.5%;
 }
-#inconsolata td:nth-child(4), #anek-malayalam td:nth-child(4) {
+#inconsolata td:nth-child(4),
+#anek-malayalam td:nth-child(4) {
   font-stretch: 75%;
 }
-#inconsolata td:nth-child(5), #anek-malayalam td:nth-child(5) {
+#inconsolata td:nth-child(5),
+#anek-malayalam td:nth-child(5) {
   font-stretch: 87.5%;
 }
-#inconsolata td:nth-child(6), #anek-malayalam td:nth-child(6) {
+#inconsolata td:nth-child(6),
+#anek-malayalam td:nth-child(6) {
   font-stretch: 100%;
 }
-#inconsolata td:nth-child(7), #anek-malayalam td:nth-child(7) {
+#inconsolata td:nth-child(7),
+#anek-malayalam td:nth-child(7) {
   font-stretch: 112.5%;
 }
-#inconsolata td:nth-child(8), #anek-malayalam td:nth-child(8) {
+#inconsolata td:nth-child(8),
+#anek-malayalam td:nth-child(8) {
   font-stretch: 125%;
 }
-#inconsolata td:nth-child(9), #anek-malayalam td:nth-child(9) {
+#inconsolata td:nth-child(9),
+#anek-malayalam td:nth-child(9) {
   font-stretch: 150%;
 }
-#inconsolata td:nth-child(10), #anek-malayalam td:nth-child(10) {
+#inconsolata td:nth-child(10),
+#anek-malayalam td:nth-child(10) {
   font-stretch: 200%;
 }
 ```
@@ -218,3 +225,4 @@ td {
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 - [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

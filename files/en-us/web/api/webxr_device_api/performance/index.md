@@ -2,24 +2,6 @@
 title: WebXR performance guide
 slug: Web/API/WebXR_Device_API/Performance
 page-type: guide
-tags:
-  - API
-  - Guide
-  - Performance
-  - Quality
-  - Scale
-  - Scaling
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - detail
-  - effects
-  - frame rate
-  - frameRate
-  - rendering
-  - resolution
-  - size
-  - speed
 ---
 
 {{DefaultAPISidebar("WebXR Device API")}}
@@ -56,7 +38,9 @@ Consider the following
 function drawScene(gl, view, programInfo, buffers, texture, deltaTime) {
   // …
   for (const object in scene) {
-    const vertexList = [/* … */];
+    const vertexList = [
+      /* … */
+    ];
     const normalMatrix = mat4.create();
     const modelViewMatrix = mat4.create();
     const objectMatrix = mat4.create();
@@ -73,7 +57,9 @@ This renders a scene. But it's inefficient, because it allocates as local variab
 A simple change can optimize this significantly:
 
 ```js
-const vertexList = [/* … */];
+const vertexList = [
+  /* … */
+];
 const normalMatrix = mat4.create();
 const modelViewMatrix = mat4.create();
 

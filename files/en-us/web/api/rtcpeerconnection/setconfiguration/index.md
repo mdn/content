@@ -1,14 +1,8 @@
 ---
-title: RTCPeerConnection.setConfiguration()
+title: "RTCPeerConnection: setConfiguration() method"
+short-title: setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
 page-type: web-api-instance-method
-tags:
-  - Configuration
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - setConfiguration
 browser-compat: api.RTCPeerConnection.setConfiguration
 ---
 
@@ -50,7 +44,7 @@ setConfiguration(configuration)
 
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if one or more of the URLs specified in `configuration.iceServers` is a {{Glossary("TURN")}} server, but complete login information is not provided (that is,
-    either the {{domxref("RTCIceServer.username")}} or {{domxref("RTCIceServer.credential")}} is missing, or if {{domxref("RTCIceServer.credentialType")}} is "password" and {{domxref("RTCIceServer.credential")}} is not a string).
+    either the `username` or `credential` is missing, or if `credentialType` is `"password"` and `credential` is not a string).
     This prevents successful login to the server.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : Thrown if the `configuration` includes changed identity information, but the connection already has identity information specified.
@@ -69,16 +63,19 @@ In this example, it has already been determined that ICE restart is needed, and 
 
 ```js
 const restartConfig = {
-  iceServers: [{
-    urls: "turn:asia.myturnserver.net",
-    username: "allie@oopcode.com",
-    credential: "topsecretpassword"
-  }]
+  iceServers: [
+    {
+      urls: "turn:asia.myturnserver.net",
+      username: "allie@oopcode.com",
+      credential: "topsecretpassword",
+    },
+  ],
 };
 
 myPeerConnection.setConfiguration(restartConfig);
 
-myPeerConnection.createOffer({ "iceRestart": true })
+myPeerConnection
+  .createOffer({ iceRestart: true })
   .then((offer) => myPeerConnection.setLocalDescription(offer))
   .then(() => {
     // send the offer to the other peer using the signaling server

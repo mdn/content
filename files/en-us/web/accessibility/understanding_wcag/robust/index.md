@@ -1,18 +1,7 @@
 ---
 title: Robust
 slug: Web/Accessibility/Understanding_WCAG/Robust
-tags:
-  - Accessibility
-  - HTML
-  - Parsing
-  - Principle 4
-  - Robust
-  - Role
-  - Validation
-  - WAI-ARIA
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - value
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}

@@ -2,14 +2,6 @@
 title: Introduction to the DOM
 slug: Web/API/Document_Object_Model/Introduction
 page-type: guide
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
 spec-urls: https://dom.spec.whatwg.org/
 ---
 
@@ -77,7 +69,7 @@ For more information on what technologies are involved in writing JavaScript on 
 You don't have to do anything special to begin using the DOM.
 You use the API directly in JavaScript from within what is called a _script_, a program run by a browser.
 
-When you create a script, whether inline in a `<script>` element or included in the web page, you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} objects to manipulate the document itself, or any of the various elements in the web page (the descendant elements of the document). Your DOM programming may be something as simple as the following example, which displays a message on the console by using the {{domxref("console.log()")}} function:
+When you create a script, whether inline in a `<script>` element or included in the web page, you can immediately begin using the API for the {{domxref("document")}} or {{domxref("Window", "window")}} objects to manipulate the document itself, or any of the various elements in the web page (the descendant elements of the document). Your DOM programming may be something as simple as the following example, which displays a message on the console by using the {{domxref("console/log_static", "console.log()")}} function:
 
 ```html
 <body onload="console.log('Welcome to my home page!');">
@@ -90,7 +82,7 @@ and manipulation of the DOM (written in JavaScript),
 the JavaScript parts will be grouped together here,
 and separated from the HTML.
 
-For example, the following function creates a new {{HTMLElement("h1")}} element,
+For example, the following function creates a new {{HTMLElement("Heading_Elements", "h1")}} element,
 adds text to that element,
 and then adds it to the tree for the document:
 
@@ -241,18 +233,17 @@ The `document` and `window` objects are the objects whose interfaces you general
 
 The following is a brief list of common APIs in web and XML page scripting using the DOM.
 
-- `{{domxref("document.querySelector", "", "", "1")}}(selector)`
-- `{{domxref("document.querySelectorAll", "", "", "1")}}(name)`
-- `{{domxref("document.createElement", "", "", "1")}}(name)`
-- `parentNode.{{domxref("Node.appendChild", "appendChild", "", "1")}}(node)`
-- `element.{{domxref("element.innerHTML", "innerHTML", "", "1")}}`
-- `element.{{domxref("HTMLElement/style", "style", "", "1")}}.left`
-- `element.{{domxref("element.setAttribute", "setAttribute", "", "1")}}()`
-- `element.{{domxref("element.getAttribute", "getAttribute", "", "1")}}()`
-- `element.{{domxref("EventTarget.addEventListener", "addEventListener", "", "1")}}()`
-- `{{domxref("window.content", "", "", "1")}}`
-- `{{domxref("Window.load_event", "Window.onload", "", "1")}}`
-- `{{domxref("window.scrollTo", "", "", "1")}}()`
+- {{domxref("document.querySelector()")}}
+- {{domxref("document.querySelectorAll()")}}
+- {{domxref("document.createElement()")}}
+- {{domxref("Element.innerHTML")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("EventTarget.addEventListener()")}}
+- {{domxref("HTMLElement.style")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Window.load_event", "window.onload")}}
+- {{domxref("window.scrollTo()")}}
 
 ## Examples
 

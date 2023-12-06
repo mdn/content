@@ -1,13 +1,8 @@
 ---
-title: SVGStyleElement.sheet
+title: "SVGStyleElement: sheet property"
+short-title: sheet
 slug: Web/API/SVGStyleElement/sheet
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.sheet
 ---
 
@@ -43,8 +38,8 @@ The code below creates a `style` element (an `SVGStyleElement`) and adds it to t
 ```js
 const svg = document.querySelector("svg");
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 svg.appendChild(style);
 style.appendChild(node);
 ```
@@ -54,7 +49,7 @@ To make
 
 ```js
 // Log the sheet associated with this new element.
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 log.value = `${style.sheet} with rules[0].cssText:\n ${style.sheet.rules[0].cssText}`;
 ```
 

@@ -1,12 +1,7 @@
 ---
 title: Promote
 slug: WebAssembly/Reference/Numeric/Promote
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Conversion
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

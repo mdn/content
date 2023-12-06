@@ -1,12 +1,7 @@
 ---
 title: Ceil
 slug: WebAssembly/Reference/Numeric/Ceil
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

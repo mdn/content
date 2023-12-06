@@ -1,22 +1,13 @@
 ---
-title: delete operator
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - Language feature
-  - Memory Management
-  - Object
-  - Operator
-  - Reference
-  - Release
-  - Unary
-  - delete
+page-type: javascript-operator
 browser-compat: javascript.operators.delete
 ---
 
 {{jsSidebar("Operators")}}
 
-The **`delete` operator** removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
+The **`delete`** operator removes a property from an object. If the property's value is an object and there are no more references to the object, the object held by that property is eventually released automatically.
 
 {{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
@@ -49,14 +40,14 @@ delete object[property]
 
 ## Description
 
-The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
+The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
-```js example-bad
+```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```
 
-Because [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are automatically in strict mode, and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) can only be legally referenced in class bodies, this means private properties can never be deleted. While `delete identifier` [may work](#deleting_global_properties) if `identifier` refers to a configurable property of the global object, you should avoid this form and prefix it with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) instead.
+Because [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are automatically in strict mode, and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be legally referenced in class bodies, this means private properties can never be deleted. While `delete identifier` [may work](#deleting_global_properties) if `identifier` refers to a configurable property of the global object, you should avoid this form and prefix it with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) instead.
 
 While other expressions are accepted, they don't lead to meaningful behaviors:
 
@@ -65,7 +56,7 @@ delete console.log(1);
 // Logs 1, returns true, but nothing deleted
 ```
 
-The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Memory_Management) page for more details.
+The `delete` operator removes a given property from an object. On successful deletion, it will return `true`, else `false` will be returned. Unlike what common belief suggests (perhaps due to other programming languages like [delete in C++](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)), the `delete` operator has **nothing** to do with directly freeing memory. Memory management is done indirectly via breaking references. See the [memory management](/en-US/docs/Web/JavaScript/Memory_management) page for more details.
 
 It is important to consider the following scenarios:
 
@@ -74,13 +65,7 @@ It is important to consider the following scenarios:
 - Non-configurable properties cannot be removed. This includes properties of built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} and properties that are created as non-configurable with methods like {{jsxref("Object.defineProperty()")}}.
 - Deleting variables, including function parameters, never works. `delete variable` will throw a {{jsxref("SyntaxError")}} in strict mode, and will have no effect in non-strict mode.
   - Any variable declared with {{jsxref("Statements/var", "var")}} cannot be deleted from the global scope or from a function's scope, because while they may be attached to the [global object](/en-US/docs/Glossary/Global_object), they are not configurable.
-  - Any variable declared with {{jsxref("Statements/let","let")}} or {{jsxref("Statements/const","const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
-
-### Cross-browser notes
-
-As of modern ECMAScript specification, the traversal order of object properties is well-defined and stable across implementations. However, in the case of Internet Explorer, when one uses `delete` on a property, some confusing behavior results, preventing other browsers from using simple objects like object literals as ordered associative arrays. In Explorer, while the property _value_ is indeed set to `undefined`, if one later adds back a property with the same name, the property will be iterated in its _old_ position — not at the end of the iteration sequence as one might expect after having deleted the property and then added it back.
-
-If you want to use an ordered associative array with support of old runtimes, use a {{jsxref("Map")}} object if available (through a polyfill, for example), or simulate this structure with two separate arrays (one for the keys and the other for the values), or build an array of single-property objects, etc.
+  - Any variable declared with {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
 
 ## Examples
 
@@ -93,7 +78,7 @@ If you want to use an ordered associative array with support of old runtimes, us
 // Since we are using var, this is marked as non-configurable.
 var empCount = 43;
 
-// Creates the property adminName on the global scope.
+// Creates the property EmployeeDetails on the global scope.
 // Since it was defined without "var", it is marked configurable.
 EmployeeDetails = {
   name: "xyz",
@@ -199,7 +184,7 @@ Object.defineProperty(Employee, "name", { configurable: false });
 console.log(delete Employee.name); // returns false
 ```
 
-{{jsxref("Statements/var","var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
+{{jsxref("Statements/var", "var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
 
 ```js
 // Since "nameOther" is added using with the
@@ -208,7 +193,7 @@ var nameOther = "XYZ";
 
 // We can access this global property using:
 Object.getOwnPropertyDescriptor(globalThis, "nameOther");
-// Object {
+// {
 //   value: "XYZ",
 //   writable: true,
 //   enumerable: true,

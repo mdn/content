@@ -1,14 +1,10 @@
 ---
-title: ImageDecoder.type
+title: "ImageDecoder: type property"
+short-title: type
 slug: Web/API/ImageDecoder/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - type
-  - ImageDecoder
-  - Experimental
+status:
+  - experimental
 browser-compat: api.ImageDecoder.type
 ---
 

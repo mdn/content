@@ -2,14 +2,6 @@
 title: Navigator
 slug: Web/API/Navigator
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - Interface
-  - Navigator
-  - Reference
-  - Web
-  - Web Performance
 browser-compat: api.Navigator
 ---
 
@@ -25,22 +17,30 @@ _Doesn't inherit any properties._
 
 ### Standard properties
 
+- {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Provides a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+  - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 - {{domxref("Navigator.cookieEnabled")}} {{ReadOnlyInline}}
   - : Returns false if setting a cookie will be ignored and true otherwise.
 - {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
-- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.deviceMemory")}} {{ReadOnlyInline}}
   - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("Navigator.geolocation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Geolocation")}} object allowing accessing the location of the device.
-- {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an {{domxref("HID")}} object providing methods
-    for connecting to HID devices, listing attached HID devices, and event
-    handlers for connected HID devices.
+- {{domxref("Navigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("GPU")}} object for the current browsing context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{domxref("Navigator.hardwareConcurrency")}} {{ReadOnlyInline}}
   - : Returns the number of logical processor cores available.
+- {{domxref("Navigator.hid")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("HID")}} object providing methods for connecting to HID devices, listing attached HID devices, and event handlers for connected HID devices.
+- {{domxref("Navigator.ink")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns an {{domxref("Ink")}} object for the current document, providing access to [Ink API](/en-US/docs/Web/API/Ink_API) functionality.
 - {{domxref('Navigator.keyboard')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref("Navigator.language")}} {{ReadOnlyInline}}
@@ -65,18 +65,26 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("Presentation")}} API.
+- {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 - {{domxref("Navigator.serviceWorker")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
   - : Returns the singleton {{domxref('StorageManager')}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
-- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.usb")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
+- {{domxref("Navigator.userActivation")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("UserActivation")}} object containing information about the current window's user activation state.
 - {{domxref("Navigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to the {{domxref("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
+- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.
 - {{domxref("Navigator.webdriver")}} {{ReadOnlyInline}}
   - : Indicates whether the user agent is controlled by automation.
 - {{domxref("Navigator.windowControlsOverlay")}} {{ReadOnlyInline}}
@@ -86,31 +94,25 @@ _Doesn't inherit any properties._
 
 ### Non-standard properties
 
-- {{domxref("Navigator.buildID")}} {{Non-standard_Inline}}
+- {{domxref("Navigator.buildID")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
-- {{domxref("Navigator.contacts")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref('ContactsManager')}} interface which allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
-- {{domxref("Navigator.globalPrivacyControl")}} {{Non-standard_Inline}} {{Experimental_Inline}}
+- {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
-  - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
-- {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("WakeLock")}} interface you can use to request screen wake locks and prevent screen from dimming, turning off, or showing a screen saver.
 
 ### Deprecated properties
 
+- {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
 - {{domxref("Navigator.appCodeName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Always returns `'Mozilla'`, in any browser.
 - {{domxref("Navigator.appName")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Always returns `'Netscape'`, in any browser.
 - {{domxref("Navigator.appVersion")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
-- {{domxref("Navigator.activeVRDisplays")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns an array containing every {{domxref("VRDisplay")}} object that is currently presenting ({{domxref("VRDisplay.ispresenting")}} is `true`).
-- {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : Reports the value of the user's do-not-track preference. When this value is "yes", your web site or application should not track the user.
+- {{domxref("Navigator.doNotTrack")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
+  - : Reports the value of the user's do-not-track preference. When this value is "1", your website or application should not track the user.
 - {{domxref("Navigator.mimeTypes")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Returns an {{domxref("MimeTypeArray")}} listing the MIME types supported by the browser.
 - {{domxref("Navigator.oscpu")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
@@ -134,35 +136,43 @@ _Doesn't inherit any method._
 
 - {{domxref("Navigator.canShare()")}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
-- {{domxref("Navigator.clearAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.clearAppBadge()")}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}
+  - : Returns a value indicating whether the specified media element, audio context, or media feature "type" is allowed to autoplay.
 - {{domxref("Navigator.getBattery()")}}
   - : Returns a promise that resolves with a {{domxref("BatteryManager")}} object that returns information about the battery charging status.
+- {{domxref("Navigator.getGamepads()")}}
+  - : returns an array of {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
+- {{domxref("Navigator.getInstalledRelatedApps()")}} {{Experimental_Inline}}
+  - : Returns a promise that resolves with an array of objects representing any related native or [Progressive Web Applications](/en-US/docs/Web/Progressive_web_apps) that the user has installed.
 - {{domxref("Navigator.registerProtocolHandler()")}}
-  - : Allows web sites to register themselves as a possible handler for a given protocol.
+  - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
   - : Returns a {{jsxref("Promise")}} for a MediaKeySystemAccess object.
 - {{domxref("Navigator.requestMIDIAccess()")}}
   - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
-- {{domxref("Navigator.setAppBadge()")}} {{Experimental_Inline}}
+- {{domxref("Navigator.setAppBadge()")}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.share()")}}
   - : Invokes the native sharing mechanism of the current platform.
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
+- {{domxref("Navigator.unregisterProtocolHandler()")}}
+  - : Unregister a website that is a handler for a given protocol.
 
 ### Deprecated methods
 
-- {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
 - {{domxref("Navigator.getUserMedia()")}} {{Deprecated_Inline}}
   - : After having prompted the user for permission, returns the audio or video stream associated to a camera or microphone on the local computer.
-- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
-  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
+- {{domxref("Navigator.getVRDisplays()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR devices connected to the computer.
 - {{domxref("Navigator.javaEnabled()")}} {{Deprecated_Inline}}
   - : Always returns false.
+- {{domxref("Navigator.taintEnabled()")}} {{Deprecated_Inline}}
+  - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
 
 ## Specifications
 

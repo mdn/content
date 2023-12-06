@@ -1,17 +1,10 @@
 ---
-title: XRCylinderLayer.aspectRatio
+title: "XRCylinderLayer: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/XRCylinderLayer/aspectRatio
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.aspectRatio
 ---
 
@@ -34,10 +27,10 @@ const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 1200,
   viewPixelHeight: 600,
-  centralAngle : 60 * Math.PI / 180,
-  aspectRatio : 2,
-  radius : 2,
-  transform : new XRRigidTransform(/* … */),
+  centralAngle: (60 * Math.PI) / 180,
+  aspectRatio: 2,
+  radius: 2,
+  transform: new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.aspectRatio; // 2

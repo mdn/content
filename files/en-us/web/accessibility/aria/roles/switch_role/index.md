@@ -1,15 +1,7 @@
 ---
 title: "ARIA: switch role"
 slug: Web/Accessibility/ARIA/Roles/switch_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Accessibility
-  - On/Off
-  - Reference
-  - Switch
-  - a11y
-  - toggle
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#switch
   - https://w3c.github.io/html-aria/#index-aria-switch
@@ -146,7 +138,10 @@ button.switch {
   line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  font: 12px "Open Sans", "Arial", serif;
+  font:
+    12px "Open Sans",
+    "Arial",
+    serif;
 }
 
 button.switch span {
@@ -166,7 +161,10 @@ button.switch span {
 }
 
 label.switch {
-  font: 16px "Open Sans", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Arial",
+    sans-serif;
   line-height: 20px;
   vertical-align: middle;
   user-select: none;

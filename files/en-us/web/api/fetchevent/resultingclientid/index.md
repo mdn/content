@@ -1,16 +1,8 @@
 ---
-title: FetchEvent.resultingClientId
+title: "FetchEvent: resultingClientId property"
+short-title: resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - FetchEvent
-  - Property
-  - Reference
-  - Service Workers
-  - Worker
-  - resultingClientId
 browser-compat: api.FetchEvent.resultingClientId
 ---
 

@@ -1,29 +1,8 @@
 ---
-title: XRPose.emulatedPosition
+title: "XRPose: emulatedPosition property"
+short-title: emulatedPosition
 slug: Web/API/XRPose/emulatedPosition
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Orientation
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Viewpoint
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - augmented
-  - emulatedPosition
-  - offset
-  - pose
-  - tracking
 browser-compat: api.XRPose.emulatedPosition
 ---
 

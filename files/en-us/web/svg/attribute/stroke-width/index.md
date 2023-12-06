@@ -1,9 +1,7 @@
 ---
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-width
 ---
 
@@ -13,7 +11,6 @@ The **`stroke-width`** attribute is a presentation attribute defining the width 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
 - {{SVGElement('line')}}

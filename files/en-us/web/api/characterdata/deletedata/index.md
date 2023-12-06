@@ -1,10 +1,8 @@
 ---
-title: CharacterData.deleteData()
+title: "CharacterData: deleteData() method"
+short-title: deleteData()
 slug: Web/API/CharacterData/deleteData
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.CharacterData.deleteData
 ---
 

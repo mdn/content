@@ -1,16 +1,8 @@
 ---
-title: CacheStorage.match()
+title: "CacheStorage: match() method"
+short-title: match()
 slug: Web/API/CacheStorage/match
 page-type: web-api-instance-method
-tags:
-  - API
-  - CacheStorage
-  - Method
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - match
 browser-compat: api.CacheStorage.match
 ---
 
@@ -108,7 +100,7 @@ self.addEventListener("fetch", (event) => {
           })
           .catch(() => caches.match("/gallery/myLittleVader.jpg"));
       }
-    })
+    }),
   );
 });
 ```

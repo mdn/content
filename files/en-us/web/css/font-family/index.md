@@ -2,12 +2,6 @@
 title: font-family
 slug: Web/CSS/font-family
 page-type: css-property
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.font-family
 ---
 
@@ -132,7 +126,7 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 
 The following declarations are **invalid**:
 
-```css example-bad
+```css-nolint example-bad
 font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
@@ -145,7 +139,9 @@ font-family: Hawaii 5-0, sans-serif;
 The following example is technically **valid** but is not recommended:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ## Formal definition

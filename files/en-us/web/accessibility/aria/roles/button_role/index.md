@@ -1,16 +1,10 @@
 ---
 title: "ARIA: button role"
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#button
-  - https://w3c.github.io/aria-practices/#button
+  - https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/
 ---
 
 The `button` role is for clickable elements that trigger a response when activated by the user. Adding `role="button"` tells the screen reader the element is a button, but provides no button functionality. Use {{HTMLElement("button")}} or {{HTMLElement("input")}} with `type="button"` instead.
@@ -31,7 +25,7 @@ The above example creates a focusable button, but requires JavaScript and CSS to
 <button type="button" id="saveChanges">Save</button>
 ```
 
-> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html).
+> **Note:** If using `role="button"` instead of the semantic `<button>` or `<input type="button">` elements, you will need to make the element focusable and define event handlers for {{domxref("Element/click_event", "click")}} and {{domxref("Element/keydown_event", "keydown")}} events. This includes handling the <kbd>Enter</kbd> and <kbd>Space</kbd> keypresses in order to process all forms of user input. See [the official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/).
 
 In addition to the ordinary button widget, `role="button"` should be included when creating a toggle button or menu button using a non-button element.
 
@@ -101,7 +95,7 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<b
 - `onclick`
   - : Handles the event raised when the button is activated using a mouse click or touch event.
 - `onKeyDown`
-  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Document/keypress_event))
+  - : Handles the event raised when the button is activated using the Enter or Space key on the keyboard. (Note not the [deprecated onKeyPress](/en-US/docs/Web/API/Element/keypress_event))
 
 ## Examples
 
@@ -298,7 +292,7 @@ If a link performs the action of a button, giving the element `role="button"` he
 - [`aria-haspopup`](https://www.w3.org/TR/wai-aria-1.1/#aria-haspopup)
 - [Strong native semantics in HTML5](https://html.spec.whatwg.org/multipage/dom.html#aria-usage-note)
 - [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
-- [Official WAI-ARIA example code](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
+- [Official WAI-ARIA example code](https://www.w3.org/WAI/ARIA/apg/patterns/button/examples/button/)
 
 <section id="Quick_links">
 

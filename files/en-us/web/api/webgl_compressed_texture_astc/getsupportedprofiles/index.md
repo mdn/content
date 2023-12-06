@@ -1,14 +1,8 @@
 ---
-title: WEBGL_compressed_texture_astc.getSupportedProfiles()
+title: "WEBGL_compressed_texture_astc: getSupportedProfiles() method"
+short-title: getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles
 ---
 
@@ -44,7 +38,7 @@ tonal range of real-world scenes (100,000:1).
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_compressed_texture_astc');
+const ext = gl.getExtension("WEBGL_compressed_texture_astc");
 ext.getSupportedProfiles(); // ["ldr"]
 ```
 

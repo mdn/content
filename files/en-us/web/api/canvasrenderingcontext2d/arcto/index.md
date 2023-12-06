@@ -1,13 +1,8 @@
 ---
-title: CanvasRenderingContext2D.arcTo()
+title: "CanvasRenderingContext2D: arcTo() method"
+short-title: arcTo()
 slug: Web/API/CanvasRenderingContext2D/arcTo
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.arcTo
 ---
 
@@ -55,7 +50,7 @@ None ({{jsxref("undefined")}}).
 One way to think about `arcTo()` is to imagine two straight segments: one
 from the starting point to a first control point, and another from there to a second
 control point. Without `arcTo()`, these two segments would form a sharp
-corner: `arcTo()` creates a circular arc that fits this corner and smooths is
+corner: `arcTo()` creates a circular arc that fits this corner and smooths it
 out. In other words, the arc is tangential to both segments.
 
 #### HTML
@@ -67,12 +62,12 @@ out. In other words, the arc is tangential to both segments.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Tangential lines
 ctx.beginPath();
-ctx.strokeStyle = 'gray';
+ctx.strokeStyle = "gray";
 ctx.moveTo(200, 20);
 ctx.lineTo(200, 130);
 ctx.lineTo(50, 20);
@@ -80,23 +75,23 @@ ctx.stroke();
 
 // Arc
 ctx.beginPath();
-ctx.strokeStyle = 'black';
+ctx.strokeStyle = "black";
 ctx.lineWidth = 5;
 ctx.moveTo(200, 20);
-ctx.arcTo(200,130, 50,20, 40);
+ctx.arcTo(200, 130, 50, 20, 40);
 ctx.stroke();
 
 // Start point
 ctx.beginPath();
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.arc(200, 20, 5, 0, 2 * Math.PI);
 ctx.fill();
 
 // Control points
 ctx.beginPath();
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.arc(200, 130, 5, 0, 2 * Math.PI); // Control point one
-ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Control point two
+ctx.arc(50, 20, 5, 0, 2 * Math.PI); // Control point two
 ctx.fill();
 ```
 
@@ -127,16 +122,16 @@ that the arc's second control point and the point specified by `lineTo()` are
 the same, which produces a totally smooth corner.
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const p0 = { x: 230, y: 20  }
-const p1 = { x: 90,  y: 130 }
-const p2 = { x: 20,  y: 20  }
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const p0 = { x: 230, y: 20 };
+const p1 = { x: 90, y: 130 };
+const p2 = { x: 20, y: 20 };
 
 const labelPoint = (p) => {
   const offset = 15;
   ctx.fillText(`(${p.x},${p.y})`, p.x + offset, p.y + offset);
-}
+};
 
 ctx.beginPath();
 ctx.moveTo(p0.x, p0.y);
@@ -170,12 +165,12 @@ arc to fit entirely below the starting point.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.beginPath();
 ctx.moveTo(180, 90);
-ctx.arcTo(180,130, 110,130, 130);
+ctx.arcTo(180, 130, 110, 130, 130);
 ctx.lineTo(110, 130);
 ctx.stroke();
 ```
@@ -186,8 +181,10 @@ ctx.stroke();
 
 ### Live demo
 
-More sophisticated demo of the method. You can play around with range input to see how
-arc changes.
+More sophisticated demo of the method. You can play around with the arc radius to see how
+the path changes. The path is drawn from the starting point _p0_ using `arcTo()` with control points
+_p1_ and _p2_ and a radius that varies from 0 to the maximum radius selected with the slider.
+Then a `lineTo()` call completes the path to _p2_.
 
 #### HTML
 
@@ -203,22 +200,18 @@ arc changes.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx    = canvas.getContext('2d');
-let radius   = 100;
-
-const controlOut = document.getElementById('radius-output');
-const control    = document.getElementById('radius');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const controlOut = document.getElementById("radius-output");
+const control = document.getElementById("radius");
 control.oninput = () => {
   controlOut.textContent = radius = control.value;
 };
 
-const mouse = { x: 0, y: 0 };
-
-const p0 = { x: 0, y: 50 };
 const p1 = { x: 100, y: 100 };
 const p2 = { x: 150, y: 50 };
 const p3 = { x: 200, y: 100 };
+let radius = control.value; // match with init control value
 
 function labelPoint(p, offset, i = 0) {
   const { x, y } = offset;
@@ -230,7 +223,7 @@ function labelPoint(p, offset, i = 0) {
 
 function drawPoints(points) {
   points.forEach((p, i) => {
-    labelPoint(p, { x: 0, y: -20 }, i)
+    labelPoint(p, { x: 0, y: -20 }, `p${i}`);
   });
 }
 

@@ -2,13 +2,9 @@
 title: MediaStreamTrackGenerator
 slug: Web/API/MediaStreamTrackGenerator
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - MediaStreamTrackGenerator
-  - Experimental
-  - Non-standard
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MediaStreamTrackGenerator
 ---
 
@@ -35,14 +31,14 @@ _This interface doesn't implement any specific methods, but inherits methods fro
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/articles/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which process barcodes and highlights them before writing the transformed frames to the writable stream of {{domxref("MediaStreamTrackGenerator.writable")}}.
 
 ```js
 const stream = await getUserMedia({ video: true });
 const videoTrack = stream.getVideoTracks()[0];
 
 const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 const transformer = new TransformStream({
   async transform(videoFrame, controller) {
@@ -53,7 +49,9 @@ const transformer = new TransformStream({
   },
 });
 
-trackProcessor.readable.pipeThrough(transformer).pipeTo(trackGenerator.writable);
+trackProcessor.readable
+  .pipeThrough(transformer)
+  .pipeTo(trackGenerator.writable);
 ```
 
 ## Specifications

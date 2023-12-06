@@ -1,20 +1,10 @@
 ---
-title: MediaSession.setCameraActive()
+title: "MediaSession: setCameraActive() method"
+short-title: setCameraActive()
 slug: Web/API/MediaSession/setCameraActive
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Session API
-  - MediaSession
-  - Method
-  - Reference
-  - UX
-  - Video
-  - setActionHandler
-  - setCameraActive
-  - Experimental
+status:
+  - experimental
 browser-compat: api.MediaSession.setCameraActive
 ---
 
@@ -45,14 +35,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 Below is an example of updating the camera active state of the current
-{{domxref('MediaSession')}}, as well as listening to requests to change the camera status with {{domxref("navigator.mediaSession.setActionHandler", "setActionHandler")}}.
+{{domxref('MediaSession')}}, as well as listening to requests to change the camera status with {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}.
 
 ```js
 let cameraActive = false;
 
 navigator.mediaSession.setCameraActive(cameraActive);
 
-navigator.mediaSession.setActionHandler('togglecamera', () => {
+navigator.mediaSession.setActionHandler("togglecamera", () => {
   cameraActive = !cameraActive;
   navigator.mediaSession.setCameraActive(cameraActive);
 });

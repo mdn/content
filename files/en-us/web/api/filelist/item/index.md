@@ -1,19 +1,14 @@
 ---
-title: FileList.item()
+title: "FileList: item() method"
+short-title: item()
 slug: Web/API/FileList/item
 page-type: web-api-instance-method
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
 browser-compat: api.FileList.item
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`item()`** method of the {{domxref("FileList")}} API returns a {{domxref("File")}} object representing the file at the specified index in the file list.
+The **`item()`** method of the {{domxref("FileList")}} interface returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Syntax
 
@@ -28,7 +23,7 @@ item(index)
 
 ### Return value
 
-A [`File`](/en-US/docs/Web/API/File) object representing the requested file.
+A {{domxref("File")}} object representing the requested file.
 
 ## Examples
 
@@ -47,7 +42,7 @@ In this example, we use `item()` to select the first item in the `FileList`.
 
 ```js
 const fileInput = document.querySelector("input[type=file]");
-const output = document.querySelector('.output');
+const output = document.querySelector(".output");
 
 fileInput.addEventListener("change", () => {
   const fileList = fileInput.files;

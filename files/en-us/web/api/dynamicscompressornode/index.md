@@ -2,14 +2,6 @@
 title: DynamicsCompressorNode
 slug: Web/API/DynamicsCompressorNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - DynamicsCompressorNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.DynamicsCompressorNode
 ---
 
@@ -72,7 +64,7 @@ _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}
 
 ## Example
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) example code.
 
 ## Specifications
 

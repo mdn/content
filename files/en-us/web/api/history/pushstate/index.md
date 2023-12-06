@@ -1,19 +1,8 @@
 ---
-title: History.pushState()
+title: "History: pushState() method"
+short-title: pushState()
 slug: Web/API/History/pushState
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Location
-  - Method
-  - Reference
-  - Session
-  - URL
-  - Web
-  - pushState
 browser-compat: api.History.pushState
 ---
 
@@ -40,14 +29,9 @@ pushState(state, unused, url)
     the `state` property of the event contains a copy of the history entry's
     `state` object.
 
-    The `state` object can be anything that can be serialized. Because
-    Firefox saves `state` objects to the user's disk so they can be restored
-    after the user restarts the browser, we impose a size limit of 16 MiB on the
-    serialized representation of a `state` object. If you pass a
-    `state` object whose serialized representation is larger than this
-    to `pushState()`, the method will throw an exception. If you need more
-    space than this, you're encouraged to use {{domxref("Window.sessionStorage",
-    "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+    The `state` object can be anything that can be serialized.
+
+    > **Note:** Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
 
@@ -92,18 +76,18 @@ This creates a new browser history entry setting the _state_ and _url_.
 ### JavaScript
 
 ```js
-const state = { 'page_id': 1, 'user_id': 5 }
-const url = 'hello-world.html'
+const state = { page_id: 1, user_id: 5 };
+const url = "hello-world.html";
 
-history.pushState(state, '', url)
+history.pushState(state, "", url);
 ```
 
 ### Change a query parameter
 
 ```js
-const url = new URL(window.location);
-url.searchParams.set('foo', 'bar');
-window.history.pushState({}, '', url);
+const url = new URL(location);
+url.searchParams.set("foo", "bar");
+history.pushState({}, "", url);
 ```
 
 ## Specifications

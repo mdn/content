@@ -2,12 +2,6 @@
 title: Pbkdf2Params
 slug: Web/API/Pbkdf2Params
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - Pbkdf2Params
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-Pbkdf2Params
 ---
 

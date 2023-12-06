@@ -1,11 +1,7 @@
 ---
 title: Local set
 slug: WebAssembly/Reference/Variables/Local_set
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

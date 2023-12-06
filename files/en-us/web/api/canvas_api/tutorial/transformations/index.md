@@ -2,16 +2,9 @@
 title: Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 page-type: guide
-tags:
-  - Canvas
-  - Graphics
-  - Guide
-  - HTML
-  - Intermediate
-  - Web
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 Earlier in this tutorial we've learned about the [canvas grid](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) and the **coordinate space**. Until now, we only used the default grid and changed the size of the overall canvas for our needs. With transformations there are more powerful ways to translate the origin to a different position, rotate the grid and even scale it.
 
@@ -52,28 +45,26 @@ You can call the `save()` method as many times as you like. Each time the `resto
 
 ### A `save` and `restore` canvas state example
 
-This example tries to illustrate how the stack of drawing states functions by drawing a set of consecutive rectangles.
-
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
-  ctx.fillRect(0, 0, 150, 150);   // Draw a rectangle with default settings
-  ctx.save();                  // Save the default state
+  ctx.fillRect(0, 0, 150, 150); // Draw a Black rectangle with default settings
+  ctx.save(); // Save the original default state
 
-  ctx.fillStyle = '#09F';      // Make changes to the settings
-  ctx.fillRect(15, 15, 120, 120); // Draw a rectangle with new settings
+  ctx.fillStyle = "#09F"; // Make changes to saved settings
+  ctx.fillRect(15, 15, 120, 120); // Draw a Blue rectangle with new settings
+  ctx.save(); // Save the current state
 
-  ctx.save();                  // Save the current state
-  ctx.fillStyle = '#FFF';      // Make changes to the settings
+  ctx.fillStyle = "#FFF"; // Make changes to saved settings
   ctx.globalAlpha = 0.5;
-  ctx.fillRect(30, 30, 90, 90);   // Draw a rectangle with new settings
+  ctx.fillRect(30, 30, 90, 90); // Draw a 50%-White rectangle with newest settings
 
-  ctx.restore();               // Restore previous state
-  ctx.fillRect(45, 45, 60, 60);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore to previous state
+  ctx.fillRect(45, 45, 60, 60); // Draw a rectangle with restored Blue setting
 
-  ctx.restore();               // Restore original state
-  ctx.fillRect(60, 60, 30, 30);   // Draw a rectangle with restored settings
+  ctx.restore(); // Restore to original state
+  ctx.fillRect(60, 60, 30, 30); // Draw a rectangle with restored Black setting
 }
 ```
 
@@ -112,7 +103,7 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       ctx.save();
@@ -154,32 +145,32 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   // left rectangles, rotate from canvas origin
   ctx.save();
   // blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(30, 30, 100, 100);
   ctx.rotate((Math.PI / 180) * 25);
   // grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(30, 30, 100, 100);
   ctx.restore();
 
   // right rectangles, rotate from rectangle center
   // draw blue rect
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = "#0095DD";
   ctx.fillRect(150, 30, 100, 100);
 
   ctx.translate(200, 80); // translate to rectangle center
-                          // x = x + 0.5 * width
-                          // y = y + 0.5 * height
+  // x = x + 0.5 * width
+  // y = y + 0.5 * height
   ctx.rotate((Math.PI / 180) * 25); // rotate
   ctx.translate(-200, -80); // translate back
 
   // draw grey rect
-  ctx.fillStyle = '#4D4E53';
+  ctx.fillStyle = "#4D4E53";
   ctx.fillRect(150, 30, 100, 100);
 }
 ```
@@ -213,7 +204,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -223,8 +214,8 @@ function draw() {
 
   // mirror horizontally
   ctx.scale(-1, 1);
-  ctx.font = '48px serif';
-  ctx.fillText('MDN', -135, 120);
+  ctx.font = "48px serif";
+  ctx.fillText("MDN", -135, 120);
 }
 ```
 
@@ -273,21 +264,21 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  const ctx = document.getElementById('canvas').getContext('2d');
+  const ctx = document.getElementById("canvas").getContext("2d");
 
   const sin = Math.sin(Math.PI / 6);
   const cos = Math.cos(Math.PI / 6);
   ctx.translate(100, 100);
   let c = 0;
   for (let i = 0; i <= 12; i++) {
-    c = Math.floor(255 / 12 * i);
+    c = Math.floor((255 / 12) * i);
     ctx.fillStyle = `rgb(${c}, ${c}, ${c})`;
     ctx.fillRect(0, 0, 100, 10);
     ctx.transform(cos, sin, -sin, cos, 0, 0);
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = 'rgba(255, 128, 255, 0.5)';
+  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```

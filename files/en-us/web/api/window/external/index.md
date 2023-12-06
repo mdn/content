@@ -1,13 +1,10 @@
 ---
-title: Window.external
+title: "Window: external property"
+short-title: external
 slug: Web/API/Window/external
 page-type: web-api-instance-property
-tags:
-  - API
-  - property
-  - Window
-  - external
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Window.external
 ---
 

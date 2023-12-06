@@ -1,20 +1,8 @@
 ---
-title: RTCRtpStreamStats.ssrc
+title: "RTCRtpStreamStats: ssrc property"
+short-title: ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
-  - source
-  - ssrc
 browser-compat: api.RTCRtpStreamStats.ssrc
 ---
 

@@ -1,17 +1,8 @@
 ---
-title: Animation.play()
+title: "Animation: play() method"
+short-title: play()
 slug: Web/API/Animation/play
 page-type: web-api-instance-method
-tags:
-  - API
-  - Animation
-  - Interface
-  - Method
-  - Reference
-  - Web Animations
-  - play
-  - waapi
-  - web animations api
 browser-compat: api.Animation.play
 ---
 
@@ -47,7 +38,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.timing.duration / 2,
-    }
+    },
   );
 
 // Pause the cake's animation so it doesn't play immediately.

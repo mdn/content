@@ -2,16 +2,6 @@
 title: object-fit
 slug: Web/CSS/object-fit
 page-type: css-property
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Layout
-  - Reference
-  - CSS layout
-  - object-fit
-  - recipe:css-property
-  - size
 browser-compat: css.properties.object-fit
 ---
 
@@ -102,7 +92,9 @@ The `object-fit` property is specified as a single keyword chosen from the list 
 
 ```css
 h2 {
-  font-family: Courier New, monospace;
+  font-family:
+    Courier New,
+    monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
 }

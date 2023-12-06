@@ -1,10 +1,7 @@
 ---
-title: Browser Extensions
+title: Browser extensions
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Add-ons
-  - Landing
-  - WebExtensions
+page-type: landing-page
 ---
 
 {{AddonSidebar}}

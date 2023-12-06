@@ -1,12 +1,8 @@
 ---
-title: TreeWalker.root
+title: "TreeWalker: root property"
+short-title: root
 slug: Web/API/TreeWalker/root
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - TreeWalker
 browser-compat: api.TreeWalker.root
 ---
 
@@ -23,10 +19,14 @@ A {{domxref("Node")}} object.
 
 ```js
 const treeWalker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode(node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false,
 );
 root = treeWalker.root; // document.body in this case
 ```

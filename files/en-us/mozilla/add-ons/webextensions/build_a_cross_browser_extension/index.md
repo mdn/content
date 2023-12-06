@@ -1,11 +1,7 @@
 ---
-title: Building a cross-browser extension
+title: Build a cross-browser extension
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
-tags:
-  - Add-ons
-  - Extensions
-  - Guide
-  - WebExtensions
+page-type: guide
 ---
 
 {{AddonSidebar()}}
@@ -67,13 +63,10 @@ So, for example, this `manifest.json` code makes the polyfill available to backg
 
 ```json
 {
- // …
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // …
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 
@@ -215,7 +208,5 @@ The Firefox, Chrome, and Edge stores require that each uploaded version has a di
 When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). Following this approach, you benefit from using API features that are closely aligned with the proposed extensions API standard and gain the simplicity of promises for asynchronous event handling.
 
 The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You will then need to account for the variations in the processes for submitting to each extension store.
-
-You can use [browser-extension-template](https://github.com/fregante/browser-extension-template) to quickly set up a working project for building and publishing a browser extension.
 
 Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.

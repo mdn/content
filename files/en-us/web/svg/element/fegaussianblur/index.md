@@ -1,10 +1,7 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Element/feGaussianBlur
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feGaussianBlur
 ---
 

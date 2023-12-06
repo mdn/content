@@ -1,15 +1,8 @@
 ---
-title: ScreenOrientation.angle
+title: "ScreenOrientation: angle property"
+short-title: angle
 slug: Web/API/ScreenOrientation/angle
 page-type: web-api-instance-property
-tags:
-  - API
-  - Orientation
-  - Property
-  - Reference
-  - Screen Orientation API
-  - ScreenOrientation
-  - angle
 browser-compat: api.ScreenOrientation.angle
 ---
 

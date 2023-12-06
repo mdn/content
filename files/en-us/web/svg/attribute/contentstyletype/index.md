@@ -1,10 +1,9 @@
 ---
 title: contentStyleType
 slug: Web/SVG/Attribute/contentStyleType
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.svg.contentStyleType
 ---
 

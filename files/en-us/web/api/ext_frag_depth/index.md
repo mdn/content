@@ -1,13 +1,8 @@
 ---
-title: EXT_frag_depth
+title: EXT_frag_depth extension
+short-title: EXT_frag_depth
 slug: Web/API/EXT_frag_depth
 page-type: webgl-extension
-tags:
-  - API
-  - Fragment Shader
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.EXT_frag_depth
 ---
 
@@ -24,7 +19,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 Enable the extension:
 
 ```js
-gl.getExtension('EXT_frag_depth');
+gl.getExtension("EXT_frag_depth");
 ```
 
 Now the output variable `gl_FragDepthEXT` is available to set a depth value of a fragment from within the fragment shader:

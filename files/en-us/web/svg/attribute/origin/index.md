@@ -1,9 +1,7 @@
 ---
 title: origin
 slug: Web/SVG/Attribute/origin
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://svgwg.org/specs/animations/#OriginAttribute
 ---
 

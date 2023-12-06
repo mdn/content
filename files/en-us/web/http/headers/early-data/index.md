@@ -1,14 +1,9 @@
 ---
 title: Early-Data
 slug: Web/HTTP/Headers/Early-Data
-tags:
-  - Early-Data
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Reference
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Early-Data
 ---
 

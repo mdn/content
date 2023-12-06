@@ -1,9 +1,7 @@
 ---
 title: Animation performance and frame rate
 slug: Web/Performance/Animation_performance_and_frame_rate
-tags:
-  - CSS animation
-  - Web Performance
+page-type: guide
 ---
 
 {{QuickLinksWithSubPages("Web/Performance")}}
@@ -14,7 +12,7 @@ For animated media, such as video and animated gifs, the main performance concer
 
 Users expect all interface interactions to be smooth and all user interfaces to be responsive. Animation can help make a site feel faster and responsive, but animations can also make a site feel slower and janky if not done correctly. Responsive user interfaces have a frame rate of 60 frames per second (fps). While it is not always possible to maintain 60fps, it is important to maintain a high and steady frame rate for all animations.
 
-With [CSS animations](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) you specify a number of [keyframes](/en-US/docs/Web/CSS/@keyframes), each of which uses CSS to define the appearance of the element at a particular stage of the animation. The browser creates the animation as a transition from each keyframe to the next.
+With [CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) you specify a number of [keyframes](/en-US/docs/Web/CSS/@keyframes), each of which uses CSS to define the appearance of the element at a particular stage of the animation. The browser creates the animation as a transition from each keyframe to the next.
 
 Compared with animating elements using JavaScript, CSS animations can be easier to create. They can also give better performance, as they give the browser more control over when to render frames, and to drop frames if necessary.
 
@@ -36,75 +34,26 @@ This sequence needs to fit into a single frame, since the screen isn't updated u
 
 In the context of the rendering waterfall, some properties are more expensive than others:
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Property type</th>
-      <th scope="col">Cost</th>
-      <th scope="col">Examples</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Properties that affect an element's <em>geometry</em> or
-        <em>position</em> trigger a style recalculation, a layout and a repaint.
-      </td>
-      <td>
-        <img alt="Recalculate: Yes" src="recalculate-style.png" />
-        <img alt="Does calculate layout" src="layout.png" />
-        <img alt="Does repaint" src="paint.png" />
-      </td>
-      <td>
-        <p>
-          <code><a href="/en-US/docs/Web/CSS/left">left</a></code
-          ><br /><code
-            ><a href="/en-US/docs/Web/CSS/max-width">max-width</a></code
-          ><br /><code
-            ><a href="/en-US/docs/Web/CSS/border-width">border-width</a></code
-          ><br /><code
-            ><a href="/en-US/docs/Web/CSS/margin-left">margin-left</a></code
-          ><br /><code
-            ><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code
-          >
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>
-          Properties that don't affect geometry or position, but are not
-          rendered in their own layer, do not trigger a layout.
-        </p>
-      </td>
-      <td>
-        <img alt="does recalculate styles " src="recalculate-style.png" />
-        <img alt="No layout" src="layout-faint.png" />
-        <img alt="does repaint" src="paint.png" />
-      </td>
-      <td>
-        <p>
-          <code><a href="/en-US/docs/Web/CSS/color">color</a></code>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Properties that are rendered in their own layer don't even trigger a
-        repaint, because the update is handled in composition.
-      </td>
-      <td>
-        <img alt="Does recalculate styles" src="recalculate-style.png" />
-        <img alt="No layout" src="layout-faint.png" />
-        <img alt="No repaint" src="paint-faint.png" />
-      </td>
-      <td>
-        <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code
-        ><br /><code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- Properties that affect an element's **geometry** or **position** trigger a:
+
+  - style recalculation
+  - layout
+  - repaint
+
+  For example: {{cssxref("left")}}, {{cssxref("max-width")}}, {{cssxref("border-width")}}, {{cssxref("margin-left")}}, {{cssxref("font-size")}}
+
+- Properties that do _not_ affect geometry or position and are _not rendered_ in their own layer, do _not_ trigger a layout. They do trigger a:
+
+  - style recalculation
+  - repaint
+
+  For example: {{cssxref("color")}}
+
+- Properties that _are rendered_ in their **own layer** don't even trigger a repaint, because the update is handled in **composition**. These do trigger:
+
+  - style recalculation
+
+  For example: {{cssxref("transform")}}, {{cssxref("opacity")}}
 
 ## Developer tools
 

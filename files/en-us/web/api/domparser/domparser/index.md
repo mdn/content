@@ -1,13 +1,8 @@
 ---
-title: DOMParser()
+title: "DOMParser: DOMParser() constructor"
+short-title: DOMParser()
 slug: Web/API/DOMParser/DOMParser
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - DOM Parsing
-  - Parsing
-  - Reference
 browser-compat: api.DOMParser.DOMParser
 ---
 

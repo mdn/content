@@ -1,11 +1,7 @@
 ---
 title: Global get
 slug: WebAssembly/Reference/Variables/Global_get
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

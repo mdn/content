@@ -1,16 +1,13 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.debugger
 ---
 
 {{jsSidebar("Statements")}}
 
-The **`debugger` statement** invokes any available debugging
+The **`debugger`** statement invokes any available debugging
 functionality, such as setting a breakpoint. If no debugging functionality is available,
 this statement has no effect.
 
@@ -49,4 +46,4 @@ statement. It is like a breakpoint in the script source.
 
 ## See also
 
-- [The Debugger in the Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)
+- [The Firefox JavaScript Debugger¶](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) in the Firefox source docs

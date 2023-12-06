@@ -1,23 +1,7 @@
 ---
 title: HTML table advanced features and accessibility
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - Accessibility
-  - Advanced
-  - Article
-  - Beginner
-  - CodingScripting
-  - HTML
-  - Headers
-  - Learn
-  - caption
-  - nesting
-  - scope
-  - summary
-  - table
-  - tbody
-  - tfoot
-  - thead
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
@@ -63,7 +47,7 @@ As you can infer from the brief example above, the caption is meant to contain a
 
 A caption is placed directly beneath the `<table>` tag.
 
-> **Note:** The {{htmlattrxref("summary","table")}} attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
+> **Note:** The [`summary`](/en-US/docs/Web/HTML/Element/table#summary) attribute can also be used on the `<table>` element to provide a description — this is also read out by screen readers. We'd recommend using the `<caption>` element instead, however, as `summary` is deprecated and can't be read by sighted users (it doesn't appear on the page).
 
 ### Active learning: Adding a caption
 
@@ -87,7 +71,7 @@ To use them:
 - The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
 - The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it.
 
-> **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
+> **Note:** `<tbody>` is always included in every table, implicitly if you don't specify it in your code. To check this, open up one of your previous examples that doesn't include `<tbody>` and look at the HTML code in your [browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — you will see that the browser has added this tag for you. You might wonder why you ought to bother including it at all — you should, because it gives you more control over your table structure and styling.
 
 ### Active learning: Adding table structure
 
@@ -97,7 +81,7 @@ Let's put these new elements into action.
 2. Try opening it in a browser — You'll see that it looks OK, but it could stand to be improved. The "SUM" row that contains a summation of the spent amounts seems to be in the wrong place, and there are some details missing from the code.
 3. Put the obvious headers row inside a `<thead>` element, the "SUM" row inside a `<tfoot>` element, and the rest of the content inside a `<tbody>` element.
 4. Save and refresh, and you'll see that adding the `<tfoot>` element has caused the "SUM" row to go down to the bottom of the table.
-5. Next, add a {{htmlattrxref("colspan","td")}} attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
+5. Next, add a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute to make the "SUM" cell span across the first four columns, so the actual number appears at the bottom of the "Cost" column.
 6. Let's add some simple extra styling to the table, to give you an idea of how useful these elements are for applying CSS. Inside the head of your HTML document, you'll see an empty {{htmlelement("style")}} element. Inside this element, add the following lines of CSS code:
 
    ```css
@@ -117,118 +101,9 @@ Let's put these new elements into action.
 
 Your finished table should look something like the following:
 
-```html hidden
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>My spending record</title>
-    <style>
-      html {
-        font-family: sans-serif;
-      }
+{{ EmbedGHLiveSample('learning-area/html/tables/advanced/spending-record-finished.html', '100%', 400) }}
 
-      table {
-        border-collapse: collapse;
-        border: 4px solid rgb(200, 200, 200);
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-      }
-
-      td,
-      th {
-        border: 2px solid rgb(190, 190, 190);
-        padding: 10px 20px;
-      }
-
-      th {
-        background-color: rgb(235, 235, 235);
-      }
-
-      td {
-        text-align: center;
-      }
-
-      tr:nth-child(even) td {
-        background-color: rgb(250, 250, 250);
-      }
-
-      tr:nth-child(odd) td {
-        background-color: rgb(245, 245, 245);
-      }
-
-      caption {
-        padding: 10px;
-      }
-
-      tbody {
-        font-size: 90%;
-        font-style: italic;
-      }
-
-      tfoot {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <table>
-      <caption>
-        How I chose to spend my money
-      </caption>
-      <thead>
-        <tr>
-          <th>Purchase</th>
-          <th>Location</th>
-          <th>Date</th>
-          <th>Evaluation</th>
-          <th>Cost (€)</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <td colspan="4">SUM</td>
-          <td>118</td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>Haircut</td>
-          <td>Hairdresser</td>
-          <td>12/09</td>
-          <td>Great idea</td>
-          <td>30</td>
-        </tr>
-        <tr>
-          <td>Lasagna</td>
-          <td>Restaurant</td>
-          <td>12/09</td>
-          <td>Regrets</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>Shoes</td>
-          <td>Shoeshop</td>
-          <td>13/09</td>
-          <td>Big regrets</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Toothpaste</td>
-          <td>Supermarket</td>
-          <td>13/09</td>
-          <td>Good</td>
-          <td>5</td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
-</html>
-```
-
-{{ EmbedLiveSample('Active_learning_Adding_table_structure', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
-
-> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html)).
+> **Note:** You can also find it on GitHub as [spending-record-finished.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record-finished.html).
 
 ## Nesting Tables
 
@@ -359,7 +234,7 @@ We already covered headers in our previous article — see [Adding headers with 
 
 ### The scope attribute
 
-A new topic for this article is the {{htmlattrxref("scope","th")}} attribute, which can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
+A new topic for this article is the [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute, which can be added to the `<th>` element to tell screen readers exactly what cells the header is a header for — is it a header for the row it is in, or the column, for example? Looking back to our spending record example from earlier on, you could unambiguously define the column headers as column headers like this:
 
 ```html
 <thead>
@@ -391,7 +266,7 @@ screen readers will recognize markup structured like this, and allow their users
 
 ### The id and headers attributes
 
-An alternative to using the `scope` attribute is to use {{htmlattrxref("id")}} and {{htmlattrxref("headers", "td")}} attributes to create associations between headers and cells. The way they are used is as follows:
+An alternative to using the `scope` attribute is to use [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to create associations between headers and cells. The way they are used is as follows:
 
 1. You add a unique `id` to each `<th>` element.
 2. You add a `headers` attribute to each `<td>` element. Each `headers` attribute has to contain a list of the `id`s of all the `<th>` elements that act as a header for that cell, separated by spaces.
@@ -442,9 +317,3 @@ If you are already learning CSS and have done well on the assessment, you can mo
 If you want to get started with learning CSS, check out the [CSS Learning Area](/en-US/docs/Learn/CSS)!
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## In this module
-
-- [HTML table basics](/en-US/docs/Learn/HTML/Tables/Basics)
-- [HTML table advanced features and accessibility](/en-US/docs/Learn/HTML/Tables/Advanced)
-- [Structuring planet data](/en-US/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -1,19 +1,14 @@
 ---
-title: Blob.arrayBuffer()
+title: "Blob: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
 browser-compat: api.Blob.arrayBuffer
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`arrayBuffer()`** method in the {{domxref("Blob")}}
+The **`arrayBuffer()`** method of the {{domxref("Blob")}}
 interface returns a {{jsxref("Promise")}} that resolves with the contents of the blob as
 binary data contained in an {{jsxref("ArrayBuffer")}}.
 

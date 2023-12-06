@@ -1,18 +1,8 @@
 ---
-title: RTCPeerConnectionIceEvent.candidate
+title: "RTCPeerConnectionIceEvent: candidate property"
+short-title: candidate
 slug: Web/API/RTCPeerConnectionIceEvent/candidate
 page-type: web-api-instance-property
-tags:
-  - Candidate
-  - Negotiation
-  - Networking
-  - Property
-  - RTCPeerConnectionIceEvent
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCPeerConnectionIceEvent.candidate
 ---
 
@@ -32,8 +22,10 @@ negotiation session.
 
 ```js
 pc.onicecandidate = (ev) => {
-  alert(`The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`);
-}
+  alert(
+    `The ICE candidate (transport address: '${ev.candidate.candidate}') has been added to this connection.`,
+  );
+};
 ```
 
 ## Specifications

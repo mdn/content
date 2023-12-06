@@ -1,14 +1,8 @@
 ---
-title: IDBTransaction.commit()
+title: "IDBTransaction: commit() method"
+short-title: commit()
 slug: Web/API/IDBTransaction/commit
 page-type: web-api-instance-method
-tags:
-  - API
-  - IDBTransaction
-  - Method
-  - Reference
-  - Web
-  - commit
 browser-compat: api.IDBTransaction.commit
 ---
 
@@ -44,18 +38,20 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const note = document.getElementById('notifications');
+const note = document.getElementById("notifications");
 
 // open a read/write db transaction, ready for adding the data
 const transaction = db.transaction(["myDB"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = (event) => {
-  note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  note.innerHTML +=
+    "<li>Transaction completed: database modification finished.</li>";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML +=
+    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
 };
 
 // create an object store on the transaction
@@ -67,7 +63,7 @@ const objectStoreRequest = objectStore.add(newItem[0]);
 objectStoreRequest.onsuccess = (event) => {
   // report the success of the request (this does not mean the item
   // has been stored successfully in the DB - for that you need transaction.onsuccess)
-  note.innerHTML += '<li>Request successful.</li>';
+  note.innerHTML += "<li>Request successful.</li>";
 };
 
 // Force the changes to be committed to the database asap

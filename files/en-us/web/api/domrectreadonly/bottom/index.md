@@ -1,15 +1,8 @@
 ---
-title: DOMRectReadOnly.bottom
+title: "DOMRectReadOnly: bottom property"
+short-title: bottom
 slug: Web/API/DOMRectReadOnly/bottom
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Property
-  - Reference
-  - bottom
 browser-compat: api.DOMRectReadOnly.bottom
 ---
 

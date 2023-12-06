@@ -2,14 +2,8 @@
 title: CSSValue
 slug: Web/API/CSSValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSValue
-  - Interface
-  - NeedsExample
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSValue
 ---
 

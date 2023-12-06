@@ -1,13 +1,8 @@
 ---
-title: WebGL2RenderingContext.waitSync()
+title: "WebGL2RenderingContext: waitSync() method"
+short-title: waitSync()
 slug: Web/API/WebGL2RenderingContext/waitSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.waitSync
 ---
 

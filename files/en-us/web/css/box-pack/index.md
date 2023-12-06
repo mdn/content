@@ -2,22 +2,21 @@
 title: box-pack
 slug: Web/CSS/box-pack
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - Non-standard
-  - Reference
-  - box-pack
-  - recipe:css-property
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.box-pack
 ---
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`-moz-box-pack`** and **`-webkit-box-pack`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
+
+The direction of layout depends on the element's orientation: horizontal or vertical.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -31,10 +30,6 @@ box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
 ```
-
-The direction of layout depends on the element's orientation: horizontal or vertical.
-
-## Syntax
 
 The `box-pack` property is specified as one of the keyword values listed below.
 

@@ -2,11 +2,6 @@
 title: ResizeObserverSize
 slug: Web/API/ResizeObserverSize
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - ResizeObserverSize
 browser-compat: api.ResizeObserverSize
 ---
 
@@ -14,7 +9,7 @@ browser-compat: api.ResizeObserverSize
 
 The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
 
-> **Note:** In [multi-column layout](/en-US/docs/Web/CSS/CSS_Columns), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
+> **Note:** In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.
 
 ## Instance properties
 

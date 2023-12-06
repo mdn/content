@@ -1,15 +1,8 @@
 ---
-title: Element.ariaDisabled
+title: "Element: ariaDisabled property"
+short-title: ariaDisabled
 slug: Web/API/Element/ariaDisabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaDisabled
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaDisabled
 ---
 
@@ -37,9 +30,9 @@ In this example the `aria-disabled` attribute on the element with an ID of `save
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaDisabled); // "true"
-el.ariaDisabled = "false"
+el.ariaDisabled = "false";
 console.log(el.ariaDisabled); // "false"
 ```
 

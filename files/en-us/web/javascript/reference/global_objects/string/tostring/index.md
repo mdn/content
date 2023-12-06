@@ -1,18 +1,13 @@
 ---
 title: String.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.toString
 ---
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the specified string value.
+The **`toString()`** method of {{jsxref("String")}} values returns this string value.
 
 {{EmbedInteractiveExample("pages/js/string-tostring.html")}}
 
@@ -21,6 +16,10 @@ The **`toString()`** method returns a string representing the specified string v
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

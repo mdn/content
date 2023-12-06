@@ -1,11 +1,9 @@
 ---
 title: accent-height
 slug: Web/SVG/Attribute/accent-height
-tags:
-  - Deprecated
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.accent-height
 ---
 

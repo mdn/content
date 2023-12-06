@@ -1,14 +1,8 @@
 ---
-title: RTCDataChannelEvent.channel
+title: "RTCDataChannelEvent: channel property"
+short-title: channel
 slug: Web/API/RTCDataChannelEvent/channel
 page-type: web-api-instance-property
-tags:
-  - Property
-  - RTCDataChannelEvent
-  - Read-only
-  - Reference
-  - WebRTC
-  - channel
 browser-compat: api.RTCDataChannelEvent.channel
 ---
 
@@ -34,7 +28,7 @@ pc.ondatachannel = (event) => {
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 ## Specifications

@@ -1,11 +1,7 @@
 ---
 title: Introduction to game development for the Web
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Games
-  - Guide
-  - Mobile
+page-type: guide
 ---
 
 {{GamesSidebar}}
@@ -77,8 +73,7 @@ You can truly think of the Web as a better target platform for your game. As we 
       <td>
         <a href="/en-US/docs/Web/HTML">HTML</a>,
         <a href="/en-US/docs/Web/CSS">CSS</a>,
-        <a href="/en-US/docs/Web/SVG">SVG</a>,
-        <a href="/en-US/docs/Social_API">Social API</a> (and much more!)
+        <a href="/en-US/docs/Web/SVG">SVG</a> (and much more!)
       </td>
     </tr>
   </tbody>
@@ -116,7 +111,7 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
   - : The Pointer Lock API lets you lock the mouse or other pointing device within your game's interface so that instead of absolute cursor positioning you receive coordinate deltas that give you more precise measurements of what the user is doing, and prevent the user from accidentally sending their input somewhere else, thereby missing important action.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Lets you build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript typed arrays give you access to raw binary data from within JavaScript; this lets you manipulate GL textures, game data, or anything else, even if it's not in a native JavaScript format.
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : This API for controlling the playback, synthesis, and manipulation of audio from JavaScript code lets you create awesome sound effects as well as play and manipulate music in real time.

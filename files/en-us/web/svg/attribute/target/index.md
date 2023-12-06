@@ -1,9 +1,7 @@
 ---
 title: target
 slug: Web/SVG/Attribute/target
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.a.target
 ---
 
@@ -25,7 +23,10 @@ svg {
 }
 
 text {
-  font: 20px Arial, Helvetica, sans-serif;
+  font:
+    20px Arial,
+    Helvetica,
+    sans-serif;
   fill: blue;
   text-decoration: underline;
 }
@@ -70,9 +71,11 @@ text {
 </table>
 
 - `_replace` {{deprecated_inline}}
+
   - : The current SVG image is replaced by the linked content in the same rectangular area in the same frame as the current SVG image.
 
     > **Note:** This value was never well implemented, and the distinction between `_replace` and `_self` has been made redundant by changes in the HTML definition of browsing contexts. Use `_self` to replace the current SVG document.
+
 - `_self`
   - : The current SVG image is replaced by the linked content in the same browsing context as the current SVG image.
 - `_parent`

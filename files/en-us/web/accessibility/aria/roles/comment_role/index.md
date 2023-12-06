@@ -1,15 +1,10 @@
 ---
 title: "ARIA: comment role"
 slug: Web/Accessibility/ARIA/Roles/comment_role
-tags:
-  - ARIA
-  - ARIA Role
-  - Comment
-  - Reference
-  - annotations
+page-type: aria-role
 ---
 
-The `comment` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a comment/reaction to some content on the page, or to a previous comment.
+The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
 > **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
 
@@ -84,7 +79,7 @@ Nested comments are also possible with ARIA annotations — nest the comments in
 
 ## Accessibility concerns
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+None
 
 ## Specifications
 

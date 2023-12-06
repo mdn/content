@@ -1,16 +1,8 @@
 ---
-title: window.cancelIdleCallback()
+title: "Window: cancelIdleCallback() method"
+short-title: cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - cancelIdleCallback
-  - polyfill
 browser-compat: api.Window.cancelIdleCallback
 ---
 
@@ -49,7 +41,3 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

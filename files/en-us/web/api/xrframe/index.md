@@ -2,22 +2,8 @@
 title: XRFrame
 slug: Web/API/XRFrame
 page-type: web-api-interface
-tags:
-  - 3D
-  - API
-  - AR
-  - Animation
-  - Augmented Reality
-  - Frame
-  - Interface
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - XRFrame
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRFrame
 ---
 
@@ -38,9 +24,9 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
 
 - {{domxref("XRFrame.createAnchor()", "createAnchor()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} which resolves to a free-floating {{domxref("XRAnchor")}} object.
-- {{domxref("XRFrame.fillJointRadii()", "fillJointRadii()")}}
+- {{domxref("XRFrame.fillJointRadii()", "fillJointRadii()")}} {{Experimental_Inline}}
   - : Populates a {{jsxref("Float32Array")}} with radii for a list of hand joint spaces. Returns `true` if successful for all spaces.
-- {{domxref("XRFrame.fillPoses()", "fillPoses()")}}
+- {{domxref("XRFrame.fillPoses()", "fillPoses()")}} {{Experimental_Inline}}
   - : Populates a {{jsxref("Float32Array")}} with the matrices of the poses, relative to a given base space. Returns `true` if all spaces have a valid pose.
 - {{domxref("XRFrame.getDepthInformation()", "getDepthInformation()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRCPUDepthInformation")}} object containing CPU depth information for the frame.
@@ -48,7 +34,7 @@ In addition to providing a reference to the {{domxref("XRSession")}} for which t
   - : Returns an array of {{domxref("XRHitTestResult")}} objects containing hit test results for a given {{domxref("XRHitTestSource")}}.
 - {{domxref("XRFrame.getHitTestResultsForTransientInput()", "getHitTestResultsForTransientInput()")}} {{Experimental_Inline}}
   - : Returns an array of {{domxref("XRTransientInputHitTestResult")}} objects containing hit test results for a given {{domxref("XRTransientInputHitTestSource")}}.
-- {{domxref("XRFrame.getJointPose()", "getJointPose()")}}
+- {{domxref("XRFrame.getJointPose()", "getJointPose()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRJointPose")}} object providing the pose of a hand joint (see {{domxref("XRHand")}}) relative to a given base space.
 - {{domxref("XRFrame.getLightEstimate()", "getLightEstimate()")}} {{Experimental_Inline}}
   - : Returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for an {{domxref("XRLightProbe")}}.

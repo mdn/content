@@ -1,13 +1,8 @@
 ---
-title: WorkerLocation.protocol
+title: "WorkerLocation: protocol property"
+short-title: protocol
 slug: Web/API/WorkerLocation/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Read-only
-  - Reference
-  - WorkerLocation
 browser-compat: api.WorkerLocation.protocol
 ---
 

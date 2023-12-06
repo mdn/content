@@ -2,12 +2,6 @@
 title: align-items
 slug: Web/CSS/align-items
 page-type: css-property
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.align-items
 ---
 
@@ -28,11 +22,13 @@ align-items: stretch;
 
 /* Positional alignment */
 /* align-items does not take left and right values */
-align-items: center; /* Pack items around the center */
-align-items: start; /* Pack items from the start */
-align-items: end; /* Pack items from the end */
-align-items: flex-start; /* Pack flex items from the start */
-align-items: flex-end; /* Pack flex items from the end */
+align-items: center;
+align-items: start;
+align-items: end;
+align-items: flex-start;
+align-items: flex-end;
+align-items: self-start;
+align-items: self-end;
 
 /* Baseline alignment */
 align-items: baseline;
@@ -62,9 +58,9 @@ align-items: unset;
     - The property doesn't apply to block-level boxes, and to table cells.
 
 - `flex-start`
-  - : The cross-start margin edges of the flex items are flushed with the cross-start edge of the line.
+  - : Used in flex layout only, aligns the flex items flush against the flex container's main-start or cross-start side.
 - `flex-end`
-  - : The cross-end margin edges of the flex items are flushed with the cross-end edge of the line.
+  - : Used in flex layout only, aligns the flex items flush against the flex container's main-end or cross-end side.
 - `center`
   - : The flex items' margin boxes are centered within the line on the cross-axis. If the cross-size of an item is larger than the flex container, it will overflow equally in both directions.
 - `start`
@@ -72,13 +68,13 @@ align-items: unset;
 - `end`
   - : The items are packed flush to each other toward the end edge of the alignment container in the appropriate axis.
 - `self-start`
-  - : The items are packed flush to the edge of the alignment container of the start side of the item, in the appropriate axis.
+  - : The items are packed flush to the edge of the alignment container's start side of the item, in the appropriate axis.
 - `self-end`
-  - : The items are packed flush to the edge of the alignment container of the end side of the item, in the appropriate axis.
+  - : The items are packed flush to the edge of the alignment container's end side of the item, in the appropriate axis.
 - `baseline`, `first baseline`, `last baseline`
   - : All flex items are aligned such that their [flex container baselines](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) align. The item with the largest distance between its cross-start margin edge and its baseline is flushed with the cross-start edge of the line.
 - `stretch`
-  - : Flex items are stretched such that the cross-size of the item's margin box is the same as the line while respecting width and height constraints.
+  - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
 - `safe`
   - : Used alongside an alignment keyword. If the chosen keyword means that the item overflows the alignment container causing data loss, the item is instead aligned as if the alignment mode were `start`.
 - `unsafe`
@@ -216,15 +212,15 @@ select {
 ```
 
 ```js hidden
-const values = document.getElementById('values');
-const display = document.getElementById('display');
-const container = document.getElementById('container');
+const values = document.getElementById("values");
+const display = document.getElementById("display");
+const container = document.getElementById("container");
 
-values.addEventListener('change', (evt) => {
+values.addEventListener("change", (evt) => {
   container.style.alignItems = evt.target.value;
 });
 
-display.addEventListener('change', (evt) => {
+display.addEventListener("change", (evt) => {
   container.className = evt.target.value;
 });
 ```
@@ -243,8 +239,8 @@ display.addEventListener('change', (evt) => {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
 - The {{cssxref("align-self")}} property

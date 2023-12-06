@@ -1,14 +1,10 @@
 ---
-title: PresentationRequest.start()
+title: "PresentationRequest: start() method"
+short-title: start()
 slug: Web/API/PresentationRequest/start
 page-type: web-api-instance-method
-tags:
-  - Experimental
-  - Method
-  - Presentation API
-  - PresentationRequest
-  - Reference
-  - start()
+status:
+  - experimental
 browser-compat: api.PresentationRequest.start
 ---
 

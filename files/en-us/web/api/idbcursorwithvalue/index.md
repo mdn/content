@@ -2,15 +2,6 @@
 title: IDBCursorWithValue
 slug: Web/API/IDBCursorWithValue
 page-type: web-api-interface
-tags:
-  - API
-  - DOM Reference
-  - Database
-  - IDBCursorWithValue
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
 browser-compat: api.IDBCursorWithValue
 ---
 
@@ -43,22 +34,22 @@ In this example we create a transaction, retrieve an object store, then use a cu
 
 ```js
 function displayData() {
-  const transaction = db.transaction(['rushAlbumList'], "readonly");
-  const objectStore = transaction.objectStore('rushAlbumList');
+  const transaction = db.transaction(["rushAlbumList"], "readonly");
+  const objectStore = transaction.objectStore("rushAlbumList");
 
   objectStore.openCursor().onsuccess = (event) => {
     const cursor = event.target.result;
     if (cursor) {
-      const listItem = document.createElement('li');
+      const listItem = document.createElement("li");
       listItem.textContent = `${cursor.value.albumTitle}, ${cursor.value.year}`;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications

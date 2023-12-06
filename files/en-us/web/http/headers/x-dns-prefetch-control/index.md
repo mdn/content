@@ -1,12 +1,9 @@
 ---
 title: X-DNS-Prefetch-Control
 slug: Web/HTTP/Headers/X-DNS-Prefetch-Control
-tags:
-  - DNS
-  - HTTP
-  - X-DNS-Prefetch-Control
-  - header
-  - Non-standard
+page-type: http-header
+status:
+  - non-standard
 browser-compat: http.headers.X-DNS-Prefetch-Control
 ---
 
@@ -82,7 +79,7 @@ loaded over {{glossary("HTTPS")}}. On Firefox, this can be changed by setting th
 ### Turning on and off prefetching
 
 You can either send the `X-DNS-Prefetch-Control` header server-side, or from
-individual documents, using the {{ htmlattrxref("http-equiv", "meta") }} attribute on
+individual documents, using the [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute on
 the {{ HTMLElement("meta") }} element, like this:
 
 ```html
@@ -94,20 +91,20 @@ You can reverse this setting by setting `content` to "`on`".
 ### Forcing lookup of specific hostnames
 
 You can force the lookup of specific hostnames without providing specific anchors using
-that hostname by using the {{ htmlattrxref("rel","link") }} attribute on the {{
-  HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Link_types) of `dns-prefetch`:
+that hostname by using the [`rel`](/en-US/docs/Web/HTML/Element/link#rel) attribute on the {{
+  HTMLElement("link") }} element with a [link type](/en-US/docs/Web/HTML/Attributes/rel) of `dns-prefetch`:
 
 ```html
-<link rel="dns-prefetch" href="https://www.mozilla.org/contribute/" />
+<link rel="dns-prefetch" href="https://www.mozilla.org" />
 ```
 
-In this example, the domain name `www.mozilla.org/contribute` will be pre-resolved.
+In this example, the domain name `www.mozilla.org` will be pre-resolved.
 
 Similarly, the link element can be used to resolve hostnames without providing a
 complete URL, but only, by preceding the hostname with two slashes:
 
 ```html
-<link rel="dns-prefetch" href="//www.mozilla.org/contribute/" />
+<link rel="dns-prefetch" href="//www.mozilla.org" />
 ```
 
 Forced prefetching of hostnames might be useful, for example, on the homepage of a site

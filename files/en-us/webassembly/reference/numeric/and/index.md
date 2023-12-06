@@ -1,12 +1,7 @@
 ---
 title: AND
 slug: WebAssembly/Reference/Numeric/AND
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

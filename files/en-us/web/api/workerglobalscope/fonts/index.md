@@ -1,15 +1,8 @@
 ---
-title: WorkerGlobalScope.fonts
+title: "WorkerGlobalScope: fonts property"
+short-title: fonts
 slug: Web/API/WorkerGlobalScope/fonts
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS Font Loading API
-  - FontFace
-  - FontFaceSet
-  - Fonts
-  - font
-  - Property
 browser-compat: api.WorkerGlobalScope.fonts
 ---
 

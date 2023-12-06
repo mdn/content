@@ -1,22 +1,7 @@
 ---
 title: Understandable
 slug: Web/Accessibility/Understanding_WCAG/Understandable
-tags:
-  - Accessibility
-  - HELP
-  - Language
-  - Navigation
-  - Principle 3
-  - Text
-  - Understandable
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - abbreviations
-  - consistency
-  - error messages
-  - form validation
-  - labels
-  - slang
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
@@ -44,7 +29,7 @@ This guideline focuses on making text content as understandable as possible.
         The default human language of each web page should be detectable via
         code. This is essential for purposes like making sure the reader has
         arrived at a page written in a language suitable for them. The simplest
-        way to achieve this is to set the {{htmlattrxref("lang")}}
+        way to achieve this is to set the <a href="/en-US/docs/Web/HTML/Global_attributes#lang">lang</a>
         attribute on the page's {{htmlelement("html")}} element, giving
         it a value equal to the language code that best represents the language
         the page is written in.
@@ -63,7 +48,7 @@ This guideline focuses on making text content as understandable as possible.
         <p>
           In cases where the content of a page includes words or phrases that
           are in a different language to the primary language, use the
-          {{htmlattrxref("lang")}} attribute on an element wrapped
+          <a href="/en-US/docs/Web/HTML/Global_attributes#lang">lang</a> attribute on an element wrapped
           around the term in question (e.g. a {{htmlelement("span")}}
           if no semantic element is available) to set an appropriate language
           for it.
@@ -102,7 +87,7 @@ This guideline focuses on making text content as understandable as possible.
         <p>
           The {{htmlelement("abbr")}} element is often thought of as
           the preferred way to provide an expansion for an abbreviation — it
-          takes a {{htmlattrxref("title")}} attribute that contains the
+          takes a <a href="/en-US/docs/Web/HTML/Global_attributes#title">title</a> attribute that contains the
           expansion, and this appears when the acronym is moused over. However,
           the title contents are not accessible via keyboard, nor are they
           reliably read out by screen readers. A better way to handle this is to
@@ -227,7 +212,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("HTMLElement.oninput")}} is useful here.
+        The {{domxref("HTMLElement/input_event", "input")}} event is useful here.
       </td>
     </tr>
     <tr>
@@ -299,7 +284,14 @@ This guideline focuses on making user interfaces intuitive and understandable.
           functionality if possible.
         </p>
       </td>
-      <td></td>
+ </tr>
+      <tr>
+      <td> 3.2.6 Consistent help (A)</td>
+      <td> <p> Web pages that contain help mechanisms, including self-help options and human contact details, that are repeated on multiple web pages, need to place those mechanisms in the same order on all pages, unless a change is initiated by the user.</p>
+      <td> <p> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help">consistent help documentation</a> for this standard to learn more. </p>
+      </td>
+      </td>
+      <tr>
     </tr>
   </tbody>
 </table>
@@ -481,6 +473,28 @@ This guideline centers around helping users enter correct information when requi
         input situations, not just ones involving sensitive data.
       </td>
       <td>Again, see 3.3.4.</td>
+      </tr>
+      <tr>
+      <td> 3.3.7 Redundant entry (A) </td>
+      <td>
+      Information that is required that was previously entered or provided by the user in the same process or user flow is either auto-populated or made selectable to the user from a list of options, unless re-entering the information is essential or required for security reasons, or if the information is no longer valid.
+      </td>
+      <td>Check out <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">Understanding redundant entry</a> to learn more.</td>
+      </tr>
+      <tr>
+      <td> 3.3.8 Accessible authentication (Minimum) (AA)
+      </td>
+      <td>
+Cognitive function tests, like remembering a password, are not required for any step in an authentication process unless an alternative is provided, such as an object or personal content (e.g., images, videos, and audio) recognition, or a mechanism to assist (e.g., copy and paste and autosave passwords).
+      </td>
+      <td> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication"> accessible authentication documentation</a> for this standard to learn more. </td>
+    </tr>
+    <tr>
+ <td> 3.3.9 Accessible Authentication (Enhanced) (AAA) </td>
+    <td>
+A cognitive function test, like remembering a password, must not be required for any step in an authentication process without providing an alternative that does not rely on a cognitive function test or provides a mechanism to assist the user in completing the cognitive function test. Authentication tests that require the user to recognize objects or identify non-text content the user provided to the website are allowed.
+    </td>
+<td> Check out the <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced">enhanced accessible authentication documentation (AAA)</a> to learn more.</td>
     </tr>
   </tbody>
 </table>

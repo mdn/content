@@ -1,14 +1,8 @@
 ---
-title: HTMLElement.offsetLeft
+title: "HTMLElement: offsetLeft property"
+short-title: offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.HTMLElement.offsetLeft
 ---
 
@@ -37,7 +31,7 @@ if (tOLeft > 5) {
 
 This example shows a 'long' sentence that wraps within a div with a blue border, and a red box that one might think should describe the boundaries of the span.
 
-![](offsetleft.jpg)
+![A sentence that reads: Short span. This text is completely within a div with a blue border. A sentence that reads: Long span that wraps within this div. The words "long span that wraps" is within a box with a red border. The words "within this div" are within the div with the blue border. ](offsetleft.jpg)
 
 ```html
 <div

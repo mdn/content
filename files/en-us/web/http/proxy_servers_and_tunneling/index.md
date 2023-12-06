@@ -1,11 +1,7 @@
 ---
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
-tags:
-  - HTTP
-  - HTTP Tunneling
-  - Proxies
-  - Proxy
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +14,7 @@ There are two types of proxies: **forward proxies** (or tunnel, or gateway) and 
 
 A forward proxy, or gateway, or just "proxy" provides proxy services to a client or a group of clients. There are likely hundreds of thousands of open forward proxies on the Internet. They store and forward Internet services (like the DNS, or web pages) to reduce and control the bandwidth used by the group.
 
-Forward proxies can also be anonymous proxies and allow users to hide their IP address while browsing the Web or using other Internet services. [TOR](https://www.torproject.org/) (The Onion Router), routes internet traffic through multiple proxies for anonymity.
+Forward proxies can also be anonymous and allow users to hide their IP address while browsing the Web or using other Internet services. For example, [Tor](https://www.torproject.org/) routes internet traffic through multiple proxies for anonymity.
 
 ## Reverse proxies
 
@@ -55,7 +51,7 @@ To provide information about the proxy itself (not about the client connecting t
 
 Tunneling transmits private network data and protocol information through public network by encapsulating the data. HTTP tunneling is using a protocol of higher level (HTTP) to transport a lower level protocol (TCP).
 
-The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using SSL (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
+The HTTP protocol specifies a request method called {{HTTPMethod("CONNECT")}}. It starts two-way communications with the requested resource and can be used to open a tunnel. This is how a client behind an HTTP proxy can access websites using TLS (i.e. HTTPS, port 443). Note, however, that not all proxy servers support the `CONNECT` method or limit it to port 443 only.
 
 See also the [HTTP tunnel article on Wikipedia](https://en.wikipedia.org/wiki/HTTP_tunnel).
 

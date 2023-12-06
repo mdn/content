@@ -1,19 +1,13 @@
 ---
-title: CSS Table
-slug: Web/CSS/CSS_Table
+title: CSS table
+slug: Web/CSS/CSS_table
 page-type: css-module
-tags:
-  - CSS
-  - CSS Table
-  - Guide
-  - Overview
-  - Reference
 spec-urls: https://www.w3.org/TR/CSS22/tables.html
 ---
 
 {{CSSRef}}
 
-**CSS Table** is a CSS module that defines how to lay out table data.
+The **CSS table** module helps you define how to lay out table data.
 
 ## Reference
 

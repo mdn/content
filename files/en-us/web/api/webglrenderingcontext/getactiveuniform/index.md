@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.getActiveUniform()
+title: "WebGLRenderingContext: getActiveUniform() method"
+short-title: getActiveUniform()
 slug: Web/API/WebGLRenderingContext/getActiveUniform
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getActiveUniform
 ---
 
@@ -130,7 +125,7 @@ blocks instanced with arrays).
 const numUniforms = gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS);
 for (let i = 0; i < numUniforms; ++i) {
   const info = gl.getActiveUniform(program, i);
-  console.log('name:', info.name, 'type:', info.type, 'size:', info.size);
+  console.log("name:", info.name, "type:", info.type, "size:", info.size);
 }
 ```
 

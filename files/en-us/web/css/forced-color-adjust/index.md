@@ -2,20 +2,6 @@
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
 page-type: css-property
-tags:
-  - Adjusting Colors
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - forced-color-adjust
-  - recipe:css-property
 browser-compat: css.properties.forced-color-adjust
 ---
 
@@ -114,6 +100,6 @@ The following screenshot shows the image above in Windows High Contrast Mode:
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - {{cssxref("print-color-adjust")}}

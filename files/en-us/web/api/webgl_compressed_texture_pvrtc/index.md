@@ -1,12 +1,8 @@
 ---
-title: WEBGL_compressed_texture_pvrtc
+title: WEBGL_compressed_texture_pvrtc extension
+short-title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
 page-type: webgl-extension
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.WEBGL_compressed_texture_pvrtc
 ---
 
@@ -41,12 +37,20 @@ The compressed texture formats are exposed by four constants and can be used in 
 ## Examples
 
 ```js
-const ext = gl.getExtension('WEBGL_compressed_texture_pvrtc');
+const ext = gl.getExtension("WEBGL_compressed_texture_pvrtc");
 
 const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGB_PVRTC_4BPPV1_IMG,
+  512,
+  512,
+  0,
+  textureData,
+);
 ```
 
 ## Specifications

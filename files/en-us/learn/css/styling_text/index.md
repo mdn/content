@@ -1,21 +1,7 @@
 ---
 title: CSS styling text
 slug: Learn/CSS/Styling_text
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Fonts
-  - Landing
-  - Links
-  - Module
-  - Text
-  - font
-  - letter
-  - line
-  - lists
-  - shadow
-  - web fonts
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

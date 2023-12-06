@@ -1,11 +1,7 @@
 ---
 title: Author list page and Genre list page challenge
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
-tags:
-  - Express
-  - Node
-  - displaying data
-  - server-side
+page-type: learn-module-chapter
 ---
 
 The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.
@@ -18,23 +14,20 @@ Open **/controllers/authorController.js**. Find the exported `author_list()` con
 
 ```js
 // Display list of all Authors.
-exports.author_list = function (req, res, next) {
-  Author.find()
-    .sort([["family_name", "ascending"]])
-    .exec(function (err, list_authors) {
-      if (err) {
-        return next(err);
-      }
-      //Successful, so render
-      res.render("author_list", {
-        title: "Author List",
-        author_list: list_authors,
-      });
-    });
-};
+exports.author_list = asyncHandler(async (req, res, next) => {
+  const allAuthors = await Author.find().sort({ family_name: 1 }).exec();
+  res.render("author_list", {
+    title: "Author List",
+    author_list: allAuthors,
+  });
+});
 ```
 
-The method uses the model's `find()`, `sort()` and `exec()` functions to return all `Author` objects sorted by `family_name` in alphabetic order. The callback passed to the `exec()` method is called with any errors (or `null`) as the first parameter, or a list of all authors on success. If there is an error it calls the next middleware function with the error value, and if not it renders the **author_list**(.pug) template, passing the page `title` and the list of authors (`author_list`).
+The route controller function follows the same pattern as for the other list pages.
+It defines a query on the `Author` model, using the `find()` function to get all authors, and the `sort()` method to sort them by `family_name` in alphabetic order.
+`exec()` is daisy-chained on the end in order to execute the query and return a promise that the function can `await`.
+
+Once the promise is fulfilled the route handler renders the **author_list**(.pug) template, passing the page `title` and the list of authors (`allAuthors`) using template keys.
 
 ## View
 

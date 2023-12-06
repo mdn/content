@@ -1,12 +1,7 @@
 ---
 title: Properly configuring server MIME types
 slug: Learn/Server-side/Configuring_server_MIME_types
-tags:
-  - Apache
-  - HTTP
-  - MIME Types
-  - nginx
-  - server-side
+page-type: guide
 ---
 
 {{LearnSidebar}}
@@ -34,7 +29,7 @@ As new content types are invented or added to web servers, web administrators ma
 
 If a web server or application reports an incorrect MIME type for content (including a "default type" for unknown content), a web browser has no way of knowing the author's intentions. This may cause unexpected behavior.
 
-Some web browsers, such as Internet Explorer, try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
+Some web browsers may try to _guess_ the correct MIME type. This allows misconfigured web servers and applications to continue working for those browsers (but not other browsers that correctly implement the standard). Apart from violating the HTTP spec, this is a bad idea for a couple of other significant reasons:
 
 - Loss of control
 
@@ -118,4 +113,3 @@ Trying to instead set it with just `header('application/pdf')` won't work.
 - [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)
-- [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](https://mskb.pkisolutions.com/kb/293336)

@@ -1,19 +1,8 @@
 ---
-title: RTCIceCandidate()
+title: "RTCIceCandidate: RTCIceCandidate() constructor"
+short-title: RTCIceCandidate()
 slug: Web/API/RTCIceCandidate/RTCIceCandidate
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Candidate
-  - Constructor
-  - ICE
-  - Media
-  - RTCIceCandidate
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidate.RTCIceCandidate
 ---
 
@@ -49,12 +38,12 @@ new RTCIceCandidate(candidateInfo)
         The syntax of the candidate string is described in {{RFC(5245, "", 15.1)}}.
         For an a-line (attribute line) that looks like this:
 
-        ```
-        a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+        ```plain
+        a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
         ```
 
         the corresponding `candidate` string's value will be
-        `"candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host"`.
+        `"candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host"`.
 
         The {{Glossary("user agent")}} always prefers candidates with the highest {{domxref("RTCIceCandidate.priority", "priority")}}, all else being equal.
         In the example above, the priority is `2043278322`. The attributes are all separated by a single space character, and are in a specific order.
@@ -64,7 +53,7 @@ new RTCIceCandidate(candidateInfo)
         - {{domxref("RTCIceCandidate.component", "component")}} = `"rtp"` (the number 1 is encoded to this string; 2 becomes `"rtcp"`)
         - {{domxref("RTCIceCandidate.protocol", "protocol")}} = `"udp"`
         - {{domxref("RTCIceCandidate.priority", "priority")}} = 2043278322
-        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.168.0.56"`
+        - {{domxref("RTCIceCandidate/address", "ip")}} = `"192.0.2.172"`
         - {{domxref("RTCIceCandidate.port", "port")}} = 44323
         - {{domxref("RTCIceCandidate.type", "type")}} = `"host"`
 
@@ -134,7 +123,7 @@ This constructor does not do complete validation of the specified `candidateInfo
 
 ## See also
 
-- {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Protocols", "ICE")}}
+- [Introduction to WebRTC protocols](/en-US/docs/Web/API/WebRTC_API/Protocols#ice)
 - [WebRTC connectivity](/en-US/docs/Web/API/WebRTC_API/Connectivity)
 - [Lifetime of a WebRTC session](/en-US/docs/Web/API/WebRTC_API/Session_lifetime)
 - [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling)

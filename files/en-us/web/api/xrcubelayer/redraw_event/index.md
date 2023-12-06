@@ -1,17 +1,10 @@
 ---
-title: 'XRCubeLayer: redraw event'
+title: "XRCubeLayer: redraw event"
+short-title: redraw
 slug: Web/API/XRCubeLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCubeLayer.redraw_event
 ---
 
@@ -26,9 +19,9 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('redraw', (event) => { })
+addEventListener("redraw", (event) => {});
 
-onredraw = (event) => { }
+onredraw = (event) => {};
 ```
 
 ## Event type
@@ -58,8 +51,8 @@ Alternatively, you can use the `onredraw` event handler property to establish a 
 
 ```js
 cubeLayer.onredraw = (event) => {
- // redraw the layer
-}
+  // redraw the layer
+};
 ```
 
 ## Specifications

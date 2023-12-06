@@ -2,14 +2,6 @@
 title: SpeechRecognition
 slug: Web/API/SpeechRecognition
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Reference
-  - SpeechRecognition
-  - Web Speech API
-  - recognition
-  - speech
 browser-compat: api.SpeechRecognition
 ---
 
@@ -33,7 +25,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.grammars")}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML {{htmlattrxref("lang","html")}} attribute value, or the user agent's language setting if that isn't set either.
+  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/en-US/docs/Web/HTML/Element/html#lang) attribute value, or the user agent's language setting if that isn't set either.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
@@ -97,29 +89,30 @@ In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/ma
 After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognized, the {{domxref("SpeechRecognition.result_event", "result")}} event fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that color.
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = false;
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
-const diagnostic = document.querySelector('.output');
-const bg = document.querySelector('html');
+const diagnostic = document.querySelector(".output");
+const bg = document.querySelector("html");
 
 document.body.onclick = () => {
   recognition.start();
-  console.log('Ready to receive a color command.');
-}
+  console.log("Ready to receive a color command.");
+};
 
 recognition.onresult = (event) => {
   const color = event.results[0][0].transcript;
   diagnostic.textContent = `Result received: ${color}`;
   bg.style.backgroundColor = color;
-}
+};
 ```
 
 ## Specifications

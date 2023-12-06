@@ -1,13 +1,10 @@
 ---
 title: Mixed content
 slug: Web/Security/Mixed_content
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - Web
-  - console
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
@@ -59,8 +56,8 @@ Most browsers prevent _mixed active content_ from loading, and some also block _
 
 Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
 
-- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see {{bug(903966)}}),
-- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see {{bug(1220810)}}).
+- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see [Firefox bug 903966](https://bugzil.la/903966)),
+- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see [Firefox bug 1220810](https://bugzil.la/1220810)).
 - Chrome also allows mixed content on `http://127.0.0.1/` and `http://localhost/`.
 - Safari does not allow any mixed content.
 
@@ -94,5 +91,3 @@ To fix this type of error, all requests to HTTP content should be removed and re
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

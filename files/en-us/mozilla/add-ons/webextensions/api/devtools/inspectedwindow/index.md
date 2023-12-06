@@ -1,14 +1,7 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - devtools.inspectedWindow
+page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.inspectedWindow
 ---
 
@@ -39,8 +32,6 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.setFormValue()
+title: "ElementInternals: setFormValue() method"
+short-title: setFormValue()
 slug: Web/API/ElementInternals/setFormValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - setFormValue
-  - ElementInternals
 browser-compat: api.ElementInternals.setFormValue
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`setFormValue()`** method of the {{domxref("ElementInternals")}} interface sets the element's submission value and state, communicating these to the user agent.
 
@@ -49,7 +44,7 @@ Undefined.
 In the following example, a checkbox custom element sets `on` as the value to send to the server, and `checked` as the state.
 
 ```js
-this.internals_.setFormValue("on","checked");
+this.internals_.setFormValue("on", "checked");
 ```
 
 ## Specifications

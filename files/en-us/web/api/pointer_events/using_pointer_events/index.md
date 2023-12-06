@@ -2,13 +2,6 @@
 title: Using Pointer Events
 slug: Web/API/Pointer_events/Using_Pointer_Events
 page-type: guide
-tags:
-  - Guide
-  - Input
-  - Pointer Events
-  - PointerEvent
-  - events
-  - touch
 browser-compat: api.PointerEvent
 ---
 
@@ -87,8 +80,8 @@ function handleStart(evt) {
   ongoingTouches.push(copyTouch(evt));
   const color = colorForTouch(evt);
   ctx.beginPath();
-  ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false);  // a circle at the start
-  ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false);  // a circle at the start
+  ctx.arc(touches[i].pageX, touches[i].pageY, 4, 0, 2 * Math.PI, false); // a circle at the start
+  ctx.arc(evt.clientX, evt.clientY, 4, 0, 2 * Math.PI, false); // a circle at the start
   ctx.fillStyle = color;
   ctx.fill();
 }
@@ -110,7 +103,9 @@ function handleMove(evt) {
   log(`continuing touch: idx =  ${idx}`);
   if (idx >= 0) {
     ctx.beginPath();
-    log(`ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`);
+    log(
+      `ctx.moveTo(${ongoingTouches[idx].pageX}, ${ongoingTouches[idx].pageY});`,
+    );
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     log(`ctx.lineTo(${evt.clientX}, ${evt.clientY});`);
     ctx.lineTo(evt.clientX, evt.clientY);
@@ -118,7 +113,7 @@ function handleMove(evt) {
     ctx.strokeStyle = color;
     ctx.stroke();
 
-    ongoingTouches.splice(idx, 1, copyTouch(evt));  // swap in the new touch record
+    ongoingTouches.splice(idx, 1, copyTouch(evt)); // swap in the new touch record
     log(".");
   } else {
     log(`can't figure out which touch to continue: idx = ${idx}`);
@@ -150,8 +145,8 @@ function handleEnd(evt) {
     ctx.beginPath();
     ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
     ctx.lineTo(evt.clientX, evt.clientY);
-    ctx.fillRect(evt.clientX - 4, evt.clientY - 4, 8, 8);  // and a square at the end
-    ongoingTouches.splice(idx, 1);  // remove it; we're done
+    ctx.fillRect(evt.clientX - 4, evt.clientY - 4, 8, 8); // and a square at the end
+    ongoingTouches.splice(idx, 1); // remove it; we're done
   } else {
     log("can't figure out which touch to end");
   }
@@ -168,7 +163,7 @@ If the user's finger wanders into browser UI, or the touch otherwise needs to be
 function handleCancel(evt) {
   log(`pointercancel: id = ${evt.pointerId}`);
   const idx = ongoingTouchIndexById(evt.pointerId);
-  ongoingTouches.splice(idx, 1);  // remove it; we're done
+  ongoingTouches.splice(idx, 1); // remove it; we're done
 }
 ```
 
@@ -204,7 +199,11 @@ Some browsers may re-use touch objects between events, so it's best to copy the 
 
 ```js
 function copyTouch(touch) {
-  return { identifier: touch.pointerId, pageX: touch.clientX, pageY: touch.clientY };
+  return {
+    identifier: touch.pointerId,
+    pageX: touch.clientX,
+    pageY: touch.clientY,
+  };
 }
 ```
 
@@ -221,7 +220,7 @@ function ongoingTouchIndexById(idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -229,7 +228,7 @@ function ongoingTouchIndexById(idToFind) {
 
 ```js
 function log(msg) {
-  const p = document.getElementById('log');
+  const p = document.getElementById("log");
   p.innerHTML = `${msg}\n${p.innerHTML}`;
 }
 ```

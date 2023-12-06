@@ -1,16 +1,14 @@
 ---
-title: NDEFRecord()
+title: "NDEFRecord: NDEFRecord() constructor"
+short-title: NDEFRecord()
 slug: Web/API/NDEFRecord/NDEFRecord
 page-type: web-api-constructor
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.NDEFRecord
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`NDEFRecord()`**
 constructor of the [Web NFC API](/en-US/docs/Web/API/Web_NFC_API) returns a

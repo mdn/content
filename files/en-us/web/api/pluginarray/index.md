@@ -2,13 +2,8 @@
 title: PluginArray
 slug: Web/API/PluginArray
 page-type: web-api-interface
-tags:
-  - API
-  - Add-ons
-  - DOM
-  - NeedsContent
-  - Plugins
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.PluginArray
 ---
 
@@ -39,12 +34,13 @@ The following example function returns the version of the Shockwave Flash plugin
 ```js
 const pluginsLength = navigator.plugins.length;
 
-document.body.innerHTML = `${pluginsLength} Plugin(s)<br>`
-  + `<table id="pluginTable"><thead>`
-  + `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>`
-  + `</thead><tbody></tbody></table>`;
+document.body.innerHTML =
+  `${pluginsLength} Plugin(s)<br>` +
+  `<table id="pluginTable"><thead>` +
+  `<tr><th>Name</th><th>Filename</th><th>description</th><th>version</th></tr>` +
+  `</thead><tbody></tbody></table>`;
 
-const table = document.getElementById('pluginTable');
+const table = document.getElementById("pluginTable");
 
 for (let i = 0; i < pluginsLength; i++) {
   let newRow = table.insertRow();
@@ -62,12 +58,12 @@ const pluginsLength = navigator.plugins.length;
 
 document.write(
   `${pluginsLength.toString()} Plugin(s)<br>` +
-  `Name | Filename | description<br>`
+    `Name | Filename | description<br>`,
 );
 
 for (let i = 0; i < pluginsLength; i++) {
   document.write(
-    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`
+    `${navigator.plugins[i].name} | ${navigator.plugins[i].filename} | ${navigator.plugins[i].description} | ${navigator.plugins[i].version}<br>`,
   );
 }
 ```

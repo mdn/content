@@ -1,9 +1,7 @@
 ---
 title: alignment-baseline
 slug: Web/SVG/Attribute/alignment-baseline
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.alignment-baseline
 ---
 
@@ -17,7 +15,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("tspan")}}
 - {{SVGElement("tref")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 
 ## Usage notes
@@ -50,15 +47,17 @@ You can use this attribute with the following SVG elements:
 - `auto` {{deprecated_inline}}
   - : The value is the dominant-baseline of the script to which the character belongs - i.e., use the dominant-baseline of the parent.
 - `baseline`
-  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline")}} to that of its parent.
+  - : Uses the {{Glossary("dominant baseline")}} choice of the parent. Matches the box's corresponding {{Glossary("baseline/typography", "baseline")}} to that of its parent.
 - `before-edge` {{deprecated_inline}}
   - : The alignment-point of the object being aligned is aligned with the "before-edge" baseline of the parent text content element.
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
+
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
     > **Note:** This keyword may be mapped to `text-top`.
+
 - `middle`
   - : Aligns the vertical midpoint of the box with the baseline of the parent box plus half the x-height of the parent.
 - `central`
@@ -68,9 +67,11 @@ You can use this attribute with the following SVG elements:
 - `text-top`
   - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
+
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
     > **Note:** This keyword may be mapped to `text-bottom`.
+
 - `ideographic`
   - : Matches the box's ideographic character face under-side baseline to that of its parent.
 - `alphabetic`

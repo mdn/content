@@ -1,24 +1,8 @@
 ---
-title: XRRigidTransform.matrix
+title: "XRRigidTransform: matrix property"
+short-title: matrix
 slug: Web/API/XRRigidTransform/matrix
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - matrix
-  - transform
 browser-compat: api.XRRigidTransform.matrix
 ---
 
@@ -418,8 +402,9 @@ to position and orient it.
 
 ```js
 let transform = new XRRigidTransform(
-                      {x: 0, y: 0.5, z: 0.5},
-                      {x: 0, y: -0.5, z: -0.5, w: 1});
+  { x: 0, y: 0.5, z: 0.5 },
+  { x: 0, y: -0.5, z: -0.5, w: 1 },
+);
 drawGLObject("magic-lamp", transform.matrix);
 ```
 

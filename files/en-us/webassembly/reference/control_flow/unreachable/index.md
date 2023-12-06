@@ -1,12 +1,7 @@
 ---
 title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

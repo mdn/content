@@ -1,17 +1,9 @@
 ---
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
+page-type: webextension-api-function
+status:
+  - deprecated
 browser-compat: webextensions.api.extension.sendRequest
 ---
 
@@ -19,7 +11,7 @@ browser-compat: webextensions.api.extension.sendRequest
 
 > **Warning:** This method has been deprecated. Use {{WebExtAPIRef("runtime.sendMessage")}} instead.
 
-Sends a single request to other listeners within the extension. Similar to {{WebExtAPIRef('runtime.connect')}}, but only sends a single request with an optional response. The {{WebExtAPIRef('extension.onRequest')}} event is fired in each page of the extension.
+Sends a request to other listeners within the extension. Similar to {{WebExtAPIRef('runtime.connect')}}, but only sends a request with an optional response. The {{WebExtAPIRef('extension.onRequest')}} event fires in each page of the extension.
 
 ## Syntax
 
@@ -41,7 +33,7 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
   - : `any`.
 - `responseCallback` {{optional_inline}}
 
-  - : `function`. The function is passed the following arguments:
+  - : `function`. The function is passed these arguments:
 
     - `response`
       - : `any`. The JSON response object sent by the handler of the request. If an error occurs while connecting to the extension, the callback will be called with no arguments and {{WebExtAPIRef('runtime.lastError')}} will be set to the error message.
@@ -53,8 +45,6 @@ This API is also available as `browser.extension.sendRequest()` in a [version th
 {{WebExtExamples}}
 
 > **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-sendRequest) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

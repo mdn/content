@@ -2,12 +2,6 @@
 title: CountQueuingStrategy
 slug: Web/API/CountQueuingStrategy
 page-type: web-api-interface
-tags:
-  - API
-  - CountQueuingStrategy
-  - Interface
-  - Reference
-  - Streams
 browser-compat: api.CountQueuingStrategy
 ---
 
@@ -22,12 +16,13 @@ The **`CountQueuingStrategy`** interface of the [Streams API](/en-US/docs/Web/AP
 
 ## Instance properties
 
-None.
+- {{domxref("CountQueuingStrategy.highWaterMark")}} {{ReadOnlyInline}}
+  - : The total number of chunks that can be contained in the internal queue before [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is applied.
 
 ## Instance methods
 
 - {{domxref("CountQueuingStrategy.size()")}}
-  - : Returns `1`.
+  - : Always returns `1`.
 
 ## Examples
 
@@ -47,7 +42,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queueingStrategy
+  queueingStrategy,
 );
 
 const size = queueingStrategy.size();
@@ -60,3 +55,9 @@ const size = queueingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Streams API", "Streams API", "", "nocode")}}
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor
+- [Internal queues and queuing strategies](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies)

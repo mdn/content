@@ -1,12 +1,7 @@
 ---
 title: Equal
 slug: WebAssembly/Reference/Numeric/Equal
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Comparison
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

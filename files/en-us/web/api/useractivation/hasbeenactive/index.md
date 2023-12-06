@@ -1,18 +1,14 @@
 ---
-title: UserActivation.hasBeenActive
+title: "UserActivation: hasBeenActive property"
+short-title: hasBeenActive
 slug: Web/API/UserActivation/hasBeenActive
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
 browser-compat: api.UserActivation.hasBeenActive
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
-The read-only **`hasBeenActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has sticky user activation (see {{Glossary("sticky activation")}}).
+The read-only **`hasBeenActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has {{Glossary("sticky activation","sticky user activation")}}.
 
 ## Value
 
@@ -22,7 +18,7 @@ A boolean.
 
 ### Checking if a user gesture was ever performed
 
-Use the `hasBeenActive` property to check wether the user has ever interacted with the page.
+Use the `hasBeenActive` property to check whether the user has interacted with the page since it was loaded.
 
 ```js
 if (navigator.userActivation.hasBeenActive) {

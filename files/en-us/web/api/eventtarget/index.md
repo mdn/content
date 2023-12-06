@@ -2,9 +2,6 @@
 title: EventTarget
 slug: Web/API/EventTarget
 page-type: web-api-interface
-tags:
-  - Interface
-  - Reference
 browser-compat: api.EventTarget
 ---
 
@@ -15,7 +12,7 @@ In other words, any target of events implements the three methods associated wit
 
 {{domxref("Element")}}, and its children, as well as {{domxref("Document")}} and {{domxref("Window")}}, are the most common event targets,
 but other objects can be event targets, too.
-For example {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, and {{domxref("AudioContext")}} are also event targets.
+For example {{domxref("IDBRequest")}}, {{domxref("AudioNode")}}, and {{domxref("AudioContext")}} are also event targets.
 
 Many event targets (including elements, documents, and windows) also support setting [event handlers](/en-US/docs/Web/Events/Event_handlers) via `onevent` properties and attributes.
 

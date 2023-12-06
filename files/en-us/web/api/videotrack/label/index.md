@@ -1,20 +1,8 @@
 ---
-title: VideoTrack.label
+title: "VideoTrack: label property"
+short-title: label
 slug: Web/API/VideoTrack/label
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - label
-  - metadata
-  - track
 browser-compat: api.VideoTrack.label
 ---
 
@@ -44,16 +32,14 @@ only allow certain track kinds through.
 ```js
 function getTrackList(el) {
   const trackList = [];
-  const wantedKinds = [
-    "main", "alternative", "commentary"
-  ];
+  const wantedKinds = ["main", "alternative", "commentary"];
 
   el.videoTracks.forEach((track) => {
     if (wantedKinds.includes(track.kind)) {
       trackList.push({
         id: track.id,
         kind: track.kind,
-        label: track.label
+        label: track.label,
       });
     }
   });

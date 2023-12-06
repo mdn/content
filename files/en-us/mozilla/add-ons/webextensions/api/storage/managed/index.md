@@ -1,16 +1,7 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - managed
+page-type: webextension-api-property
 browser-compat: webextensions.api.storage.managed
 ---
 
@@ -37,10 +28,10 @@ Here's an example manifest:
 }
 ```
 
-Given this manifest, the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) extension could access the data using code like this:
+Given this manifest, the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) extension could access the data using code like this:
 
 ```js
-let storageItem = browser.storage.managed.get('colour');
+let storageItem = browser.storage.managed.get("colour");
 storageItem.then((res) => {
   console.log(`Managed colour is: ${res.colour}`);
 });

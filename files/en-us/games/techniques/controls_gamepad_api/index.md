@@ -1,13 +1,7 @@
 ---
 title: Implementing controls using the Gamepad API
 slug: Games/Techniques/Controls_Gamepad_API
-tags:
-  - Controls
-  - Gamepad API
-  - Gamepads
-  - Games
-  - JavaScript
-  - controllers
+page-type: guide
 ---
 
 {{GamesSidebar}}

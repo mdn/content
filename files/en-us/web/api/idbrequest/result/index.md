@@ -1,16 +1,8 @@
 ---
-title: IDBRequest.result
+title: "IDBRequest: result property"
+short-title: result
 slug: Web/API/IDBRequest/result
 page-type: web-api-instance-property
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Property
-  - Reference
-  - Storage
-  - result
 browser-compat: api.IDBRequest.result
 ---
 
@@ -18,7 +10,7 @@ browser-compat: api.IDBRequest.result
 
 The **`result`** read-only property of the
 {{domxref("IDBRequest")}} interface returns the result of the request. If the request
-failed and the result is not available, an `InvalidStateError` exception is
+is not completed, the result is not available and an `InvalidStateError` exception is
 thrown.
 
 {{AvailableInWorkers}}
@@ -39,7 +31,9 @@ store. For a full working example, see our [To-do Notifications](https://github.
 const title = "Walk dog";
 
 // Open up a transaction as usual
-const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
+const objectStore = db
+  .transaction(["toDoList"], "readwrite")
+  .objectStore("toDoList");
 
 // Get the to-do list object that has this title as it's title
 const objectStoreTitleRequest = objectStore.get(title);

@@ -2,12 +2,6 @@
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSSOM View
-  - Reference
-  - recipe:css-property
 browser-compat: css.properties.scroll-behavior
 ---
 
@@ -43,7 +37,7 @@ The `scroll-behavior` property is specified as one of the keyword values listed 
 - `auto`
   - : The scrolling box scrolls instantly.
 - `smooth`
-  - : The scrolling box scrolls in a smooth fashion using a user-agent-defined timing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
+  - : The scrolling box scrolls in a smooth fashion using a user-agent-defined easing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
 
 ## Formal definition
 

@@ -1,13 +1,8 @@
 ---
-title: WebGLRenderingContext.flush()
+title: "WebGLRenderingContext: flush() method"
+short-title: flush()
 slug: Web/API/WebGLRenderingContext/flush
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.flush
 ---
 

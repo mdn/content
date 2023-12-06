@@ -1,11 +1,7 @@
 ---
 title: Access-Control-Expose-Headers
 slug: Web/HTTP/Headers/Access-Control-Expose-Headers
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Expose-Headers
 ---
 
@@ -40,7 +36,8 @@ Access-Control-Expose-Headers: *
 - \<header-name>
   - : A list of zero or more comma-separated [header names](/en-US/docs/Web/HTTP/Headers) that clients are allowed to access from a response. These are _in addition_ to the {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}}.
 - `*` (wildcard)
-  - : The value "`*`" only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information). In requests with credentials, it is treated as the literal header name "`*`" without special semantics.
+  - : The value "`*`" only counts as a special wildcard value for requests without credentials (requests without [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) or HTTP authentication information).
+    In requests with credentials, it is treated as the literal header name "`*`".
 
 ## Examples
 
@@ -62,11 +59,7 @@ For requests without credentials, a server can also respond with a wildcard valu
 Access-Control-Expose-Headers: *
 ```
 
-However, this won't wildcard the {{HTTPHeader("Authorization")}} header, so if you need to expose that, you will need to list it explicitly:
-
-```http
-Access-Control-Expose-Headers: *, Authorization
-```
+A server can also respond with the `*` value for requests with credentials, but in this case it would refer to a header named `*`.
 
 ## Specifications
 

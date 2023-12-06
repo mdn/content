@@ -2,13 +2,6 @@
 title: <string>
 slug: Web/CSS/string
 page-type: css-type
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
 browser-compat: css.types.string
 ---
 

@@ -2,16 +2,6 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 page-type: web-api-overview
-tags:
-  - API
-  - Clipping
-  - Intersection
-  - Intersection Observer API
-  - IntersectionObserver
-  - Overview
-  - Performance
-  - Reference
-  - Web
 browser-compat: api.IntersectionObserver
 ---
 
@@ -22,15 +12,15 @@ The Intersection Observer API provides a way to asynchronously observe changes i
 Historically, detecting visibility of an element, or the relative visibility of two elements in relation to each other, has been a difficult task for which solutions have been unreliable and prone to causing the browser and the sites the user is accessing to become sluggish. As the web has matured, the need for this kind of information has grown. Intersection information is needed for many reasons, such as:
 
 - Lazy-loading of images or other content as a page is scrolled.
-- Implementing "infinite scrolling" web sites, where more and more content is loaded and rendered as you scroll, so that the user doesn't have to flip through pages.
+- Implementing "infinite scrolling" websites, where more and more content is loaded and rendered as you scroll, so that the user doesn't have to flip through pages.
 - Reporting of visibility of advertisements in order to calculate ad revenues.
 - Deciding whether or not to perform tasks or animation processes based on whether or not the user will see the result.
 
 Implementing intersection detection in the past involved event handlers and loops calling methods like {{domxref("Element.getBoundingClientRect()")}} to build up the needed information for every element affected. Since all this code runs on the main thread, even one of these can cause performance problems. When a site is loaded with these tests, things can get downright ugly.
 
-Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the web site may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the web site, and their computer.
+Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the website may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the website, and their computer.
 
-The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the {{Glossary("viewport")}}), or when the amount by which the two intersect changes by a requested amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
+The Intersection Observer API lets code register a callback function that is executed whenever a particular element enters or exits an intersection with another element (or the {{Glossary("viewport")}}), or when the intersection between two elements changes by a specified amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
 
 One thing the Intersection Observer API can't tell you: the exact number of pixels that overlap or specifically which ones they are; however, it covers the much more common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
@@ -41,7 +31,7 @@ The Intersection Observer API allows you to configure a callback that is called 
 - A **target** element intersects either the device's viewport or a specified element. That specified element is called the **root element** or **root** for the purposes of the Intersection Observer API.
 - The first time the observer is initially asked to watch a target element.
 
-Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for `root` option. Keep reading for a more detailed explanation about intersection observer options.
+Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for the `root` option. Keep reading for a more detailed explanation about intersection observer options.
 
 Whether you're using the viewport or some other element as the root, the API works the same way, executing a callback function you provide whenever the visibility of the target element changes so that it crosses desired amounts of intersection with the root.
 
@@ -53,10 +43,10 @@ Create the intersection observer by calling its constructor and passing it a cal
 
 ```js
 let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
+  root: document.querySelector("#scrollArea"),
+  rootMargin: "0px",
+  threshold: 1.0,
+};
 
 let observer = new IntersectionObserver(callback, options);
 ```
@@ -79,7 +69,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 Once you have created the observer, you need to give it a target element to watch:
 
 ```js
-let target = document.querySelector('#listItem');
+let target = document.querySelector("#listItem");
 observer.observe(target);
 
 // the callback we setup for the observer will be executed now for the first time
@@ -138,7 +128,7 @@ When the callback is invoked, it receives a list of `IntersectionObserverEntry` 
 
 You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
-Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
+Note that it's possible to have a zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
@@ -203,7 +193,10 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
 }
 
 .label {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
   position: absolute;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.7);
@@ -246,7 +239,7 @@ startup = () => {
   let observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: []
+    threshold: [],
   };
 
   // An array of threshold sets for each of the boxes. The
@@ -258,17 +251,19 @@ startup = () => {
     [],
     [0.5],
     [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
-    [0, 0.25, 0.5, 0.75, 1.0]
+    [0, 0.25, 0.5, 0.75, 1.0],
   ];
 
-  for (let i=0; i<=1.0; i+= 0.01) {
+  for (let i = 0; i <= 1.0; i += 0.01) {
     thresholdSets[0].push(i);
   }
 
   // Add each box, creating a new observer for each
 
-  for (let i=0; i<4; i++) {
-    let template = document.querySelector("#boxTemplate").content.cloneNode(true);
+  for (let i = 0; i < 4; i++) {
+    let template = document
+      .querySelector("#boxTemplate")
+      .content.cloneNode(true);
     let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
@@ -276,15 +271,19 @@ startup = () => {
     // Set up the observer for this box
 
     observerOptions.threshold = thresholdSets[i];
-    observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
+    observers[i] = new IntersectionObserver(
+      intersectionCallback,
+      observerOptions,
+    );
     observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // Scroll to the starting position
 
-  document.scrollingElement.scrollTop = wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
+  document.scrollingElement.scrollTop =
+    wrapper.firstElementChild.getBoundingClientRect().top + window.scrollY;
   document.scrollingElement.scrollLeft = 750;
-}
+};
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
@@ -296,7 +295,7 @@ intersectionCallback = (entries) => {
     box.querySelector(".bottomLeft").innerHTML = visiblePct;
     box.querySelector(".bottomRight").innerHTML = visiblePct;
   });
-}
+};
 
 startup();
 ```
@@ -333,7 +332,7 @@ const intersectionCallback = (entries) => {
       }
     }
   });
-}
+};
 ```
 
 ## Interfaces
@@ -359,13 +358,15 @@ The HTML for this example is very short, with a primary element which is the box
 
 ### CSS
 
-The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
+The CSS isn't terribly important for the purposes of this example; it lays out the element and establishes that the {{cssxref("background-color")}} and {{cssxref("border")}} attributes can participate in [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), which we'll use to affect the changes to the element as it becomes more or less obscured.
 
 ```css
 #box {
   background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
-  transition: background-color 1s, border 1s;
+  transition:
+    background-color 1s,
+    border 1s;
   width: 350px;
   height: 350px;
   display: flex;
@@ -406,11 +407,15 @@ let increasingColor = "rgba(40, 40, 190, ratio)";
 let decreasingColor = "rgba(190, 40, 40, ratio)";
 
 // Set things up
-window.addEventListener("load", (event) => {
-  boxElement = document.querySelector("#box");
+window.addEventListener(
+  "load",
+  (event) => {
+    boxElement = document.querySelector("#box");
 
-  createObserver();
-}, false);
+    createObserver();
+  },
+  false,
+);
 ```
 
 The constants and variables we set up here are:
@@ -437,7 +442,7 @@ function createObserver() {
   let options = {
     root: null,
     rootMargin: "0px",
-    threshold: buildThresholdList()
+    threshold: buildThresholdList(),
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
@@ -462,8 +467,8 @@ function buildThresholdList() {
   let thresholds = [];
   let numSteps = 20;
 
-  for (let i=1.0; i<=numSteps; i++) {
-    let ratio = i/numSteps;
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
     thresholds.push(ratio);
   }
 
@@ -475,74 +480,80 @@ function buildThresholdList() {
 This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value `i/numSteps` onto the `thresholds` array for each integer `i` between 1 and `numSteps`. It also pushes 0 to include that value. The result, given the default value of `numSteps` (20), is the following list of thresholds:
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <th>#</th>
-      <th>Ratio</th>
-      <th>#</th>
-      <th>Ratio</th>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.05</td>
-      <th>11</th>
-      <td>0.55</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.1</td>
-      <th>12</th>
-      <td>0.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.15</td>
-      <th>13</th>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.2</td>
-      <th>14</th>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.25</td>
-      <th>15</th>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.3</td>
-      <th>16</th>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.35</td>
-      <th>17</th>
-      <td>0.85</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.4</td>
-      <th>18</th>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.45</td>
-      <th>19</th>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.5</td>
-      <th>20</th>
-      <td>1.0</td>
-    </tr>
-  </tbody>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ratio</th>
+        <th>#</th>
+        <th>Ratio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>0.05</td>
+        <th>11</th>
+        <td>0.6</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>0.1</td>
+        <th>12</th>
+        <td>0.65</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>0.15</td>
+        <th>13</th>
+        <td>0.7</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>0.2</td>
+        <th>14</th>
+        <td>0.75</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>0.25</td>
+        <th>15</th>
+        <td>0.8</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>0.3</td>
+        <th>16</th>
+        <td>0.85</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>0.35</td>
+        <th>17</th>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>0.4</td>
+        <th>18</th>
+        <td>0.95</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>0.45</td>
+        <th>19</th>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>0.5</td>
+        <th>20</th>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>0.55</td>
+      </tr>
+    </tbody>
 </table>
 
 We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.
@@ -555,9 +566,15 @@ When the browser detects that the target element (in our case, the one with the 
 function handleIntersect(entries, observer) {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.backgroundColor = increasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = increasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     } else {
-      entry.target.style.backgroundColor = decreasingColor.replace("ratio", entry.intersectionRatio);
+      entry.target.style.backgroundColor = decreasingColor.replace(
+        "ratio",
+        entry.intersectionRatio,
+      );
     }
 
     prevRatio = entry.intersectionRatio;

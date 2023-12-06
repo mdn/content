@@ -2,13 +2,8 @@
 title: aural
 slug: Web/CSS/@media/aural
 page-type: css-media-feature
-tags:
-  - CSS
-  - Deprecated
-  - Reference
-  - aural
-  - media feature
-  - speech
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/CSS22/aural.html
 ---
 
@@ -44,6 +39,6 @@ The `aural` CSS media type was used to specify a block of CSS that applied only 
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [`@media`](/en-US/docs/Web/CSS/@media)

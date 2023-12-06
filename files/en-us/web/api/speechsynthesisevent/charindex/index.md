@@ -1,16 +1,8 @@
 ---
-title: SpeechSynthesisEvent.charIndex
+title: "SpeechSynthesisEvent: charIndex property"
+short-title: charIndex
 slug: Web/API/SpeechSynthesisEvent/charIndex
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - charIndex
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisEvent.charIndex
 ---
 
@@ -27,8 +19,10 @@ A number.
 ```js
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
-  console.log(`Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`);
-}
+  console.log(
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
+  );
+};
 ```
 
 ## Specifications

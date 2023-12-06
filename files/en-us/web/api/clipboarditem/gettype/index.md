@@ -1,20 +1,12 @@
 ---
-title: ClipboardItem.getType()
+title: "ClipboardItem: getType() method"
+short-title: getType()
 slug: Web/API/ClipboardItem/getType
 page-type: web-api-instance-method
-tags:
-  - Clipboard
-  - Clipboard API
-  - ClipboardItem
-  - Cut
-  - Method
-  - copy
-  - getTypes
-  - paste
 browser-compat: api.ClipboardItem.getType
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
 
@@ -77,4 +69,4 @@ async function getClipboardContents() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

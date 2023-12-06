@@ -1,17 +1,10 @@
 ---
-title: XRCylinderLayer.transform
+title: "XRCylinderLayer: transform property"
+short-title: transform
 slug: Web/API/XRCylinderLayer/transform
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - Experimental
+status:
+  - experimental
 browser-compat: api.XRCylinderLayer.transform
 ---
 
@@ -33,10 +26,10 @@ This example code positions the layer two meters away from the origin of `xrRefe
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
-cylinderLayer.transform = new XRRigidTransform({z: -2});
+cylinderLayer.transform = new XRRigidTransform({ z: -2 });
 ```
 
 ## Specifications

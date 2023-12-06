@@ -1,15 +1,8 @@
 ---
-title: CanvasRenderingContext2D.createConicGradient()
+title: "CanvasRenderingContext2D: createConicGradient() method"
+short-title: createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Conic
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
 
@@ -30,7 +23,7 @@ createConicGradient(startAngle, x, y)
 ### Parameters
 
 - `startAngle`
-  - : The angle at which to begin the gradient, in radians. Angle measurements start vertically above the center and move around clockwise.
+  - : The angle at which to begin the gradient, in radians. The angle starts from a line going horizontally right from the center, and proceeds clockwise.
 - `x`
   - : The x-axis coordinate of the center of the gradient.
 - `y`
@@ -50,7 +43,7 @@ This example initializes a conic gradient using the `createConicGradient()` meth
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="240" height="240"></canvas>
 ```
 
 #### JavaScript
@@ -78,7 +71,7 @@ ctx.fillRect(20, 20, 200, 200);
 
 #### Rectangle result
 
-{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 700, 200) }}
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 240, 240) }}
 
 ## Specifications
 

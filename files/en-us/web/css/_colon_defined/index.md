@@ -2,17 +2,10 @@
 title: ":defined"
 slug: Web/CSS/:defined
 page-type: css-pseudo-class
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 browser-compat: css.selectors.defined
 ---
 
-{{ CSSRef }}
+{{CSSRef}}
 
 The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
 
@@ -30,8 +23,10 @@ simple-custom:defined {
 
 ## Syntax
 
-```
-:defined
+```css
+:defined {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -54,7 +49,7 @@ customElements.define(
 
       let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
     }
-  }
+  },
 );
 ```
 
@@ -108,4 +103,4 @@ This is useful if you have a complex custom element that takes a while to load i
 
 ## See also
 
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

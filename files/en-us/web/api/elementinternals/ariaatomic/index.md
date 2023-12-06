@@ -1,19 +1,12 @@
 ---
-title: ElementInternals.ariaAtomic
+title: "ElementInternals: ariaAtomic property"
+short-title: ariaAtomic
 slug: Web/API/ElementInternals/ariaAtomic
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaAtomic
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
 browser-compat: api.ElementInternals.ariaAtomic
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaAtomic`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the `aria-relevant` attribute.
 

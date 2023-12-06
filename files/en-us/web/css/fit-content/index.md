@@ -2,12 +2,6 @@
 title: fit-content
 slug: Web/CSS/fit-content
 page-type: css-keyword
-tags:
-  - CSS
-  - Keyword
-  - Reference
-  - Web
-  - fit-content
 browser-compat: css.properties.width.fit-content
 ---
 
@@ -53,7 +47,6 @@ block-size: fit-content;
 }
 
 .item {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #8ca0ff;
   padding: 5px;

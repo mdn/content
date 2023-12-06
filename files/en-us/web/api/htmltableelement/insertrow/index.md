@@ -1,14 +1,8 @@
 ---
-title: HTMLTableElement.insertRow()
+title: "HTMLTableElement: insertRow() method"
+short-title: insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsMobileBrowserCompatibility
-  - Reference
 browser-compat: api.HTMLTableElement.insertRow
 ---
 
@@ -24,7 +18,7 @@ inserted into the last `<tbody>`. To insert the row into a specific
 
 ```js
 let specific_tbody = document.getElementById(tbody_id);
-let row = specific_tbody.insertRow(index)
+let row = specific_tbody.insertRow(index);
 ```
 
 > **Note:** `insertRow()` inserts the row directly into the
@@ -98,12 +92,12 @@ function addRow(tableID) {
   let newCell = newRow.insertCell(0);
 
   // Append a text node to the cell
-  let newText = document.createTextNode('New bottom row');
+  let newText = document.createTextNode("New bottom row");
   newCell.appendChild(newText);
 }
 
 // Call addRow() with the table's ID
-addRow('my-table');
+addRow("my-table");
 ```
 
 ### Result

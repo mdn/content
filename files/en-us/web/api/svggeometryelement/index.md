@@ -2,13 +2,6 @@
 title: SVGGeometryElement
 slug: Web/API/SVGGeometryElement
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGGeometryElement
 ---
 

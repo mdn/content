@@ -1,16 +1,8 @@
 ---
-title: IDBFactory.deleteDatabase()
+title: "IDBFactory: deleteDatabase() method"
+short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteDatabase
 browser-compat: api.IDBFactory.deleteDatabase
 ---
 
@@ -58,8 +50,9 @@ deleteDatabase(name, options)
 
 ### Return value
 
-A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request
-are fired.
+A {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
 ## Examples
 

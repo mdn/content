@@ -2,12 +2,6 @@
 title: Using dynamic styling information
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
 page-type: guide
-tags:
-  - API
-  - Beginner
-  - CSSOM
-  - Guide
-  - NeedsBeginnerUpdate
 ---
 
 {{DefaultAPISidebar("CSSOM")}}
@@ -62,7 +56,7 @@ Also, when you set this property on an element, you override any styles that hav
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -111,7 +105,7 @@ The `style` object represents an individual style statement. The style object is
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -145,8 +139,8 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method to specify the CSS property and its value.
 
 ```js
-const el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+const el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 Be aware, however, that `setAttribute` removes all other `style` properties that may already have been defined in the element's `style` object. If the `some-element` element above had an in–line `style` attribute of say `style="font-size: 18px"`, that value would be removed by the use of `setAttribute`.

@@ -1,14 +1,8 @@
 ---
-title: DOMRectReadOnly.right
+title: "DOMRectReadOnly: right property"
+short-title: right
 slug: Web/API/DOMRectReadOnly/right
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOMRectReadOnly
-  - Geometry
-  - Property
-  - Reference
 browser-compat: api.DOMRectReadOnly.right
 ---
 

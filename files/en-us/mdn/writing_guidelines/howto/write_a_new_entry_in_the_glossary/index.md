@@ -2,9 +2,6 @@
 title: How to write an entry in the glossary
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
 
 {{MDNSidebar}}
@@ -23,9 +20,9 @@ Glossary entries are intended to be straightforward and brief.
 ## How to write an entry
 
 First, choose what topic you'd like to write a glossary entry for.
-If you're looking for topics that need a glossary entry, check the [list of undocumented terms](/en-US/docs/Glossary#contribute_to_the_glossary) at the end of the [Glossary landing page](/en-US/docs/Glossary).
+If you're looking for topics that need a glossary entry, check the list of terms in the sidebar of the [Glossary landing page](/en-US/docs/Glossary).
 
-If you have an idea for a new glossary entry, [create a new page](https://github.com/mdn/content#adding-a-new-document) for it underneath the [glossary landing page](https://github.com/mdn/content/tree/main/files/en-us/glossary).
+If you have an idea for a new glossary entry, [create a new page](/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#creating_pages) for it underneath the [glossary landing page](https://github.com/mdn/content/tree/main/files/en-us/glossary).
 
 ### Write a summary
 
@@ -40,7 +37,7 @@ Make sure anyone reading the description can immediately understand the defined 
 
 Add a few extra paragraphs if you must, but it's easy to find yourself writing an entire article.
 Writing an article is fine, but please don't create it in/for the glossary.
-If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+If you aren't sure where to put your article, feel free to [reach out to discuss it](/en-US/docs/MDN/Community/Discussions).
 
 There are a few simple guidelines to consider for writing a better glossary entry:
 
@@ -53,7 +50,7 @@ There are a few simple guidelines to consider for writing a better glossary entr
 
 ### Expand with links
 
-A glossary entry should always end with a _Learn more_ section.
+A glossary entry should always end with a _See also_ section.
 This section should contain links to help the reader move forward: discovering more details; learning to use the relevant technology.
 
 It is good practice to organize the links into three groups:

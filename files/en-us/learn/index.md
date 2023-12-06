@@ -1,15 +1,7 @@
 ---
 title: Learn web development
 slug: Learn
-tags:
-  - Beginner
-  - CSS
-  - HTML
-  - Index
-  - Intro
-  - Landing
-  - Learn
-  - Web
+page-type: landing-page
 ---
 
 {{LearnSidebar}}
@@ -51,7 +43,7 @@ The following is a list of all the topics we cover in the MDN learning area.
 - [HTML — Structuring the web](/en-US/docs/Learn/HTML)
   - : HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.
 - [CSS — Styling the web](/en-US/docs/Learn/CSS)
-  - : CSS is the language that we can use to style and layout our web content, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
+  - : CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.
 - [JavaScript — Dynamic client-side scripting](/en-US/docs/Learn/JavaScript)
   - : JavaScript is the scripting language used to add dynamic functionality to web pages. This topic teaches all the essentials needed to become comfortable with writing and understanding JavaScript.
 - [Web forms — Working with user data](/en-US/docs/Learn/Forms)
@@ -67,9 +59,27 @@ The following is a list of all the topics we cover in the MDN learning area.
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
   - : Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
 
+## Tasks and assessments
+
+In the Learn web development section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete.
+Here are some tips on how to get the most out of them.
+There are two main types of tasks you'll encounter:
+
+- "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
+- more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+
+For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
+
+Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
+There are patterns that make it easier to find these resources, for example:
+
+- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+
 ## Getting our code examples
 
-The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
+The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/).
+If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
@@ -99,12 +109,14 @@ You can update the `learning-area` repository with any changes made to the maste
 
 ## Contact us
 
-If you want to get in touch with us about anything, the best way is to drop us a message on our [Discourse forum](https://discourse.mozilla.org/c/mdn/236). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
+If you want to get in touch with us about anything, use the [communication channels](/en-US/docs/MDN/Community/Communication_channels). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
 If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 
 ## See also
 
+- [MDN Blog](/en-US/blog/)
+  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
 - [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
   - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
 - [Learn JavaScript](https://learnjavascript.online/)
@@ -117,10 +129,10 @@ If you're interested in helping develop/improve the content, take a look at [how
   - : Basic coding theory with a gamified learning process. Mainly focused on beginners.
 - [Code.org](https://code.org/)
   - : Basic coding theory and practice, primarily aimed at children/complete beginners.
-- [EXLskills](https://exlskills.com/learn-en/courses)
-  - : Free and open courses for learning tech skills, with mentorship and project-based learning.
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : Interactive site with tutorials and projects to learn web development.
+- [The Odin Project](https://www.theodinproject.com/)
+  - : Features a free and open-source full-stack curriculum, from beginner to advanced.
 - [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
   - : A framework for entry-level web literacy and 21st-century skills, which also provides access to teaching activities sorted by category.
 - [Edabit](https://edabit.com/challenges/javascript)

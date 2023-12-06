@@ -1,15 +1,7 @@
 ---
 title: Game over
 slug: Games/Tutorials/2D_breakout_game_Phaser/Game_over
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - game over
+page-type: guide
 ---
 
 {{GamesSidebar}}

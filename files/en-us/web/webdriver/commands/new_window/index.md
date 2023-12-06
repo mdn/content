@@ -1,6 +1,7 @@
 ---
 title: New Window
 slug: Web/WebDriver/Commands/New_Window
+page-type: webdriver-command
 browser-compat: webdriver.commands.NewWindow
 ---
 
@@ -31,7 +32,7 @@ The input is an object:
 The response payload is an object:
 
 - handle
-  - : The handle of the new [WebWindow.](/en-US/docs/Web/WebDriver/WebWindow)
+  - : The handle of the new [WebWindow](/en-US/docs/Web/WebDriver/WebWindow).
 - type
   - : The created type of top-level browsing context.
 

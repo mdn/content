@@ -1,18 +1,8 @@
 ---
-title: RTCIceCandidate.protocol
+title: "RTCIceCandidate: protocol property"
+short-title: protocol
 slug: Web/API/RTCIceCandidate/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - ICE
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
 browser-compat: api.RTCIceCandidate.protocol
 ---
 
@@ -42,8 +32,8 @@ A string that indicates what network protocol the candidate uses:
 
 Here's an example candidate a-line from an ICE transaction:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The third field, `"udp"`, is the protocol type, indicating that the

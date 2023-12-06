@@ -1,15 +1,8 @@
 ---
-title: XPathEvaluator.evaluate()
+title: "XPathEvaluator: evaluate() method"
+short-title: evaluate()
 slug: Web/API/XPathEvaluator/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
 browser-compat: api.XPathEvaluator.evaluate
 ---
 
@@ -97,7 +90,12 @@ The following example shows the use of the `evaluate()` method.
 
 ```js
 const evaluator = new XPathEvaluator();
-const result = evaluator.evaluate("//div", document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const result = evaluator.evaluate(
+  "//div",
+  document,
+  null,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

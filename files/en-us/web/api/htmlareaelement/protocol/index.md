@@ -1,11 +1,8 @@
 ---
-title: HTMLAreaElement.protocol
+title: "HTMLAreaElement: protocol property"
+short-title: protocol
 slug: Web/API/HTMLAreaElement/protocol
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
 browser-compat: api.HTMLAreaElement.protocol
 ---
 

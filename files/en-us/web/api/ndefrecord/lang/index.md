@@ -1,16 +1,14 @@
 ---
-title: NDEFRecord.lang
+title: "NDEFRecord: lang property"
+short-title: lang
 slug: Web/API/NDEFRecord/lang
 page-type: web-api-instance-property
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Experimental
+status:
+  - experimental
 browser-compat: api.NDEFRecord.lang
 ---
 
-{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef}}
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`lang`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the language of

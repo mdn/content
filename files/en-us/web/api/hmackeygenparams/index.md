@@ -2,12 +2,6 @@
 title: HmacKeyGenParams
 slug: Web/API/HmacKeyGenParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - HmacKeyGenParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacKeyGenParams
 ---
 

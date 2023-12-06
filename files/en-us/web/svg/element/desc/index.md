@@ -1,10 +1,7 @@
 ---
 title: <desc>
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Descriptive
+page-type: svg-element
 browser-compat: svg.elements.desc
 ---
 

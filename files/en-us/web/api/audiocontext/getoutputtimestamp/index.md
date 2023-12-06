@@ -1,23 +1,15 @@
 ---
-title: AudioContext.getOutputTimestamp()
+title: "AudioContext: getOutputTimestamp() method"
+short-title: getOutputTimestamp()
 slug: Web/API/AudioContext/getOutputTimestamp
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - getOutputTimestamp
-  - sound
 browser-compat: api.AudioContext.getOutputTimestamp
 ---
 
 {{APIRef("Web Audio API")}}
 
 The
-**`getOutputTimestamp()`** property of the
+**`getOutputTimestamp()`** method of the
 {{domxref("AudioContext")}} interface returns a new `AudioTimestamp` object
 containing two audio timestamp values relating to the current audio context.
 
@@ -60,7 +52,7 @@ In the following code we start to play an audio file after a play button is clic
 and start off a `requestAnimationFrame` loop running, which constantly
 outputs the `contextTime` and `performanceTime`.
 
-You can see full code of this [example at output-timestamp](https://github.com/mdn/webaudio-examples/blob/master/output-timestamp/index.html) ([see it live also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
+You can see full code of this [example at output-timestamp](https://github.com/mdn/webaudio-examples/blob/main/output-timestamp/index.html) ([see it live also](https://mdn.github.io/webaudio-examples/output-timestamp/)).
 
 ```js
 // Press the play button

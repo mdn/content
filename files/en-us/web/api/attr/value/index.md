@@ -1,10 +1,8 @@
 ---
-title: Attr.value
+title: "Attr: value property"
+short-title: value
 slug: Web/API/Attr/value
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.Attr.value
 ---
 
@@ -20,7 +18,7 @@ A string representing the attribute value.
 
 The following example displays the current value of the attribute `test`. Clicking on the button will change it to a different value, and read it again to update the displayed value.
 
-### HTML Content
+### HTML
 
 ```html
 <label test="initial value"></label>
@@ -33,7 +31,7 @@ The following example displays the current value of the attribute `test`. Clicki
 </p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 const element = document.querySelector("label");

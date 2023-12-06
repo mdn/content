@@ -2,12 +2,8 @@
 title: HTMLMarqueeElement
 slug: Web/API/HTMLMarqueeElement
 page-type: web-api-interface
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Interface
-  - Reference
+status:
+  - deprecated
 browser-compat: api.HTMLMarqueeElement
 ---
 
@@ -77,7 +73,7 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 

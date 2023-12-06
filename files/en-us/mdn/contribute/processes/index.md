@@ -1,10 +1,7 @@
 ---
 title: Documentation processes
 slug: MDN/Contribute/Processes
-tags:
-  - Landing
-  - MDN Meta
-  - Processes
+page-type: landing-page
 ---
 
 {{MDNSidebar}}

@@ -2,32 +2,23 @@
 title: atan2()
 slug: Web/CSS/atan2
 page-type: css-function
-tags:
-  - CSS
-  - CSS Function
-  - Function
-  - Math
-  - Reference
-  - Web
-  - atan2
-  - Experimental
 browser-compat: css.types.atan2
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`atan2()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is a trigonometric function that returns the inverse tangent of two values between `-infinity` and `infinity`. The function accepts two arguments and returns the number of radians representing an {{cssxref("&lt;angle&gt;")}} between `-180deg` and `180deg`.
 
 ## Syntax
 
 ```css
-/* Single <number> values */
+/* Two <number> values */
 transform: rotate(atan2(3, 2));
 
-/* Single <dimension> values */
+/* Two <dimension> values */
 transform: rotate(atan2(1rem, -0.5rem));
 
-/* Single <percentage> values */
+/* Two <percentage> values */
 transform: rotate(atan2(20%, -30%));
 
 /* Other values */
@@ -37,17 +28,16 @@ transform: rotate(atan2(e, 30));
 
 ### Parameters
 
-The `atan2(y, x)` function accepts two comma-separated values as its parameters. The values can be {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;dimension&gt;")}}, or {{cssxref("&lt;percentage&gt;")}} types, but both must be the same type.
+The `atan2(y, x)` function accepts two comma-separated values as its parameters. Each value can be a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}. Both values must be of the same type, although if they are {{cssxref("&lt;dimension&gt;")}} they can be of different units (example: `atan2(100px, 5vw)` is valid).
 
 - `y`
-  - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
-
+  - : The y-coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
 - `x`
-  - : The y coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
+  - : The x-coordinate of the point. A calculation which resolves to a {{cssxref("&lt;number&gt;")}}, a {{cssxref("&lt;dimension&gt;")}}, or a {{cssxref("&lt;percentage&gt;")}}.
 
 ### Return value
 
-Given two points `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive `x` axis and the ray from the origin to the point `(x, y)`.
+Given two values `x` and `y`, the function `atan2(y, x)` calculates and returns the {{cssxref("&lt;angle&gt;")}} between the positive x-axis and the ray from the origin to the point `(x, y)`.
 
 ### Formal syntax
 

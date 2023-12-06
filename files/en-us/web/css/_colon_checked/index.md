@@ -2,19 +2,6 @@
 title: ":checked"
 slug: Web/CSS/:checked
 page-type: css-pseudo-class
-tags:
-  - ":checked"
-  - CSS
-  - Checked
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Toggled
-  - Web
-  - button
-  - checkbox
-  - radio
 browser-compat: css.selectors.checked
 ---
 
@@ -30,8 +17,10 @@ The user can engage this state by checking/selecting an element, or disengage it
 
 ## Syntax
 
-```
-:checked
+```css
+:checked {
+  /* ... */
+}
 ```
 
 ## Examples

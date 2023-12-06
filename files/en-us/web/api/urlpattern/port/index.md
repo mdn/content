@@ -1,14 +1,10 @@
 ---
-title: URLPattern.port
+title: "URLPattern: port property"
+short-title: port
 slug: Web/API/URLPattern/port
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URLPattern
-  - URL Pattern API
-  - Experimental
+status:
+  - experimental
 browser-compat: api.URLPattern.port
 ---
 
@@ -32,7 +28,7 @@ The below example creates a {{domxref("URLPattern")}} object with
 and `8080`.
 
 ```js
-const pattern = new URLPattern({ port: '(80|443|8080)' });
+const pattern = new URLPattern({ port: "(80|443|8080)" });
 console.log(pattern.port); // '(80|443|8080)'
 ```
 

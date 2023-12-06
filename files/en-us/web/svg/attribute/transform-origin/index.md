@@ -1,9 +1,7 @@
 ---
 title: transform-origin
 slug: Web/SVG/Attribute/transform-origin
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.transform-origin
 ---
 
@@ -45,10 +43,12 @@ If two or more values are defined and either no value is a keyword, or the only 
 - One-value syntax:
 
   - The value must be a [`<length>`](/en-US/docs/Web/CSS/length), or one of the keywords `left`, `center`, `right`, `top`, and `bottom`.
+
 - Two-value syntax:
 
   - One value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `left`, `center`, and `right`.
   - The other value must be a [`<length>`](/en-US/docs/Web/CSS/length), a [`<percentage>`](/en-US/docs/Web/CSS/percentage), or one of the keywords `top`, `center`, and `bottom`.
+
 - Three-value syntax:
 
   - The first two values are the same as for the two-value syntax.

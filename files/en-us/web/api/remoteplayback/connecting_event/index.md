@@ -1,13 +1,8 @@
 ---
-title: 'RemotePlayback: connecting event'
+title: "RemotePlayback: connecting event"
+short-title: connecting
 slug: Web/API/RemotePlayback/connecting_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - onconnecting
-  - RemotePlayback
 browser-compat: api.RemotePlayback.connecting_event
 ---
 
@@ -20,9 +15,9 @@ The **`connecting`** event of the {{domxref("RemotePlayback")}} interface fires 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('connecting', (event) => { });
+addEventListener("connecting", (event) => {});
 
-onconnecting = (event) => { };
+onconnecting = (event) => {};
 ```
 
 ## Event type
@@ -36,7 +31,7 @@ In the following example the value of {{domxref("RemotePlayback.state")}} is pri
 ```js
 RemotePlayback.onconnecting = () => {
   console.log(RemotePlayback.state);
-}
+};
 ```
 
 ## Specifications
