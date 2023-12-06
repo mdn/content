@@ -16,7 +16,7 @@ method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the all
 ## Syntax
 
 ```js-nolint
-const allowlist = FeaturePolicy.getAllowlistForFeature(feature)
+getAllowlistForFeature(feature)
 ```
 
 ### Parameter

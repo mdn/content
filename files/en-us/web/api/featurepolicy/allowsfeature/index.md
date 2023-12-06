@@ -19,13 +19,8 @@ specified context (or the default context if no context is specified).
 ## Syntax
 
 ```js-nolint
-const allowed = FeaturePolicy.allowsFeature(feature)
-```
-
-or
-
-```js-nolint
-const allowed = FeaturePolicy.allowsFeature(feature, origin)
+allowsFeature(feature)
+allowsFeature(feature, origin)
 ```
 
 ### Parameters
