@@ -18,13 +18,14 @@ When `startViewTransition()` is invoked, a sequence of steps is followed as expl
 ## Syntax
 
 ```js-nolint
-startViewTransition(callback)
+startViewTransition()
+startViewTransition(updateCallback)
 ```
 
 ### Parameters
 
-- `callback`
-  - : A callback function typically invoked to update the DOM during the view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a screenshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
+- `updateCallback` {{optional_inline}}
+  - : An optional callback function typically invoked to update the DOM during the view transition process, which returns a {{jsxref("Promise")}}. The callback is invoked once the API has taken a screenshot of the current page. When the promise returned by the callback fulfills, the view transition begins in the next frame. If the promise returned by the callback rejects, the transition is abandoned.
 
 ### Return value
 
