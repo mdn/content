@@ -6,17 +6,17 @@ page-type: guide
 
 {{CSSRef}}
 
-When an error is made in CSS, instead of [throwing an error](/en-US/docs/Web/JavaScript/Reference/Errors) like in JavaScript, the browser will gracefully recover, skipping over the invalid content. While the user agent won't alert you to CSS errors, the user agent won't fail either. This is a feature of CSS, not a bug.
+When an error is made in CSS, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser will gracefully recover, skipping over the invalid content. While the user agent won't alert you to CSS errors, the user agent won't fail either. This is a feature of CSS, not a bug.
 
-In CSS, when an error is made, the user-agent parser ignores the lines containting the errors, discarding the minimum amount of content before returning to parsing as normal. This error-recovery is done because, as new features are added to CSS, a browser may not recognize new features and will simply discard the line with the content with what it may currently view as error. This enables adding new features to CSS without worrying that anything, other than the new feature, is broken in older browsers. It also enables including both old and new syntax, in that order, so the old syntax is rendered until the new syntax becomes parsed as valid.
+In CSS, when an error is made, the user-agent's parser ignores the lines containing the errors, discarding the minimum amount of content before returning to parsing as normal. This error recovery is done because, as new features are added to CSS, a browser may not recognize new features and will simply discard the line with the content with what it may currently view as an error. This enables adding new features to CSS without worrying that anything, other than the new feature, is broken in older browsers. It also enables including both old and new syntax, in that order, so the old syntax is rendered until the new syntax becomes parsed as valid. Because user agents ignore CSS errors, the valid fallback CSS doesn't get overwritten by perceived as invalid new CSS.
 
-The type of content that gets ignored, depends on the type of error. For example,
+The type and amount of CSS that gets ignored depends on the type of error. For example,
 
-- For errors in at-rules, whether a single line or the entire at-rule fails depends on the at-rule and the type of error.
-- If the error is an invalid selector, the entire declaration block is ignored.
-- If a semi-colon is omitted between property declarations, the missing semi-colon causes an invalid value, so the declaration is ignored.
-- If the error is a property name or value, such as an unrecognized property name or invalid data type, the declaration is ignored.
-- If the error is a missing end-bracket, what gets ignored depends on whether the user-agent can parse the error as nested CSS.
+- For [errors in at-rules](#at-rule-errors), whether a single line or the entire at-rule fails depends on the at-rule and the type of error.
+- If the error is an [invalid selector](#errors-in-selector-lists), the entire declaration block is ignored.
+- If a semi-colon is omitted between property declarations, the [missing semi-colon](#errors-within-css-declaration-blocks) causes an invalid value, so the declaration is ignored.
+- If the [error is a property name or value](#errors-within-css-declaration-blocks), such as an unrecognized property name or invalid data type, just that property/value declaration is ignored.
+- If the issue is a [missing end-bracket](#auto-closed-endings), what gets ignored, if anything, depends on whether the user-agent can parse the error as nested CSS.
 
 After each declaration, style rule, at-rule, etc. is parsed, the user agent checks the parsed content against its expected grammar for that construct. If it does not match the expected grammar for that construct, it is invalid, and is ignored.
 
