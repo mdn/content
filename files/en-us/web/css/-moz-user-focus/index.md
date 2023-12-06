@@ -32,16 +32,6 @@ By setting its value to `ignore`, you can disable focusing the element, which me
   - : The element does not accept the keyboard focus and will be skipped in the tab order.
 - `normal`
   - : The element can accept the keyboard focus.
-- `select-after`
-  - : ?
-- `select-before`
-  - : ?
-- `select-menu`
-  - : ?
-- `select-same`
-  - : ?
-- `select-all`
-  - : ?
 - `none`
   - : ?
 
@@ -53,7 +43,7 @@ By setting its value to `ignore`, you can disable focusing the element, which me
 
 ```plain
 -moz-user-focus =
-  ignore | normal | select-after | select-before | select-menu | select-same | select-all | none
+  ignore | normal | none
 ```
 
 ## Examples
