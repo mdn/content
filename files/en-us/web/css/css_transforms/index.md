@@ -2,7 +2,7 @@
 title: CSS transforms
 slug: Web/CSS/CSS_transforms
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-transforms/
+spec-urls: https://drafts.csswg.org/css-transforms-2/
 ---
 
 {{CSSRef}}
@@ -32,17 +32,35 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - {{cssxref("perspective-origin")}}
 - {{cssxref("rotate")}}
 - {{cssxref("scale")}}
-- [`skew`](/en-US/docs/Web/CSS/transform-function/skew)
 - {{cssxref("transform")}}
 - {{cssxref("transform-box")}}
 - {{cssxref("transform-origin")}}
 - {{cssxref("transform-style")}}
 - {{cssxref("translate")}}
+- {{cssxref("transform-origin")}}
 
 ### Functions
 
-- See {{cssxref("&lt;transform-function&gt;")}}
-  - All of the CSS transform functions, such as [`translateX()`](/en-US/docs/Web/CSS/transform-function/translateX), are listed on their own page.
+- {{cssxref("transform-function/matrix", "matrix()")}}
+- {{cssxref("transform-function/matrix3d", "matrix3d()")}}
+- {{cssxref("transform-function/perspective", "perspective()")}}
+- {{cssxref("transform-function/rotate", "rotate()")}}
+- {{cssxref("transform-function/rotate3d", "rotate3d()")}}
+- {{cssxref("transform-function/rotateX", "rotateX()")}}
+- {{cssxref("transform-function/rotateY", "rotateY()")}}
+- {{cssxref("transform-function/rotateZ", "rotateZ()")}}
+- {{cssxref("transform-function/scale", "scale()")}}
+- {{cssxref("transform-function/scale3d", "scale3d()")}}
+- {{cssxref("transform-function/scaleX", "scaleX()")}}
+- {{cssxref("transform-function/scaleY", "scaleY()")}}
+- {{cssxref("transform-function/scaleZ", "scaleZ()")}}
+- {{cssxref("transform-function/skew", "skew()")}}
+- {{cssxref("transform-function/skewX", "skewX()")}}
+- {{cssxref("transform-function/skewY", "skewY()")}}
+- {{cssxref("transform-function/translate", "translate()")}}
+- {{cssxref("transform-function/translateX", "translateX()")}}
+- {{cssxref("transform-function/translateY", "translateY()")}}
+- {{cssxref("transform-function/translateZ", "translateZ()")}}
 
 ### Data types
 
@@ -52,18 +70,21 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Styling animated buttons with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/styling_animated_buttons_with_css_transforms)
-  - : Contains several examples of `<button>` elements styled using animated CSS transforms.
+- [Forcing GPU acceleration with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Forcing_gpu_acceleration_with_css_transforms)
+  - : Using CSS transforms to enable hardware acceleration for animating DOM elements.
 
 ## Related concepts
 
-- You can couple CSS transforms with [CSS animations](/en-US/docs/Web/CSS/animation) or [CSS transitions](/en-US/docs/Web/CSS/transition) to transform an element over time.
-  - [Interpolation](/en-US/docs/Glossary/Interpolation) is used to calculate the transformation values during an animation.
-- Transformations modify the [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) within which an element is positioned.
-- The concepts of "transformations" and "matrix math" are closely related. This relationship is clarified in [this "Matrix math for the web" guide](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web).
-- You can force an element to be rendered with [GPU acceleration](/en-US/docs/Web/Performance/Fundamentals#use_css_transforms) by applying the CSS style `transform: translate3d(0, 0, 0);` to the element. Rendering elements using GPU hardware acceleration may improve your page's performance at the cost of increasing your page's memory usage and impacting battery life.
-- [SVG transforms](/en-US/docs/Web/SVG/Attribute/transform) can be applied to scalable vector graphics.
+- [SVG transform](/en-US/docs/Web/SVG/Attribute/transform) attribute
 
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [CSS `animation`](/en-US/docs/Web/CSS/animation) reference page
+- [CSS `transition`](/en-US/docs/Web/CSS/transition) reference page
+- [Interpolation](/en-US/docs/Glossary/Interpolation) glossary definition
+- [Coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) guide
+- [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web) guide
