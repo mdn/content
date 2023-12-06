@@ -108,7 +108,7 @@ The `resolve` and `reject` callbacks are only available within the scope of the 
 
 ### The resolve function
 
-The resolver function `resolveFunc` has the following behaviors:
+The `resolve` function has the following behaviors:
 
 - If it's called with the same value as the newly created promise (the promise it's "tethered to"), the promise is rejected with a {{jsxref("TypeError")}}.
 - If it's called with a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value (a primitive, or an object whose `then` property is not callable, including when the property is not present), the promise is immediately fulfilled with that value.
