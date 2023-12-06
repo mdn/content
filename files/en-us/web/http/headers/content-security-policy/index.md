@@ -122,10 +122,6 @@ for example.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
 
 ### Reporting directives
 
