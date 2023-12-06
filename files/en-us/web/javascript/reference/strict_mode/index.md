@@ -277,7 +277,7 @@ Whether the string passed to `eval()` is evaluated in strict mode depends on how
 #### Block-scoped function declarations
 
 The JavaScript language specification, since its start, had not allowed function declarations nested in block statements. However, it was so intuitive that most browsers implemented it as an extension grammar. Unfortunately, the implementations' semantics diverged, and it became impossible for the language specification to reconcile all implementations. Therefore, [block-scoped function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function#block-level_function_declaration) are only explicitly specified in strict mode (whereas they were once disallowed in strict mode), while sloppy mode behavior remains divergent among browsers.
-See also [Block scoping rules with let, const, class, or function declaration in strict mode](en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_let_const_class_or_function_declaration_in_strict_mode) to get to know the details.
+See also [Block scoping rules with let, const, class, or function declaration in strict mode](/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_let_const_class_or_function_declaration_in_strict_mode) to get to know the details.
 
 ### Making eval and arguments simpler
 
