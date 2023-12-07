@@ -15,20 +15,21 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 
 ## Reference
 
-### Key concepts and definitions
+### Key concepts
 
-- [`<an + b>` notation]()
-- [declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
-- {{glossary("CSS_Descriptor", "descriptor")}}
-- [comments](/en-US/docs/Web/CSS/Comments)
-- [declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
-- [escaping](/en-US/docs/Web/CSS/custom-ident#escaping_characters)
-- [function](/en-US/docs/Web/CSS/CSS_Functions)
-- [invalid](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
-- {{glossary("parse")}}
-- [rule](/en-US/docs/Web/API/CSSRule)
 - {{cssxref("at-rule")}}
+- [character escaping](/en-US/docs/Web/CSS/custom-ident#escaping_characters)
+- [CSS comments](/en-US/docs/Web/CSS/Comments)
+- [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
+- [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
+- [CSS function](/en-US/docs/Web/CSS/CSS_Functions)
+- [invalid](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
 - [style rule](/en-US/docs/Web/API/CSSStyleRule)
+
+## Glossary terms
+
+- {{glossary("CSS_Descriptor", "CSS descriptor")}}
+- {{glossary("parse")}}
 - {{glossary("stylesheet")}}
 - {{glossary("whitespace")}}
 
@@ -43,15 +44,16 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
   - : The formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
 - [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
-  - : Overview of how the user-agent handles
+
+  - : Overview of how the user-agent handles invalid CSS
 
 ## Related concepts
 
 [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module:
 
-- [specificity](/en-US/docs/Web/CSS/Specificity)
+- [CSS specificity](/en-US/docs/Web/CSS/Specificity)
 
-[CSS cascade](/en-US/docs/Web/CSS/CSS_cascade) module
+[CSS cascade](/en-US/docs/Web/CSS/CSS_cascade) module:
 
 - {{cssxref("@import")}} at-rule
 - {{cssxref("important")}} flag
@@ -59,29 +61,29 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 - [Computed values](/en-US/docs/Web/CSS/computed_value)
 - [Used values](/en-US/docs/Web/CSS/used_value)
 - [Actual values](/en-US/docs/Web/CSS/actual_value)
-- [inheritance](/en-US/docs/Web/CSS/Inheritance)
-- {{Glossary("Property/CSS", "CSS property")}} glossary term
+- [CSS inheritance](/en-US/docs/Web/CSS/Inheritance)
+- {{Glossary("Property/CSS", "CSS property")}}
 
 [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module:
 
 - [custom property (`--*`)](/en-US/docs/Web/CSS/--*)
-- {{cssxref("var")}}
+- {{cssxref("var")}} function
 
-[CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+[CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module:
 
-- {{cssxref("@media")}}
-- {{cssxref("@supports")}}
+- {{cssxref("@media")}} at-rule
+- {{cssxref("@supports")}} at-rule
 
-[CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) module
+[CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) API:
 
-- {{domxref("CSSValue.cssText", "cssText")}}
-- {{domxref("CSSStyleSheet.insertRule()", "insertRule(rule)")}}
-- {{domxref("CSSStyleSheet.replace()", "replace(text)")}}
+- {{domxref("CSSValue.cssText", "cssText")}} property
+- {{domxref("CSSStyleSheet.insertRule()", "insertRule(rule)")}} method
+- {{domxref("CSSStyleSheet.replace()", "replace(text)")}} method
 
-[WHATWG](/en-US/docs/Glossary/WHATWG) specification
+[WHATWG](/en-US/docs/Glossary/WHATWG) specification:
 
-- {{HTMLElement("style")}}
-- {{HTMLElement("link")}}
+- {{HTMLElement("style")}} element
+- {{HTMLElement("link")}} element
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute
 - [`rel`](/en-US/docs/Web/HTML/Attributes/rel#stylesheet) attribute
 
