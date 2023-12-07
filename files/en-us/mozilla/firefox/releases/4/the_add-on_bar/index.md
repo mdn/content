@@ -91,4 +91,4 @@ See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#adding_butto
 
 ## See also
 
-- The [Firefox 4 add-on bar for developers](https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers/), by Mike Kaply
+- The [Firefox 4 add-on bar for developers](https://web.archive.org/web/20110129042912/https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers), by Mike Kaply
