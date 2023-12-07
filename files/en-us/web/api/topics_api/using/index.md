@@ -22,10 +22,10 @@ Let's say we've got an ad tech platform, `ad-tech1.example`, which is embedding 
 - `knitting.example`
 - `football.example`
 
-1. The `<iframe>` content from `ad-tech1.example` implements a [feature that enables the Topics API](#what_api_features_enable_the_topics_api) on embedding pages. As a result when each of the sites is loaded, the browser:
+1. The `<iframe>` content from `ad-tech1.example` implements a [feature that enables the Topics API](#what_api_features_enable_the_topics_api) on embedding pages. As a result, when each of the sites is loaded the browser:
 
    - Records page views for that site, and infers topics of interest (such as "Fitness", "Fibre & textile arts", or "Soccer") from its URL.
-   - Records a **topics history entry** for each observed topic in a private topics history storage. Each topics history entry includes the following information:
+   - Records a **topics history entry** for each **observed topic** in a private topics history storage. Each topics history entry includes the following information:
      - A document id (i.e. an identifier for the current page).
      - Topics calculation input data (i.e. the page hostname).
      - The time (since the Unix epoch) when the page was first observed.
@@ -48,11 +48,11 @@ When the request associated with a [Topics API feature](#what_api_features_enabl
 
    > **Note:** Initially, no topics are returned, so the `<iframe>` will likely display a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
-3. The topics provided in the {{httpheader("Sec-Browsing-Topics")}} header can be marked as observed by setting an {{httpheader("Observe-Browsing-Topics")}} header on the response to the request.
+3. The topic provided in the {{httpheader("Sec-Browsing-Topics")}} header can be marked as observed by setting an {{httpheader("Observe-Browsing-Topics")}} header on the response to the request.
 
 ## What API features enable the Topics API?
 
-The following features all enable observing topics and returning the chosen top topic to the ad tech platform via the {{httpheader("Sec-Browsing-Topics")}} header:
+The following features, when included in the calling ad tech's `<iframe>` all enable observing topics and returning the chosen top topic to the ad tech platform via the {{httpheader("Sec-Browsing-Topics")}} header:
 
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
