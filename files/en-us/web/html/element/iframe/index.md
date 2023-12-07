@@ -39,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `browsingtopics` {{Experimental_Inline}}
 
-  - : Include this attribute to specify that observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the request for the `<iframe>`'s source. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+  - : A boolean attribute that, if present, specifies that observed topics should be sent with the request for the {{htmlelement("iframe")}}'s source. See the [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 - `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
 

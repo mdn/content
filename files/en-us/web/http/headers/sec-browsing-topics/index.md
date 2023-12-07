@@ -9,9 +9,11 @@ browser-compat: http.headers.Sec-Browsing-Topics
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
+> **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
+
 The **`Sec-Browsing-Topics`** request header sends observed topics along with a request, which are used by an ad tech platform to choose a personalized ad to display to the current user. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
-> **Note:** If the calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), attempting to create or modify `Sec-Browsing-Topics` fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
+If the calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), attempting to create or modify `Sec-Browsing-Topics` fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
 
 <table class="properties">
   <tbody>

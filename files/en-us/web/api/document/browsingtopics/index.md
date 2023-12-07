@@ -10,6 +10,8 @@ browser-compat: api.Document.browsingTopics
 
 {{APIRef("Topics API")}}{{SeeCompatTable}}
 
+> **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
+
 The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site, for the three most recent epochs. It also triggers the browser to observe topics for the current user and site.
 
 ## Syntax
