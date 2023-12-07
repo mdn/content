@@ -31,7 +31,7 @@ Let's say we've got an ad tech platform, `ad-tech1.example`, which is embedding 
      - The time (since the Unix epoch) when the page was first observed.
      - The domain(s) where the topic was observed (known as **topic caller domains**).
 
-2. The browser then calculates user topics at the start of each new **epoch**, i.e. the topics that were observed most often. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints).
+2. The browser then calculates user topics at the start of each new **epoch**, i.e. the topics that were observed most often. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints)).
 
 3. Also in each epoch, the browser calculates so-called **top topics** — this is a list of the most observed topics within the most recent three epochs; one for each.
 
