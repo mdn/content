@@ -64,37 +64,36 @@ The following functions are **only** available to workers:
 
 The following Web APIs are available to workers:
 
-- {{domxref("Barcode_Detection_API","Barcode Detection API")}}
-- {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}
-- {{domxref("Cache", "Cache API")}}
-- {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
-- {{domxref("Console API", "Console API")}}
-- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) (e.g. {{domxref("Crypto")}})
-- [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
+- {{domxref("Barcode Detection API", "", "", "nocode")}}
+- {{domxref("Broadcast Channel API", "", "", "nocode")}}
+- {{domxref("Cache")}} and {{domxref("CacheStorage")}}
+- {{domxref("Channel Messaging API", "", "", "nocode")}}
+- {{domxref("Console API", "", "", "nocode")}}
+- {{domxref("CSS Font Loading API", "", "", "nocode")}}
 - {{domxref("CustomEvent")}}
-- {{domxref("Encoding_API", "Encoding API")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
-- {{domxref("Fetch_API", "Fetch API")}}
+- {{domxref("Encoding API", "", "", "nocode")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
+- {{domxref("Fetch API", "", "", "nocode")}}
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}} (only works in workers!)
 - {{domxref("FormData")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
-- {{domxref("IndexedDB_API", "IndexedDB")}}
-- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
-- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
-- {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("IndexedDB API", "", "", "nocode")}}
+- {{domxref("Media Source Extensions API", "", "", "nocode")}} (dedicated workers only)
+- {{domxref("Network Information API", "", "", "nocode")}}
+- {{domxref("Notifications API", "", "", "nocode")}}
 - {{domxref("OffscreenCanvas")}} (and all the canvas context APIs)
-- {{domxref("Performance_API","Performance API")}}, including:
+- {{domxref("Performance API", "", "", "nocode")}}, including:
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
   - {{domxref("PerformanceMeasure")}}
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
-- {{domxref("ServiceWorkerRegistration")}}
-- {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
-- {{domxref('WebCodecs_API','','','true')}}
+- {{domxref("Server Sent Events", "", "", "nocode")}}
+- {{domxref("URL API", "", "", "nocode")}} (e.g. {{domxref("URL")}})
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 
