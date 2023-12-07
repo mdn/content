@@ -58,8 +58,8 @@ Some of the functions (a subset) that are common to all workers and to the main 
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers),
-- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only).
+- {{domxref("WorkerGlobalScope.importScripts()", "importScripts()")}},
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()", "postMessage()")}} (dedicated workers only).
 
 ### Supported Web APIs
 
@@ -67,38 +67,65 @@ The following functions are **only** available to workers:
 
 The following Web APIs are available to workers:
 
+- {{domxref("Background Fetch API", "", "", "nocode")}}
+- {{domxref("Background Synchronization API", "", "", "nocode")}}
 - {{domxref("Barcode Detection API", "", "", "nocode")}}
 - {{domxref("Broadcast Channel API", "", "", "nocode")}}
 - {{domxref("Cache")}} and {{domxref("CacheStorage")}}
+- {{domxref("Canvas API", "", "", "nocode")}}, including:
+  - {{domxref("CanvasGradient")}}
+  - {{domxref("CanvasPattern")}}
+  - {{domxref("ImageBitmap")}}
+  - {{domxref("ImageBitmapRenderingContext")}}
+  - {{domxref("ImageData")}}
+  - {{domxref("OffscreenCanvas")}}
+  - {{domxref("OffscreenCanvasRenderingContext2D")}}
+  - {{domxref("Path2D")}}
+  - {{domxref("TextMetrics")}}
 - {{domxref("Channel Messaging API", "", "", "nocode")}}
 - {{domxref("Console API", "", "", "nocode")}}
+- {{domxref("Compression Streams API", "", "", "nocode")}}
 - {{domxref("CSS Font Loading API", "", "", "nocode")}}
 - {{domxref("CustomEvent")}}
 - {{domxref("Encoding API", "", "", "nocode")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
 - {{domxref("Fetch API", "", "", "nocode")}}
-- {{domxref("FileReader")}}
-- {{domxref("FileReaderSync")}} (only works in workers!)
-- {{domxref("FormData")}}
-- {{domxref("ImageBitmap")}}
-- {{domxref("ImageData")}}
+- {{domxref("File API", "", "", "nocode")}}
+- {{domxref("File System API", "", "", "nocode")}}
+- {{domxref("Idle Detection API", "", "", "nocode")}}
 - {{domxref("IndexedDB API", "", "", "nocode")}}
+- {{domxref("Media Capabilities API", "", "", "nocode")}}
 - {{domxref("Media Source Extensions API", "", "", "nocode")}} (dedicated workers only)
 - {{domxref("Network Information API", "", "", "nocode")}}
 - {{domxref("Notifications API", "", "", "nocode")}}
-- {{domxref("OffscreenCanvas")}} (and all the canvas context APIs)
+- {{domxref("Payment Handler API", "", "", "nocode")}}
 - {{domxref("Performance API", "", "", "nocode")}}, including:
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
-  - {{domxref("PerformanceMeasure")}}
   - {{domxref("PerformanceMark")}}
+  - {{domxref("PerformanceMeasure")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
+  - {{domxref("PerformanceServerTiming")}}
+- {{domxref("Permissions API", "", "", "nocode")}}
+- {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
+- {{domxref("Push API", "", "", "nocode")}}
 - {{domxref("Server Sent Events", "", "", "nocode")}}
+- {{domxref("Service Worker API", "", "", "nocode")}}
+- {{domxref("Streams API", "", "", "nocode")}}
+- {{domxref("Trusted Types API", "", "", "nocode")}}
 - {{domxref("URL API", "", "", "nocode")}} (e.g. {{domxref("URL")}})
+- {{domxref("URL Pattern API", "", "", "nocode")}}
+- {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
 - {{domxref("WebCodecs API", "", "", "nocode")}}
 - {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
-- {{domxref("WebSocket")}}
-- {{domxref("XMLHttpRequest")}}
+- {{domxref("Web Locks API", "", "", "nocode")}}
+- {{domxref("Web Serial API", "", "", "nocode")}}
+- {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
+- {{domxref("WebRTC API", "", "", "nocode")}}
+- {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebUSB API", "", "", "nocode")}}
+- {{domxref("WebSockets API", "", "", "nocode")}}
+- {{domxref("XMLHttpRequest API", "", "", "nocode")}}
 
 Workers can also spawn other workers, so these APIs are also available:
 
