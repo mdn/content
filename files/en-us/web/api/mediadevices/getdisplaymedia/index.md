@@ -26,13 +26,21 @@ getDisplayMedia(options)
 ### Parameters
 
 - `options` {{optional_inline}}
+
   - : An optional object specifying requirements for the returned {{domxref("MediaStream")}}. The options for `getDisplayMedia()` work in the same as the [constraints](/en-US/docs/Web/API/MediaDevices/getUserMedia#parameters) for the {{domxref("MediaDevices.getUserMedia()")}} method, although in that case only `audio` and `video` can be specified. The list of possible option properties for `getDisplayMedia()` is as follows:
+
     - `video` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the stream will contain a video track A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
     - `controller` {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
+    - `monitorTypeSurfaces` {{optional_inline}}
+
+      - : An enumerated value specifying whether the browser should offer entire screens in the screen capture options presented to the user alongside tab and window options. This option is intended to protect companies from leakage of private information through employee error when using video conferencing apps. Possible values are `include`, which hints that the browser should include screen options, and `exclude`, which hints that they should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
+
+        > **Note:** You cannot set `monitorTypeSurfaces: "exclude"` at the same time as [`displaySurface: "monitor"`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface) as the two settings are contradictory. Trying to do so will result in the `getDisplayMedia()` call failing with a `TypeError`.
+
     - `preferCurrentTab` {{non-standard_inline}} {{optional_inline}}
       - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
     - `selfBrowserSurface` {{optional_inline}}
@@ -95,12 +103,25 @@ details measures browsers are required to take in order to fully support
 
 ## Examples
 
-In the example below, a `startCapture()` method is created which initiates
+In the example below a `startCapture()` method is created, which initiates
 screen capture given a set of options specified by the `displayMediaOptions`
-parameter. The options are specified in an object which specifies the preferred stream
-configuration and the [display surface](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture#visible_vs_logical_display_surfaces) from which video is to be captured.
+parameter.
 
 ```js
+const displayMediaOptions = {
+  video: {
+    displaySurface: "browser",
+  },
+  audio: {
+    suppressLocalAudioPlayback: false,
+  },
+  preferCurrentTab: false,
+  selfBrowserSurface: "exclude",
+  systemAudio: "include",
+  surfaceSwitching: "include",
+  monitorTypeSurfaces: "include",
+};
+
 async function startCapture(displayMediaOptions) {
   let captureStream;
 
