@@ -13,21 +13,21 @@ spec-urls: https://html.spec.whatwg.org/multipage/workers.html#workers
 
 A worker is an object created using a constructor (e.g. {{DOMxRef("Worker.Worker", "Worker()")}}) that runs a named JavaScript file — this file contains the code that will run in the worker thread.
 
-In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), [`JSON`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON), etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the [`window`](/en-US/docs/Web/API/Window) object. For information about the code that you _can_ run see [worker global context and functions](#worker_global_contexts_and_functions), and [supported web APIs](#supported_web_apis) below.
+In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of functions (such as {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("Object")}}, {{jsxref("JSON")}}, etc.), you can run almost any code you like inside a worker thread. There are some exceptions: for example, you can't directly manipulate the DOM from inside a worker, or use some default methods and properties of the {{domxref("Window")}} object. For information about the code that you _can_ run see [worker global context and functions](#worker_global_contexts_and_functions), and [supported web APIs](#supported_web_apis) below.
 
 Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's `data` property). The data is copied rather than shared.
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
 
-In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
+In addition, workers can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 
 There are a number of different types of workers:
 
-- Dedicated workers are workers that are utilized by a single script. This context is represented by a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.
-- {{DOMxRef("SharedWorker","Shared workers")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
-- [Service Workers](/en-US/docs/Web/API/Service_Worker_API) essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
+- {{domxref("Worker", "Dedicated workers", "", "nocode")}} are workers that are utilized by a single script. This context is represented by a {{DOMxRef("DedicatedWorkerGlobalScope")}} object.
+- {{domxref("SharedWorker", "Shared workers", "", "nocode")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
+- {{domxref("Service Worker API", "Service Workers", "", "nocode")}} essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
 > **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141)). This has been implemented in Firefox 42.
 
@@ -152,4 +152,4 @@ You can find out more information on how these demos work in [Using Web Workers]
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Worker")}} interface
 - {{domxref("SharedWorker")}} interface
-- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- {{domxref("Service Worker API", "", "", "nocode")}}
