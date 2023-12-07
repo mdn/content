@@ -46,5 +46,5 @@ The example below shows an image that has been floated left, and the `shape-outs
 - [How to use CSS Shapes in your web design](https://webdesign.tutsplus.com/tutorials/how-to-use-css-shapes-in-your-web-design--cms-27498)
 - [How to get started with CSS Shapes](https://www.webdesignerdepot.com/2015/03/how-to-get-started-with-css-shapes/)
 - [What I learned in one weekend with CSS Shapes](https://medium.com/@MHarreither/what-i-learned-in-one-weekend-with-css-shapes-66ae9be69cc5)
-- [CSS vs. SVG: Shapes and arbitrarily-shaped UI components](https://blog.adobe.com/en/2015/09/01/css-vs-svg-shapes-and-arbitrarily-shaped-ui-components)
+- [CSS vs. SVG: Shapes and arbitrarily-shaped UI components](https://blog.adobe.com/en/publish/2015/09/01/css-vs-svg-shapes-and-arbitrarily-shaped-ui-components)
 - [Edit shape paths in CSS — Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html)

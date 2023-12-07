@@ -7,7 +7,7 @@ status:
 browser-compat: api.BarcodeDetector
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -16,9 +16,10 @@ The Barcode Detection API detects linear and two-dimensional barcodes in images.
 Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
 
 Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; it can be one of these objects:
-an {{domxref("SVGImageElement")}},
-an {{domxref("HTMLVideoElement")}},
-an {{domxref("HTMLCanvasElement")}},
+a {{domxref("HTMLImageElement")}},
+a {{domxref("SVGImageElement")}},
+a {{domxref("HTMLVideoElement")}},
+a {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
 a {{domxref("VideoFrame")}},
