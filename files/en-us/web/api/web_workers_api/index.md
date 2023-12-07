@@ -43,20 +43,23 @@ Some of the functions (a subset) that are common to all workers and to the main 
 
 - {{domxref("atob", "atob()")}}
 - {{domxref("btoa", "btoa()")}}
-- {{domxref("clearInterval", "clearInterval()")}}
+- {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("fetch()")}}
 - {{domxref("queueMicrotask()")}}
+- {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{domxref("structuredClone()")}}
-- {{domxref("window.requestAnimationFrame")}} (dedicated workers only)
-- {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} (all workers),
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} (dedicated workers only).
+- {{domxref("WorkerGlobalScope.importScripts()")}} (all workers),
+- {{domxref("DedicatedWorkerGlobalScope.postMessage()")}} (dedicated workers only).
 
 ### Supported Web APIs
 
