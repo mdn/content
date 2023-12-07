@@ -38,13 +38,13 @@ There are many ways you might make a mistake writing a selector, but only invali
 
 If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, element or custom-element that doesn't exist, it may be a logic error, but not an error the parser needs to handle. If, however, you have a typo in a pseudo-class or pseudo-element, that may create an invalid selector, which is an error the parser will notice.
 
-If a selector list contains any invalid selectors, it creates an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), and the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} and {{cssxref(":where")}} pseudo-classes, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), the selector list will not be invalidated. There is also an [exception for -webkit-]](#webkit-exception) prefixed pseudo-elements.
+If a selector list contains any invalid selectors, it is an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) and the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-classes, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) or if the unknown selectors is a [`-webkit-` prefixed pseudo-element](#webkit-exception), only the unknown selector is ignored as not matching anything. The selector list is not be invalidated..
 
-If a selector list contains any invalid selectors outside of an `:is()` or `:where()`, that single unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The user-agent will look for the closing curly brace and will continue parsing again from that point on.
+If a selector list contains any invalid selectors outside of these exception, a single invalid or unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The user-agent will look for the closing curly brace and will continue parsing again from that point on.
 
 #### Webkit exception
 
-Due to legacy issues with the overuse of browser prefixes in selectors (and property names), to prevent the invalidation of selector lists, browsers treat all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a `-webkit-` prefix, case-insensitive, and that don't end with `()`, as valid.
+Due to legacy issues with the overuse of browser prefixes in selectors (and [property names and values](#vendor-prefixes)), to prevent the invalidation of selector lists, browsers treat all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a `-webkit-` prefix, case-insensitive, and that don't end with `()`, as valid.
 
 This means that `::-webkit-works-only-in-samsung` will not invalidate a selector list no matter the browser. In such cases, the pseudo-element may not be recognized or supported by the browser, but if a `-webkit-` prefixed pseudo-element will not cause the entire selector list and it's associated style block to be ignored. On the other hand, the unknown prefixed selector with a function notation `::-webkit-imaginary-function()` will invalidate the entire selector list and the browser will ignore the entire selector block.
 
@@ -71,13 +71,41 @@ The reason the first declaration in this selector block is invalid is because th
 
 The parser ignores the property with a invalid value, and starts parsing again after it encounters the next semi-colon. The {{cssxref("border-width")}} value of `100vh` is likely a mistake, but it's not an error. As it is valid, it will be parsed and applied to the elements matching the selector.
 
+#### Vendor prefixes
+
+Vendor-prefixed property names and property values, when not understood by a browser, are ignored. Only the single rule containing the invalid property or value is ignored. The parser looks for the next semi-colon or closing curly brace and then continues parsing from there.
+
+You may come across legacy CSS that looks like the following:
+
+```css example-bad
+/* prefixed values */
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* prefixed properties */
+.rounded {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+```
+
+The valid CSS rules are the last ones in each declaration block above. The parser ignores the rules it doesn't understand as invalid. If the user agent does understand one of the prefixed rules, as all browsers understand `display: flex;` and `border-radius: 50%;`, the values in the last, valid declaration are used, not because they are the valid ones, but rather due to the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order) [order of appearance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) rule.
+
+> **Note:** Avoid including prefixed properties or property values. If you must, declare the prefixed values before the valid, non-prefixed standard compliant property and value.
+
 ### Auto-closed endings
 
-If a stylesheet — be it an external style sheet, CSS within an HTML {{HTMLElement("style")}} element, or an inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
+If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. Failing to properly close CSS statements doesn't necessarily make the statements invalid.
 
-Do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain, and ensures that the browser parses the CSS you intended.
+> **Note:** Do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
 
 > **Note:** If a comment is with `/*` but not closed, any and all CSS encountered until the closing comment `*/` is found will be treated as a comment. Forgetting to close a comment may not make your CSS invalid, but it will make cause the CSS inside the comment to be ignored.
 
