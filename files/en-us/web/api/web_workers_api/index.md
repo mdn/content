@@ -71,17 +71,7 @@ The following Web APIs are available to workers:
 - {{domxref("Background Synchronization API", "", "", "nocode")}}
 - {{domxref("Barcode Detection API", "", "", "nocode")}}
 - {{domxref("Broadcast Channel API", "", "", "nocode")}}
-- {{domxref("Cache")}} and {{domxref("CacheStorage")}}
-- {{domxref("Canvas API", "", "", "nocode")}}, including:
-  - {{domxref("CanvasGradient")}}
-  - {{domxref("CanvasPattern")}}
-  - {{domxref("ImageBitmap")}}
-  - {{domxref("ImageBitmapRenderingContext")}}
-  - {{domxref("ImageData")}}
-  - {{domxref("OffscreenCanvas")}}
-  - {{domxref("OffscreenCanvasRenderingContext2D")}}
-  - {{domxref("Path2D")}}
-  - {{domxref("TextMetrics")}}
+- {{domxref("Canvas API", "", "", "nocode")}}
 - {{domxref("Channel Messaging API", "", "", "nocode")}}
 - {{domxref("Console API", "", "", "nocode")}}
 - {{domxref("Compression Streams API", "", "", "nocode")}}
@@ -98,14 +88,7 @@ The following Web APIs are available to workers:
 - {{domxref("Network Information API", "", "", "nocode")}}
 - {{domxref("Notifications API", "", "", "nocode")}}
 - {{domxref("Payment Handler API", "", "", "nocode")}}
-- {{domxref("Performance API", "", "", "nocode")}}, including:
-  - {{domxref("Performance")}}
-  - {{domxref("PerformanceEntry")}}
-  - {{domxref("PerformanceMark")}}
-  - {{domxref("PerformanceMeasure")}}
-  - {{domxref("PerformanceObserver")}}
-  - {{domxref("PerformanceResourceTiming")}}
-  - {{domxref("PerformanceServerTiming")}}
+- {{domxref("Performance API", "", "", "nocode")}}
 - {{domxref("Permissions API", "", "", "nocode")}}
 - {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
 - {{domxref("Push API", "", "", "nocode")}}
