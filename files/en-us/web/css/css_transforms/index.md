@@ -11,13 +11,17 @@ The **CSS transforms** module defines how elements styled with CSS can be transf
 
 ## CSS transforms in action
 
-Use the sliders in the frame below to modify the translation, rotation, scale, and skew CSS transform properties of the cube in 3D space.
+Use the sliders in the frame below to modify the translation, rotation, scale, and skew CSS transform properties of the cube in 3D space. As you move the cube through 3D space, notice the way it interacts with the element labelled `z:0px`, which is located at the 3D position `(0, 0, 0)`.
 
 {{EmbedGHLiveSample("css-examples/modules/transforms.html", '100%', 900)}}
 
-The cube in the above example is comprised of six `<div>` elements, all of which are styled with CSS to create the cube's faces.
+You can also use the `perspective` slider to modify the [`perspective`](/en-US/docs/Web/CSS/perspective) property of the cube's container, which determines the distance between you and the `z=0` plane.
 
-The cube is not drawn using a 2D or 3D canvas context, so **you can inspect the faces of the cube with your browser's developer tools as you would inspect any other DOM element**. Try using your browser's developer tools element picker to inspect different faces of the cube as you transform its position and rotation.
+The [`perspective-origin`](/en-US/docs/Web/CSS/perspective-origin) sliders determine where you, the viewer, are looking into the 3D space for purposes of determining the view's _vanishing point_. This vanishing point is indicated by a small red dot. You can imagine modifying these sliders as physically moving your head up, down, left, and right to see different parts of the cube without moving the cube itself.
+
+The `backface-visibility` checkbox determines whether the cube's back faces are set to `visible` or `hidden`.
+
+The cube in the above example is comprised of six `<div>` elements, all of which are styled with CSS to create the cube's faces. The cube is not drawn using a 2D or 3D canvas context, so **you can inspect the faces of the cube with your browser's developer tools as you would inspect any other DOM element**. Try using your browser's developer tools element picker to inspect different faces of the cube as you transform its position and rotation.
 
 > Note that the order in which 3D rotations are applied affects the resultant transformation. In the above example, rotations are applied in the order X → Y → Z.
 
