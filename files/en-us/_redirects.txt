@@ -11032,7 +11032,7 @@
 /en-US/docs/Web/Apps/Build/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Build/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
 /en-US/docs/Web/Apps/Build/Performance/The_performance_of_CSS_and_JavaScript_animations	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
-/en-US/docs/Web/Apps/Build/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/Build/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/Build/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 /en-US/docs/Web/Apps/Design/Graphic_design_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/Design/Graphics_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
@@ -11066,7 +11066,7 @@
 /en-US/docs/Web/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
-/en-US/docs/Web/Apps/Fundamentals/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/Fundamentals/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/Fundamentals/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 /en-US/docs/Web/Apps/Graphics_and_UX/graphic_design_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/JavaScript_API/navigator.mozApps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -11107,7 +11107,7 @@
 /en-US/docs/Web/Apps/Progressive/Safe	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Apps/Quickstart/App_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Web/Apps/Tools_and_frameworks/App_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/en-US/docs/Web/Apps/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/app_layout/Mobile_first	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/app_layout/responsive_design_building_blocks	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps_clone	/en-US/docs/Web/Progressive_web_apps
@@ -12176,6 +12176,7 @@
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
+/en-US/docs/Web/Guide/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /en-US/docs/Web/Guide/WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/Web/Guide/Writing_forward-compatible_websites	/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript
