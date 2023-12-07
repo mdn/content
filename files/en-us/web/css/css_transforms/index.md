@@ -33,8 +33,8 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - {{cssxref("rotate")}}
 - {{cssxref("scale")}}
 - {{cssxref("transform")}}
-- {{cssxref("transform-box")}}
-- {{cssxref("transform-origin")}}
+- {{cssxref("transform-box")}} _(Defined in [Level 1](https://drafts.csswg.org/css-transforms-1/))_
+- {{cssxref("transform-origin")}} _(Defined in [Level 1](https://drafts.csswg.org/css-transforms-1/))_
 - {{cssxref("transform-style")}}
 - {{cssxref("translate")}}
 - {{cssxref("transform-origin")}}
@@ -58,6 +58,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - {{cssxref("transform-function/skewX", "skewX()")}}
 - {{cssxref("transform-function/skewY", "skewY()")}}
 - {{cssxref("transform-function/translate", "translate()")}}
+- {{cssxref("transform-function/translate3d", "translate()")}}
 - {{cssxref("transform-function/translateX", "translateX()")}}
 - {{cssxref("transform-function/translateY", "translateY()")}}
 - {{cssxref("transform-function/translateZ", "translateZ()")}}
@@ -72,10 +73,41 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 - [Forcing GPU acceleration with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Forcing_gpu_acceleration_with_css_transforms)
   - : Using CSS transforms to enable hardware acceleration for animating DOM elements.
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+  - : Describes the way pixel locations are defined in the CSS object model.
+- [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
+  - : Describes how object transformations can be represented by mathematical matrices.
 
 ## Related concepts
 
-- [SVG transform](/en-US/docs/Web/SVG/Attribute/transform) attribute
+- CSS Properties:
+  - [`background-position`](/en-US/docs/Web/CSS/background-position)
+  - [`clip`](/en-US/docs/Web/CSS/clip)
+  - [`clip-path`](/en-US/docs/Web/CSS/clip-path)
+  - [`contain`](/en-US/docs/Web/CSS/contain)
+  - [`content-visibility`](/en-US/docs/Web/CSS/content-visibility)
+  - [`isolation`](/en-US/docs/Web/CSS/isolation)
+  - [`mask`](/en-US/docs/Web/CSS/mask)
+  - [`mask-border-source`](/en-US/docs/Web/CSS/mask-border-source)
+  - [`mask-image`](/en-US/docs/Web/CSS/mask-image)
+  - [`mix-blend-mode`](/en-US/docs/Web/CSS/mix-blend-mode)
+  - [`opacity`](/en-US/docs/Web/CSS/opacity)
+  - [`overflow`](/en-US/docs/Web/CSS/overflow)
+  - [`visibility`](/en-US/docs/Web/CSS/visibility)
+- Data types:
+  - [`<angle>`](/en-US/docs/Web/CSS/angle)
+  - [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage)
+  - [`<length>`](/en-US/docs/Web/CSS/length)
+  - [`<number>`](/en-US/docs/Web/CSS/number)
+  - [`<percentage>`](/en-US/docs/Web/CSS/percentage)
+  - [`<position>`](/en-US/docs/Web/CSS/position_value)
+- Glossary terms:
+  - [Interpolation](/en-US/docs/Glossary/Interpolation)
+  - [Stacking context](/en-US/docs/Glossary/Stacking_context)
+- SVG concepts:
+  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate)
+  - [`<set>`](/en-US/docs/Web/SVG/Element/set)
+  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform)
 
 ## Specifications
 
@@ -83,8 +115,4 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 
 ## See also
 
-- [CSS `animation`](/en-US/docs/Web/CSS/animation) reference page
-- [CSS `transition`](/en-US/docs/Web/CSS/transition) reference page
-- [Interpolation](/en-US/docs/Glossary/Interpolation) glossary definition
-- [Coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems) guide
-- [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web) guide
+- CSS properties: [`animation`](/en-US/docs/Web/CSS/animation), [`transition`](/en-US/docs/Web/CSS/transition)
