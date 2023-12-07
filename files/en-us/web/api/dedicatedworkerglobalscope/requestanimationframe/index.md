@@ -58,28 +58,47 @@ assumptions about its value. You can pass this value to
 
 ## Examples
 
+First, in the document, transfer the control of a {{HTMLElement("canavs")}} element in document using the {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} method and send a message of "start" to the worker:
+
 ```js
-const start = Date.now();
+const offscreenCanvas = document.querySelector("canvas").transferControlToOffscreen();
 
-let handle;
+worker.postMessage({
+  type: "start",
+  canvas: offscreenCanvas,
+}, [offscreenCanvas]);
+```
 
-function step(timestamp) {
-  const progress = timestamp - start;
-  console.log(progress);
+Then, in the worker, the following code will start the animation of drawing a rectangle moving from left to right when receiving a message of "start", and stop the animation when receiving a message of "stop":
 
-  handle = self.requestAnimationFrame(step);
+```js
+let ctx, pos = 0;
+
+function draw(dt) {
+  ctx.clearRect(0, 0, 100, 100);
+  ctx.fillRect(pos, 0, 10, 10);
+  pos += 10 * dt;
+  self.requestAnimationFrame(draw);
 }
 
 self.addEventListener('message', (e) => {
-  // if receive a message to start, start the progress
-  if (e.data === 'start') {
-    handle = self.requestAnimationFrame(step);
+  if (e.data.type === 'start') {
+    const transferredCanvas = e.data.canvas;
+    ctx = transferredCanvas.getContext("2d");
+    self.requestAnimationFrame(draw);
   }
-  // if receive a message to stop, just cancel the progress using the lastest handle
-  if (e.data === 'stop') {
+  if (e.data.type === 'stop') {
     self.cancelAnimationFrame(handle);
   }
 })
+```
+
+Finally, when necessary, we could send a message of "stop" to the worker:
+
+```js
+worker.postMessage({
+  type: "stop",
+});
 ```
 
 ## Specifications
