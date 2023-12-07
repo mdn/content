@@ -21,6 +21,8 @@ The `<hgroup>` element allows the grouping of a heading with any secondary conte
 
 The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
 
+The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification prior to HTML 5 being finalized, but is still part of the WHATWG specification and is at least partially supported by most browsers.
+
 ## Examples
 
 ```html
