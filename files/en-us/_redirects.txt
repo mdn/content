@@ -6887,10 +6887,10 @@
 /en-US/docs/Tools/Debugger/Break_on_DOM_mutation	https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html
 /en-US/docs/Tools/Debugger/Debug_worker_threads	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads
 /en-US/docs/Tools/Debugger/How_to	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/index.html
-/en-US/docs/Tools/Debugger/How_to/Black_box_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html
+/en-US/docs/Tools/Debugger/How_to/Black_box_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignoring_sources/index.html
 /en-US/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html
 /en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
-/en-US/docs/Tools/Debugger/How_to/Ignore_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html
+/en-US/docs/Tools/Debugger/How_to/Ignore_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignoring_sources/index.html
 /en-US/docs/Tools/Debugger/How_to/Search	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html
 /en-US/docs/Tools/Debugger/How_to/Search_and_filter	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html
 /en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
