@@ -16,10 +16,10 @@
     <path fill="#fff" d="M297.249 56.965h845.444v165.894H297.249z" />
     <use xlink:href="#a" fill-rule="evenodd" />
   </mask>
-  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="24" transform="translate(39.974 99.934)">
-    <tspan x="126.474" y="23" textLength="113.367">Cross Axis
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="24" transform="translate(80.23 116.802)">
+    <tspan x="85.688" y="23" textLength="113.367">Cross Axis
     </tspan>
-    <tspan x="51.779" y="52" textLength="205.395">flex-direction: row</tspan>
+    <tspan x="3" y="52" textLength="196.055">Flex-direction: row</tspan>
   </text>
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m280.37 68.96-.108 30.978" />
   <path d="m287.359 71.985-6.958-12.024-7.042 11.975z" />

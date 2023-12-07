@@ -16,13 +16,13 @@
     <path fill="#fff" d="M356.762 36.974h905.404v385.748H356.762z" />
     <use xlink:href="#a" fill-rule="evenodd" />
   </mask>
-  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="33" transform="translate(-19.987 179.881)">
-    <tspan x="198.542" y="32" textLength="141.233">Main Axis
-    </tspan>
-    <tspan x="27.983" y="72" textLength="330.145">flex-direction: column</tspan>
-  </text>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m319.757 48.982-.388 110.911" />
   <path d="m326.746 52.006-6.958-12.024-7.042 11.975z" />
   <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m319.795 410.712.44-110.911" />
-  <path d="m312.807 407.684 6.952 12.028 7.048-11.972z" />
+  <path d="m312.807 407.684 6.952 12.028 7.048-11.972z" /><text font-family="Helvetica" font-size="30" transform="translate(19.987 199.868)">
+    <tspan x="169.729" y="29" textLength="126.709">Main axis
+    </tspan>
+    <tspan x="3" y="65" textLength="293.438">Flex-direction: column</tspan>
+  </text>
 </svg>
