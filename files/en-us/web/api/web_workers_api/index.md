@@ -104,7 +104,6 @@ The following Web APIs are available to workers:
 - {{domxref("Web Locks API", "", "", "nocode")}}
 - {{domxref("Web Serial API", "", "", "nocode")}}
 - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
-- {{domxref("WebRTC API", "", "", "nocode")}}
 - {{domxref("WebGPU API", "", "", "nocode")}}
 - {{domxref("WebUSB API", "", "", "nocode")}}
 - {{domxref("WebSockets API", "", "", "nocode")}}
