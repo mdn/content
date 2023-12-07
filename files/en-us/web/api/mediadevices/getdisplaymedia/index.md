@@ -141,6 +141,8 @@ requested by the specified options. The stream is then returned to the caller fo
 perhaps for adding to a WebRTC call using {{domxref("RTCPeerConnection.addTrack()")}} to
 add the video track from the stream.
 
+> **Note:** The [Screen sharing controls](https://screen-sharing-controls.glitch.me/) demo provides a complete implementation that allows you to create a screen capture with your choice of `getDisplayMedia()` constraints and options.
+
 ## Specifications
 
 {{Specifications}}
