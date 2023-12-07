@@ -96,7 +96,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - ECMAScript for XML (E4X)
 
-  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). [Firefox bug 246441](https://bugzil.la/246441)
+  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://ecma-international.org/publications-and-standards/standards/ecma-357/). [Firefox bug 246441](https://bugzil.la/246441)
 
 - Translucent Windows (Windows/Linux)
 
