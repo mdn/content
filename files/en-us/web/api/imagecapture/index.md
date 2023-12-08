@@ -30,7 +30,7 @@ The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it inclu
 - {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with a `PhotoCapabilities` object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object containing the current photo configuration settings.
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current photo configuration settings.
 - {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
   - : Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.
 

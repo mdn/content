@@ -364,9 +364,7 @@ p {
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
   background: rgb(255 84 104 / 30%);
   border: 2px solid rgb(255 84 104);
@@ -414,15 +412,10 @@ p {
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  position: relative;
   background: rgb(255 84 104 / 30%);
   border: 2px solid rgb(255 84 104);
-  top: 30px;
-  left: 30px;
 }
 ```
 
@@ -465,9 +458,7 @@ p {
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
   background: rgb(255 84 104 / 30%);
   border: 2px solid rgb(255 84 104);

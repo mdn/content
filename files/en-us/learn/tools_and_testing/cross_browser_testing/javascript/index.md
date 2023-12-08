@@ -108,66 +108,66 @@ You can also use these tools with a task runner/build tool such as [Gulp](https:
 
 Browser developer tools have many useful features for helping to debug JavaScript. For a start, the JavaScript console will report errors in your code.
 
-Make a local copy of our [broken-ajax.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/broken-ajax.html) also).
+Make a local copy of our [fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-broken) also).
 
-If you look at the console, you'll see the error message "Uncaught TypeError: can't access property "length", heroes is undefined", and the referenced line number is 49. If we look at the source code, the relevant code section is this:
+If you look at the console, you'll see an error message. The exact wording is browser-dependent, but it will be something like: "Uncaught TypeError: heroes is not iterable", and the referenced line number is 25. If we look at the source code, the relevant code section is this:
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj["members"];
+  const heroes = jsonObj["members"];
 
   for (const hero of heroes) {
-    // …
+    // ...
   }
-
-  // …
 }
 ```
 
-So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
+So the code falls over as soon as we try to use `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following {{domxref("fetch()")}} call:
 
 ```js
-let requestURL =
+const requestURL =
   "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
-let request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.send();
 
-let superHeroes = request.response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
+const response = fetch(requestURL);
+populateHeader(response);
+showHeroes(response);
 ```
 
 But this fails.
 
 #### The Console API
 
-You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the main one you'll use often is [`console.log()`](/en-US/docs/Web/API/console/log_static), which prints a custom message to the console.
+You may already know what is wrong with this code, but let's explore it some more to show how you could investigate this. For a start, there is a [Console](/en-US/docs/Web/API/console) API that allows JavaScript code to interact with the browser's JavaScript console. It has a number of features available, but the one you'll use most often is [`console.log()`](/en-US/docs/Web/API/console/log_static), which prints a custom message to the console.
 
-Try inserting the following line just below line 31 (bolded above):
-
-```js
-console.log("Response value: ", superHeroes);
-```
-
-Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before.
-
-The `console.log()` output shows that the `superHeroes` object doesn't appear to contain anything. A very common problem with async requests like this is when you try to do something with the `response` object before it has actually been returned from the network. Let's fix this problem by running the code once the `load` event has been fired — remove the `console.log()` line, and update this code block:
+Try adding a `console.log()` call to log the return value of `fetch()`, like this:
 
 ```js
-const superHeroes = request.response;
+const requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+
+const response = fetch(requestURL);
+console.log(`Response value: ${response}`);
+const superHeroes = response;
 populateHeader(superHeroes);
 showHeroes(superHeroes);
 ```
 
-to the following:
+Refresh the page in the browser. This time, before the error message, you'll see a new message logged to the console:
+
+```plain
+Response value: [object Promise]
+```
+
+The `console.log()` output shows that the return value of `fetch()` is not the JSON data, it's a {{jsxref("Promise")}}. The `fetch()` function is asynchronous: it returns a `Promise` that is fulfilled only when the actual response has been received from the network. Before we can use the response, we have to wait for the `Promise` to be fulfilled.
+
+We can do this by putting the code that uses the response inside the {{jsxref("Promise.prototype.then()", "then()")}} method of the returned `Promise`, like this:
 
 ```js
-request.onload = function () {
-  let superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
-};
+const response = fetch(requestURL);
+fetch(requestURL).then((response) => {
+  populateHeader(response);
+  showHeroes(response);
+});
 ```
 
 To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
@@ -178,7 +178,7 @@ Unfortunately, we still have the same error — the problem has not gone away. L
 
 > **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
-In Firefox, the Debugger tab looks as follows:
+In Firefox, the Debugger tab looks like this:
 
 ![Firefox debugger](debugger-tab.png)
 
@@ -188,7 +188,7 @@ In Firefox, the Debugger tab looks as follows:
 
 The main feature of such tools is the ability to add breakpoints to code — these are points where the execution of the code stops, and at that point you can examine the environment in its current state and see what is going on.
 
-Let's get to work. The error is now being thrown at line 51. Click on line number 51 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 51. At this point, the right-hand side will update to show some very useful information.
+Let's get to work. The error is now being thrown at line 26. Click on line number 26 in the center panel to add a breakpoint to it (you'll see a blue arrow appear over the top of it). Now refresh the page (Cmd/Ctrl + R) — the browser will pause execution of the code at line 51. At this point, the right-hand side will update to show some very useful information.
 
 ![Firefox debugger with a breakpoint](breakpoint.png)
 
@@ -199,11 +199,11 @@ Let's get to work. The error is now being thrown at line 51. Click on line numbe
 We can find out some very useful information in here.
 
 1. Expand the `showHeroes` scope — you can see from this that the heroes variable is `undefined`, indicating that accessing the `members` property of `jsonObj` (first line of the function) didn't work.
-2. You can also see that the `jsonObj` variable is storing a text string, not a JSON object.
-3. Exploring further down the call stack, click `onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
-4. If you expand the `onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
+2. You can also see that the `jsonObj` variable is storing a {{domxref("Response")}} object, not a JSON object.
 
-We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/en-US/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/en-US/docs/Learn/JavaScript/Objects/JSON#converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
+The argument to `showHeroes()` is the value the `fetch()` promise was fulfilled with. So this promise is not in the JSON format: it is a `Response` object. There's an extra step needed to retrieve the content of the response as a JSON object.
+
+We'd like you to try fixing this problem yourself. To get you started, see the documentation for the {{domxref("Response")}} object. If you get stuck, you can find the fixed source code at <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed>.
 
 > **Note:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
 
@@ -364,7 +364,7 @@ Note that polyfills.js is basically the two polyfills we are using put together 
 
 You can see this code in action in [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (see the [source code also](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton. Check out his article [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for the original code, plus a lot of useful explanation around the wider subject).
 
-> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
+> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
 
 #### JavaScript transpiling
 
@@ -391,7 +391,7 @@ In the previous article, we included quite a lot of discussion about [handling C
 - Chrome/Opera/Safari would use `webkitObject`
 - Microsoft would use `msObject`
 
-Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;

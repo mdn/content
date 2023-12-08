@@ -24,7 +24,7 @@ session = webdriver.Firefox()
 try:
     session.execute_script("""
         let [resolve] = arguments;
-        window.setTimeout(resolve, 35000);
+        setTimeout(resolve, 35000);
         """)
 except exceptions.ScriptTimeoutException as e:
     print(e.message)
@@ -45,7 +45,7 @@ from selenium.common import exceptions
 session = webdriver.Firefox(capabilities={"alwaysMatch": {"timeouts": {"script": 150000}}})
 session.execute_script("""
     let [resolve] = arguments;
-    window.setTimeout(resolve, 35000);
+    setTimeout(resolve, 35000);
     """)
 print("finished successfully")
 ```
