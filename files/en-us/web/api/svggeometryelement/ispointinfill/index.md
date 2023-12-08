@@ -61,16 +61,16 @@ const points = [
   ["40", "30"],
   ["70", "40"],
   ["15", "75"],
-  ["83", "83"]
+  ["83", "83"],
 ];
 
 for (const point of points) {
   let isPointInFill;
-  
+
   try {
     const pointObj = new DOMPoint(point[0], point[1]);
     isPointInFill = circle.isPointInFill(pointObj);
-  } catch(e) {
+  } catch (e) {
     // Fallback for browsers that don't support .isPointInFill(DOMPoint)
     const pointObj = svg.createSVGPoint(point[0], point[1]);
     pointObj.x = point[0];
@@ -80,11 +80,14 @@ for (const point of points) {
 
   console.log(`Point at ${point[0]},${point[1]}: ${isPointInFill}`);
 
-  const pointEl = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  const pointEl = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "circle",
+  );
   pointEl.style.cx = point[0];
   pointEl.style.cy = point[1];
   pointEl.style.r = 5;
-   pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255, 0, 0, 0.5)";
+  pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255, 0, 0, 0.5)";
   svg.appendChild(pointEl);
 }
 ```
