@@ -31,7 +31,7 @@ background-position-x: 0px;
 background-position-x: 1cm;
 background-position-x: 8em;
 
-/* Side-relative values */
+/* Side-relative values or two-value syntax*/
 background-position-x: right 3px;
 background-position-x: left 25%;
 
@@ -139,6 +139,4 @@ div {
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
 - [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
