@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### JavaScript
 
-- The {{jsxref("Promise.withResolvers()")}} static method is now supported. This exposes the `resolve` and `reject` callback functions in the same scope as the returned {{jsxref("Promise")}}, allowing code that resolves or rejects the promise to be defined after its construction ([Firefox bug 1845586](https://bugzil.la/1845586))
+- The {{jsxref("Promise.withResolvers()")}} static method is now supported. This exposes the `resolve` and `reject` callback functions in the same scope as the returned {{jsxref("Promise")}}, allowing code that resolves or rejects the promise to be defined after its construction ([Firefox bug 1845586](https://bugzil.la/1845586)).
 
 - {{jsxref("Date.parse()")}} now accepts several additional date formats:
 
