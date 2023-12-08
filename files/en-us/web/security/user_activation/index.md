@@ -28,27 +28,33 @@ If an activation has been triggered, the user agent differentiates between two t
 
 APIs that require transient activation (list is not exhaustive):
 
-- [`beforeunload` event](/en-US/docs/Web/API/Window/beforeunload_event)
+- {{domxref("Window/beforeunload_event", "beforeunload")}} event
+- {{domxref("Clients.openWindow()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
 - {{domxref("Clipboard.writeText()")}}
+- {{domxref("ContactsManager.select()")}}
 - {{domxref("Document.requestStorageAccess()")}}
+- {{domxref("DocumentPictureInPicture.requestWindow()")}}
 - {{domxref("Element.requestFullScreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
+- {{domxref("EyeDropper.open()")}}
 - {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
 - {{domxref("HTMLSelectElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
+- {{domxref("Keyboard.lock()")}}
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- `MediaDevices.getViewportMedia()`
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - `MediaStreamTrack.sendCaptureAction()`
-- `MediaDevices.getViewportMedia()`
-- {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("Navigator.share()")}}
 - {{domxref("PaymentRequest.show()")}}
 - {{domxref("PresentationRequest.start()")}}
 - {{domxref("RemotePlayback.prompt()")}}
+- {{domxref("Serial.requestPort()")}}
 - {{domxref("USB.requestDevice()")}}
 - {{domxref("Keyboard.lock()")}}
 - {{domxref("Window.getScreenDetails()")}}
@@ -57,6 +63,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Window.showOpenFilePicker()")}}
 - {{domxref("Window.showSaveFilePicker()")}}
 - {{domxref("Window.showDirectoryPicker()")}}
+- {{domxref("WindowClient.focus()")}}
 - {{domxref("XRSystem.requestSession()")}}
 
 ## Sticky activation
