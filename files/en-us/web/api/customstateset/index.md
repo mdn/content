@@ -41,7 +41,7 @@ The interface can be used to expose the internal states of a custom element, all
 
 Built in HTML elements can have different _states_, such as "enabled" and "disabled, "checked" and "unchecked", "initial", "loading" and "ready".
 Some of these states are public and can be set or queried using properties/attributes, while others are effectively internal, and cannot be directly set.
-Whether external or internal, commonly elements states can be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) as selectors.
+Whether external or internal, element states can generally be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) as selectors.
 
 The `CustomStateSet` allows developers to add and delete states for autonomous custom elements (but not elements derived from built-in elements).
 These states can then be used as as custom state pseudo-class selectors in a similar way to the pseudo-classes for built-in elements.
@@ -50,7 +50,7 @@ These states can then be used as as custom state pseudo-class selectors in a sim
 
 To make the {{domxref("CustomStateSet")}} available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
 `CustomStateSet` is then returned by {{domxref("ElementInternals.states")}}.
-Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements. <!-- https://github.com/whatwg/html/issues/5166 -->
+Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements (see [github.com/whatwg/html/issues/5166](https://github.com/whatwg/html/issues/5166)).
 
 The `CustomStateSet` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold an ordered set of state values.
 Each value is a dashed identifier, with the format: `--mystatename`.
@@ -78,9 +78,10 @@ This is mapped to the `--checked` custom state, allowing styling to be applied u
 #### JavaScript
 
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
-In the constructor we just call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
+In the constructor we call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
 The content of the element is defined using a `<style>` element to be the text `[]` or `[x]` followed by a label.
-What's interesting here is that the custom state pseudo class (that we'll be talking about below following code below) is used to select the text to display: `:host(:--checked)::`.
+What's noteworthy here is that the custom state pseudo class is used to select the text to display: `:host(:--checked)::`.
+After the example below, we'll cover what's happening in the snippet in more detail.
 
 ```js
 class LabeledCheckbox extends HTMLElement {
@@ -127,7 +128,7 @@ class LabeledCheckbox extends HTMLElement {
 }
 ```
 
-The `connectedCallback()` method uses `this.attachInternals()` to attach an `ElementInternals` object, from which we use `ElementInternals.states` to get the `CustomStateSet`.
+The `connectedCallback()` method uses {{domxref("HTMLElement.attachInternals()", "`this.attachInternals()`")}} to attach an {{domxref("ElementInternals", "`ElementInternals`")}} object, from which we use `ElementInternals.states` to get the `CustomStateSet`.
 The `set checked(flag)` method adds the `"--checked"` dashed identifier to the `CustomStateSet` if the flag is set and delete the identifier if the flag is `false`.
 The `get checked()` method just checks whether the `--checked` property is defined in the set.
 The property value is toggled when the element is clicked.
@@ -161,7 +162,6 @@ labeled-checkbox:--checked {
 
 #### Result
 
-The result can be tested below.
 Click the element to see a different border being applied as the checkbox `checked` state is toggled.
 
 {{EmbedLiveSample("Labeled Checkbox", "100%", 50)}}
@@ -171,10 +171,10 @@ Click the element to see a different border being applied as the checkbox `check
 This example shows how to handle the case where the custom element has an internal property with multiple possible value.
 
 The custom element in this case has a `state` property with allowed values: "loading", "interactive" and "complete".
-To make this work we map each value to its own custom state and create code to ensure that only the dashed identifier corresponding to the internal state is set.
+To make this work, we map each value to its custom state and create code to ensure that only the dashed identifier corresponding to the internal state is set.
 You can see this in the implementation of the `set state()` method: we set the internal state, add the dashed identifier for the matching custom state to `CustomStateSet`, and remove the dashed identifiers associated with all the other values.
 
-Most of the rest of the code is very similar to the previous example (we show different text for each state as the user toggles through them).
+Most of the remaining code is similar to the example that demonstrates a single boolean state (we show different text for each state as the user toggles through them).
 
 #### JavaScript
 
@@ -247,7 +247,7 @@ customElements.define("many-state-element", ManyStateElement);
 #### HTML
 
 After registering the new element we add it to the HTML.
-This is similar to the previous example except we don't specify a value and use the default value from the slot (`<slot>Click me</slot>`).
+This is similar to the example that demonstrates a single boolean state, except we don't specify a value and use the default value from the slot (`<slot>Click me</slot>`).
 
 ```html
 <many-state-element></many-state-element>
@@ -272,7 +272,6 @@ many-state-element:--complete {
 
 #### Results
 
-The result can be tested below.
 Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
