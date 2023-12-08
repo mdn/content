@@ -1,5 +1,5 @@
 ---
-title: <hgroup>
+title: "<hgroup>: The Heading Group element"
 slug: Web/HTML/Element/hgroup
 page-type: html-element
 browser-compat: html.elements.hgroup

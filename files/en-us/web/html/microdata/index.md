@@ -64,7 +64,7 @@ In some cases, search engines covering specific regions may provide locally-spec
   <span itemprop="operatingSystem">ANDROID</span><br />
   <link
     itemprop="applicationCategory"
-    href="https://schema.org/GameApplication" />
+    href="https://schema.org/SoftwareApplication" />
 
   <div
     itemprop="aggregateRating"
@@ -106,7 +106,7 @@ In some cases, search engines covering specific regions may provide locally-spec
     <tr>
       <td>itemprop</td>
       <td>applicationCategory</td>
-      <td>GameApplication (https://schema.org/GameApplication)</td>
+      <td>SoftwareApplication (https://schema.org/SoftwareApplication)</td>
     </tr>
     <tr>
       <td rowspan="3">itemscope</td>

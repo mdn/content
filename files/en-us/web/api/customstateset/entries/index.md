@@ -8,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.entries
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns a new [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object, containing an array of `[value,value]` for each element in the `CustomStateSet`.
 
