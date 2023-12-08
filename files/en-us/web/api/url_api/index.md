@@ -2,7 +2,9 @@
 title: URL API
 slug: Web/API/URL_API
 page-type: web-api-overview
-browser-compat: api.URL
+browser-compat:
+  - api.URL
+  - api.URLSearchParams
 ---
 
 {{DefaultAPISidebar("URL API")}}
