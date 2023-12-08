@@ -13,20 +13,9 @@ The **`FencedFrameConfig`** interface represents the navigation of a {{htmleleme
 
 `FencedFrameConfig` objects cannot be constructed manually via JavaScript. They are returned from a source such as the [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/) and set as the value of {{domxref("HTMLFencedFrameElement.config")}}.
 
-A `FencedFrameConfig` object instance has standard instance properties and methods, but it also maps to internal config information containing opaque properties not accessible from JavaScript. This includes information such as the source of the loaded content and interest groups for advertising purposes. It is key to how fenced frames help to implement key use cases while respecting user privacy.
+A `FencedFrameConfig` object instance has an exposed method, but it also maps to internal config information containing opaque properties not accessible from JavaScript. This includes information such as the source of the loaded content and interest groups for advertising purposes. It is key to how fenced frames help to implement key use cases while respecting user privacy.
 
 {{InheritanceDiagram}}
-
-## Instance properties
-
-- {{domxref("FencedFrameConfig.containerHeight", "containerHeight")}}
-  - : Reports the height of the containing `<fencedframe>`, as specified by the internal config `containerSize.height` property.
-- {{domxref("FencedFrameConfig.containerWidth", "containerWidth")}}
-  - : Reports the width of the containing `<fencedframe>`, as specified by the internal config `containerSize.width` property.
-- {{domxref("FencedFrameConfig.contentHeight", "contentHeight")}}
-  - : Reports the height of the loaded content, as specified by the internal config `contentSize.size.height` property.
-- {{domxref("FencedFrameConfig.contentWidth", "contentWidth")}}
-  - : Reports the width of the loaded content, as specified by the internal config `contentSize.size.width` property.
 
 ## Instance methods
 
