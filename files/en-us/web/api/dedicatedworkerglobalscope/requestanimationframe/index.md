@@ -48,18 +48,24 @@ assumptions about its value. You can pass this value to
 First, in the document, transfer the control of a {{HTMLElement("canavs")}} element in document using the {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} method and send a message of "start" to the worker:
 
 ```js
-const offscreenCanvas = document.querySelector("canvas").transferControlToOffscreen();
+const offscreenCanvas = document
+  .querySelector("canvas")
+  .transferControlToOffscreen();
 
-worker.postMessage({
-  type: "start",
-  canvas: offscreenCanvas,
-}, [offscreenCanvas]);
+worker.postMessage(
+  {
+    type: "start",
+    canvas: offscreenCanvas,
+  },
+  [offscreenCanvas],
+);
 ```
 
 Then, in the worker, the following code will start the animation of drawing a rectangle moving from left to right when receiving a message of "start", and stop the animation when receiving a message of "stop":
 
 ```js
-let ctx, pos = 0;
+let ctx,
+  pos = 0;
 
 function draw(dt) {
   ctx.clearRect(0, 0, 100, 100);
@@ -68,16 +74,16 @@ function draw(dt) {
   self.requestAnimationFrame(draw);
 }
 
-self.addEventListener('message', (e) => {
-  if (e.data.type === 'start') {
+self.addEventListener("message", (e) => {
+  if (e.data.type === "start") {
     const transferredCanvas = e.data.canvas;
     ctx = transferredCanvas.getContext("2d");
     self.requestAnimationFrame(draw);
   }
-  if (e.data.type === 'stop') {
+  if (e.data.type === "stop") {
     self.cancelAnimationFrame(handle);
   }
-})
+});
 ```
 
 Finally, when necessary, we could send a message of "stop" to the worker to stop the animation:
