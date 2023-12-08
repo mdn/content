@@ -43,7 +43,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ### Related Topics
 
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
+- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - [JavaScript](/en-US/docs/Web/JavaScript)
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 

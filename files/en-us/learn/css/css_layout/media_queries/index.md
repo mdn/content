@@ -239,8 +239,8 @@ aside ul {
 
 nav a:link,
 nav a:visited {
-  background-color: rgba(207, 232, 220, 0.2);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220 / 20%);
+  border: 2px solid rgb(79 185 227);
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -249,17 +249,17 @@ nav a:visited {
 }
 
 nav a:hover {
-  background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgb(207 232 220 / 70%);
 }
 
 .related {
-  background-color: rgba(79, 185, 227, 0.3);
-  border: 1px solid rgb(79, 185, 227);
+  background-color: rgb(79 185 227 / 30%);
+  border: 1px solid rgb(79 185 227);
   padding: 10px;
 }
 
 .sidebar {
-  background-color: rgba(207, 232, 220, 0.5);
+  background-color: rgb(207 232 220 / 50%);
   padding: 10px;
 }
 

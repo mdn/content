@@ -14,7 +14,7 @@ browser-compat:
 
 {{DefaultAPISidebar("Device Orientation Events")}}
 
-Device orientation events are events that allow you to [detect a device's physical orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events), as well as allowing you to [detect the device's motion](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events).
+Device orientation events are events that allow you to [detect a device's physical orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_orientation_events), as well as allowing you to [detect the device's motion](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#processing_motion_events).
 
 ## Concepts and usage
 

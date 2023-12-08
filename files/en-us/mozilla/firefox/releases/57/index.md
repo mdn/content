@@ -58,7 +58,7 @@ _No changes._
 
 ### JavaScript
 
-- The non-standard {{JSxRef("Statements/for_each...in", "for each...in")}} (E4X) loop has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see [Warning: JavaScript 1.6's for-each-in loops are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) for migration help. ([Firefox bug 1083470](https://bugzil.la/1083470)).
+- The non-standard {{JSxRef("Statements/for_each...in", "for each...in")}} loop, originally part of EcmaScript for XML (E4X), has been removed. Please use {{JSxRef("Statements/for...of", "for...of")}} instead and see [Warning: JavaScript 1.6's for-each-in loops are deprecated](/en-US/docs/Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated) for migration help. ([Firefox bug 1083470](https://bugzil.la/1083470)).
 - The {{JSxRef("Object.prototype.watch()")}} and {{JSxRef("Object.unwatch", "unwatch()")}} methods are deprecated, will now throw a warning when used, and will be removed soon ([Firefox bug 934669](https://bugzil.la/934669)).
 - The non-standard {{JSxRef("Iterator")}} and {{JSxRef("StopIteration")}} objects as well as the legacy iteration protocol have been removed ([Firefox bug 1098412](https://bugzil.la/1098412)).
 - Async generator is now enabled ([Firefox bug 1352312](https://bugzil.la/1352312)).

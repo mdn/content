@@ -17,7 +17,9 @@ In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of func
 
 Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's `data` property). The data is copied rather than shared.
 
-Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
+
+In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 

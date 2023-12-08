@@ -73,7 +73,7 @@ exports.author_delete_post = asyncHandler(async (req, res, next) => {
     return;
   } else {
     // Author has no books. Delete object and redirect to the list of authors.
-    await Author.findByIdAndRemove(req.body.authorid);
+    await Author.findByIdAndDelete(req.body.authorid);
     res.redirect("/catalog/authors");
   }
 });
@@ -85,7 +85,7 @@ If there are no books then we delete the author object and redirect to the list 
 If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
 > **Note:** We could check if the call to `findById()` returns any result, and if not, immediately render the list of all authors.
-> We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndRemove()`).
+> We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndDelete()`).
 
 ## View
 
