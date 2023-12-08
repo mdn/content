@@ -582,7 +582,6 @@ Here you can see the complete example in action.
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
