@@ -72,8 +72,8 @@ for (const point of points) {
     const pointObj = new DOMPoint(point[0], point[1]);
     isPointInFill = circle.isPointInStroke(pointObj);
   } catch (e) {
-    // Fallback for browsers that don't support .isPointInStroke(DOMPoint)
-    const pointObj = svg.createSVGPoint(point[0], point[1]);
+    // Fallback for browsers that don't support DOMPoint as an argument
+    const pointObj = svg.createSVGPoint();
     pointObj.x = point[0];
     pointObj.y = point[1];
     isPointInStroke = circle.isPointInStroke(pointObj);
