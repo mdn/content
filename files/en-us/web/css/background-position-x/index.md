@@ -91,13 +91,41 @@ div {
   background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: bottom 10px;
+  background-position-y: bottom;
 }
 ```
 
 #### Result
 
 {{EmbedLiveSample('Basic_example', '100%', 300)}}
+
+### Two-value syntax
+
+The following example shows support for the multiple value syntax, which allows the developer to offset the background from any edge.
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background-color: seagreen;
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: right 20px;
+  background-position-y: bottom 10px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Two-value_syntax', '100%', 300)}}
 
 ## Specifications
 
