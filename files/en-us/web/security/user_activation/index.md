@@ -42,6 +42,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
+- {{domxref("HTMLSelectElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("Keyboard.lock()")}}
@@ -55,6 +56,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("RemotePlayback.prompt()")}}
 - {{domxref("Serial.requestPort()")}}
 - {{domxref("USB.requestDevice()")}}
+- {{domxref("Keyboard.lock()")}}
 - {{domxref("Window.getScreenDetails()")}}
 - {{domxref("Window.open()")}}
 - {{domxref("Window.queryLocalFonts()")}}

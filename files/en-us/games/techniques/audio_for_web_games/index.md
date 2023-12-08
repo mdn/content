@@ -372,7 +372,7 @@ trackEls.forEach((el, i) => {
 });
 ```
 
-> **Note:** You can [see this demo in action here](https://mdn.github.io/webaudio-examples/multi-track/) and [view the source code here](https://github.com/mdn/webaudio-examples/tree/master/multi-track).
+> **Note:** You can [see this demo in action here](https://mdn.github.io/webaudio-examples/multi-track/) and [view the source code here](https://github.com/mdn/webaudio-examples/tree/main/multi-track).
 
 In the context of your game world you may have loops and samples that are played in different circumstances, and it can be useful to be able to synchronize with other tracks for a more seamless experience.
 
