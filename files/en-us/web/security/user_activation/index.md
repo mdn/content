@@ -38,6 +38,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("GPUAdapter.requestAdapterInfo()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
+- {{domxref("HTMLSelectElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("MediaDevices.selectAudioOutput()")}}
@@ -50,12 +51,12 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("RemotePlayback.prompt()")}}
 - {{domxref("USB.requestDevice()")}}
 - {{domxref("Keyboard.lock()")}}
+- {{domxref("Window.getScreenDetails()")}}
 - {{domxref("Window.open()")}}
+- {{domxref("Window.queryLocalFonts()")}}
 - {{domxref("Window.showOpenFilePicker()")}}
 - {{domxref("Window.showSaveFilePicker()")}}
 - {{domxref("Window.showDirectoryPicker()")}}
-- `Window.getScreenDetails()`
-- {{domxref("Window.queryLocalFonts()")}}
 - {{domxref("XRSystem.requestSession()")}}
 
 ## Sticky activation

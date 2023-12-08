@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if called in a cross-origin iframe.
 
-## Security Considerations
+## Security considerations
 
 [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.
@@ -48,7 +48,7 @@ The method is only allowed to be called in same-origin iframes; an exception is 
 
 ## Examples
 
-### Feature Detection
+### Feature detection
 
 The code below shows how to check if `showPicker()` is supported:
 
@@ -58,11 +58,9 @@ if ("showPicker" in HTMLSelectElement.prototype) {
 }
 ```
 
-### Usage
+### Launching the picker
 
-This example shows how this feature can be used.
-
-> **Note:** A live example cannot be shown here because they run in a cross-origin frame, and would cause a [`SecurityError`](#securityerror)
+This example shows how to use a button to launch the picker for a `<select>` element with two options.
 
 #### HTML
 
@@ -78,7 +76,8 @@ This example shows how this feature can be used.
 
 #### JavaScript
 
-The code simply gets the previous element of the selected button and calls showPicker() on it.
+The code gets the `<button>` and adds a listener for its `click` event.
+The event handler gets the `<select>` element and calls `showPicker()` on it.
 
 ```js
 const button = document.querySelector("button");
@@ -92,6 +91,8 @@ button.addEventListener("click", (event) => {
 });
 ```
 
+<!-- A live example cannot be shown here because they run in a cross-origin frame, and would cause a SecurityError -->
+
 ## Specifications
 
 {{Specifications}}
@@ -104,3 +105,4 @@ button.addEventListener("click", (event) => {
 
 - {{ HTMLElement("select") }}
 - {{ domxref("HTMLSelectElement") }}
+- {{ domxref("HTMLInputElement.showPicker()") }}
