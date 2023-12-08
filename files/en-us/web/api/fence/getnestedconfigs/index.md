@@ -33,8 +33,14 @@ None.
 ## Examples
 
 ```js
+// Run inside a <fencedframe>
+
+// Retrieve the configs of embedded fenced frames
 const configs = window.fence.getNestedConfigs();
-console.log(configs.length);
+
+// Set a new fenced frame's config to equal one of the retrieved configs
+const frame = document.createElement("fencedframe");
+frame.config = configs[0];
 ```
 
 ## Specifications
