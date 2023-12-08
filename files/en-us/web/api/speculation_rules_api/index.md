@@ -246,7 +246,7 @@ Prerendering is more risky to adopt than prefetching and should therefore be don
 When a prerender is done, the browser GETs the URL and renders and loads the content into an invisible tab. This includes running the content's JavaScript and loading all subresources, including those fetched by JavaScript. Content can be potentially unsafe to prerender if any of the following conditions are observed:
 
 - The URL is [unsafe to prefetch](#unsafe_prefetching). Read the previous section first if you haven't already, and understand that these conditions also equally apply to unsafe prerendering.
-- The page's JavaScript modifies client-side storage (for example [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)) on load in a way that may cause confusing effects in other, non-prerendered pages that the user is currently looking at.
+- The page's JavaScript modifies client-side storage (for example {{domxref("Web Storage API", "Web Storage", "", "nocode")}} or {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}}) on load in a way that may cause confusing effects in other, non-prerendered pages that the user is currently looking at.
 - The page runs JavaScript or loads images that cause side effects such as sending analytics, recording ad impressions, or otherwise modifying the state of the application as if the user had already interacted with it. Again, this can affect the flow of the application, or cause incorrect performance or usage reporting. See [Server-rendered varying state](#server-rendered_varying_state) for more details about such use cases.
 
 To mitigate such problems, you can use the following techniques:
@@ -254,7 +254,7 @@ To mitigate such problems, you can use the following techniques:
 - Watch for the {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} header on the server as the requests come in, and then run specific code to defer problematic functionality.
 - Use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when the prerendered page is actually activated and run code as a result. This is useful in two cases:
   - Deferring code that may cause problems if it is run before the page is viewed. For example, you may want to wait until after activation to update client-side storage or modify server-side state using JavaScript. This can avoid situations when the UI and the application state become out of sync with one another, for example a shopping cart showing no items even though the user has added some.
-  - If the above is not possible, then you could still rerun code after the page is activated to bring the app up-to-date again. For example, a highly-dynamic flash sale page might rely on content updates coming in from a third-party library. If you can't delay the updates, you can always get fresh updates once the user views the page. Prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation.
+  - If the above is not possible, then you could still rerun code after the page is activated to bring the app up-to-date again. For example, a highly-dynamic flash sale page might rely on content updates coming in from a third-party library. If you can't delay the updates, you can always get fresh updates once the user views the page. Prerendered pages can be updated in real time using the {{domxref("Broadcast Channel API", "", "", "nocode")}}, or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation.
 - Manage your third-party analytics scripts carefully — if possible, use scripts that are prerendering-aware (for example use the {{domxref("Document.prerendering")}} property to defer running on prerendering pages) such as Google Analytics or NewRelic.
   - Note that cross-origin {{htmlelement("iframe")}} loads are delayed while prerendering, therefore most other third-party widgets such as adtech are actually safe to use while prerendering.
   - For third-party scripts that are not prerendering-aware, avoid loading them until after activation using the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event, as mentioned earlier.
@@ -267,8 +267,8 @@ There are two main types of server-rendered state to be concerned with: **outdat
 - User-specific state: Consider the example of tracking sign-in state via a cookie. Problems can arise like the following:
   - The user visits `https://site.example/a` in tab 1 and `https://site.example/b` in tab 2, while logged out.
   - `https://site.example/b` prerenders `https://site.example/c`. It will be prerendered in a logged-out state.
-  - The user signs in to `https://site.example` in tab 1.
-  - The user switches to tab 2 and clicks the link to `https://site.example/c`, which activates the prerendered page.
+  - The user signs in to `https://site.exam
+  - The user switches to tab 2 and clicks the link to `htple` in tab 1.tps://site.example/c`, which activates the prerendered page.
   - Tab 2 displays a signed-out view of `https://site.example/c`, which confuses the user since they thought they were logged in.
 
 User-specific state problems can occur for other user settings, for example language settings, dark-mode preferences, or adding items to a cart. They can also occur when only a single tab is involved:
@@ -279,7 +279,7 @@ User-specific state problems can occur for other user settings, for example lang
 - The user clicks on the link to `https://site.example.com/cart`, which activates the prerendered page.
 - The user sees an empty cart, even though they just added something to it.
 
-The best mitigation for these cases, and indeed any time when content can get out of sync with the server, is for pages to refresh themselves as needed. For example, a server might use the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. Pages can then update themselves appropriately, including speculatively loaded pages that have not yet activated.
+The best mitigation for these cases, and indeed any time when content can get out of sync with the server, is for pages to refresh themselves as needed. For example, a server might use the {{domxref("Broadcast Channel API", "", "", "nocode")}}, or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. Pages can then update themselves appropriately, including speculatively loaded pages that have not yet activated.
 
 ## Session history behavior for prerendered documents
 
@@ -299,32 +299,32 @@ Because a prerendered page is opened in a hidden state, a number of APIs and oth
 
 The following asynchronous features' results are deferred in prerendered documents until they are activated:
 
-- [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): {{domxref("MediaDevices.selectAudioOutput()")}}
-- [Background Fetch API](/en-US/docs/Web/API/Background_Fetch_API): {{domxref("BackgroundFetchManager.fetch()")}}
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API): {{domxref("BroadcastChannel.postMessage()")}}
-- [Credential Management API](/en-US/docs/Web/API/Credential_Management_API): {{domxref("CredentialsContainer.create()")}}, {{domxref("CredentialsContainer.get()")}}, {{domxref("CredentialsContainer.store()")}}
-- [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API): {{domxref("Navigator.requestMediaKeySystemAccess()")}}
-- [Gamepad API](/en-US/docs/Web/API/Gamepad_API): {{domxref("Navigator.getGamepads()")}}, {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} event
-- [Geolocation API](/en-US/docs/Web/API/Geolocation_API): {{domxref("Geolocation.getCurrentPosition()")}}, {{domxref("Geolocation.watchPosition()")}}, {{domxref("Geolocation.clearWatch()")}}
-- {{domxref("HTMLMediaElement")}} API: The playback position will not advance while the containing document is prerendering
-- [Idle Detection API](/en-US/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector.start()")}}
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): {{domxref("MediaDevices.getUserMedia()")}} (and the legacy {{domxref("Navigator.getUserMedia()")}} version), {{domxref("MediaDevices.enumerateDevices()")}}
-- [Notifications API](/en-US/docs/Web/API/Notifications_API): {{domxref("Notification.Notification", "Notification()")}} constructor, {{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}}
-- [Push API](/en-US/docs/Web/API/Push_API): {{domxref("PushManager.subscribe()")}}
-- [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API): {{domxref("ScreenOrientation.lock()")}}, {{domxref("ScreenOrientation.unlock()")}}
-- [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): {{domxref("Sensor.start()")}}
-- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API): {{domxref("ServiceWorker.postMessage()")}}, {{domxref("ServiceWorkerContainer.register()")}}, {{domxref("ServiceWorkerRegistration.update()")}}, {{domxref("ServiceWorkerRegistration.unregister()")}}
-- [Storage API](/en-US/docs/Web/API/Storage_API): {{domxref("StorageManager.persist()")}}
-- [Web Audio API](/en-US/docs/Web/API/Web_Audio_API): {{domxref("AudioContext")}}s are not allowed to start while the containing document is prerendering
-- [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API): {{domxref("Bluetooth.getDevices()")}}, {{domxref("Bluetooth.requestDevice()")}}
-- [WebHID API](/en-US/docs/Web/API/WebHID_API): {{domxref("HID.getDevices()")}}, {{domxref("HID.requestDevice()")}}
-- [Web Locks API](/en-US/docs/Web/API/Web_Locks_API): {{domxref("LockManager.query()")}}, {{domxref("LockManager.request()")}}
-- [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): {{domxref("Navigator.requestMIDIAccess()")}}
-- [Web NFC API](/en-US/docs/Web/API/Web_NFC_API): {{domxref("NDefReader.write()")}}, {{domxref("NDefReader.scan()")}}
-- [Web Serial API](/en-US/docs/Web/API/Web_Serial_API): {{domxref("Serial.getPorts()")}}, {{domxref("Serial.requestPort()")}}
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API): {{domxref("SpeechRecognition.abort()")}}, {{domxref("SpeechRecognition.start()")}}, {{domxref("SpeechRecognition.stop()")}}, {{domxref("SpeechSynthesis.cancel()")}}, {{domxref("SpeechSynthesis.pause()")}}, {{domxref("SpeechSynthesis.resume()")}}, {{domxref("SpeechSynthesis.speak()")}}
-- [WebUSB API](/en-US/docs/Web/API/WebUSB_API): {{domxref("USB.getDevices()")}}, {{domxref("USB.requestDevice()")}}
-- [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API): {{domxref("XRSystem.requestSession()")}}
+- {{domxref("Audio Output Devices API", "", "", "nocode")}}: {{domxref("MediaDevices.selectAudioOutput()")}}
+- {{domxref("Background Fetch API", "", "", "nocode")}}: {{domxref("BackgroundFetchManager.fetch()")}}
+- {{domxref("Broadcast Channel API", "", "", "nocode")}}: {{domxref("BroadcastChannel.postMessage()")}}
+- {{domxref("Credential Management API", "", "", "nocode")}}: {{domxref("CredentialsContainer.create()")}}, {{domxref("CredentialsContainer.get()")}}, {{domxref("CredentialsContainer.store()")}}
+- {{domxref("Encrypted Media Extensions API", "", "", "nocode")}}: {{domxref("Navigator.requestMediaKeySystemAccess()")}}
+- {{domxref("Gamepad API", "", "", "nocode")}}: {{domxref("Navigator.getGamepads()")}}, {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} event, {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} event
+- {{domxref("Geolocation API", "", "", "nocode")}}: {{domxref("Geolocation.getCurrentPosition()")}}, {{domxref("Geolocation.watchPosition()")}}, {{domxref("Geolocation.clearWatch()")}}
+- {{domxref("HTMLMediaElement")}}: The playback position will not advance while the containing document is prerendering
+- {{domxref("Idle Detection API", "", "", "nocode")}}: {{domxref("IdleDetector.start()")}}
+- {{domxref("Media Capture and Streams API", "", "", "nocode")}}: {{domxref("MediaDevices.getUserMedia()")}} (and the legacy {{domxref("Navigator.getUserMedia()")}} version), {{domxref("MediaDevices.enumerateDevices()")}}
+- {{domxref("Notifications API", "", "", "nocode")}}: {{domxref("Notification.Notification", "Notification()")}} constructor, {{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}}
+- {{domxref("Push API", "", "", "nocode")}}: {{domxref("PushManager.subscribe()")}}
+- {{domxref("Screen Orientation API", "", "", "nocode")}}: {{domxref("ScreenOrientation.lock()")}}, {{domxref("ScreenOrientation.unlock()")}}
+- {{domxref("Sensor APIs", "", "", "nocode")}}: {{domxref("Sensor.start()")}}
+- {{domxref("Service Worker API", "", "", "nocode")}}: {{domxref("ServiceWorker.postMessage()")}}, {{domxref("ServiceWorkerContainer.register()")}}, {{domxref("ServiceWorkerRegistration.update()")}}, {{domxref("ServiceWorkerRegistration.unregister()")}}
+- {{domxref("Storage API", "", "", "nocode")}}: {{domxref("StorageManager.persist()")}}
+- {{domxref("Web Audio API", "", "", "nocode")}}: {{domxref("AudioContext")}}s are not allowed to start while the containing document is prerendering
+- {{domxref("Web Bluetooth API", "", "", "nocode")}}: {{domxref("Bluetooth.getDevices()")}}, {{domxref("Bluetooth.requestDevice()")}}
+- {{domxref("WebHID API", "", "", "nocode")}}: {{domxref("HID.getDevices()")}}, {{domxref("HID.requestDevice()")}}
+- {{domxref("Web Locks API", "", "", "nocode")}}: {{domxref("LockManager.query()")}}, {{domxref("LockManager.request()")}}
+- {{domxref("Web MIDI API", "", "", "nocode")}}: {{domxref("Navigator.requestMIDIAccess()")}}
+- {{domxref("Web NFC API", "", "", "nocode")}}: {{domxref("NDefReader.write()")}}, {{domxref("NDefReader.scan()")}}
+- {{domxref("Web Serial API", "", "", "nocode")}}: {{domxref("Serial.getPorts()")}}, {{domxref("Serial.requestPort()")}}
+- {{domxref("Web Speech API", "", "", "nocode")}}: {{domxref("SpeechRecognition.abort()")}}, {{domxref("SpeechRecognition.start()")}}, {{domxref("SpeechRecognition.stop()")}}, {{domxref("SpeechSynthesis.cancel()")}}, {{domxref("SpeechSynthesis.pause()")}}, {{domxref("SpeechSynthesis.resume()")}}, {{domxref("SpeechSynthesis.speak()")}}
+- {{domxref("WebUSB API", "", "", "nocode")}}: {{domxref("USB.getDevices()")}}, {{domxref("USB.requestDevice()")}}
+- {{domxref("WebXR Device API", "", "", "nocode")}}: {{domxref("XRSystem.requestSession()")}}
 
 ### Implicitly restricted APIs
 
@@ -333,26 +333,26 @@ The following features will automatically fail or no-op in documents that are no
 APIs that require [transient activation](/en-US/docs/Glossary/Transient_activation) or [sticky activation](/en-US/docs/Glossary/Sticky_activation):
 
 - Confirmation dialogs generated by the {{domxref("Window.beforeunload_event", "beforeunload")}} event
-- The firing of any events in the [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
-- [File System API](/en-US/docs/Web/API/File_System_API): {{domxref("Window.showDirectoryPicker()")}}, {{domxref("Window.showOpenFilePicker()")}}, {{domxref("Window.showSaveFilePicker()")}}
-- [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API): {{domxref("Element.requestFullscreen()")}}
-- [Idle Detection API](/en-US/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
-- [Keyboard API](/en-US/docs/Web/API/Keyboard_API): {{domxref("Keyboard.lock()")}} (which requires fullscreen)
-- [Payment Request API](/en-US/docs/Web/API/Payment_Request_API): {{domxref("PaymentRequest.show()")}}
-- [Presentation API](/en-US/docs/Web/API/Presentation_API): {{domxref("PresentationRequest.start()")}}
-- [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API): {{domxref("Element.requestPointerLock()")}}
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): {{domxref("MediaDevices.getDisplayMedia()")}}
-- [Web Share API](/en-US/docs/Web/API/Web_Share_API): {{domxref("Navigator.share()")}}
+- The firing of any events in the {{domxref("Clipboard API", "", "", "nocode")}}.
+- {{domxref("File System API", "", "", "nocode")}}: {{domxref("Window.showDirectoryPicker()")}}, {{domxref("Window.showOpenFilePicker()")}}, {{domxref("Window.showSaveFilePicker()")}}
+- {{domxref("Fullscreen API", "", "", "nocode")}}: {{domxref("Element.requestFullscreen()")}}
+- {{domxref("Idle Detection API", "", "", "nocode")}}: {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
+- {{domxref("Keyboard API", "", "", "nocode")}}: {{domxref("Keyboard.lock()")}} (which requires fullscreen)
+- {{domxref("Payment Request API", "", "", "nocode")}}: {{domxref("PaymentRequest.show()")}}
+- {{domxref("Presentation API", "", "", "nocode")}}: {{domxref("PresentationRequest.start()")}}
+- {{domxref("Pointer Lock API", "", "", "nocode")}}: {{domxref("Element.requestPointerLock()")}}
+- {{domxref("Screen Capture API", "", "", "nocode")}}: {{domxref("MediaDevices.getDisplayMedia()")}}
+- {{domxref("Web Share API", "", "", "nocode")}}: {{domxref("Navigator.share()")}}
 - {{domxref("Window.open()")}}
 
 APIs that require the containing document to be focused:
 
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API): {{domxref("Clipboard.read()")}}, {{domxref("Clipboard.readText()")}}, {{domxref("Clipboard.write()")}}, {{domxref("Clipboard.writeText()")}}
+- {{domxref("Clipboard API", "", "", "nocode")}}: {{domxref("Clipboard.read()")}}, {{domxref("Clipboard.readText()")}}, {{domxref("Clipboard.write()")}}, {{domxref("Clipboard.writeText()")}}
 
 APIs that require the containing document's {{domxref("Document.visibilityState")}} to be `"visible"`:
 
-- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API): {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible", _or_ [transient activation](/en-US/docs/Glossary/Transient_activation))
-- [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): {{domxref("WakeLock.request()")}}
+- {{domxref("Picture-in-Picture API", "", "", "nocode")}}: {{domxref("HTMLVideoElement.requestPictureInPicture()")}} (requires the containing document's visibility state to be `"visible", _or_ [transient activation](/en-US/docs/Glossary/Transient_activation))
+- {{domxref("Screen Wake Lock API", "", "", "nocode")}}: {{domxref("WakeLock.request()")}}
 
 ### Other restricted features
 
