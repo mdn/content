@@ -48,37 +48,44 @@ A boolean indicating whether the given point is within the fill or not.
     fill="white"
     stroke="black"
     stroke-width="10" />
-
-  <circle cx="10" cy="10" r="5" fill="seagreen" />
-  <circle cx="40" cy="30" r="5" fill="seagreen" />
 </svg>
 ```
 
 ### JavaScript
 
 ```js
+const svg = document.getElementsByTagName("svg")[0];
 const circle = document.getElementById("circle");
+const points = [
+  ["10", "10"],
+  ["40", "30"],
+  ["70", "40"],
+  ["15", "75"],
+  ["83", "83"]
+];
 
-try {
-  // Point is outside
-  console.log("Point at 10,10:", circle.isPointInFill(new DOMPoint(10, 10)));
+for (const point of points) {
+  let isPointInFill;
+  
+  try {
+    const pointObj = new DOMPoint(point[0], point[1]);
+    isPointInFill = circle.isPointInFill(pointObj);
+  } catch(e) {
+    // Fallback for browsers that don't support .isPointInFill(DOMPoint)
+    const pointObj = svg.createSVGPoint(point[0], point[1]);
+    pointObj.x = point[0];
+    pointObj.y = point[1];
+    isPointInFill = circle.isPointInFill(pointObj);
+  }
 
-  // Point is inside
-  console.log("Point at 40,30:", circle.isPointInFill(new DOMPoint(40, 30)));
-} catch (e) {
-  // for the browsers that still support the deprecated interface SVGPoint
-  const svg = document.getElementsByTagName("svg")[0];
-  const point = svg.createSVGPoint();
+  console.log(`Point at ${point[0]},${point[1]}: ${isPointInFill}`);
 
-  // Point is outside
-  point.x = 10;
-  point.y = 10;
-  console.log("Point at 10,10: ", circle.isPointInFill(point));
-
-  // Point is inside
-  point.x = 40;
-  point.y = 30;
-  console.log("Point at 40,30: ", circle.isPointInFill(point));
+  const pointEl = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+  pointEl.style.cx = point[0];
+  pointEl.style.cy = point[1];
+  pointEl.style.r = 5;
+   pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255, 0, 0, 0.5)";
+  svg.appendChild(pointEl);
 }
 ```
 
