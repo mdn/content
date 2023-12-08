@@ -62,7 +62,7 @@ self.addEventListener('message', (e) => {
 })
 ```
 
-Finally, when necessary, we could send a message of "stop" to the worker:
+Finally, when necessary, we could send a message of "stop" to the worker to stop the animation:
 
 ```js
 worker.postMessage({
