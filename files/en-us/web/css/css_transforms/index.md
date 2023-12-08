@@ -75,8 +75,6 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Step-by-step tutorial about how to transform elements styled with CSS.
-- [Forcing GPU acceleration with CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Forcing_gpu_acceleration_with_css_transforms)
-  - : Using CSS transforms to enable hardware acceleration for animating DOM elements.
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
