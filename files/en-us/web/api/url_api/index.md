@@ -11,7 +11,7 @@ The URL API is a component of the URL standard, which defines what constitutes a
 
 {{AvailableInWorkers}}
 
-## URL concepts and usage
+## Concepts and usage
 
 The majority of the URL standard is taken up by the [definition of a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) and how it is structured and parsed. Also covered are definitions of various terms related to addressing of computers on a network, and the algorithms for parsing IP addresses and DOM addresses are specified. More interesting to most developers is the API itself.
 
@@ -57,7 +57,7 @@ For example, in the above snippet, the username and target page are taken from t
 
 Other functions within `URLSearchParams` let you change the value of keys, add and delete keys and their values, and even sort the list of parameters.
 
-## URL API interfaces
+## Interfaces
 
 The URL API is a simple one, with only a couple of interfaces to its name:
 
