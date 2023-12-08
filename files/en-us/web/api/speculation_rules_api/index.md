@@ -42,11 +42,11 @@ For example:
 </script>
 ```
 
-You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) setting for each rule. Note that prerendered URLs are also prefetched.
+You specify a different array to contain the rules for each speculative loading type (for example `"prerender"` or `"prefetch"`). Each rule is contained in an object that specifies for example a list of resources to be fetched, plus options such as an explicit {{httpheader("Referrer-Policy")}} setting for each rule. Note that prerendered URLs are also prefetched.
 
 See [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) for a full explanation of the available syntax.
 
-> **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `'inline-speculation-rules'` source along with a hash- or nonce-source.
+> **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the {{httpheader("Content-Security-Policy")}} [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `'inline-speculation-rules'` source along with a hash- or nonce-source.
 
 ### Using prefetching
 
@@ -58,12 +58,12 @@ This means that if you prefetch something the user doesn't navigate to, it is ge
 
 Same-site and cross-site prefetches will work, but cross-site prefetches are limited (see ["same-site" and "cross-site"](https://web.dev/articles/same-site-same-origin#same-site-cross-site) for an explanation of the difference between the two). For privacy reasons cross-site prefetches will currently only work if the user has no cookies set for the destination site — we don't want sites to be able to track user activity via prefetched pages (which they may never even actually visit) based on previously-set cookies.
 
-> **Note:** In the future an opt-in will be provided via the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header, but this was not implemented at the time of writing.
+> **Note:** In the future an opt-in will be provided via the {{httpheader("Supports-Loading-Mode")}} header, but this was not implemented at the time of writing.
 
 For browsers that support it, speculation rules prefetch should be preferred over older prefetch mechanisms, namely [`<link rel="prefetch">`](/en-US/docs/Web/HTML/Attributes/rel/prefetch) and {{domxref("fetch()")}} with a `priority: "low"` option set on it. Because we know that speculation rules prefetch is for navigations, not general resource prefetching:
 
 - It can be used for cross-site navigations, whereas `<link rel="prefetch">` cannot.
-- It doesn't get blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) headers, whereas `<link rel="prefetch">` often does.
+- It doesn't get blocked by {{httpheader("Cache-Control")}} headers, whereas `<link rel="prefetch">` often does.
 
 In addition, speculation rules prefetch:
 
@@ -83,13 +83,13 @@ Prerendering uses memory and network bandwidth. If you prerender something the u
 
 > **Note:** Many APIs will be automatically deferred when prerendering/until activation. See [Platform features deferred or restricted during prerender](#platform_features_deferred_or_restricted_during_prerender) for more details.
 
-Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation target to opt-in using the [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
+Prerendering is restricted to same-origin documents by default. Cross-origin, same-site prerendering is possible — it requires the navigation target to opt-in using the {{httpheader("Supports-Loading-Mode")}} header with a value of `credentialed-prerender`. Cross-site prerendering is not possible at this time.
 
 For browsers that support it, speculation rules prerender should be preferred over older prerender mechanisms, namely [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender):
 
 - `<link rel="prerender">` is Chrome-specific and was never standardized, and the Chrome engineering team are in the process of sunsetting it. {{experimental_inline}}
 - It loads subresources loaded via JavaScript, whereas `<link rel="prerender">` doesn't.
-- It doesn't get blocked by [Cache-Control](/en-US/docs/Web/HTTP/Headers/Cache-Control) settings, whereas `<link rel="prerender">` often does.
+- It doesn't get blocked by {{httpheader("Cache-Control")}} settings, whereas `<link rel="prerender">` often does.
 - Speculation rules prerender should be treated as a hint and a progressive enhancement. Unlike `<link rel="prerender">`, it is a speculative hint and the browser may choose not to act upon the hint based on user settings, current memory usage, or other heuristics.
 
 ### Speculation rules API feature detection
@@ -138,7 +138,7 @@ This section looks at different ways to detect whether a requested page has been
 
 ### Server-side detection
 
-Prefetched and prerendered page requests are sent with the [Sec-Purpose](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) request header:
+Prefetched and prerendered page requests are sent with the {{httpheader("Sec-Purpose")}} request header:
 
 For prefetch:
 
@@ -221,7 +221,7 @@ For example:
 - URLs that increment a user's usage allowance numbers, such as consuming their monthly free article allowance or starting the timer on their monthly minutes.
 - URLs that initiate server-side ad conversion tracking.
 
-Such issues can be mitigated on the server by watching for the [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header as the requests come in, and then running specific code to defer problematic functionality. Later on, when the page is actually navigated to, you can initiate the deferred functionality via JavaScript if needed.
+Such issues can be mitigated on the server by watching for the {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} header as the requests come in, and then running specific code to defer problematic functionality. Later on, when the page is actually navigated to, you can initiate the deferred functionality via JavaScript if needed.
 
 > **Note:** You can find more details about the detection code in the [Detecting prefetched and prerendered pages](#detecting_prefetched_and_prerendered_pages) section.
 
@@ -245,7 +245,7 @@ When a prerender is done, the browser GETs the URL and renders and loads the con
 
 To mitigate such problems, you can use the following techniques:
 
-- Watch for the [`Sec-Purpose: prerender`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header on the server as the requests come in, and then run specific code to defer problematic functionality.
+- Watch for the {{httpheader("Sec-Purpose", "Sec-Purpose: prefetch")}} header on the server as the requests come in, and then run specific code to defer problematic functionality.
 - Use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when the prerendered page is actually activated and run code as a result. This is useful in two cases:
   - Deferring code that may cause problems if it is run before the page is viewed. For example, you may want to wait until after activation to update client-side storage or modify server-side state using JavaScript. This can avoid situations when the UI and the application state become out of sync with one another, for example a shopping cart showing no items even though the user has added some.
   - If the above is not possible, then you could still rerun code after the page is activated to bring the app up-to-date again. For example, a highly-dynamic flash sale page might rely on content updates coming in from a third-party library. If you can't delay the updates, you can always get fresh updates once the user views the page. Prerendered pages can be updated in real time using the [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API), or another mechanism such as {{domxref("fetch()")}} or a {{domxref("WebSocket")}}. This guarantees that the user will see up-to-date content after prerendering activation.
@@ -378,14 +378,14 @@ The Speculation Rules API does not define any interfaces of its own.
   - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{domxref("PerformanceNavigationTiming.activationStart")}} {{experimental_inline}}
   - : A number representing the time between when a document starts prerendering and when it is activated.
-- {{domxref("PerformanceResourceTiming.deliveryType")}}, `"navigational-prefetch"` value {{experimental_inline}}
+- {{domxref("PerformanceResourceTiming.deliveryType")}} `"navigational-prefetch"` value {{experimental_inline}}
   - : Signals that the type of a performance entry is a prefetch.
 
 ## HTTP headers
 
-- [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) `'inline-speculation-rules'` value {{experimental_inline}}
+- {{httpheader("Content-Security-Policy")}} `'inline-speculation-rules'` value {{experimental_inline}}
   - : Used to opt-in to allowing usage of `<script type="speculationrules">` to define speculation rules on the document being fetched.
-- [`Supports-Loading-Mode`](/en-US/docs/Web/HTTP/Headers/Supports-Loading-Mode) {{experimental_inline}}
+- {{httpheader("Supports-Loading-Mode")}} {{experimental_inline}}
   - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site prerendering requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
 
 ## HTML features

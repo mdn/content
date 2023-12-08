@@ -52,5 +52,5 @@ if (document.prerendering) {
 
 ## See also
 
-- [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
+- {{domxref("Speculation Rules API", "", "", "nocode")}}
 - {{domxref("Document.prerendering", "prerendering")}} property
