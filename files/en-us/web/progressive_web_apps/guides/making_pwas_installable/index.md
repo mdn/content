@@ -119,7 +119,7 @@ On mobile:
 
 ### Installing sites as apps
 
-On desktop operating systems, Safari and Edge also support installing any web site as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
+On desktop operating systems, Safari and Edge also support installing any website as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
 
 ### Triggering the install prompt
 
