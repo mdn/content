@@ -128,10 +128,13 @@ class LabeledCheckbox extends HTMLElement {
 }
 ```
 
-The `connectedCallback()` method uses {{domxref("HTMLElement.attachInternals()", "`this.attachInternals()`")}} to attach an {{domxref("ElementInternals", "`ElementInternals`")}} object, from which we use `ElementInternals.states` to get the `CustomStateSet`.
-The `set checked(flag)` method adds the `"--checked"` dashed identifier to the `CustomStateSet` if the flag is set and delete the identifier if the flag is `false`.
-The `get checked()` method just checks whether the `--checked` property is defined in the set.
-The property value is toggled when the element is clicked.
+In the `LabeledCheckbox` class:
+
+- The `connectedCallback()` method uses {{domxref("HTMLElement.attachInternals()", "`this.attachInternals()`")}} to attach an {{domxref("ElementInternals", "`ElementInternals`")}} object.
+- In the `get checked()` and `set checked()` we use `ElementInternals.states` to get the `CustomStateSet`.
+- The `set checked(flag)` method adds the `"--checked"` dashed identifier to the `CustomStateSet` if the flag is set and delete the identifier if the flag is `false`.
+- The `get checked()` method just checks whether the `--checked` property is defined in the set.
+- The property value is toggled when the element is clicked.
 
 We then call the {{domxref("CustomElementRegistry/define", "define()")}} method on the object returned by {{domxref("Window.customElements")}} in order to register the custom element:
 
