@@ -31,7 +31,7 @@ background-position-y: 0px;
 background-position-y: 1cm;
 background-position-y: 8em;
 
-/* Side-relative values or two-value syntax*/
+/* Side-relative values */
 background-position-y: bottom 3px;
 background-position-y: bottom 10%;
 
