@@ -101,7 +101,7 @@ div {
 
 ### Side-relative values
 
-The following example shows support for the side-relative value syntax, which allows the developer to offset the background from any edge.
+The following example shows support for side-relative offset syntax, which allows the developer to offset the background from any edge.
 
 #### HTML
 
@@ -125,7 +125,7 @@ div {
 
 #### Result
 
-{{EmbedLiveSample('Two-value_syntax', '100%', 300)}}
+{{EmbedLiveSample('Side-relative_values', '100%', 300)}}
 
 ## Specifications
 
