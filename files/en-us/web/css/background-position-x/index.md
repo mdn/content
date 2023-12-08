@@ -99,9 +99,9 @@ div {
 
 {{EmbedLiveSample('Basic_example', '100%', 300)}}
 
-### Two-value syntax
+### Side-relative values
 
-The following example shows support for the multiple value syntax, which allows the developer to offset the background from any edge.
+The following example shows support for the side-relative value syntax, which allows the developer to offset the background from any edge.
 
 #### HTML
 
