@@ -61,8 +61,8 @@ Other functions within `URLSearchParams` let you change the value of keys, add a
 
 The URL API is a simple one, with only a couple of interfaces to its name:
 
-- [`URL`](/en-US/docs/Web/API/URL)
-- [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams)
+- {{domxref("URL")}}
+- {{domxref("URLSearchParams")}}
 
 ## Examples
 
@@ -102,7 +102,7 @@ A working version of this example can be [found on Glitch](https://url-api.glitc
 
 ## See also
 
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- {{domxref("Fetch API", "", "", "nocode")}}
 - CSS {{cssxref("&lt;url&gt;")}} type
 - {{jsxref("encodeURI", "encodeURI()")}}
 - {{jsxref("encodeURIComponent", "encodeURIComponent()")}}
