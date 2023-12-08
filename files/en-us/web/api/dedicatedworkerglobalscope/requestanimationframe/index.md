@@ -45,7 +45,7 @@ assumptions about its value. You can pass this value to
 
 ## Examples
 
-First, in the document, transfer the control of a {{HTMLElement("canavs")}} element in document using the {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} method and send a message of "start" to the worker:
+First, in the document, transfer the control of a {{HTMLElement("canvas")}} element in document using the {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} method and send a message of "start" to the worker:
 
 ```js
 const offscreenCanvas = document
