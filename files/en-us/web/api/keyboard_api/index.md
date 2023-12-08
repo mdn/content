@@ -7,6 +7,9 @@ status:
 browser-compat:
   - api.Keyboard
   - api.KeyboardLayoutMap
+spec-urls:
+  - https://wicg.github.io/keyboard-lock/
+  - https://wicg.github.io/keyboard-map/
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Keyboard API")}}
