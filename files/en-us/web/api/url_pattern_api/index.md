@@ -5,6 +5,7 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.URLPattern
+spec-urls: https://urlpattern.spec.whatwg.org/
 ---
 
 {{DefaultAPISidebar("URL Pattern API")}}{{SeeCompatTable}}
