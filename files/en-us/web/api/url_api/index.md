@@ -5,6 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.URL
   - api.URLSearchParams
+spec-urls: https://url.spec.whatwg.org/#api
 ---
 
 {{DefaultAPISidebar("URL API")}}
