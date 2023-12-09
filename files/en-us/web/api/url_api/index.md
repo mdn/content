@@ -40,7 +40,7 @@ let addr = new URL("https://example.com/login");
 addr.username = myUsername;
 ```
 
-Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "ahref")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
+Setting the value of {{domxref("URL.username", "username")}} not only sets that property's value, but it updates the overall URL. After executing the code snippet above, the value returned by {{domxref("URL.href", "href")}} is `https://someguy@example.com/login`. This is true for any of the writable properties.
 
 ### Queries
 
