@@ -1,4 +1,4 @@
----
+---0x16D267ab31F7F18051C9115CC8F9ca066cD82904
 title: Web technology for developers
 slug: Web
 page-type: landing-page
