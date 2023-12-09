@@ -8,15 +8,15 @@ browser-compat: api.DedicatedWorkerGlobalScope.requestAnimationFrame
 
 {{APIRef}}
 
-The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface tells the browser you wish to perform an animation and call a user-supplied callback function before the next repaint.
-
-Calling `requestAnimationFrame()` method in worker requires that the method needs to be supported in current worker, which means that current worker is created by window or current creator of the worker also support the method.
+The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface tells the browser you wish to perform an animation frame request and call a user-supplied callback function before the next repaint.
 
 The frequency of calls to the callback function will generally match the display refresh rate. The most common refresh rate is 60hz, (60 cycles/frames per second), though 75hz, 120hz, and 144hz are also widely used. `requestAnimationFrame()` calls are paused in most browsers when running in background tabs or hidden {{HTMLElement("iframe")}}s, in order to improve performance and battery life.
 
 Your callback function must call `requestAnimationFrame()` again if you want to animate another frame. `requestAnimationFrame()` is one-shot.
 
 > **Warning:** Be sure always to use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame — **otherwise, the animation will run faster on high refresh-rate screens**. For ways to do that, see the examples below.
+
+Calling `requestAnimationFrame()` method in worker requires that the method needs to be supported in current worker, which means that current worker need to be created by window or the creator of the worker also support the method.
 
 ## Syntax
 
@@ -41,7 +41,7 @@ assumptions about its value. You can pass this value to
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if calling the method is not supported in current worker.
+  - : Thrown if the method is not supported in current worker.
 
 ## Examples
 

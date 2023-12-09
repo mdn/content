@@ -27,9 +27,9 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}
   - : Sends a message — which can consist of `any` JavaScript object — to the parent document that first spawned the worker.
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
-  - : Discards any tasks queued in the `WorkerGlobalScope`'s event loop, effectively closing this particular scope.
-- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
   - : Cancels an animation frame request previously scheduled through a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}.
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+  - : Perform an animation frame request and call a user-supplied callback function before the next repaint.
 
 ## Events
 
