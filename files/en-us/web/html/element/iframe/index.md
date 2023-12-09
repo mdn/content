@@ -171,6 +171,10 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 
 As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
 
+## onerror and onload events
+
+Using JavaScript, iframes can be used to probe the URL space of the local network's HTTP servers. That is why for the security reason user agents do not invoke [onerror](/en-US/docs/Web/API/HTMLElement/error_event) event on iframes, and [onload](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the resource failed to load.
+
 ## Examples
 
 ### A simple \<iframe>
