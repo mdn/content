@@ -110,4 +110,4 @@ _This interface inherits methods from {{domxref("DOMMatrixReadOnly")}}._
 ## See also
 
 - The mutable matrix type, {{domxref("DOMMatrix")}}, which is based on this one.
-- The CSS {{cssxref("transform-function", "matrix()", "#matrix()")}} and {{cssxref("transform-function", "matrix3d()", "#matrix3d()")}} functional notation that can be generated from this interface to be used in a CSS {{cssxref("transform")}}.
+- The CSS {{cssxref("transform-function/matrix", "matrix()")}} and {{cssxref("transform-function/matrix3d", "matrix3d()")}} functional notation that can be generated from this interface to be used in a CSS {{cssxref("transform")}}.
