@@ -9,11 +9,10 @@ browser-compat: api.URLPattern
 
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
-The **`URLPattern`** interface matches URLs or parts of URLs against a pattern.
-The pattern can contain capturing groups that extract parts of the matched URL.
+The **`URLPattern`** interface of the {{domxref("URL Pattern API", "", "", "nocode")}} matches URLs or parts of URLs against a pattern. The pattern can contain capturing groups that extract parts of the matched URL.
 
 More information about the syntax of patterns can be found on the API overview
-page: [URL Pattern API](/en-US/docs/Web/API/URL_Pattern_API)
+page: {{domxref("URL Pattern API", "", "", "nocode")}}.
 
 {{AvailableInWorkers}}
 
