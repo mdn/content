@@ -15,7 +15,7 @@ An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeL
 
 ## Instance properties
 
-_This interface provides the following properties._
+_Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}_
 
 - {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
@@ -27,6 +27,8 @@ _This interface provides the following properties._
     - `screen`: A screen wake lock. Prevents devices from dimming or locking the screen.
 
 ## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}_
 
 - {{domxref('WakeLockSentinel.release()', 'release()')}}
   - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
