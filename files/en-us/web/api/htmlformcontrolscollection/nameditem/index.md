@@ -43,7 +43,7 @@ namedItem(name)
 ```html
 <form>
   <label for="notes">Notes:</label>
-  <input id="notes" name="my-form-control" type="textarea" />
+  <input id="notes" name="my-form-control" type="text" />
 
   <label for="start">Start date:</label>
   <input id="start" name="my-form-control" type="date" />

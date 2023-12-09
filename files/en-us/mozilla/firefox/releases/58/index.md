@@ -90,7 +90,7 @@ _No changes._
 ### Other
 
 - "Add to home screen" is now supported in Firefox for Android, part of the [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) effort ([Firefox bug 1212648](https://bugzil.la/1212648)).
-- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) [Firefox bug 1347644](https://bugzil.la/1347644).
+- [WebAssembly](/en-US/docs/WebAssembly) now has a tiered compiler providing load time optimizations ([Firefox bug 1277562](https://bugzil.la/1277562)), and new streaming APIs — [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) and [`WebAssembly.installStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/installStreaming) [Firefox bug 1347644](https://bugzil.la/1347644).
 
 ## Removals from the web platform
 

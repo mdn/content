@@ -2,7 +2,7 @@
 title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
 page-type: webassembly-interface
-browser-compat: javascript.builtins.WebAssembly.Instance
+browser-compat: webassembly.api.Instance
 ---
 
 {{WebAssemblySidebar}}
@@ -43,7 +43,7 @@ fetch("simple.wasm")
   });
 ```
 
-The preferred way to get an `Instance` is asynchronously, for example using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function like this:
+The preferred way to get an `Instance` is asynchronously, for example using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function like this:
 
 ```js
 const importObject = {
