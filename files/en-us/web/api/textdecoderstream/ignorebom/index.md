@@ -8,11 +8,11 @@ browser-compat: api.TextDecoderStream.ignoreBOM
 
 {{APIRef("Encoding API")}}
 
-The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} interface returns a {{jsxref("boolean")}} indicating if the byte order mark (BOM) is to be ignored.
+The **`ignoreBOM`** read-only property of the {{domxref("TextDecoderStream")}} interface is a {{jsxref('Boolean')}} indicating whether the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the output or skipped over.
 
 ## Value
 
-A {{jsxref("boolean")}}, initially `false`.
+`true` if the [byte order mark](https://www.w3.org/International/questions/qa-byte-order-mark) will be included in the decoded text; `false` if it will be skipped over when decoding and omitted.
 
 ## Examples
 

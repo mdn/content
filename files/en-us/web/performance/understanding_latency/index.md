@@ -26,7 +26,7 @@ To emulate the latency of a low bandwidth network, you can use developer tools a
 
 ![Emulate latency by emulating throttling](emulate_latency.png)
 
-In the developer tools, under the network table, you can switch the throttling option to 2G, 3G, etc. Different browser developer tools have different preset options, the characteristics emulated include download speed, upload speed, and minimum latency, or the minimum amount of type it takes to send a packet of data. The approximate values of some presets include:
+In the developer tools, under the network table, you can switch the throttling option to 2G, 3G, etc. Different browser developer tools have different preset options, the characteristics emulated include download speed, upload speed, and minimum latency, or the minimum amount of time it takes to send a packet of data. The approximate values of some presets include:
 
 | Selection      | Download speed | Upload speed | Minimum latency (ms) |
 | -------------- | -------------- | ------------ | -------------------- |
@@ -57,7 +57,7 @@ The **{{glossary('TLS')}} handshake** is how long it took to set up a secure con
 
 **Waiting** is disk latency, the time it took for the server to complete its response. Disk latency used to be the main area of performance concern. However, server performance has improved as computer memory, or CPU, has improved. Depending on the complexity of what is needed from the server, this can still be an issue.
 
-**Receiving** is the time it takes to download the asset. The receiving time is determined by a combination of the network capacity and the asset file size. If the image been cached, this would have been nearly instantaneous. Had we throttled, receiving could have been 43seconds!
+**Receiving** is the time it takes to download the asset. The receiving time is determined by a combination of the network capacity and the asset file size. If the image been cached, this would have been nearly instantaneous. Had we throttled, receiving could have been 43 seconds!
 
 ## Measuring latency
 
