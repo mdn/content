@@ -15,15 +15,19 @@ Baseline features are described as either newly available in current stable brow
 
 ## Badges
 
-<!-- TODO: Show Baseline iconography, once it has been merged. -->
+![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](high.png)
 
 If you see a **widely available** Baseline badge, then you can trust that the feature has a consistent history of support in each of the Baseline browsers.
 A widely available feature has been in multiple browsers for years.
 It works with many browsers and devices, even ones that aren't yet up to date with the latest browser releases.
 
+![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
+
 If you see a **newly available** Baseline badge, then you can trust that the feature works in at least the latest stable version of each of the Baseline browsers and often more.
 A newly available feature works in the latest browsers, but may not work with older browsers and devices.
 Consider your site's audience carefully before using a newly available feature.
+
+![Grey widget with the cross: limited availability. Four browsers' logos, two with checkmarks, two with crosses.](low.png)
 
 If you see a **limited availability** badge, then that feature is _not_ Baseline.
 Do more research and testing with your site's users before relying on that feature, or wait for it to become Baseline.

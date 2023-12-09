@@ -766,10 +766,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.4.4.tgz#df1332e50063499a98ff3772c5b2fdadab65d2c0"
   integrity sha512-ykYCVBr3CjyKHiXefqyl3SuSpoib/5ViBZ2kjD18xbZFJpnSSJZg1deq+lirYN0vheKhj7BU+29qjAusfZalOA==
 
-"@mdn/yari@2.36.1":
-  version "2.36.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.36.1.tgz#b18dc402bc54c9462c63298104f12a3bcd97f464"
-  integrity sha512-2eeQapkw72IL8r+eeYqd3YJRnvxOCuZM4tQr7huBPPIP0W5bZRavVZw+H0ciuGD36uMB13qFgYwbY4IswiBQzA==
+"@mdn/yari@2.37.0":
+  version "2.37.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.37.0.tgz#b52763436cde6590803e8435994f60b78798c9ab"
+  integrity sha512-pwnriLocKgOQSWgbQl8n3k86I5xLR0qBTSpYMRA5cCFIiXOjCmT2IgT5rThiNK0dcXXPELjf/3xU7Ih1aiAZKQ==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -848,7 +848,7 @@
     unified "^11.0.4"
     unist-builder "^4.0.0"
     unist-util-visit "^5.0.0"
-    web-features "0.4.1"
+    web-features "0.5.0-alpha.1"
     web-specs "^2.75.1"
 
 "@mozilla/glean@2.0.5":
@@ -7757,10 +7757,10 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-web-features@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/web-features/-/web-features-0.4.1.tgz#8dc4c1bf169e67bc2f67c4e0152e2bd178a07e97"
-  integrity sha512-L+sP/1snkijvsef57Pn6+BILxDykeZQhlqS2JaYSqe+auajKbVgGzqJjknPpeGGDZVRz6Lfl88o0Mu3ZpD+luQ==
+web-features@0.5.0-alpha.1:
+  version "0.5.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/web-features/-/web-features-0.5.0-alpha.1.tgz#672577016c8741f325b40849170c594b48378408"
+  integrity sha512-8ZcitZ3YCrZMwCajqRCOE81cUNutGuRKwRh6pVSxDC4YFG/2Yl0lToqyBjs0p7y4EpU6BOXjMmofcTI2tUve7Q==
 
 web-namespaces@^2.0.0:
   version "2.0.1"
