@@ -6,6 +6,7 @@ page-type: web-api-instance-method
 status:
   - experimental
 browser-compat: api.KeyboardLayoutMap.has
+spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.has
 ---
 
 {{APIRef("Keyboard API")}}{{SeeCompatTable}}
