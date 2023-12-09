@@ -8,13 +8,13 @@ browser-compat: api.WebTransportBidirectionalStream.readable
 
 {{APIRef("WebTransport API")}}
 
-The **`readable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("ReadableStream")}} instance that can be used to reliably read incoming data.
+The **`readable`** read-only property of the {{domxref("WebTransportBidirectionalStream")}} interface returns a {{domxref("WebTransportReceiveStream")}} instance that can be used to reliably read incoming data.
 
 {{AvailableInWorkers}}
 
 ## Value
 
-A {{domxref("ReadableStream")}}.
+A {{domxref("WebTransportReceiveStream")}}.
 
 ## Examples
 
