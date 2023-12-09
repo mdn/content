@@ -521,7 +521,7 @@ If we wanted to apply the styling information to both columns, we could just inc
 
 Just like `colspan` and `rowspan`, `span` takes a unitless number value that specifies the number of columns you want the styling to apply to.
 
-> **Note:** When a column and table cells in that column are all styled separately then styles applied on the cells are painted on top of column styles. This is because [columns' layer is rendered first then cells' layer is rendered on top of the columns' layer](https://www.w3.org/TR/CSS22/tables.html#table-layers).
+> **Note:** When a column and table cells in that column are all styled separately then styles applied on the cells are painted on top of column styles. This is because [columns' layer is rendered first then cells' layer is rendered on top of the columns' layer](/en-US/docs/Web/HTML/Element/table#table_layers_and_transparency).
 
 ### Active learning: colgroup and col
 
