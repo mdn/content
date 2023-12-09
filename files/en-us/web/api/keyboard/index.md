@@ -9,7 +9,7 @@ browser-compat: api.Keyboard
 
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}{{securecontext_header}}
 
-The **`Keyboard`** interface of the [Keyboard API](/en-US/docs/Web/API/Keyboard_API) provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
+The **`Keyboard`** interface of the {{domxref("Keyboard API", "", "", "nocode")}} provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
 A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
