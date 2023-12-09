@@ -18,7 +18,7 @@ for (const [key, value] of mySearchParams.entries()) {
 }
 ```
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Constructor
 

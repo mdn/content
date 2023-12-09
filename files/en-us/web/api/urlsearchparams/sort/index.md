@@ -14,7 +14,7 @@ order is according to unicode code points of the keys. This method uses a stable
 algorithm (i.e. the relative order between key/value pairs with equal keys will be
 preserved).
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

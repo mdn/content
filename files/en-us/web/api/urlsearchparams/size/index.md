@@ -10,6 +10,8 @@ browser-compat: api.URLSearchParams.size
 
 The read-only **`URLSearchParams.size`** property indicates the total number of search parameter entries.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A number indicating the total number of search parameter entries in the {{domxref("URLSearchParams")}} object.
