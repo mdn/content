@@ -1,6 +1,6 @@
 ---
 title: "KeyboardLayoutMap: keys() method"
-short-title: keys
+short-title: keys()
 slug: Web/API/KeyboardLayoutMap/keys
 page-type: web-api-instance-method
 status:
