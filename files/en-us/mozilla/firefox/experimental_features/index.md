@@ -524,47 +524,6 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
   </tbody>
 </table>
 
-### :has() pseudo-class
-
-The [`:has()`](/en-US/docs/Web/CSS/:has) pseudo-class selects elements that contain the selectors passed as parameters.
-(See [Firefox bug 1771896](https://bugzil.la/1771896) and [Firefox bug 1853701](https://bugzil.la/1853701) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>119</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>103</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.has-selector.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### @font-face src feature checking
 
 The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.

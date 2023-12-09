@@ -61,7 +61,7 @@ or this (from {{DOMxRef("Document.hasStorageAccess()")}}):
 hasStorageAccess()
 ```
 
-When the method is static, for example {{DOMxRef("URL.createObjectURL()")}}, then provide its interface as well:
+When the method is static, for example {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}, then provide its interface as well:
 
 ```js-nolint
 URL.createObjectURL(object)
