@@ -11,7 +11,7 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
 
-> **Note:** The hgroup element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification prior to HTML 5 being finalized, but is still part of the WHATWG specification and is at least partially supported by most browsers.
+> **Note:** The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification but is still part of the WHATWG specification and is at least partially supported by most browsers.
 
 ## Attributes
 
