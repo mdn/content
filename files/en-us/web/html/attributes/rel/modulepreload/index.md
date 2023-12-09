@@ -32,7 +32,7 @@ If dependencies are automatically fetched, no additional events are fired in the
 
 ## Examples
 
-Consider the [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules) example ([live version](https://mdn.github.io/js-examples/module-examples/basic-modules/)), introduced in the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#basic_example_structure) guide.
+Consider the [basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) example ([live version](https://mdn.github.io/js-examples/module-examples/basic-modules/)), introduced in the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#basic_example_structure) guide.
 
 This has a file structure as shown below, consisting of the top level module `main.js`, which statically imports two dependency modules `modules/canvas.js` and `modules/square.js` using the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 

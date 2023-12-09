@@ -72,5 +72,7 @@ async function computeOutlineFormat() {
 
 {{Compat}}
 
+## See also
+
 - [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
 - {{cssxref("@font-face")}}

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#listbox
-  - https://w3c.github.io/aria-practices/#Listbox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/
 ---
 
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.
@@ -199,9 +199,9 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 ### More examples
 
-- [Scrollable Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
-- [Collapsible Dropdown Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html): Single-select collapsible listbox that expands when activated, similar to HTML {{HTMLElement('select')}} with the attribute `size="1"`.
-- [Example Listboxes with Rearrangeable Options](https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html): Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.
+- [Scrollable Listbox Example](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
+- [Listbox Example with Grouped Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): Single-select listbox with grouped options, similar to HTML {{HTMLElement('select')}} with the attribute `size` set to greater than `"1"` and options grouped with `optgroup` elements.
+- [Example Listboxes with Rearrangeable Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/): Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.
 
 ## Best practices
 
