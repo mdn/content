@@ -35,7 +35,7 @@ The Screen Wake Lock API should be used to keep the screen on to benefit usabili
 
 ### Extensions to other interfaces
 
-- {{domxref("Navigator.wakelock")}}
+- {{domxref("Navigator.wakelock")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.
 
 ## Examples
