@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.released
 ---
 
-{{APIRef("Screen Wake Lock API")}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`released`** read-only property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
