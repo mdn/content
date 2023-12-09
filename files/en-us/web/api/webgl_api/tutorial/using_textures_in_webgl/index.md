@@ -226,9 +226,10 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
+    out vec4 fragColor;
 
     void main(void) {
-      gl_FragColor = texture2D(uSampler, vTextureCoord);
+      fragColor = texture(uSampler, vTextureCoord);
     }
   `;
 ```

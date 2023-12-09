@@ -12,7 +12,7 @@ page-type: firefox-release-notes
 
 - A Box Model Highlighter has been implemented ([Firefox bug 663778](https://bugzil.la/663778)).
 - Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ([Firefox bug 757866](https://bugzil.la/757866)). Similarly all JS functions and objects are highlighted in the console output ([Firefox bug 584733](https://bugzil.la/584733)). More information about the console improvement can be found in this [blog post](https://web.archive.org/web/20150427210606/http://mihai.sucan.ro/mihai/blog/web-console-improvements-episode-30).
-- Support for {{domxref("console.count()")}} has been added ([Firefox bug 922208](https://bugzil.la/922208)).
+- Support for {{domxref("console/count_static", "console.count()")}} has been added ([Firefox bug 922208](https://bugzil.la/922208)).
 
 ### CSS
 
