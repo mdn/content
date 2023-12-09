@@ -6887,10 +6887,10 @@
 /en-US/docs/Tools/Debugger/Break_on_DOM_mutation	https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html
 /en-US/docs/Tools/Debugger/Debug_worker_threads	/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads
 /en-US/docs/Tools/Debugger/How_to	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/index.html
-/en-US/docs/Tools/Debugger/How_to/Black_box_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html
+/en-US/docs/Tools/Debugger/How_to/Black_box_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignoring_sources/index.html
 /en-US/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	https://firefox-source-docs.mozilla.org/devtools-user/debugger/break_on_dom_mutation/index.html
 /en-US/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
-/en-US/docs/Tools/Debugger/How_to/Ignore_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html
+/en-US/docs/Tools/Debugger/How_to/Ignore_a_source	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignoring_sources/index.html
 /en-US/docs/Tools/Debugger/How_to/Search	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html
 /en-US/docs/Tools/Debugger/How_to/Search_and_filter	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/search/index.html
 /en-US/docs/Tools/Debugger/How_to/Set_Watch_Expressions	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_watch_expressions/index.html
@@ -7561,7 +7561,6 @@
 /en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode.parameters	/en-US/docs/Web/API/AudioWorkletNode/parameters
 /en-US/docs/Web/API/AudioWorkletNode/onprocessorerror	/en-US/docs/Web/API/AudioWorkletNode/processorerror_event
 /en-US/docs/Web/API/AudioWorkletNodeOptions	/en-US/docs/Web/API/AudioWorkletNode/AudioWorkletNode
-/en-US/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/en-US/docs/Web/API/AudioWorkletProcessor
 /en-US/docs/Web/API/BackgroundFetchRegistration/onprogress	/en-US/docs/Web/API/BackgroundFetchRegistration/progress_event
 /en-US/docs/Web/API/BarcodeDetector/getSupportedFormats	/en-US/docs/Web/API/BarcodeDetector/getSupportedFormats_static
 /en-US/docs/Web/API/Barcode_Detector_API	/en-US/docs/Web/API/Barcode_Detection_API
@@ -9632,6 +9631,7 @@
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
 /en-US/docs/Web/API/SVGStylable	/en-US/docs/Web/API/SVGElement
 /en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Attribute/href
+/en-US/docs/Web/API/Sanitizer/sanitizeFor	/en-US/docs/Web/API/Sanitizer
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/ScreenDetailed/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/ScreenDetailed/availTop
@@ -11033,7 +11033,7 @@
 /en-US/docs/Web/Apps/Build/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Build/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
 /en-US/docs/Web/Apps/Build/Performance/The_performance_of_CSS_and_JavaScript_animations	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
-/en-US/docs/Web/Apps/Build/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/Build/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/Build/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 /en-US/docs/Web/Apps/Design/Graphic_design_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/Design/Graphics_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
@@ -11067,7 +11067,7 @@
 /en-US/docs/Web/Apps/Fundamentals/Performance/CSS_JavaScript_animation_performance	/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance	/en-US/docs/Web/Performance/Optimizing_startup_performance
 /en-US/docs/Web/Apps/Fundamentals/Performance/Performance_fundamentals	/en-US/docs/Web/Performance/Fundamentals
-/en-US/docs/Web/Apps/Fundamentals/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/Fundamentals/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/Fundamentals/User_notifications/Checking_when_a_deadline_is_due	/en-US/docs/Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 /en-US/docs/Web/Apps/Graphics_and_UX/graphic_design_for_responsive_sites	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/JavaScript_API/navigator.mozApps.mgmt.addEventListener	/en-US/docs/Web/API/EventTarget/addEventListener
@@ -11108,7 +11108,7 @@
 /en-US/docs/Web/Apps/Progressive/Safe	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Apps/Quickstart/App_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /en-US/docs/Web/Apps/Tools_and_frameworks/App_developer_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/en-US/docs/Web/Apps/User_input_methods	/en-US/docs/Web/Guide/User_input_methods
+/en-US/docs/Web/Apps/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Apps/app_layout/Mobile_first	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps/app_layout/responsive_design_building_blocks	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Apps_clone	/en-US/docs/Web/Progressive_web_apps
@@ -12177,6 +12177,7 @@
 /en-US/docs/Web/Guide/Terminology	/en-US/docs/Glossary
 /en-US/docs/Web/Guide/Touch_events	/en-US/docs/Web/API/Touch_events
 /en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/en-US/docs/Web/API/Page_Visibility_API
+/en-US/docs/Web/Guide/User_input_methods	/en-US/docs/Learn/Forms/User_input_methods
 /en-US/docs/Web/Guide/Using_FormData_Objects	/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects
 /en-US/docs/Web/Guide/WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/Web/Guide/Writing_forward-compatible_websites	/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript

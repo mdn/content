@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaReadOnly
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`ariaReadOnly`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) attribute, which indicates that the element is not editable, but is otherwise operable.
 
