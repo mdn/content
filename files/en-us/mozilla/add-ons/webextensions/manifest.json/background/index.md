@@ -100,7 +100,7 @@ The `background` key is an object that must have one of these properties (for mo
       <td><code>service_worker</code></td>
       <td>
         <p>
-          Specify a JavaScript file as the extension [service worker](/en-US/docs/Web/API/Service_Worker_API). A service worker is a background script that acts as the extension's main event handler.
+          Specify a JavaScript file as the extension <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a>. A service worker is a background script that acts as the extension's main event handler.
         </p>
       </td>
     </tr>

@@ -94,7 +94,7 @@ To install Angular on your local system, you need the following:
 
 - **Node.js**
 
-  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/about/releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
+  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
 
   For more information on installing Node.js, see [nodejs.org](https://nodejs.org).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
