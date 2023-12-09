@@ -6,12 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`resolve()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
 directory names from the parent handle to the specified child entry, with the name of
 the child entry as the last array item.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

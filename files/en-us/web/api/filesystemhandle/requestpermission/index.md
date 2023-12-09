@@ -8,11 +8,13 @@ status:
 browser-compat: api.FileSystemHandle.requestPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
 file handle.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

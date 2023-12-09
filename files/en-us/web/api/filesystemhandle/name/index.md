@@ -6,11 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.name
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`name`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
 handle.
+
+{{AvailableInWorkers}}
 
 ## Value
 

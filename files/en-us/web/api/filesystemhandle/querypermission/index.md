@@ -8,11 +8,13 @@ status:
 browser-compat: api.FileSystemHandle.queryPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
 current handle.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

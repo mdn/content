@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.createSyncAccessHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`createSyncAccessHandle()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a {{domxref('FileSystemSyncAccessHandle')}} object
@@ -14,6 +14,8 @@ that can be used to synchronously read from and write to a file. The synchronous
 but it is only usable inside dedicated [Web Workers](/en-US/docs/Web/API/Web_Workers_API) for files within the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system).
 
 Creating a {{domxref('FileSystemSyncAccessHandle')}} takes an exclusive lock on the file associated with the file handle. This prevents the creation of further {{domxref('FileSystemSyncAccessHandle')}}s or {{domxref('FileSystemWritableFileStream')}}s for the file until the existing access handle is closed.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

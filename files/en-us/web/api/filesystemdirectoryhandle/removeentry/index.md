@@ -6,11 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.removeEntry
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`removeEntry()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface attempts to remove an entry if the
 directory handle contains a file or directory called the name specified.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

@@ -6,12 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.getDirectoryHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`getDirectoryHandle()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a
 {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name
 within the directory handle on which the method is called.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

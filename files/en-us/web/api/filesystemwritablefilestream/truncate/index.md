@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.truncate
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`truncate()`** method of the {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with the stream to the specified size in bytes.
 
@@ -19,6 +19,8 @@ This ensures that subsequent writes do not error.
 
 No changes are written to the actual file on disk until the stream has been closed.
 Changes are typically written to a temporary file instead.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

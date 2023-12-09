@@ -6,13 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.kind
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`kind`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the type of entry. This is
 `'file'` if the associated entry is a file or `'directory'`. It is
 used to distinguish files from directories when iterating over the contents of a
 directory.
+
+{{AvailableInWorkers}}
 
 ## Value
 

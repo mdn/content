@@ -5,9 +5,11 @@ page-type: web-api-interface
 browser-compat: api.FileSystemHandle
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`FileSystemHandle`** interface of the {{domxref('File System API')}} is an object which represents a file or directory entry. Multiple handles can represent the same entry. For the most part you do not work with `FileSystemHandle` directly but rather its child interfaces {{domxref('FileSystemFileHandle')}} and {{domxref('FileSystemDirectoryHandle')}}.
+
+{{AvailableInWorkers}}
 
 ## Interfaces based on FileSystemHandle
 

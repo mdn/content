@@ -6,12 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemWritableFileStream.write
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`write()`** method of the {{domxref("FileSystemWritableFileStream")}} interface writes content into the file the method is called on, at the current file cursor offset.
 
 No changes are written to the actual file on disk until the stream has been closed.
 Changes are typically written to a temporary file instead. This method can also be used to seek to a byte point within the stream and truncate to modify the total bytes the file contains.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

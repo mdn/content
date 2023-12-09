@@ -6,12 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.values
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`values()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
 for the iteration of the value of the entries within the `FileSystemDirectoryHandle`
 on which this method is called.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
