@@ -179,7 +179,7 @@ The program is executed from a binary format, which was generated from the origi
 
 JavaScript is a lightweight interpreted programming language.
 The web browser receives the JavaScript code in its original text form and runs the script from that.
-From a technical standpoint, most modern JavaScript interpreters actually use a technique called **just-in-time compiling** to improve performance; the JavaScript source code gets compiled into a faster, binary format while the script is being used, so that it can be run as quickly as possible.
+From a technical standpoint, most modern JavaScript interpreters actually use a technique called **just-in-time compiling** to improve performance; the JavaScript source code gets compiled into a faster binary format while the script is being used, so that it can be run as quickly as possible.
 However, JavaScript is still considered an interpreted language, since the compilation is handled at run time, rather than ahead of time.
 
 There are advantages to both types of language, but we won't discuss them right now.
