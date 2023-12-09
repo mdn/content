@@ -14,6 +14,8 @@ matchers. These patterns can be matched against URLs or individual URL
 components. The URL Pattern API is used by the {{domxref("URLPattern")}}
 interface.
 
+{{AvailableInWorkers}}
+
 ## Concepts and usage
 
 The pattern syntax is based on the syntax from the
