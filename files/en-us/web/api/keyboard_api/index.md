@@ -66,6 +66,9 @@ The codes passed {{domxref('Keyboard.lock')}} and the various methods of the {{d
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 - {{domxref('KeyboardLayoutMap')}} {{experimental_inline}}
   - : A map-like object with functions for retrieving the string associated with specific physical keys.
+
+### Extensions to other interfaces
+
 - {{domxref('navigator.keyboard')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
