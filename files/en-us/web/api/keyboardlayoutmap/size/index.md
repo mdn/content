@@ -21,6 +21,16 @@ The property is otherwise the same as {{jsxref("Map.prototype.size")}}.
 
 A number.
 
+## Examples
+
+The following example get the count of the location- or layout-specific string and its associated keyboard code on an English QWERTY keyboard.
+
+```js
+navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  console.log(keyboardLayoutMap.size)
+});
+```
+
 ## Specifications
 
 {{Specifications}}

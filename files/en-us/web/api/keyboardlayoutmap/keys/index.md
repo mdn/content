@@ -19,6 +19,18 @@ The method is otherwise the same as {{jsxref("Map.prototype.keys()")}}.
 
 A new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object.
 
+## Examples
+
+The following example iterates every keyboard code on an English QWERTY keyboard.
+
+```js
+navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  for (const code of keyboardLayoutMap.keys()) {
+    console.log(`${code} keyboard code`)
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}

@@ -36,12 +36,10 @@ The value of the specified key.
 
 ## Examples
 
-The following example demonstrates how to get the location- or layout-specific string
-associated with the key that corresponds to the 'W' key on an English QWERTY keyboard.
+The following example demonstrates how to get the location- or layout-specific string associated with the keyboard code that corresponds to the 'W' key on an English QWERTY keyboard.
 
 ```js
-const keyboard = navigator.keyboard;
-keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   const upKey = keyboardLayoutMap.get("KeyW");
   window.alert(`Press ${upKey} to move up.`);
 });

@@ -45,6 +45,18 @@ forEach(callbackFn, thisArg)
 
 None ({{jsxref("undefined")}}).
 
+## Examples
+
+The following example iterates every location- or layout-specific string and its associated keyboard code on an English QWERTY keyboard.
+
+```js
+navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
+  keyboardLayoutMap.forEach((key, code) => {
+    console.log(`${code} keyboard code represents ${key} key`)
+  })
+});
+```
+
 ## Specifications
 
 {{Specifications}}
