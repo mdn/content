@@ -22,8 +22,10 @@ A list of valid keys is found in the [UI Events KeyboardEvent code Values](https
 
 ## Instance methods
 
+- `KeyboardLayoutMap.[@@iterator]()` {{experimental_inline}}
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the `[key, value]` pairs.
 - {{domxref('KeyboardLayoutMap.entries()')}} {{experimental_inline}}
-  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a `for-in` loop enumerates properties in the prototype chain as well).
+  - : Returns a new [Iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) object that contains the `[key, value]` pairs.
 - {{domxref('KeyboardLayoutMap.forEach()')}} {{experimental_inline}}
   - : Executes a provided function once for each element of `KeyboardLayoutMap`.
 - {{domxref('KeyboardLayoutMap.get()')}} {{experimental_inline}}
