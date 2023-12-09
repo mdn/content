@@ -23,7 +23,7 @@ The `<relative-size>` data type is defined using a keyword value chosen from the
 
   - : A relative size one size smaller than the inherited size.
 
-- `bigger`
+- `larger`
 
   - : A relative size one size larger than the inherited size.
 

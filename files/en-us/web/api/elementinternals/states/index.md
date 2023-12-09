@@ -8,7 +8,7 @@ status:
 browser-compat: api.ElementInternals.states
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`states`** read-only property of the {{domxref("ElementInternals")}} interface returns a {{domxref("CustomStateSet")}} representing the possible states of the custom element.
 
