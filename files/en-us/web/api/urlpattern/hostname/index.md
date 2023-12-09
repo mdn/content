@@ -10,7 +10,7 @@ browser-compat: api.URLPattern.hostname
 
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
-The **`hostname`** property of the {{domxref("URLPattern")}} interface is a
+The **`hostname`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the hostname part
 of a URL. This value may differ from the input to the constructor due to
 normalization.

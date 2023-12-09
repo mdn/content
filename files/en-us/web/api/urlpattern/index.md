@@ -23,28 +23,28 @@ page: {{domxref("URL Pattern API", "", "", "nocode")}}.
 
 ## Instance properties
 
-- {{domxref("URLPattern.hash", "hash")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _hash_ part
     of a URL.
-- {{domxref("URLPattern.hostname", "hostname")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _hostname_
     part of a URL.
-- {{domxref("URLPattern.password", "password")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.password", "password")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _password_
     part of a URL.
-- {{domxref("URLPattern.pathname", "pathname")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.pathname", "pathname")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _pathname_
     part of a URL.
-- {{domxref("URLPattern.port", "port")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.port", "port")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _port_ part
     of a URL.
-- {{domxref("URLPattern.protocol", "protocol")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.protocol", "protocol")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _protocol_
     part of a URL.
-- {{domxref("URLPattern.search", "search")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.search", "search")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _search_ part
     of a URL.
-- {{domxref("URLPattern.username","username")}} {{Experimental_Inline}}
+- {{domxref("URLPattern.username","username")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing a pattern to match the _username_
     part of a URL.
 
