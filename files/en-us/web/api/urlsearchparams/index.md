@@ -27,7 +27,7 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## Instance properties
 
-- {{domxref("URLSearchParams.size", 'size')}}
+- {{domxref("URLSearchParams.size", 'size')}} {{ReadOnlyInline}}
   - : Indicates the total number of search parameter entries.
 
 ## Instance methods
