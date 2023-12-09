@@ -8,11 +8,11 @@ browser-compat: api.HTMLMediaElement.remote
 
 {{APIRef("Remote Playback API")}}
 
-The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} interface return a {{domxref("RemotePlayback")}} object instance associated with the media element. This is the entry point of the {{domxref("Remote Playback API", "", "", "nocode")}}.
+The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} interface returns the {{domxref("RemotePlayback")}} object associated with the media element. The `RemotePlayback` object allow the control of remote devices playing the media.
 
 ## Value
 
-A {{domxref("RemotePlayback")}} object instance.
+The associated {{domxref("RemotePlayback")}} object.
 
 ## Example
 
@@ -21,7 +21,7 @@ const el = document.createElement("audio");
 const remotePlayback = el.remote;
 
 remotePlayback.watchAvailability((availability) => {
-  // do something when the availability changes
+  // Do something when the availability changes
 });
 ```
 
