@@ -274,7 +274,7 @@ You can style the default controls with properties that affect the block as a si
 
 To get a consistent look and feel across browsers, you'll need to create custom controls; these can be marked up and styled in whatever way you want, and then JavaScript can be used along with the {{domxref("HTMLMediaElement")}} API to wire up their functionality.
 
-[Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
+[Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
 
 ### Detecting addition and removal of tracks
 
@@ -467,4 +467,4 @@ Also it's a good practice to provide some content (such as the direct download l
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
 - [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
