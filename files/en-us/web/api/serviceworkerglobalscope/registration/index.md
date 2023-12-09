@@ -14,11 +14,10 @@ The **`registration`** read-only property of the {{domxref("ServiceWorkerGlobalS
 
 A {{domxref("ServiceWorkerRegistration")}} object.
 
-## Examples
+## Syntax
 
-```js
-self.registration;
-```
+```js-nolint
+self.registration
 
 ## Specifications
 

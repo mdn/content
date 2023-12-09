@@ -14,11 +14,10 @@ The **`serviceWorker`** read-only property of the {{domxref("ServiceWorkerGlobal
 
 A {{domxref("ServiceWorker")}} object.
 
-## Examples
+## Syntax
 
-```js
-self.serviceWorker;
-```
+```js-nolint
+self.serviceWorker
 
 ## Specifications
 
