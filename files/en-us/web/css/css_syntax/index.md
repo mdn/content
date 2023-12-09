@@ -26,7 +26,7 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 - [invalid](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
 - [style rule](/en-US/docs/Web/API/CSSStyleRule)
 
-## Glossary terms
+### Glossary terms
 
 - {{glossary("CSS_Descriptor", "CSS descriptor")}}
 - {{glossary("parse")}}
