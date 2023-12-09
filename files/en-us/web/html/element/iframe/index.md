@@ -52,12 +52,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Indicates when the browser should load the iframe:
 
     - `eager`
-      - : Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
+      - : Load the iframe immediately on page load (this is the default value).
     - `lazy`
 
-      - : Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
-        The intent is to avoid the network and storage bandwidth needed until its reasonably certain that it will be needed.
-        This improves the performance and cost in most typical use cases.
+      - : Defer loading of the iframe until it reaches a calculated distance from the {{glossary("visual viewport")}}, as defined by the browser.
+        The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
+        This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
         > **Note:** Loading is only deferred when JavaScript is enabled.
         > This is an anti-tracking measure.

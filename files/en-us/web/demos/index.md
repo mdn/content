@@ -14,7 +14,7 @@ If you know of a good demonstration or application of open web technology, pleas
 
 - [Blob Sallad: an interactive blob using JavaScript and canvas](https://www.blobsallad.se/) ([code demos)](https://web.archive.org/web/20190807191003/https://blobsallad.se/article/)
 - [miniPaint: Image editor](https://viliusle.github.io/miniPaint/) ([source code](https://github.com/viliusle/miniPaint))
-- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/scanlime/zenphoton))
+- [Zen Photon Garden](https://zenphoton.com) ([source code](https://github.com/billyoc/zenphoton))
 - [Multi touch in canvas demo](https://maximumroulette.com/) ([source code](https://github.com/zlatnaspirala/multi-touch-canvas-handler))
 
 ### SVG

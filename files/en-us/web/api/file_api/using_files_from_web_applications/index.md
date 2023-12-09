@@ -4,7 +4,7 @@ slug: Web/API/File_API/Using_files_from_web_applications
 page-type: guide
 ---
 
-{{APIRef("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 Using the File API, web content can ask the user to select local files and then read the contents of those files. This selection can be done by either using an HTML `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` element or by drag and drop.
 
@@ -380,7 +380,11 @@ Here is a live demo of the code above:
 
 ## Example: Uploading a user-selected file
 
-Another thing you might want to do is let the user upload the selected file or files (such as the images selected using the previous example) to a server. This can be done asynchronously very easily.
+This example shows how to let the user upload files (such as the images selected using the previous example) to a server.
+
+> **Note:** It's usually preferable to make HTTP requests using the [Fetch API](/en-US/docs/Web/API/Fetch_API) instead of {{domxref("XMLHttpRequest")}}. However, in this case we want to show the user the upload progress, and this feature is still not supported by the Fetch API, so the example uses `XMLHttpRequest`.
+>
+> Work to track standardization of progress notifications using the Fetch API is at <https://github.com/whatwg/fetch/issues/607>.
 
 ### Creating the upload tasks
 
@@ -576,4 +580,4 @@ URL.revokeObjectURL(obj_url);
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("URL")}}
 - {{DOMxRef("XMLHttpRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

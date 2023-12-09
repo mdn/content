@@ -17,7 +17,7 @@ Firefox 11 shipped on March 13, 2012. This article provides information about th
 ### DOM
 
 - The {{domxref("element.outerHTML")}} property is now supported on HTML elements.
-- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest).
+- [`XMLHttpRequest` supports HTML parsing](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
 - Removed support for using the {{domxref("XMLHttpRequest")}} `responseType` and `withCredentials` attributes when performing synchronous requests. Attempting to do so throws an `NS_ERROR_DOM_INVALID_ACCESS_ERR` exception. This change has been proposed to the W3C for standardization.
 - The new {{domxref("window.navigator.mozVibrate()")}} method lets you vibrate the device where supported; this is implemented as `mozVibrate()` on Gecko.
 - {{domxref("window.navigator.mozApps")}} returns an [`Apps`](/en-US/docs/DOM/Apps) object you can use to install and manage [open web applications](/en-US/docs/Web/Progressive_web_apps).

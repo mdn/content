@@ -12,7 +12,7 @@ The **`StaticRange()`** constructor
 creates a new {{domxref("StaticRange")}} object representing a span of content within
 the DOM.
 
-This constructor includes properties identifying the standard and end positions of
+This constructor includes properties identifying the start and end positions of
 the range as well as a Boolean indicating whether or not the range is
 **collapsed** (that is, empty).
 
