@@ -1363,7 +1363,7 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
   </tbody>
 </table>
 
-> **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+> **Note:** On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
 
 ### XBM (X Window System Bitmap file)
 

@@ -21,6 +21,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("WorkerNavigator.deviceMemory")}} {{ReadOnlyInline}}
+  - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
 - {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -45,6 +47,8 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serviceWorker")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
 - {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}}

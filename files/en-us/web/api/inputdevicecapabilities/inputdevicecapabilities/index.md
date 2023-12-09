@@ -8,7 +8,7 @@ status:
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
 
-{{SeeCompatTable}}
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The `InputDeviceCapabilities()` constructor creates a new
 {{domxref("InputDeviceCapabilities")}} object provides information about the physical

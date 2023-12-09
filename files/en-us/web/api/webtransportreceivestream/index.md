@@ -7,9 +7,9 @@ status:
 browser-compat: api.WebTransportReceiveStream
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The `WebTransportReceiveStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a {{domxref("ReadableStream")}} that can be used to read from an incoming unidirectional or bidirectional {{domxref("WebTransport")}} stream from a server.
+The `WebTransportReceiveStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a {{domxref("ReadableStream")}} that can be used to read from an incoming unidirectional or bidirectional {{domxref("WebTransport")}} stream.
 
 The stream is a [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams) of [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), and can be consumed using either a BYOB reader ([`ReadableStreamBYOBReader`](/en-US/docs/Web/API/ReadableStreamBYOBReader)) or the default reader ([`ReadableStreamDefaultReader`](/en-US/docs/Web/API/ReadableStreamDefaultReader)).
 
