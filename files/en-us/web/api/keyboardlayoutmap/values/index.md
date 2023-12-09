@@ -26,7 +26,7 @@ The following example iterates every location- or layout-specific string on an E
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   for (const key of keyboardLayoutMap.values()) {
-    console.log(`${key} key`)
+    console.log(`${key} key`);
   }
 });
 ```

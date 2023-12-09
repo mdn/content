@@ -26,7 +26,7 @@ The following example iterates every keyboard code on an English QWERTY keyboard
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
   for (const code of keyboardLayoutMap.keys()) {
-    console.log(`${code} keyboard code`)
+    console.log(`${code} keyboard code`);
   }
 });
 ```

@@ -27,7 +27,7 @@ The following example get the count of the location- or layout-specific string a
 
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  console.log(keyboardLayoutMap.size)
+  console.log(keyboardLayoutMap.size);
 });
 ```
 

@@ -41,7 +41,7 @@ The following example check whether the location- or layout-specific string asso
 
 ```js
 navigator.keyboard.getLayoutMap().then((keyboardLayoutMap) => {
-  console.log(keyboardLayoutMap.has('KeyW'))
+  console.log(keyboardLayoutMap.has("KeyW"));
 });
 ```
 
