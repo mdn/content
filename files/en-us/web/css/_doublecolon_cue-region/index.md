@@ -3,6 +3,7 @@ title: "::cue-region"
 slug: Web/CSS/::cue-region
 page-type: css-pseudo-element
 browser-compat: css.selectors.cue-region
+spec-urls: https://w3c.github.io/webvtt/#the-cue-region-pseudo-element
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -70,7 +71,7 @@ Rules whose selectors include this element may only use the following CSS proper
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 

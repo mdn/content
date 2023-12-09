@@ -105,9 +105,9 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the user initiates a paste action through the browser's user interface.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}}
   - : Fired when an element does not satisfy its constraints during constraint validation.
-- {{DOMxRef("HTMLElement.beforetoggle", "beforetoggle")}}
+- {{DOMxRef("HTMLElement/beforetoggle_event", "beforetoggle")}}
   - : Fired when the element is a popover, before it is hidden or shown.
-- {{DOMxRef("HTMLElement.toggle", "toggle")}}
+- {{DOMxRef("HTMLElement/toggle_event", "toggle")}}
   - : Fired when the element is a popover, just after it is hidden or shown.
 
 ### Animation events
