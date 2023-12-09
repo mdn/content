@@ -11,7 +11,7 @@ page-type: tutorial-chapter
 
 In the previous section, we wrote the HTML and CSS for CycleTracker, creating a static version of our web app. In this section, we will write the JavaScript required to convert static HTML into a fully functional web application.
 
-If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `styles.css`.
+If you haven't already done so, copy the [HTML](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality/index.html) and [CSS](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality/style.css) and save them to files called `index.html` and `style.css`.
 
 The last line in the HTML file calls the `app.js` JavaScript file. This is the script we are creating in this section. In this lesson, we will be writing client-side JavaScript code to capture form submissions, locally store submitted data, and populate the past-periods section.
 
@@ -311,7 +311,7 @@ function formatDate(dateString) {
 renderPastPeriods();
 ```
 
-You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
+You can try the fully functioning [CycleTracker period tracking web app](https://mdn.github.io/pwa-examples/cycletracker/javascript_functionality) and view the [web app source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/javascript_functionality) on GitHub. Yes, it works, but it's not a yet PWA.
 
 ## Up next
 

@@ -5,7 +5,7 @@ slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.AudioWorkletProcessor.parameterDescriptors
+spec-urls: https://webaudio.github.io/web-audio-api/#audioworkletprocess-callback-parameters
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
@@ -44,10 +44,6 @@ See [`AudioWorkletNode.parameters`](/en-US/docs/Web/API/AudioWorkletNode/paramet
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

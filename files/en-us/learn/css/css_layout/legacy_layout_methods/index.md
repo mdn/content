@@ -208,7 +208,7 @@ Our next step is to create a rule for the class `.col`, floating it left, giving
   float: left;
   margin-left: 20px;
   width: 60px;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
@@ -327,7 +327,7 @@ Next, update the fourth CSS rule (with the `.col` selector) like so:
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 
@@ -524,7 +524,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 ```
 

@@ -11,7 +11,3 @@ Below you'll find links to the developer release notes for every Firefox release
 {{ListSubpages("",1,1,1)}}
 
 Whew! That's a lot of Firefoxen!
-
-## See also
-
-- [Thunderbird developer release notes](/en-US/docs/Mozilla/Thunderbird/Releases)
