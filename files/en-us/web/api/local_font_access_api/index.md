@@ -5,6 +5,7 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.Window.queryLocalFonts
+spec-urls: https://wicg.github.io/local-font-access/
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}

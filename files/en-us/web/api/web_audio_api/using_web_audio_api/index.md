@@ -20,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics).
+[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Browser support
 
@@ -251,7 +251,7 @@ The [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/vo
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

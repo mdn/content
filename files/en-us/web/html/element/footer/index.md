@@ -1,5 +1,5 @@
 ---
-title: <footer>
+title: "<footer>: The Footer element"
 slug: Web/HTML/Element/footer
 page-type: html-element
 browser-compat: html.elements.footer
