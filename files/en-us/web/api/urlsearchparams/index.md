@@ -32,6 +32,8 @@ for (const [key, value] of mySearchParams.entries()) {
 
 ## Instance methods
 
+- `URLSearchParams.[@@iterator]()`
+  - : Returns an {{jsxref("Iteration_protocols","iterator")}} allowing iteration through all key/value pairs contained in this object in the same order as they appear in the query string.
 - {{domxref("URLSearchParams.append()")}}
   - : Appends a specified key/value pair as a new search parameter.
 - {{domxref("URLSearchParams.delete()")}}
