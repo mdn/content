@@ -20,6 +20,7 @@ The {{domxref("Clients")}} object associated with the specific worker.
 
 ```js-nolint
 self.clients
+```
 
 ## Specifications
 

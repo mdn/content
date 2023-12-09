@@ -18,6 +18,7 @@ A {{domxref("ServiceWorker")}} object.
 
 ```js-nolint
 self.serviceWorker
+```
 
 ## Specifications
 

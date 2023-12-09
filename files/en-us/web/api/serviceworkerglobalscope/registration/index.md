@@ -18,6 +18,7 @@ A {{domxref("ServiceWorkerRegistration")}} object.
 
 ```js-nolint
 self.registration
+```
 
 ## Specifications
 
