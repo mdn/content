@@ -31,7 +31,7 @@ can contain:
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
 
-## URL Pattern API interfaces
+## Interfaces
 
 The URL Pattern API only has a single related interface:
 
