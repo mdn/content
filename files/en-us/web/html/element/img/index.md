@@ -111,7 +111,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
 
-- `fetchpriority` {{experimental_inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 

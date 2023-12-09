@@ -259,6 +259,26 @@ The individual pages for the different types of value that `display` can have se
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
+### Animating display
+
+[Supporting browsers](#browser_compatibility) animate `display` with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). This generally means that the property will flip between two values 50% through animating between the two.
+
+There is one exception, which is when animating to or from `display: none`. In this case, the browser will flip between the two values so that the animated content is shown for the entire animation duration. So for example:
+
+- When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
+- When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
+
+This behavior is useful for creating entry/exit animations where you want to for example remove a container from the DOM with `display: none`, but have it fade out with [`opacity`](/en-US/docs/Web/CSS/opacity) rather than disappearing immediately.
+
+When animating `display` with [CSS animations](/en-US/docs/Web/CSS/CSS_animations), you need to provide the starting `display` value in an explicit keyframe (for example using `0%` or `from`). See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations) for an example.
+
+When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), two additional features are needed:
+
+- [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) provides starting values for properties you want to transition from when the animated element is first shown. This is needed to avoid unexpected behavior. By default, CSS transitions are not triggered on an element's first style update or when the `display` type changes from `none` to another type.
+- [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set on the {{cssxref("transition-property")}} declaration (or the {{cssxref("transition")}} shorthand) to enable `display` transitions.
+
+For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples) pages.
+
 ## Accessibility concerns
 
 ### display: none
