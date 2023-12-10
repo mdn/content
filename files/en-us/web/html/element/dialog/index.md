@@ -259,7 +259,7 @@ jsCloseBtn.addEventListener("click", (e) => {
 
 {{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
 
-From the above output we can see it is not possible close the dialog using the `normal-cancel` button. But the dialog can be closed if we bypass the form validation using `formnovalidate` attribute on the cancel button. From JavaScript, `dialog.close()` can also be used to close such dialog.
+From the output, we see it is impossible to close the dialog using the _Normal close_ button. But the dialog can be closed if we bypass the form validation using the `formnovalidate` attribute on the _Cancel_ button. Programmatically, `dialog.close()` will also close such dialog.
 
 ### Animating dialogs
 
