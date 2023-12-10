@@ -49,9 +49,9 @@ In addition, the Notifications API spec specifies a number of additions to the [
 
 ### Extensions to other interfaces
 
-- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
+- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}} event
   - : Occurs when a user clicks on a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
+- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} event
   - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
