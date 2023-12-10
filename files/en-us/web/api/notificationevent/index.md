@@ -7,9 +7,11 @@ browser-compat: api.NotificationEvent
 
 {{APIRef("Web Notifications")}}
 
-The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", "", "nocode")}} represents a notification click event or close event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
+The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", "", "nocode")}} represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
+
+> **Note**: Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
 
 {{InheritanceDiagram}}
 

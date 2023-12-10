@@ -45,7 +45,7 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("Notification")}}
   - : Defines a notification object.
 - {{domxref("NotificationEvent")}}
-  - : Represents a notification click event or close event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
+  - : Represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
 ### Extensions to other interfaces
 
