@@ -10,7 +10,9 @@ browser-compat: api.TaskSignal.any_static
 
 {{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}
 
-The **`TaskSignal.any()`** static method takes an iterable of abort signals and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted. The {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted. The {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter, which can either be a a string which is one of `user-blocking`, `user-visible` and `background` or a `TaskSignal`, in which case the new signal's `priority` will change along with this signal.
+The **`TaskSignal.any()`** static method takes an iterable of {{domxref("AbortSignal")}} objects and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted.
+
+When the task signal is aborted, its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted.
 
 ## Syntax
 
@@ -26,11 +28,20 @@ TaskSignal.any(signals, init)
 - `init` {{optional_inline}}
   - : Contains optional configuration parameters. Currently only one property is defined:
     - `priority` {{optional_inline}}
-      - : A string which is one of `user-blocking`, `user-visible` and `background`, or an {{domxref("AbortSignal")}} (since {{domxref("TaskSignal")}} inherits from {{domxref("AbortSignal")}}, so a {{domxref("TaskSignal")}} can also be accepted).
+      - : One of the following:
+        - A string which is one of `user-blocking`, `user-visible` and `background`.
+        - A {{domxref("TaskSignal")}}.
 
 ### Return value
 
-A `TaskSignal` instance, its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the first signal that is aborted, and its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the specific `priority` parameter.
+A `TaskSignal` instance. It will be aborted when the first signal passed into `signals` is aborted. When this happens:
+
+- Its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the signal that caused this signal to abort.
+
+- Its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the `priority` parameter:
+
+  - If the `priority` parameter was a string, it will be the value of the string.
+  - If the `priority` parameter was a `TaskSignal`, it will be the value of that signal's `priority`.
 
 ## Examples
 
