@@ -95,3 +95,7 @@ try {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}
