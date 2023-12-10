@@ -290,4 +290,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
