@@ -1,25 +1,25 @@
 ---
-title: "ServiceWorkerContainer: message event"
-short-title: message
-slug: Web/API/ServiceWorkerContainer/message_event
+title: "ServiceWorkerContainer: messageerror event"
+short-title: messageerror
+slug: Web/API/ServiceWorkerContainer/messageerror_event
 page-type: web-api-event
-browser-compat: api.ServiceWorkerContainer.message_event
+browser-compat: api.ServiceWorkerContainer.messageerror_event
 ---
 
 {{APIRef("Service Workers API")}}
 
-The **`message`** event is used in a page controlled by a service worker to receive messages from the service worker.
+The **`messageerror`** event is fired to the {{domxref("ServiceWorkerContainer")}} when an incoming message sent to the associated worker can't be deserialized.
 
 This event is not cancelable and does not bubble.
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Use the event name in methods like {{domxref("EventTarget.addEventListener()", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener("message", (event) => {});
+addEventListener("messageerror", (event) => {});
 
-onmessage = (event) => {};
+onmessageerror = (event) => {};
 ```
 
 ## Event type
@@ -45,16 +45,16 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-In this example the service worker get the client's ID from a [`fetch`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) event and then sends it a message using [`Client.postMessage`](/en-US/docs/Web/API/Client/postMessage):
+In this example the service worker get the client's ID from a {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event and then sends it a message using {{domxref("Client.postMessage")}}:
 
 ```js
 // service-worker.js
 async function messageClient(clientId) {
-  const client = await clients.get(clientId);
+  const client = await self.clients.get(clientId);
   client.postMessage("Hi client!");
 }
 
-addEventListener("fetch", (event) => {
+self.addEventListener("fetch", (event) => {
   messageClient(event.clientId);
   event.respondWith(() => {
     // …
@@ -62,21 +62,21 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-The client can receive the message by listening to the `message` event:
+The service worker can listen for the message deserialization error by listening to the `messageerror` event:
 
 ```js
 // main.js
-navigator.serviceWorker.addEventListener("message", (message) => {
-  console.log(message);
+navigator.serviceWorker.addEventListener("messageerror", (event) => {
+  console.error("Receive message from service worker failed!");
 });
 ```
 
-Alternatively, the client can receive the message with the `onmessage` event handler:
+Alternatively, the script can listen for the message deserialization error using `onmessageerror`:
 
 ```js
 // main.js
-navigator.serviceWorker.onmessage = (message) => {
-  console.log(message);
+navigator.serviceWorker.onmessageerror = (event) => {
+  console.error("Receive message from service worker failed!");
 };
 ```
 
@@ -90,7 +90,8 @@ navigator.serviceWorker.onmessage = (message) => {
 
 ## See also
 
+- {{domxref("ServiceWorkerContainer/message_event", "message")}}
+- {{domxref("Client.postMessage()")}}
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
