@@ -204,7 +204,7 @@ It is important to provide a closing mechanism within every `dialog` element. Th
 
 ### Closing a dialog with a required form input
 
-When a form inside a dialog has a required input then user agent won't let you close the dialog till you provide a value for the required input. In order to close such dialog either use [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute on the close button or call `close()` method on the dialog object when the close button is clicked.
+When a form inside a dialog has a required input, the user agent will only let you close the dialog once you provide a value for the required input. To close such dialog, either use the [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute on the close button or call the `close()` method on the dialog object when the close button is clicked.
 
 ```html
 <dialog id="dialog">
