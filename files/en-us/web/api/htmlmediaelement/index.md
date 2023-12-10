@@ -69,6 +69,8 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : A boolean value that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio.
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
   - : Returns a `unsigned short` (enumeration) indicating the readiness state of the media.
+- {{domxref("HTMLMediaElement.remote")}} {{ReadOnlyInline}}
+  - : Return a {{domxref("RemotePlayback")}} object instance associated with the media element.
 - {{domxref("HTMLMediaElement.seekable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}

@@ -41,9 +41,7 @@
     },
     "Battery API": {
       "overview": ["Battery Status API"],
-      "guides": [
-        "/Apps/Build/gather_and_modify_data/retrieving_battery_status_information"
-      ],
+      "guides": [],
       "interfaces": ["BatteryManager"],
       "methods": ["Navigator.getBattery()"],
       "properties": [],
@@ -53,10 +51,7 @@
       "overview": ["Barcode Detection API"],
       "guides": [],
       "interfaces": ["BarcodeDetector"],
-      "methods": [
-        "BarcodeDetector.detect()",
-        "BarcodeDetector.getSupportedFormats()"
-      ],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -184,9 +179,9 @@
     },
     "Console API": {
       "overview": ["Console API"],
-      "interfaces": ["Console"],
+      "interfaces": ["console"],
       "methods": [],
-      "properties": ["Window.console", "WorkerGlobalScope.console"],
+      "properties": ["Window.console"],
       "events": []
     },
     "Cookie Store API": {
@@ -296,6 +291,7 @@
         "CSSRule",
         "CSSRuleList",
         "CSSStyleDeclaration",
+        "CSSStartingStyleRule",
         "CSSStyleRule",
         "CSSStyleSheet",
         "CSSSupportsRule",
@@ -317,6 +313,14 @@
         "Element: transitionend",
         "Window: resize"
       ]
+    },
+    "Device Memory API": {
+      "overview": ["Device Memory API"],
+      "guides": [],
+      "interfaces": [],
+      "methods": [],
+      "properties": ["Navigator.deviceMemory", "WorkerNavigator.deviceMemory"],
+      "events": []
     },
     "Device Orientation Events": {
       "overview": ["Device orientation events"],
@@ -478,7 +482,7 @@
         "FileReader",
         "FileReaderSync"
       ],
-      "methods": ["URL.createObjectURL()", "URL.revokeObjectURL()"],
+      "methods": [],
       "properties": [],
       "events": []
     },
@@ -518,6 +522,23 @@
       ],
       "properties": [],
       "events": []
+    },
+    "Force Touch Events": {
+      "overview": ["Force Touch Events"],
+      "guides": [],
+      "interfaces": [],
+      "methods": [],
+      "properties": [
+        "MouseEvent.webkitForce",
+        "MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN",
+        "MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN"
+      ],
+      "events": [
+        "Element: webkitmouseforcewillbegin",
+        "Element: webkitmouseforcedown",
+        "Element: webkitmouseforceup",
+        "Element: webkitmouseforcechanged"
+      ]
     },
     "Fullscreen API": {
       "overview": ["Fullscreen API"],
@@ -807,6 +828,22 @@
       "properties": ["Navigator.ink"],
       "events": []
     },
+    "Input Device Capabilities API": {
+      "overview": ["InputDeviceCapabilities API"],
+      "guides": [],
+      "interfaces": ["InputDeviceCapabilities"],
+      "methods": [],
+      "properties": ["UIEvent.sourceCapabilities"],
+      "events": []
+    },
+    "Insertable Streams for MediaStreamTrack API": {
+      "overview": ["Insertable Streams for MediaStreamTrack API"],
+      "guides": [],
+      "interfaces": ["MediaStreamTrackGenerator", "MediaStreamTrackProcessor"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Intersection Observer API": {
       "overview": ["Intersection Observer API"],
       "guides": [
@@ -879,11 +916,7 @@
       "methods": [],
       "properties": ["navigator.mediaSession"],
       "events": [],
-      "dictionaries": [
-        "MediaImage",
-        "MediaMetadataInit",
-        "MediaSessionActionDetails"
-      ],
+      "dictionaries": [],
       "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
       "callbacks": ["MediaSessionActionHandler"]
     },
@@ -896,10 +929,7 @@
         "SourceBufferList",
         "VideoPlaybackQuality"
       ],
-      "methods": [
-        "HTMLVideoElement.getVideoPlaybackQuality()",
-        "URL.createObjectURL()"
-      ],
+      "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
       "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
       "events": []
     },
@@ -961,7 +991,8 @@
       "overview": ["Payment Request API"],
       "guides": [
         "/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API",
-        "/docs/Web/API/Payment_Request_API/Concepts"
+        "/docs/Web/API/Payment_Request_API/Concepts",
+        "/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation"
       ],
       "interfaces": [
         "MerchantValidationEvent",
@@ -969,7 +1000,8 @@
         "PaymentMethodChangeEvent",
         "PaymentRequest",
         "PaymentRequestUpdateEvent",
-        "PaymentResponse"
+        "PaymentResponse",
+        "SecurePaymentConfirmationRequest"
       ],
       "dictionaries": [
         "AddressErrors",
@@ -1155,6 +1187,17 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Remote Playback API": {
+      "overview": ["Remote Playback API"],
+      "guides": [],
+      "interfaces": ["RemotePlayback"],
+      "methods": [],
+      "properties": [
+        "HTMLMediaElement.disableRemotePlayback",
+        "HTMLMediaElement.remote"
+      ],
+      "events": []
+    },
     "Reporting API": {
       "overview": ["Reporting API"],
       "guides": [],
@@ -1257,21 +1300,36 @@
         "Client",
         "Clients",
         "ExtendableEvent",
+        "ExtendableMessageEvent",
         "FetchEvent",
         "InstallEvent",
-        "NotificationEvent",
-        "PeriodicSyncEvent",
-        "PeriodicSyncManager",
         "ServiceWorker",
         "ServiceWorkerContainer",
         "ServiceWorkerGlobalScope",
         "ServiceWorkerRegistration",
-        "SyncEvent",
-        "SyncManager",
         "WindowClient"
       ],
       "methods": [],
-      "properties": ["Navigator.serviceWorker"],
+      "properties": [
+        "Navigator.serviceWorker",
+        "WorkerNavigator.serviceWorker"
+      ],
+      "events": []
+    },
+    "Shared Storage API": {
+      "overview": ["Shared Storage API"],
+      "interfaces": [
+        "SharedStorage",
+        "SharedStorageOperation",
+        "SharedStorageRunOperation",
+        "SharedStorageSelectURLOperation",
+        "SharedStorageWorklet",
+        "SharedStorageWorkletGlobalScope",
+        "WindowSharedStorage",
+        "WorkletSharedStorage"
+      ],
+      "methods": [],
+      "properties": ["Window.sharedStorage"],
       "events": []
     },
     "Speculation Rules API": {
@@ -1334,6 +1392,8 @@
       "events": []
     },
     "SVG": {
+      "overview": ["SVG API"],
+      "guides": ["/docs/Web/SVG"],
       "interfaces": [
         "SVGAElement",
         "SVGAngle",
@@ -1706,6 +1766,8 @@
       ],
       "interfaces": [
         "CustomElementRegistry",
+        "CustomStateSet",
+        "ElementInternals",
         "HTMLSlotElement",
         "HTMLTemplateElement",
         "ShadowRoot"
@@ -1713,6 +1775,7 @@
       "methods": [
         "Document.createElement()",
         "Element.attachShadow()",
+        "HTMLElement.attachInternals()",
         "Node.getRootNode()"
       ],
       "properties": [
@@ -2104,6 +2167,14 @@
         "RTCSessionDescriptionCallback"
       ]
     },
+    "Web Serial API": {
+      "overview": ["Web Serial API"],
+      "guides": [],
+      "interfaces": ["Serial", "SerialPort"],
+      "methods": [],
+      "properties": ["Navigator.serial", "WorkerNavigator.serial"],
+      "events": []
+    },
     "Web Share API": {
       "overview": ["Web Share API"],
       "guides": [],
@@ -2164,6 +2235,7 @@
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
         "WebTransportReceiveStream",
+        "WebTransportSendStream",
         "WebTransportError"
       ],
       "methods": [],
@@ -2267,7 +2339,14 @@
     },
     "WebXR Device API": {
       "overview": ["WebXR Device API"],
-      "guides": ["/docs/Web/API/WebXR_Device_API/Fundamentals"],
+      "guides": [
+        "/docs/Web/API/WebXR_Device_API/Fundamentals",
+        "/docs/Web/API/WebXR_Device_API/Lifecycle",
+        "/docs/Web/API/WebXR_Device_API/Startup_and_shutdown",
+        "/docs/Web/API/WebXR_Device_API/Cameras",
+        "/docs/Web/API/WebXR_Device_API/Geometry",
+        "/docs/Web/API/WebXR_Device_API/Spatial_tracking"
+      ],
       "interfaces": [
         "XRAnchor",
         "XRBoundedReferenceSpace",
@@ -2309,7 +2388,10 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": ["WindowControlsOverlay"],
+      "interfaces": [
+        "WindowControlsOverlay",
+        "WindowControlsOverlayGeometryChangeEvent"
+      ],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
