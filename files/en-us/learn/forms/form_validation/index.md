@@ -335,13 +335,26 @@ First, some HTML:
          Please note that browsers that support the pattern attribute will make it
          fail silently when used with a number field.
          Its usage here acts only as a fallback -->
-    <input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+">
+    <input
+      type="number"
+      min="12"
+      max="120"
+      step="1"
+      id="n1"
+      name="age"
+      pattern="\d+" />
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
-    <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <label for="t1"
+      >What's your favorite fruit?<span aria-label="required">*</span></label
+    >
+    <input
+      type="text"
+      id="t1"
+      name="fruit"
+      list="l1"
+      required
+      pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range" />
     <datalist id="l1">
       <option>Banana</option>
       <option>Cherry</option>
@@ -353,7 +366,7 @@ First, some HTML:
   </p>
   <p>
     <label for="t2">What's your email address?</label>
-    <input type="email" id="t2" name="email">
+    <input type="email" id="t2" name="email" />
   </p>
   <p>
     <label for="t3">Leave a short message</label>
