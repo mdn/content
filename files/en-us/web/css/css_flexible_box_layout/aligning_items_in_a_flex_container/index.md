@@ -153,7 +153,7 @@ While this may all seem a little confusing, the rule to remember is that unless 
 
 ![Diagram showing start on the left and end on the right.](align8.png)
 
-You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. `flex-start` will then be where the top of your first paragraph of text would start.
+You can switch them to display in the block direction for the language of your document by selecting `flex-direction: column`. Then, `flex-start` will be where the top of your first paragraph of text would start.
 
 ![Diagram showing start at the top and end at the bottom.](align10.png)
 
