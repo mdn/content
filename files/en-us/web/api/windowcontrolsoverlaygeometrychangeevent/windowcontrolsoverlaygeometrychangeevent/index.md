@@ -28,7 +28,7 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
 - `options`
   - : An object with the following properties:
     - `visible` {{optional_inline}}
-      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0, defaults to `false`.
+      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0. Its default value is `false`.
     - `titlebarAreaRect`
       - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
