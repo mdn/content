@@ -313,12 +313,20 @@ First, some HTML:
 ```html
 <form>
   <fieldset>
-    <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
+    <legend>
+      Do you have a driver's license?<span aria-label="required">*</span>
+    </legend>
     <!-- While only one radio button in a same-named group can be selected at a time,
          and therefore only one radio button in a same-named group having the "required"
          attribute suffices in making a selection a requirement -->
-    <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
-    <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+    <input type="radio" required name="driver" id="r1" value="yes" /><label
+      for="r1"
+      >Yes</label
+    >
+    <input type="radio" required name="driver" id="r2" value="no" /><label
+      for="r2"
+      >No</label
+    >
   </fieldset>
   <p>
     <label for="n1">How old are you?</label>
