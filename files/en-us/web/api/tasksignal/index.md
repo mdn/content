@@ -26,20 +26,18 @@ _The `TaskSignal` interface also inherits properties from its parent interface, 
 - {{domxref('TaskSignal.priority')}} {{ReadOnlyInline}}
   - : Returns the priority of the signal.
 
-## Instance methods
-
-_The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
-
 ## Static methods
 
-_The `TaskSignal` interface inherits static methods from its parent interface, {{domxref("AbortSignal")}}._
+_The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
 
 - {{domxref("TaskSignal/any_static", "TaskSignal.any()")}} {{experimental_inline}}
   - : Returns an **`TaskSignal`** that aborts when any of the given abort signals abort.
 
-## Events
+## Instance methods
 
-_The `TaskSignal` interface also inherits events and event handlers from its parent interface, {{domxref("AbortSignal")}}._
+_The `TaskSignal` interface inherits methods from its parent interface, {{domxref("AbortSignal")}}._
+
+## Events
 
 Listen to these events using {{domxref("EventTarget.addEventListener()", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
