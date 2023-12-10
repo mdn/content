@@ -45,7 +45,7 @@ assumptions about its value. You can pass this value to
 
 ## Examples
 
-First, in the document, transfer the control of a {{HTMLElement("canvas")}} element in document using the {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} method and send a message of "start" to the worker:
+On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} and send to a message to `"start"`its work to the worker, with the offscreen canvas:
 
 ```js
 const offscreenCanvas = document
@@ -61,11 +61,11 @@ worker.postMessage(
 );
 ```
 
-Then, in the worker, the following code will start the animation of drawing a rectangle moving from left to right when receiving a message of "start", and stop the animation when receiving a message of "stop":
+When receiving the `"start"` message, the worker starts the animation, moving the rectangle moving from left to right. Upon reception of a `"stop"` message, it will stop stop the animation.
 
 ```js
-let ctx,
-  pos = 0;
+let ctx;
+let pos = 0;
 
 function draw(dt) {
   ctx.clearRect(0, 0, 100, 100);
@@ -86,7 +86,7 @@ self.addEventListener("message", (e) => {
 });
 ```
 
-Finally, when necessary, we could send a message of "stop" to the worker to stop the animation:
+Finally, if needed, the main thread can send a `"stop"`message to the worker to stop the animation:
 
 ```js
 worker.postMessage({
@@ -106,4 +106,3 @@ worker.postMessage({
 
 - {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- {{domxref("Window.cancelAnimationFrame()")}}
