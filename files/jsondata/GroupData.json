@@ -1191,6 +1191,17 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Remote Playback API": {
+      "overview": ["Remote Playback API"],
+      "guides": [],
+      "interfaces": ["RemotePlayback"],
+      "methods": [],
+      "properties": [
+        "HTMLMediaElement.disableRemotePlayback",
+        "HTMLMediaElement.remote"
+      ],
+      "events": []
+    },
     "Reporting API": {
       "overview": ["Reporting API"],
       "guides": [],
