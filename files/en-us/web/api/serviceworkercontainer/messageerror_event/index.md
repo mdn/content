@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerContainer.messageerror_event
 
 {{APIRef("Service Workers API")}}
 
-The **`messageerror`** event is used in a page controlled by a service worker to listen when incoming messages can't be deserialized.
+The **`messageerror`** event is fired to the {{domxref("ServiceWorkerContainer")}} when an incoming message sent to the associated worker can't be deserialized.
 
 This event is not cancelable and does not bubble.
 
@@ -94,5 +94,4 @@ navigator.serviceWorker.onmessageerror = (event) => {
 - {{domxref("Client.postMessage()")}}
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Using Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
