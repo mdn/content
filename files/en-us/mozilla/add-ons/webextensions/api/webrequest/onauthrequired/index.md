@@ -33,8 +33,7 @@ The listener can respond in one of four ways:
 
     - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
     - in the listener, return a `Promise` that resolves with an object containing an `authCredentials` property, set to the credentials to supply
-    
-    > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
+      > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
 
 See [Examples](#examples).
 
