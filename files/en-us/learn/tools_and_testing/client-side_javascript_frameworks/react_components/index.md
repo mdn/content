@@ -245,18 +245,13 @@ const DATA = [
 
 > **Note:** If your text editor has an [ESLint](https://eslint.org/) plugin, you may see a warning on this `DATA` const. This warning comes from the ESLint configuration supplied by the Vite template we used, and it doesn't apply to this code. You can safely suppress the warning by adding `// eslint-disable-next-line` to the line above the `DATA` const.
 
-Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. The final lines of `src/main.jsx` should read like this:
+Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. Update your `<App />` component call inside `src/main.jsx` to read like this:
 
 ```jsx
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <App tasks={DATA} />
-  </React.StrictMode>,
-);
+<App tasks={DATA} />
 ```
 
-This array is now available to the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
+The `DATA` array is now available inside the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
 
 > **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
 
