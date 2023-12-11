@@ -12,8 +12,6 @@ The **`text-wrap`** CSS property controls how text inside an element is wrapped.
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.
 
-<!-- - More stability in content-editable elements — for example {{htmlelement("textarea")}}s and elements with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on them — as content is edited.-->
-
 > **Note:** The {{CSSxRef("white-space-collapse")}} and `text-wrap` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
@@ -51,17 +49,9 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ## Description
 
-As `balance` is limited to a short number of lines, this value should generally be used for headings, captions, and blockquotes.
+There are 2 ways that text can flow across lines within a block of content, such as a paragraph ({{htmlelement("p")}}). These are _forced line breaks_, that are controlled by the user, and _soft line breaks_, that are controlled by the browser. The `text-wrap` property can be user to advise the browser how to control the _soft line breaks_.
 
-The `pretty` value can have a negative effect on performance. Only use this value for longer blocks of text when layout is more important than speed.
-
-The `stable` value should be used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This ensures that the previous lines remain stable when users edit the content.
-
-## Description 2
-
-Inline-level content is laid out into lines, with line breaks breaking text across line boxes. There are two types of line breaks. A _forced line break_ occurs when a line is broken due to a newline character, the start or end of a block, or other explicit line-breaking controls such as when `{{cssxref("white-space")}}: pre` is set. A _soft line break_ is an unforced line break, such as when content naturally wraps to fit the content within its parent.
-
-When wrapping is enabled, the `text-wrap` property defines how soft-wrap-opportunities within a line are prioritized. The value you choose depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
+The value you choose, for `text-wrap`, depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
 
 When the styled content will be limited to a short number of lines, such as headings, captions, and blockquotes, `text-wrap: balance` can be added to balance the number of characters on each line, enhancing layout quality and legibility. As browsers limit the number of lines impacted by this property, this value's impact on performance is negligible.
 
