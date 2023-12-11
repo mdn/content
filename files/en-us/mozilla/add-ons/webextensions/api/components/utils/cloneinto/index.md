@@ -19,7 +19,7 @@ You can then assign the clone to an object in the target scope as an expando pro
 targetWindow.foo = clonedObject;
 ```
 
-In this way privileged code, such as an add-on, can share an object with less-privileged code such as a web page script.
+In this way privileged code, such as an extension, can share an object with less-privileged code such as a web page script.
 
 ## Syntax
 

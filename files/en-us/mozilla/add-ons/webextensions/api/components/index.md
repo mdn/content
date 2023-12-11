@@ -12,7 +12,7 @@ Utilities that enables an extension to [share objects with page scripts](/en-US/
 ## Properties
 
 - {{WebExtAPIRef("components.utils")}}
-  - : Provides various utilities.
+  - : Provides functions to export functions and create structured clones of objects defined in a privileged scope in a less-privileged scope.
 
 ## Browser compatibility
 
