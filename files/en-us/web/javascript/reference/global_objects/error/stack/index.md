@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Error.stack
 
 {{JSRef}} {{Non-standard_Header}}
 
-> **Note:** The `stack` property is de-facto implemented by most, if not all, JavaScript engines. [The standard committee is looking to standardize this feature too](https://github.com/tc39/proposal-error-stacks). You cannot rely on the precise content of the stack string due to implementation inconsistencies, but you can usually assume it exists and use it for debugging purposes.
+> **Note:** The `stack` property is de facto implemented by all major JavaScript engines, and [the JavaScript standards committee is looking to standardize it](https://github.com/tc39/proposal-error-stacks). You cannot rely on the precise content of the stack string due to implementation inconsistencies, but you can generally assume it exists and use it for debugging purposes.
 
 The non-standard **`stack`** property of an {{jsxref("Error")}} instance offers a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
 
@@ -26,7 +26,7 @@ Because the `stack` property is non-standard, implementations differ about where
 
 ## Description
 
-Each JavaScript engine uses its own format for stack traces. But generally, each line in the stack represents one function call, with the call that directly caused the error at the top, and the call that started the whole call chain at the bottom. Below are some examples of stack traces:
+Each JavaScript engine uses its own format for stack traces, but they are fairly consistent in their high-level structure. Every implementation uses a separate line in the stack to represent each function call. The call that directly caused the error is placed at the top, and the call that started the whole call chain is placed at the bottom. Below are some examples of stack traces:
 
 ```js
 function foo() {
@@ -77,10 +77,10 @@ Without having to throw an error and then catch it.
 
 In V8, the non-standard `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()` APIs can be used to customize the stack trace. Read the [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs for more information.
 
-Stack frames can be things other than explicit function calls, too. For example, event listeners, timeout jobs, and promise handlers all begin their own call chain. Source code within {{jsxref("Global_Objects/eval", "eval()")}} and {{jsxref("Function")}} constructor also appear in the stack:
+Stack frames can be things other than explicit function calls, too. For example, event listeners, timeout jobs, and promise handlers all begin their own call chain. Source code within {{jsxref("Global_Objects/eval", "eval()")}} and {{jsxref("Function")}} constructor calls also appear in the stack:
 
 ```js
-console.log(new Function("return new Error('Function failled')")().stack);
+console.log(new Function("return new Error('Function failed')")().stack);
 console.log("====");
 console.log(eval("new Error('eval failed')").stack);
 ```
@@ -103,7 +103,7 @@ anonymous@filename.js line 1 > Function:1:8
 @filename.js:3:13
 
 #### V8
-Error: Function failled
+Error: Function failed
     at eval (eval at <anonymous> (filename.js:1:13), <anonymous>:1:8)
     at filename.js:1:65
 ====
