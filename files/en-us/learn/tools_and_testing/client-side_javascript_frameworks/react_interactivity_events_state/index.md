@@ -37,9 +37,15 @@ With our component plan worked out, it's now time to start updating our app from
 
 ## Handling events
 
-If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
+If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file in which you query for some DOM nodes and attach listeners to them. For example, an HTML file might have a button in it, like this:
 
-```jsx
+```html
+<button type="button">Say hi!</button>
+```
+
+And a JavaScript file might have some code like this:
+
+```js
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
@@ -47,7 +53,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-In React, we write event handlers directly on the elements in our JSX, like this:
+In JSX, the code that describes the UI is right alongside our event listeners:
 
 ```jsx
 <button type="button" onClick={() => alert("hi!")}>
@@ -55,9 +61,7 @@ In React, we write event handlers directly on the elements in our JSX, like this
 </button>
 ```
 
-> **Note:** This may seem counter-intuitive regarding best-practice advice that tends to advise against use of inline event handlers on HTML, but remember that JSX is actually part of your JavaScript.
-
-In the above example, we're adding an `onClick` attribute to the `<button>` element. The value of that attribute is a function that triggers a simple alert.
+In this example, we're adding an `onClick` attribute to to the `<button>` element. The value of that attribute is a function that triggers a simple alert. This may seem counter to best-practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
