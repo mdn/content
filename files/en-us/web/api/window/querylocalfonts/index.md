@@ -125,5 +125,5 @@ async function computeOutlineFormat() {
 ## See also
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
