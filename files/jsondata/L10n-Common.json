@@ -55,13 +55,13 @@
     "zh-TW": "實現於："
   },
   "Inheritance": {
-    "en-US": "Inheritance:",
+    "en-US": "Inheritance",
     "es": "Herencia",
-    "fr": "Héritage&nbsp;:",
-    "ja": "継承:",
-    "ko": "상속:",
-    "pt-BR": "Herança:",
-    "ru": "Наследование:",
+    "fr": "Héritage&nbsp;",
+    "ja": "継承",
+    "ko": "상속",
+    "pt-BR": "Herança",
+    "ru": "Наследование",
     "zh-CN": "继承",
     "zh-TW": "繼承"
   },

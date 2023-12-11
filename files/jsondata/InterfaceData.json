@@ -866,7 +866,7 @@
     },
     "Document": {
       "inh": "Node",
-      "impl": []
+      "impl": ["Event", "XPathEvaluator", "GlobalEventHandlers"]
     },
     "DocumentFragment": {
       "inh": "Node",
