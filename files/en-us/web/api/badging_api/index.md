@@ -89,5 +89,5 @@ navigator.setAppBadge(12);
 
 ## See also
 
-- [Badging for app icons](https://developer.chrome.com/articles/badging-api/)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
 - [Badging API Explainer](https://github.com/w3c/badging/blob/main/explainer.md)
