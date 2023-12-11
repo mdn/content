@@ -38,7 +38,7 @@ Only in the most trivial extensions is namespace likely to be the only cross-pla
 
 ### API asynchronous event handling
 
-With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. Firefox and Safari have full support for Promises on all asynchronous APIs. At the time of writing, November 2023, Chrome has nearly complete support for Promises on asynchronous APIs. Consult the Chrome documentation for details of whether the APIs you use have Promise support.
+With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. Firefox and Safari have full support for Promises on all asynchronous APIs. Starting from Chrome 121, all asynchronous extension APIs support promises unless documented otherwise. The `devtools` API is the only API namespace without Promise support ([Chromium bug 1510416](https://crbug.com/1510416)).
 
 In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See [Callbacks and Promises](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#callbacks_and_promises) for details.
 
