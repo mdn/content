@@ -1121,6 +1121,8 @@
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
       "properties": [
         "Document.pointerLockElement",
+        "MouseEvent.movementX",
+        "MouseEvent.movementY",
         "ShadowRoot.pointerLockElement"
       ],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
