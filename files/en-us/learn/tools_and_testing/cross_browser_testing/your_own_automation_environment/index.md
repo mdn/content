@@ -63,7 +63,7 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.chromium.org/downloads) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
@@ -103,15 +103,20 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
    ```js
+   function sleep(ms) {
+     return new Promise((resolve) => setInterval(resolve, ms));
+   }
+
    const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
    (async function example() {
      const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
      try {
-       await driver.get("https://www.google.com/ncr");
+       await driver.get("<https://www.google.com/ncr>");
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
        await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
      } finally {
+       await sleep(4000); // Delay long enough to see search page!
        await driver.quit();
      }
    })();
@@ -123,7 +128,8 @@ OK, let's try a quick test to make sure everything is working.
    node google_test
    ```
 
-You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 2 seconds; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed. WebDriver will then close down the Firefox instance and stop.
+You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 1 second; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed.
+We then wait four seconds, after which WebDriver will then close down the Firefox instance and stop.
 
 ## Testing in multiple browsers at once
 
@@ -159,7 +165,6 @@ There is also nothing to stop you running the test on multiple browsers simultan
 
    searchTest(driver_fx);
    searchTest(driver_chr);
-
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
