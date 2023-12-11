@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a list of objects, each containing:
+A {{jsxref("Promise")}} that resolves with a list of objects, each containing:
 
 - `name`
   - : A string with the name of a cookie.
