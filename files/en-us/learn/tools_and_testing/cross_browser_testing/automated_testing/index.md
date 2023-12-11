@@ -106,7 +106,8 @@ With this, you are ready to move on.
 
 Let's look at setting up Gulp and using it to automate some testing tools.
 
-1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section. Also, update the `package.json` file with the line: `"type": "module"` so that it'll look something like this:
+1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.
+   Also, update the `package.json` file with the line: `"type": "module"` so that it'll look something like this:
 
    ```json
    {
@@ -137,7 +138,7 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    npm install --save-dev gulp
    ```
 
-5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
+5. Now create a new file inside your project directory called `gulpfile.mjs`. This is the file that will run all our tasks. Inside this file, put the following:
 
    ```js
    import gulp from "gulp";
