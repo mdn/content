@@ -44,15 +44,15 @@
     "zh-TW": "指南"
   },
   "Implemented_by": {
-    "en-US": "Implemented by:",
-    "es": "Implementado por:",
-    "fr": "Implémenté(e) par:",
-    "ja": "実装先:",
-    "ko": "구현:",
-    "pt-BR": "Implementado por:",
-    "ru": "Реализовано для:",
-    "zh-CN": "实现于：",
-    "zh-TW": "實現於："
+    "en-US": "Implemented by",
+    "es": "Implementado por",
+    "fr": "Implémenté(e) par",
+    "ja": "実装先",
+    "ko": "구현",
+    "pt-BR": "Implementado por",
+    "ru": "Реализовано для",
+    "zh-CN": "实现于",
+    "zh-TW": "實現於"
   },
   "Inheritance": {
     "en-US": "Inheritance",
@@ -154,15 +154,15 @@
     "zh-TW": "$1 的相關頁面"
   },
   "Related_pages_wo_group": {
-    "en-US": "Related pages:",
-    "es": "Páginas relacionadas:",
-    "fr": "Pages similaires:",
-    "ja": "関連するページ:",
-    "ko": "관련 페이지:",
-    "pt-BR": "Páginas relacionadas:",
-    "ru": "Похожие страницы:",
-    "zh-CN": "相关页面：",
-    "zh-TW": "相關頁面："
+    "en-US": "Related pages",
+    "es": "Páginas relacionadas",
+    "fr": "Pages similaires",
+    "ja": "関連するページ",
+    "ko": "관련 페이지",
+    "pt-BR": "Páginas relacionadas",
+    "ru": "Похожие страницы",
+    "zh-CN": "相关页面",
+    "zh-TW": "相關頁面"
   },
   "Static_methods": {
     "en-US": "Static methods",
