@@ -301,7 +301,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 ## Events
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from {{domxref("Node", "nodes", "", "nocode")}} contained in the document tree.
 
 - {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
@@ -315,19 +315,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-- {{DOMxRef("Document/wheel_event","wheel")}}
-  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-
-### Animation events
-
-- {{DOMxRef("Document/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
-- {{DOMxRef("Document/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
-- {{DOMxRef("Document/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
-- {{DOMxRef("Document/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
 
 ### Clipboard events
 
@@ -338,38 +325,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
 
-### Drag & drop events
-
-- {{DOMxRef("Document/drag_event", "drag")}}
-  - : Fired every few hundred milliseconds as an element or text selection is being dragged by the user.
-- {{DOMxRef("Document/dragend_event", "dragend")}}
-  - : Fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
-- {{DOMxRef("Document/dragenter_event", "dragenter")}}
-  - : Fired when a dragged element or text selection enters a valid drop target.
-- {{DOMxRef("Document/dragleave_event", "dragleave")}}
-  - : Fired when a dragged element or text selection leaves a valid drop target.
-- {{DOMxRef("Document/dragover_event", "dragover")}}
-  - : Fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
-- {{DOMxRef("Document/dragstart_event", "dragstart")}}
-  - : Fired when the user starts dragging an element or text selection.
-- {{DOMxRef("Document/drop_event", "drop")}}
-  - : Fired when an element or text selection is dropped on a valid drop target.
-
 ### Fullscreen events
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
   - : Fired when the `Document` transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
   - : Fired if an error occurs while attempting to switch into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-
-### Keyboard events
-
-- {{DOMxRef("Document/keydown_event", "keydown")}}
-  - : Fired when a key is pressed.
-- {{DOMxRef("Document/keypress_event", "keypress")}} {{Deprecated_Inline}}
-  - : Fired when a key that produces a character value is pressed down.
-- {{DOMxRef("Document/keyup_event", "keyup")}}
-  - : Fired when a key is released.
 
 ### Load & unload events
 
@@ -378,59 +339,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : Fired when the {{DOMxRef("Document/readyState", "readyState")}} attribute of a document has changed.
 
-### Pointer events
-
-- {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
-  - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
-- {{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}
-  - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-- {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
-  - : Fired when a pointer event is canceled.
-- {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
-  - : Fired when a pointer becomes active.
-- {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
-  - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-- {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
-  - : Fired when a pointer is moved out of the hit test boundaries of an element.
-- {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
-  - : Fired when the pointer is locked/unlocked.
-- {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
-  - : Fired when locking the pointer failed.
-- {{DOMxRef("Document/pointermove_event", "pointermove")}}
-  - : Fired when a pointer changes coordinates.
-- {{DOMxRef("Document/pointerout_event", "pointerout")}}
-  - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-- {{DOMxRef("Document/pointerover_event", "pointerover")}}
-  - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{DOMxRef("Document/pointerup_event", "pointerup")}}
-  - : Fired when a pointer is no longer active.
-
 ### Selection events
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
-
-### Touch events
-
-- {{DOMxRef("Document/touchcancel_event", "touchcancel")}}
-  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-- {{DOMxRef("Document/touchend_event", "touchend")}}
-  - : Fired when one or more touch points are removed from the touch surface.
-- {{DOMxRef("Document/touchmove_event", "touchmove")}}
-  - : Fired when one or more touch points are moved along the touch surface.
-- {{DOMxRef("Document/touchstart_event", "touchstart")}}
-  - : Fired when one or more touch points are placed on the touch surface.
-
-### Transition events
-
-- {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
-- {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
-- {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
-- {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

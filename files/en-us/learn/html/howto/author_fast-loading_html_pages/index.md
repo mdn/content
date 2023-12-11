@@ -77,7 +77,7 @@ Use of modern CSS reduces the amount of markup, can reduce the need for (spacer)
 
 Using valid markup has other advantages. First, browsers will have no need to perform error-correction when parsing the HTML (this is aside from the philosophical issue of whether to allow format variation in user input and then programmatically "correct" or normalize it; or whether, instead, to enforce a strict, no-tolerance input format).
 
-Moreover, valid markup allows for the free use of other tools which can _pre-process_ your web pages. For example, [HTML Tidy](http://tidy.sourceforge.net/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
+Moreover, valid markup allows for the free use of other tools that can _pre-process_ your web pages. For example, [HTML Tidy](https://www.html-tidy.org/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
 
 ### Chunk your content
 

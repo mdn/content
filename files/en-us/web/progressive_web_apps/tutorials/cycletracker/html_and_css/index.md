@@ -61,7 +61,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading through this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`styles.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading through this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`style.css`](#css-content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -101,7 +101,7 @@ While the title could be "Menstrual cycle tracking application", we opted for a 
 
 While officially optional, for better user experience, these two `<meta>` tags and the `<title>` are the three components of the `<head>` that should be considered required components of any HTML document.
 
-For right now, the last component we include in the `<head>` is a {{HTMLelement("link")}} element linking `styles.css`, our yet-to-be-written stylesheet, to our HTML.
+For right now, the last component we include in the `<head>` is a {{HTMLelement("link")}} element linking `style.css`, our yet-to-be-written stylesheet, to our HTML.
 
 ```html
 <link rel="stylesheet" href="style.css" />
