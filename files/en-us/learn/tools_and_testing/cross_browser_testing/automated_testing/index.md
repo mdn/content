@@ -13,22 +13,14 @@ Manually running tests on several browsers and devices, several times per day, c
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross-browser testing</a
-        >.
+        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages;
+        an idea of the high level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To provide an understanding of what automated testing entails, how it
-        can make your life easier, and how to make use of some of the commercial
-        products that make things easier.
+        To provide an understanding of what automated testing entails, how it can make your life easier, and how to make use of some of the commercial products that make things easier.
       </td>
     </tr>
   </tbody>
@@ -116,21 +108,23 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 
 1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section. Also, update the `package.json` file with the line: `"type": "module"` so that it'll look something like this:
 
-```json
-{
-  "name": "node-test",
-  "version": "1.0.0",
-  "description": "Test for npm projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "author": "Chris Mills",
-  "license": "MIT",
-  "type": "module"
-}
-```
-2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
+   ```json
+   {
+     "name": "node-test",
+     "version": "1.0.0",
+     "description": "Test for npm projects",
+     "main": "index.js",
+     "scripts": {
+       "test": "test"
+     },
+     "author": "Chris Mills",
+     "license": "MIT",
+     "type": "module"
+   }
+   ```
+
+2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder.
+   You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
 3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
 
    ```bash
@@ -151,7 +145,7 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    export default function (cb) {
      console.log("Gulp running");
      cb();
-   };
+   }
    ```
 
    This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
