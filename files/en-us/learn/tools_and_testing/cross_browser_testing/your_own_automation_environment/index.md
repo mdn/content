@@ -262,7 +262,7 @@ const element = driver.findElement(By.id("myElementId"));
 
 One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
 
-Enter the following at the bottom of your `example` function now:
+Enter the following at the bottom of your `example()` function now:
 
 ```js
 const button = driver.findElement(By.css("button:nth-of-type(1)"));
