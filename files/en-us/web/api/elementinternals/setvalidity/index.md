@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ElementInternals.setValidity
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`setValidity()`** method of the {{domxref("ElementInternals")}} interface sets the validity of the element.
 

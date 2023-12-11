@@ -224,5 +224,5 @@ onmessage = async (e) => {
 
 ## See also
 
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/) on web.dev
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access) on web.dev
 - [The origin private file system](https://web.dev/articles/origin-private-file-system) on web.dev
