@@ -49,7 +49,7 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ## Description
 
-There are 2 ways that text can flow across lines within a block of content, such as a paragraph ({{htmlelement("p")}}) or heading ({{htmlelement("h1")}}). These are _forced line breaks_, that are controlled by the user, and _soft line breaks_, that are controlled by the browser. The `text-wrap` property can be user to advise the browser how to control the _soft line breaks_.
+There are 2 ways that text can flow across lines within a block of content, such as a paragraph ({{HTMLElement("p")}}) or headings ({{HTMLElement("heading_elements","&lt;h1&gt;–&lt;h6&gt;")}}). These are _forced line breaks_, that are controlled by the user, and _soft line breaks_, that are controlled by the browser. The `text-wrap` property can be user to advise the browser how to control the _soft line breaks_.
 
 The value you choose, for `text-wrap`, depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
 
