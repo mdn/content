@@ -244,7 +244,7 @@ driver.get("http://localhost:8888/fake-div-buttons.html");
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Add this line to the bottom of `example()` function now:
+Add this line to the bottom of your `example()` function:
 
 ```js
 driver.get(
