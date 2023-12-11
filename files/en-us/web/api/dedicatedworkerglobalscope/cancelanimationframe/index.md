@@ -10,7 +10,7 @@ browser-compat: api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 
 The **`cancelAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface cancels an animation frame request previously scheduled through a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}.
 
-Calling `cancelAnimationFrame()` method requires that current worker need to support this method, which means that current worker is created by {{domxref("Window", "window")}} or the creator of current worker (the worker must be a dedicated worker) also supports this method.
+Calling `cancelAnimationFrame()` method requires that the current worker need to support this method, which means that the current worker is created by {{domxref("Window", "window")}} or by a dedicated worker that also supports this method.
 
 ## Syntax
 
