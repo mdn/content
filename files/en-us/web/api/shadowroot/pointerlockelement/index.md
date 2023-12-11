@@ -8,11 +8,8 @@ browser-compat: api.ShadowRoot.pointerLockElement
 
 {{APIRef("Pointer Lock API")}}
 
-The **`pointerLockElement`** read-only property
-of the {{domxref("ShadowRoot")}} interface provides the
-element set as the target for mouse events while the pointer is locked. It is
-`null` if lock is pending, pointer is unlocked, or the target is in another
-tree.
+The **`pointerLockElement`** read-only property of the {{domxref("ShadowRoot")}} interface provides the element set as the target for mouse events while the pointer is locked.
+It is `null` if lock is pending, pointer is unlocked, or the target is in another tree.
 
 ## Value
 
