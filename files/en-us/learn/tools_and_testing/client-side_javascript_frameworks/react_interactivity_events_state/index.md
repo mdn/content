@@ -68,7 +68,7 @@ The `onClick` attribute has special meaning here: it tells React to run a given 
 - The {{Glossary("camel_case", "camel-cased")}} nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
 - All browser events follow this format in JSX – `on`, followed by the name of the event.
 
-Let's apply this to our app, starting in the `Form.js` component.
+Let's apply this to our app, starting in the `Form.jsx` component.
 
 ### Handling form submission
 
@@ -132,7 +132,7 @@ For one thing, props come from the parent of a component. Our `<Form />` will no
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
-To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
+To use a React hook, we need to import it from the React module. In `Form.jsx`, change your very first line so that it reads like this:
 
 ```jsx
 import React, { useState } from "react";
@@ -233,7 +233,7 @@ function handleSubmit(e) {
 
 At last, you can type something into the input field in your browser and click _Add_ — whatever you typed will appear in an alert dialog.
 
-Your `Form.js` file should now read like this:
+Your `Form.jsx` file should now read like this:
 
 ```jsx
 import React, { useState } from "react";
@@ -284,7 +284,7 @@ Now that we've practiced with events, callback props, and hooks we're ready to w
 
 ### Tasks as state
 
-Import `useState` into `App.js`, so that we can store our tasks in state — update your `React` import line to the following:
+Import `useState` into `App.jsx`, so that we can store our tasks in state — update your `React` import line to the following:
 
 ```jsx
 import React, { useState } from "react";
@@ -340,7 +340,7 @@ npm install nanoid
 
 > **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
-Now we can import `nanoid` into the top of `App.js` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.js`:
+Now we can import `nanoid` into the top of `App.jsx` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.jsx`:
 
 ```jsx
 import { nanoid } from "nanoid";
@@ -409,7 +409,7 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-Next, go over to your `Todo.js` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
+Next, go over to your `Todo.jsx` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
 
 ```jsx
 <input
@@ -430,7 +430,7 @@ The checkbox unchecks in the browser, but our console tells us that Eat is still
 
 ### Synchronizing the browser with our data
 
-Let's revisit our `toggleTaskCompleted()` function in `App.js`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
+Let's revisit our `toggleTaskCompleted()` function in `App.jsx`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
 
 Update your `toggleTaskCompleted()` function to the following:
 
@@ -482,9 +482,9 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-In `Todo.js`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
+In `Todo.jsx`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
 
-Update the "Delete" button inside `Todo.js`, like so:
+Update the "Delete" button inside `Todo.jsx`, like so:
 
 ```jsx
 <button
@@ -503,7 +503,7 @@ Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks(
 
 This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` argument passed into `deleteTask()`.
 
-Update the `deleteTask()` function inside your `App.js` file as follows:
+Update the `deleteTask()` function inside your `App.jsx` file as follows:
 
 ```jsx
 function deleteTask(id) {
