@@ -52,7 +52,7 @@ When a popover is shown, it has `display: none` removed from it and it is put in
 When a popover element is set with `popover` or `popover="auto"` as shown above, it is said to have **auto state**. The two important behaviors to note about auto state are:
 
 - The popover can be "light dismissed" — this means that you can hide the popover by clicking outside it.
-- The popover can be closed using browser-specific mechanisms, such as pressing the <kbd>Esc</kbd> key.
+- The popover can also be closed, using browser-specific mechanisms such as pressing the <kbd>Esc</kbd> key.
 - Usually, only one popover can be shown at a time — showing a second popover when one is already shown will hide the first one. The exception to this rule is when you have nested auto popovers. See the [Nested popovers](#nested_popovers) section for more details.
 
 > **Note:** `popover="auto"` popovers are also dismissed by successful {{domxref("HTMLDialogElement.showModal()")}} and {{domxref("Element.requestFullscreen()")}} calls on other elements in the document. Bear in mind however that calling these methods on a shown popover will result in failure because those behaviors don't make sense on an already-shown popover. You can however call them on an element with the `popover` attribute that isn't currently being shown.
