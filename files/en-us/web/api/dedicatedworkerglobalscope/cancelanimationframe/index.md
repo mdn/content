@@ -21,7 +21,7 @@ cancelAnimationFrame(handle)
 ### Parameters
 
 - `handle`
-  - : The ID value returned by the call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} that requested the callback in the same worker.
+  - : The ID value returned by the call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} that requested the callback, the call must be made in the same worker.
 
 ### Return value
 
