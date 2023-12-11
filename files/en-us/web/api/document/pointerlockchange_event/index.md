@@ -8,7 +8,7 @@ browser-compat: api.Document.pointerlockchange_event
 
 {{APIRef("Pointer Lock API")}}
 
-The `pointerlockchange` event is fired when the pointer is locked/unlocked.
+The **`pointerlockchange`** event is fired when the pointer is locked/unlocked.
 
 The event handler can use {{domxref("Document.pointerLockElement")}} to determine whether the pointer is locked, and if so, to which element it is locked.
 

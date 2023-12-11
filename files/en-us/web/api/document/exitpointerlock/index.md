@@ -8,7 +8,7 @@ browser-compat: api.Document.exitPointerLock
 
 {{APIRef("Pointer Lock API")}}
 
-The **`exitPointerLock()`** method asynchronously releases a
+The **`exitPointerLock()`** method of the {{domxref("Document")}} interface asynchronously releases a
 pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.
 
 > **Note:** While the **`exitPointerLock()`** method is called on the document, the **`requestPointerLock()`** method is called on an element.

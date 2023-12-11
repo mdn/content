@@ -8,7 +8,7 @@ browser-compat: api.Element.requestPointerLock
 
 {{APIRef("Pointer Lock API")}}
 
-The **`Element.requestPointerLock()`** method lets you
+The **`requestPointerLock()`** method of the {{domxref("Element")}} interface lets you
 asynchronously ask for the pointer to be locked on the given element.
 
 To track the success or failure of the request, it is necessary to listen for the
