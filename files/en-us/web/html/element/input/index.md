@@ -321,6 +321,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | --------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | [`accept`](#accept)                           | `file`                                                                  | Hint for expected file type in file upload controls                                   |
 | [`alt`](#alt)                                 | `image`                                                                 | alt attribute for the image type. Required for accessibility                          |
+| [`autocapitalize`](#autocapitalize)           | all except `url`, `email`, and `password`                               | Controls automatic capitalization in inputted text.                                   |
 | [`autocomplete`](#autocomplete)               | all except `checkbox`, `radio`, and buttons                             | Hint for form autofill feature                                                        |
 | [`capture`](#capture)                         | `file`                                                                  | Media capture input method in file upload controls                                    |
 | [`checked`](#checked)                         | `checkbox`, `radio`                                                     | Whether the command or control is checked                                             |
@@ -364,6 +365,10 @@ A few additional non-standard attributes are listed following the descriptions o
 - `alt`
 
   - : Valid for the `image` button only, the `alt` attribute provides alternative text for the image, displaying the value of the attribute if the image [`src`](#src) is missing or otherwise fails to load. See the {{HTMLElement("input/image", "image")}} input type.
+
+- `autocapitalize`
+
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)
 
@@ -626,12 +631,6 @@ The following non-standard attributes are also available on some browsers. As a 
   </thead>
   <tbody>
     <tr>
-      <td><a href="#autocapitalize"><code>autocapitalize</code></a></td>
-      <td>
-        A string indicating how auto-capitalization should be applied to the content of text elements. <strong>Safari only.</strong>
-      </td>
-    </tr>
-    <tr>
       <td><a href="#autocorrect"><code>autocorrect</code></a></td>
       <td>
         A string indicating whether autocorrect is <code>on</code> or <code>off</code>. <strong>Safari only.</strong>
@@ -676,19 +675,6 @@ The following non-standard attributes are also available on some browsers. As a 
     </tr>
   </tbody>
 </table>
-
-- `autocapitalize` {{non-standard_inline}}
-
-  - : (Safari only). A string which indicates how auto-capitalization should be applied while the user is editing this field. Permitted values are:
-
-    - `none`
-      - : Do not automatically capitalize any text
-    - `sentences`
-      - : Automatically capitalize the first character of each sentence.
-    - `words`
-      - : Automatically capitalize the first character of each word.
-    - `characters`
-      - : Automatically capitalize every character.
 
 - `autocorrect` {{non-standard_inline}}
 
