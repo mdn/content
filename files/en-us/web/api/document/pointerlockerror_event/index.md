@@ -10,7 +10,7 @@ browser-compat: api.Document.pointerlockerror_event
 
 The **`pointerlockerror`** event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
 
-This event is not cancelable.
+This event is not cancelable and does not bubble.
 
 ## Syntax
 
