@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Error.stack
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The non-standard **`stack`** property of an {{jsxref("Error")}} instance offers a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
 
@@ -39,7 +39,7 @@ Different browsers set this value at different times. For example, Firefox sets 
 The following HTML markup demonstrates the use of `stack` property.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <meta charset="UTF-8" />
 <title>Stack Trace Example</title>
 <body>
@@ -129,5 +129,6 @@ Not part of any standard.
 
 ## See also
 
-- External projects: [TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/stacktracejs/stacktrace.js)
-- [Overview of the V8 JavaScript stack trace API](https://v8.dev/docs/stack-trace-api)
+- [TraceKit](https://github.com/csnover/TraceKit/) on GitHub
+- [stacktrace.js](https://github.com/stacktracejs/stacktrace.js) on GitHub
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

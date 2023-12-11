@@ -1,5 +1,5 @@
 ---
-title: <header>
+title: "<header>: The Header element"
 slug: Web/HTML/Element/header
 page-type: html-element
 browser-compat: html.elements.header
@@ -17,7 +17,7 @@ The `<header>` element has an identical meaning to the site-wide [`banner`](/en-
 
 The `<header>` element can define a global site header, described as a `banner` in the accessibility tree. It usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
-Otherwise, it is a `section` in the accessibility tree, and usually contain the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
+Otherwise, it is a `section` in the accessibility tree, and usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
 
 ### Historical Usage
 
@@ -117,8 +117,8 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a
         >, or
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+          >generic</a
         >
         if a descendant of an
         <code><a href="/en-US/docs/Web/HTML/Element/article">article</a></code

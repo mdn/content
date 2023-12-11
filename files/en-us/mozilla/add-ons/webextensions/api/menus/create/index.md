@@ -7,11 +7,22 @@ browser-compat: webextensions.api.menus.create
 
 {{AddonSidebar()}}
 
-Creates a new menu item, given an options object defining properties for the item.
+Creates a menu item using an options object defining properties for the item.
 
 Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.
 
-For compatibility with other browsers, Firefox makes this method available via the `contextMenus` namespace as well as the `menus` namespace. Note though that it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
+For compatibility with other browsers, Firefox makes this method available in the `contextMenus` namespace and `menus` namespace. However, it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
+
+> **Creating menus in persistent and non-persistent extensions**
+>
+> How you create menu items depends on whether your extension uses:
+>
+> - non-persistent background pages (an event page), where menus persist across browser and extension restarts. You call `menus.create` (with a menu-specific ID) from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. This avoids repeated attempts to create the menu item when the pages restart, which would occur with a top-level call.
+> - persistent background pages:
+>   - in Chrome, menu items from persistent background pages are persisted. Create your menus in a {{WebExtAPIRef("runtime.onInstalled")}} listener.
+>   - in Firefox, menu items from persistent background pages are never persisted. Call `menus.create` unconditionally from the top level to register the menu items.
+>
+> See [Initialize the extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts#initialize_the_extension) on the background scripts page and [Event-driven background scripts](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/#event-driven-background-scripts) on Extension Workshop for more information.
 
 ## Syntax
 
@@ -58,19 +69,23 @@ browser.menus.create(
 
       - : `object`. One or more custom icons to display next to the item. Custom icons can only be set for items appearing in submenus. This property is an object with one property for each supplied icon: the property's name should include the icon's size in pixels, and path is relative to the icon from the extension's root directory. The browser tries to choose a 16x16 pixel icon for a normal display or a 32x32 pixel icon for a high-density display. To avoid any scaling, you can specify icons like this:
 
-        ```json
-        "icons": {
-                "16": "path/to/geo-16.png",
-                "32": "path/to/geo-32.png"
-              }
+        ```js
+        browser.menus.create({
+          icons: {
+            16: "path/to/geo-16.png",
+            32: "path/to/geo-32.png",
+          },
+        });
         ```
 
         Alternatively, you can specify a single SVG icon, and it will be scaled appropriately:
 
-        ```json
-        "icons": {
-                "16": "path/to/geo.svg"
-              }
+        ```js
+        browser.menus.create({
+          icons: {
+            16: "path/to/geo.svg",
+          },
+        });
         ```
 
         > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
@@ -121,7 +136,7 @@ This example creates a context menu item that's shown when the user has selected
 browser.menus.create({
   id: "log-selection",
   title: "Log '%s' to the console",
-  contexts: ["selection"]
+  contexts: ["selection"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
@@ -142,21 +157,27 @@ function onCreated() {
   }
 }
 
-browser.menus.create({
-  id: "radio-green",
-  type: "radio",
-  title: "Make it green",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-green",
+    type: "radio",
+    title: "Make it green",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "radio-blue",
-  type: "radio",
-  title: "Make it blue",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.menus.create(
+  {
+    id: "radio-blue",
+    type: "radio",
+    title: "Make it blue",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
 let makeItBlue = 'document.body.style.border = "5px solid blue"';
 let makeItGreen = 'document.body.style.border = "5px solid green"';
@@ -164,11 +185,11 @@ let makeItGreen = 'document.body.style.border = "5px solid green"';
 browser.menus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "radio-blue") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItBlue
+      code: makeItBlue,
     });
   } else if (info.menuItemId === "radio-green") {
     browser.tabs.executeScript(tab.id, {
-      code: makeItGreen
+      code: makeItGreen,
     });
   }
 });

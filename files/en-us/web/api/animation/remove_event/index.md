@@ -86,7 +86,7 @@ button.addEventListener(
     document.body.addEventListener("mousemove", (event) => {
       const animation = button.animate(
         { transform: `translate(${event.clientX}px, ${event.clientY}px)` },
-        { duration: 500, fill: "forwards" }
+        { duration: 500, fill: "forwards" },
       );
       created++;
       showCounts();
@@ -98,7 +98,7 @@ button.addEventListener(
       });
     });
   },
-  { once: true }
+  { once: true },
 );
 
 function showCounts() {

@@ -1,6 +1,7 @@
 ---
 title: Capabilities
 slug: Web/WebDriver/Capabilities
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}

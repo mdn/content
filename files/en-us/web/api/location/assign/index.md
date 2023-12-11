@@ -1,5 +1,5 @@
 ---
-title: "location: assign() method"
+title: "Location: assign() method"
 short-title: assign()
 slug: Web/API/Location/assign
 page-type: web-api-instance-method
@@ -42,7 +42,7 @@ None ({{jsxref("undefined")}}).
 ```js
 // Navigate to the Location.reload article
 window.location.assign(
-  "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload"
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
 );
 ```
 

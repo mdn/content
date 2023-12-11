@@ -18,9 +18,11 @@ The example below shows the source for a set of elements marked up with `itempro
 ```html
 <div itemscope itemtype="http://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span>Director:
+  <span>
+    Director:
     <span itemprop="director">James Cameron</span>
-    (born August 16, 1954)</span>
+    (born August 16, 1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">
     Trailer
@@ -89,7 +91,7 @@ When a string value can't be easily read and understood by a person (e.g., a lon
 
 ### An item with a property whose value is a product ID
 
-The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+The ID is not human-friendly, so the product's name is used instead.
 
 ```html
 <h1 itemscope>
@@ -140,8 +142,8 @@ Properties can also be groups of name-value pairs, by putting the itemscope attr
     Band:
     <span itemprop="band" itemscope>
       <span itemprop="name">Jazz Band</span>
-      (<span itemprop="size">12</span> players)</span
-    >
+      (<span itemprop="size">12</span> players)
+    </span>
   </p>
 </div>
 ```
@@ -150,7 +152,7 @@ The outer item above has two properties, "name" and "band". The "name" is "Amand
 
 ### All the properties separated from their items
 
-This example is the same as the previous one, but all the properties are separated from their items
+This example is the same as the previous one, but all the properties are separated from their items.
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
@@ -186,8 +188,11 @@ An element introducing a property can also introduce multiple properties at once
 
 ```html
 <div itemscope>
-  <span itemprop="favorite-color
-    favorite-fruit">orange</span>
+  <span
+    itemprop="favorite-color
+    favorite-fruit"
+    >orange
+  </span>
 </div>
 ```
 
@@ -287,7 +292,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element has an `itemscope` attribute
 
-  - The value is the **item** created by the element.
+  - The value is the **item** created by the element
 
 - If the element is a `meta` element
 
@@ -327,7 +332,7 @@ If a property's value is a `URL`, the property must be specified using a URL pro
 
 Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
 
-In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
 
 ```html
 <div itemscope>
@@ -337,7 +342,7 @@ In the following example, the "a" property has the values "1" and "2", _in that 
 </div>
 ```
 
-The following is equivalent
+Here are several equivalent examples:
 
 ```html
 <div itemscope>
@@ -347,8 +352,6 @@ The following is equivalent
 </div>
 ```
 
-As is the following
-
 ```html
 <div itemscope>
   <p itemprop="a">1</p>
@@ -356,8 +359,6 @@ As is the following
   <p itemprop="a">2</p>
 </div>
 ```
-
-And the following
 
 ```html
 <div id="x">

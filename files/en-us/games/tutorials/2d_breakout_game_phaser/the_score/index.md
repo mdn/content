@@ -1,6 +1,7 @@
 ---
 title: The score
 slug: Games/Tutorials/2D_breakout_game_Phaser/The_score
+page-type: guide
 ---
 
 {{GamesSidebar}}

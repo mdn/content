@@ -1,6 +1,7 @@
 ---
 title: Add a hitmap on top of an image
 slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
@@ -125,4 +126,4 @@ If you must use image maps, you may want to look into [Matt Stow's jQuery plugin
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](http://maschek.hu/imagemap/imgmap/)
+- [Online image map editor](https://maschek.hu/imagemap/imgmap/)

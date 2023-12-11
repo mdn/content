@@ -63,15 +63,17 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 - {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
   - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
-  - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in array-style brackets or parentheses, without calling this method explicitly.
+  - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in square brackets or parentheses, without calling this method explicitly.
 - {{domxref("HTMLSelectElement.namedItem()")}}
-  - : Gets the item in the options collection with the specified name. The name string can match either the `id` or the `name` attribute of an option node. You can also access an item by specifying the name in array-style brackets or parentheses, without calling this method explicitly.
+  - : Gets the item in the options collection with the specified name. The name string can match either the `id` or the `name` attribute of an option node. You can also access an item by specifying the name in square brackets or parentheses, without calling this method explicitly.
 - {{domxref("HTMLSelectElement.remove()")}}
   - : Removes the element at the specified index from the options collection for this `select` element.
 - {{domxref("HTMLSelectElement.reportValidity()")}}
   - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns `false`; if there are no problems, it returns `true`.
 - {{domxref("HTMLSelectElement.setCustomValidity()")}}
   - : Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.
+- {{domxref("HTMLSelectElement.showPicker()", "showPicker()")}}
+  - : Shows the option picker.
 
 ## Events
 

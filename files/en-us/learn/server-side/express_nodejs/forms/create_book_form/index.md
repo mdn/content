@@ -1,6 +1,7 @@
 ---
 title: Create Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page/form to create `Book` objects. This is a little more complicated than the equivalent `Author` or `Genre` pages because we need to get and display available `Author` and `Genre` records in our `Book` form.
@@ -22,8 +23,8 @@ Find the exported `book_create_get()` controller method and replace it with the 
 exports.book_create_get = asyncHandler(async (req, res, next) => {
   // Get all authors and genres, which we can use for adding to our book.
   const [allAuthors, allGenres] = await Promise.all([
-    Author.find().exec(),
-    Genre.find().exec(),
+    Author.find().sort({ family_name: 1 }).exec(),
+    Genre.find().sort({ name: 1 }).exec(),
   ]);
 
   res.render("book_form", {
@@ -46,9 +47,9 @@ Find the exported `book_create_post()` controller method and replace it with the
 exports.book_create_post = [
   // Convert the genre to an array.
   (req, res, next) => {
-    if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") req.body.genre = [];
-      else req.body.genre = new Array(req.body.genre);
+    if (!Array.isArray(req.body.genre)) {
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },
@@ -88,13 +89,13 @@ exports.book_create_post = [
 
       // Get all authors and genres for form.
       const [allAuthors, allGenres] = await Promise.all([
-        Author.find().exec(),
-        Genre.find().exec(),
+        Author.find().sort({ family_name: 1 }).exec(),
+        Genre.find().sort({ name: 1 }).exec(),
       ]);
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genre._id) > -1) {
+        if (book.genre.includes(genre._id)) {
           genre.checked = "true";
         }
       }
@@ -145,13 +146,12 @@ We then use a wildcard (`*`) in the sanitizer to individually validate each of t
 ```
 
 The final difference with respect to the other form handling code is that we need to pass in all existing genres and authors to the form.
-In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked='true'` parameter to those that were in our post data (as reproduced in the code fragment below).
+In order to mark the genres that were checked by the user we iterate through all the genres and add the `checked="true"` parameter to those that were in our post data (as reproduced in the code fragment below).
 
 ```js
 // Mark our selected genres as checked.
-for (const genre of results.genres) {
+for (const genre of allGenres) {
   if (book.genre.includes(genre._id)) {
-    // Current genre is selected. Set "checked" flag.
     genre.checked = "true";
   }
 }
@@ -174,7 +174,6 @@ block content
     div.form-group
       label(for='author') Author:
       select#author.form-control(type='select', placeholder='Select author' name='author' required='true' )
-        - authors.sort(function(a, b) {let textA = a.family_name.toUpperCase(); let textB = b.family_name.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
         for author in authors
           if book
             option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
@@ -206,9 +205,10 @@ The view structure and behavior is almost the same as for the **genre_form.pug**
 The main differences are in how we implement the selection-type fields: `Author` and `Genre`.
 
 - The set of genres are displayed as checkboxes, and use the `checked` value we set in the controller to determine whether or not the box should be selected.
-- The set of authors are displayed as a single-selection alphabetically ordered drop-down list. If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
+- The set of authors are displayed as a single-selection alphabetically ordered drop-down list (the list passed to the template is already sorted, so we don't need to do that in the template).
+  If the user has previously selected a book author (i.e. when fixing invalid field values after initial form submission, or when updating book details) the author will be re-selected when the form is displayed. Here we determine what author to select by comparing the id of the current author option with the value previously entered by the user (passed in via the `book` variable).
 
-  > **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
+> **Note:** If there is an error in the submitted form, then, when the form is to be re-rendered, the new book author's id and the existing books's authors ids are of type `Schema.Types.ObjectId`. So to compare them we must convert them to strings first.
 
 ## What does it look like?
 

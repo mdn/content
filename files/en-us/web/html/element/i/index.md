@@ -41,7 +41,10 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 This example demonstrates using the `<i>` element to mark text that is in another language.
 
 ```html
-<p>The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in music, art, and literature.</p>
+<p>
+  The Latin phrase <i lang="la">Veni, vidi, vici</i> is often mentioned in
+  music, art, and literature.
+</p>
 ```
 
 ### Result
@@ -91,8 +94,10 @@ This example demonstrates using the `<i>` element to mark text that is in anothe
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

@@ -4,6 +4,8 @@ slug: Glossary/Enumerated
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In computer science, an **enumerated** type is a data type consisting of a limited set of named values.
 
 ## HTML enumerated attributes

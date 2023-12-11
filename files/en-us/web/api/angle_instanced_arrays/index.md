@@ -52,7 +52,7 @@ gl.vertexAttribPointer(
   gl.FLOAT,
   false,
   0,
-  0
+  0,
 );
 
 // build position buffer
@@ -61,7 +61,7 @@ for (const instance of instances) {
   instancePositions.push(
     instance.position.x,
     instance.position.y,
-    instance.position.z
+    instance.position.z,
   );
 }
 const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
@@ -75,7 +75,7 @@ gl.vertexAttribPointer(
   gl.FLOAT,
   false,
   0,
-  0
+  0,
 );
 
 // mark the attribute as instanced and advance it every single(1) instance rather than every vertex
@@ -86,7 +86,7 @@ ext.drawArraysInstancedANGLE(
   gl.TRIANGLES,
   0,
   numGeometryVertices,
-  instances.length
+  instances.length,
 );
 ```
 

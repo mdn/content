@@ -7,7 +7,7 @@ status:
 browser-compat: api.NavigatorUAData
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`NavigatorUAData`** interface of the {{domxref('User-Agent Client Hints API')}} returns information about the browser and operating system of a user.
 
@@ -69,4 +69,4 @@ navigator.userAgentData
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)

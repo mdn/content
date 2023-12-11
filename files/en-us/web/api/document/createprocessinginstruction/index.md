@@ -43,7 +43,7 @@ None ({{jsxref("undefined")}}).
 const doc = new DOMParser().parseFromString("<foo />", "application/xml");
 const pi = doc.createProcessingInstruction(
   "xml-stylesheet",
-  'href="mycss.css"'
+  'href="mycss.css"',
 );
 
 doc.insertBefore(pi, doc.firstChild);

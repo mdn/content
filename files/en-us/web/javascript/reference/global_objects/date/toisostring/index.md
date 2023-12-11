@@ -17,6 +17,10 @@ The **`toISOString()`** method of {{jsxref("Date")}} instances returns a string 
 toISOString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the given date in the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) according to universal time. It's the same format as the one required to be recognized by {{jsxref("Date.parse()")}}.

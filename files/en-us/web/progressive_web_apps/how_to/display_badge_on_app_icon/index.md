@@ -1,6 +1,7 @@
 ---
 title: Display a badge on the app icon
 slug: Web/Progressive_web_apps/How_to/Display_badge_on_app_icon
+page-type: how-to
 ---
 
 {{PWASidebar}}
@@ -51,7 +52,7 @@ Do not rely solely on badges to inform users about the availability of new conte
 
 ### Request notification permissions for iOS and/or iPadOS
 
-While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [Notification.requestPermission()](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
+While notification badges are supported on iOS and iPadOS, badges will not appear until the application is granted notification permissions. To request notification permissions, call the [`Notification.requestPermission()`](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#getting_permission) method:
 
 ```js
 Notification.requestPermission().then((result) => {
@@ -146,6 +147,6 @@ self.addEventListener("push", (event) => {
 
 ## See also
 
-- [How to create an app badge](https://web.dev/patterns/advanced-apps/badges/)
+- [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
 - [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
-- [Codelab: Build a push notification server](https://web.dev/push-notifications-server-codelab/)
+- [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

@@ -1,6 +1,7 @@
 ---
 title: dom.openOrClosedShadowRoot()
 slug: Mozilla/Add-ons/WebExtensions/API/dom/openOrClosedShadowRoot
+page-type: webextension-api-function
 browser-compat: webextensions.api.dom.openOrClosedShadowRoot
 ---
 

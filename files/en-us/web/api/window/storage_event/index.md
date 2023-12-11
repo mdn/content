@@ -8,7 +8,9 @@ browser-compat: api.Window.storage_event
 
 {{APIRef}}
 
-The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage`) has been modified in the context of another document.
+The **`storage`** event of the {{domxref("Window")}} interface fires when a storage area (`localStorage` or `sessionStorage`) has been modified in the context of another document.
+
+This event is not cancelable and does not bubble.
 
 > **Note:** This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
 
@@ -30,22 +32,20 @@ A {{domxref("StorageEvent")}}. Inherits from {{domxref("Event")}}.
 ## Event properties
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
-  - : Returns a string that represents the key changed.
-    The `key` attribute is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-    when the change is caused by the storage `clear()` method.
+  - : Returns a string with the key for the storage item that was changed.
+    The `key` attribute is `null` when the change is caused by the storage `clear()` method.
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the new value of the `key`.
-    This value is `null`
-    when the change has been invoked by storage `clear()` method,
-    or the `key` has been removed from the storage.
+  - : Returns a string with the new value of the storage item that was changed.
+    This value is `null` when the change has been invoked by storage `clear()` method,
+    or the storage item has been removed from the storage.
 - {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
-  - : Returns a string with the original value of the `key`.
-    This value is `null` when the `key` has been newly added
+  - : Returns a string with the original value of the storage item that was changed.
+    This value is `null` when the storage item has been newly added
     and therefore doesn't have any previous value.
 - {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("Storage")}} object that represents the storage that was affected.
+  - : Returns a {{DOMxRef("Storage")}} object that represents the storage object that was affected.
 - {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
-  - : Returns string with the URL of the document whose `key` changed.
+  - : Returns string with the URL of the document whose storage changed.
 
 ## Event handler aliases
 
@@ -87,6 +87,6 @@ window.onstorage = () => {
 
 ## See also
 
-- [Web Storage API](/en-US/docs/Web/API/Web_Storage_API)
+- {{domxref("Web Storage API", "", "", "nocode")}}
 - [Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 - [Responding to storage changes with the StorageEvent](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API#responding_to_storage_changes_with_the_storageevent)

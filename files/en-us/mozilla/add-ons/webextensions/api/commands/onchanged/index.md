@@ -38,7 +38,7 @@ Events have three functions:
 
     - `changeInfo`
 
-      - : `object`. An object containing containing the name of the command, its new active shortcut, and its old shortcut.
+      - : `object`. An object containing the name of the command, its new active shortcut, and its old shortcut.
 
         - `name`
           - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).

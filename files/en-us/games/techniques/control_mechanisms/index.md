@@ -1,6 +1,7 @@
 ---
 title: Implementing game control mechanisms
 slug: Games/Techniques/Control_mechanisms
+page-type: guide
 ---
 
 {{GamesSidebar}}

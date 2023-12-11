@@ -4,6 +4,8 @@ slug: Glossary/Idempotent
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An HTTP method is **idempotent** if the intended effect on the server of making a single request is the same as the effect of making several identical requests.
 
 This does not necessarily mean that the request does not have _any_ unique side effects: for example, the server may log every request with the time it was received. Idempotency only applies to effects intended by the client: for example, a POST request intends to send data to the server, or a DELETE request intends to delete a resource on the server.

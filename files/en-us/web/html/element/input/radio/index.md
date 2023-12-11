@@ -109,7 +109,7 @@ form.addEventListener(
     log.innerText = output;
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 

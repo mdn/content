@@ -48,7 +48,7 @@ The following example shows basic usage of an {{domxref("AudioContext")}} to con
 For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <body>
   <script>
     const audioCtx = new AudioContext();
@@ -104,7 +104,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
           posX,
           canvas.height - barHeight / 2,
           barWidth,
-          barHeight / 2
+          barHeight / 2,
         );
         posX += barWidth + 1;
       }

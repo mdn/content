@@ -23,7 +23,7 @@ You can style these elements to match the browser's style. The manifest.json key
 > Support for `browser_style` in Manifest V3 is deprecated. Starting from Firefox 115, the default value of `options_ui.browser_style` and `sidebar_action.browser_style` changes from `true` to `false`. In Firefox 118, `"browser_style": true` will no longer be supported in Manifest V3 extensions.
 > If your Manifest V3 extension depends on the `"browser_style": true` styles, follow the [Manifest V3 migration guide for `browser_style`](#manifest_v3_migration).
 > See ([Firefox bug 1827910](https://bugzil.la/1827910)) for more information.
-> If you want to apply the Firefox style to your extension, see the [Firefox Style Guide](https://acorn.firefox.com/latest/acorn.html).
+> If you want to apply the Firefox style to your extension, see the [Firefox Style Guide](https://acorn.firefox.com/latest/).
 
 When considering whether to use `browser_style: true`, test your extension with various themes (built-in or from AMO) to ensure that the extension UI behaves the way you expect it to.
 
@@ -476,7 +476,9 @@ body {
   background: #fcfcfc;
   background-clip: padding-box;
   border: 1px solid rgba(24, 26, 27, 0.2);
-  box-shadow: 0 3px 5px rgba(24, 26, 27, 0.1), 0 0 7px rgba(24, 26, 27, 0.1);
+  box-shadow:
+    0 3px 5px rgba(24, 26, 27, 0.1),
+    0 0 7px rgba(24, 26, 27, 0.1);
   box-sizing: content-box;
   margin: 2em auto 0.5em;
   width: 384px;

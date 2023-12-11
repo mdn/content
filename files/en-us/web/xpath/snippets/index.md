@@ -1,11 +1,10 @@
 ---
 title: XPath snippets
 slug: Web/XPath/Snippets
+page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/XPath")}}
-</section>
+{{XsltSidebar}}
 
 This article provides some XPath code snippets — simple examples of how to a few simple **utility functions** based on standard interfaces from the [DOM Level 3 XPath specification](https://www.w3.org/TR/DOM-Level-3-XPath/) that expose XPath functionality to JavaScript code. The snippets are functions you can use in the real world in your own code.
 
@@ -25,7 +24,7 @@ function evaluateXPath(aNode, aExpr) {
   const nsResolver = xpe.createNSResolver(
     aNode.ownerDocument === null
       ? aNode.documentElement
-      : aNode.ownerDocument.documentElement
+      : aNode.ownerDocument.documentElement,
   );
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
@@ -37,11 +36,11 @@ function evaluateXPath(aNode, aExpr) {
 
 Note that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
-If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
+If you are using [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) to read a local or remote XML file into a DOM tree (as described in [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)), the first argument to `evaluateXPath()` should be `req.responseXML`.
 
 #### Sample usage
 
-Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)):
+Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
 
 ##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 
@@ -105,7 +104,7 @@ function docEvaluateArray(expr, doc, context, resolver) {
     context,
     resolver,
     XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-    null
+    null,
   );
   for (let i = 0; i < result.snapshotLength; i++) {
     a.push(result.snapshotItem(i));

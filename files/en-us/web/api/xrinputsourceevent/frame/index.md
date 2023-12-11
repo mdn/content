@@ -48,7 +48,7 @@ at anything when the select was triggered.
 xrSession.onselectstart = (event) => {
   let targetRayPose = event.frame.getPose(
     event.inputSource.targetRaySpace,
-    myRefSpace
+    myRefSpace,
   );
   if (targetRayPose) {
     checkAndHandleHit(targetRayPose.transform);

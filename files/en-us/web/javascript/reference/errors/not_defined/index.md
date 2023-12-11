@@ -1,5 +1,5 @@
 ---
-title: "ReferenceError: \"x\" is not defined"
+title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 page-type: javascript-error
 ---
@@ -11,7 +11,7 @@ non-existent variable referenced somewhere.
 
 ## Message
 
-```
+```plain
 ReferenceError: "x" is not defined (V8-based & Firefox)
 ReferenceError: Can't find variable: x (Safari)
 ```

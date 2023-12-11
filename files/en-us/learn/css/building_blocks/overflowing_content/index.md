@@ -1,6 +1,7 @@
 ---
 title: Overflowing content
 slug: Learn/CSS/Building_blocks/Overflowing_content
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}

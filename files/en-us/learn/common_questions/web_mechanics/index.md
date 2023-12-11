@@ -1,6 +1,7 @@
 ---
 title: Web mechanics
 slug: Learn/Common_questions/Web_mechanics
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

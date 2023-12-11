@@ -104,5 +104,5 @@ const p = new Proxy(obj, {
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/in", "in")}} operator
+- {{jsxref("Operators/in", "in")}}
 - {{jsxref("Reflect.has()")}}

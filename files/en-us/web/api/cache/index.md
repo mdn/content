@@ -73,9 +73,9 @@ self.addEventListener("activate", (event) => {
             console.log("Deleting out of date cache:", cacheName);
             return caches.delete(cacheName);
           }
-        })
-      )
-    )
+        }),
+      ),
+    ),
   );
 });
 
@@ -101,7 +101,7 @@ self.addEventListener("fetch", (event) => {
           console.log(
             " No response for %s found in cache. About to fetch " +
               "from network…",
-            event.request.url
+            event.request.url,
           );
 
           // We call .clone() on the request since we might use it
@@ -113,7 +113,7 @@ self.addEventListener("fetch", (event) => {
             console.log(
               "  Response for %s from network is: %O",
               event.request.url,
-              response
+              response,
             );
 
             if (
@@ -162,7 +162,7 @@ self.addEventListener("fetch", (event) => {
 
           throw error;
         });
-    })
+    }),
   );
 });
 ```
@@ -183,6 +183,4 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

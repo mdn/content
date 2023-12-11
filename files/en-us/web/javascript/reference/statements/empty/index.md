@@ -1,5 +1,5 @@
 ---
-title: empty
+title: Empty statement
 slug: Web/JavaScript/Reference/Statements/Empty
 page-type: javascript-statement
 browser-compat: javascript.statements.empty

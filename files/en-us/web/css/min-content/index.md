@@ -91,3 +91,7 @@ grid-template-columns: 200px 1fr min-content;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- Related sizing keywords: {{cssxref("max-content")}}, {{cssxref("fit-content")}}

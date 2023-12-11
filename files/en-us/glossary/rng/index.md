@@ -4,6 +4,8 @@ slug: Glossary/RNG
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **PRNG** (pseudorandom number generator) is an algorithm that outputs numbers in a complex, seemingly unpredictable pattern. Truly random numbers (say, from a radioactive source) are utterly unpredictable, whereas all algorithms are predictable, and a PRNG returns the same numbers when passed the same starting parameters or _seed_.
 
 PRNGs can be used for a variety of applications, such as games.

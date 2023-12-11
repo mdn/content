@@ -1,6 +1,7 @@
 ---
 title: Use JavaScript within a webpage
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
+page-type: learn-faq
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}

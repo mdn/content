@@ -28,7 +28,7 @@ const result = foo + "1"; // JavaScript coerces foo to a string, so it can be co
 console.log(result); // 421
 ```
 
-Implicit coercions is very convenient, but can be a potential footgun if developers didn't intend to do the conversion, or intend to convert in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
+Implicit coercions are very convenient, but can create subtle bugs when conversions happen where they are not expected, or where they are expected to happen in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
 
 ## Primitive values
 
@@ -229,7 +229,7 @@ As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) lan
 
 ### Primitive coercion
 
-The [primitive coercion](https://tc39.es/ecma262/#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
+The [primitive coercion](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
 
 - The [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) constructor, when it receives one argument that's not a `Date` instance — strings represent date strings, while numbers represent timestamps.
 - The [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator — if one operand is a string, string concatenation is performed; otherwise, numeric addition is performed.
@@ -267,7 +267,5 @@ In all cases, `[@@toPrimitive]()`, if present, must be callable and return a pri
 
 ## See also
 
-- [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
-- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
-- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [JavaScript Data Structures and Algorithms](https://github.com/trekhleb/javascript-algorithms) by Oleksii Trekhleb
+- [Computer Science in JavaScript](https://github.com/humanwhocodes/computer-science-in-javascript) by Nicholas C. Zakas

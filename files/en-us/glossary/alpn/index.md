@@ -4,6 +4,8 @@ slug: Glossary/ALPN
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Application-Layer Protocol Negotiation** (**ALPN**) is a {{Glossary("TLS")}} extension (defined in [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301)) for identifying what application-layer protocol is negotiating the encrypted connection, without requiring additional round trips to do so.
 
 | Protocol                                  | Identification sequence                                |

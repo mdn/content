@@ -1,6 +1,7 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+page-type: guide
 ---
 
 {{GamesSidebar}}

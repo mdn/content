@@ -8,7 +8,7 @@ browser-compat: api.History.state
 
 {{APIRef("History API")}}
 
-The **`History.state`** property
+The **`History.state`** read-only property
 returns a value representing the state at the top of the history stack. This is
 a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 
@@ -27,7 +27,7 @@ The next line logs the value to the console again, showing that
 
 ```js
 // Should be null because we haven't modified the history stack yet
-console.log(`History.state before pushState: ${history.state}`);
+console.log("History.state before pushState: ", history.state);
 
 // Now push something on the stack
 history.pushState({ name: "Example" }, "pushState example", "page3.html");

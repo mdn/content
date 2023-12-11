@@ -3,7 +3,7 @@ title: "MediaRecorder: isTypeSupported() static method"
 short-title: isTypeSupported()
 slug: Web/API/MediaRecorder/isTypeSupported_static
 page-type: web-api-static-method
-browser-compat: api.MediaRecorder.isTypeSupported
+browser-compat: api.MediaRecorder.isTypeSupported_static
 ---
 
 {{APIRef("MediaStream Recording")}}
@@ -49,7 +49,7 @@ for (const type of types) {
   console.log(
     `Is ${type} supported? ${
       MediaRecorder.isTypeSupported(type) ? "Maybe!" : "Nope :("
-    }`
+    }`,
   );
 }
 ```

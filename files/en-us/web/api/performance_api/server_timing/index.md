@@ -47,7 +47,7 @@ The server timing metrics usually appear in the developer tools of the browser, 
 
 Given a {{HTTPHeader("Server-Timing")}} like this:
 
-```
+```http
 Server-Timing: cache;desc="Cache Read";dur=23.2,db;dur=53,app;dur=47.2
 ```
 
@@ -58,7 +58,7 @@ const observer = new PerformanceObserver((list) => {
   list.getEntries().forEach((entry) => {
     entry.serverTiming.forEach((serverEntry) => {
       console.log(
-        `${serverEntry.name} (${serverEntry.description}) duration: ${serverEntry.duration}`
+        `${serverEntry.name} (${serverEntry.description}) duration: ${serverEntry.duration}`,
       );
       // Logs "cache (Cache Read) duration: 23.2"
       // Logs "db () duration: 53"
@@ -68,7 +68,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 ["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true })
+  observer.observe({ type, buffered: true }),
 );
 ```
 

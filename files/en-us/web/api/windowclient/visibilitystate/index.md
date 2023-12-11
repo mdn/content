@@ -34,7 +34,7 @@ event.waitUntil(
       if (clients.openWindow) {
         return clients.openWindow("/");
       }
-    })
+    }),
 );
 ```
 

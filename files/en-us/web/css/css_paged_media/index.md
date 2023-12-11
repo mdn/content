@@ -1,5 +1,5 @@
 ---
-title: CSS Paged Media
+title: CSS paged media
 slug: Web/CSS/CSS_paged_media
 page-type: css-module
 spec-urls:
@@ -9,15 +9,17 @@ spec-urls:
 
 {{CSSRef}}
 
-**CSS Paged Media** is a module of CSS that defines how page switches are handled.
+The **CSS paged media** module defines the properties that control the presentation of content for print or any other media that splits content into discrete pages. It allows you to set page breaks, control printable area, style left and right pages differently, and control breaks inside elements.
 
 ## Reference
 
 ### Properties
 
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-before")}}
-- {{cssxref("page-break-inside")}}
+- {{cssxref("break-after")}}
+- {{cssxref("break-before")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}
 
 ### At-rules
 
@@ -33,3 +35,8 @@ spec-urls:
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing) guide
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module

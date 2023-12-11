@@ -1,5 +1,5 @@
 ---
-title: "TypeError: can't define property \"x\": \"obj\" is not extensible"
+title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 page-type: javascript-error
 ---
@@ -13,7 +13,7 @@ as non-extensible.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot add property x, object is not extensible (V8-based)
 TypeError: Cannot define property x, object is not extensible (V8-based)
 TypeError: can't define property "x": Object is not extensible (Firefox)

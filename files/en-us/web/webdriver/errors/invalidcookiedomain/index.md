@@ -1,6 +1,7 @@
 ---
 title: Invalid cookie domain
 slug: Web/WebDriver/Errors/InvalidCookieDomain
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
@@ -34,7 +35,7 @@ except exceptions.InvalidCookieDomainException as e:
 
 Output:
 
-```
+```plain
 InvalidCookieDomainException: https://example.org/
 ```
 
@@ -57,7 +58,7 @@ except exceptions.InvalidCookieDomainException as e:
 
 Output:
 
-```
+```plain
 InvalidCookieDomainException: Document is cookie-averse
 ```
 

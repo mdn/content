@@ -18,7 +18,7 @@ Think of the background page as a "hidden extension page".
 
 You can include HTML files—and associated CSS or JavaScript files—in your extension. The files can be included in the root or organized within meaningful sub-folders.
 
-```
+```plain
 /my-extension
     /manifest.json
     /my-page.html
@@ -70,8 +70,8 @@ To use the history API, you must request the "`history`" [permission](/en-US/doc
 
 ## Web page design
 
-For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html).
+For details on how to design your web page's to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) example, which implements several of the options for creating windows.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [window-manipulator](https://github.com/mdn/webextensions-examples/tree/main/window-manipulator) example, which implements several of the options for creating windows.

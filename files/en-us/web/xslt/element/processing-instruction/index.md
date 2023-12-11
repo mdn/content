@@ -1,9 +1,10 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:processing-instruction>` element writes a processing instruction to the output document.
 

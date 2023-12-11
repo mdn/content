@@ -13,7 +13,7 @@ The interactive example below demonstrates some of the values using Grid Layout.
 
 {{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
-The alignment is done after the lengths and auto margins are applied, meaning that, if in a [Flexbox layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) there is at least one flexible element, with {{cssxref("flex-grow")}} different from `0`, it will have no effect as there won't be any available space.
+The alignment is done after the lengths and auto margins are applied, meaning that, if in a [Flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) there is at least one flexible element, with {{cssxref("flex-grow")}} different from `0`, it will have no effect as there won't be any available space.
 
 ## Syntax
 
@@ -38,10 +38,10 @@ justify-content: space-between; /* Distribute items evenly
                                    The first item is flush with the start,
                                    the last is flush with the end */
 justify-content: space-around; /* Distribute items evenly
-                                   Items have a half-size space
-                                   on either end */
+                                   Start and end gaps are half the size of the space
+                                   between each item */
 justify-content: space-evenly; /* Distribute items evenly
-                                   Items have equal space around them */
+                                   Start, in-between, and end gaps have equal sizes */
 justify-content: stretch; /* Distribute items evenly
                                    Stretch 'auto'-sized items to fit
                                    the container */
@@ -88,7 +88,7 @@ justify-content: unset;
 
   - : If the combined size of the items along the main axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-    > **Note:** While `stretch` is supported by flexible boxes (flexbox), when applied on a flexbox, as stretching is controlled by {{CSSXref("flex")}}, `stretch` behaves as `start`.
+    > **Note:** For [flexboxes](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), the `stretch` value behaves as `flex-start` or `start`. This is because, in flexboxes, stretching is controlled using the {{CSSXref("flex-grow")}} property.
 
 - `safe`
   - : If the item overflows the alignment container, then the item is aligned as if the alignment mode is `start`. The desired alignment will not be implemented.
@@ -164,7 +164,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)

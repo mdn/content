@@ -1,6 +1,7 @@
 ---
 title: Setting up your own test automation environment
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
@@ -102,32 +103,18 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
-   const driver = new webdriver.Builder().forBrowser("firefox").build();
-
-   driver.get("http://www.google.com");
-
-   driver.findElement(By.name("q")).sendKeys("webdriver");
-
-   driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-   });
-
-   driver.findElement(By.name("btnK")).click();
-
-   driver.sleep(2000).then(() => {
-     driver.getTitle().then((title) => {
-       if (title === "webdriver - Google Search") {
-         console.log("Test passed");
-       } else {
-         console.log("Test failed");
-       }
-       driver.quit();
-     });
-   });
+   (async function example() {
+     const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+     try {
+       await driver.get("https://www.google.com/ncr");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
+     } finally {
+       await driver.quit();
+     }
+   })();
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
@@ -248,7 +235,7 @@ You can use any URL to point to your resource, including a `file://` URL to test
 
 ```js
 driver.get(
-  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html"
+  "file:///Users/chrismills/git/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html",
 );
 ```
 
@@ -264,7 +251,7 @@ Add this line to the bottom of `quick_test.js` now:
 
 ```js
 driver.get(
-  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
 );
 ```
 
@@ -679,7 +666,7 @@ Let's write an example:
        accessKey,
      })
      .usingServer(
-       `https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`
+       `https://${username}:${accessKey}@ondemand.saucelabs.com:443/wd/hub`,
      )
      .build();
 

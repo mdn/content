@@ -1,6 +1,7 @@
 ---
 title: Tools and setup
 slug: Learn/Common_questions/Tools_and_setup
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

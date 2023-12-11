@@ -1,6 +1,7 @@
 ---
 title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
+page-type: guide
 ---
 
 {{GamesSidebar}}

@@ -29,10 +29,26 @@ The `title` attribute may contain several lines. Each `U+000A LINE FEED` (`LF`) 
 
 ```html
 <p>
-  Newlines in <code>title</code> should be taken into account, like
-  <span title="This is a
-multiline title" >example</span>.
+  Newlines in <code>title</code> should be taken into account. This
+  <span
+    title="This is a
+multiline title">
+    example span
+  </span>
+  has a title a attribute with a newline.
 </p>
+<hr />
+<pre id="output"></pre>
+```
+
+### JavaScript
+
+We can query the `title` attribute and display it in the empty `<pre>` element as follows:
+
+```js
+const span = document.querySelector("span");
+const output = document.querySelector("#output");
+output.textContent = span.title;
 ```
 
 ### Result

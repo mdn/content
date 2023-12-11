@@ -214,7 +214,7 @@ if (!(mycar instanceof Car)) {
 
 This is really different from:
 
-```js example-bad
+```js-nolint example-bad
 if (!mycar instanceof Car) {
   // unreachable code
 }
@@ -224,7 +224,7 @@ This will always be `false`. (`!mycar` will be evaluated before `instanceof`, so
 
 ### Overriding the behavior of instanceof
 
-A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `C` from `x`, it would still fail:
+A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) of `C` from `x`, it would still fail:
 
 ```js
 class C {

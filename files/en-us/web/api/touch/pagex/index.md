@@ -13,8 +13,8 @@ coordinate of the touch point relative to the viewport, including any scroll off
 
 ## Value
 
-A `long` representing the X coordinate of the touch point relative to the
-viewport, including any scroll offset.
+A `double` floating point value representing the X coordinate of the touch point
+relative to the viewport, including any scroll offset.
 
 ## Examples
 
@@ -45,7 +45,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
     }
   },
-  false
+  false,
 );
 ```
 

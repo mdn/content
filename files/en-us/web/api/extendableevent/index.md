@@ -58,7 +58,7 @@ self.addEventListener("install", (event) => {
 
   console.log(
     "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch
+    urlsToPrefetch,
   );
 
   event.waitUntil(
@@ -69,7 +69,7 @@ self.addEventListener("install", (event) => {
           .addAll(
             urlsToPrefetch.map((urlToPrefetch) => {
               return new Request(urlToPrefetch, { mode: "no-cors" });
-            })
+            }),
           )
           .then(() => {
             console.log("All resources have been fetched and cached.");
@@ -77,7 +77,7 @@ self.addEventListener("install", (event) => {
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);
-      })
+      }),
   );
 });
 ```
@@ -96,6 +96,4 @@ self.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

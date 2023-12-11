@@ -1,6 +1,7 @@
 ---
 title: Using the imscJS polyfill
 slug: Related/IMSC/Using_the_imscJS_polyfill
+page-type: guide
 ---
 
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
@@ -181,9 +182,9 @@ for (let i = 0; i < timeEvents.length; i++) {
 
   let myCue;
   if (i < timeEvents.length - 1) {
-    myCue = Cue(timeEvents[i], myVideo.duration, "");
-  } else {
     myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
+  } else {
+    myCue = new Cue(timeEvents[i], myVideo.duration, "");
   }
 
   myCue.onenter = function () {
@@ -277,7 +278,7 @@ This has the effect that pointer events are going "through" the overlay (see [re
 
 The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artefacts.
 
-the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player) tutorial.
+the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) tutorial.
 
 <section id="Quick_links">
   <ol>

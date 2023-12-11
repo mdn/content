@@ -4,6 +4,8 @@ slug: Glossary/Immutable
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An immutable value is one whose content cannot be changed without creating an entirely new value.
 
 In {{glossary("JavaScript")}}, {{Glossary("primitive", "primitive values")}} are immutable — once a primitive value is created, it cannot be changed, although the variable that holds it may be reassigned another value.

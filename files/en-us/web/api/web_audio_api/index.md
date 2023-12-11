@@ -213,9 +213,8 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL (2012)](https://web.dev/webaudio-positional-audio/)
-- [Developing Game Audio with the Web Audio API (2012)](https://auth.web.dev/webaudio-games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Mixing Positional Audio and WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
+- [Developing Game Audio with the Web Audio API (2012)](https://web.dev/articles/webaudio-games)
 
 ### Libraries
 

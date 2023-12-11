@@ -1,6 +1,7 @@
 ---
 title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
@@ -89,7 +90,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
 } else if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
+} else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }
@@ -104,7 +105,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
 } else if (navigator.getAutoplayPolicy(video) === "allowed-muted") {
   // Mute audio on video
   video.muted = true;
-} else (navigator.getAutoplayPolicy(video) === "disallowed") {
+} else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // Set a default placeholder image.
   video.poster = "http://example.com/poster_image_url";
 }
@@ -340,4 +341,4 @@ Browsers may have preferences that control the way autoplay works, or how autopl
 - [Web media technologies](/en-US/docs/Web/Media)
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) (Learning guide)
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

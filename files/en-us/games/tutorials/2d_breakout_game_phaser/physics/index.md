@@ -1,6 +1,7 @@
 ---
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
+page-type: guide
 ---
 
 {{GamesSidebar}}

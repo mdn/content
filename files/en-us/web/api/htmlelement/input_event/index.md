@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.input_event
 
 {{APIRef}}
 
-The **`input`** event fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
+The **`input`** event fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed as a direct result of a user action (such as typing in a textbox or checking a checkbox).
 
 The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on. In the case of `contenteditable` and `designMode`, the event target is the _editing host_. If these properties apply to multiple elements, the editing host is the nearest ancestor element whose parent isn't editable.
 
@@ -16,7 +16,7 @@ For `<input>` elements with `type=checkbox` or `type=radio`, the `input` event s
 
 For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accept text input (`type=text`, `type=tel`, etc.), the interface is {{DOMxRef("InputEvent")}}; for others, the interface is {{DOMxRef("Event")}}.
 
-> **Note:** The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key, selecting a value from a list of options, and the like.
+The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key or selecting a value from a list of options. Note that the `input` event is not fired when JavaScript changes an element's `value` programmatically.
 
 ## Syntax
 
@@ -30,7 +30,22 @@ oninput = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+An {{domxref("InputEvent")}}. Inherits from {{domxref("UIEvent")}}.
+
+{{InheritanceDiagram("InputEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its parents, {{DOMxRef("UIEvent")}} and {{DOMxRef("Event")}}._
+
+- {{DOMxRef("InputEvent.data")}} {{ReadOnlyInline}}
+  - : Returns a string with the inserted characters. This may be an empty string if the change doesn't insert text (for example, when deleting characters).
+- {{DOMxRef("InputEvent.dataTransfer")}} {{ReadOnlyInline}}
+  - : Returns a {{DOMxRef("DataTransfer")}} object containing information about richtext or plaintext data being added to or removed from editable content.
+- {{DOMxRef("InputEvent.inputType")}} {{ReadOnlyInline}}
+  - : Returns the type of change for editable content such as, for example, inserting, deleting, or formatting text.
+- {{DOMxRef("InputEvent.isComposing")}} {{ReadOnlyInline}}
+  - : Returns a {{JSxRef("Boolean")}} value indicating if the event is fired after {{domxref("Element/compositionstart_event", "compositionstart")}} and before {{domxref("Element/compositionend_event", "compositionend")}}.
 
 ## Examples
 

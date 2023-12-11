@@ -1,6 +1,7 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}
@@ -67,4 +68,4 @@ This topic contains the following modules, in a suggested order for working thro
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.
 - [Coding math](https://www.youtube.com/user/codingmath)
-  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://twitter.com/bit101).
+  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/blog/about-me/).

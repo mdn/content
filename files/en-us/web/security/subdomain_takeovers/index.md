@@ -1,6 +1,7 @@
 ---
 title: Subdomain takeovers
 slug: Web/Security/Subdomain_takeovers
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -51,5 +52,5 @@ If you discover that a subdomain of your domain has been taken over, the first s
 
 ## Learn more
 
-- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](http://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
+- ['Deep Thoughts' on Subdomain Takeover Vulnerabilities](https://claudijd.github.io/2017/02/03/deep-thoughts-on-subdomain-takeovers/)
 - [Subdomain Takeover: Basics](https://0xpatrik.com/subdomain-takeover-basics/)

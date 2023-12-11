@@ -1,6 +1,7 @@
 ---
 title: WebDriver
 slug: Web/WebDriver
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubpages}}
@@ -28,7 +29,7 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 
 with webdriver.Firefox() as driver:
 
-    driver.get("http://google.com/ncr")
+    driver.get("https://google.com/ncr")
     wait = WebDriverWait(driver, 10)
     driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
     wait.until(presence_of_element_located((By.XPATH, '//*[@id="rcnt"]')))
@@ -40,7 +41,7 @@ with webdriver.Firefox() as driver:
 
 This might produce output akin to this:
 
-```
+```plain
 #1 Cheese - Wikipedia (https://en.wikipedia.org/wiki/Cheese)
 ```
 

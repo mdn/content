@@ -12,7 +12,7 @@ equality (`==`).
 
 ## Message
 
-```
+```plain
 Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
 ```
 

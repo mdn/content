@@ -2,12 +2,10 @@
 title: ToggleEvent
 slug: Web/API/ToggleEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.ToggleEvent
 ---
 
-{{APIRef("UI Events")}}{{SeeCompatTable}}
+{{APIRef("UI Events")}}
 
 The **`ToggleEvent`** interface represents an event notifying the user when a [popover element](/en-US/docs/Web/API/Popover_API)'s state toggles between showing and hidden.
 
@@ -19,16 +17,16 @@ It is the event object for the `HTMLElement` {{domxref("HTMLElement.beforetoggle
 
 ## Constructor
 
-- {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}} {{Experimental_Inline}}
+- {{DOMxRef("ToggleEvent.ToggleEvent", "ToggleEvent()")}}
   - : Creates an `ToggleEvent` object.
 
 ## Instance properties
 
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("ToggleEvent.newState")}} {{ReadOnlyInline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning to.
-- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("ToggleEvent.oldState")}} {{ReadOnlyInline}}
   - : A string (either `"open"` or `"closed"`), representing the state the element is transitioning from.
 
 ## Examples

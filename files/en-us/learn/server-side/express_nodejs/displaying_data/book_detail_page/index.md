@@ -1,6 +1,7 @@
 ---
 title: Book detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
+page-type: learn-module-chapter
 ---
 
 The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.

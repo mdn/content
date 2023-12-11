@@ -47,7 +47,7 @@ function loadTexture(gl, url) {
     border,
     srcFormat,
     srcType,
-    pixel
+    pixel,
   );
 
   const image = new Image();
@@ -59,7 +59,7 @@ function loadTexture(gl, url) {
       internalFormat,
       srcFormat,
       srcType,
-      image
+      image,
     );
 
     // WebGL1 has different requirements for power of 2 images
@@ -153,7 +153,7 @@ function initTextureBuffer(gl) {
   gl.bufferData(
     gl.ARRAY_BUFFER,
     new Float32Array(textureCoordinates),
-    gl.STATIC_DRAW
+    gl.STATIC_DRAW,
   );
 
   return textureCoordBuffer;
@@ -226,9 +226,10 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
+    out vec4 fragColor;
 
     void main(void) {
-      gl_FragColor = texture2D(uSampler, vTextureCoord);
+      fragColor = texture(uSampler, vTextureCoord);
     }
   `;
 ```
@@ -277,7 +278,7 @@ function setTextureAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
 }

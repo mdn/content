@@ -4,6 +4,8 @@ slug: Glossary/Signature/Function
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **function signature** (or _type_ signature, or _method_ signature) defines input and output of {{Glossary("Function", "functions")}} or {{Glossary("Method", "methods")}}.
 
 A signature can include:

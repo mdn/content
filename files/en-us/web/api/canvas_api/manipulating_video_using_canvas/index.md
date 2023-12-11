@@ -15,7 +15,7 @@ By combining the capabilities of the [`video`](/en-US/docs/Web/HTML/Element/vide
 The HTML document used to render this content is shown below.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -44,7 +44,7 @@ The HTML document used to render this content is shown below.
       <video
         id="video"
         src="media/video.mp4"
-        controls="true"
+        controls
         crossorigin="anonymous" />
     </div>
     <div>
@@ -89,7 +89,7 @@ processor.doLoad = function doLoad() {
       this.height = video.videoHeight / 2;
       this.timerCallback();
     },
-    false
+    false,
   );
 };
 ```

@@ -1,5 +1,5 @@
 ---
-title: Media queries
+title: CSS media queries
 slug: Web/CSS/CSS_media_queries
 page-type: css-module
 spec-urls:
@@ -9,12 +9,12 @@ spec-urls:
 
 {{CSSRef}}
 
-**Media queries** are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) that allow you to apply CSS styles depending on the presence or value of device characteristics.
+**CSS media queries** are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) that allow you to apply CSS styles depending on the presence or value of device characteristics.
 
 It's common to apply a media query based on the {{Glossary("viewport")}} size so that layout choices can be made for devices with different screen sizes.
 For example, you may have a smaller font size for devices with small screens, increase the padding between paragraphs when a page is viewed in portrait mode, or increase the size of buttons on touchscreens.
 
-![A laptop and a mobile device with different viewport sizes that can be queried using media queries.](media-queries.png)
+![A laptop and a mobile device with different viewport sizes that can be queried using media queries where we can see the content being laid out differently.](media-queries.svg)
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query.
 To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
@@ -52,6 +52,8 @@ You can learn more about programmatically using media queries in [Testing media 
   - : Describes how to use media queries in your JavaScript code to determine the state of a device, and to set up listeners that notify your code when the results of media queries change (such as when the user rotates the screen or resizes the browser).
 - [Using media queries for accessibility](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
   - : Learn how Media Queries can help users understand your website better.
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
+  - : Tips and techniques for helping improve web content printer output.
 
 ## Specifications
 

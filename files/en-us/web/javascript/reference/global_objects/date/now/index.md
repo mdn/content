@@ -17,6 +17,10 @@ The **`Date.now()`** static method returns the number of milliseconds elapsed si
 Date.now()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), in milliseconds, of the current time.
@@ -69,5 +73,5 @@ For more complex scenarios, you may want to use the [performance API](/en-US/doc
 
 - [Polyfill of `Date.now` in `core-js`](https://github.com/zloirock/core-js#ecmascript-date)
 - {{domxref("Performance.now()")}}
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}

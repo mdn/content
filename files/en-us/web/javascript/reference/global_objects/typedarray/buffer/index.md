@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.buffer
 
 The **`buffer`** accessor property of {{jsxref("TypedArray")}} instances returns the {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}} referenced by this typed array at construction time.
 
-{{EmbedInteractiveExample("pages/js/typedarray-buffer.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-buffer.html", "shorter")}}
 
 ## Description
 
@@ -47,5 +47,5 @@ console.log(arr.buffer === buffer); // true
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

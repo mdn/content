@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 page-type: guide
 ---
 
+{{CSSRef}}
+
 [**CSS media queries**](/en-US/docs/Web/CSS/CSS_media_queries) can be used to help users with disabilities better experience your website.
 
 ## Reduced Motion
@@ -47,4 +49,8 @@ The value of `prefers-reduced-motion` is `reduce`, not "none". Users are not exp
 
 ## See also
 
+- [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): to adjust page styles based on user's contrast preference
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+- [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors)
 - [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

@@ -1,6 +1,7 @@
 ---
 title: Multimedia and embedding
 slug: Learn/HTML/Multimedia_and_embedding
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

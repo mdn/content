@@ -58,13 +58,13 @@ In this example, the `:lang()` pseudo-class is used to match the parents of quot
 
 ```css
 :lang(en) > q {
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 :lang(fr) > q {
   quotes: "« " " »";
 }
 :lang(de) > q {
-  quotes: "»" "«" "\2039""\203A";
+  quotes: "»" "«" "\2039" "\203A";
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -11,7 +12,7 @@ slug: Mozilla/Firefox/Releases/30
 
 - A Box Model Highlighter has been implemented ([Firefox bug 663778](https://bugzil.la/663778)).
 - Anywhere a DOM node appears in the console output, it is highlighted when you hover over that console output ([Firefox bug 757866](https://bugzil.la/757866)). Similarly all JS functions and objects are highlighted in the console output ([Firefox bug 584733](https://bugzil.la/584733)). More information about the console improvement can be found in this [blog post](https://web.archive.org/web/20150427210606/http://mihai.sucan.ro/mihai/blog/web-console-improvements-episode-30).
-- Support for {{domxref("console.count()")}} has been added ([Firefox bug 922208](https://bugzil.la/922208)).
+- Support for {{domxref("console/count_static", "console.count()")}} has been added ([Firefox bug 922208](https://bugzil.la/922208)).
 
 ### CSS
 
@@ -28,7 +29,7 @@ _No change._
 
 ### JavaScript
 
-- New ES2015-compatible [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) `[for (item of iterable) item]` and [generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Generator_comprehensions) `(for (item of iterable) item)` have been implemented ([Firefox bug 979865](https://bugzil.la/979865)).
+- New ES2015-compatible [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `[for (item of iterable) item]` and [generator comprehensions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` have been implemented ([Firefox bug 979865](https://bugzil.la/979865)).
 - [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) are now extensible and support new named properties ([Firefox bug 695438](https://bugzil.la/695438)).
 - The {{jsxref("Error.prototype.stack")}} property now contains column numbers ([Firefox bug 762556](https://bugzil.la/762556)) and has been improved [when using `Function()` and `eval()` calls](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_evaled_code). This can help you to better debug minified or generated JavaScript code.
 - The `Promise.cast()` method has been renamed to {{jsxref("Promise.resolve()")}} ([Firefox bug 966348](https://bugzil.la/966348)).
@@ -37,7 +38,7 @@ _No change._
 
 - {{domxref("Navigator.sendBeacon")}} has been implemented, easing telemetry collection ([Firefox bug 936340](https://bugzil.la/936340)).
 - Added a `relList` property returning a {{domxref("DOMTokenList")}} to {{domxref("HTMLLinkElement")}}, {{domxref("HTMLAreaElement")}} and {{domxref("HTMLAnchorElement")}} ([Firefox bug 968637](https://bugzil.la/968637)).
-- As per the latest specification, the first argument of {{domxref("OscillatorNode.start")}} and {{domxref("OscillatorNode.stop")}} is now optional and defaults to `0` ([Firefox bug 982541](https://bugzil.la/982541)).
+- As per the latest specification, the first argument of {{domxref("AudioScheduledSourceNode.start")}} and {{domxref("AudioScheduledSourceNode.stop")}} is now optional and defaults to `0` ([Firefox bug 982541](https://bugzil.la/982541)).
 - The method {{domxref("Navigator.requestWakeLock()")}} and the non-standard {{domxref("MozWakeLock")}} are no longer available from the Web on Desktop ([Firefox bug 963366](https://bugzil.la/963366)).
 - The `DOM_VK_ENTER` constant has been removed from {{domxref("KeyboardEvent")}} ([Firefox bug 969247](https://bugzil.la/969247)).
 - Web components' {{domxref("Document.register")}} has been adapted to follow the behavior described in the latest version of the specification ([Firefox bug 856140](https://bugzil.la/856140)).

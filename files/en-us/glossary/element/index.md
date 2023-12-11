@@ -4,6 +4,8 @@ slug: Glossary/Element
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An **element** is a part of a webpage. In {{glossary("XML")}} and {{glossary("HTML")}}, an element may contain a data item or a chunk of text or an image, or perhaps nothing. A typical element includes an opening tag with some {{glossary("attribute", "attributes")}}, enclosed text content, and a closing tag.
 
 ![Example: in <p class="nice">Hello world!</p>, '<p class="nice">' is an opening tag, 'class="nice"' is an attribute and its value, 'Hello world!' is enclosed text content, and '</p>' is a closing tag.](anatomy-of-an-html-element.png)

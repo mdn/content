@@ -1,6 +1,7 @@
 ---
 title: Node.js server without a framework
 slug: Learn/Server-side/Node_server_without_framework
+page-type: guide
 ---
 
 {{LearnSidebar}}

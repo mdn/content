@@ -1,6 +1,7 @@
 ---
 title: Third-party APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -245,7 +246,7 @@ Next, we use a couple of [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statemen
 
 So, a complete URL would end up looking something like this:
 
-```
+```url
 https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HERE&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 

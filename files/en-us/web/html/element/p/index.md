@@ -42,19 +42,23 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
         {{HTMLElement("p")}} element is immediately followed by an
         {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
-        {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
+        {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("figcaption")}}, {{HTMLElement("figure")}},
         {{HTMLElement("footer")}}, {{HTMLElement("form")}},
         {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
         {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
         {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}},
-        {{HTMLElement("header")}}, {{HTMLElement("hr")}},
-        {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
-        {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
+        {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}},
+        {{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
+        {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
         {{HTMLElement("ul")}} or another {{HTMLElement("p")}}
         element, or if there is no more content in the parent element and the
-        parent element is not an {{HTMLElement("a")}} element.
+        parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}},
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},
+        {{HTMLElement("noscript")}} or {{HTMLElement("video")}} element,
+        or an autonomous custom element.
       </td>
     </tr>
     <tr>
@@ -117,22 +121,29 @@ By default, browsers separate paragraphs with a single blank line. Alternate sep
 ### HTML
 
 ```html
-<p>Separating paragraphs with blank lines is easiest
-for readers to scan, but they can also be separated
-by indenting their first lines. This is often used
-to take up less space, such as to save paper in print.</p>
+<p>
+  Separating paragraphs with blank lines is easiest for readers to scan, but
+  they can also be separated by indenting their first lines. This is often used
+  to take up less space, such as to save paper in print.
+</p>
 
-<p>Writing that is intended to be edited, such as school
-papers and rough drafts, uses both blank lines and
-indentation for separation. In finished works, combining
-both is considered redundant and amateurish.</p>
+<p>
+  Writing that is intended to be edited, such as school papers and rough drafts,
+  uses both blank lines and indentation for separation. In finished works,
+  combining both is considered redundant and amateurish.
+</p>
 
-<p>In very old writing, paragraphs were separated with a
-special character: ¶, the <i>pilcrow</i>. Nowadays, this
-is considered claustrophobic and hard to read.</p>
+<p>
+  In very old writing, paragraphs were separated with a special character: ¶,
+  the <i>pilcrow</i>. Nowadays, this is considered claustrophobic and hard to
+  read.
+</p>
 
-<p>How hard to read? See for yourself:
-  <button data-toggle-text="Oh no! Switch back!">Use pilcrow for paragraphs</button>
+<p>
+  How hard to read? See for yourself:
+  <button data-toggle-text="Oh no! Switch back!">
+    Use pilcrow for paragraphs
+  </button>
 </p>
 ```
 
@@ -156,13 +167,15 @@ p.pilcrow + p.pilcrow::before {
 ### JavaScript
 
 ```js
-document.querySelector('button').addEventListener('click', (event) => {
-  document.querySelectorAll('p').forEach((paragraph) => {
-    paragraph.classList.toggle('pilcrow');
+document.querySelector("button").addEventListener("click", (event) => {
+  document.querySelectorAll("p").forEach((paragraph) => {
+    paragraph.classList.toggle("pilcrow");
   });
 
-  [event.target.innerText, event.target.dataset.toggleText] =
-    [event.target.dataset.toggleText, event.target.innerText];
+  [event.target.innerText, event.target.dataset.toggleText] = [
+    event.target.dataset.toggleText,
+    event.target.innerText,
+  ];
 });
 ```
 

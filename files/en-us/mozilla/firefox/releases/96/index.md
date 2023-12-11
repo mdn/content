@@ -1,6 +1,7 @@
 ---
 title: Firefox 96 for developers
 slug: Mozilla/Firefox/Releases/96
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -19,7 +20,7 @@ No notable changes
 
 - Firefox now provides support for the {{CSSxRef("color-scheme")}} property. This allows an element to indicate which color schemes it can comfortably be rendered in. Common options include "light" and "dark", or "day mode" and "night mode". ([Firefox bug 1576289](https://bugzil.la/1576289)).
 
-- The {{CSSxRef("counter-reset")}} property now supports the `reversed()` function for creating _reversed_ [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), which are intended for numbering elements in descending order.
+- The {{CSSxRef("counter-reset")}} property now supports the `reversed()` function for creating _reversed_ [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), which are intended for numbering elements in descending order.
   This can be used with the `list-item` counter to automatically number ordered lists in reverse order, starting from the number of elements in the list
   (`list-item` is a counter that is automatically applied for ordered lists, such as those created using {{HTMLElement("ol")}}).
   Firefox uses this feature internally to support the `<ol>` [`reversed` attribute](/en-US/docs/Web/HTML/Element/ol#reversed).
@@ -31,8 +32,7 @@ No notable changes.
 
 ### HTTP
 
-- Cookies sent from the same domain but using different schemes (for example http or https) are now considered to be from different sites with respect to the cookie [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) directive.
-  In addition, cookies are assumed to implicitly set `SameSite=Lax` if the `SameSite` attribute is not specified (previously the default was `SameSite=None`), and cookies with `SameSite=None` require a secure context. ([Firefox bug 1617609](https://bugzil.la/1617609)).
+No notable changes.
 
 ### APIs
 
