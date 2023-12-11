@@ -40,7 +40,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 If calling `requestPointerLock()` with {{domxref("Element.requestFullscreen()", "requestFullscreen()")}}, the `requestPointerLock()` must be called first, because the {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} will consume the state of {{Glossary("Transient activation", "transient activation")}}.
 
-When calling `requestPointerLock()` in an {{htmlelement("iframe")}} element, the `allow-pointer-lock` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) is required to add. Also, it is required that there is no other element in other {{htmlelement("iframe")}} elements is in pointer lock mode.
+The `allow-pointer-lock` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) must be added when calling `requestPointerLock()` in an {{htmlelement("iframe")}} element. Also, no other elements in other {{htmlelement("iframe")}} elements may be in pointer lock mode.
 
 ## Examples
 
