@@ -38,7 +38,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 {{Glossary("Transient activation")}} is required when calling `requestPointerLock()`. The user has to interact with the page or a UI element in order for this feature to work. Also, the target element's associated document must be in the active state.
 
-If calling `requestPointerLock()` immediately after releasing the pointer lock via default unlock gesture instead of through a `exitPointerLock()` call, even a {{Glossary("transient activation")}} is available, the call will fail.
+If calling `requestPointerLock()` immediately after releasing the pointer lock via the default unlock gesture (instead of through a `exitPointerLock()` call), the call will fail, even if a {{Glossary("transient activation")}} is available.
 
 If calling `requestPointerLock()` with {{domxref("Element.requestFullscreen()", "requestFullscreen()")}}, the `requestPointerLock()` must be called first, because the {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} will consume the state of {{Glossary("Transient activation", "transient activation")}}.
 
