@@ -56,7 +56,7 @@ touch src/components/Todo.jsx
 
 Don't forget to restart your development server if you stopped it to run the previous commands!
 
-Let's add define a `Todo()` function in `Todo.jsx`. Here, we define a function and export it:
+Let's add a `Todo()` function in `Todo.jsx`. Here, we define a function and export it:
 
 ```jsx
 function Todo() {}
