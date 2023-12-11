@@ -828,6 +828,14 @@
       "properties": ["Navigator.ink"],
       "events": []
     },
+    "Input Device Capabilities API": {
+      "overview": ["InputDeviceCapabilities API"],
+      "guides": [],
+      "interfaces": ["InputDeviceCapabilities"],
+      "methods": [],
+      "properties": ["UIEvent.sourceCapabilities"],
+      "events": []
+    },
     "Insertable Streams for MediaStreamTrack API": {
       "overview": ["Insertable Streams for MediaStreamTrack API"],
       "guides": [],
@@ -1179,6 +1187,17 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Remote Playback API": {
+      "overview": ["Remote Playback API"],
+      "guides": [],
+      "interfaces": ["RemotePlayback"],
+      "methods": [],
+      "properties": [
+        "HTMLMediaElement.disableRemotePlayback",
+        "HTMLMediaElement.remote"
+      ],
+      "events": []
+    },
     "Reporting API": {
       "overview": ["Reporting API"],
       "guides": [],
@@ -1281,21 +1300,36 @@
         "Client",
         "Clients",
         "ExtendableEvent",
+        "ExtendableMessageEvent",
         "FetchEvent",
         "InstallEvent",
-        "NotificationEvent",
-        "PeriodicSyncEvent",
-        "PeriodicSyncManager",
         "ServiceWorker",
         "ServiceWorkerContainer",
         "ServiceWorkerGlobalScope",
         "ServiceWorkerRegistration",
-        "SyncEvent",
-        "SyncManager",
         "WindowClient"
       ],
       "methods": [],
-      "properties": ["Navigator.serviceWorker"],
+      "properties": [
+        "Navigator.serviceWorker",
+        "WorkerNavigator.serviceWorker"
+      ],
+      "events": []
+    },
+    "Shared Storage API": {
+      "overview": ["Shared Storage API"],
+      "interfaces": [
+        "SharedStorage",
+        "SharedStorageOperation",
+        "SharedStorageRunOperation",
+        "SharedStorageSelectURLOperation",
+        "SharedStorageWorklet",
+        "SharedStorageWorkletGlobalScope",
+        "WindowSharedStorage",
+        "WorkletSharedStorage"
+      ],
+      "methods": [],
+      "properties": ["Window.sharedStorage"],
       "events": []
     },
     "Speculation Rules API": {
@@ -1732,6 +1766,8 @@
       ],
       "interfaces": [
         "CustomElementRegistry",
+        "CustomStateSet",
+        "ElementInternals",
         "HTMLSlotElement",
         "HTMLTemplateElement",
         "ShadowRoot"
@@ -1739,6 +1775,7 @@
       "methods": [
         "Document.createElement()",
         "Element.attachShadow()",
+        "HTMLElement.attachInternals()",
         "Node.getRootNode()"
       ],
       "properties": [
@@ -2005,7 +2042,10 @@
         "ServiceWorkerRegistration.getNotifications()"
       ],
       "properties": [],
-      "events": ["ServiceWorkerGlobalScope: notificationclick"]
+      "events": [
+        "ServiceWorkerGlobalScope: notificationclick",
+        "ServiceWorkerGlobalScope: notificationclose"
+      ]
     },
     "WebRTC": {
       "overview": ["WebRTC API"],
@@ -2198,6 +2238,7 @@
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
         "WebTransportReceiveStream",
+        "WebTransportSendStream",
         "WebTransportError"
       ],
       "methods": [],
@@ -2301,7 +2342,14 @@
     },
     "WebXR Device API": {
       "overview": ["WebXR Device API"],
-      "guides": ["/docs/Web/API/WebXR_Device_API/Fundamentals"],
+      "guides": [
+        "/docs/Web/API/WebXR_Device_API/Fundamentals",
+        "/docs/Web/API/WebXR_Device_API/Lifecycle",
+        "/docs/Web/API/WebXR_Device_API/Startup_and_shutdown",
+        "/docs/Web/API/WebXR_Device_API/Cameras",
+        "/docs/Web/API/WebXR_Device_API/Geometry",
+        "/docs/Web/API/WebXR_Device_API/Spatial_tracking"
+      ],
       "interfaces": [
         "XRAnchor",
         "XRBoundedReferenceSpace",
@@ -2343,7 +2391,10 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": ["WindowControlsOverlay"],
+      "interfaces": [
+        "WindowControlsOverlay",
+        "WindowControlsOverlayGeometryChangeEvent"
+      ],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
