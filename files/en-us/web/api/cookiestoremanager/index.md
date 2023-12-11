@@ -36,7 +36,7 @@ await registration.cookies.subscribe(subscriptions);
 If the {{domxref("ServiceWorkerRegistration")}} has subscribed to any cookies, then {{domxref("CookieStoreManager.getSubscriptions()","getSubscriptions()")}} will return a list of cookies represented by objects in the same format as used for the original subscription.
 
 ```js
-const subscriptions = await registration.cookies.getSubscriptions();
+const subscriptions = await self.registration.cookies.getSubscriptions();
 ```
 
 ## Specifications
