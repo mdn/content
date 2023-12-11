@@ -146,9 +146,9 @@ Let's look at setting up Gulp and using it to automate some testing tools.
 5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
 
    ```js
-   const gulp = require("gulp");
+   import gulp from "gulp";
 
-   exports.default = function (cb) {
+   export default function (cb) {
      console.log("Gulp running");
      cb();
    };
@@ -193,7 +193,7 @@ To use each plugin, you need to first install it via npm, then require any depen
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html() {
+   export function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
@@ -201,14 +201,7 @@ To use each plugin, you need to first install it via npm, then require any depen
    }
    ```
 
-4. Export the html task using:
-
-   ```js
-   const _html = html;
-   export { _html as html };
-   ```
-
-5. Change the default export to:
+4. Change the default export to:
 
    ```js
    export default html;
@@ -239,7 +232,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css() {
+   export function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -261,14 +254,7 @@ In the input version of the file, you may have noticed that we put an empty {{ht
    ]
    ```
 
-5. Export the css task using:
-
-   ```js
-   const _css = css;
-   export { _css as css };
-   ```
-
-6. Change the default task to:
+5. Change the default task to:
 
    ```js
    export default gulp.series(html, css);
@@ -296,7 +282,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js() {
+   export function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -310,14 +296,7 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
    }
    ```
 
-4. Export the js task using:
-
-   ```js
-   const _js = js;
-   export { _js as js };
-   ```
-
-5. Change the default task to:
+4. Change the default task to:
 
    ```js
    export default gulp.series(html, css, js);
@@ -338,15 +317,11 @@ If you get errors, check that you've added all the dependencies and the tests as
 Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.js`:
 
 ```js
-function watch() {
+export function watch() {
   gulp.watch("src/*.html", html);
   gulp.watch("src/*.css", css);
   gulp.watch("src/*.js", js);
 }
-
-const _watch = watch;
-
-export { _watch as watch };
 ```
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
