@@ -103,10 +103,6 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
    ```js
-   function sleep(ms) {
-     return new Promise((resolve) => setInterval(resolve, ms));
-   }
-
    const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
    (async function example() {
@@ -116,7 +112,7 @@ OK, let's try a quick test to make sure everything is working.
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
        await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
      } finally {
-       await sleep(4000); // Delay long enough to see search page!
+       await driver.sleep(2000); // Delay long enough to see search page!
        await driver.quit();
      }
    })();
