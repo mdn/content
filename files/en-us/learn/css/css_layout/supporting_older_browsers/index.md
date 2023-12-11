@@ -71,7 +71,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -81,7 +81,7 @@ In the example below, we have floated three `<div>`s so they display in a row. A
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -121,7 +121,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -131,7 +131,7 @@ In the floated layout, the percentage is calculated from the container — 33.33
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -161,7 +161,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 }
 
 .wrapper {
-  background-color: rgb(79, 185, 227);
+  background-color: rgb(79 185 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -171,7 +171,7 @@ If we add a feature query to the above example, we can use it to set the widths 
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -197,17 +197,9 @@ Support for feature queries is very good across modern browsers. However, you sh
 
 The specification for feature queries also contains the ability to test if a browser does not support a feature — this is only helpful if the browser does support feature queries. In the future, an approach of checking for lack of support will work, as the browsers that don't have feature query support go away. For now, however, use the approach of doing the older CSS, then overwriting it, for the best support.
 
-## The IE10 and 11 prefixed version of Grid
-
-The CSS Grid specification was initially prototyped In Internet Explorer 10; this means that while IE10 and IE11 do not have _modern_ grid support, they do have a version of Grid layout that is very usable, although different to the modern specification documented on this site. The IE10 and 11 implementations is `-ms-` prefixed, which means you can use it for these browsers and it will be ignored by non-Microsoft browsers. Edge does still understand the old syntax, however, so take care that everything is safely overwritten in your modern grid CSS.
-
-The guide to [Progressive Enhancement in Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) can help you understand the IE version of the grid, and we have included some additional useful links at the end of this lesson. However, unless you have a very high number of visitors in older IE versions, you may find it better to focus on creating a fallback that works for all non-supporting browsers.
-
 ## Testing older browsers
 
 With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
-
-You can also download and install virtual machines, and run older versions of browsers in a contained environment on your computer. If you are still required to support Internet Explorer, Microsoft provides [a range of Virtual Machines available for free download](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). These are available for Mac, Windows and Linux operating systems and so are a great way to test in old and modern Windows browsers even if you are not using a Windows computer.
 
 ## Summary
 
@@ -221,8 +213,6 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 - [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
-- [A tutorial which uses the IE10 and 11 version of Grid](https://24ways.org/2012/css3-grid-layout/)
-- [Should I try to use the IE10 implementation of Grid Layout?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)
 - [Cascading Web Design with Feature Queries](https://24ways.org/2017/cascading-web-design/)
 - [Using Feature Queries (Video)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
 

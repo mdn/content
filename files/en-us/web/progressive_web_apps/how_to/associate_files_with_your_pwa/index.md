@@ -98,5 +98,5 @@ Note that the code checks that `launchQueue` exists before using it, to ensure t
 - {{domxref("LaunchQueue")}} interface
 - [File System API](/en-US/docs/Web/API/File_System_API)
 - [File API](/en-US/docs/Web/API/File_API)
-- [Let installed web applications be file handlers](https://developer.chrome.com/articles/file-handling/) on web.dev (2022)
+- [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) on developer.chrome.com (2022)
 - [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) on learn.microsoft.com (2023)

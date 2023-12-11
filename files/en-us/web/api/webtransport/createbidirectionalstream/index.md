@@ -50,7 +50,7 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("WebTransportBidirectionalS
 
 ## Examples
 
-An initial function is used to get references to the {{domxref("WebTransportBidirectionalStream.readable")}} and {{domxref("WebTransportBidirectionalStream.writable")}} properties. These are references to `ReadableStream` and `WritableStream` instances, which can be used to read from and write to the server.
+An initial function is used to get references to the {{domxref("WebTransportBidirectionalStream.readable")}} and {{domxref("WebTransportBidirectionalStream.writable")}} properties. These are references to `WebTransportReceiveStream` and `WebTransportSendStream` instances, which are readable and writable streams that can be used to read from and write to the server.
 
 ```js
 async function setUpBidirectional() {
@@ -67,7 +67,7 @@ async function setUpBidirectional() {
 }
 ```
 
-Reading from the `ReadableStream` can then be done as follows:
+Reading from the `WebTransportReceiveStream` can then be done as follows:
 
 ```js
 async function readData(readable) {
@@ -83,7 +83,7 @@ async function readData(readable) {
 }
 ```
 
-And writing to the `WritableStream` can be done like this:
+And writing to the `WebTransportSendStream` can be done like this:
 
 ```js
 async function writeData(writable) {
@@ -105,7 +105,8 @@ async function writeData(writable) {
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("WebTransport.createUnidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

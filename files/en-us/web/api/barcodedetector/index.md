@@ -7,7 +7,7 @@ status:
 browser-compat: api.BarcodeDetector
 ---
 
-{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
 
@@ -89,4 +89,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [Accelerated Shape Detection in Images](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [Accelerated Shape Detection in Images](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)

@@ -28,7 +28,7 @@ Throughout the remainder of this article, we'll look at these steps in more deta
 
 The example code found on this page is derived from [this working example](https://mdn.github.io/webaudio-examples/audioworklet/) which is part of MDN's [GitHub repository of Web Audio examples](https://github.com/mdn/webaudio-examples/). The example creates an oscillator node and adds white noise to it using an {{domxref("AudioWorkletNode")}} before playing the resulting sound out. Slider controls are available to allow controlling the gain of both the oscillator and the audio worklet's output.
 
-[**See the code**](https://github.com/mdn/webaudio-examples/tree/master/audioworklet)
+[**See the code**](https://github.com/mdn/webaudio-examples/tree/main/audioworklet)
 
 [**Try it live**](https://mdn.github.io/webaudio-examples/audioworklet/)
 
