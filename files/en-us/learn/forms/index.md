@@ -75,3 +75,4 @@ The following articles aren't essential to the learning pathway, but they'll pro
 - [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms)
 - [HTML \<input> types reference](/en-US/docs/Web/HTML/Element/input)
 - [HTML attribute reference](/en-US/docs/Web/HTML/Attributes)
+- [User input methods and controls](/en-US/docs/Learn/Forms/User_input_methods)

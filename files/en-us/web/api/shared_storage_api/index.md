@@ -158,7 +158,7 @@ const fencedFrameConfig = await window.sharedStorage.selectURL(
 );
 ```
 
-Because the options object contains `resolveToConfig: true`, the returned {{jsxref("Promise")}} will resolve with a {{domxref("FencedFrameConfig")}} object. This object can be set as the value of the {{domxref("HTMLFencedFrameElement.config")}} property, resulting in the chosen URL having its content displayed in the corresponding {{htmlelement("fencedframe")}} element:
+Because the options object contains `resolveToConfig: true`, the returned {{jsxref("Promise")}} will resolve with a {{domxref("FencedFrameConfig")}} object. This object can be set as the value of the {{domxref("HTMLFencedFrameElement.config")}} property, resulting in the content of the chosen URL being displayed in the corresponding {{htmlelement("fencedframe")}} element:
 
 ```js
 document.getElementById("content-slot").config = fencedFrameConfig;
