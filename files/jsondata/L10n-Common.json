@@ -46,7 +46,7 @@
   "Implemented_by": {
     "en-US": "Implemented by:",
     "es": "Implementado por:",
-    "fr": "Implémenté(e) par&nbsp;:",
+    "fr": "Implémenté(e) par:",
     "ja": "実装先:",
     "ko": "구현:",
     "pt-BR": "Implementado por:",
@@ -57,7 +57,7 @@
   "Inheritance": {
     "en-US": "Inheritance",
     "es": "Herencia",
-    "fr": "Héritage&nbsp;",
+    "fr": "Héritage",
     "ja": "継承",
     "ko": "상속",
     "pt-BR": "Herança",
@@ -156,7 +156,7 @@
   "Related_pages_wo_group": {
     "en-US": "Related pages:",
     "es": "Páginas relacionadas:",
-    "fr": "Pages similaires&nbsp;:",
+    "fr": "Pages similaires:",
     "ja": "関連するページ:",
     "ko": "관련 페이지:",
     "pt-BR": "Páginas relacionadas:",
@@ -189,7 +189,7 @@
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
-    "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire&nbsp;!",
+    "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire!",
     "ja": "まだボランティアによって日本語に翻訳されていない記事です。 MDN に参加して、翻訳してみませんか？",
     "ko": "이 문서는 아직 한국어로 번역되지 않았습니다. 저희와 함께 번역을 끝낼 수 있게 도와주세요!",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
@@ -241,7 +241,7 @@
   "summary": {
     "en-US": "The documentation about this has not yet been written; please consider contributing!",
     "es": "La documentación acerca de este tema no ha sido escrita todavía. ¡Por favor considera contribuir!",
-    "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!",
+    "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant!",
     "ja": "この項目についての文書はまだ書かれていません。書いてみませんか？",
     "ko": "이 문서는 아직 작성되지 않았습니다. 기여해 주시겠어요?",
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
