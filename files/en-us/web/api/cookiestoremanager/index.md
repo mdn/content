@@ -26,14 +26,14 @@ To get a `CookieStoreManager`, call {{domxref("ServiceWorkerRegistration.cookies
 
 ## Examples
 
-In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
+In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is subscribing to change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
 const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.subscribe(subscriptions);
 ```
 
-If the {{domxref("ServiceWorkerRegistration")}} has subscribed to any cookies then {{domxref("CookieStoreManager.getSubscriptions()","getSubscriptions()")}} will return a list of cookies represented by objects in the same format as used for the original subscription.
+If the {{domxref("ServiceWorkerRegistration")}} has subscribed to any cookies, then {{domxref("CookieStoreManager.getSubscriptions()","getSubscriptions()")}} will return a list of cookies represented by objects in the same format as used for the original subscription.
 
 ```js
 const subscriptions = await registration.cookies.getSubscriptions();
