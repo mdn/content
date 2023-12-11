@@ -57,6 +57,18 @@ The `pretty` value can have a negative effect on performance. Only use this valu
 
 The `stable` value should be used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This ensures that the previous lines remain stable when users edit the content.
 
+## Description 2
+
+Inline-level content is laid out into lines, with line breaks breaking text across line boxes. There are two types of line breaks. A _forced line break_ occurs when a line is broken due to a newline character, the start or end of a block, or other explicit line-breaking controls such as when `{{cssxref("white-space")}}: pre` is set. A _soft line break_ is an unforced line break, such as when content naturally wraps to fit the content within its parent.
+
+When wrapping is enabled, the `text-wrap` property defines how soft-wrap-opportunities within a line are prioritized. The value you choose depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
+
+When the styled content will be limited to a short number of lines, such as headings, captions, and blockquotes, `text-wrap: balance` can be added to balance the number of characters on each line, enhancing layout quality and legibility. As browsers limit the number of lines impacted by this property, this value's impact on performance is negligible.
+
+For longer sections of text, `text-wrap: pretty` can be used. Note that `pretty` has a negative effect on performance, so it should be only used for longer blocks of text when the layout is more important than speed.
+
+The `stable` value improves user experience when used on content that is [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable). This value ensures that, as the user is editing text, the previous lines in the area being edited remain stable.
+
 ## Formal definition
 
 {{CSSInfo}}
