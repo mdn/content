@@ -41,7 +41,7 @@ assumptions about its value. You can pass this value to
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the method is not supported in current worker.
+  - : Thrown if the method is not supported in the current worker.
 
 ## Examples
 

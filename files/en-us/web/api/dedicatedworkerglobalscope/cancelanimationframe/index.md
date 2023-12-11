@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the method is not supported in current worker.
+  - : Thrown if the method is not supported in the current worker.
 
 ## Examples
 
