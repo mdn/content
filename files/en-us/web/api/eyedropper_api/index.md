@@ -42,5 +42,5 @@ To prevent malicious websites from getting pixel data from a user's screen witho
 
 ## See also
 
-- [Picking colors of any pixel on the screen with the EyeDropper API](https://developer.chrome.com/articles/eyedropper/)
+- [Picking colors of any pixel on the screen with the EyeDropper API](https://developer.chrome.com/docs/capabilities/web-apis/eyedropper)
 - [The EyeDropper API W3C/SMPTE Joint Workshop](https://www.w3.org/2021/03/media-production-workshop/talks/patrick-brosset-eyedropper-api.html)
