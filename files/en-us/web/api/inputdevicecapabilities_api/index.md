@@ -7,7 +7,7 @@ status:
 browser-compat: api.InputDeviceCapabilities
 ---
 
-{{DefaultAPISidebar("InputDeviceCapabilities API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The InputDeviceCapabilities API provides details about the underlying sources of input events. The API attempts to describe how the device behaves rather than what it is. For example, the first version of the API indicates whether a device fires touch events rather than whether it is a touch screen.
 
@@ -26,8 +26,13 @@ myButton.addEventListener("mousedown", (e) => {
 
 ## Interfaces
 
-- {{DOMxRef("InputDeviceCapabilities")}} {{Experimental_Inline}}
+- {{domxref("InputDeviceCapabilities")}} {{Experimental_Inline}}
   - : Provides logical information about an input device.
+
+## Extensions to other interfaces
+
+- {{domxref("UIEvent.sourceCapabilities")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns an instance of the `InputDeviceCapabilities` interface, which provides information about the physical device responsible for generating a touch event.
 
 ## Specifications
 

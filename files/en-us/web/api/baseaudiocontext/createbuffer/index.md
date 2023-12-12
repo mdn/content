@@ -95,7 +95,7 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 Now let's look at a more complex `createBuffer()` example, in which we
 create a three-second buffer, fill it with white noise, and then play it via an {{
   domxref("AudioBufferSourceNode") }}. The comment should clearly explain what is going
-on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+on. You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();

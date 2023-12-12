@@ -5,6 +5,7 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.WindowControlsOverlay
+spec-urls: https://wicg.github.io/window-controls-overlay/
 ---
 
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
@@ -47,8 +48,15 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 ## Interfaces
 
-- {{domxref("WindowControlsOverlay")}}
+- {{domxref("WindowControlsOverlay")}} {{Experimental_Inline}}
   - : Provides information about the visibility and geometry of the title bar and an event to know whenever it changes.
+- {{domxref("WindowControlsOverlayGeometryChangeEvent")}} {{Experimental_Inline}}
+  - : Represents events providing information related to the desktop Progress Web App's title var region when its size or visibility changes.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.windowControlsOverlay")}}
+  - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps.
 
 ## Specifications
 
