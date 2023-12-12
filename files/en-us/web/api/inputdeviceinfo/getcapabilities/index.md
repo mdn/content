@@ -28,7 +28,7 @@ A `MediaTrackCapabilities` object containing the following members:
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the device ID.
 - `groupId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing a group ID.
-- `autoGainControl`>
+- `autoGainControl`
   - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can do auto gain control.
     If the feature can be controlled by a script the source will report both true and false as possible values.
 - `channelCount`
