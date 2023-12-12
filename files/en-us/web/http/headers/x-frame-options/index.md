@@ -72,6 +72,12 @@ To configure Nginx to send the `X-Frame-Options` header, add this either to your
 add_header X-Frame-Options SAMEORIGIN always;
 ```
 
+You can set the `X-Frame-Options` header to `DENY` using:
+
+```nginx
+add_header X-Frame-Options DENY always;
+```
+
 ### Configuring IIS
 
 To configure IIS to send the `X-Frame-Options` header, add this to your site's `Web.config` file:
@@ -106,8 +112,11 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 ### Configuring Express
 
-You can use [Helmet](https://helmetjs.github.io/) to configure an Express app to [set the legacy X-Frame-Options](https://helmetjs.github.io/#x-frame-options) header on old browsers or if no CSP is used.
-Add the following to your server configuration to set the `SAMEORIGIN` directive:
+You can use [Helmet](https://helmetjs.github.io/) to configure an Express app to [set the **legacy** X-Frame-Options](https://helmetjs.github.io/#x-frame-options) header on old browsers.
+
+> **Warning:** It's recommended to use the {{HTTPHeader("Content-Security-Policy")}} HTTP header with the {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} directive instead.
+
+To use Helmet to set `X-Frame-Options`, add the following to your server configuration to set the `SAMEORIGIN` directive:
 
 ```js
 const helmet = require("helmet");
