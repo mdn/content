@@ -78,11 +78,29 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
+- Added the [`browsingContext.contextDestroyed`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-contextDestroyed) event that is emitted when a browsing context is discarded ([Firefox bug 1694390](https://bugzil.la/1694390)).
+
+- Added support for the `userActivation` parameter for the [`script.callFunction`](https://w3c.github.io/webdriver-bidi/#command-script-callFunction) and [`script.evaluate`](https://w3c.github.io/webdriver-bidi/#command-script-evaluate) commands which allows evaluating JavaScript while emulating the user action. ([Firefox bug 1845488](https://bugzil.la/1845488)).
+
+- Added support for the `defaultValue` field for the [`browsingContext.userPromptOpened`](https://w3c.github.io/webdriver-bidi/#event-browsingContext-userPromptOpened) event that allow users to retrieve the default value of prompts ([Firefox bug 1851761](https://bugzil.la/1851761)).
+
+- Renamed the `viewportOptions` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command to `boxOptions` ([Firefox bug 1859258](https://bugzil.la/1859258)).
+
+- Removed the `scrollIntoView` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command, in favor of the `origin` parameter below ([Firefox bug 1862649](https://bugzil.la/1862649)).
+
+- Added support for the `origin` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command which allows to define the origin and bounds of the screenshot. The accepted values are `"document"` and `"viewport"` ([Firefox bug 1840999](https://bugzil.la/1840999)).
+
+- When serializing `Window` objects, the serialized value now contains a `context` property set to the context id for the `Window` object ([Firefox bug 1841049](https://bugzil.la/1841049)).
+
+- Fixed a bug where serializing a Node nested in a data structure (array, map, etc.) would fail ([Firefox bug 1861000](https://bugzil.la/1861000)).
+
+- Fixed a bug where the [`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate) command could return an incorrect navigation id ([Firefox bug 1861655](https://bugzil.la/1861655)).
+
 #### Marionette
+
+- Added support for serializing and deserializing `Window` and `Frame` objects ([Firefox bug 1274251](https://bugzil.la/1274251)).
 
 ## Changes for add-on developers
 
