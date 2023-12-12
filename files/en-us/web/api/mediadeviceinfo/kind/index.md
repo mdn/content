@@ -10,11 +10,11 @@ browser-compat: api.MediaDeviceInfo.kind
 
 The **`kind`** read-only property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
-either "videoinput", "audioinput" or "audiooutput".
+either `"videoinput"`, `"audioinput"` or `"audiooutput"`.
 
 ## Value
 
-A string.
+One of `"videoinput"`, `"audioinput"` or `"audiooutput"`.
 
 ## Specifications
 
