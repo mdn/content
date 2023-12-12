@@ -2,7 +2,9 @@
 title: CSS transforms
 slug: Web/CSS/CSS_transforms
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-transforms-2/
+spec-urls: 
+  - https://drafts.csswg.org/css-transforms/
+  - https://drafts.csswg.org/css-transforms-2/
 ---
 
 {{CSSRef}}
