@@ -14,6 +14,8 @@ A location breadcrumb for this document might look something like this:
 
 Breadcrumb trails enable users to be aware of their location within a website. This type of navigation, if done correctly, helps users know where they are in a site and how they got there. They can also help a user get back to where they were before and can reduce the number of clicks needed to get to a higher-level page.
 
+> **Note:** There's no dedicated [semantic HTML element](/en-US/docs/Web/HTML/Element/ol) for breadcrumb navigation menus, it's recommended to use an [`<ol>`](/en-US/docs/Web/HTML/Element/ol) to represent it's hierarchical structure.
+
 ## See also
 
 - [Breadcrumb Navigation](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
