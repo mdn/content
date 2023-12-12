@@ -8,7 +8,7 @@ browser-compat: api.MediaDevices.devicechange_event
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+The **`devicechange`** event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
 This event is not cancelable and does not bubble.
 
