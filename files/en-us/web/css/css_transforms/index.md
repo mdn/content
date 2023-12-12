@@ -79,6 +79,8 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
   - : Step-by-step tutorial about how to transform elements styled with CSS.
 - [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
   - : Describes the way pixel locations are defined in the CSS object model.
+- [Performance fundamentals: Use CSS transforms](/en-US/docs/Web/Performance/Fundamentals#use_css_transforms)
+  - : An overview of web performance fundamentals, including how CSS transforms can improve performance.
 - [Matrix math for the web](/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
   - : Describes how object transformations can be represented by mathematical matrices.
 
@@ -110,10 +112,11 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - Glossary terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)
   - [Stacking context](/en-US/docs/Glossary/Stacking_context)
-- SVG concepts:
-  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate)
-  - [`<set>`](/en-US/docs/Web/SVG/Element/set)
-  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform)
+- [SVG](/en-US/docs/Web/SVG) concepts:
+  - [`<animate>`](/en-US/docs/Web/SVG/Element/animate) element
+  - [`<animateTransform>`](/en-US/docs/Web/SVG/Element/animateTransform) element
+  - [`<set>`](/en-US/docs/Web/SVG/Element/set) element
+  - [`transform`](/en-US/docs/Web/SVG/Attribute/transform) element
 
 ## Specifications
 
@@ -121,4 +124,6 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 
 ## See also
 
-- CSS properties: [`animation`](/en-US/docs/Web/CSS/animation), [`transition`](/en-US/docs/Web/CSS/transition)
+- [Basic SVG transformations](/en-US/docs/Web/SVG/Tutorial/Basic_Transformations) tutorial
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
