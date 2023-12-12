@@ -116,7 +116,7 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": ["createImageBitmap"],
+      "methods": ["createImageBitmap()"],
       "properties": [],
       "events": []
     },
@@ -406,12 +406,6 @@
         "TreeWalker",
         "XMLDocument"
       ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "DOM (Non-standard)": {
-      "interfaces": ["DOMCursor", "DOMRequest"],
       "methods": [],
       "properties": [],
       "events": []
@@ -880,10 +874,10 @@
       ],
       "interfaces": ["MediaCapabilities", "Screen"],
       "methods": [
-        "mediaCapabilities.decodingInfo()",
-        "mediaCapabilities.encodingInfo()"
+        "MediaCapabilities.decodingInfo()",
+        "MediaCapabilities.encodingInfo()"
       ],
-      "properties": ["navigator.mediaCapabilities"],
+      "properties": ["Navigator.mediaCapabilities"],
       "events": [],
       "dictionaries": []
     },
@@ -914,7 +908,7 @@
       "overview": ["Media Session API"],
       "interfaces": ["MediaMetadata", "MediaSession"],
       "methods": [],
-      "properties": ["navigator.mediaSession"],
+      "properties": ["Navigator.mediaSession"],
       "events": [],
       "dictionaries": [],
       "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
