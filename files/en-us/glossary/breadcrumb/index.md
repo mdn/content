@@ -13,3 +13,10 @@ A location breadcrumb for this document might look something like this:
 [MDN](/) > [Glossary](/en-US/docs/Glossary) > Breadcrumb
 
 Breadcrumb trails enable users to be aware of their location within a website. This type of navigation, if done correctly, helps users know where they are in a site and how they got there. They can also help a user get back to where they were before and can reduce the number of clicks needed to get to a higher-level page.
+
+## See also
+
+- [Breadcrumb Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/)
+- [Breadcrumb Example](https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/)
+- [Understanding Success Criterion 2.4.8 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-location.html)
+- [Understanding Technique 65 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/G65)
