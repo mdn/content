@@ -98,6 +98,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
   - [`mix-blend-mode`](/en-US/docs/Web/CSS/mix-blend-mode)
   - [`opacity`](/en-US/docs/Web/CSS/opacity)
   - [`overflow`](/en-US/docs/Web/CSS/overflow)
+  - [`transition`](/en-US/docs/Web/CSS/transition)
   - [`visibility`](/en-US/docs/Web/CSS/visibility)
 - Data types:
   - [`<angle>`](/en-US/docs/Web/CSS/angle)
