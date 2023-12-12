@@ -7,9 +7,9 @@ browser-compat: webextensions.api.components.utils.exportFunction
 
 {{AddonSidebar()}}
 
-This function provides a safe way to expose a function from a privileged scope to a less-privileged scope. This way, privileged code, such as an extension, can share code with less-privileged code, such as a standard web page script. A function exported from privileged to less-privileged code can be called from the less privileged code's context.
+This function provides a safe way to expose a function from a privileged scope to a less-privileged scope. This enables privileged code, such as an extension, to share code with less-privileged code, such as a standard web page script. A function exported from privileged to less-privileged code can be called from the less privileged code's context.
 
-The function has access to its surrounding closure as if it were called in the privileged context.
+The function has access to its surrounding closure as if called in the privileged context.
 
 The exported function doesn't need to be added to the less privileged code's global window object; it can be exported to any object in the target scope.
 
@@ -30,15 +30,15 @@ let exportFunctionuating = Components.utils.exportFunction(
 - `func`
   - : `function`. The function to export.
 - `targetScope`
-  - : `object`. The object to attach the function to. This doesn't have to be the global window object: it could be any object in the target window or an object created by the caller.
+  - : `object`. The object to attach the function to. This doesn't have to be the global window object; it could be an object in the target window or created by the caller.
 - `options` {{optional_inline}}
 
-  - : `object`. Options for the function, as follows:
+  - : `object`. Options for the function.
 
     - `defineAs` {{optional_inline}}
       - : `string`. The name of the function in `targetScope`. If omitted, you need to assign the return value of `exportFunction()` to an object in the target scope.
     - `allowCrossOriginArguments` {{optional_inline}}
-      - : `boolean`. Whether to check that arguments to the exported function are [subsumed](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/index.html#subsumes) by the caller. This allows the caller to pass objects with a different origin into the exported function, which can then use its privileged status to make cross-origin requests with them. Defaults to `false`.
+      - : `boolean`. Whether to check that arguments to the exported function are [subsumed](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/index.html#subsumes) by the caller. This allows the caller to pass objects with a different origin into the exported function, which can then use its privileged status to make cross-origin requests with the object. Defaults to `false`.
 
 ### Return value
 
@@ -144,13 +144,13 @@ test.addEventListener(
 
 ### Cross-origin checking
 
-When the exported function is called, each argument, including `this`, is checked to make sure that the caller [subsumes](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/index.html#subsumes) that argument. This prevents passing cross-origin objects (such as `Window` or `Location`) to privileged functions, as the privileged code has full access to those objects and could unintentionally do something dangerous. This provision can be overridden by passing `{ allowCrossOriginArguments: true }` to `exportFunction`.
+When the exported function is called, each argument, including `this`, is checked to ensure the caller [subsumes](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/index.html#subsumes) that argument. This prevents passing cross-origin objects (such as `Window` or `Location`) to privileged functions, as the privileged code has full access to those objects and could unintentionally do something dangerous. This provision can be overridden by passing `{ allowCrossOriginArguments: true }` to `exportFunction`.
 
 ## Examples
 
 ### Export to global scope
 
-This script defines a function, then exports it to a content window:
+This script defines a function and then exports it to a content window:
 
 ```js
 // extension-script.js

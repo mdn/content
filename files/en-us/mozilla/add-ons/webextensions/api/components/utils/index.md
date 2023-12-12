@@ -7,7 +7,7 @@ browser-compat: webextensions.api.components.utils
 
 {{AddonSidebar}}
 
-Utilities that enables an extension to [share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
+Utilities that enable an extension to [share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
 
 ## Functions
 

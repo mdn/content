@@ -19,7 +19,7 @@ You can then assign the clone to an object in the target scope as an expando pro
 targetWindow.foo = clonedObject;
 ```
 
-In this way privileged code, such as an extension, can share an object with less-privileged code such as a web page script.
+This enables privileged code, such as an extension, to share an object with less-privileged code, such as a web page script.
 
 ## Syntax
 
@@ -38,7 +38,7 @@ let clonedObject = Components.utils.cloneInto(
 - `targetScope`
   - : `object`. The object to attach the object to.
 - `options` {{optional_inline}}
-  - : `object`. Options for the function, as follows:
+  - : `object`. Options for the function.
     - `cloneFunctions` {{optional_inline}}
       - : `Boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction). See [Cloning objects that have functions](#Cloning_objects_that_have_functions). {{optional_inline}}
     - `wrapReflectors` {{optional_inline}}
@@ -71,7 +71,7 @@ button.addEventListener(
 );
 ```
 
-Of course, you don't have to assign the clone to the window itself: you can assign it to some other object in the target scope:
+Of course, you don't have to assign the clone to the window itself; you can assign it to some other object in the target scope:
 
 ```js
 contentWindow.foo.addonScriptObject = cloneInto(
@@ -99,7 +99,7 @@ contentWindow.foo(cloneInto(addonScriptObject, contentWindow)); // "they said: h
 
 ### Cloning objects that have functions
 
-If the object to clone contains functions, you must pass the `{cloneFunctions:true}` flag or you get an error. If you do pass this flag, then functions in the object are cloned using the same mechanism used in [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction):
+If the object to clone contains functions, you must pass the `{cloneFunctions:true}` flag, or you get an error. If you do pass this flag, then functions in the object are cloned using the same mechanism used in [`Components.utils.exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction):
 
 ```js
 // add-on script
@@ -127,7 +127,7 @@ test.addEventListener(
 
 ### Cloning objects that contain DOM elements
 
-By default, if the object you clone contains objects that are reflected from C++, such as DOM elements, the cloning operation fails with an error. If you pass the `{wrapReflectors:true}` flag, then the object you clone contains these objects:
+By default, if the object you clone contains objects reflected from C++, such as DOM elements, the cloning operation fails with an error. If you pass the `{wrapReflectors:true}` flag, then the object you clone contains these objects:
 
 ```js
 // add-on script
