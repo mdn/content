@@ -521,8 +521,10 @@ You can get the URL of the live site by selecting the **Share** button.
 ![Glitch editor view for imported project](glitch_share_project.png)
 
 Open a new browser tab and copy the link for the live site into the address bar.
-The local library site should open.
-Note that because we haven't specified a production database, the local library will open using your development data.
+The local library site should open and display data from the development database.
+
+> **Note:** This process was a one-off import from GitHub.
+> You can also use GitHub actions such as [glitch-project-sync](https://github.com/marketplace/actions/glitch-project-sync) to keep Glitch and > your project synchronized.
 
 ### Use a Production MongoDB database
 
