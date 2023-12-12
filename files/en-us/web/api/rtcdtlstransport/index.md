@@ -71,7 +71,7 @@ When the connection is created without using BUNDLE, each RTP or RTCP component 
 
 #### When using BUNDLE
 
-When the connection is using BUNDLE, each `RTCDtlsTransport` object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using `max-compat` mode, each transport is responsible for handling all communications for a given type of media (audio, video, or data channel). Thus, a connection with any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.
+When the connection is using BUNDLE, each `RTCDtlsTransport` object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using `max-compat` mode, each transport is responsible for handling all communication for a given type of media (audio, video, or data channel). Thus, a connection with any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.
 
 Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining `RTCDtlsTransport` objects.
 
