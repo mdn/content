@@ -68,6 +68,10 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
   - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
 
+## Security
+
+{{Glossary("Transient activation")}} is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 ### Basic Example

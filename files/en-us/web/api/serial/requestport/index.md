@@ -45,6 +45,10 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
 - `NotFoundError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
 
+## Security
+
+{{Glossary("Transient activation")}} is required. The user has to interact with the page or a UI element in order for this feature to work.
+
 ## Examples
 
 The following example shows a filter being passed to `requestPort()` with a USB vendor ID in order to limit the set of devices shown to the user to only USB devices built by a particular manufacturer. If this filter was omitted the user would be able to select any available port.
