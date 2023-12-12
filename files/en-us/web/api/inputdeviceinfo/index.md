@@ -13,7 +13,13 @@ The **`InputDeviceInfo`** interface of the {{domxref('Media Capture and Streams 
 
 {{InheritanceDiagram}}
 
+## Instance properties
+
+_Also inherits properties from its parent interface, {{DOMxRef("MediaDeviceInfo")}}._
+
 ## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("MediaDeviceInfo")}}._
 
 - {{domxref("InputDeviceInfo.getCapabilities()")}}
   - : Returns a `MediaTrackCapabilities` object describing the primary audio or video track of a device's `MediaStream`.
