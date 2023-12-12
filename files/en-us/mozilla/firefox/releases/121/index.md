@@ -90,11 +90,11 @@ This article provides information about the changes in Firefox 121 that affect d
 
 - Removed the `scrollIntoView` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command, in favor of the `origin` parameter below ([Firefox bug 1862649](https://bugzil.la/1862649)).
 
-- Added support for the `origin` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command which allows to define the origin and bounds of the screenshot. The accepted values are `"document"` and `"viewport"` ([Firefox bug 1840999](https://bugzil.la/1840999)).
+- Added support for the `origin` parameter for the [`browsingContext.captureScreenshot`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-captureScreenshot) command which allows defining the origin and bounds of the screenshot. The accepted values are `"document"` and `"viewport"` ([Firefox bug 1840999](https://bugzil.la/1840999)).
 
-- When serializing `Window` objects, the serialized value now contains a `context` property set to the context id for the `Window` object ([Firefox bug 1841049](https://bugzil.la/1841049)).
+- When serializing `Window` objects, the serialized value now contains a `context` property set to the context id for the `Window` object which can also be exchanged with Marionette to reference specific windows and frames ([Firefox bug 1841049](https://bugzil.la/1841049)).
 
-- Fixed a bug where serializing a Node nested in a data structure (array, map, etc.) would fail ([Firefox bug 1861000](https://bugzil.la/1861000)).
+- Fixed a bug where serialization of a Node nested in a data structure (array, map, etc.) would fail ([Firefox bug 1861000](https://bugzil.la/1861000)).
 
 - Fixed a bug where the [`browsingContext.navigate`](https://w3c.github.io/webdriver-bidi/#command-browsingContext-navigate) command could return an incorrect navigation id ([Firefox bug 1861655](https://bugzil.la/1861655)).
 
