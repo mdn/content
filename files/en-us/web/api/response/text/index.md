@@ -32,7 +32,7 @@ In our [fetch text example](https://github.com/mdn/dom-examples/tree/main/fetch/
 First, we loop through all of these and give each one an `onclick` event handler so that the `getData()` function is run — with the link's `data-page` identifier passed to it as an argument — when one of the links is clicked.
 
 When `getData()` is run, we create a new request using the {{domxref("Request.Request","Request()")}} constructor, then use it to fetch a specific `.txt` file.
-When the fetch is successful, we read a string out of the response using `text()`, then set the {{domxref("HtmlElement.innerText","innerText")}} of the {{htmlelement("article")}} element equal to the text object.
+When the fetch is successful, we read a string out of the response using `text()`, then set the {{domxref("HTMLElement.innerText","innerText")}} of the {{htmlelement("article")}} element equal to the text object.
 
 ```js
 const myArticle = document.querySelector("article");
