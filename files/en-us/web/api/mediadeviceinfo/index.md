@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaDeviceInfo
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`MediaDeviceInfo`** interface contains information that describes a single media input or output device.
 

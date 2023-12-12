@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.deviceId
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`deviceId`** readonly property
 of the {{domxref("MediaDeviceInfo")}} interface returns a string

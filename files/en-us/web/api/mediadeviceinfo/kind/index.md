@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.kind
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`kind`** readonly property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is

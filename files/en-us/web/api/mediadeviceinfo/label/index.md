@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.label
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`label`** readonly
 property of the {{domxref("MediaDeviceInfo")}} interface returns a
