@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.InputDeviceInfo
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
 The **`InputDeviceInfo`** interface of the {{domxref('Media Capture and Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.
 

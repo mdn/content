@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaDeviceInfo
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
 The **`MediaDeviceInfo`** interface contains information that describes a single media input or output device.
 
