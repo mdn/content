@@ -118,7 +118,7 @@ In Firefox, you can use the `//# sourceURL` directive to name an eval source. Se
 
 ### Using the stack property
 
-The following script demonstrates the use of `stack` property. It runs in your browser, so you can check how the stack trace looks in your browser.
+The following script demonstrates how to use the `stack` property to output a stack trace into your browser window. You can use this to check what your browser's stack structure looks like.
 
 ```html hidden
 <div id="output"></div>
