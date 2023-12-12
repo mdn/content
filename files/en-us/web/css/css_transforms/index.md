@@ -85,6 +85,7 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 ## Related concepts
 
 - CSS Properties:
+  - [`animation`](/en-US/docs/Web/CSS/animation)
   - [`background-position`](/en-US/docs/Web/CSS/background-position)
   - [`clip`](/en-US/docs/Web/CSS/clip)
   - [`clip-path`](/en-US/docs/Web/CSS/clip-path)
