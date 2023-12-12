@@ -7,7 +7,7 @@ browser-compat: api.MediaDevices
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`MediaDevices`** interface of the {{domxref("Media Capture and Streams", "", "", "nocode")}} provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
+The **`MediaDevices`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
 
 {{InheritanceDiagram}}
 
