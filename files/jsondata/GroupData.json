@@ -895,13 +895,15 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints"
+        "MediaTrackSupportedConstraints",
+        "InputDeviceInfo"
       ],
       "methods": [
         "HTMLCanvasElement.captureStream()",
