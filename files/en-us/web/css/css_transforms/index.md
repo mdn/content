@@ -39,8 +39,8 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - {{cssxref("rotate")}}
 - {{cssxref("scale")}}
 - {{cssxref("transform")}}
-- {{cssxref("transform-box")}} _(Defined in [Level 1](https://drafts.csswg.org/css-transforms-1/))_
-- {{cssxref("transform-origin")}} _(Defined in [Level 1](https://drafts.csswg.org/css-transforms-1/))_
+- {{cssxref("transform-box")}}
+- {{cssxref("transform-origin")}}
 - {{cssxref("transform-style")}}
 - {{cssxref("translate")}}
 - {{cssxref("transform-origin")}}
