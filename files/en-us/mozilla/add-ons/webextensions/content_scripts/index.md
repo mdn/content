@@ -38,15 +38,15 @@ Using method (3), you can also load scripts into pages packaged with your extens
 
 ### Permissions
 
-Registered content scripts are only executed if the extension is granted [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
+Registered content scripts are only executed if the extension is granted [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
 
-To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
+To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
 
 Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
 
 ### Restricted domains
 
-Both [host permissions](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
+Both [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
 In Firefox, this includes the following domains:
 
