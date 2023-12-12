@@ -142,6 +142,10 @@ div.hsla {
 }
 ```
 
+### Using relative colors with hsl()
+
+xx
+
 #### Result
 
 {{EmbedLiveSample("legacy_syntax_hsla", "100%", 150)}}
