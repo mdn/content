@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaDevices.enumerateDevices
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaDevices")}} method **`enumerateDevices()`** requests a list of the currently available media input and output devices, such as microphones, cameras, headsets, and so forth.
 The returned {{jsxref("Promise")}} is resolved with an array of {{domxref("MediaDeviceInfo")}} objects describing the devices.
