@@ -8,7 +8,7 @@ browser-compat: api.MediaDeviceInfo.deviceId
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`deviceId`** readonly property
+The **`deviceId`** read-only property
 of the {{domxref("MediaDeviceInfo")}} interface returns a string
 that is an identifier for the represented device and is persisted across
 sessions.

@@ -8,7 +8,7 @@ browser-compat: api.MediaDeviceInfo.kind
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`kind`** readonly property of
+The **`kind`** read-only property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
 either "videoinput", "audioinput" or "audiooutput".
 
