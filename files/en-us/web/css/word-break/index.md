@@ -18,6 +18,8 @@ The **`word-break`** [CSS](/en-US/docs/Web/CSS) property sets whether line break
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
+word-break: manual; /* experimental */
+word-break: auto-phrase; /* experimental */
 word-break: break-word; /* deprecated */
 
 /* Global values */
@@ -38,6 +40,10 @@ The `word-break` property is specified as a single keyword chosen from the list 
   - : To prevent overflow, word breaks should be inserted between any two characters (excluding Chinese/Japanese/Korean text).
 - `keep-all`
   - : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for `normal`.
+- `manual` {{Experimental_Inline}}
+  - : Works the same as `word-break: normal` except that breaks are not automatically inserted in Southeast Asian languages since user agents frequently place them in suboptimal positions. When using this, you are expected to manually insert all line breaks yourself.
+- `auto-phrase` {{Experimental_Inline}}
+  - : Works the same as `word-break: normal` except that language-specific analasys is performed to improve word breaks by not placing them in the middle of natural phrases.
 - `break-word` {{Deprecated_Inline}}
   - : Has the same effect as `overflow-wrap: anywhere` combined with `word-break: normal`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
@@ -77,7 +83,21 @@ The `word-break` property is specified as a single keyword chosen from the list 
   グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
 </p>
 
-<p>4. <code>word-break: break-word</code></p>
+<p>4. <code>word-break: manual</code></p>
+<p class="manual narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
+
+<p>5. <code>word-break: auto-phrase</code></p>
+<p class="autoPhrase narrow">
+  This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
+  Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+</p>
+
+<p>6. <code>word-break: break-word</code></p>
 <p class="breakWord narrow">
   This is a long and Honorificabilitudinitatibus califragilisticexpialidocious
   Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
@@ -108,6 +128,14 @@ The `word-break` property is specified as a single keyword chosen from the list 
 
 .keepAll {
   word-break: keep-all;
+}
+
+.manual {
+  word-break: manual;
+}
+
+.autoPhrase {
+  word-break: auto-phrase;
 }
 
 .breakWord {
