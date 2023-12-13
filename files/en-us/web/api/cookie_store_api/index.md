@@ -4,7 +4,10 @@ slug: Web/API/Cookie_Store_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.CookieStore
+browser-compat:
+  - api.CookieStore
+  - api.CookieStoreManager
+spec-urls: https://wicg.github.io/cookie-store/
 ---
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{SeeCompatTable}}
