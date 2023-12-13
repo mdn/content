@@ -55,6 +55,10 @@ object when the requested media has successfully been obtained.
     and no hardware issues occurred that would cause a `NotReadableError` {{domxref("DOMException")}}, throw if some
     problem occurred which prevented the device from being used.
 
+- `InvalidStateError` {{domxref("DOMException")}}
+
+  - : Thrown of current document is not fully active.
+
 - `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown if one or more of the requested source devices cannot be used at this time. This will
@@ -86,10 +90,6 @@ object when the requested media has successfully been obtained.
     > permission to use the underlying device, it can potentially be used as a
     > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
-    `getUserMedia()` was called. The mechanism by which user media support is
-    enabled and disabled is left up to the individual user agent.
 - {{jsxref("TypeError")}}
   - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
