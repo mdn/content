@@ -12,6 +12,8 @@ browser-compat: api.CookieStoreManager.getSubscriptions
 
 The **`getSubscriptions()`** method of the {{domxref("CookieStoreManager")}} interface returns a list of all the cookie change subscriptions for this {{domxref("ServiceWorkerRegistration")}}.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

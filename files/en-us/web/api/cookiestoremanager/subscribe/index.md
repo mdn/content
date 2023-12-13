@@ -12,6 +12,8 @@ browser-compat: api.CookieStoreManager.subscribe
 
 The **`subscribe()`** method of the {{domxref("CookieStoreManager")}} interface subscribes a {{domxref("ServiceWorkerRegistration")}} to cookie change events.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

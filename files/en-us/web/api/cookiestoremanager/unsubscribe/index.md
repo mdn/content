@@ -12,6 +12,8 @@ browser-compat: api.CookieStoreManager.unsubscribe
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
