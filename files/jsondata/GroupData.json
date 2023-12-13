@@ -222,9 +222,9 @@
       "methods": [],
       "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
       "events": [
-        "FontFaceSet: loading event",
-        "FontFaceSet: loadingdone event",
-        "FontFaceSet: loadingerror event"
+        "FontFaceSet: loading",
+        "FontFaceSet: loadingdone",
+        "FontFaceSet: loadingerror"
       ]
     },
     "CSS Painting API": {
