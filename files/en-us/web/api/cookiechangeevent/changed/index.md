@@ -39,6 +39,9 @@ An array of objects containing the changed cookie(s). Each object contains the f
     - `"none"`
       - : Cookies will be sent in all contexts.
 
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+
 ## Examples
 
 In this example when the cookie is set, the event listener logs the `changed` property to the console. The first item in that array contains an object representing the cookie that has just been set.
