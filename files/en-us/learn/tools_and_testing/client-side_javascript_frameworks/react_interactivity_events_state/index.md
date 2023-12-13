@@ -75,8 +75,8 @@ Let's apply this to our app, starting in the `Form.jsx` component.
 At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
   alert("Hello, world!");
 }
 ```
@@ -114,8 +114,8 @@ Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatev
 Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
   props.addTask("Say hello!");
 }
 ```
@@ -183,7 +183,7 @@ Before we can change the value of `name`, we need to capture a user's input as t
 
 ```jsx
 // near the top of the `Form` component
-function handleChange(e) {
+function handleChange() {
   console.log("Typing!");
 }
 
@@ -201,13 +201,13 @@ function handleChange(e) {
 
 Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
 
-To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading `e.target.value`. `e.target` represents the element that fired the `change` event — that's our input. So, `value` is the text inside it.
+To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
 
 You can `console.log()` this value to see it in your browser's console.
 
 ```jsx
-function handleChange(e) {
-  console.log(e.target.value);
+function handleChange(event) {
+  console.log(event.target.value);
 }
 ```
 
@@ -216,16 +216,16 @@ function handleChange(e) {
 Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
 
 ```jsx
-function handleChange(e) {
-  setName(e.target.value);
+function handleChange(event) {
+  setName(event.target.value);
 }
 ```
 
 Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with name as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
   props.addTask(name);
   setName("");
 }
@@ -241,12 +241,12 @@ import { useState } from "react";
 function Form(props) {
   const [name, setName] = useState("");
 
-  function handleChange(e) {
-    setName(e.target.value);
+  function handleChange(event) {
+    setName(event.target.value);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     props.addTask(name);
     setName("");
   }
