@@ -68,7 +68,7 @@ To opt the entire page into the user's color scheme preferences, declare `color-
 
 ### Setting colors based on color scheme
 
-To style elements based on color scheme preferences, use [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query:
+To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in elements with a class of `.element` to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for those color schemes.
 
 ```css
 :root {
@@ -90,7 +90,7 @@ To style elements based on color scheme preferences, use [`prefers-color-scheme`
 }
 ```
 
-Alternatively, use the experimental [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions):
+Alternatively, use the experimental [`light-dark()`](/en-US/docs/Web/CSS/color_value/light-dark) [`<color>` function](/en-US/docs/Web/CSS/CSS_Functions#color_functions) to set the foreground and background colors for the different color schemes using a more compact code structure:
 
 ```css
 :root {
