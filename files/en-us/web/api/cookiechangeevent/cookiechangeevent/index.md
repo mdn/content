@@ -30,9 +30,9 @@ new CookieChangeEvent(type, options)
     It is case-sensitive and browsers always set it to `cookiechange`.
 - `options` {{Optional_Inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
-    - `changed`
+    - `changed`{{Optional_Inline}}
       - : An array containing the changed cookies.
-    - `deleted`
+    - `deleted`{{Optional_Inline}}
       - : An array containing the deleted cookies.
 
 ### Return value
