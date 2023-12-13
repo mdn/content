@@ -132,10 +132,10 @@ For one thing, props come from the parent of a component. Our `<Form />` will no
 
 React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
 
-To use a React hook, we need to import it from the React module. In `Form.jsx`, change your very first line so that it reads like this:
+To use a React hook, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 ```
 
 This allows us to import the `useState()` function by itself, and utilize it anywhere in this file.
@@ -236,7 +236,7 @@ At last, you can type something into the input field in your browser and click _
 Your `Form.jsx` file should now read like this:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Form(props) {
   const [name, setName] = useState("");
@@ -284,10 +284,10 @@ Now that we've practiced with events, callback props, and hooks we're ready to w
 
 ### Tasks as state
 
-Import `useState` into `App.jsx`, so that we can store our tasks in state — update your `React` import line to the following:
+We need to import `useState` into `App.jsx` so that we can store our tasks in state. Add the following to the top of your `App.jsx` file:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 ```
 
 We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your `App()` function definition:
