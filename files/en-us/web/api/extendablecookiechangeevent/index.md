@@ -19,6 +19,8 @@ Cookie changes that cause the `ExtendableCookieChangeEvent` to be dispatched are
 
 {{InheritanceDiagram}}
 
+{{AvailableInWorkers}}
+
 ## Constructor
 
 - {{domxref("ExtendableCookieChangeEvent.ExtendableCookieChangeEvent", "ExtendableCookieChangeEvent()")}}
