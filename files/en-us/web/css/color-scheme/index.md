@@ -69,12 +69,14 @@ To opt the entire page into the user's color scheme preferences, declare `color-
 To style specific elements based on the user's color scheme preferences, declare `color-scheme` on specific elements.
 
 ```css
-header,
-footer {
-  color-scheme: only dark;
+header {
+  color-scheme: only light;
 }
 main {
-  color-scheme: only light;
+  color-scheme: light dark;
+}
+footer {
+  color-scheme: only dark;
 }
 ```
 
