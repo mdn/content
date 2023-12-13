@@ -357,7 +357,7 @@ Save everything, and try your app again — now you can add tasks without gettin
 
 ## Detour: counting tasks
 
-Now that we can add new tasks, you may notice a problem: our heading reads 3 tasks remaining, no matter how many tasks we have! We can fix this by counting the length of `taskList` and changing the text of our heading accordingly.
+Now that we can add new tasks, you may notice a problem: our heading reads "3 tasks remaining" no matter how many tasks we have! We can fix this by counting the length of `taskList` and changing the text of our heading accordingly.
 
 Add this inside your `App()` definition, before the return statement:
 
@@ -377,6 +377,8 @@ Now you can replace the list heading's text content with the `headingText` varia
 ```jsx
 <h2 id="list-heading">{headingText}</h2>
 ```
+
+Save the file, go back to your browser, and try adding some tasks: the count should now update as expected.
 
 ## Completing a task
 
