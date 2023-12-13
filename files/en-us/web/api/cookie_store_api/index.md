@@ -14,6 +14,8 @@ spec-urls: https://wicg.github.io/cookie-store/
 
 The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to [Service Worker API](/en-US/docs/Web/API/Service_Worker_API),
 
+{{AvailableInWorkers}}
+
 ## Concepts and Usage
 
 The existing method of getting and setting cookies involves working with {{domxref("document.cookie")}} as a string of key/value pairs. In addition to this being cumbersome and error prone, it also has a host of issues in the context of modern web development.
