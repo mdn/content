@@ -26,11 +26,11 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 
 ## Interfaces
 
-- {{domxref("CookieStore")}}
+- {{domxref("CookieStore")}} {{Experimental_Inline}}
   - : The `CookieStore` interface enables getting and setting cookies.
-- {{domxref("CookieStoreManager")}}
+- {{domxref("CookieStoreManager")}} {{Experimental_Inline}}
   - : The `CookieStoreManager` interface provides a service worker registration to enable service workers to subscribe to cookie change events.
-- {{domxref("CookieChangeEvent")}}
+- {{domxref("CookieChangeEvent")}} {{Experimental_Inline}}
   - : A `CookieChangeEvent` named `change` is dispatched against `CookieStore` objects in {{domxref("Window")}} contexts when any script-visible cookies changes occur.
 - {{domxref("ExtendableCookieChangeEvent")}}
   - : An `ExtendableCookieChangeEvent` named `cookiechange` is dispatched against {{domxref("ServiceWorkerGlobalScope")}} events when any script-visible cookie changes occur that match the service worker's cookie change subscription list.
