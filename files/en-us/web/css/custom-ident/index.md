@@ -32,7 +32,7 @@ Any Unicode code point can be included as part of a `<custom-ident>` or quoted {
 
 In CSS, there are several ways to escape a character. Escape sequences start with a backslash (`\`), and continue with:
 
-- One to six hex (`ABCDEF0123456789`) digits. The hex digits can optionally be followed white space. The hex escape sequence gets replaced by the Unicode code point whose value is given by those digits. The whitespace allows the sequences to be followed by actual hex digits (versus replaced ones).
+- One to six hex (`ABCDEF0123456789`) digits. The hex digits can optionally be followed by white space. The hex escape sequence gets replaced by the Unicode code point whose value is given by those digits. The whitespace allows the sequences to be followed by actual hex digits (versus replaced ones).
 - Any Unicode code point that is not a hex digit or a newline character.
 
 Examples:

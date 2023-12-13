@@ -7,7 +7,7 @@ browser-compat: css.at-rules.charset
 
 {{CSSRef}}
 
-The **`@charset`** [CSS](/en-US/docs/Web/CSS) rule specifies the character encoding used in the style sheet. Although the first character is the `@` symbol, it is not an [at-rule](/en-US/docs/Web/CSS/At-rule). The [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module deprecates this rule, defining it as an unrecognized legacy rule to be dropped when a stylesheet is grammar-checked, but it is [fully supported in all browsers](#browser-compatibility).
+The **`@charset`** [CSS](/en-US/docs/Web/CSS) rule specifies the character encoding used in the style sheet. Although the first character in `@charset` is the `@` symbol, it is not an [at-rule](/en-US/docs/Web/CSS/At-rule). The [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module deprecates this rule, defining it as an unrecognized legacy rule to be dropped when a stylesheet is grammar-checked, but it is [fully supported in all browsers](#browser-compatibility).
 
 The `@charset` rule must be the first element in the style sheet and not be preceded by any character; as it is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements), it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules). If several `@charset` at-rules are defined, only the first one is used, and it cannot be used inside a `style` attribute on an HTML element or inside the {{ HTMLElement("style") }} element where the character set of the HTML page is relevant.
 
