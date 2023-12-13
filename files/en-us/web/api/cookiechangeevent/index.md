@@ -35,6 +35,10 @@ _This interface also inherits properties from {{domxref("Event")}}._
 - {{domxref("CookieChangeEvent.deleted")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array containing one or more deleted cookies.
 
+## Instance methods
+
+_This interface also inherits methods from {{domxref("Event")}}._
+
 ## Examples
 
 In this example when the cookie is set, the event listener logs the event to the console. This is a `CookieChangeEvent` object with the {{domxref("CookieChangeEvent.changed","changed")}} property containing an object representing the cookie that has just been set.
