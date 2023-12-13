@@ -201,17 +201,73 @@ The output is as follows:
 
 ## Using math functions
 
-You can use CSS math functions such as {{cssxref("calc()")}} to calculate
+You can use CSS math functions such as {{cssxref("calc()")}} to calculate values for the output color channels, in exactly the same way as you'd use them in other appropriate places in CSS. Let's look at an example.
+
+The below CSS is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given the unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its `l` (lightness) channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
+
+```html hidden
+<div id="container">
+  <div class="item" id="one"></div>
+  <div class="item" id="two"></div>
+  <div class="item" id="three"></div>
+</div>
+```
+
+```css hidden
+#container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.item {
+  flex: 1;
+  margin: 20px;
+}
+```
+
+```css
+:root {
+  --base-color: orange;
+}
+
+#one {
+  background-color: lch(from var(--base-color) calc(l + 20) c h);
+}
+
+#two {
+  background-color: var(--base-color);
+}
+
+#three {
+  background-color: lch(from var(--base-color) calc(l - 20) c h);
+}
+```
+
+The output is as follows:
+
+{{ EmbedLiveSample("Using math functions", "100%", "200") }}
 
 ## Checking for browser support
+
+You can check that a browser supports relative color syntax by running through a {{cssxref("@supports")}} at-rule.
+
+For example:
+
+```css
+@supports (color: hsl(from white h s l)) {
+  /* safe to use relative color syntax */
+}
+```
 
 ## Examples
 
 > **Note:** You can find more examples demonstrating the use of relative color syntax in the different functional notation types on their dedicated pages: [`color()`](/en-US/docs/Web/CSS/color_value/color#using_relative_colors_with_color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb#using_relative_colors_with_rgb).
 
-### xx
+### Color palette generator
 
-### Varying the alpha channel
+### Live UI color scheme updater
 
 ## See also
 
