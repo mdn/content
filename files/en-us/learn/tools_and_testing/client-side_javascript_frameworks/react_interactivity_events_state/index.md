@@ -476,9 +476,9 @@ const taskList = tasks.map((task) => (
     id={task.id}
     name={task.name}
     completed={task.completed}
-    key={task.id}
     toggleTaskCompleted={toggleTaskCompleted}
     deleteTask={deleteTask}
+    key={task.id}
   />
 ));
 ```
@@ -498,6 +498,41 @@ Update the "Delete" button inside `Todo.jsx`, like so:
 
 Now when you click on any of the "Delete" buttons in the app, your browser console should log the ID of the related task.
 
+At this point, your `Todo.jsx` file should look like this:
+
+```jsx
+function Todo(props) {
+  return (
+    <li className="todo stack-small">
+      <div className="c-cb">
+        <input
+          id={props.id}
+          type="checkbox"
+          defaultChecked={props.completed}
+          onChange={() => props.toggleTaskCompleted(props.id)}
+        />
+        <label className="todo-label" htmlFor={props.id}>
+          {props.name}
+        </label>
+      </div>
+      <div className="btn-group">
+        <button type="button" className="btn">
+          Edit <span className="visually-hidden">{props.name}</span>
+        </button>
+        <button
+          type="button"
+          className="btn btn__danger"
+          onClick={() => props.deleteTask(props.id)}>
+          Delete <span className="visually-hidden">{props.name}</span>
+        </button>
+      </div>
+    </li>
+  );
+}
+
+export default Todo;
+```
+
 ## Deleting tasks from state and UI
 
 Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app's state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
@@ -514,6 +549,73 @@ function deleteTask(id) {
 ```
 
 Try your app out again. Now you should be able to delete a task from your app!
+
+At this point, your `App.jsx` file should look like this:
+
+```jsx
+import { useState } from "react";
+import Todo from "./components/Todo";
+import Form from "./components/Form";
+import FilterButton from "./components/FilterButton";
+
+function App(props) {
+  function addTask(name) {
+    const newTask = { id: "id", name, completed: false };
+    setTasks([...tasks, newTask]);
+  }
+
+  function toggleTaskCompleted(id) {
+    const updatedTasks = tasks.map((task) => {
+      // if this task has the same ID as the edited task
+      if (id === task.id) {
+        // use object spread to make a new object
+        // whose `completed` prop has been inverted
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  }
+
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
+  }
+
+  const [tasks, setTasks] = useState(props.tasks);
+  const taskList = tasks?.map((task) => (
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      toggleTaskCompleted={toggleTaskCompleted}
+      deleteTask={deleteTask}
+      key={task.id}
+    />
+  ));
+
+  return (
+    <div className="todoapp stack-large">
+      <h1>TodoMatic</h1>
+      <Form addTask={addTask} />
+      <div className="filters btn-group stack-exception">
+        <FilterButton />
+        <FilterButton />
+        <FilterButton />
+      </div>
+      <h2 id="list-heading">3 tasks remaining</h2>
+      <ul
+        role="list"
+        className="todo-list stack-large stack-exception"
+        aria-labelledby="list-heading">
+        {taskList}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
 
 ## Summary
 
