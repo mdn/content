@@ -113,7 +113,7 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for (similar to `max-age`) — but it is specific to shared caches and is always ignored by private caches. The `s-maxage` directive overrides the value specified by the `max-age` directive or the `Expires` header if they are present.
 
 ```http
 Cache-Control: s-maxage=604800
