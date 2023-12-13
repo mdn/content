@@ -97,7 +97,7 @@ We want our `handleSubmit()` function to ultimately help us create a new task, s
 
 ### Handling form submission via callbacks
 
-Inside the top of our `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
+Inside the `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
 
 ```jsx
 function addTask(name) {
@@ -250,6 +250,7 @@ function Form(props) {
     props.addTask(name);
     setName("");
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
