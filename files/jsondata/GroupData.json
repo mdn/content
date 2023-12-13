@@ -894,10 +894,7 @@
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
       ],
-      "methods": [
-        "HTMLCanvasElement.captureStream()",
-        "MediaDevices.getUserMedia()"
-      ],
+      "methods": ["HTMLCanvasElement.captureStream()"],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
     },
