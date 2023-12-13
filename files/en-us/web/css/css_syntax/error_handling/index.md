@@ -6,9 +6,9 @@ page-type: guide
 
 {{CSSRef}}
 
-When an error is made in CSS, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser will gracefully recover, skipping the invalid content. While the user agent won't alert you to CSS errors, the user agent won't fail either. This is a feature of CSS, not a bug.
+When an error, such as an invalid value or a missing semicolon, exists in CSS, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser or other user-agent will gracefully recover, skipping the invalid content. Browser doesn't provide CSS-error-related alerts or otherwise indicate erros have occurred. This is a feature of CSS, not a bug.
 
-When an error is made in CSS, the user-agent's parser ignores the lines containing the errors, discarding the minimum amount of content before returning to parsing as normal. As new features are added to CSS, a browser may not recognize these new features. The recovery from errors allows a browser to discard the line containing the unrecognized content. This CSS feature allows for adding new features to CSS without worrying that anything, other than the new feature, is broken in older browsers. It also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because user agents ignore CSS errors, the valid fallback CSS doesn't get overwritten by perceived as invalid new CSS.
+When an error is made in CSS, the browser's parser ignores the lines containing the errors, discarding the minimum amount of content before returning to parsing as normal. As new features are added to CSS, a browser may not recognize these new features. The recovery from errors allows a browser to discard the line containing the unrecognized content. This CSS feature allows for adding new features to CSS without worrying that anything, other than the new feature, is broken in older browsers. It also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because user agents ignore CSS errors, the valid fallback CSS doesn't get overwritten by perceived as invalid new CSS.
 
 The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some of common error situations are listed below:
 
@@ -30,7 +30,7 @@ Once an at-rule begins with the `@` symbol, nothing is considered invalid from t
 
 > **Note:** Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what will invalidate the entire at-rule, if at all. The expected grammar for each at-rule and how errors are handled are documented on the respective at-rule page.
 
-For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored. A `@layer` statement, which can be declared either as a prelude or can contain a body of declarations, will always create at least an anonymous layer. If there is a declaration body, the handling of any error depends on the error. The user-agent won't fail; rather, invalid CSS is ignored. If the error is a missing closing curly brace, it is considered a logic error not a CSS error. In the case of a missing closing brace in `@layer`, the styles are assumed to be in the cascade layer that is defined in the at-rule's prelude. This represents a developer mistake, a logic error. In this case, the CSS is considered valid; because there are no syntactic errors, the parser does not ignore any part.
+For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored. A `@layer` statement, which can be declared either as a prelude or can contain a body of declarations, will always create at least an anonymous layer. If there is a declaration body, the handling of any error depends on the error. The browser won't fail; rather, invalid CSS is ignored. If the error is a missing closing curly brace, it is considered a logic error not a CSS error. In the case of a missing closing brace in `@layer`, the styles are assumed to be in the cascade layer that is defined in the at-rule's prelude. This represents a developer mistake, a logic error. In this case, the CSS is considered valid; because there are no syntactic errors, the parser does not ignore any part.
 
 ### Errors in selector lists
 
@@ -40,7 +40,7 @@ If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selector
 
 If a selector list contains any selectors that are in the [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), then the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#webkit-exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
 
-If a selector list contains any invalid selectors outside of these exceptions, a single invalid or unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The user-agent will look for the closing curly brace and will continue parsing again from that point on.
+If a selector list contains any invalid selectors outside of these exceptions, a single invalid or unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The browser will look for the closing curly brace and will continue parsing again from that point on.
 
 #### Webkit exception
 
@@ -50,7 +50,7 @@ This means that a pseudo-element like `::-webkit-works-only-in-samsung` will not
 
 ### Errors within CSS declaration blocks
 
-When it comes to CSS properties and values within a declaration block, if either the property or the value is invalid, that property-value pair is ignored and discarded. When a user agent parses or interprets a list of declarations, unknown syntax at any point causes the user-agent's parser to discard only that specific rule. It then continues parsing CSS after the next semicolon or closing curly bracket is encountered, whichever comes first.
+When it comes to CSS properties and values within a declaration block, if either the property or the value is invalid, that property-value pair is ignored and discarded. When a user agent parses or interprets a list of declarations, unknown syntax at any point causes the browser's parser to discard only that specific rule. It then continues parsing CSS after the next semicolon or closing curly bracket is encountered, whichever comes first.
 
 The parser seeks forward until it finds a semicolon (or the end of the block). It then starts fresh, trying to parse a declaration again.
 
