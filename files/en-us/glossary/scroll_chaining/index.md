@@ -18,7 +18,7 @@ There are a few important terms related to the concept of scroll chaining. These
 
 The scroll boundary is the point at which a scrollable element cannot be scrolled any further in a particular direction, either at the top or bottom (or left/right for horizontal scrolling). This typically refers to the edge of the scrollport.
 
-When the content of a {{Glossary("Scroll_container)}} does not exceed the container size in the scrolling direction, the container is considered to be at its scroll boundary at all times. This is because there's no extra content to scroll through.
+When the content of a {{Glossary("Scroll_container")}} does not exceed the container size in the scrolling direction, the container is considered to be at its scroll boundary at all times. This is because there's no extra content to scroll through.
 
 ### Boundary default action
 
