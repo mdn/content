@@ -210,7 +210,7 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-const { Builder, By, Key, until } = require("selenium-webdriver");
+const { Builder, By, until } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser("firefox").build();
