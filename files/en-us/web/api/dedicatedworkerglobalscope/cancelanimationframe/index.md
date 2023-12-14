@@ -10,7 +10,8 @@ browser-compat: api.DedicatedWorkerGlobalScope.cancelAnimationFrame
 
 The **`cancelAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface cancels an animation frame request previously scheduled through a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}.
 
-Calling `cancelAnimationFrame()` method requires that the current worker need to has an associated owner {{domxref("Window", "window")}}, which means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
+Calling the `cancelAnimationFrame()` method requires the current worker to have an associated owner {{domxref("Window", "window")}}. That means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
+
 
 ## Syntax
 
@@ -21,7 +22,7 @@ cancelAnimationFrame(handle)
 ### Parameters
 
 - `handle`
-  - : The ID value returned by the call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} that requested the callback, the call must be made in the same worker.
+  - : The ID value returned by a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}; the call must have been made in the same worker.
 
 ### Return value
 
@@ -30,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the method is not supported in the current worker.
+  - : Thrown if the method is not supported by the current worker.
 
 ## Examples
 

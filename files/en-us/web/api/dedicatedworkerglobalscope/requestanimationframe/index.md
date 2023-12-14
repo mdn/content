@@ -10,13 +10,13 @@ browser-compat: api.DedicatedWorkerGlobalScope.requestAnimationFrame
 
 The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface tells the browser you wish to perform an animation frame request and call a user-supplied callback function before the next repaint.
 
-The frequency of calls to the callback function will generally match the display refresh rate. The most common refresh rate is 60hz, (60 cycles/frames per second), though 75hz, 120hz, and 144hz are also widely used. `requestAnimationFrame()` calls are paused in most browsers when running in background tabs or hidden {{HTMLElement("iframe")}}s, in order to improve performance and battery life.
+The frequency of calls to the callback function will generally match the display refresh rate. The most common refresh rate is 60 Hz, (60 cycles/frames per second), though 75 Hz, 120 Hz, and 144 Hz are also widely used. `requestAnimationFrame()` calls are paused in most browsers when running in background tabs or hidden {{HTMLElement("iframe")}}s, to improve performance and battery life.
 
-Your callback function must call `requestAnimationFrame()` again if you want to animate another frame. `requestAnimationFrame()` is one-shot.
+A call to the `requestAnimationFrame()` method schedules only one single call to the callback function. If you want to animate another frame, your callback function must call `requestAnimationFrame()` again. 
 
 > **Warning:** Be sure always to use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame — **otherwise, the animation will run faster on high refresh-rate screens**. For ways to do that, see the examples below.
 
-Calling `requestAnimationFrame()` method requires that the current worker need to has an associated owner {{domxref("Window", "window")}}, which means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
+Calling the `requestAnimationFrame()` method requires that the current worker need to has an associated owner {{domxref("Window", "window")}}, which means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
 
 ## Syntax
 
@@ -33,15 +33,15 @@ requestAnimationFrame(callback)
 
 ### Return value
 
-A `long` integer value as the request ID that uniquely identifies the entry
+A `long` integer value that is the request ID uniquely identifying the entry
 in the callback list. This is a non-zero value, but you may not make any other
-assumptions about its value. You can pass this value to
+assumptions about it. You can pass this value to
 {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} to cancel the refresh callback request, the cancel action must be made in the same worker.
 
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the method is not supported in the current worker.
+  - : Thrown if the method is not supported by the current worker.
 
 ## Examples
 
