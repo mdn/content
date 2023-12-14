@@ -34,7 +34,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} and send to a message to `"start"`its work to the worker, with the offscreen canvas:
+On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} and send to a message to `"start"` its work to the worker, with the offscreen canvas:
 
 ```js
 const offscreenCanvas = document
