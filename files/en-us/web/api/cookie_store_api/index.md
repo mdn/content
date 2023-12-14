@@ -53,3 +53,7 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Service Worker API", "", "", "nocode")}}
