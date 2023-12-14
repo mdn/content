@@ -160,41 +160,39 @@ While callback props often match the names of familiar event handlers, like `onS
 
 This `on*` naming convention appears in a vast majority of React projects, so keep it in mind as you continue your learning. For the sake of clarity, we're going to stick with `addTask` and similar prop names for the rest of this tutorial. If you changed any prop names while reading this section, be sure to change them back before continuing!
 
-## State and the `useState` hook
+## Persisting and changing data with state
 
-So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
+So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with interactivity, however, we need the ability to create new data, retain it, and update it later. Props are not the right tool for this job because they are immutable — a component cannot change or create its own props.
 
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />` element lives directly inside of `<Form />`, so `<Form />` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
+This is where **state** comes in. If we think of props as a way to communicate between components, we can think of state as a way to give components "memory" – information they can hold onto and update as needed.
 
-React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
+React provides a special function for introducing state to a component, aptly named `useState()`.
 
-To use a React hook, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
+> **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
+
+To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition
 
 ```jsx
 import { useState } from "react";
 ```
 
-This allows us to import the `useState()` function by itself, and utilize it anywhere in this file.
+`useState()` takes a single argment that determines the initial value of the state. This argument can be a string, a number, an array, an object, or any other JavaScript datatype. `useState()` returns an array containing two items. The first item is the current value of the state; the second item is a function that can be used to update the state.
 
-`useState()` creates a piece of state for a component, and its only parameter determines the _initial value_ of that state. It returns two things: the state, and a function that can be used to update the state later.
-
-This is a lot to take in at once, so let's try it out. We're going to make ourselves a `name` state, and a function for updating the `name` state.
-
-Write the following above your `handleSubmit()` function, inside `Form()`:
+Let's create a `name` state. Write the following above your `handleSubmit()` function, inside `Form()`:
 
 ```jsx
-const [name, setName] = useState("Use hooks!");
+const [name, setName] = useState("Learn React");
 ```
 
-What's going on in this line of code?
+There are several things happening in this line of code:
 
-- We are setting the initial `name` value as "Use hooks!".
+- We are defining a `name` constant with the value of `"Learn React"`.
 - We are defining a function whose job is to modify `name`, called `setName()`.
-- `useState()` returns these two things, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
+- `useState()` returns these two things in an array, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
 
 ### Reading state
 
-You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
+You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Learn React" inside the input.
 
 ```jsx
 <input
@@ -207,7 +205,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 />
 ```
 
-Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
+Change "Learn React" to an empty string once you're done; this is what we want for our initial state.
 
 ```jsx
 const [name, setName] = useState("");
@@ -215,7 +213,7 @@ const [name, setName] = useState("");
 
 ### Reading user input
 
-Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` tag.
+Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` element.
 
 ```jsx
 // near the top of the `Form` component
@@ -235,11 +233,11 @@ function handleChange() {
 />;
 ```
 
-Currently, your input's value will not change when you try to enter text into it, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. To change the input's value, we have to use our `handleChange()` function to update our `name` state.
+Currently, our input's value will not change when you try to enter text into it, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input.
 
-To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
+To read the user's keystrokes, we must access the input's `value` property. We can do this by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
 
-You can `console.log()` this value to see it in your browser's console. Try updating the `handleChange()` function as follows, and seeing the result in your console:
+You can `console.log()` this value to see it in your browser's console. Try updating the `handleChange()` function as follows, and typing in the input to see the result in your console:
 
 ```jsx
 function handleChange(event) {
@@ -249,7 +247,7 @@ function handleChange(event) {
 
 ### Updating state
 
-Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change your `console.log()` call to `setName()`, as shown below:
+Logging isn't enough — we want to actually store what the user types and render it in the input! Change your `console.log()` call to `setName()`, as shown below:
 
 ```jsx
 function handleChange(event) {
@@ -257,7 +255,9 @@ function handleChange(event) {
 }
 ```
 
-Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
+Now when you type in the input, your keystrokes will fill out the input, like you might expect.
+
+We have one more step: we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument. Remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
 
 ```jsx
 function handleSubmit(event) {
@@ -313,7 +313,7 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note:** One thing you'll notice is that you are able to submit empty tasks by just pressing the Add button without entering a task name. Can you think of a way to disallow empty tasks from being added? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
+> **Note:** You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
 
 ## Putting it all together: Adding a task
 
