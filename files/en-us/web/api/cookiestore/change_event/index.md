@@ -33,7 +33,7 @@ A {{domxref("CookieChangeEvent")}}. Inherits from {{domxref("Event")}}.
 To be informed when a cookie has changed, you can add a handler to the `cookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
-window.cookieStore.addEventListener("change", (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log("1 change event");
 });
 ```
@@ -41,7 +41,7 @@ window.cookieStore.addEventListener("change", (event) => {
 Alternatively, you can use the `onchange` event handler property to establish a handler for the `change` event:
 
 ```js
-window.cookieStore.onchange = (event) => {
+cookieStore.onchange = (event) => {
   console.log("1 change event");
 };
 ```
