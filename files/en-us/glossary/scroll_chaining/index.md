@@ -40,5 +40,5 @@ A scroll chain is the order of scrollable elements where the scrolling action pa
 
 ## See also
 
-- {{CSSxRef("overflow")}}
-- {{CSSxRef("scroll-snap")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
