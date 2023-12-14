@@ -86,7 +86,7 @@ self.addEventListener("message", (e) => {
 });
 ```
 
-Finally, if needed, the main thread can send a `"stop"`message to the worker to stop the animation:
+Finally, if needed, the main thread can send a `"stop"` message to the worker to stop the animation:
 
 ```js
 worker.postMessage({
