@@ -9,8 +9,8 @@ browser-compat: javascript.builtins.SharedArrayBuffer.slice
 
 The **`slice()`** method of {{jsxref("SharedArrayBuffer")}} instances returns a
 new {{jsxref("SharedArrayBuffer")}} whose contents are a copy of this
-`SharedArrayBuffer`'s bytes from begin, inclusive, up to end, exclusive. If
-either begin or end is negative, it refers to an index from the end of the array, as
+`SharedArrayBuffer`'s bytes from `begin`, inclusive, up to `end`, exclusive. If
+either `begin` or `end` is negative, it refers to an index from the end of the array, as
 opposed to from the beginning. This method has the same algorithm as
 {{jsxref("Array.prototype.slice()")}}.
 
@@ -28,7 +28,7 @@ slice(begin, end)
 
 - `begin` {{optional_inline}}
 
-  - : Zero-based index at which to begin extraction.
+  - : Zero-based index at which to begin extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
 
     A negative index can be used, indicating an offset from the end of the sequence.
     `slice(-2)` extracts the last two elements in the sequence.
@@ -38,8 +38,7 @@ slice(begin, end)
 
 - `end` {{optional_inline}}
 
-  - : Zero-based index _before_ which to end extraction. `slice`
-    extracts up to but not including `end`.
+  - : Zero-based index _before_ which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice` extracts up to but not including `end`.
 
     For example, `slice(1,4)` extracts the second element through the fourth
     element (elements indexed 1, 2, and 3).
