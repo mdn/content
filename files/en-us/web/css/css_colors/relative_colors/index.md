@@ -263,11 +263,429 @@ For example:
 
 ## Examples
 
-> **Note:** You can find more examples demonstrating the use of relative color syntax in the different functional notation types on their dedicated pages: [`color()`](/en-US/docs/Web/CSS/color_value/color#using_relative_colors_with_color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb#using_relative_colors_with_rgb).
+> **Note:** You can also find basic examples demonstrating the use of relative color syntax in the different functional notation types on their dedicated pages: [`color()`](/en-US/docs/Web/CSS/color_value/color#using_relative_colors_with_color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl#using_relative_colors_with_hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb#using_relative_colors_with_hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab#using_relative_colors_with_lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch#using_relative_colors_with_lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab#using_relative_colors_with_oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch#using_relative_colors_with_oklch), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb#using_relative_colors_with_rgb).
 
 ### Color palette generator
 
+This example creates a basic color palette generator, which allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palettes are as follows:
+
+- Complementary: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). To put it technically, the two colors would be base color, and base color with hue channel + 180 degrees.
+- Triadic: Includes three colors equal distances apart around the color wheel. To put it technically, the three colors would be base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
+- Tetradic: Includes four colors equal distances apart around the color wheel. To put it technically, the four colors would be base color, and base color with hue channel +90, +180, and +270 degrees.
+- Monochrome: Includes multiple colors with the same hue, but varying lightness values. In our example we've defined five colors in a monochrome palette — base color, and base color with lightness channel -20, -10, +10, and +20.
+
+#### HTML
+
+The full HTML is included below for reference. The most interesting parts are:
+
+- The `--base-color` custom property stored as an inline style on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (full red) so we can show a color palette based on it when the example first loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was stripping it out from there during rendering.
+- The base color picker, created using a [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
+- The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls that allow you to choose a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette and generate the right number of child `<div>`s inside it to display the colors for that palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g. `.comp :nth-child(1)`) so they can have the correct colors applied to them.
+- The aforementioned `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note how an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.
+
+```html
+<div>
+  <h1>Color palette generator</h1>
+  <form>
+    <div id="color-picker">
+      <label for="color">Select a base color:</label>
+      <input type="color" id="color" name="color" value="#ff0000" />
+    </div>
+    <div>
+      <fieldset>
+        <legend>Select a color palette type:</legend>
+
+        <div>
+          <input
+            type="radio"
+            id="comp"
+            name="palette-type"
+            value="comp"
+            checked />
+          <label for="comp">Complementary</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="triadic"
+            name="palette-type"
+            value="triadic" />
+          <label for="triadic">Triadic</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="tetradic"
+            name="palette-type"
+            value="tetradic" />
+          <label for="tetradic">Tetradic</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="monochrome"
+            name="palette-type"
+            value="monochrome" />
+          <label for="monochrome">Monochrome</label>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+  <div id="container" class="comp" style="--base-color: #ff0000;">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+```
+
+#### CSS
+
+Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child()")}} to target them.
+
+The colors themselves include the `--base-color`, plus relative colors derived from that `--base-color`. The relative colors use the [`lch()`](/en-US/docs/Web/CSS/color_value/lch) function — passing in the originating `--base-color` and defining an output color with an adjusted `l` (lightness) or `h` (hue) channel as appropriate.
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin-left: 16px;
+}
+
+/* Simple form styling */
+
+#color-picker {
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+
+#color-picker label,
+legend {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+input[type="color"] {
+  width: 200px;
+  display: block;
+}
+
+fieldset {
+  display: flex;
+  gap: 20px;
+  border: 0;
+}
+
+/* palette container styling */
+
+#container {
+  display: flex;
+  width: 100vw;
+  height: 250px;
+  box-sizing: border-box;
+}
+
+#container div {
+  flex: 1;
+}
+```
+
+```css
+/* complementary colors */
+/* base color, and base color with hue channel + 180 degrees */
+
+.comp :nth-child(1) {
+  background-color: var(--base-color);
+}
+
+.comp :nth-child(2) {
+  background-color: lch(from var(--base-color) l c calc(h + 180));
+}
+
+/* triadic colors */
+/* base color, base color with hue channel - 120 degrees, and base color */
+/* with hue channel + 120 degrees */
+
+.triadic :nth-child(1) {
+  background-color: var(--base-color);
+}
+
+.triadic :nth-child(2) {
+  background-color: lch(from var(--base-color) l c calc(h - 120));
+}
+
+.triadic :nth-child(3) {
+  background-color: lch(from var(--base-color) l c calc(h + 120));
+}
+
+/* tetradic colors */
+/* base color, and base color with hue channel + 90, 180, and 270 degrees */
+
+.tetradic :nth-child(1) {
+  background-color: var(--base-color);
+}
+
+.tetradic :nth-child(2) {
+  background-color: lch(from var(--base-color) l c calc(h + 90));
+}
+
+.tetradic :nth-child(3) {
+  background-color: lch(from var(--base-color) l c calc(h + 180));
+}
+
+.tetradic :nth-child(4) {
+  background-color: lch(from var(--base-color) l c calc(h + 270));
+}
+
+/* monochrome colors */
+/* Base color, and base color with lightness channel -20, -10, +10, and +20 */
+
+.monochrome :nth-child(1) {
+  background-color: lch(from var(--base-color) calc(l - 20) c h);
+}
+
+.monochrome :nth-child(2) {
+  background-color: lch(from var(--base-color) calc(l - 10) c h);
+}
+
+.monochrome :nth-child(3) {
+  background-color: var(--base-color);
+}
+
+.monochrome :nth-child(4) {
+  background-color: lch(from var(--base-color) calc(l + 10) c h);
+}
+
+.monochrome :nth-child(5) {
+  background-color: lch(from var(--base-color) calc(l + 20) c h);
+}
+```
+
+#### JavaScript
+
+In the JavaScript, we:
+
+- Add a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event listener to the radio buttons so that when one is selected, the `setContainer()` function runs. This function does three things:
+  1. Updates the `class` value of the `<div>` with `id="container"` with the value of the selected radio button so that the correct background colors will be applied to the child `<div>`s for the chosen palette type.
+  2. Removes the existing child `<div>`s from the `container` `<div>`.
+  3. Adds the correct number of child `<div>`s back into the `container` `<div>` for the chosen palette type.
+- Add an [`input`](/en-US/docs/Web/API/HTMLElement/input_event) event listener to the color picker control so that when a new color is selected, the `setBaseColor()` function runs. This function sets the `--base-color` custom property's value to the new color.
+
+```js
+const form = document.forms[0];
+const radios = form.elements["palette-type"];
+const colorPicker = form.elements["color"];
+const containerElem = document.getElementById("container");
+
+for (const radio of radios) {
+  radio.addEventListener("change", setContainer);
+}
+
+colorPicker.addEventListener("input", setBaseColor);
+
+function setContainer(e) {
+  const palType = e.target.value;
+  console.log("radio changed");
+  containerElem.setAttribute("class", palType);
+
+  containerElem.innerHTML = "";
+
+  let num;
+  if (palType === "comp") {
+    num = 2;
+  } else if (palType === "triadic") {
+    num = 3;
+  } else if (palType === "tetradic") {
+    num = 4;
+  } else {
+    num = 5;
+  }
+
+  for (let i = 1; i <= num; i++) {
+    const divElem = document.createElement("div");
+    containerElem.append(divElem);
+  }
+}
+
+function setBaseColor(e) {
+  console.log("color changed");
+  containerElem.style.setProperty("--base-color", e.target.value);
+}
+```
+
+#### Output
+
+The output is as follows. This starts to show the power of relative CSS colors — we are defining multiple colors and generating palettes that are updated live by adjusting a single custom property.
+
+{{ EmbedLiveSample("Color palette generator", "100%", "470") }}
+
 ### Live UI color scheme updater
+
+This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control. When its value is changed, JavaScript is used to set the `--hue` custom property value to the new slider value.
+
+This in turn adjusts the color scheme for the entire UI:
+
+- The `--base-color` value is a relative color with its `h` (hue) channel set to the value of `--hue`.
+- The other colors used in the design are relative colors based on `--base-color`.
+
+#### HTML
+
+The HTML for the example is shown below.
+
+- The {{htmlelement("main")}} element acts as an outer wrapper to contain the `--hue` value. It also has a radial gradient set on it that fills the whole body.
+- The {{htmlelement("div")}} element with an ID of `container` acts as an inner container. It keeps the card and form together, allowing them to be centered vertically and horizontally inside `<main>` as one unit.
+- The {{htmlelement("section")}} element contains the {{htmlelement("h1")}} and {{htmlelement("p")}} elements that define the card's content.
+- The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control and its {{htmlelement("label")}}.
+
+```html
+<main style="--hue: 240;">
+  <div id="container">
+    <section>
+      <h1>A love of colors</h1>
+      <p>
+        Colors, the vibrant essence of our surroundings, are truly
+        awe-inspiring. From the fiery warmth of reds to the calming coolness of
+        blues, they bring unparalleled richness to our world. Colors stir
+        emotions, ignite creativity, and shape perceptions, acting as a
+        universal language of expression. Whether in a breathtaking sunset, a
+        bustling marketplace, or an artist's canvas, colors transcend the visual
+        spectrum, turning the ordinary into the extraordinary. In their
+        brilliance, colors create a visually enchanting tapestry that invites
+        admiration and sparks joy.
+      </p>
+    </section>
+    <form>
+      <label for="hue-adjust">Adjust the hue:</label>
+      <input
+        type="range"
+        name="hue-adjust"
+        id="hue-adjust"
+        value="240"
+        min="0"
+        max="360" />
+    </form>
+  </div>
+</main>
+```
+
+#### CSS
+
+In the CSS, first of all note the colors set for the color scheme inside the `main` ruleset:
+
+- `--base-color`: The base color is a relative color — it uses the [`lch()`](/en-US/docs/Web/CSS/color_value/lch) function to take `red` (although any full color would do) and adjust its `h` (hue) channel to the value set in the `--hue` custom property.
+- `--complementary-color`: A complementary color 180 degrees around the color wheel from `--base-color`. This is achieved by creating a relative color with 180 added to the `h` channel.
+- `--bg-color`: A much lighter variant of `--base-color`, intended to be used as a background. This is achieved by creating a relative color with 40 added to the `l` (lightness) channel.
+
+Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/background), [borders](/en-US/docs/Web/CSS/border), [`text-shadow`](/en-US/docs/Web/CSS/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/accent-color) of the slider.
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+#container {
+  width: 600px;
+}
+```
+
+```css
+main {
+  /* Relative color definitions */
+  --base-color: lch(from red l c var(--hue));
+  --complementary-color: lch(from var(--base-color) l c calc(h + 180));
+  --bg-color: lch(from var(--base-color) calc(l + 40) c h);
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(white, var(--base-color));
+}
+
+/* box styling */
+
+section {
+  background-color: var(--bg-color);
+  border: 3px solid var(--base-color);
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px rgb(0 0 0 / 0.5);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: var(--base-color);
+  color: black;
+  border-radius: 16px 16px 0 0;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  text-shadow:
+    1px 1px 1px var(--complementary-color),
+    -1px -1px 1px var(--complementary-color),
+    0 0 3px var(--complementary-color);
+}
+
+p {
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+}
+
+/* form styling */
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+input {
+  accent-color: var(--base-color);
+}
+```
+
+#### JavaScript
+
+The JavaScript adds an [`input`](/en-US/docs/Web/API/HTMLElement/input_event) event listener to the slider control so that when a new value is set, the `setHue()` function runs. This function sets the `--hue` custom property's value to the new value.
+
+```js
+const mainElem = document.querySelector("main");
+const slider = document.getElementById("hue-adjust");
+
+slider.addEventListener("input", setHue);
+
+function setHue(e) {
+  console.log("hue changed");
+  mainElem.style.setProperty("--hue", e.target.value);
+}
+```
+
+#### Output
+
+The output is shown below. Relative CSS colors are being used here to control the color scheme of an entire UI, which can be adjusted live as a single value is modified.
+
+{{ EmbedLiveSample("Live UI color scheme updater", "100%", "500") }}
 
 ## See also
 
