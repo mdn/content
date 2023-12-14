@@ -36,7 +36,7 @@ requestAnimationFrame(callback)
 A `long` integer value that is the request ID uniquely identifying the entry
 in the callback list. This is a non-zero value, but you may not make any other
 assumptions about it. You can pass this value to
-{{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} to cancel the refresh callback request, the cancel action must be made in the same worker.
+{{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} to cancel the refresh callback request, the cancel action must have been made in the same worker.
 
 ### Exceptions
 
