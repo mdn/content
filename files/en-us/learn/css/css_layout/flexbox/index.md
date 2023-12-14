@@ -65,9 +65,10 @@ This causes the `<section>` element to become a **flex container** and its child
 
 This single declaration gives us everything we need. Incredible, right? We have a multiple column layout with equal-sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this.
 
-Let's recap what's happening here. The element with a {{cssxref("display")}} value of `flex` is acting like [Block-level content](/en-US/docs/Glossary/Block-level_content) in terms of how it interacts with the rest of the page, but its children are laid out as flex items.
+Let's recap what's happening here. Adding a {{cssxref("display")}} value of `flex` to an element makes it a flex container. The container is displayed as [Block-level content](/en-US/docs/Glossary/Block-level_content) in terms of how it interacts with the rest of the page. When the element is converted to a flex container, its children are converted to (and laid out as) flex items.
 
-You can make the container itself inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container is laid out in the page.
+You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
+The legacy `inline-flex` display value displays the container as inline as well.
 We'll focus on how the the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
 
 The next sections explain in more detail what flex items are and what happens inside an element when you make it a flex container.
@@ -335,14 +336,6 @@ button {
   line-height: 1.5;
 }
 ```
-
-## Cross-browser compatibility
-
-Flexbox is widely available in modern browsers, but there are older browsers that don't support modern flexbox features, or flexbox at all.
-While you're learning and experimenting, this shouldn't be a concern; however, if you're thinking of using flexbox in a real website, you need to test to make sure that your user experience is still acceptable in as many browsers as possible.
-
-Flexbox is a bit trickier than some CSS features. For example, if a browser is missing a CSS drop shadow, then the site will likely still be usable. If a visitor lands on your page using a browser that doesn't support flexbox features, they'll probably see a completely broken layout, and an unusable website.
-There are strategies for overcoming cross-browser support problems in our [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
 ## Test your skills!
 
