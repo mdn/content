@@ -45,7 +45,7 @@ assumptions about it. You can pass this value to
 
 ## Examples
 
-On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} and send to a message to `"start"`its work to the worker, with the offscreen canvas:
+On the main thread, we start by transferring the control of a {{HTMLElement("canvas")}} element to an {{domxref("OffscreenCanvas")}}, using {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}, then send a message to the worker to `"start"` its work with the offscreen canvas:
 
 ```js
 const offscreenCanvas = document
