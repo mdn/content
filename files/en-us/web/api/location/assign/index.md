@@ -31,7 +31,7 @@ assign(url)
 ### Parameters
 
 - `url`
-  - : A string containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to. It can be an absolute and full path, as well as relative path to a subdirectory of website.
 
 ### Return value
 
@@ -43,6 +43,16 @@ None ({{jsxref("undefined")}}).
 // Navigate to the Location.reload article
 window.location.assign(
   "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
+);
+
+// Then navigate to it's #Specifications section
+window.location.assign(
+  "#specification",
+);
+
+// Eventually navigate to https://developer.mozilla.org/en-US/docs/Web
+window.location.assign(
+  "/Web"
 );
 ```
 
