@@ -57,7 +57,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion
 In this example, a cookie is deleted by passing the name to the `delete()` method.
 
 ```js
-const result = window.cookieStore.delete("cookie1");
+const result = cookieStore.delete("cookie1");
 
 console.log(result);
 ```

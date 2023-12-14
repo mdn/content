@@ -91,7 +91,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 In this example, we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
 
 ```js
-const cookie = await window.cookieStore.get("cookie1");
+const cookie = await cookieStore.get("cookie1");
 
 if (cookie) {
   console.log(cookie);

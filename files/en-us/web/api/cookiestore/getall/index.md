@@ -91,7 +91,7 @@ Each object contains the following properties:
 In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
-const cookies = await window.cookieStore.getAll();
+const cookies = await cookieStore.getAll();
 
 if (cookies.length > 0) {
   console.log(cookies);
