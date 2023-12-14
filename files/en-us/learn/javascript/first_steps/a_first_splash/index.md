@@ -166,7 +166,7 @@ checkGuess();
 
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
-> **Note:** You'll learn a lot more about functions [later in the course](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> **Note:** You'll learn a lot more about functions in the [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
 ### Operators
 
