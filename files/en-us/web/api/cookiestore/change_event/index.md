@@ -30,7 +30,7 @@ A {{domxref("CookieChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-To be informed when a cookie has changed, you can add a handler to the `cookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
+To be informed when a cookie has changed, you can add a handler to the `CookieStore` instance using {{domxref("EventTarget.addEventListener", "addEventListener()")}}, like this:
 
 ```js
 cookieStore.addEventListener("change", (event) => {
