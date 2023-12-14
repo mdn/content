@@ -18,8 +18,8 @@ Valid `<display-outside>` values:
 - `inline`
   - : The element generates one or more inline element boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
-> This is backwards-compatible with single-keyword syntax; for example, if you specify an element to be block, you would expect that the children of that element would participate in normal block and inline flow layout.
+> **Note:** When browsers encounter a display property with only an **outer** `display` value (e.g., `display: block` or `display: inline`), the inner value defaults to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> This is backwards-compatible with single-keyword syntax.
 
 ## Formal syntax
 

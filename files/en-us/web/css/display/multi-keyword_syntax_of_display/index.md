@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[CSS Display Module Level 3](https://drafts.csswg.org/css-display/) introduced a multi-keyword syntax for the values you can use with a CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
+The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
 > **Note:** multi-keyword syntax may also be referred to as "two-value syntax" or "multi-value syntax."
 
@@ -20,7 +20,7 @@ h1 {
 }
 ```
 
-The `display` property also lets us use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when we use `display: grid` or `display: flex`. The important concept to understand is that changing an element's `display` value changes the formatting context of its direct children. When you use `display: flex` or `display: grid`, the children of the element become flex or grid items and begin to respond to the properties in grid and flexbox specifications.
+The `display` property also lets us use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when `display: grid` or `display: flex` is set. The important concept to understand is that changing an element's `display` value can change the formatting context of its direct children. When you use `display: flex` or `display: grid`, the element's children become flex or grid items and respond to the properties in grid and flexbox specifications.
 
 What grid and flexbox demonstrate, however, is that an element has both an **outer** and an **inner** display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.
 
@@ -59,7 +59,7 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-In terms of how this multi-value syntax helps clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. When `flow-root` was added as a `display` value, a common use case for creating a new BFC was to contain floats and avoid the need for clearfix hacks.
+In terms of how this multi-value syntax helps clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it.
 
 In the example below, we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line `display: flow-root` then the float will poke out of the bottom of the box. You can replace `display: flow-root` with the multi-value `display: block flow-root`, which will achieve the same as the single `flow-root` value.
 

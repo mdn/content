@@ -192,8 +192,8 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
 ### Which syntax should you use?
 
-The [CSS Display Module Level 3](https://drafts.csswg.org/css-display/) specification describes a multi-keyword syntax for values you can use with the `display` property so that you can define the **outer** and **inner** display type explicitly.
-The single keyword values (precomposed `<display-legacy>` values) are still supported for backwards-compatibility.
+The [CSS display module](/en-US/docs/Web/CSS/CSS_display) describes a multi-keyword syntax for values you can use with the `display` property to explicitly define **outer** and **inner** display.
+The single keyword values (precomposed `<display-legacy>` values) are supported for backward-compatibility.
 
 For example, using two values you can specify an inline flex container as follows:
 
