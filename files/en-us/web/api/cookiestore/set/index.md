@@ -23,14 +23,14 @@ set(options)
 
 This method requires one of the following:
 
-- `name`
+- `name` {{optional_inline}}
   - : A string with the name of the cookie.
-- `value`
+- `value` {{optional_inline}}
   - : A string with the value of the cookie.
 
 Or
 
-- `options`
+- `options` {{optional_inline}}
 
   - : An object containing:
 
