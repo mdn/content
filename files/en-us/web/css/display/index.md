@@ -71,7 +71,6 @@ The keyword values can be grouped into six value categories.
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
-> This is backwards-compatible with single-keyword syntax; for example, if you specify an element to be block, you would expect that the children of that element would participate in normal block and inline flow layout.
 
 ### Inside
 
@@ -99,7 +98,6 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
-> This is backwards-compatible with single-keyword syntax; for example, if you specify an element to be `display: grid`, you would expect that the box created on the grid container would be a block-level box.
 
 ### List Item
 
@@ -203,7 +201,7 @@ For example, using two values you can specify an inline flex container as follow
 }
 ```
 
-This can be specified using a single value:
+This can also be specified using the legacy single value:
 
 ```css
 .container {
