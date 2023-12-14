@@ -35,21 +35,21 @@ Or
   - : An object containing:
 
     - `domain` {{Optional_Inline}}
-      - : A string containing the domain of the cookie.
+      - : A string containing the domain of the cookie. Defaults to `null`.
     - `expires` {{Optional_Inline}}
-      - : A timestamp, given as {{Glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
+      - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie. Defaults to `null`.
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information. Defaults to `false`.
     - `path` {{Optional_Inline}}
-      - : A string containing the path of the cookie.
+      - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
 
       - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
         - `"strict"`
-          - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites.
+          - : Cookies will only be sent in a first-party context and not be sent along with requests initiated by third party websites. This is the default value if not specificed.
         - `"lax"`
           - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating to the origin site (i.e. when following a link).
         - `"none"`
