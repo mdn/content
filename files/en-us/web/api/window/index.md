@@ -33,7 +33,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.console")}} {{ReadOnlyInline}}
   - : Returns a reference to the console object which provides access to the browser's debugging console.
-- {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
+- {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 - {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
@@ -127,7 +127,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}}
+- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.

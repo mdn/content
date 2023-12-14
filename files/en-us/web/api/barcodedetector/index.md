@@ -9,12 +9,12 @@ browser-compat: api.BarcodeDetector
 
 {{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
-The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} allows detection of linear and two dimensional barcodes in images.
+The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API', '', '', 'nocode')}} allows detection of linear and two dimensional barcodes in images.
 
 ## Constructors
 
 - {{domxref('BarcodeDetector.BarcodeDetector', 'BarcodeDetector.BarcodeDetector()')}} {{Experimental_Inline}}
-  - : Creates and returns a `BarcodeDetector` object, with optional `barcodeDetectorOptions`
+  - : Creates and returns a `BarcodeDetector` object, with optional `BarcodeDetectorOptions`.
 
 ## Static methods
 
@@ -25,7 +25,7 @@ The **`BarcodeDetector`** interface of the {{domxref('Barcode Detection API')}} 
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
 
-  - : Returns a {{jsxref('Promise')}} which fulfills with an array of `detectedBarcode` objects with the following properties:
+  - : Returns a {{jsxref('Promise')}} which fulfills with an array of `DetectedBarcode` objects with the following properties:
 
     - `boundingBox`: A {{domxref('DOMRectReadOnly')}}, which returns the dimensions of a rectangle representing the extent of a detected barcode, aligned with the image.
     - `cornerPoints`: The x and y co-ordinates of the four corner points of the detected barcode relative to the image, starting with the top left and working clockwise. This may not be square due to perspective distortions within the image.
@@ -89,4 +89,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [Accelerated Shape Detection in Images](https://developer.chrome.com/articles/shape-detection/#barcodedetector)
+- [Accelerated Shape Detection in Images](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)
