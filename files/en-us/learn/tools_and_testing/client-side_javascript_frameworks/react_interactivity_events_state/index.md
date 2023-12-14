@@ -111,7 +111,15 @@ Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatev
 <Form addTask={addTask} />
 ```
 
-Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
+To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it acccepts `props` as a parameter:
+
+```jsx
+function Form(props) {
+  // ...
+}
+```
+
+Finally, we can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
 
 ```jsx
 function handleSubmit(event) {
