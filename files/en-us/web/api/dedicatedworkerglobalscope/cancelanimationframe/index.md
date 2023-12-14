@@ -50,7 +50,7 @@ worker.postMessage(
 );
 ```
 
-When receiving the `"start"` message, the worker starts the animation, moving the rectangle moving from left to right. Upon reception of a `"stop"` message, it will stop stop the animation.
+When receiving the `"start"` message, the worker starts the animation, moving the rectangle from left to right. Upon reception of a `"stop"` message, it will stop the animation.
 
 ```js
 let ctx;
