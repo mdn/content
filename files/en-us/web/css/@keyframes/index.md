@@ -118,8 +118,8 @@ Declarations in a keyframe qualified with `!important` are ignored.
     margin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
-  } /* ignored */
+    margin-top: 150px !important;  /* ignored */
+  }
   to {
     margin-top: 100px;
   }
@@ -160,5 +160,6 @@ See [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animatio
 - {{cssxref("animation-range")}}
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations/) module
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}
