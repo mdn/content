@@ -9,7 +9,7 @@ browser-compat: api.Element
 
 **`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
 
-For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements and the {{DOMxRef("MathMLElement")}} interface is the base interface for MathML elements. Most functionality is specified further down the class hierarchy.
+For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements. Similarly, the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements, and the {{DOMxRef("MathMLElement")}} interface is the base interface for MathML elements. Most functionality is specified further down the class hierarchy.
 
 Languages outside the realm of the Web platform, like XUL through the `XULElement` interface, also implement `Element`.
 
