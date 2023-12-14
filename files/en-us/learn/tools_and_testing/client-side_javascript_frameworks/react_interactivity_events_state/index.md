@@ -97,7 +97,7 @@ We want our `handleSubmit()` function to ultimately help us create a new task, s
 
 ### Handling form submission via callbacks
 
-Inside the `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
+Inside the `App()` function in `App.jsx`, create a function named `addTask()` which has a single parameter of `name`:
 
 ```jsx
 function addTask(name) {
@@ -105,7 +105,7 @@ function addTask(name) {
 }
 ```
 
-Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
+Next, pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
 
 ```jsx
 <Form addTask={addTask} />
@@ -130,7 +130,35 @@ function handleSubmit(event) {
 
 Clicking on the "Add" button in your browser will prove that the `addTask()` callback function works, but it'd be nice if we could get the alert to show us what we're typing in our input field! This is what we'll do next.
 
-> **Note:** We decided to name our callback prop `addTask` to make it easy to understand what the prop will do. Another common convention you may well come across in React code is to prefix callback prop names with the word `on`, followed by the name of the event that will cause them to be run. For instance, we could have given our form a prop of `onSubmit` with the value of `addTask`.
+### Aside: a note on naming conventions
+
+We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
+
+```diff
+- <Form onSubmit={addTask} />
++ <Form onSubmit={addTask} />
+```
+
+This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `App.jsx` like this:
+
+```diff
+function handleSubmit(event) {
+  event.preventDefault();
+- props.addTask("Say hello!");
++ props.onSubmit("Say hello!");
+
+}
+```
+
+Here, the `on` prefix tells us that the prop is a callback function; `Submit` is our clue that a submit event will trigger this function. Callback props in the React ecosystem often follow this naming convention.
+
+While callback props often match the names of familiar event handlers, like `onSubmit` or `onClick`, they can be named just about anything that helops make their meaning clear. A hypothetical `<Menu />` component might allow you to define a callback function that runs when the menu is opened, as well as a separate callback function that runs when it's closed:
+
+```jsx
+<Menu onOpen={() => console.log("Hi!")} onClose={() => console.log("Bye!")} />
+```
+
+This `on*` naming convention appears in a vast majority of React projects, so keep it in mind as you continue your learning. For the sake of clarity, we're going to stick with `addTask` and similar prop names for the rest of this tutorial. If you changed any prop names while reading this section, be sure to change them back before continuing!
 
 ## State and the `useState` hook
 
