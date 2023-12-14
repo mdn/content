@@ -58,7 +58,8 @@ To learn more about what the DOM is and how it represents documents, see our art
 
 ### Obsolete DOM interfaces
 
-The Document Object Model has been highly simplified. The following interfaces in the different DOM level 3 or earlier specifications have been removed to achieve this. They are no more available to web developers.
+The Document Object Model has been highly simplified. To achieve this, the following interfaces in the different DOM level 3 or earlier specifications have been removed. They are no longer available to web developers.
+
 - `DOMConfiguration`
 - `DOMErrorHandler`
 - `DOMImplementationList`
