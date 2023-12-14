@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.delete
 
 The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. The `delete()` method expires the cookie by changing the date to one in the past.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

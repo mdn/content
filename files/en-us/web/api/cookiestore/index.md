@@ -15,6 +15,8 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 {{InheritanceDiagram}}
 
+{{AvailableInWorkers}}
+
 ## Instance methods
 
 - {{domxref("CookieStore.delete()")}} {{Experimental_Inline}}

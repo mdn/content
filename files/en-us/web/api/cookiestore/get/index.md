@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.get
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
