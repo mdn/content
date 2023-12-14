@@ -12,7 +12,7 @@ The **`requestAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobal
 
 The frequency of calls to the callback function will generally match the display refresh rate. The most common refresh rate is 60 Hz, (60 cycles/frames per second), though 75 Hz, 120 Hz, and 144 Hz are also widely used. `requestAnimationFrame()` calls are paused in most browsers when running in background tabs or hidden {{HTMLElement("iframe")}}s, to improve performance and battery life.
 
-A call to the `requestAnimationFrame()` method schedules only one single call to the callback function. If you want to animate another frame, your callback function must call `requestAnimationFrame()` again. 
+A call to the `requestAnimationFrame()` method schedules only one single call to the callback function. If you want to animate another frame, your callback function must call `requestAnimationFrame()` again.
 
 > **Warning:** Be sure always to use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame — **otherwise, the animation will run faster on high refresh-rate screens**. For ways to do that, see the examples below.
 
