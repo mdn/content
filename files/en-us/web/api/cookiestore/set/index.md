@@ -75,7 +75,8 @@ The following example sets a cookie by passing an object with `name`, `value`, `
 
 ```js
 const day = 24 * 60 * 60 * 1000;
-cookieStore.set({
+
+window.cookieStore.set({
   name: "cookie1",
   value: "cookie1-value",
   expires: Date.now() + day,
