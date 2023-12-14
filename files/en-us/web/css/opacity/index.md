@@ -7,7 +7,7 @@ browser-compat: css.properties.opacity
 
 {{CSSRef}}
 
-The **`opacity`** CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
+The **`opacity`** [CSS](/en-US/docs/Web/CSS) property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
 
 {{EmbedInteractiveExample("pages/css/opacity.html")}}
 
@@ -50,6 +50,8 @@ To change the opacity of a background only, use the {{cssxref("background")}} pr
 ```css
 background: rgba(0, 0, 0, 0.4);
 ```
+
+Various operating systems provide a preference for reducing transparency. To set the `opacity` based on the user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query.
 
 ## Accessibility concerns
 
@@ -151,6 +153,22 @@ img.opacity:hover {
 
 {{EmbedLiveSample('Setting_opacity_on_hover', '150', '200')}}
 
+### Styling based on user preferences
+
+To style elements based on user's operating systems transparency preferences, use the [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query. The following example demonstrates how to use the `prefers-color-scheme` media query to specify the desired `opacity` based on the user's preferences.
+
+```css
+.element {
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-transparency) {
+  .element {
+    opacity: 1;
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -158,3 +176,7 @@ img.opacity:hover {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media query to detect user preferences for transparency.
