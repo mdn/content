@@ -16,7 +16,7 @@ Your callback function must call `requestAnimationFrame()` again if you want to 
 
 > **Warning:** Be sure always to use the first argument (or some other method for getting the current time) to calculate how much the animation will progress in a frame — **otherwise, the animation will run faster on high refresh-rate screens**. For ways to do that, see the examples below.
 
-Calling `requestAnimationFrame()` method requires that the current worker need to support this method, which means that the current worker is created by {{domxref("Window", "window")}} or by a dedicated worker that also supports this method.
+Calling `requestAnimationFrame()` method requires that the current worker need to has an associated owner {{domxref("Window", "window")}}, which means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
 
 ## Syntax
 
