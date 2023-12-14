@@ -51,6 +51,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
@@ -83,8 +85,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
 - {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
 - {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
@@ -108,8 +108,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the ability to edit the whole document.
 - {{DOMxRef("Document.dir")}}
   - : Gets/sets directionality (rtl/ltr) of the document.
-- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
-  - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
   - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
@@ -139,10 +137,12 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the background color of the current document.
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
+- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
+  - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-  - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+  - : Returns `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -240,6 +240,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
+- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
+  - : Allows you to change the element being used as the background image for a specified element ID.
 - {{DOMxRef("Document.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
@@ -256,8 +258,6 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
 - {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
-- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
-  - : Allows you to change the element being used as the background image for a specified element ID.
 
 The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:
 
@@ -313,6 +313,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a content security policy is violated.
 - {{DOMxRef("Document/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
+- {{DOMxRef("Document/scrollend_event", "scrollend")}}
+  - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
 
@@ -338,6 +340,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : Fired when the {{DOMxRef("Document/readyState", "readyState")}} attribute of a document has changed.
+
+### Pointer lock events
+
+- {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
+  - : Fired when the pointer is locked/unlocked.
+- {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
+  - : Fired when locking the pointer failed.
 
 ### Selection events
 
