@@ -118,7 +118,7 @@ Declarations in a keyframe qualified with `!important` are ignored.
     margin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;  /* ignored */
+    margin-top: 150px !important; /* ignored */
   }
   to {
     margin-top: 100px;
