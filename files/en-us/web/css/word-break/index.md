@@ -43,7 +43,7 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - `manual` {{Experimental_Inline}}
   - : Has the same effect as `word-break: normal` except that breaks are not automatically inserted in Southeast Asian languages. In such cases, user agents frequently place them in suboptimal positions. This property value allows you to insert line breaks in optimal positions manually.
 - `auto-phrase` {{Experimental_Inline}}
-  - : Works the same as `word-break: normal` except that language-specific analasys is performed to improve word breaks by not placing them in the middle of natural phrases.
+  - : Has the same effect as `word-break: normal` except that language-specific analysis is performed to improve word breaks by not placing them in the middle of natural phrases.
 - `break-word` {{Deprecated_Inline}}
   - : Has the same effect as `overflow-wrap: anywhere` combined with `word-break: normal`, regardless of the actual value of the {{cssxref("overflow-wrap")}} property.
 
