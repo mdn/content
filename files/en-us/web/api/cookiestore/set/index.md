@@ -37,7 +37,7 @@ Or
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie.
     - `expires` {{Optional_Inline}}
-      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
+      - : A timestamp, given as {{Glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
