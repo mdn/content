@@ -213,7 +213,7 @@ Let's create a new test to allow us to explore this code as we talk about it. In
 const { Builder, By, until } = require("selenium-webdriver");
 
 (async function example() {
-  const driver = await new Builder().forBrowser("firefox").build();
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 })();
 
 ```
