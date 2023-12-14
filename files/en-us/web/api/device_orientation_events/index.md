@@ -10,6 +10,7 @@ browser-compat:
   - api.DeviceMotionEvent
   - api.DeviceMotionEventAcceleration
   - api.DeviceMotionEventRotationRate
+spec-urls: https://w3c.github.io/deviceorientation/
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}
