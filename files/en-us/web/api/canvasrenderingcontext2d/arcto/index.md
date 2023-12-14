@@ -9,7 +9,7 @@ browser-compat: api.CanvasRenderingContext2D.arcTo
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.arcTo()`** method of the Canvas 2D API adds a circular arc to the current sub-path, using the given control points and radius.
-The arc is automatically connected to the path's latest point with a straight line if necessary, for example if the control points are in a line.
+The arc is automatically connected to the path's latest point with a straight line if necessary, for example if the starting point and control points are in a line.
 
 This method is commonly used for making rounded corners.
 
@@ -35,6 +35,16 @@ arcTo(x1, y1, x2, y2, radius)
   - : The y-axis coordinate of the second control point.
 - `radius`
   - : The arc's radius. Must be non-negative.
+
+#### Usage notes
+
+Assume <em>P<sub>0</sub></em> is the point on the path when `arcTo()` is called, <em>P<sub>1</sub></em> = (`x1`, `y1`) and <em>P<sub>2</sub></em> = (`x2`, `y2`) are the first and second control points, respectively, and _r_ is the `radius` specified in the call:
+
+- If _r_ is negative, an `IndexSizeError` [exception](#exceptions) is raised.
+- If _r_ is 0, `arcTo()` behaves as if <em>P<sub>0</sub></em>, <em>P<sub>1</sub></em>, and <em>P<sub>2</sub></em> are collinear (in a line).
+- In the case of all of the points being collinear, a line from <em>P<sub>0</sub></em> to <em>P<sub>1</sub></em> is drawn unless the points <em>P<sub>0</sub></em> and <em>P<sub>1</sub></em> are coincident (having the same coordinates), in which case nothing is drawn.
+
+These conditions can be created in the [Constructing an arcTo() path](#constructing_an_arcto_path) example below to see the results.
 
 ### Return value
 
@@ -190,10 +200,10 @@ The demo shows the semi-infinite lines and circle with center _C_ tangent
 to the lines at <em>T<sub>1</sub></em> and <em>T<sub>2</sub></em> used to
 determine the path rendered by `arcTo()`.
 
-Note that `arcTo` will create a straight line when <em>P<sub>1</sub></em>
-and <em>P<sub>2</sub></em> are in a line. Additionally, nothing is drawn by
-`arcTo` if <em>P<sub>1</sub></em> and <em>P<sub>2</sub></em> have the same
-coordinates.
+Note that `arcTo` will create a straight line from <em>P<sub>0</sub></em>
+to <em>P<sub>1</sub></em> when all points are in a line. Additionally,
+nothing is drawn by `arcTo` if <em>P<sub>0</sub></em> and
+<em>P<sub>1</sub></em> have the same coordinates.
 
 Besides being able to set the arc radius with the slider, the initial point
 <em>P<sub>0</sub></em> and control points <em>P<sub>1</sub></em> and
