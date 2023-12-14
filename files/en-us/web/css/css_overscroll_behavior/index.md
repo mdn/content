@@ -23,9 +23,9 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 
 - {{Glossary("Scroll_chaining")}}
   It also covers the following terms:
-  - [Scroll boundary](/en-US/docs/Glossary/Scroll_chaining#Scroll_boundary)
-  - [Boundary default action](/en-US/docs/Glossary/Scroll_chaining#Boundary_default_action)
-  - [Local and non-local boundary defaults](/en-US/docs/Glossary/Scroll_chaining#Local_and_non-local_boundary_defaults)
+  - [Scroll boundary](/en-US/docs/Glossary/Scroll_chaining#scroll_boundary)
+  - [Boundary default action](/en-US/docs/Glossary/Scroll_chaining#boundary_default_action)
+  - [Local and non-local boundary defaults](/en-US/docs/Glossary/Scroll_chaining#local_and_non-local_boundary_defaults)
 
 ## Guides
 
