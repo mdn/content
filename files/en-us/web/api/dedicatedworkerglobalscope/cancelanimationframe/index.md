@@ -12,7 +12,6 @@ The **`cancelAnimationFrame()`** method of the {{domxref("DedicatedWorkerGlobalS
 
 Calling the `cancelAnimationFrame()` method requires the current worker to have an associated owner {{domxref("Window", "window")}}. That means that the current worker must be created by {{domxref("Window", "window")}} or by a dedicated worker that also has an associated owner {{domxref("Window", "window")}}.
 
-
 ## Syntax
 
 ```js-nolint
