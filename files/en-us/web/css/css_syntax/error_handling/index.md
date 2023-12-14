@@ -6,9 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-When an error, such as an invalid value or a missing semicolon, exists in CSS, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser or other user-agent will gracefully recover, skipping the invalid content. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. This is a feature of CSS, not a bug.
+When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user-agent) will gracefully recover, skipping the invalid content. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. This is a feature of CSS, not a bug.
 
-When a CSS error is encountered, the browser's parser ignores the lines containing the errors, discarding the minimum amount of content before returning to parsing as normal. As new features are added to CSS, a browser may not recognize these new features. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content. This CSS feature allows for the addition of new CSS features without worrying that anything, other than the new feature, will be broken in older browsers. It also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because browsers ignore CSS errors, the valid fallbacks don't get overwritten by new CSS that is perceived as invalid.
+When a CSS error is encountered, the browser's parser ignores the lines containing the errors, discarding the minimum amount of content before returning to {{glossary("parse", "parsing")}} the CSS as normal. As new features are added to CSS, a browser may not recognize these new features. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content. 
+
+The fact that browsers ignore invalid code enables using new CSS features without worrying about anything being broken in older browsers. This feature also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because browsers ignore invalid CSS, the valid fallbacks don't get overwritten by new CSS that is perceived as invalid.
 
 The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some of common error situations are listed below:
 
@@ -24,13 +26,19 @@ After parsing each declaration, style rule, at-rule, and so on, the browser chec
 
 ### At-rule errors
 
-The `@` symbol, known in the CSS specifications as an `<at-keyword-token>`, indicates the beginning of an {{cssxref("at-rule")}}. Some at-rules such as {{cssxref("@import")}} and some {{cssxref("@layer")}} declarations contain just a prelude and and other at-rule blocks contain a body of declarations, as in {{cssxref("@keyframes")}}, {{cssxref("@font-face")}}, and `@layer` declarations, which include styles blocks. These at-rule blocks are generally multi-statement and referred to as multi-line, even though they can be declared with no line breaks.
+The `@` symbol, known in the CSS specifications as an `<at-keyword-token>`, indicates the beginning of an {{cssxref("at-rule")}}. Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint; everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The contents of each at-rule is interpreted according to the grammar rules for that particular at-rule.
 
-Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint; everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The semicolon ends the at-rule immediately for single-line at-rules. If there is an open curly brace, this informs the browser where the completed at-rule prelude ends and the at-rule's body starts. For these multi-line at-rules, the parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by anything else or inside of another block, to close the body of the at-rule. The contents of the at-rule are then interpreted according to the grammar rules for that particular at-rule.
+Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for single-line at-rules. If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
 
-> **Note:** Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what will invalidate the entire at-rule, if at all. The expected grammar for each at-rule and how errors are handled are documented on the respective at-rule page.
+If the parser encounter a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. Block at-rules, like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the completed at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by anything else or inside of another block, to close the body of the at-rule. 
 
-For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored. A `@layer` statement, which can be declared either as a prelude or can contain a body of declarations, will always create at least an anonymous layer. If there is a declaration body, the handling of any error depends on the error. The browser won't fail; rather, invalid CSS is ignored. If the error is a missing closing curly brace, it is considered a logic error not a CSS error. In the case of a missing closing brace in `@layer`, the styles are assumed to be in the cascade layer that is defined in the at-rule's prelude. This represents a developer mistake, a logic error. In this case, the CSS is considered valid; because there are no syntactic errors, the parser does not ignore any part.
+Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for each at-rule and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
+
+For the `@font-face` at-rule, including an unrelated descriptor, a valid font-face descriptor with an invalid value, or a property style declaration within an `@font-face` will not invalidate the font declaration. Only the invalid CSS is ignored. 
+
+The grammar of the `@font-face` at-rule is very different from the `@keyframe`, with the type of error impacting what gets ignored.  Important declarations (marked with the {{cssxref("important")}} flag) and properties that can't be animated in keyframe rules are ignored, but normal, supported properties will still be animated. Including a keyframe selector percentage value less than `0%`, greater than `100%`, or omitting the `%`, invalidates the keyframe selector list. The style block is ignored but does not cause the entire at-rule to be invalid. Including styles between two keyframe selector blocks within a `@keyframe`, however, does invalidate the entire `@keyframe` at-rule. 
+
+Some at-rules are almost always. The statement {{cssxref("@layer")}} contains just the prelude, ending with a semi-colon. Alternatively, this at-rule can also have layer styles nested between curly braces following the prelude. If the error is a missing closing curly brace, it is considered a logic error not a CSS error. In the case of a missing closing brace in `@layer`, the styles are assumed to be in the cascade layer that is defined in the at-rule's prelude. The CSS is considered valid; because there are no syntactic errors, the parser does not ignore any part. The `@layer` statement, whether it contains just a prelude statement ending with a semi-color or if it contains a body of declarations, as long as the layer name is not a [global CSS value](), the at-rule always creates at least one layer, though the layer may be an anonymous layer containing no styles.
 
 ### Errors in selector lists
 
@@ -69,7 +77,7 @@ p {
 
 The reason the first declaration in this selector block is invalid is because the semi-colon is missing and the declaration is not the last declaration in the block. The property missing the semi-colon is ignored, as is the property-value pair following it because the browser only continues parsing after a semi-colon or closing bracket is encountered. In the above CSS, the `border-color` value is parsed as `red background-color: green;` which is not a valid {{cssxref("&lt;color&gt;")}} value.
 
-The parser ignores the property with an invalid value, and starts parsing again after it encounters the next semi-colon. The {{cssxref("border-width")}} value of `100vh` is likely a mistake, but it's not an error. As it is syntactically valid, it will be parsed and applied to the elements matching the selector.
+The parser ignores the property with an invalid value and starts parsing again after it encounters the next semi-colon. The {{cssxref("border-width")}} value of `100vh` is likely a mistake, but it's not an error. As it is syntactically valid, it will be parsed and applied to the elements matching the selector.
 
 #### Vendor prefixes
 
@@ -103,7 +111,7 @@ In both the declaration blocks above, the last declaration is valid. The parser 
 
 If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
 
-If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. Failing to properly close CSS statements doesn't necessarily make the statements invalid.
+If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. Failing to close CSS statements properly doesn't necessarily make the statements invalid.
 
 > **Note:** Do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
 
@@ -111,7 +119,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 
 ### Grammar check
 
-After each declaration, style rule, at-rule, etc. is parsed, the user agent checks to make sure the grammar is the expected grammar for that declaration. For example, if a property value is of the wrong data type or if a descriptor is not valid for the at-rule being described, the content that does not match the expected grammar is deemed invalid, and gets ignored.
+After each declaration, style rule, at-rule, etc. is parsed, the user agent checks to ensure the grammar is the expected grammar for that declaration. For example, if a property value is of the wrong data type or if a descriptor is not valid for the at-rule being described, the content that does not match the expected grammar is deemed invalid, and gets ignored.
 
 ## See also
 
