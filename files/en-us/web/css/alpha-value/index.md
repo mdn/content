@@ -3,6 +3,7 @@ title: <alpha-value>
 slug: Web/CSS/alpha-value
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-color/#typedef-color-alpha-value
+---
 
 {{CSSRef}}
 
