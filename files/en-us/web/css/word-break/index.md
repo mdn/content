@@ -41,7 +41,7 @@ The `word-break` property is specified as a single keyword chosen from the list 
 - `keep-all`
   - : Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for `normal`.
 - `manual` {{Experimental_Inline}}
-  - : Has the same effect as `word-break: normal` except that breaks are not automatically inserted in Southeast Asian languages. In such cases, user agents frequently place them in suboptimal positions. This property value allows you to insert line breaks in optimal positions manually.
+  - : Has the same effect as `word-break: normal` except that breaks are not automatically inserted in Southeast Asian languages. In such cases, user agents frequently place them in suboptimal positions. This property value allows you to insert line breaks in optimal positions manually. This is not currently supported in any browsers.
 - `auto-phrase` {{Experimental_Inline}}
   - : Has the same effect as `word-break: normal` except that language-specific analysis is performed to improve word breaks by not placing them in the middle of natural phrases.
 - `break-word` {{Deprecated_Inline}}
