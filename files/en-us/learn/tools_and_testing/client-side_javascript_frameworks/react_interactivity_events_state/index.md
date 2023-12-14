@@ -317,7 +317,7 @@ export default Form;
 
 ## Putting it all together: Adding a task
 
-Now that we've practiced with events, callback props, and hooks we're ready to write functionality that will allow a user to add a new task from their browser.
+Now that we've practiced with events, callback props, and hooks, we're ready to write functionality that will allow a user to add a new task from their browser.
 
 ### Tasks as state
 
@@ -336,7 +336,7 @@ const [tasks, setTasks] = useState(props.tasks);
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
 ```jsx
-const taskList = tasks.map((task) => (
+const taskList = tasks?.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -514,9 +514,9 @@ const taskList = tasks.map((task) => (
     id={task.id}
     name={task.name}
     completed={task.completed}
+    key={task.id}
     toggleTaskCompleted={toggleTaskCompleted}
     deleteTask={deleteTask}
-    key={task.id}
   />
 ));
 ```
@@ -627,9 +627,9 @@ function App(props) {
       id={task.id}
       name={task.name}
       completed={task.completed}
+      key={task.id}
       toggleTaskCompleted={toggleTaskCompleted}
       deleteTask={deleteTask}
-      key={task.id}
     />
   ));
 
