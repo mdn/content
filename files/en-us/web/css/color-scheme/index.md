@@ -66,7 +66,7 @@ To opt the entire page into the user's color scheme preferences, declare `color-
 }
 ```
 
-To style specific elements based on the user's color scheme preferences, declare `color-scheme` on specific elements.
+To opt in specific elements to the user's color scheme preferences, declare `color-scheme` on those elements.
 
 ```css
 header {
@@ -82,7 +82,7 @@ footer {
 
 ### Styling based on color schemes
 
-To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in elements with a class of `.element` to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for those color schemes.
+To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in the entire page to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for individual elements in those color schemes.
 
 ```css
 :root {
