@@ -54,7 +54,7 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
-  - : Fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list.
+  - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
   - : Occurs when a {{domxref("fetch()")}} is called.
 - {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
