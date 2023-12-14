@@ -58,8 +58,7 @@ To learn more about what the DOM is and how it represents documents, see our art
 
 ### Obsolete DOM interfaces
 
-The Document Object Model has been highly simplified. To achieve this, the following interfaces present in the different DOM level 3 or earlier specifications have been removed. It is uncertain whether some may be reintroduced in the future or not, but for the time being they should be considered obsolete and should be avoided:
-
+The Document Object Model has been highly simplified. The following interfaces in the different DOM level 3 or earlier specifications have been removed to achieve this. They are no more available to web developers.
 - `DOMConfiguration`
 - `DOMErrorHandler`
 - `DOMImplementationList`
@@ -85,7 +84,7 @@ The HTML DOM API provides access to various browser features such as tabs and wi
 
 ## SVG DOM
 
-Similarly, a document containt SVG is also described using the {{DOMxRef("Document")}} interface, which is extended by the SVG specification to include various SVG-specific features. In particular, the {{domxref("Element")}} interface is enhanced to become {{domxref("SVGlement")}} and various subclasses, each representing one of (or a family of closely related) elements. These interfaces are discussed further in the [SVG API](/en-US/docs/Web/API/SVG_API) documentation.
+Similarly, a document containing SVG is also described using the {{DOMxRef("Document")}} interface, which is extended by the SVG specification to include various SVG-specific features. In particular, the {{domxref("Element")}} interface is enhanced to become {{domxref("SVGlement")}} and various subclasses, each representing one of (or a family of closely related) elements. These interfaces are discussed further in the [SVG API](/en-US/docs/Web/API/SVG_API) documentation.
 
 ## Specifications
 
