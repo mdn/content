@@ -56,7 +56,7 @@ The `color-scheme` property's value must be one of the following keywords.
 
 ## Examples
 
-### Adapting to color schemes
+### Declaring color scheme preferences
 
 To opt the entire page into the user's color scheme preferences, declare `color-scheme` on the {{cssxref(":root")}} element.
 
@@ -80,7 +80,7 @@ footer {
 }
 ```
 
-### Setting colors based on color scheme
+### Styling based on color schemes
 
 To style elements based on color scheme preferences, use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query. The example below opts in elements with a class of `.element` to using both light and dark operating system color schemes via the `color-scheme` property, and then uses `prefers-color-scheme` to specify the desired foreground and background colors for those color schemes.
 
