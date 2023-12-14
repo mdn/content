@@ -169,13 +169,13 @@ React provides a special function for introducing state to a component, aptly na
 
 > **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
 
-To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition
+To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
 
 ```jsx
 import { useState } from "react";
 ```
 
-`useState()` takes a single argment that determines the initial value of the state. This argument can be a string, a number, an array, an object, or any other JavaScript datatype. `useState()` returns an array containing two items. The first item is the current value of the state; the second item is a function that can be used to update the state.
+`useState()` takes a single argument that determines the initial value of the state. This argument can be a string, a number, an array, an object, or any other JavaScript data type. `useState()` returns an array containing two items. The first item is the current value of the state; the second item is a function that can be used to update the state.
 
 Let's create a `name` state. Write the following above your `handleSubmit()` function, inside `Form()`:
 
@@ -183,10 +183,10 @@ Let's create a `name` state. Write the following above your `handleSubmit()` fun
 const [name, setName] = useState("Learn React");
 ```
 
-There are several things happening in this line of code:
+Several things are happening in this line of code:
 
-- We are defining a `name` constant with the value of `"Learn React"`.
-- We are defining a function whose job is to modify `name`, called `setName()`.
+- We are defining a `name` constant with the value `"Learn React"`.
+- We are defining a function whose job it is to modify `name`, called `setName()`.
 - `useState()` returns these two things in an array, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
 
 ### Reading state
@@ -204,7 +204,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 />
 ```
 
-Change "Learn React" to an empty string once you're done; this is what we want for our initial state.
+Change "Learn React" to an empty string once you're done; this is what we want for our initial state:
 
 ```jsx
 const [name, setName] = useState("");
@@ -220,6 +220,8 @@ function handleChange() {
   console.log("Typing!");
 }
 
+...
+
 // Down in the return statement
 <input
   type="text"
@@ -234,7 +236,7 @@ function handleChange() {
 
 Currently, our input's value will not change when you try to enter text into it, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input.
 
-To read the user's keystrokes, we must access the input's `value` property. We can do this by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
+To read the user's keystrokes, we must access the input's `value` property. We can do this by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn, has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
 
 You can `console.log()` this value to see it in your browser's console. Try updating the `handleChange()` function as follows, and typing in the input to see the result in your console:
 
@@ -254,9 +256,9 @@ function handleChange(event) {
 }
 ```
 
-Now when you type in the input, your keystrokes will fill out the input, like you might expect.
+Now when you type in the input, your keystrokes will fill out the input, as you might expect.
 
-We have one more step: we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument. Remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
+We have one more step: we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument. Remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form is submitted, so we'll call `setName()` again with an empty string to do so:
 
 ```jsx
 function handleSubmit(event) {
