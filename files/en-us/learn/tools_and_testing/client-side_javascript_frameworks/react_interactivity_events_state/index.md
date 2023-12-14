@@ -53,7 +53,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-In JSX, the code that describes the UI is right alongside our event listeners:
+In JSX, the code that describes the UI lives right alongside our event listeners:
 
 ```jsx
 <button type="button" onClick={() => alert("hi!")}>
@@ -61,7 +61,7 @@ In JSX, the code that describes the UI is right alongside our event listeners:
 </button>
 ```
 
-In this example, we're adding an `onClick` attribute to to the `<button>` element. The value of that attribute is a function that triggers a simple alert. This may seem counter to best-practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
+In this example, we're adding an `onClick` attribute to the {{htmlelement("button")}} element. The value of that attribute is a function that triggers a simple alert. This may seem counter to best practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
@@ -199,11 +199,11 @@ function handleChange() {
 />;
 ```
 
-Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
+Currently, your input's value will not change when you try to enter text into it, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. To change the input's value, we have to use our `handleChange()` function to update our `name` state.
 
 To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
 
-You can `console.log()` this value to see it in your browser's console.
+You can `console.log()` this value to see it in your browser's console. Try updating the `handleChange()` function as follows, and seeing the result in your console:
 
 ```jsx
 function handleChange(event) {
@@ -213,7 +213,7 @@ function handleChange(event) {
 
 ### Updating state
 
-Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
+Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change your `console.log()` call to `setName()`, as shown below:
 
 ```jsx
 function handleChange(event) {
@@ -221,7 +221,7 @@ function handleChange(event) {
 }
 ```
 
-Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with name as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
+Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
 
 ```jsx
 function handleSubmit(event) {
@@ -341,7 +341,7 @@ npm install nanoid
 
 > **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
-Now we can import `nanoid` into the top of `App.jsx` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.jsx`:
+Now we can use `nanoid` to create unique IDs for our new tasks. First of all, import it by including the following line at the top of `App.jsx`:
 
 ```jsx
 import { nanoid } from "nanoid";
