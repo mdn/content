@@ -18,11 +18,10 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 - {{CSSxRef("-webkit-animation-trigger", "-webkit-animation-trigger")}}
 - {{CSSxRef("-webkit-app-region", "-webkit-app-region")}}
-- {{CSSxRef("-webkit-aspect-ratio", "-webkit-aspect-ratio")}}
 
 ### B
 
-- {{CSSxRef("-webkit-backdrop-filter", "-webkit-backdrop-filter")}}
+- {{CSSxRef("backdrop-filter", "-webkit-backdrop-filter")}}\*\*
 - {{CSSxRef("border-block-end","-webkit-border-after")}}\*\*
 - {{CSSxRef("border-block-end-color","-webkit-border-after-color")}}\*\*
 - {{CSSxRef("border-block-end-style","-webkit-border-after-style")}}\*\*
@@ -43,7 +42,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-border-vertical-spacing", "-webkit-border-vertical-spacing")}}
 - {{CSSxRef("align-items","-webkit-box-align")}}\*\*
 - {{CSSxRef("flex-direction", "-webkit-box-direction")}}\*\*
-- {{CSSxRef("-webkit-box-flex-group", "-webkit-box-flex-group")}}\*\*
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}
 - {{CSSxRef("flex-grow", "-webkit-box-flex")}}\*\*
 - {{CSSxRef("flex-flow", "-webkit-box-lines")}}\*\*
 - {{CSSxRef("order", "-webkit-box-ordinal-group")}}\*\*
@@ -69,7 +68,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
 - {{CSSxRef("-webkit-hyphenate-limit-lines", "-webkit-hyphenate-limit-lines")}}
-- {{CSSxRef("-webkit-initial-letter", "-webkit-initial-letter")}}
+- {{CSSxRef("initial-letter", "-webkit-initial-letter")}}\*\*
 
 ### L
 
@@ -100,11 +99,11 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-mask-box-image-source", "-webkit-mask-box-image-source")}}
 - {{CSSxRef("-webkit-mask-box-image-width", "-webkit-mask-box-image-width")}}
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image")}}
+- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
+- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
 - {{CSSxRef("-webkit-mask-repeat-x", "-webkit-mask-repeat-x")}}\*\*\*
 - {{CSSxRef("-webkit-mask-repeat-y", "-webkit-mask-repeat-y")}}\*\*\*
 - {{CSSxRef("-webkit-mask-source-type", "-webkit-mask-source-type")}}
-- {{CSSxRef("-webkit-mask-position-x", "-webkit-mask-position-x")}}
-- {{CSSxRef("-webkit-mask-position-y", "-webkit-mask-position-y")}}
 - {{CSSxRef("-webkit-max-logical-height", "-webkit-max-logical-height")}}
 - {{CSSxRef("-webkit-max-logical-width", "-webkit-max-logical-width")}}
 - {{CSSxRef("-webkit-min-logical-height", "-webkit-min-logical-height")}}
@@ -149,7 +148,9 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-user-modify", "-webkit-user-modify")}}
 
 \* A few are on the standards, unprefixed track
-\*\* New syntax has been standardized. Property links to the new syntax. Old prefixed syntax is still supported in some browsers.
+
+\*\* New syntax has been standardized. Property links to the new syntax. The old prefixed syntax is still supported in some browsers.
+
 \*\*\* WebKit supports without `-webkit` prefix, but not standard or on standards track
 
 ## WebKit-prefixed properties on the standards track
@@ -176,6 +177,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("animation-play-state","-webkit-animation-play-state")}}
 - {{CSSxRef("animation-timing-function","-webkit-animation-timing-function")}}
 - {{CSSxRef("appearance", "-webkit-appearance")}}
+- {{CSSxRef("aspect-ratio", "-webkit-aspect-ratio")}}
 
 ### B
 
@@ -432,7 +434,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-grid-rows` (See [`grid-row`](/en-US/docs/Web/CSS/grid-row))
 - `-webkit-highlight`
 - `-webkit-hyphenate-charset`
-- `-webkit-image-set (See {{CSSxRef("image/image-set", "image-set")}})
+- `-webkit-image-set` (See {{CSSxRef("image/image-set", "image-set")}})
 - `-webkit-mask-attachment`
 - `-webkit-match-nearest-mail-blockquote-color`
 - `-webkit-margin-collapse`
@@ -446,7 +448,7 @@ The following properties were once supported with the -webkit- prefix but are no
 - `-webkit-region-break-inside`
 - `-webkit-region-fragment`
 - `-webkit-shape-inside`
-- [-webkit-touch-callout](/en-US/docs/Web/CSS/-webkit-touch-callout) (See `touch-action)`
+- [`-webkit-touch-callout`](/en-US/docs/Web/CSS/-webkit-touch-callout) (See {{cssxref("touch-action")}})
 - `background-origin-x` (unprefixed!)
 - `background-origin-y` (unprefixed!)
 
