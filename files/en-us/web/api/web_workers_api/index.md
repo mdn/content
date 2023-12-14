@@ -92,7 +92,7 @@ The following Web APIs are available to workers:
 - {{domxref("Permissions API", "", "", "nocode")}}
 - {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
 - {{domxref("Push API", "", "", "nocode")}}
-- {{domxref("Server Sent Events", "", "", "nocode")}}
+- {{domxref("Server-Sent Events", "", "", "nocode")}}
 - {{domxref("Service Worker API", "", "", "nocode")}}
 - {{domxref("Streams API", "", "", "nocode")}}
 - {{domxref("Trusted Types API", "", "", "nocode")}}
