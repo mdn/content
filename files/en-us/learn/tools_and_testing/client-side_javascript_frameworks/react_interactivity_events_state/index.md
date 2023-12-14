@@ -72,7 +72,7 @@ Let's apply this to our app, starting in the `Form.jsx` component.
 
 ### Handling form submission
 
-At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
+At the top of the `Form()` component function (i.e., just below the `function Form() {` line), create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
 ```jsx
 function handleSubmit(event) {
