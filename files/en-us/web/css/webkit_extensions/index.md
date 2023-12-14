@@ -64,7 +64,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 - {{CSSxRef("-webkit-dashboard-region", "-webkit-dashboard-region")}}
 - {{CSSxRef("-webkit-font-size-delta", "-webkit-font-size-delta")}}
 - {{CSSxRef("font-smooth", "-webkit-font-smoothing")}}
-- {{CSSxRef("-webkit-hyphenate-character", "-webkit-hyphenate-character")}}
+- {{CSSxRef("hyphenate-character", "-webkit-hyphenate-character")}} \*\*
 - {{CSSxRef("-webkit-hyphenate-limit-after", "-webkit-hyphenate-limit-after")}}
 - {{CSSxRef("-webkit-hyphenate-limit-before", "-webkit-hyphenate-limit-before")}}
 - {{CSSxRef("-webkit-hyphenate-limit-lines", "-webkit-hyphenate-limit-lines")}}
