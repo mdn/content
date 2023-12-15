@@ -11,7 +11,7 @@ The **`Access-Control-Allow-Credentials`** response header tells browsers whethe
 
 Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password. By default, these credentials are not sent in cross-origin requests, and doing so can make a site vulnerable to {{glossary("CSRF")}} attacks.
 
-A client can ask that credentials should be included in cross-site requests:
+A client can ask that credentials should be included in cross-site requests in one of two ways:
 
 - Using {{domxref("fetch()")}}, by setting the [`credentials`](/en-US/docs/Web/API/Request/Request#credentials) option in the {{domxref("Request.Request()", "Request()")}} constructor to `"include"`.
 - Using {{domxref("XMLHttpRequest")}}, by setting the {{domxref("XMLHttpRequest.withCredentials")}} property to `true`.
