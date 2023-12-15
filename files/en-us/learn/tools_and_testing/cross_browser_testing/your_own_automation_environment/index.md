@@ -188,7 +188,9 @@ let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX).build();
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
-let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX, "46", "MAC").build();
+let driver = new webdriver.Builder()
+  .forBrowser(Browser.FIREFOX, "46", "MAC")
+  .build();
 ```
 
 You could also set these options using an environment variable, for example:
