@@ -23,7 +23,7 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 - [CSS declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
 - [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
 - [CSS function](/en-US/docs/Web/CSS/CSS_Functions)
-- [invalid](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
+- [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 - [style rule](/en-US/docs/Web/API/CSSStyleRule)
 
 ### Glossary terms
@@ -43,7 +43,7 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 
   - : The formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
-- [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/error_handling)
+- [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 
   - : Overview of how the user-agent handles invalid CSS
   
@@ -98,4 +98,4 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 ## See also
 
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
-- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_units) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

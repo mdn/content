@@ -1,6 +1,6 @@
 ---
 title: CSS syntax errors
-slug: Web/CSS/CSS_syntax/error_handling
+slug: Web/CSS/CSS_syntax/Error_handling
 page-type: guide
 ---
 
@@ -148,7 +148,7 @@ After each declaration, style rule, at-rule, etc. is parsed, the user agent chec
 
 Each CSS property accepts specific data types. For example, the {{cssxref("background-color")}} property accepts either a valid {{cssxref("&lt;color&gt;")}} or a CSS global keyword. When the value assigned to a property is of the wrong type, such as `background-color: 45deg`, the declaration is invalid and ignored.
 
-Custom properties are generally considered valid when declared, but may create invalid CSS when accessed. The browser parses each custom property when encountered without regard to where the property is consumed. A custom property may be valid when declared while creating an invalid value when passed as a parameter for the {{cssxref("var()")}} function for the grammar of where the `var()` function is found.
+Custom properties are generally considered valid when declared, but may create invalid CSS when accessed. The browser parses each custom property when encountered without regard to where the property is consumed. A custom property may be valid when declared while creating an invalid value when passed as a parameter for the {{cssxref("var")}} function for the grammar of where the `var()` function is found.
 
 While invalid CSS is discarded with the property value falling back to the last valid value, an invalid computed custom property value is slightly different. If the custom property declaration was valid and the grammar of the property using that value is valid, the declaration is valid at computed time. The `var()` value substitution can still be invalid.
 
