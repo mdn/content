@@ -65,14 +65,10 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 
 - {{cssxref("@property")}}
   - [syntax](/en-US/docs/Web/CSS/@property#descriptors) descriptor
+    - [`+` and `#`](/en-US/docs/Web/CSS/@property#descriptors) multipliers
+    - [`|`](/en-US/docs/Web/CSS/@property#descriptors) combinator
   - [inherits](/en-US/docs/Web/CSS/@property#descriptors) descriptor
   - [initial-value](/en-US/docs/Web/CSS/@property#descriptors) descriptor
-  - [`+` and `#`](/en-US/docs/Web/CSS/@property#syntax_strings) multipliers
-  - [`|`](/en-US/docs/Web/CSS/@property#syntax_strings) combinator
-
-### Functions
-
-- {{cssxref("var")}}
 
 ### Interfaces and APIs
 
