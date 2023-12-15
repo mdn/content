@@ -369,7 +369,6 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
-  
   driver.get(
     "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
   );
