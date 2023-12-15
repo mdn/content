@@ -56,7 +56,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : There is no content to send for this request, but the headers may be useful.
     The user agent may update its cached headers for this resource with the new ones.
 - {{HTTPStatus(205, "205 Reset Content")}}
-  - : Tells the user agent to reset the document which sent this request.
+  - : Tells the user agent to reset the document that made the request.
 - {{HTTPStatus(206, "206 Partial Content")}}
   - : This response code is used when the {{HTTPHeader("Range")}} header is sent from the client to request only part of a resource.
 - {{HTTPStatus(207, "207 Multi-Status")}} ({{Glossary("WebDAV")}})
