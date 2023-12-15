@@ -295,7 +295,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 - [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
-- [`cancel`](/en-US/docs/Web/API/HTMLElement/cancel_event)
+- {{domxref("HTMLElement/cancel_event", "cancel")}}
   - : Fires when the file prompt of an {{HTMLElement("input")}} with `type="file"` is dismissed without a file being selected. Note that this is actually fired on the {{domxref("HTMLElement")}} interface, but we've listed it here because form input elements are one of the few types of element it is used with.
 - [`invalid`](/en-US/docs/Web/API/HTMLInputElement/invalid_event)
   - : Fired when an element does not satisfy its constraints during constraint validation.
