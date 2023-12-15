@@ -12,7 +12,7 @@ The **`type`** property of the {{domxref("RTCTransportStats")}} dictionary is a 
 
 Different statistics are obtained by iterating the {{domxref("RTCStatsReport")}} object returned by a call to {{domxref("RTCPeerConnection.getStats()")}}.
 The type indicates the set of statistics available through the object in a particular iteration step.
-A value of `"transport"` indicates that the statistics available in the current step are those defined in {{domxref("RTCPeerConnectionStats")}}.
+A value of `"transport"` indicates that the statistics available in the current step are those defined in {{domxref("RTCTransportStats")}}.
 
 ## Value
 
