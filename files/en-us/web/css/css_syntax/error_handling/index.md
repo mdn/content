@@ -6,17 +6,17 @@ page-type: guide
 
 {{CSSRef}}
 
-When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user-agent) will gracefully recover, skipping the invalid content. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. This is a feature of CSS, not a bug.
+When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user-agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
 This guide discusses how CSS {{glossary("parser", "parsers")}} discard invalid CSS.
 
 ## CSS parser errors
 
-When a CSS error is encountered, the browser's {{glossary("parser")}} ignores the lines containing the errors, discarding the minimum amount of content before returning to {{glossary("parse", "parsing")}} the CSS as normal. As new features are added to CSS, a browser may not recognize these new features. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content. 
+When a CSS error is encountered, the browser's {{glossary("parser")}} ignores the lines containing the errors, discarding the minimum amount of content before returning to {{glossary("parse", "parsing")}} the CSS as normal. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content.
 
-The fact that browsers ignore invalid code enables using new CSS features without worrying about anything being broken in older browsers. This feature also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because browsers ignore invalid CSS, the valid fallbacks don't get overwritten by new CSS that is perceived as invalid.
+The fact that browsers ignore invalid code enables the use of new CSS features without worrying about anything being broken in older browsers. A browser may not recognize a new feature, but that is okay. The discarding of invalid content without throwing an error also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because browsers ignore invalid CSS, the valid fallbacks don't get overwritten by the new CSS that follows it that is perceived as invalid.
 
-The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some of common error situations are listed below:
+The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some common error situations are listed below:
 
 - For [errors in at-rules](#at-rule_errors), whether a single line or the entire at-rule is ignored (fails) depends on the at-rule and the type of error.
 - If the [error is an invalid selector](#errors_in_selector_lists), the entire declaration block is ignored.
@@ -28,35 +28,40 @@ After parsing each declaration, style rule, at-rule, and so on, the browser chec
 
 ### At-rule errors
 
-The `@` symbol, known in the CSS specifications as an `<at-keyword-token>`, indicates the beginning of an {{cssxref("at-rule")}}. Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint; everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The contents of each at-rule is interpreted according to the grammar rules for that particular at-rule.
+The `@` symbol, known in the CSS specifications as an `<at-keyword-token>`, indicates the beginning of a CSS {{cssxref("at-rule")}}. Once an at-rule begins with the `@` symbol, nothing is considered invalid from the parser's standpoint; everything up to the first semi-colon (`;`) or the opening curly brace (`{`) is part of the at-rule's prelude. The contents of each at-rule are interpreted according to the grammar rules for that particular at-rule.
 
-Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for single-line at-rules. If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
+Statement at-rules, such as {{cssxref("@import")}} and {{cssxref("@namespace")}} declarations, contain just a prelude. The semicolon ends the at-rule immediately for [regular at-rules](en-US/docs/Web/CSS/At-rule#regular). If the contents of the prelude are invalid according to the grammar for that at-rule, the at-rule is ignored, with the browser continuing to parse CSS after it encounters the next semi-colon. For example, if an `@import` at-rule occurs after any CSS declaration other than `@charset`, `@layer` or other `@import` statements, the `@import` declaration is ignored.
 
-If the parser encounter a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rule. Block at-rules, like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the completed at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by anything else or inside of another block, to close the body of the at-rule.
+```css
+@import "assets/fonts.css" layer(fonts);
+@namespace svg url(http://www.w3.org/2000/svg);
+```
 
-Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for each at-rule and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
+If the parser encounters a curly brace (`{`) before a semi-colon is encountered, the at-rule is parsed as a block at-rules. Block at-rules, also called [nested at-rules](en-US/docs/Web/CSS/At-rule#nested), like {{cssxref("@font-face")}} and {{cssxref("@keyframes")}}, contain a block of declarations surrounded by curly braces (`{}`). The opening curly brace informs the browser where the at-rule prelude ends and the at-rule's body starts. The parser looks forward, seeking matching blocks (content surrounded by `()`, `{}`, or `[]`) until it finds a closing curly brace (`}`) that isn't matched by anything else to close the body of the at-rule.
 
-For the `@font-face` at-rule, including an unrelated descriptor, a valid font-face descriptor with an invalid value, or a property style declaration within an `@font-face` will not invalidate the font declaration. Only the invalid CSS is ignored.
+Different at-rules have different grammar rules, different (or no) descriptors, and different rules for what, if anything, will invalidate the entire at-rule. The expected grammar for [each at-rule](/en-US/docs/Web/CSS/At-rule) and how errors are handled are documented on the respective at-rule page. The handling of invalid content depends on the error.
 
-The grammar of the `@font-face` at rule is very different from the `@keyframe`, with the type of error impacting what gets ignored. Important declarations (marked with the {{cssxref("important")}} flag) and properties that can't be animated in keyframe rules are ignored, but normal, supported properties will still be animated. Including a keyframe selector percentage value less than `0%`, greater than `100%`, or with the `%` sign omitted invalidates the keyframe selector list and therefore the style block is ignored, but an invalid keyframe selector doesn't not invalidate the entire `@keyframe`. Including styles between two keyframe selector block within a `@keyframe` invalidates the at-rule.
+The `@font-face` rule requires both a [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) and [`src`](/en-US/docs/Web/CSS/@font-face/src) descriptor. If either of these is omitted or invalid, the entire `@font-face` rule is invalid. Including an unrelated descriptor, any other valid font descriptor with an invalid value, or a property style declaration within the `@font-face` nested block will not invalidate the font declaration. As long as the font name and font source are included and valid, any invalid CSS within the at-rule block is ignored.
 
-Some at-rules are almost always. The statement {{cssxref("@layer")}} contains just the prelude, ending with a semi-colon. Alternatively, this at-rule can also have layer styles nested between curly braces following the prelude. If the error is a missing closing curly brace, it is considered a logic error not a CSS error. In the case of a missing closing brace in `@layer`, the styles are assumed to be in the cascade layer that is defined in the at-rule's prelude. The CSS is considered valid; because there are no syntactic errors, the parser does not ignore any part. The `@layer` statement, whether it contains just a prelude statement ending with a semi-color or if it contains a body of declarations, as long as the layer name is not a [global CSS value](), the at-rule always creates at least one layer, though the layer may be an anonymous layer containing no styles.
+While the grammar of the `@keyframe` at-rule is very different, like the `@font-face` rule, the type of error impacts what gets ignored. Important declarations (marked with the {{cssxref("important")}} flag) and properties that can't be animated in keyframe rules are ignored, but don't impact other styles declared in the same keyframe selector block. Including an invalid keyframe selector such as a percentage value less than `0%` or greater than `100%`, or a {{cssxref("number")}} omitting the `%`, invalidates the keyframe selector list and therefore the style block is ignored. An invalid keyframe selector only invalidates the invalid selector's style block; it does not invalidate the entire `@keyframe` declaration. Including styles between two keyframe selector blocks, on the other hand, will invalidate the entire `@keyframe` at-rule.
+
+Some at-rules are almost always valid. The {{cssxref("@layer")}} at rule comes in both regular and nested forms. The `@layer` statement syntax contains just the prelude, ending with a semi-colon. Alternatively, the nested syntax has layer styles nested between curly braces coming after the prelude. Omitting a closing curly brace may be a logic error but is not a syntax error. In the case of a missing closing brace in `@layer`, any styles coming after where the closing brace should have been are parsed as being in the cascade layer defined in the at-rule's prelude. The CSS is valid as there are no syntax errors; nothing is discarded. A syntax error may cause the named or anonymous layer to be empty, but the layer is still created.
 
 ### Errors in selector lists
 
-There are many ways you might make a mistake writing a selector, but only invalid selectors cause a selector list to be invalid (See [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) issues).
+There are many ways you might make a mistake writing a selector, but only invalid selectors cause a selector list to be invalid (See [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list)).
 
-If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, element or custom-element, respectively, that doesn't exist, it may be a logic error, but it's not an error the parser needs to handle. If, however, you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser will notice.
+If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, element or custom-element, respectively, that doesn't exist, it may be a logic error, but it's not a syntax error. If, however, you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser needs to address.
 
-If a selector list contains any selectors that are in the [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), then the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#webkit-exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
+If a selector list contains any invalid selectors, then the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#webkit-exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
 
-If a selector list contains any invalid selectors outside of these exceptions, a single invalid or unsupported selector in the selector list will invalidate the entire rule. The entire selector block will be ignored. The browser will look for the closing curly brace and will continue parsing again from that point on.
+If a selector list contains any invalid selectors outside of these exceptions, a single invalid or unsupported selector in the selector list will invalidate the entire rule and the entire selector block will be ignored. The browser will look for the closing curly brace and will continue parsing again from that point on.
 
 #### Webkit exception
 
-Due to legacy issues from the overuse of browser-specific prefixes in selectors and in [property names and values](#vendor-prefixes), browsers avoid the invalidation of selector lists by treating all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a case-insensitive `-webkit-` prefix and don't end with `()` as valid.
+Due to legacy issues from the overuse of browser-specific prefixes in selectors and in [property names (and values)](#vendor-prefixes), browsers avoid the invalidation of selector lists by treating all [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) that start with a case-insensitive `-webkit-` prefix and don't end with `()` as valid.
 
-This means that a pseudo-element like `::-webkit-works-only-in-samsung` will not invalidate a selector list, regardless of the browser. In such cases, the pseudo-element may not be recognized or supported by the browser, but it will not cause the entire selector list and it's associated style block to be ignored. On the other hand, the unknown prefixed selector with a function notation `::-webkit-imaginary-function()` will invalidate the entire selector list and the browser will ignore the entire selector block.
+This means that a pseudo-element like `::-webkit-works-only-in-samsung` will not invalidate a selector list, regardless of the browser. In such cases, the pseudo-element may not be recognized or supported by the browser, but it will not cause the entire selector list and it's associated style block to be ignored. On the other hand, the unknown prefixed selector with a function notation `::-webkit-imaginary-function()` will invalidate the entire selector list, with the browser ignoring the entire selector block.
 
 ### Errors within CSS declaration blocks
 
@@ -75,13 +80,13 @@ p {
 }
 ```
 
-The reason the first declaration in this selector block is invalid is because the semi-colon is missing and the declaration is not the last declaration in the block. The property missing the semi-colon is ignored, as is the property-value pair following it because the browser only continues parsing after a semi-colon or closing bracket is encountered. In the above CSS, the `border-color` value is parsed as `red background-color: green;` which is not a valid {{cssxref("&lt;color&gt;")}} value.
+The reason the first declaration in this selector block is invalid is because the semi-colon is missing and the declaration is not the last one in the selector block. The property missing the semi-colon is ignored, as is the property-value pair following it because the browser only continues parsing after a semi-colon or closing bracket is encountered. In the above CSS, the `border-color` value is parsed as `red background-color: green;` which is not a valid {{cssxref("&lt;color&gt;")}} value.
 
 The parser ignores the property with an invalid value, and starts parsing again after it encounters the next semi-colon. The {{cssxref("border-width")}} value of `100vh` is likely a mistake, but it's not an error. As it is syntactically valid, it will be parsed and applied to the elements matching the selector.
 
 #### Vendor prefixes
 
-Vendor-prefixed property names and property values, when not understood by a browser, are ignored. Only the single rule containing the invalid property or value is ignored. The parser looks for the next semi-colon or closing curly brace and then continues parsing from there.
+Vendor-prefixed property names and property values, when not understood by a browser, are ignored. Only the individual rules containing an invalid property or value are ignored. The parser looks for the next semi-colon or closing curly brace and then continues parsing from there.
 
 You may come across legacy CSS that looks like the following:
 
@@ -103,13 +108,13 @@ You may come across legacy CSS that looks like the following:
 }
 ```
 
-In both the declaration blocks above, the last declaration is valid. The parser ignores the declarations it doesn't understand as invalid. If the user agent does understand one of the prefixed declarations, for example, all browsers understand `display: flex;` and `border-radius: 50%;`, the values in the last, valid declaration are used, not because they are the valid ones, but rather due to the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order) [order of appearance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) rule.
+In both the declaration blocks, the last declaration is valid in all browsers. Parsers ignore the declarations they don't understand as invalid. For example, all browsers understand `display: flex;` and `border-radius: 50%;`. If the user agent doesn't understand one of the prefixed declarations, the values in the last, valid declarations are used. These last declared valid values are used due to the [cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#source_order) [order of appearance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers) rule.
 
-> **Note:** Avoid including prefixed properties or property values. If you must, declare the prefixed values before the valid, non-prefixed standard property-value pairs.
+> **Note:** Avoid including prefixed properties or property values. If you must, declare the prefixed values before the valid, non-prefixed version.
 
 ### Errors with auto-closed endings
 
-If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, comment, etc. is still open, the parser will automatically close everything that was left unclosed.
+If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, or comment is still open, the parser will automatically close everything that was left unclosed.
 
 If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out an `@keyframe` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
@@ -121,11 +126,11 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 </style>
 ```
 
-The `move` animation is valid. Failing to properly close CSS statements doesn't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
+Here the `move` animation is valid. Failing to properly close CSS statements don't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS as you intended.
 
 #### Unclosed comments
 
-Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` is encountered will be treated as part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS inside the comment to be ignored.
+Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` or the end of the stylesheet, whichever comes first, is part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS inside the comment to be ignored.
 
 ```html example-bad
 <style>
@@ -138,21 +143,22 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
 <p style="/* another unclosed comment">Parsed as HTML.</p>
 ```
 
-In this example, the two CSS comments are not closed, but the closing `</style>` tag closes the first comment and the quote at the end of the `style` attribute closes the second comment.
+In this example, the two CSS comments are not closed, but the closing `</style>` tag closes the first comment and the `style` attribute's close quote closes the second comment.
 
 ## Grammar check
 
 After each declaration, style rule, at-rule, etc. is parsed, the user agent checks to make sure the grammar is the expected grammar for that declaration. For example, if a property value is of the wrong data type or if a descriptor is not valid for the at-rule being described, the content that does not match the expected grammar is deemed invalid, and gets ignored.
 
-### Invalid custom properties
-
 Each CSS property accepts specific data types. For example, the {{cssxref("background-color")}} property accepts either a valid {{cssxref("&lt;color&gt;")}} or a CSS global keyword. When the value assigned to a property is of the wrong type, such as `background-color: 45deg`, the declaration is invalid and ignored.
 
-Custom properties are generally considered valid when declared, but may create invalid CSS when accessed. The browser parses each custom property when encountered without regard to where the property is consumed. A custom property may be valid when declared while creating an invalid value when passed as a parameter for the {{cssxref("var")}} function for the grammar of where the `var()` function is found.
 
-While invalid CSS is discarded with the property value falling back to the last valid value, an invalid computed custom property value is slightly different. If the custom property declaration was valid and the grammar of the property using that value is valid, the declaration is valid at computed time. The `var()` value substitution can still be invalid.
+### Invalid custom properties
 
-When a `var()` substitution is invalid, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used; the declaration is not ignored. As the declaration was valid at compute time, the declaration is valid. This means the declaration is not ignored and the property does not remain the value of the previous valid value. Rather, the property is set to a new value, but possibly not the expected one.
+Custom properties are generally considered valid when declared, but may create invalid CSS when accessed. The browser parses each custom property when encountered without regard to where the property is consumed. A custom property may be valid when declared while creating an invalid value when passed as a parameter of the {{cssxref("var")}} function for the grammar of where the `var()` function is found.
+
+While invalid CSS is discarded with the property value falling back to the last valid value, an invalid computed custom property value is slightly different. If the custom property declaration is valid and the grammar of the property using that value is valid, the declarations are valid at computed time. The `var()` value substitution, however, can still be invalid.
+
+When a `var()` substitution is invalid, then the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used; the declaration is not ignored. As the declaration was valid at compute time, the declaration is considered valid. This means the declaration is not ignored and the value of the previous valid value does not cascade. Rather, the property is set to a new value, but possibly not the expected one.
 
 ```css example-bad
 :root {
@@ -163,7 +169,7 @@ body {
 }
 ```
 
-In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg`, the grammar is invalid. An {{cssxref("angle")}} is not a valid value `background-color`. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong data-type, if the property is inheritable, the value is inherited from it's parent. If the property is not inheritable, the default initial value is used. In this case, the default background color is `transparent`.
+In the above code, the custom property declaration is valid. The `background-color` declaration is also valid at compute time. However, when the browser substitutes the custom property in `var(--theme-color)` with `45deg` as a value of the `background-color` property, the grammar is invalid. An {{cssxref("angle")}} is not a valid `background-color` value. In this case, the declaration is not ignored as invalid. Rather, when a custom property is of the wrong type, if the property is inheritable, the value is inherited from its parent. If the property is not inheritable, the default initial value is used. In the case of `background-color`, the property value is not an inherited value, so the inital value of `transparent` is used.
 
 To better control the way custom properties fall back, use the {{cssxref("@property")}} at-rule to define the initial value of the property:
 
