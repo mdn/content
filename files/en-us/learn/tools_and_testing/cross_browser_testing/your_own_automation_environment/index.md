@@ -265,7 +265,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   driver.get(
-  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
   const button = driver.findElement(By.css("button:nth-of-type(1)"));
 })();
