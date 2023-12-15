@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 {{CSSRef}}
 
-The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables.
+The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables and the mechanisms to use custom properties as the values for other CSS properties. 
 
 When working with CSS, you often end up reusing common project-specific values such as widths that work well with your layout, or a set of colors for your color scheme.
 One way of managing repetition in stylesheets is to define a value once and use it many times in other places.
-Custom properties let you reuse values and simplify complex or repetitive rules which is easier to read and maintain.
+Custom properties, also known as custom variables, let you reuse values and simplify complex or repetitive rules which are easier to read and maintain.
 For example, `--dark-grey-text` and `--dark-footer` are easier to understand than hexadecimal colors such as `#00ff00`, and the context of how you use them is more obvious, too.
 
 ## Custom properties in action
@@ -93,7 +93,7 @@ input {
 
 {{EmbedLiveSample("",600,160)}}
 
-Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changing the {{cssxref("background-color")}} using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function (`hsl(var(--hue) 50% 50%);`). When the slider's value changes between 0 and 360, this updates a `--hue` [custom property](/en-US/docs/Web/CSS/--*) and the color of the boxes inside the grid.
+Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, setting the {{cssxref("background-color")}} using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function (`hsl(var(--hue) 50% 50%);`). As the slider's value changes from 0 up to 360, the value of the `--hue` [custom property](/en-US/docs/Web/CSS/--*) is updated, updating the background color of each box inside the grid.
 
 ## Reference
 
@@ -113,8 +113,8 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, changin
 ## Related concepts
 
 - [CSS Properties and Values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
-  - [CSS @property](/en-US/docs/Web/CSS/@property) at-rule
-  - [CSS.registerProperty()](/en-US/docs/Web/API/CSS/registerProperty_static) method
+  - [`@property`](/en-US/docs/Web/CSS/@property) at-rule
+  - [`CSS.registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) method
 
 ## Specifications
 
