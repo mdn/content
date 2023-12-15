@@ -31,7 +31,7 @@ assign(url)
 ### Parameters
 
 - `url`
-  - : A string containing the URL of the page to navigate to. It can be an absolute and full path, as well as relative path to a subdirectory of website.
+  - : A string containing the URL of the page to navigate to. It can be either an absolute URL or a relative URL.
 
 ### Return value
 
@@ -45,7 +45,7 @@ window.location.assign(
   "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
 );
 
-// Then navigate to it's #Specifications section
+// Then navigate to its Specifications section
 window.location.assign("#specification");
 
 // Eventually navigate to https://developer.mozilla.org/en-US/docs/Web
