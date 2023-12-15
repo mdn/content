@@ -902,12 +902,11 @@
     },
     "Media Session API": {
       "overview": ["Media Session API"],
+      "guides": [],
       "interfaces": ["MediaMetadata", "MediaSession"],
       "methods": [],
       "properties": ["Navigator.mediaSession"],
-      "events": [],
-      "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
-      "callbacks": ["MediaSessionActionHandler"]
+      "events": []
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
