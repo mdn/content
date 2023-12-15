@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.gamma
 ---
 
-{{ apiref("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-Returns the rotation of the device around the Y axis; that is, the number of degrees,
+The **`gamma`** read-only property of the {{domxref("DeviceOrientationEvent")}} interface returns the rotation of the device around the Y axis; that is, the number of degrees,
 ranged between `-90` and `90`, by which the device is tilted left
 or right.
 See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.

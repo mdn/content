@@ -26,6 +26,10 @@ _This interface inherits methods from the {{domxref("WorkerGlobalScope")}} inter
   - : Discards any tasks queued in the `WorkerGlobalScope`'s event loop, effectively closing this particular scope.
 - {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}
   - : Sends a message — which can consist of `any` JavaScript object — to the parent document that first spawned the worker.
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+  - : Cancels an animation frame request previously scheduled through a call to {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}}.
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
+  - : Perform an animation frame request and call a user-supplied callback function before the next repaint.
 
 ## Events
 
@@ -35,6 +39,8 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired when the worker receives a message from its parent.
 - {{domxref("DedicatedWorkerGlobalScope/messageerror_event", "messageerror")}}
   - : Fired when a worker receives a message that can't be deserialized.
+- {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}}
+  - : Fired when an encoded video or audio frame has been queued for processing by a {{domxref("WebRTC API/Using Encoded Transforms", "WebRTC Encoded Transform", "", "nocode")}}.
 
 ## Specifications
 

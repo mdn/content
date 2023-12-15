@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DeviceMotionEvent.DeviceMotionEvent
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 The **`DeviceMotionEvent()`** constructor creates a new {{DOMxRef("DeviceMotionEvent")}} object.
 

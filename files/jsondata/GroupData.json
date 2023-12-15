@@ -746,7 +746,6 @@
       "guides": [
         "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
       ],
       "interfaces": [
@@ -758,13 +757,13 @@
       "methods": [],
       "properties": [],
       "events": [
-        "Document: dragstart",
-        "Document: drag",
-        "Document: dragenter",
-        "Document: dragleave",
-        "Document: dragover",
-        "Document: drop",
-        "Document: dragend"
+        "HTMLElement: drag",
+        "HTMLElement: dragend",
+        "HTMLElement: dragenter",
+        "HTMLElement: dragleave",
+        "HTMLElement: dragover",
+        "HTMLElement: dragstart",
+        "HTMLElement: drop"
       ]
     },
     "HTML Sanitizer API": {
@@ -1077,21 +1076,23 @@
       ],
       "interfaces": ["PointerEvent"],
       "methods": [
-        "Element.setPointerCapture()",
-        "Element.releasePointerCapture()"
+        "Element.hasPointerCapture()",
+        "Element.releasePointerCapture()",
+        "Element.setPointerCapture()"
       ],
       "properties": ["Navigator.maxTouchPoints"],
       "events": [
-        "HTMLElement: pointerover",
-        "HTMLElement: pointerenter",
-        "HTMLElement: pointerdown",
-        "HTMLElement: pointermove",
-        "HTMLElement: pointerup",
-        "HTMLElement: pointercancel",
-        "HTMLElement: pointerout",
-        "HTMLElement: pointerleave",
-        "HTMLElement: gotpointercapture",
-        "HTMLElement: lostpointercapture"
+        "Element: gotpointercapture",
+        "Element: lostpointercapture",
+        "Element: pointercancel",
+        "Element: pointerdown",
+        "Element: pointerenter",
+        "Element: pointerleave",
+        "Element: pointermove",
+        "Element: pointerout",
+        "Element: pointerover",
+        "Element: pointerrawupdate",
+        "Element: pointerup"
       ]
     },
     "Pointer Lock API": {
