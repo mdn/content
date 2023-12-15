@@ -39,6 +39,8 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired when the worker receives a message from its parent.
 - {{domxref("DedicatedWorkerGlobalScope/messageerror_event", "messageerror")}}
   - : Fired when a worker receives a message that can't be deserialized.
+- {{domxref("DedicatedWorkerGlobalScope/rtctransform_event", "rtctransform")}}
+  - : Fired when an encoded video or audio frame has been queued for processing by a {{domxref("WebRTC API/Using Encoded Transforms", "WebRTC Encoded Transform", "", "nocode")}}.
 
 ## Specifications
 
