@@ -1222,7 +1222,6 @@
         "MediaTrackSupportedConstraints.logicalSurface",
         "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
-      "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
     },
     "Screen Orientation API": {
@@ -2082,10 +2081,6 @@
         "RTCDTMFSender: tonechange",
         "RTCPeerConnection: track",
         "DedicatedWorkerGlobalScope: rtctransform"
-      ],
-      "callbacks": [
-        "RTCPeerConnectionErrorCallback",
-        "RTCSessionDescriptionCallback"
       ]
     },
     "Web Serial API": {
