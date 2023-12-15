@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5) specification defines **relative color syntax**, which allows CSS {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This is a very powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — paving the way towards more effective color palette creation.
+The [CSS colors Module](/en-US/docs/Web/CSS/CSS_colors) defines **relative color syntax**, which allows CSS {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This is a powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — paving the way towards more effective color palette creation.
 
 This article explains the syntax, shows what the different options are, and looks at some illustrative examples.
 

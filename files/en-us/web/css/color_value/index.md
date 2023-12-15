@@ -51,6 +51,11 @@ oklab(59% 0.1 0.1 / 0.5)
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
+/* Relative CSS colors */
+rgb(from red 0 0 255) /* transform red to blue */
+hwb(from green h w b / 0.5) /* Add a semi-transparent alpha channel to green */
+lch(from blue calc(l + 20) c h) /* Create a lighter blue variant */
+
 /* light-dark */
 light-dark(white, black)
 light-dark(rgb(255 255 255), rgb(0 0 0))
@@ -65,6 +70,7 @@ A `<color>` value can be specified using one of the methods listed below:
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
+- By using relative color syntax to output a new color based on an existing color. Any of the above color space functions can take an **originating color** preceded by the `from` keyword, and followed by definitions of the channel values for the new output color. See [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) for a detailed usage guide with examples, and see the above color space function pages for details of the allowable syntax in each case.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 - By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
@@ -438,4 +444,5 @@ div:nth-child(6) {
 - {{CSSXref("&lt;hue&gt;")}}: the data type representing the hue angle of a color
 - {{CSSXref("color")}}, {{CSSXref("background-color")}}, {{CSSXref("border-color")}}, {{CSSXref("box-shadow")}}, {{CSSXref("outline-color")}}, {{CSSXref("text-shadow")}}: common properties that use `<color>`
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

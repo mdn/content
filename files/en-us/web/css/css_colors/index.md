@@ -77,6 +77,8 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 - [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
   - : A guide to using CSS to apply color to a variety of types of content. All color-related CSS properties are touched upon.
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
+  - : This article explains relative CSS color syntax, shows what the different options are, and looks at some illustrative examples.
 - [Understanding color and luminance](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Color perception and using colors with color insensitive (color blind) users, reduced vision users and users with vestibular disorders or other neurological disorders in mind.
 - [WCAG 1.4.1: Color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)
