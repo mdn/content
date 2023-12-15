@@ -151,7 +151,6 @@ After each declaration, style rule, at-rule, etc. is parsed, the user agent chec
 
 Each CSS property accepts specific data types. For example, the {{cssxref("background-color")}} property accepts either a valid {{cssxref("&lt;color&gt;")}} or a CSS global keyword. When the value assigned to a property is of the wrong type, such as `background-color: 45deg`, the declaration is invalid and ignored.
 
-
 ### Invalid custom properties
 
 Custom properties are generally considered valid when declared, but may create invalid CSS when accessed. The browser parses each custom property when encountered without regard to where the property is consumed. A custom property may be valid when declared while creating an invalid value when passed as a parameter of the {{cssxref("var")}} function for the grammar of where the `var()` function is found.
