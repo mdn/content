@@ -59,11 +59,94 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-In terms of how this multi-value syntax helps clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it.
+Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
 
-In the example below, we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line `display: flow-root` then the float will poke out of the bottom of the box. You can replace `display: flow-root` with the multi-value `display: block flow-root`, which will achieve the same as the single `flow-root` value.
+In the example below, four `<div>` elements demonstrate how display values affect formatting contexts.
+The first `<div>` element with the demo controls is hidden so we can focus on the elements that follow instead.
+The elements that we should focus on are the "parent", "child", and "sibling" `<div>` elements which you can differentiate by their IDs.
 
-{{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 440)}}
+What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
+You might expect that the top margin of the child element gives it a positioning somewhere in the middle of the parent element, but what happens instead is something called [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
+In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
+This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#use_browser_devtools_to_view_the_box_model).
+
+Choose the options in the `<select>` element to see the effect of different `display` values.
+You can use any value with `flow-root` to create a new formatting context, giving the child element a margin relative to its parent and avoiding the margin collapse.
+Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single `flow-root` value.
+
+```js hidden
+function changeDisplayType() {
+  var parentDiv = document.getElementById("parent");
+  var siblingDiv = document.getElementById("sibling");
+  var displayType = document.getElementById("displayType").value;
+
+  parentDiv.style.display = displayType;
+  siblingDiv.style.display = displayType;
+}
+```
+
+```css hidden
+#controls {
+  padding: 1rem;
+  outline: 2px dashed black;
+  background-color: white;
+  color: black;
+}
+body {
+  margin: 10px;
+  font-family: sans-serif;
+  color: white;
+}
+```
+
+```css
+div {
+  outline: 2px solid black;
+  background-color: cornflowerblue;
+  display: block;
+  margin-bottom: 40px;
+}
+
+#parent {
+  background-color: aquamarine;
+  height: 140px;
+}
+
+#child {
+  margin-top: 60px;
+  outline: 2px solid red;
+}
+
+#sibling {
+  background-color: mediumslateblue;
+}
+```
+
+```html hidden
+<div id="controls">
+  <label for="displayType">display:</label>
+  <select id="displayType" onchange="changeDisplayType()">
+    <option value="block">block</option>
+    <option value="flow-root">flow-root</option>
+    <option value="block flow-root">block flow-root</option>
+    <option value="inline">inline</option>
+    <option value="inline flow-root">inline flow-root</option>
+  </select>
+</div>
+```
+
+```html
+<div id="parent">
+  <div id="child">
+    <p>This para is inside the child element.</p>
+  </div>
+</div>
+<div id="sibling">
+  <p>This is a sibling.</p>
+</div>
+```
+
+{{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
 
 The `flow-root` value makes sense if you think about block and inline layout, which is sometimes called [normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow). Our HTML page creates a new formatting context (floats and margins cannot extend out from the boundaries) and our content lays out in normal flow, using block and inline layout, unless we change the value of `display` to use some other formatting context. Creating a grid or flex container also creates a new formatting context (a grid or flex formatting context, respectively.) These also contain everything inside them. However, if you want to contain floats and margins but continue using block and inline layout, you can create a new flow root, and start over with block and inline layout. From that point downwards everything is contained inside the new flow root.
 
