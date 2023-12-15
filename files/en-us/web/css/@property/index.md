@@ -24,22 +24,23 @@ The `@property` rule represents a custom property registration directly in a sty
 ### Descriptors
 
 - {{cssxref("@property/syntax","syntax")}}
-  - : Describes the allowable syntax for the property.
+
+  - : Describes the allowable syntax for the property. May be a `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, or `<custom-ident>`, or a list of data type and keyword values.
+
+    The `+` (space-separated) and `#` (comma-separated) multipliers indicate that a list of values is expected, for example `<color>#` means a comma-separated list of `<color>` values is the expected syntax.
+
+    Vertical lines (`|`) can create "or" conditions for the expected syntax, for example `<length> | auto` accepts a `<length>`, or `auto`, and `<color># | <integer>#` expects a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
+
 - {{cssxref("@property/inherits","inherits")}}
   - : Controls whether the custom property registration specified by `@property` inherits by default.
 - {{cssxref("@property/initial-value","initial-value")}}
   - : Sets the initial value for the property.
 
-`@property` rules require a {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptor; if either are missing, the entire rule is invalid and must be ignored. The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional only if the syntax is the <a href="https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition">universal syntax definition</a> (`*`), otherwise the descriptor is required; if it's missing, the entire rule is invalid and must be ignored.
+The `@property` rule must include both the {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptors; if either are missing, the entire `@property` rule is invalid and ignored.
+The {{cssxref("@property/initial-value","initial-value")}} descriptor is also required, unless the syntax is the [`*` universal syntax definition](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition) (e.g., `initial-value: *`).
+If the `initial-value` descriptor is required and omitted, the entire `@property` rule is invalid and ignored.
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
-
-#### Syntax strings
-
-The `<syntax>` descriptor can be any one of `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, or `<custom-ident>`.
-The `+` (space-separated) and `#` (comma-separated) multipliers indicate that a list of values is expected, for example `<color>#` means a comma-separated list of `<color>` values is the expected syntax.
-
-Vertical lines (`|`) can create "or" conditions for the expected syntax, for example `<length> | auto` accepts a `<length>`, or `auto`, and `<color># | <integer>#` expects a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
 
 ## Formal syntax
 
