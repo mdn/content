@@ -35,22 +35,22 @@ Some typical features for which you might want to use the device orientation eve
 
 ## Interfaces
 
-- {{domxref("DeviceOrientationEvent")}}
-  - : Represents changes in the physical orientation of a device.
 - {{domxref("DeviceMotionEvent")}}
   - : Represents changes in the acceleration of a device, as well as the rotation rate.
 - {{domxref("DeviceMotionEventAcceleration")}}
   - : Represents the amount of acceleration the device is experiencing along all three axes
 - {{domxref("DeviceMotionEventRotationRate")}}
   - : Represents the rate at which the device is rotating around all three axes.
+- {{domxref("DeviceOrientationEvent")}}
+  - : Represents changes in the physical orientation of a device.
 
-## Events
+### Extensions to other interfaces
 
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the device about the current orientation of the device as compared to the Earth coordinate frame.
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}} event
   - : Fired at a regular interval to indicate the amount of physical force of acceleration the device is receiving at that time, and the rate of rotation of the device.
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} event
+  - : Fired when fresh data is available from the device about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} event
   - : Fired when absolute device orientation changes.
 
 ## Specifications
