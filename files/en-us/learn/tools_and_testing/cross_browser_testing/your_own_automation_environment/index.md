@@ -127,7 +127,7 @@ There is also nothing to stop you running the test on multiple browsers simultan
 2. Give it the following contents, then save it:
 
    ```js
-   const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
+   const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
    const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
 
@@ -176,21 +176,19 @@ Let's have a look at a few key features of the webdriver syntax. For more comple
 To start up a new test, you need to include the `selenium-webdriver` module like this:
 
 ```js
-const webdriver = require("selenium-webdriver");
-const By = webdriver.By;
-const until = webdriver.until;
+const { Builder, By, until } = require("selenium-webdriver");
 ```
 
 Next, you need to create a new instance of a driver, using the `new webdriver.Builder()` constructor. This needs to have the `forBrowser()` method chained onto it to specify what browser you want to test with this builder, and the `build()` method to actually build it (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
 
 ```js
-let driver = new webdriver.Builder().forBrowser("firefox").build();
+let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX).build();
 ```
 
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
-let driver = new webdriver.Builder().forBrowser("firefox", "46", "MAC").build();
+let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX, "46", "MAC").build();
 ```
 
 You could also set these options using an environment variable, for example:
@@ -202,7 +200,7 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-const { Builder, By, until } = require("selenium-webdriver");
+const { Builder, Browser } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
@@ -235,12 +233,18 @@ driver.get("http://localhost:8888/fake-div-buttons.html");
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Add this line to the bottom of your `example()` function:
+Update your `example()` function as follows:
 
 ```js
-driver.get(
+const { Builder, Browser } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
   "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
-);
+  );
+})();
+
 ```
 
 ### Interacting with the document
@@ -253,10 +257,18 @@ const element = driver.findElement(By.id("myElementId"));
 
 One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
 
-Enter the following at the bottom of your `example()` function now:
+Update your `example()` function now as follows:
 
 ```js
-const button = driver.findElement(By.css("button:nth-of-type(1)"));
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+})();
 ```
 
 ### Testing your element
@@ -271,7 +283,25 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to the bottom of the `example()` function now.
+Add this to the bottom of the `example()` function now as shown below:
+
+```js
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  );
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.getText().then((text) => {
+    console.log(`Button text is '${text}'`);
+  });
+})();
+```
 
 Making sure you are inside your project directory, try running the test:
 
@@ -281,33 +311,85 @@ node quick_test.js
 
 You should see the button's text label reported inside the console.
 
-Let's do something a bit more useful. Delete the previous code entry, then add this line at the bottom instead:
+Let's do something a bit more useful. Replace the previous code entry with this line of code, `button.click();` as shown below:
 
 ```js
-button.click();
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  );
+  
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.click();
+})();
 ```
 
 Try running your test again; the button will be clicked, and the `alert()` popup should appear. At least we know the button is working!
 
-You can interact with the popup too. Add the following to the bottom of the function, and try testing it again:
+You can interact with the popup too. Update the `example()` function as follows, and try testing it again:
 
 ```js
-await driver.wait(until.alertIsPresent());
+const { Builder, Browser, By, until } = require("selenium-webdriver");
 
-const alert = driver.switchTo().alert();
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  );
 
-alert.getText().then((text) => {
-  console.log(`Alert text is '${text}'`);
-});
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
 
-alert.accept();
+  button.click();
+  
+  await driver.wait(until.alertIsPresent());
+
+  const alert = driver.switchTo().alert();
+
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
+
+  alert.accept();
+})();
+
 ```
 
-Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:
+Next, let's try entering some text into one of the form elements. Update the `example()` function as follows and try running your test again:
 
 ```js
-const input = driver.findElement(By.id("name"));
-input.sendKeys("Filling in my form");
+const { Builder, Browser, By, until } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+  );
+
+  const input = driver.findElement(By.id("name"));
+  input.sendKeys("Filling in my form");
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.click();
+  
+  await driver.wait(until.alertIsPresent());
+
+  const alert = driver.switchTo().alert();
+
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
+
+  alert.accept();
+})();
+
 ```
 
 You can submit key presses that can't be represented by normal characters using properties of the `webdriver.Key` object. For example, above we used this construct to tab out of the form input before submitting it:
@@ -338,17 +420,48 @@ driver.sleep(2000).then(() => {
 
 The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a promise that resolves at the end of that time, at which point the code inside the `then()` executes. In this case we get the title of the current page with the `getTitle()` method, then return a pass or fail message depending on what its value is.
 
-We could add a `sleep()` method to our `quick_test.js` test too — try wrapping your last line of code in a block like this:
+We could add a `sleep()` method to our `quick_test.js` test too — try updating your `example()` function like this:
 
 ```js
-driver.sleep(2000).then(() => {
-  input.sendKeys("Filling in my form");
-  input.getAttribute("value").then((value) => {
-    if (value !== "") {
-      console.log("Form input editable");
-    }
-  });
-});
+const { Builder, Browser, By, until } = require("selenium-webdriver");
+
+const driver = new Builder().forBrowser("firefox").build();
+
+(async function example() {
+  try {
+    driver.get(
+      "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+    );
+
+    driver.sleep(2000).then(() => {
+      const input = driver.findElement(By.id("name"));
+
+      input.sendKeys("Filling in my form");
+      input.getAttribute("value").then((value) => {
+        if (value !== "") {
+          console.log("Form input editable");
+        }
+      });
+    });
+
+    const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+    button.click();
+
+    await driver.wait(until.alertIsPresent());
+
+    const alert = driver.switchTo().alert();
+
+    alert.getText().then((text) => {
+      console.log(`Alert text is '${text}'`);
+    });
+
+    alert.accept();
+  } finally {
+    await driver.sleep(4000); // Delay long enough to see search page!
+    driver.quit();
+  }
+})();
 ```
 
 WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
@@ -406,9 +519,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { By, until } = require("selenium-webdriver");
 
    // username: Username can be found at automation dashboard
    const USERNAME = "{username}";
@@ -505,9 +616,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { By, until } = require("selenium-webdriver");
 
    // Input capabilities
    const capabilities = {
@@ -641,9 +750,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { By, until } = require("selenium-webdriver");
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 
@@ -786,7 +893,7 @@ Now we've got the server running, let's create a demo test that will run on the 
 
    ```js
    let driver = new webdriver.Builder()
-     .forBrowser("firefox")
+     .forBrowser(Browser.FIREFOX)
      .usingServer("http://localhost:4444/wd/hub")
      .build();
    ```
