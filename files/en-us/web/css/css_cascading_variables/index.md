@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 {{CSSRef}}
 
-The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables and the mechanisms to use custom properties as the values for other CSS properties. 
+The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables and the mechanisms to use custom properties as the values for other CSS properties.
 
 When working with CSS, you often end up reusing common project-specific values such as widths that work well with your layout, or a set of colors for your color scheme.
 One way of managing repetition in stylesheets is to define a value once and use it many times in other places.
