@@ -51,10 +51,8 @@ None ({{jsxref("undefined")}}).
 
   - : This error can occur in an array of circumstances:
 
-    - The specified object's `duration` is missing, negative, or
-      `null`.
-    - Its `position` is missing or `null`, or is
-      either negative or greater than `duration`.
+    - The specified object's `duration` is missing, negative, or `null`.
+    - Its `position` is either negative or greater than `duration`.
     - Its `playbackRate` is zero.
 
 ## Examples
