@@ -72,6 +72,17 @@ The keyword values can be grouped into six value categories.
 
 > **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
+> **Note:** To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
+>
+> ```css
+> .container {
+>   display: inline-flex;
+>   display: inline flex;
+> }
+> ```
+>
+> See [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display) for more information.
+
 ### Inside
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
