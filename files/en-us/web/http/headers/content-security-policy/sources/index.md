@@ -114,6 +114,4 @@ Directives for which the above sources apply include:
   - {{CSP("base-uri")}}
 
 - {{Glossary("Navigation directive", "Navigation directives")}}:
-
-  - {{CSP("navigate-to")}}
   - {{CSP("form-action")}}

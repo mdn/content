@@ -258,7 +258,7 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
     <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
-  {# Assumes you setup the password_reset view in your URLconf #}
+  {# Assumes you set up the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
