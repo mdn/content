@@ -8,9 +8,11 @@ status:
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -40,7 +42,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the serv
 
 ## Examples
 
-In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
+In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
 const subscriptions = [{ name: "cookie1", url: `/path1` }];
