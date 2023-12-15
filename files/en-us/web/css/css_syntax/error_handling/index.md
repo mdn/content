@@ -129,11 +129,11 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
 
 ```html example-bad
 <style>
-/* this comment is not closed
-@keyframes move {
-  0% {transform: translatex(0);}
-  100% {transform: translatex(100vw);}
-}
+  /* this comment is not closed
+  @keyframes move {
+    0% {transform: translatex(0);}
+    100% {transform: translatex(100vw);}
+  }
 </style>
 <p>This html is ignored</p>
 ```
