@@ -246,7 +246,6 @@ const { Builder, Browser } = require("selenium-webdriver");
   "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
 })();
-
 ```
 
 ### Interacting with the document
