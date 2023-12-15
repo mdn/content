@@ -7,7 +7,7 @@ browser-compat: api.DeviceMotionEventRotationRate
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-A `DeviceMotionEventRotationRate` object provides information about the rate at which the device is rotating around all three axes.
+A **`DeviceMotionEventRotationRate`** interface provides information about the rate at which the device is rotating around all three axes.
 
 ## Instance properties
 

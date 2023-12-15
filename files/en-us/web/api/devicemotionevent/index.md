@@ -7,7 +7,7 @@ browser-compat: api.DeviceMotionEvent
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEvent`** interface provides web developers with information about the speed of changes for the device's position and orientation.
+The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides web developers with information about the speed of changes for the device's position and orientation.
 
 > **Warning:** Currently, Firefox and Chrome do not handle the coordinates the same way. Take care about this while using them.
 

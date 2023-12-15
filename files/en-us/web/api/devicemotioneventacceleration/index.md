@@ -7,7 +7,7 @@ browser-compat: api.DeviceMotionEventAcceleration
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
+The **`DeviceMotionEventAcceleration`** interface provides information about the amount of acceleration the device is experiencing along all three axes.
 
 ## Instance properties
 

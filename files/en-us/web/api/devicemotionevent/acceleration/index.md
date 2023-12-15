@@ -8,7 +8,7 @@ browser-compat: api.DeviceMotionEvent.acceleration
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`acceleration`** property returns the amount of acceleration recorded by
+The **`acceleration`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the amount of acceleration recorded by
 the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared).
 The acceleration value does not include the effect of
 the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.

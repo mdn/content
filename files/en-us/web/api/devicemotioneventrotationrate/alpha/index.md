@@ -8,7 +8,7 @@ browser-compat: api.DeviceMotionEventRotationRate.alpha
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEventRotationRate.alpha`** read-only property indicates the rate of rotation around the Z axis, in degrees per second.
+The **`alpha`** read-only property of the {{domxref("DeviceMotionEventRotationRate")}} interface indicates the rate of rotation around the Z axis, in degrees per second.
 
 ## Value
 

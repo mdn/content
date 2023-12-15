@@ -8,7 +8,7 @@ browser-compat: api.DeviceOrientationEvent.absolute
 
 {{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-Indicates whether or not the device is providing orientation data absolutely (that is,
+The **`absolute`** read-only property of the {{domxref("DeviceOrientationEvent")}} interface indicates whether or not the device is providing orientation data absolutely (that is,
 in reference to the Earth's coordinate frame) or using some arbitrary frame determined
 by the device.
 See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) for details.
