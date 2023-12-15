@@ -289,12 +289,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from the {{domxref("Document")}} contained in the window object.
 
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
-  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Window/languagechange_event", "languagechange")}}
@@ -322,6 +316,15 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
 - {{domxref("Window/online_event", "online")}}
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+
+### Device orientation events
+
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
+  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 
 ### Focus events
 

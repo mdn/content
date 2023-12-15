@@ -746,7 +746,6 @@
       "guides": [
         "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
       ],
       "interfaces": [
@@ -758,13 +757,13 @@
       "methods": [],
       "properties": [],
       "events": [
-        "Document: dragstart",
-        "Document: drag",
-        "Document: dragenter",
-        "Document: dragleave",
-        "Document: dragover",
-        "Document: drop",
-        "Document: dragend"
+        "HTMLElement: drag",
+        "HTMLElement: dragend",
+        "HTMLElement: dragenter",
+        "HTMLElement: dragleave",
+        "HTMLElement: dragover",
+        "HTMLElement: dragstart",
+        "HTMLElement: drop"
       ]
     },
     "HTML Sanitizer API": {
