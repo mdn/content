@@ -46,6 +46,7 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 - [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 
   - : Overview of how the user-agent handles invalid CSS
+
 - [Learn CSS first steps: CSS syntax](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
 
   - : Introductory guide to CSS, including an introcution to CSS syntax.
