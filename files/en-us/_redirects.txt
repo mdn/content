@@ -7965,6 +7965,7 @@
 /en-US/docs/Web/API/Document/keydown_event	/en-US/docs/Web/API/Element/keydown_event
 /en-US/docs/Web/API/Document/keypress_event	/en-US/docs/Web/API/Element/keypress_event
 /en-US/docs/Web/API/Document/keyup_event	/en-US/docs/Web/API/Element/keyup_event
+/en-US/docs/Web/API/Document/lostpointercapture_event	/en-US/docs/Web/API/Element/lostpointercapture_event
 /en-US/docs/Web/API/Document/mozCancelFullScreen	/en-US/docs/Web/API/Document/exitFullscreen
 /en-US/docs/Web/API/Document/mozFullScreenElement	/en-US/docs/Web/API/Document/fullscreenElement
 /en-US/docs/Web/API/Document/mozFullScreenEnabled	/en-US/docs/Web/API/Document/fullscreenEnabled

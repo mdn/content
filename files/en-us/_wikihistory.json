@@ -29268,10 +29268,6 @@
       "JesseW"
     ]
   },
-  "Web/API/Document/lostpointercapture_event": {
-    "modified": "2020-10-15T22:14:52.161Z",
-    "contributors": ["Clarkkkk", "mfuji09", "wbamberg"]
-  },
   "Web/API/Document/mozSetImageElement": {
     "modified": "2020-10-15T21:13:49.622Z",
     "contributors": [
