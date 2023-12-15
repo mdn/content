@@ -887,7 +887,7 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [keydown event](/en-US/docs/Web/API/Element/keydown_event)
   - [keypress event](/en-US/docs/Web/API/Element/keypress_event)
   - [keyup event](/en-US/docs/Web/API/Element/keyup_event)
-  - [lostpointercapture event](/en-US/docs/Web/API/Document/lostpointercapture_event)
+  - [lostpointercapture event](/en-US/docs/Web/API/Element/lostpointercapture_event)
   - [paste event](/en-US/docs/Web/API/Document/paste_event)
   - [pointercancel event](/en-US/docs/Web/API/Element/pointercancel_event)
   - [pointerdown event](/en-US/docs/Web/API/Element/pointerdown_event)
