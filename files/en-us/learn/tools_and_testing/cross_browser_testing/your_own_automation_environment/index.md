@@ -430,7 +430,7 @@ const driver = new Builder().forBrowser("firefox").build();
 (async function example() {
   try {
     driver.get(
-      "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+      "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
     );
 
     driver.sleep(2000).then(() => {
