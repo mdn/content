@@ -7,7 +7,7 @@ browser-compat: api.RTCStatsReport.type_certificate
 
 {{DefaultAPISidebar("WebRTC")}}
 
-The **`RTCCertificateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report information about a certificate used by an {{domxref("RTCIceTransport")}}.
+The **`RTCCertificateStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) is used to report information about a certificate used by an {{domxref("RTCDtlsTransport")}} and its underlying {{domxref("RTCIceTransport")}}.
 
 The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `certificate`.
 
@@ -16,12 +16,11 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
 - {{domxref("RTCCertificateStats.fingerprint", "fingerprint")}}
   - : A string containing the certificate fingerprint, which is calculated using the hash function specified in [`fingerprintAlgorithm`](#fingerprintalgorithm).
 - {{domxref("RTCCertificateStats.fingerprintAlgorithm", "fingerprintAlgorithm")}}
-  - : A string containing the hash function used to compute the certificate [`fingerprint`](#fingerprint).
-    For instance, "sha-256".
+  - : A string containing the hash function used to compute the certificate [`fingerprint`](#fingerprint), such as "sha-256".
 - {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
-  - : A string containing the DER-encoded base-64 representation of the certificate.
+  - : A string containing the base-64 representation of the DER-encoded certificate.
 - {{domxref("RTCCertificateStats.issuerCertificateId", "issuerCertificateId")}}
-  - : A string containing the `id` of the stats object that contains the next certificate in the certificate chain.
+  - : A string containing the `id` of the `RTCCertificateStats` object that contains the next certificate in the certificate chain.
     If the current certificate is at the end of the chain (i.e. a self-signed certificate), this will not be set.
 
 ### Common instance properties
