@@ -42,7 +42,6 @@ extends layout
 
 block content
   h1= title
-  
   if book_list.length
     ul
       each book in book_list
