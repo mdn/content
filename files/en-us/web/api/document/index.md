@@ -311,10 +311,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
-- {{DOMxRef("Document/scroll_event", "scroll")}}
-  - : Fired when the document view or an element has been scrolled.
-- {{DOMxRef("Document/scrollend_event", "scrollend")}}
-  - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
 
@@ -347,6 +343,13 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when the pointer is locked/unlocked.
 - {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
+
+### Scroll events
+
+- {{DOMxRef("Document/scroll_event", "scroll")}}
+  - : Fired when the document view or an element has been scrolled.
+- {{DOMxRef("Document/scrollend_event", "scrollend")}}
+  - : Fired when the document view or an element has been scrolled.
 
 ### Selection events
 
