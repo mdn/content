@@ -389,7 +389,6 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 
   alert.accept();
 })();
-
 ```
 
 You can submit key presses that can't be represented by normal characters using properties of the `webdriver.Key` object. For example, above we used this construct to tab out of the form input before submitting it:
