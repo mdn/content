@@ -8,8 +8,8 @@ browser-compat: api.MediaSession.setPositionState
 
 {{APIRef("Media Session API")}}
 
-The {{domxref("MediaSession")}} method
-**`setPositionState()`** is used to update the current
+The **`setPositionState()`** method of the
+{{domxref("MediaSession")}} interface is used to update the current
 document's media playback position and speed for presentation by user's device in any
 kind of interface that provides details about ongoing media. This can be
 particularly useful if your code implements a player for type of media not directly
@@ -53,7 +53,7 @@ None ({{jsxref("undefined")}}).
 
     - The specified object's `duration` is missing, negative, or
       `null`.
-    - Its `position` is missing or null, or is
+    - Its `position` is missing or `null`, or is
       either negative or greater than `duration`.
     - Its `playbackRate` is zero.
 
