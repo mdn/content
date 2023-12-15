@@ -149,7 +149,7 @@ function handleSubmit(event) {
 }
 ```
 
-Here, the `on` prefix tells us that the prop is a callback function; `Submit` is our clue that a submit event will trigger this function. Callback props in the React ecosystem often follow this naming convention.
+Here, the `on` prefix tells us that the prop is a callback function; `Submit` is our clue that a submit event will trigger this function.
 
 While callback props often match the names of familiar event handlers, like `onSubmit` or `onClick`, they can be named just about anything that helps make their meaning clear. A hypothetical `<Menu />` component might include a callback function that runs when the menu is opened, as well as a separate callback function that runs when it's closed:
 
@@ -157,7 +157,7 @@ While callback props often match the names of familiar event handlers, like `onS
 <Menu onOpen={() => console.log("Hi!")} onClose={() => console.log("Bye!")} />
 ```
 
-This `on*` naming convention appears in several React projects, so keep it in mind as you continue your learning. For the sake of clarity, we're going to stick with `addTask` and similar prop names for the rest of this tutorial. If you changed any prop names while reading this section, be sure to change them back before continuing!
+This `on*` naming convention is very common in the React ecosystem, so keep it in mind as you continue your learning. For the sake of clarity, we're going to stick with `addTask` and similar prop names for the rest of this tutorial. If you changed any prop names while reading this section, be sure to change them back before continuing!
 
 ## Persisting and changing data with state
 
