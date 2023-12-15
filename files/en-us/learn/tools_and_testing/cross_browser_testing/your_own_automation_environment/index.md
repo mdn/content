@@ -17,22 +17,14 @@ In this article, we will teach you how to install your own automation environmen
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high-level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >, and
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
-          >automated testing</a
-        >.
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>, and
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">automated testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To show how to set up a Selenium testing environment locally and run
-        tests with it, and how to integrate it with tools like LambdaTest, Sauce
-        Labs, and BrowserStack.
+        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like LambdaTest, Sauce Labs, and BrowserStack.
       </td>
     </tr>
   </tbody>
@@ -215,7 +207,6 @@ const { Builder, By, until } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 })();
-
 ```
 
 ### Getting the document you want to test
