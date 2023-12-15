@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.alpha
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 Returns the rotation of the device around the Z axis; that is, the number of degrees by
 which the device is being twisted around the center of the screen.

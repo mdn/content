@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.deviceorientationabsolute_event
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 The **`deviceorientationabsolute`** event is fired when absolute device orientation changes.
 

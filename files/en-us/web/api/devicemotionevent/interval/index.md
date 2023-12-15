@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEvent.interval
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 The **`DeviceMotionEvent.interval`** property returns the interval, in milliseconds, at which data is obtained from the underlying
 hardware. You can use this to determine the granularity of motion events.

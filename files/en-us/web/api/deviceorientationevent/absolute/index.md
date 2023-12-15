@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.absolute
 ---
 
-{{ apiref("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 Indicates whether or not the device is providing orientation data absolutely (that is,
 in reference to the Earth's coordinate frame) or using some arbitrary frame determined

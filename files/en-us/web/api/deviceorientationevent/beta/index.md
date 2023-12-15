@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceOrientationEvent.beta
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 Returns the rotation of the device around the X axis; that is, the number of degrees,
 ranged between -180 and 180, by which the device is tipped forward or backward.
