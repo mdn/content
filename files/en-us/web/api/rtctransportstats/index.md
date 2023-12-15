@@ -9,7 +9,8 @@ browser-compat: api.RTCStatsReport.type_transport
 
 The **`RTCTransportStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides information about the transport ({{domxref("RTCDtlsTransport")}} and its underlying {{domxref("RTCIceTransport")}}) used by a particular candidate pair.
 
-Note that if remote endpoint is aware of the BUNDLE SDP feature, all {{domxref("MediaStreamTrack")}} and data channels are bundled onto a single transport at the completion of negotiation.
+The _BUNDLE_ feature is an SDP extension that allows negotiation to use a single transport for sending and receiving media described by multiple SDP media descriptions.
+If the remote endpoint is aware of this feature, all {{domxref("MediaStreamTrack")}} and data channels are bundled onto a single transport at the completion of negotiation.
 This is true for current browsers, but if connecting to an older endpoint that is not BUNDLE-aware, then separate transports might be used for different media.
 The policy to use in the negotiation is configured in the [`RTCPeerConnection` constructor](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection).
 
