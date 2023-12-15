@@ -73,8 +73,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 - {{HTTPStatus(301, "301 Moved Permanently")}}
   - : The URL of the requested resource has been changed permanently. The new URL is given in the response.
 - {{HTTPStatus(302, "302 Found")}}
-  - : This response code means that the URI of requested resource has been changed _temporarily_.
-    Further changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests.
+  - : This code indicates that the URI of the requested resource has temporarily changed. The URI may change in the future. Therefore the user must use the same URI in future requests.
 - {{HTTPStatus(303, "303 See Other")}}
   - : The server sent this response to direct the client to get the requested resource at another URI with a GET request.
 - {{HTTPStatus(304, "304 Not Modified")}}
