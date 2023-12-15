@@ -30,7 +30,7 @@ Lazy loading can be applied to multiple resources and through multiple strategie
 JavaScript, CSS and HTML can be split into smaller chunks. This enables sending the minimal code required to provide value upfront, improving page-load times. The rest can be loaded on demand.
 
 - Entry point splitting: separates code by entry point(s) in the app
-- Dynamic splitting: separates code where [dynamic import()](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements are used
+- Dynamic splitting: separates code where [dynamic import()](/en-US/docs/Web/JavaScript/Reference/Operators/import) statements are used 
 
 ### JavaScript
 
