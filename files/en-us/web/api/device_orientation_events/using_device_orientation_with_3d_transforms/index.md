@@ -5,6 +5,7 @@ page-type: guide
 ---
 
 {{DefaultAPISidebar("Device Orientation Events")}}
+
 This article provides tips on how to use device orientation information in tandem with CSS 3D transforms.
 
 ## Using orientation to rotate an element
