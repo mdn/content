@@ -132,7 +132,7 @@ block content
       select#status.form-control(name='status' required)
         option(value='') --Please select a status--
         each val in ['Maintenance', 'Available', 'Loaned', 'Reserved']
-          if undefined===bookinstance || bookinstance.status!=val 
+          if undefined===bookinstance || bookinstance.status!=val
             option(value=val)= val
           else
             option(value=val selected)= val
