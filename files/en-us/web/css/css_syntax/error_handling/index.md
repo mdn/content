@@ -12,7 +12,7 @@ This guide discusses how CSS {{glossary("parser", "parsers")}} discard invalid C
 
 ## CSS parser errors
 
-When a CSS error is encountered, the browser's {{glossary("parser")}} ignores the lines containing the errors, discarding the minimum amount of content before returning to {{glossary("parse", "parsing")}} the CSS as normal. As new features are added to CSS, a browser may not recognize these new features. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content.
+When a CSS error is encountered, the browser's {{glossary("parser")}} ignores the lines containing the errors, discarding the minimum amount of content before returning to {{glossary("parse", "parsing")}} the CSS as normal. As new features are added to CSS, a browser may not recognize these new features. The "error recovery" is just the ignoring or skipping of invalid content. This recovery from errors allows a browser to discard the line containing the unrecognized content. 
 
 The fact that browsers ignore invalid code enables using new CSS features without worrying about anything being broken in older browsers. This feature also allows for both old and new syntaxes to coexist, in that order. Browsers render the old syntax until they recognize the new syntax as valid. Because browsers ignore invalid CSS, the valid fallbacks don't get overwritten by new CSS that is perceived as invalid.
 
@@ -44,7 +44,7 @@ Some at-rules are almost always. The statement {{cssxref("@layer")}} contains ju
 
 ### Errors in selector lists
 
-There are many ways you might make a mistake writing a selector, but only invalid selectors cause [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) issues.
+There are many ways you might make a mistake writing a selector, but only invalid selectors cause a selector list to be invalid (See [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list) issues).
 
 If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, element or custom-element, respectively, that doesn't exist, it may be a logic error, but it's not an error the parser needs to handle. If, however, you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser will notice.
 
@@ -61,8 +61,6 @@ This means that a pseudo-element like `::-webkit-works-only-in-samsung` will not
 ### Errors within CSS declaration blocks
 
 When it comes to CSS properties and values within a declaration block, if either the property or the value is invalid, that property-value pair is ignored and discarded. When a user agent parses or interprets a list of declarations, unknown syntax at any point causes the browser's parser to discard only that specific rule. It then continues parsing CSS after the next semicolon or closing curly bracket is encountered, whichever comes first.
-
-The parser seeks forward until it finds a semicolon (or the end of the block). It then starts fresh, trying to parse a declaration again.
 
 This example contains an error. The parser ignores the error (and the comments), seeking forward until it encounters a semi-colon, then restarts parsing:
 
@@ -113,11 +111,34 @@ In both the declaration blocks above, the last declaration is valid. The parser 
 
 If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
 
-If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. Failing to properly close CSS statements doesn't necessarily make the statements invalid.
+If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out an @keyframe declaration before closing your {{htmlelement("style")}}, the animation is still valid. 
 
-> **Note:** Do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
+```html-nolint example-bad
+<style>
+@keyframes move {
+  100% {
+    transform: translatex(100vw)
+</style>
+```
 
-> **Note:** If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` is encountered will be treated as part of the comment. While an unclosed comment does not invalidate your CSS, but it causes the CSS inside the comment to be ignored.
+The `move` animation is valid. Failing to properly close CSS statements doesn't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
+
+### Unclosed comments
+
+Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` is encountered will be treated as part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS inside the comment to be ignored.
+
+```html example-bad
+<style>
+/* this comment is not closed
+@keyframes move {
+  0% {transform: translatex(0);}
+  100% {transform: translatex(100vw);}
+}
+</style>
+<p>This html is ignored</p>
+```
+
+In this example, the CSS comment was never closed so the closing `</style>` tag was never parsed, and the subsquent HTML just became part of the CSS comment.
 
 ## Grammar check
 
