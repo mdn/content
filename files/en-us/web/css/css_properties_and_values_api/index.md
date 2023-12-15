@@ -40,7 +40,6 @@ CSS.registerProperty({
 }
 
 .box {
-  --stop-color: cornflowerblue;
   background: linear-gradient(to right, var(--stop-color), lavenderblush);
   transition: --stop-color 2s;
 }
