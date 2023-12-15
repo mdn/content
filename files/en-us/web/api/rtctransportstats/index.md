@@ -27,9 +27,9 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : The total number of payload bytes received on this transport (bytes received, not including headers, padding or ICE connectivity checks).
 - `iceRole` {{optional_inline}}
   - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}. This can be any of the following:
-      - `controlling`
-      - `controlled`
-      - `unknown`
+    - `controlling`
+    - `controlled`
+    - `unknown`
 - `iceLocalUsernameFragment` {{optional_inline}}
   - : A string indicating the local username fragment used in message validation procedures for this transport.
     This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
