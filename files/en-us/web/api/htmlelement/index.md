@@ -23,8 +23,6 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
-- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
-  - : Returns a boolean value indicating whether or not the content of the element can be edited.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
 - {{DOMxRef("HTMLElement.dir")}}
@@ -43,8 +41,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
     As a setter, it replaces the content inside the selected element, converting any line breaks into {{HTMLElement("br")}} elements.
 - {{DOMxRef("HTMLElement.inputMode")}}
   - : A string value reflecting the value of the element's [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) attribute.
-- {{domxref("HTMLElement.popover")}}
-  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
+- {{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}
+  - : Returns a boolean value indicating whether or not the content of the element can be edited.
 - {{DOMxRef("HTMLElement.lang")}}
   - : A string representing the language of an element's attributes, text, and element contents.
 - {{DOMxRef("HTMLElement.nonce")}}
@@ -63,6 +61,8 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
   - : Represents the rendered text content of a node and its descendants.
     As a getter, it is the same as {{DOMxRef("HTMLElement.innerText")}} (it represents the rendered text content of an element and its descendants).
     As a setter, it replaces the selected node and its contents with the given value, converting any line breaks into {{HTMLElement("br")}} elements.
+- {{domxref("HTMLElement.popover")}}
+  - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.spellcheck")}}
   - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{DOMxRef("HTMLElement.style")}}
