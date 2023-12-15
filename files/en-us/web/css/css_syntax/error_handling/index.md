@@ -109,9 +109,9 @@ In both the declaration blocks above, the last declaration is valid. The parser 
 
 ### Errors with auto-closed endings
 
-If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, etc. is still open, the parser will automatically close everything that was left unclosed.
+If a stylesheet — be it an external style sheet, selector blocks within an HTML {{HTMLElement("style")}} element, or inline rules within a [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute — ends while a rule, declaration, function, string, comment, etc. is still open, the parser will automatically close everything that was left unclosed.
 
-If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out an @keyframe declaration before closing your {{htmlelement("style")}}, the animation is still valid.
+If the content between the last semi-colon and the end of the stylesheet is valid, even if incomplete, the CSS will be parsed normally. For example, if you fail to close out an `@keyframe` declaration before closing your {{htmlelement("style")}}, the animation is still valid.
 
 ```html-nolint example-bad
 <style>
@@ -123,7 +123,7 @@ If the content between the last semi-colon and the end of the stylesheet is vali
 
 The `move` animation is valid. Failing to properly close CSS statements doesn't necessarily make the statements invalid. That said, do not take advantage of CSS's forgiving nature. Always close all of your statements and style blocks. It makes your CSS easier to read and maintain and ensures that the browser parses the CSS you intended.
 
-### Unclosed comments
+#### Unclosed comments
 
 Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` is encountered will be treated as part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS inside the comment to be ignored.
 
@@ -135,10 +135,10 @@ Unclosed comments are logic errors, not syntax errors. If a comment starts with 
     100% {transform: translatex(100vw);}
   }
 </style>
-<p>This html is ignored</p>
+<p style="/* another unclosed comment">Parsed as HTML.</p>
 ```
 
-In this example, the CSS comment was never closed so the closing `</style>` tag was never parsed, and the subsquent HTML just became part of the CSS comment.
+In this example, the two CSS comments are not closed, but the closing `</style>` tag closes the first comment and the quote at the end of the `style` attribute closes the second comment.
 
 ## Grammar check
 
