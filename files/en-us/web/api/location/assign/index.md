@@ -46,7 +46,7 @@ window.location.assign(
 );
 
 // Then navigate to its Specifications section
-window.location.assign("#specification");
+window.location.assign("#specifications");
 
 // Eventually navigate to https://developer.mozilla.org/en-US/docs/Web
 window.location.assign("/Web");
