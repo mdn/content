@@ -380,7 +380,6 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
   const button = driver.findElement(By.css("button:nth-of-type(1)"));
 
   button.click();
-  
   await driver.wait(until.alertIsPresent());
 
   const alert = driver.switchTo().alert();
