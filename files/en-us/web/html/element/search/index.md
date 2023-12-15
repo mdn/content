@@ -9,6 +9,8 @@ browser-compat: html.elements.search
 
 The **`<search>`** [HTML](/en-US/docs/Web/HTML) element is a container representing the parts of the document or application with form controls or other content related to performing a search or filtering operation. The `<search>` element semantically identifies the purpose of the element's contents as having search or filtering capabilities. The search or filtering functionality can be for the website or application, the current web page or document, or the entire Internet or subsection thereof.
 
+> **Note:** Ensure that the `<search>` element is compatible with the browser versions outlined in your project's requirements, as it [may not be supported in some older versions](https://caniuse.com/mdn-html_elements_search).
+
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
