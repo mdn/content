@@ -17,53 +17,73 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 
 ## Instance properties
 
-- `packetsSent` {{optional_inline}}
-  - : The total number of packets sent over this transport.
-- `packetsReceived` {{optional_inline}}
-  - : The total number of packets received on this transport.
-- `bytesSent` {{optional_inline}}
-  - : The total number of payload bytes sent on this transport (bytes sent, not including headers, padding or ICE connectivity checks).
 - `bytesReceived` {{optional_inline}}
   - : The total number of payload bytes received on this transport (bytes received, not including headers, padding or ICE connectivity checks).
-- `iceRole` {{optional_inline}}
-  - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}. This can be any of the following:
-    - `controlling`
-    - `controlled`
-    - `unknown`
+- `bytesSent` {{optional_inline}}
+  - : The total number of payload bytes sent on this transport (bytes sent, not including headers, padding or ICE connectivity checks).
+- `dtlsCipher` {{optional_inline}}
+  - : A string indicating the name of the cipher suite used for the DTLS transport, as defined in the "Description" column of the [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4) section in the _IANA cipher suite registry_.
+    For example `"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"`.
+- `dtlsRole` {{optional_inline}}
+
+  - : The DTLS role of the associated {{domxref("RTCPeerConnection")}}.
+    This is one of:
+
+    - `client`
+    - `server`
+    - `unknown` (before the DTLS negotiation starts).
+
+- `dtlsState`
+
+  - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}.
+    This is one of:
+
+    - [`new`](/en-US/docs/Web/API/RTCDtlsTransport/state#new)
+    - [`connecting`](/en-US/docs/Web/API/RTCDtlsTransport/state#connecting)
+    - [`connected`](/en-US/docs/Web/API/RTCDtlsTransport/state#connected)
+    - [`closed`](/en-US/docs/Web/API/RTCDtlsTransport/state#closed)
+    - [`failed`](/en-US/docs/Web/API/RTCDtlsTransport/state#failed)
+
 - `iceLocalUsernameFragment` {{optional_inline}}
   - : A string indicating the local username fragment used in message validation procedures for this transport.
     This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
-- `dtlsState`
-  - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}: `new`, `connecting`, `connected`, `closed`, or `failed`.
+- `iceRole` {{optional_inline}}
+
+  - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
+    This is one of:
+
+    - [`controlled`](/en-US/docs/Web/API/RTCIceTransport/role#controlled)
+    - [`controlling`](/en-US/docs/Web/API/RTCIceTransport/role#controlling)
+    - [`unknown`](/en-US/docs/Web/API/RTCIceTransport/role#unknown)
+
 - `iceState` {{optional_inline}}
-  - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}: `new`, `checking`, `connected`, `completed`, `disconnected`, `failed`, or `closed`.
+
+  - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}.
+    This is one of:
+
+    - [`new`](/en-US/docs/Web/API/RTCIceTransport/state#new)
+    - [`checking`](/en-US/docs/Web/API/RTCIceTransport/state#checking)
+    - [`connected`](/en-US/docs/Web/API/RTCIceTransport/state#connected)
+    - [`completed`](/en-US/docs/Web/API/RTCIceTransport/state#completed)
+    - [`disconnected`](/en-US/docs/Web/API/RTCIceTransport/state#disconnected)
+    - [`failed`](/en-US/docs/Web/API/RTCIceTransport/state#failed)
+    - [`closed`](/en-US/docs/Web/API/RTCIceTransport/state#closed)
+
 - `selectedCandidatePairId` {{optional_inline}}
   - : A string containing the unique identifier for the object that was inspected to produce the {{domxref("RTCIceCandidatePairStats")}} associated with this transport.
 - `localCertificateId` {{optional_inline}}
   - : A string containing the id of the local certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
+- `packetsSent` {{optional_inline}}
+  - : The total number of packets sent over this transport.
+- `packetsReceived` {{optional_inline}}
+  - : The total number of packets received on this transport.
 - `remoteCertificateId` {{optional_inline}}
   - : A string containing the id or the remote certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
-- `tlsVersion` {{optional_inline}}
-
-  - : A string containing the negotiated TLS version.
-    This is present for DTLS transports, and only exists after DTLS has been negotiated.
-
-    The value comes from the DTLS handshake `ServerHello.version`, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.
-    Note however that the bytes might not map directly to version numbers.
-    For example, DTLS represents version 1.2 as `'FEFD'` which numerically is `{254, 253}`.
-
-- `dtlsCipher` {{optional_inline}}
-
-  - : A string indicating the name of the cipher suite used for the DTLS transport, as defined in the "Description" column of the [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4) section in the _IANA cipher suite registry_.
-    For example `"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"`.
-
-- `dtlsRole` {{optional_inline}}
-
-  - : The DTLS role of the associated {{domxref("RTCPeerConnection")}}.
-    This is one of `"client"`, `"server"`, or `"unknown"` (before the DTLS negotiation starts).
-
+- `selectedCandidatePairChanges` {{optional_inline}}
+  - : The number of times that the selected candidate pair of this transport has changed.
+    The value is initially zero and increases whenever a candidate pair selected or lost.
 - `srtpCipher` {{optional_inline}}
 
   - : A string indicating the descriptive name of the protection profile used for the [Secure Real-time Transport Protocol (SRTP)](/en-US/docs/Glossary/RTP) transport, as defined in the "Profile" column of the [IANA DTLS-SRTP protection profile registry](https://www.iana.org/assignments/srtp-protection/srtp-protection.xhtml#srtp-protection-1) and [RFC5764](https://www.rfc-editor.org/rfc/rfc5764.html#section-4.1.2).
@@ -81,9 +101,14 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
      auth_tag_length: 80
     ```
 
-- `selectedCandidatePairChanges` {{optional_inline}}
-  - : The number of times that the selected candidate pair of this transport has changed.
-    The value is initially zero and increases whenever a candidate pair selected or lost.
+- `tlsVersion` {{optional_inline}}
+
+  - : A string containing the negotiated TLS version.
+    This is present for DTLS transports, and only exists after DTLS has been negotiated.
+
+    The value comes from the DTLS handshake `ServerHello.version`, and is represented as four upper case hexadecimal digits, where the digits represent the two bytes of the version.
+    Note however that the bytes might not map directly to version numbers.
+    For example, DTLS represents version 1.2 as `'FEFD'` which numerically is `{254, 253}`.
 
 ### Common instance properties
 
