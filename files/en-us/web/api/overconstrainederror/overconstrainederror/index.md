@@ -25,8 +25,8 @@ new OverconstrainedError()
 
 - `constraint`
   - : The constraint that was not satisfied.
-- `message`
-  - : Text for the error's `message` property.
+- `message` {{optional_inline}}
+  - : Text for the error's `message` property. It defaults to be an empty string.
 
 ## Specifications
 
