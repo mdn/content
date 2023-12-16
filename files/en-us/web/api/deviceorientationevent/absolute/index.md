@@ -32,4 +32,3 @@ See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientati
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
 - {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
