@@ -22,12 +22,12 @@ the stream.
 ## Syntax
 
 ```js-nolint
-stream.requestFrame()
+requestFrame()
 ```
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
