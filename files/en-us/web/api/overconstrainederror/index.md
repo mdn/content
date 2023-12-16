@@ -18,14 +18,14 @@ The **`OverconstrainedError`** interface of the {{domxref("Media Capture and Str
 
 ## Instance properties
 
-_Also inherits properties from {{domxref('DOMException')}}._
+_Also inherits properties from its parent interface, {{domxref('DOMException')}}._
 
 - {{domxref("OverconstrainedError.constraint")}} {{ReadOnlyInline}}
   - : Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.
 
 ## Instance methods
 
-_Also inherits methods from {{domxref('DOMException')}}._
+_Also inherits methods from its parent interface, {{domxref('DOMException')}}._
 
 ## Specifications
 
