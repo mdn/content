@@ -69,7 +69,7 @@ await do_something_else_without_lock();
 Several options can be passed when requesting a lock:
 
 - `mode`: The default mode is "exclusive", but "shared" can be specified. There can be only one "exclusive" holder of a lock, but multiple "shared" requests can be granted at the same time. This can be used to implement the [readers-writer pattern](https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock).
-- `signal`: An **AbortSignal** can be passed in, allowing a lock request to be aborted. This can be used to implement a timeout on requests.
+- `signal`: An {{domxref("AbortSignal")}} can be passed in, allowing a lock request to be aborted. This can be used to implement a timeout on requests.
 - `ifAvailable`: If specified, the lock request will fail if the lock cannot be granted immediately without waiting. The callback is invoked with `null`.
 
 ### Monitoring
