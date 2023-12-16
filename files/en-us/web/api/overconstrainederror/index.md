@@ -18,16 +18,14 @@ The **`OverconstrainedError`** interface of the [Media Capture and Streams API](
 
 ## Instance properties
 
+_Also inherits properties from {{domxref('DOMException')}}._
+
 - {{domxref("OverconstrainedError.constraint")}} {{ReadOnlyInline}}
   - : Returns the constraint that was supplied in the constructor, meaning the constraint that was not satisfied.
-- {{domxref("DOMException.message")}} {{ReadOnlyInline}}
-  - : Returns the text supplied in the constructor.
-- {{domxref("DOMException.name")}} {{ReadOnlyInline}}
-  - : Will always return `OverconstrainedError`.
 
 ## Instance methods
 
-None.
+_Also inherits methods from {{domxref('DOMException')}}._
 
 ## Specifications
 
