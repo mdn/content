@@ -8,7 +8,7 @@ browser-compat: api.OverconstrainedError.OverconstrainedError
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`OverconstrainedError`** constructor
+The **`OverconstrainedError()`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
 desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
 met. When this event is thrown on a `MediaStreamTrack`, it is muted until
