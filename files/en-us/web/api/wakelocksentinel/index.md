@@ -83,4 +83,4 @@ wakeLockOffButton.addEventListener("click", () => {
 
 ## See also
 
-- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/articles/wake-lock/)
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
