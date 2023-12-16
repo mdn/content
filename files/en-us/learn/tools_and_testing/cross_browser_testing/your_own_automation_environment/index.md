@@ -516,7 +516,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const { By, until } = require("selenium-webdriver");
+   const { Builder, By } = require("selenium-webdriver");
 
    // username: Username can be found at automation dashboard
    const USERNAME = "{username}";
@@ -546,7 +546,7 @@ Let's write an example:
      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
 
      // setup and build selenium driver object
-     const driver = new webdriver.Builder()
+     const driver = new Builder()
        .usingServer(gridUrl)
        .withCapabilities(capabilities)
        .build();
@@ -554,7 +554,7 @@ Let's write an example:
      // navigate to a URL, search for a text and get title of page
      driver.get("https://www.google.com/ncr").then(function () {
        driver
-         .findElement(webdriver.By.name("q"))
+         .findElement(By.name("q"))
          .sendKeys("LambdaTest\n")
          .then(function () {
            driver.getTitle().then((title) => {
