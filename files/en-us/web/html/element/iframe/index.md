@@ -173,7 +173,7 @@ As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, ali
 
 ## `error` and `load` event behavior
 
-Using JavaScript `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
+The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
 ## Examples
 
