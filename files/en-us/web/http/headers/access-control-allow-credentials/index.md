@@ -43,7 +43,7 @@ Access-Control-Allow-Credentials: true
 
 ## Directives
 
-- true
+- `true`
   - : The only valid value for this header is `true` (case-sensitive). If you
     don't need credentials, omit this header entirely (rather than setting its value to
     `false`).
