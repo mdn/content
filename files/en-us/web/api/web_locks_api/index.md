@@ -5,13 +5,14 @@ page-type: web-api-overview
 browser-compat:
   - api.LockManager
   - api.Lock
+spec-urls: https://w3c.github.io/web-locks/
 ---
 
 {{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
 
 The Web Locks API allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
 
-## Web Locks Concepts and Usage
+## Concepts and Usage
 
 A lock is an abstract concept representing some potentially shared resource, identified by a name chosen by the web app. For example, if a web app running in multiple tabs wants to ensure that only one tab is syncing data between the network and Indexed DB, each tab could try to acquire a "my_net_db_sync" lock, but only one tab will succeed (the [leader election pattern](https://en.wikipedia.org/wiki/Leader_election).)
 
@@ -102,9 +103,16 @@ A deadlock occurs when a process can no longer make progress because each part i
 ## Interfaces
 
 - {{domxref("Lock")}}
-  - : Provides the name and mode of a previously requested lock, which is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}.
+  - : Provides the name and mode of a previously requested lock, which is received in the callback to {{domxref("LockManager.request()")}}.
 - {{domxref("LockManager")}}
-  - : Provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing Lock object. To get an instance of LockManager, call {{domxref('navigator.locks')}}.
+  - : Provides methods for requesting a new {{domxref("Lock")}} object and querying for an existing Lock object. To get an instance of LockManager, call {{domxref("navigator.locks")}}.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.locks")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
+- {{domxref("WorkerNavigator.locks")}} {{ReadOnlyInline}}
+  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
 
 ## Specifications
 
