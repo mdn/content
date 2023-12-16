@@ -2,7 +2,16 @@
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
 page-type: web-api-overview
-browser-compat: api.MediaStream
+browser-compat:
+  - api.MediaStream
+  - api.MediaStreamTrack
+  - api.MediaDevices
+  - api.MediaDeviceInfo
+  - api.InputDeviceInfo
+  - api.CanvasCaptureMediaStreamTrack
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
