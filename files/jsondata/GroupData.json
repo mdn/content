@@ -902,12 +902,11 @@
     },
     "Media Session API": {
       "overview": ["Media Session API"],
+      "guides": [],
       "interfaces": ["MediaMetadata", "MediaSession"],
       "methods": [],
       "properties": ["Navigator.mediaSession"],
-      "events": [],
-      "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
-      "callbacks": ["MediaSessionActionHandler"]
+      "events": []
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
@@ -1223,7 +1222,6 @@
         "MediaTrackSupportedConstraints.logicalSurface",
         "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
-      "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
     },
     "Screen Orientation API": {
@@ -2083,10 +2081,6 @@
         "RTCDTMFSender: tonechange",
         "RTCPeerConnection: track",
         "DedicatedWorkerGlobalScope: rtctransform"
-      ],
-      "callbacks": [
-        "RTCPeerConnectionErrorCallback",
-        "RTCSessionDescriptionCallback"
       ]
     },
     "Web Serial API": {
