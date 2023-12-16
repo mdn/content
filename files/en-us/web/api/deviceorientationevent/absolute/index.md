@@ -28,7 +28,7 @@ See [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientati
 
 ## See also
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} event
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} event
