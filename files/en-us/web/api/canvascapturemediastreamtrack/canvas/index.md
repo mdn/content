@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasCaptureMediaStreamTrack.canvas
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}
 
 The **`canvas`** read-only property of the {{domxref("CanvasCaptureMediaStreamTrack")}} interface returns the {{domxref("HTMLCanvasElement")}} from which frames are being captured.
 
