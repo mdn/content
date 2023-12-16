@@ -69,5 +69,4 @@ The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- {{domxref("mediaDevices.getUserMedia()")}}
 - [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): a demonstration and tutorial about using `getUserMedia()`.
