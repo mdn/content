@@ -12,7 +12,7 @@ The **`canvas`** read-only property of the {{domxref("CanvasCaptureMediaStreamTr
 
 ## Value
 
-An `HTMLCanvasElement` indicating the canvas which is the source of the frames being captured.
+A `HTMLCanvasElement` indicating the canvas which is the source of the frames being captured.
 
 ## Example
 
