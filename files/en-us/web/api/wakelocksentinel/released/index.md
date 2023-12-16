@@ -12,13 +12,7 @@ The **`released`** read-only property of the
 {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
 a {{domxref("WakeLockSentinel")}} has been released yet.
 
-## Syntax
-
-```js-nolint
-const released = sentinel.released
-```
-
-### Value
+## Value
 
 A boolean value, that is `false` until the
 {{domxref("WakeLockSentinel")}} has been released (either through a call to
