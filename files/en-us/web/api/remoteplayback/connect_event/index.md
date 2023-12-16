@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.RemotePlayback.connect_event
 ---
 
-{{APIRef()}}
+{{APIRef("Remote Playback API")}}
 
 The **`connect`** event of the {{domxref("RemotePlayback")}} interface fires when the user agent connects to the remote device.
 

@@ -83,5 +83,5 @@ col.selected||td {
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}
 - {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-last-of-type")}}

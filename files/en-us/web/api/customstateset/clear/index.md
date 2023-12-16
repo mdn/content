@@ -8,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.clear
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.
 

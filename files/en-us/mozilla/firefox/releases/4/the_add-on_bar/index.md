@@ -69,7 +69,7 @@ if (firstrun) {
 
 ## How to use one overlay per Firefox version
 
-Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](/en-US/docs/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](/en-US/docs/Chrome_Registration#manifest_flags):
+Adding support for the add-on bar while staying compatible with Firefox 3.6 and older will require using two overlays. The [chrome.manifest](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration) file can specify which file is used by which Firefox version by using [manifest flags](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration#Manifest_Flags):
 
 ```plain
 overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/overlayold.xul application={ec8030f7-c20a-464f-9b0e-13a3a9e97384} appversion<4.0
@@ -80,7 +80,7 @@ Note: the appversion has to be at least 2 digits long or it won't work with vers
 
 ### Adding a button by default
 
-See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#adding_button_by_default)
+See: [Adding a button by default](https://web.archive.org/web/20191010115941/https://developer.mozilla.org/en-US/docs/Archive/Add-ons/Code_snippets/Toolbar#Adding_button_by_default)
 
 ## Appearance differences
 
@@ -91,4 +91,4 @@ See: [Adding a button by default](/en-US/docs/Code_snippets/Toolbar#adding_butto
 
 ## See also
 
-- The [Firefox 4 add-on bar for developers](https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers/), by Mike Kaply
+- The [Firefox 4 add-on bar for developers](https://web.archive.org/web/20110129042912/https://mike.kaply.com/2011/01/25/the-firefox-4-add-on-bar-for-developers), by Mike Kaply

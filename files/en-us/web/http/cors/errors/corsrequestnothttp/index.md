@@ -17,7 +17,7 @@ Reason: CORS request not HTTP
 {{Glossary("CORS")}} requests may only use the HTTP or HTTPS URL scheme, but the URL specified by the request is of a different type.
 This often occurs if the URL specifies a local file, using the `file:///` scheme.
 
-To fix this problem, make sure you use HTTPS URLs when issuing requests involving CORS, such as {{domxref("XMLHttpRequest")}}, [Fetch](/en-US/docs/Web/API/Fetch_API) APIs, Web Fonts (`@font-face`), and [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), and XSL stylesheets.
+To fix this problem, make sure you use HTTPS URLs when issuing requests involving CORS, such as {{domxref("fetch()")}}, {{domxref("XMLHttpRequest")}}, Web Fonts (`@font-face`), and [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), and XSL stylesheets.
 
 ### Loading a local file
 
