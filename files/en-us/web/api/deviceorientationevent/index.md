@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.DeviceOrientationEvent
 ---
 
-{{apiref("Device Orientation Events")}}
+{{apiref("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceOrientationEvent`** object provides web developers with information from the physical orientation of the device running the web page.
+The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides web developers with information from the physical orientation of the device running the web page.
 
 {{InheritanceDiagram}}
 

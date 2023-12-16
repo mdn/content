@@ -746,7 +746,6 @@
       "guides": [
         "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
       ],
       "interfaces": [
@@ -758,13 +757,13 @@
       "methods": [],
       "properties": [],
       "events": [
-        "Document: dragstart",
-        "Document: drag",
-        "Document: dragenter",
-        "Document: dragleave",
-        "Document: dragover",
-        "Document: drop",
-        "Document: dragend"
+        "HTMLElement: drag",
+        "HTMLElement: dragend",
+        "HTMLElement: dragenter",
+        "HTMLElement: dragleave",
+        "HTMLElement: dragover",
+        "HTMLElement: dragstart",
+        "HTMLElement: drop"
       ]
     },
     "HTML Sanitizer API": {
@@ -903,12 +902,11 @@
     },
     "Media Session API": {
       "overview": ["Media Session API"],
+      "guides": [],
       "interfaces": ["MediaMetadata", "MediaSession"],
       "methods": [],
       "properties": ["Navigator.mediaSession"],
-      "events": [],
-      "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
-      "callbacks": ["MediaSessionActionHandler"]
+      "events": []
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
@@ -1224,7 +1222,6 @@
         "MediaTrackSupportedConstraints.logicalSurface",
         "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
-      "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
     },
     "Screen Orientation API": {
@@ -2084,10 +2081,6 @@
         "RTCDTMFSender: tonechange",
         "RTCPeerConnection: track",
         "DedicatedWorkerGlobalScope: rtctransform"
-      ],
-      "callbacks": [
-        "RTCPeerConnectionErrorCallback",
-        "RTCSessionDescriptionCallback"
       ]
     },
     "Web Serial API": {
