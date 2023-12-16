@@ -25,7 +25,7 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - `dtlsCipher` {{optional_inline}}
   - : A string indicating the name of the cipher suite used for the DTLS transport, as defined in the "Description" column of the [TLS Cipher Suites](https://www.iana.org/assignments/tls-parameters/tls-parameters.xhtml#tls-parameters-4) section in the _IANA cipher suite registry_.
     For example `"TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"`.
-- `dtlsRole` {{optional_inline}}
+- `dtlsRole` {{optional_inline}} {{experimental_inline}}
 
   - : The DTLS role of the associated {{domxref("RTCPeerConnection")}}.
     This is one of:
@@ -45,10 +45,10 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
     - [`closed`](/en-US/docs/Web/API/RTCDtlsTransport/state#closed)
     - [`failed`](/en-US/docs/Web/API/RTCDtlsTransport/state#failed)
 
-- `iceLocalUsernameFragment` {{optional_inline}}
+- `iceLocalUsernameFragment` {{optional_inline}} {{experimental_inline}}
   - : A string indicating the local username fragment used in message validation procedures for this transport.
     This is the same value as the local {{domxref("RTCIceCandidate.usernameFragment")}}, and will change if the connection is renegotiated.
-- `iceRole` {{optional_inline}}
+- `iceRole` {{optional_inline}} {{experimental_inline}}
 
   - : A string indicating the [ICE `role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCDtlsTransport.iceTransport")}}.
     This is one of:
@@ -57,7 +57,7 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
     - [`controlling`](/en-US/docs/Web/API/RTCIceTransport/role#controlling)
     - [`unknown`](/en-US/docs/Web/API/RTCIceTransport/role#unknown)
 
-- `iceState` {{optional_inline}}
+- `iceState` {{optional_inline}} {{experimental_inline}}
 
   - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}.
     This is one of:
@@ -75,9 +75,9 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - `localCertificateId` {{optional_inline}}
   - : A string containing the id of the local certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
-- `packetsSent` {{optional_inline}}
+- `packetsSent` {{optional_inline}} {{experimental_inline}}
   - : The total number of packets sent over this transport.
-- `packetsReceived` {{optional_inline}}
+- `packetsReceived` {{optional_inline}} {{experimental_inline}}
   - : The total number of packets received on this transport.
 - `remoteCertificateId` {{optional_inline}}
   - : A string containing the id or the remote certificate used by this transport.
