@@ -18,7 +18,7 @@ A client can ask that credentials should be included in cross-site requests in o
 
 If the client has asked for credentials to be included:
 
-- If the request is {{glossary("Preflight_request", "preflighted")}}, then the preflight request does not credentials. If the server's response to the preflight request sets the `Access-Control-Allow-Credentials` header to `true`, then the real request will include credentials: otherwise, the browser reports a network error.
+- If the request is {{glossary("Preflight_request", "preflighted")}}, then the preflight request does not include credentials. If the server's response to the preflight request sets the `Access-Control-Allow-Credentials` header to `true`, then the real request will include credentials: otherwise, the browser reports a network error.
 
 - If the request is not preflighted, then the request will include credentials, and if the server's response does not set the `Access-Control-Allow-Credentials` header to `true`, the browser reports a network error.
 
