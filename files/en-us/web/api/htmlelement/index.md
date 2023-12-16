@@ -13,7 +13,7 @@ The **`HTMLElement`** interface represents any [HTML](/en-US/docs/Web/HTML) elem
 
 ## Instance properties
 
-_Inherits properties from its parent, {{DOMxRef("Element")}}._
+_Also inherits properties from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.accessKey")}}
   - : A string representing the access key assigned to the element.
@@ -76,7 +76,7 @@ _Inherits properties from its parent, {{DOMxRef("Element")}}._
 
 ## Instance methods
 
-_Inherits methods from its parent, {{DOMxRef("Element")}}._
+_Also, inherits methods from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
@@ -97,7 +97,7 @@ _Inherits methods from its parent, {{DOMxRef("Element")}}._
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-_Inherits events from its parent, {{DOMxRef("Element")}}._
+_Also, inherits events from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement/cancel_event", "cancel")}}
   - : Fired for {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key.
