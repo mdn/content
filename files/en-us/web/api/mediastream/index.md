@@ -54,9 +54,9 @@ _This interface inherits methods from its parent, {{domxref("EventTarget")}}._
   - : Fired when a new {{domxref("MediaStreamTrack")}} object is added.
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
   - : Fired when a {{domxref("MediaStreamTrack")}} object has been removed.
-- {{domxref("MediaStream/active_event", "active")}}
+- {{domxref("MediaStream/active_event", "active")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is activated.
-- {{domxref("MediaStream/inactive_event", "inactive")}}
+- {{domxref("MediaStream/inactive_event", "inactive")}} {{Non-standard_Inline}}
   - : Fired when the MediaStream is inactivated.
 
 ## Specifications
