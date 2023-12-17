@@ -613,46 +613,45 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const { By, until } = require("selenium-webdriver");
+   const { Builder, By, Key } = require("selenium-webdriver");
+   const request = require("request");
 
    // Input capabilities
    const capabilities = {
-     browserName: "Firefox",
-     browser_version: "56.0 beta",
-     os: "OS X",
-     os_version: "Sierra",
-     resolution: "1280x1024",
-     "browserstack.user": "YOUR-USER-NAME",
-     "browserstack.key": "YOUR-ACCESS-KEY",
-     "browserstack.debug": "true",
-     build: "First build",
+     "bstack:options": {
+        os: "OS X",
+        osVersion: "Sonoma",
+        browserVersion: "17.0",
+        local: "false",
+        seleniumVersion: "3.14.0",
+        userName: "YOUR-USER-NAME",
+        accessKey: "YOUR-ACCESS-KEY",
+      },
+      browserName: "Safari",
    };
 
-   const driver = new webdriver.Builder()
-     .usingServer("http://hub-cloud.browserstack.com/wd/hub")
-     .withCapabilities(capabilities)
-     .build();
+   const driver = new Builder()
+      .usingServer("http://hub-cloud.browserstack.com/wd/hub")
+      .withCapabilities(capabilities)
+      .build();
 
-   driver.get("http://www.google.com");
-   driver.findElement(By.name("q")).sendKeys("webdriver");
+   (async function bStackGoogleTest() {
+      try {
+        await driver.get("https://www.google.com/");
+        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+        await driver.sleep(2000);
+        const title = await driver.getTitle();
+        if (title === "webdriver - Google Search") {
+          console.log("Test passed");
+        } else {
+          console.log("Test failed");
+        }
+      } finally {
+        await driver.sleep(4000); // Delay long enough to see search page!
+        await driver.quit();
+      }
+    })();
 
-   driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-   });
-
-   driver.findElement(By.name("btnK")).click();
-
-   driver.sleep(2000).then(() => {
-     driver.getTitle().then((title) => {
-       if (title === "webdriver - Google Search") {
-         console.log("Test passed");
-       } else {
-         console.log("Test failed");
-       }
-     });
-   });
-
-   driver.quit();
    ```
 
 3. From your [BrowserStack automation dashboard](https://www.browserstack.com/automate), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
