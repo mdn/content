@@ -46,8 +46,6 @@ The following example provides functionality to hide a popover by pressing a par
 
 ### JavaScript
 
-And now the JavaScript to wire up the functionality:
-
 ```js
 const popover = document.getElementById("mypopover");
 
