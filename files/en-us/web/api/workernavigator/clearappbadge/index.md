@@ -1,26 +1,24 @@
 ---
-title: "Navigator: setAppBadge() method"
-short-title: setAppBadge()
-slug: Web/API/Navigator/setAppBadge
+title: "WorkerNavigator: clearAppBadge() method"
+short-title: clearAppBadge()
+slug: Web/API/WorkerNavigator/clearAppBadge
 page-type: web-api-instance-method
-browser-compat: api.Navigator.setAppBadge
+browser-compat: api.WorkerNavigator.clearAppBadge
 ---
 
 {{APIRef("Badging API")}}{{securecontext_header}}
 
-The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
+The **`clearAppBadge()`** method of the {{domxref("WorkerNavigator")}} interface clears a badge on the current app's icon by setting it to `nothing`. The value `nothing` indicates that no badge is currently set, and the status of the badge is _cleared_.
 
 ## Syntax
 
 ```js-nolint
-setAppBadge()
-setAppBadge(contents)
+clearAppBadge()
 ```
 
 ### Parameters
 
-- `contents` {{optional_inline}}
-  - : A {{jsxref("number")}} which will be used as the value of the badge. If `contents` is `0` then the badge will be set to `nothing`, indicating a cleared badge.
+None.
 
 ### Return value
 
@@ -37,11 +35,10 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Examples
 
-In the example below an unread count is passed to `setAppBadge()`. The badge should then display `30`.
+Once all messages in an application have been read, call `clearAppBadge()` to clear the badge and remove the notification.
 
 ```js
-const unread = 30;
-navigator.setAppBadge(unread);
+navigator.clearAppBadge();
 ```
 
 ## Specifications

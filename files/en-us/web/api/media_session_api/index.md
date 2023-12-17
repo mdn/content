@@ -107,6 +107,15 @@ if ("mediaSession" in navigator) {
   navigator.mediaSession.setActionHandler("skipad", () => {
     /* Code excerpted. */
   });
+  navigator.mediaSession.setActionHandler("togglecamera", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglemicrophone", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("hangup", () => {
+    /* Code excerpted. */
+  });
 }
 ```
 

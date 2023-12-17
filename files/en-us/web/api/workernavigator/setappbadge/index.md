@@ -1,14 +1,14 @@
 ---
-title: "Navigator: setAppBadge() method"
+title: "WorkerNavigator: setAppBadge() method"
 short-title: setAppBadge()
-slug: Web/API/Navigator/setAppBadge
+slug: Web/API/WorkerNavigator/setAppBadge
 page-type: web-api-instance-method
-browser-compat: api.Navigator.setAppBadge
+browser-compat: api.WorkerNavigator.setAppBadge
 ---
 
 {{APIRef("Badging API")}}{{securecontext_header}}
 
-The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
+The **`setAppBadge()`** method of the {{domxref("WorkerNavigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
 ## Syntax
 
