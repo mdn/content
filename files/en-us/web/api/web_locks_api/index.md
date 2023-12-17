@@ -10,7 +10,7 @@ spec-urls: https://w3c.github.io/web-locks/
 
 {{DefaultAPISidebar("Web Locks API")}}{{securecontext_header}}
 
-The Web Locks API allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
+The **Web Locks API** allows scripts running in one tab or worker to asynchronously acquire a lock, hold it while work is performed, then release it. While held, no other script executing in the same origin can acquire the same lock, which allows a web app running in multiple tabs or workers to coordinate work and the use of resources.
 
 ## Concepts and Usage
 
