@@ -631,9 +631,9 @@ Let's write an example:
    };
 
    const driver = new Builder()
-      .usingServer("http://hub-cloud.browserstack.com/wd/hub")
-      .withCapabilities(capabilities)
-      .build();
+     .usingServer("http://hub-cloud.browserstack.com/wd/hub")
+     .withCapabilities(capabilities)
+     .build();
 
    (async function bStackGoogleTest() {
      try {
