@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Lock.name
 ---
 
-{{APIRef("Web Locks")}}
+{{APIRef("Web Locks API")}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
