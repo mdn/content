@@ -25,8 +25,17 @@ None.
 A {{jsxref('Promise')}} that resolves with an object containing a snapshot of the {{domxref("LockManager")}} state.
 The object has the following properties:
 
-- `held`: An array of {{domxref('LockInfo')}} objects for held locks.
-- `pending`: An array of {{domxref('LockInfo')}} objects for pending lock requests.
+- `held`: An array of `LockInfo` objects for held locks.
+- `pending`: An array of `LockInfo` objects for pending lock requests.
+
+The `LockInfo` object can have the following properties:
+
+- `name`
+  - : The name passed to {{domxref("LockManager.request()")}} when the lock was requested.
+- `name`
+  - : The access mode passed to {{domxref("LockManager.request()")}} when the lock was requested. The mode is either `"exclusive"` or `"shared"`.
+- `clientId`
+  - : The unique identity of the context where {{domxref("LockManager.request()")}} is called. This is the same value as {{domxref("Client.id")}}.
 
 ### Exceptions
 
