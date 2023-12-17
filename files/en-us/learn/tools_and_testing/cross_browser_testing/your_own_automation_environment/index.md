@@ -619,15 +619,15 @@ Let's write an example:
    // Input capabilities
    const capabilities = {
      "bstack:options": {
-        os: "OS X",
-        osVersion: "Sonoma",
-        browserVersion: "17.0",
-        local: "false",
-        seleniumVersion: "3.14.0",
-        userName: "YOUR-USER-NAME",
-        accessKey: "YOUR-ACCESS-KEY",
-      },
-      browserName: "Safari",
+       os: "OS X",
+       osVersion: "Sonoma",
+       browserVersion: "17.0",
+       local: "false",
+       seleniumVersion: "3.14.0",
+       userName: "YOUR-USER-NAME",
+       accessKey: "YOUR-ACCESS-KEY",
+     },
+     browserName: "Safari",
    };
 
    const driver = new Builder()
