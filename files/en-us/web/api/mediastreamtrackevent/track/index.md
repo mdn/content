@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrackEvent.track
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`track`** read-only property of the {{domxref("MediaStreamTrackEvent")}} interface returns the {{domxref("MediaStreamTrack")}} associated with this event
+The **`track`** read-only property of the {{domxref("MediaStreamTrackEvent")}} interface returns the {{domxref("MediaStreamTrack")}} associated with this event.
 
 ## Value
 
