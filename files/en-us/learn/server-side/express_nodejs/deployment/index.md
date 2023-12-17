@@ -608,6 +608,7 @@ The CLI allows you to associate a local GitHub repository with a railway project
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
 That's all the overview you need to deploy the app to Railway.
+Next we will set up a Railway account, install our website and a database, and try out the Railway client.
 
 ### Get a Railway account
 
