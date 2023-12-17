@@ -607,9 +607,6 @@ Developers interact with Railway through the Railway site, and using a special [
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
-In order to get our application to work on Railway, we'll need to put our Express web application into a git repository and make a few minor modifications.
-Once we've done that, we can set up a Railway account, install our website and a database, and also try out the Railway client.
-
 That's all the overview you need to deploy the app to Railway.
 
 ### Get a Railway account
