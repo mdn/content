@@ -8,6 +8,8 @@ page-type: glossary-definition
 
 **Grid lines** are created when you define {{glossary("Grid tracks", "tracks")}} in the explicit grid using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
+**Grid lines** are created when we using CSS Grid layout.
+
 ## Example
 
 In the following example there is a grid with three column tracks and two row tracks. This gives us 4 column lines and 3 row lines.
