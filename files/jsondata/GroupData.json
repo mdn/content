@@ -1961,7 +1961,7 @@
       "overview": ["Web Locks API"],
       "interfaces": ["Lock", "LockManager"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.locks", "WorkerNavigator.locks"],
       "events": []
     },
     "Web MIDI API": {
