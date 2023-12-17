@@ -53,12 +53,16 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
+- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
+  - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
   - : Occurs when a {{domxref("fetch()")}} is called.
 - {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
   - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
 - {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
-  - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
+  - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers.
+- {{domxref("ServiceWorkerGlobalScope/messageerror_event", "messageerror")}}
+  - : Occurs when incoming messages can't be deserialized.
 - {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
   - : Occurs when a user clicks on a displayed notification.
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
@@ -122,5 +126,3 @@ self.addEventListener("fetch", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

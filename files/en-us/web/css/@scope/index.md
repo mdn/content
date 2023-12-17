@@ -471,4 +471,4 @@ In the rendered code, note how all of the `<img>` elements are styled with the t
 
 - {{CSSxRef(":scope")}}
 - {{DOMxRef("CSSScopeRule")}}
-- [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/articles/at-scope/) on developer.chrome.com (2023)
+- [Limit the reach of your selectors with the CSS `@scope` at-rule](https://developer.chrome.com/docs/css-ui/at-scope) on developer.chrome.com (2023)

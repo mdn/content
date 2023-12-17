@@ -28,7 +28,7 @@ For maximum flexibility over the widest possible range of devices, it is a good 
 
 ### Don't use preprocessors
 
-Don't use preprocessor syntax, such as [Sass](https://sass-lang.com/), [Less](https://lesscss.org/), or [Stylus,](https://stylus-lang.com/), in the example code. On MDN Web Docs, we document the vanilla CSS language. Using preprocessors will only raise the bar to understanding the examples, potentially confusing readers.
+Don't use preprocessor syntax, such as [Sass](https://sass-lang.com/), [Less](https://lesscss.org/), or [Stylus](https://stylus-lang.com/), in the example code. On MDN Web Docs, we document the vanilla CSS language. Using preprocessors will only raise the bar to understanding the examples, potentially confusing readers.
 
 ### Don't use specific CSS methodologies
 

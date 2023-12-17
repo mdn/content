@@ -34,11 +34,11 @@ An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEve
 _Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 - {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
-  - : Returns the event's data. It can be any data type.
+  - : Returns the event's data. It can be any data type. If dispatched in `messageerror` event, the property will be `null`.
 - {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
   - : Returns the origin of the {{domxref("Client")}} that sent the message.
 - {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source. This is an empty string.
+  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
 - {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("Client")}} object that sent the message.
 - {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
@@ -100,5 +100,4 @@ self.onmessage = (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

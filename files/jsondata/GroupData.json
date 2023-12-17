@@ -116,7 +116,7 @@
         "Path2D",
         "TextMetrics"
       ],
-      "methods": ["createImageBitmap"],
+      "methods": ["createImageBitmap()"],
       "properties": [],
       "events": []
     },
@@ -134,7 +134,6 @@
         "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
       ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
-      "dictionaries": ["ClipboardPermissionDescriptor"],
       "methods": [],
       "properties": ["Navigator.clipboard"],
       "events": [
@@ -223,9 +222,9 @@
       "methods": [],
       "properties": ["Document.fonts", "WorkerGlobalScope.fonts"],
       "events": [
-        "FontFaceSet: loading event",
-        "FontFaceSet: loadingdone event",
-        "FontFaceSet: loadingerror event"
+        "FontFaceSet: loading",
+        "FontFaceSet: loadingdone",
+        "FontFaceSet: loadingerror"
       ]
     },
     "CSS Painting API": {
@@ -301,7 +300,6 @@
         "StyleSheet",
         "StyleSheetList"
       ],
-      "dictionaries": ["ScrollToOptions"],
       "methods": [],
       "properties": [],
       "events": [
@@ -406,12 +404,6 @@
         "TreeWalker",
         "XMLDocument"
       ],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
-    "DOM (Non-standard)": {
-      "interfaces": ["DOMCursor", "DOMRequest"],
       "methods": [],
       "properties": [],
       "events": []
@@ -754,7 +746,6 @@
       "guides": [
         "/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations",
-        "/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items",
         "/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types"
       ],
       "interfaces": [
@@ -766,13 +757,13 @@
       "methods": [],
       "properties": [],
       "events": [
-        "Document: dragstart",
-        "Document: drag",
-        "Document: dragenter",
-        "Document: dragleave",
-        "Document: dragover",
-        "Document: drop",
-        "Document: dragend"
+        "HTMLElement: drag",
+        "HTMLElement: dragend",
+        "HTMLElement: dragenter",
+        "HTMLElement: dragleave",
+        "HTMLElement: dragover",
+        "HTMLElement: dragstart",
+        "HTMLElement: drop"
       ]
     },
     "HTML Sanitizer API": {
@@ -880,12 +871,11 @@
       ],
       "interfaces": ["MediaCapabilities", "Screen"],
       "methods": [
-        "mediaCapabilities.decodingInfo()",
-        "mediaCapabilities.encodingInfo()"
+        "MediaCapabilities.decodingInfo()",
+        "MediaCapabilities.encodingInfo()"
       ],
-      "properties": ["navigator.mediaCapabilities"],
-      "events": [],
-      "dictionaries": []
+      "properties": ["Navigator.mediaCapabilities"],
+      "events": []
     },
     "Media Capture and Streams": {
       "overview": ["Media Capture and Streams API"],
@@ -912,13 +902,11 @@
     },
     "Media Session API": {
       "overview": ["Media Session API"],
+      "guides": [],
       "interfaces": ["MediaMetadata", "MediaSession"],
       "methods": [],
-      "properties": ["navigator.mediaSession"],
-      "events": [],
-      "dictionaries": [],
-      "types": ["MediaSessionAction", "MediaSessionPlaybackState"],
-      "callbacks": ["MediaSessionActionHandler"]
+      "properties": ["Navigator.mediaSession"],
+      "events": []
     },
     "Media Source Extensions": {
       "overview": ["Media Source Extensions API"],
@@ -1002,17 +990,6 @@
         "PaymentRequestUpdateEvent",
         "PaymentResponse",
         "SecurePaymentConfirmationRequest"
-      ],
-      "dictionaries": [
-        "AddressErrors",
-        "PaymentMethodData",
-        "PaymentCurrencyAmount",
-        "PaymentDetailsModifier",
-        "PaymentDetailsUpdate",
-        "PaymentItem",
-        "PaymentOptions",
-        "PaymentShippingOption",
-        "PaymentShippingType"
       ],
       "methods": [],
       "properties": ["HTMLIFrameElement.allowPaymentRequest"],
@@ -1098,28 +1075,35 @@
       ],
       "interfaces": ["PointerEvent"],
       "methods": [
-        "Element.setPointerCapture()",
-        "Element.releasePointerCapture()"
+        "Element.hasPointerCapture()",
+        "Element.releasePointerCapture()",
+        "Element.setPointerCapture()"
       ],
       "properties": ["Navigator.maxTouchPoints"],
       "events": [
-        "HTMLElement: pointerover",
-        "HTMLElement: pointerenter",
-        "HTMLElement: pointerdown",
-        "HTMLElement: pointermove",
-        "HTMLElement: pointerup",
-        "HTMLElement: pointercancel",
-        "HTMLElement: pointerout",
-        "HTMLElement: pointerleave",
-        "HTMLElement: gotpointercapture",
-        "HTMLElement: lostpointercapture"
+        "Element: gotpointercapture",
+        "Element: lostpointercapture",
+        "Element: pointercancel",
+        "Element: pointerdown",
+        "Element: pointerenter",
+        "Element: pointerleave",
+        "Element: pointermove",
+        "Element: pointerout",
+        "Element: pointerover",
+        "Element: pointerrawupdate",
+        "Element: pointerup"
       ]
     },
     "Pointer Lock API": {
       "overview": ["Pointer Lock API"],
       "interfaces": [],
       "methods": ["Element.requestPointerLock()", "Document.exitPointerLock()"],
-      "properties": ["Document.pointerLockElement"],
+      "properties": [
+        "Document.pointerLockElement",
+        "MouseEvent.movementX",
+        "MouseEvent.movementY",
+        "ShadowRoot.pointerLockElement"
+      ],
       "events": ["Document: pointerlockchange", "Document: pointerlockerror"]
     },
     "Popover API": {
@@ -1187,6 +1171,17 @@
         "ServiceWorkerGlobalScope: pushsubscriptionchange"
       ]
     },
+    "Remote Playback API": {
+      "overview": ["Remote Playback API"],
+      "guides": [],
+      "interfaces": ["RemotePlayback"],
+      "methods": [],
+      "properties": [
+        "HTMLMediaElement.disableRemotePlayback",
+        "HTMLMediaElement.remote"
+      ],
+      "events": []
+    },
     "Reporting API": {
       "overview": ["Reporting API"],
       "guides": [],
@@ -1214,7 +1209,6 @@
       "overview": ["Screen Capture API"],
       "guides": ["/docs/Web/API/Screen_Capture_API/Using_Screen_Capture"],
       "interfaces": ["CaptureController"],
-      "dictionaries": [],
       "methods": ["MediaDevices.getDisplayMedia()"],
       "properties": [
         "MediaTrackConstraints.displaySurface",
@@ -1228,7 +1222,6 @@
         "MediaTrackSupportedConstraints.logicalSurface",
         "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
       ],
-      "types": ["CursorCaptureConstraintSet", "DisplayCaptureSurfaceType"],
       "events": []
     },
     "Screen Orientation API": {
@@ -1305,6 +1298,22 @@
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
+      "events": []
+    },
+    "Shared Storage API": {
+      "overview": ["Shared Storage API"],
+      "interfaces": [
+        "SharedStorage",
+        "SharedStorageOperation",
+        "SharedStorageRunOperation",
+        "SharedStorageSelectURLOperation",
+        "SharedStorageWorklet",
+        "SharedStorageWorkletGlobalScope",
+        "WindowSharedStorage",
+        "WorkletSharedStorage"
+      ],
+      "methods": [],
+      "properties": ["Window.sharedStorage"],
       "events": []
     },
     "Speculation Rules API": {
@@ -1741,6 +1750,8 @@
       ],
       "interfaces": [
         "CustomElementRegistry",
+        "CustomStateSet",
+        "ElementInternals",
         "HTMLSlotElement",
         "HTMLTemplateElement",
         "ShadowRoot"
@@ -1748,6 +1759,7 @@
       "methods": [
         "Document.createElement()",
         "Element.attachShadow()",
+        "HTMLElement.attachInternals()",
         "Node.getRootNode()"
       ],
       "properties": [
@@ -1778,52 +1790,21 @@
       ],
       "methods": [],
       "properties": [],
-      "events": [],
-      "dictionaries": [
-        "AudioDataInit",
-        "AudioDataCopyToOptions",
-        "AudioDecoderConfig",
-        "AudioDecoderInit",
-        "AudioDecoderSupport",
-        "AudioEncoderConfig",
-        "AudioEncoderInit",
-        "AudioEncoderSupport",
-        "PlaneLayout",
-        "EncodedAudioChunkInit",
-        "EncodedAudioChunkMetadata",
-        "EncodedVideoChunkInit",
-        "EncodedVideoChunkMetadata",
-        "ImageDecodeOptions",
-        "ImageDecodeResult",
-        "ImageDecoderInit",
-        "SvcOutputMetadata",
-        "VideoColorSpaceInit",
-        "VideoDecoderConfig",
-        "VideoDecoderInit",
-        "VideoDecoderSupport",
-        "VideoEncoderConfig",
-        "VideoEncoderInit",
-        "VideoEncoderSupport",
-        "VideoFrameBufferInit",
-        "VideoFrameCopyToOptions",
-        "VideoFrameInit"
-      ]
+      "events": []
     },
     "Web Crypto API": {
       "overview": ["Web Crypto API"],
       "guides": [
         "/docs/Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto"
       ],
-      "interfaces": ["Crypto", "CryptoKey", "SubtleCrypto"],
-      "methods": [],
-      "properties": ["crypto_property"],
-      "events": [],
-      "dictionaries": [
+      "interfaces": [
+        "Crypto",
+        "CryptoKey",
+        "SubtleCrypto",
         "AesCbcParams",
         "AesCtrParams",
         "AesGcmParams",
         "AesKeyGenParams",
-        "Algorithm",
         "CryptoKeyPair",
         "EcKeyGenParams",
         "EcKeyImportParams",
@@ -1832,14 +1813,15 @@
         "HkdfParams",
         "HmacImportParams",
         "HmacKeyGenParams",
-        "JsonWebKey",
-        "KeyAlgorithm",
         "Pbkdf2Params",
         "RsaHashedImportParams",
         "RsaHashedKeyGenParams",
         "RsaOaepParams",
         "RsaPssParams"
-      ]
+      ],
+      "methods": [],
+      "properties": ["crypto_property"],
+      "events": []
     },
     "WebGL": {
       "overview": ["WebGL API"],
@@ -2014,7 +1996,10 @@
         "ServiceWorkerRegistration.getNotifications()"
       ],
       "properties": [],
-      "events": ["ServiceWorkerGlobalScope: notificationclick"]
+      "events": [
+        "ServiceWorkerGlobalScope: notificationclick",
+        "ServiceWorkerGlobalScope: notificationclose"
+      ]
     },
     "WebRTC": {
       "overview": ["WebRTC API"],
@@ -2055,52 +2040,17 @@
         "RTCRtpScriptTransformer",
         "RTCEncodedVideoFrame",
         "RTCEncodedAudioFrame",
-        "RTCTransformEvent"
-      ],
-      "dictionaries": [
-        "RTCOAuthCredential",
-        "RTCSessionDescriptionInit",
-        "RTCIceCandidateInit",
-        "RTCPeerConnectionIceEventInit",
-        "RTCPeerConnectionIceErrorEventInit",
-        "RTCCertificateExpiration",
-        "RTCRtpTransceiverInit",
-        "RTCRtpParameters",
-        "RTCRtpSendParameters",
-        "RTCRtpReceiveParameters",
-        "RTCRtpCodingParameters",
-        "RTCRtpDecodingParameters",
-        "RTCRtpEncodingParameters",
-        "RTCRtcpParameters",
-        "RTCRtpHeaderExtensionParameters",
+        "RTCTransformEvent",
         "RTCRtpCodecParameters",
-        "RTCRtpCapabilities",
-        "RTCRtpCodecCapability",
-        "RTCRtpHeaderExtensionCapability",
-        "RTCRtpContributingSource",
-        "RTCRtpSynchronizationSource",
-        "RTCDtlsFingerprint",
         "RTCIceParameters",
         "RTCIceCandidatePair",
-        "RTCTrackEventInit",
-        "RTCDataChannelInit",
-        "RTCDataChannelEventInit",
-        "RTCDTMFToneChangeEventInit",
-        "RTCStatsEventInit",
-        "RTCErrorEventInit",
         "RTCIceCandidatePairStats",
-        "RTCCertificateStats",
-        "RTCCodecStats",
-        "RTCDataChannelStats",
         "RTCInboundRtpStreamStats",
         "RTCIceCandidateStats",
         "RTCAudioSourceStats",
-        "RTCVideoSourceStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
-        "RTCRemoteInboundRtpStreamStats",
-        "RTCRemoteOutboundRtpStreamStats",
-        "RTCTransportStats"
+        "RTCRemoteOutboundRtpStreamStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
       "properties": [
@@ -2133,10 +2083,6 @@
         "RTCDTMFSender: tonechange",
         "RTCPeerConnection: track",
         "DedicatedWorkerGlobalScope: rtctransform"
-      ],
-      "callbacks": [
-        "RTCPeerConnectionErrorCallback",
-        "RTCSessionDescriptionCallback"
       ]
     },
     "Web Serial API": {
@@ -2207,6 +2153,7 @@
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
         "WebTransportReceiveStream",
+        "WebTransportSendStream",
         "WebTransportError"
       ],
       "methods": [],
@@ -2359,7 +2306,10 @@
     },
     "Window Controls Overlay API": {
       "overview": ["Window Controls Overlay API"],
-      "interfaces": ["WindowControlsOverlay"],
+      "interfaces": [
+        "WindowControlsOverlay",
+        "WindowControlsOverlayGeometryChangeEvent"
+      ],
       "methods": [],
       "properties": ["Navigator.windowControlsOverlay"],
       "events": []
