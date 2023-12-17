@@ -80,7 +80,7 @@ Some of the things to consider when choosing a host:
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
 These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
 They are however great for testing low-traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
-Popular choices in this category include [Glitch](https://glitch.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc
+Popular choices in this category include [Glitch](https://glitch.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc.
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
 [Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
@@ -432,7 +432,7 @@ You can do this using `git` on the command line:
 # Create branch vanilla_deployment from the current branch (main)
 git checkout -b vanilla_deployment
 
-# Push the new branch to Github
+# Push the new branch to GitHub
 git push origin vanilla_deployment
 
 # Switch back to main
@@ -474,20 +474,20 @@ While Glitch is appropriate for hosting this demonstration, you should take the 
 
 ### How does Glitch work?
 
-Glitch provides a web based interface in which you can create projects from starter templates, or import them from Github, and then add and edit the project files.
+Glitch provides a web-based interface in which you can create projects from starter templates, or import them from GitHub, and then add and edit the project files.
 As you make changes, the project is built and run in its own isolated and independent virtualized container.
 
 How this all works "under the hood" is a mystery — Glitch doesn't say.
-What is clear is that as long as you create a fairly standard nodejs web application (for example using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions), your application should "just work".
+What is clear is that as long as you create a fairly standard nodejs web application (for example, using `package.json` for your dependencies), and don't consume more resources than listed in the [technical restrictions](https://help.glitch.com/hc/en-us/articles/16287495313293-Technical-Restrictions), your application should "just work".
 
-Once the application is running it can be configured for production using [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) supplied in an a `.env` file.
-The values in the secret data are read by the application as environment variables, which as you will recall from a previous section, is how we configured our application to get its database URL.
-Note that the variables are _secret_: the `.env` should not be included in your Github repository.
+Once the application is running, it can be configured for production using [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) supplied in a `.env` file.
+The values in the secret data are read by the application as environment variables, which, as you will recall from a previous section, is how we configured our application to get its database URL.
+Note that the variables are _secret_: the `.env` should not be included in your GitHub repository.
 
 The Glitch editing view also provides _terminal_ access to the web app environment, which you can use to work with the web app as though it was running on your local machine.
 
-That's all the overview you need in order to get started.
-Next we will set up a Glitch account, upload the Library project from Github, and connect to a database.
+That's all the overview you need to get started.
+Next, we will set up a Glitch account, upload the Library project from Github, and connect it to a database.
 
 ### Get a Glitch account
 
@@ -501,22 +501,22 @@ To start using Glitch you will first need to create an account:
 
 Next we'll import the Library project from GitHub.
 First choose the **Dashboard** option from the site top menu, then select the **New project** button.
-Glitch will display a list of options for the new project, select **Import from GithHub**.
+Glitch will display a list of options for the new project; select **Import from GitHub**.
 
-![Glitch website dashboard showing new project button and popup menu with "Import from Github" option](glitch_new_project_import_github.png)
+![Glitch website dashboard showing a new project button and a popup menu with "Import from GitHub" option](glitch_new_project_import_github.png)
 
 A popup will appear.
-Enter the URL of your Github library repository into the popup and press **OK**.
-Below you can see we have entered the repo for the worked project.
+Enter the URL of your GitHub library repository into the popup and press **OK**.
+Below, we have entered the repo for the worked project.
 
 ![Glitch popup for entering URL of GitHub repo to import](glitch_new_project_github_repo_url.png)
 
 Glitch will then import the project, displaying notifications of progress.
-On completion it will display the editing view for the new project, as shown below.
+Upon completion, it will display the editing view for the new project, as shown below.
 
 ![Glitch editor view for imported project](glitch_imported_project_in_editor.png)
 
-You can get the URL of the live site by selecting the **Share** button.
+You can get the live site URL by selecting the **Share** button.
 
 ![Glitch editor view for imported project](glitch_share_project.png)
 
@@ -526,10 +526,10 @@ The local library site should open and display data from the development databas
 > **Note:** This process was a one-off import from GitHub.
 > You can also use GitHub actions such as [glitch-project-sync](https://github.com/marketplace/actions/glitch-project-sync) to keep Glitch and > your project synchronized.
 
-### Use a Production MongoDB database
+### Use a production MongoDB database
 
 You should set up a different database for production than development.
-While Glitch only hosts SQLite databases (and we are set up to use PostGres), there are many sites that provide free (and paid) MongoDb databases as a service.
+While Glitch only hosts SQLite databases (and we are set up to use MongoDB), many other sites provide MongoDB databases as a service.
 
 One option is to follow the [Setting up the MongoDB database](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#setting_up_the_mongodb_database) instructions from earlier in the tutorial to set up a new production database.
 
@@ -549,10 +549,10 @@ You will recall from a preceding section that we need to [set NODE_ENV to 'produ
 
 Open `.env` and add a `NODE_ENV` variable with value `production` (see the screenshot in the previous section).
 
-The local library application is now setup and configured for production use.
-You can add data through the website interface and it should work in the same way that it did during development (though with less debug information exposed for invalid pages).
+The local library application is now set up and configured for production use.
+You can add data through the website interface, and it should work as it did during development (though with less debug information exposed for invalid pages).
 
-> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
+> **Note:** If you only want to add some data for testing, you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
 
 ### Debugging Express apps on Glitch
 
@@ -580,7 +580,7 @@ Railway is an attractive hosting option for several reasons:
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
 - Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
-  While Railway has some excellent new features, many of the same ideas and approaches are used by other popular hosting services.
+  While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.app/) is clear and complete.
 - The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
 
@@ -589,9 +589,9 @@ You should take the time to determine if Railway is [suitable for your own websi
 ### How does Railway work?
 
 Web applications are each run in their own isolated and independent virtualized container.
-In order to execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
+To execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
 
-Railway makes this easy, as it is able to automatically recognize and install many different web application frameworks and environments based on their use of "common conventions".
+Railway makes this easy, as it can automatically recognize and install many different web application frameworks and environments based on their use of "common conventions".
 For example, Railway recognizes node applications because they have a **package.json** file, and can determine the package manager used for building from the "lock" file.
 For example, if the application includes the file **package-lock.json** Railway knows to use _npm_ to install the packages, whereas if it finds **yarn.lock** it knows to use _yarn_.
 Having installed all the dependencies, Railway will look for scripts named "build" and "start" in the package file, and use these to build and run the code.
@@ -610,7 +610,7 @@ One of the most useful features is that you can use the CLI to run your local pr
 In order to get our application to work on Railway, we'll need to put our Express web application into a git repository and make a few minor modifications.
 Once we've done that, we can set up a Railway account, install our website and a database, and also try out the Railway client.
 
-That's all the overview you need in order to deploy the app to railway.
+That's all the overview you need to deploy the app to Railway.
 
 ### Get a Railway account
 
