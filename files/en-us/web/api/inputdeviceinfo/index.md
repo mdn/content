@@ -7,7 +7,7 @@ browser-compat: api.InputDeviceInfo
 
 {{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`InputDeviceInfo`** interface of the {{domxref('Media Capture and Streams API','','',' ')}} gives access to the capabilities of the input device that it represents.
+The **`InputDeviceInfo`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} gives access to the capabilities of the input device that it represents.
 
 `InputDeviceInfo` objects are returned by {{domxref("MediaDevices.enumerateDevices()")}} if the returned device is an audio or video input device.
 
