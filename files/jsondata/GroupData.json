@@ -1285,6 +1285,7 @@
         "ExtendableMessageEvent",
         "FetchEvent",
         "InstallEvent",
+        "NavigationPreloadManager",
         "ServiceWorker",
         "ServiceWorkerContainer",
         "ServiceWorkerGlobalScope",
@@ -1293,6 +1294,7 @@
       ],
       "methods": [],
       "properties": [
+        "caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
