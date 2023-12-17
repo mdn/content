@@ -11,8 +11,6 @@ The **`MediaStream`** interface represents a stream of media content. A stream c
 
 You can obtain a `MediaStream` object either by using the constructor or by calling functions such as {{domxref("MediaDevices.getUserMedia()")}}, {{domxref("MediaDevices.getDisplayMedia()")}}, or {{domxref("HTMLCanvasElement.captureStream()")}}.
 
-Some user agents subclass this interface to provide more precise information or functionality, like in {{domxref("CanvasCaptureMediaStreamTrack")}}.
-
 {{InheritanceDiagram}}
 
 ## Constructor
