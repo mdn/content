@@ -6,20 +6,20 @@ page-type: guide
 
 {{PWASidebar}}
 
-One of the defining aspects of a PWA is that it can be installed on the device, and then appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
+One of the defining aspects of a PWA is that it can be promoted by the browser for installation on the device. Once installed, a PWA appears to users as a platform-specific app, a permanent feature of their device which they can launch directly from the operating system like any other app.
 
 We can summarize this as follows:
 
-- The PWA can be installed from the platform's app store or installed directly from the web.
+- Supporting browsers promote the PWA to the user for installation on the device.
 - The PWA can be installed like a platform-specific app, and can customize the install process.
 - Once installed, the PWA gets an app icon on the device, alongside platform-specific apps.
 - Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
-We'll discuss each of these features in this guide. First, though, we'll discuss the requirements that a web app must meet for it to be installable.
+We'll discuss each of these features in this guide. First, though, we'll discuss the requirements that a web app must meet for it to be promoted for installation.
 
 ## Installability
 
-For a web app to be installable, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
+For a web app to be promoted for installation by a supporting browser, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
 ### The web app manifest
 
@@ -90,7 +90,7 @@ If you have added your app to the app store, users can install it from there, ju
 
 ## Installation from the web
 
-When the user visits a web page that the browser has determined is installable, then the user will be offered the chance to install it. This means you can distribute your PWA as a website, making it discoverable through web search, and also distribute it in app stores, so users can find it there.
+When a supporting browser determines that a web app meets the installability criteria described earlier, it will promote the app to the user for installation. The user will be offered the chance to install the app. This means you can distribute your PWA as a website, making it discoverable through web search, and also distribute it in app stores, so users can find it there.
 
 This is a great example of the way PWAs can offer you the best of both worlds. It's also a good example of how progressive enhancement works with PWAs: if a user encounters your PWA on the web, using a browser that can't install it, they can use it just like a normal website.
 
@@ -104,11 +104,11 @@ The prompt displays the name and icon for the PWA, taken from the [`name`](/en-U
 
 ### Browser support
 
-Support for installing PWAs from the web varies by browser and by platform.
+Support for PWA installation promotion from the web varies by browser and by platform.
 
 On desktop:
 
-- Firefox and Safari do not support installing PWAs on any desktop operating systems.
+- Firefox and Safari do not support installing PWAs on any desktop operating systems. See [Installing sites as apps](#sites-as-apps), below.
 - Chrome and Edge support installing PWAs on Linux, Windows, macOS, and Chromebooks.
 
 On mobile:
@@ -116,6 +116,10 @@ On mobile:
 - On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
 - On iOS 16.3 and earlier, PWAs can only be installed with Safari.
 - On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
+
+### Installing sites as apps
+
+Safari for deskop and mobile, and Edge for desktop also support installing any website as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
 
 ### Triggering the install prompt
 

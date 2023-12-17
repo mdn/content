@@ -67799,22 +67799,6 @@
       "louisremi"
     ]
   },
-  "Web/API/Window/ondragdrop": {
-    "modified": "2020-10-19T07:54:26.789Z",
-    "contributors": [
-      "SphinxKnight",
-      "hamoud333310",
-      "Sheppy",
-      "fscholz",
-      "teoli",
-      "cpigat",
-      "libreGeekingKid",
-      "Tprogers",
-      "Tobi",
-      "Nickolay",
-      "alecananian"
-    ]
-  },
   "Web/API/Window/online_event": {
     "modified": "2020-10-15T21:20:36.089Z",
     "contributors": [

@@ -114,6 +114,8 @@ In the future, service workers will be able to do a number of other useful thing
 
 ### Extensions to other interfaces
 
+- {{DOMxRef("caches")}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context.
 - {{DOMxRef("Navigator.serviceWorker")}}
   - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.serviceWorker")}}
@@ -128,7 +130,6 @@ In the future, service workers will be able to do a number of other useful thing
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Web APIs that are related to the Service Worker API:
   - {{domxref("Background Fetch API", "", "", "nocode")}}
   - {{domxref("Background Synchronization API", "", "", "nocode")}}

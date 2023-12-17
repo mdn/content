@@ -2174,7 +2174,6 @@
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -2608,7 +2607,6 @@
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/Element/click_event
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
-/en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM:window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM:window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
@@ -3329,7 +3327,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -3618,7 +3615,6 @@
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Spartan	/en-US/docs/Glossary/Microsoft_Edge
 /en-US/docs/Glossary/Static_property	/en-US/docs/Glossary/property/JavaScript
-/en-US/docs/Glossary/Symbol	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /en-US/docs/Glossary/Transferable_objects	/en-US/docs/Web/API/Web_Workers_API/Transferable_objects
 /en-US/docs/Glossary/Transmission_Control_Protocol_(TCP)	/en-US/docs/Glossary/TCP
 /en-US/docs/Glossary/URI/www_vs_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
@@ -10851,7 +10847,6 @@
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event

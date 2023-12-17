@@ -17,22 +17,14 @@ In this article, we will teach you how to install your own automation environmen
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high-level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >, and
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
-          >automated testing</a
-        >.
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>, and
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">automated testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To show how to set up a Selenium testing environment locally and run
-        tests with it, and how to integrate it with tools like LambdaTest, Sauce
-        Labs, and BrowserStack.
+        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like LambdaTest, Sauce Labs, and BrowserStack.
       </td>
     </tr>
   </tbody>
@@ -63,7 +55,7 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.chromium.org/downloads) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
@@ -112,6 +104,7 @@ OK, let's try a quick test to make sure everything is working.
        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
        await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
      } finally {
+       await driver.sleep(2000); // Delay long enough to see search page!
        await driver.quit();
      }
    })();
@@ -123,7 +116,8 @@ OK, let's try a quick test to make sure everything is working.
    node google_test
    ```
 
-You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 2 seconds; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed. WebDriver will then close down the Firefox instance and stop.
+You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 1 second; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed.
+We then wait four seconds, after which WebDriver will then close down the Firefox instance and stop.
 
 ## Testing in multiple browsers at once
 
@@ -133,38 +127,32 @@ There is also nothing to stop you running the test on multiple browsers simultan
 2. Give it the following contents, then save it:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
-   let driver_fx = new webdriver.Builder().forBrowser("firefox").build();
+   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
 
-   let driver_chr = new webdriver.Builder().forBrowser("chrome").build();
+   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+
+   async function searchTest(driver) {
+     try {
+       await driver.get("http://www.google.com");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.sleep(2000).then(async () => {
+         await driver.getTitle().then(async (title) => {
+           if (title === "webdriver - Google Search") {
+             console.log("Test passed");
+           } else {
+             console.log("Test failed");
+           }
+         });
+       });
+     } finally {
+       driver.quit();
+     }
+   }
 
    searchTest(driver_fx);
    searchTest(driver_chr);
-
-   function searchTest(driver) {
-     driver.get("http://www.google.com");
-     driver.findElement(By.name("q")).sendKeys("webdriver");
-
-     driver.sleep(1000).then(() => {
-       driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-     });
-
-     driver.findElement(By.name("btnK")).click();
-
-     driver.sleep(2000).then(() => {
-       driver.getTitle().then((title) => {
-         if (title === "webdriver - Google Search") {
-           console.log("Test passed");
-         } else {
-           console.log("Test failed");
-         }
-         driver.quit();
-       });
-     });
-   }
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
@@ -214,11 +202,11 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-const webdriver = require("selenium-webdriver");
-const By = webdriver.By;
-const until = webdriver.until;
+const { Builder, By, until } = require("selenium-webdriver");
 
-const driver = new webdriver.Builder().forBrowser("firefox").build();
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+})();
 ```
 
 ### Getting the document you want to test
@@ -247,7 +235,7 @@ driver.get("http://localhost:8888/fake-div-buttons.html");
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Add this line to the bottom of `quick_test.js` now:
+Add this line to the bottom of your `example()` function:
 
 ```js
 driver.get(
@@ -265,7 +253,7 @@ const element = driver.findElement(By.id("myElementId"));
 
 One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
 
-Enter the following at the bottom of your `quick_test.js` code now:
+Enter the following at the bottom of your `example()` function now:
 
 ```js
 const button = driver.findElement(By.css("button:nth-of-type(1)"));
@@ -283,7 +271,7 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to `quick_test.js` now.
+Add this to the bottom of the `example()` function now.
 
 Making sure you are inside your project directory, try running the test:
 
@@ -301,9 +289,11 @@ button.click();
 
 Try running your test again; the button will be clicked, and the `alert()` popup should appear. At least we know the button is working!
 
-You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:
+You can interact with the popup too. Add the following to the bottom of the function, and try testing it again:
 
 ```js
+await driver.wait(until.alertIsPresent());
+
 const alert = driver.switchTo().alert();
 
 alert.getText().then((text) => {
