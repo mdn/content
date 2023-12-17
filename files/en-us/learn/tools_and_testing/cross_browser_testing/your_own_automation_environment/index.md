@@ -636,22 +636,21 @@ Let's write an example:
       .build();
 
    (async function bStackGoogleTest() {
-      try {
-        await driver.get("https://www.google.com/");
-        await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
-        await driver.sleep(2000);
-        const title = await driver.getTitle();
-        if (title === "webdriver - Google Search") {
-          console.log("Test passed");
-        } else {
-          console.log("Test failed");
-        }
-      } finally {
-        await driver.sleep(4000); // Delay long enough to see search page!
-        await driver.quit();
-      }
-    })();
-
+     try {
+       await driver.get("https://www.google.com/");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.sleep(2000);
+       const title = await driver.getTitle();
+       if (title === "webdriver - Google Search") {
+         console.log("Test passed");
+       } else {
+         console.log("Test failed");
+       }
+     } finally {
+       await driver.sleep(4000); // Delay long enough to see search page!
+       await driver.quit();
+     }
+   })();
    ```
 
 3. From your [BrowserStack automation dashboard](https://www.browserstack.com/automate), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
