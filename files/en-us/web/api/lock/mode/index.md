@@ -6,10 +6,12 @@ page-type: web-api-instance-property
 browser-compat: api.Lock.mode
 ---
 
-{{APIRef("Web Locks API")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}}
 
 The **`mode`** read-only property of the {{domxref("Lock")}} interface returns the access mode passed to {{domxref('LockManager.request()')}} when the lock was requested.
 The mode is either `"exclusive"` (the default) or `"shared"`.
+
+{{AvailableInWorkers}}
 
 ## Value
 

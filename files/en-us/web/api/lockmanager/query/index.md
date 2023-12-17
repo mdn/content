@@ -6,9 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.LockManager.query
 ---
 
-{{APIRef("Web Locks API")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}}
 
 The **`query()`** method of the {{domxref("LockManager")}} interface returns a {{jsxref('Promise')}} that resolves with an object containing information about held and pending locks.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
