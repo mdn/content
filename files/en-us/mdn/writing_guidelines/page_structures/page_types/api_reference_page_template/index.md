@@ -122,6 +122,8 @@ Include one term and definition for each method.
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
+_Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+
 - [`eventname1`](#)
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname1` property.
