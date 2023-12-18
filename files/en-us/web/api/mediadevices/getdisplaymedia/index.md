@@ -55,25 +55,25 @@ audio track.
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Returned if an error or failure does not match any of the other exceptions listed here.
+  - : Thrown if an error or failure does not match any of the other exceptions listed here.
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the call to `getDisplayMedia()` was not made from code running due to a
-    user action, such as an event handler. Another potential cause for this event: the
-    {{domxref("document")}} in whose context `getDisplayMedia()` was called is
-    not fully active; for example, perhaps it is not the frontmost tab.
+  - : Thrown if the call to `getDisplayMedia()` was not made from code running due to a
+    {{glossary("transient activation")}}, such as an event handler. Or if the browser context is
+    not fully active or does not focused. Or if the `controller` options has been used to create
+    a {{domxref("MediaStream")}} that captures the contents of a display or portion.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if the permission to access a screen area was denied by the user (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)), or the current browsing instance is not permitted access to screen sharing.
+  - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Returned if no sources of screen video are available for capture.
+  - : Thrown if no sources of screen video are available for capture.
 - `NotReadableError` {{domxref("DOMException")}}
-  - : Returned if the user selected a screen, window, tab, or another source of screen data, but a
+  - : Thrown if the user selected a screen, window, tab, or another source of screen data, but a
     hardware or operating system level error or lockout occurred, preventing the sharing
     of the selected source.
 - `OverconstrainedError` {{domxref("DOMException")}}
-  - : Returned if, after creating the stream, applying any specified constraints fails
+  - : Thrown if, after creating the stream, applying any specified constraints fails
     because no compatible stream could be generated.
 - {{jsxref("TypeError")}}
-  - : Returned if the specified `options` include values that are not permitted
+  - : Thrown if the specified `options` include values that are not permitted
     when calling `getDisplayMedia()`, for example a `video` property set to false, or if any specified {{domxref("MediaTrackConstraints")}} are not permitted. `min` and `exact` values are not permitted in constraints used in `getDisplayMedia()` calls.
 
 ## Security
