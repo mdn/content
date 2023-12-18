@@ -31,6 +31,8 @@ mix-blend-mode: hue;
 mix-blend-mode: saturation;
 mix-blend-mode: color;
 mix-blend-mode: luminosity;
+mix-blend-mode: plus-darker;
+mix-blend-mode: plus-lighter;
 
 /* Global values */
 mix-blend-mode: inherit;
@@ -44,6 +46,10 @@ mix-blend-mode: unset;
 
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : The blending mode that should be applied.
+- `plus-darker`
+  - : Blending using the _plus-darker_ compositing operator.
+- `plus-lighter`blinking
+  - : Blending using the _plus-lighter_ compositing operator. Useful for cross-fade effects (prevents unwanted "blinking" when two overlaying elements animate their opacity in opposite directions).
 
 ## Formal definition
 
