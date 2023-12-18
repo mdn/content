@@ -627,7 +627,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
 
 These are fairly intuitive — once the test completes, we send an API call to BrowserStack to update the test with a passed or failed status, and a reason for the result.
 
-If you now go back to your [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you should see your test session available, as before, but with the updated data attached to it:
+If you now go back to your [BrowserStack automation dashboard](https://live.browserstack.com/dashboard) page, you should see your test session available, as before, but with the updated data attached to it:
 
 ![BrowserStack Custom Results](bstack_custom_results.png)
 
