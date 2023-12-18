@@ -14,7 +14,7 @@ This article provides basic tips to help you design websites for any kind of use
       <th scope="row">Prerequisites:</th>
       <td>
         You should first read
-        <a href="/en-US/docs/Learn/Common_questions/What_is_accessibility"
+        <a href="/en-US/docs/Learn/Common_questions/Design_and_accessibility/What_is_accessibility"
           >What is accessibility?</a
         >, since we don't cover accessibility in detail here.
       </td>

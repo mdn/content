@@ -32,7 +32,7 @@ The links in this section lead to detailed guides explaining how to do a particu
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs"
+        <a href="/en-US/docs/MDN/Community/MDN_content"
           >Fixing MDN content bugs</a
         >
       </td>
@@ -81,7 +81,7 @@ The links in this section lead to detailed guides explaining how to do a particu
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/MDN/Contribute/Help_beginners"
+        <a href="/en-US/docs/MDN/Community/Learn_forum"
           >Help beginners to learn on MDN</a
         >
       </td>
