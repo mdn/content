@@ -29,7 +29,7 @@ The `@property` rule represents a custom property registration directly in a sty
 
     The `+` (space-separated) and `#` (comma-separated) multipliers indicate that a list of values is expected, for example `<color>#` means a comma-separated list of `<color>` values is the expected syntax.
 
-    Vertical lines (`|`) can create "or" conditions for the expected syntax, for example `<length> | auto` accepts a `<length>`, or `auto`, and `<color># | <integer>#` expects a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
+    Vertical lines (`|`) can create "or" conditions for the expected syntax, for example `<length> | auto` accepts a `<length>` or `auto`, and `<color># | <integer>#` expects a comma-separated list of `<color>` values or a comma-separated list of `<integer>` values.
 
 - {{cssxref("@property/inherits","inherits")}}
   - : Controls whether the custom property registration specified by `@property` inherits by default.

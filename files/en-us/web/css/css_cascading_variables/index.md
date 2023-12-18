@@ -7,12 +7,12 @@ spec-urls: https://drafts.csswg.org/css-variables/
 
 {{CSSRef}}
 
-The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables and the mechanisms to use custom properties as the values for other CSS properties.
+The **CSS custom properties for cascading variables** module adds support for cascading variables in CSS properties and lets you create custom properties to define these variables along with the mechanisms to use custom properties as the values for other CSS properties.
 
 When working with CSS, you often end up reusing common project-specific values such as widths that work well with your layout, or a set of colors for your color scheme.
 One way of managing repetition in stylesheets is to define a value once and use it many times in other places.
-Custom properties, also known as custom variables, let you reuse values and simplify complex or repetitive rules which are easier to read and maintain.
-For example, `--dark-grey-text` and `--dark-footer` are easier to understand than hexadecimal colors such as `#00ff00`, and the context of how you use them is more obvious, too.
+Custom properties let you create and define custom variables that can be reused, simplifying complex or repetitive rules and making them easier to read and maintain.
+For example, `--dark-grey-text` and `--dark-background` are easier to understand than hexadecimal colors such as `#323831`, and the context of how you use them is more obvious, too.
 
 ## Custom properties in action
 
@@ -110,6 +110,9 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, setting
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
   - : Explains how to use custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
 
+- [Invalid custom properties](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#invalid_custom_properties)
+  - :  Explains how browsers handle property values when a custom property's value is an invalid data type for that property.
+  
 ## Related concepts
 
 - [CSS Properties and Values API](/en-US/docs/Web/CSS/CSS_properties_and_values_API) module
@@ -123,5 +126,6 @@ Each color swatch increments the {{cssxref("hue")}} value by 10 degrees, setting
 ## See also
 
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
-- [CSS `env()`](Web/CSS/env)
-- [getPropertyValue()](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue)
+- [CSS `env()`](/en-US/docs/Web/CSS/env) function
+- [CSS `calc()`](/en-US/docs/Web/CSS/calc) function
+- [`getPropertyValue()`](/en-US/docs/Web/API/CSSStyleDeclaration/getPropertyValue) method
