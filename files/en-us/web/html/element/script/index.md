@@ -90,7 +90,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `async` has a similar effect in this case.
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching an external script. Allowed values:
 
@@ -144,7 +144,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         Unlike classic scripts, module scripts require the use of the CORS protocol for cross-origin fetching.
     - [`speculationrules`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
       - : This value indicates that the body of the element contains speculation rules.
-        Speculation rules take the form of a JSON object that determine what resources should be prefetched or prerendered by the browser. This is part of the [speculation rules API](/en-US/docs/Web/Performance/Speculative_loading#the_speculation_rules_api).
+        Speculation rules take the form of a JSON object that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
     - **Any other value**
       - : The embedded content is treated as a data block, and won't be processed by the browser.
         Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.

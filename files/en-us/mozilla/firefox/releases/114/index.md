@@ -23,7 +23,7 @@ No notable changes.
 
 - The [`:lang()`](/en-US/docs/Web/CSS/:lang) pseudo-class now uses string-matching semantics (including `*` wildcards) for matching language codes rather than prefix-matching semantics.
   Additionally, comma-separated lists of languages are now supported for matching multiple languages ([Firefox bug 1121792](https://bugzil.la/1121792)).
-- The [-webkit-text-security](/en-US/docs/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
+- The [`-webkit-text-security`](/en-US/docs/Web/CSS/-webkit-text-security) property that lets you replace characters with shapes is now supported. You can now control the rendering of text security using this property ([Firefox bug 1826629](https://bugzil.la/1826629)).
 - The `infinity` and `NaN` constants are now supported inside the [`calc()`](/en-US/docs/Web/CSS/calc) function ([Firefox bug 1830759](https://bugzil.la/1830759)).
 
 ### JavaScript
@@ -40,7 +40,7 @@ No notable changes.
 ### APIs
 
 - [`Window.print()`](/en-US/docs/Web/API/Window/print) now opens a print dialog on Firefox for Android, allowing the current document to be printed ([Firefox bug 1809922](https://bugzil.la/1809922)).
-- The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is now supported, which includes the following interfaces: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream), [`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
+- The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is now supported, which includes the following interfaces: [`WebTransport`](/en-US/docs/Web/API/WebTransport), [`WebTransportBidirectionalStream`](/en-US/docs/Web/API/WebTransportBidirectionalStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream), [`WebTransportReceiveStream`](/en-US/docs/Web/API/WebTransportReceiveStream), [`WebTransportSendStream`](/en-US/docs/Web/API/WebTransportSendStream), [`WebTransportDatagramDuplexStream`](/en-US/docs/Web/API/WebTransportDatagramDuplexStream) and [`WebTransportError`](/en-US/docs/Web/API/WebTransportError).
   For more information see [Firefox bug 1692754](https://bugzil.la/1692754), [Firefox bug 1818754](https://bugzil.la/1818754), and [Firefox bug 1791835](https://bugzil.la/1791835).
 
 - [`CSSImportRule.supportsText`](/en-US/docs/Web/API/CSSImportRule/supportsText) can now be used for getting any `supports()` conditions that were specified when using the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule) ([Firefox bug 1829590](https://bugzil.la/1829590)).

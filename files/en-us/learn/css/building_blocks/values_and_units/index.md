@@ -57,7 +57,7 @@ In the following example, we have set the color of our heading using a keyword, 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197, 93, 161);
+  background-color: rgb(197 93 161);
 }
 ```
 
@@ -216,11 +216,11 @@ Relative length units are relative to something else, perhaps the size of the pa
     </tr>
     <tr>
       <td><code>vb</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">block axis</a>.</td>
     </tr>
     <tr>
       <td><code>vi</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">inline axis</a>.</td>
     </tr>
     <tr>
       <td><code>svw, svh</code></td>
@@ -383,7 +383,7 @@ These values are less intuitive than keywords for defining colors, but they are 
 
 **Again, try changing the values to see how the colors vary.**
 
-### RGB and RGBA values
+### RGB values
 
 To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two).
 
