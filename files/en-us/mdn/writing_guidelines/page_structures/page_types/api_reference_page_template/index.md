@@ -98,7 +98,7 @@ Include one term and definition for each property.
 
 ## Static methods
 
-_Also inherits properties from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits methods from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
 Include one term and definition for each method.
 
