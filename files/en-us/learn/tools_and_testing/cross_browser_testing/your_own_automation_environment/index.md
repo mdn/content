@@ -406,9 +406,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { By, Builder } = require("selenium-webdriver");
 
    // username: Username can be found at automation dashboard
    const USERNAME = "{username}";
@@ -438,7 +436,7 @@ Let's write an example:
      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
 
      // setup and build selenium driver object
-     const driver = new webdriver.Builder()
+     const driver = new Builder()
        .usingServer(gridUrl)
        .withCapabilities(capabilities)
        .build();
@@ -446,12 +444,16 @@ Let's write an example:
      // navigate to a URL, search for a text and get title of page
      driver.get("https://www.google.com/ncr").then(function () {
        driver
-         .findElement(webdriver.By.name("q"))
+         .findElement(By.name("q"))
          .sendKeys("LambdaTest\n")
          .then(function () {
            driver.getTitle().then((title) => {
              setTimeout(() => {
-               console.log(title);
+             if (title === "LambdaTest - Google Search") {
+               driver.executeScript("lambda-status=passed");
+             } else {
+               driver.executeScript("lambda-status=failed");
+             }
                driver.quit();
              }, 5000);
            });
@@ -472,28 +474,13 @@ Let's write an example:
    The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
    If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
 
-5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data. You will also see a status of **passed** or **failed** instead of **completed**, because of the `if` or `else` blocks of code.
+
    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
 > **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
 > **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
-
-#### Filling in test details on LambdaTest programmatically
-
-When executing numerous automation tests, marking their status as passed or failed makes the task a lot easier.
-
-1. Add the below line of code after the `get()` function to mark a status as **passed** on LambdaTest.
-
-   ```js
-   driver.executeScript("lambda-status=passed");
-   ```
-
-2. Add the below line of code after the `get()` function to mark a status as **failed** on LambdaTest.
-
-   ```js
-   driver.executeScript("lambda-status=failed");
-   ```
 
 ### BrowserStack
 
