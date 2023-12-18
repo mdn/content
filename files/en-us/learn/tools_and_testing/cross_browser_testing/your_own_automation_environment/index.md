@@ -472,7 +472,7 @@ Let's write an example:
    The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
    If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
 
-5. Now if you go to your [LambdaTest Automation dashboard](https://www.lambdatest.com/selenium-automation), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
 > **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
