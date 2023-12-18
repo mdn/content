@@ -11,11 +11,11 @@ The **`ServiceWorker`** interface of the [Service Worker API](/en-US/docs/Web/AP
 
 A `ServiceWorker` object is available via a number of propertes:
 
- - {{domxref("ServiceWorkerRegistration.active")}}
- - {{domxref("ServiceWorkerGlobalScope.serviceWorker")}}
- - {{domxref("ServiceWorkerContainer.controller")}} — when the service worker is in `activating` or `activated` state
- - {{domxref("ServiceWorkerRegistration.installing")}} — when the service worker is in `installing` state
- - {{domxref("ServiceWorkerRegistration.waiting")}} — when the service worker is in `installed` state
+- {{domxref("ServiceWorkerRegistration.active")}}
+- {{domxref("ServiceWorkerGlobalScope.serviceWorker")}}
+- {{domxref("ServiceWorkerContainer.controller")}} — when the service worker is in `activating` or `activated` state
+- {{domxref("ServiceWorkerRegistration.installing")}} — when the service worker is in `installing` state
+- {{domxref("ServiceWorkerRegistration.waiting")}} — when the service worker is in `installed` state
 
 The `ServiceWorker` interface is dispatched a set of lifecycle events — `install` and `activate` — and functional events including `fetch`. A `ServiceWorker` object has an associated {{domxref("ServiceWorker.state")}}, related to its lifecycle.
 
