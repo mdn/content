@@ -41,7 +41,7 @@ If you know of a good demonstration or application of open web technology, pleas
 ### Virtual Reality
 
 - The Polar Sea ([source code](https://github.com/MozillaReality/polarsea))
-- Sechelt fly-through ([source code](https://github.com/MozillaReality/sechelt))
+- [Sechelt fly-through](https://mozvr.github.io/sechelt/) ([source code](https://github.com/MozillaReality/sechelt))
 
 ## CSS
 
