@@ -48,8 +48,8 @@ mix-blend-mode: unset;
   - : The blending mode that should be applied.
 - `plus-darker`
   - : Blending using the _plus-darker_ compositing operator.
-- `plus-lighter`blinking
-  - : Blending using the _plus-lighter_ compositing operator. Useful for cross-fade effects (prevents unwanted "blinking" when two overlaying elements animate their opacity in opposite directions).
+- `plus-lighter`
+  - : Blending using the _plus-lighter_ compositing operator. Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
 
 ## Formal definition
 
