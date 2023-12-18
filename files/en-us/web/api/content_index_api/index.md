@@ -6,9 +6,7 @@ status:
   - experimental
 browser-compat:
   - api.ContentIndex
-  - api.ContentIndexEvent
   - api.ServiceWorkerRegistration.index
-  - api.ServiceWorkerGlobalScope.contentdelete_event
 spec-urls: https://wicg.github.io/content-index/spec/
 ---
 
