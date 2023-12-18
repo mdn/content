@@ -22,60 +22,34 @@ new Intl.DisplayNames(locales, options)
 ### Parameters
 
 - `locales`
-
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument). The following Unicode extension key is allowed:
-
-    - `nu`
-      - : The numbering system to be used. Possible values include:
-        `"arab"`, `"arabext"`, `"bali"`,
-        `"beng"`, `"deva"`, `"fullwide"`,
-        `"gujr"`, `"guru"`, `"hanidec"`,
-        `"khmr"`, `"knda"`, `"laoo"`,
-        `"latn"`, `"limb"`, `"mlym"`,
-        `"mong"`, `"mymr"`, `"orya"`,
-        `"tamldec"`, `"telu"`, `"thai"`,
-        `"tibt"`.
-
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options`
-
-  - : An object with some or all of the following properties:
-
-    - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are
-        `"lookup"` and `"best fit"`; the default is
-        `"best fit"`. For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
-    - `style`
-
-      - : The formatting style to use, the default is `"long"`.
-
-        - `"narrow"`
-        - `"short"`
-        - `"long"`
-
+  - : An object containing the following properties, in the order they are retrieved:
+    - `localeMatcher` {{optional_inline}}
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+    - `style` {{optional_inline}}
+      - : The formatting style to use. Possible values are `"narrow"`, `"short"`, and `"long"`; the default is `"long"`.
     - `type`
-
-      - : The type to use.
-
-        - `"calendar"`
-        - `"currency"`
-        - `"dateTimeField"`
-        - `"language"`
-        - `"region"`
-        - `"script"`
-
-    - `languageDisplay`
-
-      - : The `languageDisplay` it's only usable along with type `language`, defaults to `dialect`.
-        - `"dialect"`
-        - `"standard"`
-
-    - `fallback`
-
-      - : The fallback to use, the default is `"code"`.
-
-        - `"code"`
+      - : The type of display names to return from [`of()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of). Possible values are `"language"`, `"region"`, `"script"`, `"currency"`, `"calendar"`, and `"dateTimeField"`.
+    - `fallback` {{optional_inline}}
+      - : What to return from `of()` if the input is structurally valid but there's no matching display name. Possible values are:
+        - `"code"` (default)
+          - : Return the input code itself.
         - `"none"`
+          - : Return `undefined`.
+    - `languageDisplay` {{optional_inline}}
+      - : How language names should be displayed. Only usable along with `type: "language"`. Possible values are:
+        - `"dialect"` (default)
+          - : Display special regional dialects using their own name. E.g. `"nl-BE"` will be displayed as `"Flemish"`.
+        - `"standard"`
+          - : Display all languages using standard format. E.g. `"nl-BE"` will be displayed as `"Dutch (Belgium)"`.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `options.type` is not provided.
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -151,4 +125,4 @@ console.log(dnStd.of("en-GB")); // 'English (United Kingdom)'
 
 - {{jsxref("Intl.DisplayNames")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

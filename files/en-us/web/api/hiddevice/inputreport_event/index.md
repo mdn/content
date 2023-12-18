@@ -41,7 +41,7 @@ _This interface also inherits properties from {{domxref("Event")}}._
 
 ## Example
 
-The following example demonstrates listening for an `inputreport` event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The following example demonstrates listening for an `inputreport` event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 device.addEventListener("inputreport", (event) => {

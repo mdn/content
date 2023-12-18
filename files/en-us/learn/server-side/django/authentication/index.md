@@ -65,7 +65,7 @@ MIDDLEWARE = [
 You already created your first user when we looked at the [Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site) in tutorial 4 (this was a superuser, created with the command `python manage.py createsuperuser`).
 Our superuser is already authenticated and has all permissions, so we'll need to create a test user to represent a normal site user. We'll be using the admin site to create our _locallibrary_ groups and website logins, as it is one of the quickest ways to do so.
 
-> **Note:** You can also create users programmatically, as shown below.
+> **Note:** You can also create users programmatically as shown below.
 > You would have to do this, for example, if developing an interface to allow "ordinary" users to create their own logins (you shouldn't give most users access to the admin site).
 >
 > ```python
@@ -80,7 +80,24 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 > user.save()
 > ```
 >
-> It is highly recommended to set up a custom user model when starting an actual project. You'll be able to easily customize it in the future if the need arises. For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.0/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
+> Note however that it is highly recommended to set up a _custom user model_ when starting a project, as you'll be able to easily customize it in the future if the need arises.
+> If using a custom user model the code to create the same user would look like this:
+>
+> ```python
+> # Get current user model from settings
+> from django.contrib.auth import get_user_model
+> User = get_user_model()
+>
+> # Create user from model and save to the database
+> user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+>
+> # Update fields and then save again
+> user.first_name = 'Tyrone'
+> user.last_name = 'Citizen'
+> user.save()
+> ```
+>
+> For more information, see [Using a custom user model when starting a project](https://docs.djangoproject.com/en/4.2/topics/auth/customizing/#using-a-custom-user-model-when-starting-a-project) (Django docs).
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
@@ -119,9 +136,11 @@ Django provides almost everything you need to create authentication pages to han
 
 In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
 
-> **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier. You'll almost certainly need to change the form handling code if you change your user model (an advanced topic!) but even so, you would still be able to use the stock view functions.
+> **Note:** You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
+> You'll almost certainly need to change the form handling code if you change your user model, but even so, you would still be able to use the stock view functions.
 
-> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application. However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
+> **Note:** In this case, we could reasonably put the authentication pages, including the URLs and templates, inside our catalog application.
+> However, if we had multiple applications it would be better to separate out this shared login behavior and have it available across the whole site, so that is what we've shown here!
 
 ### Project URLs
 
@@ -239,7 +258,7 @@ Create a new HTML file called /**locallibrary/templates/registration/login.html*
     <input type="hidden" name="next" value="\{{ next }}">
   </form>
 
-  {# Assumes you setup the password_reset view in your URLconf #}
+  {# Assumes you set up the password_reset view in your URLconf #}
   <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
 
 {% endblock %}
@@ -391,7 +410,7 @@ You'll be able to test the password reset functionality from the link in the log
 > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/4.0/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/4.2/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -456,7 +475,7 @@ class MyView(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
 ```
 
-For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.0/topics/auth/default/#limiting-access-to-logged-in-users).
+For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/4.2/topics/auth/default/#limiting-access-to-logged-in-users).
 
 ## Example — listing the current user's books
 
@@ -466,19 +485,31 @@ Unfortunately, we don't yet have any way for users to borrow books! So before we
 
 ### Models
 
-First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a User. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
+First, we're going to have to make it possible for users to have a `BookInstance` on loan (we already have a `status` and a `due_back` date, but we don't yet have any association between this model and a particular user. We'll create one using a `ForeignKey` (one-to-many) field. We also need an easy mechanism to test whether a loaned book is overdue.
 
-Open **catalog/models.py**, and import the `User` model from `django.contrib.auth.models` (add this just below the previous import line at the top of the file, so `User` is available to subsequent code that makes use of it):
-
-```python
-from django.contrib.auth.models import User
-```
-
-Next, add the `borrower` field to the `BookInstance` model:
+Open **catalog/models.py**, and import the `settings` from `django.conf` (add this just below the previous import line at the top of the file, so the settings are available to subsequent code that makes use of them):
 
 ```python
-borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+from django.conf import settings
 ```
+
+Next, add the `borrower` field to the `BookInstance` model, setting the user model for the key as the value of the setting `AUTH_USER_MODEL`.
+Since we have not overridden the setting with a [custom user model](https://docs.djangoproject.com/en/4.2/topics/auth/customizing/) this maps to the default `User` model from `django.contrib.auth.models`.
+
+```python
+borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
+```
+
+> **Note:** Importing the model in this way reduces the work required if you later discover that you need a custom user model.
+> This tutorial uses the default model, so you could instead import the `User` model directly with the following lines:
+>
+> ```python
+> from django.contrib.auth.models import User
+> ```
+>
+> ```python
+> borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+> ```
 
 While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
 While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
@@ -687,9 +718,9 @@ from django.contrib.auth.mixins import PermissionRequiredMixin
 class MyView(PermissionRequiredMixin, View):
     permission_required = 'catalog.can_mark_returned'
     # Or multiple permissions
-    permission_required = ('catalog.can_mark_returned', 'catalog.can_edit')
-    # Note that 'catalog.can_edit' is just an example
-    # the catalog application doesn't have such permission!
+    permission_required = ('catalog.can_mark_returned', 'catalog.change_book')
+    # Note that 'catalog.change_book' is permission
+    # Is created automatically for the book model, along with add_book, and delete_book
 ```
 
 > **Note:** There is a small default difference in the behavior above. By **default** for a logged-in user with a permission violation:
@@ -733,8 +764,8 @@ In our next article, we'll look at how you can use Django forms to collect user 
 
 ## See also
 
-- [User authentication in Django](https://docs.djangoproject.com/en/4.0/topics/auth/) (Django docs)
-- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.0/topics/auth/default/) (Django docs)
-- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
+- [User authentication in Django](https://docs.djangoproject.com/en/4.2/topics/auth/) (Django docs)
+- [Using the (default) Django authentication system](https://docs.djangoproject.com/en/4.2/topics/auth/default/) (Django docs)
+- [Introduction to class-based views > Decorating class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}

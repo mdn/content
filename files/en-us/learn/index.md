@@ -59,9 +59,27 @@ The following is a list of all the topics we cover in the MDN learning area.
 - [Server-side website programming](/en-US/docs/Learn/Server-side)
   - : Even if you are concentrating on client-side web development, it is still useful to know how servers and server-side code features work. This topic provides a general introduction to how the server-side works and detailed tutorials showing how to build up a server-side app using two popular frameworks: Django (Python) and Express (Node.js).
 
+## Tasks and assessments
+
+In the Learn web development section of MDN, there are many self-contained modules that contain articles, tasks, examples, and assessments for you to complete.
+Here are some tips on how to get the most out of them.
+There are two main types of tasks you'll encounter:
+
+- "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
+- more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+
+For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
+
+Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
+There are patterns that make it easier to find these resources, for example:
+
+- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
+
 ## Getting our code examples
 
-The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/). If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
+The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/).
+If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
@@ -97,6 +115,8 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
+- [MDN Blog](/en-US/blog/)
+  - : The MDN blog has articles from the MDN team and guest writers about new developments on the site, HTML, CSS, JavaScript, and other web development news.
 - [Mozilla developer newsletter](https://www.mozilla.org/en-US/newsletter/developer/)
   - : Our newsletter for web developers, which is an excellent resource for all levels of experience.
 - [Learn JavaScript](https://learnjavascript.online/)

@@ -119,4 +119,11 @@ Our markup includes three custom elements, including a custom element with an in
 
 ## See also
 
+- {{cssxref(":host")}}
+- {{cssxref(":host_function", ":host()")}}
+- {{cssxref(":host-context", ":host-context()")}}
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+- HTML {{HTMLElement("slot")}} element
+- HTML {{HTMLElement("template")}} element
 - [Web components](/en-US/docs/Web/API/Web_components)

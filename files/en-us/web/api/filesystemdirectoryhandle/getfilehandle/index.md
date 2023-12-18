@@ -29,7 +29,7 @@ getFileHandle(name, options)
 
   - : An object with the following properties:
 
-    - `create`
+    - `create` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`. When
         set to `true` if the file is not found, one with the specified name
         will be created and returned.
@@ -41,14 +41,14 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemFileHandle')}
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode if the `create` option is set to `true` or in `read` mode if the `create` option is set to `false`.
 - {{jsxref("TypeError")}}
   - : Thrown if the name specified is not a valid string or contains characters that would
-    interfere with the native file system
+    interfere with the native file system.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the named entry is a directory and not a file.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if file doesn't exist and the `create` option is set to
+  - : Thrown if the current entry is not found or if the file doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples
@@ -74,4 +74,4 @@ const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

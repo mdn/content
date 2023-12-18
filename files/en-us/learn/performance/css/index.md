@@ -48,6 +48,7 @@ Showing users an unstyled page and then repainting it after the CSS styles have 
 To optimize the CSSOM construction and improve page performance, you can do one or more of the following based on the current state of your CSS:
 
 - **Remove unnecessary styles**: This may sound obvious, but it is surprising how many developers forget to clean up unused CSS rules that were added to their stylesheets during development and ended up not being used. All styles get parsed, whether they are being used during layout and painting or not, so it can speed up page rendering to get rid of unused ones. As [How Do You Remove Unused CSS From a Site?](https://css-tricks.com/how-do-you-remove-unused-css-from-a-site/) (csstricks.com, 2019) summarizes, this is a difficult problem to solve for a large codebase, and there isn't a magic bullet to reliably find and remove unused CSS. You need to do the hard work of keeping your CSS modular and being careful and deliberate about what is added and removed.
+
 - **Split CSS into separate modules**: Keeping CSS modular means that CSS not required at page load can be loaded later on, reducing initial CSS render-blocking and loading times. The simplest way to do this is by splitting up your CSS into separate files and loading only what is needed:
 
   ```html
@@ -84,7 +85,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   Making your selectors less complex and specific is also good for maintenance. It is easy to understand what simple selectors are doing, and it is easy to override styles when needed later on if the selectors are less [specific](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2).
 
-- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negtively, especially on larger sites.
+- **Don't apply styles to more elements than needed**: A common mistake is to apply styles to all elements using the [universal selector](/en-US/docs/Web/CSS/Universal_selectors), or at least, to more elements than needed. This kind of styling can impact performance negatively, especially on larger sites.
 
   ```css
   /* Selects every element inside the <body> */
@@ -119,7 +120,7 @@ To optimize the CSSOM construction and improve page performance, you can do one 
 
   With `preload`, the browser will fetch the referenced resources as soon as possible and make them available in the browser cache so that they will be ready for use sooner when they are referenced in subsequent code. It is useful to preload high-priority resources that the user will encounter early on in a page so that the experience is as smooth as possible. Note how you can also use `media` attributes to create responsive preloaders.
 
-  See also [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
+  See also [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 ## Handling animations
 
@@ -171,7 +172,7 @@ Browsers may set up optimizations before an element is actually changed. These k
 
 ## Optimizing for render blocking
 
-CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
+CSS can scope styles to particular conditions with media queries. Media queries are important for a responsive web design and help us optimize a critical rendering path. The browser blocks rendering until it parses all of these styles but will not block rendering on styles it knows it will not use, such as the print stylesheets. By splitting the CSS into multiple files based on media queries, you can prevent render blocking during download of unused CSS. To create a non-blocking CSS link, move the not-immediately used styles, such as print styles, into separate file, add a [`<link>`](/en-US/docs/Web/HTML/Element/link) to the HTML mark up, and add a media query, in this case stating it's a print stylesheet.
 
 ```html
 <!-- Loading and parsing styles.css is render-blocking -->
@@ -229,16 +230,14 @@ This is more likely to be beneficial if your `font-family` declaration is hidden
 
 You can also consider:
 
-- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/font-best-practices/#preconnect-to-critical-third-party-origins) for details.
+- Using [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to make an early connection with the font provider. See [Preconnect to critical third-party origins](https://web.dev/articles/font-best-practices#preconnect_to_critical_third-party_origins) for details.
 - Using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) to customize the font loading behavior via JavaScript.
 
 ### Loading only the glyphs you need
 
 When choosing a font for body copy, it is harder to be sure of the glyphs that will be used in it, especially if you are dealing with user-generated content and/or content across multiple languages.
 
-However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This could be done in a brute-force way by creating a font file that only contains the required subset.
-
-However, there is a smarter way. The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can be used to specify the exact subset of glyphs, or glyph ranges, that you want to download:
+However, if you know you are going to use a specific set of glyphs (for example, glyphs for headings or specific punctuation characters only), you could limit the number of glyphs the browser has to download. This can be done by creating a font file that only contains the required subset. A process called [subsetting](https://fonts.google.com/knowledge/glossary/subsetting). The [`unicode-range`](/en-US/docs/Web/CSS/@font-face/unicode-range) `@font-face` descriptor can then be used to specify when your subset font is used. If the page doesn't use any character in this range, the font is not downloaded.
 
 ```css
 @font-face {
@@ -276,7 +275,7 @@ article {
 
 The {{cssxref("content-visibility")}} property is a useful shortcut, which allows authors to apply a strong set of containments on a set of containers and specify that the browser should not lay out and render those containers until needed.
 
-A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been renderered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view. This improves the quality of the user experience as the content is loaded.
+A second property, {{cssxref("contain-intrinsic-size")}}, is also available, which allows you to provide a placeholder size for containers while they are under the effects of containment. This means that the containers will take up space even if their contents have not yet been rendered, allowing containment to do its performance magic without the risk of scroll bar shift and jank as elements render and come into view. This improves the quality of the user experience as the content is loaded.
 
 ```css
 article {
@@ -290,5 +289,5 @@ article {
 ## See also
 
 - [CSS animation performance](/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance)
-- [Best practices for fonts](https://web.dev/font-best-practices/) on web.dev (2022)
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility/) on web.dev (2022)
+- [Best practices for fonts](https://web.dev/articles/font-best-practices) on web.dev (2022)
+- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) on web.dev (2022)

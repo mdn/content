@@ -176,18 +176,19 @@ Create **/views/genre_form.pug** and copy in the text below.
 extends layout
 
 block content
+
   h1 #{title}
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='name') Genre:
-      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name))
+      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
     button.btn.btn-primary(type='submit') Submit
 
   if errors
-   ul
-    for error in errors
-     li!= error.msg
+    ul
+      for error in errors
+        li!= error.msg
 ```
 
 Much of this template will be familiar from our previous tutorials. First, we extend the **layout.pug** base template and override the `block` named '**content**'. We then have a heading with the `title` we passed in from the controller (via the `render()` method).
@@ -206,14 +207,14 @@ Run the application, open your browser to `http://localhost:3000/`, then select 
 
 ![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 
-The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
+The only error we validate against server-side is that the genre field must have at least three characters. The screenshot below shows what the error list would look like if you supply a genre with only one or two characters (highlighted in yellow).
 
 ![The Create Genre section of the Local library application. The left column has a vertical navigation bar. The right section is the create a new Genre from with a heading that reads 'Create Genre'. There is one input field labeled 'Genre'. There is a submit button at the bottom. There is an error message that reads 'Genre name required' directly below the Submit button. The error message was highlighted by the author of this article. There is no visual indication in the form that the genre is required nor that the error message only appears on error.](locallibary_express_genre_create_error.png)
 
-> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
+> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the [boolean attribute](/en-US/docs/Glossary/Boolean/HTML) `required` to the field definition in the form:
 >
 > ```pug
-> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' value=(undefined===genre ? '' : genre.name), required='true' )
+> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
 > ```
 
 ## Next steps

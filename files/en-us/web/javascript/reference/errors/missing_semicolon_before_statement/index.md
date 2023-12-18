@@ -41,7 +41,7 @@ many parenthesis somewhere. Carefully check the syntax when this error is thrown
 This error can occur easily when not escaping strings properly and the JavaScript
 engine is expecting the end of your string already. For example:
 
-```js example-bad
+```js-nolint example-bad
 const foo = 'Tom's bar';
 // SyntaxError: missing ; before statement
 ```
@@ -59,7 +59,7 @@ const foo = 'Tom\'s bar';
 You **cannot** declare properties of an object or array with a
 `let`, `const`, or `var` declaration.
 
-```js example-bad
+```js-nolint example-bad
 const obj = {};
 const obj.foo = "hi"; // SyntaxError missing ; before statement
 
@@ -82,7 +82,7 @@ array[0] = "there";
 If you come from another programming language, it is also common to use keywords that
 don't mean the same or have no meaning at all in JavaScript:
 
-```js example-bad
+```js-nolint example-bad
 def print(info) {
   console.log(info);
 } // SyntaxError missing ; before statement
@@ -99,4 +99,4 @@ function print(info) {
 ## See also
 
 - [Automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)
-- [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)
+- [Statements and declarations](/en-US/docs/Web/JavaScript/Reference/Statements)

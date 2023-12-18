@@ -88,7 +88,7 @@ If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list#
 }
 ```
 
-The {{cssxref("is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
+The {{cssxref(":is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
 
 ## Specifications
 

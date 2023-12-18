@@ -30,7 +30,7 @@ getDirectoryHandle(name, options)
   - : An optional object containing options for the retrieved subdirectory. Options are as
     follows:
 
-    - `create`
+    - `create` {{optional_inline}}
       - : A boolean value, which defaults to `false`. When
         set to `true` if the directory is not found, one with the specified
         name will be created and returned.
@@ -42,11 +42,14 @@ A {{jsxref('Promise')}} which resolves with a {{domxref('FileSystemDirectoryHand
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if {{domxref('PermissionStatus')}} is not 'granted'.
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `readwrite` mode if the `create` option is set to `true` or in `read` mode if the `create` option is set to `false`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the name specified is not a valid string or contains characters that would
+    interfere with the native file system.
 - `TypeMismatchError` {{domxref("DOMException")}}
   - : Thrown if the returned entry is a file and not a directory.
 - `NotFoundError` {{domxref("DOMException")}}
-  - : Thrown if directory doesn't exist and the `create` option is set to
+  - : Thrown if the current entry is not found or if the target directory doesn't exist and the `create` option is set to
     `false`.
 
 ## Examples
@@ -72,4 +75,4 @@ const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

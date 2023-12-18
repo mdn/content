@@ -71,7 +71,7 @@ Servers should ignore this header if it contains any other value.
 - `embed`
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`
-  - : The destination is the empty string. This is used for destinations that do not have their own value. For example `fetch()`, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
+  - : The destination is the empty string. This is used for destinations that do not have their own value. For example: {{domxref("fetch()")}}, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
 - `font`
   - : The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.
 - `frame`
@@ -131,5 +131,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

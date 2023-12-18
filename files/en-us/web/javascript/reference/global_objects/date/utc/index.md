@@ -23,6 +23,8 @@ Date.UTC(year, monthIndex, day, hour, minute, second)
 Date.UTC(year, monthIndex, day, hour, minute, second, millisecond)
 ```
 
+### Parameters
+
 - `year`
   - : Integer value representing the year. Values from `0` to `99` map to the years `1900` to `1999`. All other values are the actual year. See the [example](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#interpretation_of_two-digit_years).
 - `monthIndex` {{optional_inline}}

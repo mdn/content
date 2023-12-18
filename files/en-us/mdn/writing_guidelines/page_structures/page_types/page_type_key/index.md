@@ -148,7 +148,19 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
 
-### WebDriver
+### WebAssembly page types
+
+This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs/WebAssembly). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the generic page type values.
+
+- `webassembly-function`: a global function, that is a method directly under the `WebAssembly` object that acts as a namespace, like [`WebAssembly.instantiate()`](WebAssembly/JavaScript_interface/instantiate).
+- `webassembly-constructor`: a constructor, like [`WebAssembly.Exception()`](WebAssembly/JavaScript_interface/Exception/Exception).
+- `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](WebAssembly/JavaScript_interface/LinkError).
+- `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](WebAssembly/JavaScript_interface/Instance/exports).
+- `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](WebAssembly/JavaScript_interface/Exception/getArg).
+- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](WebAssembly/JavaScript_interface/Module/exports_static).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](WebAssembly/Reference/Numeric/Wrap).
+
+### WebDriver page types
 
 This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
@@ -175,20 +187,20 @@ This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs
 
 ### XPath page types
 
-This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/Web/XPath). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `xpath-function`: a function, like [`ceiling()`](/en-US/docs/Web/XPath/Functions/ceiling)
 
 ### XSLT page types
 
-This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/WWeb/XSLT/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
 - `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
 
 ### EXSLT page types
 
-This section lists `page-type` values for pages under [Web/Manifest](/en-US/docs/Web/Manifest). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
+This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/EXSLT/exsl/node-set).
 

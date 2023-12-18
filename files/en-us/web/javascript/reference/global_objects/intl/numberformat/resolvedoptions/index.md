@@ -17,6 +17,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.NumberFormat")}} instances 
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the [locale and number formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) computed during the construction of the given {{jsxref("Intl.NumberFormat")}} object.
@@ -133,4 +137,4 @@ console.log(usedOptions.useGrouping); // auto
 
 ## See also
 
-- {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+- {{jsxref("Intl.NumberFormat")}}

@@ -63,10 +63,10 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 ### Define the lifetime of a cookie
 
-The lifetime of a cookie can be defined in two ways:
+Cookies can persist for two different periods, depending on the attributes used with the {{HTTPHeader("Set-Cookie")}} header when they were created:
 
-- _Session_ cookies are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
-- _Permanent_ cookies are deleted at a date specified by the `Expires` attribute, or after a period of time specified by the `Max-Age` attribute.
+- _Permanent_ cookies are deleted at a date specified by the `Expires` attribute or after a period prescribed by the `Max-Age` attribute.
+- _Session_ cookies – cookies without a `Max age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
 For example:
 
@@ -98,9 +98,11 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
 
 #### Domain attribute
 
-The `Domain` attribute specifies which hosts can receive a cookie. If the server does not specify a `Domain`, the browser defaults the domain to the same {{Glossary("host")}} that set the cookie, _excluding subdomains_. If `Domain` _is_ specified, then subdomains are always included. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
+The `Domain` attribute specifies which server can receive a cookie.
 
-For example, if you set `Domain=mozilla.org`, cookies are available on subdomains like `developer.mozilla.org`.
+If specified, then cookies are available on the server and its subdomains. For example, if you set `Domain=mozilla.org`, cookies are available on mozilla.org and its subdomains like `developer.mozilla.org`.
+
+If the server does not specify a `Domain`, the cookies are available on the server _but not on its subdomains_. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user.
 
 #### Path attribute
 

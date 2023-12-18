@@ -10,8 +10,7 @@ browser-compat: api.WakeLock.request
 
 The **`request()`** method of the
 {{domxref("WakeLock")}} interface returns a {{jsxref("Promise")}} that resolves with a
-{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and
-locking.
+{{domxref("WakeLockSentinel")}} object, which allows control over screen dimming and locking.
 
 ## Syntax
 
@@ -21,13 +20,14 @@ request(type)
 
 ### Parameters
 
-- `type`
+- `type` {{optional_inline}}
 
-  - : Options are as follows:
+  - : A string specifying the screen wake lock type, from among the following enumerated types:
 
-    - `'screen'`
-      - : Requests a screen wake lock. Prevents devices from
-        dimming or locking the screen.
+    - `screen`
+      - : Prevents the screen from turning off. Only visible documents can acquire the screen wake lock.
+
+If no `type` parameter is explicitly specified, the `request()` method defaults to using the `screen` type.
 
 ### Return value
 
@@ -35,13 +35,13 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 
 ### Exceptions
 
-- `NotAllowedError`
+- `NotAllowedError` {{domxref("DOMException")}}
 
   - : Thrown when wake lock is not available, which can happen because:
 
     - Use of this feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - The document is not fully active.
-    - The document is hidden.
+    - The document's visibility state is `hidden`.
     - The {{Glossary("User Agent")}} could not acquire platform's wake lock.
 
 ## Examples
@@ -74,5 +74,4 @@ requestWakeLock();
 
 ## See also
 
-- {{DOMxRef("WakeLock")}}
-- {{DOMxRef("Navigator.wakeLock")}}
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)

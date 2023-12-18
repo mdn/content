@@ -23,7 +23,7 @@ The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Strea
 
 ## Examples
 
-The following example is from the article [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/), and demonstrates a barcode scanner application, which transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}} by highlighting the barcode.
+The following example is from the article [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing), and demonstrates a barcode scanner application, which transforms the stream accessed via {{domxref("MediaStreamTrackProcessor.readable")}} by highlighting the barcode.
 
 ```js
 const stream = await getUserMedia({ video: true });

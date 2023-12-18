@@ -7,7 +7,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/#workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) (although the `responseXML` and `channel` attributes are always null) or [`fetch`](/en-US/docs/Web/API/Fetch_API) (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
 
 This article provides a detailed introduction to using web workers.
 
@@ -23,7 +23,9 @@ You can run whatever code you like inside the worker thread, with some exception
 
 Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's data attribute). The data is copied rather than shared.
 
-Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
+
+In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ## Dedicated workers
 
@@ -694,24 +696,24 @@ Workers are mainly useful for allowing your code to perform processor-intensive 
 The following JavaScript code is stored in the "fibonacci.js" file referenced by the HTML in the next section.
 
 ```js
-self.onmessage = (e) => {
-  const userNum = Number(e.data);
-  fibonacci(userNum);
+self.onmessage = (event) => {
+  const userNum = Number(event.data);
+  self.postMessage(fibonacci(userNum));
 };
 
 function fibonacci(num) {
   let a = 1;
   let b = 0;
-  while (num >= 0) {
+  while (num > 0) {
     [a, b] = [a + b, a];
     num--;
   }
 
-  self.postMessage(b);
+  return b;
 }
 ```
 
-The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called (note that this differs from defining a _function_ with that name. `var onmessage`, `let onmessage` and `function onmessage` will define global properties with those names, but they will not register the function to receive messages sent by the web page that created the worker). This performs the math and eventually returns the result back to the main thread.
+The worker sets the property `onmessage` to a function which will receive messages sent when the worker object's `postMessage()` is called. This performs the math and eventually returns the result back to the main thread.
 
 #### The HTML code
 
@@ -736,9 +738,10 @@ The worker sets the property `onmessage` to a function which will receive messag
     <form>
       <div>
         <label for="number"
-          >Enter a number that is an index position in the fibonacci sequence to
-          see what number is in that position (e.g. enter 5 and you'll get a
-          result of 8 — fibonacci index position 5 is 8).</label
+          >Enter a number that is a zero-based index position in the fibonacci
+          sequence to see what number is in that position. For example, enter 6
+          and you'll get a result of 8 — the fibonacci number at index position
+          6 is 8.</label
         >
         <input type="number" id="number" />
       </div>
@@ -775,7 +778,7 @@ The worker sets the property `onmessage` to a function which will receive messag
 </html>
 ```
 
-The web page creates a `<div>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<div>` element, and the `onerror` handler is set to log the error message to the devtools console.
+The web page creates a `<p>` element with the ID `result`, which gets used to display the result, then spawns the worker. After spawning the worker, the `onmessage` handler is configured to display the results by setting the contents of the `<p>` element, and the `onerror` handler is set to log the error message to the devtools console.
 
 Finally, a message is sent to the worker to start it.
 
@@ -806,7 +809,7 @@ To learn how to debug web workers, see the documentation for each browser's Java
 You can use most standard JavaScript features inside a web worker, including:
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
+- {{domxref("fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
 

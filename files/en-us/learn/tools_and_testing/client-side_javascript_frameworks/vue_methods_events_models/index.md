@@ -85,7 +85,7 @@ We now have an app that displays a list of to-do items. However, we can't update
 
    ```js
    components: {
-     ToDoItem, ToDoForm;
+     ToDoItem, ToDoForm,
    }
    ```
 
@@ -147,7 +147,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
    - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to {{Glossary("kebab_case", "kebab-case")}} (e.g. `page-down`).
    - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
    - `.once`: Listens for the event until it's been triggered once, and then no more.
    - `.left`: Only triggers the handler via the left mouse button event.
@@ -161,7 +161,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    <form @submit.prevent="onSubmit">…</form>
    ```
 
-If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log) we added inside our `onSubmit()` method.
+If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log_static) we added inside our `onSubmit()` method.
 
 ## Binding data to inputs with v-model
 

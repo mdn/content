@@ -24,6 +24,8 @@ _`WindowClient` inherits methods from its parent interface, {{domxref("Client")}
 
 _`WindowClient` inherits properties from its parent interface, {{domxref("Client")}}._
 
+- {{domxref("WindowClient.ancestorOrigins")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : An array of strings that indicates the ancestor origins of the browsing context represented by this `WindowClient` in reverse order.
 - {{domxref("WindowClient.focused")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the current client has focus.
 - {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
@@ -68,7 +70,5 @@ self.addEventListener("notificationclick", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

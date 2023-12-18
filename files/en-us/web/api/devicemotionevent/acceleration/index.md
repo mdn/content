@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEvent.acceleration
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`acceleration`** property returns the amount of acceleration recorded by
+The **`acceleration`** read-only property of the {{domxref("DeviceMotionEvent")}} interface returns the amount of acceleration recorded by
 the device, in [meters per second squared (m/s²)](https://en.wikipedia.org/wiki/Meter_per_second_squared).
 The acceleration value does not include the effect of
 the gravity force, in contrast to {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}.
@@ -40,10 +40,6 @@ acceleration on three axis. Each axis is represented with its own property:
 
 ## See also
 
-- {{DOMxRef("DeviceMotionEvent.accelerationIncludingGravity")}}
-- {{DOMxRef("window.devicemotion_event", "devicemotion") }} event
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
-- {{DOMxRef("DeviceOrientationEvent")}}
-- {{DOMxRef("LinearAccelerationSensor")}}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
+- {{DOMxRef("Window/devicemotion_event", "devicemotion")}} event

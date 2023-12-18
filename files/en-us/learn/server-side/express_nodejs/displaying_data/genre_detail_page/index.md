@@ -70,15 +70,14 @@ block content
   div(style='margin-left:20px;margin-top:20px')
 
     h4 Books
-
-    dl
-      each book in genre_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
-
-      else
-        p This genre has no books
+    if genre_books.length
+      dl
+        each book in genre_books
+          dt
+            a(href=book.url) #{book.title}
+          dd #{book.summary}
+    else
+      p This genre has no books.
 ```
 
 The view is very similar to all our other templates. The main difference is that we don't use the `title` passed in for the first heading (though it is used in the underlying **layout.pug** template to set the page title).
@@ -96,7 +95,6 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > ```
 >
 > The most likely cause is that the ID being passed into the mongoose methods is not actually an ID.
-> This could happen, for example, if your intended route had an ID, but another route without an ID was matched first.
 > [`Mongoose.prototype.isValidObjectId()`](<https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.isValidObjectId()>) can be used to check whether a particular ID is valid.
 
 ## Next steps

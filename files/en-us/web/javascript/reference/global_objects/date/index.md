@@ -231,8 +231,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Returns the month (`0` – `11`) in the specified date according to universal time.
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
   - : Returns the seconds (`0` – `59`) in the specified date according to universal time.
-- {{jsxref("Date.prototype.getYear()")}} {{Deprecated_Inline}}
-  - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} instead.
+- {{jsxref("Date.prototype.getYear()")}} {{deprecated_inline}}
+  - : Returns the year (usually 2–3 digits) in the specified date according to local time. Use {{jsxref("Date/getFullYear", "getFullYear()")}} instead.
 - {{jsxref("Date.prototype.setDate()")}}
   - : Sets the day of the month for a specified date according to local time.
 - {{jsxref("Date.prototype.setFullYear()")}}
@@ -263,14 +263,14 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Sets the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
   - : Sets the seconds for a specified date according to universal time.
-- {{jsxref("Date.prototype.setYear()")}} {{Deprecated_Inline}}
-  - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} instead.
+- {{jsxref("Date.prototype.setYear()")}} {{deprecated_inline}}
+  - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date/setFullYear", "setFullYear()")}} instead.
 - {{jsxref("Date.prototype.toDateString()")}}
   - : Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like `'Thu Apr 12 2018'`.
 - {{jsxref("Date.prototype.toISOString()")}}
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date.prototype.toISOString()", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -358,7 +358,7 @@ date.setYear(22);
 date.toString(); // Wed Feb 01 1922 00:00:00 GMT+0000 (GMT)
 ```
 
-So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} methods:.
+So, to create and get dates between the years `0` and `99`, instead use the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} and {{jsxref("Date/getFullYear", "getFullYear()")}} methods:.
 
 ```js
 // Preferred method; never interprets any value as being a relative offset,
@@ -429,4 +429,4 @@ In this case, it's important to return only an integer—so a simple division wo
 
 ## See also
 
-- {{jsxref("Date/Date", "Date()")}} constructor
+- {{jsxref("Date/Date", "Date()")}}

@@ -36,7 +36,7 @@ The comma operator is completely different from commas used as syntactic separat
 - Properties in [object initializers](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer) (`{ a: 1, b: 2 }`)
 - Parameters in [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)/expressions (`function f(a, b) { … }`)
 - Arguments in function calls (`f(1, 2)`)
-- {{glossary("Binding")}} lists in [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declarations (`const a = 1, b = 2;`)
+- {{Glossary("Binding")}} lists in [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) declarations (`const a = 1, b = 2;`)
 - Import lists in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations (`import { a, b } from "c";`)
 - Export lists in [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) declarations (`export { a, b };`)
 
@@ -147,4 +147,4 @@ globalThis.isDirectEval = false;
 
 ## See also
 
-- [`for` loop](/en-US/docs/Web/JavaScript/Reference/Statements/for)
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)

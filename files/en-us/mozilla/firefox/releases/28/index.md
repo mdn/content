@@ -12,8 +12,8 @@ Firefox 28 was released on March 18, 2014. This article lists key changes that a
 
 ### Developer Tools
 
-- The {{domxref("console.exception")}} property has been added ([Firefox bug 922214](https://bugzil.la/922214)).
-- The {{domxref("console.assert")}} property has been added ([Firefox bug 760193](https://bugzil.la/760193)).
+- The `console.exception` property has been added ([Firefox bug 922214](https://bugzil.la/922214)).
+- The {{domxref("console/assert_static", "console.assert()")}} property has been added ([Firefox bug 760193](https://bugzil.la/760193)).
 - App Manager: a new Manifest Editor was added.
 - App Manager: the toolbox used for debugging apps is now embedded in the app manager UI.
 - Web Console: added a "split console" mode - press Escape to quickly open the console in any other tool.
@@ -51,11 +51,11 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 - The {{domxref("DocumentFragment.getElementById()")}} method has been implemented. E.g. `document.createDocumentFragment().getElementById()` ([Firefox bug 933193](https://bugzil.la/933193)).
 - The {{domxref("KeyboardEvent.repeat")}} attribute has been implemented ([Firefox bug 600117](https://bugzil.la/600117)).
 - The {{domxref("File")}} constructor, e.g. `new File(["foo"], "foo.txt")` has been implemented. ([Firefox bug 819900](https://bugzil.la/819900)).
-- The {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} is no more enumerable, for privacy reasons ([Firefox bug 757726](https://bugzil.la/757726)).
+- The {{domxref("Navigator.plugins")}} is no more enumerable, for privacy reasons ([Firefox bug 757726](https://bugzil.la/757726)).
 - The two attributes {{domxref("Window.screenX")}} and {{domxref("Window.screenY")}} now return CSS pixels (and no more device pixels) ([Firefox bug 943668](https://bugzil.la/943668)).
 - The two methods {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} and {{domxref("CanvasRenderingContext2D/drawFocusIfNeeded", "CanvasRenderingContext2D.drawCustomFocusRing()")}} have been implemented. The preference `canvas.focusring.enabled` must be set to `true` to activate both ([Firefox bug 540456](https://bugzil.la/540456)).
 - The `willReadFrequently` context attribute for "`2d`" canvas contexts has been implemented (see {{domxref("HTMLCanvasElement.getContext()")}}) ([Firefox bug 884226](https://bugzil.la/884226)).
-- The following attributes and methods of {{domxref("NavigatorID")}} have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, and {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ([Firefox bug 925847](https://bugzil.la/925847)).
+- The following attributes and methods of `NavigatorID` have been implemented on {{domxref("WorkerNavigator")}} to allow their use in workers: {{domxref("Navigator.appCodeName")}}, {{domxref("Navigator.product")}}, and {{domxref("Navigator.taintEnabled")}} ([Firefox bug 925847](https://bugzil.la/925847)).
 - The {{domxref("Element/previousElementSibling", "previousElementSibling")}} and {{domxref("Element/nextElementSibling", "nextElementSibling")}} properties has been removed from {{domxref("DocumentType")}}, because of compatibility problems ([Firefox bug 932501](https://bugzil.la/932501)).
 
 ### MathML

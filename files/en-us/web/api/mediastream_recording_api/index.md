@@ -80,7 +80,7 @@ setTimeout((event) => {
 
 You can also use the properties of the `MediaRecorder` object to determine the state of the recording process, and its {{domxref("MediaRecorder.pause", "pause()")}} and {{domxref("MediaRecorder.resume", "resume()")}} methods to pause and resume recording of the source media.
 
-If you need or want to check to see if a specific MIME type is supported, that's possible as well. Just call {{domxref("MediaRecorder.isTypeSupported()")}}.
+If you need or want to check to see if a specific MIME type is supported, that's possible as well. Just call {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
 
 ### Examining potential input sources
 

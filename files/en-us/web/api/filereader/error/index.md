@@ -6,16 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.FileReader.error
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The {{domxref("FileReader")}} **`error`** property returns the
+The **`error`** read-only property of the {{domxref("FileReader")}} interface returns the
 error that occurred while reading the file.
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard.
+A {{domxref("DOMException")}} containing the relevant error.
 
 ## Specifications
 

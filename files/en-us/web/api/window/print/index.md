@@ -38,6 +38,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Printing](/en-US/docs/Web/Guide/Printing)
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event
 - {{ domxref("window.afterprint_event", "afterprint") }} event

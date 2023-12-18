@@ -65,7 +65,7 @@ The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scr
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 

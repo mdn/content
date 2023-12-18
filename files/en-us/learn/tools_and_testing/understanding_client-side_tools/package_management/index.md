@@ -208,7 +208,7 @@ Next, we need to add an `index.js` file in the same directory as `index.html`. F
 Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
 
 ```bash
- parcel index.html
+ npx parcel index.html
 ```
 
 You should see something like this printed in your terminal:
@@ -262,7 +262,7 @@ We can now prepare our bare bones example site for an imaginary deployment. Parc
 Run the following command:
 
 ```bash
-parcel build index.html
+npx parcel build index.html
 ```
 
 You should see an output like so:
@@ -298,7 +298,7 @@ Although the list grows by the month, there are three main offerings for tools t
 Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
 
 ```bash
-parcel build index.html --experimental-scope-hoisting
+npx parcel build index.html --experimental-scope-hoisting
 ```
 
 You'll see that this makes a huge difference:
@@ -397,7 +397,7 @@ Although the package manager will do its best to deduplicate packages you may wa
 
 ### More commands
 
-You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
+You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.io/cli/add) commands will have parity with npm, with a handful of additions.
 
 ## Making your own commands
 

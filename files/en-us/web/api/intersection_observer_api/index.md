@@ -20,7 +20,7 @@ Implementing intersection detection in the past involved event handlers and loop
 
 Consider a web page that uses infinite scrolling. It uses a vendor-provided library to manage the advertisements placed periodically throughout the page, has animated graphics here and there, and uses a custom library that draws notification boxes and the like. Each of these has its own intersection detection routines, all running on the main thread. The author of the website may not even realize this is happening, since they may know very little about the inner workings of the two libraries they are using. As the user scrolls the page, these intersection detection routines are firing constantly during the scroll handling code, resulting in an experience that leaves the user frustrated with the browser, the website, and their computer.
 
-The Intersection Observer API lets code register a callback function that is executed whenever an element they wish to monitor enters or exits another element (or the {{Glossary("viewport")}}), or when the amount by which the two intersect changes by a requested amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
+The Intersection Observer API lets code register a callback function that is executed whenever a particular element enters or exits an intersection with another element (or the {{Glossary("viewport")}}), or when the intersection between two elements changes by a specified amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
 
 One thing the Intersection Observer API can't tell you: the exact number of pixels that overlap or specifically which ones they are; however, it covers the much more common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
@@ -31,7 +31,7 @@ The Intersection Observer API allows you to configure a callback that is called 
 - A **target** element intersects either the device's viewport or a specified element. That specified element is called the **root element** or **root** for the purposes of the Intersection Observer API.
 - The first time the observer is initially asked to watch a target element.
 
-Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for `root` option. Keep reading for a more detailed explanation about intersection observer options.
+Typically, you'll want to watch for intersection changes with regard to the target element's closest scrollable ancestor, or, if the target element isn't a descendant of a scrollable element, the device's viewport. To watch for intersection relative to the device's viewport, specify `null` for the `root` option. Keep reading for a more detailed explanation about intersection observer options.
 
 Whether you're using the viewport or some other element as the root, the API works the same way, executing a callback function you provide whenever the visibility of the target element changes so that it crosses desired amounts of intersection with the root.
 
@@ -60,7 +60,7 @@ The `options` object passed into the {{domxref("IntersectionObserver.Intersectio
 - `root`
   - : The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if `null`.
 - `rootMargin`
-  - : Margin around the root. Can have values similar to the CSS {{cssxref("margin")}} property, e.g. "`10px 20px 30px 40px"` (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Defaults to all zeros.
+  - : Margin around the root. Can have values similar to the CSS {{cssxref("margin")}} property, e.g. `"10px 20px 30px 40px"` (top, right, bottom, left). The values can be percentages. This set of values serves to grow or shrink each side of the root element's bounding box before computing intersections. Defaults to all zeros.
 - `threshold`
   - : Either a single number or an array of numbers which indicate at what percentage of the target's visibility the observer's callback should be executed. If you only want to detect when visibility passes the 50% mark, you can use a value of 0.5. If you want the callback to run every time visibility passes another 25%, you would specify the array \[0, 0.25, 0.5, 0.75, 1]. The default is 0 (meaning as soon as even one pixel is visible, the callback will be run). A value of 1.0 means that the threshold isn't considered passed until every pixel is visible.
 
@@ -72,7 +72,7 @@ Once you have created the observer, you need to give it a target element to watc
 let target = document.querySelector("#listItem");
 observer.observe(target);
 
-// the callback we setup for the observer will be executed now for the first time
+// the callback we set up for the observer will be executed now for the first time
 // it waits until we assign a target to our observer (even if the target is currently not visible)
 ```
 
@@ -128,7 +128,7 @@ When the callback is invoked, it receives a list of `IntersectionObserverEntry` 
 
 You can see if the target _currently_ intersects the root by looking at the entry's {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} property; if its value is `true`, the target is at least partially intersecting the root element or document. This lets you determine whether the entry represents a transition from the elements intersecting to no longer intersecting or a transition from not intersecting to intersecting.
 
-Note that it's possible to have a non-zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
+Note that it's possible to have a zero intersection rectangle, which can happen if the intersection is exactly along the boundary between the two or the area of {{domxref("IntersectionObserverEntry.boundingClientRect", "boundingClientRect")}} is zero. This state of the target and root sharing a boundary line is not considered enough to be considered transitioning into an intersecting state.
 
 To get a feeling for how thresholds work, try scrolling the box below around. Each colored box within it displays the percentage of itself that's visible in all four of its corners, so you can see these ratios change over time as you scroll the container. Each box has a different set of thresholds:
 
@@ -480,74 +480,80 @@ function buildThresholdList() {
 This builds the array of thresholds—each of which is a ratio between 0.0 and 1.0, by pushing the value `i/numSteps` onto the `thresholds` array for each integer `i` between 1 and `numSteps`. It also pushes 0 to include that value. The result, given the default value of `numSteps` (20), is the following list of thresholds:
 
 <table class="standard-table">
-  <tbody>
-    <tr>
-      <th>#</th>
-      <th>Ratio</th>
-      <th>#</th>
-      <th>Ratio</th>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.05</td>
-      <th>11</th>
-      <td>0.55</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.1</td>
-      <th>12</th>
-      <td>0.6</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.15</td>
-      <th>13</th>
-      <td>0.65</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.2</td>
-      <th>14</th>
-      <td>0.7</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0.25</td>
-      <th>15</th>
-      <td>0.75</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>0.3</td>
-      <th>16</th>
-      <td>0.8</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>0.35</td>
-      <th>17</th>
-      <td>0.85</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>0.4</td>
-      <th>18</th>
-      <td>0.9</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>0.45</td>
-      <th>19</th>
-      <td>0.95</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>0.5</td>
-      <th>20</th>
-      <td>1.0</td>
-    </tr>
-  </tbody>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Ratio</th>
+        <th>#</th>
+        <th>Ratio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>0</th>
+        <td>0.05</td>
+        <th>11</th>
+        <td>0.6</td>
+      </tr>
+      <tr>
+        <th>1</th>
+        <td>0.1</td>
+        <th>12</th>
+        <td>0.65</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>0.15</td>
+        <th>13</th>
+        <td>0.7</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>0.2</td>
+        <th>14</th>
+        <td>0.75</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>0.25</td>
+        <th>15</th>
+        <td>0.8</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>0.3</td>
+        <th>16</th>
+        <td>0.85</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>0.35</td>
+        <th>17</th>
+        <td>0.9</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>0.4</td>
+        <th>18</th>
+        <td>0.95</td>
+      </tr>
+      <tr>
+        <th>8</th>
+        <td>0.45</td>
+        <th>19</th>
+        <td>1</td>
+      </tr>
+      <tr>
+        <th>9</th>
+        <td>0.5</td>
+        <th>20</th>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th>10</th>
+        <td>0.55</td>
+      </tr>
+    </tbody>
 </table>
 
 We could, of course, hard-code the array of thresholds into our code, and often that's what you'll end up doing. But this example leaves room for adding configuration controls to adjust the granularity, for example.

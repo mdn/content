@@ -979,6 +979,7 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [webkitmouseforceup event](/en-US/docs/Web/API/Element/webkitmouseforceup_event)
   - [webkitmouseforcewillbegin event](/en-US/docs/Web/API/Element/webkitmouseforcewillbegin_event)
   - [wheel event](/en-US/docs/Web/API/Element/wheel_event)
+  - [cancel event](/en-US/docs/Web/API/HTMLElement/cancel_event)
 
 - {{DOMxRef("EventSource")}}
 
@@ -1007,7 +1008,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("HTMLDialogElement")}}
 
-  - [cancel event](/en-US/docs/Web/API/HTMLDialogElement/cancel_event)
   - [close event](/en-US/docs/Web/API/HTMLDialogElement/close_event)
 
 - {{DOMxRef("HTMLElement")}}
@@ -1290,7 +1290,6 @@ This section lists events that have _their own_ reference pages on MDN. If you a
   - [cut event](/en-US/docs/Web/API/Window/cut_event)
   - [devicemotion event](/en-US/docs/Web/API/Window.devicemotion_event)
   - [deviceorientation event](/en-US/docs/Web/API/Window.deviceorientation_event)
-  - [DOMContentLoaded event](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
   - [error event](/en-US/docs/Web/API/Window/error_event)
   - [focus event](/en-US/docs/Web/API/Window/focus_event)
   - [gamepadconnected event](/en-US/docs/Web/API/Window/gamepadconnected_event)

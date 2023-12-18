@@ -323,7 +323,7 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for pure red is 0
 ```
 
-The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private property can never have name clash with a public property. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private property on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
 
@@ -348,7 +348,7 @@ console.log(red.getRed()); // 255
 
 Accessing private fields outside the class is an early syntax error. The language can guard against this because `#privateField` is a special syntax, so it can do some static analysis and find all usage of private fields before even evaluating the code.
 
-```js example-bad
+```js-nolint example-bad
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
 
@@ -423,7 +423,7 @@ class Color {
 
 There are some limitations in using private properties: the same name can't be declared twice in a single class, and they can't be deleted. Both lead to early syntax errors.
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -690,7 +690,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
-```js example-bad
+```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class

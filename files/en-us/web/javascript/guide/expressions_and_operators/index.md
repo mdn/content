@@ -123,15 +123,19 @@ It is an error to assign values to unmodifiable properties or to properties of a
 For more complex assignments, the [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and
 object literals.
 
+Without destructuring, it takes multiple statements to extract values from arrays and objects:
+
 ```js
 const foo = ["one", "two", "three"];
 
-// without destructuring
 const one = foo[0];
 const two = foo[1];
 const three = foo[2];
+```
 
-// with destructuring
+With destructuring, you can extract multiple values into distinct variables using a single statement:
+
+```js
 const [one, two, three] = foo;
 ```
 
@@ -155,7 +159,7 @@ However, like other expressions, assignment expressions like `x = f()` evaluate 
 Although this result value is usually not used, it can then be used by another expression.
 
 Chaining assignments or nesting assignments in other expressions can result in surprising behavior.
-For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain]).
+For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain].
 Nevertheless, assignment chaining and nesting may occur sometimes, so it is important to be able to understand how they work.
 
 [discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
@@ -303,7 +307,7 @@ For more information about objects, read [Working with Objects](/en-US/docs/Web/
 
 Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason,
-[chaining assignments in the same statement is discouraged][discourage assign chain]).
+[chaining assignments in the same statement is discouraged][discourage assign chain].
 
 In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
 For example:
@@ -1101,7 +1105,7 @@ a * c + b * c // 9
 You can use the [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new) to create an instance of a user-defined object type or of one of the built-in object types. Use `new` as follows:
 
 ```js
-const objectName = new objectType(param1, param2, /* …, */ paramN);
+const objectName = new ObjectType(param1, param2, /* …, */ paramN);
 ```
 
 ### super
@@ -1109,7 +1113,7 @@ const objectName = new objectType(param1, param2, /* …, */ paramN);
 The [`super` keyword](/en-US/docs/Web/JavaScript/Reference/Operators/super) is used to call functions on an object's parent.
 It is useful with [classes](/en-US/docs/Web/JavaScript/Reference/Classes) to call the parent constructor, for example.
 
-```js
+```js-nolint
 super(args); // calls the parent constructor.
 super.functionOnParent(args);
 ```

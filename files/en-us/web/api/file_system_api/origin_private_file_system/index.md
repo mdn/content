@@ -45,19 +45,25 @@ When accessing the OPFS from the main thread, you will use asynchronous, {{jsxre
 
 ```js
 // Create a hierarchy of files and folders
-const fileHandle = await opfsRoot
-    .getFileHandle('my first file', {create: true});
-const directoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder', {create: true});
-const nestedFileHandle = await directoryHandle
-    .getFileHandle('my first nested file', {create: true});
-const nestedDirectoryHandle = await directoryHandle
-    .getDirectoryHandle('my first nested folder', {create: true});
+const fileHandle = await opfsRoot.getFileHandle("my first file", {
+  create: true,
+});
+const directoryHandle = await opfsRoot.getDirectoryHandle("my first folder", {
+  create: true,
+});
+const nestedFileHandle = await directoryHandle.getFileHandle(
+  "my first nested file",
+  { create: true },
+);
+const nestedDirectoryHandle = await directoryHandle.getDirectoryHandle(
+  "my first nested folder",
+  { create: true },
+);
 
 // Access existing files and folders via their names
-const existingFileHandle = await opfsRoot.getFileHandle('my first file');
-const existingDirectoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder);
+const existingFileHandle = await opfsRoot.getFileHandle("my first file");
+const existingDirectoryHandle =
+  await opfsRoot.getDirectoryHandle("my first folder");
 ```
 
 ### Reading a file
@@ -191,4 +197,4 @@ accessHandle.truncate(4);
 
 ## See also
 
-- [The origin private file system](https://web.dev/origin-private-file-system/) on web.dev
+- [The origin private file system](https://web.dev/articles/origin-private-file-system) on web.dev

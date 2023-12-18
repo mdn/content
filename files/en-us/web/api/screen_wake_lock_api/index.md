@@ -2,14 +2,17 @@
 title: Screen Wake Lock API
 slug: Web/API/Screen_Wake_Lock_API
 page-type: web-api-overview
-browser-compat: api.WakeLock
+browser-compat:
+  - api.WakeLock
+  - api.WakeLockSentinel
+spec-urls: https://w3c.github.io/screen-wake-lock/
 ---
 
-{{DefaultAPISidebar("Screen Wake Lock API")}}
+{{DefaultAPISidebar("Screen Wake Lock API")}}{{securecontext_header}}
 
-The Screen Wake Lock API provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
+The **Screen Wake Lock API** provides a way to prevent devices from dimming or locking the screen when an application needs to keep running.
 
-## Concepts and Usage
+## Concepts and usage
 
 Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. Whilst this is a useful feature, some applications need the screen to stay awake to be their most useful.
 
@@ -23,18 +26,21 @@ The sentinel is attached to the underlying system wake lock. It can be released 
 
 The Screen Wake Lock API should be used to keep the screen on to benefit usability. It's a good idea to show some feedback on the interface to show if wake lock is active and a way for the user to disable it if they wish.
 
-## Screen Wake Lock API Interfaces
+## Interfaces
 
 - {{domxref("WakeLock")}}
-  - : The **`WakeLock`** interface prevents device screens from dimming or locking when an application needs to keep running.
+  - : Prevents device screens from dimming or locking when an application needs to keep running.
 - {{domxref("WakeLockSentinel")}}
   - : Provides a handle to the underlying platform wake lock and if referenced can be manually released and reacquired. Get an instance of the object by calling {{domxref('WakeLock.request')}}.
-- {{domxref("Navigator.wakelock")}}
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.wakelock")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.
 
 ## Examples
 
-### Feature Detection
+### Feature detection
 
 This code checks for wake lock support and updates the UI accordingly.
 
@@ -110,7 +116,7 @@ You can find the [complete code on GitHub here](https://github.com/mdn/dom-examp
 - If your app is synchronizing data from a remote server, consider using background sync.
 - Only active documents can acquire screen wake locks and previously acquired locks are automatically released when document becomes inactive. Therefore make sure to re-acquire screen wake lock if necessary when document becomes active (listen for [visibilitychange](/en-US/docs/Web/API/Document/visibilitychange_event) event).
 
-## Permissions Policy integration
+## Permissions policy integration
 
 Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}}.
 
@@ -126,5 +132,5 @@ The default allowlist for `screen-wake-lock` is `self`.
 
 ## See also
 
-- [An introductory article on the Screen Wake Lock API](https://web.dev/wake-lock/)
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)

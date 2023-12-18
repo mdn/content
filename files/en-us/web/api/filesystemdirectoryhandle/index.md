@@ -69,7 +69,7 @@ async function returnPathDirectories(directoryHandle) {
     return;
   }
 
-  // Check if handle exists inside directory our directory handle
+  // Check if handle exists inside our directory handle
   const relativePaths = await directoryHandle.resolve(handle);
 
   if (relativePath === null) {
@@ -119,4 +119,4 @@ for await (const fileHandle of getFilesRecursively(directoryHandle)) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

@@ -147,5 +147,5 @@ formatOrdinals(103); // '103rd'
 
 ## See also
 
+- [Polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.PluralRules` in FormatJS](https://formatjs.io/docs/polyfills/intl-pluralrules/)

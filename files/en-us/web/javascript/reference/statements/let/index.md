@@ -24,16 +24,9 @@ let name1 = value1, name2, /* …, */ nameN = valueN;
 ### Parameters
 
 - `nameN`
-  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers).
+  - : The name of the variable to declare. Each must be a legal JavaScript [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers) or a [destructuring binding pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 - `valueN` {{optional_inline}}
   - : Initial value of the variable. It can be any legal expression. Default value is `undefined`.
-
-The [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) syntax can also be used to declare variables.
-
-```js
-let { bar } = foo; // where foo = { bar: 10, baz: 12 };
-// This creates a variable with the name 'bar', which has a value of 10
-```
 
 ## Description
 
@@ -46,17 +39,20 @@ The scope of a variable declared with `let` is one of the following curly-brace-
 - Function body
 - [Static initialization block](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 
-Or the current module or script, if it's contained in none of these.
+Or if none of the above applies:
+
+- The current [module](/en-US/docs/Web/JavaScript/Guide/Modules), for code running in module mode
+- The global scope, for code running in script mode.
 
 Compared with {{jsxref("Statements/var", "var")}}, `let` declarations have the following differences:
 
 - `let` declarations are scoped to blocks as well as functions.
-- `let` declarations can only be accessed after the line of declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
+- `let` declarations can only be accessed after the place of declaration is reached (see [temporal dead zone](#temporal_dead_zone_tdz)). For this reason, `let` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting).
 - `let` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script.
 - `let` declarations cannot be [redeclared](#redeclarations) by any other declaration in the same scope.
 - `let` begins [_declarations_, not _statements_](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). That means you cannot use a lone `let` declaration as the body of a block (which makes sense, since there's no way to access the variable).
 
-  ```js example-bad
+  ```js-nolint example-bad
   if (true) let a = 1; // SyntaxError: Lexical declaration cannot appear in a single-statement context
   ```
 
@@ -64,15 +60,15 @@ Note that `let` is allowed as an identifier name when declared with `var` or `fu
 
 Many style guides (including [MDN's](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript#variable_declarations)) recommend using {{jsxref("Statements/const", "const")}} over `let` whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer `let` for non-primitives that are mutated.
 
-The list that follows the `let` keyword is called a _{{glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
+The list that follows the `let` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list.
 
 ### Temporal dead zone (TDZ)
 
-A variable declared with `let`, `const`, or `class` is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the line where the variable is declared and initialized.
+A variable declared with `let`, `const`, or `class` is said to be in a "temporal dead zone" (TDZ) from the start of the block until code execution reaches the place where the variable is declared and initialized.
 
-While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}. The variable is initialized with a value when execution reaches the line of code where it was declared. If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
+While inside the TDZ, the variable has not been initialized with a value, and any attempt to access it will result in a {{jsxref("ReferenceError")}}. The variable is initialized with a value when execution reaches the place in the code where it was declared. If no initial value was specified with the variable declaration, it will be initialized with a value of `undefined`.
 
-This differs from {{jsxref("Statements/var", "var", "hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared. The code below demonstrates the different result when `let` and `var` are accessed in code before the line in which they are declared.
+This differs from {{jsxref("Statements/var", "var", "hoisting")}} variables, which will return a value of `undefined` if they are accessed before they are declared. The code below demonstrates the different result when `let` and `var` are accessed in code before the place where they are declared.
 
 ```js example-bad
 {
@@ -111,20 +107,22 @@ This differs from using `typeof` for undeclared variables, and variables that ho
 console.log(typeof undeclaredVariable); // "undefined"
 ```
 
+> **Note:** `let` and `const` declarations are only processed when the current script gets processed. If you have two `<script>` elements running in script mode within one HTML, the first script is not subject to the TDZ restrictions for top-level `let` or `const` variables declared in the second script, although if you declare a `let` or `const` variable in the first script, declaring it again in the second script will cause a [redeclaration error](#redeclarations).
+
 ### Redeclarations
 
 `let` declarations cannot be in the same scope as any other declaration, including `let`, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and {{jsxref("Statements/import", "import")}} declaration.
 
-```js example-bad
+```js-nolint example-bad
 {
   let foo;
-  let foo; // SyntaxError: Identifier 'a' has already been declared
+  let foo; // SyntaxError: Identifier 'foo' has already been declared
 }
 ```
 
 A `let` declaration within a function's body cannot have the same name as a parameter. A `let` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier.
 
-```js
+```js-nolint example-bad
 function foo(a) {
   let a = 1; // SyntaxError: Identifier 'a' has already been declared
 }
@@ -138,7 +136,7 @@ If you're experimenting in a REPL, such as the Firefox web console (**Tools** > 
 
 You may encounter errors in {{jsxref("Statements/switch", "switch")}} statements because there is only one block.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 switch (x) {
@@ -257,13 +255,25 @@ console.log(b); // 2
 
 However, this combination of `var` and `let` declarations below is a {{jsxref("SyntaxError")}} because `var` not being block-scoped, leading to them being in the same scope. This results in an implicit re-declaration of the variable.
 
-```js example-bad
+```js-nolint example-bad
 let x = 1;
 
 {
   var x = 2; // SyntaxError for re-declaration
 }
 ```
+
+### Declaration with destructuring
+
+The left-hand side of each `=` can also be a binding pattern. This allows creating multiple variables at once.
+
+```js
+const result = /(a+)(b+)(c+)/.exec("aaabcc");
+let [, a, b, c] = result;
+console.log(a, b, c); // "aaa" "b" "cc"
+```
+
+For more information, see [Destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ## Specifications
 
@@ -278,9 +288,9 @@ let x = 1;
 - {{jsxref("Statements/var", "var")}}
 - {{jsxref("Statements/const", "const")}}
 - [Hoisting](/en-US/docs/Glossary/Hoisting)
-- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/) on hacks.mozilla.org (July 31, 2015)
-- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) on blog.mozilla.org (October 14, 2015)
-- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/) on hacks.mozilla.org (2015)
+- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/) on blog.mozilla.org (2015)
+- [You Don't Know JS: Scope & Closures, Ch.3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md) by Kyle Simpson
 - [What is the Temporal Dead Zone?](https://stackoverflow.com/questions/33198849/what-is-the-temporal-dead-zone/33198850) on Stack Overflow
 - [What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var) on Stack Overflow
 - [Why was the name 'let' chosen for block-scoped variable declarations in JavaScript?](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri) on Stack Overflow

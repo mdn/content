@@ -38,20 +38,24 @@ Also, certain methods, such as {{jsxref("Object.create()")}} or
 
 ### Invalid cases
 
+You cannot invoke a method on an `undefined` or `null` variable.
+
 ```js example-bad
-// undefined and null cases on which the substring method won't work
 const foo = undefined;
 foo.substring(1); // TypeError: foo is undefined
 
-const foo = null;
-foo.substring(1); // TypeError: foo is null
+const foo2 = null;
+foo2.substring(1); // TypeError: foo is null
+```
 
-// Certain methods might require a specific type
+Certain methods might require a specific type.
+
+```js example-bad
 const foo = {};
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 
-const foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+const foo2 = "bar";
+Object.create(foo2); // TypeError: "foo" is not an object or null
 ```
 
 ### Fixing the issue

@@ -7,7 +7,7 @@ browser-compat: javascript.statements.async_function
 
 {{jsSidebar("Statements")}}
 
-The **`async function`** declaration creates a {{glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
+The **`async function`** declaration creates a {{Glossary("binding")}} of a new async function to a given name. The `await` keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
 
 You can also define async functions using the [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function).
 
@@ -22,7 +22,7 @@ async function name(param0) {
 async function name(param0, param1) {
   statements
 }
-async function name(param0, param1, /* … ,*/ paramN) {
+async function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -34,7 +34,7 @@ async function name(param0, param1, /* … ,*/ paramN) {
 - `name`
   - : The function's name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements comprising the body of the function. The `await`
     mechanism may be used.
@@ -203,85 +203,97 @@ function resolveAfter1Second() {
 }
 
 async function sequentialStart() {
-  console.log("==SEQUENTIAL START==");
+  console.log("== sequentialStart starts ==");
 
-  // 1. Execution gets here almost instantly
-  const slow = await resolveAfter2Seconds();
-  console.log(slow); // 2. this runs 2 seconds after 1.
+  // 1. Start a timer, log after it's done
+  const slow = resolveAfter2Seconds();
+  console.log(await slow);
 
-  const fast = await resolveAfter1Second();
-  console.log(fast); // 3. this runs 3 seconds after 1.
+  // 2. Start the next timer after waiting for the previous one
+  const fast = resolveAfter1Second();
+  console.log(await fast);
+
+  console.log("== sequentialStart done ==");
 }
 
-async function concurrentStart() {
-  console.log("==CONCURRENT START with await==");
-  const slow = resolveAfter2Seconds(); // starts timer immediately
-  const fast = resolveAfter1Second(); // starts timer immediately
+async function sequentialWait() {
+  console.log("== sequentialWait starts ==");
 
-  // 1. Execution gets here almost instantly
-  console.log(await slow); // 2. this runs 2 seconds after 1.
-  console.log(await fast); // 3. this runs 2 seconds after 1., immediately after 2., since fast is already resolved
+  // 1. Start two timers without waiting for each other
+  const slow = resolveAfter2Seconds();
+  const fast = resolveAfter1Second();
+
+  // 2. Wait for the slow timer to complete, and then log the result
+  console.log(await slow);
+  // 3. Wait for the fast timer to complete, and then log the result
+  console.log(await fast);
+
+  console.log("== sequentialWait done ==");
 }
 
-function concurrentPromise() {
-  console.log("==CONCURRENT START with Promise.all==");
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then(
-    (messages) => {
-      console.log(messages[0]); // slow
-      console.log(messages[1]); // fast
-    },
-  );
+async function concurrent1() {
+  console.log("== concurrent1 starts ==");
+
+  // 1. Start two timers concurrently and wait for both to complete
+  const results = await Promise.all([
+    resolveAfter2Seconds(),
+    resolveAfter1Second(),
+  ]);
+  // 2. Log the results together
+  console.log(results[0]);
+  console.log(results[1]);
+
+  console.log("== concurrent1 done ==");
 }
 
-async function parallel() {
-  console.log("==PARALLEL with await Promise.all==");
+async function concurrent2() {
+  console.log("== concurrent2 starts ==");
 
-  // Start 2 "jobs" in parallel and wait for both of them to complete
+  // 1. Start two timers concurrently, log immediately after each one is done
   await Promise.all([
     (async () => console.log(await resolveAfter2Seconds()))(),
     (async () => console.log(await resolveAfter1Second()))(),
   ]);
+  console.log("== concurrent2 done ==");
 }
 
 sequentialStart(); // after 2 seconds, logs "slow", then after 1 more second, "fast"
 
 // wait above to finish
-setTimeout(concurrentStart, 4000); // after 2 seconds, logs "slow" and then "fast"
+setTimeout(sequentialWait, 4000); // after 2 seconds, logs "slow" and then "fast"
 
 // wait again
-setTimeout(concurrentPromise, 7000); // same as concurrentStart
+setTimeout(concurrent1, 7000); // same as sequentialWait
 
 // wait again
-setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", then after 1 more second, "slow"
+setTimeout(concurrent2, 10000); // after 1 second, logs "fast", then after 1 more second, "slow"
 ```
 
-#### await and parallelism
+#### await and concurrency
 
 In `sequentialStart`, execution suspends 2 seconds for the first
 `await`, and then another second for the second `await`. The
 second timer is not created until the first has already fired, so the code finishes
 after 3 seconds.
 
-In `concurrentStart`, both timers are created and then `await`ed.
+In `sequentialWait`, both timers are created and then `await`ed.
 The timers run concurrently, which means the code finishes in 2 rather than 3 seconds,
 i.e. the slowest timer.
 However, the `await` calls still run in series, which means the second
 `await` will wait for the first one to finish. In this case, the result of
 the fastest timer is processed after the slowest.
 
-If you wish to safely perform two or more jobs in parallel, you must await a call
-to [`Promise.all`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all),
-or
-[`Promise.allSettled`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled).
+If you wish to safely perform other jobs after two or more jobs run concurrently and are complete, you must await a call
+to {{jsxref("Promise.all()")}} or {{jsxref("Promise.allSettled()")}} before that job.
 
-> **Warning:** The functions `concurrentStart` and `concurrentPromise`
+> **Warning:** The functions `sequentialWait` and `concurrent1`
 > are not functionally equivalent.
 >
-> In `concurrentStart`, if promise `fast` rejects before promise
+> In `sequentialWait`, if promise `fast` rejects before promise
 > `slow` is fulfilled, then an unhandled promise rejection error will be
 > raised, regardless of whether the caller has configured a catch clause.
 >
-> In `concurrentPromise`, `Promise.all` wires up the promise
+> In `concurrent1`, `Promise.all` wires up the promise
 > chain in one go, meaning that the operation will fail-fast regardless of the order of
 > rejection of the promises, and the error will always occur within the configured
 > promise chain, enabling it to be caught in the normal way.
@@ -337,9 +349,9 @@ it's not already a promise itself (as in the examples).
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("AsyncFunction")}}
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - {{jsxref("Statements/function", "function")}}
@@ -347,4 +359,4 @@ it's not already a promise itself (as in the examples).
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("Operators/await", "await")}}
 - {{jsxref("Promise")}}
-- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on innolitics.com (April 04, 2016)
+- [Decorating async JavaScript functions](https://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/) on innolitics.com (2016)

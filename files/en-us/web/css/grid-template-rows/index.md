@@ -91,10 +91,6 @@ This property may be specified as:
 - [`subgrid`](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : The `subgrid` value indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
 
-> **Warning:** The `masonry` value is from Level 3 of the Grid specification and currently only has an experimental implementation behind a flag in Firefox.
->
-> The `subgrid` value is from Level 2 of the Grid specification and currently only has implementation in Firefox 71 and onwards.
-
 ## Formal definition
 
 {{cssinfo}}

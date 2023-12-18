@@ -48,7 +48,7 @@ No notable changes.
   [`MediaCapabilities.decodingInfo()`](/en-US/docs/Web/API/MediaCapabilities/decodingInfo) will also use the information to accurately report on "efficient decoding" of AV1 videos.
   For more information, see [Firefox bug 1757861](https://bugzil.la/1757861).
 
-- [`RTCRtpEncodingParameters.maxFramerate`](/en-US/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
+- `maxFramerate` is now supported for setting the maximum framerate that can be used to send an encoding (in {{domxref("RTCPeerConnection.addTransceiver()")}} and {{domxref("RTCRtpSender.setParameters()")}}).
   Note that zero if a valid frame rate value, but is interpreted by Firefox as "no frame rate limit".
   For more information, see [Firefox bug 1611957](https://bugzil.la/1611957).
 
@@ -82,10 +82,6 @@ For more information, see the [full bug list](https://bugzilla.mozilla.org/bugli
   - The content script execution environment has changed for Manifest V3 extensions:
     - Content scripts can no longer rely on host permissions to perform cross-origin requests. Cross-origin requests from content scripts are possible with [CORS](/en-US/docs/Web/HTTP/CORS).
     - The `content` object (that offered `content.fetch`, `content.XMLHttpRequest`, and `content.WebSocket`) is removed from the content script execution environment.
-
-### Removals
-
-### Other
 
 ## Older versions
 

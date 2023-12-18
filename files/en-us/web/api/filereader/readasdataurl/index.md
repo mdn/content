@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsDataURL
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `readAsDataURL` method is used to read the contents of the specified
+The **`readAsDataURL`** method of the {{domxref("FileReader")}} interface is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
 {{domxref("FileReader/loadend_event", "loadend")}} is triggered. At that time, the
@@ -134,4 +134,4 @@ picker.addEventListener("change", previewFiles);
 ## See also
 
 - {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

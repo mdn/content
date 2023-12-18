@@ -22,27 +22,29 @@ createTreeWalker(root, whatToShow, filter)
 
 - `root`
 
-  - : A root {{domxref("Node")}} of this {{domxref("TreeWalker")}} traversal. Typically this will be an element owned by the document.
+  - : A {{domxref("Node")}} representing the root of the `TreeWalker` object, which is the initial value of {{domxref("TreeWalker.currentNode")}}.
 
 - `whatToShow` {{optional_inline}}
 
-  - : An `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF`, representing the `SHOW_ALL` constant.
+  - : An `unsigned long` representing a bitmask created by combining the constant properties of [`NodeFilter`](https://dom.spec.whatwg.org/#interface-nodefilter). It is a convenient way of filtering for certain types of node. It defaults to `0xFFFFFFFF`, representing the `NodeFilter.SHOW_ALL` constant.
 
-    | Constant                                                 | Numerical value                                         | Description                                                                                                                                                                                                                                                                                                                                                                               |
-    | -------------------------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `4294967295` (that is the max value of `unsigned long`) | Shows all nodes.                                                                                                                                                                                                                                                                                                                                                                          |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                                     | Shows attribute {{domxref("Attr")}} nodes. This is meaningful only when creating a {{domxref("TreeWalker")}} with an {{domxref("Attr")}} node as its root; in this case, it means that the attribute node will appear in the first position of the iteration or traversal. Since attributes are never children of other nodes, they do not appear when traversing over the document tree. |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                                     | Shows {{domxref("CDATASection")}} nodes.                                                                                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                                   | Shows {{domxref("Comment")}} nodes.                                                                                                                                                                                                                                                                                                                                                       |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                                   | Shows {{domxref("Document")}} nodes.                                                                                                                                                                                                                                                                                                                                                      |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                                  | Shows {{domxref("DocumentFragment")}} nodes.                                                                                                                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                                   | Shows {{domxref("DocumentType")}} nodes.                                                                                                                                                                                                                                                                                                                                                  |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                                     | Shows {{domxref("Element")}} nodes.                                                                                                                                                                                                                                                                                                                                                       |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                                    | Legacy, no longer usable.                                                                                                                                                                                                                                                                                                                                                                 |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                                    | Legacy, no longer usable.                                                                                                                                                                                                                                                                                                                                                                 |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                                  | Legacy, no longer usable.                                                                                                                                                                                                                                                                                                                                                                 |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                                    | Shows {{domxref("ProcessingInstruction")}} nodes.                                                                                                                                                                                                                                                                                                                                         |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{domxref("Text")}} nodes.                                                                                                                                                                                                                                                                                                                                                          |
+    | Constant                                                 | Numerical value | Description                                       |
+    | -------------------------------------------------------- | --------------- | ------------------------------------------------- |
+    | `NodeFilter.SHOW_ALL`                                    | `0xFFFFFFFF`    | Shows all nodes.                                  |
+    | `NodeFilter.SHOW_ATTRIBUTE`                              | `0x2`           | Shows {{domxref("Attr")}} nodes.                  |
+    | `NodeFilter.SHOW_CDATA_SECTION`                          | `0x8`           | Shows {{domxref("CDATASection")}} nodes.          |
+    | `NodeFilter.SHOW_COMMENT`                                | `0x80`          | Shows {{domxref("Comment")}} nodes.               |
+    | `NodeFilter.SHOW_DOCUMENT`                               | `0x100`         | Shows {{domxref("Document")}} nodes.              |
+    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `0x400`         | Shows {{domxref("DocumentFragment")}} nodes.      |
+    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `0x200`         | Shows {{domxref("DocumentType")}} nodes.          |
+    | `NodeFilter.SHOW_ELEMENT`                                | `0x1`           | Shows {{domxref("Element")}} nodes.               |
+    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `0x20`          | Legacy, no longer effective.                      |
+    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `0x10`          | Legacy, no longer effective.                      |
+    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `0x800`         | Legacy, no longer effective.                      |
+    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `0x40`          | Shows {{domxref("ProcessingInstruction")}} nodes. |
+    | `NodeFilter.SHOW_TEXT`                                   | `0x4`           | Shows {{domxref("Text")}} nodes.                  |
+
+    > **Note:** Since the parent of any `Attr` node is always `null`, {{DOMXref("TreeWalker.nextNode()")}} and {{DOMXref("TreeWalker.previousNode()")}} will never return an `Attr` node. To traverse `Attr` nodes, use {{DOMXref("Element.attributes")}} instead.
 
 - `filter` {{optional_inline}}
 
@@ -71,6 +73,14 @@ This example uses `whatToShow` to transform text contents into upper case. Note 
 </div>
 ```
 
+#### CSS
+
+```css
+span {
+  background-color: aqua;
+}
+```
+
 #### JavaScript
 
 ```js
@@ -79,9 +89,9 @@ const treeWalker = document.createTreeWalker(
   NodeFilter.SHOW_TEXT,
 );
 
-let currentNode;
-while ((currentNode = treeWalker.nextNode())) {
-  currentNode.data = currentNode.data.toUpperCase();
+while (treeWalker.nextNode()) {
+  const node = treeWalker.currentNode;
+  node.data = node.data.toUpperCase();
 }
 ```
 
@@ -91,7 +101,7 @@ while ((currentNode = treeWalker.nextNode())) {
 
 ### Using filter
 
-This example uses `filter` to escape text contents. For any `.escape` element, the text contents of all its descendants will be escaped using {{JSXref("encodeURI()")}}, unless a descendant is also a descendant of a `.no-escape` element.
+This example uses `filter` to escape text contents. For any text node, its content will be escaped using {{JSXref("encodeURI()")}} if it is a descendant of an `.escape` element but not of any `.no-escape` element.
 
 #### HTML
 
@@ -148,24 +158,16 @@ const treeWalker = document.createTreeWalker(
     node.classList.contains("no-escape")
       ? NodeFilter.FILTER_REJECT
       : node.closest(".escape")
-      ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_SKIP,
+        ? NodeFilter.FILTER_ACCEPT
+        : NodeFilter.FILTER_SKIP,
 );
 
-let currentNode;
-while ((currentNode = treeWalker.nextNode())) {
-  const textTreeWalker = document.createTreeWalker(
-    currentNode,
-    NodeFilter.SHOW_ALL,
-    (node) =>
-      node.nodeName === "#text" && !/^\s*$/.test(node.data)
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_REJECT,
-  );
-
-  let currentTextNode;
-  while ((currentTextNode = textTreeWalker.nextNode())) {
-    currentTextNode.data = encodeURI(currentTextNode.data.replace(/\s+/g, " "));
+while (treeWalker.nextNode()) {
+  for (const node of treeWalker.currentNode.childNodes) {
+    if (node.nodeType === Node.TEXT_NODE && /\S/.test(node.data)) {
+      // Exclude whitespace-only text nodes
+      node.data = encodeURI(node.data.replace(/\s+/g, " "));
+    }
   }
 }
 ```

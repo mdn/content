@@ -22,14 +22,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-
-  - : Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
-
-    - `off` or `none`, no autocapitalization is applied (all letters default to lowercase)
-    - `on` or `sentences`, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase
-    - `words`, the first letter of each word defaults to a capital letter; all other letters default to lowercase
-    - `characters`, all letters should default to uppercase
-
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
@@ -88,7 +81,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#xml:lang) has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)

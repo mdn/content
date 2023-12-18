@@ -35,7 +35,7 @@ function execRecursively(fn, subject, _refs = new WeakSet()) {
   }
 
   fn(subject);
-  if (typeof subject === "object") {
+  if (typeof subject === "object" && subject) {
     _refs.add(subject);
     for (const key in subject) {
       execRecursively(fn, subject[key], _refs);

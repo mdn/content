@@ -6,12 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.captureStream
 ---
 
-{{APIRef("HTML Media Capture")}}
+{{APIRef("Media Capture and Streams")}}
 
-The **`captureStream()`** method of the
-{{domxref("HTMLMediaElement")}} interface returns a {{domxref('MediaStream')}} object
-which is streaming a real-time capture of the content being rendered in the media
-element.
+The **`captureStream()`** method of the {{domxref("HTMLMediaElement")}} interface returns a {{domxref('MediaStream')}} object which is streaming a real-time capture of the content being rendered in the media element.
 
 This can be used, for example, as a source for a [WebRTC](/en-US/docs/Web/API/WebRTC_API) {{domxref("RTCPeerConnection")}}.
 

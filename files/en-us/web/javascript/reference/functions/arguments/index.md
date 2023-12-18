@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.functions.arguments
 ---
 
-{{JSSidebar("Functions")}}
+{{jsSidebar("Functions")}}
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
@@ -49,7 +49,7 @@ Each argument index can also be set or reassigned:
 arguments[1] = "new value";
 ```
 
-Non-strict functions that only has simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
+Non-strict functions that only have simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
 
 ```js
 function func(a) {
@@ -94,7 +94,7 @@ This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/W
 
 ### arguments is an array-like object
 
-`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{jsxref("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 ```js
 const args = Array.prototype.slice.call(arguments);
@@ -118,7 +118,7 @@ console.log(midpoint(3, 1, 4, 1, 5)); // 3
 
 ## Properties
 
-- {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{Deprecated_Inline}}
+- {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{deprecated_inline}}
   - : Reference to the currently executing function that the arguments belong to. Forbidden in strict mode.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : The number of arguments that were passed to the function.
@@ -196,6 +196,6 @@ console.log(typeof arguments[0]); // returns the type of the first argument
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)

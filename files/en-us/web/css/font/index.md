@@ -27,6 +27,23 @@ This property is a shorthand for the following CSS properties:
 
 ## Syntax
 
+```css-nolint
+/* font-size font-family */
+font: 1.2em "Fira Sans", sans-serif;
+
+/* font-size/line height font-family */
+font: 1.2em/2 "Fira Sans", sans-serif;
+
+/* font-style font-weight font-size font-family */
+font: italic bold 1.2em "Fira Sans", sans-serif;
+
+/* font-stretch font-variant font-size font-family */
+font: ultra-condensed small-caps 1.2em "Fira Sans", sans-serif;
+
+/* system font */
+font: caption;
+```
+
 The `font` property may be specified as either a single keyword, which will select a system font, or as a shorthand for various font-related properties.
 
 If `font` is specified as a system keyword, it must be one of: `caption`, `icon`, `menu`, `message-box`, `small-caption`, `status-bar`.

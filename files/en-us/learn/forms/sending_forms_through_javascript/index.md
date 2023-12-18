@@ -6,376 +6,123 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-HTML forms can send an [HTTP](/en-US/docs/Web/HTTP) request declaratively. But forms can also prepare an HTTP request to send via JavaScript, for example via `XMLHttpRequest`. This article explores such approaches.
+When a user submits an HTML form, for example by clicking the {{glossary("Submit_button", "submit button")}}, the browser makes an [HTTP](/en-US/docs/Web/HTTP) request to send the data in the form. But instead of this declarative approach, web apps sometimes use JavaScript APIs such as {{domxref("fetch()")}} to send data programmatically to an endpoint that expects a form submission. This article explains why this is an important use case and how to do it.
 
-## A form is not always a form
+## Why use JavaScript to submit form data?
 
-With progressive web apps, single page apps, and framework-based apps, it's common to use [HTML forms](/en-US/docs/Learn/Forms) to send data without loading a new document when response data is received. Let's first talk about why this requires a different approach.
+Standard HTML form submission, as described in our article on [sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data), loads the URL where the data was sent, which means the browser window navigates with a full page load.
 
-### Gaining control of the global interface
+However, many web apps, especially {{glossary("progressive web apps")}} and {{glossary("SPA", "single-page apps")}}, use JavaScript APIs to request data from the server and update the relevant parts of the page, avoiding the overhead of a full page load.
 
-Standard HTML form submission, as described in the previous article, loads the URL where the data was sent, which means the browser window navigates with a full page load. Avoiding a full page load can provide a smoother experience by avoiding network lag, and possible visual issues like flickering.
+For this reason, when these web apps want to submit form data, they use HTML forms only to collect input from the user, but not for data submission. When the user tries to send the data, the application takes control and sends the data using a JavaScript API such as {{domxref("fetch()")}}.
 
-Many modern UIs only use HTML forms to collect input from the user, and not for data submission. When the user tries to send the data, the application takes control and transmits the data asynchronously in the background, updating only the parts of the UI that require changes.
+## The problem with JavaScript form submission
 
-Sending arbitrary data asynchronously is generally called [AJAX](/en-US/docs/Web/Guide/AJAX), which stands for **"Asynchronous JavaScript And XML"**.
+If the server endpoint to which the web app sends the form data is under the web app developer's control, then they can send the form data in any way they choose: for example, as a JSON object.
 
-### How is it different?
+However, if the server endpoint is expecting a form submission, the web app must encode the data in a particular way. For example, if the data is just textual, it is made of URL-encoded lists of key/value pairs and sent with a {{httpheader("Content-Type")}} of `application/x-www-form-urlencoded`. If the form includes binary data, it must be sent using the `multipart/form-data` content type.
 
-The {{domxref("XMLHttpRequest")}} (XHR) DOM object can build HTTP requests, send them, and retrieve their results. Historically, {{domxref("XMLHttpRequest")}} was designed to fetch and send [XML](/en-US/docs/Web/XML) as an exchange format, which has since been superseded by [JSON](/en-US/docs/Glossary/JSON). But neither XML nor JSON fits into form data request encoding. Form data (`application/x-www-form-urlencoded`) is made of URL-encoded lists of key/value pairs. For transmitting binary data, the HTTP request is reshaped into `multipart/form-data`.
+The {{domxref("FormData")}} interface takes care of the process of encoding data in this way, and in the rest of this article we'll provide a quick introduction to `FormData`. For more details, see our guide to [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects).
 
-> **Note:** The [Fetch API](/en-US/docs/Web/API/Fetch_API) is often used in place of XHR these days — it is a modern, updated version of XHR, which works similarly but has some advantages. Most of the XHR code you'll see in this article could be swapped out for Fetch.
+## Building a `FormData` object manually
 
-If you control the front-end (the code that's executed in the browser) and the back-end (the code which is executed on the server), you can send JSON/XML and process them however you want.
+You can populate a `FormData` object by calling the object's {{domxref("FormData.append()", "append()")}} method for each field you want to add, passing in the field's name and value. The value can be a string, for text fields, or a {{domxref("Blob")}}, for binary fields, including {{domxref("File")}} objects.
 
-But if you want to use a third-party service, you need to send the data in the format the services require.
-
-So how should we send such data? The different techniques you'll require are done below.
-
-## Sending form data
-
-There are 3 ways to send form data:
-
-- Building an `XMLHttpRequest` manually.
-- Using a standalone `FormData` object.
-- Using `FormData` bound to a `<form>` element.
-
-Let's look at them in detail.
-
-### Building an XMLHttpRequest manually
-
-{{domxref("XMLHttpRequest")}} is the safest and most reliable way to make HTTP requests. To send form data with {{domxref("XMLHttpRequest")}}, prepare the data by URL-encoding it, and obey the specifics of form data requests.
-
-Let's look at an example:
-
-```html
-<button>Click Me!</button>
-```
-
-And now the JavaScript:
+In the following example we send data as a form submission when the user clicks a button:
 
 ```js
-const btn = document.querySelector("button");
+async function sendData(data) {
+  // Construct a FormData instance
+  const formData = new FormData();
 
-function sendData(data) {
-  console.log("Sending data");
+  // Add a text field
+  formData.append("name", "Pomegranate");
 
-  const XHR = new XMLHttpRequest();
-
-  const urlEncodedDataPairs = [];
-
-  // Turn the data object into an array of URL-encoded key/value pairs.
-  for (const [name, value] of Object.entries(data)) {
-    urlEncodedDataPairs.push(
-      `${encodeURIComponent(name)}=${encodeURIComponent(value)}`,
-    );
+  // Add a file
+  const selection = await window.showOpenFilePicker();
+  if (selection.length > 0) {
+    const file = await selection[0].getFile();
+    formData.append("file", file);
   }
 
-  // Combine the pairs into a single string and replace all %-encoded spaces to
-  // the '+' character; matches the behavior of browser form submissions.
-  const urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
-
-  // Define what happens on successful data submission
-  XHR.addEventListener("load", (event) => {
-    alert("Yeah! Data sent and response loaded.");
-  });
-
-  // Define what happens in case of an error
-  XHR.addEventListener("error", (event) => {
-    alert("Oops! Something went wrong.");
-  });
-
-  // Set up our request
-  XHR.open("POST", "https://example.com/cors.php");
-
-  // Add the required HTTP header for form data POST requests
-  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-  // Finally, send our data.
-  XHR.send(urlEncodedData);
-}
-
-btn.addEventListener("click", () => {
-  sendData({ test: "ok" });
-});
-```
-
-Here's the live result:
-
-{{EmbedLiveSample("Building_an_XMLHttpRequest_manually", "100%", 50)}}
-
-> **Note:** This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third-party website. For cross-origin requests, you'll need [CORS and HTTP access control](/en-US/docs/Web/HTTP/CORS).
-
-### Using XMLHttpRequest and the FormData object
-
-Building an HTTP request by hand can be overwhelming. Fortunately, the [XMLHttpRequest specification](https://www.w3.org/TR/XMLHttpRequest/) provides a newer, simpler way to handle form data requests with the {{domxref("FormData","FormData")}} object.
-
-The {{domxref("FormData","FormData")}} object can be used to build form data for transmission, or to get the data within a form element to manage how it's sent.
-
-Using this object is detailed in [Using FormData Objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects), but here are two examples:
-
-#### Using a standalone FormData object
-
-```html
-<button>Click Me!</button>
-```
-
-You should be familiar with that HTML sample. Now for the JavaScript:
-
-```js
-const btn = document.querySelector("button");
-
-function sendData(data) {
-  const XHR = new XMLHttpRequest();
-  const FD = new FormData();
-
-  // Push our data into our FormData object
-  for (const [name, value] of Object.entries(data)) {
-    FD.append(name, value);
+  try {
+    const response = await fetch("https://example.org/post", {
+      method: "POST",
+      // Set the FormData instance as the request body
+      body: formData,
+    });
+    console.log(await response.json());
+  } catch (e) {
+    console.error(e);
   }
-
-  // Define what happens on successful data submission
-  XHR.addEventListener("load", (event) => {
-    alert("Yeah! Data sent and response loaded.");
-  });
-
-  // Define what happens in case of an error
-  XHR.addEventListener("error", (event) => {
-    alert("Oops! Something went wrong.");
-  });
-
-  // Set up our request
-  XHR.open("POST", "https://example.com/cors.php");
-
-  // Send our FormData object; HTTP headers are set automatically
-  XHR.send(FD);
 }
 
-btn.addEventListener("click", () => {
-  sendData({ test: "ok" });
-});
+const send = document.querySelector("#send");
+send.addEventListener("click", sendData);
 ```
 
-Here's the live result:
+1. We first construct a new, empty, `FormData` object.
 
-{{EmbedLiveSample("Using_a_standalone_FormData_object", "100%", 50)}}
+2. Next, we call `append()` twice, to add two items to the `FormData` object: a text field and a file.
 
-#### Using FormData bound to a form element
+3. Finally, we make a {{httpmethod("POST")}} request using the `fetch()` API, setting the `FormData` object as the request body.
 
-You can also bind a `FormData` object to an {{HTMLElement("form")}} element. This creates a `FormData` object that represents the data contained in the form.
+Note that we don't have to set the {{httpheader("Content-Type")}} header: the correct header is automatically set when we pass a `FormData` object into `fetch()`.
 
-The HTML is typical:
+## Associating a `FormData` object and a `<form>`
+
+If the data you're submitting is really coming from a {{htmlelement("form")}}, you can populate the `FormData` instance by passing the form into the `FormData` constructor.
+
+Suppose our HTML declares a `<form>` element:
 
 ```html
-<form id="myForm">
-  <label for="myName">Send me your name:</label>
-  <input id="myName" name="name" value="Dominic" />
-  <input type="submit" value="Send Me!" />
+<form id="userinfo">
+  <div>
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" name="username" value="Dominic" />
+  </div>
+
+  <div>
+    <label for="avatar">Select an avatar</label>
+    <input type="file" id="avatar" name="avatar" required />
+  </div>
+  <input type="submit" value="Submit" />
 </form>
 ```
 
-But JavaScript takes over the form:
+The form includes a text input, a file input, and a submit button.
+
+The JavaScript is as follows:
 
 ```js
-window.addEventListener("load", () => {
-  function sendData() {
-    const XHR = new XMLHttpRequest();
+const form = document.querySelector("#userinfo");
 
-    // Bind the FormData object and the form element
-    const FD = new FormData(form);
+async function sendData() {
+  // Associate the FormData object with the form element
+  const formData = new FormData(form);
 
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", (event) => {
-      alert(event.target.responseText);
+  try {
+    const response = await fetch("https://example.org/post", {
+      method: "POST",
+      // Set the FormData instance as the request body
+      body: formData,
     });
-
-    // Define what happens in case of error
-    XHR.addEventListener("error", (event) => {
-      alert("Oops! Something went wrong.");
-    });
-
-    // Set up our request
-    XHR.open("POST", "https://example.com/cors.php");
-
-    // The data sent is what the user provided in the form
-    XHR.send(FD);
+    console.log(await response.json());
+  } catch (e) {
+    console.error(e);
   }
+}
 
-  // Get the form element
-  const form = document.getElementById("myForm");
-
-  // Add 'submit' event handler
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    sendData();
-  });
+// Take over form submission
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  sendData();
 });
 ```
 
-Here's the live result:
+We add a submit event handler for the form element. This first calls {{domxref("Event.preventDefault()", "preventDefault()")}} to prevent the browser's built-in form submission, so we can take over. Then we call `sendData()`, which retrieves the form element and passes it into the `FormData` constructor.
 
-{{EmbedLiveSample("Using_FormData_bound_to_a_form_element", "100%", 50)}}
-
-You can even get more involved with the process by using the form's {{domxref("HTMLFormElement.elements", "elements")}} property to get a list of all of the data elements in the form and manually manage them one at a time. To learn more about that, see the [Accessing form controls](/en-US/docs/Web/API/HTMLFormElement/elements#accessing_form_controls) example.
-
-## Dealing with binary data
-
-If you use a {{domxref("FormData","FormData")}} object with a form that includes `<input type="file">` widgets, the data will be processed automatically. But to send binary data by hand, there's extra work to do.
-
-There are many sources for binary data, including {{domxref("FileReader")}}, {{domxref("HTMLCanvasElement","Canvas")}}, and [WebRTC](/en-US/docs/Web/API/Navigator/getUserMedia). Unfortunately, some legacy browsers can't access binary data or require complicated workarounds. To learn more about the `FileReader` API, see [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
-
-The least complicated way of sending binary data is by using {{domxref("FormData","FormData")}}'s `append()` method, demonstrated above. If you have to do it by hand, it's trickier.
-
-In the following example, we use the {{domxref("FileReader")}} API to access binary data and then build the multi-part form data request by hand:
-
-```html
-<form id="theForm">
-  <p>
-    <label for="theText">text data:</label>
-    <input id="theText" name="myText" value="Some text data" type="text" />
-  </p>
-  <p>
-    <label for="theFile">file data:</label>
-    <input id="theFile" name="myFile" type="file" />
-  </p>
-  <button>Send Me!</button>
-</form>
-```
-
-As you see, the HTML is a standard `<form>`. There's nothing magical going on. The "magic" is in the JavaScript:
-
-```js
-// Because we want to access DOM nodes,
-// we initialize our script at page load.
-window.addEventListener("load", () => {
-  // These variables are used to store the form data
-  const text = document.getElementById("theText");
-  const file = {
-    dom: document.getElementById("theFile"),
-    binary: null,
-  };
-
-  // Use the FileReader API to access file content
-  const reader = new FileReader();
-
-  // Because FileReader is asynchronous, store its
-  // result when it finishes reading the file
-  reader.addEventListener("load", () => {
-    file.binary = reader.result;
-  });
-
-  // At page load, if a file is already selected, read it.
-  if (file.dom.files[0]) {
-    reader.readAsBinaryString(file.dom.files[0]);
-  }
-
-  // If not, read the file once the user selects it.
-  file.dom.addEventListener("change", () => {
-    if (reader.readyState === FileReader.LOADING) {
-      reader.abort();
-    }
-
-    reader.readAsBinaryString(file.dom.files[0]);
-  });
-
-  // sendData is our main function
-  function sendData() {
-    // If there is a selected file, wait until it is read
-    // If there is not, delay the execution of the function
-    if (!file.binary && file.dom.files.length > 0) {
-      setTimeout(sendData, 10);
-      return;
-    }
-
-    // To construct our multipart form data request,
-    // We need an XMLHttpRequest instance
-    const XHR = new XMLHttpRequest();
-
-    // We need a separator to define each part of the request
-    const boundary = "blob";
-
-    // Store our body request in a string.
-    let data = "";
-
-    // So, if the user has selected a file
-    if (file.dom.files[0]) {
-      // Start a new part in our body's request
-      data += `--${boundary}\r\n`;
-
-      // Describe it as form data
-      data +=
-        "content-disposition: form-data; " +
-        // Define the name of the form data
-        `name="${file.dom.name}"; ` +
-        // Provide the real name of the file
-        `filename="${file.dom.files[0].name}"\r\n`;
-      // And the MIME type of the file
-      data += `Content-Type: ${file.dom.files[0].type}\r\n`;
-
-      // There's a blank line between the metadata and the data
-      data += "\r\n";
-
-      // Append the binary data to our body's request
-      data += file.binary + "\r\n";
-    }
-
-    // Text data is simpler
-    // Start a new part in our body's request
-    data += `--${boundary}\r\n`;
-
-    // Say it's form data, and name it
-    data += `content-disposition: form-data; name="${text.name}"\r\n`;
-    // There's a blank line between the metadata and the data
-    data += "\r\n";
-
-    // Append the text data to our body's request
-    data += text.value + "\r\n";
-
-    // Once we are done, "close" the body's request
-    data += `--${boundary}--`;
-
-    // Define what happens on successful data submission
-    XHR.addEventListener("load", (event) => {
-      alert("Yeah! Data sent and response loaded.");
-    });
-
-    // Define what happens in case of an error
-    XHR.addEventListener("error", (event) => {
-      alert("Oops! Something went wrong.");
-    });
-
-    // Set up our request
-    XHR.open("POST", "https://example.com/cors.php");
-
-    // Add the required HTTP header to handle a multipart form data POST request
-    XHR.setRequestHeader(
-      "Content-Type",
-      `multipart/form-data; boundary=${boundary}`,
-    );
-
-    // Send the data
-    XHR.send(data);
-  }
-
-  // Get the form element
-  const form = document.getElementById("theForm");
-
-  // Add 'submit' event handler
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    sendData();
-  });
-});
-```
-
-Here's the live result:
-
-{{EmbedLiveSample("Dealing_with_binary_data", "100%", 150)}}
-
-## Conclusion
-
-Depending on the browser and the type of data you are dealing with, sending form data through JavaScript can be easy or difficult. The {{domxref("FormData","FormData")}} object is generally the answer, and you can use a [polyfill](https://github.com/jimmywarting/FormData) for it on legacy browsers.
+After that, we send the `FormData` instance as an HTTP `POST` request, using `fetch()`.
 
 ## See also
 

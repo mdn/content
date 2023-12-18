@@ -38,7 +38,7 @@ case. Please see the examples below.
 in JavaScript use either the dot (.) or square brackets (`[]`), but not both.
 Square brackets allow computed property access.
 
-```js example-bad
+```js-nolint example-bad
 const obj = { foo: { bar: "baz", bar2: "baz2" } };
 const i = 2;
 
@@ -67,7 +67,7 @@ obj.foo[`bar${i}`]; // "baz2"
 If you are coming from another programming language (like [PHP](/en-US/docs/Glossary/PHP)), it is also easy to mix up the dot operator
 (`.`) and the concatenation operator (`+`).
 
-```js example-bad
+```js-nolint example-bad
 console.log("Hello" . "world");
 
 // SyntaxError: missing name after . operator

@@ -72,8 +72,8 @@ svg {
 - {{SVGAttr("spreadMethod")}}
   - : This attribute indicates how the gradient behaves if it starts or ends inside the bounds of the shape containing the gradient.
     _Value type_: `pad`|`reflect`|`repeat` ; _Default value_: `pad`; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header}}An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<radialGradient>` element that will be used as a template.
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+  - : An [\<IRI>](/en-US/docs/Web/SVG/Content_type#iri) reference to another `<radialGradient>` element that will be used as a template.
     _Value type_: [**\<IRI>**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 
 ### Global attributes
@@ -87,7 +87,7 @@ svg {
 - [Presentation Attributes](/en-US/docs/Web/SVG/Attribute/Presentation)
   - : Most notably: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - XLink Attributes
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
+  - : {{SVGAttr("xlink:href")}} {{deprecated_inline}}, {{SVGAttr("xlink:title")}}
 
 ## Usage notes
 

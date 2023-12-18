@@ -57,12 +57,12 @@ Highlights:
 - The experimental `CanvasRenderingContext2D.addHitRegion()` method now accepts a `path` option, which allows you to add hit regions to {{domxref("Path2D")}} objects ([Firefox bug 1129147](https://bugzil.la/1129147)).
 - New methods have been added to manipulate {{domxref("FormData")}} objects ([Firefox bug 1085283](https://bugzil.la/1085283)) and `FormData` is now supported in Web workers ([Firefox bug 739173](https://bugzil.la/739173)).
 - The non-standard `XMLHttpRequest.sendAsBinary()` method has been removed.
-  Refer to the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data) documentation for alternatives ([Firefox bug 853162](https://bugzil.la/853162)).
+  Refer to the [Sending and Receiving Binary Data](/en-US/docs/Web/API/XMLHttpRequest_API/Sending_and_Receiving_Binary_Data) documentation for alternatives ([Firefox bug 853162](https://bugzil.la/853162)).
 - Progress in our experimental implementation of Web Animations: {{domxref("Animation/startTime", "AnimationPlayer.startTime")}} is now writable ([Firefox bug 1073379](https://bugzil.la/1073379)).
 - Progress in our experimental implementation of [Service Workers](/en-US/docs/Web/API/Service_Worker_API): {{domxref("Cache")}} and {{domxref("CacheStorage")}} interfaces are now implemented ([Firefox bug 940273](https://bugzil.la/940273)).
 - The experimental [Fetch API](/en-US/docs/Web/API/Fetch_API) has been activated by default ([Firefox bug 1133861](https://bugzil.la/1133861)).
 - Progress in our experimental implementation of WebGL2: {{domxref("WebGLSync")}} is now implemented ([Firefox bug 1048721](https://bugzil.la/1048721)).
-- Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been added on desktop ([Firefox bug 69787](https://bugzil.la/69787), but not on Firefox for Android or Firefox OS (they will be added in [Firefox 43](/en-US/docs/Mozilla/Firefox/Releases/43)).
+- Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been added on desktop ([Firefox bug 69787](https://bugzil.la/69787), but not on Firefox for Android or Firefox OS (they will be added in [Firefox 43](/en-US/docs/Mozilla/Firefox/Releases/43))).
 
 ### MathML
 
@@ -78,7 +78,7 @@ _No change._
 
 ### Miscellaneous
 
-- [WOFF2](/en-US/docs/Web/Guide/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
+- [WOFF2](/en-US/docs/Web/CSS/CSS_fonts/WOFF) fonts support is now turned on by default in release version of Firefox (Beta and Release, in addition of Nightly and Developer Edition) ([Firefox bug 1084026](https://bugzil.la/1084026)).
 - The [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) command-line option has been removed ([Firefox bug 1080319](https://bugzil.la/1080319)).
 - Support for new [Unicode 8.0 skin tone emoji](https://www.bbc.co.uk/news/newsbeat-32220611) ([Firefox bug 1153460](https://bugzil.la/1153460)).
 

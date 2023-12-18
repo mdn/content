@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MouseEvent.movementY
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Lock API")}}
 
 The **`movementY`** read-only property of the {{domxref("MouseEvent")}} interface provides the difference in the Y coordinate of the mouse pointer between the given event and the previous {{domxref("Element/mousemove_event", "mousemove")}} event.
 In other words, the value of the property is computed like this: `currentEvent.movementY = currentEvent.screenY - previousEvent.screenY`.
@@ -15,7 +15,7 @@ In other words, the value of the property is computed like this: `currentEvent.m
 
 ## Value
 
-A number.
+A number. Always zero on any {{domxref("MouseEvent")}} other than `mousemove`.
 
 ## Examples
 

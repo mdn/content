@@ -406,17 +406,17 @@ Now we'll take care of the `FilterButton` component.
    </script>
 
    <div class="filters btn-group stack-exception">
-     <button class="btn toggle-btn" class:btn__primary={filter === "all"} aria-pressed={filter === "all"} on:click={()=> filter = "all"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ALL} aria-pressed={filter === Filter.ALL} on:click={()=> filter = Filter.ALL} >
        <span class="visually-hidden">Show</span>
        <span>All</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === "active"} aria-pressed={filter === "active"} on:click={()=> filter = "active"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.ACTIVE} aria-pressed={filter === Filter.ACTIVE} on:click={()=> filter = Filter.ACTIVE} >
        <span class="visually-hidden">Show</span>
        <span>Active</span>
        <span class="visually-hidden">tasks</span>
      </button>
-     <button class="btn toggle-btn" class:btn__primary={filter === "completed"} aria-pressed={filter === "completed"} on:click={()=> filter = "completed"} >
+     <button class="btn toggle-btn" class:btn__primary={filter === Filter.COMPLETED} aria-pressed={filter === Filter.COMPLETED} on:click={()=> filter = Filter.COMPLETED} >
        <span class="visually-hidden">Show</span>
        <span>Completed</span>
        <span class="visually-hidden">tasks</span>
@@ -445,8 +445,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -519,8 +519,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -818,7 +818,7 @@ Our stores have already been ported to TypeScript, but we can do better. We shou
 
 ### Understanding TypeScript generics
 
-Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle-brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
+Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
 
 Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` elements, like this:
 
