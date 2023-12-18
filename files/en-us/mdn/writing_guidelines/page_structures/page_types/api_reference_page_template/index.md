@@ -120,7 +120,7 @@ Include one term and definition for each method.
 
 ## Events
 
-Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 _Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
 
