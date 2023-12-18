@@ -81,7 +81,11 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 ## Guides
 
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
+
   - : Explains how to register custom properties in CSS and JavaScript, with hints on handling undefined and invalid values, fallbacks, and inheritance.
+
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)
+  - : Explains what CSS Houdini is and its advantages, along with a list of available APIs and their statuses.
 
 ## Related concepts
 
@@ -105,6 +109,5 @@ The value of `--stop-color` is set to `cornflowerblue` at first, but when you ho
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API) module
 - [Worklet](/en-US/docs/Web/API/Worklet) interface
-- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)
 - [CSS `env()`](/en-US/docs/Web/CSS/env)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
