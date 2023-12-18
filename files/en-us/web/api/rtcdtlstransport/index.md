@@ -9,7 +9,7 @@ browser-compat: api.RTCDtlsTransport
 
 The **`RTCDtlsTransport`** interface provides access to information about the Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport over which a {{domxref("RTCPeerConnection")}}'s {{Glossary("RTP")}} and {{Glossary("RTCP")}} packets are sent and received by its {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}} objects.
 
-A `RTCDtlsTransport` object is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by an connection's [data channels](/en-US/docs/Web/API/RTCDataChannel).
+A `RTCDtlsTransport` object is also used to provide information about {{Glossary("SCTP")}} packets transmitted and received by a connection's [data channels](/en-US/docs/Web/API/RTCDataChannel).
 
 Features of the DTLS transport include the addition of security to the underlying transport; the `RTCDtlsTransport` interface can be used to obtain information about the underlying transport and the security added to it by the DTLS layer.
 
@@ -26,17 +26,6 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
     which describes the underlying Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport state.
     It can be one of the following values:
     `new`, `connecting`, `connected`, `closed`, or `failed`.
-
-### Event handlers
-
-- {{DOMxRef("RTCDtlsTransport.onerror", "onerror")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function the browser calls
-    when the {{DOMxRef("RTCDtlsTransport.error_event", "error")}} event is received.
-- {{DOMxRef("RTCDtlsTransport.onstatechange", "onstatechange")}}
-  - : An [event handler](/en-US/docs/Web/Events/Event_handlers)
-    which specifies a function the browser calls
-    when the {{DOMxRef("RTCDtlsTransport.statechange_event", "statechange")}} event is received.
 
 ## Instance methods
 
@@ -82,9 +71,9 @@ When the connection is created without using BUNDLE, each RTP or RTCP component 
 
 #### When using BUNDLE
 
-When the connection is using BUNDLE, each `RTCDtlsTransport` object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using `max-compat` mode, each transport is responsible for handling all of the communications for a given type of media (audio, video, or data channel). Thus, a connection that has any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.
+When the connection is using BUNDLE, each `RTCDtlsTransport` object represents a group of {{domxref("RTCRtpTransceiver")}} objects. If the connection was created using `max-compat` mode, each transport is responsible for handling all communication for a given type of media (audio, video, or data channel). Thus, a connection with any number of audio and video channels will always have exactly one DTLS transport for audio and one for video communications.
 
-Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling or not. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining `RTCDtlsTransport` objects.
+Because transports are established early in the negotiation process, it's likely that it won't be known until after they're created whether or not the remote peer supports bundling. For this reason, you'll sometimes see separate transports created at first, one for each track, then see them get bundled up once it's known that bundling is possible. If your code accesses {{domxref("RTCRtpSender")}}s and/or {{domxref("RTCRtpReceiver")}}s directly, you may encounter situations where they're initially separate, then half or more of them get closed and the senders and receivers updated to refer to the appropriate remaining `RTCDtlsTransport` objects.
 
 ### Data channels
 
@@ -94,7 +83,7 @@ You can, in turn, identify the `RTCDtlsTransport` used to securely encapsulate t
 
 ## Examples
 
-This example presents a function, `tallySenders()`, which iterates over an `RTCPeerConnection`'s {{domxref("RTCRtpSender")}}s, tallying up how many of them are in various states. The function returns an object containing properties whose values indicate how many of the senders are in each state.
+This example presents a function, `tallySenders()`, which iterates over an `RTCPeerConnection`'s {{domxref("RTCRtpSender")}}s, tallying up how many of them are in various states. The function returns an object containing properties whose values indicate how many senders are in each state.
 
 ```js
 let pc = new RTCPeerConnection({ bundlePolicy: "max-bundle" });

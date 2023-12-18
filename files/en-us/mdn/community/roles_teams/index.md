@@ -95,7 +95,7 @@ As a maintainer, you engage in the following activities:
   - Process improvements
 
 <!--
-TODO: Compare with https://developer.mozilla.org/en-US/docs/MDN/Community/Users_teams#volunteer_and_partner_maintainers.
+TODO: Compare with https://developer.mozilla.org/en-US/docs/MDN/Community/Roles_teams#volunteer_and_partner_maintainers.
 What info needs to be retained? Should we use the term 'partner maintainer' or is 'maintainer' good enough?
 -->
 
