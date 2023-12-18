@@ -200,7 +200,7 @@ The CSS Device Adaptation specification defines the following metadata name:
           <p>
             The <code>cover</code> value means that the viewport is scaled to fill
             the device display. It is highly recommended to make use of the
-            <a href="/en-US/docs/Web/CSS/env()">safe area inset</a> variables to
+            <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
             ensure that important content doesn't end up outside the display.
           </p>
         </td>
