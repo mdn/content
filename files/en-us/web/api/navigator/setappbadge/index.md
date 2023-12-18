@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.setAppBadge
 ---
 
-{{APIRef("Badging API")}}{{securecontext_header}}{{AvailableInWorkers}}
+{{APIRef("Badging API")}}{{securecontext_header}}
 
 The **`setAppBadge()`** method of the {{domxref("Navigator")}} interface sets a badge on the icon associated with this app. If a value is passed to the method, this will be set as the value of the badge. Otherwise the badge will display as a dot, or other indicator as defined by the platform.
 
@@ -54,5 +54,4 @@ navigator.setAppBadge(unread);
 
 ## See also
 
-- [Badging API](/en-US/docs/Web/API/Badging_API)
-- [Badging for app icons](https://web.dev/badging-api/)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api/)
