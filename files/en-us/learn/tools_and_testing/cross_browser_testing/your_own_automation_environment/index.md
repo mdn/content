@@ -449,11 +449,11 @@ Let's write an example:
          .then(function () {
            driver.getTitle().then((title) => {
              setTimeout(() => {
-             if (title === "LambdaTest - Google Search") {
-               driver.executeScript("lambda-status=passed");
-             } else {
-               driver.executeScript("lambda-status=failed");
-             }
+               if (title === "LambdaTest - Google Search") {
+                 driver.executeScript("lambda-status=passed");
+               } else {
+                 driver.executeScript("lambda-status=failed");
+               }
                driver.quit();
              }, 5000);
            });
