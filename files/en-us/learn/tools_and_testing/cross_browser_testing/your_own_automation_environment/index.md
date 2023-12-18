@@ -577,19 +577,19 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
    ```js
    npm install request
    ```
-3. Then, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
+2. Then, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
 
    ```js
    const request = require("request");
    ```
 
-4. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
+3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
    'project' : 'Google test 2'
    ```
 
-5. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
+4. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
 
    ```js
    let sessionId;
@@ -599,7 +599,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
    });
    ```
 
-6. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
+5. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
    ```js
    driver.sleep(2000).then(() => {
