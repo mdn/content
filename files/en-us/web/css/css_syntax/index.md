@@ -10,6 +10,7 @@ spec-urls: https://drafts.csswg.org/css-syntax
 The **CSS syntax** module describes, in general terms, the structure and syntax of cascading stylesheets, or CSS. It defines CSS as the language for describing the rendering of structured documents (such as HTML and XML), on the web and elsewhere.
 
 This module doesn't define any properties, {{cssxref("css_types", "data types")}}, {{cssxref("css_functions", "functions")}}, or {{cssxref("at-rule", "at-rules")}}. Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
+## At-rules
 
 The module explicitly states that {{cssxref("@charset")}} is not an actual at-rule, but rather an unrecognized legacy rule that should be omitted when a stylesheet is grammar-checked.
 
