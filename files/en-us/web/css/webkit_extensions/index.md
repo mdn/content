@@ -149,7 +149,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support a numb
 
 \* A few are on the standards, unprefixed track
 
-\*\* New syntax has been standardized. Property links to the new syntax. The old prefixed syntax is still supported in some browsers.
+\*\* New syntax has been standardized. Property links to the new syntax. The old, prefixed syntax is still supported in some browsers.
 
 \*\*\* WebKit supports without `-webkit` prefix, but not standard or on standards track
 
