@@ -11,7 +11,6 @@ The **CSS syntax** module describes, in general terms, the structure and syntax 
 
 This module doesn't define any properties, {{cssxref("css_types", "data types", "nocode")}}, {{cssxref("css_functions", "functions", "nocode")}}, or {{cssxref("at-rule", "at-rules", "nocode")}}. Rather, it elaborates on how all of these features should be defined and how user agents should parse CSS.
 
-
 ## At-rules
 
 - none
