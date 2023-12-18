@@ -33,7 +33,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Events
 
-_Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._ (Note: If the interface doesn't inherit from another interface, remove this whole line.)
+_Also inherits events from its parent interface, `\{{DOMxRef("NameOfParentInterface")}}`._
 
 Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
