@@ -578,6 +578,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
    ```js
    npm install request
    ```
+
 2. Then, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
 
    ```js
