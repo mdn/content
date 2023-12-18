@@ -420,6 +420,13 @@
       "properties": [],
       "events": []
     },
+    "EditContext API": {
+      "overview": ["EditContext API"],
+      "interfaces": ["EditContext", "TextFormat"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Encoding API": {
       "overview": ["Encoding API"],
       "guides": ["/docs/Web/API/Encoding_API/Encodings"],
