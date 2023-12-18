@@ -33,6 +33,22 @@ The following properties are common to all WebRTC statistics objects (See [`RTCS
 - {{domxref("RTCCertificateStats.type", "type")}}
   - : A string with the value `"certificate"`, indicating the type of statistics that the object contains.
 
+## Examples
+
+Given a variable `myPeerConnection`, which is an instance of {{domxref("RTCPeerConnection")}}, the code below uses `await` to wait for the statistics report, and then iterates it using `RTCStatsReport.forEach()`.
+It then filters the dictionaries for just those reports that have the type of `certificate` and logs the result.
+
+```js
+const stats = await myPeerConnection.getStats();
+
+stats.forEach((report) => {
+  if (report.type === "certificate") {
+    // Log the certificate information
+    console.log(report);
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -40,3 +56,8 @@ The following properties are common to all WebRTC statistics objects (See [`RTCS
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("RTCStatsReport")}}
+- {{domxref("RTCCertificate")}}
