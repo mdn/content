@@ -183,15 +183,13 @@ You use the `Builder()` constructor to create a new instance of a driver, chaini
 The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
 
 ```js
-let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX).build();
+let driver = new Builder().forBrowser(Browser.FIREFOX).build();
 ```
 
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
-let driver = new webdriver.Builder()
-  .forBrowser(Browser.FIREFOX, "46", "MAC")
-  .build();
+let driver = new Builder().forBrowser(Browser.FIREFOX, "46", "MAC").build();
 ```
 
 You could also set these options using an environment variable, for example:
@@ -389,11 +387,11 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 })();
 ```
 
-You can submit key presses that can't be represented by normal characters using properties of the `webdriver.Key` object. For example, above we used this construct to tab out of the form input before submitting it:
+You can submit key presses that can't be represented by normal characters using properties of the `Key` object. For example, above we used this construct to tab out of the form input before submitting it:
 
 ```js
 driver.sleep(1000).then(() => {
-  driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
+  driver.findElement(By.name("q")).sendKeys(Key.TAB);
 });
 ```
 
@@ -745,11 +743,11 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const { By, until } = require("selenium-webdriver");
+   const { Builder, By, Key } = require("selenium-webdriver");
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 
-   const driver = new webdriver.Builder()
+   const driver = new Builder()
      .withCapabilities({
        browserName: "chrome",
        platform: "Windows XP",
@@ -767,7 +765,7 @@ Let's write an example:
    driver.findElement(By.name("q")).sendKeys("webdriver");
 
    driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
+     driver.findElement(By.name("q")).sendKeys(Key.TAB);
    });
 
    driver.findElement(By.name("btnK")).click();
@@ -887,7 +885,7 @@ Now we've got the server running, let's create a demo test that will run on the 
 2. Update the second code block (which starts with `let driver = …`) like so
 
    ```js
-   let driver = new webdriver.Builder()
+   let driver = new Builder()
      .forBrowser(Browser.FIREFOX)
      .usingServer("http://localhost:4444/wd/hub")
      .build();
