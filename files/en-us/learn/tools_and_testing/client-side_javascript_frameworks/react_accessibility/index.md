@@ -48,7 +48,7 @@ The `<Todo />` component will switch templates, as we designed, and you'll see a
 
 But where did our focus indicator go?
 
-When we switch between templates in our `<Todo />` component, we completely remove the elements that were there before to replace them with something else. That means the element that we were focused on vanishes, and nothing is in focus at all. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use a screen reader.
+When we switch between templates in our `<Todo />` component, we completely remove the elements from the old template and replace them with the elements from the new template. That means the element that we were focused on vanishes. When this happens, the browser resets focus to the `document.body` element. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use a screen reader.
 
 To improve the experience for keyboard and screen-reader users, we should manage the browser's focus ourselves.
 
@@ -60,10 +60,10 @@ When a user toggles a `<Todo/>` template from viewing to editing, we should focu
 
 In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://react.dev/reference/react/useRef) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
-Change the `import` statement at the top of `Todo.js` so that it includes `useRef`:
+Change the `import` statement at the top of `Todo.jsx` so that it includes `useRef`:
 
 ```jsx
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 ```
 
 Then, create two new constants beneath the hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
@@ -73,9 +73,9 @@ const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);
 ```
 
-These refs have a default value of `null` because they will not have value until we attach them to their respective elements. To do that, we'll add an attribute of `ref` to each element, and set their values to the appropriately named `ref` objects.
+These refs have a default value of `null` because they will not have value until we attach them to their respective elements. To do that, we'll add a `ref` attribute to each element, and set their values to the appropriately named `ref` objects.
 
-The textbox `<input>` in your editing template should be updated like this:
+The textbox `<input>` in your editing template should read like this:
 
 ```jsx
 <input
@@ -104,10 +104,10 @@ The "Edit" button in your view template should read like this:
 
 To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs after React renders a given component, and will run any side-effects that we'd like to add to the render process, which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
 
-Change the import statement of `Todo.js` again to add `useEffect`:
+Change the import statement of `Todo.jsx` again to add `useEffect`:
 
 ```jsx
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 ```
 
 `useEffect()` takes a function as an argument; this function is executed after the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
@@ -127,8 +127,8 @@ console.log("main render");
 Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
 ```plain
-main render (3)                                     Todo.js:100
-side effect (3)                                     Todo.js:98
+main render (3)                                     Todo.jsx:100
+side effect (3)                                     Todo.jsx:98
 ```
 
 That's it for our experimentation for now. Delete `console.log("main render")` now, and let's move on to implementing our focus management.
@@ -178,15 +178,14 @@ In order to meet our refined criteria, we need to know not just the value of `is
 ```jsx
 if (wasNotEditingBefore && isEditingNow) {
   focusOnEditField();
-}
-if (wasEditingBefore && isNotEditingNow) {
+} else if (wasEditingBefore && isNotEditingNow) {
   focusOnEditButton();
 }
 ```
 
 The React team had discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
 
-Paste the following code near the top of `Todo.js`, above your `Todo()` function.
+Paste the following code near the top of `Todo.jsx`, above your `Todo()` function.
 
 ```jsx
 function usePrevious(value) {
@@ -210,8 +209,7 @@ With this constant, we can update our `useEffect()` hook to implement the pseudo
 useEffect(() => {
   if (!wasEditing && isEditing) {
     editFieldRef.current.focus();
-  }
-  if (wasEditing && !isEditing) {
+  } else if (wasEditing && !isEditing) {
     editButtonRef.current.focus();
   }
 }, [wasEditing, isEditing]);
@@ -231,10 +229,10 @@ Sometimes, the place we want to send our focus to is obvious: when we toggled ou
 
 ### Creating our ref
 
-Import the `useRef()` and `useEffect()` hooks into `App.js` — you'll need them both below:
+Import the `useRef()` and `useEffect()` hooks into `App.jsx` — you'll need them both below:
 
 ```jsx
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 ```
 
 Then declare a new ref inside the `App()` function. Just above the `return` statement is a good place:
@@ -259,7 +257,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 
 ### Getting previous state
 
-We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we already used earlier on. Add it to the top of your `App.js` file, just below the imports:
+We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we already used earlier on. Add it to the top of your `App.jsx` file, just below the imports:
 
 ```jsx
 function usePrevious(value) {
