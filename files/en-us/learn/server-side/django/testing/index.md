@@ -145,7 +145,7 @@ class YourTestClass(TestCase):
         pass
 
     def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
+        print("setUp: Run once for every test method to set up clean data.")
         pass
 
     def test_false_is_false(self):
@@ -197,11 +197,11 @@ Run the tests in the root directory of _LocalLibrary_. You should see an output 
 
 Creating test database for alias 'default'...
 setUpTestData: Run once to set up non-modified data for all class methods.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_false.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_true.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_one_plus_one_equals_two.
 .
 ======================================================================
@@ -973,7 +973,7 @@ The next and final tutorial shows how you can deploy your wonderful (and fully t
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/4.2/intro/tutorial05/) (Django docs)
 - [Testing tools reference](https://docs.djangoproject.com/en/4.2/topics/testing/tools/) (Django docs)
 - [Advanced testing topics](https://docs.djangoproject.com/en/4.2/topics/testing/advanced/) (Django docs)
-- [A Guide to Testing in Django](https://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
+- [A Guide to Testing in Django](https://toastdriven.com/blog/2011/apr/09/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
 - [Workshop: Test-Driven Web Development with Django](https://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 

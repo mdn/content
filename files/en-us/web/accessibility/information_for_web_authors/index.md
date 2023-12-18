@@ -36,11 +36,11 @@ page-type: guide
 
 Use a tool to quickly check for common errors in your browser.
 
-- [HTML CodeSniffer](http://squizlabs.github.io/HTML_CodeSniffer/)
+- [HTML CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/)
 - [aXe](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US)
 - [Lighthouse Accessibility Audit](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Accessibility Insights](https://accessibilityinsights.io/)
-- [<abbr>WAVE</abbr>](http://wave.webaim.org/extension/)
+- [<abbr>WAVE</abbr>](https://wave.webaim.org/extension/)
 
 Tools to integrate into your build process, programmatically adding accessibility tests, so you can catch errors as you develop your web application:
 

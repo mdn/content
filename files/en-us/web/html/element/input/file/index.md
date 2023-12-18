@@ -111,7 +111,7 @@ Each `File` object contains the following information:
 - `name`
   - : The file's name.
 - `lastModified`
-  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
+  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970, at midnight).
 - `lastModifiedDate` {{deprecated_inline}}
   - : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. _This is deprecated and should not be used. Use `lastModified` instead._
 - `size`
@@ -235,7 +235,6 @@ html {
 }
 
 form {
-  width: 580px;
   background: #ccc;
   margin: 0 auto;
   padding: 20px;
@@ -348,6 +347,7 @@ function updateImageDisplay() {
         )}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
+        image.alt = image.title = file.name;
 
         listItem.appendChild(image);
         listItem.appendChild(para);
@@ -396,6 +396,16 @@ function returnFileSize(number) {
     return `${(number / 1048576).toFixed(1)} MB`;
   }
 }
+```
+
+```js hidden
+const button = document.querySelector("form button");
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const para = document.createElement("p");
+  para.append("Image uploaded!");
+  preview.replaceChildren(para);
+});
 ```
 
 The example looks like this; have a play:

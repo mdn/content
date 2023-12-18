@@ -264,7 +264,7 @@ Click on the play icon below to see the `clamp()` example in the code playground
   <code>width: clamp(10%, 9999px, 90%);</code>
 </div>
 <div class="clamp3">
-  <code>width: clamp(25px, 1px, 150px);</code>
+  <code>width: clamp(125px, 1px, 250px);</code>
 </div>
 <div class="clamp4">
   <code>width: clamp(25px, 9999px, 150px);</code>

@@ -10,7 +10,7 @@ This article provides an overview of the changes you may need to make to your ad
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 6, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 6.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 6, and have no binary components (which need to be recompiled for every major Firefox release), have automatically been updated on AMO to indicate that they work in Firefox 6.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
