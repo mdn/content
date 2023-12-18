@@ -37,18 +37,19 @@ As we near the end of our React journey (for now at least), we'll add the finish
 
 ## Editing the name of a task
 
-We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.js`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
+We don't have a user interface for editing the name of a task yet. We'll get to that in a moment. To start with, we can at least implement an `editTask()` function in `App.jsx`. It'll be similar to `deleteTask()` because it'll take an `id` to find its target object, but it'll also take a `newName` property containing the name to update the task to. We'll use [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) instead of [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) because we want to return a new array with some changes, instead of deleting something from the array.
 
-Add the `editTask()` function inside your `App` component, in the same place as the other functions:
+Add the `editTask()` function inside your `<App />` component, in the same place as the other functions:
 
 ```jsx
 function editTask(id, newName) {
   const editedTaskList = tasks.map((task) => {
     // if this task has the same ID as the edited task
     if (id === task.id) {
-      //
+      // Copy the task and update its name
       return { ...task, name: newName };
     }
+    // Return the original task if it's not the edited task
     return task;
   });
   setTasks(editedTaskList);
@@ -71,17 +72,17 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-Now open `Todo.js`. We're going to do some refactoring.
+Now open `Todo.jsx`. We're going to do some refactoring.
 
 ## A UI for editing
 
-In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import `useState` into the `Todo` component like we did before with the `App` component, by updating the first import statement to this:
+In order to allow users to edit a task, we have to provide a user interface for them to do so. First, import `useState` into the `<Todo />` component like we did before with the `<App />` component:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 ```
 
-We'll now use this to set an `isEditing` state, the default state of which should be `false`. Add the following line just inside the top of your `Todo(props) { }` component definition:
+We'll use this to set an `isEditing` state with a default value of `false`. Add the following line just inside the top of your `<Todo />` component definition:
 
 ```jsx
 const [isEditing, setEditing] = useState(false);
@@ -193,9 +194,9 @@ The next step is to actually make the editing functionality work.
 
 ## Editing from the UI
 
-Much of what we're about to do will mirror the work we did in `Form.js`: as the user types in our new input field, we need to track the text they enter; once they submit the form, we need to use a callback prop to update our state with the new name of the task.
+Much of what we're about to do will mirror the work we did in `Form.jsx`: as the user types in our new input field, we need to track the text they enter; once they submit the form, we need to use a callback prop to update our state with the new name of the task.
 
-We'll start by making a new hook for storing and setting the new name. Still in `Todo.js`, put the following underneath the existing hook:
+We'll start by making a new hook for storing and setting the new name. Still in `Todo.jsx`, put the following underneath the existing hook:
 
 ```jsx
 const [newName, setNewName] = useState("");
@@ -266,7 +267,7 @@ Our goal right now is two-fold:
 
 A JavaScript object would be a great way to relate names to behaviors: each key is the name of a filter; each property is the behavior associated with that name.
 
-At the top of `App.js`, beneath our imports but above our `App()` function, let's add an object called `FILTER_MAP`:
+At the top of `App.jsx`, beneath our imports but above our `App()` function, let's add an object called `FILTER_MAP`:
 
 ```jsx
 const FILTER_MAP = {
@@ -302,7 +303,7 @@ const filterList = FILTER_NAMES.map((name) => (
 ));
 ```
 
-Now we'll replace the three repeated `<FilterButton />`s in `App.js` with this `filterList`. Replace the following:
+Now we'll replace the three repeated `<FilterButton />`s in `App.jsx` with this `filterList`. Replace the following:
 
 ```jsx
 <FilterButton />
@@ -338,7 +339,7 @@ const filterList = FILTER_NAMES.map((name) => (
 ));
 ```
 
-In the same way as we did earlier with our `<Todo />` component, we now have to update `FilterButton.js` to utilize the props we have given it. Do each of the following, and remember to use curly braces to read these variables!
+In the same way as we did earlier with our `<Todo />` component, we now have to update `FilterButton.jsx` to utilize the props we have given it. Do each of the following, and remember to use curly braces to read these variables!
 
 - Replace `all` with `{props.name}`.
 - Set the value of `aria-pressed` to `{props.isPressed}`.
