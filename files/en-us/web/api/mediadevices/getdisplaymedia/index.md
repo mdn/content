@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getDisplayMedia
 ---
 
-{{DefaultAPISidebar("Screen Capture API")}}
+{{APIRef("Screen Capture API")}}
 
 The {{domxref("MediaDevices")}} interface's **`getDisplayMedia()`** method prompts the user to select and
 grant permission to capture the contents of a display or portion thereof (such as a window) as a {{domxref("MediaStream")}}.
