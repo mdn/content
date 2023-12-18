@@ -292,17 +292,15 @@ Try running your test again; the button will be clicked, and the `alert()` popup
 You can interact with the popup too. Add the following to the bottom of the function, and try testing it again:
 
 ```js
-(async function example() {
-  await driver.wait(until.alertIsPresent());
+await driver.wait(until.alertIsPresent());
 
-  const alert = driver.switchTo().alert();
+const alert = driver.switchTo().alert();
 
-  alert.getText().then((text) => {
-    console.log(`Alert text is '${text}'`);
-  });
+alert.getText().then((text) => {
+  console.log(`Alert text is '${text}'`);
+});
 
-  alert.accept();
-})();
+alert.accept();
 ```
 
 Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:
@@ -485,15 +483,15 @@ Let's write an example:
 
 When executing numerous automation tests, marking their status as passed or failed makes the task a lot easier.
 
-1. Use the below command for marking a status as **passed** on LambdaTest.
+1. Add the below line of code after the `get()` function to mark a status as **passed** on LambdaTest.
 
-   ```bash
+   ```js
    driver.executeScript("lambda-status=passed");
    ```
 
-2. Use the below command for marking a status as **failed** on LambdaTest.
+2. Add the below line of code after the `get()` function to mark a status as **failed** on LambdaTest.
 
-   ```bash
+   ```js
    driver.executeScript("lambda-status=failed");
    ```
 
