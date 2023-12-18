@@ -429,7 +429,7 @@ In the same way as we did earlier with our `<Todo />` component, we now have to 
 - Set the value of `aria-pressed` to `{props.isPressed}`.
 - Add an `onClick` handler that calls `props.setFilter()` with the filter's name.
 
-With all of that done, your `FilterButton()` function should read like this:
+With all of that done, your `FilterButton.jsx` file should read like this:
 
 ```jsx
 function FilterButton(props) {
@@ -445,6 +445,8 @@ function FilterButton(props) {
     </button>
   );
 }
+
+export default FilterButton;
 ```
 
 Visit your browser again. You should see that the different buttons have been given their respective names. When you press a filter button, you should see its text take on a new outline — this tells you it has been selected. And if you look at your DevTool's Page Inspector while clicking the buttons, you'll see the `aria-pressed` attribute values change accordingly.
