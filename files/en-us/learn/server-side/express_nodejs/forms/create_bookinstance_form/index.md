@@ -109,27 +109,33 @@ extends layout
 block content
   h1=title
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='book') Book:
-      select#book.form-control(type='select' placeholder='Select book' name='book' required='true')
+      select#book.form-control(name='book' required)
+        option(value='') --Please select a book--
         for book in book_list
-          option(value=book._id, selected=(selected_book==book._id.toString() ? '' : false) ) #{book.title}
+          if selected_book==book._id.toString()
+            option(value=book._id, selected) #{book.title}
+          else
+            option(value=book._id) #{book.title}
 
     div.form-group
       label(for='imprint') Imprint:
-      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required='true' value=(undefined===bookinstance ? '' : bookinstance.imprint))
+      input#imprint.form-control(type='text' placeholder='Publisher and date information' name='imprint' required value=(undefined===bookinstance ? '' : bookinstance.imprint) )
     div.form-group
       label(for='due_back') Date when book available:
       input#due_back.form-control(type='date' name='due_back' value=(undefined===bookinstance ? '' : bookinstance.due_back_yyyy_mm_dd))
 
     div.form-group
       label(for='status') Status:
-      select#status.form-control(type='select' placeholder='Select status' name='status' required='true' )
-        option(value='Maintenance' selected=(undefined===bookinstance || bookinstance.status!='Maintenance' ? false:'selected')) Maintenance
-        option(value='Available' selected=(undefined===bookinstance || bookinstance.status!='Available' ? false:'selected')) Available
-        option(value='Loaned' selected=(undefined===bookinstance || bookinstance.status!='Loaned' ? false:'selected')) Loaned
-        option(value='Reserved' selected=(undefined===bookinstance || bookinstance.status!='Reserved' ? false:'selected')) Reserved
+      select#status.form-control(name='status' required)
+        option(value='') --Please select a status--
+        each val in ['Maintenance', 'Available', 'Loaned', 'Reserved']
+          if undefined===bookinstance || bookinstance.status!=val
+            option(value=val)= val
+          else
+            option(value=val selected)= val
 
     button.btn.btn-primary(type='submit') Submit
 
