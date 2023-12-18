@@ -28,7 +28,7 @@ detect(imageBitmapSource)
 ### Return value
 
 Returns a {{jsxref('Promise')}} which fulfills with an array of
-`detectedBarcode` objects with the following properties:
+`DetectedBarcode` objects with the following properties:
 
 - `boundingBox`
   - : A {{domxref('DOMRectReadOnly')}}, which returns the
