@@ -32,7 +32,7 @@ The `LockInfo` object can have the following properties:
 
 - `name`
   - : The name passed to {{domxref("LockManager.request()")}} when the lock was requested.
-- `name`
+- `mode`
   - : The access mode passed to {{domxref("LockManager.request()")}} when the lock was requested. The mode is either `"exclusive"` or `"shared"`.
 - `clientId`
   - : The unique identity of the context where {{domxref("LockManager.request()")}} is called. This is the same value as {{domxref("Client.id")}}.
