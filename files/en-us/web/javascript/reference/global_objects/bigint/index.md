@@ -207,7 +207,12 @@ If you have JSON data containing values you know will be large integers, you can
 
 ```js
 const reviver = (key, value) =>
-  value !== null && typeof value === "object" && "$bigint" in value && typeof value.$bigint === "string" ? BigInt(value.$bigint) : value;
+  value !== null &&
+  typeof value === "object" &&
+  "$bigint" in value &&
+  typeof value.$bigint === "string"
+    ? BigInt(value.$bigint)
+    : value;
 
 const payload = '{"number":1,"big":{"$bigint":"18014398509481982"}}';
 const parsed = JSON.parse(payload, reviver);
