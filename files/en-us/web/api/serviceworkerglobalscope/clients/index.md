@@ -16,12 +16,6 @@ object associated with the service worker.
 
 The {{domxref("Clients")}} object associated with the specific worker.
 
-## Syntax
-
-```js-nolint
-self.clients
-```
-
 ## Specifications
 
 {{Specifications}}
