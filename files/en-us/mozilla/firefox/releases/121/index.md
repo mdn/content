@@ -75,6 +75,8 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### WebAssembly
 
+- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1858855](https://bugzil.la/1846789)).
+
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
