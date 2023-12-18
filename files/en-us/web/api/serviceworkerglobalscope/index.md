@@ -27,6 +27,8 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
   - : Contains the {{domxref("Clients")}} object associated with the service worker.
 - {{domxref("ServiceWorkerGlobalScope.registration")}} {{ReadOnlyInline}}
   - : Contains the {{domxref("ServiceWorkerRegistration")}} object that represents the service worker's registration.
+- {{domxref("ServiceWorkerGlobalScope.serviceWorker")}} {{ReadOnlyInline}}
+  - : Contains the {{domxref("ServiceWorker")}} object that represents the service worker.
 
 ## Instance methods
 
@@ -53,6 +55,8 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
   - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
   - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
+- {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
+  - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
   - : Occurs when a {{domxref("fetch()")}} is called.
 - {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
@@ -124,5 +128,3 @@ self.addEventListener("fetch", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

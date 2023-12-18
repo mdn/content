@@ -105,7 +105,7 @@ async function writeData(writable) {
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebTransport.createUnidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}

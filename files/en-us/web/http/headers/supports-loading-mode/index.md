@@ -40,7 +40,7 @@ Supports-Loading-Mode: <comma-separated list of client hint headers>
 
 The `Supports-Loading-Mode` header value is a list of one or more tokens, which can include the following values:
 
-- `credentialed-prerender`
+- `credentialed-prerender` {{experimental_inline}}
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
 - `fenced-frame`
   - : The response can loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
