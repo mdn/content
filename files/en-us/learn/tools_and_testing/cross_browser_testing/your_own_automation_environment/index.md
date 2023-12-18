@@ -110,6 +110,8 @@ OK, let's try a quick test to make sure everything is working.
    })();
    ```
 
+   > **Note:** This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
+
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
    ```bash
