@@ -6,9 +6,9 @@ page-type: guide
 
 {{CSSRef}}
 
-When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user-agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
+When an error exists in CSS, such as an invalid value or a missing semicolon, instead of [throwing an error like in JavaScript](/en-US/docs/Web/JavaScript/Reference/Errors), the browser (or other user agent) will gracefully recover. Browsers don't provide CSS-related alerts or otherwise indicate errors have occurred in styles. They just discard invalid content and parse subsequent valid styles. This is a feature of CSS, not a bug.
 
-This guide discusses how CSS {{glossary("parser", "parsers")}} discard invalid CSS.
+This guide discusses how CSS {{glossary("parser", "parsers")}} discards invalid CSS.
 
 ## CSS parser errors
 
@@ -16,17 +16,22 @@ When a CSS error is encountered, the browser's {{glossary("parser")}} ignores th
 
 The fact that browsers ignore invalid code enables the use of new CSS features without worrying about anything being broken in older browsers. A browser may not recognize a new feature, but that is okay. The discarding of invalid content without throwing an error allows both old and new syntaxes to coexist in the same ruleset, although bear in mind that they should be specified in that order. For example:
 
-(include a syntax block here showing an example)
+```css
+div {
+  display: inline-flex;
+  display: inline flex;
+}
+```
 
-Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. Until then, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid.
+Browsers will render the old syntax until they recognize the new syntax as valid, at which point the new syntax will override the old. Until then, the valid fallback won't get overwritten by the new CSS, because the browser perceives it as invalid. (See )
 
 The type and amount of CSS that a browser ignores due to an error depends on the type of error. Some common error situations are listed below:
 
 - For [errors in at-rules](#at-rule_errors), whether a single line or the entire at-rule is ignored (fails) depends on the at-rule and the type of error.
 - If the [error is an invalid selector](#errors_in_selector_lists), the entire declaration block is ignored.
-- An [error due to a missing semi-colon](#errors_within_css_declaration_blocks) between property declarations causes an invalid value, in which case, the property-value declaration is ignored.
+- An [error due to a missing semi-colon](#errors_within_css_declaration_blocks) between property declarations causes an invalid value, in which case, multiple property-value declarations are ignored.
 - If the [error is a property name or value](#errors_within_css_declaration_blocks), such as an unrecognized property name or invalid data type, the property-value declaration is ignored.
-- If the [error is due to a missing end-bracket](#auto-closed_endings), the extent of what is ignored depends on the browser's ability to parse the error as nested CSS.
+- If the [error is due to a missing end-bracket](#errors_with_auto-closed_endings), the extent of what is ignored depends on the browser's ability to parse the error as nested CSS.
 
 After parsing each declaration, style rule, at-rule, and so on, the browser checks the parsed content against its expected [grammar](#grammar_check) for that construct. If the content does not match the expected grammar for that construct, the browser considers it invalid and ignores it.
 
@@ -57,7 +62,7 @@ There are many ways you might make a mistake writing a selector, but only invali
 
 If you include a {{cssxref("class_selectors", "class")}}, {{cssxref("id_selectors", "id")}}, or {{cssxref("type_selectors", "type")}} selector for a class, id, or element (or custom element) that doesn't exist, it may be a logic error but it's not a syntax error. However, if you have a typo in a pseudo-class or a pseudo-element, it might create an invalid selector, which is an error the parser needs to address.
 
-If a selector list contains any invalid selectors, then the entire style block is ignored. There are exceptions: if the invalid selector is within the {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class, which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#webkit-exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
+If a selector list contains any invalid selectors, then the entire style block is ignored. There are exceptions: if the invalid selector is within an {{cssxref(":is")}} or {{cssxref(":where")}} pseudo-class (which accept [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list)) or if the unknown selector is a [`-webkit-` prefixed pseudo-element](#-webkit-_exception), only the unknown selector is ignored as not matching anything. The selector list is not invalidated.
 
 Outside of these exceptions, a single invalid or unsupported selector in the selector list will invalidate the entire rule and the entire selector block will be ignored. The browser will then look for the closing curly brace and continue parsing from that point onwards.
 
@@ -136,7 +141,7 @@ Here the `move` animation is valid. Failing to properly close CSS statements doe
 
 #### Unclosed comments
 
-Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until the closing comment `*/` or the end of the stylesheet, whichever comes first, is part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS inside the comment to be ignored.
+Unclosed comments are logic errors, not syntax errors. If a comment starts with `/*` but is not closed, all CSS code until a closing delimiter (`*/`) in a subsequent comment or the end of the stylesheet, whichever comes first, is part of the comment. While an unclosed comment does not invalidate your CSS, it causes the CSS following the opening delimiter (`/*`) to be ignored.
 
 ```html example-bad
 <style>
@@ -161,7 +166,7 @@ Each CSS property accepts specific data types. For example, the {{cssxref("backg
 
 Custom properties are generally considered valid when declared, but may create invalid CSS when accessed, i.e. they may be used as a value (via the {{cssxref("var")}} function) for a property that does not accept that value type. The browser parses each custom property when encountered without regard to where the property is consumed.
 
-Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value.  Invalid computed custom property values, however, work slightly differently.
+Generally, when a property value is invalid, the declaration is ignored and the property falls back to the last valid value. Invalid computed custom property values, however, work slightly differently.
 
 When a `var()` substitution is invalid, the declaration is not ignored and the [initial](/en-US/docs/Web/CSS/initial_value) or [inherited](/en-US/docs/Web/CSS/Inheritance) value of the property is used instead. The property is set to a new value, but possibly not the expected one.
 
