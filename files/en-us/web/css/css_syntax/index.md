@@ -41,15 +41,15 @@ The module explicitly states that {{cssxref("@charset")}} is not an actual at-ru
 
 - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
 
-  - : The formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
+  - : Explains the formal grammar for defining valid values for CSS properties and functions, along with semantic constraints. A guide for understanding CSS component value types, combinators, and multipliers.
 
 - [CSS syntax error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
 
-  - : Overview of how the user-agent handles invalid CSS
+  - : Overview of how the user agent handles invalid CSS.
 
 - [Learn CSS first steps: CSS syntax](/en-US/docs/Learn/CSS/First_steps/What_is_CSS#css_syntax)
 
-  - : Introductory guide to CSS, including an introcution to CSS syntax.
+  - : Introductory guide to CSS, including an introduction to CSS syntax.
 
 ## Related concepts
 

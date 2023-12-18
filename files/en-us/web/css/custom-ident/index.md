@@ -24,7 +24,7 @@ The syntax of `<custom-ident>` is similar to CSS identifiers (such as property n
 - an [escaped character](#escaping-characters) (preceded by a backslash, `\`),
 - a [Unicode](https://en.wikipedia.org/wiki/Unicode) character (in the format of a backslash, `\`, followed by one to six hexadecimal digits, representing its Unicode code point)
 
-Note that `id1`, `Id1`, `iD1` and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity).
+Note that `id1`, `Id1`, `iD1`, and `ID1` are all different identifiers as they are [case-sensitive](https://en.wikipedia.org/wiki/Case_sensitivity).
 
 ### Escaping characters
 
@@ -37,11 +37,11 @@ In CSS, there are several ways to escape a character. Escape sequences start wit
 
 Examples:
 
-- "&B" can be written as `\26 B` and `\000026B`.
-- "hi.there" can be written as `hi\.there` and `hi\002Ethere`.
-- "toto?" can be written as`toto\?`, `toto\3F`, or `toto\00003F`
+- "&B" can be written as `\26 B` or `\000026B`.
+- "hi.there" can be written as `hi\.there` or `hi\002Ethere`.
+- "toto?" can be written as `toto\?`, `toto\3F`, or `toto\00003F`.
 
-To include actual white space after an escape sequence, include two white spaces in the escape sequence .
+To include actual white space after an escape sequence, include two white spaces in the escape sequence.
 
 ### Forbidden values
 
