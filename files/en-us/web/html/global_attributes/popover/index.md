@@ -44,3 +44,7 @@ The following renders a button that will open a popover element when activated.
 ## See also
 
 - {{domxref("Popover API", "Popover API", "", "nocode")}}
+- [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML `button` attribute
+- [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML `button` attribute
+- [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) CSS pseudo-element
+- [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) CSS pseudo-class
