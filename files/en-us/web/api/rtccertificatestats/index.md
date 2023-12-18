@@ -19,9 +19,6 @@ The report can be obtained by iterating the {{domxref("RTCStatsReport")}} return
   - : A string containing the hash function used to compute the certificate [`fingerprint`](#fingerprint), such as "sha-256".
 - {{domxref("RTCCertificateStats.base64Certificate", "base64Certificate")}}
   - : A string containing the base-64 representation of the DER-encoded certificate.
-- {{domxref("RTCCertificateStats.issuerCertificateId", "issuerCertificateId")}}
-  - : A string containing the `id` of the `RTCCertificateStats` object that contains the next certificate in the certificate chain.
-    If the current certificate is at the end of the chain (i.e. a self-signed certificate), this will not be set.
 
 ### Common instance properties
 
