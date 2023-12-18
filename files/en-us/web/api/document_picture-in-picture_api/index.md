@@ -37,6 +37,7 @@ The Picture-in-Picture window is similar to a blank same-origin window opened vi
 - The Picture-in-Picture window never outlives the opening window.
 - The Picture-in-Picture window cannot be navigated.
 - The Picture-in-Picture window position cannot be set by the website.
+- The Picture-in-Picture window is limited to one per browser tab at a time, with the user agent potentially further restricting the global number of Picture-in-Picture windows open.
 
 Apart from that, you can manipulate the Picture-in-Picture window's `Window` instance however you want, for example appending the content you want to display there onto its DOM, and copying stylesheets to it so that the appended content will be styled the same way as when it is in the main window. You can also close the Picture-in-Picture window (by clicking the browser-provided control, or by running {{domxref("Window.close()")}} on it), and then react to it closing using the standard [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event). When it closes, you'll want to put the content it was showing back into the main app window.
 

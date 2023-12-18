@@ -179,10 +179,10 @@ block content
 
   h1 #{title}
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='name') Genre:
-      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required='true' value=(undefined===genre ? '' : genre.name) )
+      input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
     button.btn.btn-primary(type='submit') Submit
 
   if errors
@@ -211,10 +211,10 @@ The only error we validate against server-side is that the genre field must have
 
 ![The Create Genre section of the Local library application. The left column has a vertical navigation bar. The right section is the create a new Genre from with a heading that reads 'Create Genre'. There is one input field labeled 'Genre'. There is a submit button at the bottom. There is an error message that reads 'Genre name required' directly below the Submit button. The error message was highlighted by the author of this article. There is no visual indication in the form that the genre is required nor that the error message only appears on error.](locallibary_express_genre_create_error.png)
 
-> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
+> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the [boolean attribute](/en-US/docs/Glossary/Boolean/HTML) `required` to the field definition in the form:
 >
 > ```pug
-> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required='true' value=(undefined===genre ? '' : genre.name) )
+> input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
 > ```
 
 ## Next steps

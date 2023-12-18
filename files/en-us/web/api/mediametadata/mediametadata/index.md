@@ -24,12 +24,20 @@ new MediaMetadata(metadata)
 
   - : The metadata parameters are as follows:
 
-    - `title`: The title of the media to be played.
-    - `artist`: The name of the artist, group, creator, etc. of the media
-      to be played.
-    - `album`: The name of the album, or collection, containing the media
-      to be played.
-    - `artwork`: An array of images associated with the playing media.
+    - `title` {{optional_inline}}
+      - : The title of the media to be played. It defaults to the empty string (`""`).
+    - `artist` {{optional_inline}}
+      - : The name of the artist, group, creator, etc. of the media to be played. It defaults to the empty string (`""`).
+    - `album` {{optional_inline}}
+      - : The name of the album, or collection, containing the media to be played. It defaults to the empty string (`""`).
+    - `artwork` {{optional_inline}}
+      - : An {{jsxref("Array")}} of objects that represent images associated with the playing media that defaults to be an empty array. The object structure is:
+        - `src`
+          - : The URL from which the user agent fetches the image's data.
+        - `sizes` {{optional_inline}}
+          - : Specifies the resource in multiple sizes so the user agent doesn't have to scale a single image. It defaults to the empty string (`""`).
+        - `type` {{optional_inline}}
+          - : The {{Glossary("MIME type")}} hint for the user agent that allows it to ignore images of types that it doesn't support. However, the user agent may still use MIME type sniffing after downloading the image to determine its type. It defaults to the empty string (`""`).
 
 ## Example
 
