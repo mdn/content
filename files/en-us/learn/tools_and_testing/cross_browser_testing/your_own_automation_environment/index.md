@@ -244,7 +244,7 @@ const { Builder, Browser } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   driver.get(
-  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
 })();
 ```
@@ -294,7 +294,7 @@ const { Builder, Browser, By } = require("selenium-webdriver");
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 
   driver.get(
-    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
 
   const button = driver.findElement(By.css("button:nth-of-type(1)"));
@@ -321,9 +321,9 @@ const { Builder, Browser, By } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   driver.get(
-    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
-  
+
   const button = driver.findElement(By.css("button:nth-of-type(1)"));
 
   button.click();
@@ -339,15 +339,15 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
-  
+
   driver.get(
-    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
 
   const button = driver.findElement(By.css("button:nth-of-type(1)"));
 
   button.click();
-  
+
   await driver.wait(until.alertIsPresent());
 
   const alert = driver.switchTo().alert();
@@ -358,7 +358,6 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 
   alert.accept();
 })();
-
 ```
 
 Next, let's try entering some text into one of the form elements. Update the `example()` function as follows and try running your test again:
@@ -369,7 +368,7 @@ const { Builder, Browser, By, until } = require("selenium-webdriver");
 (async function example() {
   const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
   driver.get(
-    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html"
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
   );
 
   const input = driver.findElement(By.id("name"));
