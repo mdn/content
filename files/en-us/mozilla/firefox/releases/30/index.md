@@ -17,7 +17,7 @@ page-type: firefox-release-notes
 ### CSS
 
 - The property {{cssxref("background-blend-mode")}} has been enabled by default ([Firefox bug 970600](https://bugzil.la/970600)).
-- The non-standard {{cssxref("overflow-clip-box")}} property has been implemented for use in UA stylesheets only ([Firefox bug 966992](https://bugzil.la/966992)).
+- The non-standard `overflow-clip-box`")}}` property has been implemented for use in UA stylesheets only ([Firefox bug 966992](https://bugzil.la/966992)).
 - The {{cssxref("line-height")}} property now affects single-line text inputs (`<input type=text|password|email|search|tel|url|unknown>` types) although it cannot shrink them below a line height of `1.0` ([Firefox bug 349259](https://bugzil.la/349259)).
 - The {{cssxref("line-height")}} property now also affects `type=button`, with no restrictions ([Firefox bug 697451](https://bugzil.la/697451)).
 - Change to keyframes' name does not affect current elements ([Firefox bug 978648](https://bugzil.la/978648)).
