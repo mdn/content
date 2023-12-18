@@ -102,6 +102,15 @@ This article provides information about the changes in Firefox 121 that affect d
 
 - Added support for serializing and deserializing `Window` and `Frame` objects ([Firefox bug 1274251](https://bugzil.la/1274251)).
 
+## Experimental web features
+
+These features are newly shipped in Firefox 121 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- Custom element state pseudo-class: `dom.element.customstateset.enabled`
+  - : Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state. ([Firefox bug 1861466](https://bugzil.la/1861466))
+- `showPicker()` method for HTML select elements: `dom.select.showPicker.enabled`
+  - : The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction. ([Firefox bug 1854112](https://bugzil.la/1854112))
+
 ## Changes for add-on developers
 
 ### Removals
