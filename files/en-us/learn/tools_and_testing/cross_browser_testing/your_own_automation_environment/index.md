@@ -173,14 +173,14 @@ Let's have a look at a few key features of the webdriver syntax. For more comple
 
 ### Starting a new test
 
-To start up a new test, you need to include the `selenium-webdriver` module like this:
+To start up a new test, you need to include the `selenium-webdriver` module, importing the `Builder` constructor and `Browser` interface:
 
 ```js
 const { Builder, Browser } = require("selenium-webdriver");
 ```
 
-Next, you need to create a new instance of a driver, using the imported `Builder()` constructor. This needs to have the `forBrowser()` method chained onto it to specify what browser you want to test with this builder (browser options are defined in the imported `Browser` interface).
-The `build()` method is chained at the end to actually builds the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
+You use the `Builder()` constructor to create a new instance of a driver, chaining the `forBrowser()` method to specify what browser you want to test with this builder.
+The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
 
 ```js
 let driver = new webdriver.Builder().forBrowser(Browser.FIREFOX).build();
