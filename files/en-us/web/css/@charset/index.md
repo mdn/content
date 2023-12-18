@@ -17,13 +17,13 @@ The `@charset` rule must be the first element in the style sheet and not be prec
 
 This at-rule is useful when using non-{{Glossary("ASCII")}} characters in some CSS properties, like {{ cssxref("content") }}.
 
-As there are several ways to define the character encoding of a style sheet, the browser will try the following methods in the following order (and stop as soon as one yields a result) :
+As there are several ways to define the character encoding of a style sheet, the browser will try the following methods in the following order (and stop as soon as one yields a result):
 
 1. The value of the [Unicode byte-order](https://en.wikipedia.org/wiki/Byte_order_mark) character placed at the beginning of the file.
 2. The value given by the `charset` attribute of the `Content-Type:` HTTP header or the equivalent in the protocol used to serve the style sheet.
 3. The `@charset` CSS at-rule.
 4. Use the character encoding defined by the referring document: the `charset` attribute of the {{ HTMLElement("link") }} element. This method is obsolete and should not be used.
-5. Assume that the document is UTF-8
+5. Assume that the document is UTF-8.
 
 ## Syntax
 
