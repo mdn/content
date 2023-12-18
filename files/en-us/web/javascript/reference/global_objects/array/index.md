@@ -99,7 +99,7 @@ colors.forEach((item, index) => {
 // 2: blue
 // 5: purple
 
-colors.reverse(); //  ['purple', empty × 2, 'blue', 'yellow', 'red']
+colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']
 ```
 
 Newer methods (e.g. `keys`) do not treat empty slots specially and treat them as if they contain `undefined`. Methods that conflate empty slots with `undefined` elements include the following: {{jsxref("Array/entries", "entries()")}}, {{jsxref("Array/fill", "fill()")}}, {{jsxref("Array/find", "find()")}}, {{jsxref("Array/findIndex", "findIndex()")}}, {{jsxref("Array/findLast", "findLast()")}}, {{jsxref("Array/findLastIndex", "findLastIndex()")}}, {{jsxref("Array/includes", "includes()")}}, {{jsxref("Array/join", "join()")}}, {{jsxref("Array/keys", "keys()")}}, {{jsxref("Array/toLocaleString", "toLocaleString()")}}, {{jsxref("Array/toReversed", "toReversed()")}}, {{jsxref("Array/toSorted", "toSorted()")}}, {{jsxref("Array/values", "values()")}}, and {{jsxref("Array/with", "with()")}}.
