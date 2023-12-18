@@ -292,15 +292,17 @@ Try running your test again; the button will be clicked, and the `alert()` popup
 You can interact with the popup too. Add the following to the bottom of the function, and try testing it again:
 
 ```js
-await driver.wait(until.alertIsPresent());
+(async function example() {
+  await driver.wait(until.alertIsPresent());
 
-const alert = driver.switchTo().alert();
+  const alert = driver.switchTo().alert();
 
-alert.getText().then((text) => {
-  console.log(`Alert text is '${text}'`);
-});
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
 
-alert.accept();
+  alert.accept();
+})();
 ```
 
 Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:
