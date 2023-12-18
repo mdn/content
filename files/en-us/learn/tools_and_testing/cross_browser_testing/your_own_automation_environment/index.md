@@ -257,7 +257,7 @@ Now we've got a document to test, we need to interact with it in some way, which
 const element = driver.findElement(By.id("myElementId"));
 ```
 
-One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
+One of the most useful ways to find an element by CSS — the `By.css()` method allows you to select an element using a CSS selector.
 
 Update your `example()` function now as follows:
 
