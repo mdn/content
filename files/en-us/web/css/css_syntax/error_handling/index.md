@@ -106,6 +106,7 @@ You may come across legacy CSS that looks like the following:
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  display: block flex;
 }
 /* Prefixed properties */
 .rounded {
