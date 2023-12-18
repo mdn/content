@@ -176,7 +176,7 @@ Let's have a look at a few key features of the webdriver syntax. For more comple
 To start up a new test, you need to include the `selenium-webdriver` module like this:
 
 ```js
-const { Builder, By, until } = require("selenium-webdriver");
+const { Builder, Browser} = require("selenium-webdriver");
 ```
 
 Next, you need to create a new instance of a driver, using the `new webdriver.Builder()` constructor. This needs to have the `forBrowser()` method chained onto it to specify what browser you want to test with this builder, and the `build()` method to actually build it (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
