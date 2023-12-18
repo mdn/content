@@ -74,7 +74,7 @@ audio track.
     because no compatible stream could be generated.
 - {{jsxref("TypeError")}}
   - : Returned if the specified `options` include values that are not permitted
-    when calling `getDisplayMedia()`, for example a `video` property set to false, or if any specified {{domxref("MediaTrackConstraints")}} are not permitted. `min` and `exact` values are not permitted in constraints used in {{domxref("MediaDevices.getDisplayMedia()")}} calls.
+    when calling `getDisplayMedia()`, for example a `video` property set to false, or if any specified {{domxref("MediaTrackConstraints")}} are not permitted. `min` and `exact` values are not permitted in constraints used in `getDisplayMedia()` calls.
 
 ## Security
 
