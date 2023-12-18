@@ -574,6 +574,7 @@ You can use the BrowserStack REST API and some other capabilities to annotate yo
 Let's update our `bstack_google_test.js` demo, to show how these features work:
 
 1. Install the request module by running the following command inside your project directory:
+
    ```js
    npm install request
    ```
