@@ -34,9 +34,9 @@ Our final article provides you with a list of React resources that you can use t
 
 ## Component-level styles
 
-Although this tutorial doesn't use this approach, many React applications define their styles on a per-component basis, rather than in a single, monolithic stylesheet.
+While we kept all the CSS for our tutorial in a single `index.css` file, it's common for React applications to define per-component stylesheets. In an application powered by Vite, this can be done by creating a CSS file and importing it into its corresponding component component module.
 
-`create-react-app` makes it possible to import CSS files into JavaScript modules, so that CSS is only sent to your user when the corresponding component is rendered. For this app, we could have for example written a dedicated `Form.css` file to house the styles of those respective components, then imported the styles into their respective modules like this:
+For example: we could have written a dedicated `Form.css` file to house the CSS related to the `<Form />` component, then imported the styles into `Form.jsx`, like this:
 
 ```jsx
 import Form from "./Form";
@@ -45,7 +45,7 @@ import "./Form.css";
 
 This approach makes it easy to identify and manage the CSS that belongs to a specific component. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to limit the amount of irrelevant code that's sent to your user. You'll likely have app-wide styles and specific component styles that build on top of those.
 
-You can [read more about component stylesheets in the create-react-app docs](https://create-react-app.dev/docs/adding-a-stylesheet/).
+You can read more about this and other approaches to styling React components in the Smashing Magazine article, ["Styling Components In React"](https://www.smashingmagazine.com/2020/05/styling-components-react/).
 
 ## React DevTools
 
