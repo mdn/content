@@ -34,7 +34,7 @@ You might have accompanying utility sites with components embedded in all the ot
 
 In such situations, site owners often encourage users to add their site as an exception or to disable third-party cookie-blocking policies entirely. Users who wish to continue interacting with their content must significantly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
-The Storage Access API is intended to solve this problem; embedded cross-site content can request unrestricted access to third-party cookies on a frame-by-frame basis, via the {{domxref("Document.requestStorageAccess()")}} method. It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
+The Storage Access API is intended to solve this problem; embedded cross-site content can request unrestricted access to third-party cookies on a frame-by-frame basis via the {{domxref("Document.requestStorageAccess()")}} method. It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
 ### Unpartitioned versus partitioned cookies
 
