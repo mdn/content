@@ -27,11 +27,11 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
 ## Instance methods
 
 - {{domxref("PresentationConnection.close()")}} {{Experimental_Inline}}
-  - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection.onclosed")}}.
+  - : Closes the current connection and sends a {{domxref("PresentationConnectionCloseEvent")}} to {{DOMxRef("PresentationConnection/close", "close")}} event.
 - {{domxref("PresentationConnection.send()")}} {{Experimental_Inline}}
   - : Sends either binary or text data between a controlling browsing context and a presenting browsing context.
 - {{domxref("PresentationConnection.terminate()")}} {{Experimental_Inline}}
-  - : Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.
+  - : Terminates the current connection and fires {{domxref("PresentationConnection/terminate_event", "terminate")}} event.
 
 ## Events
 
@@ -41,7 +41,7 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
   - : Fired when a presentation connection is established.
 - {{domxref("PresentationConnection/message_event", "message")}} {{Experimental_Inline}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
-- {{domxref("PresentationConnection/terminated_event", "terminated")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnection/terminate_event", "terminate")}} {{Experimental_Inline}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
 ## Specifications
