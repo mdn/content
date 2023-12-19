@@ -301,7 +301,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("vert-origin-x")}}
 - {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
-- {{SVGAttr("viewTarget")}}
 - {{SVGAttr("visibility")}}
 
 ### W
