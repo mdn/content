@@ -281,7 +281,7 @@ const prevTaskLength = usePrevious(tasks.length);
 
 Here we are invoking `usePrevious()` to track the length of the tasks state, like so:
 
-> **Note:** Since we're now utilizing `usePrevious()` in two files, a good efficiency refactor would be to move the `usePrevious()` function into its own file, export it from that file, and import it where you need it. Try doing this as an exercise once you've got to the end.
+> **Note:** Since we're now utilizing `usePrevious()` in two files, it might be more efficient to move the `usePrevious()` function into its own file, export it from that file, and import it where you need it. Try doing this as an exercise once you've got to the end.
 
 ### Using `useEffect()` to control our heading focus
 
