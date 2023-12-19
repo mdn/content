@@ -6,18 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.Clipboard.read
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`read()`** method of the
-{{domxref("Clipboard")}} interface requests a copy of the clipboard's contents,
-delivering the data to the returned {{jsxref("Promise")}} when the promise is
-resolved. Unlike {{domxref("Clipboard.readText", "readText()")}}, the
-`read()` method can return arbitrary data, such as images. This method can
-also return text.
-
-> **Note:** The asynchronous Clipboard and [Permissions APIs](/en-US/docs/Web/API/Permissions_API) are still in the
-> process of being integrated into most browsers, so they often deviate from the
-> official rules for permissions and the like. Be sure to review the [compatibility table](#browser_compatibility) before using these methods.
+The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, delivering the data to the returned {{jsxref("Promise")}} when the promise is resolved.
+Unlike {{domxref("Clipboard.readText", "readText()")}}, the `read()` method can return arbitrary data, such as images.
+This method can also return text.
 
 ## Syntax
 
@@ -31,16 +24,15 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects
-containing the clipboard's contents. The promise is rejected if permission to access the
-clipboard is not granted.
+A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects containing the clipboard's contents.
+The promise is rejected if permission to access the clipboard is not granted.
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+The user has to interact with the page or a UI element in order for this feature to work.
 
-To read from the clipboard, you must first have the `"clipboard-read"`
-permission.
+To read from the clipboard, you must first have the `"clipboard-read"` permission.
 
 ## Examples
 
@@ -52,10 +44,7 @@ Try copying the butterfly image on the left using the "Copy image" context menu 
 
 The example will check or ask for permission to read the clipboard, then fetch the image data and display the image data in the empty frame.
 
-> **Note:** At this time, while Firefox does implement
-> `read()`, it does not recognize the `"clipboard-read"`
-> permission, so attempting to use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to manage access to
-> the API will not work.
+> **Note:** At this time, while Firefox does implement `read()`, it does not recognize the `"clipboard-read"` permission, so attempting to use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to manage access to the API will not work.
 
 #### HTML
 

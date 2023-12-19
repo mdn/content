@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.presentationStyle
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The read-only
-**`presentationStyle`** property of the {{domxref("ClipboardItem")}}
-interface returns a string indicating how an item should be presented.
+The read-only **`presentationStyle`** property of the {{domxref("ClipboardItem")}} interface returns a string indicating how an item should be presented.
 
 ## Value
 

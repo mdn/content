@@ -6,12 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Clipboard.writeText
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The {{domxref("Clipboard")}} interface's **`writeText()`**
-property writes the specified text string to the system clipboard. Text may be read back
-using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.readText",
-  "readText()")}}.
+The **`writeText()`** method of the {{domxref("Clipboard")}} interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
 
 ## Syntax
 
@@ -26,9 +23,8 @@ writeText(newClipText)
 
 ### Return value
 
-A {{jsxref("Promise")}} which is resolved once the clipboard's contents have been
-updated. The promise is rejected if the caller does not have permission to write to the
-clipboard.
+A {{jsxref("Promise")}} that is resolved once the clipboard's contents have been updated.
+The promise is rejected if the caller does not have permission to write to the clipboard.
 
 ## Security
 
