@@ -22,6 +22,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### CSS
 
+- The {{CSSXRef("text-wrap")}} property has been updated with support for the values `balance` and `stable`. The `balance` value is used for short blocks of content, such as headings, and will make sure that the content is balanced and easy to read when spread over multiple lines. The `stable` value makes sure that editable content does not reflow while the user is editing it ([Firefox bug 1731541](https://bugzil.la/1731541)).
 - The {{cssxref(":has", ":has()")}} selector, commonly referred to as the _parent selector_, is now supported. It allows developers to apply styles to an element based on related elements, e.g. `li:has(ul)` will match a list which contains a sub-list, or `h1:has(+ p)` will match a heading with a paragraph directly after it.
 - The [`text-indent`](/en-US/docs/Web/CSS/text-indent) CSS property now supports the [`each-line`](/en-US/docs/Web/CSS/text-indent#each-line) and [`hanging`](/en-US/docs/Web/CSS/text-indent#hanging) property values ([Firefox bug 784648](https://bugzil.la/784648)), allowing developers to more easily specify certain text indentation styles. Additionally, developers can now combine multiple `text-indent` property values for more creativity, e.g. `text-indent: 3em hanging each-line`.
 
@@ -74,6 +75,8 @@ This article provides information about the changes in Firefox 121 that affect d
 
 ### WebAssembly
 
+- WebAssembly now supports tail call optimization via new `return_call` and `return_call_indirect` alternatives to the [`call`](/en-US/docs/WebAssembly/Reference/Control_flow/call) instruction. This improves performance, reduces stack space usage, and enhances compatibility with programming languages that use tail calls. ([Firefox bug 1858855](https://bugzil.la/1846789)).
+
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
@@ -101,6 +104,15 @@ This article provides information about the changes in Firefox 121 that affect d
 #### Marionette
 
 - Added support for serializing and deserializing `Window` and `Frame` objects ([Firefox bug 1274251](https://bugzil.la/1274251)).
+
+## Experimental web features
+
+These features are newly shipped in Firefox 121 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- Custom element state pseudo-class: `dom.element.customstateset.enabled`
+  - : Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state. ([Firefox bug 1861466](https://bugzil.la/1861466))
+- `showPicker()` method for HTML select elements: `dom.select.showPicker.enabled`
+  - : The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction. ([Firefox bug 1854112](https://bugzil.la/1854112))
 
 ## Changes for add-on developers
 
