@@ -32,7 +32,7 @@ You should bear in mind that:
 
 ## How does RWS work?
 
-A related website set consists of one primary domain and up to five associated domains, which are represented in a JSON structure. A hypothetical example is as follows:
+A related website set consists of one primary domain and up to five associated domains, represented in a JSON structure. A hypothetical example is as follows:
 
 ```json
 {
