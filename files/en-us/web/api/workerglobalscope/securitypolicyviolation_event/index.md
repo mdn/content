@@ -30,7 +30,7 @@ A {{domxref("SecurityPolicyViolationEvent")}}. Inherits from {{domxref("Event")}
 
 ## Examples
 
-The code below shows how you might add an event handler function using the `onsecuritypolicyviolation`  event handler property or call `addEventListener()` method.
+The code below shows how you might add an event handler function using the `onsecuritypolicyviolation` event handler property or call `addEventListener()` method.
 
 ```js
 self.onsecuritypolicyviolation = (e) => {
