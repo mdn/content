@@ -18,8 +18,8 @@ Related website sets are a mechanism for defining a set of related sites that sh
 
 Let's consider situations where you have a series of related websites with different domain names, and you want to give site content access to third-party cookies when loaded in a third-party context inside other related sites (i.e., embedded in an {{htmlelement("iframe")}}). Typical use cases are:
 
-- App domains: A single application may be deployed over multiple domains, and the aim is to allow users to seamlessly navigate between them in a single session.
-- Brand domains: A set of brand assets may be contained in a single domain, but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
+- App domains: A single application may be deployed over multiple domains, aiming to allow users to navigate between them seamlessly in a single session.
+- Brand domains: A set of brand assets may be contained in a single domain but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
 
 Third-party cookie access is increasingly commonly blocked by browser cookie blocking policies, but you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
 
