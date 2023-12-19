@@ -34,7 +34,7 @@ Our final article provides you with a list of React resources that you can use t
 
 ## Component-level styles
 
-While we kept all the CSS for our tutorial in a single `index.css` file, it's common for React applications to define per-component stylesheets. In an application powered by Vite, this can be done by creating a CSS file and importing it into its corresponding component component module.
+While we kept all the CSS for our tutorial in a single `index.css` file, it's common for React applications to define per-component stylesheets. In an application powered by Vite, this can be done by creating a CSS file and importing it into its corresponding component module.
 
 For example: we could have written a dedicated `Form.css` file to house the CSS related to the `<Form />` component, then imported the styles into `Form.jsx`, like this:
 
@@ -43,9 +43,9 @@ import Form from "./Form";
 import "./Form.css";
 ```
 
-This approach makes it easy to identify and manage the CSS that belongs to a specific component. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to limit the amount of irrelevant code that's sent to your user. You'll likely have app-wide styles and specific component styles that build on top of those.
+This approach makes it easy to identify and manage the CSS that belongs to a specific component and distinguish it from your app-wide styles. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to use component-level styles and thereby limit the amount of irrelevant code that's sent to your user at any one time. 
 
-You can read more about this and other approaches to styling React components in the Smashing Magazine article, ["Styling Components In React"](https://www.smashingmagazine.com/2020/05/styling-components-react/).
+You can read more about this and other approaches to styling React components in the Smashing Magazine article, [Styling Components In React](https://www.smashingmagazine.com/2020/05/styling-components-react/).
 
 ## React DevTools
 
@@ -72,7 +72,7 @@ You can [read more about React DevTools in the React docs](https://react.dev/lea
 
 ## The `useReducer()` hook
 
-In this tutorial, we used the `useState()` hook to manage state across a small collection of event handler functions. This was fine for learning purposes, but it left our state management logic tied to our componments' event handlers – especially those of the `<Todo />` component.
+In this tutorial, we used the `useState()` hook to manage state across a small collection of event handler functions. This was fine for learning purposes, but it left our state management logic tied to our component's event handlers – especially those of the `<Todo />` component.
 
 The `useReducer()` hook offers developers a way to consolidate different-but-related state management logic into a single function. It's a bit more complex than `useState()`, but it's a good tool to have in your belt. You can [read more about `useReducer()` in the React docs](https://react.dev/learn/extracting-state-logic-into-a-reducer).
 
@@ -86,7 +86,7 @@ If you'd like to try this API for yourself, Smashing Magazine has written an [in
 
 ## Class components
 
-Although this tutorial doesn't mention them, it is possible to build React components using [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain edge-cases, and they're common in legacy React projects. The official React docs maintain a reference for the [Component](https://react.dev/reference/react/Component) base class, but recommend [State: A Component's Memory](https://react.dev/learn/state-a-components-memory) and [Synchronizing with Effects](https://react.dev/learn/synchronizing-with-effects) to use hooks to manage state and side effects.
+Although this tutorial doesn't mention them, it is possible to build React components using [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) – these are called class components. Until the arrival of hooks, classes were the only way to bring state into components or manage rendering side effects. They're still the only way to handle certain edge-cases, and they're common in legacy React projects. The official React docs maintain a reference for the [Component](https://react.dev/reference/react/Component) base class, but recommend [state](https://react.dev/learn/state-a-components-memory) and [effects](https://react.dev/learn/synchronizing-with-effects) to use hooks for managing state and side effects.
 
 ## Testing
 

@@ -70,7 +70,7 @@ Change the `import` statement at the top of `Todo.jsx` so that it includes `useR
 import { useRef, useState } from "react";
 ```
 
-Then, create two new constants beneath the hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
+Next, create two new constants beneath the `useState()` hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
 
 ```jsx
 const editFieldRef = useRef(null);
@@ -114,7 +114,7 @@ Change the import statement of `Todo.jsx` again to add `useEffect`:
 import { useEffect, useRef, useState } from "react";
 ```
 
-`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
+`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
 
 ```jsx
 useEffect(() => {
@@ -187,7 +187,7 @@ if (wasNotEditingBefore && isEditingNow) {
 }
 ```
 
-The React team had discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and has provided an example custom hook we can use for the job.
+The React team has discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
 
 Paste the following code near the top of `Todo.jsx`, above your `Todo()` function.
 
@@ -239,7 +239,7 @@ Import the `useRef()` and `useEffect()` hooks into `App.jsx` — you'll need the
 import { useState, useRef, useEffect } from "react";
 ```
 
-Then declare a new ref inside the `App()` function. Just above the `return` statement is a good place:
+Next, declare a new ref inside the `App()` function, just above the `return` statement:
 
 ```jsx
 const listHeadingRef = useRef(null);
@@ -261,7 +261,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 
 ### Getting previous state
 
-We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we already used earlier on. Add it to the top of your `App.jsx` file, just below the imports:
+We want to focus on the element associated with our ref (via the `ref` attribute) only when our user deletes a task from their list. That's going to require the `usePrevious()` hook we used earlier on. Add it to the top of your `App.jsx` file, just below the imports:
 
 ```jsx
 function usePrevious(value) {
@@ -279,7 +279,7 @@ Now add the following, above the `return` statement inside the `App()` function:
 const prevTaskLength = usePrevious(tasks.length);
 ```
 
-Here we are invoking `usePrevious()` to track the length of the tasks state, like so:
+Here we are invoking `usePrevious()` to track the previous length of the tasks array.
 
 > **Note:** Since we're now utilizing `usePrevious()` in two files, it might be more efficient to move the `usePrevious()` function into its own file, export it from that file, and import it where you need it. Try doing this as an exercise once you've got to the end.
 
