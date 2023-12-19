@@ -8,7 +8,7 @@ browser-compat: api.MediaDevices.getDisplayMedia
 
 {{APIRef("Screen Capture API")}}
 
-The {{domxref("MediaDevices")}} interface's **`getDisplayMedia()`** method prompts the user to select and
+The **`getDisplayMedia()`** method of the {{domxref("MediaDevices")}} interface prompts the user to select and
 grant permission to capture the contents of a display or portion thereof (such as a window) as a {{domxref("MediaStream")}}.
 
 The resulting stream can then be
@@ -31,17 +31,17 @@ getDisplayMedia(options)
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `true`. If this option is omitted or set to `true`, the stream will contain a video track A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain a video track. Since `getDisplayMedia()` requires a video track, if this option is set to `false` the promise will reject with a `TypeError`.
     - `audio` {{optional_inline}}
       - : A boolean or a {{domxref("MediaTrackConstraints")}} instance; the default value is `false`. A value of `true` indicates that the returned {{domxref("MediaStream")}} will contain an audio track, if audio is supported and available for the display surface chosen by the user.
-    - `controller` {{optional_inline}} {{Experimental_Inline}}
+    - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : A {{domxref("CaptureController")}} object instance containing methods that can be used to further manipulate the capture session if included.
-    - `preferCurrentTab` {{non-standard_inline}} {{optional_inline}} {{Experimental_Inline}}
+    - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
       - : A boolean; a value of `true` instructs the browser to offer the current tab as the most prominent capture source, i.e. as a separate "This Tab" option in the "Choose what to share" options presented to the user. This is useful as many app types generally just want to share the current tab. For example, a slide deck app might want to let the user stream the current tab containing the presentation to a virtual conference. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
-    - `selfBrowserSurface` {{optional_inline}} {{Experimental_Inline}}
+    - `selfBrowserSurface` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should allow the user to select the current tab for capture. This helps to avoid the "infinite hall of mirrors" effect experienced when a video conferencing app inadvertently shares its own display. Possible values are `include`, which hints that the browser should include the current tab in the choices offered for capture, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
-    - `surfaceSwitching` {{optional_inline}} {{Experimental_Inline}}
+    - `surfaceSwitching` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should display a control to allow the user to dynamically switch the shared tab during screen-sharing. This is much more convenient than having to go through the whole sharing process again each time a user wants to switch the shared tab. Possible values are `include`, which hints that the browser should include the control, and `exclude`, which hints that it should not be shown. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
-    - `systemAudio` {{optional_inline}} {{Experimental_Inline}}
+    - `systemAudio` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user. Possible values are `include`, which hints that the browser should include the system audio in the list of choices, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
-    - `monitorTypeSurfaces` {{optional_inline}} {{Experimental_Inline}}
+    - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value specifying whether the application would like the user agent to offer the user the option to choose display surfaces whose type is monitor. Possible values are `include`, which hints that the browser should include the display surfaces whose type is monitor, and `exclude`, which hints that it should be excluded. A default value is not mandated by the spec; see the [Browser compatibility](#browser_compatibility) section for browser-specific defaults.
 
 > **Note:** See the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints) for a lot more detail on how these options work.
