@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
+In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen-reader users.
 
 <table>
   <tbody>
@@ -34,7 +34,7 @@ In our final tutorial article, we'll focus on (pun intended) accessibility, incl
 
 ## Including keyboard users
 
-At this point, we've accomplished all of the features we set out to implement. A user can add a new task, check and uncheck tasks, delete tasks, or edit task names. Also, they can filter their task list by all, active, or completed tasks.
+At this point, we've implemented all the features we set out to implement. Users can add a new task, check and uncheck tasks, delete tasks, or edit task names. Also, they can filter their task list by all, active, or completed tasks.
 
 Or, at least, they can do all of these things with a mouse. Unfortunately, these features are not very accessible to keyboard-only users. Let's explore this now.
 
@@ -58,11 +58,11 @@ If you click the "All", "Active", or "Completed" filter buttons with your mouse,
 
 ## Focusing between templates
 
-When a user toggles a `<Todo/>` template from viewing to editing, we should focus on the `<input>` used to rename it; when they toggle back from editing to viewing, we should move focus back to the "Edit" button.
+When a user toggles a `<Todo />` template from viewing to editing, we should focus on the `<input>` used to rename it; when they toggle back from editing to viewing, we should move focus back to the "Edit" button.
 
 ### Targeting our elements
 
-In order to focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://react.dev/reference/react/useRef) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
+To focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://react.dev/reference/react/useRef) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.jsx` so that it includes `useRef`:
 
@@ -106,7 +106,7 @@ The "Edit" button in your view template should read like this:
 
 ### Implementing `useEffect()`
 
-To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects which we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
+To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -177,7 +177,7 @@ We need to refactor our approach so that focus changes only when `isEditing` cha
 
 ## More robust focus management
 
-In order to meet our refined criteria, we need to know not just the value of `isEditing`, but also _when that value has changed_. In order to do that, we need to be able to read the previous value of the `isEditing` constant. Using pseudocode, our logic should be something like this:
+To meet our refined criteria, we need to know not just the value of `isEditing`, but also _when that value has changed_. To do that, we need to be able to read the previous value of the `isEditing` constant. Using pseudocode, our logic should be something like this:
 
 ```jsx
 if (wasNotEditingBefore && isEditingNow) {
@@ -247,7 +247,7 @@ const listHeadingRef = useRef(null);
 
 ### Prepare the heading
 
-Heading elements like our `<h2>` are not usually focusable. This isn't a problem — we can make any element programmatically focusable by adding the attribute [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to it. This means _only focusable with JavaScript_. You can't press <kbd>Tab</kbd> to focus on an element with a tabindex of `-1` the same way you could do with a [`<button>`](/en-US/docs/Web/HTML/Element/button) or [`<a>`](/en-US/docs/Web/HTML/Element/a) element (this can be done using `tabindex="0"`, but that's not really appropriate in this case).
+Heading elements like our `<h2>` are not usually focusable. This isn't a problem — we can make any element programmatically focusable by adding the attribute [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to it. This means _only focusable with JavaScript_. You can't press <kbd>Tab</kbd> to focus on an element with a tabindex of `-1` the same way you could do with a [`<button>`](/en-US/docs/Web/HTML/Element/button) or [`<a>`](/en-US/docs/Web/HTML/Element/a) element (this can be done using `tabindex="0"`, but that's not appropriate in this case).
 
 Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `headingRef`:
 
