@@ -34,7 +34,7 @@ new MediaRecorder(stream, options)
 
   - : A dictionary object that can contain the following properties:
 
-    - `mimeType`
+    - `mimeType` {{optional_inline}}
       - : A MIME type specifying the format for the resulting
         media; you may specify the container format (the browser will select its preferred
         codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
@@ -42,13 +42,13 @@ new MediaRecorder(stream, options)
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling
         {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
-    - `audioBitsPerSecond`
+    - `audioBitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the audio component of
         the media.
-    - `videoBitsPerSecond`
+    - `videoBitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the video component of
         the media.
-    - `bitsPerSecond`
+    - `bitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the audio and video
         components of the media. This can be specified instead of the above two
         properties. If this is specified along with one or the other of the above
