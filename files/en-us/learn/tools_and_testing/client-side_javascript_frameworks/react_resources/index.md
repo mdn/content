@@ -74,7 +74,7 @@ You can [read more about React DevTools on the React blog](https://reactjs.org/b
 
 In this tutorial, we used the `useState()` hook to manage state across a small collection of event handler functions. This was fine for learning purposes, but it left our state management logic tied to our componments' event handlers – especially those of the `<Todo />` component.
 
-The `useReducer()` hook offers developers a way to consolidate different-but-related state management logic into a single function. It's a bit more complex than `useState()`, but it's a good tool to have in your belt. You can [read more about `useReducer()` on the React docs](https://react.dev/learn/extracting-state-logic-into-a-reducer).
+The `useReducer()` hook offers developers a way to consolidate different-but-related state management logic into a single function. It's a bit more complex than `useState()`, but it's a good tool to have in your belt. You can [read more about `useReducer()` in the React docs](https://react.dev/learn/extracting-state-logic-into-a-reducer).
 
 ## The Context API
 
