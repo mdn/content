@@ -145,10 +145,10 @@ function rSAFor() {
 }
 ```
 
-In the above code, we call `navigator.permissions.query({name: "top-level-storage-access", requestedOrigin: "https://example.com"})` to discover if the origin has previously been granted permission, or if cookie access still needs to be requested.
+In the above code, we call `navigator.permissions.query({name: "top-level-storage-access", requestedOrigin: "https://example.com"})` to discover if the origin has previously been granted permission or if cookie access still needs to be requested.
 
-- If the permission status is `"granted"` we can just start using cookies; `requestStorageAccessFor()` was already called so there is no need to call it again.
-- If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor("https://example.com")` call from within a user gesture, such as a button click.
+- If the permission status is `"granted"` we can start using cookies; `requestStorageAccessFor()` was already called, so there is no need to call it again.
+- If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor("https://example.com")` from within a user gesture, such as a button click.
 
 > **Note:** The feature name used when querying the permissions status in this case is different to the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
 
