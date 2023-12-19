@@ -48,9 +48,9 @@ The `<Todo />` component will switch templates, as we designed, and you'll see a
 
 But where did our focus indicator go?
 
-When we switch between templates in our `<Todo />` component, we completely remove the elements from the old template and replace them with the elements from the new template. That means the element that we were focused on vanishes. When this happens, the browser resets focus to the `document.body` element. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use a screen reader.
+When we switch between templates in our `<Todo />` component, we completely remove the elements from the old template and replace them with the elements from the new template. That means the element that we were focused on no longer exists, so there's no visual cue as to where the browser's focus is. This could confuse a wide variety of users — particularly users who rely on the keyboard, or users who use assistive technology.
 
-To improve the experience for keyboard and screen-reader users, we should manage the browser's focus ourselves.
+To improve the experience for keyboard and assistive technology users, we should manage the browser's focus ourselves.
 
 ## Focusing between templates
 
@@ -100,9 +100,9 @@ The "Edit" button in your view template should read like this:
 </button>
 ```
 
-### Focusing on our refs with useEffect
+### Implementing `useEffect()`
 
-To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs after React renders a given component, and will run any side-effects that we'd like to add to the render process, which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
+To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects which we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -110,7 +110,7 @@ Change the import statement of `Todo.jsx` again to add `useEffect`:
 import { useEffect, useRef, useState } from "react";
 ```
 
-`useEffect()` takes a function as an argument; this function is executed after the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
+`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass into it a function that logs the words "side effect" to your console:
 
 ```jsx
 useEffect(() => {
@@ -127,11 +127,11 @@ console.log("main render");
 Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
 ```plain
-main render (3)                                     Todo.jsx:100
-side effect (3)                                     Todo.jsx:98
+main render                                     Todo.jsx
+side effect                                     Todo.jsx
 ```
 
-That's it for our experimentation for now. Delete `console.log("main render")` now, and let's move on to implementing our focus management.
+Again, this happens because code inside `useEffect()` runs _after_ the component renders. This takes some getting used to, just keep it in mind as you move forward. For now, delete `console.log("main render")` and we'll move on to implementing our focus management.
 
 ### Focusing on our editing field
 
@@ -165,7 +165,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of mostly works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
+This kind of works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
 
@@ -217,7 +217,7 @@ useEffect(() => {
 
 Note that the logic of `useEffect()` now depends on `wasEditing`, so we provide it in the array of dependencies.
 
-Again try using the "Edit" and "Cancel" buttons to toggle between the templates of your `<Todo />` component; you'll see the browser focus indicator move appropriately, without the problem we discussed at the start of this section.
+Try using your keyboard to activate the "Edit" and "Cancel" buttons in the `<Todo />` component; you'll see the browser focus indicator move appropriately, without the problem we discussed at the start of this section.
 
 ## Focusing when the user deletes a task
 
