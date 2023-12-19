@@ -277,7 +277,7 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 > **Note:** When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced regardless of any setup on the server and the client as described in this chapter.
 
-The most interesting capability exposed by both {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will **not** send credentials.
+The most interesting capability exposed by both {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
 
 To ask for a `fetch()` request to include credentials, set the [`credentials`](/en-US/docs/Web/API/Request/Request#credentials) option in the {{domxref("Request.Request()", "Request()")}} constructor to `"include"`.
 
