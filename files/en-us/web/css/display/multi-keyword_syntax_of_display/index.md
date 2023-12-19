@@ -97,7 +97,8 @@ body {
 ```
 
 ```css
-div, p {
+div,
+p {
   outline: 2px solid black;
   background-color: cornflowerblue;
   display: block;
