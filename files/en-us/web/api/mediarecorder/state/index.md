@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.state
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.state`** read-only property returns the
+The **`state`** read-only property of the {{domxref("MediaRecorder")}} interface returns the
 current state of the current `MediaRecorder` object.
 
 ## Value
@@ -48,4 +48,4 @@ record.onclick = () => {
 - [Web Dictaphone](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder +
   getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on GitHub](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone).)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
-- {{domxref("Navigator.getUserMedia")}}
+- {{domxref("Navigator.getUserMedia()")}}

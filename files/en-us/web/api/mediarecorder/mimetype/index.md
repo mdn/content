@@ -8,8 +8,8 @@ browser-compat: api.MediaRecorder.mimeType
 
 {{APIRef("MediaStream Recording")}}
 
-The **`mimeType`** read-only
-property returns the {{Glossary("MIME")}} media type that was specified when creating
+The **`mimeType`** read-only property of the {{domxref("MediaRecorder")}} interface
+returns the {{Glossary("MIME")}} media type that was specified when creating
 the {{domxref("MediaRecorder")}} object, or, if none was specified, which was chosen
 by the browser. This is the file format of the file that would result from
 writing all of the recorded data to disk.
