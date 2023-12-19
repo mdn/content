@@ -114,7 +114,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
   - : Each time a chunk of media data is finished being recorded, it's delivered to consumers in {{domxref("Blob")}} form using a {{domxref("BlobEvent")}} of type `dataavailable`.
 - {{domxref("MediaRecorder")}}
   - : The primary interface that implements the MediaStream Recording API.
-- {{domxref("MediaRecorderErrorEvent")}}
+- {{domxref("MediaRecorderErrorEvent")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The interface that represents errors thrown by the MediaStream Recording API. Its {{domxref("MediaRecorderErrorEvent.error", "error")}} property is a {{domxref("DOMException")}} that specifies that error occurred.
 
 ## Specifications
