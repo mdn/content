@@ -292,6 +292,32 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
+      <div class="cell">
+        plus-darker
+        <div class="container plus-darker">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        plus-lighter
+        <div class="container plus-lighter">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="note">Blending globally (blend with the background)</div>
@@ -504,6 +530,32 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
+      <div class="cell">
+        plus-darker
+        <div class="container plus-darker">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        plus-lighter
+        <div class="container plus-lighter">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -637,6 +689,12 @@ body {
 }
 .luminosity .item {
   mix-blend-mode: luminosity;
+}
+.plus-darker .item {
+  mix-blend-mode: plus-darker;
+}
+.plus-lighter .item {
+  mix-blend-mode: plus-lighter;
 }
 ```
 
