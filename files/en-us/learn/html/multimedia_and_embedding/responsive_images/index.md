@@ -110,7 +110,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 So, with these attributes in place, the browser will:
 
-1. Look at its device width.
+1. Look at screen size, pixel density, zoom level, screen orientation, and network speed.
 2. Work out which media condition in the `sizes` list is the first one to be true.
 3. Look at the slot size given to that media query.
 4. Load the image referenced in the `srcset` list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.

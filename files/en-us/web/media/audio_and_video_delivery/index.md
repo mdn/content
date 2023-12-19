@@ -98,7 +98,7 @@ It's also possible to feed an {{ htmlelement("audio") }} element a base64 encode
 <audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
 ```
 
-[Speak.js](https://github.com/kripken/speak.js/) employs this technique. [Try the demo](https://speak-demo.herokuapp.com).
+[Speak.js](https://github.com/kripken/speak.js/) employs this technique.
 
 ### JavaScript Video
 

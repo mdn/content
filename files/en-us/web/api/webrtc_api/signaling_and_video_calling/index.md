@@ -618,7 +618,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 
 Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
-Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
+Finally, we set the {{domxref("HTMLButtonElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 
 #### Dealing with state changes
 
