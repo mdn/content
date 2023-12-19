@@ -39,7 +39,7 @@ Now on to the code executed inside the embedded document. In this code:
 4. If that call returns `false`, we then call {{domxref("Permissions.query()")}} to check whether permission to access third-party cookies has already been granted (i.e., to another same-site embed). We wrap this whole section in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block because [some browsers don't support the `"storage-access"` permission](/en-US/docs/Web/API/Storage_Access_API#api.permissions.permission_storage-access), which can cause the `query()` call to throw. If it throws, we report that to the console and try running the cookie code anyway.
 5. If the permission state is `"granted"`, we immediately call `document.requestStorageAccess()`. This call will automatically resolve, saving the user some time, then we can run our code that accesses cookies.
 6. If the permission state is `"prompt"`, we call `document.requestStorageAccess()` after user interaction. This call may trigger a prompt to the user. If this call resolves, then we can run our code that accesses cookies.
-7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies, and our code cannot make use of them.
+7. If the permission state is `"denied"`, the user has denied our requests to access third-party cookies, and our code cannot use them.
 
 ```js
 function doThingsWithCookies() {
