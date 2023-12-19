@@ -76,8 +76,8 @@ For full details of the process, JSON syntax, and other requirements for submitt
 
 Once a set is active:
 
-- Requests from sites in the set (via {{domxref("Document.requestStorageAccess()")}}) to access third party cookies that belong to sites in the set are automatically granted, and no user permission step is required.
-- {{domxref("Document.requestStorageAccessFor()")}} calls can be made from top-level sites in the set to request third party cookie access for other sites in the set.
+- Requests from sites in the set (via {{domxref("Document.requestStorageAccess()")}}) to access third-party cookies that belong to sites in the set are automatically granted, and no user permission step is required.
+- {{domxref("Document.requestStorageAccessFor()")}} calls can be made from top-level sites in the set to request third-party cookie access for other sites in the set.
 
 ## Examples
 
