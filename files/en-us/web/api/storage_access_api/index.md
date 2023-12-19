@@ -22,7 +22,7 @@ The API provides methods that allow embedded resources to check whether they cur
 
 ## Concepts and usage
 
-Browsers implement several storage access features and policies that restrict access to third-party cookies. These range from giving embedded resources under each top-level origin a unique cookie storage space ([partitioned cookies](#unpartitioned_versus_partitioned_cookies)), to outright blocking of cookie access when resources are loaded in a third-party context.
+Browsers implement several storage access features and policies restricting access to third-party cookies. These range from giving embedded resources under each top-level origin a unique cookie storage space ([partitioned cookies](#unpartitioned_versus_partitioned_cookies)) to outright blocking of cookie access when resources are loaded in a third-party context.
 
 The semantics around third-party cookie blocking features/policies differ from browser to browser, but the core functionality is similar: cross-site resources embedded in a third-party context are not given access to the same cookies that they would have access to when loaded in a first-party context. This is done with good intent — browser vendors want to take steps to better protect their user's privacy and security, for example leaving them less open to having their activity tracked across different sites, and less vulnerable to exploits such as cross-site request forgery ({{glossary("CSRF")}}).
 
