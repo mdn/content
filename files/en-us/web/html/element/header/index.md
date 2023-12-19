@@ -1,5 +1,5 @@
 ---
-title: <header>
+title: "<header>: The Header element"
 slug: Web/HTML/Element/header
 page-type: html-element
 browser-compat: html.elements.header

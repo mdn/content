@@ -141,16 +141,17 @@ extends layout
 block content
   h1=title
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='first_name') First Name:
-      input#first_name.form-control(type='text' placeholder='First name' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
+      input#first_name.form-control(type='text', placeholder='First name (Christian)' name='first_name' required value=(undefined===author ? '' : author.first_name) )
       label(for='family_name') Family Name:
-      input#family_name.form-control(type='text' placeholder='Family name' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
+      input#family_name.form-control(type='text', placeholder='Family name (Surname)' name='family_name' required value=(undefined===author ? '' : author.family_name))
     div.form-group
       label(for='date_of_birth') Date of birth:
       input#date_of_birth.form-control(type='date' name='date_of_birth' value=(undefined===author ? '' : author.date_of_birth) )
     button.btn.btn-primary(type='submit') Submit
+
   if errors
     ul
       for error in errors
