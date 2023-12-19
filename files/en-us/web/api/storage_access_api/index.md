@@ -28,7 +28,7 @@ The semantics around third-party cookie blocking features/policies differ from b
 
 However, there are legitimate uses for embedded cross-site content accessing third-party cookies, which the above features/policies are known to break. Let's say you've got a series of different sites that provide users with access to different products — `heads-example.com`, `shoulders-example.com`, `knees-example.com`, and `toes-example.com`.
 
-> **Note:** Alternatively, you might choose to separate out your content or services into different country domains for localization purposes — `example.com`, `example.ua`, `example.br`, etc. — or in some other way.
+Alternatively, you might separate your content or services into different country domains for localization purposes — `example.com`, `example.ua`, `example.br`, etc. — or in some other way.
 
 You might have accompanying utility sites that have components embedded in all the other sites, for example to provide Single Sign-On (`sso-example.com`) or general personalization services (`services-example.com`). These utility sites will want to share state with the sites they are embedded in via cookies. They cannot share first-party cookies because they are on different domains, and third-party cookies will no longer work in browsers that block them.
 
