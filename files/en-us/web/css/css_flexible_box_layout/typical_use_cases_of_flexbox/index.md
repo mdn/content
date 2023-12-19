@@ -22,7 +22,7 @@ When we have a set of items that we want to display horizontally, we may well en
 
 ### Space distributed outside the items
 
-To distribute the space between or around the items we use the alignment properties in flexbox, and the {{cssxref("justify-content")}} property. You can read more about this property in [Aligning Items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), which deals with aligning items on the main axis.
+To distribute the space between or around the items, we use the alignment properties in flexbox, and the {{cssxref("justify-content")}} property. You can read more about this property in [Aligning Items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container), which deals with aligning items on the main axis.
 
 In the below live example we display the items at their natural size and by using `justify-content: space-between` make equal amounts of space between the items. You can change how the space is distributed using the `space-around` value, or where supported, `space-evenly`. You could also use `flex-start` to place the space at the end of the items, `flex-end` to place it before them, or `center` to center the navigation items.
 
@@ -78,7 +78,7 @@ In the live example below you can see our media object. I have used the alignmen
 
 Some things that you might want to try in this live example relate to the different ways you might want to constrain the media object in your design.
 
-To prevent the image growing too large, add a {{cssxref("max-width")}} to the image. As that side of the media object is using the initial values of flexbox it can shrink but not grow, and uses a `flex-basis` of auto. Any {{cssxref("width")}} or max-width applied to the image will become the `flex-basis`.
+To prevent the image from growing too large, you should add a {{cssxref("max-width")}} to the image. As that side of the media object uses the initial values of flexbox, it can shrink, but not grow, and uses a `flex-basis` of auto. Any {{cssxref("width")}} or max-width applied to the image will become the `flex-basis`.
 
 ```css
 .image img {

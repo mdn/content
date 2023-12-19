@@ -309,7 +309,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
 }
 ```

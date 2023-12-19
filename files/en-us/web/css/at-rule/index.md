@@ -40,7 +40,7 @@ A subset of nested statements, which can be used as a statement of a style sheet
 
 - {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
 - {{cssxref("@scope")}} - A conditional group rule that will apply its content if the device meets the criteria of the given condition.
-- {{cssxref("@starting-style")}} - A conditional group rule that will apply atarting transition if the browser meets the criteria of the given condition.
+- {{cssxref("@starting-style")}} - A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
 - {{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
 - {{cssxref("@document")}} {{deprecated_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition.
 - {{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.

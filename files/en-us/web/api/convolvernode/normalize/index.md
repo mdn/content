@@ -27,7 +27,7 @@ A boolean.
 
 ### Switching normalization off
 
-The following example creates a convolver node and assigns it an {{domxref("AudioBuffer")}}. Before assiging the audio buffer, it sets `normalize` to `false`.
+The following example creates a convolver node and assigns it an {{domxref("AudioBuffer")}}. Before assigning the audio buffer, it sets `normalize` to `false`.
 
 ```js
 const audioCtx = new AudioContext();

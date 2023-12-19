@@ -119,7 +119,7 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-If you want to abort from multiple signals, you can use {{domxref("AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
 
 ```js
 try {
