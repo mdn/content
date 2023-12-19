@@ -125369,10 +125369,6 @@
       "Mogglewump"
     ]
   },
-  "Web/SVG/Attribute/viewTarget": {
-    "modified": "2020-10-15T22:18:25.792Z",
-    "contributors": ["Sebastianz"]
-  },
   "Web/SVG/Attribute/visibility": {
     "modified": "2020-10-15T21:07:30.330Z",
     "contributors": [

@@ -1739,8 +1739,7 @@
         "'externalResourcesRequired'",
         "'viewBox'",
         "'preserveAspectRatio'",
-        "'zoomAndPan'",
-        "'viewTarget'"
+        "'zoomAndPan'"
       ],
       "interfaces": ["SVGViewElement"]
     },
