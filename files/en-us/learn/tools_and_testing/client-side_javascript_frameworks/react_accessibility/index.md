@@ -52,6 +52,10 @@ When we switch between templates in our `<Todo />` component, we completely remo
 
 To improve the experience for keyboard and assistive technology users, we should manage the browser's focus ourselves.
 
+### Aside: a note on our focus indicator
+
+If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator. Your code isn't broken! Our CSS uses the [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible) pseudo-class, which allows the browser to decide when to show a visual focus indicator to the users. Most often, this means an indicator will only appear when the user is navigating with the keyboard, but there are some exceptions: you'll notice that the indicator still shows up when you click the "What needs to be done?" text input at the top of the page.
+
 ## Focusing between templates
 
 When a user toggles a `<Todo/>` template from viewing to editing, we should focus on the `<input>` used to rename it; when they toggle back from editing to viewing, we should move focus back to the "Edit" button.
