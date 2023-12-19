@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
-  - https://w3c.github.io/aria-practices/#kbd_shortcuts
+  - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 ---
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
@@ -64,7 +64,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
+In trying to improve the accessibility of your sites and applications, there are some best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 

@@ -165,7 +165,7 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to create new asymmetric key credentials, i.e., via {{domxref("CredentialsContainer.create", "navigator.credentials.create({publicKey: ..., ...})")}}.
 
-- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}} {{experimental_inline}}
+- {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
@@ -192,6 +192,10 @@ You can specify
 - {{httpheader("Permissions-Policy/web-share", "web-share")}}
 
   - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of Web Share API to share text, links, images, and other content to arbitrary destinations of user's choice, e.g. mobile apps.
+
+- {{httpheader("Permissions-Policy/window-management", "window-management")}} {{experimental_inline}}
+
+  - : Controls whether or not the current document is allowed to use the [Window Management API](/en-US/docs/Web/API/Window_Management_API) to manage windows on multiple displays.
 
 - {{httpheader("Permissions-Policy/xr-spatial-tracking", "xr-spatial-tracking")}} {{Experimental_Inline}}
   - : Controls whether or not the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) to interact with a WebXR session.

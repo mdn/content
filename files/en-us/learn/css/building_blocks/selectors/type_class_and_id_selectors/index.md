@@ -40,7 +40,7 @@ In this lesson, we examine some of the simplest selectors, which you will probab
 
 ## Type selectors
 
-A **type selector** is sometimes referred to as a _tag name selector_ or _element selector_ because it selects an HTML tag/element in your document. In the example below, we have used the `span`, `em` and `strong` selectors.
+A **type selector** is sometimes referred to as a _tag name selector_ or _element selector_ because it selects an HTML tag/element in your document. Type selectors are not case-sensitive. In the example below, we have used the `span`, `em` and `strong` selectors.
 
 **Try adding a CSS rule to select the `<h1>` element and change its color to blue.**
 
@@ -78,7 +78,7 @@ Although both do the same thing, the readability is significantly improved.
 
 ## Class selectors
 
-The class selector starts with a dot (`.`) character. It will select everything in the document with that class applied to it. In the live example below we have created a class called `highlight`, and have applied it to several places in my document. All of the elements that have the class applied are highlighted.
+The case-sensitive class selector starts with a dot (`.`) character. It will select everything in the document with that class applied to it. In the live example below we have created a class called `highlight`, and have applied it to several places in my document. All of the elements that have the class applied are highlighted.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
 
@@ -102,7 +102,7 @@ We can tell the browser that we only want to match the element if it has two cla
 
 ## ID selectors
 
-An ID selector begins with a `#` rather than a dot character, but is used in the same way as a class selector. However, an ID can be used only once per page, and elements can only have a single `id` value applied to them. It can select an element that has the `id` set on it, and you can precede the ID with a type selector to only target the element if both the element and ID match. You can see both of these uses in the following example:
+The case-sensitive ID selector begins with a `#` rather than a dot character, but is used in the same way as a class selector. However, an ID can be used only once per page, and elements can only have a single `id` value applied to them. It can select an element that has the `id` set on it, and you can precede the ID with a type selector to only target the element if both the element and ID match. You can see both of these uses in the following example:
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 

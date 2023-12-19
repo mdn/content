@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.types
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The read-only
 **`types`** property of the {{domxref("ClipboardItem")}}

@@ -8,7 +8,7 @@ browser-compat: api.Element.touchend_event
 
 {{APIRef}}
 
-The `touchend` event fires when one or more touch points are removed from the touch surface.
+The `touchend` event fires when one or more touch points are removed from the touch surface. Remember that it is possible to get a [`touchcancel`](/en-US/docs/Web/API/Element/touchcancel_event) event instead.
 
 ## Syntax
 

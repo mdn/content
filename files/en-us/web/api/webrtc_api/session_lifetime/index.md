@@ -30,7 +30,7 @@ Why, you may wonder, is something fundamental to the process of establishing a W
 
 In particular, if a developer already has a method in place for connecting two devices, it doesn't make sense for them to have to use another one, defined by the specification, just for WebRTC. Since WebRTC doesn't live in a vacuum, there is likely other connectivity in play, so it makes sense to avoid having to add additional connection channels for signaling if an existing one can be used.
 
-In order to exchange signaling information, you can choose to send JSON objects back and forth over a WebSocket connection, or you could use XMPP or SIP over an appropriate channel, or you could use {{domxref("XMLHttpRequest")}} over {{Glossary("HTTPS")}} with polling, or any other combination of technologies you can come up with. You could even use email as the signaling channel.
+In order to exchange signaling information, you can choose to send JSON objects back and forth over a WebSocket connection, or you could use XMPP or SIP over an appropriate channel, or you could use {{domxref("fetch()")}} over {{Glossary("HTTPS")}} with polling, or any other combination of technologies you can come up with. You could even use email as the signaling channel.
 
 It's also worth noting that the channel for performing signaling doesn't even need to be over the network. One peer can output a data object that can be printed out, physically carried (on foot or by carrier pigeon) to another device, entered into that device, and a response then output by that device to be returned on foot, and so forth, until the WebRTC peer connection is open. It'd be very high latency but it could be done.
 

@@ -156,5 +156,7 @@ div.hsla {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: the data type that represents any color
-- [HSL Color Picker](https://hslpicker.com/)
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
+- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou

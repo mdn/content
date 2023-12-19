@@ -13,7 +13,7 @@ page-type: firefox-release-notes
 ### Developer Tools
 
 - The position of elements can now be changed within the content ([Firefox bug 1139187](https://bugzil.la/1139187)).
-- Implemented {{domxref("console.clear()")}} to clear the console output ([Firefox bug 659625](https://bugzil.la/659625)).
+- Implemented {{domxref("console/clear_static", "console.clear()")}} to clear the console output ([Firefox bug 659625](https://bugzil.la/659625)).
 - Added [HTTP log inspection to the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details) ([Firefox bug 1211525](https://bugzil.la/1211525)).
 - Added a [Firebug theme](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#choose-devtools-theme) ([Firefox bug 1244054](https://bugzil.la/1244054)).
 - Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ([Firefox bug 1201475](https://bugzil.la/1201475)).

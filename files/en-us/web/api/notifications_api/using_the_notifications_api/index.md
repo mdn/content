@@ -11,7 +11,7 @@ The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page o
 
 Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-![Android device notifications feed containing a list of several alerts from multiple sources.](android-notification.png)
+![Desktop notification: To do list via mdn.github.io HEY! Your task "Go shopping" is now overdue](desktop-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
@@ -92,11 +92,9 @@ function askNotificationPermission() {
 }
 ```
 
-Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we then run a check to see whether the promise-based version of `Notification.requestPermission()` is supported. If it is, we run the promise-based version (supported everywhere except Safari), and if not, we run the older callback-based version (which is supported in Safari).
+Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we run the promise-based version of `Notification.requestPermission()`, and if not, we log a message to the console.
 
 To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
-
-> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
 
 ## Creating a notification
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.lengthComputable
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The
 **`ProgressEvent.lengthComputable`** read-only property is a

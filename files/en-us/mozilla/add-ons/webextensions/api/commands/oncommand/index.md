@@ -38,6 +38,8 @@ Events have three functions:
 
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+    - `tab`
+      - : {{WebExtAPIRef('tabs.Tab')}}. The tab that was active when the command shortcut was entered.
 
 ## Examples
 

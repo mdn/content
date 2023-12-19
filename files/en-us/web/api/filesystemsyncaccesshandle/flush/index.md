@@ -31,7 +31,8 @@ None ({{jsxref('undefined')}}).
 
 ### Exceptions
 
-None.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the associated access handle is already closed.
 
 ## Examples
 
@@ -84,4 +85,4 @@ onmessage = async (e) => {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://developer.chrome.com/articles/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

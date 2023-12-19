@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/menuitemcheckbox_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemcheckbox
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.

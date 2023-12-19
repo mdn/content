@@ -1,6 +1,7 @@
 ---
 title: Count trailing zeros
 slug: WebAssembly/Reference/Numeric/Count_trailing_zeros
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

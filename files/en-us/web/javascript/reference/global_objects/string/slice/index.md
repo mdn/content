@@ -34,7 +34,19 @@ A new string containing the extracted section of the string.
 
 `slice()` extracts the text from one string and returns a new string. Changes to the text in one string do not affect the other string.
 
-`slice()` extracts up to but not including `indexEnd`. For example, `str.slice(1, 4)` extracts the second character through the fourth character (characters indexed `1`, `2`, and `3`).
+`slice()` extracts up to but not including `indexEnd`. For example, `str.slice(4, 8)` extracts the fifth character through the eighth character (characters indexed `4`, `5`, `6`, and `7`):
+
+```plain
+              indexStart        indexEnd
+                  ↓               ↓
+| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+| T | h | e |   | m | i | r | r | o | r |
+
+                  m   i   r   r
+                 _______________
+                      ↑
+                    Result
+```
 
 - If `indexStart >= str.length`, an empty string is returned.
 - If `indexStart < 0`, the index is counted from the end of the string. More formally, in this case, the substring starts at `max(indexStart + str.length, 0)`.

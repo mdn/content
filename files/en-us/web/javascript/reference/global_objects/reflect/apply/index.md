@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Reflect.apply
 
 The **`Reflect.apply()`** static method calls a target function with arguments as specified.
 
-{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
+{{EmbedInteractiveExample("pages/js/reflect-apply.html", "taller")}}
 
 ## Syntax
 

@@ -12,7 +12,7 @@ The **`addEventListener()`** method of the {{domxref("EventTarget")}} interface
 sets up a function that will be called whenever the specified event is delivered to the target.
 
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
-but the target may be any object that supports events (such as {{domxref("XMLHttpRequest")}}).
+but the target may be any object that supports events (such as {{domxref("IDBRequest")}}).
 
 > **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
 >
@@ -122,7 +122,7 @@ For example, an event handler callback that can be used to handle both
 {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} might look like this:
 
 ```js
-function eventHandler(event) {
+function handleEvent(event) {
   if (event.type === "fullscreenchange") {
     /* handle a full screen toggle */
   } else {
@@ -368,12 +368,13 @@ As mentioned [above](#specifying_this_using_bind), you can use
 const myButton = document.getElementById("my-button-id");
 const someString = "Data";
 
-myButton.addEventListener(
-  "click",
-  function () {
-    console.log(this); // Expected Value: 'Data'
-  }.bind(someString),
-);
+myButton.addEventListener("click", passIntoEvtListener.bind(someString));
+
+//function declaration for event listener
+function passIntoEvtListener(e) {
+  console.log("Expected Value:", this); // Expected Value: 'Data'
+  console.log("current target:", e.currentTarget.id); // current target: my-button-id
+}
 ```
 
 This method is suitable when you don't need to know which HTML element the event

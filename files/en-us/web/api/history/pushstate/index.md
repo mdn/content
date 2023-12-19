@@ -12,8 +12,6 @@ In an [HTML](/en-US/docs/Web/HTML) document, the
 **`history.pushState()`** method adds an entry to the browser's
 session history stack.
 
-This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
-
 ## Syntax
 
 ```js-nolint

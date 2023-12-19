@@ -22,14 +22,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-
-  - : Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
-
-    - `off` or `none`, no autocapitalization is applied (all letters default to lowercase)
-    - `on` or `sentences`, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase
-    - `words`, the first letter of each word defaults to a capital letter; all other letters default to lowercase
-    - `characters`, all letters should default to uppercase
-
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)

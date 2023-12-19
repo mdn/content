@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ClipboardItem.getType
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The **`getType()`** method of the {{domxref("ClipboardItem")}} interface returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} of the requested {{Glossary("MIME type")}} or an error if the MIME type is not found.
 
