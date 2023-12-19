@@ -1506,8 +1506,6 @@
         "'width'",
         "'height'",
         "'preserveAspectRatio'",
-        "'contentScriptType'",
-        "'contentStyleType'",
         "'viewBox'"
       ],
       "interfaces": ["SVGSVGElement"]
@@ -1741,8 +1739,7 @@
         "'externalResourcesRequired'",
         "'viewBox'",
         "'preserveAspectRatio'",
-        "'zoomAndPan'",
-        "'viewTarget'"
+        "'zoomAndPan'"
       ],
       "interfaces": ["SVGViewElement"]
     },
