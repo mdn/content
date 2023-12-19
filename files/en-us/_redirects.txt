@@ -7589,7 +7589,6 @@
 /en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
-/en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
 /en-US/docs/Web/API/BluetoothAdvertisingData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/appearance	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/manufacturerData	/en-US/docs/Web/API/Web_Bluetooth_API
