@@ -42,7 +42,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
     - The document is not the top-level document.
     - The document has a `null` origin.
     - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
-    - The top-level site and embedded site are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+    - The top-level and embedded sites are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.
