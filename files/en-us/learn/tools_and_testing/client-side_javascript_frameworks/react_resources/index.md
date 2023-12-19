@@ -51,22 +51,22 @@ You can read more about this and other approaches to styling React components in
 
 We used `console.log()` to check on the state and props of our application in this tutorial, and you'll also have seen some of the useful warnings and error message that React gives you both in the CLI and your browser's JavaScript console. But there's more we can do here.
 
-The React DevTools utility allows you to inspect the internals of your React application directly in the browser. It adds a new panel to your browser's developer tools, and with it you can inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
+The React DevTools utility allows you to inspect the internals of your React application directly in the browser. It adds a new panel to your browser's developer tools that allows you to inspect the state and props of various components, and even edit state and props to make immediate changes to your application.
 
 This screenshot shows our finished application as it appears in React DevTools:
 
 ![Our project being shown in React devtools](react-devtools.png)
 
-On the left, we see all of the components that make up our application, including some unique keys for the things that are rendered from arrays. On the right, we see the props and hooks that our App component utilizes. Notice, too, that the `Form`, `FilterButton`, and `Todo` components are indented to the right – this indicates that `App` is their parent. In more complex apps, this view is great for understanding parent/child relationships at a glance.
+On the left, we see all of the components that make up our application, including unique keys for the items that are rendered from arrays. On the right, we see the props and hooks that our App component uses. Notice, too, that the `Form`, `FilterButton`, and `Todo` components are indented to the right – this indicates that `App` is their parent. This view is great for understanding parent/child relationships at a glance and is invaluable for understanding more complex apps.
 
-React DevTools is available in a number of forms:
+React DevTools is available in several forms:
 
 - A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 - A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
 - A [stand-alone application you can install with npm or Yarn](https://www.npmjs.com/package/react-devtools).
 
-Try installing one of these, then using it to inspect the app you've just built!
+Try installing one of these, and then using it to inspect the app you've just built!
 
 You can [read more about React DevTools in the React docs](https://react.dev/learn/react-developer-tools).
 
