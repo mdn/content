@@ -35,13 +35,13 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
 
 ## Events
 
-- {{domxref("PresentationConnection/close_event")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnection/close_event", "close")}} {{Experimental_Inline}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.close", "PresentationConnection.close()")}}.
-- {{domxref("PresentationConnection/connect_event")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnection/connect_event", "connect")}} {{Experimental_Inline}}
   - : Fired when a presentation connection is established.
-- {{domxref("PresentationConnection/message_event")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnection/message_event", "message")}} {{Experimental_Inline}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
-- {{domxref("PresentationConnection/terminated_event")}} {{Experimental_Inline}}
+- {{domxref("PresentationConnection/terminated_event", "terminated")}} {{Experimental_Inline}}
   - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
 ## Specifications

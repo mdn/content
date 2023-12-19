@@ -53,11 +53,11 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
 
 ## Events
 
-- {{DOMxRef("HTMLMarqueeElement/bounce_event")}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLMarqueeElement/bounce_event", "bounce")}} {{Deprecated_Inline}}
   - : Fires when the marquee has reached the end of its scroll position. It can only fire when the behavior attribute is set to `alternate`.
-- {{DOMxRef("HTMLMarqueeElement/finish_event")}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLMarqueeElement/finish_event", "finish")}} {{Deprecated_Inline}}
   - : Fires when the marquee has finished the amount of scrolling that is set by the loop attribute. It can only fire when the loop attribute is set to some number that is greater than 0.
-- {{DOMxRef("HTMLMarqueeElement/start_event")}} {{Deprecated_Inline}}
+- {{DOMxRef("HTMLMarqueeElement/start_event", "start")}} {{Deprecated_Inline}}
   - : Fires when the marquee starts scrolling.
 
 ## Examples

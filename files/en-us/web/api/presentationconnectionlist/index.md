@@ -20,7 +20,7 @@ browser-compat: api.PresentationConnectionList
 
 ## Events
 
-- {{domxref('PresentationConnectionList/connectionavailable_event')}} {{Experimental_Inline}}
+- {{domxref('PresentationConnectionList/connectionavailable_event', "connectionavailable")}} {{Experimental_Inline}}
   - : Fired whenever a new [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) becomes available.
 
 ## Specifications
