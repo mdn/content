@@ -35,7 +35,7 @@ No exceptions are thrown.
 
 ## Examples
 
-Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index")}}. We receive a reference to the current {{domxref('ServiceWorkerRegistration')}}, which allows us to access the {{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the `delete` method.
+Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index", "", "nocode")}}. We receive a reference to the current {{domxref('ServiceWorkerRegistration')}}, which allows us to access the {{domxref('ServiceWorkerRegistration.index','index')}} property and thus access the `delete` method.
 
 ```js
 async function unregisterContent(article) {
@@ -68,4 +68,4 @@ self.registration.index.delete("my-id");
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}

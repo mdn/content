@@ -18,7 +18,7 @@ The **Content Index API** allows developers to register their offline enabled co
 
 As it stands, offline web content is not easily discoverable by users. Content indexing allows developers to tell the browser about their specific offline content. This allows users to discover and view what is available, whilst giving developers the ability to add and manage this content. Examples could be a news website prefetching the latest articles in the background, or a content streaming app registering downloaded content.
 
-The Content Index API is an extension to {{domxref("Service Worker API")}}, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
+The Content Index API is an extension to {{domxref("Service Worker API", "", "", "nocode")}}, which allows developers to add URLs and metadata of already cached pages, under the scope of the current service worker. The browser can then use these entries to display offline reading to a user. As a developer you can also display these entries within your application.
 
 Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.
 
@@ -27,22 +27,20 @@ Indexed entries do not automatically expire. It's good practice to present an in
 ## Interfaces
 
 - {{domxref("ContentIndex")}} {{Experimental_Inline}}
-  - : The **`ContentIndex`** interface provides functionality to register content available offline.
+  - : Provides functionality to register content available offline.
 - {{domxref("ContentIndexEvent")}} {{Experimental_Inline}}
-  - : The **`ContentIndexEvent`** interface defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
+  - : Defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
 
-## Extensions to other interfaces
-
-The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.
+### Extensions to other interfaces
 
 - {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} event {{Experimental_Inline}}
-  - : An event fired when content is removed by the user agent.
+  - : Fired when content is removed by the user agent.
 
 ## Examples
 
-All the following examples assume a service worker has been registered. For more information see the {{domxref("Service Worker API")}}.
+All the following examples assume a service worker has been registered. For more information see the {{domxref("Service Worker API", "", "", "nocode")}}.
 
 ### Feature detection and interface access
 
@@ -61,7 +59,7 @@ if ("index" in registration) {
 
 ### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add()', 'add()')}} method to register it with the {{domxref('Content Index API', 'content index')}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add()', 'add()')}} method to register it with the {{domxref('Content Index API', 'content index', '', 'nocode')}}.
 
 ```js
 // our content
@@ -156,7 +154,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
 ```js
 // service worker script
@@ -194,4 +192,4 @@ The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}}
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}

@@ -11,7 +11,7 @@ browser-compat: api.ContentIndexEvent
 
 The **`ContentIndexEvent`** interface of the {{domxref("Content Index API")}} defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event.
 
-This event is sent to the {{domxref("ServiceWorkerGlobalScope", "global scope")}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.
+This event is sent to the {{domxref("ServiceWorkerGlobalScope", "global scope", "", "nocode")}} of a {{domxref('ServiceWorker')}}. It contains the id of the indexed content to be removed.
 
 The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", 'contentdelete')}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete')}} method is called.
 
@@ -19,7 +19,7 @@ The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", 'contentdelete')}}
 
 ## Constructor
 
-- {{domxref("ContentIndexEvent.ContentIndexEvent()", "ContentIndexEvent()")}} {{Experimental_Inline}}
+- {{domxref("ContentIndexEvent.ContentIndexEvent", "ContentIndexEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `ContentIndexEvent` object whose type and other options are configured as specified.
 
 ## Instance properties
@@ -35,7 +35,7 @@ _While `ContentIndexEvent` offers no methods of its own, it inherits any specifi
 
 ## Examples
 
-This example shows the {{domxref("ServiceWorker", "service worker")}} script listening for the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event and logs the removed content index id.
+This example shows the {{domxref("ServiceWorker", "service worker", "", "nocode")}} script listening for the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event and logs the removed content index id.
 
 ```js
 self.addEventListener("contentdelete", (event) => {
@@ -57,4 +57,4 @@ self.addEventListener("contentdelete", (event) => {
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}

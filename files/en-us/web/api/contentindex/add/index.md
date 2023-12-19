@@ -10,7 +10,7 @@ browser-compat: api.ContentIndex.add
 
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The **`add()`** method of the {{domxref("ContentIndex")}} interface registers an item with the {{domxref("Content Index API", "content index")}}.
+The **`add()`** method of the {{domxref("ContentIndex")}} interface registers an item with the {{domxref("Content Index API", "content index", "", "nocode")}}.
 
 ## Syntax
 
@@ -73,14 +73,14 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
     - The service worker's registration is not present or the service worker does not contain a {{domxref('FetchEvent')}}.
     - One of `id`, `title`, `description` or `url` parameter are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The `url` parameter is not {{glossary("same origin")}} with the {{domxref("ServiceWorker", "service worker")}}.
+    - The `url` parameter is not {{glossary("same origin")}} with the {{domxref("ServiceWorker", "service worker", "", "nocode")}}.
     - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error or decode error.
 
 ## Examples
 
 Here we're declaring an item in the correct format and creating an asynchronous
 function which uses the `add` method to register it with the
-{{domxref("Content Index API", "content index")}}.
+{{domxref("Content Index API", "content index", "", "nocode")}}.
 
 ```js
 // our content
@@ -118,7 +118,7 @@ async function registerContent(data) {
 }
 ```
 
-The `add` method can also be used within the {{domxref("ServiceWorker", "service worker")}} scope.
+The `add` method can also be used within the {{domxref("ServiceWorker", "service worker", "", "nocode")}} scope.
 
 ```js
 // our content
@@ -153,4 +153,4 @@ self.registration.index.add(item);
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}

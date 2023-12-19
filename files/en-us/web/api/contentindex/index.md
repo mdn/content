@@ -18,7 +18,7 @@ There are no properties of this interface.
 ## Instance methods
 
 - {{domxref('ContentIndex.add()')}} {{Experimental_Inline}}
-  - : Registers an item with the {{domxref("Content Index API", "content index")}}.
+  - : Registers an item with the {{domxref("Content Index API", "content index", "", "nocode")}}.
 - {{domxref('ContentIndex.delete()')}} {{Experimental_Inline}}
   - : Unregisters an item from the currently indexed content.
 - {{domxref('ContentIndex.getAll()')}} {{Experimental_Inline}}
@@ -43,7 +43,7 @@ if ("index" in registration) {
 
 ### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref("Content Index API", "content index")}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref("Content Index API", "content index", "", "nocode")}}.
 
 ```js
 // our content
@@ -83,7 +83,7 @@ async function registerContent(data) {
 
 ### Retrieving items within the current index
 
-The below example shows an asynchronous function that retrieves items within the {{domxref("Content Index API", "content index")}} and iterates over each entry, building a list for the interface.
+The below example shows an asynchronous function that retrieves items within the {{domxref("Content Index API", "content index", "", "nocode")}} and iterates over each entry, building a list for the interface.
 
 ```js
 async function createReadingList() {
@@ -124,7 +124,7 @@ async function createReadingList() {
 
 ### Unregistering indexed content
 
-Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index")}}.
+Below is an asynchronous function, that removes an item from the {{domxref("Content Index API", "content index", "", "nocode")}}.
 
 ```js
 async function unregisterContent(article) {
@@ -139,7 +139,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
 
 ```js
 // service worker script
@@ -163,4 +163,4 @@ const contentIndexItems = self.registration.index.getAll();
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}

@@ -73,6 +73,6 @@ self.oncontentdelete = (event) => {
 
 ## See also
 
-- {{domxref("Content Index API")}}
+- {{domxref("Content Index API", "", "", "nocode")}}
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

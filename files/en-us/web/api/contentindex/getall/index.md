@@ -74,7 +74,7 @@ No exceptions are thrown. If there are no items in the Content Index, an empty
 ## Examples
 
 The below example shows an asynchronous function that retrieves items within the
-{{domxref("Content Index API", "content index")}} and iterates over each entry, building
+{{domxref("Content Index API", "content index", "", "nocode")}} and iterates over each entry, building
 a list for the interface.
 
 ```js
@@ -126,4 +126,4 @@ async function createReadingList() {
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
-- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage")}}
+- {{domxref("Service Worker API", "Service Worker API, along with information about Cache and CacheStorage", "", "nocode")}}
