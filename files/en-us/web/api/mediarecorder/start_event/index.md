@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.start_event
 
 {{APIRef("MediaStream Recording")}}
 
-The `start` event is fired when
+The **`start`** event of the {{domxref("MediaRecorder")}} interface is fired when
 {{domxref("MediaRecorder.start()")}} is called. At this point, the data
 starts being gathered into a {{domxref("Blob")}}.
 

@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.pause_event
 
 {{APIRef("MediaStream Recording")}}
 
-The `pause` event is thrown as a result of the
+The **`pause`** event is of the {{domxref("MediaRecorder")}} interface thrown as a result of the
 {{domxref("MediaRecorder.pause()")}} method being invoked.
 
 ## Syntax
