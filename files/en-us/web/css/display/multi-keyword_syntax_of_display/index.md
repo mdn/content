@@ -59,20 +59,20 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
+Regarding how this multi-value syntax helps clarify CSS layout, we can look at some values in the table above that might be less familiar to you. The multi-keyword `display: block flow-root` maps to a single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside, and things outside the box cannot intrude into it.
 
-In the example below, four `<div>` elements demonstrate how display values affect formatting contexts.
+In the example below, two `<p>` elements, one inside a `<div>` demonstrate how display values affect formatting contexts.
 The first `<div>` element with the demo controls is hidden so we can focus on the elements that follow instead.
-The elements that we should focus on are the "parent", "child", and "sibling" `<div>` elements which you can differentiate by their IDs.
+The elements that we should focus on are the "parent", "child", and "sibling" `<div>` and `<p>` elements which you can differentiate by their IDs.
 
 What's notable about this layout is that there is no content between the parent and child elements, and the child element has a top margin applied.
 You might expect that the top margin of the child element gives it a positioning somewhere in the middle of the parent element, but what happens instead is something called [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 In this case, the margin of the child element extends well above the parent's bounding box and pushes the parent element further down the page.
 This is easier to see if you inspect the box model of the child element [in your browser's developer tools](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#use_browser_devtools_to_view_the_box_model).
 
-Choose the options in the `<select>` element to see the effect of different `display` values.
-You can use any value with `flow-root` to create a new formatting context, giving the child element a margin relative to its parent and avoiding the margin collapse.
-Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single `flow-root` value.
+Change the selected option in the `<select>` element to see the effect of different `display` values.
+You can use any value with `flow-root` to create a new formatting context for the parent, making the child element margin relative to its parent's outer edge and avoiding the margin collapse.
+Changing between `display: flow-root` and `display: block flow-root` will achieve the same effect as the single-value `flow-root` keyword.
 
 ```js hidden
 function changeDisplayType() {
@@ -89,36 +89,33 @@ function changeDisplayType() {
 #controls {
   padding: 1rem;
   outline: 2px dashed black;
-  background-color: white;
-  color: black;
 }
 body {
   margin: 10px;
   font-family: sans-serif;
-  color: white;
 }
 ```
 
 ```css
-div {
+div, p {
   outline: 2px solid black;
   background-color: cornflowerblue;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 #parent {
-  background-color: aquamarine;
-  height: 140px;
+  background-color: oldlace;
+  min-height: 2rem;
 }
 
 #child {
-  margin-top: 60px;
-  outline: 2px solid red;
+  margin-top: 4rem;
+  outline: 2px dashed red;
 }
 
 #sibling {
-  background-color: mediumslateblue;
+  background-color: lavender;
 }
 ```
 
@@ -137,13 +134,9 @@ div {
 
 ```html
 <div id="parent">
-  <div id="child">
-    <p>This para is inside the child element.</p>
-  </div>
+  <p id="child">The #child paragraph (nested in the #parent).</p>
 </div>
-<div id="sibling">
-  <p>This is a sibling.</p>
-</div>
+<p id="sibling">The #sibling paragraph (to the #parent)</p>
 ```
 
 {{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
