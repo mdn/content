@@ -85,7 +85,7 @@ function recordStream(stream) {
 
 ## Specifications
 
-{{Specifications}}
+This feature is no longer part of any specification, and longer on track to become standard.
 
 ## Browser compatibility
 
