@@ -70,7 +70,7 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 ## Examples
 
 ```js
-if (screen.pixelDepth < 8) {
+if (screen.colorDepth < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page
