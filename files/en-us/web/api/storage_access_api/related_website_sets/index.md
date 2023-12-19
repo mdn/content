@@ -21,7 +21,7 @@ Let's consider situations where you have a series of related websites with diffe
 - App domains: A single application may be deployed over multiple domains, aiming to allow users to navigate between them seamlessly in a single session.
 - Brand domains: A set of brand assets may be contained in a single domain but then deployed over multiple domains, including session data relating to user preferences, customization, etc.
 
-Third-party cookie access is increasingly commonly blocked by browser cookie blocking policies, but you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
+Third-party cookie access is commonly blocked by browser cookie-blocking policies. Still, you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
 
 Related website sets can be considered a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie access between websites in the same set **without** having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
 
