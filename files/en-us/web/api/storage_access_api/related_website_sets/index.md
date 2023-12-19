@@ -23,12 +23,12 @@ Let's consider situations where you have a series of related websites with diffe
 
 Third-party cookie access is commonly blocked by browser cookie-blocking policies. Still, you can work around it using the Storage Access API — see [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for details.
 
-Related website sets can be considered a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie access between websites in the same set **without** having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
+Related website are a progressive enhancement mechanism that works alongside the Storage Access API. Supporting browsers grant third-party cookie access between websites in the same set _without_ having to go through the usual user permission prompt workflow, once {{domxref("Document.requestStorageAccess()")}} (or {{domxref("Document.requestStorageAccessFor()")}}) is called. This results in a more user-friendly experience for users of sites in the set.
 
 You should bear in mind that:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
-- When Chrome first supported the standard Storage Access API (i.e. {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}), it required calling sites to be part of a related website set, however this is no longer the case.
+- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}methods), it required calling sites to be part of a related website set. This is no longer the case.
 
 ## How does RWS work?
 

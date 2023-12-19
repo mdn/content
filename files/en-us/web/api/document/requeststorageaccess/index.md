@@ -8,13 +8,11 @@ browser-compat: api.Document.requestStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies. This is relevant to user agents that, by default, block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-This is relevant to user agents that, by default, block access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
-
-> **Note:** To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
 ## Syntax
 

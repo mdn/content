@@ -4,13 +4,13 @@ short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 page-type: web-api-instance-method
 status:
-  - experimental
+  - non-standard
 browser-compat: api.Document.requestStorageAccessFor
 ---
 
-{{APIRef("Storage Access API")}}{{seecompattable}}
+{{APIRef("Storage Access API")}}{{non-standard_header}}
 
-The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface is a proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 ## Syntax
 
@@ -53,7 +53,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
 
 The `requestStorageAccessFor()` method addresses challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It is relevant to user agents that by default block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g. to prevent tracking), and is a proposed extension of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-`requestStorageAccessFor()` can enable third-party cookie access for cross-site resources directly embedded into the top-level site that are unable to request their own storage access, for example via {{htmlelement("img")}} or {{htmlelement("script")}} elements. Cross-site content embedded in `<iframe>`s that has its own logic and resources and needs third-party cookie access should request its own storage access via {{domxref("Document.requestStorageAccess()")}}.
+`requestStorageAccessFor()` can enable third-party cookie access for cross-site resources directly embedded into a top-level site that are unable to request storage access themselves, for example {{htmlelement("img")}} elements. Cross-site content embedded in `<iframe>`s that has its own logic and resources and needs third-party cookie access should request storage access via {{domxref("Document.requestStorageAccess()")}}.
 
 To check whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"top-level-storage-access"`. This is different from the feature name used for the regular {{domxref("Document.requestStorageAccess()")}} method, which is `"storage-access"`.
 

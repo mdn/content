@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party cookies](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) can be used by embedded cross-site documents to verify whether they have access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies) cookies and, if not, to request access. We'll briefly look at a common storage access scenario.
 
 > **Note:** When we talk about third-party cookies in the content of the Storage Access API, we implicitly mean [_unpartitioned_](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) third-party cookies.
 
@@ -94,9 +94,11 @@ async function handleCookieAccess() {
 }
 ```
 
-> **Note:** `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or if permission was already granted previously. If permission was not previously granted, they need to be run inside some kind of user gesture-based event handler, as shown above.
+> **Note:** `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or if permission was already granted previously. If permission was not previously granted, `requestStorageAccess()` requests must be run inside a user gesture-based event handler, as shown above.
 
-> **Note:** The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
+### Related website sets
+
+The Chrome-only [related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) feature can be considered a progressive enhancement mechanism that works alongside the Storage Access API — supporting browsers grant default third-party cookie access between websites in the same set. This means not having to go through the usual user permission prompt workflow described above, meaning a more user-friendly experience for users of sites in the set.
 
 ## Requesting storage access from the top-level site on behalf of embedded resources
 
@@ -104,7 +106,7 @@ The Storage Access API features above allow an embedded document to request its 
 
 The `requestStorageAccessFor()` method addresses challenges in adopting the Storage Access API on top-level sites that use cross-site images or scripts requiring cookies. It can enable third-party cookie access for cross-site resources directly embedded into the top-level site that are unable to request their own storage access, for example via {{htmlelement("img")}} or {{htmlelement("script")}} elements.
 
-For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource it is requesting storage access for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
 Typical usage of `requestStorageAccessFor()` looks like this (this time written in regular promise-style rather than async/await):
 
@@ -145,14 +147,21 @@ function rSAFor() {
 }
 ```
 
-In the above code, we call `navigator.permissions.query({name: "top-level-storage-access", requestedOrigin: "https://example.com"})` to discover if the origin has previously been granted permission or if cookie access still needs to be requested.
+> **Note:** Unlike with `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days when `requestStorageAccessFor()` is called because the user is already on the page. See [Browser-specific variations > Chrome](/en-US/docs/Web/API/Storage_Access_API#chrome) for more details of this behavior.
+
+When querying permission status for storage access requests made on behalf of another origin, the permission name used is different from the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`. In the above code, we use the following call:
+
+```js
+navigator.permissions.query({
+  name: "top-level-storage-access",
+  requestedOrigin: "https://example.com",
+});
+```
+
+to discover if the origin has previously been granted permission or if cookie access still needs to be requested.
 
 - If the permission status is `"granted"` we can start using cookies; `requestStorageAccessFor()` was already called, so there is no need to call it again.
 - If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor("https://example.com")` from within a user gesture, such as a button click.
-
-> **Note:** The feature name used when querying the permissions status, in this case, is different from the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
-
-> **Note:** Unlike with `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days when `requestStorageAccessFor()` is called because the user is already on the page. See [Browser-specific variations > Chrome](/en-US/docs/Web/API/Storage_Access_API#chrome) for more details of this behavior.
 
 After the `"top-level-storage-access"` permission is granted, cross-site requests will include cookies if they include [CORS](/en-US/docs/Web/HTTP/CORS) / [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin), so sites may want to wait before triggering a request. Such requests must use the [`credentials: "include"`](/en-US/docs/Web/API/fetch#credentials) option and resources must include the `crossorigin="use-credentials"` attribute.
 
