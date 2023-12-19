@@ -68,7 +68,7 @@ React DevTools is available in a number of forms:
 
 Try installing one of these, then using it to inspect the app you've just built!
 
-You can [read more about React DevTools on the React blog](https://reactjs.org/blog/2019/08/15/new-react-devtools.html).
+You can [read more about React DevTools in the React docs](https://react.dev/learn/react-developer-tools).
 
 ## The `useReducer()` hook
 
