@@ -3,7 +3,7 @@ title: Topics API
 slug: Web/API/Topics_API
 page-type: web-api-overview
 status:
-  - experimental
+  - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 

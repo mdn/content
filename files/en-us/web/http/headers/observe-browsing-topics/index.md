@@ -3,11 +3,13 @@ title: Observe-Browsing-Topics
 slug: Web/HTTP/Headers/Observe-Browsing-Topics
 page-type: http-header
 status:
-  - experimental
+  - non-standard
 browser-compat: http.headers.Observe-Browsing-Topics
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{HTTPSidebar}}
+
+> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
 
 The **`Observe-Browsing-Topics`** response header is used to mark topics sent by {{httpheader("Sec-Browsing-Topics")}} as observed in the response to the request. The browser will then use those topics to calculate topics of interest for a user for future epochs.
 

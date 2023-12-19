@@ -4,15 +4,19 @@ short-title: browsingTopics()
 slug: Web/API/Document/browsingTopics
 page-type: web-api-instance-method
 status:
-  - experimental
+  - non-standard
 browser-compat: api.Document.browsingTopics
 ---
 
-{{APIRef("Topics API")}}{{SeeCompatTable}}
+{{APIRef("Topics API")}}
+
+> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
 The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site, for the three most recent epochs. It also triggers the browser to observe topics for the current user and site.
+
+See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
 ## Syntax
 

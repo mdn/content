@@ -4,11 +4,13 @@ short-title: browsingTopics
 slug: Web/API/HTMLIFrameElement/browsingTopics
 page-type: web-api-instance-property
 status:
-  - experimental
+  - non-standard
 browser-compat: api.HTMLIFrameElement.browsingTopics
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
+
+> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
 
 The **`browsingTopics`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean that specifies whether observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
 

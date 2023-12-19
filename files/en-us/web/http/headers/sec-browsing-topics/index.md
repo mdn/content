@@ -3,17 +3,21 @@ title: Sec-Browsing-Topics
 slug: Web/HTTP/Headers/Sec-Browsing-Topics
 page-type: http-header
 status:
-  - experimental
+  - non-standard
 browser-compat: http.headers.Sec-Browsing-Topics
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{HTTPSidebar}}
+
+> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
 The **`Sec-Browsing-Topics`** request header sends observed topics along with a request, which are used by an ad tech platform to choose a personalized ad to display to the current user. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
 If the calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), attempting to create or modify `Sec-Browsing-Topics` fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
+
+See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 
 <table class="properties">
   <tbody>
