@@ -32,7 +32,7 @@ Alternatively, you might separate your content or services into different countr
 
 You might have accompanying utility sites with components embedded in all the other sites, for example, to provide Single Sign-On (`sso-example.com`) or general personalization services (`services-example.com`). These utility sites will want to share their state with the sites they are embedded in via cookies. They cannot share first-party cookies because they are on different domains, and third-party cookies will no longer work in browsers that block them.
 
-In such situations, site owners often encourage users to add their site as an exception or to disable third-party cookie blocking policies entirely. Users who wish to continue to interact with their content are forced to greatly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
+In such situations, site owners often encourage users to add their site as an exception or to disable third-party cookie-blocking policies entirely. Users who wish to continue interacting with their content must significantly relax their blocking policy for resources loaded from all embedded origins and possibly across all websites.
 
 The Storage Access API is intended to solve this problem; embedded cross-site content can request unrestricted access to third-party cookies on a frame-by-frame basis, via the {{domxref("Document.requestStorageAccess()")}} method. It can also check whether it already has access via the {{domxref("Document.hasStorageAccess()")}} method.
 
