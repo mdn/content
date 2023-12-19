@@ -142,13 +142,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          Optional in desktop Firefox 60 onwards. One of
-          <code>theme_frame</code> or <code>headerURL</code> had to be specified
-          before Firefox 60.
-        </p>
-        <p>
-          In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
+          Optional in desktop Firefox 60 onwards. Required in Firefox for Android.
         </p>
       </td>
     </tr>
@@ -379,7 +373,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-frame.png" /></p>
       </td>
     </tr>
     <tr>
@@ -757,7 +751,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-textcolor.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-tab_background_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -839,10 +833,6 @@ All these properties can be specified as either a string containing any valid [C
             <code>frame_inactive</code>.
           </p>
         </div>
-        <p>
-          From Firefox 55 to 58, it is incorrectly implemented as alias for
-          <code>"textcolor"</code>
-        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -1253,8 +1243,6 @@ All these properties can be specified as either a string containing any valid [C
 
 Additionally, this key accepts various properties that are aliases for one of the properties above. These are provided for compatibility with Chrome. If an alias is given, and the non-alias version is also given, then the value will be taken from the non-alias version.
 
-> **Warning:** Beginning Firefox 70, the following properties are removed: `accentcolor` and `textcolor`. Use `frame` and `tab_background_text` instead. Using these values in themes loaded into Firefox 65 or later will raise warnings.
-
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
@@ -1266,18 +1254,6 @@ Additionally, this key accepts various properties that are aliases for one of th
     <tr>
       <td><code>bookmark_text</code></td>
       <td><code>toolbar_text</code></td>
-    </tr>
-    <tr>
-      <td><code>frame</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>frame_inactive</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>tab_background_text</code></td>
-      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
     </tr>
   </tbody>
 </table>
