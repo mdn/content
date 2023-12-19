@@ -49,10 +49,6 @@ mediaRecorder.onresume = () => {
 };
 ```
 
-## Instance properties
-
-None.
-
 ## Specifications
 
 {{Specifications}}

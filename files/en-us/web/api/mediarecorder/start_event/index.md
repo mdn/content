@@ -40,10 +40,6 @@ mediaRecorder.onstart = () => {
 };
 ```
 
-## Instance properties
-
-None.
-
 ## Specifications
 
 {{Specifications}}
