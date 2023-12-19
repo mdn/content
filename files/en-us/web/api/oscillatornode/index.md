@@ -52,11 +52,6 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, a
 - {{domxref("OscillatorNode.type")}}
   - : A string which specifies the shape of waveform to play; this can be one of a number of standard values, or `custom` to use a {{domxref("PeriodicWave")}} to describe a custom waveform. Different waves will produce different tones. Standard values are `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` and `"custom"`. The default is `"sine"`.
 
-### Event handlers
-
-- {{domxref("AudioScheduledSourceNode.ended_event")}}
-  - : Sets the event handler for the {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event, which fires when the tone has stopped playing.
-
 ## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and adds the following:_

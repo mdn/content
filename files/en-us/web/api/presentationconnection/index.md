@@ -24,17 +24,6 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
 - {{domxref("PresentationConnection.url")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the URL used to create or reconnect to the presentation.
 
-### Event handlers
-
-- {{domxref("PresentationConnection.onclose")}} {{Experimental_Inline}}
-  - : Fired when there is a call to {{DOMxRef("PresentationConnection.close", "PresentationConnection.close()")}}.
-- {{domxref("PresentationConnection.onconnect")}} {{Experimental_Inline}}
-  - : Fired when a presentation connection is established.
-- {{domxref("PresentationConnection.onmessage")}} {{Experimental_Inline}}
-  - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
-- {{domxref("PresentationConnection.onterminated")}}
-  - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
-
 ## Instance methods
 
 - {{domxref("PresentationConnection.close()")}} {{Experimental_Inline}}
@@ -43,6 +32,17 @@ The **`PresentationConnection`** interface of the [Presentation API](/en-US/docs
   - : Sends either binary or text data between a controlling browsing context and a presenting browsing context.
 - {{domxref("PresentationConnection.terminate()")}} {{Experimental_Inline}}
   - : Terminates the current connection and fires {{DOMxRef("PresentationConnection.onterminated")}}.
+
+## Events
+
+- {{domxref("PresentationConnection/close_event")}} {{Experimental_Inline}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.close", "PresentationConnection.close()")}}.
+- {{domxref("PresentationConnection/connect_event")}} {{Experimental_Inline}}
+  - : Fired when a presentation connection is established.
+- {{domxref("PresentationConnection/message_event")}} {{Experimental_Inline}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.send", "PresentationConnection.send()")}}.
+- {{domxref("PresentationConnection/terminated_event")}} {{Experimental_Inline}}
+  - : Fired when there is a call to {{DOMxRef("PresentationConnection.terminate", "PresentationConnection.terminate()")}}.
 
 ## Specifications
 
