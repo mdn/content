@@ -54,7 +54,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
 
     If the initial view was a link into the SVG document fragment using an SVG view specification fragment identifier (i.e., `#svgView(…)`), then:
 
-    - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
+    - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
 
 - {{domxref("SVGSVGElement.currentScale")}}
   - : On an outermost {{SVGElement("svg")}} element, this float attribute indicates the current scale factor relative to the initial view to take into account user magnification and panning operations. DOM attributes `currentScale` and `currentTranslate` are equivalent to the 2×3 matrix `[a b c d e f] = [currentScale 0 0 currentScale currentTranslate.x currentTranslate.y]`. If "magnification" is enabled (i.e., `zoomAndPan="magnify"`), then the effect is as if an extra transformation were placed at the outermost level on the SVG document fragment (i.e., outside the outermost {{SVGElement("svg")}} element).
