@@ -61,8 +61,8 @@ audio track.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the call to `getDisplayMedia()` was not made from code running due to a
     {{glossary("transient activation")}}, such as an event handler. Or if the browser context is
-    not fully active or does not focused. Or if the `controller` options has been used to create
-    a {{domxref("MediaStream")}} that captures the contents of a display or portion.
+    not fully active or does not focused. Or if the `controller` options has been already used in creating
+    another {{domxref("MediaStream")}}.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the permission to access a screen area was denied by the user, or the current browsing instance is not permitted access to screen sharing (for example by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy)).
 - `NotFoundError` {{domxref("DOMException")}}
