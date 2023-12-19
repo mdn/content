@@ -42,6 +42,7 @@ new MediaRecorder(stream, options)
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling
         {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
+        Defaults to an empty string.
     - `audioBitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the audio component of
         the media.
@@ -53,6 +54,16 @@ new MediaRecorder(stream, options)
         components of the media. This can be specified instead of the above two
         properties. If this is specified along with one or the other of the above
         properties, this will be used for the one that isn't specified.
+    - `audioBitrateMode` {{optional_inline}}
+      - : The bitrate mode that should be used to encode the audio track(s).
+        Can be `constant`, which indicates that the recorder should encode at a constant bitrate,
+        or `variable`, which indicates that the recorder should encode using a variable bitrate,
+        thus allowing more space to be used for complex signals and less space for less complex signals.
+        Defaults to `variable`.
+    - `videoKeyFrameIntervalDuration` {{optional_inline}}
+      - : The nominal interval in time between key frames in the encoded video stream. The {{glossary("user agent")}} controls key frame generation considering this option as well as `videoKeyFrameIntervalCount` option.
+    - `videoKeyFrameIntervalCount` {{optional_inline}}
+      - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
     > **Note:** If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
