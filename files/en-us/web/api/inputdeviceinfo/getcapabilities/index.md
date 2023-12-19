@@ -84,3 +84,7 @@ navigator.mediaDevices.enumerateDevices().then((devices) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("MediaStreamTrack.getCapabilities()")}}, which also return a `MediaTrackCapabilities` object.

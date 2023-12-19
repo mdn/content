@@ -72,3 +72,7 @@ A `MediaTrackCapabilities` object which specifies the value or range of values w
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("InputDeviceInfo.getCapabilities()")}}, which also return a `MediaTrackCapabilities` object.
