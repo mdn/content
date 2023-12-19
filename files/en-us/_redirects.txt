@@ -6516,7 +6516,6 @@
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/SVG/Attribute/filter	/en-US/docs/Web/SVG/Attribute/filter
-/en-US/docs/SVG/Attribute/filterRes	/en-US/docs/Web/SVG/Attribute/filterRes
 /en-US/docs/SVG/Attribute/filterUnits	/en-US/docs/Web/SVG/Attribute/filterUnits
 /en-US/docs/SVG/Attribute/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
 /en-US/docs/SVG/Attribute/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity

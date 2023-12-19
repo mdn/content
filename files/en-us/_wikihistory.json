@@ -124398,16 +124398,6 @@
       "Jeremie"
     ]
   },
-  "Web/SVG/Attribute/filterRes": {
-    "modified": "2020-10-15T21:19:12.262Z",
-    "contributors": [
-      "bershanskiy",
-      "Sebastianz",
-      "ExE-Boss",
-      "jpmedley",
-      "Jeremie"
-    ]
-  },
   "Web/SVG/Attribute/filterUnits": {
     "modified": "2020-10-15T21:08:01.201Z",
     "contributors": ["Sebastianz", "Jeremie"]
