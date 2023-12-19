@@ -143,7 +143,7 @@ The `contenteditable` attribute automatically adds the element to the document's
 
 To provide a good user experience, any custom form control you create must be accessible and function like native form controls:
 
-- The element's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles/), [label](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), and [description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) need to be added with ARIA.
+- The element's [`role`](/en-US/docs/Web/Accessibility/ARIA/Roles), [label](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby), and [description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) need to be added with ARIA.
 - All user input methods needs to be supported, including [keyboard](#keyboard), [mouse](#mouse), [touch](#finger-touch), and [pointer](#pointer-events) events, all described above.
 - JavaScript is required to handle functionality such as [validation](/en-US/docs/Learn/Forms/Form_validation), [submission](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data), and [saving](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript) of user-updated content.
 

@@ -43,7 +43,6 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`
 - [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
-- [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): `speaker-selection`
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
 - [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 

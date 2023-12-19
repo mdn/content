@@ -51,11 +51,11 @@ block content
 
   h1 ID: #{bookinstance._id}
 
-  p #[strong Title:]
+  p #[strong Title: ]
     a(href=bookinstance.book.url) #{bookinstance.book.title}
   p #[strong Imprint:] #{bookinstance.imprint}
 
-  p #[strong Status:]
+  p #[strong Status: ]
     if bookinstance.status=='Available'
       span.text-success #{bookinstance.status}
     else if bookinstance.status=='Maintenance'

@@ -202,6 +202,65 @@ Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} m
 
 It is important to provide a closing mechanism within every `dialog` element. The <kbd>Esc</kbd> key does not close non-modal dialogs by default, nor can one assume that a user will even have access to a physical keyboard (e.g., someone using a touch screen device without access to a keyboard).
 
+### Closing a dialog with a required form input
+
+When a form inside a dialog has a required input, the user agent will only let you close the dialog once you provide a value for the required input. To close such dialog, either use the [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute on the close button or call the `close()` method on the dialog object when the close button is clicked.
+
+```html
+<dialog id="dialog">
+  <form method="dialog">
+    <p>
+      <label>
+        Favorite animal:
+        <input type="text" required />
+      </label>
+    </p>
+    <div>
+      <input type="submit" id="normal-close" value="Normal close" />
+      <input
+        type="submit"
+        id="novalidate-close"
+        value="Novalidate close"
+        formnovalidate />
+      <input type="submit" id="js-close" value="JS close" />
+    </div>
+  </form>
+</dialog>
+<p>
+  <button id="show-dialog">Show the dialog</button>
+</p>
+<output></output>
+```
+
+```css hidden
+[type="submit"] {
+  margin-right: 1rem;
+}
+```
+
+#### JavaScript
+
+```js
+const showBtn = document.getElementById("show-dialog");
+const dialog = document.getElementById("dialog");
+const jsCloseBtn = dialog.querySelector("#js-close");
+
+showBtn.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+jsCloseBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  dialog.close();
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
+
+From the output, we see it is impossible to close the dialog using the _Normal close_ button. But the dialog can be closed if we bypass the form validation using the `formnovalidate` attribute on the _Cancel_ button. Programmatically, `dialog.close()` will also close such dialog.
+
 ### Animating dialogs
 
 `<dialog>`s are set to `display: none;` when hidden and `display: block;` when shown, as well as being removed from / added to the {{glossary("top layer")}} and the [accessibility tree](/en-US/docs/Web/Performance/How_browsers_work#building_the_accessibility_tree). Therefore, for `<dialog>` elements to be animated the {{cssxref("display")}} property needs to be animatable. [Supporting browsers](/en-US/docs/Web/CSS/display#browser_compatibility) animate `display` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete). Specifically, the browser will flip between `none` and another value of `display` so that the animated content is shown for the entire animation duration.
