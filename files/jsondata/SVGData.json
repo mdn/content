@@ -1506,8 +1506,6 @@
         "'width'",
         "'height'",
         "'preserveAspectRatio'",
-        "'contentScriptType'",
-        "'contentStyleType'",
         "'viewBox'"
       ],
       "interfaces": ["SVGSVGElement"]

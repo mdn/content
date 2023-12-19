@@ -124185,14 +124185,6 @@
     "modified": "2020-10-15T21:04:59.286Z",
     "contributors": ["Sebastianz", "connorshea", "Jeremie"]
   },
-  "Web/SVG/Attribute/contentScriptType": {
-    "modified": "2020-10-15T21:09:10.002Z",
-    "contributors": ["Sebastianz", "Jeremie"]
-  },
-  "Web/SVG/Attribute/contentStyleType": {
-    "modified": "2020-10-15T21:09:14.670Z",
-    "contributors": ["Sebastianz", "George8211", "Jeremie", "pa7"]
-  },
   "Web/SVG/Attribute/cursor": {
     "modified": "2020-10-15T21:18:37.523Z",
     "contributors": [

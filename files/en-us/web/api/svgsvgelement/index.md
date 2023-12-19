@@ -23,8 +23,6 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.contentStyleType")}}
-  - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("contentStyleType")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
   - : A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{Deprecated_Inline}}
