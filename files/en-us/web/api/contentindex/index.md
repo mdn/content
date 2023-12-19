@@ -100,7 +100,8 @@ async function createReadingList() {
   if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
-    message.innerText = "You currently have no articles saved for offline reading.";
+    message.innerText =
+      "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
   } else {

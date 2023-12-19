@@ -67,7 +67,8 @@ const item = {
   id: "post-1",
   url: "/posts/amet.html",
   title: "Amet consectetur adipisicing",
-  description: "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
+  description:
+    "Repellat et quia iste possimus ducimus aliquid a aut eaque nostrum.",
   icons: [
     {
       src: "/media/dark.png",
@@ -115,7 +116,8 @@ async function createReadingList() {
   if (entries.length === 0) {
     // if there are no entries, display a message
     const message = document.createElement("p");
-    message.innerText = "You currently have no articles saved for offline reading.";
+    message.innerText =
+      "You currently have no articles saved for offline reading.";
 
     readingListElem.append(message);
   } else {
