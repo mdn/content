@@ -25,8 +25,10 @@ None.
 A {{jsxref('Promise')}} that resolves with an object containing a snapshot of the {{domxref("LockManager")}} state.
 The object has the following properties:
 
-- `held`: An array of `LockInfo` objects for held locks.
-- `pending`: An array of `LockInfo` objects for pending lock requests.
+- `held`
+  - : An array of `LockInfo` objects for held locks.
+- `pending`
+  - : An array of `LockInfo` objects for pending lock requests.
 
 The `LockInfo` object can have the following properties:
 
