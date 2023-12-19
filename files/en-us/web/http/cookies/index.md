@@ -204,7 +204,7 @@ While the server hosting a web page sets first-party cookies, the page may conta
 
 Typical use cases for third-party cookies include sharing user profile information or collecting analytics across different related domains. They are also often used for advertising and tracking users across the web.
 
-> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes, and in some cases to comply with [regulations](#cookie-related_regulations). For example, see [Google's notice on the types of cookie it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
+> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes and to comply with [regulations](#cookie-related_regulations). For example, see [Google's notice on the types of cookies it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
 
 A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites.
 Firefox, by default, blocks third-party cookies that are known to contain trackers.
