@@ -57,7 +57,7 @@ The `requestStorageAccessFor()` method addresses challenges in adopting the Stor
 
 To check whether permission to access third-party cookies has already been granted via `requestStorageAccessFor()`, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"top-level-storage-access"`. This is different from the feature name used for the regular {{domxref("Document.requestStorageAccess()")}} method, which is `"storage-access"`.
 
-The `Permissions.query()` call must specify the embedded origin, for example:
+The `Permissions.query()` call must specify the embedded origin; for example:
 
 ```js
 navigator.permissions.query({
