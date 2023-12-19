@@ -150,7 +150,7 @@ In the above code, we call `navigator.permissions.query({name: "top-level-storag
 - If the permission status is `"granted"` we can start using cookies; `requestStorageAccessFor()` was already called, so there is no need to call it again.
 - If the permission status is `"prompt"` we need to call `document.requestStorageAccessFor("https://example.com")` from within a user gesture, such as a button click.
 
-> **Note:** The feature name used when querying the permissions status in this case is different to the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
+> **Note:** The feature name used when querying the permissions status, in this case, is different from the rest of the Storage Access API: `"top-level-storage-access"` rather than `"storage-access"`.
 
 > **Note:** Unlike with `requestStorageAccess()`, Chrome doesn't check for an interaction in a top-level document within the last 30 days when `requestStorageAccessFor()` is called because the user is already on the page. See [Browser-specific variations > Chrome](/en-US/docs/Web/API/Storage_Access_API#chrome) for more details of this behavior.
 
