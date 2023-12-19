@@ -6497,8 +6497,6 @@
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
-/en-US/docs/SVG/Attribute/contentScriptType	/en-US/docs/Web/SVG/Attribute/contentScriptType
-/en-US/docs/SVG/Attribute/contentStyleType	/en-US/docs/Web/SVG/Attribute/contentStyleType
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -7589,7 +7587,6 @@
 /en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
-/en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
 /en-US/docs/Web/API/BluetoothAdvertisingData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/appearance	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/manufacturerData	/en-US/docs/Web/API/Web_Bluetooth_API
