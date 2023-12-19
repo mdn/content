@@ -106,7 +106,7 @@ The `requestStorageAccessFor()` method addresses challenges in adopting the Stor
 
 For `requestStorageAccessFor()` to work, both the calling top-level page and the embedded resource storage access is being requested for need to be part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 
-Typical usage of `requestStorageAccessFor()` looks like this (this time written in regular promise-style, rather than async/await):
+Typical usage of `requestStorageAccessFor()` looks like this (this time written in regular promise-style rather than async/await):
 
 ```js
 navigator.permissions
