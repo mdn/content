@@ -35,7 +35,9 @@ _Inherits properties from its parent interface, {{domxref("Event")}}_.
 - {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMException")}} containing information about the error that occurred.
 
-### Value
+## Description
+
+### Trigger
 
 A function to be called whenever an error occurs during the recorder's lifetime. In
 addition to other general errors that might occur, the following errors are specifically
