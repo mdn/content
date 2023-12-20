@@ -124,6 +124,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "AudioSession": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "AudioSinkInfo": {
       "inh": "",
       "impl": []
@@ -236,8 +240,28 @@
       "inh": "",
       "impl": []
     },
+    "BluetoothDataFilter": {
+      "inh": "",
+      "impl": []
+    },
     "BluetoothDevice": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "BluetoothLEScan": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanFilter": {
+      "inh": "",
+      "impl": []
+    },
+    "BluetoothLEScanPermissionResult": {
+      "inh": "PermissionStatus",
+      "impl": []
+    },
+    "BluetoothManufacturerDataFilter": {
+      "inh": "",
       "impl": []
     },
     "BluetoothManufacturerDataMap": {
@@ -262,6 +286,10 @@
     },
     "BluetoothRemoteGATTService": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "BluetoothServiceDataFilter": {
+      "inh": "",
       "impl": []
     },
     "BluetoothServiceDataMap": {
@@ -378,6 +406,10 @@
     },
     "CloseEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "CloseWatcher": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Comment": {
@@ -758,6 +790,10 @@
     },
     "CSSVariableReferenceValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSViewTransitionRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CustomElementRegistry": {
@@ -1896,6 +1932,10 @@
       "inh": "AnimationEffect",
       "impl": []
     },
+    "KeyFrameRequestEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "KHR_parallel_shader_compile": {
       "inh": "",
       "impl": []
@@ -2192,6 +2232,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationActivation": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationCurrentEntryChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -2218,6 +2262,14 @@
     },
     "Navigator": {
       "inh": "",
+      "impl": []
+    },
+    "NavigatorLogin": {
+      "inh": "",
+      "impl": []
+    },
+    "NavigatorManagedData": {
+      "inh": "EventTarget",
       "impl": []
     },
     "NavigatorUAData": {
@@ -2336,6 +2388,10 @@
       "inh": "",
       "impl": []
     },
+    "PageRevealEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "PageTransitionEvent": {
       "inh": "Event",
       "impl": []
@@ -2401,6 +2457,10 @@
       "impl": []
     },
     "PerformanceEventTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
+    "PerformanceLongAnimationFrameTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },
@@ -2773,7 +2833,7 @@
       "impl": []
     },
     "RTCRtpScriptTransformer": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "RTCRtpSender": {
@@ -3916,6 +3976,10 @@
       "inh": "ReadableStream",
       "impl": []
     },
+    "WebTransportSendGroup": {
+      "inh": "",
+      "impl": []
+    },
     "WebTransportSendStream": {
       "inh": "WritableStream",
       "impl": []
@@ -4142,6 +4206,14 @@
     },
     "XRPermissionStatus": {
       "inh": "PermissionStatus",
+      "impl": []
+    },
+    "XRPlane": {
+      "inh": "",
+      "impl": []
+    },
+    "XRPlaneSet": {
+      "inh": "",
       "impl": []
     },
     "XRPose": {

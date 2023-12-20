@@ -28,7 +28,7 @@ Below is a list of interfaces based on the OrientationSensor interface.
 ## Instance methods
 
 - {{domxref("OrientationSensor.populateMatrix()")}}
-  - : Populates the given object with the rotation matrix based on the latest sensor reading. The rotation matrix is shown below.
+  - : Populates the given object with the rotation matrix based on the latest sensor reading.
 
 ## Examples
 

@@ -9,10 +9,10 @@ browser-compat: api.FileSystemDirectoryHandle.entries
 {{securecontext_header}}{{APIRef("File System API")}}
 
 The **`entries()`** method of the
-{{domxref("FileSystemDirectoryHandle")}} interface returns an array of a given object's
-own enumerable property `[key, value]` pairs, in the same order as that
-provided by a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop (the difference being that a for-in loop
-enumerates properties in the prototype chain as well).
+{{domxref("FileSystemDirectoryHandle")}} interface returns a new asynchronous iterator
+for the iteration of the key-value pairs of the entries within the `FileSystemDirectoryHandle`
+on which this method is called. The key-value pairs are
+in the form of an array like `[key, value]`.
 
 ## Syntax
 
@@ -26,10 +26,18 @@ None.
 
 ### Return value
 
-An array of the given `FileSystemDirectoryHandle` object's own enumerable
-property `[key, value]` pairs.
+A new asynchronous iterator containing the key-value pairs of each entry within the `FileSystemDirectoryHandle`.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} for the handle is not `'granted'` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the current entry is not found.
 
 ## Examples
+
+Use the `for await...of` loop can simplify the iteration process.
 
 ```js
 const dirHandle = await window.showDirectoryPicker();
@@ -50,4 +58,4 @@ for await (const [key, value] of dirHandle.entries()) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

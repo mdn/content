@@ -13,12 +13,11 @@ sequence of characters.
 ## Description
 
 Strings are useful for holding data that can be represented in text form. Some of the
-most-used operations on strings are to check their {{jsxref("String/length",
-  "length")}}, to build and concatenate them using the
-[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
+most-used operations on strings are to check their {{jsxref("String/length", "length")}}, to build and concatenate them using the
+[`+` and `+=` string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
 checking for the existence or location of substrings with the
-{{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
-with the {{jsxref("String.prototype.substring()", "substring()")}} method.
+{{jsxref("String/indexOf", "indexOf()")}} method, or extracting substrings
+with the {{jsxref("String/substring", "substring()")}} method.
 
 ### Creating strings
 
@@ -45,7 +44,7 @@ with this form you can interpolate expressions. For more information on the synt
 ### Character access
 
 There are two ways to access an individual character in a string. The first is the
-{{jsxref("String.prototype.charAt()", "charAt()")}} method:
+{{jsxref("String/charAt", "charAt()")}} method:
 
 ```js
 "cat".charAt(1); // gives value "a"
@@ -114,7 +113,7 @@ The `localeCompare()` method enables string comparison in a similar fashion as `
 
 Note that JavaScript distinguishes between `String` objects and
 {{Glossary("Primitive", "primitive string")}} values. (The same is true of
-{{jsxref("Boolean")}} and {{jsxref("Global_Objects/Number", "Numbers")}}.)
+{{jsxref("Boolean")}} and {{jsxref("Number", "Numbers")}}.)
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
@@ -154,7 +153,7 @@ when it expects a primitive string instead, although generally, authors need not
 about the distinction.
 
 A `String` object can always be converted to its primitive counterpart with
-the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
+the {{jsxref("String/valueOf", "valueOf()")}} method.
 
 ```js
 console.log(eval(s2.valueOf())); // returns the number 4
@@ -311,7 +310,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
   - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
@@ -322,7 +321,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+    {{jsxref("String/toLowerCase", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
@@ -330,7 +329,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+    {{jsxref("String/toUpperCase", "toUpperCase()")}}.
 
 - {{jsxref("String.prototype.toLowerCase()")}}
   - : Returns the calling string value converted to lowercase.
@@ -360,31 +359,31 @@ These properties are own properties of each `String` instance.
 >
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
-- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
   - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)
-- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.big()")}} {{deprecated_inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.blink()")}} {{deprecated_inline}}
   - : `<blink>`
-- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.bold()")}} {{deprecated_inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}
   - : [`<font color="color">`](/en-US/docs/Web/HTML/Element/font#color)
-- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}
   - : [`<font size="size">`](/en-US/docs/Web/HTML/Element/font#size)
-- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.italics()")}} {{deprecated_inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.link()")}} {{deprecated_inline}}
   - : [`<a href="url">`](/en-US/docs/Web/HTML/Element/a#href) (link to URL)
-- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.small()")}} {{deprecated_inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.strike()")}} {{deprecated_inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sub()")}} {{deprecated_inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sup()")}} {{deprecated_inline}}
   - : {{HTMLElement("sup")}}
 
 Note that these methods do not check if the string itself contains HTML tags, so it's possible to create invalid HTML:
@@ -403,17 +402,17 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 
 ### String conversion
 
-It's possible to use `String` as a more reliable
-{{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
+The `String()` function is a more reliable way of converting values to strings than calling the `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
+// You cannot access properties on null or undefined
+
 const nullVar = null;
-nullVar.toString(); // TypeError: nullVar is null
+nullVar.toString(); // TypeError: Cannot read properties of null
 String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString(); // TypeError: undefinedVar is undefined
+undefinedVar.toString(); // TypeError: Cannot read properties of undefined
 String(undefinedVar); // "undefined"
 ```
 
@@ -427,5 +426,5 @@ String(undefinedVar); // "undefined"
 
 ## See also
 
-- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
 - {{jsxref("RegExp")}}

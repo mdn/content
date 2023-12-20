@@ -83,7 +83,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ## Specifications
 

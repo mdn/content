@@ -1,5 +1,5 @@
 ---
-title: in operator
+title: in
 slug: Web/JavaScript/Reference/Operators/in
 page-type: javascript-operator
 browser-compat: javascript.operators.in
@@ -21,7 +21,7 @@ prop in object
 ### Parameters
 
 - `prop`
-  - : A string or symbol representing a property name (non-symbols will be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Can also be a [private property identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+  - : A string or symbol representing a property name (non-symbols will be [coerced to strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)). Can also be a [private property identifier](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 - `object`
   - : Object to check if it (or its prototype chain) contains the property with specified name (`prop`).
 
@@ -36,7 +36,7 @@ The `in` operator tests if a string or symbol property is present in an object o
 
 A property may be present in an object but have value `undefined`. Therefore, `x in obj` is not the same as `obj.x !== undefined`. To make `in` return `false` after a property is added, use the [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator instead of setting that property's value to `undefined`.
 
-You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private properties as well.
+You can also use the `in` operator to check whether a particular [private class field or method](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) has been defined in an object. The operator returns `true` if the property is defined, and `false` otherwise. This is known as a _branded check_, because it returns `true` if and only if the object was created with that class constructor, after which you can safely access other private properties as well.
 
 This is a special syntax — the left-hand side of the `in` operator is a property identifier instead of an expression, but unquoted (because otherwise it's a string property, not a private property).
 
@@ -131,7 +131,7 @@ delete trees[3];
 3 in trees; // returns false
 ```
 
-If you set a property to {{jsxref("Global_Objects/undefined", "undefined")}} but do not delete it, the `in` operator returns true for that property.
+If you set a property to {{jsxref("undefined")}} but do not delete it, the `in` operator returns true for that property.
 
 ```js
 const mycar = { make: "Honda", model: "Accord", year: 1998 };
@@ -265,7 +265,7 @@ if (p1 instanceof Person && p2 instanceof Person) {
 }
 ```
 
-For more examples, see [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#private_fields).
+For more examples, see [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) and the [class guide](/en-US/docs/Web/JavaScript/Guide/Using_classes#private_fields).
 
 ## Specifications
 

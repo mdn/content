@@ -8,7 +8,7 @@ status:
 
 {{CSSRef}}
 
-[CSS Display Module Level 3](https://drafts.csswg.org/css-display/) describes the multi-keyword syntax for the [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the change to the syntax, including the reasoning behind this change. It also details the in-built backwards compatibility for the `display` property.
+[CSS Display Module Level 3](https://drafts.csswg.org/css-display/) introduced multi-keyword syntax for the [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
 > **Note:** this syntax may also be referred to as "two-value syntax" or "multi-value syntax."
 
@@ -40,9 +40,9 @@ The same is true when working with grid layout. Using `display: grid` will give 
 
 ## The multi-keyword syntax
 
-As you can see from the above explanation, the `display` property has gained considerable new powers. In addition to indicating whether something is block-level or inline-level in relationship to other boxes on the page, it now also indicates the formatting context inside the box it is applied to. In order to better describe this behavior, the `display` property has been refactored to allow for two values — an outer and inner value — to be set on it, as well as the single values we are used to.
+As you can see from the above explanation, the `display` property has considerable powers. In addition to indicating whether something is block-level or inline-level in relationship to other boxes on the page, it also indicates the formatting context inside the box it is applied to. To better describe this behavior, the `display` property allows for two values — an outer and inner value — to be set on it. The original single-value syntax is also valid.
 
-This means that instead of setting `display: flex` to create a block-level box with flex children, we will use `display: block flex`. Instead of `display: inline-flex` to create an inline-level box with flex children, we will use `display: inline flex`. The example below, which will work in Firefox 70 and upwards, demonstrates these values.
+This means that instead of setting `display: flex` to create a block-level box with flex children, we use `display: block flex`. Instead of `display: inline-flex` to create an inline-level box with flex children, we use `display: inline flex`. The example below demonstrates these values.
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/multi-keyword-flex.html", '100%', 640)}}
 
@@ -61,9 +61,9 @@ There are mappings for all of the existing values of `display`; the most common 
 
 ## display: block flow-root and display: inline flow-root
 
-In terms of how these new values help to clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a fairly recent single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. The most obvious use-case for creating a new BFC is to contain floats, and avoid the need for clearfix hacks.
+In terms of how this multi-value syntax helps clarify CSS layout, we can take a look at a couple of values in the table that might seem less familiar. The multi-keyword `display: block flow-root` maps to a relatively recent single value; `display: flow-root`. This value's only purpose is to create a new [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC). A BFC ensures that everything inside your box stays inside it, and things from outside the box cannot intrude into it. When `flow-root` was added as a `display` value, a common use case for creating a new BFC was to contain floats and avoid the need for clearfix hacks.
 
-In the example below we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line `display: flow-root` then the float will poke out of the bottom of the box. If you are using Firefox you can replace it with the newer `display: block flow-root`, which will achieve the same as the single `flow-root` value.
+In the example below we have a floated item inside a container. The float is contained by the bordered box, which wraps it and the text alongside. If you remove the line `display: flow-root` then the float will poke out of the bottom of the box. You can replace `display: flow-root` with the multi-value `display: block flow-root`, which will achieve the same as the single `flow-root` value.
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 440)}}
 
@@ -75,7 +75,7 @@ The value `display: inline-block` has been around since the early days of CSS. T
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/inline-block.html", '100%', 440)}}
 
-An element with `display: inline-block` however, will also contain floats. It contains everything inside the inline-level box. Therefore `display: inline-block` does exactly what `display: flow-root` does, but with an inline-level, rather than a block-level box. The new syntax accurately describes what is happening with this value. In the example above, you can change `display: inline-block` to `display: inline flow-root` in Firefox and get the same result.
+An element with `display: inline-block` however, will also contain floats. It contains everything inside the inline-level box. Therefore `display: inline-block` does exactly what `display: flow-root` does, but with an inline-level, rather than a block-level box. The two-value syntax accurately describes what is happening with this value. In the example above, you can change `display: inline-block` to `display: inline flow-root` and get the same result.
 
 ## What about the old values of display?
 
@@ -106,9 +106,3 @@ If a supporting browser comes across these as single values then it treats them 
 - `inline grid`
 
 So all of the current situations are neatly covered, meaning that we maintain compatibility of existing and new sites that use the single values, while allowing the spec to evolve.
-
-## Can I start to use the multi-keyword syntax?
-
-As demonstrated above, there is not a lot of advantage in using the multi-keyword version right now; if you did, your page would only work in Firefox! Other browsers do not yet implement the multi-keyword versions. Therefore `display: block flex` will only get you flex layout in Firefox and will be ignored as invalid in Chrome. You can see current support in the **Multi-keyword values** row of the [browser compatibility table for the CSS `display` property](/en-US/docs/Web/CSS/display#browser_compatibility). See also the following [Chrome issue](https://crbug.com/804600).
-
-There is value in thinking about the values of `display` in this multi-keyword way however. If you consider the outer and inner values when you change the value of `display`, you will understand immediately what impact the value will have on the box itself, and how it displays and behaves in the layout, and the direct children.

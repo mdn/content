@@ -298,7 +298,7 @@ We can use these values to measure specific timings of interest:
 ```js
 const dns = time.domainLookupEnd - time.domainLookupStart;
 const tcp = time.connectEnd - time.connectStart;
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ### Time to first byte
@@ -333,12 +333,12 @@ The time it takes for the [TCP](/en-US/docs/Glossary/TCP) handshake is the time 
 const tcp = time.connectEnd - time.connectStart;
 ```
 
-### SSL negotiation
+### TLS negotiation
 
 [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceResourceTiming/secureConnectionStart) will be `undefined` if not available, `0` if [HTTPS](/en-US/docs/Glossary/HTTPS) in not used, or a timestamp if available, and used. In other words, if a secure connection was used, `secureConnectionStart` will be [truthy](/en-US/docs/Glossary/Truthy), and the time between `secureConnectionStart` and `requestStart` will greater than 0.
 
 ```js
-const ssl = time.requestStart - time.secureConnectionStart;
+const tls = time.requestStart - time.secureConnectionStart;
 ```
 
 ## Performance Entry API
@@ -375,7 +375,7 @@ In supporting browsers, you can use `performance.getEntriesByType('paint')` to q
 
 ## Navigation Timing
 
-When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and SSL negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
+When a user requests a website or application, [to populate the browser](/en-US/docs/Web/Performance/How_browsers_work) the user agent goes through a series of steps, including a {{glossary('DNS')}} lookup, {{glossary('TCP handshake')}}, and TLS negotiation, before the user agent makes the actual request and the servers return the requested assets. The browser then parses the content received, builds the DOM, CSSOM, accessibility, and render trees, eventually rendering the page. Once the user agent stops parsing the document, the user agent sets the document readiness to _interactive_. If there are deferred scripts needing to be parsed, it will do so, then fire the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event), after which the readiness is set to _complete_. The Document can now handle post-load tasks, after which point the document is marked as completely loaded.
 
 ```js
 const navigationTimings = performance.getEntriesByType("navigation");

@@ -7,7 +7,7 @@ browser-compat: javascript.statements.generator_function
 
 {{jsSidebar("Statements")}}
 
-The **`function*`** declaration creates a {{glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{glossary("binding", "bindings")}}) saved across re-entrances.
+The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
@@ -263,9 +263,9 @@ for (const power of powers(2)) {
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("GeneratorFunction")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Statements/function", "function")}}

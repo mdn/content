@@ -30,14 +30,15 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then((response) => {
-  // for each response header, log an array with header name as key
-  console.log(...response.headers);
-  response.blob().then((myBlob) => {
+fetch(myRequest)
+  .then((response) => {
+    console.log("response.headers =", response.headers);
+    return response.blob();
+  })
+  .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
 ```
 
 ## Specifications

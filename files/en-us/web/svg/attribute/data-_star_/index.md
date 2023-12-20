@@ -15,7 +15,7 @@ The `*` can be replaced by any characters allowed in [XML's rules for names](htt
 - No semicolons (`;`, `U+003A`).
 - No capital `A` to `Z` letters.
 
-> **Note:** The {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute `data-test-value` via `SVGElement.dataset.testValue`. Hyphen characters (`-`, `U+002D`) are removed and the next letter is capitalized, resulting in the {{Glossary("camelCase")}} format.
+> **Note:** The {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute `data-test-value` via `SVGElement.dataset.testValue`. Hyphen characters (`-`, `U+002D`) are removed and the next letter is capitalized, resulting in the {{Glossary("camel_case", "camel case")}} format.
 
 You can use this attribute with any SVG element.
 

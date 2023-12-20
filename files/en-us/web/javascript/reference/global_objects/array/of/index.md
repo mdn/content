@@ -88,7 +88,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}

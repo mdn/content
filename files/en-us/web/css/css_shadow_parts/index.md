@@ -59,4 +59,4 @@ By default, elements in a shadow tree can be styled only within their respective
 - [CSS pseudo elements](/en-US/docs/Web/CSS/CSS_pseudo-elements) module
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
-- [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling-outside-of-the-current-scope) on web.dev (2023)
+- [Templates: Styling outside of the current scope](https://web.dev/learn/html/template/#styling_outside_of_the_current_scope) on web.dev (2023)

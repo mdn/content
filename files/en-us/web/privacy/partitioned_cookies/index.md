@@ -9,7 +9,7 @@ browser-compat: http.headers.Set-Cookie.Partitioned
 
 {{QuicklinksWithSubPages("Web/Privacy")}}{{SeeCompatTable}}
 
-**Cookies Having Independent Partitioned State** (**CHIPS**, also know as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
+**Cookies Having Independent Partitioned State** (**CHIPS**, also known as **Partitioned cookies**) allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
 
 A partitioned third-party cookie is tied to the top-level site where it's initially set and cannot be accessed from elsewhere. The aim is to allow cookies to be set by third-party services, but only read within the context of the top-level site where they were initially set. This allows cross-site tracking to be blocked, while still enabling non-tracking uses of third-party cookies such as persisting state of embedded maps or chat widgets across different sites, and persisting config information for subresource CDN load balancing and Headless CMS providers.
 
@@ -53,8 +53,6 @@ Blocking all third-party cookies would currently be problematic, for example in 
 1. A user visits `https://shoppy.example`, which embeds a third-party chat service from `https://3rd-party.example/chat` to provide support for users that need help. `https://3rd-party.example/chat` sets a cookie on the user's device using `Partitioned`, to persist the state of the chat across different site subdomains.
 2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.
 3. The user visits various subdomains in the quest to solve their problem that also embed `https://3rd-party.example/chat`, including `https://support.shoppy.example` and `https://checkout.shoppy.example`. The new embedded instances are able to access the cookie because the partition key still matches.
-
-> **Note:** [First-party sets](https://github.com/WICG/first-party-sets) is a proposal that aims to allow site owners to declare a collection of related domains that will act like they are a single top-level site, for the purposes of cookie access mechanisms like CHIPS.
 
 ## Specifications
 

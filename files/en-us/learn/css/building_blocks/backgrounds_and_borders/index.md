@@ -44,8 +44,8 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
   background:
     linear-gradient(
         105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
       ) center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;

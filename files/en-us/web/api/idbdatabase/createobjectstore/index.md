@@ -53,7 +53,7 @@ A new {{domxref("IDBObjectStore")}}.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
+This method may raise a {{domxref("DOMException")}} with a `name` of
 one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -63,7 +63,7 @@ one of the following types:
   - : Thrown if a request is made on a source database that does not exist
     (for example, when the database has been deleted or removed). In Firefox previous to version 41,
     an `InvalidStateError` was raised in this case as well, which
-    was misleading; this has now been fixed (see [Webkit bug 1176165](https://bugzil.la/1176165)).
+    was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165)).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
     already exists in the connected database.

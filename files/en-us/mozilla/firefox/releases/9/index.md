@@ -47,7 +47,7 @@ _No change._
 - The `readystatechange` event is now fired only on the {{ domxref("Document") }}, as intended.
 - Event handlers are now implemented as standard IDL interfaces. For most cases, this won't affect content, but there are exceptions.
 - A new response type, "`moz-json`", has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/en-US/docs/Glossary/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
-- [`XMLHttpRequest` "progress" events](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
+- [`XMLHttpRequest` "progress" events](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
 - In the past, calling [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) with a `null` listener would throw an exception. Now it returns without error and with no effect.
 - The new {{ domxref("navigator.doNotTrack") }} property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.
 - {{ domxref("Range") }} and {{ domxref("Selection") }} objects now behave according to their specifications when {{ domxref("Text.splitText()", "splitText()") }} and {{ domxref("Node.normalize", "normalize()") }} are called.
@@ -69,7 +69,7 @@ _No change._
 
 ### Networking
 
-- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
 - The HTTP `Accept` header for XSLT requests has been changed to "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/en-US/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.open
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method **`open()`**
 initializes a newly-created request, or re-initializes an existing one.
@@ -67,7 +67,7 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Related {{domxref("XMLHttpRequest")}} methods:
   {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, and

@@ -13,7 +13,7 @@ browser-compat: html.manifest.shortcuts
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>Object</code></td>
+      <td><code>Array</code></td>
     </tr>
   </tbody>
 </table>

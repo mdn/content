@@ -111,7 +111,7 @@ The actual syntax for HTTP messages (called requests and responses) is not that 
   pElem.textContent = "We changed the text!";
   ```
 
-  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality
+  In the house analogy, JavaScript is like the cooker, TV, Microwave, or hairdryer — the things that give your house useful functionality.
 
 ### Tools
 

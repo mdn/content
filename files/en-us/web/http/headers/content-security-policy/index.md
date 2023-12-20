@@ -122,10 +122,6 @@ for example.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
 
 ### Reporting directives
 
@@ -201,7 +197,7 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
 - `'unsafe-inline'`
   - : Allow use of inline resources.
 - `'unsafe-eval'`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
 - `'unsafe-allow-redirects'` {{experimental_inline}}

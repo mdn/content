@@ -35,11 +35,11 @@ some(callbackFn, thisArg)
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the array. Otherwise, `false`.
+`false` unless `callbackFn` returns a {{Glossary("truthy")}} value for an array element, in which case `true` is immediately returned.
 
 ## Description
 
-The `some()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. If such an element is found, `some()` immediately returns `true` and stops iterating through the array. Otherwise, if `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value for all elements, `some()` returns `false`.
+The `some()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. If such an element is found, `some()` immediately returns `true` and stops iterating through the array. Otherwise, if `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value for all elements, `some()` returns `false`. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `some()` acts like the "there exists" quantifier in mathematics. In particular, for an empty array, it returns `false` for any condition.
 
@@ -114,6 +114,23 @@ getBoolean(1); // true
 getBoolean("true"); // true
 ```
 
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `some()` to check whether the array is strictly increasing.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5];
+const isIncreasing = !numbers
+  .filter((num) => num > 0)
+  .some((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx === 0) return false;
+    return num <= arr[idx - 1];
+  });
+console.log(isIncreasing); // false
+```
+
 ### Using some() on sparse arrays
 
 `some()` will not run its predicate on empty slots.
@@ -151,7 +168,7 @@ console.log(Array.prototype.some.call(arrayLike, (x) => typeof x === "number"));
 ## See also
 
 - [Polyfill of `Array.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.every()")}}
 - {{jsxref("Array.prototype.forEach()")}}

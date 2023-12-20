@@ -43,6 +43,8 @@ opacity: unset;
 
 Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
+When `opacity` value is set to `0`, the element and all of its children are not visible; however, they still register [pointer events](/en-US/docs/Web/API/Pointer_events). This can be controlled with the CSS [`pointer-events`](/en-US/docs/Web/CSS/pointer-events) property.
+
 To change the opacity of a background only, use the {{cssxref("background")}} property with a {{cssxref("color_value", "color value")}} that allows for an alpha channel. For example:
 
 ```css

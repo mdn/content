@@ -112,4 +112,4 @@ const rejectAlways = () => {
 ## See also
 
 - [constructor](/en-US/docs/Glossary/Constructor)
-- [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)

@@ -109,7 +109,7 @@ function checkValue(a, b) {
 }
 ```
 
-Do not confuse the primitive Boolean values `true` and `false` with truthiness or falsiness of the {{jsxref("Global_Objects/Boolean", "Boolean")}} object. Any value that is not `false`, `undefined`, `null`, `0`, `-0`, `NaN`, or the empty string (`""`), and any object, including a Boolean object whose value is `false`, is considered {{Glossary("truthy")}} when used as the condition. For example:
+Do not confuse the primitive Boolean values `true` and `false` with truthiness or falsiness of the {{jsxref("Boolean")}} object. Any value that is not `false`, `undefined`, `null`, `0`, `-0`, `NaN`, or the empty string (`""`), and any object, including a Boolean object whose value is `false`, is considered {{Glossary("truthy")}} when used as the condition. For example:
 
 ```js
 const b = new Boolean(false);

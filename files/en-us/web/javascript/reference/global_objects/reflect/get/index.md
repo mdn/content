@@ -96,4 +96,4 @@ Reflect.get(obj3, "foo", { foo: 3 }); // "3bar"
 - [Polyfill of `Reflect.get` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
-- [`Proxy`'s `get` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)
+- [`handler.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get)

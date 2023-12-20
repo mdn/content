@@ -4,7 +4,7 @@ slug: Web/JavaScript/Event_loop
 page-type: guide
 ---
 
-{{JsSidebar("Advanced")}}
+{{jsSidebar("Advanced")}}
 
 JavaScript has a runtime model based on an **event loop**, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks. This model is quite different from models in other languages like C and Java.
 
@@ -137,7 +137,7 @@ A web worker or a cross-origin `iframe` has its own stack, heap, and message que
 
 ## Never blocking
 
-A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) query to return or an [XHR](/en-US/docs/Web/API/XMLHttpRequest) request to return, it can still process other things like user input.
+A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) query to return or a [`fetch()`](/en-US/docs/Web/API/fetch) request to return, it can still process other things like user input.
 
 Legacy exceptions exist like `alert` or synchronous XHR, but it is considered good practice to avoid them. Beware: [exceptions to the exception do exist](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (but are usually implementation bugs, rather than anything else).
 

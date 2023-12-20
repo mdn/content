@@ -162,4 +162,4 @@ console.log(
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

@@ -31,10 +31,9 @@ queryPermission(fileSystemHandlePermissionDescriptor)
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
-If this returns "prompt" the website will have to call requestPermission() before any
+If {{domxref('PermissionStatus.state')}} returns "prompt" the website will have to call requestPermission() before any
 operations on the handle can be done. If this returns "denied" any operations will
 reject. Usually handles returned by the local file system handle factories will
 initially return "granted" for their read permission state. However, other than through
@@ -88,4 +87,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

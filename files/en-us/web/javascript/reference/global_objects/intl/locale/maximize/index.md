@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Add Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
@@ -41,8 +41,7 @@ affects the main subtags that comprise the [language identifier](https://www.uni
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
 include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "numeric")}}.
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 

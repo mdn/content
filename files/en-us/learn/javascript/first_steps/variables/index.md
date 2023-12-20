@@ -225,7 +225,7 @@ You can call a variable pretty much anything you like, but there are limitations
 - You shouldn't use other characters because they may cause errors or be hard to understand for an international audience.
 - Don't use underscores at the start of variable names — this is used in certain JavaScript constructs to mean specific things, so may get confusing.
 - Don't use numbers at the start of variables. This isn't allowed and causes an error.
-- A safe convention to stick to is so-called ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms), where you stick together multiple words, using lower case for the whole first word and then capitalize subsequent words. We've been using this for our variable names in the article so far.
+- A safe convention to stick to is {{Glossary("camel_case", "lower camel case")}}, where you stick together multiple words, using lower case for the whole first word and then capitalize subsequent words. We've been using this for our variable names in the article so far.
 - Make variable names intuitive, so they describe the data they contain. Don't just use single letters/numbers, or big long phrases.
 - Variables are case sensitive — so `myage` is a different variable from `myAge`.
 - One last point: you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers recognize them as different code items, and so you'll get errors.

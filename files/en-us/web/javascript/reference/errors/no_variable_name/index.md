@@ -98,4 +98,4 @@ const arr = [1, 2, 3, 4, 5];
 
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
 - {{jsxref("Statements/var", "var")}}
-- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

@@ -1,6 +1,7 @@
 ---
 title: Convert
 slug: WebAssembly/Reference/Numeric/Convert
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

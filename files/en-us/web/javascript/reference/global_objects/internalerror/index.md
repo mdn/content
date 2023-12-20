@@ -22,7 +22,7 @@ Example cases are mostly when something is too large, e.g.:
 
 ## Constructor
 
-- {{jsxref("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
+- {{jsxref("InternalError/InternalError", "InternalError()")}} {{non-standard_inline}}
   - : Creates a new `InternalError` object.
 
 ## Instance properties

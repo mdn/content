@@ -110,7 +110,7 @@ div {
 
 When using an angle, `0deg` creates a vertical gradient running bottom to top, `90deg` creates a horizontal gradient running left to right, and so on in a clockwise direction. Negative angles run in the counterclockwise direction.
 
-![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
+![Four boxes listing angle and showing associated gradient from red to white. 0deg starts at the bottom and goes up. 90deg starts at left and goes right. 180deg starts at the top and goes down. -90deg starts at right and goes left.](linear_red_angles.png)
 
 ## Declaring colors & creating effects
 
@@ -368,7 +368,7 @@ Radial gradients are similar to linear gradients, except that they radiate out f
 
 ### A basic radial gradient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of it's box:
+As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of its box:
 
 ```html hidden
 <div class="simple-radial"></div>
@@ -439,7 +439,7 @@ div {
 
 Unlike linear gradients, you can specify the size of radial gradients. Possible values include `closest-corner`, `closest-side`, `farthest-corner`, and `farthest-side`, with `farthest-corner` being the default. Circles can also be sized with a length, and ellipses a length or percentage.
 
-#### Example: closest-side for ellipses
+#### Example: `closest-side` for ellipses
 
 This example uses the `closest-side` size value, which means the size is set by the distance from the starting point (the center) to the closest side of the enclosing box.
 
@@ -468,7 +468,7 @@ div {
 
 {{ EmbedLiveSample('Example_closest-side_for_ellipses', 240, 100) }}
 
-#### Example: farthest-corner for ellipses
+#### Example: `farthest-corner` for ellipses
 
 This example is similar to the previous one, except that its size is specified as `farthest-corner`, which sets the size of the gradient by the distance from the starting point to the farthest corner of the enclosing box from the starting point.
 
@@ -497,7 +497,7 @@ div {
 
 {{ EmbedLiveSample('Example_farthest-corner_for_ellipses', 240, 100) }}
 
-#### Example: closest-side for circles
+#### Example: `closest-side` for circles
 
 This example uses `closest-side`, which makes the circle's radius to be the distance between the center of the gradient and the closest side. In this case the radius is the distance between the center and the bottom edge, because the gradient is placed 25% from the left and 25% from the bottom, and the div element's height is smaller than the width.
 
@@ -936,5 +936,5 @@ div {
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
-- [CSS Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients/)
+- [CSS Gradients Library, by Estelle Weyl](https://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)

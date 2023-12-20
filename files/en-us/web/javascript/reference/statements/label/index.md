@@ -1,5 +1,5 @@
 ---
-title: label
+title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label

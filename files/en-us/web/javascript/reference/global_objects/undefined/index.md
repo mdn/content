@@ -8,14 +8,14 @@ browser-compat: javascript.builtins.undefined
 {{jsSidebar("Objects")}}
 
 The **`undefined`** global property represents the primitive
-value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
+value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type). It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
 ## Value
 
-The primitive value `{{Glossary("Undefined", "undefined")}}`.
+The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type).
 
 {{js_property_attributes(0, 0, 0)}}
 

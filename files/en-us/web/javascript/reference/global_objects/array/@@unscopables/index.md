@@ -67,7 +67,7 @@ So the `@@unscopables` data property for `Array.prototype` causes the `Array` pr
 ## See also
 
 - [Polyfill of `Array.prototype[@@unscopables]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}
 - {{jsxref("Symbol.unscopables")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
 
-{{ APIRef("Mountain View APIRef Project") }}
+{{ APIRef("Web Audio API") }}
 
 The **`getByteTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 

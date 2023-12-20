@@ -224,7 +224,7 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
    git push -u origin main
    ```
 
-   > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/ssh/index.html#generating-a-new-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
+   > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
 With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
@@ -337,7 +337,7 @@ Congratulations! You have completed the Svelte tutorial. In the previous article
 - Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.
 - We also took a look at Svelte's TypeScript support.
 
-In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to setup a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
+In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to set up a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
 
 Congratulations! After completing this series of tutorials you should have a strong base from which to start developing professional web applications with Svelte.
 

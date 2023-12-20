@@ -20,15 +20,15 @@ The **`AbstractRange`** abstract interface is the base class upon which all {{Gl
 - {{domxref("AbstractRange.endContainer", "endContainer")}} {{ReadOnlyInline}}
   - : The {{domxref("Node")}} object in which the end of the range, as specified by the `endOffset` property, is located.
 - {{domxref("AbstractRange.endOffset", "endOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the beginning of the range represented by the range object. This value must be less than the length of the `endContainer` node.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the range represented by the range object. This value must be less than the length of the `endContainer` node.
 - {{domxref("AbstractRange.startContainer", "startContainer")}} {{ReadOnlyInline}}
   - : The DOM {{domxref("Node")}} in which the beginning of the range, as specified by the `startOffset` property, is located.
 - {{domxref("AbstractRange.startOffset", "startOffset")}} {{ReadOnlyInline}}
-  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the last character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
+  - : An integer value indicating the offset, in characters, from the beginning of the node's contents to the first character of the contents referred to by the range object. This value must be less than the length of the node indicated in `startContainer`.
 
 ## Instance methods
 
-_The `AbstractRange` interface does provide any methods._
+_The `AbstractRange` interface doesn't provide any methods._
 
 ## Usage notes
 

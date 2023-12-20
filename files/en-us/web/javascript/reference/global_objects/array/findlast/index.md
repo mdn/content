@@ -20,7 +20,7 @@ If you need to find:
   Again, it checks each element for equality with the value instead of using a testing function.
 - if any element satisfies the provided testing function, use {{jsxref("Array/some", "some()")}}.
 
-{{EmbedInteractiveExample("pages/js/array-findlast.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-findlast.html", "shorter")}}
 
 ## Syntax
 
@@ -44,21 +44,13 @@ findLast(callbackFn, thisArg)
 
 ### Return value
 
-The value of the element in the array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
+The last (highest-index) element in the array that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
 
 ## Description
 
-The `findLast()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLast()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}.
+The `findLast()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in descending-index order, until `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value. `findLast()` then returns that element and stops iterating through the array. If `callbackFn` never returns a truthy value, `findLast()` returns {{jsxref("undefined")}}. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `callbackFn` is invoked for _every_ index of the array, not just those with assigned values. Empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) behave the same as `undefined`.
-
-`findLast()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `findLast()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are visited as if they were `undefined`.
-
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `findLast()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -122,6 +114,24 @@ function isPrime(element) {
 
 console.log([4, 6, 8, 12].findLast(isPrime)); // undefined, not found
 console.log([4, 5, 7, 8, 9, 11, 12].findLast(isPrime)); // 11
+```
+
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `findLast()` to find the last element that is less than its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5, 9, 2, 6];
+const lastTrough = numbers
+  .filter((num) => num > 0)
+  .findLast((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx > 0 && num >= arr[idx - 1]) return false;
+    if (idx < arr.length - 1 && num >= arr[idx + 1]) return false;
+    return true;
+  });
+console.log(lastTrough); // 2
 ```
 
 ### Using findLast() on sparse arrays
@@ -191,8 +201,8 @@ console.log(
 
 ## See also
 
-- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Polyfill of `Array.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.findIndex()")}}

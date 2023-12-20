@@ -445,8 +445,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -519,8 +519,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -776,7 +776,7 @@ Now if we try to create a `localStore` with something that cannot be converted t
 
 ![VS Code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
 
-And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
+And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 
 ```svelte
 <!-- App.svelte -->
@@ -818,7 +818,7 @@ Our stores have already been ported to TypeScript, but we can do better. We shou
 
 ### Understanding TypeScript generics
 
-Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle-brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
+Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle brackets, and by convention are denoted with an upper-cased single char letter. Generic types allows us to capture the types provided by the user to be used later.
 
 Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` elements, like this:
 

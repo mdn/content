@@ -2,12 +2,10 @@
 title: popover
 slug: Web/HTML/Global_attributes/popover
 page-type: html-attribute
-status:
-  - experimental
 browser-compat: html.global_attributes.popover
 ---
 
-{{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
+{{HTMLSidebar("Global_attributes")}}
 
 The **`popover`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is used to designate an element as a popover element.
 
@@ -23,13 +21,15 @@ For detailed information on usage, see the {{domxref("Popover API", "Popover API
 
 ## Examples
 
-The following will render a button which will open a popover element.
+The following renders a button that will open a popover element when activated.
 
 ```html
 <button popovertarget="my-popover">Open Popover</button>
 
 <div popover id="my-popover">Greetings, one and all!</div>
 ```
+
+{{EmbedLiveSample('Examples', 600, 200)}}
 
 > **Note:** See our [Popover API examples landing page](https://mdn.github.io/dom-examples/popover-api/) to access the full collection of MDN popover examples.
 

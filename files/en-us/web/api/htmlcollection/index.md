@@ -24,7 +24,7 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
 - {{domxref("HTMLCollection.item()")}}
 
-  - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
+  - : Returns the specific element at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
 
     An alternative to accessing `collection[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 

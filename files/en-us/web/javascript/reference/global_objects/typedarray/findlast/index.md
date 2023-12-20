@@ -33,7 +33,7 @@ findLast(callbackFn, thisArg)
 
 ### Return value
 
-The element in the typed array with the highest index value that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
+The last (highest-index) element in the typed array that satisfies the provided testing function; {{jsxref("undefined")}} if no matching element is found.
 
 ## Description
 
@@ -116,8 +116,8 @@ uint8.findLast((value, index) => {
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.findLast()` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [Polyfill of `TypedArray.prototype.findLast` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

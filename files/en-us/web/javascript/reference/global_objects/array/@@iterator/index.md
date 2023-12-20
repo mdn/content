@@ -53,7 +53,7 @@ for (const letter of arr) {
 
 #### Result
 
-{{EmbedLiveSample('Iteration_using_for...of_loop', '', '')}}
+{{EmbedLiveSample("Iteration_using_for...of_loop", "", "")}}
 
 ### Manually hand-rolling the iterator
 
@@ -112,12 +112,12 @@ logIterable(123);
 ## See also
 
 - [Polyfill of `Array.prototype[@@iterator]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
 - [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
 - {{jsxref("Symbol.iterator")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

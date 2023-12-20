@@ -89,7 +89,7 @@ console.log(instance.msg); // "hello cake"
 
 Setter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike setter properties in object literals, setter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
 
 ### Removing a setter with the `delete` operator
 
@@ -150,7 +150,7 @@ console.log(obj.baz); // "baz"
 
 ## See also
 
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Object.defineProperty()")}}

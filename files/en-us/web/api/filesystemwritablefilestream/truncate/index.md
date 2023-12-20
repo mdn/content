@@ -10,7 +10,7 @@ browser-compat: api.FileSystemWritableFileStream.truncate
 
 The **`truncate()`** method of the {{domxref("FileSystemWritableFileStream")}} interface resizes the file associated with the stream to the specified size in bytes.
 
-If the size specified is larger than the current file size the file is padded with `null` bytes.
+If the size specified is larger than the current file size the file is padded with `0x00` bytes.
 
 The file cursor is also updated when `truncate()` is called.
 If the offset is smaller than the size, it remains unchanged.
@@ -28,7 +28,7 @@ truncate(size)
 
 ### Parameters
 
-- size
+- `size`
   - : A number specifying the number of bytes to resize the stream to.
 
 ### Return value
@@ -38,9 +38,11 @@ A {{jsxref('Promise')}} that returns `undefined`.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if {{domxref('PermissionStatus.state')}} is not `granted`.
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the new size of the file is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - {{jsxref("TypeError")}}
-  - : Returned if `size` is not a number or not defined.
+  - : Thrown if `size` is not a number or not defined.
 
 ## Examples
 
@@ -89,4 +91,4 @@ If you run the above function and then open the resulting file created on disk, 
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

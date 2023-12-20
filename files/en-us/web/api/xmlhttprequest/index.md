@@ -5,11 +5,9 @@ page-type: web-api-interface
 browser-compat: api.XMLHttpRequest
 ---
 
-{{DefaultAPISidebar("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 `XMLHttpRequest` (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
-
-`XMLHttpRequest` is used heavily in [AJAX](/en-US/docs/Web/Guide/AJAX) programming.
 
 {{InheritanceDiagram}}
 
@@ -121,11 +119,5 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 ## See also
 
 - {{domxref("XMLSerializer")}}: Serializing a DOM tree into XML
-- MDN tutorials covering `XMLHttpRequest`:
-
-  - [Ajax](/en-US/docs/Web/Guide/AJAX)
-  - [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - [Fetch API](/en-US/docs/Web/API/Fetch_API)
-
-- [New Tricks in XMLHttpRequest2 (2011)](https://web.dev/xhr2/)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
