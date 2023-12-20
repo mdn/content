@@ -173,7 +173,7 @@ useEffect(() => {
 
 These changes make it so that, if `isEditing` is true, React reads the current value of the `editFieldRef` and moves browser focus to it. We also pass an array into `useEffect()` as a second argument. This array is a list of values `useEffect()` should depend on. With these values included, `useEffect()` will only run when one of those values changes. We only want to change focus when the value of `isEditing` changes.
 
-Try it now, and you'll see that when you click an "Edit" button, focus moves to the corresponding edit `<input>`!
+Try it now: use the <kbd>Tab</kbd> key to navigate to one of the "Edit" buttons, then press <kbd>Enter</kbd>. You should see the `<Todo />` component switch to its editing template, and the browser focus indicator should appear around the `<input>` element!
 
 ### Moving focus back to the edit button
 
@@ -189,9 +189,9 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of works. Head back to your browser and you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
+This kind of works. If you use your keyboard to trigger the "Edit" button (remember: <kbd>Tab</kbd> to it and press <kbd>Enter</kbd>), you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
 
-Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, we see focus on the last "Edit" button.
+Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, the last `<Todo />` that renders moves focus to its "Edit" button.
 
 We need to refactor our approach so that focus changes only when `isEditing` changes from one value to another.
 
