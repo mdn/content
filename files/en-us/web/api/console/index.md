@@ -89,7 +89,7 @@ console.log(someObject);
 
 The output looks something like this:
 
-```text
+```plain
 {str:"Some text", id:5}
 ```
 
