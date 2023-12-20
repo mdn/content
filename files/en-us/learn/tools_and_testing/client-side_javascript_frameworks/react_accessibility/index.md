@@ -223,7 +223,13 @@ function usePrevious(value) {
 }
 ```
 
-`usePrevious()` is a _custom hook_ that tracks a value across renders. It uses the `useRef()` hook to create a ref, and then updates the `useEffect()` hook. This means the `current` property of the ref will always contain the previous value of the `value` argument. You might think of it as intentionally being one value "behind" – hence the name `usePrevious()`.
+`usePrevious()` is a _custom hook_ that tracks a value across renders. It:
+
+1. Uses the `useRef()` hook to create an empty `ref`.
+2. Returns the `ref`'s `current` value to the component that called it.
+3. Calls `useEffect()` and updates the value stored in `ref.current` after each rendering of the calling component.
+
+The behavior of `useEffect()` is key to this functionality. Because `ref.current` is updated inside a `useEffect()` call, it's always one step behind whatever value is in the component's main render cycle – hence the name `usePrevious()`.
 
 ### Using `usePrevious()`
 
