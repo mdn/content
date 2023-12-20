@@ -31,9 +31,43 @@ Preloaded resources from the early hint are effectively pre-pended to the `Docum
 
 ## Examples
 
-### Basic example
+### Preconnect example
 
-The following `103` early hint response indicates a stylesheet `style.css` might be preloaded by the final response.
+The following `103` early hint response shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`https://cdn.example.com`).
+Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
+
+```http
+103 Early Hint
+Link: <https://cdn.example.com>; rel=preconnect, <https://cdn.example.com>; rel=preconnect; crossorigin
+```
+
+This example preconnects to `https://cdn.example.com` twice:
+
+- The first connection would be used for loading resources that can be fetched without CORS, such as images.
+- The second connection includes the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute and would be used for loading [CORS](/en-US/docs/Web/HTTP/CORS)-protected resources, such as fonts.
+
+CORS-protected resources must be fetched over a completely separate connection. If you only need one type of resource from an origin then you only need to preconnect once.
+
+Subsequently the server sends the final response.
+This includes a crossorigin font preload and an `<img>` loaded from the additional origin.
+
+```http
+200 OK
+Content-Type: text/html
+
+<!DOCTYPE html>
+...
+<link rel="preload" href="https://cdn.example.com/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin>
+...
+<img src="https://cdn.example.com/images/image.jpg" alt="">
+...
+```
+
+### Preload example
+
+> **Warning:** Some browsers only support `preconnect` over 103 Early Hints. See the implementation notes in the [browser compatibility](#browser-compatibility) section below.
+
+The following `103` early hint response indicates a stylesheet `style.css` might be needed by the final response.
 
 ```http
 103 Early Hint
@@ -41,7 +75,7 @@ Link: </style.css>; rel=preload; as=style
 ```
 
 Subsequently the server sends the final response.
-This includes a link to the stylesheet, which may already have preloaded.
+This includes a link to the stylesheet, which may already have been preloaded from the early hint.
 
 ```http
 200 OK
@@ -78,16 +112,6 @@ Content-Type: text/html
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...
-```
-
-### Early hint to preconnect
-
-The following example shows an early hint response where the server indicates that the client might want to preconnect to a particular origin (`example.com`).
-Just like the HTML [`rel=preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) attribute this is a hint that the page is likely to need resources from the target resource's origin, and that the browser can likely improve the user experience by preemptively initiating a connection to that origin.
-
-```http
-103 Early Hints
-Link: <https://example.com>; rel=preconnect;
 ```
 
 ## Specifications

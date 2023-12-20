@@ -78,4 +78,3 @@ Server: Apache
 
 - {{HTTPHeader("Connection")}}
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-- [Keep-Alive Header](https://datatracker.ietf.org/doc/html/draft-thomson-hybi-http-timeout-03#section-2) IETF Internet Draft

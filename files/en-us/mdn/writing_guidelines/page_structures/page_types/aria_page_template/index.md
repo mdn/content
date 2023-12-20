@@ -28,7 +28,7 @@ In ARIA role or attribute subpages, you need to include the following tags (see 
 In the value of the `spec_urls` front matter metadata key, update the URLs to point to the fragment IDs for the correct sections from the following specifications:
 
 - [ARIA](https://w3c.github.io/aria/)
-- [ARIA Authoring Practices](https://w3c.github.io/aria-practices/)
+- [ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/)
 
 Additional resources:
 

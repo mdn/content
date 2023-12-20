@@ -498,7 +498,7 @@ This is really one of the key reasons someone would use flexbox rather than grid
 
 This is all looking fairly complete now, however we sometimes have these cards which contain far more content than the others. It might be nice to cause those to span two tracks, and then they won't be so tall. We have a class of `wide` on my larger item, and we add a rule {{cssxref("grid-column-end")}} with a value of `span 2`. Now when grid encounters this item, it will assign it two tracks. At some breakpoints, this means that we'll get a gap in the grid – where there isn't space to lay out a two-track item.
 
-![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
+![The layout has gaps as there is not space to lay out a two track item.](11-grid-auto-flow-sparse.png)
 
 We can cause a grid to backfill those gaps by setting {{cssxref("grid-auto-flow")}}`: dense` on the grid container. Take care when doing this however as it does take items away from their logical source order. You should only do this if your items do not have a set order – and be aware of the [issues](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility#visual_not_logical_re-ordering) of the tab order following the source and not your reordered display.
 

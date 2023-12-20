@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/heading_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#heading
-  - https://w3c.github.io/aria-practices/#heading
+  - https://www.w3.org/WAI/ARIA/apg/practices/structural-roles/#when_to_use_structural_roles
 ---
 
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.

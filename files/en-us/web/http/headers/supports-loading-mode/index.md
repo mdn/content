@@ -42,7 +42,7 @@ Supports-Loading-Mode: credentialed-prerender
 
 The `Supports-Loading-Mode` header is a list of one or more tokens, which can include the following values:
 
-- `credentialed-prerender`
+- `credentialed-prerender` {{experimental_inline}}
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
 
 ## Browser compatibility

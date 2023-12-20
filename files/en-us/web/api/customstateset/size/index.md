@@ -8,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.size
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`size`** property of the {{domxref("CustomStateSet")}} interface returns the number of values in the `CustomStateSet`.
 

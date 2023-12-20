@@ -120,7 +120,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         </tr>
         <tr>
           <td>font</td>
-          <td>CSS @font-face</td>
+          <td>
+            <p>CSS @font-face</p>
+            <div class="notecard note">
+              <p>
+                <strong>Note:</strong> This value also requires
+                <code>&#x3C;link></code> to contain the crossorigin attribute, see <a href="/en-US/docs/Web/HTML/Attributes/rel/preload#cors-enabled_fetches">CORS-enabled fetches</a>.
+              </p>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>image</td>
@@ -191,7 +199,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- `fetchpriority` {{Experimental_Inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching a preloaded resource. Allowed values:
 
@@ -383,7 +391,12 @@ You can include `render` token inside a `blocking` attribute;
 the rendering of the page will be blocked till the resource is fetched. For example:
 
 ```html
-<link blocking="render" href="critical-font.woff2" as="font" />
+<link
+  blocking="render"
+  rel="preload"
+  href="critical-font.woff2"
+  as="font"
+  crossorigin />
 ```
 
 ## Technical summary

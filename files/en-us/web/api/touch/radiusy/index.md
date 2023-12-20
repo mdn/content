@@ -8,7 +8,7 @@ browser-compat: api.Touch.radiusY
 
 {{ APIRef("Touch Events") }}
 
-The **`radiusX`** read-only property of the {{domxref("Touch")}} interface returns the Y radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
+The **`radiusY`** read-only property of the {{domxref("Touch")}} interface returns the Y radius of the ellipse that most closely circumscribes the area of contact with the touch surface. The value is in CSS pixels of the same scale as {{ domxref("Touch.screenX") }}.
 
 This value, in combination with {{ domxref("Touch.radiusX") }} and {{ domxref("Touch.rotationAngle") }} constructs an ellipse that approximates the size and shape of the area of contact between the user and the screen. This may be a large ellipse representing the contact between a fingertip and the screen or a small one representing the tip of a stylus, for example.
 

@@ -70,7 +70,7 @@ Note: It is the author's responsibility to apply the "above" keyboard behavior.
 
 ## Examples
 
-[Example Implementation of Feed Pattern](https://w3c.github.io/aria-practices/examples/feed/feed.html)
+[Example Implementation of Feed Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
 
 ## Best practices
 

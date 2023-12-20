@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-checked
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-checked
-  - https://w3c.github.io/aria-practices/#checkbox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/
 ---
 
 The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/menubar_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menubar
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
 A `menubar` is a presentation of `menu` that usually remains visible and is usually presented horizontally.
