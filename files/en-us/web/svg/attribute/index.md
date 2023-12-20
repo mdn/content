@@ -83,7 +83,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
 - {{SVGAttr("filter")}}
-- {{SVGAttr("filterRes")}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
