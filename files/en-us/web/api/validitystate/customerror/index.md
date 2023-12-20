@@ -46,7 +46,7 @@ confirmElement.addEventListener("change", () => {
   confirmElement.setCustomValidity(
     confirmElement.value != originalElement.value
       ? "Both email addresses must match."
-      : ""
+      : "",
   );
 });
 
