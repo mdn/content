@@ -118,9 +118,9 @@ Doing this will populate our `editFieldRef` and `editButtonRef` with references 
 console.log(editButtonRef.current);
 ```
 
-You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<input>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render.
+You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<input>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render. Be sure to delete this log before moving on.
 
-> **Note:** These logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
+> **Note:** Your logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
 
 We're getting closer! To take advantage of our newly referenced elements, we need to use another React hook: `useEffect()`.
 
@@ -209,6 +209,8 @@ if (wasNotEditingBefore && isEditingNow) {
 
 The React team has discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
 
+### Enter `usePrevious()`
+
 Paste the following code near the top of `Todo.jsx`, above your `Todo()` function.
 
 ```jsx
@@ -221,13 +223,25 @@ function usePrevious(value) {
 }
 ```
 
-Now we'll define a `wasEditing` constant beneath the hooks at the top of `Todo()`. We want this constant to track the previous value of `isEditing`, so we call `usePrevious` with `isEditing` as an argument:
+`usePrevious()` is a _custom hook_ that tracks a value across renders. It uses the `useRef()` hook to create a ref, and then updates the `useEffect()` hook. This means the `current` property of the ref will always contain the previous value of the `value` argument. You might think of it as intentionally being one value "behind" – hence the name `usePrevious()`.
+
+### Using `usePrevious()`
+
+Now we can define a `wasEditing` constant beneath the hooks at the top of `Todo()`. We want this constant to track the previous value of `isEditing`, so we call `usePrevious` with `isEditing` as an argument:
 
 ```jsx
 const wasEditing = usePrevious(isEditing);
 ```
 
-With this constant, we can update our `useEffect()` hook to implement the pseudocode we discussed before — update it as follows:
+You can see how `usePrevious()` behaves by adding a console log beneath this line:
+
+```jsx
+console.log(wasEditing);
+```
+
+In this log, the `current` value of `wasEditing` will always be the previous value of `isEditing`. Click on the "Edit" and "Cancel" button a few times to watch it change, then delete this log when you're ready to move on.
+
+With this `wasEditing` constant, we can update our `useEffect()` hook to implement the pseudocode we discussed before:
 
 ```jsx
 useEffect(() => {
