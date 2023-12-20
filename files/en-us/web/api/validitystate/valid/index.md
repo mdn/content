@@ -10,7 +10,7 @@ browser-compat: api.ValidityState.valid
 
 The read-only **`valid`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}} element meets all its validation constraints, and is therefore considered to be valid.
 
-If true, the element matches the {{cssxref(":valid")}} CSS pseudo-class; the {{cssxref(":invalid")}} CSS pseudo-class otherwise.
+If `true`, the element matches the {{cssxref(":valid")}} CSS pseudo-class; otherwise the {{cssxref(":invalid")}} CSS pseudo-class applies.
 
 ## Value
 
