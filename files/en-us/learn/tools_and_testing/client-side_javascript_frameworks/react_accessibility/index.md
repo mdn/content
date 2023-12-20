@@ -54,9 +54,9 @@ To improve the experience for keyboard and assistive technology users, we should
 
 ### Aside: a note on our focus indicator
 
-If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator. Your code isn't broken!
+If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator, but you will do if you move between them with the tab key on your keyboard. Don't worry — your code isn't broken!
 
-Our CSS file uses the [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible) pseudo-class to define the focus indicator we see, and this pseudo-class uses a browser-defined set of rules to determine whether or not to show the focus indicator to the user. Generally, `:focus-visible` _will_ show a focus indicator in response to keyboard input, and _might_ show in response to mouse input. `<button>` elements are an example of an element that does not show a focus indicator in response to mouse input, while `<input>` elements _do_ show a focus indicator in response to mouse input.
+Our CSS file uses the [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible) pseudo-class to provide custom styling for the focus indicator, and the browser uses a set of internal rules to determine when to show it to the user. Generally, the browser _will_ show a focus indicator in response to keyboard input, and _might_ show it in response to mouse input. `<button>` elements generally _don't_ show a focus indicator in response to mouse input, while `<input>` elements _do_.
 
 The behavior of `:focus-visible` is more selective than the older [`:focus`](/en-US/docs/Web/CSS/:focus) pseudo-class, with which you might be more familiar. `:focus` shows a focus indicator in many more situations, and you can use it instead of or in combination with `:focus-visible` if you prefer.
 
