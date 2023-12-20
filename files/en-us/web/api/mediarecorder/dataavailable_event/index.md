@@ -48,7 +48,9 @@ ondataavailable = (event) => {};
 
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("BlobEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("BlobEvent")}}
 
 ## Example
 
