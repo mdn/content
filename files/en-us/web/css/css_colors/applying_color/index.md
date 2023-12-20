@@ -399,7 +399,7 @@ For example, if we wanted to show the `display-p3 0 0 1` color, which is outside
 
 ### Relative colors
 
-The CSS Color Module Level 5 specification defines [**relative color syntax**](https://drafts.csswg.org/css-color-5/#relative-colors), which allows CSS {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This is a very powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — paving the way towards more effective color palette creation.
+The [CSS colors Module](/en-US/docs/Web/CSS/CSS_colors) defines [**relative color syntax**](https://drafts.csswg.org/css-color-5/#relative-colors), which allows CSS {{cssxref("&lt;color&gt;")}} values to be defined relative to other existing colors, rather than defining a color value from scratch each time. This is a very powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — paving the way towards more effective color palette creation.
 
 See [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) for a detailed guide.
 

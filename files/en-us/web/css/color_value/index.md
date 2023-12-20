@@ -52,9 +52,14 @@ oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
 
 /* Relative CSS colors */
-rgb(from red 0 0 255) /* transform red to blue */
-hwb(from green h w b / 0.5) /* Add a semi-transparent alpha channel to green */
-lch(from blue calc(l + 20) c h) /* Create a lighter blue variant */
+/* Change the hue value to 240 degrees to transform red to blue */
+hsl(from red 240deg s l)
+/* Add a semi-transparent alpha channel to green */
+hsl(from green h s l / 0.5)
+/* Create a lighter blue variant by setting the output lightness */
+/* to the originating color's lightness channel value plus 0.6 */
+hsl(from blue h s calc(l + 0.2)) /* Chrome */
+hsl(from blue h s calc(l + 20%)) /* Safari */
 
 /* light-dark */
 light-dark(white, black)
