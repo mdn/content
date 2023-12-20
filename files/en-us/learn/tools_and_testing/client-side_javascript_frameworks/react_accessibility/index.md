@@ -325,7 +325,7 @@ Add the following into the body of your `App()` function, just below your previo
 
 ```jsx
 useEffect(() => {
-  if (tasks.length - prevTaskLength === -1) {
+  if (tasks.length < prevTaskLength) {
     listHeadingRef.current.focus();
   }
 }, [tasks.length, prevTaskLength]);
@@ -333,7 +333,7 @@ useEffect(() => {
 
 We only try to focus on our list heading if we have fewer tasks now than we did before. The dependencies passed into this hook ensure it will only try to re-run when either of those values (the number of current tasks, or the number of previous tasks) changes.
 
-Now, when you delete a task in your browser, you will see our dashed focus outline appear around the heading above the list.
+Now, when you use your keyboard to delete a task in your browser, you will see our dashed focus outline appear around the heading above the list.
 
 ## Finished!
 
