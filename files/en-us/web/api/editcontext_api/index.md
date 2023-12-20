@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: api.EditContext
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("EditContext API")}}
+{{DefaultAPISidebar("EditContext API")}}
 
 The **EditContext API** ...
 
