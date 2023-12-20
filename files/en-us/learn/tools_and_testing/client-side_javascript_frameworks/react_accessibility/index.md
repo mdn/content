@@ -66,7 +66,7 @@ When a user toggles a `<Todo />` template from viewing to editing, we should foc
 
 ### Targeting our elements
 
-Up to this point, we've been writing JSX and letting React build the DOM from them. Most of the time, we don't need to target specific elements in the DOM because we can use React's state and props to control what gets rendered. To manage focus, however, we _do_ need to be able to target specific elements.
+Up to this point, we've been writing JSX components and letting React build the resulting DOM behind the scenes. Most of the time, we don't need to target specific elements in the DOM because we can use React's state and props to control what gets rendered. To manage focus, however, we _do_ need to be able to target specific DOM elements.
 
 This is where the `useRef()` hook comes in.
 
@@ -76,7 +76,7 @@ First, change the `import` statement at the top of `Todo.jsx` so that it include
 import { useRef, useState } from "react";
 ```
 
-`useRef()` creates an object with a single property: `current`. Refs can store any value we want it to, and we can look up that value later. We can even store references to DOM elements, which is exactly what we're going to do here.
+`useRef()` creates an object with a single property: `current`. Refs can store any values we want them to, and we can look up those values later. We can even store references to DOM elements, which is exactly what we're going to do here.
 
 Next, create two new constants beneath the `useState()` hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
 
@@ -112,7 +112,7 @@ Update the "Edit" button in your view template so that it reads like this:
 </button>
 ```
 
-Doing this will populate our `editFieldRef` and `editButtonRef` with references to the DOM elements they're attached to, but _only_ after React has rendered the component. Test that out for yourself: add the following line somewhere in the body of your `Todo()` function:
+Doing this will populate our `editFieldRef` and `editButtonRef` with references to the DOM elements they're attached to, but _only_ after React has rendered the component. Test that out for yourself: add the following line somewhere in the body of your `Todo()` function, below where `editButtonRef` is initialized:
 
 ```jsx
 console.log(editButtonRef.current);
@@ -126,7 +126,7 @@ We're getting closer! To take advantage of our newly referenced elements, we nee
 
 ### Implementing `useEffect()`
 
-[`useEffect()`](https://react.dev/reference/react/useEffect) is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` runs right after a component renders, and this means that meaning the DOM elements we referenced in the previous section will be available for us to use.
+[`useEffect()`](https://react.dev/reference/react/useEffect) is so named because it runs any side-effects that we'd like to add to the render process, which can't be run inside the main function body. `useEffect()` runs right after a component renders, meaning the DOM elements we referenced in the previous section will be available for us to use.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -134,7 +134,7 @@ Change the import statement of `Todo.jsx` again to add `useEffect`:
 import { useEffect, useRef, useState } from "react";
 ```
 
-`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. To illustrate this, put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
+`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. To demonstrate this, put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
 
 ```jsx
 useEffect(() => {
@@ -191,7 +191,7 @@ useEffect(() => {
 
 This kind of works. If you use your keyboard to trigger the "Edit" button (remember: <kbd>Tab</kbd> to it and press <kbd>Enter</kbd>), you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
 
-Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. Because there are three instances of `<Todo />`, the last `<Todo />` that renders moves focus to its "Edit" button.
+Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. There are three instances of `<Todo />`, and focus is given to the "Edit" button of the one that renders last.
 
 We need to refactor our approach so that focus changes only when `isEditing` changes from one value to another.
 
@@ -227,7 +227,7 @@ function usePrevious(value) {
 
 ### Using `usePrevious()`
 
-Now we can define a `wasEditing` constant beneath the hooks at the top of `Todo()`. We want this constant to track the previous value of `isEditing`, so we call `usePrevious` with `isEditing` as an argument:
+Now we can define a `wasEditing` constant to track the previous value of `isEditing`; this is achieved by calling `usePrevious` with `isEditing` as an argument. Add the following inside `Todo()`, below the `useRef` lines:
 
 ```jsx
 const wasEditing = usePrevious(isEditing);
