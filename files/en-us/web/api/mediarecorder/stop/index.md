@@ -38,9 +38,9 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-An `InvalidState` error is raised if the `stop()` method is
-called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
-is "inactive" — it makes no sense to stop media capture if it is already stopped.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `MediaRecorder` is currently `"inactive"`; you cannot stop
+    the recording if the `MediaRecorder` is not active.
 
 ## Examples
 
