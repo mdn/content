@@ -9,7 +9,7 @@ browser-compat: api.ContentIndex
 
 {{APIRef("Content Index API")}}{{SeeCompatTable}}
 
-The **`ContentIndex`** interface of the {{domxref("Content Index API")}} allows developers to register their offline enabled content with the browser.
+The **`ContentIndex`** interface of the {{domxref("Content Index API", "", "", "nocode")}} allows developers to register their offline enabled content with the browser.
 
 ## Instance properties
 

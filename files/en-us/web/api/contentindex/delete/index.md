@@ -50,7 +50,7 @@ async function unregisterContent(article) {
 }
 ```
 
-The `delete` method can also be used within the {{domxref("ServiceWorker", "service worker")}} scope.
+The `delete` method can also be used within the {{domxref("ServiceWorker", "service worker", "", "nocode")}} scope.
 
 ```js
 self.registration.index.delete("my-id");
