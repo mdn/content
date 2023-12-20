@@ -156,13 +156,13 @@ Promise.resolve(aThenable); // A promise fulfilled with 42
 The `Promise` class offers four static methods to facilitate async task [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing):
 
 - {{jsxref("Promise.all()")}}
-  - : Fulfills when **all** of the promises fulfill; rejects when **any** of the promises rejects.
+  - : Fulfills when **all** of the promises fulfill; rejects when **any** of the promises reject.
 - {{jsxref("Promise.allSettled()")}}
   - : Fulfills when **all** promises settle.
 - {{jsxref("Promise.any()")}}
-  - : Fulfills when **any** of the promises fulfills; rejects when **all** of the promises reject.
+  - : Fulfills when **any** of the promises fulfill; rejects when **all** of the promises reject.
 - {{jsxref("Promise.race()")}}
-  - : Settles when **any** of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.
+  - : Settles when **any** of the promises settle. In other words, fulfills when any of the promises fulfill; rejects when any of the promises reject.
 
 All these methods take an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) of promises ([thenables](#thenables), to be exact) and return a new promise. They all support subclassing, which means they can be called on subclasses of `Promise`, and the result will be a promise of the subclass type. To do so, the subclass's constructor must implement the same signature as the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor — accepting a single `executor` function that can be called with the `resolve` and `reject` callbacks as parameters. The subclass must also have a `resolve` static method that can be called like {{jsxref("Promise.resolve()")}} to resolve values to promises.
 
