@@ -66,13 +66,13 @@ Up to this point, we've been writing JSX and letting React build the DOM from th
 
 This is where the `useRef()` hook comes in.
 
-`useRef()` creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
-
-Change the `import` statement at the top of `Todo.jsx` so that it includes `useRef`:
+First, change the `import` statement at the top of `Todo.jsx` so that it includes `useRef`:
 
 ```jsx
 import { useRef, useState } from "react";
 ```
+
+`useRef()` creates an object with a single property: `current`. Refs can store any value we want it to, and we can look up that value later. We can even store references to DOM elements, which is exactly what we're going to do here.
 
 Next, create two new constants beneath the `useState()` hooks in your `Todo()` function. Each should be a ref – one for the "Edit" button in the view template and one for the edit field in the editing template.
 
@@ -81,9 +81,9 @@ const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);
 ```
 
-These refs have a default value of `null` so that it's explicitly clear that they'll be empty until we attach them to their respective elements. To attach them to their elements, we'll add the special `ref` attribute to each element, and set their values to the appropriately named `ref` objects.
+These refs have a default value of `null` to make it clear that they'll be empty until they're attached to their DOM elements. To attach them to their elements, we'll add the special `ref` attribute to each element's JSX, and set the values of those attributes to the appropriately named `ref` objects.
 
-The textbox `<input>` in your editing template should read like this:
+Update the `<input>` in your editing template so that it reads like this:
 
 ```jsx
 <input
@@ -96,7 +96,7 @@ The textbox `<input>` in your editing template should read like this:
 />
 ```
 
-The "Edit" button in your view template should read like this:
+Update the "Edit" button in your view template so that it reads like this:
 
 ```jsx
 <button
@@ -108,11 +108,21 @@ The "Edit" button in your view template should read like this:
 </button>
 ```
 
-Doing this will allow us to directly reference the `<input>` and "Edit" button elements in our code, but we have one more step to take.
+Doing this will populate our `editFieldRef` and `editButtonRef` with references to the DOM elements they're attached to, but _only_ after React has rendered the component. Test that out for yourself: add the following line somewhere in the body of your `Todo()` function:
+
+```jsx
+console.log(editButtonRef.current);
+```
+
+You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<input>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render.
+
+> **Note:** These logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
+
+We're getting closer! To take advantage of our newly referenced elements, we need to use another React hook: `useEffect()`.
 
 ### Implementing `useEffect()`
 
-To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. The refs we defined in the previous section won't have a value until _after_ React has rendered the component, so we need `useEffect()` to read and interact with our DOM elements.
+[`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` runs right after a component renders, and this means that meaning the DOM elements we referenced in the previous section will be available for us to use.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -120,7 +130,7 @@ Change the import statement of `Todo.jsx` again to add `useEffect`:
 import { useEffect, useRef, useState } from "react";
 ```
 
-`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. To see this in action, put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
+`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. To illustrate this, put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
 
 ```jsx
 useEffect(() => {
@@ -140,8 +150,6 @@ Now, open the app in your browser. You should see both messages in your console,
 main render                                     Todo.jsx
 side effect                                     Todo.jsx
 ```
-
-> **Note:** These logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
 
 Again, the logs are ordered this way because code inside `useEffect()` runs _after_ the component renders. This takes some getting used to, just keep it in mind as you move forward. For now, delete `console.log("main render")` and we'll move on to implementing our focus management.
 
