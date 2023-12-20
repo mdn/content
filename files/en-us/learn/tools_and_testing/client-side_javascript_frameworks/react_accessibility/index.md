@@ -126,7 +126,7 @@ We're getting closer! To take advantage of our newly referenced elements, we nee
 
 ### Implementing `useEffect()`
 
-[`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` runs right after a component renders, and this means that meaning the DOM elements we referenced in the previous section will be available for us to use.
+[`useEffect()`](https://react.dev/reference/react/useEffect) is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` runs right after a component renders, and this means that meaning the DOM elements we referenced in the previous section will be available for us to use.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
