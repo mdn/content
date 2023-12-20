@@ -18,12 +18,15 @@ A boolean that is `true` if a custom error message has been set to a non-empty s
 
 ### Detecting a custom error
 
-In the following example, we set a custom error when both emails don't match. A log is written when this is the case, and a different message is displayed when there is no custom errors. When there is an error, custom or not, the widget are surrounded by a red border.
+In the following example, we set a custom error when both emails don't match. A log is written when this is the case, and a different message is displayed when there is no custom errors. When there is an error, custom or not, the widget is surrounded by a red border.
 
 #### HTML
 
 ```html
-<input type="email" id="original" /> <input type="email" id="confirmation" />
+<label for="original">Type your email:</label>
+<input type="email" id="original" />
+<label for="confirmation">Retype your email:</label>
+<input type="email" id="confirmation" />
 <pre id="log"></pre>
 ```
 
@@ -56,10 +59,7 @@ function displayLog() {
   } else {
     log.textContent = "No custom error message is set.";
   }
-  requestAnimationFrame(displayLog);
 }
-
-requestAnimationFrame(displayLog);
 ```
 
 #### Result
