@@ -140,7 +140,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self', 'self')}} property:
 
 ```js
 // service worker script

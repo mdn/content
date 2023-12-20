@@ -156,7 +156,7 @@ async function unregisterContent(article) {
 }
 ```
 
-All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self')}} property:
+All the above methods are available within the scope of the {{domxref("ServiceWorker", "service worker", "", "nocode")}}. They are accessible from the {{domxref('WorkerGlobalScope.self', 'self')}} property:
 
 ```js
 // service worker script
@@ -180,7 +180,7 @@ self.addEventListener("contentdelete", (event) => {
 });
 ```
 
-The {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete()')}} method is called.
+The {{domxref('ServiceWorkerGlobalScope.contentdelete_event', "contentdelete")}} event is only fired when the deletion happens due to interaction with the browser's built-in user interface. It is not fired when the {{domxref('ContentIndex.delete', 'delete()')}} method is called.
 
 ## Specifications
 
