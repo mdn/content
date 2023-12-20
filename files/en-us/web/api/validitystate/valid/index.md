@@ -27,7 +27,7 @@ const input = document.getElementById("age");
 if (input.validity.valid) {
   console.log("Bad input detected…");
 } else {
-  console.log("Content of input OK.");
+  console.log("Input OK…");
 }
 ```
 
