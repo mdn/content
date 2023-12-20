@@ -6,7 +6,7 @@ page-type: guide
 
 {{SVGRef}}
 
-Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL). SMIL allows you to:
+[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an extension of [SVG](/en-US/docs/Web/SVG) allowing to animating SVG elements. SMIL allows you to:
 
 - animate the numeric attributes of an element (x, y, …)
 - animate transform attributes (translation or rotation)
