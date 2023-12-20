@@ -44,19 +44,10 @@ addition to other general errors that might occur, the following errors are spec
 possible when using the MediaStream Recording API; to determine which occurred, check
 the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name")}}.
 
-- `InvalidStateError`
-  - : An attempt was made to stop or pause an inactive recorder, start or resume an
-    active recorder, or otherwise manipulate the `MediaRecorder` while in the
-    wrong state. This exception can also occur when a request is made on a source that has
-    been deleted or removed.
 - `SecurityError`
   - : The {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
     "getUserMedia()")}} when the user denies permission to use an input device.
-- `NotSupportedError`
-  - : An attempt was made to instantiate a `MediaRecorder` using a MIME type
-    that isn't supported on the user's device; one or more of the requested container,
-    codecs, or profiles as well as other information may be invalid.
 - `InvalidModificationError`
   - : The number of tracks on the stream being recorded has changed. You can't add or
     remove tracks while recording media.
