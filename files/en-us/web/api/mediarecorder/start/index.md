@@ -70,8 +70,8 @@ handler to respond to these errors.
     start recording media if it is already being recorded. See the
     {{domxref("MediaRecorder.state", "state")}} property.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the media stream you are attempting to record is inactive, or one or more of the
-    stream's tracks is in a format that cannot be recorded using the current configuration.
+  - : Thrown if the media stream you are attempting to record is inactive, or if one or more of the
+    stream's tracks is in a format that cannot be recorded using the current configuration, or if the `videoKeyFrameIntervalDuration` and `videoKeyFrameIntervalCount` parameter are both specificed when creating the `MediaRecorder`.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("MediaStream")}} is configured to disallow recording. This may be the
     case, for example, with sources obtained using {{domxref("MediaDevices.getUserMedia",
