@@ -101,8 +101,8 @@ movedFiles = (
 
 console.log(`Number of moved files to consider: ${movedFiles.length}`);
 
-let totalNo = 0,
-  updatedNo = 0;
+let totalNo = 0;
+let updatedNo = 0;
 for await (const filePath of walkSync(getRootDir())) {
   if (filePath.endsWith("index.md")) {
     try {
