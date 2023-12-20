@@ -64,7 +64,7 @@ recording process.
 
 ## Examples
 
-Using [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) to listen for `error` events:
+Using {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for `error` events:
 
 ```js
 async function record() {
@@ -79,7 +79,7 @@ async function record() {
 record();
 ```
 
-The same, but using the onerror event handler property:
+The same, but using the `onerror` event handler property:
 
 ```js
 async function record() {
