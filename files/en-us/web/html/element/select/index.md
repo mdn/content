@@ -121,6 +121,10 @@ Keyboard users can select multiple non-contiguous items by:
 
   to select/deselect "focused" select options.
 
+## &lt;hr&gt; in select
+
+To make long select lists easier to read {{HTMLElement("hr")}} elements can be added to make the select list easier to read, by creating separators which visually break up the options available for the user to choose.
+
 ## Styling with CSS
 
 The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
@@ -152,6 +156,48 @@ The following example creates a very simple dropdown menu, the second option of 
 #### Result
 
 {{EmbedLiveSample("Basic_select", "", "100")}}
+
+### Select with grouping
+
+The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
+
+```html
+<label for="hr-select">Please select a food</label> <br />
+
+<select name="foods" id="hr-select">
+  <option value="">Select a favorite food</option>
+  <hr />
+  <optgroup label="Fruit">
+    <option value="apple">Apples</option>
+    <option value="banana">Bananas</option>
+    <option value="cherry">Cherries</option>
+    <option value="damson">Damsons</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Vegetables">
+    <option value="artichoke">Artichokes</option>
+    <option value="broccoli">Broccoli</option>
+    <option value="cabbage">Cabbages</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Meat">
+    <option value="beef">Beef</option>
+    <option value="chicken">Chicken</option>
+    <option value="pork">Pork</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Fish">
+    <option value="cod">Cod</option>
+    <option value="haddock">Haddock</option>
+    <option value="salmon">Salmon</option>
+    <option value="turbot">Turbot</option>
+  </optgroup>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("select_with_grouping", "", "100")}}
 
 ### Advanced select with multiple features
 
@@ -580,8 +626,8 @@ document.forms[0].onsubmit = (e) => {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}} or
-        {{HTMLElement("optgroup")}} elements.
+        Zero or more {{HTMLElement("option")}},
+        {{HTMLElement("optgroup")}} or {{HTMLElement("hr")}} elements.
       </td>
     </tr>
     <tr>
