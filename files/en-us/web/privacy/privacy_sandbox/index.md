@@ -10,8 +10,8 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 
 - [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)
   - : Also known as **partitioned cookies**, CHIPs allows developers to opt a cookie into partitioned storage, with a separate cookie jar per top-level site.
-- [Related Website Sets](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets/)
-  - : A mechanism for a company to declare relationships between different origins. Supporting browsers will then allow limited third-party cookie access across those origins for specific purposes.
+- [Related website sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets)
+  - : A mechanism for a company to declare relationships between different sites. Supporting browsers will then allow limited third-party cookie access across those sites for specific purposes, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 - [Topics API](/en-US/docs/Web/API/Topics_API)
   - : Provides a mechanism for developers to implement use cases such as **interest-based advertising (IBA)** based on topics collected by the browser as the user navigates different pages, rather than collected by the developer by tracking the user's journey around different sites with third-party cookies.
 

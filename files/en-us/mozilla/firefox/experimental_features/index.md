@@ -1686,8 +1686,8 @@ See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>114</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
