@@ -65,9 +65,6 @@ are reported through {{domxref("MediaRecorder.error_event", "error")}} events se
 object. You can implement the {{domxref("MediaRecorder.error_event", "onerror")}} event
 handler to respond to these errors.
 
-- `InvalidModificationError` {{domxref("DOMException")}}
-  - : Thrown if the number of tracks on the stream being recorded has changed. You cannot add or
-    remove tracks while recording media.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the `MediaRecorder` is not in the `inactive` state; you cannot
     start recording media if it is already being recorded. See the
@@ -81,8 +78,6 @@ handler to respond to these errors.
     "getUserMedia()")}} when the user denies permission to use an input device. This
     exception may also be delivered as an {{domxref("MediaRecorder.error_event", "error")}} event if
     the security options for the source media change after recording begins.
-- `UnknownError` {{domxref("DOMException")}}
-  - : Thrown if something else went wrong during the recording process.
 
 ## Examples
 
