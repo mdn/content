@@ -43,7 +43,7 @@ import Form from "./Form";
 import "./Form.css";
 ```
 
-This approach makes it easy to identify and manage the CSS that belongs to a specific component and distinguish it from your app-wide styles. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to use component-level styles and thereby limit the amount of irrelevant code that's sent to your user at any one time. 
+This approach makes it easy to identify and manage the CSS that belongs to a specific component and distinguish it from your app-wide styles. However, it also fragments your stylesheet across your codebase, and this fragmentation might not be worthwhile. For larger applications with hundreds of unique views and lots of moving parts, it makes sense to use component-level styles and thereby limit the amount of irrelevant code that's sent to your user at any one time.
 
 You can read more about this and other approaches to styling React components in the Smashing Magazine article, [Styling Components In React](https://www.smashingmagazine.com/2020/05/styling-components-react/).
 
@@ -90,7 +90,7 @@ Although this tutorial doesn't mention them, it is possible to build React compo
 
 ## Testing
 
-`create-react-app` provides some tools for testing your application out of the box — you may have deleted the relevant files earlier in the tutorial. The documentation for `create-react-app` [covers some basics for testing](https://create-react-app.dev/docs/running-tests/).
+Libraries such as [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) make it possible to write unit tests for React components. There are many ways to _run_ these tests. The testing framework [Vitest](https://vitest.dev/) is built on top of Vite, and is a great companion to your Vite-powered React applications. [Jest](https://jestjs.io/) is another popular testing framework that can be used with React.
 
 ## Routing
 
