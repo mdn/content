@@ -142,7 +142,7 @@ In our example:
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
-> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the [next article](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Functions
 
@@ -166,7 +166,7 @@ checkGuess();
 
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
-> **Note:** You'll learn a lot more about functions [later in the course](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> **Note:** You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
 ### Operators
 

@@ -12,6 +12,8 @@ The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}}
 
 The method returns a {{jsxref("Promise")}} that resolves to a {{domxref("WritableStream")}} object, which can be used to reliably write data to the server.
 
+<!-- Note, returns a `WebTransportSendStream` according to spec, but not yet implemented -->
+
 "Reliable" means that transmission and order of data are guaranteed. This provides slower delivery (albeit faster than with WebSockets) than {{domxref("WebTransport.datagrams", "datagrams")}}, but is needed in situations where reliability and ordering are important, like chat applications.
 
 The relative order in which queued bytes are emptied from created streams can be specified using the `sendOrder` option.
@@ -100,7 +102,8 @@ await writer.abort();
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
+- {{domxref("WebTransport.createBidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

@@ -24,10 +24,6 @@ text-align: justify;
 text-align: justify-all;
 text-align: match-parent;
 
-/* Character-based alignment in a table column */
-text-align: ".";
-text-align: "." center;
-
 /* Block alignment values (Non-standard syntax) */
 text-align: -moz-center;
 text-align: -webkit-center;
@@ -64,8 +60,6 @@ The `text-align` property is specified in one of the following ways:
   - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : When applied to a table cell, specifies the alignment character around which the cell's contents will align.
 
 ## Accessibility concerns
 

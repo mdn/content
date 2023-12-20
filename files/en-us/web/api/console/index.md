@@ -7,7 +7,7 @@ browser-compat: api.console
 
 {{APIRef("Console API")}}
 
-The **`console`** object provides access to the debugging console (e.g. the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox). The specifics of how it works varies from browser to browser or server runtimes (Node.js for example), but there is a _de facto_ set of features that are typically provided.
+The **`console`** object provides access to the debugging console (e.g., the [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) in Firefox). The specifics of how it works vary from browser to browser or server runtimes (Node.js, for example), but there is a _de facto_ set of features that are typically provided.
 
 The `console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as `console`. For example:
 
@@ -89,7 +89,7 @@ console.log(someObject);
 
 The output looks something like this:
 
-```bash
+```plain
 {str:"Some text", id:5}
 ```
 
@@ -105,7 +105,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 
 The output will look like this:
 
-```bash
+```plain
 My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 ```
 
