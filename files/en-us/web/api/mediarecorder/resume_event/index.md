@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.resume_event
 
 {{APIRef("MediaStream Recording")}}
 
-The **`resume`** event of the {{domxref("MediaRecorder")}} interface is thrown when
+The **`resume`** event of the {{domxref("MediaRecorder")}} interface is fired when
 {{domxref("MediaRecorder.resume()")}} is called.
 
 ## Syntax
