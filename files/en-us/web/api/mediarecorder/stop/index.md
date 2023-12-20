@@ -36,7 +36,7 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 An `InvalidState` error is raised if the `stop()` method is
 called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
