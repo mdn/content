@@ -8,9 +8,7 @@ browser-compat: api.MediaRecorder.start
 
 {{APIRef("MediaStream Recording")}}
 
-The {{domxref("MediaRecorder")}} method
-**`start()`**, which is part of the MediaStream Recording API,
-begins recording media into one or more {{domxref("Blob")}} objects.
+The **`start()`** method of the {{domxref("MediaRecorder")}} interface begins recording media into one or more {{domxref("Blob")}} objects.
 
 You can
 record the entire duration of the media into a single `Blob` (or until you

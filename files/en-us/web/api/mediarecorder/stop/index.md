@@ -8,8 +8,7 @@ browser-compat: api.MediaRecorder.stop
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.stop()`** method
-(part of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is
+The **`stop()`** method of the {{domxref("MediaRecorder")}} interface is
 used to stop media capture.
 
 When the `stop()` method is invoked, the UA queues a task that runs the
