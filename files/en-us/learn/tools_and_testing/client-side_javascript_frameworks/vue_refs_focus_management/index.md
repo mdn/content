@@ -1,6 +1,7 @@
 ---
 title: Focus management with Vue refs
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -182,7 +183,7 @@ mounted() {
 }
 ```
 
-Inside your `mounted()` method, assign your `labelInput` ref to a variable, and then call the `focus()` function of the ref. You don't have to use `$nextTick` here because the component has already been added to the DOM when `mounted()` is called.
+Inside your `mounted()` method, assign your `labelInput` ref to a variable, and then call the `focus()` function of the ref. You don't have to use `$nextTick()` here because the component has already been added to the DOM when `mounted()` is called.
 
 ```js
 mounted() {
@@ -211,7 +212,7 @@ Inside `App.vue`, update your `<h2>` as follows:
 
 > **Note:** [`tabindex`](/en-US/docs/Web/HTML/Global_attributes/tabindex) is a really powerful tool for handling certain accessibility problems. However, it should be used with caution. Over-using `tabindex="-1"` can cause problems for all sorts of users, so only use it exactly where you need to. You should also almost never use `tabindex` > = `0`, as it can cause problems for users since it can make the DOM flow and the tab-order mismatch, and/or add non-interactive elements to the tab order. This can be confusing to users, especially those using screen readers and other assistive technology.
 
-Now that we have a `ref` and have let browsers know that we can programmatically focus the `<h2>`, we need to set focus on it. At the end of `deleteToDo()`, use the `listSummary` ref to set focus on the `<h2>`. Since the `<h2>` is always rendered in the app, you do not need to worry about using `$nextTick` of lifecycle methods to handle focusing it.
+Now that we have a `ref` and have let browsers know that we can programmatically focus the `<h2>`, we need to set focus on it. At the end of `deleteToDo()`, use the `listSummary` ref to set focus on the `<h2>`. Since the `<h2>` is always rendered in the app, you do not need to worry about using `$nextTick()` or lifecycle methods to handle focusing it.
 
 ```js
 deleteToDo(toDoId) {

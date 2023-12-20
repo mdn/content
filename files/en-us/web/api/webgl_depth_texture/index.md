@@ -49,7 +49,7 @@ gl.texImage2D(
   0,
   gl.DEPTH_COMPONENT,
   gl.UNSIGNED_SHORT,
-  null
+  null,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: How to fill a box with an image without distorting it
 slug: Learn/CSS/Howto/Fill_a_box_with_an_image
+page-type: learn-faq
 ---
 
 {{LearnSidebar}}

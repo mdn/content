@@ -1,6 +1,7 @@
 ---
 title: Design and accessibility
 slug: Learn/Common_questions/Design_and_accessibility
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

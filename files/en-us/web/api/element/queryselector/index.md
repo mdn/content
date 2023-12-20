@@ -55,7 +55,7 @@ type or has type "text/css" in the HTML document body is returned:
 
 ```js
 const el = document.body.querySelector(
-  "style[type='text/css'], style:not([type])"
+  "style[type='text/css'], style:not([type])",
 );
 ```
 

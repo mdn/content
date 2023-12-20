@@ -11,7 +11,7 @@ All prose content is available under
 
 ### Text of CC-BY-SA-2.5 license
 
-```
+```plain
 Creative Commons Attribution-ShareAlike 2.5
 
 CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES. DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES REGARDING THE INFORMATION PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE.
@@ -75,13 +75,13 @@ Code examples and snippets added on or after August 20, 2010 are in the public d
 ([CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode)). No licensing notice
 is necessary, but if you need one, you can use:
 
-```
+```plain
 Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
 ```
 
 #### Text of CC0 license
 
-```
+```plain
 Creative Commons Legal Code
 
 CC0 1.0 Universal
@@ -211,13 +211,13 @@ Code examples and snippets added before August 20, 2010 are available under
 the [MIT license](https://opensource.org/licenses/MIT). You should insert
 the following attribution information into the MIT license template:
 
-```
+```plain
 © <date of last page revision> <name of person who created it>
 ```
 
 #### Text of MIT license template
 
-```
+```plain
 Copyright <YEAR> <COPYRIGHT HOLDER>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this

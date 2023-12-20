@@ -94,8 +94,8 @@ fetch(url)
         console.log(
           buffer.slice(
             Math.max(0, matchFoundAt - contextBefore),
-            matchFoundAt + toMatch.length + contextAfter
-          )
+            matchFoundAt + toMatch.length + contextAfter,
+          ),
         );
         console.log("Cancelling fetch");
         reader.cancel();
@@ -110,7 +110,7 @@ fetch(url)
   })
   .catch((err) => {
     console.error(
-      "Something went wrong. See devtools for details. Does the response lack CORS headers?"
+      "Something went wrong. See devtools for details. Does the response lack CORS headers?",
     );
     throw err;
   });

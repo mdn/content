@@ -1,6 +1,7 @@
 ---
 title: Web performance
 slug: Web/Performance
+page-type: landing-page
 ---
 
 {{QuickLinksWithSubPages}}
@@ -35,19 +36,13 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
 
 ## Using Performance APIs
 
-- [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/en-US/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
-- [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
-  - : [Resource loading and timing](/en-US/docs/Web/API/Resource_Timing_API) the loading of those resources, including managing the resource buffer and coping with CORS
-- [The performance timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/en-US/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/en-US/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
-- [User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-  - : Create application specific timestamps using the [user timing API](/en-US/docs/Web/API/User_Timing_API)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
+- [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
+  - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with CORS
+- [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
+  - : Create application specific timestamps using the [user timing API](/en-US/docs/Web/API/Performance_API/User_timing)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
   - : The [Beacon](/en-US/docs/Web/API/Beacon_API) interface schedules an asynchronous and non-blocking request to a web server.
 - [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
@@ -72,7 +67,6 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('First contentful paint')}}
 - {{glossary('First CPU idle')}}
 - {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
 - {{glossary('First meaningful paint')}}
 - {{glossary('First paint')}}
 - {{glossary('HTTP')}}
@@ -135,30 +129,30 @@ CSS
 
 JavaScript
 
-- [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+- [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/en-US/docs/Glossary/Garbage_collection)
 - [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame)
 
 APIs
 
 - [Performance API](/en-US/docs/Web/API/Performance_API)
-- [Navigation Timing API](/en-US/docs/Web/API/Navigation_timing_API)
+- [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing)
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API)
 - [Network Information API](/en-US/docs/Web/API/Network_Information_API)
 - [PerformanceNavigationTiming](/en-US/docs/Web/API/PerformanceNavigationTiming)
 - [Battery Status API](/en-US/docs/Web/API/Battery_Status_API)
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
-- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
 - [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
-- [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API)
 
   - [requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/en-US/docs/Web/HTTP/Link_prefetching_FAQ), and prerender
+- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
 - [FetchEvent.preloadResponse](/en-US/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/en-US/docs/Web/API/PerformanceServerTiming)
 
@@ -184,6 +178,6 @@ Best Practices
 
   - [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
 
-- [PWA](/en-US/docs/Web/Progressive_web_apps/Offline_Service_workers)
+- [Offline and background operation](/en-US/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
 - [Caching](/en-US/docs/Web/HTTP/Caching)
 - Content Delivery Networks (CDN)

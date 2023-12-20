@@ -4,6 +4,8 @@ slug: Glossary/Serializable_object
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Serializable objects** are objects that can be serialized and later deserialized in any JavaScript environment ("realm").
 This allows them to, for example, be stored on disk and later restored, or cloned with {{domxref("structuredClone()")}}, or shared between workers using {{domxref("DedicatedWorkerGlobalScope.postMessage()")}}.
 

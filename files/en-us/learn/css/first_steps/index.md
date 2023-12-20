@@ -1,6 +1,7 @@
 ---
 title: CSS first steps overview
 slug: Learn/CSS/First_steps
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

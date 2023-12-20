@@ -1,6 +1,7 @@
 ---
 title: regexp:test()
 slug: Web/EXSLT/regexp/test
+page-type: exslt-function
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
@@ -35,4 +36,4 @@ The character flags are:
 
 ## Specifications
 
-[EXSLT - REGEXP:TEST](http://exslt.org/regexp/functions/test/index.html)
+[EXSLT - REGEXP:TEST](https://exslt.github.io/regexp/functions/test/index.html)

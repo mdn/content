@@ -62,7 +62,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 
@@ -107,7 +109,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```
@@ -135,7 +139,9 @@ body {
 }
 
 h1 {
-  font: 1.6em "Fira Sans", sans-serif;
+  font:
+    1.6em "Fira Sans",
+    sans-serif;
   margin-bottom: 1rem;
 }
 ```

@@ -1,6 +1,7 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
+page-type: landing-page
 ---
 
 {{LearnSidebar}}

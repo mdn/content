@@ -64,7 +64,7 @@ pc.addEventListener(
     videoElement.srcObject = e.streams[0];
     hangupButton.disabled = false;
   },
-  false
+  false,
 );
 ```
 

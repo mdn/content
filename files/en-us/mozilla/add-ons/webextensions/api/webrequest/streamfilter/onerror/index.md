@@ -29,13 +29,13 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`);
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["<all_urls>"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 
@@ -47,13 +47,13 @@ function listener(details) {
 
   filter.onerror = (event) => {
     console.log(`Error: ${filter.error}`); // Error: Invalid request ID
-  }
+  };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  {urls: ["<all_urls>"], types: ["main_frame"]}
-);
+browser.webRequest.onBeforeRequest.addListener(listener, {
+  urls: ["<all_urls>"],
+  types: ["main_frame"],
+});
 ```
 
 {{WebExtExamples}}

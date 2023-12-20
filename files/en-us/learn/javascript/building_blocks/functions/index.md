@@ -1,6 +1,7 @@
 ---
 title: Functions — reusable blocks of code
 slug: Learn/JavaScript/Building_blocks/Functions
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
@@ -88,7 +89,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -234,7 +235,7 @@ textBox.addEventListener("keydown", (event) => {
 });
 ```
 
-If the function only takes one parameter, you can omit the brackets around the parameter:
+If the function only takes one parameter, you can omit the parentheses around the parameter:
 
 ```js-nolint
 textBox.addEventListener("keydown", event => {
@@ -244,17 +245,17 @@ textBox.addEventListener("keydown", event => {
 
 Finally, if your function contains only one line that's a `return` statement, you can also omit the braces and the `return` keyword, and implicitly return the expression. In the following example we're using the {{jsxref("Array.prototype.map()","map()")}} method of `Array` to double every value in the original array:
 
-```js
+```js-nolint
 const originals = [1, 2, 3];
 
-const doubled = originals.map((item) => item * 2);
+const doubled = originals.map(item => item * 2);
 
 console.log(doubled); // [2, 4, 6]
 ```
 
 The `map()` method takes each item in the array in turn, passing it into the given function. It then takes the value returned by that function and adds it to a new array.
 
-So in the example above, `(item) => item * 2` is the arrow function equivalent of:
+So in the example above, `item => item * 2` is the arrow function equivalent of:
 
 ```js
 function doubleItem(item) {
@@ -266,7 +267,7 @@ You can use the same concise syntax to rewrite the `addEventListener` example.
 
 ```js
 textBox.addEventListener("keydown", (event) =>
-  console.log(`You pressed "${event.key}".`)
+  console.log(`You pressed "${event.key}".`),
 );
 ```
 

@@ -119,7 +119,7 @@ gl.framebufferTexture2D(
   gl.COLOR_ATTACHMENT0,
   gl.TEXTURE_2D,
   texture,
-  0
+  0,
 );
 ```
 

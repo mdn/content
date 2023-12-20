@@ -15,7 +15,6 @@ The **`kerning`** attribute indicates whether the spacing between {{Glossary("gl
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("text")}}
 - {{SVGElement("tref")}}
@@ -28,7 +27,11 @@ html,
 body,
 svg {
   height: 100%;
-  font: 36px Verdana, Helvetica, Arial, sans-serif;
+  font:
+    36px Verdana,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 ```
 

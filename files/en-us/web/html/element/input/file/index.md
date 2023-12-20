@@ -111,7 +111,7 @@ Each `File` object contains the following information:
 - `name`
   - : The file's name.
 - `lastModified`
-  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
+  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970, at midnight).
 - `lastModifiedDate` {{deprecated_inline}}
   - : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. _This is deprecated and should not be used. Use `lastModified` instead._
 - `size`
@@ -170,6 +170,26 @@ The `accept` attribute doesn't validate the types of the selected files; it prov
 
 Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
 
+### Detecting cancellations
+
+The `cancel` event is fired when the user does not change their selection, reselecting the previously selected files. The `cancel` event is also fired when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
+
+For example, the following code will log to the console if the user closes the popup without selecting a file:
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
+
 ### Notes
 
 1. You cannot set the value of a file picker from a script — doing something like the following has no effect:
@@ -215,7 +235,6 @@ html {
 }
 
 form {
-  width: 580px;
   background: #ccc;
   margin: 0 auto;
   padding: 20px;
@@ -276,8 +295,8 @@ Next, let's walk through the JavaScript.
 In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the `input` element by clicking its {{htmlelement("label")}}, so it is better to visually hide the `input` and style the label like a button, so the user will know to interact with it if they want to upload files.
 
 ```js
-const input = document.querySelector('input');
-const preview = document.querySelector('.preview');
+const input = document.querySelector("input");
+const preview = document.querySelector(".preview");
 
 input.style.opacity = 0;
 ```
@@ -287,7 +306,7 @@ input.style.opacity = 0;
 Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
 ```js
-input.addEventListener('change', updateImageDisplay);
+input.addEventListener("change", updateImageDisplay);
 ```
 
 Whenever the `updateImageDisplay()` function is invoked, we:
@@ -300,32 +319,35 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If it is, we:
 
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
-  - Generate a thumbnail preview of the image by calling {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
+  - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
 
 - If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
 
 ```js
 function updateImageDisplay() {
-  while(preview.firstChild) {
+  while (preview.firstChild) {
     preview.removeChild(preview.firstChild);
   }
 
   const curFiles = input.files;
   if (curFiles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No files currently selected for upload';
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
     preview.appendChild(para);
   } else {
-    const list = document.createElement('ol');
+    const list = document.createElement("ol");
     preview.appendChild(list);
 
     for (const file of curFiles) {
-      const listItem = document.createElement('li');
-      const para = document.createElement('p');
+      const listItem = document.createElement("li");
+      const para = document.createElement("p");
       if (validFileType(file)) {
-        para.textContent = `File name ${file.name}, file size ${returnFileSize(file.size)}.`;
-        const image = document.createElement('img');
+        para.textContent = `File name ${file.name}, file size ${returnFileSize(
+          file.size,
+        )}.`;
+        const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
+        image.alt = image.title = file.name;
 
         listItem.appendChild(image);
         listItem.appendChild(para);
@@ -354,7 +376,7 @@ const fileTypes = [
   "image/svg+xml",
   "image/tiff",
   "image/webp",
-  "image/x-icon"
+  "image/x-icon",
 ];
 
 function validFileType(file) {
@@ -376,6 +398,16 @@ function returnFileSize(number) {
 }
 ```
 
+```js hidden
+const button = document.querySelector("form button");
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const para = document.createElement("p");
+  para.append("Image uploaded!");
+  preview.replaceChildren(para);
+});
+```
+
 The example looks like this; have a play:
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
@@ -394,8 +426,9 @@ The example looks like this; have a play:
     <tr>
       <td><strong>Events</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("HTMLElement/input_event", "input")}} and
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>

@@ -1,6 +1,7 @@
 ---
 title: Event handling (overview)
 slug: Web/Events/Event_handlers
+page-type: guide
 ---
 
 Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
@@ -73,7 +74,7 @@ btn.addEventListener(
   (event) => {
     console.log("greet:", event);
   },
-  { signal: controller.signal }
+  { signal: controller.signal },
 ); // pass an AbortSignal to this handler
 ```
 

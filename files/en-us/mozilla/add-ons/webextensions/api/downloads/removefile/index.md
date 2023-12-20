@@ -60,7 +60,7 @@ function remove(downloadItems) {
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(remove, onError);

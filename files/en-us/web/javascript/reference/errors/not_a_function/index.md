@@ -1,5 +1,5 @@
 ---
-title: "TypeError: \"x\" is not a function"
+title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 page-type: javascript-error
 ---
@@ -11,7 +11,7 @@ value from a function, but the value is not actually a function.
 
 ## Message
 
-```
+```plain
 TypeError: "x" is not a function. (V8-based & Firefox & Safari)
 ```
 
@@ -126,7 +126,7 @@ const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
-### Using brackets for multiplication
+### Using parenthese for multiplication
 
 In math, you can write 2 × (3 + 5) as 2\*(3 + 5) or just 2(3 + 5).
 

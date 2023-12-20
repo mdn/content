@@ -1,6 +1,7 @@
 ---
 title: Rendering a list of Vue components
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

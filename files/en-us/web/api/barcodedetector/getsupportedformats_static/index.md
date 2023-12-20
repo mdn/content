@@ -5,10 +5,10 @@ slug: Web/API/BarcodeDetector/getSupportedFormats_static
 page-type: web-api-static-method
 status:
   - experimental
-browser-compat: api.BarcodeDetector.getSupportedFormats
+browser-compat: api.BarcodeDetector.getSupportedFormats_static
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detector API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Barcode Detector API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`getSupportedFormats()`** static method
 of the {{domxref("BarcodeDetector")}} interface returns a {{jsxref('Promise')}} which

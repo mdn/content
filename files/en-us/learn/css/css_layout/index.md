@@ -1,6 +1,7 @@
 ---
 title: CSS layout
 slug: Learn/CSS/CSS_layout
+page-type: learn-module
 ---
 
 {{LearnSidebar}}
@@ -35,7 +36,7 @@ These articles will provide instruction on the fundamental layout tools and tech
 - [Normal flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)
   - : Elements on webpages lay themselves out according to _normal flow_ - until we do something to change that. This article explains the basics of normal flow as a grounding for learning how to change it.
 - [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-  - : [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals. After studying this guide you can [test your flexbox skills](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills) to check your understanding before moving on.
+  - : [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox) is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces. This article explains all the fundamentals. After studying this guide you can [test your flexbox skills](/en-US/docs/Learn/CSS/CSS_layout/Flexbox_skills) to check your understanding before moving on.
 - [Grids](/en-US/docs/Learn/CSS/CSS_layout/Grids)
   - : CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay content out in rows and columns, and has many features that make building complex layouts straightforward. This article will give you all you need to know to get started with page layout, then [test your grid skills](/en-US/docs/Learn/CSS/CSS_layout/Grid_skills) before moving on.
 - [Floats](/en-US/docs/Learn/CSS/CSS_layout/Floats)

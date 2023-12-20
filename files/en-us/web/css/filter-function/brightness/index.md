@@ -106,7 +106,9 @@ p {
   background-color: magenta;
   color: palegoldenrod;
   border: 1em solid rebeccapurple;
-  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  box-shadow:
+    inset -5px -5px red,
+    5px 5px yellow;
   padding: 0.25rem;
   font-size: 1.25rem;
   font-family: sans-serif;
@@ -199,7 +201,7 @@ In the images below, the first one has a `brightness()` filter function applied,
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/contrast", "contrast()")}}

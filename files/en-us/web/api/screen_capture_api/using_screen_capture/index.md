@@ -22,9 +22,8 @@ async function startCapture(displayMediaOptions) {
   let captureStream = null;
 
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    captureStream =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     console.error(`Error: ${err}`);
   }
@@ -180,7 +179,7 @@ startElem.addEventListener(
   (evt) => {
     startCapture();
   },
-  false
+  false,
 );
 
 stopElem.addEventListener(
@@ -188,7 +187,7 @@ stopElem.addEventListener(
   (evt) => {
     stopCapture();
   },
-  false
+  false,
 );
 ```
 
@@ -202,7 +201,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use {{domxref("console.log()")}} and {{domxref("console.error()")}} to log information to the log box in the document.
+This allows us to use {{domxref("console/log_static", "console/log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 
@@ -213,9 +212,8 @@ async function startCapture() {
   logElem.innerHTML = "";
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     dumpOptionsInfo();
   } catch (err) {
     console.error(err);

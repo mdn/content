@@ -1,13 +1,14 @@
 ---
 title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
+page-type: learn-module-chapter
 ---
 
 This is the fourth example that explain [how to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
 ## Change states
 
-### HTML Content
+### HTML
 
 ```html
 <form class="no-widget">
@@ -32,7 +33,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 .widget select,
@@ -55,7 +56,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -85,7 +86,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -101,7 +102,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -135,7 +136,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -155,7 +156,7 @@ This is the fourth example that explain [how to build custom form widgets](/en-U
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 // -------------------- //

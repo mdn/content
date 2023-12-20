@@ -1,9 +1,10 @@
 ---
 title: choose
 slug: Web/XPath/Functions/choose
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
@@ -11,7 +12,7 @@ The `choose` function returns one of the specified objects based on a boolean pa
 
 ### Syntax
 
-```
+```plain
 choose( boolean, object1, object2 )
 ```
 

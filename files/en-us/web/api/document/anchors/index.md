@@ -29,7 +29,7 @@ The following is an example that auto populates a Table of Contents with every a
 on the page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

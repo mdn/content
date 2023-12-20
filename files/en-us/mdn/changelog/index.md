@@ -1,6 +1,7 @@
 ---
 title: MDN Web Docs changelog
 slug: MDN/Changelog
+page-type: guide
 ---
 
 {{MDNSidebar}}

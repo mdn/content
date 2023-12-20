@@ -162,7 +162,7 @@ gl.compressedTexSubImage2D(
   512,
   512,
   ext.COMPRESSED_RGBA_S3TC_DXT5_EXT,
-  textureData
+  textureData,
 );
 ```
 

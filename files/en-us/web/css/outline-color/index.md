@@ -20,7 +20,7 @@ outline-color: rgb(30, 222, 121);
 outline-color: blue;
 
 /* Keyword value */
-outline-color: invert;
+outline-color: auto;
 
 /* Global values */
 outline-color: inherit;
@@ -36,8 +36,8 @@ The `outline-color` property is specified as any one of the values listed below.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
-- `invert`
-  - : To ensure the outline is visible, performs a color inversion of the background. Note that browsers are not required to support this value; if they don't, this keyword is considered invalid.
+- `auto` {{Experimental_Inline}}
+  - : Computes to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it computes to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description
 
@@ -103,4 +103,4 @@ p {
 - {{cssxref("outline-width")}}
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

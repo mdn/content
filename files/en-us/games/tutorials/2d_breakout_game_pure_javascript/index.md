@@ -1,6 +1,7 @@
 ---
 title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+page-type: guide
 ---
 
 {{GamesSidebar}}

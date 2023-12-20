@@ -11,7 +11,7 @@ to be parsed as JSON.
 
 ## Message
 
-```
+```plain
 SyntaxError: JSON.parse: unterminated string literal
 SyntaxError: JSON.parse: bad control character in string literal
 SyntaxError: JSON.parse: bad character in string literal

@@ -65,7 +65,7 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
   - : Sets the {{domxref("GPURenderPipeline")}} to use for this render bundle.
 
 - {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} {{Experimental_Inline}}
-  - : Sets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
+  - : Sets or unsets the current {{domxref("GPUBuffer")}} that will provide vertex data for subsequent drawing commands.
 
 ## Examples
 

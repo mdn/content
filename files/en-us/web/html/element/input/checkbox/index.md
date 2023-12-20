@@ -128,15 +128,15 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
 ```js
-const overall = document.querySelector('#enchantment');
-const ingredients = document.querySelectorAll('ul input');
+const overall = document.querySelector("#enchantment");
+const ingredients = document.querySelectorAll("ul input");
 
-overall.addEventListener('click', (e) => {
+overall.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
 for (const ingredient of ingredients) {
-  ingredient.addEventListener('click', updateDisplay);
+  ingredient.addEventListener("click", updateDisplay);
 }
 
 function updateDisplay() {
@@ -213,7 +213,11 @@ The following example is an extended version of the "multiple checkboxes" exampl
         <input type="checkbox" id="other" name="interest" value="other" />
         Other
       </label>
-      <input type="text" id="otherValue" name="other" aria-label="Other interest" />
+      <input
+        type="text"
+        id="otherValue"
+        name="other"
+        aria-label="Other interest" />
     </div>
     <div>
       <button type="submit">Submit form</button>
@@ -253,16 +257,16 @@ legend {
 ### JavaScript
 
 ```js
-const otherCheckbox = document.querySelector('#other');
-const otherText = document.querySelector('#otherValue');
-otherText.style.visibility = 'hidden';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.addEventListener('change', () => {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
   } else {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "hidden";
   }
 });
 ```

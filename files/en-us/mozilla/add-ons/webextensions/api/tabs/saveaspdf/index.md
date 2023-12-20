@@ -40,10 +40,9 @@ In this example a background script listens for a click on a [browser action](/e
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.saveAsPDF({})
-    .then((status) => {
-      console.log(status);
-    });
+  browser.tabs.saveAsPDF({}).then((status) => {
+    console.log(status);
+  });
 });
 ```
 

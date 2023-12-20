@@ -159,4 +159,4 @@ OneClass.apply(obj3, args);
 - {{jsxref("Reflect")}}
 - {{jsxref("Operators/new", "new")}}
 - [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
-- [`Proxy`'s `construct` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)
+- [`handler.construct()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct)

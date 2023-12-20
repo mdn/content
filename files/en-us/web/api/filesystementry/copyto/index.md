@@ -78,10 +78,10 @@ workingDirectory.getFile(
       (dirEntry) => {
         fileEntry.copyTo(dirEntry);
       },
-      handleError
+      handleError,
     );
   },
-  handleError
+  handleError,
 );
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: The HTML5 input types
 slug: Learn/Forms/HTML5_input_types
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}

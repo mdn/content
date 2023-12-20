@@ -42,7 +42,7 @@ This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Inter
 ## Example
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify"
 ```
 
 ## Browser compatibility

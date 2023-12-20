@@ -36,8 +36,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. The function will be passed no parameters.
+- `listener`
+  - : The function called when this event occurs. The function is passed no parameters.
 
 ## Browser compatibility
 

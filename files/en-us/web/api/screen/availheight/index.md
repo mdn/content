@@ -44,7 +44,7 @@ In the main window, when it's time to open the panels, code like the following i
 const paletteWindow = window.open(
   "panels.html",
   "Panels",
-  "left=0, top=0, width=200"
+  "left=0, top=0, width=200",
 );
 ```
 

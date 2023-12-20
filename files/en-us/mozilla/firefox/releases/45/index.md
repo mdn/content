@@ -1,6 +1,7 @@
 ---
 title: Firefox 45 for developers
 slug: Mozilla/Firefox/Releases/45
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

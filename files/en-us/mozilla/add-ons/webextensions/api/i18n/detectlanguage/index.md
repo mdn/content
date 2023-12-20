@@ -55,7 +55,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-let text = "L'homme est né libre, et partout il est dans les fers."
+let text = "L'homme est né libre, et partout il est dans les fers.";
 
 let detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

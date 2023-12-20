@@ -4,6 +4,8 @@ slug: Glossary/Falsy
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **falsy** (sometimes written **falsey**) value is a value that is considered false when encountered in a {{Glossary("Boolean")}} context.
 
 {{Glossary("JavaScript")}} uses {{Glossary("Type_Conversion", "type conversion")}} to coerce any value to a Boolean in contexts that require it, such as {{Glossary("Conditional", "conditionals")}} and {{Glossary("Loop", "loops")}}.

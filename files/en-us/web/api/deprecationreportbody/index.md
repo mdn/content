@@ -79,7 +79,7 @@ function displayReports(reports) {
   reports.forEach((report, i) => {
     const listItem = document.createElement("li");
     const textNode = document.createTextNode(
-      `Report ${i + 1}, type: ${report.type}`
+      `Report ${i + 1}, type: ${report.type}`,
     );
     listItem.appendChild(textNode);
     const innerList = document.createElement("ul");
@@ -108,4 +108,4 @@ The `reports` parameter contains an array of all the reports in the observer's r
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)

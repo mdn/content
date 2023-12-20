@@ -30,7 +30,7 @@ someElement.addEventListener(
   (event) => {
     process_tilt(event.tiltX, event.tiltY);
   },
-  false
+  false,
 );
 ```
 

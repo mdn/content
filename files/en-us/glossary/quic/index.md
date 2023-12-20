@@ -4,6 +4,8 @@ slug: Glossary/QUIC
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **QUIC** is a multiplexed transport protocol implemented on UDP. It is used instead of {{Glossary("TCP")}} as the transport layer in HTTP/3.
 
 QUIC was designed to provide quicker setup and lower latency for HTTP connections. In particular:

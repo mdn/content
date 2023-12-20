@@ -35,7 +35,6 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("CustomEvent")}}
 - {{domxref("DeviceMotionEvent")}}
 - {{domxref("DeviceOrientationEvent")}}
-- {{domxref("DeviceProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("DragEvent")}}
 - {{domxref("ErrorEvent")}}
 - {{domxref("FetchEvent")}}
@@ -68,7 +67,6 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("TrackEvent")}}
 - {{domxref("TransitionEvent")}}
 - {{domxref("UIEvent")}}
-- {{domxref("UserProximityEvent")}} {{Deprecated_Inline}}
 - {{domxref("WebGLContextEvent")}}
 - {{domxref("WheelEvent")}}
 
@@ -98,7 +96,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
   - : The time at which the event was created (in milliseconds). By specification, this value is time since epoch—but in reality, browsers' definitions vary. In addition, work is underway to change this to be a {{domxref("DOMHighResTimeStamp")}} instead.
 - {{domxref("Event.type")}} {{ReadOnlyInline}}
-  - : The case-insensitive name identifying the type of the event.
+  - : The name identifying the type of the event.
 
 ### Legacy and non-standard properties
 

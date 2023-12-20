@@ -63,13 +63,13 @@ configuration is typically found in a `.conf` file (`httpd.conf`
 and `apache.conf` are common names for these), or in an
 `.htaccess` file:
 
-```
+```apacheconf
 Header set Access-Control-Allow-Origin 'https://example.com'
 ```
 
 For **Nginx** ([docs](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header)), the command to set up this header is:
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'https://example.com' always;
 ```
 

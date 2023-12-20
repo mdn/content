@@ -1,9 +1,10 @@
 ---
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
+page-type: guide
 ---
 
-{{XSLTRef}}
+{{XsltSidebar}}
 
 ## An Overview
 

@@ -89,7 +89,7 @@ new Request(input, options)
     ```js
     const oldRequest = new Request(
       "https://github.com/mdn/content/issues/12959",
-      { headers: { From: "webmaster@example.org" } }
+      { headers: { From: "webmaster@example.org" } },
     );
     oldRequest.headers.get("From"); // "webmaster@example.org"
     const newRequest = new Request(oldRequest, {

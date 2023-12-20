@@ -29,7 +29,7 @@ Validation errors occur whenever invalid inputs are given to a WebGPU call. Thes
 The `message` property is inherited from its parent, {{domxref("GPUError")}}:
 
 - {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : A string providing a human-readable message that explains why the error ocurred.
+  - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples
 

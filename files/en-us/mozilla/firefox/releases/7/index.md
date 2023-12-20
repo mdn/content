@@ -1,6 +1,7 @@
 ---
 title: Firefox 7 for developers
 slug: Mozilla/Firefox/Releases/7
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -21,10 +22,10 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 - As part of the [Azure project](https://web.archive.org/web/20160304084025/https://blog.mozilla.org/joe/2011/04/26/introducing-the-azure-project/) the Direct2D Azure Backend [has been implemented](https://bugzil.la/651858) and will significantly improve the performance of the 2D canvas.
 - Specifying invalid values when calling `setTransform()`, `bezierCurveTo()`, or `arcTo()` no longer throws an exception; these calls are now correctly silently ignored.
-- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/ispointinpath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
+- The [`isPointInPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isPointInPath) method now correctly considers the transformation matrix when comparing the specified point to the current path.
 - Calling `strokeRect()` with a zero width and height now correctly does nothing.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
-- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawimage) with non-finite coordinates no longer throws an exception.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with a zero width or height {{ HTMLElement("canvas") }} now throws `INVALID_STATE_ERR`.
+- Calling [`drawImage()`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage) with non-finite coordinates no longer throws an exception.
 - `toDataURL()` method now accepts a second argument to control JPEG quality.
 - Support for the non-standard `globalCompositeOperation` operations `clear` and `over` has been removed.
 - [Shadows](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors#shadows) are now only drawn for `source-over` compositing operations.
@@ -44,15 +45,15 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 - The top-level {{ MathMLElement("math") }} element now accepts any attributes of the {{ MathMLElement("mstyle") }} element.
 - Support for [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/) fonts has been added.
 - The `medium` line thickness of fraction bars in {{ MathMLElement("mfrac") }} elements has been corrected to match the default thickness.
-- [Names for negative spaces](</en-US/docs/Web/MathML/Attribute/Values#constants_(namedspaces)>) are now supported.
+- [Names for negative spaces](</en-US/docs/Web/MathML/Values#constants_(namedspaces)>) are now supported.
 
 ### DOM
 
 - The {{ domxref("File") }} interface's non-standard methods `getAsBinary()`, `getAsDataURL()`, and `getAsText()` have been removed as well as the non-standard properties `fileName` and `fileSize` ([Firefox bug 661876](https://bugzil.la/661876)).
 - The {{ domxref("FormData", "FormData") }} interface no longer reports the filename as an empty string when sending the `Content-Disposition` HTTP header if the data was set using a {{ domxref("Blob") }}. This fixes errors that were happening with some servers.
-- The {{ domxref("element.dir") }} attribute now always returns its result as all lower-case, as required by the HTML specification.
+- The {{ domxref("HTMLelement.dir") }} property now always returns its result as all lower-case, as required by the HTML specification.
 - The {{ domxref("FileReader") }} `readAsArrayBuffer()` method is now implemented.
-- {{ domxref("document.createEntityReference") }} has been removed. It was never properly implemented and is not implemented in most other browsers.
+- `Document.createEntityReference` has been removed. It was never properly implemented and is not implemented in most other browsers.
 - `document.normalizeDocument` has been removed. Use {{ domxref("Node.normalize") }} instead.
 - {{ domxref("DOMTokenList.item") }} now returns `undefined` if the `index` is out of bounds, previously it returned `null`.
 - `Node.getFeature` has been removed.
@@ -63,7 +64,7 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### JavaScript
 
-- The [`Function.arity`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/arity) property has been removed; use [`Function.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) instead.
+- The `Function.arity` property has been removed; use [`Function.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) instead.
 
 ### WebSockets
 
@@ -73,11 +74,11 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ### console API
 
-- Message logged with `console.log` while the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) isn't open are still logged, although they aren't displayed when the web console is opened.
+- Message logged with `console.log` while the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) isn't open is still logged, although they aren't displayed when the web console is opened.
 
 ### Web timing
 
-- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API) specification which provides data that can be used to measure the performance of a website.
+- Initial implementation of the [Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) specification which provides data that can be used to measure the performance of a website.
 
 ### XML
 
@@ -85,9 +86,9 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 ## Changes for Mozilla and add-on developers
 
-These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/en-US/docs/Mozilla/Firefox/Updating_extensions_for_Firefox_7) for additional information.
+These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/en-US/docs/Mozilla/Firefox/Releases/7/Updating_extensions) for additional information.
 
-> **Note:** Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> **Note:** Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox.
 
 ### JavaScript code modules
 
@@ -97,17 +98,17 @@ These changes affect add-on developers as well as developers working on or with 
 
 #### AddonManager.jsm
 
-- The Add-on Manager has new methods for managing lists of add-ons that changed during applications startup: `AddonManager.addStartupChange()`, `AddonManager.removeStartupChange()`, and `AddonManager.getStartupChanges()`.
+- The Add-on Manager has new methods for managing lists of add-ons that changed during application startup: `AddonManager.addStartupChange()`, `AddonManager.removeStartupChange()`, and `AddonManager.getStartupChanges()`.
 
 ### XUL
 
 - `<tree>` elements can now persist the state of disclosure triangles if the nodes referenced by `datasources` all have unique IDs specified by "id" attributes.
-- `<panel>` elements can now be configured to [let the user drag them by clicking anywhere on their background](/en-US/docs/XUL/PopupGuide/Panels#letting_panels_be_dragged_by_grabbing_the_background) by using the new `backdrag` attribute.
+- `<panel>` elements can now be configured to let the user drag them by clicking anywhere on their background by using the new `backdrag` attribute.
 
 ### XPCOM
 
-- The new [`Components.utils.schedulePreciseGC()`](/en-US/docs/Components.utils.schedulePreciseGC) method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.
-- The [`Components.utils.unload()`](/en-US/docs/Components.utils.unload) method lets you unload JavaScript code modules previously loaded by calling [`Components.utils.load()`](/en-US/docs/Components.utils.load).
+- The new `Components.utils.schedulePreciseGC()` method lets you schedule a thorough garbage collection cycle to occur at some point in the future when no JavaScript code is executing; a callback is executed once collection is complete.
+- The `Components.utils.unload()` method lets you unload JavaScript code modules previously loaded by calling `Components.utils.load()`.
 
 ### Memory reporters
 
@@ -115,13 +116,13 @@ Support has been added for multi-reporters; that is, memory reporters that gathe
 
 ### User experience changes
 
-- Extension options can now be [displayed inside the Add-on Manager](/en-US/docs/Extensions/Inline_Options) for both restartless and traditional extensions.
-- The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using [DownloadLastDir.jsm](/en-US/docs/JavaScript_code_modules/DownloadLastDir.jsm).
+- Extension options can now be displayed inside the Add-on Manager for both restartless and traditional extensions.
+- The destination of downloads is now remembered on a site-by-site basis. This data can be accessed using `DownloadLastDir.jsm`.
 
 ### Changes to the build system
 
 - The ActiveX embedding API is no longer built and support has been removed from the build system. Supporting interfaces have also been removed; see [Removed interfaces](#removed_interfaces).
-- You should no longer specify `-Zc:wchar_t-` when building on Windows. See the [updated Build documentation](/en-US/docs/Mozilla/Developer_guide/Build_Instructions#build_and_install) for details.
+- You should no longer specify `-Zc:wchar_t-` when building on Windows.
 
 ### Interface changes
 

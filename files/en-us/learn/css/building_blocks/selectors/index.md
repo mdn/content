@@ -1,6 +1,7 @@
 ---
 title: CSS selectors
 slug: Learn/CSS/Building_blocks/Selectors
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
@@ -77,7 +78,7 @@ h1,
 
 In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1100)}}
+{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1150)}}
 
 When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.
 
@@ -107,21 +108,21 @@ There are a few different groupings of selectors, and knowing which type of sele
 
 ### Type, class, and ID selectors
 
-This group includes selectors that target an HTML element such as an `<h1>`.
+Type selectors target an HTML element such as an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements):
 
 ```css
 h1 {
 }
 ```
 
-It also includes selectors which target a class:
+Class selectors target an element that has a specific value for its [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute:
 
 ```css
 .box {
 }
 ```
 
-or, an ID:
+ID selectors target an element that has a specific value for its [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute:
 
 ```css
 #unique {
@@ -174,6 +175,6 @@ article > p {
 
 In this article we've introduced CSS selectors, which enable you to target particular HTML elements. Next, we'll take a closer look at [type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
 
-For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_Selectors).
+For a complete list of selectors, see our [CSS selectors reference](/en-US/docs/Web/CSS/CSS_selectors).
 
 {{NextMenu("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}

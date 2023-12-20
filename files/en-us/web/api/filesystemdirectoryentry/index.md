@@ -37,7 +37,7 @@ function onFs(fs) {
       //directoryEntry.name === 'Documents'
       //directoryEntry.fullPath === '/Documents'
     },
-    onError
+    onError,
   );
 }
 

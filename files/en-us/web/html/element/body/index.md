@@ -18,9 +18,7 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >Sectioning root</a
-        >.
+        None.
       </td>
     </tr>
     <tr>
@@ -160,7 +158,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     <title>Document title</title>
   </head>
   <body>
-    <p>The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.</p>
+    <p>
+      The <code>&lt;body&gt;</code> HTML element represents the content of an
+      HTML document. There can be only one <code>&lt;body&gt;</code> element in
+      a document.
+    </p>
   </body>
 </html>
 ```

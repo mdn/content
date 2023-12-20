@@ -1,6 +1,7 @@
 ---
 title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -42,11 +43,11 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - In the past, the {{ cssxref(":hover") }} pseudoclass was not applied to class selectors when in quirks mode; for example, `.someclass:hover` did not work. This quirk has been removed.
 - The {{ cssxref(":indeterminate") }} pseudo-class can be applied to {{ HTMLElement("progress") }} elements. This is non-standard, but we hope it will be adopted by other browsers, because it will be useful.
 - The `-moz-win-exclude-glass` value has been added to the `-moz-appearance` CSS property in order to exclude opaque regions in Aero Glass glaze effects on Windows systems.
-- [Webkit bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
+- [Firefox bug 658949](https://bugzil.la/658949) changed how the hash (#) symbol is treated in data URLs which may break CSS stylesheets which contain such a symbol if it is not escaped.
 
 ### DOM
 
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
   - : You can now test the result of a media query string programmatically using the {{ domxref("window.matchMedia()") }} method and the {{ domxref("MediaQueryList") }} interface.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.
@@ -56,15 +57,15 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 <!---->
 
 - `navigator.securityPolicy`, which has returned an empty string for a long time, has been removed outright.
-- {{ domxref("BlobBuilder") }} is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
-- The {{ domxref("document.height") }} and {{ domxref("document.width") }} have been removed. [Webkit bug 585877](https://bugzil.la/585877)
+- `BlobBuilder` is now implemented, although for now it's prefixed (so you need to use `MozBlobBuilder`).
+- The `Document.height` and `Document.width` have been removed. [Firefox bug 585877](https://bugzil.la/585877)
 - The {{ domxref("DocumentType") }} object's `entities` and `notations` properties, which were never implemented and always returned `null`, have been removed, since they've been removed from the specification anyway.
 - The `DOMConfiguration` interface and the `document.domConfig` property that used it have both been removed; they were never supported and have since been removed from the DOM specification.
 - The `hashchange` event now correctly includes [the `newURL` and `oldURL` fields](/en-US/docs/Web/API/Window/hashchange_event).
 - The {{ domxref("FileReader") }} interface's `abort()` method now throws an exception when used if no file read is in progress.
 - The {{ domxref("window.postMessage()") }} method now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to let you pass JavaScript objects instead of just strings from one window to another.
 - The {{ domxref("window.history") }} API now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize the objects you pass to the `pushState()` and `replaceState()` methods; this lets you use more complex objects (including those that contain cyclic graphs of references).
-- You can now [detect when printing has been initiated and has completed](/en-US/docs/Web/Guide/Printing#detecting_print_requests) by listening for the new `beforeprint` and `afterprint` events.
+- You can now [detect when printing has been initiated and has completed](/en-US/docs/Web/CSS/CSS_media_queries/Printing#detecting_print_requests) by listening for the new `beforeprint` and `afterprint` events.
 - The `document.strictErrorChecking` property has been removed, since it was never implemented and was removed from the DOM specification.
 - The standard {{ domxref("event.defaultPrevented") }} property is now supported; you should use this instead of the non-standard `getPreventDefault()` method to detect whether or not {{ domxref("event.preventDefault()") }} was called on the event.
 - The {{ domxref("window.top") }} property is now properly read only.
@@ -126,7 +127,7 @@ For an overview of the changes you may need to make in order to make your add-on
 
 #### XPCOMUtils.jsm
 
-- The new [`importRelative()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#importRelative()>) method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
+- The new `importRelative()` method lets you load one JavaScript code module from a path relative to the path of another JavaScript code module. This makes it easier to build modules that depend on each other.
 
 ### XPCOM
 

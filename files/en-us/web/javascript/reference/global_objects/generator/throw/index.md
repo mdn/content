@@ -11,10 +11,10 @@ The **`throw()`** method of {{jsxref("Generator")}} instances acts as if a `thro
 
 ## Syntax
 
-<!-- We don't usually add the "generatorObject" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
+<!-- We don't usually add the "generatorInstance" subject for methods. However, it is necessary here, because "throw" is a keyword, so otherwise it's invalid syntax. -->
 
 ```js-nolint
-generatorObject.throw(exception)
+generatorInstance.throw(exception)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ generatorObject.throw(exception)
 
 ### Return value
 
-If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+If the thrown exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return an {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:

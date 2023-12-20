@@ -39,7 +39,7 @@ hitTestResult.createAnchor().then(
   },
   (error) => {
     console.error(`Could not create anchor: ${error}`);
-  }
+  },
 );
 ```
 

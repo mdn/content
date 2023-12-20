@@ -65,7 +65,7 @@ ext.framebufferTextureMultiviewOVR(
   colorTex,
   0,
   0,
-  2
+  2,
 );
 
 const depthStencilTex = gl.createTexture();
@@ -78,7 +78,7 @@ ext.framebufferTextureMultiviewOVR(
   depthStencilTex,
   0,
   0,
-  2
+  2,
 );
 gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```

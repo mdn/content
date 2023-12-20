@@ -136,7 +136,7 @@ video.addEventListener(
       streaming = true;
     }
   },
-  false
+  false,
 );
 ```
 
@@ -157,7 +157,7 @@ startbutton.addEventListener(
     takepicture();
     ev.preventDefault();
   },
-  false
+  false,
 );
 ```
 
@@ -245,7 +245,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
   <p>
     Visit our article
     <a
-      href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
+      href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos">
       Taking still photos with WebRTC</a
     >
     to learn more about the technologies used here.
@@ -384,7 +384,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
           streaming = true;
         }
       },
-      false
+      false,
     );
 
     startbutton.addEventListener(
@@ -393,7 +393,7 @@ If there isn't a valid image available (that is, the `width` and `height` are bo
         takepicture();
         ev.preventDefault();
       },
-      false
+      false,
     );
 
     clearphoto();

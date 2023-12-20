@@ -1,6 +1,7 @@
 ---
 title: Ember resources and troubleshooting
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -139,8 +140,8 @@ export default class Example extends Component {
 
 Which would then be called in the template like so:
 
-```hbs
-<Checkbox @data="\{{this.someData}}" @onChange="\{{this.setData}}" />
+```hbs-nolint
+<Checkbox @data=\{{this.someData}} @onChange=\{{this.setData}} />
 ```
 
 Due to the conciseness of using `mut`, it may be desirable to reach for it. However, `mut` has unnatural semantics and has caused much confusion over the term of its existence.

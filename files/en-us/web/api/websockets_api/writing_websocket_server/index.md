@@ -167,7 +167,7 @@ After a successful handshake, the client will send encoded messages to the serve
 
 If we send "MDN", we get these bytes:
 
-```
+```plain
 129 131 61 84 35 6 112 16 109
 ```
 
@@ -251,7 +251,7 @@ class Server {
             while (client.Available < 3); // match against "get"
 
             byte[] bytes = new byte[client.Available];
-            stream.Read(bytes, 0, client.Available);
+            stream.Read(bytes, 0, bytes.Length);
             string s = Encoding.UTF8.GetString(bytes);
 
             if (Regex.IsMatch(s, "^GET", RegexOptions.IgnoreCase)) {
@@ -279,7 +279,7 @@ class Server {
                     mask = (bytes[1] & 0b10000000) != 0; // must be true, "All messages from the client to the server have this bit set"
                 int opcode = bytes[0] & 0b00001111, // expecting 1 - text message
                     offset = 2;
-                ulong msglen = bytes[1] & 0b01111111;
+                ulong msglen = bytes[1] & (ulong)0b01111111;
 
                 if (msglen == 126) {
                     // bytes are reversed because websocket will print them in Big-Endian, whereas
@@ -319,7 +319,7 @@ class Server {
 ### client.html
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <style>
     textarea {

@@ -5,6 +5,8 @@ page-type: svg-attribute
 browser-compat: svg.attributes.core
 ---
 
+{{SVGRef}}
+
 The SVG core attributes are all the common attributes that can be specified on any SVG element.
 
 - [`id`](#id)

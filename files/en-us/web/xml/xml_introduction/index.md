@@ -1,6 +1,7 @@
 ---
 title: XML introduction
 slug: Web/XML/XML_introduction
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/XML")}}

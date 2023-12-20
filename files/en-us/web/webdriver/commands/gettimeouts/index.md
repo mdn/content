@@ -1,6 +1,7 @@
 ---
 title: Get Timeouts
 slug: Web/WebDriver/Commands/GetTimeouts
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetTimeouts
 ---
 

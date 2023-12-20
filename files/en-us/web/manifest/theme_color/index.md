@@ -1,6 +1,7 @@
 ---
 title: theme_color
 slug: Web/Manifest/theme_color
+page-type: web-manifest-member
 browser-compat: html.manifest.theme_color
 ---
 

@@ -10,7 +10,7 @@ The JavaScript exception "BigInt division by zero" occurs when a {{jsxref("BigIn
 
 ## Message
 
-```
+```plain
 RangeError: Division by zero (V8-based)
 RangeError: BigInt division by zero (Firefox)
 RangeError: 0 is an invalid divisor value. (Safari)
@@ -46,5 +46,5 @@ const quotient = b === 0n ? undefined : a / b;
 ## See also
 
 - [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
-- [Division](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Remainder](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)

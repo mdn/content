@@ -1,6 +1,7 @@
 ---
 title: Build your own function
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
@@ -80,7 +81,7 @@ To begin with, let's put together a basic function.
    panel.appendChild(closeBtn);
 
    closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel)
+     panel.parentNode.removeChild(panel),
    );
    ```
 
@@ -220,7 +221,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
    ```js
    btn.addEventListener("click", () =>
-     displayMessage("Woo, this is a different message!")
+     displayMessage("Woo, this is a different message!"),
    );
    ```
 

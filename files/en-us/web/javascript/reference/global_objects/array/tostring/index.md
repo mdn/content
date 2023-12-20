@@ -7,16 +7,20 @@ browser-compat: javascript.builtins.Array.toString
 
 {{JSRef}}
 
-The **`toString()`** method returns a string representing the
+The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
 
-{{EmbedInteractiveExample("pages/js/array-tostring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-tostring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -35,6 +39,26 @@ console.log(Array.prototype.toString.call({ join: () => 1 })); // 1
 ```
 
 JavaScript calls the `toString` method automatically when an array is to be represented as a text value or when an array is referred to in a string concatenation.
+
+`Array.prototype.toString` recursively converts each element, including other arrays, to strings. Because the string returned by `Array.prototype.toString` does not have delimiters, nested arrays look like they are flattened.
+
+```js
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log(matrix.toString()); // 1,2,3,4,5,6,7,8,9
+```
+
+When an array is cyclic (it contains an element that is itself), browsers avoid infinite recursion by ignoring the cyclic reference.
+
+```js
+const arr = [];
+arr.push(1, [3, arr, 4], 2);
+console.log(arr.toString()); // 1,3,,4,2
+```
 
 ## Examples
 
@@ -77,7 +101,7 @@ console.log(Array.prototype.toString.call({ join: "not function" }));
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.toLocaleString()")}}

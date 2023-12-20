@@ -63,7 +63,10 @@ Using CSS, you can override the default style for the `<var>` element. In this e
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 

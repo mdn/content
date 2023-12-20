@@ -3,12 +3,10 @@ title: "ToggleEvent: ToggleEvent() constructor"
 short-title: ToggleEvent()
 slug: Web/API/ToggleEvent/ToggleEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.ToggleEvent.ToggleEvent
 ---
 
-{{APIRef("Popover API")}}{{SeeCompatTable}}
+{{APIRef("Popover API")}}
 
 The **`ToggleEvent()`** constructor creates a new {{domxref("ToggleEvent")}} object.
 

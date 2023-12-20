@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-mask-position-x
 
 The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-mask-position-x: left;
@@ -26,7 +28,10 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 -webkit-mask-position-x: -1cm;
 
 /* Multiple values */
--webkit-mask-position-x: 50px, 25%, -3em;
+-webkit-mask-position-x:
+  50px,
+  25%,
+  -3em;
 
 /* Global values */
 -webkit-mask-position-x: inherit;
@@ -35,8 +40,6 @@ The `-webkit-mask-position-x` CSS property sets the initial horizontal position 
 -webkit-mask-position-x: revert-layer;
 -webkit-mask-position-x: unset;
 ```
-
-## Syntax
 
 ### Values
 

@@ -5,6 +5,8 @@ page-type: svg-attribute
 browser-compat: svg.attributes.style
 ---
 
+{{SVGRef}}
+
 The SVG styling attributes are all the attributes that can be specified on any SVG element to apply CSS styling effects.
 
 - [`class`](#class)

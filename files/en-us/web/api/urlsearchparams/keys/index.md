@@ -43,7 +43,7 @@ for (const key of searchParams.keys()) {
 
 The result is:
 
-```
+```plain
 key1
 key2
 ```

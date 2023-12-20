@@ -1,6 +1,7 @@
 ---
 title: What is accessibility?
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

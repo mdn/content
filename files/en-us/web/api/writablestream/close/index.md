@@ -115,7 +115,7 @@ const writableStream = new WritableStream(
       log("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 log("Sending 'Hello, world.' message.");

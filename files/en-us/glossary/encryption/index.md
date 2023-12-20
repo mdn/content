@@ -4,6 +4,8 @@ slug: Glossary/Encryption
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 In {{glossary("cryptography")}}, **encryption** is the conversion of {{glossary("plaintext")}} into a coded text or {{glossary("ciphertext")}}. A ciphertext is intended to be unreadable by unauthorized readers.
 
 Encryption is a cryptographic primitive: it transforms a plaintext message into a ciphertext using a cryptographic algorithm called a {{glossary("cipher")}}. Encryption in modern ciphers is performed using a specific algorithm and a secret, called the {{glossary("key")}}. Since the algorithm is often public, the key must stay secret if the encryption stays secure.

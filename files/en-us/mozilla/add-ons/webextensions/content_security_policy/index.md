@@ -13,7 +13,7 @@ Extensions developed with WebExtension APIs have a Content Security Policy (CSP)
 Like websites, extensions can load content from different sources. For example, a browser action's popup is specified as an HTML document, and it can include JavaScript and CSS from different sources, just like a normal web page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -44,13 +44,13 @@ Compared to a website, extensions have access to additional privileged APIs, so 
 
 The default content security policy for extensions using Manifest V2 is:
 
-```
+```plain
 "script-src 'self'; object-src 'self';"
 ```
 
 While for extensions using Manifest V3, the default content security policy is:
 
-```
+```plain
 "script-src 'self'; upgrade-insecure-requests;"
 ```
 
@@ -76,6 +76,8 @@ This doesn't load the requested resource: it fails silently, and any object that
 
 - download the resource, package it in your extension, and refer to this version of the resource.
 - allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or, in Manifest V3, the `content_scripts` property.
+
+> **Note:** If your modified CSP allows remote script injection, your extension will get rejected from addons.mozilla.org (AMO) during the review. For more information, see details about [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/).
 
 ### eval() and friends
 
@@ -107,7 +109,7 @@ Under the default CSP, inline JavaScript is not executed. This disallows both Ja
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
+If you are currently using code like `<body onload="main()">` to run your script when the page has loaded, listen for [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) or [load](/en-US/docs/Web/API/Window/load_event) instead.
 
 ### WebAssembly
 
@@ -123,7 +125,7 @@ For Chrome, extensions cannot use WebAssembly in version 101 or earlier. In 102,
 
 Extensions should use `https:` and `wss:` when communicating with external servers. To encourage this as the standard behavior, the default Manifest V3 CSP includes the {{CSP("upgrade-insecure-requests")}} directive. This directive automatically upgrades network requests to `http:` to use `https:`.
 
-While requests are automatically updated, it is still recommended to use `https:`-URLs in the extension's source code where possible. In particular, entries in the [`host_permissions` section of manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) should start with `https://` or `*://` instead of only `http://`.
+While requests are automatically upgraded, it is still recommended to use `https:`-URLs in the extension's source code where possible. In particular, entries in the [`host_permissions` section of manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) should start with `https://` or `*://` instead of only `http://`.
 
 Manifest V3 Extensions that need to make `http:` or `ws:` requests can opt out of this behavior by overriding the default CSP using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) manifest.json key with a policy that excludes the `upgrade-insecure-requests` directive. However, to comply with the [security requirements](https://extensionworkshop.com/documentation/publish/add-on-policies/#security-compliance-and-blocking) of the Add-on Policies, all user data must be transmitted securely.
 

@@ -65,7 +65,7 @@ element.addEventListener(
   (event) => {
     // …
   },
-  false
+  false,
 );
 ```
 

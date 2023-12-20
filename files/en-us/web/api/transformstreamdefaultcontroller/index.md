@@ -41,7 +41,7 @@ const transformContent = {
           controller.terminate();
         } else if (ArrayBuffer.isView(chunk)) {
           controller.enqueue(
-            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength)
+            new Uint8Array(chunk.buffer, chunk.byteOffset, chunk.byteLength),
           );
         } else if (
           Array.isArray(chunk) &&

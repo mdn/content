@@ -1,6 +1,7 @@
 ---
 title: Styling links
 slug: Learn/CSS/Styling_text/Styling_links
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
@@ -150,7 +151,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
 }
 
 a:link {
@@ -300,7 +301,7 @@ solution.addEventListener("click", () => {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -367,7 +368,7 @@ p {
 }
 
 a {
-  outline: none;
+  outline-color: transparent;
   text-decoration: none;
   padding: 2px 1px 0;
 }
@@ -410,7 +411,7 @@ So that's it. Try revisiting the active learning section above and trying this n
 
 > **Note:** The `href` values look strange — we've used dummy links here that don't really go anywhere. The reason for this is that if we used real links, you would be able to load an external site in the `<iframe>` the live example is embedded in, thereby losing the example.
 
-> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) yet; these are explained in other places.
+> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 
@@ -447,7 +448,7 @@ html {
 a {
   flex: 1;
   text-decoration: none;
-  outline: none;
+  outline-color: transparent;
   text-align: center;
   line-height: 3;
   color: black;

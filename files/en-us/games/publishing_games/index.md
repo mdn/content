@@ -1,6 +1,7 @@
 ---
 title: Publishing games
 slug: Games/Publishing_games
+page-type: guide
 ---
 
 {{GamesSidebar}}

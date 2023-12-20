@@ -1,6 +1,7 @@
 ---
 title: display
 slug: Web/Manifest/display
+page-type: web-manifest-member
 browser-compat: html.manifest.display
 ---
 

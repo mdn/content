@@ -12,7 +12,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```
+```plain
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -81,5 +81,4 @@ function g() {
 
 ## See also
 
-- {{jsxref("Statements/return", "Automatic Semicolon Insertion",
-    "#Automatic_Semicolon_Insertion", 1)}}
+- [Automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)

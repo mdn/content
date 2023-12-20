@@ -1,6 +1,7 @@
 ---
 title: Adding vector graphics to the web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -50,9 +51,9 @@ Moreover, vector image files are much lighter than their raster equivalents, bec
 
 ## What is SVG?
 
-[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)
+[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. SVG defines elements for creating basic shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}, as well as elements for creating more complex shapes, like {{svgelement("path")}} and {{svgelement("polygon")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix), {{svgelement("animate")}} (animate parts of your vector graphic), and {{svgelement("mask")}} (apply a mask over the top of your image).
 
-As a simple example, the following code creates a circle and a rectangle:
+As a basic example, the following code creates a circle and a rectangle:
 
 ```html
 <svg
@@ -293,7 +294,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

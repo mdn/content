@@ -4,6 +4,8 @@ slug: Glossary/Literal
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 **Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
 
 - [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)

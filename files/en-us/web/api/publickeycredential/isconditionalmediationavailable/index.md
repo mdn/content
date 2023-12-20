@@ -3,7 +3,7 @@ title: "PublicKeyCredential: isConditionalMediationAvailable() static method"
 short-title: isConditionalMediationAvailable()
 slug: Web/API/PublicKeyCredential/isConditionalMediationAvailable
 page-type: web-api-static-method
-browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable
+browser-compat: api.PublicKeyCredential.isConditionalMediationAvailable_static
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
@@ -44,30 +44,32 @@ Before invoking a conditional WebAuthn API call, check if:
 
 ```js
 // Availability of `window.PublicKeyCredential` means WebAuthn is usable.
-if (window.PublicKeyCredential &&
-    PublicKeyCredential.​​isConditionalMediationAvailable) {
+if (
+  window.PublicKeyCredential &&
+  PublicKeyCredential.isConditionalMediationAvailable
+) {
   // Check if conditional mediation is available.
-  const isCMA = await PublicKeyCredential.​​isConditionalMediationAvailable();
+  const isCMA = await PublicKeyCredential.isConditionalMediationAvailable();
   if (isCMA) {
     // Call WebAuthn authentication
     const publicKeyCredentialRequestOptions = {
       // Server generated challenge
       challenge: ****,
       // The same RP ID as used during registration
-      rpId: 'example.com',
+      rpId: "example.com",
     };
 
     const credential = await navigator.credentials.get({
       publicKey: publicKeyCredentialRequestOptions,
       signal: abortController.signal,
       // Specify 'conditional' to activate conditional UI
-      mediation: 'conditional'
+      mediation: "conditional",
     });
   }
 }
 ```
 
-> **Note:** See [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more information about using conditional mediation.
+> **Note:** See [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more information about using conditional mediation.
 
 ## Specifications
 

@@ -1,6 +1,7 @@
 ---
 title: Create Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
+page-type: learn-module-chapter
 ---
 
 This subarticle shows how to define a page for creating `Author` objects.
@@ -49,11 +50,11 @@ exports.author_create_post = [
     .isAlphanumeric()
     .withMessage("Family name has non-alphanumeric characters."),
   body("date_of_birth", "Invalid date of birth")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
   body("date_of_death", "Invalid date of death")
-    .optional({ checkFalsy: true })
+    .optional({ values: "falsy" })
     .isISO8601()
     .toDate(),
 
@@ -117,12 +118,12 @@ The validation code demonstrates several new features:
   ```
 
 - We can use the `optional()` function to run a subsequent validation only if a field has been entered (this allows us to validate optional fields).
-  For example, below we check that the optional date of birth is an ISO8601-compliant date (the `checkFalsy` flag means that we'll accept either an empty string or `null` as an empty value).
+  For example, below we check that the optional date of birth is an ISO8601-compliant date (the `{ values: "falsy" }` object passed means that we'll accept either an empty string or `null` as an empty value).
 
   ```js
   [
     body("date_of_birth", "Invalid date of birth")
-      .optional({ checkFalsy: true })
+      .optional({ values: "falsy" })
       .isISO8601()
       .toDate(),
   ];
@@ -140,16 +141,17 @@ extends layout
 block content
   h1=title
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='first_name') First Name:
-      input#first_name.form-control(type='text' placeholder='First name' name='first_name' required='true' value=(undefined===author ? '' : author.first_name) )
+      input#first_name.form-control(type='text', placeholder='First name (Christian)' name='first_name' required value=(undefined===author ? '' : author.first_name) )
       label(for='family_name') Family Name:
-      input#family_name.form-control(type='text' placeholder='Family name' name='family_name' required='true' value=(undefined===author ? '' : author.family_name))
+      input#family_name.form-control(type='text', placeholder='Family name (Surname)' name='family_name' required value=(undefined===author ? '' : author.family_name))
     div.form-group
       label(for='date_of_birth') Date of birth:
       input#date_of_birth.form-control(type='date' name='date_of_birth' value=(undefined===author ? '' : author.date_of_birth) )
     button.btn.btn-primary(type='submit') Submit
+
   if errors
     ul
       for error in errors

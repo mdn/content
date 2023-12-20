@@ -1,6 +1,7 @@
 ---
 title: Writing mathematics with MathML
 slug: Learn/MathML
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}

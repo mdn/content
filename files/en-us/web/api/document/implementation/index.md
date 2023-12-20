@@ -24,7 +24,7 @@ const conformTest = document.implementation.hasFeature(modName, modVer);
 
 console.log(`DOM ${modName} ${modVer} supported?: ${conformTest}`);
 
-// Log: "DOM HTML 2.0 supported?: true" (hasFeature always return true)
+// Log: "DOM HTML 2.0 supported?: true" (hasFeature always returns true)
 ```
 
 > **Warning:** Do not use this for feature detection. The `hasFeature()` method always returns true.

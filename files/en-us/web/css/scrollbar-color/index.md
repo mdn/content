@@ -83,7 +83,7 @@ When using `scrollbar-color` property with specific color values, authors should
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #007 #bada55;
 }
 ```
 
@@ -113,6 +113,8 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## See also
 
-- [`overflow`](/en-US/docs/Web/CSS/overflow)
-- [`scrollbar-width`](/en-US/docs/Web/CSS/scrollbar-width)
-- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_Scrollbars) module
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-width")}}

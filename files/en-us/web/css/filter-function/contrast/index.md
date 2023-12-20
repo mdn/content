@@ -75,7 +75,7 @@ p {
 ```html hidden
 <div class="container" style="background-image: url(unity_for_the_people.jpg);">
   <p>
-    Alway ensure there is enough contrast between text and all background
+    Always ensure there is enough contrast between text and all background
     colors. If you think your text may land on top of a background image,
     include a <code>backdrop-filter</code>. Reducing the contrast of background
     colors with the <code>contrast()</code> filter may improve legibility but
@@ -105,7 +105,9 @@ p {
   background-color: magenta;
   color: palegoldenrod;
   border: 1em solid rebeccapurple;
-  box-shadow: inset -5px -5px red, 5px 5px yellow;
+  box-shadow:
+    inset -5px -5px red,
+    5px 5px yellow;
   padding: 0.25rem;
   font-size: 1.25rem;
   font-family: sans-serif;
@@ -204,7 +206,7 @@ This example shows three images: the image with a `contrast()` filter function a
 
 ## See also
 
-- [CSS filter effects](/en-US/docs/Web/CSS/Filter_Effects) module
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module
 - The other {{cssxref("&lt;filter-function&gt;")}} functions available to be used in values of the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties include:
   - {{cssxref("filter-function/blur", "blur()")}}
   - {{cssxref("filter-function/brightness", "brightness()")}}

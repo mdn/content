@@ -67,7 +67,7 @@ Inherited into roles:
 - [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
 - [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`radiogroup`](/en-US/docs/web/accessibility/aria/roles/radiogroup_role)
+- [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
 - [`tree`](/en-US/docs/Web/Accessibility/ARIA/Roles/tree_role)
 - [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
 

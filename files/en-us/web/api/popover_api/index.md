@@ -2,12 +2,10 @@
 title: Popover API
 slug: Web/API/Popover_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.HTMLElement.popover
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Popover API")}}
+{{DefaultAPISidebar("Popover API")}}
 
 The **Popover API** provides developers with a standard, consistent, flexible mechanism for displaying popover content on top of other page content. Popover content can be controlled either declaratively using HTML attributes, or via JavaScript.
 
@@ -44,7 +42,7 @@ See [Using the popover API](/en-US/docs/Web/API/Popover_API/Using) for a detaile
 - [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget)
   - : Turns a {{htmlelement("button")}} or {{htmlelement("input")}} element into a popover control button; takes the ID of the popover element to control as its value.
 - [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction)
-  - : Specifies the the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by a control {{htmlelement("button")}} or {{htmlelement("input")}}.
+  - : Specifies the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on the popover element being controlled by a control {{htmlelement("button")}} or {{htmlelement("input")}}.
 
 ## CSS features
 

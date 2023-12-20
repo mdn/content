@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.entries
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string object, and the value is either a string or a {{domxref("Blob")}}.
 
@@ -40,7 +40,7 @@ for (const pair of formData.entries()) {
 
 The result is:
 
-```
+```plain
 key1, value1
 key2, value2
 ```
@@ -55,5 +55,5 @@ key2, value2
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

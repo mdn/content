@@ -33,7 +33,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
 );
 url.toJSON(); // should return the URL as a string
 ```

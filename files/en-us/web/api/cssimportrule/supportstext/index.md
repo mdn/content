@@ -3,12 +3,10 @@ title: "CSSImportRule: supportsText property"
 short-title: supportsText
 slug: Web/API/CSSImportRule/supportsText
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.CSSImportRule.supportsText
 ---
 
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 The read-only **`supportsText`** property of the {{domxref("CSSImportRule")}} interface returns the supports condition specified by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
@@ -45,5 +43,5 @@ console.log(myRules[2].supportsText); // returns `null`
 
 ## See also
 
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - {{cssxref("@import")}} and {{cssxref("@supports")}}

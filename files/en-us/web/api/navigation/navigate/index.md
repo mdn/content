@@ -23,7 +23,7 @@ navigate(url, options)
 ### Parameters
 
 - `url`
-  - : The destination URL to navigate to.
+  - : The destination URL to navigate to. Note that when calling `navigate()` on a another window's `navigation` object, the URL will be resolved relative to the target window's URL, not the calling window's URL. This matches the behavior of the [History API](/en-US/docs/Web/API/History_API), but not the behavior of the [Location API](/en-US/docs/Web/API/Location).
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `state`

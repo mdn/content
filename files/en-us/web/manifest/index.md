@@ -1,6 +1,7 @@
 ---
 title: Web app manifests
 slug: Web/Manifest
+page-type: landing-page
 browser-compat: html.manifest
 ---
 

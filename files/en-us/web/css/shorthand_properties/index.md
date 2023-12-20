@@ -98,7 +98,9 @@ font-family: Arial, sans-serif;
 These 5 statements can be shortened to the following:
 
 ```css
-font: italic bold 0.8em/1.2 Arial, sans-serif;
+font:
+  italic bold 0.8em/1.2 Arial,
+  sans-serif;
 ```
 
 This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
@@ -176,10 +178,10 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
@@ -207,10 +209,13 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("border-width")}}
   - {{cssxref("column-rule")}}
   - {{cssxref("columns")}}
+  - {{cssxref("container")}}
   - {{cssxref("contain-intrinsic-size")}}
   - {{cssxref("flex")}}
   - {{cssxref("flex-flow")}}
   - {{cssxref("font")}}
+  - {{cssxref("font-synthesis")}}
+  - {{cssxref("font-variant")}}
   - {{cssxref("gap")}}
   - {{cssxref("grid")}}
   - {{cssxref("grid-area")}}

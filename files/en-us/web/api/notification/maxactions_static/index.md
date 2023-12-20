@@ -5,7 +5,7 @@ slug: Web/API/Notification/maxActions_static
 page-type: web-api-static-property
 status:
   - experimental
-browser-compat: api.Notification.maxActions
+browser-compat: api.Notification.maxActions_static
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
@@ -27,7 +27,7 @@ The following snippet logs the maximum number of supported actions.
 ```js
 const maxActions = Notification.maxActions;
 console.log(
-  `This device can display at most ${maxActions} actions on each notification.`
+  `This device can display at most ${maxActions} actions on each notification.`,
 );
 ```
 

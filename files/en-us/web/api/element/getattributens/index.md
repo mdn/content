@@ -62,7 +62,7 @@ In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -121,7 +121,3 @@ requested attribute does not exist on the specified element.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

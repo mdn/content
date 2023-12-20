@@ -47,7 +47,7 @@ canvas.addEventListener(
   (e) => {
     console.log(e.statusMessage || "Unknown error");
   },
-  false
+  false,
 );
 
 const gl = canvas.getContext("webgl");

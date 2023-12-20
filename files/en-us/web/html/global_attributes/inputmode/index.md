@@ -34,7 +34,7 @@ The attribute can have any of the following values:
     Inputs that *require\* a telephone number should typically use `{{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}}` instead.
 - `search`
   - : A virtual keyboard optimized for search input.
-    For instance, the [return/submit key](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search", along with possible other optimizations.
+    For instance, the [return/submit key](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search", along with possible other optimizations.
     Inputs that _require_ a search query should typically use `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}` instead.
 - `email`
   - : A virtual keyboard optimized for entering email addresses.

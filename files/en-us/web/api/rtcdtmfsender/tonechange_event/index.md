@@ -54,7 +54,7 @@ dtmfSender.addEventListener(
 
     document.getElementById("playingTone").innerText = tone;
   },
-  false
+  false,
 );
 ```
 

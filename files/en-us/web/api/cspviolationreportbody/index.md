@@ -76,7 +76,7 @@ const observer = new ReportingObserver(
   {
     types: ["csp-violation"],
     buffered: true,
-  }
+  },
 );
 
 observer.observe();

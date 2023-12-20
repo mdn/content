@@ -7,7 +7,7 @@ browser-compat: javascript.operators.exponentiation
 
 {{jsSidebar("Operators")}}
 
-The **exponentiation (`**`)** operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
+The **exponentiation (`**`)\*\* operator returns the result of raising the first operand to the power of the second operand. It is equivalent to {{jsxref("Math.pow()")}}, except it also accepts [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) as operands.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
@@ -19,7 +19,7 @@ x ** y
 
 ## Description
 
-The `**` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt exponentiation if both operands becomes BigInts; otherwise, it performs number exponentiation. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
+The `**` operator is overloaded for two types of operands: number and [BigInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt). It first [coerces both operands to numeric values](/en-US/docs/Web/JavaScript/Data_structures#numeric_coercion) and tests the types of them. It performs BigInt exponentiation if both operands become BigInts; otherwise, it performs number exponentiation. A {{jsxref("TypeError")}} is thrown if one operand becomes a BigInt but the other becomes a number.
 
 For both numbers and BigInts, `0` raised to a positive power returns `0`, and `0` raised to a power of `0` returns `1`. For numbers, `0` raised to a negative number returns `Infinity`, while `-0` raised to a negative number returns `-Infinity`.
 
@@ -63,7 +63,7 @@ Number(2n) ** 2; // 4
 
 ### Associativity
 
-```js
+```js-nolint
 2 ** 3 ** 2; // 512
 2 ** (3 ** 2); // 512
 (2 ** 3) ** 2; // 64
@@ -93,12 +93,12 @@ To force the base of an exponentiation expression to be a negative number:
 
 ## See also
 
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Increment operator](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Division (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Division)
+- [Multiplication (`*`)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Increment (`++`)](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Unary negation (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Unary plus (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus)

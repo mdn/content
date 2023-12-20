@@ -50,7 +50,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 
 customElements.define(
@@ -65,7 +65,7 @@ customElements.define(
       const shadowRoot = this.attachShadow({ mode: "closed" });
       shadowRoot.appendChild(pElem);
     }
-  }
+  },
 );
 ```
 

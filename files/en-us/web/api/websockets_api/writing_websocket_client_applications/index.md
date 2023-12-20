@@ -48,7 +48,7 @@ A custom protocol of "protocolOne" is named in the request for the socket in thi
 ```js
 const exampleSocket = new WebSocket(
   "wss://www.example.com/socketserver",
-  "protocolOne"
+  "protocolOne",
 );
 ```
 

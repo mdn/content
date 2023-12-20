@@ -41,10 +41,10 @@ window.requestFileSystem(
           console.log("File removed.");
         }, onError);
       },
-      onError
+      onError,
     );
   },
-  onError
+  onError,
 );
 ```
 

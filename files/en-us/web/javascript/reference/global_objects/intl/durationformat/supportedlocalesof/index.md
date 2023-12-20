@@ -2,10 +2,12 @@
 title: Intl.DurationFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/supportedLocalesOf
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.supportedLocalesOf
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Intl.DurationFormat.supportedLocalesOf()`** static method returns an array containing those of the provided locales that are supported in duration formatting without having to fall back to the runtime's default locale.
 
@@ -38,10 +40,8 @@ Assuming a runtime that supports Indonesian and German but not Balinese in durat
 ```js
 const locales = ["ban", "id-u-co-pinyin", "de-ID"];
 const options = { localeMatcher: "lookup" };
-console.log(
-  Intl.DurationFormat.supportedLocalesOf(locales, options).join(", "),
-);
-// "id-u-co-pinyin, de-ID"
+console.log(Intl.DurationFormat.supportedLocalesOf(locales, options));
+// ["id-u-co-pinyin", "de-ID"]
 ```
 
 ## Specifications

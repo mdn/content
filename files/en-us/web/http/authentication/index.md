@@ -119,7 +119,7 @@ To password-protect a directory on an Apache server, you will need a `.htaccess`
 
 The `.htaccess` file typically looks like this:
 
-```plain
+```apacheconf
 AuthType Basic
 AuthName "Access to the staging site"
 AuthUserFile /path/to/.htpasswd
@@ -128,7 +128,7 @@ Require valid-user
 
 The `.htaccess` file references a `.htpasswd` file in which each line consists of a username and a password separated by a colon (`:`). You cannot see the actual passwords as they are [hashed](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (using MD5-based hashing, in this case). Note that you can name your `.htpasswd` file differently if you like, but keep in mind this file shouldn't be accessible to anyone. (Apache is usually configured to prevent access to `.ht*` files).
 
-```
+```apacheconf
 aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 ```
@@ -138,7 +138,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 For Nginx, you will need to specify a location that you are going to protect and the `auth_basic` directive that provides the name to the password-protected area.
 The `auth_basic_user_file` directive then points to a `.htpasswd` file containing the encrypted user credentials, just like in the Apache example above.
 
-```plain
+```apacheconf
 location /status {
     auth_basic           "Access to the staging site";
     auth_basic_user_file /etc/apache2/.htpasswd;

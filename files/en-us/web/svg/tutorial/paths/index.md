@@ -99,7 +99,7 @@ So our path above could be shortened to:
  <path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
 ```
 
-The relative forms of these commands can also be used to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our box is 80×80, the `<path>` element could have been written as:
+The relative forms of these commands can also be used to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our rectangle is 80×80, the `<path>` element could have been written as:
 
 ```xml
  <path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black"/>

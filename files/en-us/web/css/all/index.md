@@ -11,6 +11,10 @@ The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
 
+## Constituent properties
+
+This property is a shorthand for all CSS properties except for {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
+
 ## Syntax
 
 ```css

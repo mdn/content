@@ -3,7 +3,7 @@ title: "CSS: escape() static method"
 short-title: escape()
 slug: Web/API/CSS/escape_static
 page-type: web-api-static-method
-browser-compat: api.CSS.escape
+browser-compat: api.CSS.escape_static
 ---
 
 {{APIRef("CSSOM")}}

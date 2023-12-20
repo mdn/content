@@ -1,6 +1,7 @@
 ---
 title: How do you make sure your website works properly?
 slug: Learn/Common_questions/Tools_and_setup/Checking_that_your_web_site_is_working_properly
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}

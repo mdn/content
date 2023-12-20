@@ -106,7 +106,7 @@ async function recursiveValidate(request, response) {
     const promise = fixField(
       request,
       "shippingaddresschange",
-      shippingValidator
+      shippingValidator,
     );
     promisesToFixThings.push(promise);
   }

@@ -47,7 +47,7 @@ When no parameters are provided, the newly-created `Date` object represents the 
 #### Date string
 
 - `dateString`
-  - : A string value representing a date, in a format recognized by the {{jsxref("Date.parse()")}} method. The only specified format is the [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format), but other formats can be implementation-defined, which commonly include [IETF-compliant RFC 2822 timestamps](https://datatracker.ietf.org/doc/html/rfc2822#page-14). See [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) for caveats on using different formats.
+  - : A string value representing a date, parsed and interpreted using the same algorithm implemented by {{jsxref("Date.parse()")}}. See [date time string format](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#date_time_string_format) for caveats on using different formats.
 
 #### Date object
 
@@ -69,15 +69,15 @@ Similarly, if any parameter underflows, it "borrows" from the higher positions. 
 - `monthIndex`
   - : Integer value representing the month, beginning with `0` for January to `11` for December.
 - `day` {{optional_inline}}
-  - : Integer value representing the day of the month. The default is `1`.
+  - : Integer value representing the day of the month. Defaults to `1`.
 - `hours` {{optional_inline}}
   - : Integer value between `0` and `23` representing the hour of the day. Defaults to `0`.
 - `minutes` {{optional_inline}}
-  - : Integer value representing the minute segment of a time. The default is `0` minutes past the hour.
+  - : Integer value representing the minute segment of a time. Defaults to `0`.
 - `seconds` {{optional_inline}}
-  - : Integer value representing the second segment of a time. The default is `0` seconds past the minute.
+  - : Integer value representing the second segment of a time. Defaults to `0`.
 - `milliseconds` {{optional_inline}}
-  - : Integer value representing the millisecond segment of a time. The default is `0` milliseconds past the second.
+  - : Integer value representing the millisecond segment of a time. Defaults to `0`.
 
 ### Return value
 
@@ -94,7 +94,7 @@ The following examples show several ways to create JavaScript dates:
 ```js
 const today = new Date();
 const birthday = new Date("December 17, 1995 03:24:00"); // DISCOURAGED: may not work in all runtimes
-const birthday = new Date("1995-12-17T03:24:00"); // This is ISO-8601-compliant and will work reliably
+const birthday = new Date("1995-12-17T03:24:00"); // This is standardized and will work reliably
 const birthday = new Date(1995, 11, 17); // the month is 0-indexed
 const birthday = new Date(1995, 11, 17, 3, 24, 0);
 const birthday = new Date(628021800000); // passing epoch timestamp

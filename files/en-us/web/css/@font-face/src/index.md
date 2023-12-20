@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-face.src
 
 {{CSSRef}}
 
-The **`src`** CSS descriptor of the {{cssxref("@font-face")}} rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
+The **`src`** CSS descriptor for the {{cssxref("@font-face")}} at-rule specifies the resource containing font data. It is required for the `@font-face` rule to be valid.
 
 ## Syntax
 
@@ -33,11 +33,14 @@ src: url(path/to/font.woff) format("woff");
 src: url(path/to/font.otf) format("opentype");
 
 /* Multiple resources */
-src: url(path/to/font.woff) format("woff"), url(path/to/font.otf) format("opentype");
+src:
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.otf) format("opentype");
 
 /* Multiple resources with font format and technologies */
-src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-    format(opentype);
+src:
+  url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+  url("trickster-outline.otf") format(opentype);
 ```
 
 ### Values
@@ -61,6 +64,12 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
     Enclosing the font name in quotes is optional.
 
     > **Note:** For OpenType and TrueType fonts, `<font-face-name>` is used to match either the Postscript name or the full font name in the name table of locally available fonts. Which type of name is used varies by platform and font, so you should include both of these names to assure proper matching across platforms. Platform substitutions for a given font name must not be used.
+
+    > **Note:** Locally available fonts may have been preinstalled on the user's device, or may have been actively installed by the user.
+    >
+    > While the set of preinstalled fonts is likely to be the same for all users of a particular device, the set of user-installed fonts is not. By discovering the set of user-installed fonts, a site can therefore build a {{glossary("fingerprinting", "fingerprint")}} for the device, helping the site to track users across the web.
+    >
+    > To prevent this, user agents may ignore user-installed fonts when using `local()`.
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
@@ -198,7 +207,7 @@ p.bold {
 }
 ```
 
-### Specifying font resources using tech and format values
+### Specifying font resources using tech() and format() values
 
 The following example shows how to use the `tech()` and `format()` values to specify font resources.
 A font using `color-colrv1` technology and `opentype` format is specified using the `tech()` and `format()` values.
@@ -207,8 +216,9 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 ```css
 @font-face {
   font-family: "Trickster";
-  src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-      format(opentype);
+  src:
+    url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+    url("trickster-outline.otf") format(opentype);
 }
 
 /* Using the font face */
@@ -217,19 +227,20 @@ p {
 }
 ```
 
-### Fallbacks for older browsers
+### Specifying fallbacks for older browsers
 
 Browsers should use a `@font-face` with a single `src` descriptor listing possible sources for the font.
-Since the browser will use the first resource that it is able to load, items should be specified in the order that you'd most like them to be used.
+Since the browser will use the first resource that it is able to load, items should be specified in the order of your preference for their usage.
 
-Generally this means that local files should appear before remote files, and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
+Generally this means that local files should appear before remote files and that resources with `format()` or `tech()` constraints should appear before resources that don't have them (otherwise the less-constrained version would always be selected).
 For example:
 
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 
@@ -244,8 +255,9 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
   font-family: "MgOpenModernaBold";
   src: url("MgOpenModernaBold.otf") format(opentype);
   src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 

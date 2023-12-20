@@ -34,7 +34,7 @@ padding-block-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the padding as a fixed value. Must be nonnegative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Containing_block). Must be nonnegative.
 
 ## Description
 
@@ -92,6 +92,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

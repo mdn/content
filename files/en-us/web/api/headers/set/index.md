@@ -17,7 +17,7 @@ the specified header already exists and accepts multiple values, `set()`
 overwrites the existing value with the new one, whereas {{domxref("Headers.append")}}
 appends the new value to the end of the set of values.
 
-For security reasons, some headers can only be controller by the user agent. These
+For security reasons, some headers can only be controlled by the user agent. These
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 

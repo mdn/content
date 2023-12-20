@@ -1,6 +1,7 @@
 ---
 title: Structuring the web with HTML
 slug: Learn/HTML
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}

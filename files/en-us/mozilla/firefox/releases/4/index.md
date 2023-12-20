@@ -1,6 +1,7 @@
 ---
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -43,15 +44,15 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{HTMLElement("canvas")}} element now supports the Mozilla-specific `mozGetAsFile()` method, which lets you obtain a memory-based file containing an image of the canvas's contents. See {{domxref("HTMLCanvasElement")}} for details.
 - `canvas2dcontext.lineCap` and `canvas2dcontext.lineJoin` no longer throw an exception when set to an unrecognized value.
 - `canvas2dcontext.globalCompositeOperation` no longer throws an exception when set to an unrecognized value, and no longer supports the non-standard `darker` value.
-- Support for the obsolete {{HTMLElement("spacer")}} element, which was absent in all other browsers, has been removed.
+- Support for the obsolete `<spacer>` element, which was absent in all other browsers, has been removed.
 - The {{HTMLElement("isindex")}} element, when created by calling {{domxref("document.createElement()")}}, is now created as a simple element with no properties or methods.
-- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
+- Gecko now supports calling `click()` on {{HTMLElement("input")}} elements to open the file picker. See the [example](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#using_hidden_file_input_elements_using_the_click_method) in the article [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 - The {{HTMLElement("input")}} element supports a new `mozactionhint` attribute, which lets you specify the label for the enter key on virtual keyboards.
 - {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}}, and {{HTMLElement("noframes")}} elements now get executed, which they weren't in previous versions of Firefox. This is in compliance with the specification, and matches the behavior of other browsers.
 
 ### CSS
 
-- [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
   - : Support for `-moz-calc` has been added. This lets you specify `{{cssxref("&lt;length&gt;")}}` values as mathematical expressions.
@@ -161,7 +162,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td>Description</td>
     </tr>
     <tr>
-      <td>{{cssxref(":-moz-focusring")}}</td>
+      <td>{{cssxref(":focus-visible", ":-moz-focusring")}}</td>
       <td>
         Lets you specify the appearance of an element when Gecko believes it
         should have a focus indication rendered.
@@ -222,7 +223,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("text-shadow")}} property now caps the blur radius to 300px for sanity and performance reasons.
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
-- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
+- The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 - Gecko's handling of [CSS units](/en-US/docs/Web/CSS/length) has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
@@ -246,7 +247,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 ### DOM
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Support has been added for JavaScript typed arrays; this allows you to manipulate buffers containing raw data using native data types. Several APIs make use of this, including the [File API](/en-US/docs/Web/API/File), [WebGL](/en-US/docs/Web/API/WebGL_API), and [WebSockets](/en-US/docs/Web/API/WebSockets_API).
 - Obtaining boundary rectangles for ranges
   - : The {{domxref("Range")}} object now has {{domxref("range.getClientRects()")}} and {{domxref("range.getBoundingClientRect()")}} methods.
@@ -263,32 +264,32 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 Several HTML elements have had their DOM interfaces changed to the ones required by the HTML5 specification, as shown below.
 
-| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -------------------------------------------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, {{HTMLElement("blink")}}, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, , {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
-| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, `<blink>`, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, , {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
+| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Miscellaneous DOM changes
 
 - The wrapping of a {{HTMLElement("textarea")}} element can now be controlled via the DOM, via the `wrap` DOM attribute. [Firefox bug 41464](https://bugzil.la/41464)
 - {{HTMLElement("script")}} elements created using {{domxref("document.createElement()")}} and inserted into a document now behave according to the HTML5 specification by default. Scripts with the `src` attribute execute as soon as available (without maintaining ordering) and scripts without the `src` attribute execute synchronously. To make script-inserted scripts that have the `src` attribute execute in the insertion order, set `.async=false` on them.
 - DOM {{domxref("file")}} objects now offer a `url` property.
-- [FormData](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
+- [FormData](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#using_formdata_objects) support for XMLHttpRequest.
 - The {{domxref("element.isContentEditable")}} property has been implemented.
 - The {{domxref("document.currentScript")}} property lets you determine which {{HTMLElement("script")}} element's script is currently executing. The new {{domxref("element.onbeforescriptexecute")}} and {{domxref("element.onafterscriptexecute")}} events are fired before and after a script element executes.
 - Added the `mozSourceNode` property to the [`DragTransfer`](/en-US/docs/Web/API/DataTransfer) object.
 - Added the [`selection.modify()`](/en-US/docs/Web/API/Selection/modify) method to the {{domxref("Selection")}} object; this lets you easily alter the current text selection or cursor position in a browser window.
-- Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Webkit bug 474058](https://bugzil.la/474058)
+- Support for the `window.directories` object and the `directories` feature for {{domxref("window.open")}}, which are not supported in any other browser, has been removed. Use `personalbar` instead. [Firefox bug 474058](https://bugzil.la/474058)
 - The {{domxref("event.mozInputSource")}} property has been added to DOM user interface events; this non-standard property lets you determine the type of device that generated an event.
 - The {{domxref("document.onreadystatechange")}} event has been implemented.
 - The {{domxref("document.createElement")}} method no longer accepts `<` and `>` around the tag name in quirks mode.
 - The {{domxref("element.setCapture()")}} and {{domxref("document.releaseCapture()")}} methods have been added, allowing elements to continue tracking mouse events even while the mouse is outside their normal tracking area after a `mousedown` event has occurred.
 - The `window.mozPaintCount` property has been added; it lets you determine how many times a document has been painted. This can be useful when testing performance of your web application.
-- The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. [Webkit bug 572656](https://bugzil.la/572656)
+- The language token has been removed from {{domxref("window.navigator.appVersion")}} and {{domxref("window.navigator.userAgent")}}. Use {{domxref("window.navigator.language")}} or the [Accept-Language header](/en-US/docs/Web/HTTP/Content_negotiation) instead. [Firefox bug 572656](https://bugzil.la/572656)
 - The [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) object now exposes the response as a JavaScript typed array as well as a string, using the Gecko-specific `mozResponseArrayBuffer` property.
 - [Mouse events](/en-US/docs/Web/API/MouseEvent) now include a `mozPressure` property indicating the amount of pressure on supported pressure-sensitive input devices.
-- The {{domxref("URL/createObjectURL", "window.URL.createObjectURL()")}} and {{domxref("URL/revokeObjectURL", "window.URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
+- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods let you create object URLs which reference local files.
 - The {{domxref("DOMImplementation.createHTMLDocument()")}} method lets you create a new HTML document.
 - {{domxref("Node.mozMatchesSelector()")}} now throws a `SYNTAX_ERR` exception if the specified selector string is invalid, instead of incorrectly returning `false`.
 - You can now set an element's SVG properties' values using the same shorthand syntax as with CSS. For example: `element.style.fill = 'lime'`. See {{domxref("element.style")}} for details.
@@ -345,8 +346,8 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Miscellaneous changes to code modules
 
-- The `NetUtil.jsm` code module now offers the [`readInputStreamToString()`](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.html#readInputStreamToString()>) method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
-- The XPCOMUtils.jsm code module now offers [IterSimpleEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterSimpleEnumerator()>) and [IterStringEnumerator()](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.html#IterStringEnumerator()>) helpers to iterate over XPCOM enumerators.
+- The `NetUtil.jsm` code module now offers the `readInputStreamToString()` method, which lets you read arbitrary bytes from a stream into a string, even if the stream includes zeroes.
+- The XPCOMUtils.jsm code module now offers IterSimpleEnumerator() and IterStringEnumerator() helpers to iterate over XPCOM enumerators.
 - You can now [use workers in JavaScript code modules](/en-US/docs/JavaScript_code_modules/Using_workers_in_JavaScript_code_modules).
 
 ### DOM changes

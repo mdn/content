@@ -28,7 +28,7 @@ let creating = browser.tabs.create(
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tab should become the active tab in the window. If `false`, it has no effect. Does not affect whether the window is focused (see {{WebExtAPIRef('windows.update')}}). Defaults to `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+      - : `string`. Use this to create a tab whose cookie store ID is `cookieStoreId`. This option is only available if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `discarded` {{optional_inline}}
       - : `boolean`. Whether the tab is created and made visible in the tab bar without any content loaded into memory, a state known as discarded. The tab's content is loaded when the tab is activated.
     - `index` {{optional_inline}}
@@ -81,7 +81,7 @@ Open "https\://example.org" in a new tab:
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`Created new tab: ${tab.id}`);
 }
 
 function onError(error) {
@@ -90,7 +90,7 @@ function onError(error) {
 
 browser.browserAction.onClicked.addListener(() => {
   let creating = browser.tabs.create({
-    url:"https://example.org"
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });

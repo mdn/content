@@ -85,7 +85,6 @@ You can use this class to style SVG content using CSS.
 The following elements can use the `class` attribute:
 
 - {{ SVGElement("a") }}
-- {{ SVGElement("altGlyph") }}
 - {{ SVGElement("circle") }}
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("defs") }}

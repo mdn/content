@@ -155,7 +155,7 @@ For example, `em` is relative to the font size on the element and `vh` is relati
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                    |
 | `vmax` | 1% of viewport's larger dimension.                                                                                                     |
 
-Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_Container_Queries).
+Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
 | Unit    | Relative to                           |
@@ -294,4 +294,4 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 - [CSS Basic Data Types](/en-US/docs/Web/CSS/CSS_Types)
 - [Introduction to CSS: Values and Units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Trigonometric functions in CSS](https://web.dev/css-trig-functions/)
+- [Trigonometric functions in CSS](https://web.dev/articles/css-trig-functions)

@@ -54,7 +54,7 @@ _Inherits properties from its parent, {{domxref("AudioScheduledSourceNode")}}, a
 
 ### Event handlers
 
-- {{domxref("OscillatorNode.onended")}}
+- {{domxref("AudioScheduledSourceNode.ended_event")}}
   - : Sets the event handler for the {{domxref("AudioScheduledSourceNode/ended_event", "ended")}} event, which fires when the tone has stopped playing.
 
 ## Instance methods
@@ -63,14 +63,14 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 
 - {{domxref("OscillatorNode.setPeriodicWave()")}}
   - : Sets a {{domxref("PeriodicWave")}} which describes a periodic waveform to be used instead of one of the standard waveforms; calling this sets the `type` to `custom`.
-- {{domxref("OscillatorNode.start()")}}
+- {{domxref("AudioScheduledSourceNode.start()")}}
   - : Specifies the exact time to start playing the tone.
-- {{domxref("OscillatorNode.stop()")}}
+- {{domxref("AudioScheduledSourceNode.stop()")}}
   - : Specifies the time to stop playing the tone.
 
 ## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an oscillator node and to start playing a tone on it. For an applied example, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/main/violent-theremin/scripts/app.js) for relevant code).
 
 ```js
 // create web audio api context

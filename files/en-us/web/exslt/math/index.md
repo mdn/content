@@ -1,6 +1,7 @@
 ---
 title: Math (math)
 slug: Web/EXSLT/math
+page-type: landing-page
 ---
 
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}

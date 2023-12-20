@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+  <style>
+    text {
+      font: 20px sans-serif;
+    }
+
+    div {
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      background: conic-gradient(red, #ff0, green, #0ff, blue, #f0f, red);
+    }
+  </style>
+  <path fill="#fff" d="M0 0h400v400H0z" />
+  <foreignObject width="320" height="320" x="40" y="40">
+    <div xmlns="http://www.w3.org/1999/xhtml" />
+  </foreignObject>
+  <text x="200" y="30" text-anchor="middle">0°</text>
+  <text x="347" y="115" dominant-baseline="middle">60°</text>
+  <text x="347" y="285" dominant-baseline="middle">120°</text>
+  <text x="200" y="370" dominant-baseline="hanging" text-anchor="middle">
+    180°
+  </text>
+  <text x="53" y="285" dominant-baseline="middle" text-anchor="end">240°</text>
+  <text x="53" y="115" dominant-baseline="middle" text-anchor="end">300°</text>
+</svg>

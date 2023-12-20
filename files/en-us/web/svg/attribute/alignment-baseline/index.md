@@ -15,7 +15,6 @@ You can use this attribute with the following SVG elements:
 
 - {{SVGElement("tspan")}}
 - {{SVGElement("tref")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("textPath")}}
 
 ## Usage notes

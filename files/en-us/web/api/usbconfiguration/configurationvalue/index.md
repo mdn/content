@@ -11,7 +11,8 @@ browser-compat: api.USBConfiguration.configurationValue
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`configurationValue`** read-only property
-of the {{domxref("USBConfiguration")}} interface null
+of the {{domxref("USBConfiguration")}} interface returns the configuration value of this configuration. This is equal to the
+[`bConfigurationValue`](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) field of the configuration descriptor provided by the device defining this configuration.
 
 ## Value
 

@@ -17,6 +17,10 @@ The **`getTimezoneOffset()`** method of {{jsxref("Date")}} instances returns the
 getTimezoneOffset()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A number representing the difference, in minutes, between the date as evaluated in the UTC time zone and as evaluated in the local time zone. The actual local time algorithm is implementation-defined, and the return value is allowed to be zero in runtimes without appropriate data. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

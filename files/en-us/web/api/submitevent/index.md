@@ -42,7 +42,7 @@ form.addEventListener("submit", (event) => {
   } else {
     showAlertMessage(
       "An unknown or unaccepted payment type was selected. Please try again.",
-      "OK"
+      "OK",
     );
   }
 });

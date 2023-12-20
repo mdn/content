@@ -34,7 +34,7 @@ async function handleTransition() {
   }
 
   const transition = document.startViewTransition(() =>
-    updateTheDOMSomehow(data)
+    updateTheDOMSomehow(data),
   );
 
   try {

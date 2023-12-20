@@ -1,6 +1,7 @@
 ---
 title: Tools and testing
 slug: Learn/Tools_and_testing
+page-type: learn-topic
 ---
 
 {{LearnSidebar}}

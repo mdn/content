@@ -46,7 +46,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent = result.snapshotLength;
 ```

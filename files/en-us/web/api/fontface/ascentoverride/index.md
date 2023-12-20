@@ -24,7 +24,7 @@ This property accepts the same values as the {{cssxref("@font-face/ascent-overri
 let fontFace = new FontFace(
   "Roboto",
   "url(https://fonts.example.com/roboto.woff2)",
-  { ascentOverride: "90%" }
+  { ascentOverride: "90%" },
 );
 console.log(fontFace.ascentOverride); // 90%
 fontFace.ascentOverride = "normal";

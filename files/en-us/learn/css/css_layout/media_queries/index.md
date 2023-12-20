@@ -1,6 +1,7 @@
 ---
 title: Beginner's guide to media queries
 slug: Learn/CSS/CSS_layout/Media_queries
+page-type: learn-module-chapter
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
@@ -105,7 +106,7 @@ The `width` (and `height`) media features can be used as ranges, and therefore b
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#syntax).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
 
 #### Orientation
 
@@ -142,6 +143,27 @@ If we know the user cannot hover, we could display some interactive features by 
 Also in Level 4 is the `pointer` media feature. This takes three possible values, `none`, `fine` and `coarse`. A `fine` pointer is something like a mouse or trackpad. It enables the user to precisely target a small area. A `coarse` pointer is your finger on a touchscreen. The value `none` means the user has no pointing device; perhaps they are navigating with the keyboard only or with voice commands.
 
 Using `pointer` can help you to design better interfaces that respond to the type of interaction a user is having with a screen. For example, you could create larger hit areas if you know that the user is interacting with the device as a touchscreen.
+
+#### Using ranged syntax
+
+One common case is to check if the viewport width is between two values:
+
+```css
+@media (min-width: 30em) and (max-width: 50em) {
+  /* … */
+}
+```
+
+If you want to improve the readability of this, you can use "range" syntax:
+
+```css
+@media (30em <= width <= 50em) {
+  /* … */
+}
+```
+
+So in this case, styles are applied when the viewport width is between `30em` and `50em`.
+For more information on using this style, see [Using Media Queries: Syntax improvements in Level 4](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax_improvements_in_level_4)
 
 ## More complex media queries
 
@@ -219,7 +241,10 @@ Our starting point is an HTML document with some CSS applied to add background c
 body {
   width: 90%;
   margin: 2em auto;
-  font: 1em/1.3 Arial, Helvetica, sans-serif;
+  font:
+    1em/1.3 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,
@@ -235,8 +260,8 @@ aside ul {
 
 nav a:link,
 nav a:visited {
-  background-color: rgba(207, 232, 220, 0.2);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220 / 20%);
+  border: 2px solid rgb(79 185 227);
   text-decoration: none;
   display: block;
   padding: 10px;
@@ -245,17 +270,17 @@ nav a:visited {
 }
 
 nav a:hover {
-  background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgb(207 232 220 / 70%);
 }
 
 .related {
-  background-color: rgba(79, 185, 227, 0.3);
-  border: 1px solid rgb(79, 185, 227);
+  background-color: rgb(79 185 227 / 30%);
+  border: 1px solid rgb(79 185 227);
   padding: 10px;
 }
 
 .sidebar {
-  background-color: rgba(207, 232, 220, 0.5);
+  background-color: rgb(207 232 220 / 50%);
   padding: 10px;
 }
 

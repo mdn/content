@@ -9,6 +9,8 @@ browser-compat: css.properties.mask-position
 
 The **`mask-position`** [CSS](/en-US/docs/Web/CSS) property sets the initial position, relative to the mask position layer set by {{cssxref("mask-origin")}}, for each defined mask image.
 
+## Syntax
+
 ```css
 /* Keyword values */
 mask-position: top;
@@ -24,7 +26,9 @@ mask-position: 10% 8em;
 
 /* Multiple values */
 mask-position: top right;
-mask-position: 1rem 1rem, center;
+mask-position:
+  1rem 1rem,
+  center;
 
 /* Global values */
 mask-position: inherit;
@@ -33,8 +37,6 @@ mask-position: revert;
 mask-position: revert-layer;
 mask-position: unset;
 ```
-
-## Syntax
 
 One or more `<position>` values, separated by commas.
 

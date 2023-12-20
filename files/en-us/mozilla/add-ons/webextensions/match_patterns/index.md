@@ -1,5 +1,5 @@
 ---
-title: Match patterns in extension manifests
+title: Match patterns
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 page-type: guide
 browser-compat: webextensions.match_patterns.scheme
@@ -16,9 +16,9 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 > **Note:** Some browsers don't support certain schemes.
 > Check the [Browser compatibility table](#browser_compatibility) for details.
 
-All match patterns are specified as strings. Apart from the special [`<all_urls>`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
+All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
 
-```
+```plain
 <scheme>://<host><path>
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Update Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
+page-type: learn-module-chapter
 ---
 
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
@@ -14,9 +15,9 @@ Open **/controllers/bookController.js**. Find the exported `book_update_get()` c
 exports.book_update_get = asyncHandler(async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
-    Book.findById(req.params.id).populate("author").populate("genre").exec(),
-    Author.find().exec(),
-    Genre.find().exec(),
+    Book.findById(req.params.id).populate("author").exec(),
+    Author.find().sort({ family_name: 1 }).exec(),
+    Genre.find().sort({ name: 1 }).exec(),
   ]);
 
   if (book === null) {
@@ -27,13 +28,9 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
   }
 
   // Mark our selected genres as checked.
-  for (const genre of allGenres) {
-    for (const book_g of book.genre) {
-      if (genre._id.toString() === book_g._id.toString()) {
-        genre.checked = "true";
-      }
-    }
-  }
+  allGenres.forEach((genre) => {
+    if (book.genre.includes(genre._id)) genre.checked = "true";
+  });
 
   res.render("book_form", {
     title: "Update Book",
@@ -62,12 +59,9 @@ Find the exported `book_update_post()` controller method, and replace it with th
 exports.book_update_post = [
   // Convert the genre to an array.
   (req, res, next) => {
-    if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") {
-        req.body.genre = [];
-      } else {
-        req.body.genre = new Array(req.body.genre);
-      }
+    if (!Array.isArray(req.body.genre)) {
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },
@@ -108,13 +102,13 @@ exports.book_update_post = [
 
       // Get all authors and genres for form
       const [allAuthors, allGenres] = await Promise.all([
-        Author.find().exec(),
-        Genre.find().exec(),
+        Author.find().sort({ family_name: 1 }).exec(),
+        Genre.find().sort({ name: 1 }).exec(),
       ]);
 
       // Mark our selected genres as checked.
       for (const genre of allGenres) {
-        if (book.genre.indexOf(genres._id) > -1) {
+        if (book.genre.indexOf(genre._id) > -1) {
           genre.checked = "true";
         }
       }
@@ -128,9 +122,9 @@ exports.book_update_post = [
       return;
     } else {
       // Data from form is valid. Update the record.
-      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
       // Redirect to book detail page.
-      res.redirect(thebook.url);
+      res.redirect(updatedBook.url);
     }
   }),
 ];

@@ -63,7 +63,7 @@ function initNormalBuffer(gl) {
   gl.bufferData(
     gl.ARRAY_BUFFER,
     new Float32Array(vertexNormals),
-    gl.STATIC_DRAW
+    gl.STATIC_DRAW,
   );
 
   return normalBuffer;
@@ -107,7 +107,7 @@ function setNormalAttribute(gl, buffers, programInfo) {
     type,
     normalize,
     stride,
-    offset
+    offset,
   );
   gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
 }
@@ -135,7 +135,7 @@ mat4.transpose(normalMatrix, normalMatrix);
 gl.uniformMatrix4fv(
   programInfo.uniformLocations.normalMatrix,
   false,
-  normalMatrix
+  normalMatrix,
 );
 ```
 

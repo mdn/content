@@ -13,7 +13,6 @@ The **`stroke-miterlimit`** attribute is a presentation attribute defining a lim
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement('altGlyph')}}
 - {{SVGElement('path')}}
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}

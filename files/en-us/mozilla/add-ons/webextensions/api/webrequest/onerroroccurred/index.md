@@ -28,7 +28,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 
 Events have three functions:
 
-- `addListener(callback, filter)`
+- `addListener(listener, filter)`
   - : Adds a listener to this event.
 - `removeListener(listener)`
   - : Stop listening to this event. The `listener` argument is the listener to remove.
@@ -39,22 +39,22 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
+- `listener`
 
-  - : A function that will be called when this event occurs. The function will be passed the following arguments:
+  - : The function called when this event occurs. The function is passed this argument:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that will be sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that is sent to this listener.
 
 ## Additional objects
 
 ### details
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
 - `error`
@@ -165,10 +165,7 @@ function logError(responseDetails) {
   console.log(responseDetails.error);
 }
 
-browser.webRequest.onErrorOccurred.addListener(
-  logError,
-  {urls: [target]}
-);
+browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
 ```
 
 {{WebExtExamples}}

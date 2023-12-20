@@ -1,6 +1,7 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,9 +36,9 @@ _No changes._
 
 - CSS parsing has been parallelized ([Firefox bug 1346988](https://bugzil.la/1346988)).
 - Support for {{cssxref("font-variation-settings")}} and {{cssxref("font-optical-sizing")}} has been enabled by default ([Firefox bug 1447163](https://bugzil.la/1447163)).
-- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_Box_Alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
+- The `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties have been renamed to {{cssxref("gap")}}, {{cssxref("row-gap")}}, and {{cssxref("column-gap")}}, as they are no longer grid-specific ([Firefox bug 1398482](https://bugzil.la/1398482)). See [Box alignment; Gaps between boxes](/en-US/docs/Web/CSS/CSS_box_alignment#gaps_between_boxes) for additional details. The old names have been kept as aliases for web compatibility purposes.
 - The {{cssxref("flex-basis")}} `content` value is now supported ([Firefox bug 1105111](https://bugzil.la/1105111)).
-- Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_Columns) ([Firefox bug 1398537](https://bugzil.la/1398537)).
+- Percentage values of {{cssxref("column-gap")}} are now supported in [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) ([Firefox bug 1398537](https://bugzil.la/1398537)).
 - The CSS {{cssxref(":host")}} pseudo-class is now supported; this selects a custom element from inside its shadow DOM ([Firefox bug 992245](https://bugzil.la/992245)).
 - {{cssxref("overflow")}} now accepts two-value syntax ([Firefox bug 1453148](https://bugzil.la/1453148)).
 - Flex items that are sized according to their content are now sized using `max-content`, not `fit-content` ([Firefox bug 1282821](https://bugzil.la/1282821)). See the [`width` value definitions](/en-US/docs/Web/CSS/width#values) for more details of these values.
@@ -138,8 +139,8 @@ _No changes._
 
 - The {{domxref("File")}} interface's property {{domxref("File.lastModifiedDate", "lastModifiedDate")}} has been removed ([Firefox bug 1458883](https://bugzil.la/1458883)).
 - The `Node.setUserData` and `Node.getUserData` methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
-- The {{domxref("Element.createShadowRoot()")}} method has been removed. Use {{domxref("Element.attachShadow()")}} instead ([Firefox bug 1453789](https://bugzil.la/1453789)).
-- The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL()")}} method has been removed ([Firefox bug 1454889](https://bugzil.la/1454889)).
+- The `Element.createShadowRoot()` method has been removed. Use {{domxref("Element.attachShadow()")}} instead ([Firefox bug 1453789](https://bugzil.la/1453789)).
+- The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} method has been removed ([Firefox bug 1454889](https://bugzil.la/1454889)).
 
 ### SVG
 

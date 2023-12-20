@@ -18,7 +18,6 @@ Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elem
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("audio")}}
 - {{SVGElement("canvas")}}
 - {{SVGElement("circle")}}

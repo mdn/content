@@ -41,7 +41,7 @@ dtmfSender.addEventListener(
       sendDTMFButton.disabled = false;
     }
   },
-  false
+  false,
 );
 ```
 

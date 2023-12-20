@@ -1,6 +1,7 @@
 ---
 title: Get Window Rect
 slug: Web/WebDriver/Commands/GetWindowRect
+page-type: webdriver-command
 browser-compat: webdriver.commands.GetWindowRect
 ---
 

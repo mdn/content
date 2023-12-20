@@ -4,6 +4,8 @@ slug: Glossary/Routers
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 There are three definitions for **routers** on the web:
 
 1. For the network layer, the router is a networking device that decides data {{Glossary('Packet')}}s directions. They are distributed by retailers allowing user interaction to the internet.

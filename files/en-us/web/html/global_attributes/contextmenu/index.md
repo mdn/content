@@ -61,14 +61,14 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
 function shareViaTwitter() {
   window.open(
     "https://twitter.com/intent/tweet?text=" +
-      "Hurray! I am learning ContextMenu from MDN via Mozilla"
+      "Hurray! I am learning ContextMenu from MDN via Mozilla",
   );
 }
 
 function shareViaFacebook() {
   window.open(
     "https://facebook.com/sharer/sharer.php?u=" +
-      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus"
+      "https://developer.mozilla.org/en/HTML/Element/Using_HTML_context_menus",
   );
 }
 

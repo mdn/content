@@ -26,7 +26,7 @@ const nodeIterator = document.createNodeIterator(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 root = nodeIterator.root; // document.body in this case
 ```

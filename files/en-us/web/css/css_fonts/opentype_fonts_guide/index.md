@@ -1,6 +1,6 @@
 ---
 title: OpenType font features guide
-slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
+slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 page-type: guide
 ---
 
@@ -163,7 +163,9 @@ According to the specification you can either supply just the 4-character featur
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 

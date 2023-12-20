@@ -1,6 +1,7 @@
 ---
 title: Firefox 49 for developers
 slug: Mozilla/Firefox/Releases/49
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -51,13 +52,13 @@ slug: Mozilla/Firefox/Releases/49
 - Added the [`q` length unit](/en-US/docs/Web/CSS/length#q) ([Firefox bug 1274526](https://bugzil.la/1274526)).
 - The property {{cssxref("text-align-last")}} has been unprefixed ([Firefox bug 1039541](https://bugzil.la/1039541)).
 - Added support for {{cssxref("overflow-wrap")}}, replacing `word-wrap` that is still supported as an alternative name ([Firefox bug 955857](https://bugzil.la/955857)).
-- Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_Grid_Layout) implementation has been improved:
+- Our experimental [CSS Grids](/en-US/docs/Web/CSS/CSS_grid_layout) implementation has been improved:
 
   - Implemented {{cssxref("&lt;percentage&gt;")}} for the `grid-gap`, `grid-row-gap`, and `grid-column-gap` properties ([Firefox bug 1266268](https://bugzil.la/1266268)).
   - Implemented grid layout support for {{cssxref("align")}}, {{cssxref("justify-self")}}`:baseline` and `last-baseline` (aka "baseline self-alignment") ([Firefox bug 1221525](https://bugzil.la/1221525)).
   - Implemented grid item baseline content alignment ([Firefox bug 1256429](https://bugzil.la/1256429)).
 
-- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_Masking) implementation has been improved:
+- Our experimental [CSS Masks](/en-US/docs/Web/CSS/CSS_masking) implementation has been improved:
 
   - The {{cssxref("mask-origin")}} property now uses `border-box` instead of `padding-box` as initial value, to match the spec ([Firefox bug 1258286](https://bugzil.la/1258286)).
   - The {{cssxref("mask-repeat")}} property now supports the `space` and `round` values ([Firefox bug 1258626](https://bugzil.la/1258626)).
@@ -82,7 +83,7 @@ slug: Mozilla/Firefox/Releases/49
 - The value returned by {{domxref("URL.origin")}}, {{domxref("HTMLAnchorElement/origin", "HTMLAnchorElement.origin")}}, and {{domxref("HTMLAnchorElement/origin", "HTMLAreaElement.origin")}} for URL using the `blob:` scheme is no longer incorrectly `null` but is instead the origin of the URL formed by removing the leading `blob:` ([Firefox bug 1270451](https://bugzil.la/1270451)).
 - In prerendering mode, the {{domxref('Document.visibilityState')}} property now returns `'prerender'` ([Firefox bug 1069772](https://bugzil.la/1069772)).
 - The {{domxref("isSecureContext")}} property has been implemented ([Firefox bug 1162772](https://bugzil.la/1162772)).
-- The DOM4 {{domxref("ChildNode.before()")}}, {{domxref("ChildNode.after()")}}, {{domxref("ChildNode.replaceWith()")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ([Firefox bug 911477](https://bugzil.la/911477)).
+- The DOM4 {{domxref("Element.before")}}, {{domxref("Element.after")}}, {{domxref("Element.replaceWith")}}, {{domxref("Element.append")}} and {{domxref("Element.prepend")}} methods have been implemented ([Firefox bug 911477](https://bugzil.la/911477)).
 - The `TouchList.identifiedTouch()` method has been removed ([Firefox bug 1188539](https://bugzil.la/1188539)).
 - By default, the `scrollbars` {{domxref("Window")}} feature is enabled when calling {{domxref("Window.open()")}}. In the past, while it was strongly recommended to enable it, it wasn't the default ([Firefox bug 1257887](https://bugzil.la/1257887)).
 - Added the _experimental_ and _non-standard_ {{domxref("HTMLMediaElement.seekToNextFrame()")}} method, which allows seeking frame-by-frame through video content ([Firefox bug 1235301](https://bugzil.la/1235301)). While you're encouraged to experiment with this method to help us understand how useful it is, _do not use it in production code!_
@@ -160,7 +161,7 @@ _No change._
 
 ### SVG
 
-- Removed support for the deprecated {{SVGElement('altGlyph')}}, {{SVGElement('altGlyphDef')}} and {{SVGElement('altGlyphItem')}} elements ([Firefox bug 1260032](https://bugzil.la/1260032)).
+- Removed support for the deprecated `<altGlyph>`, `<altGlyphDef>` and `<altGlyphItem>` elements ([Firefox bug 1260032](https://bugzil.la/1260032)).
 
 ### Audio/Video
 
@@ -267,9 +268,9 @@ In order to improve compatibility with existing content, Firefox now accepts som
 - The `WebKitCSSMatrix` interface is an alias of {{domxref("DOMMatrix")}}
 - The following media query features have been implemented:
 
-  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
-  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
-  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
+  - `-webkit-min-device-pixel-ratio` as an alias of [`min-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) with the same value (in `dppx)`, though this feature is [disabled by default](https://bugzil.la/1237720) (behind about:config pref `layout.css.prefixes.device-pixel-ratio-webkit`)
+  - `-webkit-max-device-pixel-ratio` as an alias of [`max-resolution`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) of the same value (in `dppx`); this feature is also disabled by default, behind the same about:config pref.
+  - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-webkit-transform-3d) always matching, indicating 3d transform support.
 
 ## Changes for add-on and Mozilla developers
 

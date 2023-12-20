@@ -26,7 +26,7 @@ The `inputSource` property allows you to filter hit test results by input source
 // frame loop
 function onXRFrame(time, xrFrame) {
   let hitTestResults = xrFrame.getHitTestResultsForTransientInput(
-    transientHitTestSource
+    transientHitTestSource,
   );
 
   hitTestResults.forEach((resultsPerInputSource) => {

@@ -71,7 +71,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: true,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.create(
@@ -82,7 +82,7 @@ browser.contextMenus.create(
     contexts: ["all"],
     checked: false,
   },
-  onCreated
+  onCreated,
 );
 
 browser.contextMenus.onClicked.addListener((info, tab) => {

@@ -44,7 +44,7 @@ let downloading = browser.downloads.download(
     - `conflictAction` {{optional_inline}}
       - : A string representing the action you want taken if there is a filename conflict, as defined in the {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (defaults to "uniquify" when it is not specified).
     - `cookieStoreId` {{optional_inline}}
-      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+      - : The cookie store ID of the [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) the download is associated with. If omitted, the default cookie store is used. Use requires the "cookies" [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions). See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `filename` {{optional_inline}}
       - : A `string` representing a file path relative to the default downloads directory — this provides the location where you want the file to be saved, and what filename you want to use. Absolute paths, empty paths, path components that start and/or end with a dot (.), and paths containing back-references (`../`) will cause an error. If omitted, this value will default to the filename already given to the download file, and a location immediately inside the downloads directory.
     - `headers` {{optional_inline}}
@@ -68,7 +68,7 @@ let downloading = browser.downloads.download(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the download started successfully, the promise will be fulfilled with the `id` of the new {{WebExtAPIRef("downloads.DownloadItem")}}. Otherwise, the promise will be rejected with an error message taken from {{WebExtAPIRef("downloads.InterruptReason")}}.
 
-If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
+If you use [URL.createObjectURL()](/en-US/docs/Web/API/URL/createObjectURL_static) to download data created in JavaScript and you want to revoke the object URL (with [revokeObjectURL](/en-US/docs/Web/API/URL/revokeObjectURL_static)) later (as it is strongly recommended), you need to do that after the download has been completed. To do so, listen to the [downloads.onChanged](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged) event.
 
 ## Browser compatibility
 
@@ -90,9 +90,9 @@ function onFailed(error) {
 let downloadUrl = "https://example.org/image.png";
 
 let downloading = browser.downloads.download({
-  url : downloadUrl,
-  filename : 'my-image-again.png',
-  conflictAction : 'uniquify'
+  url: downloadUrl,
+  filename: "my-image-again.png",
+  conflictAction: "uniquify",
 });
 
 downloading.then(onStartedDownload, onFailed);

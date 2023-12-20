@@ -46,13 +46,13 @@ workingDirectory.getFile(
             { create: true },
             (newEntry) => {
               fileEntry = newEntry;
-            }
+            },
           );
         });
       }
     });
   },
-  handleError
+  handleError,
 );
 ```
 

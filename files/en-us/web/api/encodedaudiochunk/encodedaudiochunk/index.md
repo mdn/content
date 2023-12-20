@@ -46,7 +46,7 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedAudioChunk(init);
+chunk = new EncodedAudioChunk(init);
 ```
 
 ## Specifications

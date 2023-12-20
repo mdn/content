@@ -16,6 +16,8 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
 
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+
 ## Constructor
 
 - {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -24,9 +26,6 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 ## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
-
-- {{domxref("InstallEvent.activeWorker")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
 
 ## Instance methods
 
@@ -55,7 +54,7 @@ self.addEventListener("install", (event) => {
 
   console.log(
     "Handling install event. Resources to pre-fetch:",
-    urlsToPrefetch
+    urlsToPrefetch,
   );
 
   event.waitUntil(
@@ -66,7 +65,7 @@ self.addEventListener("install", (event) => {
           .addAll(
             urlsToPrefetch.map((urlToPrefetch) => {
               return new Request(urlToPrefetch, { mode: "no-cors" });
-            })
+            }),
           )
           .then(() => {
             console.log("All resources have been fetched and cached.");
@@ -74,7 +73,7 @@ self.addEventListener("install", (event) => {
       })
       .catch((error) => {
         console.error("Pre-fetching failed:", error);
-      })
+      }),
   );
 });
 ```
@@ -85,6 +84,7 @@ self.addEventListener("install", (event) => {
 
 ## See also
 
+- [`install` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - {{domxref("NotificationEvent")}}
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

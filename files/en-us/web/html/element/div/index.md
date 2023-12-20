@@ -7,7 +7,7 @@ browser-compat: html.elements.div
 
 {{HTMLSidebar}}
 
-The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) is applied to its parent element).
+The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g. styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) is applied to its parent element).
 
 {{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}
 
@@ -17,7 +17,7 @@ As a "pure" container, the `<div>` element does not inherently represent anythin
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
+> **Note:** The `align` attribute is obsolete; do not use it anymore. Instead, you should use CSS properties or techniques such as [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) or [CSS Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) to align and position `<div>` elements on the page.
 
 ## Usage notes
 
@@ -117,8 +117,10 @@ This example creates a shadowed box by applying a style to the `<div>` using CSS
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

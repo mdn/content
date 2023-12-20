@@ -1,6 +1,6 @@
 ---
-title: CSS Images
-slug: Web/CSS/CSS_Images
+title: CSS images
+slug: Web/CSS/CSS_images
 page-type: css-module
 spec-urls:
   - https://drafts.csswg.org/css-images/
@@ -10,7 +10,7 @@ spec-urls:
 
 {{CSSRef}}
 
-**CSS Images** is a module of CSS that defines what types of images can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
+The **CSS images** module defines the types of images that can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
 
 ## Reference
 
@@ -42,9 +42,9 @@ spec-urls:
 
 ## Guides
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Presents a specific type of CSS images, _gradients_, and how to create and use these.
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS)
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
   - : Describes the common technique grouping several images in one single document to save download requests and speed up the availability of a page.
 
 ## Specifications

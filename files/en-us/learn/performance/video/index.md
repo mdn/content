@@ -1,6 +1,7 @@
 ---
 title: "Multimedia: video"
 slug: Learn/Performance/video
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/Multimedia", "Learn/Performance/javascript_performance", "Learn/Performance")}}
@@ -81,7 +82,7 @@ To ensure that a looping background video autoplays, you must add several attrib
 <video
   autoplay=""
   loop=""
-  muted="true"
+  muted
   playsinline=""
   src="backgroundvideo.mp4"></video>
 ```
@@ -95,7 +96,7 @@ While the `loop` and `autoplay` make sense for a looping and autoplaying video, 
 For hero-video or other video without audio, removing audio is smart.
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
+<video autoplay="" loop="" muted playsinline="" id="hero-video">
   <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
   <source src="web_banner.mp4" type="video/mp4" />
 </video>

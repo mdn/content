@@ -1,6 +1,7 @@
 ---
 title: Styling web forms
 slug: Learn/Forms/Styling_web_forms
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
@@ -117,7 +118,7 @@ button {
 }
 ```
 
-In the screenshot below, the left column shows the default rendering of an \<input type="radio">, \<input type="checkbox">, \<input type="range">, \<input type="text">, \<input type="date"> input, {{htmlelement('select')}}, {{htmlelement('textarea')}},\<input type="submit">, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
+In the screenshot below, the left column shows the default rendering of an `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, and {{htmlelement('button')}}. The right column on the other hand shows the same elements with our above rule applied to them. Notice how this lets us ensure that all of the elements occupy the same amount of space, despite the platform's default rules for each kind of widget.
 
 ![box model properties effect most input types.](boxmodel_formcontrols1.png)
 
@@ -214,16 +215,18 @@ First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the b
 ```css
 @font-face {
   font-family: "handwriting";
-  src: url("fonts/journal-webfont.woff2") format("woff2"), url("fonts/journal-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "typewriter";
-  src: url("fonts/momot___-webfont.woff2") format("woff2"), url("fonts/momot___-webfont.woff")
-      format("woff");
+  src:
+    url("fonts/momot___-webfont.woff2") format("woff2"),
+    url("fonts/momot___-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -252,11 +255,13 @@ form {
 }
 ```
 
-Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_Grid_Layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
-  font: 1em "typewriter", monospace;
+  font:
+    1em "typewriter",
+    monospace;
   align-self: end;
 }
 
@@ -276,7 +281,9 @@ Now we can start working on the form elements themselves. First, let's ensure th
 
 ```css
 label {
-  font: 0.8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
@@ -285,7 +292,10 @@ The text fields require some common rules. In other words, we remove their {{css
 ```css
 input,
 textarea {
-  font: 1.4em/1.5em "handwriting", cursive, sans-serif;
+  font:
+    1.4em/1.5em "handwriting",
+    cursive,
+    sans-serif;
   border: none;
   padding: 0 10px;
   margin: 0;
@@ -299,7 +309,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
 }
 ```
@@ -347,7 +357,6 @@ button:after {
 
 button:hover,
 button:focus {
-  outline: none;
   background: #000;
   color: #fff;
 }

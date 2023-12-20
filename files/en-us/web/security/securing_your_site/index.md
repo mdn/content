@@ -1,6 +1,7 @@
 ---
 title: Securing your site
 slug: Web/Security/Securing_your_site
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

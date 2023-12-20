@@ -118,7 +118,7 @@ We can also use {{jsxref("Array")}} methods on any {{domxref("HTMLCollection")}}
 const testElements = document.getElementsByClassName("test");
 const testDivs = Array.prototype.filter.call(
   testElements,
-  (testElement) => testElement.nodeName === "DIV"
+  (testElement) => testElement.nodeName === "DIV",
 );
 ```
 

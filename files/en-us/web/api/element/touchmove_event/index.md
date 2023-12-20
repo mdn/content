@@ -65,4 +65,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("Element/mousemove_event", "mousemove")}}
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchmove_event", "touchmove")}}

@@ -17,6 +17,9 @@ The **`radial-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/We
 /* A gradient at the center of its container,
    starting red, changing to blue, and finishing green */
 radial-gradient(circle at center, red 0, blue, green 100%)
+
+/* hsl color space with lognger hue interpolation */
+radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 ```
 
 A radial gradient is specified by indicating the center of the gradient (where the 0% ellipse will be) and the size and shape of the _ending shape_ (the 100% ellipse).
@@ -47,7 +50,7 @@ A radial gradient is specified by indicating the center of the gradient (where t
     When the `<ending-shape>` keyword is omitted, the gradient shape is determined by the size given. One `<length>` value provides a circle, while two values in `<length-percentage>`units provide an ellipse. A single `<percentage>` value is not valid.
 
 - `<linear-color-stop>`
-  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by an one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
+  - : A color-stop's {{cssxref("&lt;color&gt;")}} value, followed by one or two optional stop positions (either a {{cssxref("&lt;percentage&gt;")}} or a {{cssxref("&lt;length&gt;")}} along the gradient's axis). A percentage of `0%`, or a length of `0`, represents the center of the gradient; the value `100%` represents the intersection of the ending shape with the virtual gradient ray. Percentage values in between are linearly positioned on the gradient ray. Including two stop positions is equivalent to declaring two color stops with the same color at the two positions.
 - `<color-hint>`
   - : The color-hint is an interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
@@ -121,9 +124,61 @@ Color-stop points are positioned on a _virtual gradient ray_ that extends horizo
 
 {{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
 
+### Interpolating with hue
+
+```html hidden
+<div class="shorter"></div>
+<div class="longer"></div>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  margin-top: 1rem;
+  width: 45vw;
+  height: 80vh;
+}
+
+.shorter::before {
+  content: "shorter hue";
+  display: block;
+  margin-top: -1rem;
+}
+
+.longer::before {
+  content: "longer hue";
+  display: block;
+  margin-top: -1rem;
+}
+```
+
+In this example for interpolation, [hsl](/en-US/docs/Web/CSS/color_value/hsl) color system is being used and [hue](/en-US/docs/Web/CSS/hue) is being interpolated.
+
+```css
+.shorter {
+  background-image: radial-gradient(
+    circle at center in hsl shorter hue,
+    red,
+    blue
+  );
+}
+
+.longer {
+  background-image: radial-gradient(
+    circle at center in hsl longer hue,
+    red,
+    blue
+  );
+}
+```
+
+The box on the left uses [shorter interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#shorter), meaning the color goes straight from red to blue using the shorter arc on [color wheel](/en-US/docs/Glossary/Color_wheel). The box on the right uses [longer interpolation](/en-US/docs/Web/CSS/hue-interpolation-method#longer), meaning the color goes from red to blue using the longer arc, traversing through greens, yellows, and oranges.
+
+{{EmbedLiveSample("Interpolating with hue", 240, 200)}}
+
 ### More radial-gradient examples
 
-Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## Specifications
 
@@ -135,8 +190,10 @@ Please see [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradie
 
 ## See also
 
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
+- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("image/image","image()")}}
 - {{cssxref("element", "element()")}}

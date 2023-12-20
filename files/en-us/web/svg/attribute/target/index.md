@@ -23,7 +23,10 @@ svg {
 }
 
 text {
-  font: 20px Arial, Helvetica, sans-serif;
+  font:
+    20px Arial,
+    Helvetica,
+    sans-serif;
   fill: blue;
   text-decoration: underline;
 }

@@ -64,7 +64,7 @@ A _property descriptor_ is a record with some of the following attributes:
 
 ## Examples
 
-### Using Object.getOwnPropertyDescriptor
+### Using Object.getOwnPropertyDescriptor()
 
 ```js
 let o, d;

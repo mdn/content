@@ -1,6 +1,7 @@
 ---
 title: Routing in Ember
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}

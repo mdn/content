@@ -1,6 +1,7 @@
 ---
 title: "Media type and format guide: image, audio, and video content"
 slug: Web/Media/Formats
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

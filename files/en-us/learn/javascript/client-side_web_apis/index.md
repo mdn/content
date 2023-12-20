@@ -1,6 +1,7 @@
 ---
 title: Client-side web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
+page-type: learn-module
 ---
 
 {{LearnSidebar}}

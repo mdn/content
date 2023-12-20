@@ -49,7 +49,7 @@ function readDirectory(directory) {
       },
       (error) => {
         /* handle error — error is a FileError object */
-      }
+      },
     );
   };
 

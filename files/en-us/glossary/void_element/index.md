@@ -4,6 +4,8 @@ slug: Glossary/Void_element
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **void element** is an {{Glossary("element")}} in HTML that **cannot** have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements.
 
 In HTML, a void element must not have an end tag. For example, `<input type="text"></input>` is invalid HTML. In contrast, SVG or MathML elements that cannot have any child nodes may use an end tag instead of XML self-closing-tag syntax in their start tag.
@@ -22,7 +24,6 @@ The void elements in HTML are as follows:
 - {{HTMLElement("hr")}}
 - {{HTMLElement("img")}}
 - {{HTMLElement("input")}}
-- {{HTMLElement("keygen")}} {{deprecated_inline}}
 - {{HTMLElement("link")}}
 - {{HTMLElement("meta")}}
 - {{HTMLElement("param")}} {{deprecated_inline}}

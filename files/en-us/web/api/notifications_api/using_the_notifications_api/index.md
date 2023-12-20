@@ -5,13 +5,13 @@ page-type: guide
 browser-compat: api.Notification
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
 Typically, system notifications refer to the operating system's standard notification mechanism: think for example of how a typical desktop system or mobile device broadcasts notifications.
 
-![Android device notifications feed containing a list of several alerts from multiple sources.](android-notification.png)
+![Desktop notification: To do list via mdn.github.io HEY! Your task "Go shopping" is now overdue](desktop-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
 
@@ -31,7 +31,7 @@ In addition, In Chrome and Firefox you cannot request notifications at all unles
 
 ### Checking current permission status
 
-You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission")}} read only property. It can have one of three possible values:
+You can check to see if you already have permission by checking the value of the {{domxref("Notification.permission_static", "Notification.permission")}} read only property. It can have one of three possible values:
 
 - `default`
   - : The user hasn't been asked for permission yet, so notifications won't be displayed.
@@ -42,7 +42,7 @@ You can check to see if you already have permission by checking the value of the
 
 ### Getting permission
 
-If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
+If permission to display notifications hasn't been granted yet, the application needs to use the {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} method to request this from the user. In its simplest form, we just include the following:
 
 ```js
 Notification.requestPermission().then((result) => {
@@ -53,10 +53,14 @@ Notification.requestPermission().then((result) => {
 This uses the promise-based version of the method. If you want to support older versions, you might have to use the older callback version, which looks like this:
 
 ```js
-Notification.requestPermission();
+Notification.requestPermission((result) => {
+  console.log(result);
+});
 ```
 
 The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.
+
+> **Note:** There's no way to reliably feature-test whether `Notification.requestPermission` supports the promise-based version. If you need to support older browsers, just use the callback-based version—although this is deprecated, it still works in new browsers. Check the [browser compatibility table](/en-US/docs/Web/API/Notification/requestPermission_static#browser_compatibility) for more information.
 
 ### Example
 
@@ -80,41 +84,17 @@ function askNotificationPermission() {
   // Let's check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support notifications.");
-  } else if (checkNotificationPromise()) {
+  } else {
     Notification.requestPermission().then((permission) => {
       handlePermission(permission);
     });
-  } else {
-    Notification.requestPermission((permission) => {
-      handlePermission(permission);
-    });
   }
 }
 ```
 
-Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we then run a check to see whether the promise-based version of `Notification.requestPermission()` is supported. If it is, we run the promise-based version (supported everywhere except Safari), and if not, we run the older callback-based version (which is supported in Safari).
+Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we run the promise-based version of `Notification.requestPermission()`, and if not, we log a message to the console.
 
 To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
-
-> **Note:** Before version 37, Chrome doesn't let you call {{domxref("Notification.requestPermission()")}} in the `load` event handler (see [issue 274284](https://crbug.com/274284)).
-
-### Feature-detecting the requestPermission() promise
-
-Above we said that we had to check whether the browser supports the promise version of `Notification.requestPermission()`. We did this using the following:
-
-```js
-function checkNotificationPromise() {
-  try {
-    Notification.requestPermission().then();
-  } catch (e) {
-    return false;
-  }
-
-  return true;
-}
-```
-
-We basically try to see if the `.then()` method is available on `requestPermission()`. If so, we move on and return `true`. If it fails, we return `false` in the `catch() {}` block.
 
 ## Creating a notification
 
@@ -208,7 +188,7 @@ window.addEventListener("load", () => {
       // If the user hasn't told if they want to be notified or not
       // Note: because of Chrome, we are not sure the permission property
       // is set, therefore it's unsafe to check for the "default" value.
-      Notification.requestPermission((status) => {
+      Notification.requestPermission().then((status) => {
         // If the user said okay
         if (status === "granted") {
           let i = 0;

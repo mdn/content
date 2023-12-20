@@ -39,6 +39,9 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
   - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/iframe#height) HTML attribute, indicating the height of the frame.
+- {{domxref("HTMLIFrameElement.loading")}}
+  - : A string providing a hint to the browser that the iframe should be loaded immediately (`eager`) or on an as-needed basis (`lazy`).
+    This reflects the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) HTML attribute.
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
   - : A string that contains the URI of a long description of the frame.
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}

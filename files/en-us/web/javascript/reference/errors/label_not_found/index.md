@@ -6,11 +6,11 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "label not found" occurs when a {{jsxref("Statement/break", "break")}} or {{jsxref("Statement/continue", "continue")}} statement references a label that does not exist on any statement that contains the `break` or `continue` statement.
+The JavaScript exception "label not found" occurs when a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement references a label that does not exist on any statement that contains the `break` or `continue` statement.
 
 ## Message
 
-```
+```plain
 SyntaxError: Undefined label 'label' (V8-based)
 SyntaxError: label not found (Firefox)
 SyntaxError: Cannot use the undeclared label 'label'. (Safari)
@@ -30,7 +30,7 @@ In JavaScript, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) a
 
 You cannot use labels as if they are `goto`.
 
-```js example-bad
+```js-nolint example-bad
 start: console.log("Hello, world!");
 console.log("Do it again");
 break start;
@@ -50,4 +50,4 @@ start: {
 
 ## See also
 
-- [Label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

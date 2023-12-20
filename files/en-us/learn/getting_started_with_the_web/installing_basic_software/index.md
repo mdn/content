@@ -1,6 +1,7 @@
 ---
 title: Installing basic software
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}

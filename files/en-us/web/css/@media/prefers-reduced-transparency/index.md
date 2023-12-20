@@ -9,7 +9,7 @@ browser-compat: css.at-rules.media.prefers-reduced-transparency
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
+The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) is used to detect if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device. Switching on such a setting can help improve contrast and readability for some users.
 
 ## Syntax
 
@@ -20,19 +20,12 @@ The **`prefers-reduced-transparency`** [CSS](/en-US/docs/Web/CSS) [media feature
 
 ## User preferences
 
-For Firefox, the `reduce` request is honored if a dedicated system-specific setting exists, otherwise it is enabled if reduced motion is also enabled:
+Various operating systems provide a preference for reducing transparency, and user agents are likely to rely on these system settings.
+They may also rely on less explicit signals on platforms which don't offer a specific setting.
 
-- In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
-
-  - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
-  - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
-
-- In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
-- In Windows 10: Settings > Personalization > Colors > Transparency effects.
-- In Windows 11: Settings > Personalization > Colors > Transparency effects.
+- In Windows 10/11: Settings > Personalization > Colors > Transparency effects.
 - In macOS: System Preferences > Accessibility > Display > Reduce transparency.
-- In iOS: Settings > Accessibility > Motion.
-- In Android 9+: Settings > Accessibility > Remove animations.
+- In iOS: Settings > Accessibility > Display & Text Size > Reduce Transparency.
 
 ## Examples
 
@@ -69,4 +62,4 @@ This example has a translucent box by default. If the setting to reduce transpar
 ## See also
 
 - CSS [prefers-reduced-motion](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) media query
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

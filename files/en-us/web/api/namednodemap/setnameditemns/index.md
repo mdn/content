@@ -60,7 +60,7 @@ let result = `The '<span>' element initially contains ${attrMap.length} attribut
 result += "We remove `one` from '<span>' and adds it to '<pre>'.\n";
 const one = warning.attributes.removeNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 );
 attrMap.setNamedItemNS(one);
 result += `The '<span>' element now contains ${span.attributes.length} attributes:\n\n`;

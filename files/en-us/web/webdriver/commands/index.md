@@ -1,6 +1,7 @@
 ---
 title: Commands
 slug: Web/WebDriver/Commands
+page-type: landing-page
 browser-compat: webdriver.commands
 ---
 

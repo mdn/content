@@ -86,7 +86,7 @@ XR.requestSession("inline").then((xrSession) => {
         xrViewport.x,
         xrViewport.y,
         xrViewport.width,
-        xrViewport.height
+        xrViewport.height,
       );
 
       // WebGL draw calls will now be rendered into the appropriate viewport.

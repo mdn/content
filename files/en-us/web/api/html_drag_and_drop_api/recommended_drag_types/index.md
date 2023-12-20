@@ -42,7 +42,7 @@ To drag multiple links, separate each link inside the `text/uri-list` data with 
 
 For example, this sample `text/uri-list` data contains two links and a comment:
 
-```
+```plain
 http://www.mozilla.org
 #A second link
 http://www.example.com
@@ -58,7 +58,7 @@ const url = event.dataTransfer.getData("URL");
 
 You may also see data with the Mozilla-specific type `text/x-moz-url`. If it appears, it should appear before the `text/uri-list` type. It holds the URLs of links followed by their titles, separated by a linebreak. For example:
 
-```
+```plain
 http://www.mozilla.org
 Mozilla
 http://www.example.com
@@ -132,7 +132,7 @@ currentEvent.dataTransfer.setData("text/x-moz-url", URL);
 currentEvent.dataTransfer.setData("application/x-moz-file-promise-url", URL);
 currentEvent.dataTransfer.setData(
   "application/x-moz-file-promise-dest-filename",
-  leafName
+  leafName,
 );
 
 function dataProvider() {}
@@ -154,10 +154,10 @@ dataProvider.prototype = {
       aTransferable.getTransferData(
         "application/x-moz-file-promise-url",
         urlPrimitive,
-        dataSize
+        dataSize,
       );
       const url = urlPrimitive.value.QueryInterface(
-        Components.interfaces.nsISupportsString
+        Components.interfaces.nsISupportsString,
       ).data;
       console.log(`URL file original is = ${url}`);
 
@@ -165,10 +165,10 @@ dataProvider.prototype = {
       aTransferable.getTransferData(
         "application/x-moz-file-promise-dest-filename",
         namePrimitive,
-        dataSize
+        dataSize,
       );
       const name = namePrimitive.value.QueryInterface(
-        Components.interfaces.nsISupportsString
+        Components.interfaces.nsISupportsString,
       ).data;
 
       console.log(`target filename is = ${name}`);
@@ -177,16 +177,16 @@ dataProvider.prototype = {
       aTransferable.getTransferData(
         "application/x-moz-file-promise-dir",
         dirPrimitive,
-        dataSize
+        dataSize,
       );
       const dir = dirPrimitive.value.QueryInterface(
-        Components.interfaces.nsILocalFile
+        Components.interfaces.nsILocalFile,
       );
 
       console.log(`target folder is = ${dir.path}`);
 
       const file = Cc["@mozilla.org/file/local;1"].createInstance(
-        Components.interfaces.nsILocalFile
+        Components.interfaces.nsILocalFile,
       );
       file.initWithPath(dir.path);
       file.appendRelativePath(name);

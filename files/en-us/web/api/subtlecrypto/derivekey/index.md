@@ -30,8 +30,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An object defining the [derivation algorithm](#supported_algorithms) to use.
     - To use [ECDH](#ecdh), pass an
       [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
-    - To use [HKDF](#hkdf), pass
-      an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
     - To use [PBKDF2](#pbkdf2), pass
       a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `baseKey`
@@ -42,12 +41,13 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     `CryptoKey` using
     [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 - `derivedKeyAlgorithm`
-  - : An object defining the algorithm the derived key will be used for.
-    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac): pass an
-      [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
+  - : An object defining the algorithm the derived key will be used for:
+    - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw): pass an
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an
       [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
+    - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    - For [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `extractable`
   - : A boolean value indicating whether it
     will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
@@ -148,7 +148,7 @@ function deriveSecretKey(privateKey, publicKey) {
       length: 256,
     },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -162,7 +162,7 @@ async function agreeSharedSecretKey() {
       namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   let bobsKeyPair = await window.crypto.subtle.generateKey(
@@ -171,19 +171,19 @@ async function agreeSharedSecretKey() {
       namedCurve: "P-384",
     },
     false,
-    ["deriveKey"]
+    ["deriveKey"],
   );
 
   // Alice then generates a secret key using her private key and Bob's public key.
   let alicesSecretKey = await deriveSecretKey(
     alicesKeyPair.privateKey,
-    bobsKeyPair.publicKey
+    bobsKeyPair.publicKey,
   );
 
   // Bob generates the same secret key using his private key and Alice's public key.
   let bobsSecretKey = await deriveSecretKey(
     bobsKeyPair.privateKey,
-    alicesKeyPair.publicKey
+    alicesKeyPair.publicKey,
   );
 
   // Alice can then use her copy of the secret key to encrypt a message to Bob.
@@ -219,7 +219,7 @@ function getKeyMaterial() {
     enc.encode(password),
     "PBKDF2",
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -235,10 +235,55 @@ async function encrypt(plaintext, salt, iv) {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 
   return window.crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, plaintext);
+}
+```
+
+### HKDF
+
+In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH. Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/hkdf.js)
+
+```js
+/*
+  Given some key material and some random salt,
+  derive an AES-GCM key using HKDF.
+  */
+function getKey(keyMaterial, salt) {
+  return window.crypto.subtle.deriveKey(
+    {
+      name: "HKDF",
+      salt: salt,
+      info: new Uint8Array("Encryption example"),
+      hash: "SHA-256",
+    },
+    keyMaterial,
+    { name: "AES-GCM", length: 256 },
+    true,
+    ["encrypt", "decrypt"],
+  );
+}
+
+async function encrypt(secret, plainText) {
+  const message = {
+    salt: window.crypto.getRandomValues(new Uint8Array(16)),
+    iv: window.crypto.getRandomValues(new Uint8Array(12)),
+  };
+
+  const key = await getKey(secret, message.salt);
+
+  message.ciphertext = await window.crypto.subtle.encrypt(
+    {
+      name: "AES-GCM",
+      iv: message.iv,
+    },
+    key,
+    plainText,
+  );
+
+  return message;
 }
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: Responsive images
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -24,7 +25,7 @@ In this article, we'll learn about the concept of responsive images — images t
       <th scope="row">Objective:</th>
       <td>
         Learn how to use features like
-         <a href="en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
+         <a href="/en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
         {{htmlelement("picture")}} element to implement responsive
         image solutions on websites.
       </td>
@@ -109,7 +110,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 So, with these attributes in place, the browser will:
 
-1. Look at its device width.
+1. Look at screen size, pixel density, zoom level, screen orientation, and network speed.
 2. Work out which media condition in the `sizes` list is the first one to be true.
 3. Look at the slot size given to that media query.
 4. Load the image referenced in the `srcset` list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.

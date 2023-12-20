@@ -103,7 +103,7 @@ if (XR) {
             xrViewport.x,
             xrViewport.y,
             xrViewport.width,
-            xrViewport.height
+            xrViewport.height,
           );
         }
       });

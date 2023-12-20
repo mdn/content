@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
-browser-compat: javascript.builtins.WebAssembly.Tag
+page-type: webassembly-interface
+browser-compat: webassembly.api.Tag
 ---
 
 {{WebAssemblySidebar}}
@@ -49,7 +50,7 @@ const importObject = {
 WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject).then(
   (obj) => {
     // …
-  }
+  },
 );
 ```
 

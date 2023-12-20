@@ -13,6 +13,8 @@ The `-webkit-touch-callout` [CSS](/en-US/docs/Web/CSS) property controls the dis
 
 When a target is touched and held on iOS, Safari displays a callout information about the link. This property allows disabling that behavior.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-touch-callout: default;
@@ -25,8 +27,6 @@ When a target is touched and held on iOS, Safari displays a callout information 
 -webkit-touch-callout: revert-layer;
 -webkit-touch-callout: unset;
 ```
-
-## Syntax
 
 ### Values
 

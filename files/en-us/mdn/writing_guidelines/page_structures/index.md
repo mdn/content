@@ -1,6 +1,7 @@
 ---
 title: Page structures
 slug: MDN/Writing_guidelines/Page_structures
+page-type: landing-page
 ---
 
 {{MDNSidebar}}

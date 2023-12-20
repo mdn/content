@@ -53,7 +53,7 @@ Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/
 }
 ```
 
-Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}:
+Using [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty_static', 'CSS.registerProperty()')}}:
 
 ```js
 window.CSS.registerProperty({

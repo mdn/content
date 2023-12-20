@@ -140,4 +140,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_Text/Wrapping_Text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

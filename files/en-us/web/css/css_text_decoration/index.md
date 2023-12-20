@@ -1,13 +1,13 @@
 ---
-title: CSS Text Decoration
-slug: Web/CSS/CSS_Text_Decoration
+title: CSS text decoration
+slug: Web/CSS/CSS_text_decoration
 page-type: css-module
 spec-urls: https://drafts.csswg.org/css-text-decor/
 ---
 
 {{CSSRef}}
 
-**CSS Text Decoration** is a module of CSS that defines features relating to text decoration, such as underlines, text shadows, and emphasis marks.
+The **CSS text decoration** module defines features relating to text decoration, such as underlines, text shadows, and emphasis marks.
 
 ## Reference
 

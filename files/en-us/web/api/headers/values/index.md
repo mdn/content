@@ -44,7 +44,7 @@ for (const value of myHeaders.values()) {
 
 The result is:
 
-```
+```plain
 text/xml
 Accept-Language
 ```

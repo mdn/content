@@ -80,7 +80,7 @@ window.addEventListener(
       // Stop animation by clearing the timer.
       clearInterval(timer);
     }
-    // Call stopAnimation() once to setup the initial event
+    // Call stopAnimation() once to set up the initial event
     // handlers for canvas and button.
     stopAnimation({ type: "click" });
 
@@ -94,7 +94,7 @@ window.addEventListener(
           clearInterval(timer);
           alert(
             "Failed to get WebGL context.\n" +
-              "Your browser or device may not support WebGL."
+              "Your browser or device may not support WebGL.",
           );
           return;
         }
@@ -115,7 +115,7 @@ window.addEventListener(
       return [Math.random(), Math.random(), Math.random()];
     }
   },
-  false
+  false,
 );
 ```
 

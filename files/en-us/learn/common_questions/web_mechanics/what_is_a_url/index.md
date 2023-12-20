@@ -1,6 +1,7 @@
 ---
 title: What is a URL?
 slug: Learn/Common_questions/Web_mechanics/What_is_a_URL
+page-type: learn-faq
 ---
 
 {{QuicklinksWithSubPages("Learn/Common_questions")}}
@@ -42,7 +43,7 @@ With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the
 
 Here are some examples of URLs:
 
-```
+```plain
 https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL

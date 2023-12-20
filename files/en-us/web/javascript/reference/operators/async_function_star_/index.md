@@ -7,7 +7,7 @@ browser-compat: javascript.operators.async_generator_function
 
 {{jsSidebar("Operators")}}
 
-The **`async function*`** keywords can be used to define an asynchronous generator function inside an expression.
+The **`async function*`** keywords can be used to define an async generator function inside an expression.
 
 You can also define async generator functions using the [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*).
 
@@ -22,7 +22,7 @@ async function* (param0) {
 async function* (param0, param1) {
   statements
 }
-async function* (param0, param1, /* … ,*/ paramN) {
+async function* (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -32,7 +32,7 @@ async function* name(param0) {
 async function* name(param0, param1) {
   statements
 }
-async function* name(param0, param1, /* … ,*/ paramN) {
+async function* name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
@@ -44,7 +44,7 @@ async function* name(param0, param1, /* … ,*/ paramN) {
 - `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -54,7 +54,7 @@ An `async function*` expression is very similar to, and has almost the same synt
 
 ## Examples
 
-### Using async function\*
+### Using async function\* expression
 
 The following example defines an unnamed asynchronous generator function and assigns it to `x`. The function yields the square of its argument:
 
@@ -77,11 +77,10 @@ x(6)
 
 ## See also
 
-- {{jsxref("Statements/async_function*", "async function*")}} statement
-- {{jsxref("AsyncGeneratorFunction")}} object
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("GeneratorFunction")}} object
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/async_function*", "async function*")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Functions", "Functions", "", 1)}}

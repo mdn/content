@@ -4,6 +4,8 @@ slug: Glossary/Safe/HTTP
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 An HTTP method is **safe** if it doesn't alter the state of the server. In other words, a method is safe if it leads to a read-only operation. Several common HTTP methods are safe: {{HTTPMethod("GET")}}, {{HTTPMethod("HEAD")}}, or {{HTTPMethod("OPTIONS")}}. All safe methods are also {{glossary("idempotent")}}, but not all idempotent methods are safe. For example, {{HTTPMethod("PUT")}} and {{HTTPMethod("DELETE")}} are both idempotent but unsafe.
 
 Even if safe methods have a read-only semantic, servers can alter their state: e.g. they can log or keep statistics. What is important here is that by calling a safe method, the client doesn't request any server change itself, and therefore won't create an unnecessary load or burden for the server. Browsers can call safe methods without fearing to cause any harm to the server; this allows them to perform activities like pre-fetching without risk. Web crawlers also rely on calling safe methods.

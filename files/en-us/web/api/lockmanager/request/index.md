@@ -6,10 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.LockManager.request
 ---
 
-{{APIRef("Web Locks")}}
+{{APIRef("Web Locks API")}}{{securecontext_header}}
 
 The **`request()`** method of the {{domxref("LockManager")}} interface requests a {{domxref('Lock')}} object with parameters specifying its name and characteristics.
-The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}}.
+The requested `Lock` is passed to a callback, while the function itself returns a {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 The `mode` property of the `options` parameter may be either `"exclusive"` or `"shared"`.
 
@@ -23,6 +23,8 @@ When a `"shared"` lock for a given name is held, other `"shared"` locks for the 
 This shared/exclusive lock pattern is common in database transaction architecture, for example to allow multiple simultaneous readers (each requests a `"shared"` lock) but only one writer (a single `"exclusive"` lock).
 This is known as the readers-writer pattern.
 In the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), this is exposed as `"readonly"` and `"readwrite"` transactions which have the same semantics.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -72,20 +74,20 @@ request(name, options, callback)
 
 ### Return value
 
-A {{jsxref('Promise')}} that resolves with `undefined` when the request is granted.
+A {{jsxref('Promise')}} that resolves (or rejects) with the result of the callback after the lock is released, or rejects if the request is aborted.
 
 ### Exceptions
 
 This method may return a promise rejected with a {{domxref("DOMException")}} of one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : If the environments document is not fully active.
+  - : Thrown if the environments document is not fully active.
 - `SecurityError` {{domxref("DOMException")}}
-  - : If a lock manager cannot be obtained for the current environment.
+  - : Thrown if a lock manager cannot be obtained for the current environment.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : If `names` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
+  - : Thrown if `name` starts with a hyphen (`-`), both options `steal` and `ifAvailable` are `true`, or if option `signal` exists and _either_ option `steal` or `ifAvailable` is `true`.
 - `AbortError` {{domxref("DOMException")}}
-  - : If the option `signal` exists and is aborted.
+  - : Thrown if the option `signal` exists and is aborted.
 
 ## Examples
 
@@ -114,7 +116,7 @@ async function do_read() {
     { mode: "shared" },
     async (lock) => {
       // Read code here.
-    }
+    },
   );
 }
 ```
@@ -129,7 +131,7 @@ async function do_write() {
     { mode: "exclusive" },
     async (lock) => {
       // Write code here.
-    }
+    },
   );
 }
 ```
@@ -152,7 +154,7 @@ await navigator.locks.request(
 
     // The lock was granted, and no other running code in this origin is holding
     // the 'my_res_lock' lock until this returns.
-  }
+  },
 );
 ```
 
@@ -171,7 +173,7 @@ try {
     { signal: controller.signal },
     async (lock) => {
       // The lock was acquired!
-    }
+    },
   );
 } catch (ex) {
   if (ex.name === "AbortError") {

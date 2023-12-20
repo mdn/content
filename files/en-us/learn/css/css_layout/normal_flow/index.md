@@ -1,6 +1,7 @@
 ---
 title: Normal Flow
 slug: Learn/CSS/CSS_layout/Normal_Flow
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -47,7 +48,7 @@ That explains how elements are structured individually, but how about the way th
 
 Inline elements behave differently. They don't appear on new lines; instead, they all sit on the same line along with any adjacent (or wrapped) text content as long as there is space for them to do so inside the width of the parent block level element. If there isn't space, then the overflowing content will move down to a new line.
 
-If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+If two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears. This is known as [**margin collapsing**](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 Collapsing margins is only relevant in the **vertical direction**.
 
 Let's look at a simple example that explains all of this:
@@ -88,8 +89,8 @@ body {
 }
 
 p {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
 }

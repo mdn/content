@@ -1,6 +1,7 @@
 ---
 title: Publishing your website
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
@@ -16,7 +17,7 @@ Publishing a website is a complex topic because there are many ways to go about 
 To have more control over content and website appearance, most people choose to buy web hosting and a domain name:
 
 - Web hosting is rented file space on a hosting company's [web server](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server). You put website files on the web server. The web server provides website content to website visitors.
-- A [domain name](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) is the unique address where people find your website, such as `http://www.mozilla.org` or `http://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**.
+- A [domain name](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) is the unique address where people find your website, such as `https://www.mozilla.org` or `https://www.bbc.co.uk`. You can rent your domain name for as many years as you want from a **domain registrar**.
 
 Many professional websites go online this way.
 
@@ -60,7 +61,7 @@ Now let's examine how to easily publish your site via GitHub Pages.
 1. First of all, [sign up for GitHub](https://github.com/) and verify your email address.
 2. Next, you need to [create a repository](https://github.com/new) to store files.
 3. On this page, in the _Repository name_ box, enter _username_.github.io, where _username_ is your username. For example, our friend Bob Smith would enter _bobsmith.github.io_.
-   Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![A sample of a github repository page](github-create-repo.png)
+   Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![A sample of a GitHub repository page](github-create-repo.png)
 4. Drag and drop the content of your website folder into your repository. Then click _Commit changes_.
 
    > **Note:** Make sure your folder has an `index.html` file.
@@ -77,6 +78,5 @@ To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-
 - [Understanding domain names](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
 - [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
 - [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website): A nice tutorial from Codecademy that goes a bit further and shows some additional techniques.
-- [Cheap or Free Static Website Hosting](https://alignedleft.com/resources/cheap-web-hosting) by Scott Murray has some useful ideas on available services.
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

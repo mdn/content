@@ -67,7 +67,7 @@ world. You can do that using `getOffsetReferenceSpace()`.
 xrSession.requestReferenceSpace("local").then((refSpace) => {
   xrReferenceSpace = refSpace;
   xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(
-    new XRRigidTransform(startPosition, { x: 0, y: 0, z: 1.0, w: 1.0 })
+    new XRRigidTransform(startPosition, { x: 0, y: 0, z: 1.0, w: 1.0 }),
   );
   xrSession.requestAnimationFrame(drawFrame);
 });
@@ -153,7 +153,7 @@ function applyMouseMovement(refSpace) {
       y: inverseOrientation[1],
       z: inverseOrientation[2],
       w: inverseOrientation[3],
-    }
+    },
   );
 
   return refSpace.getOffsetReferenceSpace(newTransform);

@@ -47,7 +47,7 @@ new Notification(title, options)
         notification, which is displayed below the title.
     - `tag`
       - : A string representing an identifying tag for
-        the notification.
+        the notification. The default is the empty string.
     - `icon`
       - : A string containing the URL of an icon to
         be displayed in the notification.
@@ -58,11 +58,9 @@ new Notification(title, options)
       - : Arbitrary data that you want associated with the
         notification. This can be of any data type.
     - `vibrate`
-      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification.
+      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification. If specified, `silent` must not be `true`.
     - `renotify`
-      - : A boolean value specifying whether the user
-        should be notified after a new notification replaces an old one. The default is
-        `false`, which means they won't be notified.
+      - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction`
       - : Indicates that a notification should remain
         active until the user clicks or dismisses it, rather than closing automatically.
@@ -81,7 +79,14 @@ new Notification(title, options)
     - `silent`
       - : A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
-        settings. The default is `false`, which means it won't be silent.
+        settings. The default is `false`, which means it won't be silent. If `true`, then `vibrate` must not be present.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the following is true:
+    - `options.silent` is `true` and `options.vibrate` is specified.
+    - `options.renotify` is `true` but `options.tag` is empty.
 
 ## Examples
 

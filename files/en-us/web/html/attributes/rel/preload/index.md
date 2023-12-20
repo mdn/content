@@ -24,7 +24,7 @@ Here however, we will use a `rel` value of `preload`, which turns `<link>` into 
 - The path to the resource in the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute.
 - The type of resource in the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute.
 
-A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
+A simple example might look like this (see our [JS and CSS example source](https://github.com/mdn/html-examples/tree/main/link-rel-preload/js-and-css), and [also live](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/)):
 
 ```html
 <head>
@@ -65,7 +65,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 - `audio`: Audio file, as typically used in {{htmlelement("audio")}}.
 - `document`: An HTML document intended to be embedded by a {{htmlelement("frame")}} or {{htmlelement("iframe")}}.
 - `embed`: A resource to be embedded inside an {{htmlelement("embed")}} element.
-- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly/WASM binary, or JSON file.
+- `fetch`: Resource to be accessed by a fetch or XHR request, such as an ArrayBuffer, WebAssembly binary, or JSON file.
 - `font`: Font file.
 - `image`: Image file.
 - `object`: A resource to be embedded inside an {{htmlelement("object")}} element.
@@ -83,7 +83,7 @@ Many content types can be preloaded. The possible `as` attribute values are:
 
 `<link>` elements can accept a [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute, which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the `type` attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.
 
-You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
+You can see an example of this in our video example (see the [full source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/video), and also [the live version](https://mdn.github.io/html-examples/link-rel-preload/video/)), a code snippet from which is shown below. This illustrates the core behavior behind preloading in general.
 
 ```html
 <head>
@@ -118,7 +118,7 @@ When preloading resources that are fetched with [CORS](/en-US/docs/Web/HTTP/CORS
 
 As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see [Font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)).
 
-Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
+Let's use this case as an example. You can see the full [example source code on GitHub](https://github.com/mdn/html-examples/tree/main/link-rel-preload/fonts) ([also see it live](https://mdn.github.io/html-examples/link-rel-preload/fonts/)):
 
 ```html
 <head>
@@ -149,9 +149,9 @@ Not only are we providing the MIME type hints in the `type` attributes, but we a
 
 ## Including media
 
-One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries), allowing you to do responsive preloading!
+One nice feature of `<link>` elements is their ability to accept [`media`](/en-US/docs/Web/HTML/Element/link#media) attributes. These can accept [media types](/en-US/docs/Web/CSS/@media#media_types) or full-blown [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), allowing you to do responsive preloading!
 
-Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
+Let's look at an example (see it on GitHub — [source code](https://github.com/mdn/html-examples/tree/main/link-rel-preload/media), [live example](https://mdn.github.io/html-examples/link-rel-preload/media/)):
 
 ```html
 <head>
@@ -189,7 +189,7 @@ Let's look at an example (see it on GitHub — [source code](https://github.com/
 </body>
 ```
 
-We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for more).
+We include `media` attributes on our `<link>` elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for more).
 
 This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).
 
@@ -197,7 +197,10 @@ This doesn't have to be limited to images, or even files of the same type — th
 
 ## Scripting and preloads
 
-Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
+> **Note:** Use [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) instead if you are working with [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules).
+
+Another nice thing about these preloads is that you can execute them with script.
+For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:
 
 ```js
 const preloadLink = document.createElement("link");
@@ -217,15 +220,6 @@ document.body.appendChild(preloadedScript);
 
 This is useful when you want to preload a script, but then defer execution until exactly when you need it.
 
-## Other resource preloading mechanisms
-
-Other preloading features exist, but none are quite as fit for purpose as `<link rel="preload">`:
-
-- `<link rel="prefetch">` has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the **_next_** navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give `prefetch` resources a lower priority than `preload` ones — the current page is more important than the next. See [Link prefetching FAQ](/en-US/docs/Web/HTTP/Link_prefetching_FAQ) for more details.
-- `<link rel="prerender">` renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users' bandwidth, Chrome treats `prerender` as a [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/) instead.
-- `<link rel="subresource">` {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as `preload`, but it had a problem: there was no way to work out a priority for the items (`as` didn't exist back then), so they all got fetched with fairly low priority.
-- There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems.
-
 ## Specifications
 
 {{Specifications}}
@@ -236,4 +230,5 @@ Other preloading features exist, but none are quite as fit for purpose as `<link
 
 ## See also
 
+- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="preload">` and other similar performance improvement features.
 - [Preload: What Is It Good For?](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/) by Yoav Weiss

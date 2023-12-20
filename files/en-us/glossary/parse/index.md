@@ -4,6 +4,8 @@ slug: Glossary/Parse
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 Parsing means analyzing and converting a program into an internal format that a runtime environment can actually run, for example the {{glossary("JavaScript")}} engine inside browsers.
 
 The [browser parses HTML](/en-US/docs/Learn/HTML) into a {{glossary('DOM')}} tree. HTML parsing involves [tokenization](/en-US/docs/Web/API/DOMTokenList) and tree construction. HTML tokens include start and end tags, as well as attribute names and values. If the document is well-formed, parsing it is straightforward and faster. The parser parses tokenized input into the document, building up the document tree.

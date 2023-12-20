@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequest.loadend_event
 ---
 
-{{APIRef}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`loadend`** event is fired when a request has completed, whether successfully (after {{domxref("XMLHttpRequest/load_event", "load")}}) or unsuccessfully (after {{domxref("XMLHttpRequest/abort_event", "abort")}} or {{domxref("XMLHttpRequest/error_event", "error")}}).
 
@@ -113,7 +113,7 @@ function runXHR(url) {
 
 xhrButtonSuccess.addEventListener("click", () => {
   runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   );
 });
 
@@ -123,7 +123,7 @@ xhrButtonError.addEventListener("click", () => {
 
 xhrButtonAbort.addEventListener("click", () => {
   runXHR(
-    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
   ).abort();
 });
 ```
@@ -143,4 +143,4 @@ xhrButtonAbort.addEventListener("click", () => {
 ## See also
 
 - Related events: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/error_event", "error")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
-- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress)
+- [Monitoring progress](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)

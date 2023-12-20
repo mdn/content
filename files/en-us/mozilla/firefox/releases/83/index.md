@@ -1,6 +1,7 @@
 ---
 title: Firefox 83 for developers
 slug: Mozilla/Firefox/Releases/83
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -24,11 +25,11 @@ This article provides information about the changes in Firefox 83 that will affe
 ### CSS
 
 - The vendor prefixed `:-moz-any()` is now aliased to the standard {{CSSxRef(":is", ":is()")}} CSS pseudo-class function ([Firefox bug 1666086](https://bugzil.la/1666086)).
-- We've added support for [CSS Conic Gradients](/en-US/docs/Web/CSS/conic-gradient) ([Firefox bug 1632351](https://bugzil.la/1632351)) and ([Firefox bug 1175958](https://bugzil.la/1175958)).
+- We've added support for [CSS Conic Gradients](/en-US/docs/Web/CSS/gradient/conic-gradient) ([Firefox bug 1632351](https://bugzil.la/1632351)) and ([Firefox bug 1175958](https://bugzil.la/1175958)).
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
+- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
 
 ### HTTP
 

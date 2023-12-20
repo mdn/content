@@ -738,7 +738,9 @@ This example uses `mix-blend-mode` to blend text color with the background color
 }
 
 p {
-  font: 4rem "Rubik Moonrocks", cursive;
+  font:
+    4rem "Rubik Moonrocks",
+    cursive;
   font-weight: bold;
   color: orange;
   padding: 0.5rem;

@@ -106,7 +106,7 @@ addEventListener("fetch", (event) => {
       if (cachedResponse) return cachedResponse;
       // If we didn't find a match in the cache, use the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```
@@ -128,6 +128,4 @@ addEventListener("fetch", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

@@ -3,12 +3,10 @@ title: "Notification: silent property"
 short-title: silent
 slug: Web/API/Notification/silent
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Notification.silent
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be

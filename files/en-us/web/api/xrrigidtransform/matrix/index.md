@@ -403,7 +403,7 @@ to position and orient it.
 ```js
 let transform = new XRRigidTransform(
   { x: 0, y: 0.5, z: 0.5 },
-  { x: 0, y: -0.5, z: -0.5, w: 1 }
+  { x: 0, y: -0.5, z: -0.5, w: 1 },
 );
 drawGLObject("magic-lamp", transform.matrix);
 ```

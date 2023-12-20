@@ -4,6 +4,8 @@ slug: Glossary/Entity_header
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 > **Warning:** The current HTTP/1.1 specification no longer refers to entities, entity headers or entity-body. Some of the fields are now referred to as {{glossary("Representation header")}} fields.
 
 An entity header is an {{glossary("HTTP_header", "HTTP header")}} that describes the payload of an HTTP message (i.e. metadata about the message body). Entity headers include: {{HTTPHeader("Content-Length")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Expires")}}, etc. Entity headers may be present in both HTTP request and response messages.

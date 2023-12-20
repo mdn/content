@@ -12,7 +12,7 @@ the type expected by the function.
 
 ## Message
 
-```
+```plain
 TypeError: Method Set.prototype.add called on incompatible receiver undefined (V8-based)
 TypeError: Bind must be called on a function (V8-based)
 TypeError: Function.prototype.toString called on incompatible object (Firefox)

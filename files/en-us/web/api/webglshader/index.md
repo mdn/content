@@ -59,7 +59,7 @@ const fragmentShaderSource =
 const fragmentShader = createShader(
   gl,
   fragmentShaderSource,
-  gl.FRAGMENT_SHADER
+  gl.FRAGMENT_SHADER,
 );
 ```
 

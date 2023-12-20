@@ -1,9 +1,10 @@
 ---
 title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
+page-type: xslt-element
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `<xsl:value-of>` element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.
 

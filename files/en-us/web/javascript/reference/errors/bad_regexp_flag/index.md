@@ -1,18 +1,18 @@
 ---
-title: "SyntaxError: invalid regular expression flag \"x\""
+title: 'SyntaxError: invalid regular expression flag "x"'
 slug: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `d`, `g`, `i`, `m`, `s`, `u`, or `y`.
+The JavaScript exception "invalid regular expression flag" occurs when the flags in a regular expression contain any flag that is not one of: `d`, `g`, `i`, `m`, `s`, `u`, `v`, or `y`.
 
 It may also be raised if the expression contains more than one instance of a valid flag.
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid regular expression flags (V8-based)
 SyntaxError: invalid regular expression flag x (Firefox)
 SyntaxError: Invalid regular expression: invalid flags (Safari)
@@ -26,7 +26,7 @@ SyntaxError: Invalid regular expression: invalid flags (Safari)
 
 The regular expression contains invalid flags, or valid flags have been used more than once in the expression.
 
-The valid (allowed) flags are `d`, `g`, `i`, `m`, `s`, `u`, and `y`. They are introduced in more detail in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
+The valid (allowed) flags are `d`, `g`, `i`, `m`, `s`, `u`, `v`, and `y`. They are introduced in more detail in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
 ## Examples
 
@@ -81,4 +81,4 @@ const obj = {
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide

@@ -4,6 +4,8 @@ slug: Glossary/Glyph
 page-type: glossary-definition
 ---
 
+{{GlossarySidebar}}
+
 A **glyph** is a term used in typography for the visual representation of one or more {{Glossary("character", "characters")}}.
 
 The fonts used by a website contain different sets of glyphs, which represent the characters of the font.

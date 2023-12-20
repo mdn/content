@@ -14,9 +14,11 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 ```css
 @font-face {
   font-family: "Trickster";
-  src: local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-      format("opentype"), url("trickster-outline.woff") format("woff");
+  src:
+    local("Trickster"),
+    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+    url("trickster-outline.otf") format("opentype"),
+    url("trickster-outline.woff") format("woff");
 }
 ```
 
@@ -104,7 +106,7 @@ The `@font-face` at-rule may be used not only at the top level of a CSS, but als
 This example specifies a downloadable font to use, applying it to the entire body of the document:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -154,7 +156,7 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 
 ## See also
 
-- [About WOFF](/en-US/docs/Web/Guide/WOFF)
+- [About WOFF](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
 - [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

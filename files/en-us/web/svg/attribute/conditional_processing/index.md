@@ -5,6 +5,8 @@ page-type: svg-attribute
 browser-compat: svg.attributes.conditional_processing
 ---
 
+{{SVGRef}}
+
 The SVG conditional processing attributes are all the attributes that can be specified on some SVG elements to control whether or not the element on which it appears should be rendered.
 
 - [requiredExtensions](#requiredextensions)

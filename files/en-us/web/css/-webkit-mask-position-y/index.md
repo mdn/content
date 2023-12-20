@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-mask-position-y
 
 The `-webkit-mask-position-y` CSS property sets the initial vertical position of a mask image.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-mask-position-y: top;
@@ -26,7 +28,10 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 -webkit-mask-position-y: -1cm;
 
 /* Multiple values */
--webkit-mask-position-y: 50px, 25%, -3em;
+-webkit-mask-position-y:
+  50px,
+  25%,
+  -3em;
 
 /* Global values */
 -webkit-mask-position-y: inherit;
@@ -35,8 +40,6 @@ The `-webkit-mask-position-y` CSS property sets the initial vertical position of
 -webkit-mask-position-y: revert-layer;
 -webkit-mask-position-y: unset;
 ```
-
-## Syntax
 
 ### Values
 

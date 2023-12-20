@@ -102,7 +102,7 @@ const mediaConfig = {
 // check support and performance
 navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
   console.log(
-    `This configuration is ${result.supported ? "" : "not "}supported,`
+    `This configuration is ${result.supported ? "" : "not "}supported,`,
   );
   console.log(`${result.smooth ? "" : "not "}smooth, and`);
   console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
@@ -136,4 +136,4 @@ const mediaConfig = {
 
 - {{domxref("MediaCapabilities.encodingInfo()")}}
 - {{domxref("HTMLMediaElement.canPlayType()")}} for file
-- {{domxref("MediaSource.isTypeSupported()")}} for media-source
+- {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} for media-source

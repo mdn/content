@@ -97,7 +97,7 @@ source.addEventListener("dragstart", (ev) => {
   ev.dataTransfer.setData("text/plain", ev.target.id);
 });
 source.addEventListener("dragend", (ev) =>
-  ev.target.classList.remove("dragging")
+  ev.target.classList.remove("dragging"),
 );
 
 const target = document.querySelector("#target");

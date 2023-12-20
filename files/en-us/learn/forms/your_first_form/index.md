@@ -1,6 +1,7 @@
 ---
 title: Your first form
 slug: Learn/Forms/Your_first_form
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}

@@ -32,7 +32,7 @@ In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJy
 ```js
 const rabbitDownAnimation = new Animation(
   rabbitDownKeyframes,
-  document.timeline
+  document.timeline,
 );
 ```
 

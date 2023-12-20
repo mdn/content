@@ -45,7 +45,7 @@ for (const pair of myHeaders.entries()) {
 
 The result is:
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```

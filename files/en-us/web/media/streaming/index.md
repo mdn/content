@@ -1,6 +1,7 @@
 ---
 title: Guide to streaming audio and video
 slug: Web/Media/Streaming
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

@@ -1,6 +1,7 @@
 ---
 title: Firefox 86 for developers
 slug: Mozilla/Firefox/Releases/86
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

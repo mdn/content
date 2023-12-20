@@ -1,6 +1,7 @@
 ---
 title: Unknown command
 slug: Web/WebDriver/Errors/UnknownCommand
+page-type: webdriver-error
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}

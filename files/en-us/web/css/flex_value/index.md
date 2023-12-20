@@ -41,4 +41,4 @@ The `<flex>` data type is specified as a {{cssxref("&lt;number&gt;")}} followed 
 
 ## See also
 
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout)
+- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)

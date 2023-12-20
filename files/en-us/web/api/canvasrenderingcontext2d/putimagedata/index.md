@@ -85,7 +85,7 @@ function putImageData(
   dirtyX,
   dirtyY,
   dirtyWidth,
-  dirtyHeight
+  dirtyHeight,
 ) {
   const data = imageData.data;
   const height = imageData.height;

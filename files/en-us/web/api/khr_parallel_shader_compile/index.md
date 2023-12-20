@@ -44,7 +44,7 @@ function* linkingProgress(programs) {
   while (todo.length) {
     if (ext) {
       todo = todo.filter(
-        (x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR)
+        (x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR),
       );
     } else {
       const x = todo.pop();

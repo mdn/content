@@ -41,7 +41,7 @@ function setupVideo(url) {
       playing = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.addEventListener(
@@ -50,7 +50,7 @@ function setupVideo(url) {
       timeupdate = true;
       checkReady();
     },
-    true
+    true,
   );
 
   video.src = url;
@@ -104,7 +104,7 @@ function initTexture(gl) {
     border,
     srcFormat,
     srcType,
-    pixel
+    pixel,
   );
 
   // Turn off mips and set wrapping to clamp to edge so it
@@ -132,7 +132,7 @@ function updateTexture(gl, texture, video) {
     internalFormat,
     srcFormat,
     srcType,
-    video
+    video,
   );
 }
 ```

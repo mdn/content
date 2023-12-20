@@ -1,9 +1,10 @@
 ---
 title: element-available
 slug: Web/XPath/Functions/element-available
+page-type: xpath-function
 ---
 
-{{ XsltRef() }}
+{{XsltSidebar}}
 
 The `element-available` function determines if an element is available and returns true or false.
 

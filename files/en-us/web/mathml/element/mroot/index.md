@@ -24,7 +24,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 </math>
 ```
 
-{{ EmbedLiveSample('mroot_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

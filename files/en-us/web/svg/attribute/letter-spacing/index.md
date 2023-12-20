@@ -17,7 +17,6 @@ If the attribute value has a unit identifier, such as `.25em` or `1%`, then the 
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}

@@ -1,6 +1,7 @@
 ---
 title: Filtering our to-do items
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

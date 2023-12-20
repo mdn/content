@@ -197,7 +197,7 @@ if (!navigator.getAutoplayPolicy) {
     "navigator.getAutoplayPolicy() not supported. It may or may not autoplay, depending on the browser!";
 } else {
   log.textContent = `Autoplay policy for media elements is: ${navigator.getAutoplayPolicy(
-    "mediaelement"
+    "mediaelement",
   )}. `;
 
   if (navigator.getAutoplayPolicy("mediaelement") === "allowed-muted") {
@@ -270,7 +270,7 @@ if (!navigator.getAutoplayPolicy) {
 } else {
   // Here we pass in the HTMLVideoElement to check
   log.textContent = `navigator.getAutoplayPolicy(video) == ${navigator.getAutoplayPolicy(
-    "mediaelement"
+    "mediaelement",
   )}`;
 
   if (navigator.getAutoplayPolicy(video) === "allowed-muted") {

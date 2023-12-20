@@ -23,7 +23,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ```html
 <p>
   According to Mozilla's website,
-  <q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0 was released in 2004 and became a big success.</q>
+  <q cite="https://www.mozilla.org/en-US/about/history/details/">
+    Firefox 1.0 was released in 2004 and became a big success.
+  </q>
 </p>
 ```
 
@@ -74,8 +76,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

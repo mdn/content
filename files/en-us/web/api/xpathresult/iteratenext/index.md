@@ -59,7 +59,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 let node = null;
 const tagNames = [];

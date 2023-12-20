@@ -3,7 +3,7 @@ title: "DOMPoint: fromPoint() static method"
 short-title: fromPoint()
 slug: Web/API/DOMPoint/fromPoint_static
 page-type: web-api-static-method
-browser-compat: api.DOMPoint.fromPoint
+browser-compat: api.DOMPoint.fromPoint_static
 ---
 
 {{APIRef("DOM")}}

@@ -33,7 +33,7 @@ function renderFrame(session, frame) {
       const indexFingerTipJoint = inputSource.hand.get("index-finger-tip");
       const radius = frame.getJointPose(
         indexFingerTipJoint,
-        referenceSpace
+        referenceSpace,
       ).radius;
     }
   }

@@ -56,7 +56,7 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 ### Deprecated methods
 
 - {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## Events
 
@@ -73,7 +73,7 @@ Listen to these events using `addEventListener()`, or by assigning an event list
 
 ### Obtaining a form element object
 
-To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
+To obtain an `HTMLFormElement` object, you can use a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors) with {{domxref("Document.querySelector", "querySelector()")}}, or you can get a list of all of the forms in the document using its {{domxref("Document.forms", "forms")}} property.
 
 {{domxref("Document.forms")}} returns an array of `HTMLFormElement` objects listing each of the forms on the page. You can then use any of the following syntaxes to get an individual form:
 
@@ -183,7 +183,7 @@ Extract information from a `<form>` element and set some of its attributes:
 Submit a `<form>` into a new window:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

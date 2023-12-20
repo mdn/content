@@ -15,7 +15,7 @@ The **`DocumentType.replaceWith()`** method replaces the document type with a se
 ```js-nolint
 replaceWith(node1)
 replaceWith(node1, node2)
-replaceWith(node1, node2, /* … ,*/ nodeN)
+replaceWith(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters
@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 let svg_dt = document.implementation.createDocumentType(
   "svg:svg",
   "-//W3C//DTD SVG 1.1//EN",
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
 );
 
 document.doctype.replaceWith(svg_dt);

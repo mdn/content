@@ -51,7 +51,9 @@ function onGetRejected(e) {
 }
 
 browser.windows.onCreated.addListener((window) => {
-  browser.sessions.getWindowValue(window.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getWindowValue(window.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 
