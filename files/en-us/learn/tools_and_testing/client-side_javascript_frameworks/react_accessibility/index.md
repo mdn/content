@@ -62,7 +62,11 @@ When a user toggles a `<Todo />` template from viewing to editing, we should foc
 
 ### Targeting our elements
 
-To focus on an element in our DOM, we need to tell React which element we want to focus on and how to find it. React's [`useRef`](https://react.dev/reference/react/useRef) hook creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
+Up to this point, we've been writing JSX and letting React build the DOM from them. Most of the time, we don't need to target specific elements in the DOM because we can use React's state and props to control what gets rendered. To manage focus, however, we _do_ need to be able to target specific elements.
+
+This is where the `useRef()` hook comes in.
+
+`useRef()` creates an object with a single property: `current`. This property can be a reference to anything we want, and that reference can be looked up later. It's particularly useful for referring to DOM elements.
 
 Change the `import` statement at the top of `Todo.jsx` so that it includes `useRef`:
 
@@ -77,7 +81,7 @@ const editFieldRef = useRef(null);
 const editButtonRef = useRef(null);
 ```
 
-These refs have a default value of `null` because they will not have value until we attach them to their respective elements. To do that, we'll add a `ref` attribute to each element, and set their values to the appropriately named `ref` objects.
+These refs have a default value of `null` so that it's explicitly clear that they'll be empty until we attach them to their respective elements. To attach them to their elements, we'll add the special `ref` attribute to each element, and set their values to the appropriately named `ref` objects.
 
 The textbox `<input>` in your editing template should read like this:
 
@@ -104,9 +108,11 @@ The "Edit" button in your view template should read like this:
 </button>
 ```
 
+Doing this will allow us to directly reference the `<input>` and "Edit" button elements in our code, but we have one more step to take.
+
 ### Implementing `useEffect()`
 
-To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. `useEffect()` is useful in the current situation because we cannot focus on an element until after the `<Todo />` component renders and React knows where our refs are.
+To use our refs for their intended purpose, we need to import another React hook: [`useEffect()`](https://react.dev/reference/react/useEffect). `useEffect()` is so named because it runs any side-effects that we'd like to add to the render process, and which we can't run inside the main function body. The refs we defined in the previous section won't have a value until _after_ React has rendered the component, so we need `useEffect()` to read and interact with our DOM elements.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -114,7 +120,7 @@ Change the import statement of `Todo.jsx` again to add `useEffect`:
 import { useEffect, useRef, useState } from "react";
 ```
 
-`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. Let's see this in action; put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
+`useEffect()` takes a function as an argument; this function is executed _after_ the component renders. To see this in action, put the following `useEffect()` call just above the `return` statement in the body of `Todo()`, and pass a function into it that logs the words "side effect" to your console:
 
 ```jsx
 useEffect(() => {
@@ -128,14 +134,16 @@ To illustrate the difference between the main render process and code run inside
 console.log("main render");
 ```
 
-Now, open the app in your browser. You should see both messages in your console, with each one repeating three times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
+Now, open the app in your browser. You should see both messages in your console, with each one repeating multiple times. Note how "main render" logged first, and "side effect" logged second, even though the "side effect" log appears first in the code.
 
 ```plain
 main render                                     Todo.jsx
 side effect                                     Todo.jsx
 ```
 
-Again, this happens because code inside `useEffect()` runs _after_ the component renders. This takes some getting used to, just keep it in mind as you move forward. For now, delete `console.log("main render")` and we'll move on to implementing our focus management.
+> **Note:** These logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
+
+Again, the logs are ordered this way because code inside `useEffect()` runs _after_ the component renders. This takes some getting used to, just keep it in mind as you move forward. For now, delete `console.log("main render")` and we'll move on to implementing our focus management.
 
 ### Focusing on our editing field
 
