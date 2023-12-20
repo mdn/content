@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.EditContext.textformatupdate_event
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The `textformatupdate` event fires when ...
 

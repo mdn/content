@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TextFormat
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`TextFormat`** interface represents an instance of an TextFormat ...
 

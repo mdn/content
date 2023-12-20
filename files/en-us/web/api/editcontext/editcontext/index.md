@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EditContext.EditContext
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`EditContext()`** constructor returns a new {{DOMxRef("EditContext")}} object.
 

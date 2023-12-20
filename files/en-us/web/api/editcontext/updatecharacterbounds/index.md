@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EditContext.updateCharacterBounds
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`EditContext.updateCharacterBounds()`** method ...
 

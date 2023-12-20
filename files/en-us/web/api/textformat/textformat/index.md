@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.TextFormat.TextFormat
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`TextFormat()`** constructor returns a new {{DOMxRef("TextFormat")}} object.
 

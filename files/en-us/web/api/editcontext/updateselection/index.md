@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EditContext.updateSelection
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`EditContext.updateSelection()`** method ...
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.EditContext
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`EditContext`** interface represents an instance of an EditContext ...
 

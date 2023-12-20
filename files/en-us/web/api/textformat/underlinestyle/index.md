@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextFormat.underlineStyle
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`underlineStyle`** property of the {{domxref("TextFormat")}} interface ...
 

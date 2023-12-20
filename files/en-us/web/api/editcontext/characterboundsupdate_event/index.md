@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.EditContext.characterboundsupdate_event
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The `characterboundsupdate` event fires when ...
 

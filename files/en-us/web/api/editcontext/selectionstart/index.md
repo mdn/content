@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.EditContext.selectionStart
 ---
 
-{{securecontext_header}}{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}
 
 The **`selectionStart`** property of the {{domxref("EditContext")}} interface ...
 
