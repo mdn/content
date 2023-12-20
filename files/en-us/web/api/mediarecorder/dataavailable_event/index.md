@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.dataavailable_event
 
 {{APIRef("MediaStream Recording")}}
 
-The `dataavailable` event is fired when the MediaRecorder delivers media
+The **`dataavailable`** event of the {{domxref("MediaRecorder")}} interface is fired when the MediaRecorder delivers media
 data to your application for its use. The data is provided in a {{domxref("Blob")}}
 object that contains the data. This occurs in four situations:
 

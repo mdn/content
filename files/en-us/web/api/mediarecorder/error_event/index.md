@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.error_event
 
 {{APIRef("MediaStream Recording")}}
 
-The {{domxref("MediaRecorder")}} interface's **`error`** event is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
+The **`error`** event of the {{domxref("MediaRecorder")}} interface is fired when an error occurs: for example because recording wasn't allowed or was attempted using an unsupported codec.
 
 This event is not cancelable and does not bubble.
 
