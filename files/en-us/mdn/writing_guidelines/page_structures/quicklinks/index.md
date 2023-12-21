@@ -20,9 +20,9 @@ For example, your quicklinks HTML might look like this:
 ```html
 <section id="Quick_links">
   <ol>
-    <li><a href="http://docs.ckeditor.com/">CKEditor documentation site</a></li>
+    <li><a href="https://www.markdownguide.org">Markdown guide</a></li>
     <li>
-      <a href="http://mxr.mozilla.org/">MXR: Mozilla source cross-reference</a>
+      <a href="https://github.com/mdn/content/">Github repository for MDN</a>
     </li>
     <li class="toggle">
       <details>
