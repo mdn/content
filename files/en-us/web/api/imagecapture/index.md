@@ -23,8 +23,6 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 
 ## Instance methods
 
-The `ImageCapture` interface is based on {{domxref("EventTarget")}}, so it includes the methods defined by that interface as well as the ones listed below.
-
 - {{domxref("ImageCapture.takePhoto()")}} {{Experimental_Inline}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
 - {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
