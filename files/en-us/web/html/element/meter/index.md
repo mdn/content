@@ -145,5 +145,5 @@ On Google Chrome, the resulting meter looks like this:
 
 - {{HTMLElement("progress")}}
 - {{cssxref("::-webkit-meter-bar")}}, {{cssxref("::-webkit-meter-inner-element") }}, {{cssxref("::-webkit-
-meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-
-suboptimum-value")}}: non-standard pseudo-elements
+  meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-
+  suboptimum-value")}}: non-standard pseudo-elements
