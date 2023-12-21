@@ -65,7 +65,9 @@ Other functions within `URLSearchParams` let you change the value of keys, add a
 The URL API is a simple one, with only a couple of interfaces to its name:
 
 - {{domxref("URL")}}
+  - : Can be used to parse, construct, normalize, and encode {{glossary("URL", "URLs")}}.
 - {{domxref("URLSearchParams")}}
+  - : Defines utility methods to work with the query string of a URL.
 
 ## Examples
 
