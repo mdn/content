@@ -38,6 +38,13 @@ A {{jsxref("Promise")}} that resolves with an object containing the following pr
 - `fillLightMode`
   - : Returns an array of available fill light options. Options include `auto`, `off`, or `flash`.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
+
 ## Examples
 
 The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from

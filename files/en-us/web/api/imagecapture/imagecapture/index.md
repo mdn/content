@@ -31,6 +31,11 @@ new ImageCapture(videoTrack)
 A new `ImageCapture` object which can be used to capture still frames from
 the specified video track.
 
+### Exceptions
+
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the `videoTrack` parameter's `kind` property is not `video`.
+
 ## Examples
 
 The following example shows how to use a call to

@@ -29,6 +29,13 @@ None.
 
 A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `UnknownError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
+
 ## Examples
 
 This example is extracted from this [Simple Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by

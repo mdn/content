@@ -39,6 +39,13 @@ containing the following properties:
 - `redEyeReduction`
   - : A boolean indicating whether the red-eye reduction should be used if it is available.
 
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `OperationError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
+
 ## Examples
 
 The following example, extracted from [Chrome's Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from
