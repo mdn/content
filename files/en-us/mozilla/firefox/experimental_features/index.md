@@ -1793,7 +1793,8 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1806,8 +1807,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1816,8 +1817,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
     </tr>
     <tr>
       <th>Beta</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1831,9 +1832,10 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   </tbody>
 </table>
 
-#### ClipboardRead
+#### Clipboard read and write
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See [Firefox bug 1701512](https://bugzil.la/1701512) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1846,8 +1848,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>90</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1856,7 +1858,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
+      <td>Yes</td>
       <td>No</td>
     </tr>
     <tr>
@@ -1866,7 +1868,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.read</code></td>
+      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
     </tr>
   </tbody>
 </table>

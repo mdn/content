@@ -11,7 +11,7 @@ browser-compat: api.URLSearchParams.URLSearchParams
 The **`URLSearchParams()`** constructor creates and returns a
 new {{domxref("URLSearchParams")}} object.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
