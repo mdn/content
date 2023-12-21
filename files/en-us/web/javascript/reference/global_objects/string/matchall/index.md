@@ -29,7 +29,7 @@ matchAll(regexp)
 
 ### Return value
 
-An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches or an empty iterator if no matches are found. Each iterator value has the same shape as  {{jsxref("RegExp.prototype.exec()")}}'s return value.
+An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) (which is not restartable) of matches or an empty iterator if no matches are found. Each iterator value has the same shape as {{jsxref("RegExp.prototype.exec()")}}'s return value.
 
 ### Exceptions
 
