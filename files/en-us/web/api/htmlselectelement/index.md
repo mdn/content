@@ -72,6 +72,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
   - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element, and returns `false`; if there are no problems, it returns `true`.
 - {{domxref("HTMLSelectElement.setCustomValidity()")}}
   - : Sets the custom validity message for the selection element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.
+- {{domxref("HTMLSelectElement.showPicker()", "showPicker()")}}
+  - : Shows the option picker.
 
 ## Events
 

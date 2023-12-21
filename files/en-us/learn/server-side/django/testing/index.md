@@ -145,7 +145,7 @@ class YourTestClass(TestCase):
         pass
 
     def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
+        print("setUp: Run once for every test method to set up clean data.")
         pass
 
     def test_false_is_false(self):
@@ -197,11 +197,11 @@ Run the tests in the root directory of _LocalLibrary_. You should see an output 
 
 Creating test database for alias 'default'...
 setUpTestData: Run once to set up non-modified data for all class methods.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_false.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_true.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_one_plus_one_equals_two.
 .
 ======================================================================

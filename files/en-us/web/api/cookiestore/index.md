@@ -33,7 +33,7 @@ The `CookieStore` is accessed via attributes in the global scope in a {{domxref(
 
 ## Examples
 
-In this example we set a cookie and write to the console feedback as to whether the operation succeeded or failed.
+In this example, we set a cookie and write to the console feedback as to whether the operation succeeded or failed.
 
 ```js
 const day = 24 * 60 * 60 * 1000;

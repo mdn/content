@@ -2,7 +2,10 @@
 title: Private properties
 slug: Web/JavaScript/Reference/Classes/Private_properties
 page-type: javascript-language-feature
-browser-compat: javascript.classes.private_class_fields
+browser-compat:
+  - javascript.classes.private_class_fields
+  - javascript.classes.private_class_fields_in
+  - javascript.classes.private_class_methods
 ---
 
 {{jsSidebar("Classes")}}
