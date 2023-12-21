@@ -1,4 +1,4 @@
-name: Create Markdownlint auto-fix PR
+name: Create content auto-fix PR
 
 on:
   schedule:
@@ -31,14 +31,15 @@ jobs:
           yarn content fix-flaws
           yarn fix:md
           yarn fix:fm
+          node scripts/update-moved-file-links.js
 
       - name: Create PR with only fixable issues
         if: success()
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: auto-fix Markdownlint issues"
+          commit-message: "chore: auto-fix Markdownlint, Prettier, front-matter, redirects issues"
           branch: markdownlint-auto-cleanup
-          title: "Markdownlint auto-cleanup"
+          title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
@@ -50,7 +51,7 @@ jobs:
         with:
           commit-message: "chore: auto-fix Markdownlint issues"
           branch: markdownlint-auto-cleanup
-          title: "Markdownlint auto-cleanup"
+          title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
