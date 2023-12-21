@@ -7,7 +7,9 @@ browser-compat: api.MediaStreamTrack
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack`** interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+The **`MediaStreamTrack`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+
+Some user agents subclass this interface to provide more precise information or functionality, such as {{domxref("CanvasCaptureMediaStreamTrack")}}.
 
 {{InheritanceDiagram}}
 

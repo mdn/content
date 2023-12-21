@@ -1,5 +1,5 @@
 ---
-title: <header>
+title: "<header>: The Header element"
 slug: Web/HTML/Element/header
 page-type: html-element
 browser-compat: html.elements.header
@@ -64,7 +64,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 {{EmbedLiveSample('Article Header')}}
 
-## Accessibility
+## Accessibility concerns
 
 The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/Roles/banner_role) landmark when its context is the {{HTMLElement('body')}} element. The HTML header element is not considered a banner landmark when it is descendant of an {{HTMLElement('article')}}, {{HTMLElement('aside')}}, {{HTMLElement('main')}}, {{HTMLElement('nav')}}, or {{HTMLElement('section')}} element.
 

@@ -70,7 +70,7 @@ console.log(c); // 1; does not throw SyntaxError
 
 Note that the block-scoped `const c = 2` _does not_ throw a `SyntaxError: Identifier 'c' has already been declared` because it can be declared uniquely within the block.
 
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted.
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks are scoped to that block and are hoisted to the top of the block.
 
 ```js
 "use strict";

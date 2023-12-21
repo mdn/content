@@ -389,7 +389,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
 
 ## Concatenation (is not possible)
 
-In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](http://getbem.com/naming/).
+In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
 
 ```css example-bad
 .component {

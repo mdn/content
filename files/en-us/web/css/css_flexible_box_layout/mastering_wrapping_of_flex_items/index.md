@@ -70,7 +70,7 @@ The flexbox specification details what should happen if a flex item is collapsed
 
 This behavior is useful if you want to target flex items using JavaScript to show and hide content for example. The example in the specification demonstrates one such pattern.
 
-In the following live example I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse` and therefore the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item disappear and the space redistribute between non-collapsed items; the height of the flex container should not change.
+In the following live example, I have a non-wrapped flex container. The third item has more content than the others yet is set to `visibility: collapse`; therefore, the flex container is retaining a _strut_ of the height required to display this item. If you remove `visibility: collapse` from the CSS or change the value to `visible`, you will see the item appear, and the space is redistributed between non-collapsed items; the height of the flex container should not change.
 
 > **Note:** Use Firefox for the below two examples as Chrome and Safari treat collapse as hidden.
 

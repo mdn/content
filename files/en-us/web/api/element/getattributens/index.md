@@ -121,7 +121,3 @@ requested attribute does not exist on the specified element.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)
