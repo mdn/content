@@ -6,13 +6,15 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
+This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
 
 ## Changes for web developers
 
 ### Developer Tools
 
 ### HTML
+
+- {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
 
 #### Removals
 
@@ -59,6 +61,10 @@ This article provides information about the changes in Firefox 122 that affect d
 ### Removals
 
 ### Other
+
+## Experimental web features
+
+These features are newly shipped in Firefox 122 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 ## Older versions
 

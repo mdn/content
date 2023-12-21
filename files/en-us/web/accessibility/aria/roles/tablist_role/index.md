@@ -79,7 +79,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Accessibility Concerns
+## Accessibility concerns
 
 ## Best Practices
 
