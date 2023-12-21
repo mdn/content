@@ -19,16 +19,17 @@ object representing the url pattern defined by the parameters.
 
 ```js-nolint
 new URLPattern(input)
-new URLPattern(patternString, baseURL)
+new URLPattern(input, baseURL)
 new URLPattern(input, options)
-new URLPattern(patternString, baseURL, options)
+new URLPattern(input, baseURL, options)
 ```
 
 ### Parameters
 
-- `input` {{Optional_Inline}}
-  - : An object providing patterns for each URL part individually
-    that will be used for matching. The object members can be any of:
+- `input`
+  - : The input pattern that will be used for matching. This can either be a
+    string, or an object providing patterns for each URL part
+    individually. The object members can be any of:
     - `protocol`
     - `username`
     - `password`
@@ -39,15 +40,13 @@ new URLPattern(patternString, baseURL, options)
     - `hash`
     - `baseURL`
       > **Note:** Omitted parts of the object will be treated as wildcards (`*`).
-- `patternString` {{Optional_Inline}}
-  - : A string representing the input pattern that will be used for matching.
 - `baseURL` {{Optional_Inline}}
   - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
 - `options` {{Optional_Inline}}
   - : An object providing options for matching the given pattern. The possible object members are as follows:
     - `ignoreCase` {{Optional_Inline}}
-      - Enables case-insensitive matching if set to `true`. If omitted or set to `false`, matching will be case-sensitive.
+      - : Enables case-insensitive matching if set to `true`. If omitted or set to `false`, matching will be case-sensitive.
 
 ### Exceptions
 
