@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### HTML
 
+- {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
+
 #### Removals
 
 ### CSS
