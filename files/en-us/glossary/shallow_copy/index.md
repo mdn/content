@@ -10,7 +10,7 @@ A **shallow copy** of an object is a copy whose properties share the same [refer
 
 More formally, two objects `o1` and `o2` are shallow copies if:
 
-1. They are not the same object (`o1 !== o2`).
+1. They are not the same object but they refer to same object (`o1 === o2`).
 2. The properties of `o1` and `o2` have the same names in the same order.
 3. The values of their properties are equal.
 4. Their prototype chains are equal.
