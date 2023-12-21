@@ -26,7 +26,7 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 - {{domxref("ImageCapture.takePhoto()")}} {{Experimental_Inline}}
   - : Takes a single exposure using the video capture device sourcing a {{domxref("MediaStreamTrack")}} and returns a {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}} containing the data.
 - {{domxref("ImageCapture.getPhotoCapabilities()")}} {{Experimental_Inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with a `PhotoCapabilities` object containing the ranges of available configuration options.
+  - : Returns a {{jsxref("Promise")}} that resolves with an object containing the ranges of available configuration options.
 - {{domxref("ImageCapture.getPhotoSettings()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing the current photo configuration settings.
 - {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}

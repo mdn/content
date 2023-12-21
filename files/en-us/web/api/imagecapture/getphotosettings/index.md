@@ -27,8 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an object
-containing the following properties:
+A {{jsxref("Promise")}} that resolves with an object containing the following properties:
 
 - `fillLightMode`
   - : The flash setting of the capture device, one of `"auto"`, `"off"`, or `"flash"`.
