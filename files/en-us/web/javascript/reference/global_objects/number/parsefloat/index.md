@@ -14,7 +14,7 @@ This method has the very same functionality as the global {{jsxref("parseFloat()
 Number.parseFloat === parseFloat; // true
 ```
 
-Its purpose is modularization of globals.Please see {{jsxref("parseFloat()")}} for detail and examples.
+Its purpose is modularization of globals. Please see {{jsxref("parseFloat()")}} for detail and examples.
 
 ## Specifications
 
