@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.validationMessage
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`validationMessage`** read-only property of the {{domxref("ElementInternals")}} interface returns the validation message for the element.
 

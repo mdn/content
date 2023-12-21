@@ -110,7 +110,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 ## Examples
 
-## Accessibility Concerns
+## Accessibility concerns
 
 ## Best Practices
 

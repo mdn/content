@@ -12,7 +12,7 @@ browser-compat: api.Window.queryLocalFonts
 
 The **`window.queryLocalFonts()`** method returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
 
-To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}. In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
+To use this method, the user must grant permission to access `local-fonts` (permission status can be queried via the {{domxref("Permissions API", "", "", "nocode")}}). In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ## Syntax
 
@@ -125,5 +125,5 @@ async function computeOutlineFormat() {
 ## See also
 
 - {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
