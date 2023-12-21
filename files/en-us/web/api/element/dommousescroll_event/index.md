@@ -31,7 +31,7 @@ onDOMMouseScroll = (event) => {};
 
 ## Event type
 
-A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 
