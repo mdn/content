@@ -162,10 +162,10 @@ The following example creates a very simple dropdown menu, the second option of 
 The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
 
 ```html
-<label for="hr-select">Please select a food</label> <br />
+<label for="hr-select">Your favorite food</label> <br />
 
 <select name="foods" id="hr-select">
-  <option value="">Select a favorite food</option>
+  <option value="">Choose a food</option>
   <hr />
   <optgroup label="Fruit">
     <option value="apple">Apples</option>
