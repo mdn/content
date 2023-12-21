@@ -26,16 +26,16 @@ Indexed entries do not automatically expire. It's good practice to present an in
 
 ## Interfaces
 
-- {{domxref("ContentIndex")}}
+- {{domxref("ContentIndex")}} {{Experimental_Inline}}
   - : The **`ContentIndex`** interface provides functionality to register content available offline.
-- {{domxref("ContentIndexEvent")}}
+- {{domxref("ContentIndexEvent")}} {{Experimental_Inline}}
   - : The **`ContentIndexEvent`** interface of the {{domxref('Content Index API')}} defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event.
 
 ## Service worker additions
 
 The following additions to the {{domxref('ServiceWorker')}} have been specified in the Content Index API spec to provide an entry point for using content indexing.
 
-- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}}
+- {{domxref("ServiceWorkerRegistration.index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("ContentIndex")}} interface for indexing cached pages.
 - {{domxref("ServiceWorkerGlobalScope.contentdelete_event", "contentdelete")}} event {{Experimental_Inline}}
   - : An event fired when content is removed by the user agent.
