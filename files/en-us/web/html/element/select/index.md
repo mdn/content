@@ -17,7 +17,7 @@ Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/opt
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
-You can further nest `<option>` elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.
+You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
 For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
 
@@ -121,10 +121,6 @@ Keyboard users can select multiple non-contiguous items by:
 
   to select/deselect "focused" select options.
 
-## &lt;hr&gt; in select
-
-To make long select lists easier to read {{HTMLElement("hr")}} elements can be added to make the select list easier to read, by creating separators which visually break up the options available for the user to choose.
-
 ## Styling with CSS
 
 The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
@@ -157,7 +153,7 @@ The following example creates a very simple dropdown menu, the second option of 
 
 {{EmbedLiveSample("Basic_select", "", "100")}}
 
-### Select with grouping
+### Select with grouping options
 
 The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
 
@@ -197,7 +193,7 @@ The following example creates a dropdown menu with grouping using {{HTMLElement(
 
 #### Result
 
-{{EmbedLiveSample("select_with_grouping", "", "100")}}
+{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
 
 ### Advanced select with multiple features
 
@@ -584,6 +580,10 @@ document.forms[0].onsubmit = (e) => {
 #### Result
 
 {{EmbedGHLiveSample("html-examples/custom-select", '100%', 300)}}
+
+## Accessibility concerns
+
+The `<hr>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
 ## Technical summary
 
