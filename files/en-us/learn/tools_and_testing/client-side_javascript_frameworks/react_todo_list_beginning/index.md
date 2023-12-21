@@ -79,7 +79,7 @@ As a starting point for this project, we're going to provide two things: an `App
 Copy the following snippet to your clipboard, then paste it into `App.jsx`:
 
 ```jsx
-function App(props) {
+export default function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
