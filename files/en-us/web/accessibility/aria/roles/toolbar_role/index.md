@@ -86,7 +86,7 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 
 [Toolbar example from <abbr>W3C</abbr>, the World Wide Web Consortium](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 

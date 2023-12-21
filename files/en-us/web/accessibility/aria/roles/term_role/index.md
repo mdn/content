@@ -68,7 +68,7 @@ or without any ARIA (but possibly not how you want it presented)
 </dl>
 ```
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Don't use the `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
 
