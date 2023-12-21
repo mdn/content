@@ -55,11 +55,14 @@ confirmElement.addEventListener("change", () => {
 
 function displayLog() {
   if (confirmElement.validity.customError) {
-    log.textContent = "A custom error message has been detected.";
+    log.textContent = `There is a custom error on the repeated password: ${confirmElement.validationMessage}`;
   } else {
     log.textContent = "No custom error message is set.";
   }
+  requestAnimationFrame(displayLog);
 }
+
+requestAnimationFrame(displayLog);
 ```
 
 #### Result
