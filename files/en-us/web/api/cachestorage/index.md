@@ -1,3 +1,4 @@
+![1000000799](https://github.com/mdn/content/assets/146886446/e48e36d2-7d85-4f5e-aba4-d0b08748405b)
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
