@@ -4,7 +4,10 @@ slug: Web/API/Content_Index_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.ContentIndex
+browser-compat:
+  - api.ContentIndex
+  - api.ServiceWorkerRegistration.index
+spec-urls: https://wicg.github.io/content-index/spec/
 ---
 
 {{DefaultAPISidebar("Content Index API")}}{{SeeCompatTable}}
