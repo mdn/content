@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.takePhoto
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the
 {{domxref("ImageCapture")}} interface takes a single exposure using the video capture

@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.grabFrame
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`grabFrame()`** method of the
 {{domxref("ImageCapture")}} interface takes a snapshot of the live video in a

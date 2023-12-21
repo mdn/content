@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.getPhotoSettings
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`getPhotoSettings()`** method of
 the {{domxref("ImageCapture")}} interface returns a {{jsxref("Promise")}} that

@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.ImageCapture
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`ImageCapture()`** constructor
 creates a new {{domxref("ImageCapture")}} object.
