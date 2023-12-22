@@ -10,8 +10,6 @@ browser-compat: api.EditContext.selectionEnd
 
 The **`selectionEnd`** read-only property of the {{domxref("EditContext")}} refers to the offset, within the editable text content, of the end of the current selection.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
-
 ## Value
 
 A {{jsxref("Number")}}

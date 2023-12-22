@@ -10,8 +10,6 @@ browser-compat: api.EditContext.updateSelection
 
 The **`updateSelection()`** method of the {{domxref("EditContext")}} interface updates the internal state of the selection within the editable text context. This method is used to update the selection state when the user interacts with the text rendering in the `EditContext`'s associated element, such as by clicking or dragging the mouse, or by using the keyboard.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
-
 ## Syntax
 
 ```js-nolint

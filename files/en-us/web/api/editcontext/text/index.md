@@ -10,8 +10,6 @@ browser-compat: api.EditContext.text
 
 The **`text`** read-only property of the {{domxref("EditContext")}} interface represents the editable text content of the element.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
-
 ## Value
 
 A string containing the current editable text content. Its initial value is the empty string.
