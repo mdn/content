@@ -11,8 +11,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
 1. **action**
    - *Description:* Specifies the URL to which the form data is sent when submitted.
-   - *Example:*
-     ```html
+
+   - _Description:_ Specifies the URL to which the form data is sent when submitted.
+   - _Example:_
+
      <form action="/submit_form" method="post">
        <!-- Form elements go here -->
      </form>
