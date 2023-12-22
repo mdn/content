@@ -14,6 +14,35 @@ The **`EditContext()`** constructor returns a new {{DOMxRef("EditContext")}} obj
 
 ```js-nolint
 new EditContext()
+new EditContext(options)
+```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : An optional object with the following properties:
+    - `text`
+      - : A string to set the initial text of the `EditContext`.
+    - `selectionStart`
+      - : A number to set the initial selection start of the `EditContext`.
+    - `selectionEnd`
+      - : A number to set the initial selection end of the `EditContext`.
+
+## Example
+
+The following example creates a new `EditContext` object with the initial text "Hello world!" and the initial selection covering the entire text.
+
+```js-nolint
+const initialText = "Hello world!";
+
+const editContext = new EditContext({
+  text: initialText,
+  selectionStart: 0,
+  selectionEnd: initialText.length
+});
+
+const editorElement = document.getElementById("editor");
+editorElement.editContext = editContext;
 ```
 
 ## Specifications

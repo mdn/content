@@ -60,7 +60,7 @@ To use the EditContext API, you need to create an instance of the {{domxref("Edi
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js
+```js-nolint
 const canvas = document.getElementById("editor-canvas");
 const editContext = new EditContext();
 canvas.editContext = editContext;
