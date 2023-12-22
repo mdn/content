@@ -117,7 +117,7 @@ For each of them, use the standard equivalent provided.
 - `-webkit-border-before-width`
   - : Use the standard {{CSSxRef("border-block-start-width")}} property instead.
 - `-webkit-border-end`
-  - : Use the standard {{CSSxRef("border-inline-end")}} proprety instead.
+  - : Use the standard {{CSSxRef("border-inline-end")}} property instead.
 - `-webkit-border-end-color`
   - : Use the standard {{CSSxRef("border-inline-end-color")}} property instead.
 - `-webkit-border-end-style`
