@@ -41,8 +41,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
      ```
 
 5. **autocomplete**
-   - *Description:* Controls whether the browser should automatically complete input fields based on previous user input.
-   - *Example:*
+
+   - _Description:_ Controls whether the browser should automatically complete input fields based on previous user input.
+   - _Example:_
+
      ```html
      <form action="/submit_form" method="post" autocomplete="on">
        <!-- Form elements go here -->
