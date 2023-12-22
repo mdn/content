@@ -38,12 +38,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
-An `InvalidState` error is raised if the `requestData()` method
-is called while the `MediaRecorder` object's
-{{domxref("MediaRecorder.state")}} is not "recording" — the media cannot be captured if
-recording is not occurring.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `MediaRecorder` is currently `"inactive"`; you cannot capture
+    the recording if the `MediaRecorder` is not active.
 
 ## Examples
 
