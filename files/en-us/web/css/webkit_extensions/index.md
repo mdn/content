@@ -10,7 +10,7 @@ status:
 
 Applications based on WebKit or Blink, such as Safari and Chrome, support several special extensions to [CSS](/en-US/docs/Web/CSS). These extensions are generally prefixed with `-webkit-`. Most `-webkit-` prefixed properties also work with an `-apple-` prefix. A few are prefixed with `-epub-`.
 
-## WebKit-only properties without standard equivalents
+## -webkit-prefixed properties without standard equivalents
 
 > **Note:** Avoid using on websites. These properties will only work in WebKit-based browsers.
 
