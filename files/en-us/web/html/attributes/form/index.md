@@ -21,8 +21,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
      ```
 
 2. **method**
-   - *Description:* Defines the HTTP method used when sending form data. It can be "get" or "post."
-   - *Example:*
+
+   - _Description:_ Defines the HTTP method used when sending form data. It can be "get" or "post."
+   - _Example:_
+
      ```html
      <form action="/submit_form" method="post">
        <!-- Form elements go here -->
