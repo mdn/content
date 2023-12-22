@@ -47,7 +47,7 @@ function draw() {
   ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
   ctx.clip();
 
-  // Draw Background
+  // Draw background
   const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
   lingrad.addColorStop(0, "#232256");
   lingrad.addColorStop(1, "#143778");
