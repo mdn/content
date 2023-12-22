@@ -2,6 +2,11 @@
 {}
 ---
 
+# HTML `<form>` Element
+
+---
+
+## {}
 
 The `<form>` element in HTML is a crucial component that allows users to input data and submit it to a server for processing. It serves as the foundation for creating interactive and dynamic web pages by providing a structure for user input fields, buttons, and other related elements. Let's delve into the attributes associated with the `<form>` element to understand its capabilities and customization options.
 [![mdn-form.png](https://i.postimg.cc/3JS0BqNc/mdn-form.png)](https://postimg.cc/3dGwrngX)
