@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen-reader users.
+In our final tutorial article, we'll focus on (pun intended) accessibility, including focus management in React, which can improve usability and reduce confusion for both keyboard-only and screen reader users.
 
 <table>
   <tbody>
@@ -54,7 +54,7 @@ To improve the experience for keyboard and assistive technology users, we should
 
 ### Aside: a note on our focus indicator
 
-If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator, but you will do if you move between them with the tab key on your keyboard. Don't worry — your code isn't broken!
+If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator, but you will do if you move between them with the <kbd>Tab</kbd> key on your keyboard. Don't worry — your code isn't broken!
 
 Our CSS file uses the [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible) pseudo-class to provide custom styling for the focus indicator, and the browser uses a set of internal rules to determine when to show it to the user. Generally, the browser _will_ show a focus indicator in response to keyboard input, and _might_ show it in response to mouse input. `<button>` elements _don't_ show a focus indicator in response to mouse input, while `<input>` elements _do_.
 
@@ -62,7 +62,7 @@ The behavior of `:focus-visible` is more selective than the older [`:focus`](/en
 
 ## Focusing between templates
 
-When a user toggles a `<Todo />` template from viewing to editing, we should focus on the `<input>` used to rename it; when they toggle back from editing to viewing, we should move focus back to the "Edit" button.
+When a user changes the `<Todo />` template from viewing to editing, we should focus on the `<input>` used to rename it; when they change back from editing to viewing, we should move focus back to the "Edit" button.
 
 ### Targeting our elements
 
@@ -126,7 +126,7 @@ We're getting closer! To take advantage of our newly referenced elements, we nee
 
 ### Implementing `useEffect()`
 
-[`useEffect()`](https://react.dev/reference/react/useEffect) is so named because it runs any side-effects that we'd like to add to the render process, which can't be run inside the main function body. `useEffect()` runs right after a component renders, meaning the DOM elements we referenced in the previous section will be available for us to use.
+[`useEffect()`](https://react.dev/reference/react/useEffect) is so named because it runs any side-effects that we'd like to add to the render process but which can't be run inside the main function body. `useEffect()` runs right after a component renders, meaning the DOM elements we referenced in the previous section will be available for us to use.
 
 Change the import statement of `Todo.jsx` again to add `useEffect`:
 
@@ -189,7 +189,7 @@ useEffect(() => {
 }, [isEditing]);
 ```
 
-This kind of works. If you use your keyboard to trigger the "Edit" button (remember: <kbd>Tab</kbd> to it and press <kbd>Enter</kbd>), you'll see that your focus moves between Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load, before we even interact with the app!
+This kind of works. If you use your keyboard to trigger the "Edit" button (remember: <kbd>Tab</kbd> to it and press <kbd>Enter</kbd>), you'll see that your focus moves between the Edit `<input>` and "Edit" button as you start and end an edit. However, you may have noticed a new problem — the "Edit" button in the final `<Todo />` component is focused immediately on page load before we even interact with the app!
 
 Our `useEffect()` hook is behaving exactly as we designed it: it runs as soon as the component renders, sees that `isEditing` is `false`, and focuses the "Edit" button. There are three instances of `<Todo />`, and focus is given to the "Edit" button of the one that renders last.
 
@@ -289,7 +289,7 @@ const listHeadingRef = useRef(null);
 
 Heading elements like our `<h2>` are not usually focusable. This isn't a problem — we can make any element programmatically focusable by adding the attribute [`tabindex="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to it. This means _only focusable with JavaScript_. You can't press <kbd>Tab</kbd> to focus on an element with a tabindex of `-1` the same way you could do with a [`<button>`](/en-US/docs/Web/HTML/Element/button) or [`<a>`](/en-US/docs/Web/HTML/Element/a) element (this can be done using `tabindex="0"`, but that's not appropriate in this case).
 
-Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `headingRef`:
+Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the heading above our list of tasks, along with our `listHeadingRef`:
 
 ```jsx
 <h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
@@ -297,7 +297,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 </h2>
 ```
 
-> **Note:** The `tabindex` attribute is great for accessibility edge-cases, but you should take **great care** to not overuse it. Only apply a `tabindex` to an element when you're absolutely sure that making it focusable will benefit your user in some way. In most cases, you should be utilizing elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screen-reader users!
+> **Note:** The `tabindex` attribute is excellent for accessibility edge cases, but you should take **great care** not to overuse it. Only apply a `tabindex` to an element when you're sure that making it focusable will benefit your user somehow. In most cases, you should utilize elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screen reader users!
 
 ### Getting previous state
 
