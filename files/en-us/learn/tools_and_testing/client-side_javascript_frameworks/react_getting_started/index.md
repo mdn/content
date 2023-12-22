@@ -313,7 +313,7 @@ function App() {
 
 The `App()` function returns a JSX expression. This expression defines what your browser ultimately renders to the DOM.
 
-Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/docs/fragments). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
+Just under the `return` keyword is a special bit of syntax: `<>`. This is a [fragment](https://react.dev/reference/react/Fragment). React components have to return a single JSX element, and fragments allow us to do that without rendering arbitrary `<div>`s in the browser. You'll see fragments in many React applications.
 
 ### The `export` statement
 

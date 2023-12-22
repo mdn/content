@@ -39,7 +39,7 @@ onkeydown = (event) => {};
 
 ## Event type
 
-A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("KeyboardEvent")}}
 
