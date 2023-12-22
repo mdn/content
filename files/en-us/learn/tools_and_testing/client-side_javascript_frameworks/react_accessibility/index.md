@@ -297,7 +297,7 @@ Let's add the `tabindex` attribute — written as `tabIndex` in JSX — to the h
 </h2>
 ```
 
-> **Note:** The `tabindex` attribute is great for accessibility edge cases, but you should take **great care** to not overuse it. Only apply a `tabindex` to an element when you're absolutely sure that making it focusable will benefit your user in some way. In most cases, you should be utilizing elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screenreader users!
+> **Note:** The `tabindex` attribute is excellent for accessibility edge cases, but you should take **great care** not to overuse it. Only apply a `tabindex` to an element when you're sure that making it focusable will benefit your user somehow. In most cases, you should utilize elements that can naturally take focus, such as buttons, anchors, and inputs. Irresponsible usage of `tabindex` could have a profoundly negative impact on keyboard and screen reader users!
 
 ### Getting previous state
 
