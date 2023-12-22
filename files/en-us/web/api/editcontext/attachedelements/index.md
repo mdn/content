@@ -8,7 +8,9 @@ browser-compat: api.EditContext.attachedElements
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext.attachedElements()`** method ...
+The **`attachedElements()`** method of the {{domxref("EditContext")}} interface returns an {{jsxref("Array")}} containing the element that's associated with the `EditContext` object.
+
+The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
 
 ## Syntax
 
@@ -18,7 +20,24 @@ attachedElements()
 
 ### Return value
 
-...
+An {{jsxref("Array")}} containing one {{domxref("HTMLElement")}} object.
+
+There can only be one element associated to an `EditContext` instance, so the returned array will always contain one element. If the API is extended in the future to support multiple associated elements, the return value will be an array containing multiple elements.
+
+## Example
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js-nolint
+const canvas = document.getElementById("editor-canvas");
+const editContext = new EditContext();
+canvas.editContext = editContext;
+
+const attachedElements = editContext.attachedElements();
+console.log(attachedElements[0] === canvas); // true
+```
 
 ## Specifications
 

@@ -8,17 +8,66 @@ browser-compat: api.EditContext.updateSelection
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext.updateSelection()`** method ...
+The **`updateSelection()`** method of the {{domxref("EditContext")}} interface updates the internal state of the selection within the editable text context. This method is used to update the selection state when the user interacts with the text rendering in the `EditContext`'s associated element, such as by clicking or dragging the mouse, or by using the keyboard.
+
+The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
 
 ## Syntax
 
 ```js-nolint
-updateSelection()
+updateSelection(start, end)
 ```
 
-### Return value
+### Parameters
 
-...
+- `start`
+  - : A number representing the new selection start.
+- `end`
+  - : A number representing the new selection end.
+
+If the `start` and `end` values are the same, the selection is equivalent to a caret.
+
+### Exceptions
+
+- If only one argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
+- If either either argument is not a positive number, a {{domxref("DOMException")}} is thrown.
+- If `start` is greater than `end`, a {{domxref("DOMException")}} is thrown.
+
+## Example
+
+This example shows how to use the `updateSelection` method to update the selection in the `EditContext` of a `canvas` element when the arrow keys are used to move the caret or select text in the editable region.
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js-nolint
+const canvas = document.getElementById("editor-canvas");
+const ctx = canvas.getContext("2d");
+
+const editContext = new EditContext();
+canvas.editContext = editContext;
+
+canvas.addEventListener("keydown", e => {
+  if (e.key == "ArrowLeft") {
+    const newPosition = Math.max(editContext.selectionStart - 1, 0);
+
+    if (e.shiftKey) {
+      editContext.updateSelection(newPosition, editContext.selectionEnd);
+    } else {
+      editContext.updateSelection(newPosition, newPosition);
+    }
+  } else if (e.key == "ArrowRight") {
+    const newPosition = Math.min(editContext.selectionEnd + 1, editContext.text.length);
+
+    if (e.shiftKey) {
+      editContext.updateSelection(editContext.selectionStart, newPosition);
+    } else {
+      editContext.updateSelection(newPosition, newPosition);
+    }
+  }
+});
+```
 
 ## Specifications
 

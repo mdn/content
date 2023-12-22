@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.editContext
 
 The **`editContext`** property of the {{domxref("HTMLElement")}} interface gets and sets an element's associated {{domxref("EditContext")}} object.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support a variety of input methods and text rendering options.
+The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
 
 ### Element association
 

@@ -8,15 +8,15 @@ browser-compat: api.EditContext.characterBoundsRangeStart
 
 {{APIRef("EditContext API")}}
 
-The **`characterBoundsRangeStart`** property of the {{domxref("EditContext")}} interface ...
+The **`characterBoundsRangeStart`** read-only property of the {{domxref("EditContext")}} interface ??? TODO ???
 
 ## Value
 
-...
+??? TODO ???
 
-## Examples
+## Example
 
-...
+??? TODO ???
 
 ## Specifications
 

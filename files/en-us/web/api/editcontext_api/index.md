@@ -70,6 +70,14 @@ An `EditContext` instance can only be attached to one DOM element at a time.
 
 Attaching an `EditContext` instance to a DOM element makes the element focusable, as part of the document's focus order. The user can enter text into the element using the input method of their choice, and you can use event fired by the `EditContext` instance to render the text and selection.
 
+### Model and view architecture
+
+When using the EditContext API, it helps to build your editing experience as a model and view architecture.
+
+The `EditContext` instance represents the model of your editable region. Its internal state gets updated when text input is received, and when the selection changes.
+
+You can then render the text and selection in the view, using the information provided by the `EditContext` instance, however your view doesn't need to match the model exactly. You're free to render the text in any way you want.
+
 ## Interfaces
 
 - {{DOMxRef("EditContext")}}
