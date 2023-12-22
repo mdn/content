@@ -8,6 +8,7 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 [![mdn-form.png](https://i.postimg.cc/3JS0BqNc/mdn-form.png)](https://postimg.cc/3dGwrngX)
 ## Attributes
 
+
 1. **action**
    - *Description:* Specifies the URL to which the form data is sent when submitted.
    - *Example:*
