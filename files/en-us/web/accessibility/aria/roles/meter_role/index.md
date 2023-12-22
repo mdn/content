@@ -84,6 +84,6 @@ In the above scenario, when the `aria-valuenow` value updates, the width of the 
 <section id="Quick_links">
   <ol>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA
-          roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+          roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}</li>
   </ol>
 </section>
