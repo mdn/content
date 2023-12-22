@@ -12,7 +12,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support severa
 
 ## -webkit-prefixed properties without standard equivalents
 
-> **Note:** Avoid using on websites. These properties will only work in WebKit-based browsers.
+> **Note:** Avoid using on websites. These properties will only work in WebKit- or Blink-based browsers except where specified.
 
 ### A-C
 
