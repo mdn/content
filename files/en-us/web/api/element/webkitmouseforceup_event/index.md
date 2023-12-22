@@ -26,7 +26,7 @@ onwebkitmouseforceup = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
