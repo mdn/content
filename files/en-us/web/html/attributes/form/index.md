@@ -19,7 +19,8 @@ The `<form>` element in HTML is a crucial component that allows users to input d
    - _Example:_
 
      ```html
-     <form action="/submit_form" method="post"></form>
+     <form action="/submit_form" method="post">
+     </form>
      ```
 
 2. **method**
@@ -40,7 +41,6 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
      ```html
      <form action="/submit_form" method="post" enctype="multipart/form-data">
-       <!-- Form elements go here -->
      </form>
      ```
 
@@ -51,7 +51,6 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
      ```html
      <form action="/submit_form" method="post" target="_blank">
-       <!-- Form elements go here -->
      </form>
      ```
 
@@ -62,7 +61,6 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
      ```html
      <form action="/submit_form" method="post" autocomplete="on">
-       <!-- Form elements go here -->
      </form>
      ```
 
@@ -73,7 +71,6 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
      ```html
      <form action="/submit_form" method="post" novalidate>
-       <!-- Form elements go here -->
      </form>
      ```
 
@@ -84,6 +81,5 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 
      ```html
      <form action="/submit_form" method="post" name="userForm">
-       <!-- Form elements go here -->
      </form>
      ```
