@@ -32,7 +32,7 @@ onblur = (event) => {};
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 
