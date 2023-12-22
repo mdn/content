@@ -1,4 +1,3 @@
-# HTML `<form>` Element
 ---
 {}
 ---
