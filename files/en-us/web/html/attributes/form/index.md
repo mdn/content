@@ -32,8 +32,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
      ```
 
 4. **target**
-   - *Description:* Specifies where to display the response received after submitting the form. Values can include "_blank," "_self," "_parent," or "_top."
-   - *Example:*
+
+   - _Description:_ Specifies where to display the response received after submitting the form. Values can include "\_blank," "\_self," "\_parent," or "\_top."
+   - _Example:_
+
      ```html
      <form action="/submit_form" method="post" target="_blank">
        <!-- Form elements go here -->
