@@ -1170,51 +1170,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array transfer
-
-The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
-The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
-After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
-(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
-    </tr>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
@@ -1793,7 +1748,8 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1806,8 +1762,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1816,8 +1772,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
     </tr>
     <tr>
       <th>Beta</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1831,9 +1787,10 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   </tbody>
 </table>
 
-#### ClipboardRead
+#### Clipboard read and write
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See [Firefox bug 1701512](https://bugzil.la/1701512) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1846,8 +1803,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>90</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1856,7 +1813,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
+      <td>Yes</td>
       <td>No</td>
     </tr>
     <tr>
@@ -1866,7 +1823,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.read</code></td>
+      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
     </tr>
   </tbody>
 </table>
