@@ -92,7 +92,7 @@ Applications based on WebKit or Blink, such as Safari and Chrome, support severa
 - {{CSSxRef("-webkit-user-drag")}}
 - {{CSSxRef("-webkit-user-modify")}}
 
-## Webkit-prefixed properties with standard equivalent
+## -webkit-prefixed properties with standard equivalents
 
 Several old Webkit-prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
 
