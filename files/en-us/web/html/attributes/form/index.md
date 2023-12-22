@@ -69,3 +69,21 @@ The `<form>` element in HTML is a crucial component that allows users to input d
 6. **novalidate**
 
    - _Description:_ Prevents the browser from validating form elements before submission. Useful when custom validation is implemented.
+   - _Example:_
+
+     ```html
+     <form action="/submit_form" method="post" novalidate>
+       <!-- Form elements go here -->
+     </form>
+     ```
+
+7. **name**
+
+   - _Description:_ Provides a name for the form, which can be used for scripting or styling purposes.
+   - _Example:_
+
+     ```html
+     <form action="/submit_form" method="post" name="userForm">
+       <!-- Form elements go here -->
+     </form>
+     ```
