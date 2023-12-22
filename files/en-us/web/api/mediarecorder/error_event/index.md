@@ -58,10 +58,6 @@ the value of {{domxref("DOMException.name", "MediaRecorderErrorEvent.error.name"
     sent to the `MediaRecorder` with the remaining received data, and finally a
     {{domxref("MediaRecorder/stop_event", "stop")}} event is sent.
 
-These errors may occur either directly because of a call to a
-`MediaRecorder` method, or indirectly due to a problem arising during the
-recording process.
-
 ## Examples
 
 Using {{domxref("EventTarget.addEventListener", "addEventListener()")}} to listen for `error` events:
