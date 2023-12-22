@@ -32,8 +32,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
      ```
 
 3. **enctype**
-   - *Description:* Indicates how the form data should be encoded before sending it to the server. Common values include "application/x-www-form-urlencoded" and "multipart/form-data."
-   - *Example:*
+
+   - _Description:_ Indicates how the form data should be encoded before sending it to the server. Common values include "application/x-www-form-urlencoded" and "multipart/form-data."
+   - _Example:_
+
      ```html
      <form action="/submit_form" method="post" enctype="multipart/form-data">
        <!-- Form elements go here -->
