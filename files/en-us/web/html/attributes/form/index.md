@@ -63,8 +63,10 @@ The `<form>` element in HTML is a crucial component that allows users to input d
      ```
 
 7. **name**
-   - *Description:* Provides a name for the form, which can be used for scripting or styling purposes.
-   - *Example:*
+
+   - _Description:_ Provides a name for the form, which can be used for scripting or styling purposes.
+   - _Example:_
+
      ```html
      <form action="/submit_form" method="post" name="userForm">
        <!-- Form elements go here -->
