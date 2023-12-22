@@ -8,22 +8,18 @@ browser-compat: api.WakeLockSentinel.released
 
 {{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The **`released`** read-only property of the
-{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
-a {{domxref("WakeLockSentinel")}} has been released yet.
+The **`released`** read-only property of the {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether a {{domxref("WakeLockSentinel")}} has been released.
+
+The `WakeLockSentinel` is released when the associated platform screen wake lock is revoked, and then remains `true`.
+If needed, the application would heed to request a new screen wake lock (the current `WakeLockSentinel` cannot be reused).
 
 ## Value
 
-A boolean value, that is `false` until the
-{{domxref("WakeLockSentinel")}} has been released (either through a call to
-{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
-automatically) and the {{domxref("WakeLockSentinel/release_event", "release")}} event has been
-emitted, after which it becomes `true` and no longer changes.
+A boolean value, that is `false` until the {{domxref("WakeLockSentinel")}} has been released (either through a call to {{domxref("WakeLockSentinel.release()")}} or because the lock has been released automatically) and the {{domxref("WakeLockSentinel/release_event", "release")}} event has been emitted, after which it becomes `true` and no longer changes.
 
 ## Examples
 
-This example shows how **`released`**'s value changes within a
-{{domxref("WakeLockSentinel")}}'s life cycle.
+This example shows how **`released`**'s value changes within a {{domxref("WakeLockSentinel")}}'s life cycle.
 
 ```js
 const sentinel = await navigator.wakeLock.request("screen");

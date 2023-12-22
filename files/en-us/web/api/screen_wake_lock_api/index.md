@@ -16,7 +16,7 @@ The **Screen Wake Lock API** provides a way to prevent devices from dimming or l
 
 Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. Whilst this is a useful feature, some applications need the screen to stay awake to be their most useful.
 
-The Screen Wake Lock API prevents the screen from turning off, dimming or locking. It allows for a simple platform-based solution which up until now could only be achieved via workarounds which were potentially power hungry. Only visible (active) documents can acquire the screen wake lock.
+The Screen Wake Lock API prevents the screen from turning off, dimming or locking. It allows for a simple platform-based solution for visible (active) documents to acquire the platform screen wake lock.
 
 There are plenty of use cases for keeping a screen on, including reading an ebook, map navigation, following a recipe, presenting to an audience, scanning a QR/barcode or applications that use voice or gesture control, rather than tactile input (the default way to keep a screen awake).
 
