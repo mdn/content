@@ -19,7 +19,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 - {{CSSxRef("-webkit-app-region")}}
 - {{CSSxRef("-webkit-border-horizontal-spacing")}}
 - {{CSSxRef("-webkit-border-vertical-spacing")}}
-- {{CSSxRef("-webkit-box-reflect")}} (Supported with `-webkit` by every browser, for compatibility reasons)
+- {{CSSxRef("-webkit-box-reflect")}} (supported with `-webkit-` by every browser, for compatibility reasons)
 - {{CSSxRef("-webkit-column-axis")}}
 - {{CSSxRef("-webkit-column-progression")}}
 - {{CSSxRef("-webkit-cursor-visibility")}}
@@ -54,10 +54,10 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 - {{CSSxRef("-webkit-mask-box-image-width")}}
 - {{CSSxRef("-webkit-mask-box-image")}}
 - {{cssxref("-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-position-x")}} (Supported with `-webkit` by every browser, for compatibility reasons)
-- {{CSSxRef("-webkit-mask-position-y")}} (Supported with `-webkit` by every browser, for compatibility reasons)
-- {{CSSxRef("-webkit-mask-repeat-x")}} (Also supported without prefix)
-- {{CSSxRef("-webkit-mask-repeat-y")}} (Also supported without prefix)
+- {{CSSxRef("-webkit-mask-position-x")}} (supported with `-webkit-` by every browser, for compatibility reasons)
+- {{CSSxRef("-webkit-mask-position-y")}} (supported with `-webkit-` by every browser, for compatibility reasons)
+- {{CSSxRef("-webkit-mask-repeat-x")}} (also supported without prefix)
+- {{CSSxRef("-webkit-mask-repeat-y")}} (also supported without prefix)
 - {{CSSxRef("-webkit-mask-source-type")}}
 - {{CSSxRef("-webkit-max-logical-height")}}
 - {{CSSxRef("-webkit-max-logical-width")}}
