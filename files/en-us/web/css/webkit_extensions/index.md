@@ -1,5 +1,5 @@
 ---
-title: WebKit vendor-prefixed CSS extensions
+title: "-webkit-prefixed CSS extensions"
 slug: Web/CSS/WebKit_Extensions
 page-type: landing-page
 status:
@@ -8,7 +8,7 @@ status:
 
 {{CSSRef}}
 
-Applications based on WebKit or Blink, such as Safari and Chrome, support several special extensions to [CSS](/en-US/docs/Web/CSS). These extensions are generally prefixed with `-webkit-`. Most `-webkit-` prefixed properties also work with an `-apple-` prefix. A few are prefixed with `-epub-`.
+User agents based on WebKit or Blink, such as Safari and Chrome, support several special extensions to [CSS](/en-US/docs/Web/CSS). These extensions are prefixed with `-webkit-`.
 
 ## -webkit-prefixed properties without standard equivalents
 
