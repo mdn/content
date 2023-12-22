@@ -52,19 +52,30 @@ In return, the EditContext API makes the DOM element you choose editable and par
 
 If you use the EditContext API with a `<canvas>` element, make sure to also make the text accessible to assistive technology. Screen readers can't read the text in a `<canvas>` element. For example, you could maintain a separate view of the text in an offscreen DOM element that's presented to screen readers.
 
-## Usage
+### Basic usage
 
-TODO
+To use the EditContext API, you need to create an instance of the {{domxref("EditContext")}} interface, and then attach it to the DOM element you want to make editable by using the {{domxref("HTMLElement/editContext", "editContext")}} property. The DOM element can be any element, including a `<div>` or a `<canvas>` element.
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js
+const canvas = document.getElementById("editor-canvas");
+const editContext = new EditContext();
+canvas.editContext = editContext;
+```
+
+An `EditContext` instance can only be attached to one DOM element at a time.
+
+Attaching an `EditContext` instance to a DOM element makes the element focusable, as part of the document's focus order. The user can enter text into the element using the input method of their choice, and you can use event fired by the `EditContext` instance to render the text and selection.
 
 ## Interfaces
 
 - {{DOMxRef("EditContext")}}
-
-  - : The **`EditContext`** interface represents an instance of an EditContext ...
-
+  - : The **`EditContext`** interface is a JavaScript reflection of the text edit context that's normally provided transparently by the browser when using standard editable regions such as `textarea`. `EditContext` provides the state of the text being edited, with information such as the text itself, the current selection, or the location of the text in the app's UI.
 - {{DOMxRef("TextFormat")}}
-
-  - : The **`TextFormat`** interface represents an instance of an TextFormat ...
+  - : The **`TextFormat`** interface is used to represent certain formats that should be applied to text ranges when the user is composing text within the IME composition window.
 
 ## Specifications
 
