@@ -583,7 +583,7 @@ document.forms[0].onsubmit = (e) => {
 
 ## Accessibility concerns
 
-The `<hr>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
 ## Technical summary
 
