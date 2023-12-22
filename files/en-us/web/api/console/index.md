@@ -76,7 +76,10 @@ This page documents the [Methods](#methods) available on the `console` object an
 
 The console's most frequently used feature is logging text and other data. There are several categories of output you can generate using the {{domxref("console/log_static", "console.log()")}}, {{domxref("console/info_static", "console.info()")}}, {{domxref("console/warn_static", "console.warn()")}}, {{domxref("console/error_static", "console.error()")}}, or {{domxref("console/debug_static", "console.debug()")}} methods. Each of these results in output styled differently in the log, and you can use the filtering controls provided by your browser to view only the kinds of output that interest you.
 
-There are two ways to use each of the output methods; you can pass in a list of objects whose string representations get concatenated into one string, then output to the console, or you can pass in a string containing zero or more substitution strings followed by a list of objects to replace them.
+There are two ways to use each of the output methods:
+
+- Pass in a variable number of arguments whose string representations get concatenated into one string, then output to the console.
+- Pass in a string containing zero or more substitution strings followed by a variable number of arguments to replace them.
 
 #### Outputting a single object
 
@@ -89,7 +92,7 @@ console.log(someObject);
 
 The output looks something like this:
 
-```bash
+```plain
 {str:"Some text", id:5}
 ```
 
@@ -105,7 +108,7 @@ console.info("My first car was a", car, ". The object is:", someObject);
 
 The output will look like this:
 
-```bash
+```plain
 My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 ```
 
