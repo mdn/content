@@ -9,6 +9,11 @@ browser-compat: webextensions.api.storage.StorageArea.onChanged
 
 Fires when one or more items in a storage area change. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
 
+When this event is triggered :
+
+- In Firefox, the information returned includes all the keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}. The extension can determine the changes by examining the content of the `changes` argument received by the `onChanged` listeners.
+- In Chrome, the information returned includes only the keys that changed.
+
 ## Syntax
 
 ```js-nolint
