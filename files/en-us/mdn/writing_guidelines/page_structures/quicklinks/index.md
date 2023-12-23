@@ -99,6 +99,7 @@ The following macros are included on all reference pages, but are also supported
 ### Banner macros
 
 - `\{{SeeCompatTable}}`
+
   - : Generates a **This is an experimental technology** banner indicating the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental) with a link to the [Browser compatibility](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) that every [reference page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) contains.
 
 - `\{{Deprecated_Header}}` 
