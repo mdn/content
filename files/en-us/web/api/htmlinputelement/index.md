@@ -31,7 +31,7 @@ Some properties only apply to input element types that support the corresponding
 
   - : `string`: **Returns / Sets** the directionality of the element.
 
-- {{domxref("HTMLInputElement.inputmode", "inputmode")}}
+- {{domxref("HTMLInputElement.inputMode", "inputMode")}}
 
   - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents.
 
