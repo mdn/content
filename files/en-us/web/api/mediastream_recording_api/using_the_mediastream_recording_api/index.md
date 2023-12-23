@@ -263,7 +263,5 @@ Finally, we set an `onclick` handler on the delete button to be a function that 
 
 ## See also
 
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) landing page
-- [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) landing page
 - {{domxref("MediaDevices.getUserMedia()")}}
