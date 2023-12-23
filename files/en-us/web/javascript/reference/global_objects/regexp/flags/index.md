@@ -38,6 +38,6 @@ The set accessor of `flags` is `undefined`. You cannot change this property dire
 
 ## See also
 
-- [A table of regular expression flags and their description](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags)
 - [Polyfill of `RegExp.prototype.flags` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) in the Regular expressions guide
 - {{jsxref("RegExp.prototype.source")}}
