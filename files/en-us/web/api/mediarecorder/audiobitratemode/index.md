@@ -17,9 +17,9 @@ The **`audioBitrateMode`** read-only property of the {{domxref("MediaRecorder")}
 One of the following:
 
 - `constant`
-  - : The {{domxref("MediaRecorder"}} encodes at this constant bitrate.
+  - : The {{domxref("MediaRecorder")}} encodes at this constant bitrate.
 - `variable`
-  - : The {{domxref("MediaRecorder"}} encodes using this variable bitrate, allowing more space to be used for complex signals and less space for less complex signals.
+  - : The {{domxref("MediaRecorder")}} encodes using this variable bitrate, allowing more space to be used for complex signals and less space for less complex signals.
 
 ## Specifications
 
