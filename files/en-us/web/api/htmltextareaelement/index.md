@@ -13,6 +13,8 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Instance properties
 
+_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+
 <table class="standard-table">
   <tbody>
     <tr>
@@ -252,6 +254,8 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
 
 ## Instance methods
 
+_Inherits methods from its parent, {{domxref("HTMLElement")}}._
+
 <table class="standard-table">
   <tbody>
     <tr>
@@ -321,6 +325,8 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
 The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
 ## Events
+
+_Inherits events from its parent, {{domxref("HTMLElement")}}._
 
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 

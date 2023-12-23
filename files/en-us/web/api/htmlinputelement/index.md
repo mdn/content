@@ -13,6 +13,8 @@ The **`HTMLInputElement`** interface provides special properties and methods for
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
+
 Some properties only apply to input element types that support the corresponding attributes.
 
 - {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
@@ -234,6 +236,8 @@ Some properties only apply to input element types that support the corresponding
 
 ## Instance methods
 
+_Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
+
 - {{domxref("HTMLElement/blur", "blur()")}}
 
   - : Removes focus from the input element; keystrokes will subsequently go nowhere.
@@ -290,6 +294,8 @@ Some properties only apply to input element types that support the corresponding
     - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the [`min`](/en-US/docs/Web/HTML/Element/input#min).
 
 ## Events
+
+_Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
 
