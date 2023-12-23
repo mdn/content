@@ -158,7 +158,7 @@ await navigator.locks.request(
 );
 ```
 
-### `signal` Example
+### `signal` example
 
 To only wait for a lock for a short period of time, use the `signal` option.
 
