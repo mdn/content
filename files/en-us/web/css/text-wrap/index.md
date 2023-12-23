@@ -44,12 +44,12 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
   - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six for Chromium and ten for Firefox).
 - `pretty`
   - : Results in the same behavior as `wrap`, except that the user agent will use a slower algorithm that favors better layout over speed. This is intended for body copy where good typography is favored over performance (for example, when the number of [orphans](/en-US/docs/Web/CSS/orphans) should be kept to a minimum).
-- `stable`
+- `stable` {{experimental_inline}}
   - : Results in the same behavior as `wrap`, except that when the user is editing the content, the lines that come before the lines they are editing remain static rather than the whole block of text re-wrapping.
 
 ## Description
 
-There are 2 ways that text can flow across lines within a block of content, such as a paragraph ({{HTMLElement("p")}}) or headings ({{HTMLElement("heading_elements","&lt;h1&gt;–&lt;h6&gt;")}}). These are _forced line breaks_, that are controlled by the user, and _soft line breaks_, that are controlled by the browser. The `text-wrap` property can be user to advise the browser how to control the _soft line breaks_.
+There are 2 ways that text can flow across lines within a block of content, such as a paragraph ({{HTMLElement("p")}}) or headings ({{HTMLElement("heading_elements","&lt;h1&gt;–&lt;h6&gt;")}}). These are _forced line breaks_, that are controlled by the user, and _soft line breaks_, that are controlled by the browser. The `text-wrap` property can be used to prompt the browser how to control the _soft line breaks_.
 
 The value you choose, for `text-wrap`, depends on how many lines of text you anticipate styling, whether the text is `contenteditable`, and whether you need to prioritize appearance or performance.
 
