@@ -3,6 +3,7 @@ title: MediaStream Recording API
 slug: Web/API/MediaStream_Recording_API
 page-type: web-api-overview
 browser-compat: api.MediaRecorder
+spec-urls: https://w3c.github.io/mediacapture-record/
 ---
 
 {{DefaultAPISidebar("MediaStream Recording")}}
