@@ -55,17 +55,17 @@ For the complete list of page types see [The page-type front matter key](/en-US/
 
 Below are examples of the various pages you'll find on MDN along with templates that can be used to create new content based on the type of content you will be presenting, including the following pages:
 
-    - [API langding pages](#api_landing_page)
-    - [API reference page](#api_reference_page)
-    - [API reference subpage](#api_reference_subpage)
-    - [Conceptual pages](#conceptual_page)
-    - [CSS feature reference](#css_feature_reference_page)
-    - [CSS module landing page](#css_module_landing_page)
-    - [Glossary entry](#glossary_page)
-    - [HTML element](#html_element_reference_page)
-    - [HTTP header](#http_header_reference_page)
-    - [Landing page](#landing_page)
-    - [SVG element](#svg_element_reference_page)
+- [API langding pages](#api_landing_page)
+- [API reference page](#api_reference_page)
+- [API reference subpage](#api_reference_subpage)
+- [Conceptual pages](#conceptual_page)
+- [CSS feature reference](#css_feature_reference_page)
+- [CSS module landing page](#css_module_landing_page)
+- [Glossary entry](#glossary_page)
+- [HTML element](#html_element_reference_page)
+- [HTTP header](#http_header_reference_page)
+- [Landing page](#landing_page)
+- [SVG element](#svg_element_reference_page)
 
 Each section includes links to live example pages for that page type.
 
