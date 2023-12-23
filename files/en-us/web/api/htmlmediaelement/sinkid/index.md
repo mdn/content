@@ -33,4 +33,5 @@ Access to the property is subject to the following constraints:
 
 ## See also
 
-[`HTMLMediaElement.setSinkId()`](/en-US/docs/Web/API/HTMLMediaElement/setSinkId)
+- {{domxref("MediaDevices.selectAudioOutput()")}}
+- {{domxref("HTMLMediaElement.setSinkId()")}}

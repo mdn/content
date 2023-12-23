@@ -69,4 +69,5 @@ console.log(`Audio is being output on ${audio.sinkId}`);
 
 ## See also
 
-[`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
+- {{domxref("MediaDevices.selectAudioOutput()")}}
+- {{domxref("HTMLMediaElement.sinkId")}}
