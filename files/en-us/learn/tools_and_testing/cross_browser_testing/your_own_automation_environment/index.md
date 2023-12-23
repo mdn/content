@@ -879,7 +879,7 @@ If you don't want to use a service like Sauce Labs or BrowserStack, you can alwa
 Now we've got the server running, let's create a demo test that will run on the remote selenium server.
 
 1. Create a copy of your `google_test.js` file, and call it `google_test_remote.js`; put it in your project directory.
-2. Update the second code block (which starts with `let driver = …`) like so
+2. Update the line of code (which starts with `const driver = …`) like so
 
    ```js
    let driver = new Builder()
