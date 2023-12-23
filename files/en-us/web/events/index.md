@@ -558,7 +558,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         <p>
           Events related to any performance-related spec grouped into
           <a href="/en-US/docs/Web/API/Performance_API"
-            >Performance API</a
+            >Performance APIs</a
           >.
         </p>
       </td>
