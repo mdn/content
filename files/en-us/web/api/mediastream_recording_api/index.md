@@ -131,7 +131,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 - [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
 - [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element)
 - [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12)
-- {{domxref("MediaDevices.getUserMedia")}}
+- {{domxref("MediaDevices.getUserMedia()")}}
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))
