@@ -13,6 +13,8 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
+
 - {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}
   - : Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}} {{experimental_inline}}
@@ -70,6 +72,8 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Instance methods
 
+_Also inherits methods from its parent interface, {{DOMxRef("HTMLElement")}}._
+
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : Selects the contents of the control.
 - {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
@@ -85,10 +89,14 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Events
 
+_Also inherits events from its parent interface, {{DOMxRef("HTMLElement")}}._
+
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLElement/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
+- {{domxref("HTMLTextAreaElement/select_event", "select")}} event
+  - : Fires when some text has been selected..
 - {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 
