@@ -20,6 +20,7 @@ Any time you need to use the same set of quicklinks on more than one page, you s
 Every page has a sidebar. These sidebars are created by quicklink macros added after the frontmatter and before the content on every page. Here are a few, with what they do:
 
 - `\{{CSSRef}}`
+
   - : Present on every CSS page, it generates different CSS sidebars depending on tags, like "properties", "selectors", "at-rules", "descriptors", etc., included in the page.
 
 - `\{{ListSubpagesForSidebar(<parameters>)}}`
