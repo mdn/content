@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.sinkId
 ---
 
-{{APIRef("Audio Output Devices API")}}
+{{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
 The **`HTMLMediaElement.sinkId`** read-only property of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) returns a string that is the unique ID of the device to be used for playing audio output.
 
