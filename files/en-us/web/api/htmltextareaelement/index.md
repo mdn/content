@@ -15,9 +15,9 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
   - : Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
-- {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}} {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
   - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#accesskey) attribute.
 - {{domxref("HTMLTextAreaElement.autofocus", "autofocus")}}
   - : Returns / Sets the element's [`autofocus`](/en-US/docs/Web/HTML/Element/textarea#autofocus) attribute, indicating that the control should have input focus when the page loads.
@@ -29,7 +29,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
   - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
-- {{domxref("HTMLTextAreaElement.inputMode", "inputMode")}} {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement.inputMode", "inputMode")}}
   - : Returns / Sets the element's [`inputmode`](/en-US/docs/Web/HTML/Element/textarea#inputmode) attribute.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
