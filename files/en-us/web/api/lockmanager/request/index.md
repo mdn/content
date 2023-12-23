@@ -102,7 +102,7 @@ await navigator.locks.request("my_resource", async (lock) => {
 });
 ```
 
-### `mode` Example
+### `mode` example
 
 The following example shows how to use the `mode` option for readers and writers.
 
