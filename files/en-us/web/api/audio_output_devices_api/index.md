@@ -9,7 +9,7 @@ browser-compat:
   - api.HTMLMediaElement.setSinkId
   - api.HTMLMediaElement.sinkId
   - http.headers.Permissions-Policy.speaker-selection
-spec-urls: https://w3c.github.io/mediacapture-output/#dom-mediadevices-selectaudiooutput
+spec-urls: https://w3c.github.io/mediacapture-output/
 ---
 
 {{DefaultAPISidebar("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
