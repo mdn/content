@@ -55,7 +55,7 @@ For example, adding the following at the end of a markdown file will create a si
 - `\{{LandingPageListSubPages()}}`
   - : Inserts a definition list ({{HTMLelement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLelement("dt")}} term and its SEO summary as the {{HTMLelement("dd")}} term. The optional parameter accepts the slug or the parent page of the directory of pages to output instead of the subpages of the current page.
 
-There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) which output links in content. The macros that create links to a single web feature require at last one parameter: the feature being referenced. The second parameter, if present, provides the link text. By default, these links are displayed in as code in a monospace font. To prevent the code semantics and styling, `"nocode"` can be included as the third parameter. 
+There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) which output links in content. The macros that create links to a single web feature require at last one parameter: the feature being referenced. The second parameter, if present, provides the link text. By default, these links are displayed in as code in a monospace font. To prevent the code semantics and styling, `"nocode"` can be included as the third parameter.
 
 For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}".
 
