@@ -27,7 +27,7 @@ A string.
 ## Examples
 
 The following examples show how the name property passed in the call
-to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+to {{domxref('LockManager.request()')}}. {{domxref('LockManager')}} is the object returned
 by {{domxref('navigator.locks')}}.
 
 ```js
