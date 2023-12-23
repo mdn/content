@@ -136,7 +136,7 @@ async function do_write() {
 }
 ```
 
-### `ifAvailable` Example
+### `ifAvailable` example
 
 To grab a lock only if it isn't already being held, use the `ifAvailable` option.
 In this function `await` means the method will not return until the callback is complete.
