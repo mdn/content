@@ -37,7 +37,7 @@ The appropriate macro to use depends on the page type and is listed in the templ
 
 #### Including extra content in a sidebar
 
-To include a sidebar with additional content and not be limited to the macro's output, include the macro at the end of the page (instead of right after the frontmatter) and nest the macro in a {{htmlelement("section")}} element with `id="Quick_links"` set. 
+To include a sidebar with additional content and not be limited to the macro's output, include the macro at the end of the page (instead of right after the frontmatter) and nest the macro in a {{htmlelement("section")}} element with `id="Quick_links"` set.
 
 For example:
 
