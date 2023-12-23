@@ -9,7 +9,7 @@ browser-compat: webextensions.api.storage.onChanged
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
 
-When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. The information returned includes the keys from the storage area changed by{{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}. The extension can determine the changes by examining the content of the `changes` argument received by the `onChanged` listeners.
+When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. The extension can determine the changes that occurred by examining the content of the `changes` argument received by the `onChanged` listeners.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ Events have three functions:
   - : The function called when this event occurs. The function is passed these arguments:
 
     - `changes`
-      - : `object`. Object describing the change. This object contains properties for the keys included in the {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} call that changed. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
+      - : `object`. Object describing the change. This object contains properties for all the keys in the storage area included in the {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} call, even if key values are unchanged. The name of each property is the name of each key. The value of each key is a {{WebExtAPIRef('storage.StorageChange')}} object describing the change to that item.
     - `areaName`
       - : `string`. The name of the storage area (`"sync"`, `"local"`, or `"managed"`) to which the changes were made.
 
