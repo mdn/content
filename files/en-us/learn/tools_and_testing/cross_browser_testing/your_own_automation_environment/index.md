@@ -882,7 +882,7 @@ Now we've got the server running, let's create a demo test that will run on the 
 2. Update the line of code (which starts with `const driver = …`) like so
 
    ```js
-   let driver = new Builder()
+   const driver = new Builder()
      .forBrowser(Browser.FIREFOX)
      .usingServer("http://localhost:4444/wd/hub")
      .build();
