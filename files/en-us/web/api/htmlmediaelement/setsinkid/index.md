@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Audio Output Devices API")}}
 
 The **`HTMLMediaElement.setSinkId()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) sets the ID of the audio device to use for output and returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

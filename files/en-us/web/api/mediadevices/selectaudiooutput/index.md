@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaDevices.selectAudioOutput
 ---
 
-{{APIRef("WebRTC")}} {{SeeCompatTable}}
+{{APIRef("Audio Output Devices API")}}{{SeeCompatTable}}
 
 The {{domxref("MediaDevices.selectAudioOutput()")}} method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
 
