@@ -23,6 +23,7 @@ Every page has a sidebar. These sidebars are created by quicklink macros added a
   - : Present on every CSS page, it generates different CSS sidebars depending on tags, like "properties", "selectors", "at-rules", "descriptors", etc., included in the page.
 
 - `\{{ListSubpagesForSidebar(<parameters>)}}`
+
   - : Inserts a tree of subpages of the slug of the pages specified as the first parameter. Include two parameters, with the second being `true`, to display the links as plain text instead of like code. Include a third parameter, set to `true`, to include the parent page at the top of the list with the link text "Overview".
 
 - `\{{DefaultAPISidebar("<API_Title>")}}`
