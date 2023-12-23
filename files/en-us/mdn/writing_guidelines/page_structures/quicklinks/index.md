@@ -82,7 +82,6 @@ There are around 100 [available macros](https://github.com/mdn/yari/tree/main/ku
     This creates hierarchical lists up to two levels deep.
     The pages' titles are used as the link text and their summaries as tooltips.
 
-
 ### Additional macros
 
 In addition to quicklinks, there are a several other macros that you can include.
