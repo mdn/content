@@ -76,71 +76,22 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
 
 ## Instance methods
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>{{domxref("HTMLElement/blur", "blur()")}}</td>
-      <td>
-        Removes focus from the control; keystrokes will subsequently go nowhere.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("HTMLElement/focus", "focus()")}}</td>
-      <td>
-        Gives focus to the control; keystrokes will subsequently go to this
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/select", "select()")}}
-      </td>
-      <td>Selects the contents of the control.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/setRangeText", "setRangeText()")}}
-      </td>
-      <td>Replaces a range of text in the element with new text.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/setSelectionRange", "setSelectionRange()")}}
-      </td>
-      <td>Selects a range of text in the element (but does not focus it).</td>
-    </tr>
-    <tr>
-      <td><code>checkValidity()</code></td>
-      <td>
-        Returns <code>false</code> if the element is a candidate for constraint
-        validation, and it does not satisfy its constraints. In this case, it
-        also fires a cancelable <code>invalid</code> event at the control. It
-        returns <code>true</code> if the control is not a candidate for
-        constraint validation, or if it satisfies its constraints.
-      </td>
-    </tr>
-    <tr>
-      <td><code>reportValidity()</code></td>
-      <td>
-        <p>
-          This method reports the problems with the constraints on the element,
-          if any, to the user. If there are problems, it fires a cancelable
-          <code>invalid</code> event at the element, and returns
-          <code>false</code>; if there are no problems, it returns
-          <code>true</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>setCustomValidity(DOMstring)</code></td>
-      <td>
-        Sets a custom validity message for the element. If this message is not
-        the empty string, then the element is suffering from a custom validity
-        error, and does not validate.
-      </td>
-    </tr>
-  </tbody>
-</table>
+- {{domxref("HTMLElement.blur", "blur()")}}
+  - : Removes focus from the control; keystrokes will subsequently go nowhere.
+- {{domxref("HTMLElement.focus", "focus()")}}
+  - : Gives focus to the control; keystrokes will subsequently go to this element.
+- {{domxref("HTMLInputElement.select", "select()")}}
+  - : Selects the contents of the control.
+- {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
+  - : Replaces a range of text in the element with new text.
+- {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+  - : Selects a range of text in the element (but does not focus it).
+- {{domxref("HTMLTextAreaElement.checkValidity", "checkValidity()")}}
+  - : Returns `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable `invalid` event at the control. It returns `true` if the control is not a candidate for constraint validation, or if it satisfies its constraints.
+- {{domxref("HTMLTextAreaElement.reportValidity", "reportValidity()")}}
+  - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.
+- {{domxref("HTMLTextAreaElement.setCustomValidity", "setCustomValidity()")}}
+  - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
 
 The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
