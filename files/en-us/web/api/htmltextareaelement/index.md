@@ -13,8 +13,6 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Instance properties
 
-- {{domxref("HTMLTextAreaElement.accessKey", "accessKey")}}
-  - : Returns / Sets the element's [`accesskey`](/en-US/docs/Web/HTML/Element/textarea#accesskey) attribute.
 - {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}} {{experimental_inline}}
   - : Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}} {{experimental_inline}}
@@ -55,8 +53,6 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
   - : Returns / Sets the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
 - {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}}
   - : Returns / Sets the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument.
-- {{domxref("HTMLTextAreaElement.tabIndex", "tabIndex")}}
-  - : Returns / Sets the position of the element in the tabbing navigation order for the current document.
 - {{domxref("HTMLTextAreaElement.textLength", "textLength")}} {{ReadOnlyInline}}
   - : Returns the code point length of the control's `value`. Same as reading `value.length`.
 - {{domxref("HTMLTextAreaElement.type", "type")}} {{ReadOnlyInline}}
@@ -72,14 +68,8 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 - {{domxref("HTMLTextAreaElement.wrap", "wrap")}}
   - : Returns / Sets the element's [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) attribute, indicating how the control wraps text.
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
-
 ## Instance methods
 
-- {{domxref("HTMLElement.blur", "blur()")}}
-  - : Removes focus from the control; keystrokes will subsequently go nowhere.
-- {{domxref("HTMLElement.focus", "focus()")}}
-  - : Gives focus to the control; keystrokes will subsequently go to this element.
 - {{domxref("HTMLInputElement.select", "select()")}}
   - : Selects the contents of the control.
 - {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
@@ -92,8 +82,6 @@ The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTML
   - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.
 - {{domxref("HTMLTextAreaElement.setCustomValidity", "setCustomValidity()")}}
   - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
-
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
 
 ## Events
 
