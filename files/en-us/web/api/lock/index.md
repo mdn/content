@@ -23,7 +23,7 @@ This may be a newly requested lock that is received in the callback to {{domxref
 ## Examples
 
 The following examples show how the mode and name properties are passed in the call to {{domxref('LockManager.request()')}}.
-`LockManager` is the object returned by {{domxref('navigator.locks')}}.
+{{domxref('LockManager')}} is the object returned by {{domxref('navigator.locks')}}.
 
 ```js
 navigator.locks.request("net_db_sync", show_lock_properties);

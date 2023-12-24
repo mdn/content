@@ -55,7 +55,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
-- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
+- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden)
   - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
@@ -118,7 +118,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
-- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
 
   - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
 

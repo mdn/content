@@ -64,8 +64,8 @@ request(name, options, callback)
         > Code that was previously running inside the lock continues to run, and may clash with the code that now holds the lock.
 
     - `signal` {{optional_inline}}
-      - : An `AbortSignal` (the `signal` property of an `AbortController`);
-        if specified and the `AbortController` is aborted, the lock request is dropped if it was not already granted.
+      - : An {{domxref("AbortSignal")}} (the {{domxref("AbortController.signal", "signal")}} property of an {{domxref("AbortController")}});
+        if specified and the {{domxref("AbortController")}} is aborted, the lock request is dropped if it was not already granted.
 
 - `callback`
   - : Method called when the lock is granted.
@@ -102,7 +102,7 @@ await navigator.locks.request("my_resource", async (lock) => {
 });
 ```
 
-### Mode Example
+### `mode` example
 
 The following example shows how to use the `mode` option for readers and writers.
 
@@ -136,7 +136,7 @@ async function do_write() {
 }
 ```
 
-### ifAvailable Example
+### `ifAvailable` example
 
 To grab a lock only if it isn't already being held, use the `ifAvailable` option.
 In this function `await` means the method will not return until the callback is complete.
@@ -158,7 +158,7 @@ await navigator.locks.request(
 );
 ```
 
-### signal Example
+### `signal` example
 
 To only wait for a lock for a short period of time, use the `signal` option.
 
