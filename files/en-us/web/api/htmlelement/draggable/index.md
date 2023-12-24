@@ -10,7 +10,7 @@ browser-compat: api.HTMLElement.draggable
 
 The **`draggable`** property of the {{domxref("HTMLElement")}} interface gets and sets a {{jsxref("Boolean")}} indicating if the element can be dragged.
 
-It reflects the value of the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
+It reflects the value of the [`draggable`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute.
 
 ## Value
 
@@ -46,4 +46,4 @@ if (notDraggableElement.draggable) {
 ## See also
 
 - [draggable](/en-US/docs/Web/HTML/Global_attributes#hidden) HTML global attribute
-- [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
+- [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API) landing page
