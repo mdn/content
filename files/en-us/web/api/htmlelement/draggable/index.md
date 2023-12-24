@@ -21,17 +21,17 @@ A {{jsxref("Boolean")}}, `true` if the element can be dragged, `false` otherwise
 The following example shows how to control the element' draggable status via script:
 
 ```js
-const draggableElement = document.querySelector('.draggable-element')
-const notDraggableElement = document.querySelector('.not-draggable-element')
+const draggableElement = document.querySelector(".draggable-element");
+const notDraggableElement = document.querySelector(".not-draggable-element");
 
 // enable the target element's draggable status
 if (!draggableElement.draggable) {
-  draggableElement.draggable = true
+  draggableElement.draggable = true;
 }
 
 // disable the target element's draggable status
 if (notDraggableElement.draggable) {
-  notDraggableElement.draggable = false
+  notDraggableElement.draggable = false;
 }
 ```
 
