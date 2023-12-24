@@ -18,26 +18,22 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
   - : Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
-  - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#accesskey) attribute.
-- {{domxref("HTMLTextAreaElement.autofocus", "autofocus")}}
-  - : Returns / Sets the element's [`autofocus`](/en-US/docs/Web/HTML/Element/textarea#autofocus) attribute, indicating that the control should have input focus when the page loads.
+  - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
   - : Returns / Sets the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
 - {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
   - : Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
+- {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
+  - : Returns / Sets the directionality of the element.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
   - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
-- {{domxref("HTMLTextAreaElement.inputMode", "inputMode")}}
-  - : Returns / Sets the element's [`inputmode`](/en-US/docs/Web/HTML/Element/textarea#inputmode) attribute.
-- {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
-  - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
   - : Returns / Sets the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
-- {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
+- {{domxref("HTMLTextAreaElement.minlength", "minlength")}}
   - : Returns / Sets the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.name", "name")}}
   - : Returns / Sets the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
@@ -74,18 +70,18 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 
 _Also inherits methods from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-- {{domxref("HTMLInputElement.select", "select()")}}
-  - : Selects the contents of the control.
-- {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-  - : Replaces a range of text in the element with new text.
-- {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-  - : Selects a range of text in the element (but does not focus it).
 - {{domxref("HTMLTextAreaElement.checkValidity", "checkValidity()")}}
   - : Returns `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable `invalid` event at the control. It returns `true` if the control is not a candidate for constraint validation, or if it satisfies its constraints.
 - {{domxref("HTMLTextAreaElement.reportValidity", "reportValidity()")}}
   - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.
+- {{domxref("HTMLTextAreaElement.select", "select()")}}
+  - : Selects the contents of the control.
 - {{domxref("HTMLTextAreaElement.setCustomValidity", "setCustomValidity()")}}
   - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
+- {{domxref("HTMLTextAreaElement.setRangeText", "setRangeText()")}}
+  - : Replaces a range of text in the element with new text.
+- {{domxref("HTMLTextAreaElement.setSelectionRange", "setSelectionRange()")}}
+  - : Selects a range of text in the element (but does not focus it).
 
 ## Events
 
@@ -94,7 +90,7 @@ _Also inherits events from its parent interface, {{DOMxRef("HTMLElement")}}._
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLTextAreaElement/select_event", "select")}} event
-  - : Fires when some text has been selected..
+  - : Fires when some text has been selected.
 - {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 
