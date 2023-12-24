@@ -21,10 +21,6 @@ Some properties only apply to input element types that support the corresponding
 
   - : Represents the alignment of the element. _Use CSS instead._
 
-- {{domxref("HTMLInputElement.autocapitalize", "autocapitalize")}} {{Experimental_Inline}}
-
-  - : Defines the capitalization behavior for user input. Valid values are `none`, `off`, `characters`, `words` or `sentences`.
-
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
 
   - : Returns / Sets the default value as originally specified in the HTML that created this object.
@@ -33,9 +29,9 @@ Some properties only apply to input element types that support the corresponding
 
   - : Returns / Sets the directionality of the element.
 
-- {{domxref("HTMLInputElement.inputMode", "inputMode")}}
+- {{domxref("HTMLInputElement.incremental", "incremental")}} {{Non-standard_Inline}}
 
-  - : Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents.
+  - : Returns / Sets the search event fire mode, if `true`, fires on every keypress, or on clicking the cancel button; otherwise fires when pressing <kbd>Enter</kbd>.
 
 - {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
 
@@ -111,10 +107,6 @@ Some properties only apply to input element types that support the corresponding
 
 ### Instance properties that apply to any type of input element that is not hidden
 
-- {{domxref("HTMLInputElement.autofocus", "autofocus")}}
-
-  - : Returns / Sets the element's [`autofocus`](/en-US/docs/Web/HTML/Element/input#autofocus) attribute, which specifies that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the [`autofocus`](/en-US/docs/Web/HTML/Element/input#autofocus) attribute.
-
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 
   - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, indicating that the control is not available for interaction. The input values will not be submitted with the form. See also [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly).
@@ -170,10 +162,6 @@ Some properties only apply to input element types that support the corresponding
 
   - : Returns / Sets the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
-- {{domxref("HTMLInputElement.allowdirs", "allowdirs")}} {{Non-standard_Inline}}
-
-  - : Part of the non-standard Directory Upload API. Indicates whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.
-
 - {{domxref("HTMLInputElement.files", "files")}}
 
   - : Returns / Sets a list of {{domxref("File")}} objects representing the files selected for upload.
@@ -190,6 +178,10 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
   - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
+
+- {{domxref("HTMLInputElement.capture", "capture")}}
+
+  - : Returns / Sets the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
 
 - {{domxref("HTMLInputElement.max", "max")}}
 
@@ -219,6 +211,10 @@ Some properties only apply to input element types that support the corresponding
 
   - : Returns / Sets the element's [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) attribute, indicating that the user cannot modify the value of the control. This is ignored if the [`type`](/en-US/docs/Web/HTML/Element/input#type) is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 
+- {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
+
+  - : Returns / Sets the direction in which selection occurred. Possible values are: `forward` (the selection was performed in the start-to-end direction of the current locale), `backward` (the opposite direction) or `none` (the direction is unknown).
+
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 
   - : Returns / Sets the end index of the selected text. When there's no selection, this returns the offset of the character immediately following the current text input cursor position.
@@ -226,10 +222,6 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
 
   - : Returns / Sets the beginning index of the selected text. When nothing is selected, this returns the position of the text input cursor (caret) inside of the {{HTMLElement("input")}} element.
-
-- {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
-
-  - : Returns / Sets the direction in which selection occurred. Possible values are: `forward` (the selection was performed in the start-to-end direction of the current locale), `backward` (the opposite direction) or `none` (the direction is unknown).
 
 - {{domxref("HTMLInputElement.size", "size")}}
   - : Returns / Sets the element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute, containing visual size of the control. This value is in pixels unless the value of [`type`](/en-US/docs/Web/HTML/Element/input#type) is `text` or `password`, in which case, it is an integer number of characters. Applies only when [`type`](/en-US/docs/Web/HTML/Element/input#type) is set to `text`, `search`, `tel`, `url`, `email`, or `password`.
