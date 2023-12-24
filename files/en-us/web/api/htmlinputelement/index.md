@@ -238,26 +238,6 @@ Some properties only apply to input element types that support the corresponding
 
 _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLInputElement.select()", "select()")}}
-
-  - : Selects all the text in the input element, and focuses it so the user can subsequently replace all of its content.
-
-- {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
-
-  - : Selects a range of text in the input element (but does not focus it).
-
-- {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
-
-  - : Replaces a range of text in the input element with new text.
-
-- {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
-
-  - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
-
-- {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
-
-  - : Shows a browser picker for date, time, color, and files.
-
 - {{domxref("HTMLInputElement.checkValidity()", "checkValidity()")}}
 
   - : Returns a boolean value that is `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element. It returns `true` if the element is not a candidate for constraint validation, or if it satisfies its constraints.
@@ -265,6 +245,26 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLInputElement.reportValidity()", "reportValidity()")}}
 
   - : Runs the `checkValidity()` method, and if it returns false (for an invalid input or no pattern attribute provided), then it reports to the user that the input is invalid in the same manner as if you submitted a form.
+
+- {{domxref("HTMLInputElement.select()", "select()")}}
+
+  - : Selects all the text in the input element, and focuses it so the user can subsequently replace all of its content.
+
+- {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}}
+
+  - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
+
+- {{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}
+
+  - : Replaces a range of text in the input element with new text.
+
+- {{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}
+
+  - : Selects a range of text in the input element (but does not focus it).
+
+- {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
+
+  - : Shows a browser picker for date, time, color, and files.
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
