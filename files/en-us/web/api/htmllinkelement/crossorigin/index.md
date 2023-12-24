@@ -12,9 +12,7 @@ The **`crossOrigin`** property of the {{domxref("HTMLLinkElement")}} interface s
 
 ## Value
 
-A string of a keyword specifying the CORS mode to use when fetching the resource.
-
-Available values are:
+A string of a keyword specifying the CORS mode to use when fetching the resource. Available values are:
 
 - `anonymous` or an empty string (`""`)
   - : Requests sent by the {{domxref("HTMLLinkElement")}} will use the `cors` mode and the `same-origin` credentials mode. This means that CORS is enabled and credentials are sent _if_ the resource is fetched from the same origin from which the document was loaded.
