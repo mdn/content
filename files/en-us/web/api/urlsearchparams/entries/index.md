@@ -14,7 +14,7 @@ The **`entries()`** method of the
 pairs contained in this object. The iterator returns key/value pairs in the same order as they appear in the query string. The key and value of each pair are
 string objects.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

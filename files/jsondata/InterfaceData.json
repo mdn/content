@@ -312,6 +312,10 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
+    "BufferedChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ByteLengthQueuingStrategy": {
       "inh": "",
       "impl": []
@@ -1932,6 +1936,10 @@
       "inh": "AnimationEffect",
       "impl": []
     },
+    "KeyFrameRequestEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "KHR_parallel_shader_compile": {
       "inh": "",
       "impl": []
@@ -1994,6 +2002,14 @@
     },
     "Magnetometer": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
       "impl": []
     },
     "MathMLElement": {
@@ -2226,6 +2242,10 @@
     },
     "Navigation": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "NavigationActivation": {
+      "inh": "",
       "impl": []
     },
     "NavigationCurrentEntryChangeEvent": {
@@ -2825,7 +2845,7 @@
       "impl": []
     },
     "RTCRtpScriptTransformer": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "RTCRtpSender": {

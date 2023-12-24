@@ -2174,7 +2174,6 @@
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -2608,7 +2607,6 @@
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/Element/click_event
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
-/en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM:window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM:window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
@@ -3329,7 +3327,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -6500,8 +6497,6 @@
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
-/en-US/docs/SVG/Attribute/contentScriptType	/en-US/docs/Web/SVG/Attribute/contentScriptType
-/en-US/docs/SVG/Attribute/contentStyleType	/en-US/docs/Web/SVG/Attribute/contentStyleType
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6521,7 +6516,6 @@
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/SVG/Attribute/filter	/en-US/docs/Web/SVG/Attribute/filter
-/en-US/docs/SVG/Attribute/filterRes	/en-US/docs/Web/SVG/Attribute/filterRes
 /en-US/docs/SVG/Attribute/filterUnits	/en-US/docs/Web/SVG/Attribute/filterUnits
 /en-US/docs/SVG/Attribute/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
 /en-US/docs/SVG/Attribute/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
@@ -7592,7 +7586,6 @@
 /en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
-/en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
 /en-US/docs/Web/API/BluetoothAdvertisingData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/appearance	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/manufacturerData	/en-US/docs/Web/API/Web_Bluetooth_API
@@ -10849,7 +10842,6 @@
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -11480,6 +11472,7 @@
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
