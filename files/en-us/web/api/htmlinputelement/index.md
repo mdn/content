@@ -260,18 +260,10 @@ _Also inherits methods from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
-  - : Decrements the [`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws an `InvalidStateError` exception:
-    - if the method is not applicable to for the current [`type`](/en-US/docs/Web/HTML/Element/input#type) value,
-    - if the element has no [`step`](/en-US/docs/Web/HTML/Element/input#step) value,
-    - if the [`value`](/en-US/docs/Web/HTML/Element/input#value) cannot be converted to a number,
-    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the [`min`](/en-US/docs/Web/HTML/Element/input#min).
+  - : Decrements the [`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified.
 
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
-  - : Increments the [`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws an `InvalidStateError` exception:
-    - if the method is not applicable to for the current [`type`](/en-US/docs/Web/HTML/Element/input#type) value.,
-    - if the element has no [`step`](/en-US/docs/Web/HTML/Element/input#step) value,
-    - if the [`value`](/en-US/docs/Web/HTML/Element/input#value) cannot be converted to a number,
-    - if the resulting value is above the [`max`](/en-US/docs/Web/HTML/Element/input#max) or below the [`min`](/en-US/docs/Web/HTML/Element/input#min).
+  - : Increments the [`value`](/en-US/docs/Web/HTML/Element/input#value) by ([`step`](/en-US/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified.
 
 ## Events
 
