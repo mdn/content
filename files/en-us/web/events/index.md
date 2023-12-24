@@ -1012,9 +1012,9 @@ This section lists events that have _their own_ reference pages on MDN. If you a
 
 - {{DOMxRef("HTMLElement")}}
 
-  - [beforeinput event](/en-US/docs/Web/API/HTMLElement/beforeinput_event)
+  - [beforeinput event](/en-US/docs/Web/API/Element/beforeinput_event)
   - [change event](/en-US/docs/Web/API/HTMLElement/change_event)
-  - [input event](/en-US/docs/Web/API/HTMLElement/input_event)
+  - [input event](/en-US/docs/Web/API/Element/input_event)
 
 - {{DOMxRef("HTMLFormElement")}}
 
