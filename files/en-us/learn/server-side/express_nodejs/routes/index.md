@@ -648,7 +648,10 @@ We've set up all our new routes, but we still have a route to the original page.
 Open **/routes/index.js** and replace the existing route with the function below.
 
 ```js
-// GET home page.
+router.use(express.urlencoded({ extended: false }));
+router.use(express.json());
+
+/* GET home page. */
 router.get("/", function (req, res) {
   res.redirect("/catalog");
 });
