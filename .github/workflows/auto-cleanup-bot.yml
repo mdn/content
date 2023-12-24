@@ -31,13 +31,12 @@ jobs:
           yarn content fix-flaws
           yarn fix:md
           yarn fix:fm
-          node scripts/update-moved-file-links.js
 
       - name: Create PR with only fixable issues
         if: success()
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: auto-fix Markdownlint, Prettier, front-matter, redirects issues"
+          commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
           title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
@@ -49,7 +48,7 @@ jobs:
         if: failure()
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: auto-fix Markdownlint issues"
+          commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
           title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
