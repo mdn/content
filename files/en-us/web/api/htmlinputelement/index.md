@@ -19,19 +19,19 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.align", "align")}} {{Deprecated_Inline}}
 
-  - : Represents the alignment of the element. _Use CSS instead._
+  - : The alignment of the element. _Use CSS instead._
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
 
-  - : Returns / Sets the default value as originally specified in the HTML that created this object.
+  - : The default value as originally specified in the HTML that created this object.
 
 - {{domxref("HTMLInputElement.dirName", "dirName")}}
 
-  - : Returns / Sets the directionality of the element.
+  - : The directionality of the element.
 
 - {{domxref("HTMLInputElement.incremental", "incremental")}} {{Non-standard_Inline}}
 
-  - : Returns / Sets the search event fire mode, if `true`, fires on every keypress, or on clicking the cancel button; otherwise fires when pressing <kbd>Enter</kbd>.
+  - : The search event fire mode, if `true`, fires on every keypress, or on clicking the cancel button; otherwise fires when pressing <kbd>Enter</kbd>.
 
 - {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
 
@@ -43,11 +43,11 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
 
-  - : Returns / Sets the element's [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute, indicating whether more than one value is possible (e.g., multiple files).
+  - : The element's [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute, indicating whether more than one value is possible (e.g., multiple files).
 
 - {{domxref("HTMLInputElement.name", "name")}}
 
-  - : Returns / Sets the element's [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, containing a name that identifies the element when submitting the form.
+  - : The element's [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, containing a name that identifies the element when submitting the form.
 
 - {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
 
@@ -59,26 +59,26 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.step", "step")}}
 
-  - : Returns / Sets the element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which works with [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
+  - : The element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute, which works with [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
 
 - {{domxref("HTMLInputElement.type", "type")}}
 
-  - : Returns / Sets the element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. For possible values, see the documentation for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
+  - : The element's [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. For possible values, see the documentation for the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute.
 
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
 
-  - : Represents a client-side image map.
+  - : A client-side image map.
 
 - {{domxref("HTMLInputElement.value", "value")}}
 
-  - : Returns / Sets the current value of the control. If the user enters a value different from the value expected, this may return an empty string.
+  - : The current value of the control. If the user enters a value different from the value expected, this may return an empty string.
 
 - {{domxref("HTMLInputElement.valueAsDate", "valueAsDate")}}
 
-  - : Returns / Sets the value of the element, interpreted as a date, or `null` if conversion is not possible.
+  - : The value of the element, interpreted as a date, or `null` if conversion is not possible.
 
 - {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
-  - : Returns / Sets the value of the element, interpreted as one of the following, in order: A time value, a number or `NaN` if conversion is impossible.
+  - : The value of the element, interpreted as one of the following, in order: A time value, a number or `NaN` if conversion is impossible.
 
 ### Instance properties related to the parent form
 
@@ -88,32 +88,32 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
 
-  - : Returns / Sets the element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URL of a program that processes information submitted by the element. This overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the parent form.
+  - : The element's [`formaction`](/en-US/docs/Web/HTML/Element/input#formaction) attribute, containing the URL of a program that processes information submitted by the element. This overrides the [`action`](/en-US/docs/Web/HTML/Element/form#action) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
 
-  - : Returns / Sets the element's [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the parent form.
+  - : The element's [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formMethod", "formMethod")}}
 
-  - : Returns / Sets the element's [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute, containing the HTTP method that the browser uses to submit the form. This overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the parent form.
+  - : The element's [`formmethod`](/en-US/docs/Web/HTML/Element/input#formmethod) attribute, containing the HTTP method that the browser uses to submit the form. This overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
 
-  - : Returns / Sets the element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute, indicating that the form is not to be validated when it is submitted. This overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the parent form.
+  - : The element's [`formnovalidate`](/en-US/docs/Web/HTML/Element/input#formnovalidate) attribute, indicating that the form is not to be validated when it is submitted. This overrides the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute of the parent form.
 
 - {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : Returns / Sets the element's [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the parent form.
+  - : The element's [`formtarget`](/en-US/docs/Web/HTML/Element/input#formtarget) attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the [`target`](/en-US/docs/Web/HTML/Element/form#target) attribute of the parent form.
 
 ### Instance properties that apply to any type of input element that is not hidden
 
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
 
-  - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, indicating that the control is not available for interaction. The input values will not be submitted with the form. See also [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly).
+  - : The element's [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, indicating that the control is not available for interaction. The input values will not be submitted with the form. See also [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly).
 
 - {{domxref("HTMLInputElement.required", "required")}}
 
-  - : Returns / Sets the element's [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, indicating that the user must fill in a value before submitting a form.
+  - : The element's [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute, indicating that the user must fill in a value before submitting a form.
 
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
 
@@ -130,101 +130,101 @@ Some properties only apply to input element types that support the corresponding
 
 - {{domxref("HTMLInputElement.checked", "checked")}}
 
-  - : Returns / Sets the current state of the element.
+  - : The current state of the element.
 
 - {{domxref("HTMLInputElement.defaultChecked", "defaultChecked")}}
 
-  - : Returns / Sets the default state of a radio button or checkbox as originally specified in HTML that created this object.
+  - : The default state of a radio button or checkbox as originally specified in HTML that created this object.
 
 - {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
-  - : Returns whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
+  - : Whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
 
 ### Instance properties that apply only to elements of type image
 
 - {{domxref("HTMLInputElement.alt", "alt")}}
 
-  - : Returns / Sets the element's [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute, containing alternative text to use.
+  - : The element's [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute, containing alternative text to use.
 
 - {{domxref("HTMLInputElement.height", "height")}}
 
-  - : Returns / Sets the element's [`height`](/en-US/docs/Web/HTML/Element/input#height) attribute, which defines the height of the image displayed for the button.
+  - : The element's [`height`](/en-US/docs/Web/HTML/Element/input#height) attribute, which defines the height of the image displayed for the button.
 
 - {{domxref("HTMLInputElement.src", "src")}}
 
-  - : Returns / Sets the element's [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute, which specifies a URI for the location of an image to display on the graphical submit button.
+  - : The element's [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute, which specifies a URI for the location of an image to display on the graphical submit button.
 
 - {{domxref("HTMLInputElement.width", "width")}}
-  - : Returns / Sets the element's [`width`](/en-US/docs/Web/HTML/Element/input#width) attribute, which defines the width of the image displayed for the button.
+  - : The element's [`width`](/en-US/docs/Web/HTML/Element/input#width) attribute, which defines the width of the image displayed for the button.
 
 ### Instance properties that apply only to elements of type file
 
 - {{domxref("HTMLInputElement.accept", "accept")}}
 
-  - : Returns / Sets the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
+  - : The element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
 - {{domxref("HTMLInputElement.files", "files")}}
 
-  - : Returns / Sets a list of {{domxref("File")}} objects representing the files selected for upload.
+  - : A list of {{domxref("File")}} objects representing the files selected for upload.
 
 - {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
 
-  - : Returns the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
+  - : The [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input#webkitdirectory) attribute. If `true`, the file-system-picker interface only accepts directories instead of files.
 
-- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}}
+- {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{ReadOnlyInline}}
   - : Describes the currently selected files or directories.
 
 ### Instance properties that apply only to visible elements containing text or numbers
 
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
-  - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
+  - : The element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
 
 - {{domxref("HTMLInputElement.capture", "capture")}}
 
-  - : Returns / Sets the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
+  - : The element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
 
 - {{domxref("HTMLInputElement.max", "max")}}
 
-  - : Returns / Sets the element's [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum ([`min`](/en-US/docs/Web/HTML/Element/input#min) attribute) value.
+  - : The element's [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum ([`min`](/en-US/docs/Web/HTML/Element/input#min) attribute) value.
 
 - {{domxref("HTMLInputElement.maxLength", "maxLength")}}
 
-  - : Returns / Sets the element's [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute, containing the maximum number of characters (in Unicode code points) that the value can have.
+  - : The element's [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute, containing the maximum number of characters (in Unicode code points) that the value can have.
 
 - {{domxref("HTMLInputElement.min", "min")}}
 
-  - : Returns / Sets the element's [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ([`max`](/en-US/docs/Web/HTML/Element/input#max) attribute) value.
+  - : The element's [`min`](/en-US/docs/Web/HTML/Element/input#min) attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ([`max`](/en-US/docs/Web/HTML/Element/input#max) attribute) value.
 
 - {{domxref("HTMLInputElement.minLength", "minLength")}}
 
-  - : Returns / Sets the element's [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute, containing the minimum number of characters (in Unicode code points) that the value can have.
+  - : The element's [`minlength`](/en-US/docs/Web/HTML/Element/input#minlength) attribute, containing the minimum number of characters (in Unicode code points) that the value can have.
 
 - {{domxref("HTMLInputElement.pattern", "pattern")}}
 
-  - : Returns / Sets the element's [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute, containing a regular expression that the control's value is checked against. Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to describe the pattern to help the user. This attribute only applies when the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`.
+  - : The element's [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern) attribute, containing a regular expression that the control's value is checked against. Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to describe the pattern to help the user. This attribute only applies when the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`.
 
 - {{domxref("HTMLInputElement.placeholder", "placeholder")}}
 
-  - : Returns / Sets the element's [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute only applies when the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`.
+  - : The element's [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute only applies when the value of the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`.
 
 - {{domxref("HTMLInputElement.readOnly", "readOnly")}}
 
-  - : Returns / Sets the element's [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) attribute, indicating that the user cannot modify the value of the control. This is ignored if the [`type`](/en-US/docs/Web/HTML/Element/input#type) is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
+  - : The element's [`readonly`](/en-US/docs/Web/HTML/Element/input#readonly) attribute, indicating that the user cannot modify the value of the control. This is ignored if the [`type`](/en-US/docs/Web/HTML/Element/input#type) is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
 
-  - : Returns / Sets the direction in which selection occurred. Possible values are: `forward` (the selection was performed in the start-to-end direction of the current locale), `backward` (the opposite direction) or `none` (the direction is unknown).
+  - : The direction in which selection occurred. Possible values are: `forward` (the selection was performed in the start-to-end direction of the current locale), `backward` (the opposite direction) or `none` (the direction is unknown).
 
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
 
-  - : Returns / Sets the end index of the selected text. When there's no selection, this returns the offset of the character immediately following the current text input cursor position.
+  - : The end index of the selected text. When there's no selection, this returns the offset of the character immediately following the current text input cursor position.
 
 - {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
 
-  - : Returns / Sets the beginning index of the selected text. When nothing is selected, this returns the position of the text input cursor (caret) inside of the {{HTMLElement("input")}} element.
+  - : The beginning index of the selected text. When nothing is selected, this returns the position of the text input cursor (caret) inside of the {{HTMLElement("input")}} element.
 
 - {{domxref("HTMLInputElement.size", "size")}}
-  - : Returns / Sets the element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute, containing visual size of the control. This value is in pixels unless the value of [`type`](/en-US/docs/Web/HTML/Element/input#type) is `text` or `password`, in which case, it is an integer number of characters. Applies only when [`type`](/en-US/docs/Web/HTML/Element/input#type) is set to `text`, `search`, `tel`, `url`, `email`, or `password`.
+  - : The element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute, containing visual size of the control. This value is in pixels unless the value of [`type`](/en-US/docs/Web/HTML/Element/input#type) is `text` or `password`, in which case, it is an integer number of characters. Applies only when [`type`](/en-US/docs/Web/HTML/Element/input#type) is set to `text`, `search`, `tel`, `url`, `email`, or `password`.
 
 ## Instance methods
 
