@@ -234,18 +234,6 @@ Some properties only apply to input element types that support the corresponding
 
 ## Instance methods
 
-- {{domxref("HTMLElement/blur", "blur()")}}
-
-  - : Removes focus from the input element; keystrokes will subsequently go nowhere.
-
-- {{domxref("HTMLElement.click()", "click()")}}
-
-  - : Simulates a click on the input element.
-
-- {{domxref("HTMLElement/focus", "focus()")}}
-
-  - : Focuses on the input element; keystrokes will subsequently go to this element.
-
 - {{domxref("HTMLInputElement.select()", "select()")}}
 
   - : Selects all the text in the input element, and focuses it so the user can subsequently replace all of its content.
@@ -293,12 +281,12 @@ Some properties only apply to input element types that support the corresponding
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
-  - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) elements, but we've listed it here because it is most commonly used with form input elements.
 - {{domxref("HTMLInputElement/invalid_event", "invalid")}} event
   - : Fired when an element does not satisfy its constraints during constraint validation.
 - {{domxref("HTMLInputElement/search_event", "search")}} event {{Non-standard_Inline}}
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
+- {{domxref("HTMLInputElement/select_event", "select")}} event
+  - : Fired when some text has been selected.
 - {{domxref("HTMLInputElement/selectionchange_event", "selectionchange")}} event {{Experimental_Inline}}
   - : Fires when the text selection in a {{HTMLElement("input")}} element has been changed.
 
