@@ -34,7 +34,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}}
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
+  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing {{DOMxRef('Lock')}} object.
 - {{DOMxRef("WorkerNavigator.mediaCapabilities")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
@@ -60,7 +60,12 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 ## Instance methods
 
-_The `WorkerNavigator` interface neither inherits nor implements any method._
+_The `WorkerNavigator` interface doesn't inherit any method._
+
+- {{domxref("Navigator.clearAppBadge()")}}
+  - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.setAppBadge()")}}
+  - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications
 

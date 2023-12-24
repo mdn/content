@@ -11,7 +11,7 @@ browser-compat: api.URLSearchParams.getAll
 The **`getAll()`** method of the {{domxref("URLSearchParams")}}
 interface returns all the values associated with a given search parameter as an array.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
