@@ -244,7 +244,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 ## Recommending a payment app when user has no apps
 
-If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NOTSUPPORTEDERR` exception. If this payment method is not supported, it redirects to the signup page for BobPay.
+If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` exception. If this payment method is not supported, it redirects to the signup page for BobPay.
 
 The code looks something like this:
 
