@@ -7,12 +7,9 @@ browser-compat: webextensions.api.storage.onChanged
 
 {{AddonSidebar()}}
 
-Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area.
+Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area, returning details of the changed keys. A callback is received only when there are changes to the underlying data.
 
-When this event is triggered by {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}:
-
-- In Firefox, it's possible to receive a callback when there is no change to the underlying data. Also, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. The extension can determine the changes by examining the content of the `changes` argument received by the `onChanged` listeners.
-- In Chrome, no callback is received when there is no change to the underlying data. When there is a change, the information returned includes only the keys that changed.
+> **Note:** In Firefox, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against. Also, receiving a callback is possible when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
 
 ## Syntax
 
