@@ -48,6 +48,7 @@ Note how `isNaN()` returns `true` for values that are not the value `NaN` but ar
 isNaN(NaN); // true
 isNaN(undefined); // true
 isNaN({}); // true
+isNaN([]); // false
 
 isNaN(true); // false
 isNaN(null); // false
