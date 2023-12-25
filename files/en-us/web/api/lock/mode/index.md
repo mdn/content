@@ -1,5 +1,5 @@
 ---
-title: "Locks: mode property"
+title: "Lock: mode property"
 short-title: mode
 slug: Web/API/Lock/mode
 page-type: web-api-instance-property

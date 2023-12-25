@@ -1,5 +1,5 @@
 ---
-title: "Locks: name property"
+title: "Lock: name property"
 short-title: name
 slug: Web/API/Lock/name
 page-type: web-api-instance-property
