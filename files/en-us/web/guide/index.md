@@ -41,7 +41,7 @@ There are a number of guides within MDN docs. These articles aim to add addition
 ## APIs
 
 - [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using `XMLHttpRequest`. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
+  - : The [`FormData`](/en-US/docs/Web/API/FormData) object lets you compile a set of key/value pairs to send using {{domxref("fetch()")}}. It's primarily intended for sending form data, but can be used independently of forms to transmit keyed data. The transmission is in the same format that the form's `submit()` method would use to send the data if the form's encoding type were set to "multipart/form-data".
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps#core_pwa_guides)
   - : Progressive web apps (PWAs) use modern web APIs along with traditional progressive enhancement strategy to create cross-platform web applications. These apps work everywhere and provide several features that give them the same user experience advantages as native apps. This set of guides tells you all you need to know about PWAs.
 - [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
@@ -66,5 +66,5 @@ There are a number of guides within MDN docs. These articles aim to add addition
 
 ## User interface development
 
-- [User input and controls](/en-US/docs/Web/Guide/User_input_methods)
-  - : Modern web user input goes beyond simple mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.
+- [User input methods and controls](/en-US/docs/Learn/Forms/User_input_methods)
+  - : User input goes beyond just a mouse and keyboard: think of touchscreens for example. This article provides recommendations for managing user input and implementing controls in open web apps, along with FAQs, real-world examples, and links to further information for anyone needing more detailed information on the underlying technologies.

@@ -36,5 +36,3 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

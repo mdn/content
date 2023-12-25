@@ -24,25 +24,29 @@ A pointer's _hit test_ is the process a browser uses to determine the target ele
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
+- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
-- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
   - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
   - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
   - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
   - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the Y axis.
-- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
   - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g. pen stylus) axis and the X axis.
-- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
   - : The clockwise rotation of the pointer (e.g. pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
   - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
-- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
 ## Instance methods
@@ -54,9 +58,9 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 
 ## Pointer event types
 
-The `PointerEvent` interface has several event types. To determine which event fired, look at the event's {{ domxref("Event.type", "type") }} property.
+The `PointerEvent` interface has several event types. To determine which event fired, look at the event's {{domxref("Event.type", "type")}} property.
 
-> **Note:** It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{ domxref("event.preventDefault()") }} to keep the mouse event from being sent as well.
+> **Note:** It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{domxref("Event.preventDefault()", "preventDefault()")}} to keep the mouse event from being sent as well.
 
 - {{domxref('Element/pointerover_event', 'pointerover')}}
   - : This event is fired when a pointing device is moved into an element's hit test boundaries.
@@ -70,7 +74,7 @@ The `PointerEvent` interface has several event types. To determine which event f
 
 - {{domxref('Element/pointermove_event', 'pointermove')}}
   - : This event is fired when a pointer changes coordinates.
-- {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}
+- {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}} {{experimental_inline}}
   - : This event is fired when any of a pointer's properties change.
 - {{domxref('Element/pointerup_event', 'pointerup')}}
   - : This event is fired when a pointer is no longer _active_.
@@ -99,6 +103,6 @@ Examples of each property, event type, and global event handler are included in 
 
 ## See also
 
-- {{ domxref("Touch_events","Touch Events") }}
-- {{ domxref("GestureEvent") }}
+- {{domxref("Touch_events","Touch Events")}}
+- {{domxref("GestureEvent")}}
 - {{cssxref("touch-action")}}

@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.CSS.registerProperty_static
 ---
 
-{{DefaultAPISidebar("CSS Properties and Values API")}}{{SeeCompatTable}}
+{{DefaultAPISidebar("CSS Properties and Values API")}}
 
 The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows the registration of {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 
