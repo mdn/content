@@ -10,6 +10,8 @@ browser-compat: api.ExtendableCookieChangeEvent.changed
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 An array of objects containing the changed cookie(s). Each object contains the following properties:
@@ -36,6 +38,9 @@ An array of objects containing the changed cookie(s). Each object contains the f
       - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e. when following a link).
     - `"none"`
       - : Cookies will be sent in all contexts.
+
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
 
 ## Examples
 
