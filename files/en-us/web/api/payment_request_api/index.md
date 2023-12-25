@@ -21,19 +21,17 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 
 ## Interfaces
 
-- {{domxref('PaymentAddress')}}
+- {{domxref('PaymentAddress')}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : An object that contains address information; used for billing and shipping addresses, for example.
 - {{domxref('PaymentRequest')}}
   - : An object that provides the API for creating and managing the {{Glossary("user agent", "user agent's")}} payment interface.
-- {{domxref('PaymentRequestEvent')}}
-  - : An event delivered to a payment handler when a {{domxref("PaymentRequest")}} is made.
 - {{domxref('PaymentRequestUpdateEvent')}}
   - : Enables the web page to update the details of the payment request in response to a user action.
 - {{domxref('PaymentMethodChangeEvent')}}
   - : Represents the user changing payment instrument (e.g., switching from one payment method to another).
 - {{domxref('PaymentResponse')}}
   - : An object returned after the user selects a payment method and approves a payment request.
-- {{domxref('MerchantValidationEvent')}}
+- {{domxref('MerchantValidationEvent')}} {{Deprecated_Inline}}
   - : Represents the browser requiring the merchant (website) to validate themselves as allowed to use a particular payment handler (e.g., registered as allowed to use Apple Pay).
 
 ## Specifications
