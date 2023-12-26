@@ -135,9 +135,9 @@ p {
 
 ```html
 <div id="parent">
-  <p id="child">The #child paragraph (nested in the #parent).</p>
+  <p id="child">The #child paragraph (nested in #parent).</p>
 </div>
-<p id="sibling">The #sibling paragraph (to the #parent)</p>
+<p id="sibling">The #sibling paragraph (sibling of #parent).</p>
 ```
 
 {{EmbedLiveSample("display_block_flow-root_and_display_inline_flow-root", '90%', 380)}}
