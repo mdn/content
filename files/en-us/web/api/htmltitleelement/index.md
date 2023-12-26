@@ -16,7 +16,7 @@ The **`HTMLTitleElement`** interface is implemented by a document's {{ HTMLEleme
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : A string representing the text of the document's title, and only the text part.
+  - : A string representing the text of the document's title.
 
 ## Instance methods
 
