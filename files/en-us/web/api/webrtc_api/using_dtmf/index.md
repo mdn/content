@@ -381,9 +381,9 @@ function handleReceiverAddStreamEvent(event) {
 }
 ```
 
-The `track` event includes a {{domxref("MediaStreamEvent.streams", "streams")}} property containing an array of the streams the track is a member of (one track can be part of many streams). We take the first stream and attach it to the {{HTMLElement("audio")}} element.
+The `track` event includes a {{domxref("RTCTrackEvent.streams", "streams")}} property containing an array of the streams the track is a member of (one track can be part of many streams). We take the first stream and attach it to the {{HTMLElement("audio")}} element.
 
-The `addstream` event includes a {{domxref("RTCTrackEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
+The `addstream` event includes a {{domxref("MediaStreamEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
 
 #### Logging
 
