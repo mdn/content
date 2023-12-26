@@ -3,12 +3,14 @@ title: "HTMLElement: virtualkeyboardpolicy property"
 short-title: virtualkeyboardpolicy
 slug: Web/API/HTMLElement/virtualkeyboardpolicy
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLElement.virtualkeyboardpolicy
 ---
 
-{{APIRef("VirtualKeyboard API")}}
+{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
 
-The **`virtualkeyboardpolicy`** property of the {{domxref("HTMLElement")}} interface gets and sets a string indicating the whether enable the default handling of the virtualkeyboard by the browser if the element is contenteditable (like {{htmlelement("input")}}, {{htmlelement("textarea")}} or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on the element).
+The **`virtualkeyboardpolicy`** property of the {{domxref("HTMLElement")}} interface gets and sets a string indicating whether the default handling of the virtualkeyboard by the browser is enabled, if the element is contenteditable (like {{htmlelement("input")}}, {{htmlelement("textarea")}} or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on the element), or is handled via script manually.
 
 It reflects the value of the [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) HTML global attribute.
 
@@ -25,7 +27,7 @@ An enumerated value; possible values are:
 
 ## Examples
 
-The following example shows change the virtualkeyboardpolicy handling behavior via script:
+The following example shows change the virtualkeyboard handling behavior via script:
 
 ```js
 const element = document.querySelector("input");
