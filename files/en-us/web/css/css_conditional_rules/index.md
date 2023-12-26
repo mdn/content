@@ -29,8 +29,8 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
-- {{cssxref("@when")}}
-- {{cssxref("@else")}}
+
+> **Note:** The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
 
 ### Functions
 
