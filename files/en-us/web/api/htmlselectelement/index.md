@@ -77,6 +77,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 ## Events
 
+_This interface inherits the events of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
+
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLElement/change_event", "change")}} event
