@@ -63,7 +63,7 @@ new MediaRecorder(stream, options)
     - `videoKeyFrameIntervalDuration` {{optional_inline}}
       - : The nominal interval in time between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation based  on this option and the `videoKeyFrameIntervalCount` option.
     - `videoKeyFrameIntervalCount` {{optional_inline}}
-      - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
+      - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
     > **Note:** If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
