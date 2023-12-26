@@ -15,19 +15,19 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 ## Instance properties
 
-- {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline()}}
+- {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline}}
 
   - : A string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
 
-- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline()}}
+- {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline}}
 
   - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
 
-- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline()}}
+- {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline}}
   - : An {{jsxref("ArrayBuffer")}} that holds the globally unique identifier for this `PublicKeyCredential`. This identifier can be used to look up credentials for future calls to {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
-- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline()}}
+- {{domxref("PublicKeyCredential.response")}} {{ReadOnlyInline}}
   - : An instance of an {{domxref("AuthenticatorResponse")}} object. It is either of type {{domxref("AuthenticatorAttestationResponse")}} if the `PublicKeyCredential` was the results of a {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} call, or of type {{domxref("AuthenticatorAssertionResponse")}} if the `PublicKeyCredential` was the result of a {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call.
-- `PublicKeyCredential.type` {{ReadOnlyInline()}}
+- `PublicKeyCredential.type` {{ReadOnlyInline}}
   - : Inherited from {{domxref("Credential")}}. Always set to `public-key` for `PublicKeyCredential` instances.
 
 ## Static methods
