@@ -8,16 +8,14 @@ browser-compat: api.MediaRecorder.state
 
 {{APIRef("MediaStream Recording")}}
 
-The **`state`** read-only property of the {{domxref("MediaRecorder")}} interface returns the
-current state of the current `MediaRecorder` object.
+The **`state`** read-only property of the {{domxref("MediaRecorder")}} interface returns the current state of the current `MediaRecorder` object.
 
 ## Value
 
 A string containing one of the following values:
 
 - `inactive`
-  - : Recording is not occurring — it has either not been started yet, or it has been
-    started and then stopped.
+  - : Recording is not occurring — it has either not been started yet, or it has been started and then stopped.
 - `recording`
   - : Recording has been started and the {{glossary("user agent")}} is capturing data.
 - `paused`
