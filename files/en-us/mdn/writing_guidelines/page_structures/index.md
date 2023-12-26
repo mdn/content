@@ -13,5 +13,5 @@ This page lists articles describing these structures so that you can modify page
 
 ## See also
 
-- [Page templates](files/en-us/mdn/writing_guidelines/page_structures/page_types/#page_templates)
+- [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
