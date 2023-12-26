@@ -14,7 +14,7 @@ The **`PaymentMethodChangeEvent`** interface of the [Payment Request API](/en-US
 ## Constructor
 
 - {{domxref("PaymentMethodChangeEvent.PaymentMethodChangeEvent", "PaymentMethodChangeEvent()")}}
-  - : Creates and returns a new `PaymentMethodChangeEvent` object, optionally initialized with values taken from a given {{domxref("PaymentMethodChangeEventInit")}} dictionary.
+  - : Creates and returns a new `PaymentMethodChangeEvent` object.
 
 ## Instance properties
 
