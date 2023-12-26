@@ -393,7 +393,7 @@ Try to be consistent, though.
 
 ## Page components
 
-This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
+This section lists the guidelines to follow for different parts of each page, such as headings, notes, links, and examples.
 
 - [Code examples](#code_examples)
 - [Cross-references (linking)](#cross-references_linking)
