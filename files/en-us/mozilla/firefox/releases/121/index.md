@@ -49,7 +49,7 @@ This article provides information about the changes in Firefox 121 that affect d
 
 #### DOM
 
-- {{domxref("HTMLInputElement.showPicker()")}} now works for week and month input elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
+- {{domxref("HTMLInputElement.showPicker()")}} now works for [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/month) and [`<input type="month">`](/en-US/docs/Web/HTML/Element/input/month) elements on Android ([Firefox bug 1853797](https://bugzil.la/161853797)).
 
 ### WebAssembly
 
