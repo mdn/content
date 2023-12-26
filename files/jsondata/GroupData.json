@@ -1645,7 +1645,10 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": ["Navigator.virtualKeyboard"],
+      "properties": [
+        "HTMLElement.virtualkeyboardpolicy",
+        "Navigator.virtualKeyboard"
+      ],
       "events": []
     },
     "Visual Viewport": {
