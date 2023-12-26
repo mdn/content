@@ -97,6 +97,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : Fires on handled {{jsxref("Promise")}} rejection events.
+- {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : Fires on unhandled {{jsxref("Promise")}} rejection events.
 
