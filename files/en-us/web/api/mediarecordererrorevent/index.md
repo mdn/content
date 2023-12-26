@@ -32,7 +32,7 @@ _Inherits methods from its parent interface, {{domxref("Event")}}_.
 
 ## Specifications
 
-This feature is no longer part of any specification, and longer on track to become standard.
+This feature is no longer part of any specification.
 
 ## Browser compatibility
 
