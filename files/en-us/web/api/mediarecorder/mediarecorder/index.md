@@ -61,7 +61,7 @@ new MediaRecorder(stream, options)
         thus allowing more space to be used for complex signals and less space for less-complex signals.
         Defaults to `variable`.
     - `videoKeyFrameIntervalDuration` {{optional_inline}}
-      - : The nominal interval in time between key frames in the encoded video stream. The {{glossary("user agent")}} controls key frame generation considering this option as well as `videoKeyFrameIntervalCount` option.
+      - : The nominal interval in time between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation based  on this option and the `videoKeyFrameIntervalCount` option.
     - `videoKeyFrameIntervalCount` {{optional_inline}}
       - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
