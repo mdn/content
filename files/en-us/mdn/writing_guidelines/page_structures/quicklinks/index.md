@@ -38,7 +38,7 @@ The appropriate macro to use depends on the page type and is listed in the templ
 
 Each macro listed above creates sections of links displayed automatically in the sidebar. No additional code is needed to define the location of the list. The macro call needs to be nested within specific HTML to have the list of links add additional content included as a sidebar.
 
-To include a sidebar with additional content -- to display content above or below the list of links outputted by a macro -- the quicklinks macro must be appended to the end of the page (instead of between the frontmatter and the page content) with the macro call nested in a {{htmlelement("section")}} element with `id="Quick_links"` set.
+To include a sidebar with additional content — to display content above or below the list of links outputted by a macro — the quicklinks macro must be appended to the end of the page (instead of between the frontmatter and the page content) with the macro call nested in a {{htmlelement("section")}} element with `id="Quick_links"` set.
 
 For example, adding the following at the end of a markdown file will create a sidebar containing the links to all the ARIA role pages, preceded by a link to the ARIA roles overview page:
 
@@ -54,14 +54,14 @@ For example, adding the following at the end of a markdown file will create a si
 
 ### Quicklinks within page content
 
-Quicklink macros can also be used to add lists of links to the main area of the page; macros to create generated lists of links are not not limited to sidebars. 
+Quicklink macros can also be used to add lists of links to the main area of the page; macros to create generated lists of links are not not limited to sidebars.
 
 - `\{{LandingPageListSubPages()}}`
   - : Inserts a definition list ({{HTMLelement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLelement("dt")}} term and its SEO summary as the {{HTMLelement("dd")}} term. The optional parameter accepts the slug or the parent page of the directory of pages to output instead of the subpages of the current page.
 
 #### Quick links: macros to create single links
 
-In addition to macros that create lists of links, there are macros that quickly create a single link for a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced. 
+In addition to macros that create lists of links, there are macros that quickly create a single link for a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced.
 
 The macros include:
 
@@ -79,7 +79,7 @@ All the macros accept additional parameters. The second parameter, if present, p
 
 For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `\{{CSSxRef("at-rule", "CSS at-rule", "nocode")}}` creates the plain text link "{{CSSxRef("at-rule", "CSS at-rule", "nocode")}}".
 
-There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page. 
+There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
 ### Underlying code for MDN macros
 
