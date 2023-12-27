@@ -32,10 +32,10 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ### Functions
 
-- [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
-- [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
 - [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech)
 - [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format)
+- [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
+- [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
 
 > **Note:** The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
 
@@ -62,13 +62,19 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 - [Using CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 
-  - : 
+  - : Applying CSS rules after checking browser's support for the specified property and value feature queries.
 
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 
+  - : Introduces media queries, their syntax, and the operators and media features that are used to construct media query expressions.
+
 - [Supporting older browsers: feature queries](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
 
+  - :  How to use feature queries to target CSS based on the browser's level of support for modern web features technology.
+
 - [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
+
+  - : A look at JavaScript and CSS feature detection, including CSS `@supports`.
 
 ## Related concepts
 
@@ -81,8 +87,8 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
   - [`<media-feature>`](/en-US/docs/Web/CSS/@media#media_features)
   - [`<media-type>`](/en-US/docs/Web/CSS/@media#media_types)
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
-  - [`<media-query-list>`]()
-  - [`not`]()
+  - [`<media-query-list>`](/en-US/docs/Web/SVG/Atrributes/media)
+  - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 
@@ -112,9 +118,3 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ## See also
 
-- {{CSSxRef("@supports", "@supports selector()")}}
-  - : Applies CSS rules after checking browser's support for the specified selector syntax.
-- {{CSSxRef("@supports", "@supports font-tech()")}}
-  - : Applies CSS rules after checking browser's support for the specified font technology.
-- {{CSSxRef("@supports", "@supports font-format()")}}
-  - : Applies CSS rules after checking browser's support for the specified font format.
