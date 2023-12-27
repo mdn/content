@@ -13,7 +13,7 @@ When a quicklink macro is included, the server creates a section of content cont
 You can and often **should** use macros to generate links.
 Any time you need to use the same set of quicklinks on more than one page, you should turn them into a macro.
 
-### Quicklinks for sidebars
+## Quicklinks for sidebars
 
 Every page has a sidebar. These sidebars are created by quicklink macros added after the frontmatter and before the content on every page, or, in some cases, at the end of the markdown file. Here are a few, with what they do:
 
@@ -34,7 +34,7 @@ Every page has a sidebar. These sidebars are created by quicklink macros added a
 
 The appropriate macro to use depends on the page type and is listed in the template for each page type.
 
-#### Adding static content to your sidebar quicklinks
+### Adding static content to your sidebar quicklinks
 
 Each macro listed above creates sections of links displayed automatically in the sidebar. No additional code is needed to define the location of the list. The macro call needs to be nested within specific HTML to have the list of links add additional content included as a sidebar.
 
@@ -52,14 +52,14 @@ For example, adding the following at the end of a markdown file will create a si
 </section>
 ```
 
-### Quicklinks within page content
+## Quicklinks within page content
 
 Quicklink macros can also be used to add lists of links to the main area of the page; macros to create generated lists of links are not not limited to sidebars.
 
 - `\{{LandingPageListSubPages()}}`
   - : Inserts a definition list ({{HTMLelement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLelement("dt")}} term and its SEO summary as the {{HTMLelement("dd")}} term. The optional parameter accepts the slug or the parent page of the directory of pages to output instead of the subpages of the current page.
 
-#### Quick links: macros to create single links
+### Quick links: macros to create single links
 
 In addition to macros that create lists of links, there are macros that quickly create a single link for a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced.
 
@@ -81,7 +81,7 @@ For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef
 
 There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
-### Underlying code for MDN macros
+## Underlying code for MDN macros
 
 There are around 100 [available macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Here are a few standard macros for generating quicklinks and an example of a hardcoded Yari macro list.
 
