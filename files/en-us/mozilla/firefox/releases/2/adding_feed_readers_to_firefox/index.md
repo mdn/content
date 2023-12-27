@@ -14,7 +14,7 @@ Starting with Firefox 2, Firefox has support for selecting different RSS or Atom
 
 Support for adding feed readers from the web was removed from the HTML5 spec, and Firefox support is scheduled for removal in Firefox 62. {{Deprecated_Inline}}
 
-In older versions, JavaScript code on the web can add a feed reader easily, using the `navigator.registerContentHandler()` function, like this:
+In older versions, JavaScript code on the web can add a feed reader using the `navigator.registerContentHandler()` function, like this:
 
 ```js
 navigator.registerContentHandler(
