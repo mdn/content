@@ -17,8 +17,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLButtonElement.accessKey")}}
   - : A string indicating the single-character keyboard key to give access to the button.
-- {{domxref("HTMLButtonElement.autofocus")}}
-  - : A boolean value indicating whether or not the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLButtonElement.disabled")}}
   - : A boolean value indicating whether or not the control is disabled, meaning that it does not accept any clicks.
 - {{domxref("HTMLButtonElement.form")}} {{ReadOnlyInline}}
