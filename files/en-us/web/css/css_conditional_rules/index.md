@@ -3,9 +3,9 @@ title: CSS conditional rules
 slug: Web/CSS/CSS_conditional_rules
 page-type: css-module
 spec-urls:
-  - https://drafts.csswg.org/css-conditional-5
-  - https://drafts.csswg.org/css-conditional-4
-  - https://drafts.csswg.org/css-conditional-3
+  - https://www.w3.org/TR/css-conditional-5/
+  - https://www.w3.org/TR/css-conditional-4/
+  - https://www.w3.org/TR/css-conditional-3/
 
 ---
 
@@ -54,12 +54,21 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ### Terms and glossary definitions
 
-- "CSS feature queries"
-- "supports queries"
+- supports queries
 - conditional group rule
 - media
 
 ## Guides
+
+- [Using CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+
+  - : 
+
+- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+
+- [Supporting older browsers: feature queries](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
+
+- [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
 
 ## Related concepts
 
@@ -87,15 +96,15 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 - [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
 
-  - {{cssxref("@charset")}}
-  - {{cssxref("at-rule")}}
-  - [`invalid`](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
-  - {{glossary("parse")}} glossary term
-  - [style rule](/en-US/docs/Web/API/CSSStyleRule)
+  - {{cssxref("@charset")}} declaration
+  - {{cssxref("at-rule")}} term
+  - [`invalid`](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) term
+  - {{glossary("parse")}} term
+  - [style rule](/en-US/docs/Web/API/CSSStyleRule) term
 
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
 
-  - {{cssxref("@namespace")}}
+  - {{cssxref("@namespace")}} at-rule
 
 ## Specifications
 
