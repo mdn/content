@@ -15,7 +15,7 @@ The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface capture
 
 > **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("getFrameData()")}}.
+The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("VRDisplay.getFrameData()", "getFrameData()")}}.
 
 ## Syntax
 
