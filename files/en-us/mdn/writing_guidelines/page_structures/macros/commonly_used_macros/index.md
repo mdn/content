@@ -271,4 +271,4 @@ The following macros are included on all reference pages, but are also supported
 
 - `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
 
-  -  : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
+  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
