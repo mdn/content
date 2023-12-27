@@ -55,7 +55,7 @@ This could be written semantically, without the need for JavaScript:
 - `false`
   - : The element is not required.
 
-## ARIAMixin API
+## API
 
 - {{domxref("Element.ariaRequired")}}
   - : The [`ariaRequired`](/en-US/docs/Web/API/Element/ariaRequired) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-required` attribute.

@@ -88,7 +88,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 ### Instance properties included from ARIA
 
-_The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
+_The `Element` interface also includes the following properties._
 
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
