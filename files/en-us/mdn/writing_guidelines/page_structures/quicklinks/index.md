@@ -77,7 +77,7 @@ The macros include:
 
 All the macros accept additional parameters. The second parameter, if present, provides the link text. By default, these links are displayed like code, in a monospace font. To prevent HTML code semantics and CSS code styling, the `"nocode"` parameter can be included as the third value in the macro call.
 
-For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `\{{CSSxRef("at-rule", "CSS at-rule", "nocode")}}` creates the plain text link "{{CSSxRef("at-rule", "CSS at-rule", "nocode")}}".
+For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `\{{CSSxRef("At-rules", "CSS at-rule", "nocode")}}` creates the plain text link "{{CSSxRef("At-rules", "CSS at-rule", "nocode")}}".
 
 There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
