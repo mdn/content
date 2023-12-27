@@ -10058,6 +10058,7 @@
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
+/en-US/docs/Web/API/WebRTC_API/High-level_guide	/en-US/docs//en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage

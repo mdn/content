@@ -65026,10 +65026,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/WebRTC_API/High-level_guide": {
-    "modified": "2019-03-23T22:47:43.736Z",
-    "contributors": ["Sheppy"]
-  },
   "Web/API/WebRTC_API/Intro_to_RTP": {
     "modified": "2019-03-18T21:41:44.636Z",
     "contributors": ["Sheppy"]
