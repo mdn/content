@@ -15,8 +15,6 @@ The **`HTMLButtonElement`** interface provides properties and methods (beyond th
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLButtonElement.accessKey")}}
-  - : A string indicating the single-character keyboard key to give access to the button.
 - {{domxref("HTMLButtonElement.autofocus")}}
   - : A boolean value indicating whether or not the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLButtonElement.disabled")}}
@@ -44,8 +42,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by a control button. It reflects the value of the [`popovertargetaction`](/en-US/docs/Web/HTML/Element/button#popovertargetaction) HTML attribute.
 - {{domxref("HTMLButtonElement.popoverTargetElement")}}
   - : Gets and sets the popover element to control via a button. The JavaScript equivalent of the [`popovertarget`](/en-US/docs/Web/HTML/Element/button#popovertarget) HTML attribute.
-- {{domxref("HTMLButtonElement.tabIndex")}}
-  - : A `long` that represents this element's position in the tabbing order.
 - {{domxref("HTMLButtonElement.type")}}
 
   - : A string indicating the behavior of the button. This is an enumerated attribute with the following possible values:
