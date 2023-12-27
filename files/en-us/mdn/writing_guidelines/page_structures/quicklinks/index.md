@@ -99,23 +99,9 @@ The following macros are included on all reference pages, but are also supported
 - `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
   - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
 
-### Banner macros
-
-- `\{{SeeCompatTable}}`
-
-  - : Generates a **This is an experimental technology** banner indicating the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental) with a link to the [Browser compatibility](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) that every [reference page](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) contains.
-
-- `\{{Deprecated_Header}}`
-
-  - : Generates a **Deprecated** banner indicating the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated) and should not be used.
-
-- `\{{SecureContext_Header}}`
-  - : Generates a **Secure context** banner indicating a [secure context](/en-US/docs/Web/Security/Secure_Contexts) is required for the feature.
-
-For more information, see the [banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
-
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
-- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
+- [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
+- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
