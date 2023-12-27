@@ -123,7 +123,7 @@ class Counter {
     this.count = 0;
   }
   add(array) {
-    // Only function expressions will have its own this binding
+    // Only function expressions have their own this bindings.
     array.forEach(function countEntry(entry) {
       this.sum += entry;
       ++this.count;

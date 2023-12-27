@@ -5,12 +5,13 @@ slug: Web/API/MediaRecorder/warning_event
 page-type: web-api-event
 status:
   - deprecated
+  - non-standard
 browser-compat: api.MediaRecorder.warning_event
 ---
 
-{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{non-standard_header}}
 
-The `warning` event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.
+The **`warning`** event fires on non-fatal errors during media recording via a `MediaRecorder`. Non-fatal errors are one's that don't halt recording.
 
 ## Value
 
@@ -23,6 +24,10 @@ mediaRecorder.onwarning = (e) => {
   console.warn(`A warning has been raised: ${e.message}`);
 };
 ```
+
+## Specifications
+
+This feature is no longer part of any specification.
 
 ## Browser compatibility
 

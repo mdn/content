@@ -31,7 +31,7 @@ Opt for using the {{htmlelement("Heading_Elements", "h1")}} through {{htmlelemen
 
 In the case of a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), `aria-level` is supported on elements with the role [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), not elements with role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Rows act as leaf nodes within the vertical orientation of the grid. Gridcells are leaf nodes within the horizontal orientation of each row. `Aria-level` is not supported on cells within rows. So, in treegrids, the `aria-level` attribute is applied to the element with the role `row`.
 
-If a complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, [`aria-setsize`](/en-US/docs/Web/Accessibility/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/Attributes/aria-posinset) included.
+If a complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) included.
 
 ## Values
 
