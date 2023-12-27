@@ -84,21 +84,6 @@ There are around 100 [available macros](https://github.com/mdn/yari/tree/main/ku
     This creates hierarchical lists up to two levels deep.
     The pages' titles are used as the link text and their summaries as tooltips.
 
-### Additional macros
-
-In addition to quicklinks, there are a several other macros that you can include.
-
-#### Page sections
-
-The following macros are included on all reference pages, but are also supported by all page types:
-
-- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
-
-  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature passed as the parameter. If no parameter is included, it defaults to the features defined by `browser-compat` in the frontmatter. An optional depth parameter sets how deep sub features should be added to the table. The depth, if omitted, defaults to 1, meaning only the first level of sub feature data from BCD will be included.
-
-- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
-  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
-
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
