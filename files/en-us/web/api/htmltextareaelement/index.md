@@ -16,41 +16,41 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
 - {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
-  - : Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
+  - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
-  - : Returns / Sets the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
+  - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
-  - : Returns / Sets the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
+  - : An unsigned long that represents the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
 - {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
-  - : Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
+  - : A string that represents the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
-  - : Returns / Sets the directionality of the element.
+  - : A string that represents the directionality of the element.
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
-  - : Returns / Sets the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
+  - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
-  - : Returns / Sets the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A long that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.minlength", "minlength")}}
-  - : Returns / Sets the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A long that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.name", "name")}}
-  - : Returns / Sets the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
+  - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
 - {{domxref("HTMLTextAreaElement.placeholder", "placeholder")}}
-  - : Returns / Sets the element's [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute, containing a hint to the user about what to enter in the control.
+  - : A string that represents the element's [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute, containing a hint to the user about what to enter in the control.
 - {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}}
-  - : Returns / Sets the element's [`readonly`](/en-US/docs/Web/HTML/Element/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.
+  - : A boolean that represents the element's [`readonly`](/en-US/docs/Web/HTML/Element/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.
 - {{domxref("HTMLTextAreaElement.required", "required")}}
-  - : Returns / Sets the element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
+  - : A boolean that represents the element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
 - {{domxref("HTMLTextAreaElement.rows", "rows")}}
-  - : Returns / Sets the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
+  - : An unsigned long that represents the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
 - {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}}
-  - : Returns / Sets the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
+  - : A string that represents the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
 - {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
-  - : Returns / Sets the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
+  - : An unsigned long that represents the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
 - {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}}
-  - : Returns / Sets the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument.
+  - : An unsigned long that represents the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument.
 - {{domxref("HTMLTextAreaElement.textLength", "textLength")}} {{ReadOnlyInline}}
   - : Returns the code point length of the control's `value`. Same as reading `value.length`.
 - {{domxref("HTMLTextAreaElement.type", "type")}} {{ReadOnlyInline}}
@@ -60,11 +60,11 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.validity", "validity")}} {{ReadOnlyInline}}
   - : Returns the validity states that this element is in.
 - {{domxref("HTMLTextAreaElement.value", "value")}}
-  - : Returns / Sets the raw value contained in the control.
+  - : A string that represents the raw value contained in the control.
 - {{domxref("HTMLTextAreaElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
   - : Returns whether the element is a candidate for constraint validation. `false` if any conditions bar it from constraint validation, including its `readOnly` or `disabled` property is `true`.
 - {{domxref("HTMLTextAreaElement.wrap", "wrap")}}
-  - : Returns / Sets the element's [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) attribute, indicating how the control wraps text.
+  - : A string that represents the element's [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) attribute, indicating how the control wraps text.
 
 ## Instance methods
 
