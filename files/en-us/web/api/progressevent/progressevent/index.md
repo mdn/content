@@ -44,23 +44,23 @@ new ProgressEvent(type, options)
 
 A new {{domxref("ProgressEvent")}} object.
 
-
-
 ## Example
+
 The example demonstrates how a `ProgressEvent` is built using a constructor. This is particularly useful for tracking the progress of processes like file uploads, downloads, or any long-running tasks.
+
 ```js
 function updateProgress(loaded, total) {
-    const progressEvent = new ProgressEvent("progress", {
-        lengthComputable: true,
-        loaded: loaded,
-        total: total
-    });
-    
-    document.dispatchEvent(progressEvent);
+  const progressEvent = new ProgressEvent("progress", {
+    lengthComputable: true,
+    loaded: loaded,
+    total: total,
+  });
+
+  document.dispatchEvent(progressEvent);
 }
 
-document.addEventListener("progress", function(event) {
-    console.log(`Progress: ${event.loaded}/${event.total}`);
+document.addEventListener("progress", function (event) {
+  console.log(`Progress: ${event.loaded}/${event.total}`);
 });
 
 updateProgress(50, 100);
