@@ -47,9 +47,9 @@ mix-blend-mode: unset;
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : The blending mode that should be applied.
 - `plus-darker`
-  - : Blending using the _plus-darker_ compositing operator.
+  - : Blending using the [_plus-darker_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_darker).
 - `plus-lighter`
-  - : Blending using the _plus-lighter_ compositing operator. Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
+  - : Blending using the [_plus-lighter_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_lighter). Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
 
 ## Formal definition
 
