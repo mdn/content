@@ -23,8 +23,6 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ## Reference
 
-### Properties
-
 ### At-rules
 
 - {{cssxref("@media")}}
@@ -34,9 +32,12 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ### Functions
 
-- [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition) statement
-- [`media()`]() statement
-- [`selector()`]() notation 
+- [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
+- [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
+- [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech)
+- [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format)
+
+> **Note:** The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
 
 ### data types
 
@@ -51,15 +52,28 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 - {{domxref("CSSSupportsRule")}}
 - {{domxref("CSS.supports()")}} method
 
+### Terms and glossary definitions
+
+- "CSS feature queries"
+- "supports queries"
+- conditional group rule
+- media
+
 ## Guides
 
 ## Related concepts
+
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+
+  - {{cssxref("@import")}} at-rule
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 
   - [`<media-feature>`](/en-US/docs/Web/CSS/@media#media_features)
   - [`<media-type>`](/en-US/docs/Web/CSS/@media#media_types)
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
+  - [`<media-query-list>`]()
+  - [`not`]()
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 
@@ -69,7 +83,15 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
   - {{domxref("CSSOMString")}} API
   - {{domxref("CSSRule")}} API
   - {{domxref("MediaList")}} interface
-    - - {{domxref("MediaList.mediaText")}} property
+    - {{domxref("MediaList.mediaText")}} property
+
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+
+  - {{cssxref("@charset")}}
+  - {{cssxref("at-rule")}}
+  - [`invalid`](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+  - {{glossary("parse")}} glossary term
+  - [style rule](/en-US/docs/Web/API/CSSStyleRule)
 
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
 
@@ -80,3 +102,10 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 {{Specifications}}
 
 ## See also
+
+- {{CSSxRef("@supports", "@supports selector()")}}
+  - : Applies CSS rules after checking browser's support for the specified selector syntax.
+- {{CSSxRef("@supports", "@supports font-tech()")}}
+  - : Applies CSS rules after checking browser's support for the specified font technology.
+- {{CSSxRef("@supports", "@supports font-format()")}}
+  - : Applies CSS rules after checking browser's support for the specified font format.
