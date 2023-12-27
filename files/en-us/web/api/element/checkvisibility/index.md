@@ -43,9 +43,9 @@ checkVisibility(options)
         > **Note:** Invisible elements include those that have [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), and some element types that have [`visibility: collapse`](/en-US/docs/Web/CSS/visibility#collapse).
 
     - `checkOpacity`
-      - : A historic alias for [`opacityProperty`](#opacityProperty).
+      - : A historic alias for [`opacityProperty`](#opacityproperty).
     - `checkVisibilityCSS`
-      - : A historic alias for [`visibilityProperty`](#visibilityProperty).
+      - : A historic alias for [`visibilityProperty`](#visibilityproperty).
 
 ### Return value
 
