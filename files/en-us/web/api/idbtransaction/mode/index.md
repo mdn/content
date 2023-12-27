@@ -30,7 +30,7 @@ The following values are available:
 - `versionchange`
   - : Allows any operation, including ones that delete and
     create object stores and indexes.
-    This mode is for updating the version number of transactions if the need is detected when calling {{domxref("IDBDatabase.open()")}}.
+    This mode is for updating the version number of transactions if the need is detected when calling {{domxref("IDBFactory.open()")}}.
     Transactions of this mode cannot run concurrently with other transactions.
     Transactions in this mode are known as _upgrade transactions_.
 
