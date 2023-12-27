@@ -38,7 +38,7 @@ If you want to check if a browser supports the `row-gap` property, for example, 
 
 {{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
 
-The value part of the property value pair matters more if you are testing for new values of a particular property. All browsers support `color`, as `color: red`. This dates back to CSS1. However, there are often additional values added to properties in CSS,like [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative-colors), that may not be supported and [system colors](/en-US/docs/Web/CSS/system-color). Feature queries enable testing property and value pairs, meaning we can detect support for values. 
+The value part of the property value pair matters more if you are testing for new values of a particular property. All browsers support `color`, as `color: red`. This dates back to CSS1. However, there are often additional values added to properties in CSS,like [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative-colors), that may not be supported and [system colors](/en-US/docs/Web/CSS/system-color). Feature queries enable testing property and value pairs, meaning we can detect support for values.
 
 Expanding on the `color` property example above, here we check if the browser supports the `color: AccentColor` declaration:
 
@@ -110,6 +110,5 @@ Feature queries are not limited to property-value pairs. You can also check supp
 
 - [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Supporting older browsers: feature queries](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
+- [Supporting older browsers: feature queries](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
 - [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
-
