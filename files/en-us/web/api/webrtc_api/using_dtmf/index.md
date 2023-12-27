@@ -369,7 +369,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this. Still, some browsers haven't been updated to support this yet, so we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this. Since some browsers haven't been updated to support this yet, we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. This is demonstrated in the `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods below.
 
 ```js
 function handleReceiverTrackEvent(event) {
