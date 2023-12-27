@@ -6,28 +6,51 @@ page-type: guide
 
 {{CSSRef}}
 
-**Feature queries** are created using the CSS at-rule [@supports](/en-US/docs/Web/CSS/@supports), and are useful as they give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide you will learn how to implement progressive enhancement using feature queries.
+**Feature queries** are conditional group rules that test whether the user agent supports or doesn't support one or more CSS features, such as CSS properties and property values. Feature queries give web developers a way to test to see if a browser has support for a certain feature, and then provide CSS that will only run based on the result of that test. In this guide, you will learn how to implement progressive enhancement using feature queries.
 
-> **Note:** The CSS at-rule [@import](/en-US/docs/Web/CSS/@import) can similarly use a `supports()` condition, if available, to ensure that stylesheets are not even loaded (and possibly not fetched) if they use features that are not supported.
-> The syntax is almost identical to that described here for `@supports`.
+Feature queries are created using the CSS at-rule [`@supports`](/en-US/docs/Web/CSS/@supports) (or the `supports()` function within [`@import`](/en-US/docs/Web/CSS/@import) at-rules).
 
 ## Syntax
 
-CSS feature queries are part of the [CSS conditional rules module](/en-US/docs/Web/CSS/CSS_conditional_rules), which also contains the media query [@media](/en-US/docs/Web/CSS/@media) rule; when you use feature queries, you will find they behave in a similar way to media queries. The difference is that with a media query you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/@media) at-rule. You will find feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
-A feature query consists of the `@supports` rule, followed by the property name and value you would like to test for. You may not test for a bare property name such as `display`; the rule requires a property name and a value:
+A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
 ```css
-@supports (property: value) {
+@supports <support-condition> {
   CSS rules to apply
 }
+
+@import url_to_import supports(<declaration>);
+```
+
+For example, we can include a styles sheet if the user-agent supports red` as a valid value for the CSS {{cssxref("color")}} property (hint: it is):
+
+```css
+@supports (color: red) {
+  CSS rules to apply
+}
+
+@import `/css/styles.css` supports(color: red);
 ```
 
 If you want to check if a browser supports the `row-gap` property, for example, you would write the following feature query. It doesn't matter which value you use in a lot of cases: if all you want is to check that the browser supports this property, then any valid value will do.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
 
-The value part of the property value pair matters more if you are testing for new values of a particular property. A good example would be the `display` property. All browsers support `display`, as `display: block` dates back to CSS1. However the values `display: flex` and `display: grid` are newer. There are often additional values added to properties in CSS, and so the fact that you have to test for property and value means that you can detect support for these values.
+The value part of the property value pair matters more if you are testing for new values of a particular property. Expanding on the `color` property, we know that all browsers support `color`, as `color: red`. This dates back to CSS1. However, there are newer color values, like relative colors, that may not be supported, and [system colors](/en-US/docs/Web/CSS/system-color) that are not fully supported.
+
+```css
+@supports (color: AccentColor) {
+  CSS rules to apply
+}
+
+@import `/css/styles.css` supports(color: AccentColor);
+```
+
+There are often additional values added to properties in CSS, and so the fact that you have to test for property and value means that you can detect support for these values.
+
+The most common support condition is a CSS property and value pair within parenthesis, but the `<support-condition>` is not constrained to a single property value pair, or even limited to just CSS property value pairs.
 
 ## Testing for lack of support
 
@@ -114,4 +137,3 @@ Feature Queries can help you start to use newer features by enhancing a simpler 
 - The [@supports](/en-US/docs/Web/CSS/@supports) rule
 - Learn Layout: [Supporting Older Browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
