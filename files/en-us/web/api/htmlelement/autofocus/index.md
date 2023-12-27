@@ -1,9 +1,9 @@
 ---
-title: "HTMLSelectElement: autofocus property"
+title: "HTMLElement: autofocus property"
 short-title: autofocus
-slug: Web/API/HTMLSelectElement/autofocus
+slug: Web/API/HTMLElement/autofocus
 page-type: web-api-instance-property
-browser-compat: api.HTMLSelectElement.autofocus
+browser-compat: api.HTMLElement.autofocus
 ---
 
 {{ APIRef("HTML DOM") }}
