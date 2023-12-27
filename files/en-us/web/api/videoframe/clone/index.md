@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A new cloned `VideoFrame` object.
+A new cloned {{domxref("VideoFrame")}} object.
 
 ### Exceptions
 
