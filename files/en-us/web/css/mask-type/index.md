@@ -11,6 +11,9 @@ The **`mask-type`** [CSS](/en-US/docs/Web/CSS) property sets whether an SVG {{sv
 
 This property may be overridden by the {{cssxref("mask-mode")}} property, which has the same effect but applies to the element where the mask is used. Alpha masks will generally be faster to render.
 
+**`You do not use mask-type in html tags like this: mask-type="alpha". It runs perfectly but sometimes it throws syntax error`**
+
+
 ## Syntax
 
 ```css
