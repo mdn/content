@@ -148,6 +148,7 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 ### Libraries
 
 - [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
+- [Lume](https://lume.io) provides 3D graphical HTML elements, written in TypeScript, built on Three.js, compatible with all web frameworks including React, Vue, Svelte, Angular, and Solid.js.
 - [Babylon.js](https://www.babylonjs.com) is a powerful, simple, and open game and 3D rendering engine packed into a friendly JavaScript framework.
 - [Pixi.js](https://pixijs.com/) is a fast, open-source 2D WebGL renderer.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
