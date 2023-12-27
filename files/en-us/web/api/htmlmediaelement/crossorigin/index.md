@@ -33,4 +33,5 @@ If the `crossOrigin` property is not specified, the resource is fetched without 
 
 ## See also
 
-- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.crossOrigin` property
+- {{domxref("HTMLImageElement.crossOrigin")}}
+- {{domxref("HTMLLinkElement.crossOrigin")}}
