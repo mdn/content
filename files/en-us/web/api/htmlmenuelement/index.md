@@ -7,7 +7,7 @@ browser-compat: api.HTMLMenuElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMenuElement`** interface provides additional properties (beyond those inherited form the {{domxref("HTMLElement")}} interface ) for manipulating a {{HTMLElement("menu")}} element, a semantic alternative to a {{HTMLElement("ul")}} element.
+The **`HTMLMenuElement`** interface provides additional properties (beyond those inherited form the {{domxref("HTMLElement")}} interface) for manipulating a {{HTMLElement("menu")}} element, a semantic alternative to a {{HTMLElement("ul")}} element.
 
 {{InheritanceDiagram}}
 
