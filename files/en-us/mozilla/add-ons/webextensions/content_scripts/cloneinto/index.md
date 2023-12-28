@@ -1,6 +1,6 @@
 ---
 title: components.utils.cloneInto()
-slug: Mozilla/Add-ons/WebExtensions/API/components/utils/cloneInto
+slug: Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto
 page-type: webextension-api-function
 browser-compat: webextensions.api.components.utils.cloneInto
 ---

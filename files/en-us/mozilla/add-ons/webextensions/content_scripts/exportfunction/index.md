@@ -1,6 +1,6 @@
 ---
 title: components.utils.exportFunction()
-slug: Mozilla/Add-ons/WebExtensions/API/components/utils/exportFunction
+slug: Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction
 page-type: webextension-api-function
 browser-compat: webextensions.api.components.utils.exportFunction
 ---
