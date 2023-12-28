@@ -8,7 +8,7 @@ browser-compat: api.Element.copy_event
 
 {{APIRef}}
 
-The **`copy`** event fires when the user initiates a copy action through the browser's user interface or the [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
+The **`copy`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) fires when the user initiates a copy action through the browser's user interface.
 
 The event's default action is to copy the selection (if any) to the clipboard.
 

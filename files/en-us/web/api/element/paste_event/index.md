@@ -8,7 +8,7 @@ browser-compat: api.Element.paste_event
 
 {{APIRef}}
 
-The **`paste`** event is fired when the user has initiated a "paste" action through the browser's user interface.
+The **`paste`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "paste" action through the browser's user interface.
 
 If the cursor is in an editable context (for example, in a {{HTMLElement("textarea")}} or an element with [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set to `true`) then the default action is to insert the contents of the clipboard into the document at the cursor position.
 
