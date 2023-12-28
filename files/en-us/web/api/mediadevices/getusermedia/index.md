@@ -90,6 +90,10 @@ object when the requested media has successfully been obtained.
     > permission to use the underlying device, it can potentially be used as a
     > [fingerprinting](/en-US/docs/Glossary/Fingerprinting) surface.
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if user media support is disabled on the {{domxref("Document")}} on which
+    `getUserMedia()` was called. The mechanism by which user media support is
+    enabled and disabled is left up to the individual user agent.
 - {{jsxref("TypeError")}}
   - : Thrown if the list of constraints specified is empty, or has all constraints set to
     `false`. This can also happen if you try to call
