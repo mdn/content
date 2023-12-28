@@ -32,10 +32,6 @@ _This interface inherits methods from {{domxref('WorkletGlobalScope')}}._
 - {{domxref('PaintWorkletGlobalScope.registerPaint()')}} {{Experimental_Inline}}
   - : Registers a class to programmatically generate an image where a CSS property expects a file.
 
-### Event
-
-None.
-
 ## Examples
 
 The following three examples go together to show creating, loading, and using a paint `Worklet`.
