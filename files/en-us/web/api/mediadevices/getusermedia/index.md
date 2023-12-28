@@ -57,7 +57,7 @@ object when the requested media has successfully been obtained.
 
 - `InvalidStateError` {{domxref("DOMException")}}
 
-  - : Thrown of current document is not fully active.
+  - : Thrown if current document is not fully active.
 
 - `NotAllowedError` {{domxref("DOMException")}}
 
