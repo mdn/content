@@ -27,7 +27,7 @@ None.
 A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem")}} objects containing the clipboard's contents.
 The promise is rejected if permission to access the clipboard is not granted.
 
-## Security
+## Security considerations
 
 [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.

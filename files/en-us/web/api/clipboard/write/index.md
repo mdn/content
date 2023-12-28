@@ -31,6 +31,13 @@ write(data)
 A {{jsxref("Promise")}} which is resolved when the data has been written to the clipboard.
 The promise is rejected if the clipboard is unable to complete the clipboard access.
 
+## Security considerations
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+The user has to interact with the page or a UI element in order for this feature to work.
+
+The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) is granted automatically to pages when they are in the active tab.
+
 ## Examples
 
 This example function replaces the current contents of the clipboard with a specified string.

@@ -26,9 +26,10 @@ writeText(newClipText)
 A {{jsxref("Promise")}} that is resolved once the clipboard's contents have been updated.
 The promise is rejected if the caller does not have permission to write to the clipboard.
 
-## Security
+## Security considerations
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+The user has to interact with the page or a UI element in order for this feature to work.
 
 The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) is granted automatically to pages when they are in the active tab.
 
