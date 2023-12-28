@@ -11,10 +11,6 @@ The **`HTMLMenuElement`** interface provides additional properties (beyond those
 
 {{InheritanceDiagram}}
 
-## Constructor
-
-- {{DOMxRef("HTMLMenuElement.HTMLMenuElement", "HTMLMenuElement()")}}
-  - : Returns a newly constructed `HTMLMenuElement`.
 
 ## Instance properties
 
