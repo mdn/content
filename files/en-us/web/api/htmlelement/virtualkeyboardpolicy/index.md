@@ -1,16 +1,16 @@
 ---
-title: "HTMLElement: virtualkeyboardpolicy property"
-short-title: virtualkeyboardpolicy
-slug: Web/API/HTMLElement/virtualkeyboardpolicy
+title: "HTMLElement: virtualKeyboardPolicy property"
+short-title: virtualKeyboardPolicy
+slug: Web/API/HTMLElement/virtualKeyboardPolicy
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.HTMLElement.virtualkeyboardpolicy
+browser-compat: api.HTMLElement.virtualKeyboardPolicy
 ---
 
 {{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
 
-The **`virtualkeyboardpolicy`** property of the {{domxref("HTMLElement")}} interface gets and sets a string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available when the element is contenteditable (like {{htmlelement("input")}}, {{htmlelement("textarea")}} or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on the element).
+The **`virtualKeyboardPolicy`** property of the {{domxref("HTMLElement")}} interface gets and sets a string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available when the element is contenteditable (like {{htmlelement("input")}}, {{htmlelement("textarea")}} or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on the element).
 
 It reflects the value of the [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) HTML global attribute.
 
@@ -31,7 +31,7 @@ The following example shows how to control the on-screen virtual keyboard behavi
 const element = document.querySelector("input");
 
 // the on-screen virtual keyboard behavior will be controlled by script manually
-element.virtualkeyboardpolicy = "manual";
+element.virtualKeyboardPolicy = "manual";
 ```
 
 ## Specifications
