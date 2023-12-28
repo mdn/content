@@ -120,8 +120,8 @@ console.log(it[Symbol.iterator]() === it); // true
 // which has the @@iterator method return the it (itself),
 // and consequently, the it object can iterate only _once_.
 
-// If we change its @@iterator method to a function/generator
-// which returns a new iterator/generator object, (it)
+// If we change the @@iterator method of `it` to a function/generator
+// which returns a new iterator/generator object, `it`
 // can iterate many times
 
 it[Symbol.iterator] = function* () {
