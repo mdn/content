@@ -49,7 +49,7 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 - {{domxref("CSSConditionRule")}}
 - {{domxref("CSSMediaRule")}}
 - {{domxref("CSSSupportsRule")}}
-- {{domxref("CSS.supports()")}} method
+- {{domxref("CSS.supports_static")}} method
 
 ### Terms and glossary definitions
 
@@ -116,4 +116,3 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 {{Specifications}}
 
 ## See also
-
