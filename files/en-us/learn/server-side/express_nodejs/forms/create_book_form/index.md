@@ -185,7 +185,7 @@ block content
             option(value=author._id) #{author.name}
     div.form-group
       label(for='summary') Summary:
-      textarea#summary.form-control(placeholder='Summary' name='summary' required)= undefined===book ? '' : book.summary
+      textarea#summary.form-control(placeholder='Summary' name='summary' required value=(undefined===book ? '' : book.summary))
     div.form-group
       label(for='isbn') ISBN:
       input#isbn.form-control(type='text', placeholder='ISBN13' name='isbn' value=(undefined===book ? '' : book.isbn) required)
