@@ -20,7 +20,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
-  - : An unsigned long that represents the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
+  - : A number that represents the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
 - {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
   - : A string that represents the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
 - {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
@@ -32,9 +32,9 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
-  - : A long that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A number that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.minLength", "minLength")}}
-  - : A long that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
+  - : A number that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.name", "name")}}
   - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
 - {{domxref("HTMLTextAreaElement.placeholder", "placeholder")}}
@@ -44,13 +44,13 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.required", "required")}}
   - : A boolean that represents the element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
 - {{domxref("HTMLTextAreaElement.rows", "rows")}}
-  - : An unsigned long that represents the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
+  - : A number that represents the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
 - {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}}
   - : A string that represents the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
 - {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
-  - : An unsigned long that represents the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
+  - : A number that represents the index of the end of selected text. If no text is selected, it contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
 - {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}}
-  - : An unsigned long that represents the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument.
+  - : A number that represents the index of the beginning of selected text. If no text is selected, it contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument and `selectionEnd` as the second argument.
 - {{domxref("HTMLTextAreaElement.textLength", "textLength")}} {{ReadOnlyInline}}
   - : Returns the code point length of the control's `value`. Same as reading `value.length`.
 - {{domxref("HTMLTextAreaElement.type", "type")}} {{ReadOnlyInline}}
@@ -58,7 +58,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
 - {{domxref("HTMLTextAreaElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
   - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
 - {{domxref("HTMLTextAreaElement.validity", "validity")}} {{ReadOnlyInline}}
-  - : Returns the validity states that this element is in.
+  - : Returns the validity state that this element is in.
 - {{domxref("HTMLTextAreaElement.value", "value")}}
   - : A string that represents the raw value contained in the control.
 - {{domxref("HTMLTextAreaElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
