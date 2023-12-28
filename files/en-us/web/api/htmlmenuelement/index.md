@@ -7,7 +7,7 @@ browser-compat: api.HTMLMenuElement
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMenuElement`** interface represents a {{HTMLElement("menu")}} element, that is a semantic alternative to a {{HTMLElement("ul")}} element.
+The **`HTMLMenuElement`** interface provides additional properties (beyond those inherited form the {{domxref("HTMLElement")}} interface ) for manipulating a {{HTMLElement("menu")}} element, a semantic alternative to a {{HTMLElement("ul")}} element.
 
 {{InheritanceDiagram}}
 
@@ -21,7 +21,7 @@ The **`HTMLMenuElement`** interface represents a {{HTMLElement("menu")}} element
 _Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancestors._
 
 - {{domxref("HTMLMenuElement.compact")}} {{deprecated_inline}}
-  - : A Boolean value determining if the menu displays in a compact way.
+  - : A boolean determining if the menu displays compactly.
 
 ## Instance methods
 
