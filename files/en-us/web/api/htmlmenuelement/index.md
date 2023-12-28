@@ -11,7 +11,6 @@ The **`HTMLMenuElement`** interface provides additional properties (beyond those
 
 {{InheritanceDiagram}}
 
-
 ## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}, and its ancestors._
