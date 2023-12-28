@@ -1621,8 +1621,8 @@
   },
   "Trusted Types": {
     "name": "Trusted Types",
-    "url": "https://w3c.github.io/trusted-types/dist/spec/",
-    "status": "ED"
+    "url": "https://www.w3.org/TR/trusted-types/",
+    "status": "WD"
   },
   "UI Events": {
     "name": "UI Events",
