@@ -8907,7 +8907,7 @@
 /en-US/docs/Web/API/MediaRecorder.onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder.onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder.onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder.pause	/en-US/docs/Web/API/MediaRecorder/pause
 /en-US/docs/Web/API/MediaRecorder.requestData	/en-US/docs/Web/API/MediaRecorder/requestData
 /en-US/docs/Web/API/MediaRecorder.resume	/en-US/docs/Web/API/MediaRecorder/resume
@@ -8923,7 +8923,8 @@
 /en-US/docs/Web/API/MediaRecorder/onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder/onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder/onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder
+/en-US/docs/Web/API/MediaRecorder/warning_event	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API
 /en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 /en-US/docs/Web/API/MediaSessionAction	/en-US/docs/Web/API/MediaSession/setActionHandler
