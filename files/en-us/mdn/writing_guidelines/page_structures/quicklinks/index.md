@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-MDN supports adding links and lists of links in sidebars and within the main content of a page. You can and often **should** use macros to generate links. 
+MDN supports adding links and lists of links in sidebars and within the main content of a page. You can and often **should** use macros to generate links.
 This article describes how to use the different MDN macros, demonstrating how to include sidebars to MDN pages and add always-up-to-date and maintained links within your content. Quickly.
 
 In this guide, you will learn how to create a sidebar of links by just including a macro and how to add how to use those same macros to create sidebars with additional text. You will also learn about cross-reference macros to add links to other pages and macros to add lists of links to pages and subpages.
@@ -75,7 +75,7 @@ For example, adding the following at the end of a markdown file (and removing an
 </section>
 ```
 
-> **Note:**  This `<section>` must be appended to the end of the page, instead of between the frontmatter and the page content.
+> **Note:** This `<section>` must be appended to the end of the page, instead of between the frontmatter and the page content.
 
 You can also fully craft a sidebar with more than one Quicklinks macro, without including a Quicklinks macro, with cross reference macros, or any combination of macros and markdown. The steps to creating a sidebar without a Quicklinks macro are similar to the steps for the ARIA example above:
 
@@ -86,9 +86,9 @@ You can also fully craft a sidebar with more than one Quicklinks macro, without 
 ```md
 <section id="Quick_links">
 
-* [WAI-ARIA `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role)
-* {{HTMLElement("button")}}
-* {{HTMLElement("input/button", "button", "nocode")}} {{HTMLElement("input)}}
+- [WAI-ARIA `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role)
+- \{{HTMLElement("button")}}
+- \{{HTMLElement("input/button", "button", "nocode")}} \{{HTMLElement("input)}}
 
 </section>
 ```
@@ -97,7 +97,7 @@ You can also fully craft a sidebar with more than one Quicklinks macro, without 
 
 ## Main content area links
 
-Macros are not limited to sidebars or even to long lists of links. 
+Macros are not limited to sidebars or even to long lists of links.
 
 Quicklink macros can also be used to add lists of links to the main area of the page.
 
