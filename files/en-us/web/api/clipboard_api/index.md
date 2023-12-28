@@ -36,14 +36,27 @@ A typical application accesses clipboard functionality by mapping [user input](h
 
 ### Extensions to other interfaces
 
+The Clipboard API extends the following APIs, adding the listed features.
+
 - {{domxref("Navigator.clipboard")}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
+- [`Element: copy`](/en-US/docs/Web/API/Element/copy_event) event
+  - : An event fired whenever the user initiates a copy action through the browser's user interface or the Clipboard API.
+- [`Element: cut`](/en-US/docs/Web/API/Element/cut_event) event
+  - : An event fired whenever the user initiates a cut action through the browser's user interface or the Clipboard API.
+- [`Element: paste`](/en-US/docs/Web/API/Element/cut_event) event
+  - : An event fired whenever the user initiates a paste action through the browser's user interface or the Clipboard API.
+
+<!-- Note `Window: clipboardchange` event is in spec but not implemented -->
 
 ## Examples
 
 ### Accessing the clipboard
 
-Instead of creating a `Clipboard` object through instantiation, you access the system clipboard through the {{domxref("Navigator.clipboard")}} global:
+The system clipboard is accessed through the {{domxref("Navigator.clipboard")}} global.
+
+This snippet fetches the text from the clipboard and appends it to the first element found with the class `editor`.
+Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.
 
 ```js
 navigator.clipboard
@@ -52,9 +65,6 @@ navigator.clipboard
     (clipText) => (document.querySelector(".editor").innerText += clipText),
   );
 ```
-
-This snippet fetches the text from the clipboard and appends it to the first element found with the class `editor`.
-Since {{domxref("Clipboard.readText", "readText()")}} (and {{domxref("Clipboard.read", "read()")}}, for that matter) returns an empty string if the clipboard isn't text, this code is safe.
 
 ## Specifications
 
