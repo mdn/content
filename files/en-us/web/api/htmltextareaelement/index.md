@@ -33,7 +33,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}.
   - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
   - : A long that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
-- {{domxref("HTMLTextAreaElement.minlength", "minlength")}}
+- {{domxref("HTMLTextAreaElement.minLength", "minLength")}}
   - : A long that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
 - {{domxref("HTMLTextAreaElement.name", "name")}}
   - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
