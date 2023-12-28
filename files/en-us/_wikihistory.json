@@ -46288,16 +46288,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/MediaStreamTrack/overconstrained_event": {
-    "modified": "2020-10-15T21:29:32.712Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "fscholz",
-      "libbymc",
-      "teoli"
-    ]
-  },
   "Web/API/MediaStreamTrack/readyState": {
     "modified": "2020-10-15T21:29:36.532Z",
     "contributors": [
