@@ -88,7 +88,7 @@ You can also fully craft a sidebar with more than one Quicklinks macro, without 
 
 - [WAI-ARIA `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role)
 - \{{HTMLElement("button")}}
-- \{{HTMLElement("input/button", "button", "nocode")}} \{{HTMLElement("input)}}
+- \{{HTMLElement("input/button", "button")}} \{{HTMLElement("input")}}
 
 </section>
 ```
