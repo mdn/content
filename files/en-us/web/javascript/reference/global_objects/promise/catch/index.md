@@ -26,7 +26,7 @@ promiseInstance.catch(onRejected)
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. If `onRejected` is called, the returned promise will resolve based on the return value or thrown error of this call. If the current promise fulfills, `onRejected` is not called and the returned promise fulfills to the same value.
+Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. If `onRejected` is called, the returned promise will resolve based on the return value of this call, or reject with the thrown error from this call. If the current promise fulfills, `onRejected` is not called and the returned promise fulfills to the same value.
 
 ## Description
 
