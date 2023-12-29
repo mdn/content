@@ -12,9 +12,6 @@ The **`clipboard`** read-only property of the {{domxref("Navigator")}} interface
 
 This is the entry point to the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), which can be used to implement cut, copy, and paste features within a web application.
 
-Use of the asynchronous clipboard read and write methods requires that the user grant the website or app permission to access the clipboard.
-This permission must be obtained from the [Permissions API](/en-US/docs/Web/API/Permissions_API) using the `"clipboard-read"` and/or `"clipboard-write"` permissions.
-
 ## Value
 
 The {{domxref("Clipboard")}} object used to access the system clipboard.
