@@ -13,7 +13,7 @@ The **`AbortSignal`** interface represents a signal object that allows you to co
 
 ## Instance properties
 
-_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
@@ -21,6 +21,8 @@ _The AbortSignal interface may also inherit properties from its parent interface
   - : A JavaScript value providing the abort reason, once the signal has aborted.
 
 ## Static methods
+
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
   - : Returns an **`AbortSignal`** instance that is already set as aborted.
@@ -31,12 +33,14 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 ## Instance methods
 
-_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.throwIfAborted()")}}
   - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Events
+
+_Also inherits events from its parent interface, {{DOMxRef("EventTarget")}}._
 
 Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
