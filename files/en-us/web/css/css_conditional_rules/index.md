@@ -10,9 +10,9 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS conditional rules** module defines CSS feature and support queries, enabling you to define styles that are only implemented if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewports. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
+The **CSS conditional rules** module defines CSS features and support queries, enabling you to define styles that are only implemented if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewports. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 
-The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles. These were set as the value of the HTML {{HTMLElement("link)}} and {{HTMLElement("style)}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement and {{cssxref("@import")}} at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
+The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles. These were set as the value of the HTML {{HTMLElement("link")}} and {{HTMLElement("style")}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement and {{cssxref("@import")}} at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
 
 CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
@@ -55,9 +55,9 @@ There are plans to further extend possible queries by adding the generalized con
 
 ### Terms and glossary definitions
 
-- supports queries
-- conditional group rule
-- media
+- {{glossary("media/CSS", "Media")}}
+- Supports query (See [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries))
+- [Conditional group rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules)
 
 ## Guides
 
