@@ -10,6 +10,9 @@ browser-compat: api.Clipboard.readText
 
 The **`readText()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} which fulfils with a copy of the textual contents of the system clipboard.
 
+> **Note:** To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
+> You can write text to the clipboard using {{domxref("Clipboard.writeText", "writeText()")}}.
+
 ## Syntax
 
 ```js-nolint
@@ -23,17 +26,20 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a string containing the textual contents of the clipboard.
-Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the {{domxref("DataTransfer")}} objects representing the clipboard's contents.
 
-To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
-You can write text to the clipboard using {{domxref("Clipboard.writeText", "writeText()")}}.
+Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the objects representing the clipboard's contents.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the access to read the clipboard is not allowed.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if the clipboard indicates that it contains data that can be represented as a text but is unable to provide a textual representation.
 
 ## Security considerations
 
 [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.
-
-The `"clipboard-read"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) must be granted before you can read data from the clipboard.
 
 ## Examples
 
@@ -57,5 +63,6 @@ navigator.clipboard
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

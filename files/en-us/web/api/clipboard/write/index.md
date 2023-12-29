@@ -8,12 +8,11 @@ browser-compat: api.Clipboard.write
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary data, such as images, to the clipboard.
+The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary data to the clipboard, such as images, fulfilling the returned {{jsxref("Promise")}} on completion.
 This can be used to implement cut and copy functionality.
 
-The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API), is granted automatically to pages when they are in the active tab.
-
-> **Note:** For parity with Google Chrome, Firefox only allows this function to work with text, HTML, and PNG data.
+The method can in theory write arbitrary data (unlike {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text).
+Browsers commonly support writing text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
 
 ## Syntax
 
@@ -29,14 +28,17 @@ write(data)
 ### Return value
 
 A {{jsxref("Promise")}} which is resolved when the data has been written to the clipboard.
-The promise is rejected if the clipboard is unable to complete the clipboard access.
+The promise is rejected if the clipboard is unable to write the data.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if writing to the clipboard is not allowed.
 
 ## Security considerations
 
 [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.
-
-The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) is granted automatically to pages when they are in the active tab.
 
 ## Examples
 
@@ -100,3 +102,6 @@ function copyCanvasContentsToClipboard(canvas, onDone, onError) {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.writeText()")}}
+- {{domxref("Clipboard.read()")}}
+- {{domxref("Clipboard.readText()")}}

@@ -9,7 +9,9 @@ browser-compat: api.Clipboard.read
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
 The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
-The method can return arbitrary data, such as images, HTML markup, or plain text (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
+
+The method can in theory return arbitrary data (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
+Browsers commonly support reading text, HTML, and PNG image data — see [browser compatibility](#browser_compatibility) for more information.
 
 ## Syntax
 
@@ -28,7 +30,7 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the access to read the clipboard is not allowed.
+  - : Thrown if the reading from the clipboard is not allowed.
 
 ## Security considerations
 
@@ -118,3 +120,6 @@ async function pasteImage() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.readText()")}}
+- {{domxref("Clipboard.writeText()")}}
+- {{domxref("Clipboard.write()")}}

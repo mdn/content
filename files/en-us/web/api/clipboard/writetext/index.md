@@ -24,14 +24,16 @@ writeText(newClipText)
 ### Return value
 
 A {{jsxref("Promise")}} that is resolved once the clipboard's contents have been updated.
-The promise is rejected if the caller does not have permission to write to the clipboard.
+
+### Exceptions
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if writing to the clipboard is not allowed.
 
 ## Security considerations
 
 [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.
-
-The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) is granted automatically to pages when they are in the active tab.
 
 ## Examples
 
@@ -60,3 +62,6 @@ navigator.clipboard.writeText("<empty clipboard>").then(
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.write()")}}
+- {{domxref("Clipboard.read()")}}
+- {{domxref("Clipboard.readText()")}}
