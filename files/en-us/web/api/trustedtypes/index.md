@@ -8,7 +8,7 @@ browser-compat: api.trustedTypes
 
 {{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
-The global **`trustedTypes`** read-only property returns the {{domxref("TrustedTypePolicyFactory")}} object associated to the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
+The global **`trustedTypes`** read-only property returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 
 ## Value
 
