@@ -108,14 +108,14 @@ The code snippet below shows how to use the `virtualkeyboardpolicy` attribute an
 
 ## Interfaces
 
-- {{DOMxRef('VirtualKeyboard')}} {{Experimental_Inline}}
+- {{domxref('VirtualKeyboard')}} {{experimental_inline}}
   - : Provides functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.
 
 ## Extensions to other interfaces
 
-- {{DOMxRef("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a reference to the {{DOMxRef("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
-- {{DOMxRef("HTMLElement.virtualkeyboardpolicy")}} {{Experimental_Inline}}
+- {{domxref("HTMLElement.virtualkeyboardpolicy")}} {{experimental_inline}}
   - : A string indicating whether the default handling of the virtualkeyboard by the browser is enabled, if the element is contenteditable, or is handled via script manually.
 
 ## Specifications
