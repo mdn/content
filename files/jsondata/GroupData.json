@@ -645,6 +645,7 @@
         "HTMLLinkElement",
         "HTMLMapElement",
         "HTMLMediaElement",
+        "HTMLMenuElement",
         "HTMLMetaElement",
         "HTMLMeterElement",
         "HTMLModElement",
