@@ -25,11 +25,11 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}.
 _Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
-  - : Returns an **`AbortSignal`** instance that is already set as aborted.
+  - : Returns an `AbortSignal` instance that is already set as aborted.
 - {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}
-  - : Returns an **`AbortSignal`** that aborts when any of the given abort signals abort.
+  - : Returns an `AbortSignal` that aborts when any of the given abort signals abort.
 - {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
-  - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
+  - : Returns an `AbortSignal` instance that will automatically abort after a specified time.
 
 ## Instance methods
 
@@ -42,9 +42,9 @@ _Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 _Also inherits events from its parent interface, {{DOMxRef("EventTarget")}}._
 
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+Listen to this event using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
+- {{domxref("AbortSignal/abort_event", "abort")}}
   - : Invoked when the DOM requests the signal is communicating with is/are aborted.
     Also available via the `onabort` property.
 
