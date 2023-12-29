@@ -10,15 +10,17 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS conditional rules** module defines CSS feature and support queries, enabling you define styles that are only is specific conditions are met. Conditions include the capabilities of the processor or the document the style sheet is being applied to.
+The **CSS conditional rules** module defines CSS feature and support queries, enabling you to define styles that are only implemented if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewports. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 
-The first conditional rule, `@media`, has been around since CSS 2.1. The original implementation's only function was to enable stylesheets based on [media types](/en-US/docs/Web/CSS/@media#media_types).
+The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles. These were set as the value of the HTML {{HTMLElement("link)}} and {{HTMLElement("style)}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement and {{cssxref("@import")}} at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
 
-The ability to conditionally apply CSS rules has been greatly expanded. CSS conditional rules level 3 added `@supports` to provide browser CSS capability queries and expanded `@media` to enable nesting at-rules and, in conjunction with media features defined in [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries), to targes styles based onquery values or browser and device features, independent of the document being rendered.
+CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
-enabling nesting at-rules, enabling providing CSS for all media and feature requirements in a single stylesheet.
+The CSS conditional rules module also expanded `@media` to enable nesting at-rules with the [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) removing unused media types while adding many media features and conditions that can be targeted.
 
-Conditional rules Level 4 added the ability to query support for particular CSS selectors. Level 5 further extends possible queries by adding the generalized conditional rule `@when` and the chained conditional rule `@else`, as well as add font processing to the list of features that can be queried.
+The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent, rather than the viewport.
+
+There are plans to further extend possible queries by adding the generalized conditional rule `@when` and the chained conditional rule `@else`. These two at-rules are not yet supported.
 
 ## Reference
 
@@ -40,9 +42,9 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 
 ### data types
 
-- `<media-query>`
-- `<supports-condition>`
-- `<supports-feature>`
+- [`<media-query>`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax)
+- [`<supports-condition>`](/en-US/docs/Web/CSS/@import#importing_css_rules_conditional_on_feature_support)
+- `<supports-feature>` (see [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition))
 
 ### Interfaces
 
@@ -116,3 +118,7 @@ Conditional rules Level 4 added the ability to query support for particular CSS 
 {{Specifications}}
 
 ## See also
+
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries) module
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
