@@ -30,8 +30,8 @@ We assigned an _Anonymous Function_ in a {{glossary("Variable")}}, then we used 
 function sayHello() {
   return "Hello, ";
 }
-function greeting(helloMessage, name) {
-  console.log(helloMessage() + name);
+function greeting(sayHello, name) {
+  console.log(sayHello() + name);
 }
 // Pass `sayHello` as an argument to `greeting` function
 greeting(sayHello, "JavaScript!");
