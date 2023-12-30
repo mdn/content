@@ -11,8 +11,6 @@ status:
 
 > **Note:** This method was removed from Firefox 23 and onward.
 
-## Summary
-
 Gets/sets the status bar text for the given window.
 
 ## Value
