@@ -10,7 +10,7 @@ browser-compat: api.StorageManager.persist
 
 The **`persist()`** method of the {{domxref("StorageManager")}} interface requests permission to use persistent storage, and returns a {{jsxref('Promise')}} that resolves to `true` if permission is granted and bucket mode is persistent, and `false` otherwise.
 
-{{AvailableInWorkers}}
+> **Note:** This method is not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API), though the {{domxref("StorageManager")}} interface is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
