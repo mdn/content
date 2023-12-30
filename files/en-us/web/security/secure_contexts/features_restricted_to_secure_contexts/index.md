@@ -16,7 +16,6 @@ This section lists APIs that specifications make available only in secure contex
 - {{domxref("Audio Output Devices API", "", "", "nocode")}}
 - {{domxref("Background Fetch API", "", "", "nocode")}}
 - {{domxref("Background Synchronization API", "", "", "nocode")}}
-- [Background Sync](https://wicg.github.io/BackgroundSync/spec/) (see {{domxref("SyncManager")}}, for example)
 - {{domxref("Badging API", "", "", "nocode")}}
 - {{domxref("Barcode Detection API", "", "", "nocode")}}
 - {{domxref("Battery Status API", "", "", "nocode")}}
@@ -34,7 +33,6 @@ This section lists APIs that specifications make available only in secure contex
 - [Generic Sensor API](https://w3c.github.io/sensors/)
 - {{domxref("Gamepad API", "", "", "nocode")}}
 - {{domxref("Geolocation API", "", "", "nocode")}}
-- {{domxref("Geolocation")}}
 - {{domxref("Idle Detection API", "", "", "nocode")}}
 - {{domxref("Keyboard API", "", "", "nocode")}}
 - {{domxref("Local Font Access API", "", "", "nocode")}}
