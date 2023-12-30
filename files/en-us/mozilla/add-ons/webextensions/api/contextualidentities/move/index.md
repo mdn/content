@@ -25,11 +25,11 @@ let moveContainers = browser.contextualIdentities.move(
 - `cookieStoreIds`
   - : `string` or `array` of `string`. An ordered list of the contextual identity cookie store IDs to move.
 - `position`
-  - : `integer`. The position to move `cookieStoreIds` to in the list of contextual identities. `-1` indicates that the items are moved to the end of the list.
+  - : `integer`. The position to move `cookieStoreIds` to in the list of contextual identities. Zero-based; `0` indicates the first position. `-1` indicates that the items are moved to the end of the list.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with an array of cookie store IDs representing the re-ordered list. If the request is for an invalid move or the contextual identities feature is not enabled, the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the contextual identities are reordered. If the request is for an invalid move or the contextual identities feature is not enabled, the promise is rejected.
 
 ## Examples
 
