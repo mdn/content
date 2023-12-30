@@ -88,8 +88,8 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The passing `options` is an empty object.
-    - The `url` in `options` is present and is not equal with the creation URL if in Window context.
-    - The `url` in `options` is present and its origin is same as the origin of the creation URL.
+    - The `url` in `options` is present and is not equal with the creation URL if in main thread.
+    - The `url` in `options` is present and its origin is not the same as the origin of the creation URL.
     - Getting the cookie or cookies represented by the given `name` or `options` fails.
 
 ## Examples
