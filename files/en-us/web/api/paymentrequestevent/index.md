@@ -9,7 +9,7 @@ browser-compat: api.PaymentRequestEvent
 
 {{SeeCompatTable}}{{APIRef("Payment Handler API")}}
 
-The **`PaymentRequestEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
+The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", "", "", "nocode")}} is the object passed to a payment handler when a {{domxref("PaymentRequest")}} is made.
 
 {{InheritanceDiagram}}
 
