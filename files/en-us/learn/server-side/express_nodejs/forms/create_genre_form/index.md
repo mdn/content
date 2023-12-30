@@ -165,7 +165,7 @@ res.render("genre_form", { title: "Create Genre" });
 // Render the POST route
 res.render("genre_form", {
   title: "Create Genre",
-  genre,
+  genre: genre,
   errors: errors.array(),
 });
 ```
