@@ -45836,20 +45836,6 @@
     "modified": "2020-10-15T21:51:07.748Z",
     "contributors": ["fscholz", "david_ross", "jpmedley"]
   },
-  "Web/API/MediaRecorder/warning_event": {
-    "modified": "2020-10-15T21:27:43.833Z",
-    "contributors": [
-      "Sheppy",
-      "sideshowbarker",
-      "lucian95",
-      "miguelao",
-      "jpmedley",
-      "Sebastianz",
-      "chrisdavidmills",
-      "teoli",
-      "kscarfone"
-    ]
-  },
   "Web/API/MediaRecorderErrorEvent": {
     "modified": "2020-10-15T21:57:11.850Z",
     "contributors": ["sideshowbarker", "Sheppy"]
@@ -46300,16 +46286,6 @@
       "Sheppy",
       "jeremy-french",
       "jpmedley"
-    ]
-  },
-  "Web/API/MediaStreamTrack/overconstrained_event": {
-    "modified": "2020-10-15T21:29:32.712Z",
-    "contributors": [
-      "alattalatta",
-      "sideshowbarker",
-      "fscholz",
-      "libbymc",
-      "teoli"
     ]
   },
   "Web/API/MediaStreamTrack/readyState": {
@@ -65025,10 +65001,6 @@
       "Laurentj",
       "chrisdavidmills"
     ]
-  },
-  "Web/API/WebRTC_API/High-level_guide": {
-    "modified": "2019-03-23T22:47:43.736Z",
-    "contributors": ["Sheppy"]
   },
   "Web/API/WebRTC_API/Intro_to_RTP": {
     "modified": "2019-03-18T21:41:44.636Z",
