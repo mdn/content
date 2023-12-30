@@ -13,7 +13,7 @@ The API to create [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions
 
 You can listen for clicks on the icon in a background script, or specify a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) that opens when the icon is clicked.
 
-If you specify a popup, you define its contents and behavior using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts. Despite being named pageAction, the action code doesn't get access to web page content. To access web page DOM, you need to add [content script](en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and interact with it.
+If you specify a popup, you define its contents and behavior using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts. Despite being named pageAction, the action code doesn't get access to web page content. To access web page DOM, you need to add [content script](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) and interact with it.
 
 The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `page_action` {{WebExtAPIRef("menus.ContextType")}}.
 
