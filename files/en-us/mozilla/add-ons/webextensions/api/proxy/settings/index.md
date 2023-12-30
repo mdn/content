@@ -27,14 +27,14 @@ The underlying value is an object. When setting this object, all properties are 
 
   - : `string`. A comma-separated list of hosts that shouldn't be proxied. Can be defined as:
 
-    - `HOST_PATTERN[:PORT]`, but not with scheme, e.g., `SCHEME://]HOST_PATTERN[:PORT]`. See [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
-    - `IP_LITERAL[:PORT]`, but not with scheme, e.g., `SCHEME://]IP_LITERAL[:PORT]`
+    - `HOST_NAME[:PORT]`, for example: `example.com` or `example.com:1234`
+    - `IP_LITERAL[:PORT]`
     - `IP_LITERAL/PREFIX_LENGTH_IN_BITS`, using [CIDR notation](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation)
     - `<local>`, to bypass proxying for all hostnames that don't contain periods.
 
-    You can use IPv6 addresses.
+    You can use IPv6 addresses. For example, `[::123]`.
 
-    Hosts`localhost` and `127.0.0.1` are never proxied.
+    Hosts `localhost` and `127.0.0.1` are never proxied.
 
 - `proxyDNS` {{optional_inline}}
   - : `boolean`. Proxy DNS when using SOCKS5. Defaults to `false`.
