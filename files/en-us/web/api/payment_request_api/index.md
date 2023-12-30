@@ -7,11 +7,11 @@ browser-compat: api.PaymentRequest
 
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
-The **Payment Request API** provides a consistent user experience for both merchants and users. It is not a new way for paying for things; rather, it's a way for users to select their preferred way of paying for things, and make that information available to a merchant.
+The **Payment Request API** provides a consistent user experience for merchants and users. It is not a new way of paying for things; instead, it's a way for users to select their preferred way of paying for things and make that information available to a merchant.
 
 ## Concepts and usage
 
-Many problems related to online shopping-cart abandonment can be traced to checkout forms, which can be difficult and time consuming to fill out and often require multiple steps to complete. The **Payment Request API** is meant to reduce the number of steps needed to complete a payment online, potentially doing away with checkout forms. It aims to make the checkout process easier, by having payment apps store a user's details, which are then passed along to a merchant, hopefully without requiring an HTML form.
+Many problems related to online shopping cart abandonment can be traced to checkout forms, which can be difficult and time-consuming to fill out and often require multiple steps to complete. The **Payment Request API** is meant to reduce the steps needed to complete payment online, potentially doing away with checkout forms. It aims to make the checkout process more accessible by having payment apps store a user's details, which are passed along to a merchant, hopefully without requiring an HTML form.
 
 To request a payment, a web page creates a {{domxref("PaymentRequest")}} object in response to a user action that initiates a payment, such as clicking a "Purchase" button. The `PaymentRequest` allows the web page to exchange information with the user agent while the user provides input to complete the transaction.
 
