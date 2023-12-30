@@ -9,9 +9,7 @@ status:
 
 {{APIRef()}}{{deprecated_header}}
 
-> **Note:** This method was removed from Firefox 23 and onward.
-
-## Summary
+> **Note:** This property was removed from Firefox 23 and onward.
 
 Gets/sets the status bar text for the given window.
 
