@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-`undefined`.
+None (`undefined`).
 
 ### Exceptions
 
