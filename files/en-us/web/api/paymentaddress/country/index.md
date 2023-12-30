@@ -28,7 +28,7 @@ which frequently can be assumed to mean "same country as the site owner."
 ## Usage notes
 
 If the payment handler validates the address and determines that the value of
-`country` is invalid; a call to
+`country` is invalid, a call to
 {{domxref("PaymentRequestUpdateEvent.updateWith()")}} will be made with a
 `details` object containing a `shippingAddressErrors`
 field. That field contains an object whose
