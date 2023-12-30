@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.country
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`country`** read-only property of the
 {{domxref('PaymentAddress')}} interface is a string identifying the address's country
