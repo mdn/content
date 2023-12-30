@@ -58,7 +58,13 @@ The `color-scheme` property's value must be one of the following keywords.
 
 ### Declaring color scheme preferences
 
-To opt the entire page into the user's color scheme preferences, declare `color-scheme` on the {{cssxref(":root")}} element.
+To opt the entire page into the user's color scheme preferences, declare `color-scheme` on HTML {{HTMLElement("meta")}} tag.
+
+```html
+<meta name="color-scheme" content="light dark">
+```
+
+To opt the entire page into the user's color scheme preferences, declare `color-scheme` on the CSS {{cssxref(":root")}} element.
 
 ```css
 :root {
