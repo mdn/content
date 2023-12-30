@@ -29,41 +29,54 @@ let moveContainers = browser.contextualIdentities.move(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the contextual identities are reordered. If the request is for an invalid move or the contextual identities feature is not enabled, the promise is rejected.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled when the contextual identities are reordered. The promise is rejected if the request is for an invalid move or the contextual identities feature is not enabled.
 
 ## Examples
 
-Starting with this list of contextual identities `[id0, id1, id2, id3]`:
+This example moves the last identity to the start and then back to the end.
 
 ```js
-browser.contextualIdentities.move("id3", 0);
+let identities = await browser.contextualIdentities.query({});
+let firstId = identities[0].cookieStoreId;
+
+// Moves first identity to the end.
+await browser.contextualIdentities.move(firstId, -1);
+
+// Move identity to the start again.
+await browser.contextualIdentities.move(firstId, 0);
 ```
 
-This moves `id3` to the first position in the list, resulting in the list `[id3, id0, id1, id2]`.`
+Another way of moving the first identity to the end is by moving all other identities to the start.
 
 ```js
-browser.contextualIdentities.move("id0", -1);
+let identities = await browser.contextualIdentities.query({});
+let ids = identities.map((identity) => identity.cookieStoreId);
+// Create an array without the first item:
+let otherIds = ids.slice(1);
+
+// Move other identities to the start,
+// effectively putting the first identity at the end.
+await browser.contextualIdentities.move(otherIds, 0);
 ```
 
-This moves `id0` to the last position in the list, resulting in the list `[id1, id2, id3, id0]`.
+This example moves the "Personal" identity to before "Work". The example assumes containers with these names to exist. This may not be the case in customized or localized (non-English) Firefox instances.
 
 ```js
-browser.contextualIdentities.move("id0, id3", 1);
+let identities = await browser.contextualIdentities.query({});
+
+// Find the cookieStoreId of the container with the name "Personal".
+let personalId = identities.find((ci) => ci.name === "Personal")?.cookieStoreId;
+if (!personalId) {
+  throw new Error("Personal container not found");
+}
+
+// Find the index of the container with the name "Work".
+let workIndex = identities.findIndex((identity) => identity.name === "Work");
+if (workIndex === -1) {
+  throw new Error("Work container not found!");
+}
+await browser.contextualIdentities.move(personalId, workIndex);
 ```
-
-This moves `id0` to the second position in the list and `id3` to the third position, resulting in the list `[id1, id0, id3, id2]`.
-
-```js
-browser.contextualIdentities.move("foobar", 2);
-```
-
-This is an attempt to move an invalid contextual identity and is therefore rejected.
-
-```js
-browser.contextualIdentities.move("id0", -2);
-```
-
-This is an attempt to move a contextual identity to an invalid position and is therefore rejected.
 
 {{WebExtExamples}}
 
