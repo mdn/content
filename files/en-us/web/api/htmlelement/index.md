@@ -76,7 +76,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 
 ## Instance methods
 
-_Also, inherits methods from its parent, {{DOMxRef("Element")}}._
+_Also inherits methods from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
