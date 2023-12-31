@@ -15,7 +15,7 @@ This allows UIs to differentiate timeout errors, which typically require user no
 
 The timeout is based on active rather than elapsed time, and will effectively be paused if the code is running in a suspended worker, or while the document is in a back-forward cache ("[bfcache](https://web.dev/articles/bfcache)").
 
-To combine multiple signals, you can use {{domxref("AbortSignal.any()")}}, for example, to directly abort a download using either a timeout signal or by calling {{domxref("AbortController.abort()")}}.
+To combine multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}, for example, to directly abort a download using either a timeout signal or by calling {{domxref("AbortController.abort()")}}.
 
 ## Syntax
 
