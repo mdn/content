@@ -50,7 +50,7 @@ for (const rule of rules) {
 - `CSSRule.FONT_FEATURE_VALUES_RULE` (`14`)
   - : The rule is a {{domxref("CSSFontFeatureValuesRule")}}.
 
-The values `CSSRule.UNKNOWN_RULE` (`0`), `CSSRule.CHARSET_RULE` (`2`), `CSSRule.DOCUMENT_RULE` (`13`), `CSSRule.VIEWPORT_RULE` (`14`), and `CSSRule.REGION_STYLE_RULE` (`16`)  cannot be obtained anymore.
+The values `CSSRule.UNKNOWN_RULE` (`0`), `CSSRule.CHARSET_RULE` (`2`), `CSSRule.DOCUMENT_RULE` (`13`), `CSSRule.VIEWPORT_RULE` (`14`), and `CSSRule.REGION_STYLE_RULE` (`16`) cannot be obtained anymore.
 
 ## Examples
 
