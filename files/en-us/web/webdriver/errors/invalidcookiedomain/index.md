@@ -35,7 +35,7 @@ except exceptions.InvalidCookieDomainException as e:
 
 Output:
 
-```
+```plain
 InvalidCookieDomainException: https://example.org/
 ```
 
@@ -58,7 +58,7 @@ except exceptions.InvalidCookieDomainException as e:
 
 Output:
 
-```
+```plain
 InvalidCookieDomainException: Document is cookie-averse
 ```
 

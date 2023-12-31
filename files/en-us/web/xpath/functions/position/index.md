@@ -10,7 +10,7 @@ The `position` function returns a number equal to the context position from the 
 
 ### Syntax
 
-```
+```plain
 position()
 ```
 

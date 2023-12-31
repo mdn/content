@@ -16,7 +16,7 @@ The response body is a `text/xml` or `application/xml` HTTP entity with a `multi
 
 ## Status
 
-```
+```plain
 207 Multi-Status
 ```
 

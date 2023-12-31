@@ -67,17 +67,22 @@ browser-compat: path.to.feature.NameOfTheElement
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
+> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
+>
 > _Remember to remove this whole explanatory note before publishing_
 
 {{SeeCompatTable}}{{deprecated_header}}{{SVGRef}}
 
-The summary paragraph — start by naming the element and saying what it does. This should ideally be 1 or 2 short sentences.
+Begin the content on the page with an introductory paragraph — start by naming the element and saying what it does.
+This should ideally be one or two short sentences.
 
 ## Usage context
 
-{{svginfo}}
+`\{{svginfo}}`
 
-Note — for the correct information to appear here, you need to fill in an entry for the element in the \\{{svginfo}} macro, if it is not in there already.
+For the correct information to appear here, fill an entry for the element in the `\{{svginfo}}` macro if it is not in there already.
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Attributes
 
@@ -99,7 +104,7 @@ Note — for the correct information to appear here, you need to fill in an entr
 
 ## DOM Interface
 
-This element implements the {{domxref("NameOfSVGDOMElement")}} interface.
+This element implements the `\{{domxref("NameOfSVGDOMElement")}}` interface.
 
 ## Examples
 
@@ -141,11 +146,15 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 
 ## Specifications
 
-{{Specifications}}
+`\{{Specifications}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Browser compatibility
 
-{{Compat}}
+`\{{Compat}}`
+
+_To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
@@ -153,3 +162,4 @@ Include links to reference pages and guides related to the current element. For 
 
 - link1
 - link2
+- external_link (year)

@@ -7,7 +7,7 @@ browser-compat: javascript.statements.class
 
 {{jsSidebar("Statements")}}
 
-The **`class`** declaration creates a {{glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
+The **`class`** declaration creates a {{Glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
 
 You can also define classes using the [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class).
 
@@ -29,7 +29,7 @@ class name extends otherName {
 The class body of a class declaration is executed in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The `class` declaration is very similar to {{jsxref("Statements/let", "let")}}:
 
 - `class` declarations are scoped to blocks as well as functions.
-- `class` declarations can only be accessed after the line of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `class` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting) (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
+- `class` declarations can only be accessed after the place of declaration is reached (see [temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)). For this reason, `class` declarations are commonly regarded as [non-hoisted](/en-US/docs/Glossary/Hoisting) (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 - `class` declarations do not create properties on {{jsxref("globalThis")}} when declared at the top level of a script (unlike [function declarations](/en-US/docs/Web/JavaScript/Reference/Statements/function)).
 - `class` declarations cannot be [redeclared](/en-US/docs/Web/JavaScript/Reference/Statements/let#redeclarations) by any other declaration in the same scope.
 

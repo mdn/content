@@ -449,7 +449,7 @@ container.addEventListener("click", handleClick);
 
 You'll see that the parent fires a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a DIV element
 ```
 
@@ -488,7 +488,7 @@ button.addEventListener("click", handleClick);
 
 You'll see that all three elements fire a click event when the user clicks the button:
 
-```
+```plain
 You clicked on a BUTTON element
 You clicked on a DIV element
 You clicked on a BODY element
@@ -679,7 +679,7 @@ button.addEventListener("click", handleClick);
 
 In this case, the order of messages is reversed: the `<body>` event handler fires first, followed by the `<div>` event handler, followed by the `<button>` event handler:
 
-```
+```plain
 You clicked on a BODY element
 You clicked on a DIV element
 You clicked on a BUTTON element
@@ -765,7 +765,7 @@ The [Node.js event model](https://nodejs.org/api/events.html) relies on listener
 The [HTTP connect event docs](https://nodejs.org/api/http.html#event-connect) provide a good example.
 
 You can also use JavaScript to build cross-browser add-ons — browser functionality enhancements — using a technology called [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions).
-The event model is similar to the web events model, but a bit different — event listeners' properties are camel-cased (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
+The event model is similar to the web events model, but a bit different — event listeners' properties are written in {{Glossary("camel_case", "camel case")}} (such as `onMessage` rather than `onmessage`), and need to be combined with the `addListener` function.
 See the [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) page for an example.
 
 You don't need to understand anything about other such environments at this stage in your learning; we just wanted to make it clear that events can differ in different programming environments.
@@ -782,7 +782,7 @@ As mentioned, events are not really part of the core JavaScript — they are def
 Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
 We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](https://discourse.mozilla.org/c/mdn/learn/250) to ask for help.
+> **Note:** If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 

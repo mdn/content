@@ -211,5 +211,5 @@ obj[Object(sym)]; // still 1
 
 - [Polyfill of `Symbol` in `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
-- ["ES6 In Depth: Symbols" on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
+- [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) on hacks.mozilla.org (2015)

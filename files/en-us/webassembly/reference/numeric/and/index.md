@@ -1,6 +1,7 @@
 ---
 title: AND
 slug: WebAssembly/Reference/Numeric/AND
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

@@ -76,7 +76,7 @@ Take the following HTML code:
 
 In the DOM, the node corresponding to our `<p>` element is a parent. Its children are a text node and the three nodes corresponding to our `<span>` elements. The `SPAN` nodes are also parents, with text nodes as their children:
 
-```
+```plain
 P
 ├─ "Let's use:"
 ├─ SPAN

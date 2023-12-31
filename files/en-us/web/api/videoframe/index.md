@@ -69,7 +69,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Examples
 
-In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://web.dev/webcodecs/).
+In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
 
 ```js
 let frame_counter = 0;
@@ -106,5 +106,5 @@ while (true) {
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)

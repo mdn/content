@@ -46,7 +46,7 @@ Escaped values provided to the `regexp()` function must additionally be escaped 
 
 ## Formal syntax
 
-```
+```plain
 @document [ <url>                    |
             url-prefix(<string>)     |
             domain(<string>)         |

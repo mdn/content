@@ -1,5 +1,5 @@
 ---
-title: "document: write() method"
+title: "Document: write() method"
 short-title: write()
 slug: Web/API/Document/write
 page-type: web-api-instance-method

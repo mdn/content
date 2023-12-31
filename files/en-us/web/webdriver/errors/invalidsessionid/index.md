@@ -30,7 +30,7 @@ except exceptions.InvalidSessionIdException as e:
 
 Output:
 
-```
+```plain
 Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
 No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 ```
@@ -57,7 +57,7 @@ except exceptions.InvalidSessionIdException as e:
 
 Output:
 
-```
+```plain
 Current session is 46197c16-8373-469b-bc56-4c4d9e4132b4
 No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 ```

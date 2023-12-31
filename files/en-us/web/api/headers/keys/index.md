@@ -44,7 +44,7 @@ for (const key of myHeaders.keys()) {
 
 The result is:
 
-```
+```plain
 content-type
 vary
 ```

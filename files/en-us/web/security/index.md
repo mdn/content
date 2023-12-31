@@ -10,7 +10,7 @@ Sensitive information needs to be protected, and that is the focus of web securi
 
 - Put companies at a competitive disadvantage by sharing their information with competitors.
 - Disable or hijack their services, again causing serious problems with their operation.
-- Put their customer's [privacy](/en-US/docs/Web/Privacy) at risk, making them vulnerable to profiling, targetting, loss of data, identity theft, or even financial loss.
+- Put their customer's [privacy](/en-US/docs/Web/Privacy) at risk, making them vulnerable to profiling, targeting, loss of data, identity theft, or even financial loss.
 
 Modern browsers already have several features to protect users' security on the web, but developers also need to employ best practices and code carefully to ensure that their websites are secure. Even simple bugs in your code can result in vulnerabilities that bad people can exploit to steal data and gain control over services for which they don't have authorization.
 
@@ -92,7 +92,7 @@ You should prepare for the removal of cross-site cookies by limiting the amount 
 For example:
 
 - Use an alternative client-side storage mechanism such as the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) to persist data. Web storage does have the downside that the data is stored per-origin, so it can't be shared. Note that web storage has two variants — `sessionStorage` and `localStorage`. We would recommend using `sessionStorage` for extra security, as data only persists for the lifetime of the window or tab it exists in. `localStorage` data persists even after the window or tab is closed and reopened. This means that there is a higher chance of it falling into the wrong hands, for example on a shared workstation.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way or block them altogether. These technologies currently have limited browser support.
+- Use a technology such as the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way.
 - Use a server-side solution for data persistence.
 
 See our [privacy guide](/en-US/docs/Web/Privacy) and particularly [Cut down on tracking cookies](/en-US/docs/Web/Privacy#cut_down_on_tracking_cookies) for more context around this.
@@ -115,7 +115,7 @@ Here are some other tips for providing secure logins:
 
 ## Don't include sensitive data in URL query strings
 
-As a general rule you shouldn't [include sensitive data in URL query strings](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url): if a third party intercepts the URL (for example via the {{httpheader("Referer")}} HTTP header), they could steal that information. Even more serious is that these URLs can indexed by public web crawlers, HTTP proxies, and archiving tools such as the [internet archive](https://web.archive.org/), meaning that your sensitive data can be persisted on publicly accessible resources.
+As a general rule you shouldn't [include sensitive data in URL query strings](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url): if a third party intercepts the URL (for example via the {{httpheader("Referer")}} HTTP header), they could steal that information. Even more serious is that these URLs can be indexed by public web crawlers, HTTP proxies, and archiving tools such as the [internet archive](https://web.archive.org/), meaning that your sensitive data can persist on publicly accessible resources.
 
 Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
 

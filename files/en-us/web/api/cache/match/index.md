@@ -22,7 +22,7 @@ match(request, options)
 
 - `request`
   - : The {{domxref("Request")}} for which you are attempting to find responses in the
-    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL.
+    {{domxref("Cache")}}. This can be a {{domxref("Request")}} object or a URL string.
 - `options` {{optional_inline}}
 
   - : An object that sets options for the `match` operation.

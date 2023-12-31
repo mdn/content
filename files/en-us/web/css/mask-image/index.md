@@ -68,4 +68,4 @@ mask-image: unset;
 ## See also
 
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
-- [Apply effects to images with CSS's mask-image property](https://web.dev/css-masking/)
+- [Apply effects to images with CSS's mask-image property](https://web.dev/articles/css-masking)

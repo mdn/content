@@ -84,7 +84,7 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal syntax
 
-```
+```plain
 -webkit-mask-box-image: <mask-image-source> [<mask-image-offset>{4} <mask-border-repeat>{1,2} ]
 
 Where:

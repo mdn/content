@@ -37,6 +37,8 @@ Functional notation: `hsl(H S L[ / A])`
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
+> **Note:** This functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
+
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
@@ -154,5 +156,7 @@ div.hsla {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: the data type that represents any color
-- [HSL Color Picker](https://hslpicker.com/)
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
+- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou

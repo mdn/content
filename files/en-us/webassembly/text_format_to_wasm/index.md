@@ -1,6 +1,7 @@
 ---
 title: Converting WebAssembly text format to Wasm
 slug: WebAssembly/Text_format_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}

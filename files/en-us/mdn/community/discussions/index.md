@@ -8,12 +8,13 @@ page-type: mdn-community-guide
 
 On MDN Web Docs, we encourage our community to start and/or engage in discussions around topics related to the overall project. Discussions are categorized by different topic areas. We ask that you keep each discussion focused on the topic at hand instead of covering multiple topics in one discussion.
 
-_NOTE:_ `mdn-community/discussions` is not the place to report problems. For any problems you encounter on MDN Web Docs, it is best to raise issues against the [relevant project](https://github.com/mdn/). If you're ever in doubt about whether to open an issue or a discussion, consider the following guidelines:
+**Note:** `mdn-community/discussions` is not the place to report problems.
+If you see something wrong on MDN Web Docs, it's best to open a GitHub issue in the [relevant MDN GitHub repository](https://github.com/mdn/).
+If you're not sure whether to open an issue or start discussion, consider the following guidelines:
 
 - Issues are for reporting a bug or a work item with clearly defined and actionable tasks and outcomes.
-- Discussions are the right place if the issue needs a discussion to agree upon a course of action or define an actionable piece of work.
-
-Check out the definition of each discussion category below so that you can start your discussion in the proper place.
+- Discussions are the right place if an issue needs a discussion to agree upon a course of action or define an actionable piece of work.
+  heck out the subject of each discussion category below so that you can start your discussion in the proper place.
 
 <table>
   <thead>
@@ -50,7 +51,7 @@ Check out the definition of each discussion category below so that you can start
         <a href="https://github.com/mdn/browser-compat-data"
           >browser-compat-data</a
         >
-        project.
+        project which documents web platform compatibility data for browsers.
       </td>
     </tr>
     <tr>
@@ -64,11 +65,9 @@ Check out the definition of each discussion category below so that you can start
       <td>
         Discussions related to the
         <a href="https://github.com/mdn/content">content</a> on MDN Web Docs.
-        <em>Note:</em> This is not the place to ask for help with code examples.
-        For code-related help, please
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >join our community on Discourse</a
-        >.
+        <em>Note:</em> This is not the place to ask for coding assistance.
+        If you're stuck, a good place to start is our
+        <a href="/en-US/docs/Learn">Learn Web Development</a> area.
       </td>
     </tr>
     <tr>
@@ -99,10 +98,8 @@ Check out the definition of each discussion category below so that you can start
       <td>
         Discussions related to all code examples on MDN Web Docs. This includes
         interactive examples, live samples and static code examples. For help
-        with general coding challenges on MDN Web Docs, please
-        <a href="https://discourse.mozilla.org/c/mdn/learn/250"
-          >join our community on Discourse</a
-        >.
+        with general coding challenges on MDN Web Docs, see our
+        <a href="/en-US/docs/MDN/Community/Communication_channels">Communication channels</a>.
       </td>
     </tr>
     <tr>
@@ -189,5 +186,6 @@ Check out the definition of each discussion category below so that you can start
         keep your eyes peeled. 👀
       </td>
     </tr>
+
   </tbody>
 </table>

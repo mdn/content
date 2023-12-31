@@ -1,6 +1,7 @@
 ---
 title: Compiling a New C/C++ Module to WebAssembly
 slug: WebAssembly/C_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}

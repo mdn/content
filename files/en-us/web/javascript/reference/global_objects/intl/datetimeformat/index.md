@@ -33,9 +33,9 @@ These properties are defined on `Intl.DateTimeFormat.prototype` and shared by al
 ## Instance methods
 
 - {{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}
-  - : Getter function that formats a date according to the locale and formatting options of this {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} object.
+  - : Getter function that formats a date according to the locale and formatting options of this `DateTimeFormat` object.
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}
-  - : This method receives two [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and formats the date range in the most concise way based on the locale and options provided when instantiating {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}}.
+  - : This method receives two [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and formats the date range in the most concise way based on the locale and options provided when instantiating `DateTimeFormat`.
 - {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
   - : This method receives two [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and returns an Array of objects containing the locale-specific tokens representing each part of the formatted date range.
 - {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
@@ -184,5 +184,5 @@ console.log(usedOptions.timeZone);
 
 ## See also
 
+- [Polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)
 - {{jsxref("Intl")}}
-- [A polyfill of `Intl.DateTimeFormat` in FormatJS](https://formatjs.io/docs/polyfills/intl-datetimeformat/)

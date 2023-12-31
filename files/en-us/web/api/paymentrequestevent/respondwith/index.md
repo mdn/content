@@ -60,7 +60,7 @@ self.addEventListener('paymentrequest', async e => {
 …
 ```
 
-See [Open the payment handler window to display the web-based payment app frontend](https://web.dev/orchestrating-payment-transactions/#open-payment-handler-window) for more details about how this would be used.
+See [Open the payment handler window to display the web-based payment app frontend](https://web.dev/articles/orchestrating-payment-transactions#open-payment-handler-window) for more details about how this would be used.
 
 ## Specifications
 
@@ -72,8 +72,8 @@ See [Open the payment handler window to display the web-based payment app fronte
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -29,8 +29,8 @@ A string which is one of the following:
 
 Consider this {{Glossary("SDP")}} attribute line (a-line):
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 This is an ICE candidate a-line, whose {{domxref("RTCIceCandidate.foundation",

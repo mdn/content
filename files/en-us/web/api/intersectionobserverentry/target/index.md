@@ -28,7 +28,7 @@ In this simple example, each targeted element's {{cssxref("opacity")}} is set to
 ```js
 function intersectionCallback(entries) {
   entries.forEach((entry) => {
-    entry.target.opacity = entry.intersectionRatio;
+    entry.target.style.opacity = entry.intersectionRatio;
   });
 }
 ```

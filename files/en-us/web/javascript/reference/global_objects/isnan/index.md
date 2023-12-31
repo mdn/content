@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.isNaN
 
 {{jsSidebar("Objects")}}
 
-The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}} when converted to a number. Because coercion inside the `isNaN()` function can be [surprising](#description), you may alternatively want to use {{jsxref("Number.isNaN()")}}.
+The **`isNaN()`** function determines whether a value is {{jsxref("NaN")}}, first converting the value to a number if necessary. Because coercion inside the `isNaN()` function can be [surprising](#description), you may prefer to use {{jsxref("Number.isNaN()")}}.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
@@ -64,6 +64,11 @@ isNaN(" "); // false: a string with spaces is converted to 0 which is not NaN
 // Dates
 isNaN(new Date()); // false; Date objects can be converted to a number (timestamp)
 isNaN(new Date().toString()); // true; the string representation of a Date object cannot be parsed as a number
+
+// Arrays
+isNaN([]); // false; the primitive representation is "", which coverts to the number 0
+isNaN([1]); // false; the primitive representation is "1"
+isNaN([1, 2]); // true; the primitive representation is "1,2", which cannot be parsed as number
 ```
 
 ## Specifications

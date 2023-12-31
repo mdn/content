@@ -10,7 +10,7 @@ The `string` function converts the given argument to a string.
 
 ### Syntax
 
-```
+```plain
 string( [object] )
 ```
 

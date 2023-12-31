@@ -10,7 +10,7 @@ browser-compat: api.NodeIterator.pointerBeforeReferenceNode
 
 The **`NodeIterator.pointerBeforeReferenceNode`** read-only
 property returns a boolean flag that indicates whether the
-{{domxref("NodeFilter")}} is anchored before (if this value is `true`) or
+`NodeFilter` is anchored before (if this value is `true`) or
 after (if this value is `false`) the anchor node indicated by the
 {{domxref("NodeIterator.referenceNode")}} property.
 

@@ -53,6 +53,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `post`: The data from the form are included in the body of the HTTP request when sent to the server. Use when the form contains information that shouldn't be public, like login credentials.
     - `get`: The form data are appended to the form's `action` URL, with a `?` as a separator, and the resulting URL is sent to the server. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent), like search forms.
+    - `dialog`: This method is used to indicate that the button closes the [dialog](/en-US/docs/Web/HTML/Element/dialog) with which it is associated, and does not transmit the form data at all.
 
     If specified, this attribute overrides the [`method`](/en-US/docs/Web/HTML/Element/form#method) attribute of the button's form owner.
 

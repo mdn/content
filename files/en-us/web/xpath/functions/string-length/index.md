@@ -10,7 +10,7 @@ The `string-length` function returns a number equal to the number of characters 
 
 ### Syntax
 
-```
+```plain
 string-length( [string] )
 ```
 

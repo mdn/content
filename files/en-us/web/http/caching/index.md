@@ -34,8 +34,6 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Note that if the response has an `Authorization` header, it cannot be stored in the private cache (or a shared cache, unless `public` is specified).
-
 ### Shared cache
 
 The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into **proxy caches** and **managed caches**.
@@ -125,7 +123,7 @@ For the example response, the meaning of `max-age` is the following:
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is possible to tell the client the age of the response. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -519,7 +517,7 @@ So the HTML above makes it difficult to cache `bundle.js` and `build.css` with `
 
 Therefore, you can serve the JavaScript and CSS with URLs that include a changing part based on a version number or hash value. Some of the ways to do that are shown below.
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -549,7 +547,7 @@ With that design, both JavaScript and CSS resources can be cached for a long tim
 
 Some commonly-used cache-header values are shown below.
 
-```
+```plain
 36 cache-control max-age=0
 37 cache-control max-age=604800
 38 cache-control max-age=2592000

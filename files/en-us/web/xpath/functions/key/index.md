@@ -10,7 +10,7 @@ The `key` function returns a node-set of nodes that have the given value for the
 
 ### Syntax
 
-```
+```plain
 key( keyname, value )
 ```
 

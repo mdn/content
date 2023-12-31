@@ -1,6 +1,7 @@
 ---
 title: Greater than
 slug: WebAssembly/Reference/Numeric/Greater_than
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

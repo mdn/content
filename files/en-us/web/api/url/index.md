@@ -49,12 +49,12 @@ If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor
 
 ## Static methods
 
-- [`canParse()`](/en-US/docs/Web/API/URL/canParse_static)
+- {{domxref("URL.canParse_static", "canParse()")}}
   - : Returns a boolean indicating whether or not a URL defined from a URL string and optional base URL string is parsable and valid.
-- {{domxref("URL.createObjectURL", "createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
   - : Returns a string containing a unique blob URL, that is a URL with `blob:` as its scheme, followed by an opaque string uniquely identifying the object in the browser.
-- {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
-  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
+  - : Revokes an object URL previously created using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Instance methods
 
@@ -74,7 +74,7 @@ console.log(url.pathname); // "/cats"
 ```
 
 The constructor will raise an exception if the URL cannot be parsed to a valid URL.
-You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the [`canParse()`](/en-US/docs/Web/API/URL/canParse_static) static method to first check the URL is valid:
+You can either call the above code in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block or use the {{domxref("URL.canParse_static", "canParse()")}} static method to first check the URL is valid:
 
 ```js
 if (URL.canParse("../cats", "http://www.example.com/dogs")) {

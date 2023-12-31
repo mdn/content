@@ -44,7 +44,7 @@ const person = {};
 
 Now open your browser's [JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console), enter `person` into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>. You should get a result similar to one of the below lines:
 
-```
+```plain
 [object Object]
 Object { }
 { }
@@ -176,7 +176,7 @@ person.age;
 person.name.first;
 ```
 
-You can instead use brackets:
+You can instead use square brackets:
 
 ```js
 person["age"];
@@ -187,7 +187,7 @@ This looks very similar to how you access the items in an array, and it is basic
 It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
 
 Dot notation is generally preferred over bracket notation because it is more succinct and easier to read.
-However there are some cases where you have to use brackets.
+However there are some cases where you have to use square brackets.
 For example, if an object property name is held in a variable, then you can't use dot notation to access the value, but you can access the value using bracket notation.
 
 In the example below, the `logProperty()` function can use `person[propertyName]` to retrieve the value of the property named in `propertyName`.

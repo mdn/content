@@ -12,7 +12,7 @@ To compute the minimum value of the node-set, the node set is sorted into ascend
 
 ## Syntax
 
-```
+```plain
 math:min(nodeSet)
 ```
 

@@ -119,7 +119,7 @@ We've included a custom property in the selector block defining a boxColor. Cust
 
 ## See also
 
-- {{domxref('PaintWorklet')}}
+- {{domxref('PaintWorkletGlobalScope')}}
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - {{cssxref("&lt;image&gt;")}}

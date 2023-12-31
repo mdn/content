@@ -50,7 +50,9 @@ container: unset;
 
 {{CSSSyntax}}
 
-## Example
+## Examples
+
+### Establishing inline size containment
 
 Given the following HTML example which is a card component with an image, a title, and some text:
 
@@ -87,8 +89,6 @@ You can then target that container by name using the {{cssxref("@container")}} a
   /* <stylesheet> */
 }
 ```
-
-For more information on container queries, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_container_queries) page.
 
 ## Specifications
 

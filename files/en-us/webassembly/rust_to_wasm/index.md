@@ -1,6 +1,7 @@
 ---
 title: Compiling from Rust to WebAssembly
 slug: WebAssembly/Rust_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -41,8 +42,7 @@ cargo install wasm-pack
 Enough setup; let's create a new package in Rust. Navigate to wherever you keep your personal projects, and type this:
 
 ```bash
-$ cargo new --lib hello-wasm
-     Created library `hello-wasm` project
+cargo new --lib hello-wasm
 ```
 
 This creates a new library in a subdirectory named `hello-wasm` with everything you need to get going:
@@ -203,7 +203,7 @@ If you check out the generated WebAssembly code size, it may be a few hundred ki
 Now that we've got a compiled Wasm module, let's run it in the browser.
 Let's start by creating a file named `index.html` in the root of the project, so we end up with the following project structure:
 
-```
+```plain
 ├── Cargo.lock
 ├── Cargo.toml
 ├── index.html
@@ -328,7 +328,7 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 });
 ```
 
-This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
+This imports the new module from the `node_modules` folder. This isn't considered a best practice, but this is a demo, so it's OK for now. Once it's loaded, it calls the `greet` function from that module, passing `"WebAssembly with npm"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
 Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
@@ -347,7 +347,7 @@ Finally, we need to add a HTML file to load the JavaScript. Create an `index.htm
 
 The `hello-wasm/site` directory should look like this:
 
-```
+```plain
 ├── index.html
 ├── index.js
 ├── node_modules

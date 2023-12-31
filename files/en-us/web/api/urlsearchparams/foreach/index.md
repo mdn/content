@@ -12,7 +12,7 @@ The **`forEach()`** method of the
 {{domxref("URLSearchParams")}} interface allows iteration through all values contained
 in this object via a callback function.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -55,7 +55,7 @@ searchParams.forEach((value, key) => {
 
 The result is:
 
-```
+```plain
 value1 key1
 value2 key2
 ```

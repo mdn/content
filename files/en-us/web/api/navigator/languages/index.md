@@ -26,13 +26,25 @@ the extra `qvalues` (quality values) field (e.g. `en-US;q=0.8`).
 
 ## Value
 
-A string.
+An array of strings.
 
 ## Examples
 
+### Listing the contents of navigator.language and navigator.languages
+
 ```js
-navigator.language; //"en-US"
-navigator.languages; //["en-US", "zh-CN", "ja-JP"]
+navigator.language; // "en-US"
+navigator.languages; // ["en-US", "zh-CN", "ja-JP"]
+```
+
+### Using Intl constructors to do language-specific formatting, with fallback
+
+The array of language identifiers contained in `navigator.languages` can be passed directly to the {{jsxref("Intl")}} constructors to implement preference-based fallback selection of locales, where the first entry in the list that matches a locale supported by `Intl` is used:
+
+```js
+const date = new Date("2012-05-24");
+
+const formattedDate = new Intl.DateTimeFormat(navigator.languages).format(date);
 ```
 
 ## Specifications
@@ -48,3 +60,4 @@ navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 - {{domxref("navigator.language")}}
 - {{domxref("navigator")}}
 - {{domxref("Window.languagechange_event", "languagechange")}} event
+- {{jsxref("Intl")}}

@@ -67,7 +67,7 @@ If {{cssxref("transform-function/perspective", "perspective()")}} is one of mult
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform-order).
+    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
 - `none`
   - : Specifies that no transform should be applied.
 

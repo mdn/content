@@ -14,7 +14,7 @@ allowed in for-in loops in strict mode. In addition, lexical declarations with i
 
 ## Message
 
-```
+```plain
 SyntaxError: for-in loop variable declaration may not have an initializer. (V8-based)
 SyntaxError: for-in loop head declarations may not have initializers (Firefox)
 SyntaxError: a lexical declaration in the head of a for-in loop can't have an initializer (Firefox)
@@ -36,7 +36,7 @@ In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), however, a `
 
 This example throws a `SyntaxError`:
 
-```js example-bad
+```js-nolint example-bad
 const obj = { a: 1, b: 2, c: 3 };
 
 for (const i = 0 in obj) {
@@ -79,6 +79,4 @@ for (let i = 2; i < arr.length; i++) {
 
 - [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
 - [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-  – also disallows an initializer in both strict and non-strict mode.
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) –
-  preferred for array iteration, allows to define an initializer.
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.presentationStyle
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}}
 
 The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
@@ -46,4 +46,4 @@ async function getClipboardContents() {
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

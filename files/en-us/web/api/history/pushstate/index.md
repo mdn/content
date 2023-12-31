@@ -12,8 +12,6 @@ In an [HTML](/en-US/docs/Web/HTML) document, the
 **`history.pushState()`** method adds an entry to the browser's
 session history stack.
 
-This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
-
 ## Syntax
 
 ```js-nolint
@@ -31,14 +29,9 @@ pushState(state, unused, url)
     the `state` property of the event contains a copy of the history entry's
     `state` object.
 
-    The `state` object can be anything that can be serialized. Because
-    Firefox saves `state` objects to the user's disk so they can be restored
-    after the user restarts the browser, we impose a size limit of 16 MiB on the
-    serialized representation of a `state` object. If you pass a
-    `state` object whose serialized representation is larger than this
-    to `pushState()`, the method will throw an exception. If you need more
-    space than this, you're encouraged to use {{domxref("Window.sessionStorage",
-    "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+    The `state` object can be anything that can be serialized.
+
+    > **Note:** Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
 
