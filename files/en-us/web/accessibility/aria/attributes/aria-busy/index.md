@@ -38,7 +38,7 @@ If changes to a rendered widget would create a state where the widget is missing
 - true
   - : The element is being updated.
 
-## API
+## Associated interfaces
 
 - {{domxref("Element.ariaBusy")}}
   - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of each element's interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
