@@ -14,7 +14,7 @@ It reflects the value of the [`spellcheck`](/en-US/docs/Web/HTML/Global_attribut
 
 ## Value
 
-A boolean value that is `true` if spell and grammar of the text content in the element may be be checked, or may inherit from its parent element, `false` otherwise.
+A boolean value that is `true` if spell and grammar of the text content in the element may be be checked, `false` otherwise.
 
 ## Examples
 
