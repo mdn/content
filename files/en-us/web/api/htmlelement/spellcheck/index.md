@@ -8,28 +8,28 @@ browser-compat: api.HTMLElement.spellcheck
 
 {{APIRef("HTML DOM")}}
 
-The **`spellcheck`** property of the {{domxref("HTMLElement")}} interface gets and sets a {{jsxref("Boolean")}} primitive indicating if spell and grammar of the element will be checked or will be act like its parent elements'.
+The **`spellcheck`** property of the {{domxref("HTMLElement")}} interface represents a boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It can be presented on all HTML elements, though it doesn't have an effect on all of them.
 
 It reflects the value of the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) HTML global attribute.
 
 ## Value
 
-A {{jsxref("Boolean")}} primitive that is `true` if spell and grammar of the element will be checked or will be act like its parent elements', `false` otherwise.
+A boolean value that is `true` if spell and grammar of the text content in the element may be be checked, or may inherit from its parent element, `false` otherwise.
 
 ## Examples
 
-The following example shows how to enable or disable spell and grammar check of the element via script:
+The following example shows how to control the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint via script:
 
 ```js
 const spellcheckElement = document.querySelector(".spellcheck-element");
 const noSpellcheckElement = document.querySelector(".no-spellcheck-element");
 
-// enable spell and grammar check of the element
+// the spell and grammar of text content in the element may be checked
 if (!spellcheckElement.spellcheck) {
   spellcheckElement.spellcheck = true;
 }
 
-// disable spell and grammar check of the element
+// the spell and grammar of text content in the element may not be checked
 if (noSpellcheckElement.spellcheck) {
   noSpellcheckElement.spellcheck = false;
 }
