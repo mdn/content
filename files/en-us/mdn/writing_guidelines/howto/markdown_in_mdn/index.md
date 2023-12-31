@@ -16,7 +16,7 @@ The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github
 
 The GFM specification defines two basic types of links:
 
-- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text
+- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text.
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
 On MDN we allow only inline links.
