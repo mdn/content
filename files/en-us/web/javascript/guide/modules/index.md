@@ -201,7 +201,7 @@ This allows remapping of whole classes of URLs.
 
 ```js
 // Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
+import { name as squareNameFour } from "https://example.com/shapes/modules/shapes/square.js";
 ```
 
 It is possible for multiple keys in an import map to be valid matches for a module specifier.
