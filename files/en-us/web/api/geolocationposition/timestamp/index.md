@@ -12,7 +12,7 @@ The **`timestamp`** read-only property of the {{domxref("GeolocationPosition")}}
 
 ## Value
 
-A number containing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
+A number containing a timestamp, given as {{Glossary("Unix time")}} in milliseconds.
 
 ## Specifications
 
