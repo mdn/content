@@ -8,7 +8,7 @@ browser-compat: api.GeolocationPosition.timestamp
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationPosition.timestamp`** read-only property represents the date and time that the position was acquired by the device.
+The **`timestamp`** read-only property of the {{domxref("GeolocationPosition")}} interface represents the date and time that the position was acquired by the device.
 
 ## Value
 
