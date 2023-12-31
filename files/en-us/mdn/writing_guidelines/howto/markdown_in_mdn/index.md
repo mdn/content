@@ -477,7 +477,7 @@ The main limitations of GFM table syntax are:
 - GFM tables may not have a header column.
 - GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
 - GFM tables cannot have classes assigned to them.
-- GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
+- GFM doesn't support any table elements beyond `<table>`, `<tr>`, `<th>`, and `<td>`.
 - GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
 If an author needs to use any of the unsupported features, they should write the table in HTML.
