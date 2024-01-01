@@ -13,7 +13,7 @@ Another essential concept in coding is **functions**, which allow you to store a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic understanding of HTML, CSS, and 
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.

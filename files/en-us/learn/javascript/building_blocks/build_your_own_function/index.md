@@ -13,7 +13,7 @@ With most of the essential theory dealt with in the previous article, this artic
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        A basic understanding of HTML, CSS, and 
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >. Also, <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
