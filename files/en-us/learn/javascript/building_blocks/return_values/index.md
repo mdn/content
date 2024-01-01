@@ -14,7 +14,7 @@ There's one last essential concept about functions for us to discuss — return 
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Basic computer literacy, a basic understanding of HTML and CSS,
+          A basic understanding of HTML and CSS,
           <a href="/en-US/docs/Learn/JavaScript/First_steps"
             >JavaScript first steps</a
           >,

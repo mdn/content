@@ -1,4 +1,4 @@
-name: Create Markdownlint auto-fix PR
+name: Create content auto-fix PR
 
 on:
   schedule:
@@ -36,9 +36,9 @@ jobs:
         if: success()
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: auto-fix Markdownlint issues"
+          commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
-          title: "Markdownlint auto-cleanup"
+          title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
@@ -48,9 +48,9 @@ jobs:
         if: failure()
         uses: peter-evans/create-pull-request@v5
         with:
-          commit-message: "chore: auto-fix Markdownlint issues"
+          commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
-          title: "Markdownlint auto-cleanup"
+          title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.

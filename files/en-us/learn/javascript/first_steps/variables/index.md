@@ -13,7 +13,7 @@ After reading the last couple of articles you should now know what JavaScript is
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
