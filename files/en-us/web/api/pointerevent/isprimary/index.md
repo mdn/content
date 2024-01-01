@@ -1,15 +1,11 @@
 ---
-title: PointerEvent.isPrimary
+title: "PointerEvent: isPrimary property"
+short-title: isPrimary
 slug: Web/API/PointerEvent/isPrimary
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.PointerEvent.isPrimary
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`isPrimary`** read-only property of the
@@ -26,9 +22,9 @@ can achieve that by ignoring non-primary pointers.
 
 A pointer is considered primary if the pointer represents a mouse device. A pointer
 representing pen input is considered the primary pen input if its
-{{event("pointerdown")}} event was dispatched when no other active pointers representing
+{{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers representing
 pen input existed. A pointer representing touch input is considered the primary touch
-input if its {{event("pointerdown")}} event was dispatched when no other active pointers
+input if its {{domxref("Element/pointerdown_event", "pointerdown")}} event was dispatched when no other active pointers
 representing touch input existed.
 
 When two or more pointer device types are being used concurrently, multiple pointers
@@ -39,30 +35,27 @@ pointers, these pointers will all produce _compatibility mouse events_ (see
 {{domxref("Pointer_events")}} for more information about pointer, mouse and touch
 interaction).
 
-## Syntax
+## Value
 
-```js
-var isPrimary = pointerEvent.isPrimary;
-```
+A boolean, `true` if the pointer for this event is the primary pointer and returns `false` otherwise.
 
-### Return value
-
-- `isPrimary`
-  - : Returns `true` if the pointer for this event is the primary pointer and
-    returns `false` otherwise.
-
-## Example
+## Examples
 
 This example illustrates using the value of `isPrimary` to call the
 appropriate processing function.
 
 ```js
-target.addEventListener('pointerdown', function(event) {
-  if (event.isPrimary)
-    process_primary_pointer(event);
-  else
-    process_secondary_pointer(event);
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.isPrimary) {
+      process_primary_pointer(event);
+    } else {
+      process_secondary_pointer(event);
+    }
+  },
+  false,
+);
 ```
 
 ## Specifications

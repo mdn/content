@@ -1,31 +1,28 @@
 ---
-title: CountQueuingStrategy()
+title: "CountQueuingStrategy: CountQueuingStrategy() constructor"
+short-title: CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
-tags:
-  - API
-  - Constructor
-  - CountQueuingStrategy
-  - Experimental
-  - Reference
-  - Streams
+page-type: web-api-constructor
 browser-compat: api.CountQueuingStrategy.CountQueuingStrategy
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`CountQueuingStrategy()`** constructor
 creates and returns a `CountQueuingStrategy` object instance.
 
 ## Syntax
 
-```js
-var countQueuingStrategy = new CountQueuingStrategy({highWaterMark});
+```js-nolint
+new CountQueuingStrategy(highWaterMark)
 ```
 
 ### Parameters
 
-- {highWaterMark}
-  - : An object containing a `highWaterMark` property. This is a non-negative
-    integer defining the total number of chunks that can be contained in the internal
+An object with the following property:
+
+- `highWaterMark`
+  - : The total number of chunks that can be contained in the internal
     queue before backpressure is applied.
 
 ### Return value
@@ -41,20 +38,23 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
 ## Specifications
@@ -64,3 +64,7 @@ var size = queuingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CountQueuingStrategy")}}

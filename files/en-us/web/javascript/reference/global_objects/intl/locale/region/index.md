@@ -1,20 +1,13 @@
 ---
 title: Intl.Locale.prototype.region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Property
-  - Locale
-  - Localization
-  - Prototype
-  - Reference
+page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.region
 ---
+
 {{JSRef}}
 
-The **`Intl.Locale.prototype.region`** property is an accessor property that returns the region of the world (usually a country) associated with the locale.
+The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 
 ## Description
 
@@ -24,19 +17,19 @@ The region is an essential part of the locale identifier, as it places the local
 
 ### Setting the region in the locale identifier string argument
 
-The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Locale")}} constructor. The region is a mandatory part of a
+The region is the third part of a valid Unicode language identifier string, and can be set by adding it to the locale identifier string that is passed into the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The region is a mandatory part of a
 
 ```js
-let locale = new Intl.Locale("en-Latn-US");
+const locale = new Intl.Locale("en-Latn-US");
 console.log(locale.region); // Prints "US"
 ```
 
 ### Setting the region via the configuration object
 
-The {{jsxref("Intl/Locale/Locale", "Locale")}} constructor takes a configuration object, which can be used to set the region subtag and property.
+The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes a configuration object, which can be used to set the region subtag and property.
 
 ```js
-let locale = new Intl.Locale("fr-Latn", { region: "FR" });
+const locale = new Intl.Locale("fr-Latn", { region: "FR" });
 console.log(locale.region); // Prints "FR"
 ```
 
@@ -50,5 +43,5 @@ console.log(locale.region); // Prints "FR"
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [Unicode region chart](https://www.unicode.org/cldr/charts/latest/supplemental/territory_containment_un_m_49.html)
+- {{jsxref("Intl.Locale")}}
+- [Unicode region chart](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_containment_un_m_49.html)

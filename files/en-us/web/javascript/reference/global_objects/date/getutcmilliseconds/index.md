@@ -1,46 +1,41 @@
 ---
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMilliseconds
 ---
+
 {{JSRef}}
 
-The **`getUTCMilliseconds()`** method returns the milliseconds
-portion of the time object's value.
+The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 getUTCMilliseconds()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-An integer number, between 0 and 999, representing the milliseconds portion of the
-given date object.  This method is a companion to the other UTC based methods that give
-hour portion, minute portion, etc.; this method gives milliseconds portion.
+An integer, between 0 and 999, representing the milliseconds for the given date according to universal time. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
-Not to be confused with Unix epoch time.  To get total milliseconds since 1970/01/01,
-use the method ".getTime()".
+Not to be confused with the timestamp. To get the total milliseconds since the epoch, use the [`getTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) method.
 
 ## Examples
 
 ### Using getUTCMilliseconds()
 
-The following example assigns the milliseconds portion of the current time to the
-variable `milliseconds`.
+The following example assigns the milliseconds portion of the current time to the variable `milliseconds`.
 
 ```js
-var today = new Date();
-var milliseconds = today.getUTCMilliseconds();
+const today = new Date();
+const milliseconds = today.getUTCMilliseconds();
 ```
 
 ## Specifications

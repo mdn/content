@@ -1,24 +1,13 @@
 ---
-title: CSSStyleSheet.addRule()
+title: "CSSStyleSheet: addRule() method"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Style
-  - StyleSheet
-  - addRule
-  - legacy
-  - rules
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's
@@ -28,17 +17,17 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
-var result = cssStyleSheet.addRule(selector, styleBlock, index);
+```js-nolint
+addRule(selector, styleBlock, index)
 ```
 
 ### Parameters
 
 - `selector`
-  - : A {{domxref("DOMString")}} specifying the selector portion of the CSS rule. The
+  - : A string specifying the selector portion of the CSS rule. The
     default is the string `undefined`.
 - `styleBlock`
-  - : A {{domxref("DOMString")}} indicating the style block to apply to elements matching
+  - : A string indicating the style block to apply to elements matching
     the `selector`. The default is the string `undefined`.
 - `index` {{optional_inline}}
   - : An optional index into the stylesheet's {{domxref("CSSRuleList")}} at which to
@@ -50,7 +39,7 @@ var result = cssStyleSheet.addRule(selector, styleBlock, index);
 
 Always returns -1.
 
-Note that due to somewhat estoteric rules about where you can legally insert rules,
+Note that due to somewhat esoteric rules about where you can legally insert rules,
 it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule",
   "insertRule()")}} for more information.
 
@@ -83,5 +72,4 @@ cssStyleSheet.insertRule(`${selector} {${styles}}`, 0);
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

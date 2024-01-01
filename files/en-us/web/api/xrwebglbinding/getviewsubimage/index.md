@@ -1,22 +1,20 @@
 ---
-title: XRWebGLBinding.getViewSubImage()
+title: "XRWebGLBinding: getViewSubImage() method"
+short-title: getViewSubImage()
 slug: Web/API/XRWebGLBinding/getViewSubImage
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getViewSubImage
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getViewSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render for a view.
 
 ## Syntax
 
-```js
+```js-nolint
 getViewSubImage(layer, view)
 ```
 
@@ -34,7 +32,8 @@ A {{domxref("XRWebGLSubImage")}} object.
 ### Exceptions
 
 A {{jsxref("TypeError")}} is thrown,
-  - if `layer` is not in the [session's `layer` array](/en-US/docs/Web/API/XRSession/updateRenderState#setting_the_layers_array).
+
+- if `layer` is not in the [session's `layer` array](/en-US/docs/Web/API/XRSession/updateRenderState#setting_the_layers_array).
 
 ## Examples
 
@@ -55,13 +54,23 @@ function onXRFrame(time, xrFrame) {
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
 
-  for (let view in xrViewerPose.views) {
-    let subImage = xrGlBinding.getViewSubImage(layer, view);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-      gl.TEXTURE_2D, subImage.colorTexture, 0);
-    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT,
-      gl.TEXTURE_2D, subImage.depthStencilTexture, 0);
-    let viewport = subImage.viewport;
+  for (const view in xrViewerPose.views) {
+    const subImage = xrGlBinding.getViewSubImage(layer, view);
+    gl.framebufferTexture2D(
+      gl.FRAMEBUFFER,
+      gl.COLOR_ATTACHMENT0,
+      gl.TEXTURE_2D,
+      subImage.colorTexture,
+      0,
+    );
+    gl.framebufferTexture2D(
+      gl.FRAMEBUFFER,
+      gl.DEPTH_ATTACHMENT,
+      gl.TEXTURE_2D,
+      subImage.depthStencilTexture,
+      0,
+    );
+    const viewport = subImage.viewport;
     gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
     // Render from the viewpoint of xrView

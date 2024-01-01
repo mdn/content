@@ -1,21 +1,21 @@
 ---
-title: MediaStreamTrackProcessor.MediaStreamTrackProcessor()
+title: "MediaStreamTrackProcessor: MediaStreamTrackProcessor() constructor"
+short-title: MediaStreamTrackProcessor()
 slug: Web/API/MediaStreamTrackProcessor/MediaStreamTrackProcessor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MediaStreamTrackProcessor
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor.MediaStreamTrackProcessor
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`MediaStreamTrackProcessor()`** constructor creates a new {{domxref("MediaStreamTrackProcessor")}} object which consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
 ## Syntax
 
-```js
-new MediaStreamTrackProcessor(init);
+```js-nolint
+new MediaStreamTrackProcessor(options)
 ```
 
 ### Parameters
@@ -24,7 +24,7 @@ new MediaStreamTrackProcessor(init);
   - : An object with the following properties:
     - `track`
       - : A {{domxref("MediaStreamTrack")}}.
-    - `maxBufferSize`{{Optional_Inline}}
+    - `maxBufferSize` {{optional_inline}}
       - : An integer specifying the maximum number of media frames to be buffered.
 
 ## Examples
@@ -42,4 +42,3 @@ const trackProcessor = new MediaStreamTrackProcessor({ track: videoTrack });
 ## Browser compatibility
 
 {{Compat}}
-

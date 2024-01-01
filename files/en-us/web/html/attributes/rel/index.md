@@ -1,13 +1,11 @@
 ---
-title: 'HTML attribute: rel'
+title: "HTML attribute: rel"
 slug: Web/HTML/Attributes/rel
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Link
-  - form
-  - rel
+page-type: html-attribute
+browser-compat:
+  - html.elements.link.rel
+  - html.elements.a.rel
+  - html.elements.area.rel
 ---
 
 {{HTMLSidebar}}
@@ -18,261 +16,218 @@ The type of relationships is given by the value of the `rel` attribute, which, i
 
 The following table lists some of the most important existing keywords. Every keyword within a space-separated value should be unique within that value.
 
-| `rel` value                                                      | Description                                                                                                                                                                                                                                           | `{{htmlelement('link')}}` | `{{htmlelement('a')}}` and `{{htmlelement('area')}}` | `{{htmlelement('form')}}` |
-| ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------- | ------------------------- |
-| `{{anch("attr-alternate", "alternate")}}`                        | Alternate representations of the current document.                                                                                                                                                                                                    | Link                      | Link                                                 | Not allowed               |
-| `{{anch("attr-author", "author")}}`                              | Author of the current document or article.                                                                                                                                                                                                            | Link                      | Link                                                 | Not allowed               |
-| `{{anch("attr-bookmark", "bookmark")}}`                          | Permalink for the nearest ancestor section.                                                                                                                                                                                                           | Not allowed               | Link                                                 | Not allowed               |
-| `{{anch("attr-canonical", "canonical")}}`                        | Preferred URL for the current document.                                                                                                                                                                                                               | Link                      | Not allowed                                          | Not allowed               |
-| [`dns-prefetch`](/en-US/docs/Web/HTML/Link_types/dns-prefetch)   | Tells the browser to preemptively perform DNS resolution for the target resource's origin                                                                                                                                                             | External Resource         | Not allowed                                          | Not allowed               |
-| `{{anch("attr-external", "external")}}`                          | The referenced document is not part of the same site as the current document.                                                                                                                                                                         | Not allowed               | Annotation                                           | Annotation                |
-| `{{anch("attr-help", "help")}}`                                  | Link to context-sensitive help.                                                                                                                                                                                                                       | Link                      | Link                                                 | Link                      |
-| `{{anch("attr-icon", "icon")}}`                                  | An icon representing the current document.                                                                                                                                                                                                            | External Resource         | Not allowed                                          | Not allowed               |
-| `{{anch("attr-license", "license")}}`                            | Indicates that the main content of the current document is covered by the copyright license described by the referenced document.                                                                                                                     | Link                      | Link                                                 | Link                      |
-| [`manifest`](/en-US/docs/Web/HTML/Link_types/manifest)           | Web app manifest                                                                                                                                                                                                                                      | Link                      | Not allowed                                          | Not allowed               |
-| [`modulepreload`](/en-US/docs/Web/HTML/Link_types/modulepreload) | Tells to browser to preemptively fetch the script and store it in the document's module map for later evaluation. Optionally, the module's dependencies can be fetched as well.                                                                       | External Resource         | Not allowed                                          | Not allowed               |
-| `{{anch("attr-next", "next")}}`                                  | Indicates that the current document is a part of a series and that the next document in the series is the referenced document.                                                                                                                        | Link                      | Link                                                 | Link                      |
-| `{{anch("attr-nofollow", "nofollow")}}`                          | Indicates that the current document's original author or publisher does not endorse the referenced document.                                                                                                                                          | Not allowed               | Annotation                                           | Annotation                |
-| [`noopener`](/en-US/docs/Web/HTML/Link_types/noopener)           | Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate` target `attribute value).                                                      | Not allowed               | Annotation                                           | Annotation                |
-| `{{anch("attr-noreferrer", "noreferrer")}}`                      | No `Referer` header will be included. Additionally, has the same effect as `noopener`.                                                                                                                                                                | Not allowed               | Annotation                                           | Annotation                |
-| `{{anch("attr-opener", "opener")}}`                              | Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value).                                              | Not allowed               | Annotation                                           | Annotation                |
-| `{{anch("attr-pingback", "pingback")}}`                          | Gives the address of the pingback server that handles pingbacks to the current document.                                                                                                                                                              | External Resource         | Not allowed                                          | Not allowed               |
-| [`preconnect`](/en-US/docs/Web/HTML/Link_types/preconnect)       | Specifies that the user agent should preemptively connect to the target resource's origin.                                                                                                                                                            | External Resource         | Not allowed                                          | Not allowed               |
-| [`prefetch`](/en-US/docs/Web/HTML/Link_types/prefetch)           | Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.                                                                                                       | External Resource         | Not allowed                                          | Not allowed               |
-| [`preload`](/en-US/docs/Web/HTML/Link_types/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](as) attribute (and the priority associated with the corresponding destination). | External Resource         | Not allowed                                          | Not allowed               |
-| [`prerender`](/en-US/docs/Web/HTML/Link_types/prerender)         | Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.                                                                                               | External Resource         | Not allowed                                          | Not allowed               |
-| `{{anch("attr-prev", "prev")}}`                                  | Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.                                                                                                                    | Link                      | Link                                                 | Link                      |
-| `{{anch("attr-search", "search")}}`                              | Gives a link to a resource that can be used to search through the current document and its related pages.                                                                                                                                             | Link                      | Link                                                 | Link                      |
-| `{{anch("attr-stylesheet", "stylesheet")}}`                      | Imports a style sheet.                                                                                                                                                                                                                                | External Resource         | Not allowed                                          | Not allowed               |
-| `{{anch("attr-tag", "tag")}}`                                    | Gives a tag (identified by the given address) that applies to the current document.                                                                                                                                                                   | Not allowed               | Link                                                 | Not allowed               |
+| `rel` value                                                          | Description                                                                                                                                                                                                                                                                             | {{htmlelement('link')}} | {{htmlelement('a')}} and {{htmlelement('area')}} | {{htmlelement('form')}} |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------------------------------------------ | ----------------------- |
+| [`alternate`](#alternate)                                            | Alternate representations of the current document.                                                                                                                                                                                                                                      | Link                    | Link                                             | Not allowed             |
+| [`author`](#author)                                                  | Author of the current document or article.                                                                                                                                                                                                                                              | Link                    | Link                                             | Not allowed             |
+| [`bookmark`](#bookmark)                                              | Permalink for the nearest ancestor section.                                                                                                                                                                                                                                             | Not allowed             | Link                                             | Not allowed             |
+| [`canonical`](#canonical)                                            | Preferred URL for the current document.                                                                                                                                                                                                                                                 | Link                    | Not allowed                                      | Not allowed             |
+| [`dns-prefetch`](/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch)   | Tells the browser to preemptively perform DNS resolution for the target resource's origin.                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
+| [`external`](#external)                                              | The referenced document is not part of the same site as the current document.                                                                                                                                                                                                           | Not allowed             | Annotation                                       | Annotation              |
+| [`help`](#help)                                                      | Link to context-sensitive help.                                                                                                                                                                                                                                                         | Link                    | Link                                             | Link                    |
+| [`icon`](#icon)                                                      | An icon representing the current document.                                                                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
+| [`license`](#license)                                                | Indicates that the main content of the current document is covered by the copyright license described by the referenced document.                                                                                                                                                       | Link                    | Link                                             | Link                    |
+| [`manifest`](/en-US/docs/Web/HTML/Attributes/rel/manifest)           | Web app manifest.                                                                                                                                                                                                                                                                       | Link                    | Not allowed                                      | Not allowed             |
+| [`me`](/en-US/docs/Web/HTML/Attributes/rel/me)                       | Indicates that the current document represents the person who owns the linked content.                                                                                                                                                                                                  | Link                    | Link                                             | Not allowed             |
+| [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload) | Tells to browser to preemptively fetch the script and store it in the document's module map for later evaluation. Optionally, the module's dependencies can be fetched as well.                                                                                                         | External Resource       | Not allowed                                      | Not allowed             |
+| [`next`](#next)                                                      | Indicates that the current document is a part of a series and that the next document in the series is the referenced document.                                                                                                                                                          | Link                    | Link                                             | Link                    |
+| [`nofollow`](#nofollow)                                              | Indicates that the current document's original author or publisher does not endorse the referenced document.                                                                                                                                                                            | Not allowed             | Annotation                                       | Annotation              |
+| [`noopener`](/en-US/docs/Web/HTML/Attributes/rel/noopener)           | Creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those, to begin with (i.e., has an appropriate `target` attribute value).                                                                                        | Not allowed             | Annotation                                       | Annotation              |
+| [`noreferrer`](#noreferrer)                                          | No `Referer` header will be included. Additionally, has the same effect as `noopener`.                                                                                                                                                                                                  | Not allowed             | Annotation                                       | Annotation              |
+| [`opener`](#opener)                                                  | Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value).                                                                                | Not allowed             | Annotation                                       | Annotation              |
+| [`pingback`](#pingback)                                              | Gives the address of the pingback server that handles pingbacks to the current document.                                                                                                                                                                                                | External Resource       | Not allowed                                      | Not allowed             |
+| [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect)       | Specifies that the user agent should preemptively connect to the target resource's origin.                                                                                                                                                                                              | External Resource       | Not allowed                                      | Not allowed             |
+| [`prefetch`](/en-US/docs/Web/HTML/Attributes/rel/prefetch)           | Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.                                                                                                                                         | External Resource       | Not allowed                                      | Not allowed             |
+| [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload)             | Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). | External Resource       | Not allowed                                      | Not allowed             |
+| [`prerender`](/en-US/docs/Web/HTML/Attributes/rel/prerender)         | Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.                                                                                                                                 | External Resource       | Not allowed                                      | Not allowed             |
+| [`prev`](#prev)                                                      | Indicates that the current document is a part of a series and that the previous document in the series is the referenced document.                                                                                                                                                      | Link                    | Link                                             | Link                    |
+| [`privacy-policy`](#privacy-policy)                                  | Gives a link to a information about the data collection and usage practices that apply to the current document.                                                                                                                                                                         | Link                    | Link                                             | Not allowed             |
+| [`search`](#search)                                                  | Gives a link to a resource that can be used to search through the current document and its related pages.                                                                                                                                                                               | Link                    | Link                                             | Link                    |
+| [`stylesheet`](#stylesheet)                                          | Imports a style sheet.                                                                                                                                                                                                                                                                  | External Resource       | Not allowed                                      | Not allowed             |
+| [`tag`](#tag)                                                        | Gives a tag (identified by the given address) that applies to the current document.                                                                                                                                                                                                     | Not allowed             | Link                                             | Not allowed             |
+| [`terms-of-service`](#terms-of-service)                              | Link to the agreement, or terms of service, between the document's provider and users who wish to use the document.                                                                                                                                                                     | Link                    | Link                                             | Not allowed             |
 
-The `rel` attribute is relevant to the {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}} elements, but some values only relevant to a subset of those elements. Like all HTML keyword attribute values, these values are case-insenstive.
+The `rel` attribute is relevant to the {{htmlelement('link')}}, {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('form')}} elements, but some values only relevant to a subset of those elements. Like all HTML keyword attribute values, these values are case-insensitive.
 
 The `rel` attribute has no default value. If the attribute is omitted or if none of the values in the attribute are supported, then the document has no particular relationship with the destination resource other than there being a hyperlink between the two. In this case, on {{htmlelement('link')}} and {{htmlelement('form')}}, if the `rel` attribute is absent, has no keywords, or if not one or more of the space-separated keywords above, then the element does not create any links. {{htmlelement('a')}} and {{htmlelement('area')}} will still created links, but without a defined relationship.
 
 ## Values
 
-- {{htmlattrdef("alternate")}}
+- `alternate`
 
   - : Indicates an alternate representation of the current document. Valid for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the meaning depends on the values of the other attributes.
 
-    - With the `{{anch('stylesheet')}}` keyword on a `<link>`, it creates an alternate stylesheet.
+    - With the [`stylesheet`](#stylesheet) keyword on a `<link>`, it creates an [alternate stylesheet](/en-US/docs/Web/CSS/Alternative_style_sheets).
 
       ```html
       <!-- a persistent style sheet -->
-      <link rel="stylesheet" href="default.css">
+      <link rel="stylesheet" href="default.css" />
       <!-- alternate style sheets -->
-      <link rel="alternate stylesheet" href="highcontrast.css" title="High contrast">
+      <link
+        rel="alternate stylesheet"
+        href="highcontrast.css"
+        title="High contrast" />
       ```
 
-    - With an [hreflang](hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [type](type) attribute, it indicates that the referenced document is the same content in a different format. For example, with `type="application/rss+xml"` it creates a hyperlink referencing a syndication feed.
+    - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) attribute that differs from the document language, it indicates a translation.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
 
       ```html
-      <link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog">
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        href="posts.xml"
+        title="Blog" />
       ```
 
-    - Both the [hreflang](hreflang) and [type](type) attributes specify links to versions of the document in an alternative format and language, intended for other media:
+    - Otherwise, it creates a hyperlink referencing an alternate representation of the current document, whose nature is given by the [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) and [`type`](/en-US/docs/Web/HTML/Element/link#type) attributes.
+
+      - If `hreflang` is given alongside `alternate`, and the value of `hreflang` is different from the current document's language, it indicates that the referenced document is a translation.
+      - If `type` is given alongside `alternate`, it indicates that the referenced document is an alternative format (such as a PDF).
+      - The `hreflang` and `type` attributes may both be given alongside `alternate`.
 
       ```html
-      <link rel=alternate href="/fr/html/print" hreflang=fr type=text/html media=print title="French HTML (for printing)">
-      <link rel=alternate href="/fr/pdf" hreflang=fr type=application/pdf title="French PDF">
+      <link
+        rel="alternate"
+        href="/fr/html/print"
+        hreflang="fr"
+        type="text/html"
+        media="print"
+        title="French HTML (for printing)" />
+      <link
+        rel="alternate"
+        href="/fr/pdf"
+        hreflang="fr"
+        type="application/pdf"
+        title="French PDF" />
       ```
 
-    > **Note:** The obsolete `rev="made"` is treated as `rel="alternate"`
+- `author`
 
-- {{htmlattrdef("author")}}
-  - : Indicates the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `author` keyword creates a hyperlink. With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or `mailto:`) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document. For {{htmlelement('link')}}, it represents the author of the entire document.
-- {{htmlattrdef("bookmark")}}
-  - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements, the bookmark provides a permalink for ancestor section, which is the nearest ancestor {{htmlelement('article')}} or {{htmlelement('section')}}, if there is at least one, otherwise, the nearest heading sibling or ancestor descendant, to the next..
-- {{htmlattrdef("canonical")}}
-  - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which is useful for search engines.
-- {{htmlattrdef("dns-prefetch")}}
-  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints]().
-- {{htmlattrdef("external")}}
+  - : Indicates the referenced document provides further information about the author of the current document or article. Relevant for {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements.
+
+    With {{htmlelement('a')}} and {{htmlelement('area')}}, it indicates the linked document (or `mailto:`) provides information about the author of the nearest {{htmlelement('article')}} ancestor if there is one, otherwise the entire document.
+
+    With {{htmlelement('link')}}, it represents the author of the entire document.
+
+    > **Note:** For historical reasons, the obsolete attribute value `rev="made"` is treated as `rel="author"`.
+
+- `bookmark`
+  - : Relevant as the `rel` attribute value for the {{htmlelement('a')}} and {{htmlelement('area')}} elements. Gives a permalink for the nearest ancestor {{htmlelement('article')}} element, if there is one. If there is no ancestor `<article>` element, gives a permalink for the section the linking element is most closely associated with.
+- `canonical`
+  - : Valid for {{htmlelement('link')}}, it defines the preferred URL for the current document, which helps search engines reduce duplicate content.
+- `dns-prefetch`
+  - : Relevant for the {{htmlelement('link')}} element both in the {{htmlelement('body')}} and {{htmlelement('head')}}, it tells the browser to preemptively perform DNS resolution for the target resource's origin. Useful for resources the user will likely need, it helps reduce latency and thereby improves performance when the user does access the resources as the browser preemptively performed DNS resolution for the origin of the specified resource. See [dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) described in [resource hints](https://w3c.github.io/resource-hints/).
+- `external`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
-- {{htmlattrdef("help")}}
+- `help`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `help` keyword indicates that the linked to content provides context-sensitive help, providing information for the parent of the element defining the hyperlink, and its children. When used within `<link>`, the help is for the whole document. When included with {{htmlelement('a')}} and {{htmlelement('area')}} and supported, the default {{cssxref('cursor')}} will be `help` instead of `pointer`.
-- {{htmlattrdef("icon")}}
+- `icon`
 
-  - : **Note:** Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.
+  - : Valid with {{htmlelement('link')}}, the linked resource represents the icon, a resource for representing the page in the user interface, for the current document.
 
     The most common use for the `icon` value is the favicon:
 
     ```html
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" />
     ```
 
-    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](media) attribute, [`type`](type), and [`sizes`](sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
+    If there are multiple `<link rel="icon">`s, the browser uses their [`media`](/en-US/docs/Web/HTML/Element/link#media), [`type`](/en-US/docs/Web/HTML/Element/link#type), and [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attributes to select the most appropriate icon. If several icons are equally appropriate, the last one is used. If the most appropriate icon is later found to be inappropriate, for example because it uses an unsupported format, the browser proceeds to the next-most appropriate, and so on.
 
-    > **Note:** Prior to Firefox 83 the [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute was not supported for `rel="icon"` there is also [an open issue for Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645).
+    > **Note:** The [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) attribute is not supported for `rel="icon"` in Chromium-based browsers. See the [open Chromium issue](https://crbug.com/1121645).
 
-    **Note:** Apple's iOS does not use this link type, nor the [`sizes`](sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
+    > **Note:** Apple's iOS does not use this link type, nor the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder.
+    > Instead it uses the non-standard [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) respectively.
 
     > **Note:** The `shortcut` link type is often seen before `icon`, but this link type is non-conforming, ignored and **web authors must not use it anymore**.
 
-- {{htmlattrdef("license")}}
+- `license`
 
-  - : **Note:** Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
+  - : Valid on the {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} elements, the `license` value indicates that the hyperlink leads to a document describing the licensing information; that the main content of the current document is covered by the copyright license described by the referenced document. If not inside the {{HTMLElement("head")}} element, the standard doesn't distinguish between a hyperlink applying to a specific part of the document or to the document as a whole. Only the data on the page can indicate this.
 
     ```html
-    <link rel="license" href="#license">
+    <link rel="license" href="#license" />
     ```
 
-    **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
+    > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
-- {{htmlattrdef("manifest")}}
+- `manifest` {{Experimental_Inline}}
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
-- {{htmlattrdef("modulepreload")}}
-  - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [link types: `modulepreload`](/en-US/docs/Web/HTML/Link_types/modulepreload).
-- {{htmlattrdef("next")}}
+- `modulepreload`
+  - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
+- `next`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `next` values indicates that the current document is a part of a series, and that the next document in the series is the referenced document. When included in a `<link>`, browsers may assume that document will be fetched next, and treat it as a resource hint.
-- {{htmlattrdef("nofollow")}}
+- `nofollow`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `nofollow` keyword tells search engine spiders to ignore the link relationship. The nofollow relationship may indicate the current document's owner does not endorse the referenced document. It is often included by Search Engine Optimizers pretending their link farms are not spam pages.
-- {{htmlattrdef("noopener")}}
+- `noopener`
 
-  - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate` target `attribute value). In other words, it makes the link behave as if [`window.opener`](/en-US/docs/Web/API/Window/opener) were null and `target="_parent"` were set.
+  - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, creates a top-level browsing context that is not an auxiliary browsing context if the hyperlink would create either of those to begin with (i.e., has an appropriate `target` attribute value). In other words, it makes the link behave as if [`window.opener`](/en-US/docs/Web/API/Window/opener) were null and `target="_parent"` were set.
 
-    This is the opposite of {{anch("opener")}}.
+    This is the opposite of [`opener`](#opener).
 
-- {{htmlattrdef("noreferrer")}}
+- `noreferrer`
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, including this value makes the referrer unknown (no `Referer` header will be included), and creates a top-level browsing context as if `noopener` were also set.
-- {{htmlattrdef("opener")}}
-  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not anauxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of {{anch("noopener")}}.
-- {{htmlattrdef("pingback")}}
-  - : Gives the address of the pingback server that handles pingbacks to the current document.
-- {{htmlattrdef("preconnect")}}
-  - : Specifies that the user agent should preemptively connect to the target resource's origin.
-- {{htmlattrdef("prefetch")}}
+- `opener`
+  - : Creates an auxiliary browsing context if the hyperlink would otherwise create a top-level browsing context that is not an auxiliary browsing context (i.e., has "`_blank`" as `target` attribute value). Effectively, the opposite of [noopener](#noopener).
+- `pingback`
+  - : Gives the address of the pingback server that handles pingbacks to the current document. See the [Pingback specification](https://www.hixie.ch/specs/pingback/pingback).
+- `preconnect`
+  - : Provides a hint to the browser suggesting that it open a connection to the linked website in advance, without disclosing any private information or downloading any content, so that when the link is followed the linked content can be fetched more quickly.
+- `prefetch`
   - : Specifies that the user agent should preemptively fetch and cache the target resource as it is likely to be required for a followup navigation.
-- {{htmlattrdef("preload")}}
-  - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](as) attribute (and the priority associated with the corresponding destination).
-- {{htmlattrdef("prerender")}}
-  - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future.
-- {{htmlattrdef("prev")}}
+    See {{Glossary("prefetch")}} for more information.
+- `preload`
+  - : Specifies that the user agent must preemptively fetch and cache the target resource for current navigation according to the potential destination given by the [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute (and the priority associated with the corresponding destination). See the page for the [`preload`](/en-US/docs/Web/HTML/Attributes/rel/preload) value.
+- `prerender` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Specifies that the user agent should preemptively fetch the target resource and process it in a way that helps deliver a faster response in the future, for example by fetching its subresources or performing some rendering.
+- `prev`
 
-  - : Similar to the {{anch("next")}} keyword, relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `prev` values indicates that the current document is a part of a series, and that the link references a previous document in the series is the referenced document.
+  - : Similar to the [`next`](#next) keyword, relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, the `prev` values indicates that the current document is a part of a series, and that the link references a previous document in the series is the referenced document.
 
     Note: The synonym `previous` is incorrect and should not be used.
 
-- {{htmlattrdef("search")}}
+- `privacy-policy`
+
+  - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `privacy-policy` value indicates that the referenced document is the Privacy Policy which describes the data collection and usage practices of the current document.
+
+- `search`
 
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('link')}}, {{htmlelement('a')}}, and {{htmlelement('area')}} elements, the `search` keywords indicates that the hyperlink references a document whose interface is specially designed for searching in the current document, site, and related resources, providing a link to a resource that can be used to search.
 
-    If the [`type`](type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of some browsers like Firefox or Internet Explorer.
+    If the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is set to `application/opensearchdescription+xml` the resource is an [OpenSearch](/en-US/docs/Web/OpenSearch) plugin that can be easily added to the interface of Firefox.
 
-- {{htmlattrdef("stylesheet")}}
+- `stylesheet`
 
-  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
+  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
-    When used with the {{anch('alternate')}} keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](type).
+    When used with the [`alternate`](#alternate) keyword, it defines an alternative style sheet. In this case, include a non-empty [`title`](/en-US/docs/Web/HTML/Element/link#title).
 
-    The external stylesheet will not be used or even downloaded if the media does not match the value of the [`media`](media) attribute.
+    The external stylesheet will not be used or even downloaded if the media does not match the value of the [`media`](/en-US/docs/Web/HTML/Element/link#media) attribute.
 
     Requires the use of the CORS protocol for cross-origin fetching.
 
-- {{htmlattrdef("tag")}}
+- `tag`
+
   - : Valid for the {{htmlelement('a')}}, and {{htmlelement('area')}} elements, it gives a tag (identified by the given address) that applies to the current document. The tag value denotes that the link refers to a document describing a tag applying to the document on which it is located. This link type is not meant for tags within a tag cloud, as those tags apply to a group of pages, whereas the `tag` value of the `rel` attribute is for a single document.
+
+- `terms-of-service`
+
+  - : Valid for {{htmlelement('a')}}, {{htmlelement('area')}}, and {{htmlelement('link')}} elements, the `terms-of-service` value indicates that the referenced document is the Terms of Service that describes the agreements between the current document's provider and users who wish to use the document provided.
 
 ### Non-standard values
 
-- {{htmlattrdef("apple-touch-icon")}}
+- `apple-touch-icon`
   - : Specifies the icon for a web application on an iOS device.
-
-## Browser compatibility
-
-{{Compat("html.elements.attributes.rel")}}
 
 ## Specifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'links.html#linkTypes', 'rel attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td>
-        Added <code>opener</code>. Made <code>noopener</code> default for
-        <code>target="_blank"</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'links.html#linkTypes', 'rel attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td>
-        Added <code>tag</code>, <code>search</code>, <code>prefetch</code>,
-        <code>noreferrer</code>, <code>nofollow</code>, <code>icon</code>, and
-        <code>author</code>.<br />Renamed <code>copyright</code> to
-        <code>license</code>.<br />Removed <code>start</code>,
-        <code>chapter</code>, <code>section</code>, <code>subsection</code>, and
-        <code>appendix</code>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Preload", "#x2.link-type-preload", "preload")}}
-      </td>
-      <td>{{Spec2("Preload")}}</td>
-      <td>Added <code>preload</code>.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Resource Hints", "#dfn-preconnect", "preconnect")}}
-      </td>
-      <td>{{Spec2("Resource Hints")}}</td>
-      <td>
-        Added <code>dns-prefetch</code>, <code>preconnect</code>, and
-        <code>prerender</code> values.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("HTML4.01", "types.html#type-links", "link types")}}
-      </td>
-      <td>{{Spec2("HTML4.01")}}</td>
-      <td>
-        Added <code>alternate</code>, <code>stylesheet</code>,
-        <code>start</code>, <code>chapter</code>, <code>section</code>,
-        <code>subsection</code>, <code>appendix</code>, and
-        <code>bookmark</code>.<br />Renamed <code>previous</code> to
-        <code>prev</code>.<br />Removed <code>top</code>, and
-        <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{SpecName("HTML3.2", "#link", "&lt;link&gt;")}}</td>
-      <td><p>{{Spec2("HTML3.2")}} (Obsolete)</p></td>
-      <td>
-        Added <code>top</code>, <code>contents</code>, <code>index</code>,
-        <code>glossary</code>, <code>copyright</code>, <code>next</code>,
-        <code>previous</code>, <code>help</code>, and <code>search</code>.
-      </td>
-    </tr>
-    <tr>
-      <td>{{RFC(1866, "HTML 2.0")}}</td>
-      <td>{{Spec2("HTML2.0")}} (Obsolete)</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.link.rel")}}
-
-## Accessibility concerns
+{{Compat}}
 
 ## See also
 

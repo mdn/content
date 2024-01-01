@@ -1,17 +1,10 @@
 ---
 title: pkcs11
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-tags:
-  - API
-  - API Extensions
-  - Add-ons
-  - Extensions
-  - Reference
-  - Web
-  - Web Development
-  - WebExtensions
-  - pkcs11
+page-type: webextension-api
+browser-compat: webextensions.api.pkcs11
 ---
+
 {{AddonSidebar}}
 
 The `pkcs11` API enables an extension to enumerate [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11) security modules and to make them accessible to the browser as sources of keys and certificates.
@@ -22,29 +15,29 @@ To use this API you need to have the "pkcs11" [permission](/en-US/docs/Mozilla/A
 
 Perform the following steps:
 
-1.  Save the PKCS #11 module to a permanent location on your local computer
-2.  Select **Tools > Options** or select the **Firefox menu** and then **Options**
-3.  Once the Options page opens, select **Privacy & Security**
-4.  Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices...
-    ![](device_manager.png)**
-5.  Click or tap the **Load** button
-    ![](load_device_driver.png)
-6.  Enter a name for the security module, such as "_My Client Database_"
+1. Save the PKCS #11 module to a permanent location on your local computer
+2. Select **Tools > Options** or select the **Firefox menu** and then **Options**
+3. Once the Options page opens, select **Privacy & Security**
+4. Scroll down to the bottom of the page and under **Certificates** click or tap on **Security Devices…**
+   ![Security modules and devices](device_manager.png)
+5. Click or tap the **Load** button
+   ![Load PKCS#11 device driver](load_device_driver.png)
+6. Enter a name for the security module, such as "_My Client Database_"
 
-    > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
+   > **Warning:** Be careful about using international characters as there is currently a bug in Firefox where international characters may cause problems.
 
-7.  Choose **Browse...** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
+7. Choose **Browse…** to find the location of the PKCS #11 module on your local computer, and then click or tap **OK** to confirm.
 
 ## Provisioning PKCS #11 modules
 
-> **Note:** Starting with Firefox 58, extensions can use the [pkcs11](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
+> **Note:** Starting with Firefox 58, extensions can use this API to enumerate PKCS #11 modules and make them accessible to the browser as sources of keys and certificates.
 
 There are two environmental prerequisites for using this **API**:
 
 - One or more `PKCS #11` modules must be installed on the user's computer
 - For each installed `PKCS #11` module, there must be a [native manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) file that enables the browser to locate the module.
 
-Most probably, the user or device administrator would install the `PKCS #11`module, and its installer would install the native manifest file at the same time.
+Most probably, the user or device administrator would install the `PKCS #11` module, and its installer would install the native manifest file at the same time.
 
 However, the module and manifest can't be installed as part of the extension's own installation process.
 
@@ -63,4 +56,6 @@ For details about the manifest file's contents and location, see [Native manifes
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.pkcs11", 1, 1)}} {{WebExtExamples("h2")}}
+{{WebExtExamples("h2")}}
+
+{{Compat}}

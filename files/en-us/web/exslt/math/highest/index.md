@@ -1,11 +1,9 @@
 ---
 title: math:highest()
 slug: Web/EXSLT/math/highest
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `math:highest()` returns the node in the specified node-set with the highest value (where the highest value calculated using [`math:max()`](/en-US/docs/Web/EXSLT/math/max)).
@@ -14,7 +12,7 @@ A node has this maximum value if converting its string value to a number equals 
 
 ## Syntax
 
-```js
+```plain
 math:highest(nodeSet)
 ```
 
@@ -29,4 +27,4 @@ A result tree fragment consisting of copies of the nodes returned by [`math:max(
 
 ## Specifications
 
-[EXSLT - MATH:HIGHEST](http://www.exslt.org/math/functions/highest/index.html)
+[EXSLT - MATH:HIGHEST](https://exslt.github.io/math/functions/highest/index.html)

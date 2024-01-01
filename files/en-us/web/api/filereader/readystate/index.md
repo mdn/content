@@ -1,17 +1,14 @@
 ---
-title: FileReader.readyState
+title: "FileReader: readyState property"
+short-title: readyState
 slug: Web/API/FileReader/readyState
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.FileReader.readyState
 ---
-{{APIRef("File API")}}
 
-The {{domxref("FileReader")}} **`readyState`** property provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
+{{APIRef("File API")}}{{AvailableInWorkers}}
+
+The **`readyState`** read-only property of the {{domxref("FileReader")}} interface provides the current state of the reading operation a `FileReader` is in. A `FileReader` exists in one of the following states:
 
 | Value | State     | Description                                                   |
 | ----- | --------- | ------------------------------------------------------------- |
@@ -26,17 +23,17 @@ The {{domxref("FileReader")}} **`readyState`** property provides the current sta
 - `DONE`
   - : The read operation is complete. This could mean that: the entire {{domxref("File")}} or {{domxref("Blob")}} has been read into memory, a file read error occurred, or {{domxref("FileReader.abort()", "abort()")}} was called and the read was cancelled.
 
-## Example
+## Examples
 
 ```js
-var reader = new FileReader();
-console.log('EMPTY', reader.readyState); // readyState will be 0
+const reader = new FileReader();
+console.log("EMPTY", reader.readyState); // readyState will be 0
 
 reader.readAsText(blob);
-console.log('LOADING', reader.readyState); // readyState will be 1
+console.log("LOADING", reader.readyState); // readyState will be 1
 
-reader.onloadend = function () {
-  console.log('DONE', reader.readyState); // readyState will be 2
+reader.onloadend = () => {
+  console.log("DONE", reader.readyState); // readyState will be 2
 };
 ```
 

@@ -1,16 +1,11 @@
 ---
-title: FileSystemDirectoryEntry.createReader()
+title: "FileSystemDirectoryEntry: createReader() method"
+short-title: createReader()
 slug: Web/API/FileSystemDirectoryEntry/createReader
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemDirectoryEntry
-  - Files
-  - Method
-  - Reference
-  - createReader
+page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryEntry.createReader
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
@@ -20,8 +15,8 @@ the directory.
 
 ## Syntax
 
-```js
-directoryReader = FileSystemDirectoryEntry.createReader();
+```js-nolint
+createReader()
 ```
 
 ### Parameters
@@ -33,7 +28,7 @@ None.
 A {{domxref("FileSystemDirectoryReader")}} object which can be used to read the
 directory's entries.
 
-## Example
+## Examples
 
 This example creates a method called `readDirectory()`, which fetches all of
 the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in
@@ -44,15 +39,18 @@ function readDirectory(directory) {
   let dirReader = directory.createReader();
   let entries = [];
 
-  let getEntries = function() {
-    dirReader.readEntries(function(results) {
-      if (results.length) {
-        entries = entries.concat(toArray(results));
-        getEntries();
-      }
-    }, function(error) {
-      /* handle error -- error is a FileError object */
-    });
+  let getEntries = () => {
+    dirReader.readEntries(
+      (results) => {
+        if (results.length) {
+          entries = entries.concat(toArray(results));
+          getEntries();
+        }
+      },
+      (error) => {
+        /* handle error — error is a FileError object */
+      },
+    );
   };
 
   getEntries();
@@ -77,10 +75,8 @@ to `readDirectory()`, the array is returned to the caller.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemDirectoryReader")}}
 - {{domxref("FileSystemDirectoryEntry")}}
 - {{domxref("FileSystemFileEntry")}}

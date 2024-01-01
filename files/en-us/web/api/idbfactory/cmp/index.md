@@ -1,17 +1,11 @@
 ---
-title: IDBFactory.cmp()
+title: "IDBFactory: cmp() method"
+short-title: cmp()
 slug: Web/API/IDBFactory/cmp
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - cmp
+page-type: web-api-instance-method
 browser-compat: api.IDBFactory.cmp
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`cmp()`** method of the {{domxref("IDBFactory")}}
@@ -29,15 +23,15 @@ operations, such as storing and iterating.
 
 ## Syntax
 
-```js
-var result = indexedDB.cmp(first, second);
+```js-nolint
+cmp(first, second)
 ```
 
 ### Parameters
 
-- first
+- `first`
   - : The first key to compare.
-- second
+- `second`
   - : The second key to compare.
 
 ### Return value
@@ -53,19 +47,16 @@ possible values and their meanings:
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if one of the supplied keys was not a valid key.
 
-| Attribute                                   | Description                                   |
-| ------------------------------------------- | --------------------------------------------- |
-| [`DataError`](/en-US/docs/Web/API/DOMError) | One of the supplied keys was not a valid key. |
-
-## Example
+## Examples
 
 ```js
-var a = 1;
-var b = 2;
-var result = window.indexedDB.cmp(a, b);
-console.log( "Comparison results: " + result );
+const a = 1;
+const b = 2;
+const result = window.indexedDB.cmp(a, b);
+console.log(`Comparison results: ${result}`);
 ```
 
 ## Specifications
@@ -84,5 +75,4 @@ console.log( "Comparison results: " + result );
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,37 +1,34 @@
 ---
-title: Element.prepend()
+title: "Element: prepend() method"
+short-title: prepend()
 slug: Web/API/Element/prepend
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - prepend
+page-type: web-api-instance-method
 browser-compat: api.Element.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.prepend()`** method inserts a set of
-{{domxref("Node")}} objects or {{domxref("DOMString")}} objects before the first child
-of the {{domxref("Element")}}. {{domxref("DOMString")}} objects are inserted as
+{{domxref("Node")}} objects or string objects before the first child
+of the {{domxref("Element")}}. String objects are inserted as
 equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
-prepend(...nodesOrDOMStrings);
+```js-nolint
+prepend(param1)
+prepend(param1, param2)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -62,7 +59,7 @@ div.prepend("Headline: ");
 console.log(div.textContent); // "Headline: Some text"
 ```
 
-### Appending an element and text
+### Prepending an element and text
 
 ```js
 let div = document.createElement("div");
@@ -80,7 +77,7 @@ See {{jsxref("Symbol.unscopables")}} for more information.
 ```js
 let div = document.createElement("div");
 
-with(div) {
+with (div) {
   prepend("foo");
 }
 // ReferenceError: prepend is not defined

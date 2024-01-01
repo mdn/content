@@ -1,26 +1,26 @@
 ---
 title: BigInt.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
-tags:
-  - BigInt
-  - JavaScript
-  - Method
-  - Prototype
-  - valueOf()
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.BigInt.valueOf
 ---
+
 {{JSRef}}
 
-The **`valueOf()`** method returns the wrapped primitive value
+The **`valueOf()`** method of {{jsxref("BigInt")}} values returns the wrapped primitive value
 of a {{jsxref("BigInt")}} object.
 
-{{EmbedInteractiveExample("pages/js/bigint-valueof.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/bigint-valueof.html", "shorter")}}
 
 ## Syntax
 
-```js
-bigIntObj.valueOf()
+```js-nolint
+valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

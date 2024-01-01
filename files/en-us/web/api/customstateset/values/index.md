@@ -1,25 +1,28 @@
 ---
-title: CustomStateSet.values()
+title: "CustomStateSet: values() method"
+short-title: values()
 slug: Web/API/CustomStateSet/values
-tags:
-  - API
-  - Method
-  - Reference
-  - values
-  - CustomStateSet
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CustomStateSet.values
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`values()`** method of the {{domxref("CustomStateSet")}} interface returns a new iterator object that yields the values for each element in the `CustomStateSet` object in insertion order.
 
 ## Syntax
 
-```js
-CustomStateSet.values()
+```js-nolint
+values()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A new iterator object containing the values for each element in the given `CustomStateSet`, in insertion order.
 
@@ -30,4 +33,3 @@ A new iterator object containing the values for each element in the given `Custo
 ## Browser compatibility
 
 {{Compat}}
-

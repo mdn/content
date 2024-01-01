@@ -1,29 +1,11 @@
 ---
-title: XRViewport.x
+title: "XRViewport: x property"
+short-title: x
 slug: Web/API/XRViewport/x
-tags:
-  - API
-  - AR
-  - Coordinate
-  - Position
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRViewport
-  - augmented
-  - left
-  - origin
-  - viewport
-  - x
+page-type: web-api-instance-property
 browser-compat: api.XRViewport.x
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The read-only {{domxref("XRViewport")}} interface's

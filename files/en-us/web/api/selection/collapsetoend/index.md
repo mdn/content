@@ -1,16 +1,12 @@
 ---
-title: Selection.collapseToEnd()
+title: "Selection: collapseToEnd() method"
+short-title: collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
-tags:
-  - API
-  - Experimental
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToEnd
 ---
-{{ ApiRef("DOM") }}{{SeeCompatTable}}
+
+{{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the
 selection to the end of the last range in the selection. If the content of the selection
@@ -18,13 +14,17 @@ is focused and editable, the caret will blink there.
 
 ## Syntax
 
-```js
-sel.collapseToEnd()
+```js-nolint
+collapseToEnd()
 ```
 
 ### Parameters
 
-_None._
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

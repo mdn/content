@@ -1,25 +1,10 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
-tags:
-  - API
-  - Audio
-  - AudioNode
-  - Interface
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - MediaStreamTrack
-  - Reference
-  - Web
-  - Web Audio API
-  - WebRTC
-  - getusermedia
-  - sound
-  - stream
-  - track
+page-type: web-api-interface
 browser-compat: api.MediaStreamAudioSourceNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioSourceNode`** interface is a type of {{domxref("AudioNode")}} which operates as an audio source whose media is received from a {{domxref("MediaStream")}} obtained using the WebRTC or Media Capture and Streams APIs.
@@ -28,9 +13,11 @@ This media could be from a microphone (through {{domxref("MediaDevices.getUserMe
 
 A `MediaStreamAudioSourceNode` has no inputs and exactly one output, and is created using the {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See {{anch("Track ordering")}} for more information about the order of tracks.
+The `MediaStreamAudioSourceNode` takes the audio from the _first_ {{domxref("MediaStreamTrack")}} whose {{domxref("MediaStreamTrack.kind", "kind")}} attribute's value is `audio`. See [Track ordering](#track_ordering) for more information about the order of tracks.
 
 The number of channels output by the node matches the number of tracks found in the selected audio track.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -45,10 +32,7 @@ The number of channels output by the node matches the number of tracks found in 
     <tr>
       <th scope="row">Channel count</th>
       <td>
-        defined by the first audio {{domxref("MediaStreamTrack")}}
-        passed to the
-        {{domxref("AudioContext.createMediaStreamSource()")}}
-        method that created it.
+        2 (but note that {{domxref("AudioNode.channelCount")}} is only used for up-mixing and down-mixing {{domxref("AudioNode")}} inputs, and {{domxref("MediaStreamAudioSourceNode")}} doesn't have any input)
       </td>
     </tr>
   </tbody>
@@ -59,14 +43,14 @@ The number of channels output by the node matches the number of tracks found in 
 - {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
   - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
-## Properties
+## Instance properties
 
 _In addition to the following properties, `MediaStreamAudioSourceNode` inherits the properties of its parent, {{domxref("AudioNode")}}._
 
 - {{domxref("MediaStreamAudioSourceNode.mediaStream", "mediaStream")}} {{ReadOnlyInline}}
   - : The {{domxref("MediaStream")}} used when constructing this `MediaStreamAudioSourceNode`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -89,7 +73,7 @@ The {{domxref("MediaStreamTrackAudioSourceNode")}} interface is similar to `Medi
 
 ## Example
 
-See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#example) for example code that uses this object.
+See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#examples) for example code that uses this object.
 
 ## Specifications
 
@@ -103,5 +87,5 @@ See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API (Media Streams)](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStreamTrackAudioSourceNode")}}

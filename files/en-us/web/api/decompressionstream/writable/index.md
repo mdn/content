@@ -1,23 +1,16 @@
 ---
-title: DecompressionStream.writable
+title: "DecompressionStream: writable property"
+short-title: writable
 slug: Web/API/DecompressionStream/writable
-tags:
-  - API
-  - Property
-  - Reference
-  - writable
-  - DecompressionStream
+page-type: web-api-instance-property
 browser-compat: api.DecompressionStream.writable
 ---
-{{DefaultAPISidebar("Compression Streams API")}}
+
+{{APIRef("Compression Streams API")}}
 
 The **`writable`** read-only property of the {{domxref("DecompressionStream")}} interface returns a {{domxref("WritableStream")}}.
 
-## Syntax
-
-    let writableStream = DecompressionStream.writable;
-
-### Value
+## Value
 
 A {{domxref("WritableStream")}}.
 
@@ -26,26 +19,13 @@ A {{domxref("WritableStream")}}.
 The following example returns a {{domxref("WritableStream")}} from a `DecompressionStream`.
 
 ```js
-let stream = new DecompressionStream('gzip');
-console.log(stream.writeable); //a WritableStream
+let stream = new DecompressionStream("gzip");
+console.log(stream.writable); // A WritableStream
 ```
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('Streams','#dom-generictransformstream-writable','writable')}}
-      </td>
-      <td>{{Spec2('Streams')}}</td>
-      <td>Initial definition.</td>
-    </tr>
-  </tbody>
-</table>
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

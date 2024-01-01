@@ -1,22 +1,11 @@
 ---
-title: VideoTrackList.getTrackById()
+title: "VideoTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
-tags:
-  - API
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - Video
-  - VideoTrackList
-  - getTrackById
-  - id
-  - track
+page-type: web-api-instance-method
 browser-compat: api.VideoTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("VideoTrackList")}}** method
@@ -29,14 +18,14 @@ you know its ID string.
 
 ## Syntax
 
-```js
-var theTrack = VideoTrackList.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
 ### Parameters
 
 - `id`
-  - : A {{domxref("DOMString")}} indicating the ID of the track to locate within the track
+  - : A string indicating the ID of the track to locate within the track
     list.
 
 ### Return value

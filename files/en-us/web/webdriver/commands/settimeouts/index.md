@@ -1,13 +1,12 @@
 ---
 title: Set Timeouts
 slug: Web/WebDriver/Commands/SetTimeouts
-tags:
-  - Command
-  - Get Timeouts
-  - Reference
-  - WebDriver
+page-type: webdriver-command
 browser-compat: webdriver.commands.SetTimeouts
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
+
 The _Set Timeouts_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API sets the timeouts associated with the current session. The [session timeout](/en-US/docs/Web/WebDriver/Timeouts) durations control such behavior as timeouts on [script injection](/en-US/docs/Web/WebDriver/Timeouts#script), [document navigation](/en-US/docs/Web/WebDriver/Timeouts#pageload), and [element retrieval](/en-US/docs/Web/WebDriver/Timeouts#implicit).
 
 ## Syntax
@@ -48,5 +47,4 @@ The input is a [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object:
 ## See also
 
 - [`Timeouts`](/en-US/docs/Web/WebDriver/Timeouts) object
-- [Set Timeouts](/en-US/docs/Web/WebDriver/Commands/SetTimeouts) command
 - [List of WebDriver commands](/en-US/docs/Web/WebDriver/Commands)

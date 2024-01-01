@@ -1,29 +1,25 @@
 ---
-title: DataTransferItemList.clear()
+title: "DataTransferItemList: clear() method"
+short-title: clear()
 slug: Web/API/DataTransferItemList/clear
-tags:
-  - API
-  - DataTransferItemList
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - clear
-  - drag and drop
+page-type: web-api-instance-method
 browser-compat: api.DataTransferItemList.clear
 ---
+
+{{APIRef("HTML Drag and Drop API")}}
+
 The {{domxref("DataTransferItemList")}} method
 **`clear()`** removes all {{domxref("DataTransferItem")}}
 objects from the drag data items list, leaving the list empty.
 
 The drag data store in which this list is kept is only writable while handling the
-{{event("dragstart")}} event. While handling {{event("drop")}}, the drag data store is
+{{domxref("HTMLElement/dragstart_event", "dragstart")}} event. While handling {{domxref("HTMLElement/drop_event", "drop")}}, the drag data store is
 in read-only mode, and this method silently does nothing. No exception is thrown.
 
 ## Syntax
 
-```js
-DataTransferItemList.clear();
+```js-nolint
+clear()
 ```
 
 ### Parameters
@@ -32,100 +28,106 @@ None.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example shows the use of the `clear()` method.
 
-#### HTML
+### HTML
 
 ```html
- <div>
-   <p id="source" ondragstart="dragstart_handler(event);" ondragend="dragend_handler(event);" draggable="true">
-     Select this element, drag it to the Drop Zone and then release the selection to move the element.</p>
- </div>
- <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
+<div>
+  <p
+    id="source"
+    ondragstart="dragstartHandler(event);"
+    ondragend="dragendHandler(event);"
+    draggable="true">
+    Select this element, drag it to the Drop Zone and then release the selection
+    to move the element.
+  </p>
+</div>
+<div
+  id="target"
+  ondrop="dropHandler(event);"
+  ondragover="dragoverHandler(event);">
+  Drop Zone
+</div>
 ```
 
-#### CSS
+### CSS
 
 ```css
-  div {
-    margin: 0em;
-    padding: 2em;
-  }
-  #source {
-    color: blue;
-    border: 1px solid black;
-  }
-  #target {
-    border: 1px solid black;
-  }
+div {
+  margin: 0em;
+  padding: 2em;
+}
+#source {
+  color: blue;
+  border: 1px solid black;
+}
+#target {
+  border: 1px solid black;
+}
 ```
 
-#### JavaScript
+### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
+
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
-  var dataList = ev.dataTransfer.items;
+  const dataList = ev.dataTransfer.items;
   dataList.add(ev.target.id, "text/plain");
-  // Add some other items to the drag payload
-  dataList.add("<p>... paragraph ...</p>", "text/html");
-  dataList.add("http://www.example.org","text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
-  var data = event.dataTransfer.items;
+
   // Loop through the dropped items and log their data
-  for (var i = 0; i < data.length; i++) {
-    if ((data[i].kind == 'string') && (data[i].type.match('^text/plain'))) {
+  for (const item of ev.dataTransfer.items) {
+    if (item.kind === "string" && item.type.match(/^text\/plain/)) {
       // This item is the target node
-      data[i].getAsString(function (s){
+      item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/html'))) {
+    } else if (item.kind === "string" && item.type.match(/^text\/html/)) {
       // Drag data item is HTML
-      data[i].getAsString(function (s){
-        console.log("... Drop: HTML = " + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: HTML = ${s}`);
       });
-    } else if ((data[i].kind == 'string') && (data[i].type.match('^text/uri-list'))) {
+    } else if (item.kind === "string" && item.type.match(/^text\/uri-list/)) {
       // Drag data item is URI
-      data[i].getAsString(function (s){
-        console.log("... Drop: URI = " + s);
+      item.getAsString((s) => {
+        console.log(`… Drop: URI = ${s}`);
       });
     }
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
+
   // Set the dropEffect to move
-  ev.dataTransfer.dropEffect = "move"
+  ev.dataTransfer.dropEffect = "move";
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
-  var dataList = ev.dataTransfer.items;
-  for (var i = 0; i < dataList.length; i++) {
-    dataList.remove(i);
-  }
+  const dataList = ev.dataTransfer.items;
+
   // Clear any remaining drag data
   dataList.clear();
 }
 ```
 
-#### Result
+### Result
 
-{{EmbedLiveSample('Example', 400, 300)}}
-
-{{LiveSampleLink('Example','Result link')}}
+{{EmbedLiveSample('Examples', 400, 300)}}
 
 ## Specifications
 
@@ -134,5 +136,3 @@ function dragend_handler(ev) {
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("HTML Drag and Drop API")}}

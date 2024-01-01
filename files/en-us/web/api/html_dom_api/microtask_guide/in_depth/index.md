@@ -1,23 +1,14 @@
 ---
-title: 'In depth: Microtasks and the JavaScript runtime environment'
+title: "In depth: Microtasks and the JavaScript runtime environment"
 slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
-tags:
-  - API
-  - Advanced
-  - Guide
-  - JavaScript
-  - Microtasks
-  - asynchronous
-  - queueMicrotask
-  - runtime
+page-type: guide
 ---
-{{APIRef("HTML DOM")}}{{Draft("This page is very much a work in progress; it contains technical details that may be useful while considering using—and while using—microtasks, but it is not absolutely necessary for most people to know. Additionally, there may be errors here as this draft is just that rough. ~~Sheppy")}}
 
-When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand. That's what this section covers
+{{APIRef("HTML DOM")}}
 
-## Introduction
+When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
 
-JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
+JavaScript is an inherently single-threaded language. It was designed in an era in which this was a positive choice; there were few multi-processor computers available to the general public, and the expected amount of code that would be handled by JavaScript was relatively low at that time.
 
 As time passed, of course, we know that computers have evolved into powerful multi-core systems, and JavaScript has become one of the most prolifically-used languages in the computing world. A vast number of the most popular applications are based at least in part on JavaScript code. To support this, it was necessary to find ways to allow for projects to escape the limitations of a single-threaded language.
 
@@ -39,8 +30,8 @@ Each context is, in essence, a level of scope within your code. As one of these 
 let outputElem = document.getElementById("output");
 
 let userLanguages = {
-  "Mike": "en",
-  "Teresa": "es"
+  Mike: "en",
+  Teresa: "es",
 };
 
 function greetUser(user) {
@@ -48,7 +39,7 @@ function greetUser(user) {
     let greeting;
     let language = userLanguages[user];
 
-    switch(language) {
+    switch (language) {
       case "es":
         greeting = `¡Hola, ${user}!`;
         break;
@@ -59,7 +50,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += localGreeting(user) + "<br>\r";
+  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
 }
 
 greetUser("Mike");
@@ -102,18 +93,18 @@ Here we look at how the runtime functions in slightly more detail.
 
 Each agent is driven by an **event loop**, which collects any user and other events, enqueuing tasks to handle each callback. It then runs any pending JavaScript tasks, then any pending microtasks, then performs any needed rendering and painting before looping again to check for pending tasks.
 
-Your web site or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
+Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
 The event loop, then, drives everything that happens in the browser as it pertains to the interaction with the user, but more importantly for our purposes here, it is responsible for the scheduling and execution of every piece of code that runs within its thread.
 
 There are three types of event loop:
 
 - Window event loop
-  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this as described elsewhere in this article XXXX ????).
+  - : The window event loop is the one that drives all of the windows sharing a similar origin (though there are further limits to this, as described below).
 - Worker event loop
   - : A worker event loop is one which drives a worker; this includes all forms of workers, including basic [web workers](/en-US/docs/Web/API/Web_Workers_API), [shared workers](/en-US/docs/Web/API/SharedWorker), and [service workers](/en-US/docs/Web/API/Service_Worker_API). Workers are kept in one or more agents that are separate from the "main" code; the browser may use a single event loop for all of the workers of a given type or may use multiple event loops to handle them.
 - Worklet event loop
-  - : A [worklet](/en-US/docs/Web/API/Worklet) event loop is the event loop used to drive agents which run the code for the worklets for a given agent. This includes worklets of type {{domxref("Worklet")}}, {{domxref("AudioWorklet")}}, and {{domxref("PaintWorklet")}}.
+  - : A [worklet](/en-US/docs/Web/API/Worklet) event loop is the event loop used to drive agents which run the code for the worklets for a given agent. This includes worklets of type {{domxref("Worklet")}} and {{domxref("AudioWorklet")}}.
 
 Several windows loaded from the same {{Glossary("origin")}} may be running on the same event loop, each queueing tasks onto the event loop so that their tasks take turns with the processor, one after another. Keep in mind that in web parlance, the word "window" actually means "browser-level container that web content runs within," including an actual window, a tab, or a frame.
 
@@ -125,9 +116,9 @@ There are specific circumstances in which this sharing of an event loop among wi
 
 The specifics may vary from browser to browser, depending on how they're implemented.
 
-#### Tasks vs microtasks
+#### Tasks vs. microtasks
 
-A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}**.**
+A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 
@@ -142,7 +133,7 @@ When multiple programs and multiple code objects within those programs start to 
 
 ### Solutions
 
-The use of [web workers](/en-US/docs/Web/API/Web_Workers_API), which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed web site or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.
+The use of [web workers](/en-US/docs/Web/API/Web_Workers_API), which allow the main script to run other scripts in new threads, help to alleviate this problem. A well-designed website or app uses workers to perform any complex or lengthy operations, leaving the main thread to do as little work as possible beyond updating, laying out, and rendering the web page.
 
 This is further alleviated by using [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous) techniques such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to allow the main code to continue to run while waiting for the results of a request. However, code running at a more fundamental level—such as code comprising a library or framework—may need a way to schedule code to be run at a safe time while still executing on the main thread, independent of the results of any single request or task.
 
@@ -155,9 +146,6 @@ The microtask queue has been around for a while, but it's historically been used
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("queueMicrotask()")}}
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-
-  - [General asynchronous programming concepts](/en-US/docs/Learn/JavaScript/Asynchronous/Concepts)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
+  - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Graceful asynchronous programming with Promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [Choosing the right approach](/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)

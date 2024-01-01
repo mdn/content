@@ -1,24 +1,21 @@
 ---
 title: AnimationTimeline
 slug: Web/API/AnimationTimeline
-tags:
-  - API
-  - Animation
-  - AnimationTimeline
-  - Interface
-  - Reference
-  - Web Animations
-  - waapi
-  - web animations api
+page-type: web-api-interface
 browser-compat: api.AnimationTimeline
 ---
-{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
-The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents the timeline of an animation. This interface exists to define timeline features (inherited by {{domxref("DocumentTimeline")}} and future timeline types) and is not itself directly used by developers. Anywhere you see `AnimationTimeline`, you should use `DocumentTimeline` or any other timeline type instead.
+{{ APIRef("Web Animations") }}
 
-## Properties
+The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) represents the timeline of an animation. This interface exists to define timeline features, inherited by other timeline types:
 
-- {{domxref("AnimationTimeline.currentTime")}} {{readonlyInline}}
+- {{domxref("DocumentTimeline")}}
+- {{domxref("ScrollTimeline")}}
+- {{domxref("ViewTimeline")}}
+
+## Instance properties
+
+- {{domxref("AnimationTimeline.currentTime", "currentTime")}} {{ReadOnlyInline}}
   - : Returns the time value in milliseconds for this timeline or `null` if this timeline is inactive.
 
 ## Specifications
@@ -31,6 +28,7 @@ The `AnimationTimeline` interface of the [Web Animations API](/en-US/docs/Web/AP
 
 ## See also
 
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- {{domxref("DocumentTimeline")}}
+- {{domxref("DocumentTimeline")}}, {{domxref("ScrollTimeline")}}, {{domxref("ViewTimeline")}}
 - {{domxref("Document.timeline")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)

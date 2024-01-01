@@ -1,22 +1,16 @@
 ---
-title: BaseAudioContext.createConvolver()
+title: "BaseAudioContext: createConvolver() method"
+short-title: createConvolver()
 slug: Web/API/BaseAudioContext/createConvolver
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createConvolver
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createConvolver
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createConvolver()` method of the {{ domxref("BaseAudioContext") }}
 interface creates a {{ domxref("ConvolverNode") }}, which is commonly used to apply
-reverb effects to your audio. See the [spec definition of
-Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
+reverb effects to your audio. See the [spec definition of Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more information.
 
 > **Note:** The {{domxref("ConvolverNode.ConvolverNode", "ConvolverNode()")}}
 > constructor is the recommended way to create a {{domxref("ConvolverNode")}}; see
@@ -24,53 +18,50 @@ Convolution](https://webaudio.github.io/web-audio-api/#background-3) for more in
 
 ## Syntax
 
-```js
-baseAudioContext.createConvolver();
+```js-nolint
+createConvolver()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("ConvolverNode")}}.
 
-## Example
+## Examples
 
-The following example shows basic usage of an AudioContext to create a convolver node.
-The basic premise is that you create an AudioBuffer containing a sound sample to be used
-as an ambience to shape the convolution (called the _impulse response_,) and
+### Creating a convolver node
+
+The following example shows how to use an AudioContext to create a convolver node.
+You create an {{domxref("AudioBuffer")}} containing a sound sample to be used
+as an ambience to shape the convolution (called the _impulse response_) and
 apply that to the convolver. The example below uses a short sample of a concert hall
 crowd, so the reverb effect applied is really deep and echoey.
 
-For applied examples/information, check out our [Voice-change-O-matic demo](https://mdn.github.io/voice-change-o-matic/) ([see
-app.js](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js) for relevant code).
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (see [app.js](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js) for the code that is excerpted below).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new AudioContext();
+// ...
 
-  ...
+const convolver = audioCtx.createConvolver();
+// ...
 
-// grab audio track via XHR for convolver node
-
-var soundSource, concertHallBuffer;
-
-ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
-
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+// Grab audio track via fetch() for convolver node
+try {
+  const response = await fetch(
+    "https://mdn.github.io/voice-change-o-matic/audio/concert-crowd.ogg",
+  );
+  const arrayBuffer = await response.arrayBuffer();
+  const decodedAudio = await audioCtx.decodeAudioData(arrayBuffer);
+  convolver.buffer = decodedAudio;
+} catch (error) {
+  console.error(
+    `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+  );
 }
-
-ajaxRequest.send();
-
-  ...
-
-convolver.buffer = concertHallBuffer;
 ```
 
 ## Specifications

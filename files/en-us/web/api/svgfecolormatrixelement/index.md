@@ -1,21 +1,15 @@
 ---
 title: SVGFEColorMatrixElement
 slug: Web/API/SVGFEColorMatrixElement
-tags:
-  - API
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFEColorMatrixElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEColorMatrixElement`** interface corresponds to the {{SVGElement("feColorMatrix")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 ## Constants
 
@@ -58,7 +52,7 @@ The **`SVGFEColorMatrixElement`** interface corresponds to the {{SVGElement("feC
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -79,7 +73,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEColorMatrixElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}_.
 

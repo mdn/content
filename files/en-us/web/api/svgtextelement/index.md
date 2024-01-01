@@ -1,25 +1,21 @@
 ---
 title: SVGTextElement
 slug: Web/API/SVGTextElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGTextElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTextElement`** interface corresponds to the {{SVGElement("text")}} elements.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGTextPositioningElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGTextPositioningElement")}}._
 

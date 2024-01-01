@@ -1,21 +1,17 @@
 ---
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Logical Properties
-  - CSS Property
-  - Reference
-  - overscroll-behavior-inline
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline
 ---
+
 {{CSSRef}}
 
-The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
+The **`overscroll-behavior-inline`** CSS property sets the browser's behavior when the inline direction boundary of a scrolling area is reached.
 
 See {{cssxref("overscroll-behavior")}} for a full explanation.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,19 +23,18 @@ overscroll-behavior-inline: none;
 overscroll-behavior-inline: inherit;
 overscroll-behavior-inline: initial;
 overscroll-behavior-inline: revert;
+overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
-## Syntax
-
-The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
+The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
 
 ### Values
 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
@@ -63,11 +58,15 @@ By default, when the inner box is scrolled and a scroll boundary is reached, the
 
 ```html
 <main>
-  <div>
-    <div>
-      <p><code>overscroll-behavior-inline</code> has been used to make it so that when the scroll boundaries of the yellow inner box are reached, the whole page does not begin to scroll.</p>
-    </div>
-  </div>
+  <div>
+    <div>
+      <p>
+        <code>overscroll-behavior-inline</code> has been used to make it so that
+        when the scroll boundaries of the yellow inner box are reached, the
+        whole page does not begin to scroll.
+      </p>
+    </div>
+  </div>
 </main>
 ```
 
@@ -78,7 +77,12 @@ main {
   height: 400px;
   width: 3000px;
   background-color: white;
-  background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 main > div {
@@ -95,12 +99,17 @@ div > div {
   height: 100%;
   width: 1500px;
   background-color: yellow;
-  background-image: repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 19px, rgba(0,0,0,0.5) 20px);
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 19px,
+    rgba(0, 0, 0, 0.5) 20px
+  );
 }
 
 p {
   padding: 10px;
-  background-color: rgba(255,0,0,0.5);
+  background-color: rgba(255, 0, 0, 0.5);
   margin: 0;
   width: 360px;
   position: relative;
@@ -123,4 +132,4 @@ p {
 
 ## See also
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
+- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior/#demo)

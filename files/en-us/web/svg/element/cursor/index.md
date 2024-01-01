@@ -1,14 +1,12 @@
 ---
 title: <cursor>
 slug: Web/SVG/Element/cursor
-tags:
-  - Deprecated
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
+page-type: svg-element
+status:
+  - deprecated
 browser-compat: svg.elements.cursor
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 > **Note:** The CSS {{cssxref("cursor")}} property should be used instead of this element.
@@ -25,17 +23,17 @@ The PNG format is recommended because it supports the ability to define a transp
 
 ### Global attributes
 
-*   [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
+- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
 
 ### Specific attributes
 
-*   {{SVGAttr("x")}}
-*   {{SVGAttr("y")}}
-*   {{SVGAttr("xlink:href")}}
+- {{SVGAttr("x")}} {{Deprecated_Inline}}
+- {{SVGAttr("y")}} {{Deprecated_Inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{DOMxRef("SVGCursorElement")}} interface.
 

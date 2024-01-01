@@ -1,20 +1,16 @@
 ---
-title: XRQuadLayer.space
+title: "XRQuadLayer: space property"
+short-title: space
 slug: Web/API/XRQuadLayer/space
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRQuadLayer.space
 ---
-{{APIRef("WebXR Device API")}}
 
-The **`space`** property of the {{domxref("XRQuadLayer")}} interface represents the layer's spatial relationship with the user’s physical environment.
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+
+The **`space`** property of the {{domxref("XRQuadLayer")}} interface represents the layer's spatial relationship with the user's physical environment.
 
 ## Value
 
@@ -30,11 +26,11 @@ This example code positions the layer two meters away from `newSpace` with a `he
 const quadLayer = xrGlBinding.createQuadLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 quadLayer.space = newSpace;
-quadLayer.transform = new XRRigidTransform({z: -2});
+quadLayer.transform = new XRRigidTransform({ z: -2 });
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
 ```

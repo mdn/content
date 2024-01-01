@@ -1,31 +1,16 @@
 ---
-title: Animation.playState
+title: "Animation: playState property"
+short-title: playState
 slug: Web/API/Animation/playState
-tags:
-  - API
-  - Animation
-  - Property
-  - Reference
-  - Web Animations
-  - playState
-  - web animations api
+page-type: web-api-instance-property
 browser-compat: api.Animation.playState
 ---
-{{APIRef("Web Animations")}}{{SeeCompatTable}}
 
-The **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns and sets an enumerated value describing the playback state of an animation.
+{{APIRef("Web Animations")}}
 
-> **Note:** This property is read-only for CSS Animations and Transitions.
+The read-only **`Animation.playState`** property of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns an enumerated value describing the playback state of an animation.
 
-## Syntax
-
-```js
-var currentPlayState = Animation.playState;
-
-Animation.playState = newState;
-```
-
-### Value
+## Value
 
 - `idle`
   - : The current time of the animation is unresolved and there are no pending tasks.
@@ -38,34 +23,32 @@ Animation.playState = newState;
 
 Previously, Web Animations defined a **`pending`** value to indicate that some asynchronous operation such as initiating playback was yet to complete. This is now indicated by the separate {{domxref("Animation.pending")}} property.
 
-## Example
+## Examples
 
-In the [Growing/Shrinking Alice Game](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, players can get an ending with [Alice crying into a pool of tears](http://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). In the game, for performance reasons, the tears should only be animating when they're visible. So they must be paused as soon as they are animated like so:
+In the [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) example, players can get an ending with [Alice crying into a pool of tears](https://codepen.io/rachelnabors/pen/EPJdJx?editors=0010). In the game, for performance reasons, the tears should only be animating when they're visible. So they must be paused as soon as they are animated like so:
 
 ```js
 // Setting up the tear animations
 
-tears.forEach(function(el) {
-  el.animate(
-    tearsFalling,
-    {
-      delay: getRandomMsRange(-1000, 1000), // randomized for each tear
-      duration: getRandomMsRange(2000, 6000), // randomized for each tear
-      iterations: Infinity,
-      easing: 'cubic-bezier(0.6, 0.04, 0.98, 0.335)'
-    });
-  el.pause();
+tears.forEach((el) => {
+  el.animate(tearsFalling, {
+    delay: getRandomMsRange(-1000, 1000), // randomized for each tear
+    duration: getRandomMsRange(2000, 6000), // randomized for each tear
+    iterations: Infinity,
+    easing: "cubic-bezier(0.6, 0.04, 0.98, 0.335)",
+  });
+  el.pause();
 });
 
 // Play the tears falling when the ending needs to be shown.
 
-tears.forEach(function(el) {
-  el.play();
+tears.forEach((el) => {
+  el.play();
 });
 
 // Reset the crying tears animations and pause them.
 
-tears.forEach(function(el) {
+tears.forEach((el) => {
   el.pause();
   el.currentTime = 0;
 });

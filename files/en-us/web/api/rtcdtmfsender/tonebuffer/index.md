@@ -1,20 +1,11 @@
 ---
-title: RTCDTMFSender.toneBuffer
+title: "RTCDTMFSender: toneBuffer property"
+short-title: toneBuffer
 slug: Web/API/RTCDTMFSender/toneBuffer
-tags:
-  - Audio
-  - DTMF
-  - Media
-  - Property
-  - RTCDTMFSender
-  - Reference
-  - Telephony
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - toneBuffer
+page-type: web-api-instance-property
 browser-compat: api.RTCDTMFSender.toneBuffer
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCDTMFSender")}} interface's toneBuffer property returns a string
@@ -24,15 +15,9 @@ call {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}}.
 
 Tones are removed from the string as they're played, so only upcoming tones are listed.
 
-## Syntax
+## Value
 
-```js
-var toneBuffer = RTCDTMFSender.toneBuffer;
-```
-
-### Value
-
-A {{domxref("DOMString")}} listing the tones to be played. If the string is empty,
+A string listing the tones to be played. If the string is empty,
 there are no tones pending.
 
 ### Exceptions
@@ -51,7 +36,7 @@ are permitted by the DTMF standard.
   - : These characters represent the digit keys on a telephone keypad.
 - The letters A-D
   - : These characters represent the "A" through "D" keys which are part of the DTMF
-    standard but not included on most telephones. These are *not* interpreted as
+    standard but not included on most telephones. These are _not_ interpreted as
     digits. Lower-case "a"-"d" automatically gets converted to upper-case.
 - The pound/hash sign ("#") and the asterisk ("\*")
   - : These correspond to the similarly-labeled keys which are typically on the bottom row
@@ -72,7 +57,7 @@ request access to the VM system, then, after a pause, send a "1" to start playba
 voicemail messages, then after a pause, dial "5555" as a PIN number to open the
 messages.
 
-Settting the tone buffer to an empty string (`""`) cancels any pending DTMF
+Setting the tone buffer to an empty string (`""`) cancels any pending DTMF
 codes.
 
 ## Example

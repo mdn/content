@@ -1,14 +1,11 @@
 ---
-title: 'Location: assign()'
+title: "Location: assign() method"
+short-title: assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - HTML-DOM
-  - Location
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Location.assign
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`Location.assign()`** method causes the window to load
@@ -27,20 +24,32 @@ If the provided URL is not valid, a {{domxref("DOMException")}} of the
 
 ## Syntax
 
-```js
-location.assign(url);
+```js-nolint
+assign(url)
 ```
 
 ### Parameters
 
 - `url`
-  - : Is a {{domxref("DOMString")}} containing the URL of the page to navigate to.
+  - : A string containing the URL of the page to navigate to; for example, an absolute URL such as `https://developer.mozilla.org/en-US/docs/Web/API/Location/reload`, or a relative URL — such as `"/Web` (just a path, for navigating to another document at the same origin) or `#specifications` (just a fragment string, for navigating to some part of the same page), and so on.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 // Navigate to the Location.reload article
-window.location.assign('https://developer.mozilla.org/en-US/docs/Web/API/Location/reload');
+window.location.assign(
+  "https://developer.mozilla.org/en-US/docs/Web/API/Location/reload",
+);
+
+// Then navigate to its Specifications section
+window.location.assign("#specifications");
+
+// Eventually navigate to https://developer.mozilla.org/en-US/docs/Web
+window.location.assign("/Web");
 ```
 
 ## Specifications

@@ -1,19 +1,16 @@
 ---
-title: VideoFrame.timestamp
+title: "VideoFrame: timestamp property"
+short-title: timestamp
 slug: Web/API/VideoFrame/timestamp
-tags:
-  - API
-  - Property
-  - Reference
-  - timestamp
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.timestamp
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`timestamp`** property of the {{domxref("VideoFrame")}} interface returns an integer indicating the timestamp of the video in microseconds.
 
-### Value
+## Value
 
 An integer.
 
@@ -32,5 +29,3 @@ console.log(VideoFrame.timestamp);
 ## Browser compatibility
 
 {{Compat}}
-
-

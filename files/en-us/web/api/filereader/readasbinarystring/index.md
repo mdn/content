@@ -1,31 +1,32 @@
 ---
-title: FileReader.readAsBinaryString()
+title: "FileReader: readAsBinaryString() method"
+short-title: readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
-tags:
-  - API
-  - File API
-  - Files
-  - Method
-  - Reference
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.FileReader.readAsBinaryString
 ---
-{{APIRef("File API")}}
 
-The `readAsBinaryString` method is used to start reading the contents of the
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
+
+> **Note:** This method is deprecated in favor of {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}.
+
+The **`readAsBinaryString`** method of the {{domxref("FileReader")}} interface is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
 finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-`DONE`, and the {{event("loadend")}} is triggered. At that time, the
+`DONE`, and the {{domxref("FileReader.loadend_event")}} is triggered. At that time, the
 {{domxref("FileReader.result","result")}} attribute contains the raw binary data from
 the file.
 
 Note that this method was once removed from the File API specification, but
 re-introduced for backward compatibility.
-Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
+Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
-```js
-instanceOfFileReader.readAsBinaryString(blob);
+```js-nolint
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -33,31 +34,35 @@ instanceOfFileReader.readAsBinaryString(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var canvas = document.createElement('canvas');
-var height = 200;
-var width  = 200;
+const canvas = document.createElement("canvas");
+const height = 200;
+const width = 200;
 
-canvas.width  = width;
+canvas.width = width;
 canvas.height = height;
 
-var ctx = canvas.getContext('2d');
+const ctx = canvas.getContext("2d");
 
-ctx.strokeStyle = '#090';
+ctx.strokeStyle = "#090";
 ctx.beginPath();
-ctx.arc(width/2, height/2, width/2 - width/10, 0, Math.PI*2);
+ctx.arc(width / 2, height / 2, width / 2 - width / 10, 0, Math.PI * 2);
 ctx.stroke();
 
-canvas.toBlob(function (blob) {
-  var reader = new FileReader();
+canvas.toBlob((blob) => {
+  const reader = new FileReader();
 
-  reader.onload = function () {
+  reader.onload = () => {
     console.log(reader.result);
-  }
+  };
 
-  reader.readAsBinaryString(blob);
+  reader.readAsBinaryString(blob);
 });
 ```
 

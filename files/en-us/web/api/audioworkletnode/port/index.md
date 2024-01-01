@@ -1,16 +1,12 @@
 ---
-title: AudioWorkletNode.port
+title: "AudioWorkletNode: port property"
+short-title: port
 slug: Web/API/AudioWorkletNode/port
-tags:
-  - API
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
-  - port
+page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.port
 ---
-{{APIRef("Web Audio API")}}{{SeeCompatTable}}
+
+{{APIRef("Web Audio API")}}
 
 The read-only **`port`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated
@@ -21,13 +17,7 @@ associated {{domxref("AudioWorkletProcessor")}}.
 > available under the {{domxref("AudioWorkletProcessor.port", "port")}} property of the
 > processor.
 
-## Syntax
-
-```js
-audioWorkletNodeInstance.port;
-```
-
-### Value
+## Value
 
 The {{domxref("MessagePort")}} object that is connecting the
 `AudioWorkletNode` and its associated `AudioWorkletProcessor`.
@@ -44,19 +34,19 @@ Note that this should be done in a separate file.
 ```js
 // ping-pong-processor.js
 class PingPongProcessor extends AudioWorkletProcessor {
-  constructor (...args) {
-    super(...args)
+  constructor(...args) {
+    super(...args);
     this.port.onmessage = (e) => {
-      console.log(e.data)
-      this.port.postMessage('pong')
-    }
+      console.log(e.data);
+      this.port.postMessage("pong");
+    };
   }
-  process (inputs, outputs, parameters) {
-    return true
+  process(inputs, outputs, parameters) {
+    return true;
   }
 }
 
-registerProcessor('ping-pong-processor', PingPongProcessor)
+registerProcessor("ping-pong-processor", PingPongProcessor);
 ```
 
 Now in our main scripts file we'll load the processor, create an instance of
@@ -64,14 +54,14 @@ Now in our main scripts file we'll load the processor, create an instance of
 an audio graph.
 
 ```js
-const audioContext = new AudioContext()
-await audioContext.audioWorklet.addModule('ping-pong-processor.js')
-const pingPongNode = new AudioWorkletNode(audioContext, 'ping-pong-processor')
+const audioContext = new AudioContext();
+await audioContext.audioWorklet.addModule("ping-pong-processor.js");
+const pingPongNode = new AudioWorkletNode(audioContext, "ping-pong-processor");
 // send the message containing 'ping' string
 // to the AudioWorkletProcessor from the AudioWorkletNode every second
-setInterval(() => pingPongNode.port.postMessage('ping'), 1000)
-pingPongNode.port.onmessage = (e) => console.log(e.data)
-pingPongNode.connect(audioContext.destination)
+setInterval(() => pingPongNode.port.postMessage("ping"), 1000);
+pingPongNode.port.onmessage = (e) => console.log(e.data);
+pingPongNode.connect(audioContext.destination);
 ```
 
 This will output `"ping"` and `"pong"` strings to the console
@@ -88,5 +78,4 @@ every second.
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

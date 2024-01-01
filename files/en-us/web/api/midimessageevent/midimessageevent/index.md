@@ -1,44 +1,35 @@
 ---
-title: MIDIMessageEvent.MIDIMessageEvent()
+title: "MIDIMessageEvent: MIDIMessageEvent() constructor"
+short-title: MIDIMessageEvent()
 slug: Web/API/MIDIMessageEvent/MIDIMessageEvent
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MIDIMessageEvent
+page-type: web-api-constructor
 browser-compat: api.MIDIMessageEvent.MIDIMessageEvent
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIMessageEvent()`** constructor creates a new {{domxref("MIDIMessageEvent")}} object. Typically this constructor is not used as events are created when a {{domxref("MIDIInput")}} finishes receiving one or more MIDI messages.
 
 ## Syntax
 
-```js
-new MIDIMessageEvent(type);
-new MIDIMessageEvent(type, MIDIMessageEventInit);
+```js-nolint
+new MIDIMessageEvent(type)
+new MIDIMessageEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - : Will always be `'MIDIMessageEvent'`.
-- `MIDIMessageEventInit`{{optional_inline}}
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `MIDIMessageEvent`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `data`
+      - : A {{jsxref("Uint8Array")}} instance containing the data bytes of the MIDI message.
 
-  - : A dictionary including the following fields:
+### Return value
 
-    - `port`
-      - : The {{domxref("MIDIPort")}} instance representing the port that has connected or disconnected.
-    - `bubbles` {{optional_inline}}
-      - : A boolean value indicating whether the event bubbles. The default is
-        `false`.
-    - `cancelable` {{optional_inline}}
-      - : A boolean value indicating whether the event can be cancelled. The
-        default is `false`.
-    - `composed` {{optional_inline}}
-      - : A boolean value indicating whether the event will trigger listeners
-        outside of a shadow root (see {{domxref("Event.composed")}} for details). The
-        default is `false`.
+A new {{domxref("MIDIMessageEvent")}} object.
 
 ## Specifications
 

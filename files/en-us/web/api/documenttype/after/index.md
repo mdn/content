@@ -1,31 +1,34 @@
 ---
-title: DocumentType.after()
+title: "DocumentType: after() method"
+short-title: after()
 slug: Web/API/DocumentType/after
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DocumentType.after
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.after()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of the
+{{domxref("Node")}} objects or strings in the children list of the
 `DocumentType`'s parent, just after the `DocumentType`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
-after(... nodes)
+```js-nolint
+after(param1)
+after(param1, param2)
+after(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} objects or strings to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -38,7 +41,7 @@ after(... nodes)
 let docType = document.implementation.createDocumentType("html", "", "");
 let myDoc = document.implementation.createDocument("", "", docType);
 
-docType.after(document.createElement('html'));
+docType.after(document.createElement("html"));
 
 myDoc.childNodes;
 // NodeList [<!DOCTYPE html>, <html>]

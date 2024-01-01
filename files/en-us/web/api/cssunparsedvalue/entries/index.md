@@ -1,20 +1,12 @@
 ---
-title: CSSUnparsedValue.entries()
+title: "CSSUnparsedValue: entries() method"
+short-title: entries()
 slug: Web/API/CSSUnparsedValue/entries
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Entries
-  - Experimental
-  - Houdini
-  - Method
-  - NeedsExample
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CSSUnparsedValue.entries
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue.entries()`** method
 returns an array of a given object's own enumerable property `[key, value]`
@@ -24,8 +16,8 @@ prototype chain as well).
 
 ## Syntax
 
-```js
-CSSUnparsedValue.entries(obj)
+```js-nolint
+entries(obj)
 ```
 
 ### Parameters
@@ -49,7 +41,7 @@ An array of the given `CSSUnparsedValue` object's own enumerable property
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.keys")}}
 - {{domxref("CSSUnparsedValue.length")}}

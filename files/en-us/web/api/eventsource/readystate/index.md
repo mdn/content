@@ -1,28 +1,18 @@
 ---
-title: EventSource.readyState
+title: "EventSource: readyState property"
+short-title: readyState
 slug: Web/API/EventSource/readyState
-tags:
-  - API
-  - EventSource
-  - Property
-  - Reference
-  - Server-sent events
-  - readyState
+page-type: web-api-instance-property
 browser-compat: api.EventSource.readyState
 ---
+
 {{APIRef('WebSockets API')}}
 
 The **`readyState`** read-only property of the
 {{domxref("EventSource")}} interface returns a number representing the state of the
 connection.
 
-## Syntax
-
-```js
-var myReadyState = eventSource.readyState;
-```
-
-### Value
+## Value
 
 A number representing the state of the connection. Possible values are:
 
@@ -33,12 +23,11 @@ A number representing the state of the connection. Possible values are:
 ## Examples
 
 ```js
-var evtSource = new EventSource('sse.php');
+const evtSource = new EventSource("sse.php");
 console.log(evtSource.readyState);
 ```
 
-> **Note:** You can find a full example on GitHub — see [Simple SSE
-> demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> **Note:** You can find a full example on GitHub — see [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main/server-sent-events).
 
 ## Specifications
 

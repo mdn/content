@@ -1,13 +1,11 @@
 ---
-title: Range.surroundContents()
+title: "Range: surroundContents() method"
+short-title: surroundContents()
 slug: Web/API/Range/surroundContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.surroundContents
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.surroundContents()`** method moves content of the
@@ -26,8 +24,8 @@ instead the operation will fail.
 
 ## Syntax
 
-```js
-range.surroundContents(newParent);
+```js-nolint
+surroundContents(newParent)
 ```
 
 ### Parameters
@@ -35,7 +33,11 @@ range.surroundContents(newParent);
 - `newParent`
   - : A {{ domxref("Node") }} with which to surround the contents.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ### HTML
 
@@ -47,15 +49,15 @@ range.surroundContents(newParent);
 
 ```js
 const range = document.createRange();
-const newParent = document.createElement('h1');
+const newParent = document.createElement("h1");
 
-range.selectNode(document.querySelector('.header-text'));
+range.selectNode(document.querySelector(".header-text"));
 range.surroundContents(newParent);
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

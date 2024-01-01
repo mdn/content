@@ -1,17 +1,13 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.aspect-ratio
 ---
+
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
 
 ## Syntax
 
@@ -26,8 +22,8 @@ Note that, when none of the media query conditions are true, the background will
 ### HTML
 
 ```html
-<div id='inner'>
-  Watch this element as you resize your viewport's width and height.
+<div id="inner">
+  Watch this element as you resize your viewport's width and height.
 </div>
 ```
 
@@ -36,23 +32,23 @@ Note that, when none of the media query conditions are true, the background will
 ```css
 /* Minimum aspect ratio */
 @media (min-aspect-ratio: 8/5) {
-  div {
-    background: #9af; /* blue */
-  }
+  div {
+    background: #9af; /* blue */
+  }
 }
 
 /* Maximum aspect ratio */
 @media (max-aspect-ratio: 3/2) {
-  div {
-    background: #9ff;  /* cyan */
-  }
+  div {
+    background: #9ff; /* cyan */
+  }
 }
 
 /* Exact aspect ratio, put it at the bottom to avoid override*/
 @media (aspect-ratio: 1/1) {
-  div {
-    background: #f9a; /* red */
-  }
+  div {
+    background: #f9a; /* red */
+  }
 }
 ```
 
@@ -60,32 +56,33 @@ Note that, when none of the media query conditions are true, the background will
 
 ```html hidden
 <label id="wf" for="w">width:165</label>
-<input id="w" name="w" type="range" min="100" max="250" step="5" value="165">
+<input id="w" name="w" type="range" min="100" max="250" step="5" value="165" />
 <label id="hf" for="w">height:165</label>
-<input id="h" name="h" type="range" min="100" max="250" step="5" value="165">
+<input id="h" name="h" type="range" min="100" max="250" step="5" value="165" />
 
-<iframe id="outer" src="data:text/html,<style> @media (min-aspect-ratio: 8/5) { div { background: %239af; } } @media (max-aspect-ratio: 3/2) { div { background: %239ff; } } @media (aspect-ratio: 1/1) { div { background: %23f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
-
+<iframe
+  id="outer"
+  srcdoc="<style> @media (min-aspect-ratio: 8/5) { div { background: #9af; } } @media (max-aspect-ratio: 3/2) { div { background: #9ff; } } @media (aspect-ratio: 1/1) { div { background: #f9a; } }</style><div id='inner'> Watch this element as you resize your viewport's width and height.</div>">
 </iframe>
 ```
 
 ```css hidden
-iframe{
-  display:block;
+iframe {
+  display: block;
 }
 ```
 
 ```js hidden
-outer.style.width=outer.style.height="165px"
+outer.style.width = outer.style.height = "165px";
 
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
-}
+w.onchange = w.oninput = () => {
+  outer.style.width = `${w.value}px`;
+  wf.textContent = `width: ${w.value}`;
+};
+h.onchange = h.oninput = () => {
+  outer.style.height = `${h.value}px`;
+  hf.textContent = `height: ${h.value}`;
+};
 ```
 
 {{ EmbedLiveSample('Result', '300px', '350px') }}
@@ -100,5 +97,5 @@ h.onchange=h.oninput=function(){
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.copyTexSubImage2D()
+title: "WebGLRenderingContext: copyTexSubImage2D() method"
+short-title: copyTexSubImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexSubImage2D
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.copyTexSubImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexSubImage2D()`** method of
@@ -18,8 +14,8 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) copies pixels from the current
 
 ## Syntax
 
-```js
-void gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
+```js-nolint
+copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height)
 ```
 
 ### Parameters
@@ -45,7 +41,7 @@ void gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the horizontal offset within the texture image.
 - `yoffset`
@@ -63,12 +59,12 @@ void gl.copyTexSubImage2D(target, level, xoffset, yoffset, x, y, width, height);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0,0, 0, 0, 16, 16);
+gl.copyTexSubImage2D(gl.TEXTURE_2D, 0, 0, 0, 0, 0, 16, 16);
 ```
 
 ## Specifications

@@ -1,16 +1,11 @@
 ---
-title: Element.hasPointerCapture()
+title: "Element: hasPointerCapture() method"
+short-title: hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - PointerEvent
-  - Reference
-  - hasPointerCapture
+page-type: web-api-instance-method
 browser-compat: api.Element.hasPointerCapture
 ---
+
 {{APIRef("DOM")}}
 
 The **`hasPointerCapture()`** method of the
@@ -19,8 +14,8 @@ pointer capture for the pointer identified by the given pointer ID.
 
 ## Syntax
 
-```js
-targetElement.hasPointerCapture(pointerId);
+```js-nolint
+hasPointerCapture(pointerId)
 ```
 
 ### Parameters
@@ -31,24 +26,23 @@ targetElement.hasPointerCapture(pointerId);
 
 ### Return value
 
-A boolean value — `true` if the element does have pointer
-capture, `false` if it doesn't.
+A boolean value — `true` if the element does have pointer capture for the pointer identified by the given pointer ID, `false` if it doesn't.
 
 ## Examples
 
 ```html
-<html>
+<html lang="en">
   <script>
     function downHandler(ev) {
       const el = document.getElementById("target");
       // Element 'target' will receive/capture further events
       el.setPointerCapture(ev.pointerId);
 
-      /* ... */
+      // …
 
       // Check whether element still has pointer capture
       let pointerCap = el.hasPointerCapture(ev.pointerId);
-      if(pointerCap) {
+      if (pointerCap) {
         // We've still got pointer capture
       } else {
         // oops, we've lost pointer capture!

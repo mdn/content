@@ -1,20 +1,11 @@
 ---
-title: 'Window: pageshow event'
+title: "Window: pageshow event"
+short-title: pageshow
 slug: Web/API/Window/pageshow_event
-tags:
-  - API
-  - Document
-  - Event
-  - History
-  - Navigation
-  - Page
-  - PageTransitionEvent
-  - Reference
-  - Window
-  - pageshow
-  - show
+page-type: web-api-event
 browser-compat: api.Window.pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
@@ -28,26 +19,33 @@ This includes:
 
 > **Note:** During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PageTransitionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("Window.onpageshow", "onpageshow")}}</td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("pageshow", (event) => {});
+onpageshow = (event) => {};
+```
+
+## Event type
+
+A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("PageTransitionEvent")}}
+
+## Event properties
+
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
+  - : Indicates if the document is loading from a cache.
+
+## Event handler aliases
+
+In addition to the `Window` interface, the event handler property `onpageshow` is also available on the following targets:
+
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
+- {{domxref("SVGSVGElement")}}
 
 ## Examples
 
@@ -56,35 +54,33 @@ This example sets up event handlers for events listed in the array `events`. The
 ### JavaScript
 
 ```js
-const events = [
-  "pagehide", "pageshow",
-  "unload", "load"
-];
+const events = ["pagehide", "pageshow", "unload", "load"];
 
-const eventLogger = event => {
+const eventLogger = (event) => {
   switch (event.type) {
     case "pagehide":
-    case "pageshow":
+    case "pageshow": {
       let isPersisted = event.persisted ? "persisted" : "not persisted";
-      console.log('Event:', event.type, '-', isPersisted);
+      console.log(`Event: ${event.type} - ${isPersisted}`);
       break;
+    }
     default:
-      console.log('Event:', event.type);
+      console.log(`Event: ${event.type}`);
       break;
   }
 };
 
-events.forEach(eventName =>
-  window.addEventListener(eventName, eventLogger)
-);
+events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ```
 
 ### HTML
 
 ```html
-<p>Open the console and watch the output as you navigate to and from
-this page. Try loading new pages into this tab, then navigating forward
-and backward through history, noting the events’ output to the log.</p>
+<p>
+  Open the console and watch the output as you navigate to and from this page.
+  Try loading new pages into this tab, then navigating forward and backward
+  through history, noting the events' output to the log.
+</p>
 ```
 
 ### Results

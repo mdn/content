@@ -1,42 +1,35 @@
 ---
 title: PaymentRequestUpdateEvent
 slug: Web/API/PaymentRequestUpdateEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Payment Request
-  - Payment Request API
-  - PaymentRequestUpdateEvent
-  - Reference
-  - Secure context
+page-type: web-api-interface
 browser-compat: api.PaymentRequestUpdateEvent
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentRequestUpdateEvent`** interface is used for events sent to a {{domxref("PaymentRequest")}} instance when changes are made to shipping-related information for a pending {{domxref("PaymentRequest")}}. Those events are:
 
-- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} {{securecontext_inline}}
+- {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}}
   - : Dispatched whenever the user changes their shipping address.
-    Also available using the {{domxref("PaymentRequest.onshippingaddresschange", "onshippingaddresschange")}} event handler property.
-- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} {{securecontext_inline}}
+- {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}}
   - : Dispatched whenever the user changes a shipping option.
-    Also available using the {{domxref("PaymentRequest.onshippingoptionchange", "onshippingoptionchange")}} event handler property.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("PaymentRequestUpdateEvent.PaymentRequestUpdateEvent()","PaymentRequestUpdateEvent()")}} {{securecontext_inline}}
+- {{domxref("PaymentRequestUpdateEvent.PaymentRequestUpdateEvent()","PaymentRequestUpdateEvent()")}}
   - : Creates a new `PaymentRequestUpdateEvent` object.
 
-## Properties
+## Instance properties
 
 _Provides only the properties inherited from its parent interface, {{domxref("Event")}}._
 
-## Methods
+## Instance methods
 
 _In addition to methods inherited from the parent interface, {{domxref("Event")}}, `PaymentRequestUpdateEvent` offers the following methods:_
 
-- {{domxref("PaymentRequestUpdateEvent.updateWith()")}} {{securecontext_inline}}
+- {{domxref("PaymentRequestUpdateEvent.updateWith()")}}
   - : If the event handler determines that information included in the payment request needs to be changed, or that new information needs to be added, it calls `updateWith()` with the information that needs to be replaced or added.
 
 ## Specifications

@@ -1,30 +1,19 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.isArray
 ---
+
 {{JSRef}}
 
-The **`Array.isArray()`** method determines whether the passed
-value is an {{jsxref("Array")}}.
+The **`Array.isArray()`** static method determines whether the passed value is an {{jsxref("Array")}}.
 
-```js
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
-```
+{{EmbedInteractiveExample("pages/js/array-isarray.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Array.isArray(value)
 ```
 
@@ -35,29 +24,26 @@ Array.isArray(value)
 
 ### Return value
 
-`true` if the value is an {{jsxref("Array")}}; otherwise,
-`false`.
+`true` if `value` is an {{jsxref("Array")}}; otherwise, `false`. `false` is always returned if `value` is a {{jsxref("TypedArray")}} instance.
 
 ## Description
 
-If the value is an {{jsxref("Array")}}, `true` is returned; otherwise,
-`false` is.
+`Array.isArray()` checks if the passed value is an {{jsxref("Array")}}. It does not check the value's prototype chain, nor does it rely on the `Array` constructor it is attached to. It returns `true` for any value that was created using the array literal syntax or the `Array` constructor. This makes it safe to use with cross-realm objects, where the identity of the `Array` constructor is different and would therefore cause [`instanceof Array`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) to fail.
 
-See the article [“Determining with
-absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html) for more
-details. Given a {{jsxref("TypedArray")}} instance, `false` is always
-returned.
+See the article ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) for more details.
+
+`Array.isArray()` also rejects objects with `Array.prototype` in its prototype chain but aren't actual arrays, which `instanceof Array` would accept.
 
 ## Examples
 
-### Using Array.isArray
+### Using Array.isArray()
 
 ```js
 // all following calls return true
 Array.isArray([]);
 Array.isArray([1]);
 Array.isArray(new Array());
-Array.isArray(new Array('a', 'b', 'c', 'd'));
+Array.isArray(new Array("a", "b", "c", "d"));
 Array.isArray(new Array(3));
 // Little known fact: Array.prototype itself is an array:
 Array.isArray(Array.prototype);
@@ -68,27 +54,29 @@ Array.isArray({});
 Array.isArray(null);
 Array.isArray(undefined);
 Array.isArray(17);
-Array.isArray('Array');
+Array.isArray("Array");
 Array.isArray(true);
 Array.isArray(false);
 Array.isArray(new Uint8Array(32));
+// This is not an array, because it was not created using the
+// array literal syntax or the Array constructor
 Array.isArray({ __proto__: Array.prototype });
 ```
 
-### `instanceof` vs `isArray`
+### instanceof vs. Array.isArray()
 
-When checking for `Array` instance, `Array.isArray` is preferred
-over `instanceof` because it works through `iframes`.
+When checking for `Array` instance, `Array.isArray()` is preferred over `instanceof` because it works across realms.
 
 ```js
-var iframe = document.createElement('iframe');
+const iframe = document.createElement("iframe");
 document.body.appendChild(iframe);
-xArray = window.frames[window.frames.length-1].Array;
-var arr = new xArray(1,2,3); // [1,2,3]
+const xArray = window.frames[window.frames.length - 1].Array;
+const arr = new xArray(1, 2, 3); // [1, 2, 3]
 
 // Correctly checking for Array
-Array.isArray(arr);  // true
-// Considered harmful, because doesn't work through iframes
+Array.isArray(arr); // true
+// The prototype of arr is xArray.prototype, which is a
+// different object from Array.prototype
 arr instanceof Array; // false
 ```
 
@@ -102,7 +90,6 @@ arr instanceof Array; // false
 
 ## See also
 
-- A polyfill of `Array.isArray` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [A
-  polyfill](https://github.com/behnammodi/polyfill/blob/master/array.polyfill.js)
+- [Polyfill of `Array.isArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}

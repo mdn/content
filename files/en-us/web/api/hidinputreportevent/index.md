@@ -1,38 +1,39 @@
 ---
 title: HIDInputReportEvent
 slug: Web/API/HIDInputReportEvent
-tags:
-  - API
-  - Interface
-  - Reference
-  - HIDInputReportEvent
+page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.HIDInputReportEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebHID API")}}
 
-The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.oninputreport")}} when an input report is received from any associated HID device.
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-## Properties
+The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
+
+{{InheritanceDiagram}}
+
+## Instance properties
 
 _This interface also inherits properties from {{domxref("Event")}}._
 
-- {{domxref("HIDInputReportEvent.data")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
-- {{domxref("HIDInputReportEvent.device")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.device")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{domxref("HIDDevice")}} instance that represents the HID interface that sent the input report.
-- {{domxref("HIDInputReportEvent.reportId")}}{{readonlyinline}}
+- {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
-## Methods
+## Instance methods
 
 _This interface inherits methods from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-The following example demonstrates listening for an `inputReport` that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The following example demonstrates listening for an `inputReport` that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
-device.addEventListener("inputreport", event => {
+device.addEventListener("inputreport", (event) => {
   const { data, device, reportId } = event;
 
   // Handle only the Joy-Con Right device and a specific report ID.

@@ -1,34 +1,18 @@
 ---
-title: RTCError.sctpCauseCode
+title: "RTCError: sctpCauseCode property"
+short-title: sctpCauseCode
 slug: Web/API/RTCError/sctpCauseCode
-tags:
-  - API
-  - Error
-  - Networking
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - SCTP
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - sctpCauseCode
+page-type: web-api-instance-property
 browser-compat: api.RTCError.sctpCauseCode
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sctpCauseCode`** property in an
 {{domxref("RTCError")}} object provides the {{Glossary("SCTP")}} cause code explaining
 why the SCTP negotiation failed, if the `RTCError` represents an SCTP error.
 
-## Syntax
-
-```js
-let sctpCause = rtcError.sctpCauseCode;
-```
-
-### Value
+## Value
 
 An unsigned long integer value specifying SCTP cause code explaining why the error
 occurred. This property is `null` if the error isn't an SCTP error, with its

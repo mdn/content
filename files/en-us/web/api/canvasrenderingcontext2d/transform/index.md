@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.transform()
+title: "CanvasRenderingContext2D: transform() method"
+short-title: transform()
 slug: Web/API/CanvasRenderingContext2D/transform
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.transform
 ---
+
 {{APIRef}}
 
 The
@@ -24,8 +21,8 @@ described by the arguments of this method. This lets you scale, rotate, translat
 
 ## Syntax
 
-```js
-void ctx.transform(a, b, c, d, e, f);
+```js-nolint
+transform(a, b, c, d, e, f)
 ```
 
 The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
@@ -44,18 +41,28 @@ The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
 
 ### Parameters
 
-- `a` (m11)
-  - : Horizontal scaling. A value of `1` results in no scaling.
-- `b` (m12)
-  - : Vertical skewing.
-- `c` (m21)
-  - : Horizontal skewing.
-- `d` (m22)
-  - : Vertical scaling. A value of `1` results in no scaling.
-- `e` (dx)
-  - : Horizontal translation (moving).
-- `f` (dy)
-  - : Vertical translation (moving).
+- `a` (`m11`)
+  - : The cell in the first row and first column of the matrix.
+- `b` (`m12`)
+  - : The cell in the second row and first column of the matrix.
+- `c` (`m21`)
+  - : The cell in the first row and second column of the matrix.
+- `d` (`m22`)
+  - : The cell in the second row and second column of the matrix.
+- `e` (`m41`)
+  - : The cell in the first row and third column of the matrix.
+- `f` (`m42`)
+  - : The cell in the second row and third column of the matrix.
+
+If a point originally had coordinates <math><semantics><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="TeX">(x, y)</annotation></semantics></math>, then after the transformation it will have coordinates <math><semantics><mrow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mrow><annotation encoding="TeX">(ax + cy + e, bx + dy + f)</annotation></semantics></math>. This means:
+
+- `e` and `f` control the horizontal and vertical translation of the context.
+- When `b` and `c` are `0`, `a` and `d` control the horizontal and vertical scaling of the context.
+- When `a` and `d` are `1`, `b` and `c` control the horizontal and vertical skewing of the context.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -73,10 +80,10 @@ This example skews a rectangle both vertically (`.2`) and horizontally
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.transform(1, .2, .8, 1, 0, 0);
+ctx.transform(1, 0.2, 0.8, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
 ```
 

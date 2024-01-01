@@ -1,20 +1,17 @@
 ---
 title: HTMLMenuItemElement
 slug: Web/API/HTMLMenuItemElement
-tags:
-  - API
-  - Deprecated
-  - Draft
-  - HTMLMenuItemElement
-  - Interface
-  - Reference
-browser-compat: api.HTMLMenuItemElement
+page-type: web-api-interface
+status:
+  - deprecated
+  - non-standard
 ---
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`HTMLMenuItemElement`** interface provides special properties (beyond those defined on the regular {{DOMxRef("HTMLElement")}} interface it also has available to it by inheritance) for manipulating {{HTMLElement("menuitem")}} elements.
 
-{{InheritanceDiagram(600,120)}}
+{{InheritanceDiagram}}
 
 ## Specifications
 
@@ -22,7 +19,7 @@ This feature is not part of any current specification. It is no longer on track 
 
 ## Browser compatibility
 
-{{Compat}}
+No longer supported in any browser. Firefox, the only browser that supported this element, removed support in 85.
 
 ## See also
 

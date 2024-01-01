@@ -1,25 +1,21 @@
 ---
 title: SVGFEFuncRElement
 slug: Web/API/SVGFEFuncRElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFEFuncRElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEFuncRElement`** interface corresponds to the {{SVGElement("feFuncR")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface not provide any specific properties, but inherits properties from its parent interface, {{domxref("SVGComponentTransferFunctionElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGComponentTransferFunctionElement")}}._
 

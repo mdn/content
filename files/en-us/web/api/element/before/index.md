@@ -1,31 +1,34 @@
 ---
-title: Element.before()
+title: "Element: before() method"
+short-title: before()
 slug: Web/API/Element/before
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.before
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.before()`** method inserts a set of
-{{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of this
+{{domxref("Node")}} or string objects in the children list of this
 `Element`'s parent, just before this `Element`.
-{{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.
+String objects are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
-```js
-before(... nodes)
+```js-nolint
+before(param1)
+before(param1, param2)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `nodes`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to insert.
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to insert.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

@@ -1,49 +1,36 @@
 ---
-title: LargestContentfulPaint.size
+title: "LargestContentfulPaint: size property"
+short-title: size
 slug: Web/API/LargestContentfulPaint/size
-tags:
-  - API
-  - Property
-  - Reference
-  - size
-  - LargestContentfulPaint
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.size
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
+
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`size`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the intrinsic size of the element that is the largest contentful paint.
 
 The `size` of the element is the `width` times `height` of the {{domxref("DOMRectReadOnly","rectangle")}} that this element creates on the screen.
 
-## Syntax
-
-```js
-let size = LargestContentfulPaint.size;
-```
-
-### Value
+## Value
 
 An integer representing the width times height of the element.
 
 ## Examples
 
-The following example gets the `LargestContentfulPaint` object and prints the value of `size` to the console.
+### Logging the size of the largest contentful paint element
+
+This example uses a {{domxref("PerformanceObserver")}} notifying of new `largest-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
-try {
-  let lcp;
-
-  const po = new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    const lastEntry = entries[entries.length - 1];
-    console.log(lastEntry.size);
-  });
-
-  po.observe({type: 'largest-contentful-paint', buffered: true});
-
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+  console.log(lastEntry.size);
+});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```
 
 ## Specifications

@@ -1,20 +1,16 @@
 ---
 title: Content-DPR
 slug: Web/HTTP/Headers/Content-DPR
-tags:
-  - Content-DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Response header
-  - Deprecated
-  - Non-standard
-  - Exerimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Content-DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Glossary/Client_hints) was used to select an image resource.
+{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+
+The **`Content-DPR`** response header is used to confirm the _image_ device to pixel ratio in requests where the screen {{HTTPHeader("DPR")}} [client hint](/en-US/docs/Web/HTTP/Client_hints) was used to select an image resource.
 
 <table class="properties">
   <tbody>
@@ -22,7 +18,7 @@ The **`Content-DPR`** response header is used to confirm the _image_ device to p
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Response header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -44,11 +40,11 @@ If the `Content-DPR` header appears more than once in a message the last occurre
 
 > **Note:**
 >
-> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
 
 ## Syntax
 
-```
+```http
 Content-DPR: <number>
 ```
 
@@ -68,7 +64,7 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Device-Memory")}}
@@ -77,4 +73,4 @@ See the [`DPR`](/en-US/docs/Web/HTTP/Headers/DPR#examples) header example.
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

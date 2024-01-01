@@ -1,22 +1,12 @@
 ---
-title: XMLHttpRequest.getResponseHeader()
+title: "XMLHttpRequest: getResponseHeader() method"
+short-title: getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
-tags:
-  - API
-  - Examine Header
-  - Get Header
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Method
-  - Reference
-  - XHR
-  - XHR Header
-  - XMLHttpRequest
-  - getResponseHeader
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
 **`getResponseHeader()`** returns the string containing the
@@ -35,25 +25,25 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
-var myHeader = XMLHttpRequest.getResponseHeader(headerName);
+```js-nolint
+getResponseHeader(headerName)
 ```
 
 ### Parameters
 
-- _headerName_
-  - : A {{jsxref("String")}} indicating the name of the header you want to return the
+- `headerName`
+  - : A string indicating the name of the header you want to return the
     text value of.
 
 ### Return value
 
-A {{jsxref("String")}} representing the header's text value, or `null`
+A string representing the header's text value, or `null`
 if either the response has not yet been received or the header doesn't exist in the
 response.
 
-## Example
+## Examples
 
-In this example, a request is created and sent, and a {{Event("readystatechange")}}
+In this example, a request is created and sent, and a {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}}
 handler is established to look for the {{DOMxRef("XMLHttpRequest.readyState",
   "readyState")}} to indicate that the headers have been received; when that is the case,
 the value of the {{httpheader("Content-Type")}} header is fetched. If the
@@ -61,18 +51,18 @@ the value of the {{httpheader("Content-Type")}} header is fetched. If the
 canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+const client = new XMLHttpRequest();
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-    var contentType = client.getResponseHeader("Content-Type");
-    if (contentType != my_expected_type) {
+client.onreadystatechange = () => {
+  if (client.readyState === client.HEADERS_RECEIVED) {
+    const contentType = client.getResponseHeader("Content-Type");
+    if (contentType !== my_expected_type) {
       client.abort();
     }
   }
-}
+};
 ```
 
 ## Specifications
@@ -85,8 +75,7 @@ client.onreadystatechange = function() {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}

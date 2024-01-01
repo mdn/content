@@ -1,11 +1,11 @@
 ---
-title: CharacterData.insertData()
+title: "CharacterData: insertData() method"
+short-title: insertData()
 slug: Web/API/CharacterData/insertData
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.insertData
 ---
+
 {{APIRef("DOM")}}
 
 The **`insertData()`** method of the {{domxref("CharacterData")}} interface
@@ -15,7 +15,7 @@ The provided data is spliced into the existing data.
 
 ## Syntax
 
-```js
+```js-nolint
 characterData.insertData(offset, data)
 ```
 
@@ -31,6 +31,11 @@ characterData.insertData(offset, data)
 
 None.
 
+## Exceptions
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : Thrown if offset is negative or greater than the length of the contained data.
+
 ## Example
 
 ```html
@@ -38,8 +43,8 @@ None.
 ```
 
 ```js
-let span = document.getElementsByTagName("span")[0];
-let textnode = span.nextSibling;
+const span = document.querySelector("span");
+const textnode = span.nextSibling;
 
 textnode.insertData(2, "long ");
 ```

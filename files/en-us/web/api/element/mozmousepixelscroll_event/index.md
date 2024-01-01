@@ -1,45 +1,35 @@
 ---
-title: 'Element: MozMousePixelScroll event'
+title: "Element: MozMousePixelScroll event"
+short-title: MozMousePixelScroll
 slug: Web/API/Element/MozMousePixelScroll_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Firefox
-  - Mouse Wheel
-  - MozMousePixelScroll
-  - Mozilla
-  - Non-standard
-  - Reference
-  - mouse
-  - wheel
-  - Deprecated
+page-type: web-api-event
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.MozMousePixelScroll_event
 ---
+
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
 The Firefox-only, _non-standard_, and _obsolete_ **`MozMousePixelScroll`** event is fired at an {{domxref("Element")}} asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseScrollEvent") }} interface.
 
 > **Note:** Do not use this non-standard and obsolete event. Instead, you should always use the standard {{domxref("Element.wheel_event", "wheel")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        {{domxref("MouseScrollEvent")}} {{Deprecated_inline}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("MozMousePixelScroll", (event) => {});
+
+onMozMousePixelScroll = (event) => {};
+```
+
+## Event type
+
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.
+
+{{InheritanceDiagram("WheelEvent")}}
 
 ## Getting the distance scrolled
 

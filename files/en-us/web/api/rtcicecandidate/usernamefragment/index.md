@@ -1,21 +1,11 @@
 ---
-title: RTCIceCandidate.usernameFragment
+title: "RTCIceCandidate: usernameFragment property"
+short-title: usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
-tags:
-  - API
-  - Candidate
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - ufrag
-  - usernameFragment
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.usernameFragment
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`usernameFragment`** property on the {{domxref("RTCIceCandidate")}} interface is a string indicating the
@@ -26,21 +16,15 @@ If you call the constructor with an m-line string instead of the options object,
 
 Note that 24 bits of the username fragment are required to be randomized by the browser. See [Randomization](#randomization) below for details.
 
-## Syntax
+## Value
 
-```js
-var ufrag = RTCIceCandidate.usernameFragment;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the username fragment (usually referred to in
+A string containing the username fragment (usually referred to in
 shorthand as "ufrag" or "ice-ufrag") that, along with the ICE password ("ice-pwd"),
 uniquely identifies a single ongoing ICE interaction, including for any communication
 with the {{Glossary("STUN")}} server. The string may be up to 256 characters long, and
 has no default value.
 
-#### Randomization
+### Randomization
 
 At least 24 bits of the text in the `ufrag` are required to be randomly
 selected by the ICE layer at the beginning of the ICE session. The specifics for which
@@ -61,7 +45,7 @@ to inject themselves into an ICE exchange.
 
 The `usernameFragment` and password both change every time an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart) occurs.
 
-## Example
+## Examples
 
 Although the WebRTC infrastructure will filter out obsolete candidates for you after an
 ICE restart, you can do it yourself if you're trying to absolutely minimize the number
@@ -69,7 +53,7 @@ of messages going back and forth.
 
 To do so, you can compare the value of `usernameFragment` to the current
 `usernameFragment` being used for the connection after receiving the
-candidate from the signaling server and before caling
+candidate from the signaling server and before calling
 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} to add it to the
 set of possible candidates.
 
@@ -85,21 +69,20 @@ from the signaling server that contains an ICE candidate to be added to the
 restart, we can use code like this:
 
 ```js
-const ssNewCandidate = signalMsg => {
+const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach(receiver => {
+  for (const receiver of receivers) {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {
       return;
     }
-  });
+  }
 
-  pc.addIceCandidate(candidate)
-    .catch(reportError);
-}
+  pc.addIceCandidate(candidate).catch(reportError);
+};
 ```
 
 This walks through the list of the {{domxref("RTCRtpReceiver")}} objects being used to

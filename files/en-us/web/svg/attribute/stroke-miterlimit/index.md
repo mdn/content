@@ -1,11 +1,10 @@
 ---
 title: stroke-miterlimit
 slug: Web/SVG/Attribute/stroke-miterlimit
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.stroke-miterlimit
 ---
+
 {{SVGRef}}
 
 The **`stroke-miterlimit`** attribute is a presentation attribute defining a limit on the ratio of the miter length to the {{ SVGAttr("stroke-width") }} used to draw a miter join. When the limit is exceeded, the join is converted from a miter to a bevel.
@@ -14,55 +13,73 @@ The **`stroke-miterlimit`** attribute is a presentation attribute defining a lim
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement('altGlyph')}}
-*   {{SVGElement('path')}}
-*   {{SVGElement('polygon')}}
-*   {{SVGElement('polyline')}}
-*   {{SVGElement('rect')}}
-*   {{SVGElement('text')}}
-*   {{SVGElement('textPath')}}
-*   {{SVGElement('tref')}}
-*   {{SVGElement('tspan')}}
+- {{SVGElement('path')}}
+- {{SVGElement('polygon')}}
+- {{SVGElement('polyline')}}
+- {{SVGElement('rect')}}
+- {{SVGElement('text')}}
+- {{SVGElement('textPath')}}
+- {{SVGElement('tref')}}
+- {{SVGElement('tspan')}}
 
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg">
   <!-- Impact of the default miter limit -->
-  <path stroke="black" fill="none" stroke-linejoin="miter" id="p1"
-        d="M1,9 l7   ,-3 l7   ,3
-           m2,0 l3.5 ,-3 l3.5 ,3
-           m2,0 l2   ,-3 l2   ,3
-           m2,0 l0.75,-3 l0.75,3
-           m2,0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    id="p1"
+    d="M1,9 l7   ,-3 l7   ,3
+       m2,0 l3.5 ,-3 l3.5 ,3
+       m2,0 l2   ,-3 l2   ,3
+       m2,0 l0.75,-3 l0.75,3
+       m2,0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact of the smallest miter limit (1) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="1" id="p2"
-        d="M1,19 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="1"
+    id="p2"
+    d="M1,19 l7   ,-3 l7   ,3
+       m2, 0 l3.5 ,-3 l3.5 ,3
+       m2, 0 l2   ,-3 l2   ,3
+       m2, 0 l0.75,-3 l0.75,3
+       m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- Impact of a large miter limit (8) -->
-  <path stroke="black" fill="none" stroke-linejoin="miter"
-        stroke-miterlimit="8" id="p3"
-        d="M1,29 l7   ,-3 l7   ,3
-           m2, 0 l3.5 ,-3 l3.5 ,3
-           m2, 0 l2   ,-3 l2   ,3
-           m2, 0 l0.75,-3 l0.75,3
-           m2, 0 l0.5 ,-3 l0.5 ,3" />
+  <path
+    stroke="black"
+    fill="none"
+    stroke-linejoin="miter"
+    stroke-miterlimit="8"
+    id="p3"
+    d="M1,29 l7   ,-3 l7   ,3
+       m2, 0 l3.5 ,-3 l3.5 ,3
+       m2, 0 l2   ,-3 l2   ,3
+       m2, 0 l0.75,-3 l0.75,3
+       m2, 0 l0.5 ,-3 l0.5 ,3" />
 
   <!-- the following pink lines highlight the position of the path for each stroke -->
-  <path stroke="pink" fill="none" stroke-width="0.05"
-        d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
-           M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
+  <path
+    stroke="pink"
+    fill="none"
+    stroke-width="0.05"
+    d="M1, 9 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
+      M1,19 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3
+      M1,29 l7,-3 l7,3 m2,0 l3.5,-3 l3.5,3 m2,0 l2,-3 l2,3 m2,0 l0.75,-3 l0.75,3 m2,0 l0.5,-3 l0.5,3" />
 </svg>
 ```
 
@@ -103,34 +120,10 @@ For example, a miter limit of 1.414 converts miters to bevels for theta less tha
 
 The value of `stroke-miterlimit` must be greater than or equal to 1.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-## Specifications
-
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Definition for shapes and texts</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "painting.html#StrokeMiterlimitProperty", "stroke-miterlimit")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition for shapes and texts</td>
-    </tr>
-  </tbody>
-</table>

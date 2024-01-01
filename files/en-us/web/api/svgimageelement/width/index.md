@@ -1,18 +1,11 @@
 ---
-title: SVGImageElement.width
+title: "SVGImageElement: width property"
+short-title: width
 slug: Web/API/SVGImageElement/width
-tags:
-  - API
-  - Image
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
-  - SVGImageElement
-  - width
+page-type: web-api-instance-property
 browser-compat: api.SVGImageElement.width
 ---
+
 {{APIRef("SVG")}}
 
 The **`width`** read-only property of the
@@ -20,13 +13,7 @@ The **`width`** read-only property of the
 corresponding to the {{SVGAttr("width")}} attribute of the given {{SVGElement("image")}}
 element.
 
-## Syntax
-
-```js
-var width = svgImageElement.width;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}}.
 

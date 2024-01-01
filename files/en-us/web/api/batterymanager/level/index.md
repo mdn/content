@@ -1,52 +1,53 @@
 ---
-title: BatteryManager.level
+title: "BatteryManager: level property"
+short-title: level
 slug: Web/API/BatteryManager/level
-tags:
-  - API
-  - Battery API
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.BatteryManager.level
 ---
-{{deprecated_header}}{{APIRef("Battery API")}}
 
-Indicates the current battery charge level as a value between `0.0` and
-`1.0`.
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-## Syntax
+The **`BatteryManager.level`** property indicates the current battery charge level as a value between `0.0` and `1.0`.
+A value of `0.0` means the battery is empty and the system is about to be suspended.
+A value of `1.0` means the battery is full or the user agent is unable to report the battery status information.
+When its value changes, the {{domxref("BatteryManager/levelchange_event", "levelchange")}} event is fired.
 
-```js
-var level = battery.level
-```
+## Value
 
-On return, `level` is a number representing the system's battery charge
-level scaled to a value between 0.0 and 1.0. A value of 0 means the
-`battery`, which is a {{domxref("BatteryManager")}} object, is empty
-and the system is about to be suspended. A value of 1.0 means the battery is full. A
-value of 1.0 is also returned if the implementation isn't able to determine the battery
-charge level or if the system is not battery-powered.
+A number.
 
-## Example
+## Examples
 
-### HTML Content
+### Getting the battery level
+
+#### HTML
 
 ```html
-<div id="level">(battery level unknown)</div>
+<button id="get-level">Get battery level</button>
+<div id="output"></div>
 ```
 
-### JavaScript Content
+#### JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+const getLevel = document.querySelector("#get-level");
+const output = document.querySelector("#output");
 
-    var level = battery.level;
-
-    document.querySelector('#level').textContent = level;
+getLevel.addEventListener("click", async () => {
+  if (!navigator.getBattery) {
+    output.textContent = "Battery manager is unsupported";
+  } else {
+    const manager = await navigator.getBattery();
+    const level = manager.level;
+    output.textContent = `Battery level: ${level}`;
+  }
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30, '', 'Web/API/BatteryManager/level') }}
+#### Result
+
+{{ EmbedLiveSample('Getting the battery level') }}
 
 ## Specifications
 
@@ -59,4 +60,4 @@ navigator.getBattery().then(function(battery) {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

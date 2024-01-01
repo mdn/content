@@ -1,11 +1,9 @@
 ---
-title: 'Warning: unreachable code after return statement'
+title: "Warning: unreachable code after return statement"
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-tags:
-  - Error
-  - JavaScript
-  - Warning
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript warning "unreachable code after return statement" occurs when using an
@@ -14,7 +12,7 @@ semicolon-less return statement but including an expression directly after.
 
 ## Message
 
-```js
+```plain
 Warning: unreachable code after return statement (Firefox)
 ```
 
@@ -38,7 +36,7 @@ meaning it can never be run.
 Why should I have semicolons after `return` statements? In the case of
 semicolon-less `return` statements, it can be unclear whether the developer
 intended to return the statement on the following line, or to stop execution and return.
-The warning indicates that there is ambiguity in the way the `return`
+The warning indicates that there is ambiguity in the way the `return`
 statement is written.
 
 Warnings will not be shown for semicolon-less returns if these statements follow it:
@@ -52,15 +50,15 @@ Warnings will not be shown for semicolon-less returns if these statements follow
 
 ### Invalid cases
 
-```js example-bad
+```js-nolint example-bad
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   return x;   // return exits the function immediately
   x -= 3;     // so this line will never run; it is unreachable
 }
 
-function f() {
+function g() {
   return     // this is treated like `return;`
     3 + 4;   // so the function returns, and this line is never reached
 }
@@ -68,20 +66,19 @@ function f() {
 
 ### Valid cases
 
-```js example-good
+```js-nolint example-good
 function f() {
-  var x = 3;
+  let x = 3;
   x += 4;
   x -= 3;
-  return x;  // OK: return after all other statements
+  return x; // OK: return after all other statements
 }
 
-function f() {
-  return 3 + 4  // OK: semicolon-less return with expression on the same line
+function g() {
+  return 3 + 4 // OK: semicolon-less return with expression on the same line
 }
 ```
 
 ## See also
 
-- {{jsxref("Statements/return", "Automatic Semicolon Insertion",
-    "#Automatic_Semicolon_Insertion", 1)}}
+- [Automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion)

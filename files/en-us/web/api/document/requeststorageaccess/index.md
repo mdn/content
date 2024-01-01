@@ -1,124 +1,23 @@
 ---
-title: Document.requestStorageAccess()
+title: "Document: requestStorageAccess() method"
+short-title: requestStorageAccess()
 slug: Web/API/Document/requestStorageAccess
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - Storage Access API
-  - requestStorageAccess
+page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
 ---
-{{APIRef}}
 
-The **`requestStorageAccess()`** method of the
-{{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves if the
-access to first-party storage was granted, and rejects if access was denied.
+{{APIRef("Storage Access API")}}
 
-## Conditions for granting storage access
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies. This is relevant to user agents that, by default, block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-Storage access is granted based on a series of checks described here:
+To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
-1.  If the document already has been granted access, resolve.
-2.  If the document has a null origin, reject.
-3.  If the document's frame is the main frame, resolve.
-4.  If the sub frame's origin is equal to the main frame's, resolve.
-5.  If the sub frame is not sandboxed, skip to step 7.
-6.  If the sub frame doesn't have the token
-    `allow-storage-access-by-user-activation`, reject.
-7.  If the sub frame's parent frame is not the top frame, reject.
-8.  If the browser is not processing a user gesture, reject.
-9.  Check any additional rules that the browser has. Examples: allow lists, block lists,
-    on-device classification, user settings, anti-clickjacking heuristics, or prompting
-    the user for explicit permission. Reject if some rule is not fulfilled.
-10. Grant the document access to cookies and other site storage and store that fact for
-    the purposes of future calls to {{domxref("Document.hasStorageAccess()")}} and
-    `requestStorageAccess()`.
-
-Assuming all of the requirements above are satisfied, Firefox will automatically grant
-storage access to the requesting origin on up to a threshold number of first-party
-origins in the current session for the duration of user’s session, up to a maximum of 24
-hours. After the requesting origin has exceeded the maximum allowable number of storage
-access grants, any future call to `requestStorageAccess()` during the same
-browsing session will prompt the user.
-
-The maximum number of concurrent storage access grants an origin can obtain is a
-positive integer currently defined as one percent of the number of top-level origins
-visited in the current session or 5, whichever is higher. The threshold is enforced on
-the level of eTLD+1, so for example two storage access grants for
-`foo.example.com` and `bar.example.com` will only count as a
-single exception against the limit.
-
-At the time of a `requestStorageAccess()` call, if the requesting origin has
-storage access to...
-
-...fewer origins than the maximum:
-
-- The user is not prompted.
-- The origin is given an ephemeral storage access grant for the current top-level
-  origin.
-- The number of origins the requesting origin has storage access to is incremented by
-  one.
-
-  - Note that this number is also incremented when automatic access grants are given
-    through [Firefox
-    compatibility heuristics](/en-US/docs/Web/Privacy/Storage_Access_Policy#automatic_storage_access_upon_interaction).
-
-- The ephemeral storage access grant is:
-
-  - Invalidated at the end of the browser session.
-  - Not persisted to disk (e.g. will not persist if the browser crashes).
-  - Reset after 24 hours in the case of a long-running browser session.
-
-...equal or more origins than the maximum:
-
-- The user is prompted
-- If the user clicks “Allow” or “Allow on any site” the request is resolved.
-- If the user clicks “Don’t Allow”, the storage access request is rejected and the
-  requesting origin can re-request once it receives another user interaction.
-- If the user allows storage the requesting origin is given a persistent storage
-  access grant on the current top-level origin.
-- The number of origins the requesting origin has storage access to is incremented by
-  one.
-- The persistent storage access permission is:
-
-  - Persisted to disk and will remain valid in future browser sessions.
-  - Reset after 30 days.
-
-When an ephemeral or persistent storage access grant expires, the number of origins the
-requesting origin has storage access to is decremented by one.
-
-> **Note:** If the requesting origin is not [classified
-> as a tracking origin](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained), the access request is automatically given an ephemeral
-> storage access grant, which will go away when the page is reloaded. The user is never
-> shown a prompt in this case, and calling `requestStorageAccess()` won’t
-> have any side effects besides changing the value returned by
-> {{domxref("Document.hasStorageAccess()")}}.
-
-## Debugging
-
-The storage access grant threshold may make it more difficult to test your website
-under the condition where Firefox prompts the user for access. To make testing easier,
-we have added two preferences in `about:config` that control prompting upon
-`requestStorageAccess()` calls:
-
-- `dom.storage_access.auto_grants` can be set to `false` to
-  disable the automatic granting of ephemeral storage access grants. All calls to
-  `requestStorageAccess()` by origins classified as trackers will trigger a
-  prompt.
-- `dom.storage_access.max_concurrent_auto_grants` controls the threshold
-  number of storage access grants at which users will begin to receive prompts. For
-  example, if you want to configure Firefox to automatically grant access on the first
-  site where `requestStorageAccess()` is called and then prompt afterwards,
-  you should adjust the value of the
-  `dom.storage_access.max_concurrent_auto_grants` preference to 1.
+> **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Syntax
 
-```js
-var promise = document.requestStorageAccess();
+```js-nolint
+requestStorageAccess()
 ```
 
 ### Parameters
@@ -127,33 +26,43 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to
-first-party storage was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted, and rejects if access was denied.
 
-When the promise gets resolved, the resolve handler will run as if a user gesture is
-being processed, whether the promise was fulfilled or rejected:
+`requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
-- In the former case, code can then start to call APIs that require user activation
-  and things can move forward.
-- In the latter case, code can run to inform the user of why the request failed and
-  what they can do to continue (for example asking them to log in, if that is a
-  requirement).
+- If the promise resolves (i.e. if permission was granted), then the user gesture has not been consumed, so the script can subsequently call APIs that require a user gesture.
+- If the promise rejects (i.e. permission was not granted), then the user gesture has been consumed, so the script can't do anything that requires a gesture. This is intentional protection against abuse — it prevents scripts from calling `requestStorageAccess()` in a loop until the user accepts the prompt.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the current {{domxref("Document")}} is not yet active.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if:
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The document or the top-level document has a `null` origin.
+    - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is denied by the user agent's permission request to use the API.
 
 ## Examples
 
 ```js
 document.requestStorageAccess().then(
-  () => { console.log('access granted') },
-  () => { console.log('access denied') }
+  () => {
+    console.log("access granted");
+  },
+  () => {
+    console.log("access denied");
+  },
 );
 ```
 
+> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+
 ## Specifications
 
-The API is currently only at the proposal stage — the standardization process has yet
-to begin. You can currently find specification details of the API at Apple's [Introducing
-Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) blog post, and the [Storage Access API proposal in the
-Privacy CG](https://github.com/privacycg/storage-access).
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -161,4 +70,6 @@ Privacy CG](https://github.com/privacycg/storage-access).
 
 ## See also
 
-[Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
+- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
+- [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

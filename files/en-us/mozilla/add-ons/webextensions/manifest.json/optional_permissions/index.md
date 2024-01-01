@@ -1,13 +1,10 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -21,14 +18,16 @@ browser-compat: webextensions.manifest.optional_permissions
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
 "optional_permissions": [
-  "*://developer.mozilla.org/*",
   "webRequest"
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>
@@ -48,6 +47,11 @@ The key can contain two kinds of permissions: host permissions and API permissio
 
 These are the same as the host permissions you can specify in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) key.
 
+> **Note:** When using Manifest V3 or higher:
+>
+> - in Chrome, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzil.la/1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
+
 ## API permissions
 
 You can include any of the following here, but not in all browsers: check the compatibility table for browser-specific details.
@@ -56,12 +60,17 @@ You can include any of the following here, but not in all browsers: check the co
 - `background`
 - `bookmarks`
 - `browserSettings`
+- `browsingData`
 - `clipboardRead`
 - `clipboardWrite`
 - `contentSettings`
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
+- `devtools`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -72,13 +81,19 @@ You can include any of the following here, but not in all browsers: check the co
 - `nativeMessaging`
 - `notifications`
 - `pageCapture`
+- `pkcs11`
 - `privacy`
+- `proxy`
+- `scripting`
+- `sessions`
 - `tabHide`
 - `tabs`
 - `topSites`
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 Note that this is a subset of the API permissions allowed in [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
@@ -89,6 +104,8 @@ Of this set, the following permissions are granted silently, without a user prom
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 ## Example
 
@@ -96,7 +113,7 @@ Of this set, the following permissions are granted silently, without a user prom
  "optional_permissions": ["*://developer.mozilla.org/*"]
 ```
 
-Enable the extension to ask for privileged access to pages under developer.mozilla.org.
+In Manifest V2 only, enable the extension to ask for privileged access to pages under developer.mozilla.org.
 
 ```json
   "optional_permissions": ["tabs"]
@@ -108,7 +125,7 @@ Enable the extension to ask for access to the privileged pieces of the `tabs` AP
   "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
 ```
 
-Enable the extension to ask for both of the above permissions.
+In Manifest V2 only, enable the extension to ask for both of the above permissions.
 
 ## Browser compatibility
 

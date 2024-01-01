@@ -1,15 +1,12 @@
 ---
-title: ProgressEvent.total
+title: "ProgressEvent: total property"
+short-title: total
 slug: Web/API/ProgressEvent/total
-tags:
-  - API
-  - Progress Event
-  - ProgressEvent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.total
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The **`ProgressEvent.total`** read-only property is an unsigned
 64-bit integer value indicating the total size of the data being processed or
@@ -20,11 +17,9 @@ overhead.
 If the event's {{domxref("ProgressEvent.lengthComputable", "lengthComputable")}}
 property is `false`, this value is meaningless and should be ignored.
 
-## Syntax
+## Value
 
-```js
-let value = progressEvent.total;
-```
+An integer.
 
 ## Specifications
 

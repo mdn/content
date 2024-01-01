@@ -1,34 +1,32 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Firefox
-  - Mozilla
-  - Non-standard
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
+status:
+  - experimental
 browser-compat: css.selectors.-moz-focus-inner
 ---
-{{CSSRef}}{{Non-standard_header}}
 
-The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents an inner focus ring of the {{HTMLElement("button")}} element as well as the {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}}, and {{HTMLElement("input/color","color")}} types of the {{HTMLElement("input")}} element.
+{{CSSRef}}{{SeeCompatTable}}
+
+The **`::-moz-focus-inner`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents an inner focus ring of the {{HTMLElement("button")}} element as well as the {{HTMLElement("input/button","button")}}, {{HTMLElement("input/submit","submit")}}, {{HTMLElement("input/reset","reset")}}, and {{HTMLElement("input/color","color")}} types of the {{HTMLElement("input")}} element.
 
 > **Note:** Using `::-moz-focus-inner` with anything than the buttons that support it doesn't match anything and has no effect.
 
 ## Syntax
 
-{{csssyntax}}
+```css
+::-moz-focus-inner {
+  /* ... */
+}
+```
 
 ## Example
 
 ### HTML
 
 ```html
-<input type="submit" value="Input"/>
-<button type="submit">Button</button>
+<input type="submit" value="Input" /> <button type="submit">Button</button>
 ```
 
 ### CSS
@@ -39,11 +37,11 @@ input[type="color"]::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
 input[type="submit"]::-moz-focus-inner {
-    padding-block-start: 0px;
-    padding-inline-end: 2px;
-    padding-block-end: 0px;
-    padding-inline-start: 2px;
-    border: 2px dotted red;
+  padding-block-start: 0px;
+  padding-inline-end: 2px;
+  padding-block-end: 0px;
+  padding-inline-start: 2px;
+  border: 2px dotted red;
 }
 ```
 
@@ -68,7 +66,6 @@ Not part of any standard.
 
 - Related CSS selectors:
 
-  - [`:-moz-focusring`](/en-US/docs/Web/CSS/:-moz-focusring)
   - [`:focus`](/en-US/docs/Web/CSS/:focus)
   - [`:focus-visible`](/en-US/docs/Web/CSS/:focus-visible)
   - [`:focus-within`](/en-US/docs/Web/CSS/:focus-within)

@@ -1,24 +1,14 @@
 ---
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
-  - three.js
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to actually see them, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
-> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), or [PlayCanvas](https://playcanvas.com/).
+> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html) or [PlayCanvas](https://playcanvas.com/).
 
 ## Environment setup
 
@@ -34,24 +24,30 @@ To start developing with Three.js, you don't need much. You should:
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>MDN Games: Three.js demo</title>
-	<style>
-		body { margin: 0; padding: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
-</head>
-<body>
-<script src="three.min.js"></script>
-<script>
-	const WIDTH = window.innerWidth;
-	const HEIGHT = window.innerHeight;
-	/* all our JavaScript code goes here */
-</script>
-</body>
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Three.js demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+    <script>
+      const WIDTH = window.innerWidth;
+      const HEIGHT = window.innerHeight;
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -64,9 +60,9 @@ Before reading further, copy this code to a new text file, and save it in your w
 A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser.
 
 ```js
-var renderer = new THREE.WebGLRenderer({antialias:true});
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xDDDDDD, 1);
+renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
@@ -89,7 +85,7 @@ Later, we will be using the `.add()` method, to add objects to this scene.
 We have the rendered scene, but we still need to add a camera to view our handiwork — imagine a movie set without any cameras. The following lines put the camera in place in the 3D coordinate system, and point it in the direction of our scene, so we can finally see something:
 
 ```js
-const camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
@@ -108,12 +104,12 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we've set-up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {
-	requestAnimationFrame(render);
-	renderer.render(scene, camera);
+  requestAnimationFrame(render);
+  renderer.render(scene, camera);
 }
 render();
 ```
@@ -137,7 +133,7 @@ In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry i
 A material is what covers an object, the colors, or textures on its surface. In our case, we will choose a simple blue color to paint our box. There are a number of predefined materials which can be used: Basic, Phong, Lambert. Let's play with the last two later, but for now, the Basic one should be enough:
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
 Add this line below the previously added.
@@ -149,7 +145,7 @@ Our material is now ready, what next?
 To apply the material to a geometry, a mesh is used. This takes on a shape, and adds the specified material to every face:
 
 ```js
-var cube = new THREE.Mesh(boxGeometry, basicMaterial);
+const cube = new THREE.Mesh(boxGeometry, basicMaterial);
 ```
 
 Again, add this line below the one you previously added.
@@ -162,7 +158,7 @@ We've now created a cube, using the geometry and material defined earlier. The l
 scene.add(cube);
 ```
 
-If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face.  Again, adding our code below the previous:
+If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face. Again, adding our code below the previous:
 
 ```js
 cube.rotation.set(0.4, 0.2, 0);
@@ -186,12 +182,12 @@ Now we will add more shapes to the scene, and explore other shapes, materials, l
 cube.position.x = -25;
 ```
 
-Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
+Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
 
 ```js
-var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
-var torus = new THREE.Mesh(torusGeometry, phongMaterial);
+const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
+const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
 
@@ -200,9 +196,9 @@ These lines will add a torus geometry; the `TorusGeometry()` method's parameters
 We can choose more fun predefined shapes. Let's play some more. Add the following lines, below those defining the torus:
 
 ```js
-var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
-var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
+const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
+const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
 ```
@@ -216,7 +212,7 @@ As mentioned above, the new objects currently just look black. To have both, the
 There are various types of light sources available in Three.js. The most basic is `PointLight`, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:
 
 ```js
-var light = new THREE.PointLight(0xFFFFFF);
+const light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -229,7 +225,7 @@ This looks a little boring though. In a game, something is usually happening. We
 
 ## Animation
 
-We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
+We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
 
 ### Rotation
 
@@ -246,7 +242,7 @@ This rotates the cube on every frame, by a tiny bit, so the animation looks smoo
 We can also scale an object. Applying a constant value, we would make it grow, or shrink just once. Let's make things more interesting. First, we implement a helper variable, called `t,` for counting elapsed time. Add it right before the `render()` function:
 
 ```js
-var t = 0;
+let t = 0;
 ```
 
 Now let's increase the value by a given constant value, on each frame of the animation. Add the following lines, just below the `requestAnimationFrame()` invocation:
@@ -256,7 +252,7 @@ t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.
+We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1, negative values might render out torus in unexpected way. In this case it looks black half the time.
 
 Now, onto movement.
 
@@ -265,10 +261,10 @@ Now, onto movement.
 Aside from rotation, and scaling, we can additionally move objects around the scene. Add the following, again just below our `requestAnimationFrame()` invocation:
 
 ```js
-dodecahedron.position.y = -7*Math.sin(t*2);
+dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
-This will move the dodecahedron up and down, by applying the `sin()` value to the y axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.
+This will move the dodecahedron up and down, by applying the `sin()` value to the y-axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.
 
 ## Conclusion
 

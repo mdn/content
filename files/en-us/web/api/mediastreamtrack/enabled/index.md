@@ -1,21 +1,14 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled property"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
+page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The **`enabled`** property on the
+The **`enabled`** property of the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
 `true` if the track is allowed to render the source stream or
 `false` if it is not. This can be used to intentionally mute a
@@ -36,14 +29,7 @@ data, such as a scenario in which frames have been lost in transit.
 > **Note:** If the track has been disconnected, the value of this property
 > can be changed, but has no effect.
 
-## Syntax
-
-```js
-const enabledFlag = track.enabled
-track.enabled = [true | false]
-```
-
-### Value
+## Value
 
 When `true`, `enabled` indicates that the track is permitted to
 render its actual media to the output. When `enabled` is set to
@@ -65,15 +51,15 @@ computers turns off while the track is muted in this way.
 
 ## Example
 
-This example demonstrates a {{event("click")}} event handler for a pause button.
+This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
 ```js
-pauseButton.onclick = function(evt) {
+pauseButton.onclick = (evt) => {
   const newState = !myAudioTrack.enabled;
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 This creates a variable, `newState`, which is the opposite of the current
@@ -93,7 +79,7 @@ Finally, the new value of `enabled` is saved, making the change take effect.
 
 ## See also
 
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

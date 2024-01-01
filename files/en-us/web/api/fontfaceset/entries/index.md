@@ -1,29 +1,26 @@
 ---
-title: FontFaceSet.entries()
+title: "FontFaceSet: entries() method"
+short-title: entries()
 slug: Web/API/FontFaceSet/entries
-tags:
-  - API
-  - Method
-  - Reference
-  - entries
-  - FontFaceSet
+page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.entries
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`entries()`** method of the {{domxref("FontFaceSet")}} interface returns a new {{jsxref("Iterator")}} object, containing an array of `[value,value]` for each element in the `FontFaceSet`.
 
 ## Syntax
 
-```js
-FontFaceSet.entries()
+```js-nolint
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
 
@@ -34,4 +31,3 @@ A new iterator object that contains an array of `[value, value]` for each elemen
 ## Browser compatibility
 
 {{Compat}}
-

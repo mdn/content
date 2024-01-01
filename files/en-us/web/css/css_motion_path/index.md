@@ -1,18 +1,13 @@
 ---
-title: CSS Motion Path
-slug: Web/CSS/CSS_Motion_Path
-tags:
-  - CSS
-  - CSS Motion Path
-  - Experimental
-  - Guide
-  - Motion Path
-  - Overview
-  - Reference
+title: CSS motion path
+slug: Web/CSS/CSS_motion_path
+page-type: css-module
+browser-compat: css.properties.offset-path
 ---
-{{CSSRef}}{{SeeCompatTable}}
 
-**Motion Path** is a CSS module that allows authors to animate any graphical object along a custom path.
+{{CSSRef}}
+
+The **CSS motion path** module allows authors to animate any graphical object along a custom path.
 
 The idea is that when you want to animate an element moving along a path, you previously only had animating translation, position, etc. at your disposal, which wasn't ideal and only allowed for simple movements. With {{cssxref("offset-path")}} you can define a specific path of any shape you want. You then animate it along that path by animating {{cssxref("offset-distance")}}, and can choose to rotate it at any point using {{cssxref("offset-rotate")}}.
 
@@ -24,7 +19,7 @@ The idea is that when you want to animate an element moving along a path, you pr
 
 ```css
 #motion-demo {
-  offset-path: path('M20,20 C20,100 200,0 200,100');
+  offset-path: path("M20,20 C20,100 200,0 200,100");
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
   height: 40px;
@@ -54,14 +49,14 @@ The idea is that when you want to animate an element moving along a path, you pr
 - {{cssxref("offset-position")}}
 - {{cssxref("offset-rotate")}}
 
+### Functions
+
+- {{cssxref("ray")}}
+
 ## Specifications
 
-| Specification                                    | Status                                       | Comment             |
-| ------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-### offset property
-
-{{Compat("css.properties.offset-path")}}
+{{Compat}}

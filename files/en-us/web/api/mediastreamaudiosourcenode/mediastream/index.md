@@ -1,19 +1,11 @@
 ---
-title: MediaStreamAudioSourceNode.mediaStream
+title: "MediaStreamAudioSourceNode: mediaStream property"
+short-title: mediaStream
 slug: Web/API/MediaStreamAudioSourceNode/mediaStream
-tags:
-  - API
-  - Audio
-  - Media
-  - MediaStream
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.MediaStreamAudioSourceNode.mediaStream
 ---
+
 {{APIRef("Web Audio API")}}
 
 The {{domxref("MediaStreamAudioSourceNode")}} interface's
@@ -26,13 +18,7 @@ either using the {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNod
   "MediaStreamAudioSourceNode()")}} constructor or the
 {{domxref("AudioContext.createMediaStreamSource()")}} method.
 
-## Syntax
-
-```js
-audioSourceStream = mediaStreamAudioSourceNode.mediaStream;
-```
-
-### Value
+## Value
 
 A {{domxref("MediaStream")}} representing the stream which contains the
 {{domxref("MediaStreamTrack")}} serving as the source of audio for the node.
@@ -48,8 +34,8 @@ need to have access to the track itself, you should use a
 ```js
 const audioCtx = new window.AudioContext();
 let options = {
-  mediaStream : stream
-}
+  mediaStream: stream,
+};
 
 let source = new MediaStreamAudioSourceNode(audioCtx, options);
 console.log(source.mediaStream);

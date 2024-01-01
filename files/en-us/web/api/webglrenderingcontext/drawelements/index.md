@@ -1,22 +1,19 @@
 ---
-title: WebGLRenderingContext.drawElements()
+title: "WebGLRenderingContext: drawElements() method"
+short-title: drawElements()
 slug: Web/API/WebGLRenderingContext/drawElements
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.drawElements
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
-void gl.drawElements(mode, count, type, offset);
+```js-nolint
+drawElements(mode, count, type, offset)
 ```
 
 ### Parameters
@@ -35,7 +32,7 @@ void gl.drawElements(mode, count, type, offset);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements of the bound element array
     buffer to be rendered. For example, to draw a wireframe triangle with `gl.LINES`
     the count should be 2 endpoints per line × 3 lines = 6 elements. However to draw the
@@ -44,24 +41,25 @@ void gl.drawElements(mode, count, type, offset);
     second line/start of the third line, so `count` will be four. To draw the same
     triangle with `gl.LINE_LOOP` the element array buffer does not repeat the
     first/last vertex either so `count` will be three.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    - When using the {{domxref("OES_element_index_uint")}} extension:
 
-      - `gl.UNSIGNED_INT`
+    When using the {{domxref("OES_element_index_uint")}} extension:
 
-- offset
+    - `gl.UNSIGNED_INT`
+
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying a byte offset in the element array buffer. Must
     be a valid multiple of the size of the given `type`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -69,7 +67,7 @@ None.
   `gl.INVALID_ENUM` error is thrown.
 - If `offset` is not a valid multiple of the size of the given type, a
   `gl.INVALID_OPERATION` error is thrown.
-- If `count` is negative, a `gl.INVALID_VALUE` error is thrown.
+- If `count` is negative, a `gl.INVALID_VALUE` error is thrown.
 
 ## Examples
 

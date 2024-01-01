@@ -1,15 +1,14 @@
 ---
-title: FileSystemHandle.queryPermission()
+title: "FileSystemHandle: queryPermission() method"
+short-title: queryPermission()
 slug: Web/API/FileSystemHandle/queryPermission
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.FileSystemHandle.queryPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -17,8 +16,8 @@ current handle.
 
 ## Syntax
 
-```js
-var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissionDescriptor);
+```js-nolint
+queryPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
@@ -32,10 +31,9 @@ var PermissionState = FileSystemHandle.queryPermission(FileSystemHandlePermissio
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
-If this returns "prompt" the website will have to call requestPermission() before any
+If {{domxref('PermissionStatus.state')}} returns "prompt" the website will have to call requestPermission() before any
 operations on the handle can be done. If this returns "denied" any operations will
 reject. Usually handles returned by the local file system handle factories will
 initially return "granted" for their read permission state. However, other than through
@@ -44,8 +42,8 @@ the user revoking permission, a handle retrieved from IndexedDB is also likely t
 
 ### Exceptions
 
-- `TypeError`
-  - : If `mode` is specified with a value other than
+- {{jsxref("TypeError")}}
+  - : Thrown if `mode` is specified with a value other than
     `'read'` or `'readwrite'`
 
 ## Examples
@@ -60,16 +58,16 @@ permissions to the file handle. Permission is requested if not.
 async function verifyPermission(fileHandle, withWrite) {
   const opts = {};
   if (withWrite) {
-    opts.mode = 'readwrite';
+    opts.mode = "readwrite";
   }
 
   // Check if we already have permission, if so, return true.
-  if (await fileHandle.queryPermission(opts) === 'granted') {
+  if ((await fileHandle.queryPermission(opts)) === "granted") {
     return true;
   }
 
   // Request permission to the file, if the user grants permission, return true.
-  if (await fileHandle.requestPermission(opts) === 'granted') {
+  if ((await fileHandle.requestPermission(opts)) === "granted") {
     return true;
   }
 
@@ -88,6 +86,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

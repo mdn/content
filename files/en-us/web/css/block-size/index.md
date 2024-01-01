@@ -1,15 +1,10 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.block-size
 ---
+
 {{CSSRef}}
 
 The **`block-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("width")}} or the {{cssxref("height")}} property, depending on the value of {{cssxref("writing-mode")}}.
@@ -31,6 +26,7 @@ block-size: 75%;
 /* Keyword values */
 block-size: max-content;
 block-size: min-content;
+block-size: fit-content;
 block-size: fit-content(20em);
 block-size: auto;
 
@@ -38,6 +34,7 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: revert;
+block-size: revert-layer;
 block-size: unset;
 ```
 

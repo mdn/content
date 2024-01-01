@@ -1,24 +1,22 @@
 ---
-title: Shapes From Images
-slug: Web/CSS/CSS_Shapes/Shapes_From_Images
-tags:
-  - CSS
-  - CSS Shapes
-  - Guide
+title: Shapes from images
+slug: Web/CSS/CSS_shapes/Shapes_from_images
+page-type: guide
 ---
+
 {{CSSRef}}
 
 In this guide, we will take a look at how we can create a shape from an image file with an alpha channel or even from a CSS Gradient. This is a very flexible way to create shapes. Rather than drawing a path with a complex polygon in CSS, you can create the shape in a graphics program and then use the path created by the pixels less opaque than a threshold value.
 
-## A simple shape from an image
+## Creating shapes from images
 
-To use an image for the shape the image needs to have an Alpha Channel, an area that is not fully opaque. The {{cssxref("shape-image-threshold")}} property is used to set a threshold for this opacity. Pixels that are more opaque than this value will be used to calculate the area of the shape.
+To use an image for creating a shape, the image needs to have an Alpha Channel, an area that is not fully opaque. The {{cssxref("shape-image-threshold")}} property is used to set a threshold for this opacity. Pixels that are more opaque than this value will be used to calculate the area of the shape.
 
-As a simple example, I have an image of a star with a solid red area and an area that is fully transparent. I use the path to the image file as the value of the {{cssxref("shape-outside")}} property. The content now wraps around the star shape.
+In the example below, there is an image of a star with a solid red area and an area that is fully transparent. The path to the image file is used as the value for the {{cssxref("shape-outside")}} property. The content now wraps around the star shape.
 
 {{EmbedGHLiveSample("css-examples/shapes/image/simple-example.html", '100%', 800)}}
 
-I can use {{cssxref("shape-margin")}} to move the text away from the shape, giving a margin around the created shape and the text.
+You can use {{cssxref("shape-margin")}} to move the text away from the shape, giving a margin around the created shape and the text.
 
 {{EmbedGHLiveSample("css-examples/shapes/image/margin.html", '100%', 800)}}
 
@@ -48,16 +46,16 @@ You do need something to float, but that could be some generated content as in t
 
 ## Creating shapes using a gradient
 
-As a [CSS gradient](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients) is treated as an image, you can use a gradient to generate your shape, by having transparent or semi-transparent areas as part of the gradient.
+Because a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) is treated as an image, you can use a gradient to generate a shape by having transparent or semi-transparent areas as part of the gradient.
 
-In this next example, I have used generated content and floated this content, giving it a background image of a linear gradient. I am using that same value as the value of {{cssxref("shape-outside")}}. The linear gradient goes from purple to transparent, so by changing the value of {{cssxref("shape-image-threshold")}} I can decide how transparent the pixels need to be that create my shape. You can play with that value in the example below to see how the diagonal line will move across the shape depending on that value.
+The next example uses generated content. The content has been floated, giving it a background image of a linear gradient. I am using that same value as the value of {{cssxref("shape-outside")}}. The linear gradient goes from purple to transparent. By changing the value of {{cssxref("shape-image-threshold")}}, you can decide how transparent the pixels need to be that create the shape. You can play with that value in the example below to see how the diagonal line will move across the shape depending on that value.
 
 You could also try removing the background image completely, thus using the gradient purely to create the shape and not displaying it on the page at all.
 
 {{EmbedGHLiveSample("css-examples/shapes/image/gradient.html", '100%', 800)}}
 
-In this next example, I am using a radial gradient with an ellipse, once again using a transparent part of the gradient to create the shape.
+The next example uses a radial gradient with an ellipse, once again using a transparent part of the gradient to create the shape.
 
 {{EmbedGHLiveSample("css-examples/shapes/image/radial-gradient.html", '100%', 800)}}
 
-You can experiment directly in these live examples, to see how changing the gradient will change the path of your shape.
+You can experiment directly in these live examples to see how changing the gradient will change the path of your shape.

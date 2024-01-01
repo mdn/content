@@ -1,29 +1,20 @@
 ---
-title: UIEvent.view
+title: "UIEvent: view property"
+short-title: view
 slug: Web/API/UIEvent/view
-tags:
-  - API
-  - DOM
-  - NeedsLiveExample
-  - Property
-  - Read-only
-  - Reference
-  - UIEvent
+page-type: web-api-instance-property
 browser-compat: api.UIEvent.view
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`UIEvent.view`** read-only property returns the
-{{domxref("WindowProxy")}} object from which the event was generated. In browsers, this
+{{glossary("WindowProxy")}} object from which the event was generated. In browsers, this
 is the {{ domxref("Window") }} object the event happened in.
 
-## Syntax
+## Value
 
-```js
-var view = event.view;
-```
-
-- `view` is a reference to an `AbstractView` object.
+A reference to an `AbstractView` object.
 
 ## Specifications
 

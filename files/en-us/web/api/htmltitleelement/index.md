@@ -1,29 +1,34 @@
 ---
 title: HTMLTitleElement
 slug: Web/API/HTMLTitleElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLTitleElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLTitleElement`** interface contains the title for a document. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
+The **`HTMLTitleElement`** interface is implemented by a document's {{ HTMLElement( "title" )}}. This element inherits all of the properties and methods of the {{domxref("HTMLElement")}} interface.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTitleElement.text")}}
-  - : Is a {{domxref("DOMString")}} representing the text of the document's title.
+  - : A string representing the text of the document's title.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
+
+## Example
+
+Do not confuse: `document.title` with `document.querySelector('title')`
+
+The former is just a setter/getter method to set or get the inner text value of the document title, while the latter is the {{domxref("HTMLTitleElement")}} object. So you cannot write: `document.title.text = "Hello world!";`
+
+Instead, you can simply write: `document.title = "Hello world!";` which is an equivalent to `document.querySelector('title').text = "Hello world!";`
 
 ## Specifications
 

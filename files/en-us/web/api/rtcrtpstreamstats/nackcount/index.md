@@ -1,24 +1,11 @@
 ---
-title: RTCRtpStreamStats.nackCount
+title: "RTCRtpStreamStats: nackCount property"
+short-title: nackCount
 slug: Web/API/RTCRtpStreamStats/nackCount
-tags:
-  - API
-  - Acknowledgement
-  - Generic NACK
-  - NACK
-  - Negative Acknowledgement
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - nackCount
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.nackCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`nackCount`** property of the
@@ -29,13 +16,7 @@ A NACK
 (Negative ACKnowledgement, also called "Generic NACK") packet tells the sender that one
 or more of the {{Glossary("RTP")}} packets it sent were lost in transport.
 
-## Syntax
-
-```js
-var nackCount = RTCRtpStreamStats.nackCount;
-```
-
-### Value
+## Value
 
 An integer value indicating how many times the receiver sent a NACK packet to the
 sender after detecting that one or more packets were lost during transport.

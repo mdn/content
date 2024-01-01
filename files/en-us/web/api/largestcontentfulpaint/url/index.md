@@ -1,47 +1,34 @@
 ---
-title: LargestContentfulPaint.url
+title: "LargestContentfulPaint: url property"
+short-title: url
 slug: Web/API/LargestContentfulPaint/url
-tags:
-  - API
-  - Property
-  - Reference
-  - url
-  - LargestContentfulPaint
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.LargestContentfulPaint.url
 ---
-{{DefaultAPISidebar("Largest Contentful Paint API")}}
 
-The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request url of the element, if the element is an image.
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
-## Syntax
+The **`url`** read-only property of the {{domxref("LargestContentfulPaint")}} interface returns the request URL of the element, if the element is an image.
 
-```js
-let url = LargestContentfulPaint.url;
-```
+## Value
 
-### Value
-
-A {{domxref("DOMString","string")}} containing a URL.
+A string containing a URL.
 
 ## Examples
 
-The following example gets the `LargestContentfulPaint` object and prints the value of `url` to the console.
+### Logging the url of the largest contentful paint
+
+This example uses a {{domxref("PerformanceObserver")}} notifying of new `largest-contentful-paint` performance entries as they are recorded in the browser's performance timeline. The `buffered` option is used to access entries from before the observer creation.
 
 ```js
-try {
-  let lcp;
-
-  const po = new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    const lastEntry = entries[entries.length - 1];
-    console.log(lastEntry.url);
-  });
-
-  po.observe({type: 'largest-contentful-paint', buffered: true});
-
-} catch (e) {
-  // Do nothing if the browser doesn't support this API.
-}
+const observer = new PerformanceObserver((list) => {
+  const entries = list.getEntries();
+  const lastEntry = entries[entries.length - 1]; // Use the latest LCP candidate
+  console.log(lastEntry.url);
+});
+observer.observe({ type: "largest-contentful-paint", buffered: true });
 ```
 
 ## Specifications

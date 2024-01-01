@@ -1,14 +1,10 @@
 ---
 title: File and Directory Entries API
 slug: Web/API/File_and_Directory_Entries_API
-tags:
-  - API
-  - File and Directory Entries API
-  - Files
-  - Overview
-  - Reference
+page-type: web-api-overview
 browser-compat: api.FileSystem
 ---
+
 {{DefaultAPISidebar("File and Directory Entries API")}}
 
 The File and Directory Entries API simulates a local file system that web apps can navigate within and access files in. You can develop apps which read, write, and create files and/or directories in a virtual, sandboxed file system.
@@ -17,8 +13,8 @@ The File and Directory Entries API simulates a local file system that web apps c
 
 There are two ways to get access to file systems defined in the current specification draft:
 
-- When handling a {{event("drop")}} event for drag and drop, you can call {{domxref("DataTransferItem.webkitGetAsEntry()")}} to get the {{domxref("FileSystemEntry")}} for a dropped item. If the result isn't `null`, then it's a dropped file or directory, and you can use file system calls to work with it.
-- The {{domxref("HTMLInputElement.webkitEntries")}} property lets you access the {{domxref("FileSystemFileEntry")}} objects for the currently selected files, but only if they are dragged-and-dropped onto the file chooser ({{bug(1326031)}}). If {{domxref("HTMLInputElement.webkitdirectory")}} is `true`, the {{HTMLElement("input")}} element is instead a directory picker, and you get {{domxref("FileSystemDirectoryEntry")}} objects for each selected directory.
+- When handling a {{domxref("HTMLElement/drop_event", "drop")}} event for drag and drop, you can call {{domxref("DataTransferItem.webkitGetAsEntry()")}} to get the {{domxref("FileSystemEntry")}} for a dropped item. If the result isn't `null`, then it's a dropped file or directory, and you can use file system calls to work with it.
+- The {{domxref("HTMLInputElement.webkitEntries")}} property lets you access the {{domxref("FileSystemFileEntry")}} objects for the currently selected files, but only if they are dragged-and-dropped onto the file chooser ([Firefox bug 1326031](https://bugzil.la/1326031)). If {{domxref("HTMLInputElement.webkitdirectory")}} is `true`, the {{HTMLElement("input")}} element is instead a directory picker, and you get {{domxref("FileSystemDirectoryEntry")}} objects for each selected directory.
 
 ## Interfaces
 
@@ -34,8 +30,6 @@ The File and Directory Entries API includes the following interfaces:
   - : Represents a single directory in a file system.
 - {{domxref("FileSystemDirectoryReader")}}
   - : Created by calling {{domxref("FileSystemDirectoryEntry.createReader()")}}, this interface provides the functionality which lets you read the contents of a directory.
-- {{domxref("FileSystemFlags")}}
-  - : Defines a set of values which are used when specifying option flags when calling certain methods in the File and Directory Entries API.
 
 ## Specifications
 

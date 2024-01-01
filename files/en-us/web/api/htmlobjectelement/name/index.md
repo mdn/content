@@ -1,33 +1,21 @@
 ---
-title: HTMLObjectElement.name
+title: "HTMLObjectElement: name property"
+short-title: name
 slug: Web/API/HTMLObjectElement/name
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - name
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.name
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`name`** property of the
-{{domxref("HTMLObjectElement")}} interface returns a {{domxref("DOMString")}} that
-reflects the {{htmlattrxref("name", "object")}} HTML attribute, specifying the name of
+{{domxref("HTMLObjectElement")}} interface returns a string that
+reflects the [`name`](/en-US/docs/Web/HTML/Element/object#name) HTML attribute, specifying the name of
 the browsing context.
 
-## Syntax
+## Value
 
-```js
-var String = HTMLObjectElement.name;
-HTMLObjectElement.name = String;
-```
-
-### Value
-
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

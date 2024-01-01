@@ -1,17 +1,11 @@
 ---
 title: <frequency-percentage>
 slug: Web/CSS/frequency-percentage
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Reference
-  - frequency-percentage
-  - units
-  - values
+page-type: css-type
 browser-compat: css.types.frequency-percentage
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`<frequency-percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a value that can be either a {{Cssxref("frequency")}} or a {{Cssxref("percentage")}}. Frequency values, e.g. the pitch of a speaking voice, are not currently used in any CSS properties.
 
@@ -25,13 +19,19 @@ The value of a `<frequency-percentage>` is either a {{Cssxref("frequency")}} or 
 
 Where a `<frequency-percentage>` is specified as an allowable type, this means that the percentage resolves to a frequency and therefore can be used in a [`calc()`](/en-US/docs/Web/CSS/calc) expression.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
 ### Valid percentage values
 
-    90% Positive percentage
-    +90% Positive percentage with leading +
-    -90% Negative percentage — not valid for all properties that use percentages
+```plain example-good
+90% Positive percentage
++90% Positive percentage with leading +
+-90% Negative percentage — not valid for all properties that use percentages
+```
 
 ### Invalid percentage values
 
@@ -41,11 +41,13 @@ Where a `<frequency-percentage>` is specified as an allowable type, this means t
 
 ### Valid frequency values
 
-    12Hz     Positive integer
-    4.3Hz    Non-integer
-    14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
-    +0Hz     Zero, with a leading + and a unit
-    -0kHz    Zero, with a leading - and a unit
+```plain example-good
+12Hz     Positive integer
+4.3Hz    Non-integer
+14KhZ    The unit is case-insensitive, though non-SI capitalization is not recommended.
++0Hz     Zero, with a leading + and a unit
+-0kHz    Zero, with a leading - and a unit
+```
 
 ### Invalid frequency values
 

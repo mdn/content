@@ -1,28 +1,18 @@
 ---
-title: CSSStyleRule.styleMap
+title: "CSSStyleRule: styleMap property"
+short-title: styleMap
 slug: Web/API/CSSStyleRule/styleMap
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSStyleRule
-  - Reference
-  - Houdini
-  - Experimental
+page-type: web-api-instance-property
 browser-compat: api.CSSStyleRule.styleMap
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`styleMap`** read-only property of the
 {{domxref("CSSStyleRule")}} interface returns a {{domxref('StylePropertyMap')}} object
 which provides access to the rule's property-value pairs.
 
-## Syntax
-
-```js
-var stylePropertyMap = cssStyleRule.styleMap;
-```
-
-### Value
+## Value
 
 A {{domxref('StylePropertyMap')}} object.
 
@@ -34,11 +24,11 @@ the {{domxref('StylePropertyMap.set()')}} method.
 ```js
 const stylesheet = document.styleSheets[0];
 
-Object.values(stylesheet.cssRules).forEach(block => {
-  if (block.selectorText === 'button') {
-    block.styleMap.set('--mainColor', 'black');
+Object.values(stylesheet.cssRules).forEach((block) => {
+  if (block.selectorText === "button") {
+    block.styleMap.set("--mainColor", "black");
   }
-})
+});
 ```
 
 ## Specifications

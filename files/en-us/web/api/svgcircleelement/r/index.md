@@ -1,49 +1,43 @@
 ---
-title: SVGCircleElement.r
+title: "SVGCircleElement: r property"
+short-title: r
 slug: Web/API/SVGCircleElement/r
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVGCircleElement
-  - r
+page-type: web-api-instance-property
 browser-compat: api.SVGCircleElement.r
 ---
+
 {{APIRef("SVG")}}
 
 The **`r`** read-only property of the {{domxref("SVGCircleElement")}} interface reflects the {{SVGAttr("r")}} attribute of a {{SVGElement("circle")}} element and by that defines the radius of the circle.
 
-If unspecified, the effect is as if the value is set to `0`.
+If unspecified, the effect is as if the value is set to `0`.
 
-## Syntax
-
-```js
-var radius = element.r;
-```
-
-### Value
+## Value
 
 An {{domxref("SVGAnimatedLength")}} representing the radius of the circle.
 
-## Example
+## Examples
 
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
-  <circle r="50" r="50" r="50" fill="gold" id="circle"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="200"
+  height="200">
+  <circle r="50" r="50" r="50" fill="gold" id="circle" />
 </svg>
 ```
 
 ### JavaScript
 
 ```js
-const circle = document.getElementById('circle');
+const circle = document.getElementById("circle");
 console.log(circle.r);
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Examples", "200", "200")}}
 
 ## Specifications
 

@@ -1,32 +1,24 @@
 ---
-title: ReadableStreamDefaultReader.releaseLock()
+title: "ReadableStreamDefaultReader: releaseLock() method"
+short-title: releaseLock()
 slug: Web/API/ReadableStreamDefaultReader/releaseLock
-tags:
-  - API
-  - Method
-  - ReadableStreamDefaultReader
-  - Reference
-  - Streams
-  - releaseLock
+page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultReader.releaseLock
 ---
+
 {{APIRef("Streams")}}
 
-The **`releaseLock()`** method of the
-{{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the
-stream.
+The **`releaseLock()`** method of the {{domxref("ReadableStreamDefaultReader")}} interface releases the reader's lock on the stream.
 
-If the associated stream is errored when the lock is released, the reader will appear
-errored in that same way subsequently; otherwise, the reader will appear closed.
+If the associated stream is errored when the lock is released, the reader will appear errored in that same way subsequently; otherwise, the reader will appear closed.
 
-A reader’s lock cannot be released while it still has a pending read request, i.e., if
-a promise returned by the reader’s {{domxref("ReadableStreamDefaultReader.read()")}}
-method has not finished. This will result in a `TypeError` being thrown.
+If the reader's lock is released while it still has pending read requests then the promises returned by the reader's {{domxref("ReadableStreamDefaultReader.read()")}} method are immediately rejected with a `TypeError`.
+Unread chunks remain in the stream's internal queue and can be read later by acquiring a new reader.
 
 ## Syntax
 
-```js
-readableStreamDefaultReader.releaseLock();
+```js-nolint
+releaseLock()
 ```
 
 ### Parameters
@@ -35,13 +27,12 @@ None.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- TypeError
-  - : The source object is not a `ReadableStreamDefaultReader`, or a read
-    request is pending.
+- {{jsxref("TypeError")}}
+  - : Thrown if the source object is not a `ReadableStreamDefaultReader`.
 
 ## Examples
 
@@ -49,11 +40,11 @@ None.
 function fetchStream() {
   const reader = stream.getReader();
 
-  ...
+  // ...
 
-  reader.releaseLock()
+  reader.releaseLock();
 
-  ...
+  // ...
 }
 ```
 
@@ -64,3 +55,8 @@ function fetchStream() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamDefaultReader.ReadableStreamDefaultReader", "ReadableStreamDefaultReader()")}} constructor
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

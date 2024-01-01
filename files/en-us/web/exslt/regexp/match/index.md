@@ -1,18 +1,16 @@
 ---
 title: regexp:match()
 slug: Web/EXSLT/regexp/match
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `regexp:match()` performs regular expression matching on a string, returning the submatches found as a result.
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:match(targetString, regExpString[, flagsString])
 ```
 
@@ -22,7 +20,7 @@ regexp:match(targetString, regExpString[, flagsString])
   - : The string to perform regular expression matching upon.
 - `regExpString`
   - : The JavaScript style regular expression to evaluate.
-- `flagsString{{Optional_Inline}}`
+- `flagsString` {{optional_inline}}
   - : An optional string containing character flags.
 
 The character flags are:
@@ -47,12 +45,14 @@ For example:
 
 This code generates the following output:
 
-    Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
-    Part 2 = https
-    Part 3 = developer.mozilla.org
-    Part 4 =
-    Part 5 = /en/docs/Firefox_3_for_developers
+```plain
+Part 1 = https://developer.mozilla.org/en/docs/Firefox_3_for_developers
+Part 2 = https
+Part 3 = developer.mozilla.org
+Part 4 =
+Part 5 = /en/docs/Firefox_3_for_developers
+```
 
 ## Specifications
 
-[EXSLT - REGEXP:MATCH](http://www.exslt.org/regexp/functions/match/index.html)
+[EXSLT - REGEXP:MATCH](https://exslt.github.io/regexp/functions/match/index.html)

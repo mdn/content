@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.uniformMatrix[234]x[234]fv()
+title: "WebGL2RenderingContext: uniformMatrix[234]x[234]fv() method"
+short-title: uniformMatrix[234]x[234]fv()
 slug: Web/API/WebGL2RenderingContext/uniformMatrix
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.uniformMatrix2fv
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.uniformMatrix[234]x[234]fv()`**
@@ -21,32 +18,58 @@ values for uniform variables.
 
 ## Syntax
 
-```js
-void gl.uniformMatrix2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3x2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4x2fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix2x3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4x3fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix2x4fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix3x4fv(location, transpose, data, optional srcOffset, optional srcLength);
-void gl.uniformMatrix4fv(location, transpose, data, optional srcOffset, optional srcLength);
+```js-nolint
+uniformMatrix2fv(location, transpose, data)
+uniformMatrix2fv(location, transpose, data, srcOffset)
+uniformMatrix2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3x2fv(location, transpose, data)
+uniformMatrix3x2fv(location, transpose, data, srcOffset)
+uniformMatrix3x2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4x2fv(location, transpose, data)
+uniformMatrix4x2fv(location, transpose, data, srcOffset)
+uniformMatrix4x2fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix2x3fv(location, transpose, data)
+uniformMatrix2x3fv(location, transpose, data, srcOffset)
+uniformMatrix2x3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3fv(location, transpose, data)
+uniformMatrix3fv(location, transpose, data, srcOffset)
+uniformMatrix3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4x3fv(location, transpose, data)
+uniformMatrix4x3fv(location, transpose, data, srcOffset)
+uniformMatrix4x3fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix2x4fv(location, transpose, data)
+uniformMatrix2x4fv(location, transpose, data, srcOffset)
+uniformMatrix2x4fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix3x4fv(location, transpose, data)
+uniformMatrix3x4fv(location, transpose, data, srcOffset)
+uniformMatrix3x4fv(location, transpose, data, srcOffset, srcLength)
+
+uniformMatrix4fv(location, transpose, data)
+uniformMatrix4fv(location, transpose, data, srcOffset)
+uniformMatrix4fv(location, transpose, data, srcOffset, srcLength)
 ```
 
 ### Parameters
 
-- location
+- `location`
   - : A {{domxref("WebGLUniformLocation")}} object containing the location of the uniform
     attribute to modify.
-- transpose
+- `transpose`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} specifying whether to transpose the matrix. Must be
     `false`.
-- data
+- `data`
   - : A {{jsxref("Float32Array")}} of float values.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

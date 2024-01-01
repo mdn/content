@@ -1,39 +1,43 @@
 ---
-title: DOMTokenList.add()
+title: "DOMTokenList: add() method"
+short-title: add()
 slug: Web/API/DOMTokenList/add
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.add
 ---
+
 {{APIRef("DOM")}}
 
-The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given _tokens_ to the list.
+The **`add()`** method of the {{domxref("DOMTokenList")}} interface adds the given tokens to the list, omitting any that are already present.
 
 ## Syntax
 
-```js
-add(token);
-add(token, token);
-add(token, token, token);
-...
+```js-nolint
+add(token1)
+add(token1, token2)
+add(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters
 
-- `token`
+- `tokenN`
   - : A string representing a token (or tokens) to add to the `DOMTokenList`.
 
 ### Return value
 
 None.
 
+### Exceptions
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if one of the arguments is an empty string
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if a token contains ASCII whitespace.
+
 ## Examples
 
-In the following example we retrieve the list of classes set on a
-{{htmlelement("span")}} element as a `DOMTokenList` using
-{{domxref("Element.classList")}}. We then add a new token to the list, and write the
-list into the `<span>`'s {{domxref("Node.textContent")}}.
+In the following example, we retrieve the list of classes set on a {{htmlelement("span")}} element as a `DOMTokenList`, using {{domxref("Element.classList")}}.
+We then add a new token to the list, and write the list into the `<span>`'s {{domxref("Node.textContent")}}.
 
 First, the HTML:
 

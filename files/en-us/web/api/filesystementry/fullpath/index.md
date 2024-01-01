@@ -1,38 +1,26 @@
 ---
-title: FileSystemEntry.fullPath
+title: "FileSystemEntry: fullPath property"
+short-title: fullPath
 slug: Web/API/FileSystemEntry/fullPath
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - fullPath
+page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.fullPath
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`fullPath`** property
-of the {{domxref("FileSystemEntry")}} interface returns a {{domxref("USVString")}}
+of the {{domxref("FileSystemEntry")}} interface returns a string
 specifying the full, absolute path from the file system's root to the file represented
 by the entry.
 
 This can also be thought of as a path which is relative to the root directory, with a
 "/" prepended to it to make it absolute.
 
-## Syntax
+## Value
 
-```js
-var fullPath = FileSystemEntry.fullPath;
-```
+A string indicating the entry's full path.
 
-### Value
-
-A {{domxref("USVString")}} indicating the entry's full path.
-
-## Example
+## Examples
 
 This example shows a function which is called with a file system; it then gets a
 {{domxref("FileSystemFileEntry")}} for a file named `data.json` and returns
@@ -42,9 +30,14 @@ its full path.
 function gotFileSystem(fs) {
   let path = "";
 
-  fs.root.getFile("data.json", { create: true, exclusive: true }, function(entry) {
-    path = fullPath;
-  }, handleError(error));
+  fs.root.getFile(
+    "data.json",
+    { create: true, exclusive: true },
+    (entry) => {
+      path = fullPath;
+    },
+    handleError(error),
+  );
 
   return path;
 }
@@ -64,8 +57,6 @@ for scenarios in which you don't know it.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}

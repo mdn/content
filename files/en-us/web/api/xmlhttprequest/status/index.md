@@ -1,38 +1,36 @@
 ---
-title: XMLHttpRequest.status
+title: "XMLHttpRequest: status property"
+short-title: status
 slug: Web/API/XMLHttpRequest/status
-tags:
-  - API
-  - Error
-  - Property
-  - Reference
-  - XMLHttpRequest
-  - XMLHttpRequest Status
-  - result
-  - status
+page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.status
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The read-only **`XMLHttpRequest.status`** property returns the numerical HTTP [status code](/en-US/docs/Web/HTTP/Status) of the `XMLHttpRequest`'s response.
 
 Before the request completes, the value of `status` is 0. Browsers also report a status of 0 in case of `XMLHttpRequest` errors.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ```js
-var xhr = new XMLHttpRequest();
-console.log('UNSENT: ', xhr.status);
+const xhr = new XMLHttpRequest();
+console.log("UNSENT: ", xhr.status);
 
-xhr.open('GET', '/server');
-console.log('OPENED: ', xhr.status);
+xhr.open("GET", "/server");
+console.log("OPENED: ", xhr.status);
 
-xhr.onprogress = function () {
-  console.log('LOADING: ', xhr.status);
+xhr.onprogress = () => {
+  console.log("LOADING: ", xhr.status);
 };
 
-xhr.onload = function () {
-  console.log('DONE: ', xhr.status);
+xhr.onload = () => {
+  console.log("DONE: ", xhr.status);
 };
 
 xhr.send();
@@ -57,5 +55,5 @@ xhr.send();
 
 ## See also
 
-- List of [HTTP response codes](/en-US/docs/Web/HTTP/Response_codes)
+- List of [HTTP status](/en-US/docs/Web/HTTP/Status)
 - [HTTP](/en-US/docs/Web/HTTP)

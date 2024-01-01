@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.getActiveUniformBlockName()
+title: "WebGL2RenderingContext: getActiveUniformBlockName() method"
+short-title: getActiveUniformBlockName()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockName
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockName
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getActiveUniformBlockName()`**
@@ -17,8 +14,8 @@ of the active uniform block at a given index within a {{domxref("WebGLProgram")}
 
 ## Syntax
 
-```js
-DOMString gl.getActiveUniformBlockName(program, uniformBlockIndex);
+```js-nolint
+getActiveUniformBlockName(program, uniformBlockIndex)
 ```
 
 ### Parameters
@@ -31,12 +28,12 @@ DOMString gl.getActiveUniformBlockName(program, uniformBlockIndex);
 
 ### Return value
 
-A {{domxref("DOMString")}} indicating the active uniform block name.
+A string indicating the active uniform block name.
 
 ## Examples
 
 ```js
-var blockName = gl.getActiveUniformBlockName(program, 0);
+const blockName = gl.getActiveUniformBlockName(program, 0);
 ```
 
 ## Specifications

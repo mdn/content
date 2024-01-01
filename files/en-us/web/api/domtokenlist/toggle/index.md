@@ -1,11 +1,11 @@
 ---
-title: DOMTokenList.toggle()
+title: "DOMTokenList: toggle() method"
+short-title: toggle()
 slug: Web/API/DOMTokenList/toggle
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.toggle
 ---
+
 {{APIRef("DOM")}}
 
 The **`toggle()`** method of the {{domxref("DOMTokenList")}} interface
@@ -14,9 +14,9 @@ If the token doesn't exist it's added and the function returns `true`.
 
 ## Syntax
 
-```js
-toggle(token);
-toggle(token, force);
+```js-nolint
+toggle(token)
+toggle(token, force)
 ```
 
 ### Parameters
@@ -25,8 +25,8 @@ toggle(token, force);
   - : A string representing the token you want to toggle.
 - `force` {{optional_inline}}
   - : If included, turns the toggle into a one way-only operation.
-     If set to `false`, then `token` will _only_ be removed, but not added.
-     If set to `true`, then `token` will _only_ be added, but not removed.
+    If set to `false`, then `token` will _only_ be removed, but not added.
+    If set to `true`, then `token` will _only_ be added, but not removed.
 
 ### Return value
 
@@ -34,6 +34,8 @@ A boolean value, `true` or `false`, indicating whether `token` is in the
 list after the call or not.
 
 ## Examples
+
+### Toggling a class on click
 
 In the following example we retrieve the list of classes set on a
 {{htmlelement("span")}} element as a `DOMTokenList` using
@@ -52,20 +54,25 @@ Now the JavaScript:
 const span = document.querySelector("span");
 const classes = span.classList;
 
-span.addEventListener('click', function() {
+span.addEventListener("click", () => {
   const result = classes.toggle("c");
-
-  if (result) {
-    span.textContent = `'c' added; classList is now "${classes}".`;
-  } else {
-    span.textContent = `'c' removed; classList is now "${classes}".`;
-  }
-})
+  span.textContent = `'c' ${
+    result ? "added" : "removed"
+  }; classList is now "${classes}".`;
+});
 ```
 
 The output looks like this and it will change each time you click on the text:
 
-{{ EmbedLiveSample('Examples', '100%', 60) }}
+{{ EmbedLiveSample('Toggling_a_class_on_click', '100%', 60) }}
+
+### Setting the force parameter
+
+The second parameter can be used to determine whether the class is included or not. This example would include the 'c' class only if the browser window is over 1000 pixels wide:
+
+```js
+span.classList.toggle("c", window.innerWidth > 1000);
+```
 
 ## Specifications
 

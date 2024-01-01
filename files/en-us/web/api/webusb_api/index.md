@@ -1,13 +1,13 @@
 ---
 title: WebUSB API
 slug: Web/API/WebUSB_API
-tags:
-  - API
-  - Web USB
-  - Overview
-  - Reference
+page-type: web-api-overview
+status:
+  - experimental
+spec-urls: https://wicg.github.io/webusb/
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Web USB API")}}
+
+{{securecontext_header}}{{DefaultAPISidebar("WebUSB API")}}{{SeeCompatTable}}
 
 The **WebUSB API** provides a way to expose non-standard Universal Serial Bus (USB) compatible devices services to the web, to make USB safer and easier to use.
 
@@ -26,11 +26,13 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 - {{domxref("USB")}}
   - : Provides attributes and methods for finding and connecting USB devices from a web page.
 - {{domxref("USBConnectionEvent")}}
-  - : The event type passed to {{domxref("USB.onconnect")}} or {{domxref("USB.ondisconnect")}} when the user agent detects a new USB device has been connected to, or disconnected from the host.
+  - : The event type passed to `USB` {{domxref("USB.connect_event", "connect")}} or {{domxref("USB.disconnect_event", "disconnect")}} events when the user agent detects a new USB device has been connected to, or disconnected from the host.
 - {{domxref("USBDevice")}}
   - : Provides access to metadata about a paired USB device and methods for controlling it.
 - {{domxref("USBInTransferResult")}}
   - : Represents the result from requesting a transfer of data from the USB device to the USB host.
+- {{domxref("USBOutTransferResult")}}
+  - : Represents the result from requesting a transfer of data from the USB host to the USB device.
 - {{domxref("USBIsochronousInTransferPacket")}}
   - : Represents the status of an individual packet from a request to transfer data from the USB device to the USB host over an isochronous endpoint.
 - {{domxref("USBIsochronousInTransferResult")}}
@@ -55,12 +57,15 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
 The following example demonstrates how to access a connected Arduino device using {{domxref("USB.requestDevice()")}}, which has a vendorId of `0x2341`.
 
 ```js
-navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
-  .then(device => {
-    console.log(device.productName);      // "Arduino Micro"
+navigator.usb
+  .requestDevice({ filters: [{ vendorId: 0x2341 }] })
+  .then((device) => {
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   })
-  .catch(error => { console.error(error); });
+  .catch((error) => {
+    console.error(error);
+  });
 ```
 
 ### Finding all connected devices
@@ -68,22 +73,18 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 You can find all connected devices with {{domxref("USB.getDevices()")}}. In the following example, with the Arduino device connected, product and manufacturer name are printed to the console.
 
 ```js
-navigator.usb.getDevices().then(devices => {
-  devices.forEach(device => {
-    console.log(device.productName);      // "Arduino Micro"
+navigator.usb.getDevices().then((devices) => {
+  devices.forEach((device) => {
+    console.log(device.productName); // "Arduino Micro"
     console.log(device.manufacturerName); // "Arduino LLC"
   });
-})
+});
 ```
 
 ## Specifications
 
-| Specification                    | Status                       | Comment             |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Web USB')}} | {{Spec2('Web USB')}} | Initial definition. |
-
-## Browser compatibility
+{{Specifications}}
 
 ## See also
 
-- [Access USB Devices on the Web](https://web.dev/usb/)
+- [Access USB Devices on the Web](https://developer.chrome.com/docs/capabilities/usb)

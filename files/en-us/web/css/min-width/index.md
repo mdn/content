@@ -1,20 +1,10 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - CSS
-  - CSS Property
-  - Horizontal
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - min-width
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.min-width
 ---
+
 {{CSSRef}}
 
 The **`min-width`** [CSS](/en-US/docs/Web/CSS) property sets the minimum width of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("width")}} property from becoming smaller than the value specified for `min-width`.
@@ -35,12 +25,14 @@ min-width: 10%;
 /* Keyword values */
 min-width: max-content;
 min-width: min-content;
+min-width: fit-content;
 min-width: fit-content(20em);
 
 /* Global values */
 min-width: inherit;
 min-width: initial;
 min-width: revert;
+min-width: revert-layer;
 min-width: unset;
 ```
 
@@ -56,7 +48,9 @@ min-width: unset;
   - : The intrinsic preferred `min-width`.
 - `min-content`
   - : The intrinsic minimum `min-width`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ## Formal definition
@@ -72,9 +66,13 @@ min-width: unset;
 ### Setting minimum element width
 
 ```css
-table { min-width: 75%; }
+table {
+  min-width: 75%;
+}
 
-form { min-width: 0; }
+form {
+  min-width: 0;
+}
 ```
 
 ## Specifications
@@ -88,4 +86,4 @@ form { min-width: 0; }
 ## See also
 
 - {{Cssxref("width")}}, {{Cssxref("max-width")}}
-- The [box model](/en-US/docs/Web/CSS/box_model), {{Cssxref("box-sizing")}}
+- The [box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{Cssxref("box-sizing")}}

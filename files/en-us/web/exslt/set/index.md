@@ -1,17 +1,11 @@
 ---
 title: Sets (set)
 slug: Web/EXSLT/set
-tags:
-  - EXSLT
-  - Overview
-  - Reference
+page-type: landing-page
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 The EXSLT Sets package offers functions that let you perform set manipulation. The namespace for these functions is `http://exslt.org/sets`.
 
 {{SubpagesWithSummaries}}
-
-## Browser compatibility
-
-{{Compat("xslt.exslt.set")}}

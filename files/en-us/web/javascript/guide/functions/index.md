@@ -1,14 +1,10 @@
 ---
 title: Functions
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Beginner
-  - Functions
-  - Guide
-  - JavaScript
-  - l10n:priority
+page-type: guide
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure—a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.
 
@@ -22,7 +18,7 @@ A **function definition** (also called a **function declaration**, or **function
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by commas.
-- The JavaScript statements that define the function, enclosed in curly brackets, `{...}`.
+- The JavaScript statements that define the function, enclosed in curly braces, `{ /* … */ }`.
 
 For example, the following code defines a simple function named `square`:
 
@@ -32,29 +28,40 @@ function square(number) {
 }
 ```
 
-The function `square` takes one parameter, called `number`. The function consists of one statement that says to return the parameter of the function (that is, `number`) multiplied by itself. The statement [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) specifies the value returned by the function:
+The function `square` takes one parameter, called `number`. The function consists of one statement that says to return the parameter of the function (that is, `number`) multiplied by itself. The [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement specifies the value returned by the function, which is `number * number`.
 
-```js
-return number * number;
-```
+Parameters are essentially passed to functions **by value** — so if the code within the body of a function assigns a completely new value to a parameter that was passed to the function, **the change is not reflected globally or in the code which called that function**.
 
-Primitive parameters (such as a number) are passed to functions **by value**; the value is passed to the function, but if the function changes the value of the parameter, **this change is not reflected globally or in the calling function**.
-
-If you pass an object (i.e., a non-primitive value, such as {{jsxref("Array")}} or a user-defined object) as a parameter and the function changes the object's properties, that change is visible outside the function, as shown in the following example:
+When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function, as shown in the following example:
 
 ```js
 function myFunc(theObject) {
-  theObject.make = 'Toyota';
+  theObject.make = "Toyota";
 }
 
-var mycar = {make: 'Honda', model: 'Accord', year: 1998};
-var x, y;
+const mycar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
 
-x = mycar.make; // x gets the value "Honda"
-
+console.log(mycar.make); // "Honda"
 myFunc(mycar);
-y = mycar.make; // y gets the value "Toyota"
-                // (the make property was changed by the function)
+console.log(mycar.make); // "Toyota"
+```
+
+When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function, as shown in the following example:
+
+```js
+function myFunc(theArr) {
+  theArr[0] = 30;
+}
+
+const arr = [45];
+
+console.log(arr[0]); // 45
+myFunc(arr);
+console.log(arr[0]); // 30
 ```
 
 ### Function expressions
@@ -64,26 +71,31 @@ While the function declaration above is syntactically a statement, functions can
 Such a function can be **anonymous**; it does not have to have a name. For example, the function `square` could have been defined as:
 
 ```js
-const square = function(number) { return number * number }
-var x = square(4) // x gets the value 16
+const square = function (number) {
+  return number * number;
+};
+
+console.log(square(4)); // 16
 ```
 
 However, a name _can_ be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:
 
 ```js
-const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n - 1) }
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
-console.log(factorial(3))
+console.log(factorial(3)); // 6
 ```
 
 Function expressions are convenient when passing a function as an argument to another function. The following example shows a `map` function that should receive a function as first argument and an array as second argument:
 
 ```js
 function map(f, a) {
-  let result = []; // Create a new Array
-  let i; // Declare variable
-  for (i = 0; i != a.length; i++)
+  const result = new Array(a.length);
+  for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
+  }
   return result;
 }
 ```
@@ -92,36 +104,35 @@ In the following code, the function receives a function defined by a function ex
 
 ```js
 function map(f, a) {
-  let result = []; // Create a new Array
-  let i; // Declare variable
-  for (i = 0; i != a.length; i++)
+  const result = new Array(a.length);
+  for (let i = 0; i < a.length; i++) {
     result[i] = f(a[i]);
+  }
   return result;
 }
-const f = function(x) {
-   return x * x * x;
-}
-let numbers = [0, 1, 2, 5, 10];
-let cube = map(f,numbers);
-console.log(cube);
-```
 
-Function returns: `[0, 1, 8, 125, 1000]`.
+const cube = function (x) {
+  return x * x * x;
+};
+
+const numbers = [0, 1, 2, 5, 10];
+console.log(map(cube, numbers)); // [0, 1, 8, 125, 1000]
+```
 
 In JavaScript, a function can be defined based on a condition. For example, the following function definition defines `myFunc` only if `num` equals `0`:
 
 ```js
-var myFunc;
+let myFunc;
 if (num === 0) {
-  myFunc = function(theObject) {
-    theObject.make = 'Toyota';
-  }
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
 In addition to defining functions as described here, you can also use the {{jsxref("Function")}} constructor to create functions from a string at runtime, much like {{jsxref("Global_Objects/eval", "eval()")}}.
 
-A **method** is a function that is a property of an object. Read more about objects and methods in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects).
+A **method** is a function that is a property of an object. Read more about objects and methods in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects).
 
 ## Calling functions
 
@@ -135,55 +146,67 @@ square(5);
 
 The preceding statement calls the function with an argument of `5`. The function executes its statements and returns the value `25`.
 
-Functions must be _in scope_ when they are called, but the function declaration can be hoisted (appear below the call in the code), as in this example:
+Functions must be _in scope_ when they are called, but the function declaration can be [hoisted](#function_hoisting) (appear below the call in the code). The scope of a function declaration is the function in which it is declared (or the entire program, if it is declared at the top level).
 
-```js
-console.log(square(5));
-/* ... */
-function square(n) { return n * n }
-```
-
-The scope of a function is the function in which it is declared (or the entire program, if it is declared at the top level).
-
-> **Note:** This works only when defining the function using the above syntax (i.e., `function funcName(){}`). The code below will not work.
->
-> This means that function hoisting only works with function _declarations_—not with function _expressions_.
->
-> ```js example-bad
-> console.log(square)    // square is hoisted with an initial value undefined.
-> console.log(square(5)) // Uncaught TypeError: square is not a function
-> const square = function(n) {
->   return n * n;
-> }
-> ```
-
-The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The `showProps()` function (defined in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)) is an example of a function that takes an object as an argument.
+The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function. The `showProps()` function (defined in [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#objects_and_properties)) is an example of a function that takes an object as an argument.
 
 A function can call itself. For example, here is a function that computes factorials recursively:
 
 ```js
 function factorial(n) {
-  if ((n === 0) || (n === 1))
+  if (n === 0 || n === 1) {
     return 1;
-  else
-    return (n * factorial(n - 1));
+  } else {
+    return n * factorial(n - 1);
+  }
 }
 ```
 
 You could then compute the factorials of `1` through `5` as follows:
 
 ```js
-var a, b, c, d, e;
-a = factorial(1); // a gets the value 1
-b = factorial(2); // b gets the value 2
-c = factorial(3); // c gets the value 6
-d = factorial(4); // d gets the value 24
-e = factorial(5); // e gets the value 120
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
 ```
 
 There are other ways to call functions. There are often cases where a function needs to be called dynamically, or the number of arguments to a function vary, or in which the context of the function call needs to be set to a specific object determined at runtime.
 
-It turns out that _functions are themselves objects_—and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) One of these, the {{jsxref("Function.apply", "apply()")}} method, can be used to achieve this goal.
+It turns out that _functions are themselves objects_ — and in turn, these objects have methods. (See the {{jsxref("Function")}} object.) The [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [`apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) methods can be used to achieve this goal.
+
+### Function hoisting
+
+Consider the example below:
+
+```js
+console.log(square(5)); // 25
+
+function square(n) {
+  return n * n;
+}
+```
+
+This code runs without any error, despite the `square()` function being called before it's declared. This is because the JavaScript interpreter hoists the entire function declaration to the top of the current scope, so the code above is equivalent to:
+
+```js
+// All function declarations are effectively at the top of the scope
+function square(n) {
+  return n * n;
+}
+
+console.log(square(5)); // 25
+```
+
+Function hoisting only works with function _declarations_ — not with function _expressions_. The following code will not work:
+
+```js example-bad
+console.log(square(5)); // ReferenceError: Cannot access 'square' before initialization
+const square = function (n) {
+  return n * n;
+};
+```
 
 ## Function scope
 
@@ -193,30 +216,30 @@ In other words, a function defined in the global scope can access all variables 
 
 ```js
 // The following variables are defined in the global scope
-var num1 = 20,
-    num2 = 3,
-    name = 'Chamakh';
+const num1 = 20;
+const num2 = 3;
+const name = "Chamakh";
 
 // This function is defined in the global scope
 function multiply() {
   return num1 * num2;
 }
 
-multiply(); // Returns 60
+console.log(multiply()); // 60
 
 // A nested function example
 function getScore() {
-  var num1 = 2,
-      num2 = 3;
+  const num1 = 2;
+  const num2 = 3;
 
   function add() {
-    return name + ' scored ' + (num1 + num2);
+    return `${name} scored ${num1 + num2}`;
   }
 
   return add();
 }
 
-getScore(); // Returns "Chamakh scored 5"
+console.log(getScore()); // "Chamakh scored 5"
 ```
 
 ## Scope and the function stack
@@ -225,42 +248,45 @@ getScore(); // Returns "Chamakh scored 5"
 
 A function can refer to and call itself. There are three ways for a function to refer to itself:
 
-1.  The function's name
-2.  [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  An in-scope variable that refers to the function
+1. The function's name
+2. [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. An in-scope variable that refers to the function
 
 For example, consider the following function definition:
 
 ```js
-var foo = function bar() {
-   // statements go here
-}
+const foo = function bar() {
+  // statements go here
+};
 ```
 
 Within the function body, the following are all equivalent:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 A function that calls itself is called a _recursive function_. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
 
-For example, the following loop...
+For example, consider the following loop:
 
 ```js
-var x = 0;
-while (x < 10) { // "x < 10" is the loop condition
-   // do stuff
-   x++;
+let x = 0;
+// "x < 10" is the loop condition
+while (x < 10) {
+  // do stuff
+  x++;
 }
 ```
 
-...can be converted into a recursive function declaration, followed by a call to that function:
+It can be converted into a recursive function declaration, followed by a call to that function:
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" is the exit condition (equivalent to "!(x < 10)")
+  // "x >= 10" is the exit condition (equivalent to "!(x < 10)")
+  if (x >= 10) {
     return;
+  }
   // do stuff
   loop(x + 1); // the recursive call
 }
@@ -271,10 +297,11 @@ However, some algorithms cannot be simple iterative loops. For example, getting 
 
 ```js
 function walkTree(node) {
-  if (node == null) //
+  if (node === null) {
     return;
+  }
   // do something with node
-  for (var i = 0; i < node.childNodes.length; i++) {
+  for (let i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
   }
 }
@@ -288,16 +315,16 @@ In fact, recursion itself uses a stack: the function stack. The stack-like behav
 
 ```js
 function foo(i) {
-  if (i < 0)
+  if (i < 0) {
     return;
-  console.log('begin: ' + i);
+  }
+  console.log(`begin: ${i}`);
   foo(i - 1);
-  console.log('end: ' + i);
+  console.log(`end: ${i}`);
 }
 foo(3);
 
-// Output:
-
+// Logs:
 // begin: 3
 // begin: 2
 // begin: 1
@@ -330,9 +357,10 @@ function addSquares(a, b) {
   }
   return square(a) + square(b);
 }
-a = addSquares(2, 3); // returns 13
-b = addSquares(3, 4); // returns 25
-c = addSquares(4, 5); // returns 41
+
+console.log(addSquares(2, 3)); // 13
+console.log(addSquares(3, 4)); // 25
+console.log(addSquares(4, 5)); // 41
 ```
 
 Since the inner function forms a closure, you can call the outer function and specify arguments for both the outer and inner function:
@@ -344,11 +372,10 @@ function outside(x) {
   }
   return inside;
 }
-fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give
-                        // it
-result = fn_inside(5); // returns 8
 
-result1 = outside(3)(5); // returns 8
+const fnInside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
+console.log(fnInside(5)); // 8
+console.log(outside(3)(5)); // 8
 ```
 
 ### Preservation of variables
@@ -379,33 +406,33 @@ function A(x) {
   }
   B(2);
 }
-A(1); // logs 6 (1 + 2 + 3)
+A(1); // Logs 6 (which is 1 + 2 + 3)
 ```
 
 In this example, `C` accesses `B`'s `y` and `A`'s `x`.
 
 This can be done because:
 
-1.  `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
-2.  `C` forms a closure including `B`.
-3.  Because `B`'s closure includes `A`, `C`'s closure includes `A`, `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
+1. `B` forms a closure including `A` (i.e., `B` can access `A`'s arguments and variables).
+2. `C` forms a closure including `B`.
+3. Because `C`'s closure includes `B` and `B`'s closure includes `A`, then `C`'s closure also includes `A`. This means `C` can access _both_ `B` _and_ `A`'s arguments and variables. In other words, `C` _chains_ the scopes of `B` and `A`, _in that order_.
 
 The reverse, however, is not true. `A` cannot access `C`, because `A` cannot access any argument or variable of `B`, which `C` is a variable of. Thus, `C` remains private to only `B`.
 
 ### Name conflicts
 
-When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the inner-most scope takes the highest precedence, while the outer-most scope takes the lowest. This is the scope chain. The first on the chain is the inner-most scope, and the last is the outer-most scope. Consider the following:
+When two arguments or variables in the scopes of a closure have the same name, there is a _name conflict_. More nested scopes take precedence. So, the innermost scope takes the highest precedence, while the outermost scope takes the lowest. This is the scope chain. The first on the chain is the innermost scope, and the last is the outermost scope. Consider the following:
 
 ```js
 function outside() {
-  var x = 5;
+  const x = 5;
   function inside(x) {
     return x * 2;
   }
   return inside;
 }
 
-outside()(10); // returns 20 instead of 10
+console.log(outside()(10)); // 20 (instead of 10)
 ```
 
 The name conflict happens at the statement `return x * 2` and is between `inside`'s parameter `x` and `outside`'s variable `x`. The scope chain here is {`inside`, `outside`, global object}. Therefore, `inside`'s `x` takes precedences over `outside`'s `x`, and `20` (`inside`'s `x`) is returned instead of `10` (`outside`'s `x`).
@@ -419,81 +446,90 @@ However, the outer function does _not_ have access to the variables and function
 Also, since the inner function has access to the scope of the outer function, the variables and functions defined in the outer function will live longer than the duration of the outer function execution, if the inner function manages to survive beyond the life of the outer function. A closure is created when the inner function is somehow made available to any scope outside the outer function.
 
 ```js
-var pet = function(name) {   // The outer function defines a variable called "name"
-  var getName = function() {
-    return name;             // The inner function has access to the "name" variable of the outer
-                             //function
-  }
-  return getName;            // Return the inner function, thereby exposing it to outer scopes
-}
-myPet = pet('Vivie');
+// The outer function defines a variable called "name"
+const pet = function (name) {
+  const getName = function () {
+    // The inner function has access to the "name" variable of the outer function
+    return name;
+  };
+  return getName; // Return the inner function, thereby exposing it to outer scopes
+};
+const myPet = pet("Vivie");
 
-myPet();                     // Returns "Vivie"
+console.log(myPet()); // "Vivie"
 ```
 
 It can be much more complex than the code above. An object containing methods for manipulating the inner variables of the outer function can be returned.
 
 ```js
-var createPet = function(name) {
-  var sex;
+const createPet = function (name) {
+  let sex;
 
-  return {
-    setName: function(newName) {
+  const pet = {
+    // setName(newName) is equivalent to setName: function (newName)
+    // in this context
+    setName(newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName() {
       return name;
     },
 
-    getSex: function() {
+    getSex() {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex === 'string' && (newSex.toLowerCase() === 'male' ||
-        newSex.toLowerCase() === 'female')) {
+    setSex(newSex) {
+      if (
+        typeof newSex === "string" &&
+        (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
 
-var pet = createPet('Vivie');
-pet.getName();                  // Vivie
+  return pet;
+};
 
-pet.setName('Oliver');
-pet.setSex('male');
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+const pet = createPet("Vivie");
+console.log(pet.getName()); // Vivie
+
+pet.setName("Oliver");
+pet.setSex("male");
+console.log(pet.getSex()); // male
+console.log(pet.getName()); // Oliver
 ```
 
 In the code above, the `name` variable of the outer function is accessible to the inner functions, and there is no other way to access the inner variables except through the inner functions. The inner variables of the inner functions act as safe stores for the outer arguments and variables. They hold "persistent" and "encapsulated" data for the inner functions to work with. The functions do not even have to be assigned to a variable, or have a name.
 
 ```js
-var getCode = (function() {
-  var apiCode = '0]Eal(eh&2';    // A code we do not want outsiders to be able to modify...
+const getCode = (function () {
+  const apiCode = "0]Eal(eh&2"; // A code we do not want outsiders to be able to modify…
 
-  return function() {
+  return function () {
     return apiCode;
   };
 })();
 
-getCode();    // Returns the apiCode
+console.log(getCode()); // "0]Eal(eh&2"
 ```
 
 > **Note:** There are a number of pitfalls to watch out for when using closures!
 >
-> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope.)
+> If an enclosed function defines a variable with the same name as a variable in the outer scope, then there is no way to refer to the variable in the outer scope again. (The inner scope variable "overrides" the outer one, until the program exits the inner scope. It can be thought of as a [name conflict](#name_conflicts).)
 >
 > ```js example-bad
-> var createPet = function(name) {  // The outer function defines a variable called "name".
+> const createPet = function (name) {
+>   // The outer function defines a variable called "name".
 >   return {
->     setName: function(name) {    // The enclosed function also defines a variable called "name".
->       name = name;               // How do we access the "name" defined by the outer function?
->     }
->   }
-> }
+>     setName(name) {
+>       // The enclosed function also defines a variable called "name".
+>       name = name; // How do we access the "name" defined by the outer function?
+>     },
+>   };
+> };
 > ```
 
 ## Using the arguments object
@@ -501,7 +537,7 @@ getCode();    // Returns the apiCode
 The arguments of a function are maintained in an array-like object. Within a function, you can address the arguments passed to it as follows:
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 where `i` is the ordinal number of the argument, starting at `0`. So, the first argument passed to a function would be `arguments[0]`. The total number of arguments is indicated by `arguments.length`.
@@ -512,27 +548,26 @@ For example, consider a function that concatenates several strings. The only for
 
 ```js
 function myConcat(separator) {
-   var result = ''; // initialize list
-   var i;
-   // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  let result = ""; // initialize list
+  // iterate through arguments
+  for (let i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
 You can pass any number of arguments to this function, and it concatenates each argument into a string "list":
 
 ```js
-// returns "red, orange, blue, "
-myConcat(', ', 'red', 'orange', 'blue');
+console.log(myConcat(", ", "red", "orange", "blue"));
+// "red, orange, blue, "
 
-// returns "elephant; giraffe; lion; cheetah; "
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+console.log(myConcat("; ", "elephant", "giraffe", "lion", "cheetah"));
+// "elephant; giraffe; lion; cheetah; "
 
-// returns "sage. basil. oregano. pepper. parsley. "
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+console.log(myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley"));
+// "sage. basil. oregano. pepper. parsley. "
 ```
 
 > **Note:** The `arguments` variable is "array-like", but not an array. It is array-like in that it has a numbered index and a `length` property. However, it does _not_ possess all of the array-manipulation methods.
@@ -541,13 +576,11 @@ See the {{jsxref("Function")}} object in the JavaScript reference for more infor
 
 ## Function parameters
 
-Starting with ECMAScript 2015, there are two new kinds of parameters: _default parameters_ and _rest parameters_.
+There are two special kinds of parameter syntax: _default parameters_ and _rest parameters_.
 
 ### Default parameters
 
 In JavaScript, parameters of functions default to `undefined`. However, in some situations it might be useful to set a different default value. This is exactly what default parameters do.
-
-#### Without default parameters (pre-ECMAScript 2015)
 
 In the past, the general strategy for setting defaults was to test parameter values in the body of the function and assign a value if they are `undefined`.
 
@@ -555,15 +588,12 @@ In the following example, if no value is provided for `b`, its value would be `u
 
 ```js
 function multiply(a, b) {
-  b = typeof b !== 'undefined' ?  b : 1;
-
+  b = typeof b !== "undefined" ? b : 1;
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
-
-#### With default parameters (post-ECMAScript 2015)
 
 With _default parameters_, a manual check in the function body is no longer necessary. You can put `1` as the default value for `b` in the function head:
 
@@ -572,7 +602,7 @@ function multiply(a, b = 1) {
   return a * b;
 }
 
-multiply(5); // 5
+console.log(multiply(5)); // 5
 ```
 
 For more details, see [default parameters](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters) in the reference.
@@ -585,16 +615,16 @@ In the following example, the function `multiply` uses _rest parameters_ to coll
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
-var arr = multiply(2, 1, 2, 3);
+const arr = multiply(2, 1, 2, 3);
 console.log(arr); // [2, 4, 6]
 ```
 
 ## Arrow functions
 
-An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (previously, and now incorrectly known as **fat arrow function**) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [arguments](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [super](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [new.target](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous. See also this hacks.mozilla.org blog post: "[ES6 In Depth: Arrow functions](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)".
+An [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (also called a _fat arrow_ to distinguish from a hypothetical `->` syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super), or [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). Arrow functions are always anonymous.
 
 Two factors influenced the introduction of arrow functions: _shorter functions_ and _non-binding_ of `this`.
 
@@ -603,23 +633,20 @@ Two factors influenced the introduction of arrow functions: _shorter functions_ 
 In some functional patterns, shorter functions are welcome. Compare:
 
 ```js
-var a = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-];
+const a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s) { return s.length; });
+const a2 = a.map(function (s) {
+  return s.length;
+});
 
-console.log(a2); // logs [8, 6, 7, 9]
+console.log(a2); // [8, 6, 7, 9]
 
-var a3 = a.map(s => s.length);
+const a3 = a.map((s) => s.length);
 
-console.log(a3); // logs [8, 6, 7, 9]
+console.log(a3); // [8, 6, 7, 9]
 ```
 
-### No separate `this`
+### No separate this
 
 Until arrow functions, every new function defined its own [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) value (a new object in the case of a constructor, undefined in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) function calls, the base object if the function is called as an "object method", etc.). This proved to be less than ideal with an object-oriented style of programming.
 
@@ -636,15 +663,16 @@ function Person() {
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
 
 In ECMAScript 3/5, this issue was fixed by assigning the value in `this` to a variable that could be closed over.
 
 ```js
 function Person() {
-  var self = this; // Some choose `that` instead of `self`.
-                   // Choose one and be consistent.
+  // Some choose `that` instead of `self`.
+  // Choose one and be consistent.
+  const self = this;
   self.age = 0;
 
   setInterval(function growUp() {
@@ -664,40 +692,11 @@ function Person() {
   this.age = 0;
 
   setInterval(() => {
-    this.age++; // |this| properly refers to the person object
+    this.age++; // `this` properly refers to the person object
   }, 1000);
 }
 
-var p = new Person();
+const p = new Person();
 ```
 
-## Predefined functions
-
-JavaScript has several top-level, built-in functions:
-
-- {{jsxref("Global_Objects/eval", "eval()")}}
-  - : The **`eval()`** method evaluates JavaScript code represented as a string.
-- {{jsxref("Global_Objects/uneval", "uneval()")}}
-  - : The **`uneval()`** method creates a string representation of the source code of an {{jsxref("Object")}}.
-- {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : The global **`isFinite()`** function determines whether the passed value is a finite number. If needed, the parameter is first converted to a number.
-- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : The **`isNaN()`** function determines whether a value is {{jsxref("Global_Objects/NaN", "NaN")}} or not. Note: coercion inside the `isNaN` function has [interesting](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) rules; you may alternatively want to use {{jsxref("Number.isNaN()")}}, as defined in ECMAScript 2015, or you can use [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to determine if the value is Not-A-Number.
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-  - : The **`parseFloat()`** function parses a string argument and returns a floating point number.
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-  - : The **`parseInt()`** function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
-- {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : The **`decodeURI()`** function decodes a Uniform Resource Identifier (URI) previously created by {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or by a similar routine.
-- {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : The **`decodeURIComponent()`** method decodes a Uniform Resource Identifier (URI) component previously created by {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} or by a similar routine.
-- {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : The **`encodeURI()`** method encodes a Uniform Resource Identifier (URI) by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
-- {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-  - : The **`encodeURIComponent()`** method encodes a Uniform Resource Identifier (URI) component by replacing each instance of certain characters by one, two, three, or four escape sequences representing the UTF-8 encoding of the character (will only be four escape sequences for characters composed of two "surrogate" characters).
-- {{jsxref("Global_Objects/escape", "escape()")}}
-  - : The deprecated **`escape()`** method computes a new string in which certain characters have been replaced by a hexadecimal escape sequence. Use {{jsxref("Global_Objects/encodeURI", "encodeURI")}} or {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} instead.
-- {{jsxref("Global_Objects/unescape", "unescape()")}}
-  - : The deprecated **`unescape()`** method computes a new string in which hexadecimal escape sequences are replaced with the character that it represents. The escape sequences might be introduced by a function like {{jsxref("Global_Objects/escape", "escape")}}. Because `unescape()` is deprecated, use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} or {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} instead.
-
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

@@ -1,18 +1,11 @@
 ---
-title: AudioParam.setValueCurveAtTime()
+title: "AudioParam: setValueCurveAtTime() method"
+short-title: setValueCurveAtTime()
 slug: Web/API/AudioParam/setValueCurveAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web
-  - Web Audio
-  - Web Audio API
-  - setValueCurveAtTime
+page-type: web-api-instance-method
 browser-compat: api.AudioParam.setValueCurveAtTime
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -27,8 +20,8 @@ values, which are scaled to fit into the given interval starting at
 
 ## Syntax
 
-```js
-var paramRef = param.setValueCurveAtTime(values, startTime, duration);
+```js-nolint
+setValueCurveAtTime(values, startTime, duration)
 ```
 
 ### Parameters
@@ -37,8 +30,7 @@ var paramRef = param.setValueCurveAtTime(values, startTime, duration);
   - : An array of floating-point numbers representing the value curve the
     {{domxref("AudioParam")}} will change through along the specified
     `duration`. Every value in the array must be a finite number; if any value
-    is `NaN`, `Infinity`, or `-Infinity`, a
-    `TypeError` exception is thrown.
+    is `NaN`, `Infinity`, or `-Infinity`, a {{jsxref("TypeError")}} exception is thrown.
 - `startTime`
   - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
     was first created that the change in value will happen. If this value is lower than
@@ -57,10 +49,10 @@ of this interface return `undefined`.
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the specified array of `values` has fewer than 2 items in it.
-- `RangeError` {{domxref("DOMException")}}
+- {{jsxref("RangeError")}}
   - : Thrown if the specified `startTime` is either negative or a non-finite value, or
     `duration` is not a finite, strictly positive number.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if one or more of the values in the `values` array is non-finite. Non-finite
     values are `NaN`, `Infinity`, and `-Infinity`.
 
@@ -75,33 +67,26 @@ parameter.
 
 ## Examples
 
-In this example, we have a media source with a single button (see the [webaudio-examples
-repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example
-live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
+In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
 change the gain value between the values contained in the waveArray array:
 
 ```js
 // create audio context
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
 // set basic variables for example
-var myAudio = document.querySelector('audio');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const myAudio = document.querySelector("audio");
 
-pre.innerHTML = myScript.innerHTML;
-
-var valueCurve = document.querySelector('.value-curve');
+const valueCurve = document.querySelector(".value-curve");
 
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a gain node and set it's gain value to 0.5
-var gainNode = audioCtx.createGain();
+const gainNode = audioCtx.createGain();
 gainNode.gain.value = 0.5;
-var currGain = gainNode.gain.value;
+const currGain = gainNode.gain.value;
 
 // connect the AudioBufferSourceNode to the gainNode
 // and the gainNode to the destination
@@ -110,7 +95,7 @@ gainNode.connect(audioCtx.destination);
 
 // set button to do something onclick
 
-var waveArray = new Float32Array(9);
+const waveArray = new Float32Array(9);
 waveArray[0] = 0.5;
 waveArray[1] = 1;
 waveArray[2] = 0.5;
@@ -121,9 +106,9 @@ waveArray[6] = 0.5;
 waveArray[7] = 0;
 waveArray[8] = 0.5;
 
-valueCurve.onclick = function() {
+valueCurve.onclick = () => {
   gainNode.gain.setValueCurveAtTime(waveArray, audioCtx.currentTime, 2);
-}
+};
 ```
 
 ## Specifications

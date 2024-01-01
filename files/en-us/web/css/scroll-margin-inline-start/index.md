@@ -1,19 +1,13 @@
 ---
 title: scroll-margin-inline-start
 slug: Web/CSS/scroll-margin-inline-start
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-margin-inline
-  - scroll-margin-inline-start
+page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-start
 ---
+
 {{CSSRef}}
 
-The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 {{EmbedInteractiveExample("pages/css/scroll-margin-inline-start.html")}}
 
@@ -28,12 +22,13 @@ scroll-margin-inline-start: 1em;
 scroll-margin-inline-start: inherit;
 scroll-margin-inline-start: initial;
 scroll-margin-inline-start: revert;
+scroll-margin-inline-start: revert-layer;
 scroll-margin-inline-start: unset;
 ```
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the inline start edge of the scroll container.
 
 ## Formal definition
@@ -67,7 +62,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {
@@ -105,7 +100,7 @@ The child elements are styled as follows:
 }
 ```
 
-The most relevant part here is `scroll-snap-align: start`, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.
+The most relevant part here is `scroll-snap-align: start`, which specifies that the left-hand edges (the "starts" along the x axis, in our case) are the designated snap points.
 
 Last of all we specify the scroll margin-values, a different one for the second and third child elements:
 
@@ -137,5 +132,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

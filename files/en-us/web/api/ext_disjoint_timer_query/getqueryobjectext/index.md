@@ -1,14 +1,11 @@
 ---
-title: EXT_disjoint_timer_query.getQueryObjectEXT()
+title: "EXT_disjoint_timer_query: getQueryObjectEXT() method"
+short-title: getQueryObjectEXT()
 slug: Web/API/EXT_disjoint_timer_query/getQueryObjectEXT
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension-method
 browser-compat: api.EXT_disjoint_timer_query.getQueryObjectEXT
 ---
+
 {{APIRef("WebGL")}}
 
 The **`EXT_disjoint_timer_query.getQueryObjectEXT()`** method
@@ -17,8 +14,8 @@ query object.
 
 ## Syntax
 
-```js
-any ext.getQueryObjectEXT(query, pname);
+```js-nolint
+getQueryObjectEXT(query, pname)
 ```
 
 ### Parameters
@@ -41,21 +38,20 @@ Depends on `pname`:
 ## Examples
 
 ```js
-var ext = gl.getExtension('EXT_disjoint_timer_query');
-var query = ext.createQueryEXT();
+const ext = gl.getExtension("EXT_disjoint_timer_query");
+const query = ext.createQueryEXT();
 ext.beginQueryEXT(ext.TIME_ELAPSED_EXT, query);
 
-// ... drawing ...
-
+// Draw
 ext.endQueryEXT(ext.TIME_ELAPSED_EXT);
 
 // At some point in the future, after returning control to the browser
-var available = ext.getQueryObjectEXT(query, ext.QUERY_RESULT_AVAILABLE_EXT);
-var disjoint = gl.getParameter(ext.GPU_DISJOINT_EXT);
+const available = ext.getQueryObjectEXT(query, ext.QUERY_RESULT_AVAILABLE_EXT);
+const disjoint = gl.getParameter(ext.GPU_DISJOINT_EXT);
 
 if (available && !disjoint) {
   // See how much time the rendering of the object took in nanoseconds.
-  var timeElapsed = ext.getQueryObjectEXT(query, ext.QUERY_RESULT_EXT);
+  const timeElapsed = ext.getQueryObjectEXT(query, ext.QUERY_RESULT_EXT);
 }
 ```
 

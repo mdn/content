@@ -1,16 +1,12 @@
 ---
-title: WritableStreamDefaultWriter()
+title: "WritableStreamDefaultWriter: WritableStreamDefaultWriter() constructor"
+short-title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
+page-type: web-api-constructor
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`WritableStreamDefaultWriter()`**
 constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object instance.
@@ -20,13 +16,13 @@ constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object inst
 
 ## Syntax
 
-```js
-var writableStreamDefaultWriter = new WritableStreamDefaultWriter(stream);
+```js-nolint
+new WritableStreamDefaultWriter(stream)
 ```
 
 ### Parameters
 
-- stream
+- `stream`
   - : The {{domxref("WritableStream")}} to be written to.
 
 ### Return value
@@ -35,7 +31,7 @@ An instance of the {{domxref("WritableStreamDefaultWriter")}} object.
 
 ### Exceptions
 
-- TypeError
+- {{jsxref("TypeError")}}
   - : The provided `stream` value is not a {{domxref("WritableStream")}}, or it
     is locked to another writer already.
 
@@ -51,7 +47,7 @@ used to write each chunk of the string to the stream. Finally, `write()` and
 of chunks and streams.
 
 ```js
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
@@ -60,9 +56,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -87,36 +81,38 @@ function sendMessage(message, writableStream) {
 const decoder = new TextDecoder("utf-8");
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 let result = "";
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
-      view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      return new Promise((resolve, reject) => {
+        const buffer = new ArrayBuffer(1);
+        const view = new Uint8Array(buffer);
+        view[0] = chunk;
+        const decoded = decoder.decode(view, { stream: true });
+        const listItem = document.createElement("li");
+        listItem.textContent = `Chunk decoded: ${decoded}`;
+        list.appendChild(listItem);
+        result += decoded;
+        resolve();
+      });
+    },
+    close() {
+      const listItem = document.createElement("li");
+      listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
       list.appendChild(listItem);
-      result += decoded;
-      resolve();
-    });
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
-    list.appendChild(listItem);
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer
-example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

@@ -1,15 +1,11 @@
 ---
-title: ANGLE_instanced_arrays.drawElementsInstancedANGLE()
+title: "ANGLE_instanced_arrays: drawElementsInstancedANGLE() method"
+short-title: drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: web-api-instance-method
 browser-compat: api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set of elements.
@@ -18,8 +14,8 @@ The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [Web
 
 ## Syntax
 
-```js
-void ext.drawElementsInstancedANGLE(mode, count, type, offset, primcount);
+```js-nolint
+drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 ```
 
 ### Parameters
@@ -36,37 +32,35 @@ void ext.drawElementsInstancedANGLE(mode, count, type, offset, primcount);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array buffer. Possible values are:
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    - When using the {{domxref("OES_element_index_uint")}} extension:
+    - `gl.UNSIGNED_INT` when using the {{domxref("OES_element_index_uint")}} extension.
 
-      - `gl.UNSIGNED_INT`
-
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be a valid multiple of the size of the given `type`.
-- primcount
+- `primcount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the set of elements to execute.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - If `mode` is not one of the accepted values, a `gl.INVALID_ENUM` error is thrown.
-- If `offset` is a invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
-- If `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
+- If `offset` is an invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
+- If `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
 
 ## Examples
 
 ```js
-var ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

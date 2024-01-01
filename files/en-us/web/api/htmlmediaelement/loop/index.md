@@ -1,33 +1,23 @@
 ---
-title: HTMLMediaElement.loop
+title: "HTMLMediaElement: loop property"
+short-title: loop
 slug: Web/API/HTMLMediaElement/loop
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Web
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.loop
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.loop`** property reflects the {{htmlattrxref("loop", "video")}} HTML attribute, which controls whether the media element should start over when it reaches the end.
+The **`HTMLMediaElement.loop`** property reflects the [`loop`](/en-US/docs/Web/HTML/Element/video#loop) HTML attribute, which controls whether the media element should start over when it reaches the end.
 
-## Syntax
-
-```js
-var loop = video.loop;
-audio.loop = true;
-```
-
-### Value
+## Value
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // true
 ```
 
@@ -41,4 +31,4 @@ obj.loop = true; // true
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.loop` property

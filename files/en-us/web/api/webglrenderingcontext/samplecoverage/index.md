@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.sampleCoverage()
+title: "WebGLRenderingContext: sampleCoverage() method"
+short-title: sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.sampleCoverage()`** method of the
@@ -17,22 +14,22 @@ parameters for anti-aliasing effects.
 
 ## Syntax
 
-```js
-void gl.sampleCoverage(value, invert);
+```js-nolint
+sampleCoverage(value, invert)
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : A {{domxref("WebGL_API/Types", "GLclampf")}} which sets a single floating-point coverage value clamped
     to the range \[0,1]. The default value is 1.0.
-- invert
+- `invert`
   - : A {{domxref("WebGL_API/Types", "GLboolean")}} which sets whether or not the coverage masks should be
     inverted. The default value is `false`.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -50,7 +47,7 @@ To check the sample coverage values, query the `SAMPLE_COVERAGE_VALUE` and
 `SAMPLE_COVERAGE_INVERT` constants.
 
 ```js
-gl.getParameter(gl.SAMPLE_COVERAGE_VALUE);  // 0.5
+gl.getParameter(gl.SAMPLE_COVERAGE_VALUE); // 0.5
 gl.getParameter(gl.SAMPLE_COVERAGE_INVERT); // false
 ```
 

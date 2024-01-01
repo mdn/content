@@ -1,9 +1,9 @@
 ---
 title: Updating extensions for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 3.
@@ -12,7 +12,7 @@ Before going further, there's one helpful hint we can offer: if the only change 
 
 ## Step 1: Update the install manifest
 
-The first step -- and, for most extensions, the only one that will be needed -- is to update the [install manifest](/en-US/docs/Install_Manifests) file, [`install.rdf`](/en-US/docs/Creating_a_Skin_for_Firefox/install.rdf), to indicate compatibility with Firefox 3.
+The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](/en-US/docs/Install_Manifests) file, [`install.rdf`](/en-US/docs/Creating_a_Skin_for_Firefox/install.rdf), to indicate compatibility with Firefox 3.
 
 Find the line indicating the maximum compatible version of Firefox (which, for Firefox 2, might look like this):
 
@@ -40,7 +40,7 @@ Firefox 3 supports new properties in the install manifest to specify localized d
 
 ## Step 2: Ensure you are providing secure updates
 
-If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#Securing_Updates) for more information.
+If you are hosting addons yourself and not on a secure add-on hosting provider like [addons.mozilla.org](https://addons.mozilla.org) then you must provide a secure method of updating your add-on. This will either involve hosting your updates on an SSL website, or using cryptographic keys to sign the update information. Read [Securing Updates](/en-US/docs/Extension_Versioning,_Update_and_Compatibility#securing_updates) for more information.
 
 ## Step 3: Deal with changed APIs
 
@@ -58,15 +58,15 @@ If your extension accesses bookmark or history data in any way, it will need sub
 
 ### Download Manager
 
-The Download Manager API has changed slightly due to the transition from an RDF data store to using the [Storage](/en-US/docs/Storage) API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See {{ Interface("nsIDownloadManager") }}, {{ Interface("nsIDownloadProgressListener") }}, and [Monitoring downloads](/en-US/docs/Monitoring_downloads) for more information.
+The Download Manager API has changed slightly due to the transition from an RDF data store to using the [Storage](/en-US/docs/Storage) API. This should be a pretty easy transition to make. In addition, the API for monitoring download progress has changed to support multiple download manager listeners. See `nsIDownloadManager`, `nsIDownloadProgressListener`, and [Monitoring downloads](/en-US/docs/Monitoring_downloads) for more information.
 
 ### Password Manager
 
 If your extension accesses user login information using the Password Manager, it will need to be updated to use the new Login Manager API.
 
 - The article [Using nsILoginManager](/en-US/docs/XPCOM_Interface_Reference/Using_nsILoginManager) includes examples, including a demonstration of how to write your extension to work with both the Password Manager and the Login Manager, so it will work with both Firefox 3 and earlier versions.
-- [`nsILoginInfo`](/en-US/docs/XPCOM_Interface_Reference/nsILoginInfo)
-- [`nsILoginManager`](/en-US/docs/XPCOM_Interface_Reference/nsILoginManager)
+- `nsILoginInfo`
+- `nsILoginManager`
 
 You can also override the built-in password manager storage if you want to provide your own password storage implementation in your extensions. See [Creating a Login Manager storage module](/en-US/docs/Creating_a_Login_Manager_storage_module) for details.
 
@@ -76,7 +76,7 @@ The XUL Popup system was heavily modified in Firefox 3. The Popup system include
 
 ### Autocomplete
 
-The {{ Interface("nsIAutoCompleteController") }} interface's [`handleEnter()`](/en-US/docs/XPCOM_Interface_Reference/nsIAutoCompleteController#handleEnter.28.29) method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.
+The `nsIAutoCompleteController` interface's `handleEnter()` method has been changed to accept an argument that indicates whether the text was selected from the autocomplete popup or by the user pressing enter after typing text.
 
 ### DOMParser
 
@@ -105,7 +105,7 @@ The following interfaces were removed from Gecko 1.9, which drives Firefox 3. If
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (see {{ Bug(386200) }})
+- `nsICloseAllWindows` (see [Firefox bug 386200](https://bugzil.la/386200))
 
 ## Step 4: Check for relevant chrome changes
 
@@ -143,23 +143,23 @@ Or use the following technique to make your overlay work on both Firefox 2 and F
 
 ### Changed boxes
 
-Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the `noautohide` attribute to `true`.
+Extensions that attempt to overlay onto the "appcontent" box try to float chrome over document content will no longer display that material. You should update your extension to use the new [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) XUL element. If you wish to keep the panel from automatically disappearing after a delay, you can set the `noautohide` attribute to `true`.
 
 ## Other changes
 
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
 - `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
-- {{ Interface("nsIAboutModule") }} implementations are now required to support the `getURIFlags` method. See {{ Source("netwerk/protocol/about/public/nsIAboutModule.idl", "nsIAboutModule.idl") }} for documentation. This affects extensions that provide new `about:` URIs. ({{ Bug(337746) }})
-- The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ({{ Bug(339964) }}). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
-- Changes to [nsISupports proxies](/en-US/docs/nsISupports_proxies) and possibly to threading-related interfaces need to be documented.
-- If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in {{ Bug(319654) }}:
+- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
+- The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([Firefox bug 339964](https://bugzil.la/339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
+- Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
+- If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [Firefox bug 319654](https://bugzil.la/319654):
 
-  1.  XML PIs are now added to a XUL document's DOM. This means {{ Domxref("document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
-  2.  `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
+  1. XML PIs are now added to a XUL document's DOM. This means {{ Domxref("Node.firstChild", "document.firstChild") }} is no longer guaranteed to be the root element. If you need to get the root document in your script, use {{ Domxref("document.documentElement") }} instead.
+  2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 
-- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to {{ Bug(296639) }} which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#Detecting_page_load) and works in Firefox 2 as well.
+- `window.addEventListener("load", myFunc, true)` is not fired when loading web content (browser page loads). This is due to [Firefox bug 296639](https://bugzil.la/296639) which changes the way inner and outer windows communicate. The simple fix here is to use `gBrowser.addEventListener("load", myFunc, true)` as described [here](/en-US/docs/Code_snippets/Tabbed_browser#detecting_page_load) and works in Firefox 2 as well.
 - `content.window.getSelection()` gives an object (which can be converted to a string by `toString()`), unlike the now deprecated `content.document.getSelection()` which returns a string
 - `event.preventBubble()` was deprecated in Firefox 2 and has been removed in Firefox 3. Use [`event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), which works in Firefox 2 as well.
-- Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for {{ Bug(52209) }}. You may use {{ Interface("nsITimer") }} instead.
-- If your extension needs to allow an untrusted source (e.g., a web site) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).
+- Timers that are initiated using `setTimeout()` are now blocked by modal windows due to the fix made for [Firefox bug 52209](https://bugzil.la/52209). You may use `nsITimer` instead.
+- If your extension needs to allow an untrusted source (e.g., a website) to access the extension's chrome, then you must use the new [`contentaccessible` flag](/en-US/docs/Chrome_Registration#contentaccessible).

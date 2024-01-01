@@ -1,21 +1,10 @@
 ---
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - JavaScript
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - Web
-  - WebExtensions
-  - get
+page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.get
 ---
+
 {{AddonSidebar()}}
 
 Retrieves one or more items from the storage area.
@@ -24,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let results = browser.storage.<storageType>.get(
   keys    // null, string, object or array of strings
 )
@@ -35,11 +24,11 @@ let results = browser.storage.<storageType>.get(
 ### Parameters
 
 - `keys`
-  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty string, object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
+  - : A key (`string`) or keys (an array of strings, _or_ an object specifying default values) to identify the item(s) to be retrieved from storage. If you pass an empty object or array here, an empty object will be retrieved. If you pass `null`, or an undefined value, the entire storage contents will be retrieved.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a `results` object, containing every object in `keys` that was found in the storage area. If `keys` is an object, keys that are not found in the storage area will have their values given by the `keys` object.
 
 If the operation failed, the promise is rejected with an error message.
 
@@ -63,8 +52,8 @@ Suppose storage contains two items:
 // storage contains two items,
 // "kitten" and "monster"
 browser.storage.local.set({
-  kitten:  {name:"Mog", eats:"mice"},
-  monster: {name:"Kraken", eats:"people"}
+  kitten: { name: "Mog", eats: "mice" },
+  monster: { name: "Kraken", eats: "people" },
 });
 ```
 
@@ -111,7 +100,11 @@ gettingItem.then(onGot, onError);
 With an array of object names, retrieve all matches:
 
 ```js
-let gettingItem = browser.storage.local.get(["kitten", "monster", "grapefruit"]);
+let gettingItem = browser.storage.local.get([
+  "kitten",
+  "monster",
+  "grapefruit",
+]);
 gettingItem.then(onGot, onError);
 
 // -> Object { kitten: Object, monster: Object }
@@ -125,8 +118,8 @@ let gettingItem = browser.storage.local.get({
   monster: "no monster",
   grapefruit: {
     name: "Grape Fruit",
-    eats: "Water"
-  }
+    eats: "Water",
+  },
 });
 
 // -> Object { kitten: Object, monster: Object, grapefruit: Object }
@@ -137,15 +130,15 @@ let gettingItem = browser.storage.local.get({
 ### Chrome examples
 
 ```js
-chrome.storage.local.get("kitten", function(items){
-  console.log(items.kitten);  // -> {name:"Mog", eats:"mice"}
+chrome.storage.local.get("kitten", (items) => {
+  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
 
 Or with an arrow function
 
 ```js
-chrome.storage.local.get("kitten", items => {
+chrome.storage.local.get("kitten", (items) => {
   console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
 });
 ```
@@ -153,10 +146,10 @@ chrome.storage.local.get("kitten", items => {
 Or using a Promise
 
 ```js
-let gettingItem = new Promise(resolve => chrome.storage.local.get("kitten", resolve));
+let gettingItem = new Promise((resolve) =>
+  chrome.storage.local.get("kitten", resolve),
+);
 gettingItem.then(onGot); // -> Object { kitten: Object }
 ```
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

@@ -1,28 +1,23 @@
 ---
-title: ':placeholder-shown'
+title: ":placeholder-shown"
 slug: Web/CSS/:placeholder-shown
-tags:
-  - ':placeholder-shown'
-  - CSS
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown
 ---
+
 {{CSSRef}}
 
-The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#attr-placeholder).
+The **`:placeholder-shown`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element that is currently displaying [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder).
 
-```css
-/* Selects any element with an active placeholder */
-:placeholder-shown {
-  border: 2px solid silver;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+:placeholder-shown {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -33,7 +28,7 @@ This example applies special font and border styles when the placeholder is show
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -62,16 +57,15 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 #### HTML
 
 ```html
-<input id="input1" placeholder="Name, Rank, and Serial Number">
-<br><br>
-<input id="input2" placeholder="Name, Rank, and Serial Number">
+<input id="input1" placeholder="Name, Rank, and Serial Number" /> <br /><br />
+<input id="input2" placeholder="Name, Rank, and Serial Number" />
 ```
 
 #### CSS
 
 ```css
 #input2:placeholder-shown {
-  text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 ```
 
@@ -81,25 +75,31 @@ When form fields are too small, placeholder text can get cropped in an undesirab
 
 ### Customized input field
 
-The following example highlights the Branch and ID code fields with a custom style.
+The following example highlights the Student ID field with a custom style.
 
 #### HTML
 
 ```html
 <form id="test">
-  <p>
-    <label for="name">Enter Student Name:</label>
-    <input id="name" placeholder="Student Name"/>
-  </p>
-  <p>
-    <label for="branch">Enter Student Branch:</label>
-    <input id="branch" placeholder="Student Branch"/>
-  </p>
-  <p>
-    <label for="sid">Enter Student ID:</label>
-    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
-  </p>
-  <input type="submit"/>
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name" />
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch" />
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input
+      type="number"
+      pattern="[0-9]{8}"
+      title="8 digit ID"
+      id="sid"
+      class="studentid"
+      placeholder="8 digit id" />
+  </p>
+  <input type="submit" />
 </form>
 ```
 
@@ -107,14 +107,14 @@ The following example highlights the Branch and ID code fields with a custom sty
 
 ```css
 input {
-  background-color: #E8E8E8;
-  color: black;
+  background-color: #e8e8e8;
+  color: black;
 }
 
 input.studentid:placeholder-shown {
-  background-color: yellow;
-  color: red;
-  font-style: italic;
+  background-color: yellow;
+  color: red;
+  font-style: italic;
 }
 ```
 

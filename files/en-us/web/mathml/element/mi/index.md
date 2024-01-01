@@ -1,131 +1,95 @@
 ---
 title: <mi>
 slug: Web/MathML/Element/mi
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
+page-type: mathml-element
 browser-compat: mathml.elements.mi
 ---
+
 {{MathMLRef}}
 
-The MathML `<mi>` element indicates that the content should be rendered as an **identifier** such as function names, variables or symbolic constants. You can also have arbitrary text in it to mark up terms.
+The **`<mi>`** [MathML](/en-US/docs/Web/MathML) element indicates that the content should be rendered as an **identifier**, such as a function name, variable or symbolic constant.
+
+By default `<mi>` elements that contain multiple characters are a rendered as normal text, while single character characters are rendered as italic: the same formatting behaviour as the [CSS `text-transform`](/en-US/docs/Web/CSS/text-transform) property with a value of `math-auto`.
+The `mathvariant` attribute with a value of `normal` can be used to reset a single character to the normal font.
+
+In order to use a particular form of a character such as bold/italic, serif, sans-serif, script/calligraphy, monospaced, double-struck, and so on, you should use the appropriate [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
+
+> **Note:** In a previous specification (MathML3), the `mathvariant` attribute was used to define logical classes that could apply the character formatting for mathematical alphanumeric symbols.
+> The associated values are now deprecated, and expected to be removed from browsers in future releases.
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- dir
-  - : The text direction. Possible values are either `ltr` (left to right) or `rtl` (right to left).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathsize
-  - : The size of the content. See [length](/en-US/docs/Web/CSS/length) for possible values.
-    Deprecated values are: `small`, `normal` and `big`. These will be removed in the future.
-- mathvariant
+- `mathvariant`
 
-  - : This logical class of the identifier, which varies in typography. That is, although the names suggest the typographic style for the class, semantically, items with the same class are treated "the same" within an expression, which might or might not involve displaying them with the named typography. The following values are allowed:
+  - : The only value allowed in the current specification is `normal` (case insensitive):
 
-    - `normal` (Default value for _more than one character_) ;
+    - `normal`
+      - : Use default/normal rendering, removing automatic styling of single characters to italic.
 
-      <math><mi mathvariant="normal">Example</mi></math>
+    Deprecated legacy values are:
 
-    - `bold` ;
+    - `bold` {{deprecated_inline}}
+      - : Try and use bold characters e.g. "𝐀".
+    - `italic` {{deprecated_inline}}
+      - : Try and use italic characters e.g. "𝐴".
+    - `bold-italic` {{deprecated_inline}}
+      - : Try and use bold-italic characters e.g. "𝑨".
+    - `double-struck` {{deprecated_inline}}
+      - : Try and use double-struck characters e.g. "𝔸".
+    - `bold-fraktur` {{deprecated_inline}}
+      - : Try and use bold-fraktur characters e.g. "𝕬".
+    - `script` {{deprecated_inline}}
+      - : Try and use script characters e.g. "𝒜".
+    - `bold-script` {{deprecated_inline}}
+      - : Try and use bold-script characters e.g. "𝓐".
+    - `fraktur` {{deprecated_inline}}
+      - : Try and use fraktur characters e.g. "𝔄".
+    - `sans-serif` {{deprecated_inline}}
+      - : Try and use sans-serif characters e.g. "𝖠".
+    - `bold-sans-serif` {{deprecated_inline}}
+      - : Try and use bold-sans-serif characters e.g. "𝗔".
+    - `sans-serif-italic` {{deprecated_inline}}
+      - : Try and use sans-serif-italic characters e.g. "𝘈".
+    - `sans-serif-bold-italic` {{deprecated_inline}}
+      - : Try and use sans-serif-bold-italic characters e.g. "𝘼".
+    - `monospace` {{deprecated_inline}}
+      - : Try and use monospace characters e.g. "𝙰".
+    - `initial` {{deprecated_inline}}
+      - : Try and use initial characters e.g. "𞸢".
+    - `tailed` {{deprecated_inline}}
+      - : Try and use tailed characters e.g. "𞹂".
+    - `looped` {{deprecated_inline}}
+      - : Try and use looped characters e.g. "𞺂".
+    - `stretched` {{deprecated_inline}}
+      - : Try and use stretched characters e.g. "𞹢".
 
-      <math><mi mathvariant="bold">Example</mi></math>
-
-    - `italic` (Default value for _a single character_) ;
-
-      <math><mi mathvariant="italic">Example</mi></math>
-
-    - `bold-italic` ;
-
-      <math><mi mathvariant="bold-italic">Example</mi></math>
-
-    <!---->
-
-    - `double-struck` ;
-
-      <math><mi mathvariant="double-struck">Example</mi></math>
-
-    - `bold-fraktur` ;
-
-      <math><mi mathvariant="bold-fraktur">Example</mi></math>
-
-    - `script` ;
-
-      <math><mi mathvariant="script">Example</mi></math>
-
-    - `bold-script` ;
-
-      <math><mi mathvariant="bold-script">Example</mi></math>
-
-    - `fraktur` ;
-
-      <math><mi mathvariant="fraktur">Example</mi></math>
-
-    <!---->
-
-    - `sans-serif` ;
-
-      <math><mi mathvariant="sans-serif">Example</mi></math>
-
-    - `bold-sans-serif` ;
-
-      <math><mi mathvariant="bold-sans-serif">Example</mi></math>
-
-    - `sans-serif-italic` ;
-
-      <math><mi mathvariant="sans-serif-italic">Example</mi></math>
-
-    - `sans-serif-bold-italic` ;
-
-      <math><mi mathvariant="sans-serif-bold-italic">Example</mi></math>
-
-    - `monospace` ;
-
-      <math><mi mathvariant="monospace">Example</mi></math>
-
-    <!---->
-
-    - `initial` ;
-
-      <math><mi mathvariant="initial">مثال</mi></math>
-
-    - `tailed` ;
-
-      <math><mi mathvariant="tailed">مثال</mi></math>
-
-    - `looped` ;
-
-      <math><mi mathvariant="looped">مثال</mi></math>
-
-    - `stretched` ;
-
-      <math><mi mathvariant="stretched">مثال</mi></math>
+This element also accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 ## Examples
 
 ```html
-<math>
-
-  <mi> y </mi>
-
-  <mi> sin </mi>
-
-  <mi mathvariant="monospace"> x </mi>
-
-  <mi mathvariant="bold"> &pi; </mi>
-
+<math display="block">
+  <!-- Multiple characters render as "normal" text -->
+  <mi>sin</mi>
+</math>
+<hr />
+<math display="block">
+  <!-- Single characters render as italic by default (i.e. "A" renders as "𝐴") -->
+  <mi>A</mi>
+</math>
+<hr />
+<math display="block">
+  <!-- Use mathvariant="normal" to make single character render as normal text -->
+  <mi mathvariant="normal">F</mi>
+</math>
+<hr />
+<math display="block">
+  <!-- To use a specific variant, such as "B" in Fraktur -->
+  <mi>𝔅</mi>
 </math>
 ```
+
+{{ EmbedLiveSample('mi_example', 400, 100) }}
 
 ## Specifications
 
@@ -134,7 +98,3 @@ The MathML `<mi>` element indicates that the content should be rendered as an **
 ## Browser compatibility
 
 {{Compat}}
-
-## Gecko-specific notes
-
-- Some `mathvariant` values are only implemented starting with Gecko 28.0 {{ geckoRelease("28.0") }} and require appropriate [math fonts](/en-US/docs/Mozilla/MathML_Project/Fonts).

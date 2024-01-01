@@ -1,23 +1,20 @@
 ---
-title: XRCompositionLayer.destroy()
+title: "XRCompositionLayer: destroy() method"
+short-title: destroy()
 slug: Web/API/XRCompositionLayer/destroy
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRCompositionLayer.destroy
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`destroy()`** method of the {{domxref("XRCompositionLayer")}} interface deletes the references to the underlying graphics library for the layer. It also sets the color textures and depth stencil texture arrays to an empty array.
 
 ## Syntax
 
-```js
+```js-nolint
 destroy()
 ```
 
@@ -27,7 +24,7 @@ None.
 
 ### Return value
 
-Returns {{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

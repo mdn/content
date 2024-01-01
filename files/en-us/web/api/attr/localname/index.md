@@ -1,62 +1,65 @@
 ---
-title: Attr.localName
+title: "Attr: localName property"
+short-title: localName
 slug: Web/API/Attr/localName
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Attr.localName
 ---
+
 {{APIRef("DOM")}}
 
-The **`Attr.localName`** read-only property returns the local
-part of the qualified name of an attribute.
+The read-only **`localName`** property of the {{domxref("Attr")}} interface returns the _local part_ of the _qualified name_ of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is `xml:lang`, the returned local name is `lang`, if the element supports that namespace.
 
-## Syntax
+The local name is always in lower case, whatever case at the attribute creation.
 
-```js
-name = attribute.localName
-```
+> **Note:** HTML only supports a fixed set of namespaces on SVG and MathML elements. These are `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:href`, `xlink:show`, `xlink:target` and `xlink:title` attributes) and `xpath`.
+>
+> That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.
 
-### Return value
+## Value
 
-A {{domxref("DOMString")}} representing the local part of the attribute's qualified
-name.
+A string representing the local part of the attribute's qualified name.
 
 ## Example
 
-The following example shows "id" in an alert dialog.
+The following example displays the local name of the first attribute of the two first elements, when we click on the appropriate button. The {{SVGElement("svg")}} element is XML and supports namespaces leading to the local name (`lang`) to be different from the qualified name `xml:lang`. The {{HTMLElement("label")}} element is HTML, that doesn't support namespaces, leading to a local name and the qualified name to be both `xml:lang`.
 
-### HTML Content
+### HTML
 
 ```html
-<button id="example">Click me</button>
+<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
+<label xml:lang="en-US" class="struct"></label>
+
+<p>
+  <button>Show value for &lt;svg&gt;</button>
+  <button>Show value for &lt;label&gt;</button>
+</p>
+
+<p>
+  Local part of the attribute <code>xml:lang</code>:
+  <output id="result">None.</output>
+</p>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
-const element = document.querySelector("#example");
-element.addEventListener("click", function() {
-  const attribute = element.attributes[0];
-  alert(attribute.localName);
-});
+const elements = document.querySelectorAll(".struct");
+const buttons = document.querySelectorAll("button");
+const outputEl = document.querySelector("#result");
+
+let i = 0;
+for (const button of buttons) {
+  const element = elements[i];
+  button.addEventListener("click", () => {
+    const attribute = element.attributes[0];
+    outputEl.value = attribute.localName;
+  });
+  i++;
+}
 ```
 
-{{ EmbedLiveSample('Example','100%',30) }}
-
-## Notes
-
-The local name of an attribute is the part of the attribute's qualified name that comes
-after the colon. Qualified names are typically used in XML as part of the namespace(s)
-of the particular XML documents.
-
-> **Note:** In {{Gecko("1.9.2")}} and earlier, the property returns the
-> upper-cased version of the local name for HTML attributes in HTML DOMs (as opposed to
-> XHTML attributes in XML DOMs). In later versions, in compliance with HTML5, the
-> property returns in the case of the internal DOM storage, which is lower case for both
-> HTML attributes in HTML DOMs and XHTML attributes in XML DOMs.
+{{ EmbedLiveSample('Example','100%',100) }}
 
 ## Specifications
 
@@ -68,6 +71,5 @@ of the particular XML documents.
 
 ## See also
 
-- {{domxref("Attr.namespaceURI")}}
-- {{domxref("Attr.prefix")}}
-- {{domxref("Element.localName")}}
+- The properties {{domxref("Attr.name")}}, returning the qualified name of the attribute, and {{domxref("Attr.prefix")}}, the namespace prefix.
+- The {{domxref("Element.localName()")}} property, returning the local name of an {{domxref("Element")}}.

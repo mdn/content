@@ -1,51 +1,40 @@
 ---
-title: MediaSource.removeSourceBuffer()
+title: "MediaSource: removeSourceBuffer() method"
+short-title: removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Method
-  - Reference
-  - Video
-  - removeSourceBuffer
+page-type: web-api-instance-method
 browser-compat: api.MediaSource.removeSourceBuffer
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
-The **`removeSourceBuffer()`** method of the
-{{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from
-the {{domxref("SourceBuffers")}} list associated with this `MediaSource`
-object.
+{{APIRef("Media Source Extensions")}}
+
+The **`removeSourceBuffer()`** method of the {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from the {{domxref("SourceBufferList")}} associated with this `MediaSource` object.
 
 ## Syntax
 
-```js
-mediaSource.removeSourceBuffer(sourceBuffer);
+```js-nolint
+removeSourceBuffer(sourceBuffer)
 ```
 
 ### Parameters
 
-- sourceBuffer
+- `sourceBuffer`
   - : The {{domxref("SourceBuffer")}} object to be removed.
 
 ### Return value
 
-{{jsxref('undefined')}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `NotFoundError` {{domxref("DOMException")}}
-  - :  Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
+  - : Thrown if the supplied sourceBuffer doesn't exist in {{domxref("MediaSource.sourceBuffers")}}.
 
 ## Examples
 
 ```js
-for (i = 0; i < 10; i++) {
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+for (let i = 0; i < 10; i++) {
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
 }
 
 mediaSource.removeSourceBuffer(mediaSource.sourceBuffers[0]);

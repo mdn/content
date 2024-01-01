@@ -1,32 +1,20 @@
 ---
-title: ElementInternals.ariaModal
+title: "ElementInternals: ariaModal property"
+short-title: ariaModal
 slug: Web/API/ElementInternals/ariaModal
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaModal
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaModal
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-modal` attribute, which indicates whether an element is modal when displayed.
+{{APIRef("Web Components")}}
+
+The **`ariaModal`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal) attribute, which indicates whether an element is modal when displayed.
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaModal = ElementInternals.ariaModal;
-ElementInternals.ariaModal = ariaModal;
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The element is modal.

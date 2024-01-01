@@ -1,27 +1,25 @@
 ---
-title: VideoDecoder.VideoDecoder()
+title: "VideoDecoder: VideoDecoder() constructor"
+short-title: VideoDecoder()
 slug: Web/API/VideoDecoder/VideoDecoder
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoDecoder
+page-type: web-api-constructor
 browser-compat: api.VideoDecoder.VideoDecoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`VideoDecoder()`** constructor creates a new {{domxref("VideoDecoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoDecoder.state")}} set to `"unconfigured"`.
 
 ## Syntax
 
-```js
-new VideoDecoder();
+```js-nolint
+new VideoDecoder(options)
 ```
 
 ### Parameters
 
-- `init`
-  - : A dictionary object containing two callbacks.
+- `options`
+  - : An object containing two callbacks.
     - `output`
       - : A callback which takes a {{domxref("VideoFrame")}} object as its only argument.
     - `error`
@@ -45,4 +43,3 @@ const videoDecoder = new VideoDecoder({
 ## Browser compatibility
 
 {{Compat}}
-

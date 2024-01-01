@@ -1,11 +1,11 @@
 ---
-title: CharacterData.after()
+title: "CharacterData: after() method"
+short-title: after()
 slug: Web/API/CharacterData/after
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.after
 ---
+
 {{APIRef("DOM")}}
 
 The **`after()`** method of the {{domxref("CharacterData")}} interface
@@ -16,8 +16,8 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
-after(... nodes)
+```js-nolint
+after(...nodes)
 ```
 
 ### Parameters
@@ -40,10 +40,10 @@ after(... nodes)
 The `after()` method allows you to insert new nodes after a `CharacterData` node.
 
 ```js
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+const h1TextNode = document.querySelector("h1").firstChild;
 h1TextNode.after(" #h1");
 
-h1TextNode.parentElement.childNodes
+h1TextNode.parentElement.childNodes;
 // NodeList [#text "CharacterData.after()", #text " #h1"]
 
 h1TextNode.data;

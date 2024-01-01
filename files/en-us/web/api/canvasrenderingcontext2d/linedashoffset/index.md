@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.lineDashOffset
+title: "CanvasRenderingContext2D: lineDashOffset property"
+short-title: lineDashOffset
 slug: Web/API/CanvasRenderingContext2D/lineDashOffset
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineDashOffset
 ---
+
 {{APIRef}}
 
 The
@@ -18,15 +15,9 @@ property of the Canvas 2D API sets the line dash offset, or "phase."
 > **Note:** Lines are drawn by calling the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.
 
-## Syntax
+## Value
 
-```js
-ctx.lineDashOffset = value;
-```
-
-- `value`
-  - : A float specifying the amount of the line dash offset. The default value is
-    `0.0`.
+A float specifying the amount of the line dash offset. The default value is `0.0`.
 
 ## Examples
 
@@ -44,8 +35,8 @@ dash offset of 4.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.setLineDash([4, 16]);
 
@@ -57,7 +48,7 @@ ctx.stroke();
 
 // Dashed line with offset of 4
 ctx.beginPath();
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.lineDashOffset = 4;
 ctx.moveTo(0, 100);
 ctx.lineTo(300, 100);
@@ -82,8 +73,8 @@ animating the border.
 ```
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 let offset = 0;
 
 function draw() {
@@ -95,7 +86,7 @@ function draw() {
 
 function march() {
   offset++;
-  if (offset > 16) {
+  if (offset > 5) {
     offset = 0;
   }
   draw();
@@ -120,5 +111,4 @@ march();
 - The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
 - {{domxref("CanvasRenderingContext2D.setLineDash()")}}
-- [Applying
-  styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)

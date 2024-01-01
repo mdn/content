@@ -1,50 +1,40 @@
 ---
-title: BatteryManager.charging
+title: "BatteryManager: charging property"
+short-title: charging
 slug: Web/API/BatteryManager/charging
-tags:
-  - API
-  - Battery API
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.BatteryManager.charging
 ---
-{{deprecated_header}}{{APIRef("Battery API")}}
 
-A Boolean value indicating whether or not the device's battery is currently being
-charged.
+{{ApiRef("Battery API")}}{{securecontext_header}}
 
-## Syntax
+The **`BatteryManager.charging`** property is a Boolean value indicating whether or not the device's battery is currently being charged. When its value changes, the {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} event is fired.
 
-```js
-var charging = battery.charging
-```
+If the battery is charging or the user agent is unable to report the battery status information, this value is `true`. Otherwise, it is `false`.
 
-On return, `charging` indicates whether or not the
-`battery`, which is a {{domxref("BatteryManager")}} object, is
-currently being charged; if the battery is charging, this value is `true`.
-Otherwise, the value is `false`.
+## Value
 
-## Example
+A boolean.
 
-### HTML Content
+## Examples
+
+### HTML
 
 ```html
 <div id="charging">(charging state unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
+  const charging = battery.charging;
 
-    var charging = battery.charging;
-
-    document.querySelector('#charging').textContent = charging ;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 
@@ -57,4 +47,4 @@ navigator.getBattery().then(function(battery) {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

@@ -1,21 +1,22 @@
 ---
-title: SerialPort.close()
+title: "SerialPort: close() method"
+short-title: close()
 slug: Web/API/SerialPort/close
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - SerialPort
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SerialPort.close
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`SerialPort.close()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port closes.
 
 ## Syntax
 
-    var promise = SerialPort.close();
+```js-nolint
+close()
+```
 
 ### Parameters
 

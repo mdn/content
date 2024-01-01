@@ -1,33 +1,23 @@
 ---
-title: MediaStream.getAudioTracks()
+title: "MediaStream: getAudioTracks() method"
+short-title: getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaStream
-  - MediaStreamTrack
-  - Method
-  - Reference
-  - getAudioTracks
-  - track
+page-type: web-api-instance-method
 browser-compat: api.MediaStream.getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The **`getAudioTracks()`** method of the
-{{domxref("MediaStream")}} interface returns a sequence that represents all the
-{{domxref("MediaStreamTrack")}} objects in this
-stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
+The **`getAudioTracks()`** method of the
+{{domxref("MediaStream")}} interface returns a sequence that represents all the
+{{domxref("MediaStreamTrack")}} objects in this
+stream's [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) where {{domxref("MediaStreamTrack.kind")}}
 is `audio`.
 
 ## Syntax
 
-```js
-var mediaStreamTracks = mediaStream.getAudioTracks()
+```js-nolint
+getAudioTracks()
 ```
 
 ### Parameters
@@ -49,7 +39,7 @@ Early versions of this API included a special `AudioStreamTrack` interface
 which was used as the type for each entry in the list of audio streams; however, this
 has since been merged into the main {{domxref("MediaStreamTrack")}} interface.
 
-## Example
+## Examples
 
 This example gets a webcam's audio and video in a stream using
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, attaches the stream to a
@@ -57,15 +47,16 @@ This example gets a webcam's audio and video in a stream using
 first audio track found on the stream.
 
 ```js
-navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream => {
-  document.querySelector('video').srcObject = mediaStream;
-  // Stop the audio stream after 5 seconds
-  setTimeout(() => {
-    const tracks = mediaStream.getAudioTracks()
-    tracks[0].stop()
-  }, 5000)
-})
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: true })
+  .then((mediaStream) => {
+    document.querySelector("video").srcObject = mediaStream;
+    // Stop the audio stream after 5 seconds
+    setTimeout(() => {
+      const tracks = mediaStream.getAudioTracks();
+      tracks[0].stop();
+    }, 5000);
+  });
 ```
 
 ## Specifications

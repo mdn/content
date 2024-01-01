@@ -1,14 +1,11 @@
 ---
-title: TextTrack.inBandMetadataTrackDispatchType
+title: "TextTrack: inBandMetadataTrackDispatchType property"
+short-title: inBandMetadataTrackDispatchType
 slug: Web/API/TextTrack/inBandMetadataTrackDispatchType
-tags:
-  - API
-  - Property
-  - Reference
-  - inBandMetadataTrackDispatchType
-  - TextTrack
+page-type: web-api-instance-property
 browser-compat: api.TextTrack.label
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`inBandMetadataTrackDispatchType`** read-only property of the {{domxref("TextTrack")}} interface returns the text track's in-band metadata dispatch type of the text track represented by the {{domxref("TextTrack")}} object.
@@ -17,22 +14,16 @@ An in-band metadata dispatch type is a string extracted from a media resource sp
 
 The value of this attribute could be used to attach these tracks to dedicated script modules as they are loaded.
 
-## Syntax
+## Value
 
-```js
-let label = TextTrack.label;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the `inBandMetadataTrackDispatchType`, or an empty string.
+A string containing the `inBandMetadataTrackDispatchType`, or an empty string.
 
 ## Examples
 
 In the following example the value of `inBandMetadataTrackDispatchType` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.inBandMetadataTrackDispatchType);

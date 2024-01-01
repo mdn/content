@@ -1,14 +1,11 @@
 ---
-title: CharacterData.replaceWith()
+title: "CharacterData: replaceWith() method"
+short-title: replaceWith()
 slug: Web/API/CharacterData/replaceWith
-tags:
-  - API
-  - DOM
-  - Method
-  - CharacterData
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CharacterData.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 The **`replaceWith()`** method of the {{domxref("CharacterData")}} interface
@@ -19,8 +16,8 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 
 ## Syntax
 
-```js
-replaceWith(... nodes)
+```js-nolint
+replaceWith(...nodes)
 ```
 
 ### Parameters
@@ -30,26 +27,30 @@ replaceWith(... nodes)
 
 > **Note:** If there no argument is passed, this method acts just remove the node from the DOM tree.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Thrown when the node cannot be inserted at the specified point in the hierarchy.
 
-## Example
+## Examples
 
 ```html
 <p id="myText">Some text</p>
 ```
 
 ```js
-let text = document.getElementById('myText').firstChild;
+let text = document.getElementById("myText").firstChild;
 let em = document.createElement("em");
 em.textContent = "Italic text";
 
-text.replaceWith(); // Replace `Some text` by `Italic text`
+text.replaceWith(em); // Replace `Some text` by `Italic text`
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

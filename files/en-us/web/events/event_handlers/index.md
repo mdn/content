@@ -1,11 +1,9 @@
 ---
 title: Event handling (overview)
 slug: Web/Events/Event_handlers
-tags:
-  - Beginner
-  - DOM
-  - DOM Beginner
+page-type: guide
 ---
+
 Events are signals fired inside the browser window that notify of changes in the browser or operating system environment. Programmers can create _event handler_ code that will run when an event fires, allowing web pages to respond appropriately to change.
 
 This page provides a very brief "reminder" of how to work with events and event handlers. New developers should instead read [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events).
@@ -24,18 +22,17 @@ There are two recommended approaches for registering handlers. Event handler cod
 
 ### Using onevent properties
 
-By convention, Javascript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
+By convention, JavaScript objects that fire events have a corresponding "onevent" properties (named by prefixing "on" to the name of the event). These properties are called to run associated handler code when the event is fired, and may also be called directly by your own code.
 
 To set event handler code you can just assign it to the appropriate onevent property. Only one event handler can be assigned for every event in an element. If needed the handler can be replaced by assigning another function to the same property.
 
 Below we show how to set a simple `greet()` function for the `click` event using the `onclick` property.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log("greet:", event);
 }
 
 btn.onclick = greet;
@@ -52,14 +49,13 @@ The most flexible way to set an event handler on an element is to use the {{domx
 Below we show how a simple `greet()` function can be set as a listener/event handler for the `click` event (you could use a lambda function instead of a named function if desired). Note again that the event is passed as the first argument to the event handler.
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-function greet(event){
-  // print the event object to console
-  console.log('greet:', arguments)
+function greet(event) {
+  console.log("greet:", event);
 }
 
-btn.addEventListener('click', greet);
+btn.addEventListener("click", greet);
 ```
 
 The method can also take additional arguments/options to control aspects of how the events are captured and removed. More information can be found on the {{domxref("EventTarget.addEventListener")}} reference page.
@@ -73,10 +69,13 @@ This is done by passing the same {{domxref("AbortSignal")}} to the {{domxref("Ev
 ```js
 const controller = new AbortController();
 
-btn.addEventListener('click', function(event) {
-  // print the event object to console
-  console.log('greet:', arguments)
-  }, { signal: controller.signal }); // pass an AbortSignal to this handler
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal },
+); // pass an AbortSignal to this handler
 ```
 
 Then the event handler created by the code above can be removed like this:
@@ -85,4 +84,9 @@ Then the event handler created by the code above can be removed like this:
 controller.abort(); // removes any/all event handlers associated with this controller
 ```
 
-<section id="Quick_links"><ul><li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li><li><a href="/en-US/docs/Web/Events">Event reference</a></li></ul></section>
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Learn/JavaScript/Building_blocks/Events">Introduction to events</a></li>
+    <li><a href="/en-US/docs/Web/Events">Event reference</a></li>
+  </ol>
+</section>

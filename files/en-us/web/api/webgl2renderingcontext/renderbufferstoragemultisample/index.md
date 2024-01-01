@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.renderbufferStorageMultisample()
+title: "WebGL2RenderingContext: renderbufferStorageMultisample() method"
+short-title: renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -19,26 +16,27 @@ samples to be used.
 
 ## Syntax
 
-```js
-void gl.renderbufferStorageMultisample(target, samples, internalFormat, width, height);
+```js-nolint
+renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target renderbuffer object. Possible values:
 
-    - `gl.RENDERBUFFER`: Buffer data storage for single images in a
-      renderable internal format.
+    - `gl.RENDERBUFFER`
+      - : Buffer data storage for single images in a
+        renderable internal format.
 
-- samples
+- `samples`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of samples to be used for the
     renderbuffer storage.
-- internalFormat
+- `internalFormat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
-    values (\`gl.DEPTH_STENCIL\` is not supported):
+    values (`gl.DEPTH_STENCIL` is not supported):
 
     - `gl.R8`
     - `gl.R8UI`
@@ -76,19 +74,19 @@ void gl.renderbufferStorageMultisample(target, samples, internalFormat, width, h
     - `gl.DEPTH32F_STENCIL8`
     - `gl.STENCIL_INDEX8`
 
-- width
+- `width`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the width of the renderbuffer in pixels.
-- height
+- `height`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the height of the renderbuffer in pixels.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RGBA4, 256, 256);
 ```
 
 ## Specifications

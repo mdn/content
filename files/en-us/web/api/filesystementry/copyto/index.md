@@ -1,20 +1,15 @@
 ---
-title: FileSystemEntry.copyTo()
+title: "FileSystemEntry: copyTo() method"
+short-title: copyTo()
 slug: Web/API/FileSystemEntry/copyTo
-tags:
-  - API
-  - File System API
-  - File and Directory Entries APIs
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - copyTo
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.copyTo
 ---
-{{APIRef("File System API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file
@@ -30,8 +25,11 @@ typical restrictions on what you can do:
 
 ## Syntax
 
-```js
-FileSystemEntry.copyTo(newParent[, newName][, successCallback][, errorCallback]);
+```js-nolint
+copyTo(newParent)
+copyTo(newParent, newName)
+copyTo(newParent, newName, successCallback)
+copyTo(newParent, newName, successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -52,7 +50,7 @@ FileSystemEntry.copyTo(newParent[, newName][, successCallback][, errorCallback])
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -64,17 +62,27 @@ FileSystemEntry.copyTo(newParent[, newName][, successCallback][, errorCallback])
   - : The operation exceeded the user's storage quota, or there isn't enough storage space
     left to complete the operation.
 
-## Example
+## Examples
 
 This example shows how a temporary log file might be moved into a more permanent "log"
 directory.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  workingDirectory.getDirectory("log", {}, function(dirEntry) {
-    fileEntry.copyTo(dirEntry);
-  }, handleError);
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    workingDirectory.getDirectory(
+      "log",
+      {},
+      (dirEntry) => {
+        fileEntry.copyTo(dirEntry);
+      },
+      handleError,
+    );
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility
@@ -83,7 +91,5 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

@@ -1,12 +1,10 @@
 ---
 title: Geolocation API
 slug: Web/API/Geolocation_API
-tags:
-  - Geolocation API
-  - Guide
-  - Intermediate
-  - Overview
+page-type: web-api-overview
+browser-compat: api.Geolocation
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Geolocation API")}}
 
 The **Geolocation API** allows the user to provide their location to web applications if they so desire. For privacy reasons, the user is asked for permission to report location information.
@@ -42,6 +40,9 @@ For further information on Geolocation usage, read [Using the Geolocation API](/
   - : Represents the coordinates of a user's position; a `GeolocationCoordinates` instance contains latitude, longitude, and other important related information.
 - {{domxref("GeolocationPositionError")}}
   - : A `GeolocationPositionError` is returned by an unsuccessful call to one of the methods contained inside {{domxref("Geolocation")}}, inside an error callback, and contains an error code and message.
+
+### Extensions to other interfaces
+
 - {{domxref("Navigator.geolocation")}}
   - : The entry point into the API. Returns a {{domxref("Geolocation")}} object instance, from which all other functionality can be accessed.
 
@@ -51,18 +52,18 @@ See [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Ge
 
 ## Specifications
 
-{{Specifications("api.Geolocation")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Availability
 
-As WiFi-based locationing is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
+As Wi-Fi-based locating is often provided by Google, the vanilla Geolocation API may be unavailable in China. You may use local third-party providers such as [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), or [Tencent](https://lbs.qq.com/tool/component-geolocation.html). These services use the user's IP address and/or a local app to provide enhanced positioning.
 
 ## See also
 
 - [Using the Geolocation API](/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
-- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation-API/)
+- [Geolocation API on w3.org](https://www.w3.org/TR/geolocation/)
 - [Who moved my geolocation?](https://hacks.mozilla.org/2013/10/who-moved-my-geolocation/) (Hacks blog)

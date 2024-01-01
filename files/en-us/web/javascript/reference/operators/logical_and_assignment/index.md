@@ -1,53 +1,54 @@
 ---
 title: Logical AND assignment (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
+page-type: javascript-operator
 browser-compat: javascript.operators.logical_and_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
-The logical AND assignment (`x &&= y`) operator only assigns if
-`x` is {{Glossary("truthy")}}.
+The **logical AND assignment (`&&=`)** operator only evaluates the right operand and assigns to the left if the left operand is {{Glossary("truthy")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
 
 ## Syntax
 
-```js
-expr1 &&= expr2
+```js-nolint
+x &&= y
 ```
 
 ## Description
 
-### Short-circuit evaluation
+Logical AND assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x &&= y` is equivalent to `x && (x = y)`, except that the expression `x` is only evaluated once.
 
-The [logical
-AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator is evaluated left to right, it is tested for possible short-circuit
-evaluation using the following rule:
-
-`(some falsy expression) && expr` is short-circuit evaluated to the
-falsy expression;
-
-Short circuit means that the `expr` part above is **not
-evaluated**, hence any side effects of doing so do not take effect (e.g., if
-`expr` is a function call, the calling never takes place).
-
-Logical AND assignment short-circuits as well meaning that `x &&= y`
-is equivalent to:
+No assignment is performed if the left-hand side is not truthy, due to short-circuiting of the [logical AND](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) operator. For example, the following does not throw an error, despite `x` being `const`:
 
 ```js
-x && (x = y);
+const x = 0;
+x &&= 2;
 ```
 
-And not equivalent to the following which would always perform an assignment:
+Neither would the following trigger the setter:
 
-```js example-bad
-x = x && y;
+```js
+const x = {
+  get value() {
+    return 0;
+  },
+  set value(v) {
+    console.log("Setter called");
+  },
+};
+
+x.value &&= 2;
+```
+
+In fact, if `x` is not truthy, `y` is not evaluated at all.
+
+```js
+const x = 0;
+x &&= console.log("y evaluated");
+// Logs nothing
 ```
 
 ## Examples
@@ -74,11 +75,8 @@ y &&= 0; // 0
 
 ## See also
 
-- [Logical AND
-  (&&)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
-- [The
-  nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- [Bitwise
-  AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Logical AND (`&&`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Bitwise AND assignment (`&=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

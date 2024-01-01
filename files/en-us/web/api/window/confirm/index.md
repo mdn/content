@@ -1,15 +1,11 @@
 ---
-title: Window.confirm()
+title: "Window: confirm() method"
+short-title: confirm()
 slug: Web/API/Window/confirm
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - confirm
+page-type: web-api-instance-method
 browser-compat: api.Window.confirm
 ---
+
 {{ApiRef("Window")}}
 
 `window.confirm()` instructs the browser to display a dialog with an optional message, and to wait until the user either confirms or cancels the dialog.
@@ -18,8 +14,8 @@ Under some conditions — for example, when the user switches tabs — the brows
 
 ## Syntax
 
-```js
-result = window.confirm(message);
+```js-nolint
+confirm(message)
 ```
 
 ### Parameters
@@ -33,7 +29,7 @@ A boolean indicating whether OK (`true`) or Cancel (`false`) was
 selected. If a browser is ignoring in-page dialogs, then the returned value is always
 `false`.
 
-## Example
+## Examples
 
 ```js
 if (window.confirm("Do you really want to leave?")) {
@@ -43,17 +39,16 @@ if (window.confirm("Do you really want to leave?")) {
 
 Produces:
 
-![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
-
-
+![Firefox confirm](firefox_confirm_dialog.png)
 
 ## Notes
 
 Dialog boxes are modal windows — they
 prevent the user from accessing the rest of the program's interface until the dialog box
 is closed. For this reason, you should not overuse any function that creates a dialog
-box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for
-confirmation](https://alistapart.com/article/neveruseawarning/).
+box (or modal window). Regardless, there are good reasons to [avoid using dialog boxes for confirmation](https://alistapart.com/article/neveruseawarning/).
+
+Alternatively {{HTMLElement("dialog")}} element can be used for confirmations.
 
 ## Specifications
 
@@ -65,5 +60,6 @@ confirmation](https://alistapart.com/article/neveruseawarning/).
 
 ## See also
 
+- {{HTMLElement("dialog")}} element
 - {{domxref("window.alert()")}}
 - {{domxref("window.prompt()")}}

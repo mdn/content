@@ -1,14 +1,13 @@
 ---
-title: CSSPrimitiveValue.getRGBColorValue()
+title: "CSSPrimitiveValue: getRGBColorValue() method"
+short-title: getRGBColorValue()
 slug: Web/API/CSSPrimitiveValue/getRGBColorValue
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - getRGBColorValue
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getRGBColorValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getRGBColorValue()`** method of the
@@ -27,9 +26,13 @@ Modification to the corresponding style property can be achieved using the
 
 ## Syntax
 
-```js
-var rgbColorValue = cssPrimitiveValue.getRGBColorValue();
+```js-nolint
+getRGBColorValue()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -41,17 +44,17 @@ An {{domxref("RGBColor")}} object representing the color value.
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | `DOMException` | An `INVALID_ACCESS_ERR` is raised if the attached property can't return an RGB color value (i.e. this is not `CSS_RGBCOLOR`). |
 
-## Example
+## Examples
 
 ```js
-var cs = window.getComputedStyle(document.body);
-var cssValue = cs.getPropertyCSSValue("color");
+const cs = window.getComputedStyle(document.body);
+const cssValue = cs.getPropertyCSSValue("color");
 console.log(cssValue.getRGBColorValue());
 ```
 
 ## Specifications
 
-This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style) specification, but has been dropped from any
+This feature was originally defined in the [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) specification, but has been dropped from any
 standardization effort since then.
 
 It has been superseded by a modern, but incompatible, [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) that is now on the standard track.

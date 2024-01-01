@@ -1,17 +1,21 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - CSS Property
-  - Pointer Events
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.touch-action
 ---
+
 {{CSSRef}}
 
 The **`touch-action`** CSS property sets how an element's region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
+
+By default, panning (scrolling) and pinching gestures are handled exclusively by the browser. An application using {{domxref("Pointer_events", "Pointer events", "", 1)}} will receive a {{domxref("Element/pointercancel_event", "pointercancel")}} event when the browser starts handling a touch gesture. By explicitly specifying which gestures should be handled by the browser, an application can supply its own behavior in {{domxref("Element/pointermove_event", "pointermove")}} and {{domxref("Element/pointerup_event", "pointerup")}} listeners for the remaining gestures. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use `touch-action` to ensure the browser knows the intent of the application before any event listeners have been invoked.
+
+When a gesture is started, the browser intersects the `touch-action` values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, `touch-action` is typically applied only to top-level elements which have some custom behavior, without needing to specify `touch-action` explicitly on any of that element's descendants.
+
+> **Note:** After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -30,16 +34,9 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: revert;
+touch-action: revert-layer;
 touch-action: unset;
 ```
-
-By default, panning (scrolling) and pinching gestures are handled exclusively by the browser. An application using {{domxref("Pointer_events", "Pointer events", "", 1)}} will receive a {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} event when the browser starts handling a touch gesture. By explicitly specifying which gestures should be handled by the browser, an application can supply its own behavior in {{domxref("HTMLElement/pointermove_event", "pointermove")}} and {{domxref("HTMLElement/pointerup_event", "pointerup")}} listeners for the remaining gestures. Applications using {{domxref("Touch_events", "Touch events", "", 1)}} disable the browser handling of gestures by calling {{domxref("Event.preventDefault","preventDefault()")}}, but should also use `touch-action` to ensure the browser knows the intent of the application before any event listeners have been invoked.
-
-When a gesture is started, the browser intersects the `touch-action` values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, `touch-action` is typically applied only to top-level elements which have some custom behavior, without needing to specify `touch-action` explicitly on any of that element's descendants.
-
-> **Note:** After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
-
-## Syntax
 
 The `touch-action` property may be specified as either:
 
@@ -67,7 +64,7 @@ The `touch-action` property may be specified as either:
 
 A declaration of `touch-action: none;` may inhibit operating a browser's zooming capabilities. This will prevent people experiencing low vision conditions from being able to read and understand page content.
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Formal definition
@@ -117,6 +114,6 @@ The most common usage is to disable all gestures on an element (and its non-scro
 
 - {{cssxref("pointer-events","pointer-events")}}
 - {{domxref("Pointer_events","Pointer Events")}}
-- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
-- Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
-- [Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
+- Google Developers Blog [Making touch scrolling fast by default](https://developer.chrome.com/blog/scrolling-intervention/)
+- [Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap)

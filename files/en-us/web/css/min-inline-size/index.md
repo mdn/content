@@ -1,16 +1,10 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - min-inline-size
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.min-inline-size
 ---
+
 {{CSSRef}}
 
 The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("min-width")}} or the {{cssxref("min-height")}} property, depending on the value of {{cssxref("writing-mode")}}.
@@ -30,12 +24,14 @@ min-inline-size: 10%;
 /* Keyword values */
 min-inline-size: max-content;
 min-inline-size: min-content;
+min-inline-size: fit-content;
 min-inline-size: fit-content(20em);
 
 /* Global values */
 min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: revert;
+min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 

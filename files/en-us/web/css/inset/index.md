@@ -1,21 +1,28 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.inset
 ---
+
 {{CSSRef}}
 
-The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
+The **`inset`** [CSS](/en-US/docs/Web/CSS) property is a shorthand that corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and/or {{cssxref("left")}} properties. It has the same multi-value syntax of the {{cssxref("margin")}} shorthand.
+
+{{EmbedInteractiveExample("pages/css/inset.html")}}
 
 While part of the _CSS Logical Properties_ specification, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{Cssxref("top")}}
+- {{Cssxref("right")}}
+- {{Cssxref("bottom")}}
+- {{Cssxref("left")}}
+
+## Syntax
 
 ```css
 /* <length> values */
@@ -34,14 +41,13 @@ inset: auto;
 inset: inherit;
 inset: initial;
 inset: revert;
+inset: revert-layer;
 inset: unset;
 ```
 
-## Syntax
-
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("left")}} property.
 
 ## Formal definition
 
@@ -95,6 +101,6 @@ div {
 
 ## See also
 
-- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
-- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
-- The {{cssxref("margin")}} shorthand multi-value syntax.
+- The longhand box offset properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}.
+- The mapped logical shorthands: {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
+- The {{cssxref("margin")}} shorthand multi-value syntax.

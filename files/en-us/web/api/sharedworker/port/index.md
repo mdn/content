@@ -1,32 +1,22 @@
 ---
-title: SharedWorker.port
+title: "SharedWorker: port property"
+short-title: port
 slug: Web/API/SharedWorker/port
-tags:
-  - API
-  - Property
-  - Reference
-  - SharedWorker
-  - Web Workers
-  - port
+page-type: web-api-instance-property
 browser-compat: api.SharedWorker.port
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`port`** property of the {{domxref("SharedWorker")}}
 interface returns a {{domxref("MessagePort")}} object used to communicate and control
 the shared worker.
 
-## Syntax
-
-```js
-myWorker.port;
-```
-
-### Value
+## Value
 
 A {{domxref("MessagePort")}} object.
 
-## Example
+## Examples
 
 The following code snippet shows creation of a `SharedWorker` object using
 the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Multiple
@@ -35,12 +25,11 @@ using the `SharedWorker.port` property — the port is started using its
 `start()` method:
 
 ```js
-var myWorker = new SharedWorker('worker.js');
+const myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 
-For a full example, see our [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run
-shared worker](https://mdn.github.io/simple-shared-worker/).)
+For a full example, see our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/).)
 
 ## Specifications
 
@@ -52,5 +41,4 @@ shared worker](https://mdn.github.io/simple-shared-worker/).)
 
 ## See also
 
-- The {{domxref("SharedWorker")}} interface it belongs to.
-- [another multiply demo](https://anlexn.github.io/shared-worker-mdn/)
+- {{domxref("SharedWorker")}}

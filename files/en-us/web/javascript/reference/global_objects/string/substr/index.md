@@ -1,27 +1,23 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.String.substr
 ---
-{{JSRef}}
 
-The **`substr()`** method returns a portion
-of the string, starting at the specified index and extending for a given number of
-characters afterwards.
+{{JSRef}} {{Deprecated_Header}}
+
+The **`substr()`** method of {{jsxref("String")}} values returns a portion of this string, starting at the specified index and extending for a given number of characters afterwards.
+
+> **Note:** `substr()` is not part of the main ECMAScript specification — it's defined in [Annex B: Additional ECMAScript Features for Web Browsers](https://tc39.es/ecma262/multipage/additional-ecmascript-features-for-web-browsers.html), which is normative optional for non-browser runtimes. Therefore, people are advised to use the standard [`String.prototype.substring()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring) and [`String.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods instead to make their code maximally cross-platform friendly. The [`String.prototype.substring()` page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring#the_difference_between_substring_and_substr) has some comparisons between the three methods.
 
 {{EmbedInteractiveExample("pages/js/string-substr.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 substr(start)
 substr(start, length)
 ```
@@ -30,8 +26,8 @@ substr(start, length)
 
 - `start`
   - : The index of the first character to include in the returned substring.
-- `length`
-  - : Optional. The number of characters to extract.
+- `length` {{optional_inline}}
+  - : The number of characters to extract.
 
 ### Return value
 
@@ -39,67 +35,32 @@ A new string containing the specified part of the given string.
 
 ## Description
 
-`substr()` extracts `length` characters from a
-`str`, counting from the `start` index.
+A string's `substr()` method extracts `length` characters from the string, counting from the `start` index.
 
-- If `start` is a non-negative number, the index starts counting from
-  the start of the string. Its value is capped at `str.length - 1`.
-- If `start` is a negative number, the index starts counting
-  from the end of the string. Its value is capped at
-  `-str.length`.
-- Note: In Microsoft JScript, negative values of the `start`
-  argument are not considered to refer to the end of the string.
-- If `length` is omitted, `substr()` extracts
-  characters to the end of the string.
-- If `length` is {{jsxref("undefined")}}, `substr()`
-  extracts characters to the end of the string.
-- If `length` is a negative number, it is treated as
-  `0`.
-- For both `start` and `length`,
-  {{jsxref("NaN")}} is treated as `0`.
+- If `start >= str.length`, an empty string is returned.
+- If `start < 0`, the index starts counting from the end of the string. More formally, in this case the substring starts at `max(start + str.length, 0)`.
+- If `start` is omitted or {{jsxref("undefined")}}, it's treated as `0`.
+- If `length` is omitted or {{jsxref("undefined")}}, or if `start + length >= str.length`, `substr()` extracts characters to the end of the string.
+- If `length < 0`, an empty string is returned.
+- For both `start` and `length`, {{jsxref("NaN")}} is treated as `0`.
 
-## Polyfill
-
-Microsoft's JScript does not support negative values for the start index. To use this
-feature in JScript, you can use the following code:
-
-```js
-// only run when the substr() function is broken
-if ('ab'.substr(-1) != 'b') {
-  /**
-   *  Get the substring of a string
-   *  @param  {integer}  start   where to start the substring
-   *  @param  {integer}  length  how many characters to return
-   *  @return {string}
-   */
-  String.prototype.substr = function(substr) {
-    return function(start, length) {
-      // call the original method
-      return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
-        // adjust the start parameter for negative value
-        start < 0 ? this.length + start : start,
-        length)
-    }
-  }(String.prototype.substr);
-}
-```
+Although you are encouraged to avoid using `substr()`, there is no trivial way to migrate `substr()` to either `slice()` or `substring()` in legacy code without essentially writing a polyfill for `substr()`. For example, `str.substr(a, l)`, `str.slice(a, a + l)`, and `str.substring(a, a + l)` all have different results when `str = "01234", a = 1, l = -2` — `substr()` returns an empty string, `slice()` returns `"123"`, while `substring()` returns `"0"`. The actual refactoring path depends on the knowledge of the range of `a` and `l`.
 
 ## Examples
 
 ### Using substr()
 
 ```js
-var aString = 'Mozilla';
+const aString = "Mozilla";
 
-console.log(aString.substr(0, 1));   // 'M'
-console.log(aString.substr(1, 0));   // ''
-console.log(aString.substr(-1, 1));  // 'a'
-console.log(aString.substr(1, -1));  // ''
-console.log(aString.substr(-3));     // 'lla'
-console.log(aString.substr(1));      // 'ozilla'
+console.log(aString.substr(0, 1)); // 'M'
+console.log(aString.substr(1, 0)); // ''
+console.log(aString.substr(-1, 1)); // 'a'
+console.log(aString.substr(1, -1)); // ''
+console.log(aString.substr(-3)); // 'lla'
+console.log(aString.substr(1)); // 'ozilla'
 console.log(aString.substr(-20, 2)); // 'Mo'
-console.log(aString.substr(20, 2));  // ''
+console.log(aString.substr(20, 2)); // ''
 ```
 
 ## Specifications
@@ -112,6 +73,6 @@ console.log(aString.substr(20, 2));  // ''
 
 ## See also
 
-- A polyfill of `String.prototype.substr` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.substr` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.slice()")}}
 - {{jsxref("String.prototype.substring()")}}

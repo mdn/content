@@ -1,14 +1,14 @@
 ---
-title: NDEFReader()
+title: "NDEFReader: NDEFReader() constructor"
+short-title: NDEFReader()
 slug: Web/API/NDEFReader/NDEFReader
-tags:
-  - NDEF
-  - Reference
-  - Web NFC
-  - Constructor
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.NDEFReader.NDEFReader
 ---
-{{securecontext_header}}{{APIRef()}}
+
+{{SecureContext_Header}}{{APIRef("Web NFC API")}}{{SeeCompatTable}}
 
 The **`NDEFReader()`**
 constructor of the {{domxref("NDEFReader")}} interface returns a
@@ -18,8 +18,8 @@ field.
 
 ## Syntax
 
-```js
-let reader = new NDEFReader();
+```js-nolint
+new NDEFReader()
 ```
 
 ### Parameters

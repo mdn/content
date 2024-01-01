@@ -1,23 +1,16 @@
 ---
-title: 'Test your skills: CSS and JavaScript accessibility'
-slug: >-
-  Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
-tags:
-  - Accessibility
-  - Assessment
-  - Beginner
-  - HTML
-  - JavaScript
-  - Learn
-  - test your skills
+title: "Test your skills: CSS and JavaScript accessibility"
+slug: Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+page-type: learn-module-assessment
 ---
+
 {{learnsidebar}}
 
-This aim of this skill test is to assess whether you've understood our [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript) article.
+The aim of this skill test is to assess whether you've understood our [CSS and JavaScript accessibility best practices](/en-US/docs/Learn/Accessibility/CSS_and_JavaScript) article.
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## CSS accessibility 1
 
@@ -31,16 +24,16 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y1-download.html) to work in your own editor or in an online editor.
 
 ## CSS accessibility 2
 
-In this next task you are presented with a simple bit of content — just headings and paragraphs. There are  accessibility issues with the colors and sizing of the text; we'd like you to:
+In this next task you are presented with a simple bit of content — just headings and paragraphs. There are accessibility issues with the colors and sizing of the text; we'd like you to:
 
-1.  Explain what the problems are, and what the guidelines are that state the acceptable values for color and sizing.
-2.  Select new values for the color and font-size that fix the problem.
-3.  Update the CSS with these new values to fix the problem.
-4.  Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
+1. Explain what the problems are, and what the guidelines are that state the acceptable values for color and sizing.
+2. Select new values for the color and font-size that fix the problem.
+3. Update the CSS with these new values to fix the problem.
+4. Test the code to make sure the problem is now fixed. Explain what tools or methods you used to select the new values and test the code.
 
 Try updating the live code below to recreate the finished example:
 
@@ -48,7 +41,7 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/html-css/css/css-a11y2-download.html) to work in your own editor or in an online editor.
 
 ## JavaScript accessibility 1
 
@@ -58,18 +51,4 @@ But it is not very accessible — in its current state you can only operate it w
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/master/accessibility/tasks/js/js/js1-download.html) to work in your own editor or in an online editor.
-
-## Assessment or further help
-
-You can practice these examples in the Interactive Editors above.
-
-If you would like your work assessed, or are stuck and want to ask for help:
-
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
-
-    - A descriptive title such as "Assessment wanted for CSS accessibility 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/accessibility/tasks/js/js/js1-download.html) to work in your own editor or in an online editor.

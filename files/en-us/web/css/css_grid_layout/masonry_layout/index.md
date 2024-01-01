@@ -1,17 +1,17 @@
 ---
-title: Masonry Layout
-slug: Web/CSS/CSS_Grid_Layout/Masonry_Layout
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - masonry
+title: Masonry layout
+slug: Web/CSS/CSS_grid_layout/Masonry_layout
+page-type: guide
+status:
+  - experimental
+browser-compat:
+  - css.properties.grid-template-columns.masonry
+  - css.properties.grid-template-rows.masonry
 ---
-{{CSSRef}}
 
-Level 3 of the [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is, and how to use it.
+{{CSSRef}} {{SeeCompatTable}}
 
-> **Warning:** This feature is only implemented in Firefox, and can be enabled by setting the flag `layout.css.grid-template-masonry-value.enabled` to `true` in `about:config`, in order to allow testing and providing of feedback.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
 
 Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
 
@@ -22,13 +22,13 @@ To create the most common masonry layout, your columns will be the grid axis and
 ```css
 .container {
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-template-rows: masonry;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-rows: masonry;
 }
 ```
 
-The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout autoplacement. However, as they move onto a new row the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
+The child elements of this container will now lay out item by item along the rows, as they would with regular grid layout automatic placement. However, as they move onto a new row the items will display according to the masonry algorithm. Items will load into the column with the most room causing a tightly packed layout without strict row tracks.
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/block-axis.html", '100%', 800)}}
 
@@ -52,7 +52,7 @@ This example includes an item which has positioning for columns. Items with defi
 
 ## Controlling the masonry axis
 
-The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three additional properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.
+The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three additional properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.
 
 ### masonry-auto-flow
 
@@ -76,7 +76,11 @@ The `justify-tracks` property works in the same way as align-tracks, however it 
 
 ## Fallback
 
-In browsers that do not support masonry, regular grid auto-placement will be used instead.
+In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

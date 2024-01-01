@@ -1,15 +1,10 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.time
 ---
+
 {{CSSRef}}
 
 The **`<time>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a time value expressed in seconds or milliseconds. It is used in {{cssxref("animation")}}, {{cssxref("transition")}}, and related properties.
@@ -22,9 +17,9 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 
 ### Units
 
-- **`s`**
+- `s`
   - : Represents a time in seconds. Examples: `0s`, `1.5s`, `-60s`.
-- **`ms`**
+- `ms`
   - : Represents a time in milliseconds. Examples: `0ms`, `150.25ms`, `-60000ms`.
 
 > **Note:** Conversion between `s` and `ms` follows the logical `1s` = `1000ms`.
@@ -33,12 +28,14 @@ The `<time>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by o
 
 ### Valid times
 
-    12s         Positive integer
-    -456ms      Negative integer
-    4.3ms       Non-integer
-    14mS        The unit is case-insensitive, although capital letters are not recommended.
-    +0s         Zero with a leading + and a unit
-    -0ms        Zero with a leading - and a unit
+```plain example-good
+12s         Positive integer
+-456ms      Negative integer
+4.3ms       Non-integer
+14mS        The unit is case-insensitive, although capital letters are not recommended.
++0s         Zero with a leading + and a unit
+-0ms        Zero with a leading - and a unit
+```
 
 ### Invalid times
 

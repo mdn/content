@@ -1,17 +1,10 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Blend modes
-  - CSS
-  - CSS Data Type
-  - Compositing
-  - Compositing and Blending
-  - Data Type
-  - Reference
-  - color
+page-type: css-type
 browser-compat: css.types.blend-mode
 ---
+
 {{CSSRef}}
 
 The **`<blend-mode>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes how colors should appear when elements overlap. It is used in the {{cssxref("background-blend-mode")}} and {{cssxref("mix-blend-mode")}} properties.
@@ -80,9 +73,13 @@ For each pixel among the layers to which it is applied, a blend mode takes the c
 
 Changes between blend modes are not interpolated. Any change occurs immediately.
 
+## Formal syntax
+
+{{csssyntax}}
+
 ## Examples
 
-### normal
+### Example using "normal"
 
 ```html hidden
 <div id="div"></div>
@@ -92,15 +89,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: normal;
 }
 ```
 
-{{ EmbedLiveSample('normal', "300", "350") }}
+{{ EmbedLiveSample('Example using "normal"', "300", "350") }}
 
-### multiply
+### Example using "multiply"
 
 ```html hidden
 <div id="div"></div>
@@ -110,15 +106,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: multiply;
 }
 ```
 
-{{ EmbedLiveSample('multiply', "300", "350") }}
+{{ EmbedLiveSample('Example using "multiply"', "300", "350") }}
 
-### screen
+### Example using "screen"
 
 ```html hidden
 <div id="div"></div>
@@ -128,15 +123,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: screen;
 }
 ```
 
-{{ EmbedLiveSample('screen', "300", "350") }}
+{{ EmbedLiveSample('Example using "screen"', "300", "350") }}
 
-### overlay
+### Example using "overlay"
 
 ```html hidden
 <div id="div"></div>
@@ -146,15 +140,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: overlay;
 }
 ```
 
-{{ EmbedLiveSample('overlay', "300", "350") }}
+{{ EmbedLiveSample('Example using "overlay"', "300", "350") }}
 
-### darken
+### Example using "darken"
 
 ```html hidden
 <div id="div"></div>
@@ -164,15 +157,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: darken;
 }
 ```
 
-{{ EmbedLiveSample('darken', "300", "350") }}
+{{ EmbedLiveSample('Example using "darken"', "300", "350") }}
 
-### lighten
+### Example using "lighten"
 
 ```html hidden
 <div id="div"></div>
@@ -182,15 +174,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: lighten;
 }
 ```
 
-{{ EmbedLiveSample('lighten', "300", "350") }}
+{{ EmbedLiveSample('Example using "lighten"', "300", "350") }}
 
-### color-dodge
+### Example using "color-dodge"
 
 ```html hidden
 <div id="div"></div>
@@ -200,15 +191,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-dodge;
 }
 ```
 
-{{ EmbedLiveSample('color-dodge', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-dodge"', "300", "350") }}
 
-### color-burn
+### Example using "color-burn"
 
 ```html hidden
 <div id="div"></div>
@@ -218,15 +208,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color-burn;
 }
 ```
 
-{{ EmbedLiveSample('color-burn', "300", "350") }}
+{{ EmbedLiveSample('Example using "color-burn"', "300", "350") }}
 
-### hard-light
+### Example using "hard-light"
 
 ```html hidden
 <div id="div"></div>
@@ -236,15 +225,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hard-light;
 }
 ```
 
-{{ EmbedLiveSample('hard-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "hard-light"', "300", "350") }}
 
-### soft-light
+### Example using "soft-light"
 
 ```html hidden
 <div id="div"></div>
@@ -254,15 +242,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: soft-light;
 }
 ```
 
-{{ EmbedLiveSample('soft-light', "300", "350") }}
+{{ EmbedLiveSample('Example using "soft-light"', "300", "350") }}
 
-### difference
+### Example using "difference"
 
 ```html hidden
 <div id="div"></div>
@@ -272,15 +259,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: difference;
 }
 ```
 
-{{ EmbedLiveSample('difference', "300", "350") }}
+{{ EmbedLiveSample('Example using "difference"', "300", "350") }}
 
-### exclusion
+### Example using "exclusion"
 
 ```html hidden
 <div id="div"></div>
@@ -290,15 +276,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: exclusion;
 }
 ```
 
-{{ EmbedLiveSample('exclusion', "300", "350") }}
+{{ EmbedLiveSample('Example using "exclusion"', "300", "350") }}
 
-### hue
+### Example using "hue"
 
 ```html hidden
 <div id="div"></div>
@@ -308,15 +293,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: hue;
 }
 ```
 
-{{ EmbedLiveSample('hue', "300", "350") }}
+{{ EmbedLiveSample('Example using "hue"', "300", "350") }}
 
-### saturation
+### Example using "saturation"
 
 ```html hidden
 <div id="div"></div>
@@ -326,15 +310,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: saturation;
 }
 ```
 
-{{ EmbedLiveSample('saturation', "300", "350") }}
+{{ EmbedLiveSample('Example using "saturation"', "300", "350") }}
 
-### color
+### Example using "color"
 
 ```html hidden
 <div id="div"></div>
@@ -344,15 +327,14 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: color;
 }
 ```
 
-{{ EmbedLiveSample('color', "300", "350") }}
+{{ EmbedLiveSample('Example using "color"', "300", "350") }}
 
-### luminosity
+### Example using "luminosity"
 
 ```html hidden
 <div id="div"></div>
@@ -362,17 +344,16 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 #div {
   width: 300px;
   height: 300px;
-  background: url('br.png'),
-              url('tr.png');
+  background: url("br.png"), url("tr.png");
   background-blend-mode: luminosity;
 }
 ```
 
-{{ EmbedLiveSample('luminosity', "300", "350") }}
+{{ EmbedLiveSample('Example using "luminosity"', "300", "350") }}
 
 ### Blend mode comparison
 
-In the following example, we have a `<div>` with two background images set on it — a Firefox logo on top of a linear gradient. Below it we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
+In the following example, we have a `<div>` with two background images set on it — a Firefox logo on top of a linear gradient. Below it, we have a provided a `<select>` menu that allows you to change the `background-blend-mode` applied to the `<div>`, allowing you to compare the different blend mode effects.
 
 #### HTML
 
@@ -380,22 +361,22 @@ In the following example, we have a `<div>` with two background images set on it
 <div></div>
 <p>Choose a blend-mode:</p>
 <select>
-  <option selected>normal</option>
-  <option>multiply</option>
-  <option>screen</option>
-  <option>overlay</option>
-  <option>darken</option>
-  <option>lighten</option>
-  <option>color-dodge</option>
-  <option>color-burn</option>
-  <option>hard-light</option>
-  <option>soft-light</option>
-  <option>difference</option>
-  <option>exclusion</option>
-  <option>hue</option>
-  <option>saturation</option>
-  <option>color</option>
-  <option>luminosity</option>
+  <option selected>normal</option>
+  <option>multiply</option>
+  <option>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
 </select>
 ```
 
@@ -403,20 +384,22 @@ In the following example, we have a `<div>` with two background images set on it
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
-  linear-gradient(to bottom, blue, orange);
+  width: 300px;
+  height: 300px;
+  background:
+    url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png)
+      no-repeat center,
+    linear-gradient(to bottom, blue, orange);
 }
 ```
 
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
+const selectElem = document.querySelector("select");
+const divElem = document.querySelector("div");
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.backgroundBlendMode = selectElem.value;
 });
 ```
@@ -435,6 +418,7 @@ selectElem.addEventListener('change', () => {
 
 ## See also
 
+- The [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending) module that defines the `<blend-mode>` values.
 - Properties that use this data type: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 
 Description to various blend modes on other website:

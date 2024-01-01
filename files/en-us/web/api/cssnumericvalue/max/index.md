@@ -1,18 +1,12 @@
 ---
-title: CSSNumericValue.max()
+title: "CSSNumericValue: max() method"
+short-title: max()
 slug: Web/API/CSSNumericValue/max
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - max()
+page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.max
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`max()`** method of the
 {{domxref("CSSNumericValue")}} interface returns the highest value from among the values
@@ -20,14 +14,14 @@ passed. The passed values must be of the same type.
 
 ## Syntax
 
-```js
-var cssUnitValue = CSSNumericValue.man(number1 ... numbern);
+```js-nolint
+max(number1, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- number
-  - : Either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number1`, …, `numberN`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
@@ -35,8 +29,8 @@ A {{domxref('CSSUnitValue')}}.
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 

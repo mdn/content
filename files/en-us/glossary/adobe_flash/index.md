@@ -1,23 +1,18 @@
 ---
 title: Adobe Flash
 slug: Glossary/Adobe_Flash
-tags:
-  - Adobe
-  - CodingScripting
-  - Flash
-  - Glossary
-  - Infrastructure
+page-type: glossary-definition
 ---
-Flash is a deprecated technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media. Adobe Flash can run from supporting {{Glossary("Browser","web browsers")}} via a browser plug-in.
+
+{{GlossarySidebar}}
+
+[Flash](https://en.wikipedia.org/wiki/Adobe_Flash) is an obsolete technology developed by Adobe for viewing expressive web applications, multimedia content, and streaming media.
+
+As of 2021, Flash is no longer supported by Adobe or any major web browsers.
 
 ## See also
 
-- [Official web site](https://www.adobe.com/products/flashruntimes.html)
-- [Shumway, a free implementation by Mozilla](https://mozilla.github.io/shumway/)
-- [Gnash, a free implementation by GNU](http://gnashdev.org/)
-- [Ruffle, a free implementation](https://ruffle.rs)
-- [Glossary](/en-US/docs/Glossary)
-
-  1.  {{Glossary("Browser")}}
-
-- {{Interwiki("wikipedia", "Adobe Flash")}} (Wikipedia)
+- [Adobe Flash end-of-life announcement](https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update#gs.g8mmgf)
+- [Saying goodbye to Flash in Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/)
+- [Firefox Roadmap for Flash End-of-Life](https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/)
+- [Microsoft Windows Flash Player removal](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)

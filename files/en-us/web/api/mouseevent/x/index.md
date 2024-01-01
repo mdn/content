@@ -1,14 +1,12 @@
 ---
-title: MouseEvent.x
+title: "MouseEvent: x property"
+short-title: x
 slug: Web/API/MouseEvent/x
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.x
 ---
-{{APIRef}}
+
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.x`** property is an alias for the {{domxref("MouseEvent.clientX")}} property.
 

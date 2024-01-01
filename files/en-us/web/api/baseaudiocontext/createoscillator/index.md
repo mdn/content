@@ -1,16 +1,11 @@
 ---
-title: BaseAudioContext.createOscillator()
+title: "BaseAudioContext: createOscillator() method"
+short-title: createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createOscillator
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createOscillator()` method of the {{domxref("BaseAudioContext")}}
@@ -23,29 +18,32 @@ waveform. It basically generates a constant tone.
 
 ## Syntax
 
-```js
-var oscillatorNode = audioCtx.createOscillator();
+```js-nolint
+createOscillator()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("OscillatorNode")}}.
 
-## Example
+## Examples
 
 The following example shows basic usage of an AudioContext to create an oscillator
-node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see
-app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
+node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/main/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
 more information.
 
 ```js
 // create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
-var oscillator = audioCtx.createOscillator();
+const oscillator = audioCtx.createOscillator();
 
-oscillator.type = 'square';
+oscillator.type = "square";
 oscillator.frequency.setValueAtTime(3000, audioCtx.currentTime); // value in hertz
 oscillator.connect(audioCtx.destination);
 oscillator.start();

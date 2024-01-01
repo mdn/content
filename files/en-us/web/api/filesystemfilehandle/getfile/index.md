@@ -1,29 +1,24 @@
 ---
-title: FileSystemFileHandle.getFile()
+title: "FileSystemFileHandle: getFile() method"
+short-title: getFile()
 slug: Web/API/FileSystemFileHandle/getFile
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemFileHandle
-  - Method
-  - getFile
-  - working with files
+page-type: web-api-instance-method
 browser-compat: api.FileSystemFileHandle.getFile
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`getFile()`** method of the
 {{domxref("FileSystemFileHandle")}} interface returns a {{jsxref('Promise')}} which resolves to a
-  {{domxref('File')}} object representing the state on disk of the entry represented by the handle.
+{{domxref('File')}} object representing the state on disk of the entry represented by the handle.
 
 If the file on disk changes or is removed after this method is called, the returned
 {{domxref('File')}} object will likely be no longer readable.
 
 ## Syntax
 
-```js
-const filePromise = FileSystemFileHandle.getFile();
+```js-nolint
+getFile()
 ```
 
 ### Parameters
@@ -36,9 +31,10 @@ A {{jsxref('Promise')}} which resolves to a {{domxref('File')}} object.
 
 ### Exceptions
 
-- NotAllowedError
-  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in
-    read mode.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the {{domxref('PermissionStatus.state')}} is not `granted` in `read` mode.
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if current entry is not found.
 
 ## Examples
 
@@ -65,6 +61,5 @@ async function getTheFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

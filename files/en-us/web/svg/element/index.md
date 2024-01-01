@@ -1,143 +1,135 @@
 ---
 title: SVG element reference
 slug: Web/SVG/Element
-tags:
-  - Drawing
-  - Elements
-  - Responsive Design
-  - SVG
-  - SVG Reference
-  - Vector Graphics
-  - l10n:priority
+page-type: landing-page
 ---
+
+{{SVGRef}}
+
 SVG drawings and images are created using a wide array of elements which are dedicated to the construction, drawing, and layout of vector images and diagrams. Here you'll find reference documentation for each of the SVG elements.
 
 ## SVG elements A to Z
 
 ### A
 
-*   {{SVGElement("a")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateMotion")}}
-*   {{SVGElement("animateTransform")}}
+- {{SVGElement("a")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("animateMotion")}}
+- {{SVGElement("animateTransform")}}
 
 ### C
 
-*   {{SVGElement("circle")}}
-*   {{SVGElement("clipPath")}}
+- {{SVGElement("circle")}}
+- {{SVGElement("clipPath")}}
 
 ### D
 
-*   {{SVGElement("defs")}}
-*   {{SVGElement("desc")}}
-*   {{SVGElement("discard")}}
+- {{SVGElement("defs")}}
+- {{SVGElement("desc")}}
 
 ### E
 
-*   {{SVGElement("ellipse")}}
+- {{SVGElement("ellipse")}}
 
 ### F
 
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feDistantLight")}}
-*   {{SVGElement("feDropShadow")}}
-*   {{SVGElement("feFlood")}}
-*   {{SVGElement("feFuncA")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   {{SVGElement("feFuncR")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMergeNode")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("fePointLight")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feSpotLight")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   {{SVGElement("filter")}}
-*   {{SVGElement("foreignObject")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDistantLight")}}
+- {{SVGElement("feDropShadow")}}
+- {{SVGElement("feFlood")}}
+- {{SVGElement("feFuncA")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMergeNode")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("fePointLight")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feSpotLight")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- {{SVGElement("filter")}}
+- {{SVGElement("foreignObject")}}
 
 ### G
 
-*   {{SVGElement("g")}}
+- {{SVGElement("g")}}
 
 ### H
 
-*   {{SVGElement("hatch")}}
-*   {{SVGElement("hatchpath")}}
+- {{SVGElement("hatch")}}
+- {{SVGElement("hatchpath")}}
 
 ### I
 
-*   {{SVGElement("image")}}
+- {{SVGElement("image")}}
 
 ### L
 
-*   {{SVGElement("line")}}
-*   {{SVGElement("linearGradient")}}
+- {{SVGElement("line")}}
+- {{SVGElement("linearGradient")}}
 
 ### M
 
-*   {{SVGElement("marker")}}
-*   {{SVGElement("mask")}}
-*   {{SVGElement("mesh")}}
-*   {{SVGElement("meshgradient")}}
-*   {{SVGElement("meshpatch")}}
-*   {{SVGElement("meshrow")}}
-*   {{SVGElement("metadata")}}
-*   {{SVGElement("mpath")}}
+- {{SVGElement("marker")}}
+- {{SVGElement("mask")}}
+- {{SVGElement("metadata")}}
+- {{SVGElement("mpath")}}
 
 ### P
 
-*   {{SVGElement("path")}}
-*   {{SVGElement("pattern")}}
-*   {{SVGElement("polygon")}}
-*   {{SVGElement("polyline")}}
+- {{SVGElement("path")}}
+- {{SVGElement("pattern")}}
+- {{SVGElement("polygon")}}
+- {{SVGElement("polyline")}}
 
 ### R
 
-*   {{SVGElement("radialGradient")}}
-*   {{SVGElement("rect")}}
+- {{SVGElement("radialGradient")}}
+- {{SVGElement("rect")}}
 
 ### S
 
-*   {{SVGElement("script")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("stop")}}
-*   {{SVGElement("style")}}
-*   {{SVGElement("svg")}}
-*   {{SVGElement("switch")}}
-*   {{SVGElement("symbol")}}
+- {{SVGElement("script")}}
+- {{SVGElement("set")}}
+- {{SVGElement("stop")}}
+- {{SVGElement("style")}}
+- {{SVGElement("svg")}}
+- {{SVGElement("switch")}}
+- {{SVGElement("symbol")}}
 
 ### T
 
-*   {{SVGElement("text")}}
-*   {{SVGElement("textPath")}}
-*   {{SVGElement("title")}}
-*   {{SVGElement("tspan")}}
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("title")}}
+- {{SVGElement("tspan")}}
 
 ### U
 
-*   {{SVGElement("unknown")}}
-*   {{SVGElement("use")}}
+- {{SVGElement("use")}}
 
 ### V
 
-*   {{SVGElement("view")}}
+- {{SVGElement("view")}}
+
+> **Note:** The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
 
 ## SVG elements by category
 
 ### Animation elements
 
-{{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("discard")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
+{{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, {{SVGElement("mpath")}}, {{SVGElement("set")}}
 
 ### Basic shapes
 
@@ -145,7 +137,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Container elements
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("unknown")}}
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
 
 ### Descriptive elements
 
@@ -153,7 +145,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Filter primitive elements
 
-{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}},{{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}},{{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
+{{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
 
 ### Font elements
 
@@ -161,15 +153,15 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Gradient elements
 
-{{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, {{SVGElement("stop")}}
 
 ### Graphics elements
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("text")}}, {{SVGElement("use")}}
 
 ### Graphics referencing elements
 
-{{SVGElement("mesh")}}, {{SVGElement("use")}}
+{{SVGElement("use")}}
 
 ### Light source elements
 
@@ -177,19 +169,21 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Never-rendered elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("meshgradient")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
 ### Paint server elements
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("meshgradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
 
 ### Renderable elements
 
-{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("unknown")}}, {{SVGElement("use")}}
+{{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
+
+> **Note:** The [SVG 2 spec requires](https://www.w3.org/TR/SVG2/struct.html#UnknownElement) that any unknown elements be treated as {{SVGElement("g")}} for the purpose of rendering.
 
 ### Shape elements
 
-{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("mesh")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
+{{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}
 
 ### Structural elements
 
@@ -197,23 +191,19 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Text content elements
 
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### Text content child elements
 
-{{SVGElement("altGlyph")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
 
 ### Uncategorized elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("meshpatch")}}, {{SVGElement("meshrow")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## Obsolete and deprecated elements
 
 > **Warning:** These are old SVG elements which are deprecated and should not be used. **You should never use them in new projects, and should replace them in old projects as soon as you can.** They are listed here for informational purposes only.
-
-### A
-
-{{SVGElement("altGlyph")}}, {{SVGElement("altGlyphDef")}}, {{SVGElement("altGlyphItem")}}, {{SVGElement("animateColor")}}
 
 ### C
 
@@ -245,8 +235,8 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ## See also
 
-*   [SVG attribute reference](/en-US/docs/Web/SVG/Attribute)
-*   [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
-*   [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG attribute reference](/en-US/docs/Web/SVG/Attribute)
+- [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial)
+- [SVG interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
 
 {{SVGRef}}

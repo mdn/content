@@ -1,15 +1,35 @@
 ---
 title: ARIA live regions
-slug: Web/Accessibility/ARIA/ARIA_Live_Regions 
-tags:
-  - ARIA
-  - Accessibility
-  - ariaLive
+slug: Web/Accessibility/ARIA/ARIA_Live_Regions
+page-type: guide
 ---
-Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
 
-> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
-> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/Docs/Web/Accessibility/ARIA/Roles/Alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
+<section id="Quick_links">
+  <ol>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Annotations">ARIA annotations</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides">ARIA guides</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
+    <li class="toggle">
+      <details><summary>ARIA states and properties</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Attributes", 1)}}
+      </details>
+    </li>
+    <li class="toggle">
+      <details><summary>WAI-ARIA Roles</summary>
+        {{ListSubpagesForSidebar("Web/Accessibility/ARIA/Roles", 1)}}
+      </details>
+    </li>
+  </ol>
+</section>
+
+Using JavaScript, it is possible to dynamically change parts of a page without requiring the entire page to reload — for instance, to update a list of search results on the fly, or to display a discreet alert or notification which does not require user interaction. While these changes are usually visually apparent to users who can see the page, they may not be obvious to users of assistive technologies. ARIA live regions fill this gap and provide a way to programmatically expose dynamic content changes in a way that can be announced by assistive technologies.
+
+> **Note:** Assistive technologies will announce _dynamic_ changes in the content of a live region.
+> Including an `aria-live` attribute or a specialized live region `role` (such as [`role="alert"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)) on the element you want to announce changes to works as long as you add the attribute before the changes occur — either in the original markup, or dynamically using JavaScript.
 
 ## Live regions
 
@@ -25,79 +45,91 @@ As `aria-live="off"` is the assumed default for elements, it should not be neces
 
 ### Basic example: Dropdown box updates useful onscreen information
 
-A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.
+A website specializing in providing information about planets provides a dropdown box. When a planet is selected from the dropdown, a region on the page is updated with information about the selected planet.
 
 ```html
 <fieldset>
-  <legend>Planet information</legend>
-  <label for="planetsSelect">Planet:</label>
-  <select id="planetsSelect" aria-controls="planetInfo">
-    <option value="">Select a planet…</option>
-    <option value="mercury">Mercury</option>
-    <option value="venus">Venus</option>
-    <option value="earth">Earth</option>
-    <option value="mars">Mars</option>
-  </select>
+  <legend>Planet information</legend>
+  <label for="planetsSelect">Planet:</label>
+  <select id="planetsSelect" aria-controls="planetInfo">
+    <option value="">Select a planet…</option>
+    <option value="mercury">Mercury</option>
+    <option value="venus">Venus</option>
+    <option value="earth">Earth</option>
+    <option value="mars">Mars</option>
+  </select>
   <button id="renderPlanetInfoButton">Go</button>
 </fieldset>
 
 <div role="region" id="planetInfo" aria-live="polite">
-  <h2 id="planetTitle">No planet selected</h2>
-  <p id="planetDescription">Select a planet to view its description</p>
+  <h2 id="planetTitle">No planet selected</h2>
+  <p id="planetDescription">Select a planet to view its description</p>
 </div>
 
-<p><small>Information courtesy <a href="https://en.wikipedia.org/wiki/Solar_System#Inner_Solar_System">Wikipedia</a></small></p>
+<p>
+  <small>
+    Information from
+    <a href="https://en.wikipedia.org/wiki/Solar_System">Wikipedia</a>
+  </small>
+</p>
 ```
 
 ```js
 const PLANETS_INFO = {
-  mercury: {
-    title: 'Mercury',
-    description: 'Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.'
-  },
+  mercury: {
+    title: "Mercury",
+    description:
+      "Mercury is the smallest and innermost planet in the Solar System. It is named after the Roman deity Mercury, the messenger to the gods.",
+  },
 
-  venus: {
-    title: "Venus",
-    description: 'Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.'
-  },
+  venus: {
+    title: "Venus",
+    description:
+      "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty.",
+  },
 
-  earth: {
-    title: "Earth",
-    description: 'Earth is the third planet from the Sun and the only object in the Universe known to harbor life.'
-  },
+  earth: {
+    title: "Earth",
+    description:
+      "Earth is the third planet from the Sun and the only object in the Universe known to harbor life.",
+  },
 
-  mars: {
-    title: "Mars",
-    description: 'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".'
-  }
+  mars: {
+    title: "Mars",
+    description:
+      'Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury. In English, Mars carries a name of the Roman god of war, and is often referred to as the "Red Planet".',
+  },
 };
 
 function renderPlanetInfo(planet) {
-  const planetTitle = document.querySelector('#planetTitle');
-  const planetDescription = document.querySelector('#planetDescription');
+  const planetTitle = document.querySelector("#planetTitle");
+  const planetDescription = document.querySelector("#planetDescription");
 
-  if (planet in PLANETS_INFO) {
-    planetTitle.textContent = PLANETS_INFO[planet].title;
-    planetDescription.textContent = PLANETS_INFO[planet].description;
-  } else {
-    planetTitle.textContent = 'No planet selected';
-    planetDescription.textContent = 'Select a planet to view its description';
-  }
+  if (planet in PLANETS_INFO) {
+    planetTitle.textContent = PLANETS_INFO[planet].title;
+    planetDescription.textContent = PLANETS_INFO[planet].description;
+  } else {
+    planetTitle.textContent = "No planet selected";
+    planetDescription.textContent = "Select a planet to view its description";
+  }
 }
 
-const renderPlanetInfoButton = document.querySelector('#renderPlanetInfoButton');
+const renderPlanetInfoButton = document.querySelector(
+  "#renderPlanetInfoButton",
+);
 
-renderPlanetInfoButton.addEventListener('click', event => {
-  const planetsSelect = document.querySelector('#planetsSelect');
-  const selectedPlanet = planetsSelect.options[planetsSelect.selectedIndex].value;
+renderPlanetInfoButton.addEventListener("click", (event) => {
+  const planetsSelect = document.querySelector("#planetsSelect");
+  const selectedPlanet =
+    planetsSelect.options[planetsSelect.selectedIndex].value;
 
-  renderPlanetInfo(selectedPlanet);
+  renderPlanetInfo(selectedPlanet);
 });
 ```
 
 {{EmbedLiveSample('Basic_example_Dropdown_box_updates_useful_onscreen_information', '', 350)}}
 
-As the user selects a new planet, the information in the live region will be announced. Because the live region has `aria-live="polite"`, the screen reader will wait until the user pauses before announcing the update. Thus, moving down in the list and selecting another planet will not announce updates in the live region. Updates in the live region will only be announced for the planet finally chosen.
+As the user selects a new planet, the information in the live region will be announced. Because the live region has `aria-live="polite"`, the screen reader will wait until the user pauses before announcing the update. Thus, moving down in the list and selecting another planet will not announce updates in the live region. Updates in the live region will only be announced for the planet finally chosen.
 
 Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) to the live region:
 
@@ -105,7 +137,7 @@ Here is a screenshot of VoiceOver on Mac announcing the update (via subtitles) t
 
 ## Roles with implicit live region attributes
 
-Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
+Elements with the following [`role="…"`](/en-US/docs/Web/Accessibility/ARIA/Roles) values act as live regions by default:
 
 <table style="width: 100%;">
  <thead>
@@ -128,7 +160,7 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>alert</td>
-   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/TR/wai-aria-practices/examples/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
+   <td>Error or warning message that flashes on the screen. Alerts are particularly important for client side validation notices to users. <a href="https://www.w3.org/WAI/ARIA/apg/example-index/alert/alert.html" class="external" rel=" noopener">Alert Example.</a></td>
    <td>To maximize compatibility, some people recommend adding a redundant <code>aria-live="assertive"</code> when using this role. However, adding both <code>aria-live</code> and <code>role="alert"</code> causes double speaking issues in VoiceOver on iOS.</td>
   </tr>
   <tr>
@@ -138,12 +170,12 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
   </tr>
   <tr>
    <td>marquee</td>
-   <td>for text which scrolls, such as a stock ticker.</td>
+   <td>Text which scrolls, such as a stock ticker.</td>
    <td></td>
   </tr>
   <tr>
    <td>timer</td>
-   <td>or any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
+   <td>Any kind of timer or clock, such as a countdown timer or stopwatch readout.</td>
    <td></td>
   </tr>
  </tbody>
@@ -151,16 +183,12 @@ Elements with the following [`role="..."`](/en-US/Docs/Web/Accessibility/ARIA/Ro
 
 ## Additional live region attributes
 
-(TBD: more granular information on the support of the individual attributes with combinations of OS/Browser/AT).
+Live Regions are well supported. The Paciello Group, in 2014, posted [information about the state of the support of Live Regions](https://www.tpgi.com/screen-reader-support-aria-live-regions/). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
-General support for Live Regions was added to JAWS on version 10.0. In Windows Eyes supports Live Regions since version 8.0 "for use outside of Browse Mode for Microsoft Internet Explorer and Mozilla Firefox". NVDA added some basic support for Live Regions for Mozilla Firefox back in 2008 and was improved in 2010 and 2014. In 2015, basic support was also added for Internet Explorer (MSHTML).
+1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
+2. [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 
-The Paciello Group has some [information about the state of the support of Live Regions ](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul J. Adam has researched [the support of `aria-atomic` and `aria-relevant`](https://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
-
-1.  **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2.  [**`aria-relevant`**](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
-
-    : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
+   : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 
 ### Basic examples: `aria-atomic`
 
@@ -176,9 +204,10 @@ As an illustration of `aria-atomic`, consider a site with a simple clock, showin
 ```js
 /* basic JavaScript to update the clock */
 function updateClock() {
-  var now = new Date();
-  document.getElementById('clock-hours').innerHTML = now.getHours();
-  document.getElementById('clock-mins').innerHTML = ("0"+now.getMinutes()).substr(-2);
+  const now = new Date();
+  document.getElementById("clock-hours").textContent = now.getHours();
+  document.getElementById("clock-mins").textContent =
+    `0${now.getMinutes()}`.substr(-2);
 }
 
 /* first run */
@@ -195,18 +224,15 @@ One way around this would be to first clear all the contents of the live region 
 `aria-atomic="true"` ensures that each time the live region is updated, the entirety of the content is announced in full (e.g. "17:34").
 
 ```html
-<div id="clock" role="timer" aria-live="polite" aria-atomic="true">
-  ...
-</div>
+<div id="clock" role="timer" aria-live="polite" aria-atomic="true">…</div>
 ```
 
 Another example of `aria-atomic` - an update/notification made as a result of a user action.
 
 ```html
 <div id="date-input">
-  <label>Year:
-    <input type="text" id="year" value="1990" onblur="change(event)"/>
-  </label>
+  <label for="year">Year:</label>
+  <input type="text" id="year" value="1990" onblur="change(event)" />
 </div>
 
 <div id="date-output" aria-atomic="true" aria-live="polite">
@@ -217,19 +243,19 @@ Another example of `aria-atomic` - an update/notification made as a result of a 
 
 ```js
 function change(event) {
-  var yearOut = document.getElementById("year-output");
+  const yearOut = document.getElementById("year-output");
 
   switch (event.target.id) {
     case "year":
       yearOut.innerHTML = event.target.value;
       break;
     default:
-      return;
+      return;
   }
-};
+}
 ```
 
-Without `aria-atomic="true"` the screenreader announces only the changed value of year. With `aria-atomic="true"`, the screenreader announces "The set year is: _changed value_"
+Without `aria-atomic="true"` the screen reader announces only the changed value of year. With `aria-atomic="true"`, the screen reader announces "The set year is: _changed value_"
 
 ### Basic example: `aria-relevant`
 
@@ -239,14 +265,14 @@ As an example, consider a chat site that wants to display a list of users curren
 
 ```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-  <!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add and remove users here -->
 </ul>
 ```
 
 Breakdown of ARIA live properties:
 
 - `aria-live="polite"` indicates that the screen reader should wait until the user is idle before presenting updates to the user. This is the most commonly used value, as interrupting the user with "assertive" might interrupt their flow.
-- `aria-atomic` is not set (`false` by default) so that only the added or removed users should be spoken and not the entire roster each time.
+- `aria-atomic` is not set (`false` by default) so that only the added or removed users should be spoken and not the entire roster each time.
 - `aria-relevant="additions removals"` ensures that both users added or removed to the roster will be spoken.
 
 ## See also

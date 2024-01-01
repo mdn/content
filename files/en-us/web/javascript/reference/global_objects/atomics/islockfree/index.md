@@ -1,17 +1,13 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.isLockFree
 ---
+
 {{JSRef}}
 
-The static
-**`Atomics.isLockFree()`**
+The **`Atomics.isLockFree()`** static
 method is used to determine whether the `Atomics` methods use locks
 or atomic hardware operations when applied to typed arrays with the given element
 byte size.
@@ -22,7 +18,7 @@ property of integer TypedArray types.
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.isLockFree(size)
 ```
 

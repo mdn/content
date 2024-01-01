@@ -1,41 +1,29 @@
 ---
-title: PannerNode.maxDistance
+title: "PannerNode: maxDistance property"
+short-title: maxDistance
 slug: Web/API/PannerNode/maxDistance
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDistance
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.maxDistance
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `maxDistance` property of the {{ domxref("PannerNode") }} interface is a double value representing the maximum distance between the audio source and the listener, after which the volume is not reduced any further. This value is used only by the `linear` distance model.
 
 The `maxDistance` property's default value is `10000`.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var panner = audioCtx.createPanner();
-panner.maxDistance = 10000;
-```
-
-### Value
+## Value
 
 A double. The default is `10000`, and non-positive values are not allowed.
 
 ### Exceptions
 
-- `RangeError`
-  - : The property has been given a value that is outside the accepted range.
+- {{jsxref("RangeError")}}
+  - : Thrown if the property has been given a value that is outside the accepted range.
 
-## Example
+## Examples
 
-See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#example) for example code.
+See [`BaseAudioContext.createPanner()`](/en-US/docs/Web/API/BaseAudioContext/createPanner#examples) for example code.
 
 ## Specifications
 

@@ -1,10 +1,10 @@
 ---
-title: Match patterns in extension manifests
+title: Match patterns
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-tags:
-  - WebExtensions
+page-type: guide
 browser-compat: webextensions.match_patterns.scheme
 ---
+
 {{AddonSidebar}}
 
 Match patterns are a way to specify groups of URLs: a match pattern matches a specific set of URLs. They are used in WebExtensions APIs in a few places, most notably to specify which documents to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into, and to specify which URLs to add [`webRequest`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) listeners to.
@@ -13,12 +13,14 @@ APIs that use match patterns usually accept a list of match patterns, and will p
 
 ## Match pattern structure
 
-> **Note:** Some browsers don’t support certain schemes.
+> **Note:** Some browsers don't support certain schemes.
 > Check the [Browser compatibility table](#browser_compatibility) for details.
 
-All match patterns are specified as strings. Apart from the special [`<all_urls>`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#%3call_urls%3e) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
+All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
 
-    <scheme>://<host><path>
+```plain
+<scheme>://<host><path>
+```
 
 ### scheme
 
@@ -93,7 +95,7 @@ The value for the _path_ matches against the string which is the URL path plus t
 
 Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
 
-> **Note:** The path pattern string should not include a port number. Adding a port, as in: _"http\://localhost:1234/\*"_ causes the match pattern to be ignored. However, "_http\://localhost:1234_" will match with "\*http\://localhost/\*\*"
+> **Note:** The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
 
 ### \<all_urls>
 
@@ -240,7 +242,7 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
         <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
         <p>
-          <code>https://mozilla.org/path/</code><code>?foo=1</code
+          <code>https://mozilla.org/path/?foo=1</code
           ><br />(unmatched path due to URL query string)
         </p>
       </td>
@@ -366,7 +368,5 @@ The special value `<all_urls>` matches all URLs under any of the supported schem
 </table>
 
 ## Browser compatibility
-
-### scheme
 
 {{Compat}}

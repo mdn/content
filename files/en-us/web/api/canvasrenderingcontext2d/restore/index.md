@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.restore()
+title: "CanvasRenderingContext2D: restore() method"
+short-title: restore()
 slug: Web/API/CanvasRenderingContext2D/restore
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.restore
 ---
+
 {{APIRef}}
 
 The
@@ -17,22 +14,29 @@ method of the Canvas 2D API restores the most recently saved canvas state by pop
 top entry in the drawing state stack. If there is no saved state, this method does
 nothing.
 
-For more information about the [drawing
-state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
+For more information about the [drawing state](/en-US/docs/Web/API/CanvasRenderingContext2D/save#drawing_state), see {{domxref("CanvasRenderingContext2D.save()")}}.
 
 ## Syntax
 
-```js
-void ctx.restore();
+```js-nolint
+restore()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ### Restoring a saved state
 
-This example uses the `save()` method to save the default state and
+This example uses the `save()` method to save the current state and
 `restore()` to restore it later, so that you are able to draw a rect with the
-default state later.
+current state later.
 
 #### HTML
 
@@ -43,16 +47,16 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Save the default state
+// Save the current state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
-// Restore the default state
+// Restore to the state saved by the most recent call to save()
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);

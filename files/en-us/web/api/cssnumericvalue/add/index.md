@@ -1,18 +1,12 @@
 ---
-title: CSSNumericValue.add()
+title: "CSSNumericValue: add() method"
+short-title: add()
 slug: Web/API/CSSNumericValue/add
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - add()
+page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.add
 ---
-{{draft}}{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`add()`** method of the
 {{domxref("CSSNumericValue")}} interface adds a supplied number to the
@@ -20,14 +14,14 @@ The **`add()`** method of the
 
 ## Syntax
 
-```js
-var cssMathSum = CSSNumericValue.add(double | CSSNumericValue);
+```js-nolint
+add(number)
 ```
 
 ### Parameters
 
-- number
-  - : either a {{jsxref('Number')}} or a {{domxref('CSSNumericValue')}}.
+- `number`
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
@@ -35,13 +29,16 @@ A {{domxref('CSSMathSum')}}
 
 ### Exceptions
 
-- TypeError
-  - : Indicates that an invalid type was passed to the method.
+- {{jsxref("TypeError")}}
+  - : Thrown if an invalid type was passed to the method.
 
 ## Examples
 
 ```js
-let mathSum = CSS.px("23").add(CSS.percent("4")).add(CSS.cm("3")).add(CSS.in("9"));
+let mathSum = CSS.px("23")
+  .add(CSS.percent("4"))
+  .add(CSS.cm("3"))
+  .add(CSS.in("9"));
 // Prints "calc(23px + 4% + 3cm + 9in)"
 console.log(mathSum.toString());
 ```

@@ -1,13 +1,10 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
+page-type: http-status-code
 browser-compat: http.status.307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** redirect
@@ -30,7 +27,7 @@ identical.
 
 ## Status
 
-```
+```http
 307 Temporary Redirect
 ```
 
@@ -48,4 +45,4 @@ identical.
   change the method used when it is not a {{HTTPMethod("GET")}}.
 - {{HTTPStatus("303", "303 See Other")}}, a temporary redirect that changes the method
   used to {{HTTPMethod("GET")}}.
-- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect
+- {{HTTPStatus("301", "301 Moved Permanently")}}, a permanent redirect

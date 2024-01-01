@@ -1,25 +1,22 @@
 ---
 title: Example
 slug: Learn/Forms/How_to_structure_a_web_form/Example
-tags:
-  - Beginner
-  - CSS
-  - Example
-  - Guide
-  - HTML
-  - Intro
-  - Reference
+page-type: learn-module-chapter
 ---
+
 This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## A payment form
 
-### HTML Content
+### HTML
 
-```html
+```html-nolint
 <form method="post">
   <h1>Payment form</h1>
-  <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+  <p>
+    Required fields are followed by
+    <strong><span aria-label="required">*</span></strong>.
+  </p>
   <section>
     <h2>Contact information</h2>
     <fieldset>
@@ -27,19 +24,19 @@ This the example for a basic payment form for the article [How to structure an H
       <ul>
         <li>
           <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="A">
+            <input type="radio" id="title_1" name="title" value="A" />
             Ace
           </label>
         </li>
         <li>
           <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="K" >
+            <input type="radio" id="title_2" name="title" value="K" />
             King
           </label>
         </li>
         <li>
           <label for="title_3">
-            <input type="radio" id="title_3" name="title" value="Q">
+            <input type="radio" id="title_3" name="title" value="Q" />
             Queen
           </label>
         </li>
@@ -48,23 +45,23 @@ This the example for a basic payment form for the article [How to structure an H
     <p>
       <label for="name">
         <span>Name: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="text" id="name" name="username">
+      <input type="text" id="name" name="username" required />
     </p>
     <p>
       <label for="mail">
-        <span>E-mail: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <span>Email: </span>
+        <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="email" id="mail" name="usermail">
+      <input type="email" id="mail" name="usermail" required />
     </p>
     <p>
       <label for="pwd">
         <span>Password: </span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="password" id="pwd" name="password">
+      <input type="password" id="pwd" name="password" required />
     </p>
   </section>
   <section>
@@ -82,91 +79,101 @@ This the example for a basic payment form for the article [How to structure an H
     <p>
       <label for="number">
         <span>Card number:</span>
-        <strong><abbr title="required">*</abbr></strong>
+        <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="tel" id="number" name="cardnumber">
+      <input type="tel" id="number" name="cardnumber" />
     </p>
     <p>
-      <label for="date">
+      <label for="expiration">
         <span>Expiration date:</span>
-        <strong><abbr title="required">*</abbr></strong>
-        <em>formatted as mm/dd/yyyy</em>
+        <strong><span aria-label="required">*</span></strong>
       </label>
-      <input type="date" id="date" name="expiration">
+      <input
+        type="text"
+        id="expiration"
+        required="true"
+        placeholder="MM/YY"
+        pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
   </section>
   <section>
-    <p> <button type="submit">Validate the payment</button> </p>
+    <p><button type="submit">Validate the payment</button></p>
   </section>
 </form>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+  margin: 0 auto;
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
 }
 
-div+div {
-    margin-top: 1em;
+div + div {
+  margin-top: 1em;
 }
 
 label span {
-    display: inline-block;
-    width: 120px;
-    text-align: right;
+  display: inline-block;
+  text-align: right;
 }
 
-input, textarea {
-    font: 1em sans-serif;
-    width: 250px;
-    box-sizing: border-box;
-    border: 1px solid #999;
+input,
+textarea {
+  font: 1em sans-serif;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
 }
 
-input[type=checkbox], input[type=radio] {
-    width: auto;
-    border: none;
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  border: none;
 }
 
-input:focus, textarea:focus {
-    border-color: #000;
+input:focus,
+textarea:focus {
+  border-color: #000;
 }
 
 textarea {
-    vertical-align: top;
-    height: 5em;
-    resize: vertical;
+  vertical-align: top;
+  height: 5em;
+  resize: vertical;
 }
 
 fieldset {
-    width: 250px;
-    box-sizing: border-box;
-    margin-left: 136px;
-    border: 1px solid #999;
+  width: 250px;
+  box-sizing: border-box;
+  border: 1px solid #999;
 }
 
 button {
-    margin: 20px 0 0 124px;
+  margin: 20px 0 0 0;
 }
 
 label {
   position: relative;
+  display: inline-block;
+}
+
+p label {
+  width: 100%;
 }
 
 label em {

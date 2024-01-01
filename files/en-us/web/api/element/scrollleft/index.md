@@ -1,13 +1,11 @@
 ---
-title: Element.scrollLeft
+title: "Element: scrollLeft property"
+short-title: scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Element.scrollLeft
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.scrollLeft`** property gets or sets the number
@@ -18,29 +16,7 @@ If the element's {{cssxref("direction")}} is `rtl` (right-to-left), then
 position (at the start of the scrolled content), and then increasingly negative as you
 scroll towards the end of the content.
 
-> **Warning:** On systems using display scaling, `scrollLeft` may give you a decimal
-> value.
-
-## Syntax
-
-### Getting the value
-
-```js
-// Get the number of pixels scrolled
-var sLeft = element.scrollLeft;
-```
-
-`sLeft` is an integer representing the number of pixels that
-`element` has been scrolled from the left edge.
-
-### Setting the value
-
-```js
-// Set the number of pixels scrolled
-element.scrollLeft = 10;
-```
-
-`scrollLeft` can be specified as any integer value. However:
+It can be specified as any integer value. However:
 
 - If the element can't be scrolled (e.g., it has no overflow), `scrollLeft`
   is set to `0`.
@@ -49,7 +25,14 @@ element.scrollLeft = 10;
 - If specified as a value greater than the maximum that the content can be scrolled,
   `scrollLeft` is set to the maximum.
 
-## Example
+> **Warning:** On systems using display scaling, `scrollLeft` may give you a decimal
+> value.
+
+## Value
+
+A number.
+
+## Examples
 
 ### HTML
 
@@ -80,16 +63,16 @@ element.scrollLeft = 10;
 ### JavaScript
 
 ```js
-const button = document.getElementById('slide');
+const button = document.getElementById("slide");
 
-button.onclick = function () {
-  document.getElementById('container').scrollLeft += 20;
+button.onclick = () => {
+  document.getElementById("container").scrollLeft += 20;
 };
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -101,7 +84,6 @@ button.onclick = function () {
 
 ## See also
 
-- [MSDN's Measuring Element
-  Dimension and Location](<https://msdn.microsoft.com/en-us/library/hh781509(v=vs.85).aspx> "MSDN Measuring Element Dimension and Location")
+- [MSDN's Measuring Element Dimension and Location](<https://msdn.microsoft.com/library/hh781509(v=vs.85).aspx>)
 - {{domxref("Element.scrollTop")}}
 - {{domxref("Element.scrollTo()")}}

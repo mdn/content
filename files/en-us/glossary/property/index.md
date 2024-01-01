@@ -1,10 +1,11 @@
 ---
 title: Property
-slug: Glossary/property
-tags:
-  - Disambiguation
-  - Glossary
+slug: Glossary/Property
+page-type: glossary-disambiguation
 ---
+
+{{GlossarySidebar}}
+
 The term **property** can have several meanings depending on the context. It may refer to:
 
 {{GlossaryDisambiguation}}

@@ -1,14 +1,10 @@
 ---
-title: 'CSP: base-uri'
+title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
-tags:
-  - CSP
-  - Directive
-  - Document directive
-  - HTTP
-  - Security
-browser-compat: http.headers.csp.Content-Security-Policy.base-uri
+page-type: http-csp-directive
+browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive restricts the URLs which can be used in a document's {{HTMLElement("base")}} element. If this value is absent, then any URI is allowed. If this directive is absent, the user agent will use the value in the {{HTMLElement("base")}} element.
@@ -32,30 +28,30 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more*sources* can be allowed for the base-uri policy:
+One or more _sources_ can be allowed for the base-uri policy:
 
-```
+```http
 Content-Security-Policy: base-uri <source>;
 Content-Security-Policy: base-uri <source> <source>;
 ```
 
 ### Sources
 
-While this directive uses the same arguments as other CSP directives, some of them don’t make sense for \`\<base>\`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`
+This directive uses most of the same source values for arguments as other CSP directives: [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+Note however that some of the values don't make sense for `base-uri`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`.
 
 ## Examples
 
 ### Meta tag configuration
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
 ```
 
 ### Apache configuration
 
-```html
+```apacheconf
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
@@ -63,7 +59,7 @@ Header set Content-Security-Policy "base-uri 'self'";
 
 ### Nginx configuration
 
-```
+```nginx
 add_header Content-Security-Policy "base-uri 'self';"
 ```
 
@@ -72,12 +68,14 @@ add_header Content-Security-Policy "base-uri 'self';"
 Since your domain isn't `example.com`, a {{HTMLElement("base")}} element with its `href` set to `https://example.com` will result in a CSP violation.
 
 ```html example-bad
-<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
-<base href="https://example.com/">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'" />
+<base href="https://example.com/" />
 
+<!--
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
 // directive: "base-uri 'self'"
+-->
 ```
 
 ## Specifications

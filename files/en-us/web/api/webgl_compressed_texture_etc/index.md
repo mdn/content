@@ -1,13 +1,11 @@
 ---
-title: WEBGL_compressed_texture_etc
+title: WEBGL_compressed_texture_etc extension
+short-title: WEBGL_compressed_texture_etc
 slug: Web/API/WEBGL_compressed_texture_etc
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_etc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_etc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes 10 [ETC/EAC compressed texture formats](https://en.wikipedia.org/wiki/Ericsson_Texture_Compression).
@@ -46,12 +44,20 @@ The compressed texture formats are exposed by 10 constants and can be used in tw
 ## Examples
 
 ```js
-var ext = gl.getExtension('WEBGL_compressed_texture_etc');
+const ext = gl.getExtension("WEBGL_compressed_texture_etc");
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA8_ETC2_EAC, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGBA8_ETC2_EAC,
+  512,
+  512,
+  0,
+  textureData,
+);
 ```
 
 ## Specifications
@@ -62,7 +68,7 @@ gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA8_ETC2_EAC, 512, 51
 
 {{Compat}}
 
-## Compatibility notes
+### Compatibility notes
 
 - This extension was named `WEBGL_compressed_texture_es3` from Firefox 46 to Firefox 51 and used to be available on the WebGL 2 context by default – this is not the case anymore. You have to enable it on both, WebGL 1 and WebGL 2 contexts, in order to use it.
 

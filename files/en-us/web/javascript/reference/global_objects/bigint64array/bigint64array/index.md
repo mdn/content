@@ -1,62 +1,36 @@
 ---
 title: BigInt64Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array
-tags:
-  - BigInt
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
+page-type: javascript-constructor
 browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 ---
+
 {{JSRef}}
 
-The **`BigInt64Array()`** typed array constructor creates a new
-{{jsxref("BigInt64Array")}} object, which is, an array of 64-bit signed integers in the
-platform byte order. If control over byte order is needed, use {{jsxref("DataView")}}
-instead. The contents are initialized to `0n`. Once established, you can
-reference elements in the array using the object's methods, or by using standard array
-index syntax (that is, using bracket notation).
+The **`BigInt64Array()`** constructor creates {{jsxref("BigInt64Array")}} objects. The contents are initialized to `0n`.
 
 ## Syntax
 
-```js
-new BigInt64Array();
-new BigInt64Array(length);
-new BigInt64Array(typedArray);
-new BigInt64Array(object);
+```js-nolint
+new BigInt64Array()
+new BigInt64Array(length)
+new BigInt64Array(typedArray)
+new BigInt64Array(object)
 
-new BigInt64Array(buffer);
-new BigInt64Array(buffer, byteOffset);
-new BigInt64Array(buffer, byteOffset, length);
+new BigInt64Array(buffer)
+new BigInt64Array(buffer, byteOffset)
+new BigInt64Array(buffer, byteOffset, length)
 ```
+
+> **Note:** `BigInt64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
-- `length`
-  - : When called with a `length` argument, an internal array buffer
-    is created in memory, of size `length` _multiplied by
-    `BYTES_PER_ELEMENT`_ bytes, containing zeros.
-- `typedArray`
-  - : When called with a `typedArray` argument, which can be an
-    object of any of the typed array types (such as `Int32Array`), the
-    `typedArray` gets copied into a new typed array. Each value in
-    `typedArray` is converted to the corresponding type of the
-    constructor before being copied into the new array. The length of the new typed array
-    will be same as the length of the `typedArray` argument.
-- `object`
-  - : When called with an `object` argument, a new typed array is
-    created as if by the `TypedArray.from()` method.
-- `buffer`, `byteOffset`,
-  `length`
-  - : When called with a `buffer`, and optionally a
-    `byteOffset` and a `length` argument, a
-    new typed array view is created that views the specified {{jsxref("ArrayBuffer")}}.
-    The `byteOffset` and `length` parameters
-    specify the memory range that will be exposed by the typed array view. If both are
-    omitted, all of `buffer` is viewed; if only
-    `length` is omitted, the remainder of
-    `buffer` is viewed.
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#parameters).
+
+### Exceptions
+
+See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#exceptions).
 
 ## Examples
 
@@ -64,29 +38,32 @@ new BigInt64Array(buffer, byteOffset, length);
 
 ```js
 // From a length
-var bigint64 = new BigInt64Array(2);
+const bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n
 console.log(bigint64.length); // 2
 console.log(bigint64.BYTES_PER_ELEMENT); // 8
 
 // From an array
-var arr = new BigInt64Array([21n,31n]);
-console.log(arr[1]); // 31n
+const x = new BigInt64Array([21n, 31n]);
+console.log(x[1]); // 31n
 
 // From another TypedArray
-var x = new BigInt64Array([21n, 31n]);
-var y = new BigInt64Array(x);
+const y = new BigInt64Array(x);
 console.log(y[0]); // 21n
 
 // From an ArrayBuffer
-var buffer = new ArrayBuffer(32);
-var z = new BigInt64Array(buffer, 0, 4);
+const buffer = new ArrayBuffer(64);
+const z = new BigInt64Array(buffer, 8, 4);
+console.log(z.byteOffset); // 8
 
 // From an iterable
-var iterable = function*(){ yield* [1n, 2n, 3n]; }();
-var bigint64 = new BigInt64Array(iterable);
-// BigInt64Array[1n, 2n, 3n]
+const iterable = (function* () {
+  yield* [1n, 2n, 3n];
+})();
+const bigint64FromIterable = new BigInt64Array(iterable);
+console.log(bigint64FromIterable);
+// BigInt64Array [1n, 2n, 3n]
 ```
 
 ## Specifications
@@ -99,6 +76,7 @@ var bigint64 = new BigInt64Array(iterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
-- {{jsxref("BigUint64Array")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

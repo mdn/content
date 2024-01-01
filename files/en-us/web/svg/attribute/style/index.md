@@ -1,11 +1,10 @@
 ---
 title: style
 slug: Web/SVG/Attribute/style
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.style.style
 ---
+
 {{SVGRef}}
 
 The **`style`** attribute allows to style an element using {{Glossary("CSS")}} declarations. It functions identically to [the `style` attribute in HTML](/en-US/docs/Web/HTML/Global_attributes/style).
@@ -15,13 +14,21 @@ You can use this attribute with any SVG element.
 ## Example
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewbox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-  <rect width="80"  height="40" x="10" y="10"
-      style="fill: skyblue; stroke: cadetblue; stroke-width: 2;"/>
+<svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <rect
+    width="80"
+    height="40"
+    x="10"
+    y="10"
+    style="fill: skyblue; stroke: cadetblue; stroke-width: 2;" />
 </svg>
 ```
 
@@ -46,38 +53,13 @@ html,body,svg { height:100% }
   </tbody>
 </table>
 
-*   `<style>`
-    *   : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
+- `<style>`
 
-        > **Note:** In theory, [the `contentStyleType` attribute](/en-US/docs/Web/SVG/Attribute/contentStyleType) could be used to specify styling languages other than CSS, like [XSL(T)](/en-US/docs/Web/XSLT). However, this was never implemented satisfactorily in browsers, so you should not rely on it.
+  - : The syntax of style data depends on the style sheet language. By default, the style sheet language is [CSS](/en-US/docs/Web/CSS).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "styling.html#StyleAttribute", "style")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "styling.html#StyleAttribute", "style")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -85,5 +67,5 @@ html,body,svg { height:100% }
 
 ## See also
 
-*   {{SVGElement("style")}}
-*   [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)
+- {{SVGElement("style")}}
+- [HTML `style` attribute](/en-US/docs/Web/HTML/Global_attributes/style)

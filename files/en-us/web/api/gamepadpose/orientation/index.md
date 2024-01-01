@@ -1,18 +1,13 @@
 ---
-title: GamepadPose.orientation
+title: "GamepadPose: orientation property"
+short-title: orientation
 slug: Web/API/GamepadPose/orientation
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Orientation
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadPose.orientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.
@@ -26,13 +21,7 @@ The value is a {{jsxref("Float32Array")}}, made up of the following values:
 
 The orientation yaw (rotation around the y axis) is relative to the initial yaw of the sensor when it was first read.
 
-## Syntax
-
-```js
-var myGamepadOrientation = gamepadPoseInstance.orientation;
-```
-
-### Value
+## Value
 
 A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide orientation data.
 

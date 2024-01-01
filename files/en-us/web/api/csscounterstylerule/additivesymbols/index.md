@@ -1,28 +1,18 @@
 ---
-title: CSSCounterStyleRule.additiveSymbols
+title: "CSSCounterStyleRule: additiveSymbols property"
+short-title: additiveSymbols
 slug: Web/API/CSSCounterStyleRule/additiveSymbols
-tags:
-  - API
-  - Property
-  - Reference
-  - additiveSymbols
-  - CSSCounterStyleRule
+page-type: web-api-instance-property
 browser-compat: api.CSSCounterStyleRule.additiveSymbols
 ---
+
 {{DefaultAPISidebar("CSS Counter Styles")}}
 
 The **`additiveSymbols`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the value of the {{cssxref("@counter-style/additive-symbols","additive-symbols")}} descriptor. If the descriptor does not have a value set, this attribute returns an empty string.
 
-## Syntax
+## Value
 
-```js
-let additiveSymbols = CSSCounterStyleRule.additiveSymbols;
-CSSCounterStyleRule.additiveSymbols = a;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 
@@ -31,7 +21,10 @@ The following example shows a {{cssxref("@counter-style")}} rule. In JavaScript,
 ```css
 @counter-style additive-symbols-example {
   system: additive;
-  additive-symbols: V 5, IV 4, I 1;
+  additive-symbols:
+    V 5,
+    IV 4,
+    I 1;
 }
 ```
 

@@ -1,15 +1,14 @@
 ---
-title: FileSystemHandle.requestPermission()
+title: "FileSystemHandle: requestPermission() method"
+short-title: requestPermission()
 slug: Web/API/FileSystemHandle/requestPermission
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Method
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.FileSystemHandle.requestPermission
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
 
 The **`requestPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface requests read or readwrite permissions for the
@@ -17,8 +16,8 @@ file handle.
 
 ## Syntax
 
-```js
-var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermissionDescriptor);
+```js-nolint
+requestPermission(fileSystemHandlePermissionDescriptor)
 ```
 
 ### Parameters
@@ -32,13 +31,12 @@ var PermissionState = FileSystemHandle.requestPermission(FileSystemHandlePermiss
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
 ### Exceptions
 
-- `TypeError`
-  - : No parameter is specified or the `mode` is not that of
+- {{jsxref("TypeError")}}
+  - : Thrown if no parameter is specified or the `mode` is not that of
     `'read'` or `'readwrite'`
 
 ## Examples
@@ -52,16 +50,16 @@ The following asynchronous function requests permissions if they have not been g
 async function verifyPermission(fileHandle, withWrite) {
   const opts = {};
   if (withWrite) {
-    opts.mode = 'readwrite';
+    opts.mode = "readwrite";
   }
 
   // Check if we already have permission, if so, return true.
-  if (await fileHandle.queryPermission(opts) === 'granted') {
+  if ((await fileHandle.queryPermission(opts)) === "granted") {
     return true;
   }
 
   // Request permission to the file, if the user grants permission, return true.
-  if (await fileHandle.requestPermission(opts) === 'granted') {
+  if ((await fileHandle.requestPermission(opts)) === "granted") {
     return true;
   }
 
@@ -80,6 +78,5 @@ async function verifyPermission(fileHandle, withWrite) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

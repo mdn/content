@@ -1,22 +1,19 @@
 ---
-title: SVGPointList.initialize()
+title: "SVGPointList: initialize() method"
+short-title: initialize()
 slug: Web/API/SVGPointList/initialize
-tags:
-  - API
-  - Method
-  - Reference
-  - initialize
-  - SVGPointList
+page-type: web-api-instance-method
 browser-compat: api.SVGPointList.initialize
 ---
+
 {{APIRef("SVG")}}
 
 The **`initialize()`** method of the {{domxref("SVGPointList")}} interface clears the list then adds a single new {{domxref("SVGPoint")}} object to the list.
 
 ## Syntax
 
-```js
-SVGPointList.initialize(obj);
+```js-nolint
+initialize(obj)
 ```
 
 ### Parameters
@@ -30,7 +27,7 @@ The added {{domxref("SVGPoint")}} object.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModicationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples
@@ -39,13 +36,17 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js
 let example = document.getElementById("example");
-console.log(example.points.length) //5;
+console.log(example.points.length); //5;
 let svgpoint = document.getElementById("svg").createSVGPoint();
 example.points.initialize(svgpoint);
 console.log(example.points.length); //1

@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.lineJoin
+title: "CanvasRenderingContext2D: lineJoin property"
+short-title: lineJoin
 slug: Web/API/CanvasRenderingContext2D/lineJoin
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
+
 {{APIRef}}
 
 The
@@ -22,22 +19,15 @@ zero (i.e., with all endpoints and control points at the exact same position) ar
 ignored.
 
 > **Note:** Lines can be drawn with the
-> {{domxref("CanvasRenderingContext2D.stroke()",
-    "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
+> {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}},
+> {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}},
 > and {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} methods.
 
-## Syntax
+## Value
 
-```js
-ctx.lineJoin = "bevel" || "round" || "miter";
-```
+There are three possible values for this property: `"round"`, `"bevel"`, and `"miter"`. The default is `"miter"`.
 
-### Options
-
-There are three possible values for this property: `"round"`,
-`"bevel"`, and `"miter"`. The default is `"miter"`.
-
-![](canvas_linejoin.png)
+![Three horizontal zigzag lines with round, bevel, and miter values, shown from top to bottom respectively.](canvas_linejoin.png)
 
 - `"round"`
   - : Rounds off the corners of a shape by filling an additional sector of disc centered
@@ -67,11 +57,11 @@ This example applies rounded line joins to a path.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.lineWidth = 20;
-ctx.lineJoin = 'round';
+ctx.lineJoin = "round";
 ctx.beginPath();
 ctx.moveTo(20, 20);
 ctx.lineTo(190, 100);
@@ -94,12 +84,11 @@ The example below draws three different paths, demonstrating each of the three
 ```
 
 ```js
-var ctx = document.getElementById('canvas').getContext('2d');
-var lineJoin = ['round', 'bevel', 'miter'];
+const ctx = document.getElementById("canvas").getContext("2d");
 ctx.lineWidth = 10;
 
-for (let i = 0; i < lineJoin.length; i++) {
-  ctx.lineJoin = lineJoin[i];
+["round", "bevel", "miter"].forEach((join, i) => {
+  ctx.lineJoin = join;
   ctx.beginPath();
   ctx.moveTo(-5, 5 + i * 40);
   ctx.lineTo(35, 45 + i * 40);
@@ -107,7 +96,7 @@ for (let i = 0; i < lineJoin.length; i++) {
   ctx.lineTo(115, 45 + i * 40);
   ctx.lineTo(155, 5 + i * 40);
   ctx.stroke();
-}
+});
 ```
 
 {{EmbedLiveSample("Comparison_of_line_joins", "180", "180",

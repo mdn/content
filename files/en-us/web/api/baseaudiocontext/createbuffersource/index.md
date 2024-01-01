@@ -1,16 +1,11 @@
 ---
-title: BaseAudioContext.createBufferSource()
+title: "BaseAudioContext: createBufferSource() method"
+short-title: createBufferSource()
 slug: Web/API/BaseAudioContext/createBufferSource
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createBufferSource
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createBufferSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}
@@ -27,56 +22,63 @@ track.
 
 ## Syntax
 
-```js
-var source = baseAudioContext.createBufferSource();
+```js-nolint
+createBufferSource()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 An {{domxref("AudioBufferSourceNode")}}.
 
-## Example
+## Examples
 
 In this example, we create a two second buffer, fill it with white noise, and then play
 it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain
 what is going on.
 
 > **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
-> or [view
-> the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var button = document.querySelector('button');
-var pre = document.querySelector('pre');
-var myScript = document.querySelector('script');
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const button = document.querySelector("button");
+const pre = document.querySelector("pre");
+const myScript = document.querySelector("script");
 
 pre.innerHTML = myScript.innerHTML;
 
 // Stereo
-var channels = 2;
+const channels = 2;
 // Create an empty two second stereo buffer at the
 // sample rate of the AudioContext
-var frameCount = audioCtx.sampleRate * 2.0;
+const frameCount = audioCtx.sampleRate * 2.0;
 
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+const myArrayBuffer = audioCtx.createBuffer(
+  channels,
+  frameCount,
+  audioCtx.sampleRate,
+);
 
-button.onclick = function() {
+button.onclick = () => {
   // Fill the buffer with white noise;
   //just random values between -1.0 and 1.0
-  for (var channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
-   }
+  for (let channel = 0; channel < channels; channel++) {
+    // This gives us the actual ArrayBuffer that contains the data
+    const nowBuffering = myArrayBuffer.getChannelData(channel);
+    for (let i = 0; i < frameCount; i++) {
+      // Math.random() is in [0; 1.0]
+      // audio needs to be in [-1.0; 1.0]
+      nowBuffering[i] = Math.random() * 2 - 1;
+    }
   }
 
   // Get an AudioBufferSourceNode.
   // This is the AudioNode to use when we want to play an AudioBuffer
-  var source = audioCtx.createBufferSource();
+  const source = audioCtx.createBufferSource();
   // set the buffer in the AudioBufferSourceNode
   source.buffer = myArrayBuffer;
   // connect the AudioBufferSourceNode to the
@@ -84,7 +86,7 @@ button.onclick = function() {
   source.connect(audioCtx.destination);
   // start the source playing
   source.start();
-}
+};
 ```
 
 ## Specifications

@@ -1,26 +1,23 @@
 ---
 title: SVGMarkerElement
 slug: Web/API/SVGMarkerElement
-tags:
-  - API
-  - Interface
-  - Reference
-  - SVGMarkerElement
+page-type: web-api-interface
 browser-compat: api.SVGMarkerElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGMarkerElement`** interface provides access to the properties of {{SVGElement("marker")}} elements, as well as methods to manipulate them. The {{SVGElement("marker")}} element defines the graphics used for drawing marks on a shape.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
 The following properties and methods all return, or act on the attributes of the {{SVGElement("marker")}} element represented by `SVGMarkerElement`.
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
-- {{domxref("SVGMarkerElement.markerUnits")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerUnits")}} {{ReadOnlyInline}}
 
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
@@ -31,11 +28,11 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 2
       - : `SVG_MARKERUNITS_STROKEWIDTH` which means that the {{SVGattr("markerUnits")}} attribute has the keyword value `strokeWidth`.
 
-- {{domxref("SVGMarkerElement.markerWidth")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerWidth")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the width of the {{SVGElement("marker")}} viewport.
-- {{domxref("SVGMarkerElement.markerHeight")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.markerHeight")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.
-- {{domxref("SVGMarkerElement.orientType")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.orientType")}} {{ReadOnlyInline}}
 
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
 
@@ -46,18 +43,18 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
     - 2
       - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
 
-- {{domxref("SVGMarkerElement.orientAngle")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.orientAngle")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
-- {{domxref("SVGMarkerElement.refX")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.refX")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refX")}} attribute of the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.refY")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.refY")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the value of the {{SVGattr("refY")}} attribute of the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.viewBox")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.viewBox")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedRect")}} object containing an {{domxref("SVGRect")}} which contains the values set by the {{SVGattr("viewBox")}} attribute on the {{SVGElement("marker")}}.
-- {{domxref("SVGMarkerElement.preserveAspectRatio")}}{{ReadOnlyInline}}
+- {{domxref("SVGMarkerElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGPreserveAspectRatio")}} object which contains the values set by the {{SVGattr("preserveAspectRatio")}} attribute on the {{SVGElement("marker")}} viewport.
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGElement")}}._
 
@@ -73,9 +70,14 @@ The following SVG will be referenced in the examples.
 ```html
 <svg id="svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient="90">
+    <marker
+      id="arrow"
+      viewBox="0 0 10 10"
+      refX="5"
+      refY="5"
+      markerWidth="6"
+      markerHeight="6"
+      orient="90">
       <path d="M 0 0 L 10 5 L 0 10 z" />
     </marker>
   </defs>

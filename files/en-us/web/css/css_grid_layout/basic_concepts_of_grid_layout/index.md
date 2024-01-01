@@ -1,15 +1,12 @@
 ---
-title: Basic Concepts of grid layout
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Grids
-  - Guide
-  - Layout
+title: Basic concepts of grid layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
+page-type: guide
 ---
+
 {{CSSRef}}
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
 
 ## What is a grid?
 
@@ -17,7 +14,7 @@ A grid is a set of intersecting horizontal and vertical lines defining columns a
 
 ### Fixed and flexible track sizes
 
-You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the new `fr` unit designed for this purpose.
+You can create a grid with fixed track sizes – using pixels for example. This sets the grid to the specified pixel which fits to the layout you desire. You can also create a grid using flexible sizes with percentages or with the `fr` unit designed for this purpose.
 
 ### Item placement
 
@@ -25,7 +22,7 @@ You can place items into a precise location on the grid using line numbers, name
 
 ### Creation of additional tracks to hold content
 
-You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding “as many columns that will fit into a container” are included.
+You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding "as many columns that will fit into a container" are included.
 
 ### Alignment control
 
@@ -35,9 +32,9 @@ Grid contains alignment features so we can control how the items align once plac
 
 More than one item can be placed into a grid cell or area and they can partially overlap each other. This layering may then be controlled with the {{cssxref("z-index")}} property.
 
-Grid is a powerful specification that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout), can help you create layouts that were previously impossible to build in CSS. It all starts by creating a grid in your **grid container**.
+Grid is a powerful specification that, when combined with other parts of CSS such as [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout), can help you create layouts that were previously impossible to build in CSS. It all starts by creating a grid in your **grid container**.
 
-## The Grid container
+## Grid container
 
 We create a _grid container_ by declaring `display: grid` or `display: inline-grid` on an element. As soon as we do this, all _direct children_ of that element become _grid items_.
 
@@ -62,7 +59,9 @@ I make the `.wrapper` a grid container.
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -81,19 +80,21 @@ I make the `.wrapper` a grid container.
 
 {{ EmbedLiveSample('The_Grid_container', '200', '330') }}
 
-All the direct children are now grid items. In a web browser, you won’t see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
+All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
 
 ![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
-As you learn and then work with the CSS Grid Layout this tool will give you a better idea of what is happening with your grids visually.
+As you learn and then work with the CSS Grid Layout, this tool will give you a better idea of what is happening with your grids visually.
 
 If we want to start making this more grid-like we need to add column tracks.
 
 ## Grid tracks
 
-We define rows and columns on our grid with the {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} properties. These define grid tracks. A _grid track_ is the space between any two lines on the grid. In the below image you can see a track highlighted – this is the first row track in our grid.
+We define rows and columns on our grid with the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties. These define grid tracks. A _grid track_ is the space between any two adjacent lines on the grid. The image below shows a highlighted track – this is the first-row track in our grid.
 
-![](1_grid_track.png)
+![A box with 3 grid items. Above the three items is a solid light green area which is the track.](1_grid_track.png)
+
+Grid tracks are defined in the explicit grid by using the `grid-template-columns` and `grid-template-rows` properties or the shorthand `grid` or `grid-template` properties. Tracks are also created in the implicit grid by positioning a grid item outside of the tracks created in the explicit grid.
 
 ### Basic example
 
@@ -119,7 +120,9 @@ I have now created a grid with three 200-pixel-wide column tracks. The child ite
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -160,7 +163,9 @@ Tracks can be defined using any length unit. Grid also introduces an additional 
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -201,7 +206,9 @@ In this next example, we create a definition with a `2fr` track then two `1fr` t
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -222,7 +229,7 @@ In this next example, we create a definition with a `2fr` track then two `1fr` t
 
 ### Mixing flexible and absolute sizes
 
-In this final example, we mix absolute sized tracks with `fr` units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.
+In this final example, we mix absolute sized tracks with `fr` units. The first track is 500 pixels, so the fixed width is taken away from the available space. The remaining space is divided into three and assigned in proportion to the two flexible tracks.
 
 ```html
 <div class="wrapper">
@@ -242,7 +249,9 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -263,7 +272,7 @@ In this final example, we mix absolute sized tracks with `fr` units. The first t
 
 ### Track listings with repeat() notation
 
-Large grids with many tracks can use the `repeat()` notation, to repeat all or a section of the track listing. For example the grid definition:
+Large grids with many tracks can use the `repeat()` notation, to repeat all or a section of the track listing. For example the grid definition:
 
 ```css
 .wrapper {
@@ -290,7 +299,7 @@ Repeat notation can be used for a part of the track listing. In this next exampl
 }
 ```
 
-Repeat notation takes the track listing, and uses it to create a repeating pattern of tracks. In this next example, my grid will consist of 10 tracks, a `1fr` track, and then followed by a `2fr` track. This pattern will be repeated five times.
+Repeat notation takes the track listing, and uses it to create a repeating pattern of tracks. In this next example, my grid will consist of 10 tracks, a `1fr` track, and then followed by a `2fr` track. This pattern will be repeated five times.
 
 ```css
 .wrapper {
@@ -299,15 +308,15 @@ Repeat notation takes the track listing, and uses it to create a repeating pat
 }
 ```
 
-### The implicit and explicit grid
+### Implicit and explicit grids
 
 When creating our example grid we specifically defined our column tracks with the {{cssxref("grid-template-columns")}} property, but the grid also created rows on its own. These rows are part of the implicit grid. Whereas the explicit grid consists of any rows and columns defined with {{cssxref("grid-template-columns")}} or {{cssxref("grid-template-rows")}}.
 
-If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the implicit grid. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.
+If you place something outside of the defined grid—or due to the amount of content, more grid tracks are needed—then the grid creates rows and columns in the implicit grid. These tracks will be auto-sized by default, resulting in their size being based on the content that is inside them.
 
 You can also define a set size for tracks created in the implicit grid with the {{cssxref("grid-auto-rows")}} and {{cssxref("grid-auto-columns")}} properties.
 
-In the below example we use `grid-auto-rows` to ensure that tracks created in the implicit grid are 200 pixels tall.
+In the below example, we use `grid-auto-rows` to ensure that tracks created in the implicit grid are 200 pixels tall.
 
 ```html
 <div class="wrapper">
@@ -328,7 +337,9 @@ In the below example we use `grid-auto-rows` to ensure that tracks created in th
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -349,9 +360,9 @@ In the below example we use `grid-auto-rows` to ensure that tracks created in th
 
 ### Track sizing and minmax
 
-When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.
+When setting up an explicit grid or defining the sizing for automatically created rows or columns we may want to give tracks a minimum size, but also ensure they expand to fit any content that is added. For example, I may want my rows to never collapse smaller than 100 pixels, but if my content stretches to 300 pixels in height, then I would like the row to stretch to that height.
 
-Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
+Grid has a solution for this with the {{cssxref("minmax", "minmax()")}} function. In this next example I am using `minmax()` in the value of {{cssxref("grid-auto-rows")}}. This means automatically created rows will be a minimum of 100 pixels tall, and a maximum of `auto`. Using `auto` means that the size will look at the content size and will stretch to give space for the tallest item in a cell, in this row.
 
 ```css
 .wrapper {
@@ -362,7 +373,9 @@ Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} functi
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -382,7 +395,8 @@ Grid has a solution for this with the {{cssxref("minmax()", "minmax()")}} functi
 ```html
 <div class="wrapper">
   <div>One</div>
-  <div>Two
+  <div>
+    Two
     <p>I have some more content in.</p>
     <p>This makes me taller than 100 pixels.</p>
   </div>
@@ -400,11 +414,11 @@ It should be noted that when we define a grid we define the grid tracks, not the
 
 ![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
 
-Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.
+Lines are numbered according to the writing mode of the document. In a left-to-right language, line 1 is on the left-hand side of the grid. In a right-to-left language, it is on the right-hand side of the grid. Lines can also be named, and we will look at how to do this in a later guide in this series.
 
 ### Positioning items against lines
 
-We will be exploring line based placement in full detail in a later article. The following example demonstrates doing this in a simple way. When placing an item, we target the line – rather than the track.
+We will be exploring line based placement in full detail in a later article. The following example demonstrates doing this in a simple way. When placing an item, we target the line – rather than the track.
 
 In the following example I am placing the first two items on our three column track grid, using the {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row-start")}} and {{cssxref("grid-row-end")}} properties. Working from left to right, the first item is placed against column line 1, and spans to column line 4, which in our case is the far-right line on the grid. It begins at row line 1 and ends at row line 3, therefore spanning two row tracks.
 
@@ -442,7 +456,9 @@ The second item starts on grid column line 1, and spans one track. This is the d
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -461,7 +477,7 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **Note:** Don't forget that you can use the [Grid Inspector](/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+> **Note:** Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 
@@ -489,13 +505,13 @@ You can omit the end value if the area only spans one track.
 
 ## Grid cells
 
-A _grid cell_ is the smallest unit on a grid. Conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. In the below image, I have highlighted the first cell of the grid.
+A _grid cell_ is the smallest unit on a grid. Conceptually it is like a table cell. As we saw in our earlier examples, once a grid is defined as a parent the child items will lay themselves out in one cell each of the defined grid. In the below image, I have highlighted the first cell of the grid.
 
 ![The first cell of the grid highlighted](1_grid_cell.png)
 
 ## Grid areas
 
-Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas must be rectangular – it isn’t possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
+Items can span one or more cells both by row or by column, and this creates a _grid area_. Grid areas must be rectangular – it isn't possible to create an L-shaped area for example. The highlighted grid area spans two row and two column tracks.
 
 ![A grid area](1_grid_area.png)
 
@@ -527,7 +543,9 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("col
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   column-gap: 10px;
@@ -552,13 +570,13 @@ Any space used by gaps will be accounted for before space is assigned to the fle
 
 ## Nesting grids
 
-A grid item can become a grid container. In the following example, I have the three-column grid that I created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in a normal document flow.
+A grid item can become a grid container. In the following example, I have the three-column grid that I created earlier, with our two positioned items. In this case the first item has some sub-items. As these items are not direct children of the grid they do not participate in grid layout and so display in a normal document flow.
 
 ![Nested grid in flow](1_nested_grids_in_flow.png)
 
 ### Nesting without subgrid
 
-If I set `box1` to `display: grid` I can give it a track definition and it too will become a grid. The items then lay out on this new grid.
+If I set `box1` to `display: grid` I can give it a track definition and it too will become a grid. The items then lay out on this new grid.
 
 ```css
 .box1 {
@@ -573,24 +591,27 @@ If I set `box1` to `display: grid` I can give it a track definition and it too w
 
 ```html hidden
 <div class="wrapper">
-    <div class="box box1">
-      <div class="nested">a</div>
-      <div class="nested">b</div>
-      <div class="nested">c</div>
-    </div>
-    <div class="box box2">Two</div>
-    <div class="box box3">Three</div>
-    <div class="box box4">Four</div>
-    <div class="box box5">Five</div>
+  <div class="box box1">
+    <div class="nested">a</div>
+    <div class="nested">b</div>
+    <div class="nested">c</div>
   </div>
+  <div class="box box2">Two</div>
+  <div class="box box3">Three</div>
+  <div class="box box4">Four</div>
+  <div class="box box5">Five</div>
+</div>
 ```
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
   border-radius: 5px;
+  gap: 3px;
   background-color: #fff4e6;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -622,11 +643,9 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 ### Subgrid
 
-In the working draft of the Level 2 Grid specification there is a feature called _subgrid_, which would let us create nested grids that use the track definition of the parent grid.
+In addition to regular grids, _subgrid_ lets us create nested grids that use the track definition of the parent grid.
 
-> **Note:** This feature shipped in Firefox 71, which is currently the only browser to implement subgrid.
-
-In the current specification, we would edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid will then use the parent grid tracks to layout items.
+To use them, we edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid then use the parent grid tracks to lay out items.
 
 ```css
 .box1 {
@@ -635,11 +654,11 @@ In the current specification, we would edit the above nested grid example to cha
   grid-row-start: 1;
   grid-row-end: 3;
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: subgrid;
 }
 ```
 
-## Layering items with `z-index`
+## Layering items with z-index
 
 Grid items can occupy the same cell, and in this case we can use the {{cssxref("z-index")}} property to control the order in which overlapping items stack.
 
@@ -679,7 +698,9 @@ If we return to our example with items positioned by line number, we can change 
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -702,7 +723,7 @@ The item `box2` is now overlapping `box1`, it displays on top as it comes later 
 
 ### Controlling the order
 
-We can control the order in which items stack up by using the `z-index` property - just like positioned items. If we give `box2` a lower `z-index` than `box1` it will display below `box1` in the stack.
+We can control the order in which items stack up by using the `z-index` property - just like positioned items. If we give `box2` a lower `z-index` than `box1` it will display below `box1` in the stack.
 
 ```css
 .wrapper {
@@ -738,7 +759,9 @@ We can control the order in which items stack up by using the `z-index` property
 ```
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -757,6 +780,6 @@ We can control the order in which items stack up by using the `z-index` property
 
 {{ EmbedLiveSample('Controlling_the_order', '230', '460') }}
 
-## Next Steps
+## Next steps
 
-In this article we have had a very quick look through the Grid Layout Specification. Have a play with the code examples, and then move onto [the next part of this guide where we will really start to dig into the detail of CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout).
+In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), where we will really start to dig into the details of CSS Grid Layout.

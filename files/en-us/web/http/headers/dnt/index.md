@@ -1,14 +1,14 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.DNT
 ---
-{{HTTPSidebar}}{{Deprecated_header}}
+
+{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets
@@ -29,7 +29,7 @@ users indicate whether they would prefer privacy rather than personalized conten
 
 ## Syntax
 
-```
+```http
 DNT: 0
 DNT: 1
 DNT: null
@@ -52,7 +52,7 @@ The user's DNT preference can also be read from JavaScript using the
 {{domxref("Navigator.doNotTrack")}} property:
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+navigator.doNotTrack; // "0", "1" or null
 ```
 
 ## Specifications
@@ -69,7 +69,7 @@ navigator.doNotTrack; // "0" or "1"
 - {{HTTPHeader("Tk")}} header
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)
 - [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](https://donottrack.us/)
+- [DNT on Electronic Frontier Foundation](https://www.eff.org/issues/do-not-track)
 - DNT browser settings help:
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

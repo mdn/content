@@ -1,29 +1,18 @@
 ---
-title: isSecureContext
+title: isSecureContext global property
+short-title: isSecureContext
 slug: Web/API/isSecureContext
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Web
-  - Workers
-  - isSecureContext
+page-type: web-api-global-property
 browser-compat: api.isSecureContext
 ---
-{{APIRef}}{{SeeCompatTable}}
+
+{{APIRef}}{{AvailableInWorkers}}
 
 The global **`isSecureContext`** read-only property returns a boolean indicating whether
 the current [context is secure](/en-US/docs/Web/Security/Secure_Contexts)
 (`true`) or not (`false`).
 
-## Syntax
-
-```js
-var isItSecure = self.isSecureContext; // or just isSecureContext
-```
-
-### Value
+## Value
 
 Boolean `true` or `false`.
 

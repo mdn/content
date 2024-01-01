@@ -1,35 +1,25 @@
 ---
-title: FileSystemHandle.name
+title: "FileSystemHandle: name property"
+short-title: name
 slug: Web/API/FileSystemHandle/name
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemHandle
-  - Property
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.FileSystemHandle.name
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`name`** read-only property of the
 {{domxref("FileSystemHandle")}} interface returns the name of the entry represented by
 handle.
 
-## Syntax
+## Value
 
-```js
-var String = FileSystemHandle.name;
-```
-
-### Value
-
-{{domxref('USVString')}}
+A string.
 
 ## Examples
 
 The following function allows the user to choose a file from the file picker and
-retrieve the `name` property.
+retrieve the `name` property.
 
 ```js
 // store a reference to our file handle
@@ -40,7 +30,6 @@ async function getFile() {
   [fileHandle] = await window.showOpenFilePicker();
 
   const fileName = fileHandle.name;
-
 }
 ```
 
@@ -54,6 +43,5 @@ async function getFile() {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

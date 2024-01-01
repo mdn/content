@@ -1,16 +1,13 @@
 ---
 title: ID selectors
 slug: Web/CSS/ID_selectors
-tags:
-  - CSS
-  - Reference
-  - Selector
-  - Selectors
+page-type: css-selector
 browser-compat: css.selectors.id
 ---
+
 {{CSSRef}}
 
-The CSS **ID selector** matches an element based on the value of the element’s {{htmlattrxref("id")}} attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.
+The CSS **ID selector** matches an element based on the value of the element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. In order for the element to be selected, its `id` attribute must match exactly the value given in the selector.
 
 ```css
 /* The element with id="demo" */
@@ -62,5 +59,5 @@ Note that syntactically (but not specificity-wise), this is equivalent to the fo
 
 ## See also
 
-- [CSS Selectors](/en-US/docs/Web/CSS/CSS_Selectors)
+- [CSS Selectors](/en-US/docs/Web/CSS/CSS_selectors)
 - [Learn CSS: Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)

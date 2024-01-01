@@ -1,15 +1,10 @@
 ---
-title: 'CSP: worker-src'
+title: "CSP: worker-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-browser-compat: http.headers.csp.Content-Security-Policy.worker-src
+page-type: http-csp-directive
+browser-compat: http.headers.Content-Security-Policy.worker-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -37,7 +32,6 @@ scripts.
           {{CSP("default-src")}} directive, when governing worker
           execution.
         </p>
-        <p></p>
       </td>
     </tr>
   </tbody>
@@ -47,14 +41,16 @@ scripts.
 
 One or more sources can be allowed for the `worker-src` policy:
 
-```
+```http
 Content-Security-Policy: worker-src <source>;
 Content-Security-Policy: worker-src <source> <source>;
 ```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
 
 ## Examples
 
@@ -62,7 +58,7 @@ Content-Security-Policy: worker-src <source> <source>;
 
 Given this CSP header:
 
-```
+```http
 Content-Security-Policy: worker-src https://example.com/
 ```
 
@@ -71,9 +67,9 @@ blocked and won't load:
 
 ```html
 <script>
-  var blockedWorker = new Worker("data:application/javascript,...");
+  let blockedWorker = new Worker("data:application/javascript,…");
   blockedWorker = new SharedWorker("https://not-example.com/");
-  navigator.serviceWorker.register('https://not-example.com/sw.js');
+  navigator.serviceWorker.register("https://not-example.com/sw.js");
 </script>
 ```
 

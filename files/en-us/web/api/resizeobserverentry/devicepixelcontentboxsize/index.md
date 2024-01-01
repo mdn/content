@@ -1,15 +1,11 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize property"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - devicePixelContentBoxSize
+page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`devicePixelContentBoxSize`** read-only property of
@@ -17,9 +13,9 @@ the {{domxref("ResizeObserverEntry")}} interface returns an array containing the
 
 ## Value
 
-An array containing objects with the new size of the observed element in device pixels. The
-array is necessary to support elements that have multiple fragments, which occur in
-multi-column scenarios. Each object in the array contains two properties:
+An array containing objects with the new size of the observed element in device pixels. The
+array is necessary to support elements that have multiple fragments, which occur in
+multi-column scenarios. Each object in the array contains two properties:
 
 - `blockSize`
   - : The size of the content-box, in device pixels, of the block dimension of the observed element. For boxes
@@ -31,12 +27,11 @@ multi-column scenarios. Each object in the array contains two properties:
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more information about writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 
-The folowing example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/device-pixel-content-box/). As the callback function of a {{domxref("ResizeObserver")}}
+The following example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/articles/device-pixel-content-box). As the callback function of a {{domxref("ResizeObserver")}}
 is called after layout but before paint.
 This provides an opportunity to log the exact size in physical pixels to
 ensure a one-to-one mapping of canvas pixels to physical pixels.
@@ -49,7 +44,7 @@ const observer = new ResizeObserver((entries) => {
 
   /* … render to canvas … */
 });
-observer.observe(canvas, {box: ['device-pixel-content-box']});
+observer.observe(canvas, { box: "device-pixel-content-box" });
 ```
 
 ## Specifications

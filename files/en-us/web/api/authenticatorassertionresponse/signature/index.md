@@ -1,15 +1,11 @@
 ---
-title: AuthenticatorAssertionResponse.signature
+title: "AuthenticatorAssertionResponse: signature property"
+short-title: signature
 slug: Web/API/AuthenticatorAssertionResponse/signature
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Property
-  - Reference
-  - Web Authentication API
-  - WebAuthn
+page-type: web-api-instance-property
 browser-compat: api.AuthenticatorAssertionResponse.signature
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`signature`** read-only property of the
@@ -23,20 +19,7 @@ This signature will be sent to the server for control, as part of the response. 
 provides the proof that an authenticator does possess the private key which was used for
 the credential's generation.
 
-> **Note:** An `AuthenticatorAssertionResponse` instance is
-> available on {{domxref("PublicKeyCredential.response")}} after calling
-> {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}}.
-
-> **Note:** This property may only be used in top-level contexts and will
-> not be available in an {{HTMLElement("iframe")}} for example.
-
-## Syntax
-
-```js
-signature = authenticatorAssertionResponse.signature
-```
-
-### Value
+## Value
 
 An {{jsxref("ArrayBuffer")}} object which the signature of the authenticator (using its
 private key) for both {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
@@ -46,23 +29,7 @@ available from
 
 ## Examples
 
-```js
-var options = {
-  challenge: new Uint8Array(26), // will be another value, provided by the relying party server
-  timeout: 60000
-};
-
-navigator.credentials.get({  publicKey: options })
-  .then(function (assertionPKCred) {
-    var signature = assertionPKCred.response.signature;
-
-    // Send response and client extensions to the server so that it can
-    // go on with the authentication
-
-}).catch(function (err) {
-   console.error(err);
-});
-```
+See [User login using the WebAuthn API](/en-US/docs/Web/API/CredentialsContainer/get#user_login_using_the_webauthn_api) for a detailed example.
 
 ## Specifications
 

@@ -1,27 +1,25 @@
 ---
 title: SVGFontFaceFormatElement
 slug: Web/API/SVGFontFaceFormatElement
-tags:
-  - API
-  - Deprecated
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.SVGFontFaceFormatElement
 ---
+
 {{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGFontFaceFormatElement`** interface corresponds to the {{SVGElement("font-face-format")}} elements.
 
 Object-oriented access to the attributes of the {{SVGElement("font-face-format")}} element via the SVG DOM is not possible.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface has no methods but inherits methods from its parent, {{domxref("SVGElement")}}._
 

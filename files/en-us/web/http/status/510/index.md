@@ -1,14 +1,13 @@
 ---
 title: 510 Not Extended
 slug: Web/HTTP/Status/510
-tags:
-  - HTTP
-  - Server error
-  - Status code
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 ---
+
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP)  **`510 Not Extended`**
+The HyperText Transfer Protocol (HTTP) **`510 Not Extended`**
 response status code is sent in the context of the HTTP Extension Framework, defined in
 [RFC 2774](https://datatracker.ietf.org/doc/html/rfc2774).
 
@@ -19,12 +18,10 @@ responds with the 510 status code.
 
 ## Status
 
-```
+```http
 510 Not Extended
 ```
 
 ## Specifications
 
-| Specification                                            | Title                       |
-| -------------------------------------------------------- | --------------------------- |
-| {{RFC("2774", "510 Not Extended" , "7")}} | An HTTP Extension Framework |
+{{Specifications}}

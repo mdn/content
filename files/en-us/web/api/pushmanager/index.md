@@ -1,28 +1,22 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
+page-type: web-api-interface
 browser-compat: api.PushManager
 ---
+
 {{ApiRef("Push API")}}
 
 The **`PushManager`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides a way to receive notifications from third-party servers as well as request URLs for push notifications.
 
 This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushManager")}} property.
 
-## Properties
+## Static properties
 
-- {{domxref("PushManager.supportedContentEncodings")}}
+- [`PushManager.supportedContentEncodings`](/en-US/docs/Web/API/PushManager/supportedContentEncodings_static)
   - : Returns an array of supported content codings that can be used to encrypt the payload of a push message.
 
-## Methods
+## Instance methods
 
 - {{domxref("PushManager.getSubscription()")}}
   - : Retrieves an existing push subscription. It returns a {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object containing details of an existing subscription. If no existing subscription exists, this resolves to a `null` value.
@@ -45,27 +39,25 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 ## Example
 
 ```js
-this.onpush = function(event) {
+this.onpush = (event) => {
   console.log(event.data);
   // From here we can write the data to IndexedDB, send it to any open
   // windows, display a notification, etc.
-}
+};
 
-navigator.serviceWorker.register('serviceworker.js').then(
-  function(serviceWorkerRegistration) {
+navigator.serviceWorker
+  .register("serviceworker.js")
+  .then((serviceWorkerRegistration) => {
     serviceWorkerRegistration.pushManager.subscribe().then(
-      function(pushSubscription) {
+      (pushSubscription) => {
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
-      }, function(error) {
-        // During development it often helps to log errors to the
-        // console. In a production environment it might make sense to
-        // also report information about errors back to the
-        // application server.
-        console.log(error);
-      }
+        // for example, the fetch() API.
+      },
+      (error) => {
+        console.error(error);
+      },
     );
   });
 ```

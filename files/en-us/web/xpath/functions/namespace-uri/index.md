@@ -1,17 +1,18 @@
 ---
 title: namespace-uri
 slug: Web/XPath/Functions/namespace-uri
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `namespace-uri` function returns a string representing the namespace URI of the first node in a given node-set.
 
 ### Syntax
 
-    namespace-uri( [node-set] )
+```plain
+namespace-uri( [node-set] )
+```
 
 ### Arguments
 
@@ -25,14 +26,11 @@ A string representing URI of the namespace in which the given node resides.
 ### Notes
 
 - If the given node does not have a specified namespace, the returned string will be an empty string.
-
-<!---->
-
 - For nodes other than element and attribute nodes, the returned string will always be an empty string.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
 ### Gecko support
 

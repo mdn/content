@@ -1,18 +1,15 @@
 ---
 title: IIRFilterNode
 slug: Web/API/IIRFilterNode
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Interface
-  - Reference
-  - Web Audio API
+page-type: web-api-interface
 browser-compat: api.IIRFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
-The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **{{interwiki("wikipedia", "infinite impulse response")}}** (IIR)  filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
+The **`IIRFilterNode`** interface of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) is a {{domxref("AudioNode")}} processor which implements a general **[infinite impulse response](https://en.wikipedia.org/wiki/Infinite_impulse_response)** (IIR) filter; this type of filter can be used to implement tone control devices and graphic equalizers as well. It lets the parameters of the filter response be specified, so that it can be tuned as needed.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -56,11 +53,11 @@ However, if you need to create an odd-ordered IIR filter, you'll need to use `II
 - {{domxref("IIRFilterNode.IIRFilterNode", "IIRFilterNode()")}}
   - : Creates a new instance of an IIRFilterNode object.
 
-## Properties
+## Instance properties
 
 _This interface has no properties of its own; however, it inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the following additional methods:_
 
@@ -69,7 +66,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the fol
 
 ## Examples
 
-You can find a simple IIR filter demo live [on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can find a simple IIR filter demo live [on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 Also see our [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters) guide for a full explanation.
 

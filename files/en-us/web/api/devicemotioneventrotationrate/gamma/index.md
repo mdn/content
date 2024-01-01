@@ -1,35 +1,19 @@
 ---
-title: 'DeviceMotionEventRotationRate: gamma'
+title: "DeviceMotionEventRotationRate: gamma property"
+short-title: gamma
 slug: Web/API/DeviceMotionEventRotationRate/gamma
-tags:
-  - API
-  - Device Orientation
-  - Intermediate
-  - Mobile
-  - Motion
-  - Orientation
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventRotationRate.gamma
 ---
-{{ ApiRef("Device Orientation Events") }}
 
-This property indicates the rate of rotation around the Y axis -- in degrees per second
-\-- in a {{ domxref("DeviceMotionEventRotationRate") }} object.
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-## Syntax
+The **`gamma`** read-only property of the {{domxref("DeviceMotionEventRotationRate")}} interface indicates the rate of rotation around the Y axis, in degrees per second.
 
-```js
-var gamma = deviceRotationRate.gamma;
-```
+## Value
 
-This property is read-only.
-
-### Return value
-
-- `gamma`
-  - : A `double` indicating the rate of rotation around the Y axis, in degrees
-    per second. See [Accelerometer
-    values explained](/en-US/docs/Web/API/Detecting_device_orientation#accelerometer_values_explained) for details.
+A `double` indicating the rate of rotation around the Y axis, in degrees per second.
+See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#accelerometer_values_explained) for details.
 
 ## Specifications
 

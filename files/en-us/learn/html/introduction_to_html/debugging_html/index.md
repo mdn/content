@@ -1,16 +1,9 @@
 ---
 title: Debugging HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-tags:
-  - Beginner
-  - CodingScripting
-  - Debugging
-  - Error
-  - Guide
-  - HTML
-  - Validation
-  - validator
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
@@ -20,7 +13,7 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        HTML familiarity, as covered in, for example, <a
+        HTML familiarity, as covered in, for example, <a
           href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >,
@@ -47,9 +40,9 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
 
 When writing code of some kind, everything is usually fine, until that dreaded moment when an error occurs — you've done something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. For example, the following shows an error reported when trying to {{glossary("compile")}} a simple program written in the [Rust](https://www.rust-lang.org/) language.
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Here, the error message is relatively easy to understand — "unterminated double quote string". If you look at the listing, you can probably see how `println!(Hello, world!");` might logically be missing a double quote. However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little intimidating to someone who doesn't know anything about Rust.
+![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)Here, the error message is relatively easy to understand — "unterminated double quote string". If you look at the listing, you can probably see how `println!(Hello, world!");` might logically be missing a double quote. However, error messages can quickly get more complicated and less easy to interpret as programs get bigger, and even simple cases can look a little intimidating to someone who doesn't know anything about Rust.
 
-Debugging doesn't have to be scary though —  the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
+Debugging doesn't have to be scary though — the key to being comfortable with writing and debugging any programming language or code is familiarity with both the language and the tools.
 
 ## HTML and debugging
 
@@ -70,59 +63,62 @@ HTML itself doesn't suffer from syntax errors because browsers parse it permissi
 
 It's time to study the permissive nature of HTML code.
 
-1.  First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
-2.  Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
-3.  This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
+1. First, download our [debug-example demo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and save it locally. This demo is deliberately written with some built-in errors for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
+2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
+3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly,
-          then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly,
+         then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasised?</strong>
-          what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important
+         for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
+         what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's
-          look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-          homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
+         homepage</a>
+   </ul>
+   ```
 
-4.  Let's review the problems:
+4. Let's review the problems:
 
-    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
-    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasised.
-    - This section is badly nested: `<strong>strong <em>strong emphasised?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
-    - The {{htmlattrxref("href","a")}} attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
+   - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
+   - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been strongly emphasized.
+   - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
+   - The [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute value is missing a closing double quote. This seems to have caused the biggest problem — the link has not rendered at all.
 
-5.  Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools).
-6.  In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
-7.  Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
+5. Now let's look at the markup the browser has rendered, as opposed to the markup in the source code. To do this, we can use the browser developer tools. If you are not familiar with how to use your browser's developer tools, take a few minutes to review [Discover browser developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+6. In the DOM inspector, you can see what the rendered markup looks like: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
+7. Using the DOM inspector, let's explore our code in detail to see how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
 
-    - The paragraphs and list items have been given closing tags.
-    - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
-    - The incorrect nesting has been fixed by the browser as shown here:
+   - The paragraphs and list items have been given closing tags.
+   - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text with its own strong tag, right down to the bottom of the document!
+   - The incorrect nesting has been fixed by the browser as shown here:
 
-      ```html
-      <strong>strong
-        <em>strong emphasised?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong>
+       strong
+       <em>strong emphasized?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - The link with the missing double quote has been deleted altogether. The last list item looks like this:
+   - The link with the missing double quote has been deleted altogether. The last list item looks like this:
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong>
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
+       </strong>
+     </li>
+     ```
 
 ### HTML validation
 
@@ -132,16 +128,16 @@ The best strategy is to start by running your HTML page through the [Markup Vali
 
 ![The HTML validator homepage](validator.png)
 
-To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
+To specify the HTML to validate, you can provide a web address, upload an HTML file, or directly input some HTML code.
 
 ### Active learning: Validating an HTML document
 
-Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html).
+Let's try this with our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html).
 
-1.  First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
-2.  Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
-3.  Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
-4.  Press the _Check_ button.
+1. First, load the [Markup Validation Service](https://validator.w3.org/) in one browser tab, if it isn't already open.
+2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
+3. Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
+4. Press the _Check_ button.
 
 This should give you a list of errors and other information.
 
@@ -151,14 +147,15 @@ This should give you a list of errors and other information.
 
 The error messages are usually helpful, but sometimes they are not so helpful; with a bit of practice you can work out how to interpret these to fix your code. Let's go through the error messages and see what they mean. You'll see that each message comes with a line and column number to help you to locate the error easily.
 
-- "Consider adding a `lang` attribute to the `html` start tag to declare the language of this document.": This is not an error but a warning. The [recommendation](https://www.w3.org/International/questions/qa-html-language-declarations) is to always define a language, and this warning explains how to do it.
 - "End tag `li` implied, but there were open elements" (2 instances): These messages indicate that an element is open that should be closed. The ending tag is implied, but not actually there. The line/column information points to the first line after the line where the closing tag should really be, but this is a good enough clue to see what is wrong.
 - "Unclosed element `strong`": This is really easy to understand — a {{htmlelement("strong")}} element is unclosed, and the line/column information points right to where it is.
 - "End tag `strong` violates nesting rules": This points out the incorrectly nested elements, and the line/column information points out where they are.
 - "End of file reached when inside an attribute value. Ignoring tag": This one is rather cryptic; it refers to the fact that there is an attribute value not properly formed somewhere, possibly near the end of the file because the end of the file appears inside the attribute value. The fact that the browser doesn't render the link should give us a good clue as to what element is at fault.
-- "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
+- "End of file seen and there were open elements": This is a bit ambiguous, but basically refers to the fact there are open elements that need to be properly closed. The line numbers point to the last few lines of the file, and this error message comes with a line of code that points out an example of an open element:
 
-      example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
+  ```plain
+  example: <a href="https://www.mozilla.org/>link to Mozilla homepage</a> ↩ </ul>↩ </body>↩</html>
+  ```
 
   > **Note:** An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.
 
@@ -175,15 +172,3 @@ You will know when all your errors are fixed when you see the following banner i
 So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when you start to debug CSS, JavaScript, and other types of code later on in your career. This also marks the end of the Introduction to HTML module learning articles — now you can go on to testing yourself with our assessments: the first one is linked below.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -1,35 +1,31 @@
 ---
 title: border-bottom
 slug: Web/CSS/border-bottom
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-bottom
 ---
+
 {{CSSRef}}
 
 The **`border-bottom`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's bottom [border](/en-US/docs/Web/CSS/border). It sets the values of {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-color")}}.
 
 {{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
+As with all shorthand properties, `border-bottom` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 
 ```css
 border-bottom-style: dotted;
 border-bottom: thick green;
 ```
 
-... is actually the same as ...
+It is actually the same as this one:
 
 ```css
 border-bottom-style: dotted;
 border-bottom: none thick green;
 ```
 
-... and the value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
+The value of {{cssxref("border-bottom-style")}} given before `border-bottom` is ignored. Since the default value of {{cssxref("border-bottom-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 
@@ -50,6 +46,7 @@ border-bottom: medium dashed blue;
 border-bottom: inherit;
 border-bottom: initial;
 border-bottom: revert;
+border-bottom: revert-layer;
 border-bottom: unset;
 ```
 
@@ -79,9 +76,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the bottom side.
-</div>
+<div>This box has a border on the bottom side.</div>
 ```
 
 #### CSS

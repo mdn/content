@@ -1,32 +1,21 @@
 ---
-title: BluetoothCharacteristicProperties.notify
+title: "BluetoothCharacteristicProperties: notify property"
+short-title: notify
 slug: Web/API/BluetoothCharacteristicProperties/notify
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - notify
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
-{{draft}}{{securecontext_header}}{{APIRef("")}}
+
+{{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
 
 The **`notify`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a
 `boolean` that is `true` if notifications of the characteristic
 value without acknowledgement is permitted.
 
-## Syntax
-
-```js
-var aBoolean = BluetoothCharacteristicProperties.notify;
-```
-
-### Value
+## Value
 
 A boolean value.
 

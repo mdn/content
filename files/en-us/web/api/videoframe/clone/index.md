@@ -1,36 +1,33 @@
 ---
-title: VideoFrame.clone()
+title: "VideoFrame: clone() method"
+short-title: clone()
 slug: Web/API/VideoFrame/clone
-tags:
-  - API
-  - Method
-  - Reference
-  - clone
-  - VideoFrame
+page-type: web-api-instance-method
 browser-compat: api.VideoFrame.clone
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
 
-The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
+{{APIRef("Web Codecs API")}}
+
+The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object referencing the same media resource as the original.
 
 ## Syntax
 
-```js
-VideoFrame.clone()
+```js-nolint
+clone()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-The cloned {{domxref("VideoData")}} object.
+A new cloned {{domxref("VideoFrame")}} object.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the `VideoFrame` object has been {{domxref("Transferable","transfered", "", "true")}}.
+  - : Thrown if the `VideoFrame` object has been [transferred](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
 
 ## Examples
 
@@ -47,4 +44,3 @@ let videoFrame2 = VideoFrame.clone();
 ## Browser compatibility
 
 {{Compat}}
-

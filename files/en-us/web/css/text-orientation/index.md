@@ -1,14 +1,10 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - CSS Property
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-orientation
 ---
+
 {{CSSRef}}
 
 The **`text-orientation`** [CSS](/en-US/docs/Web/CSS) property sets the orientation of the text characters in a line. It only affects text in vertical mode (when {{cssxref("writing-mode")}} is not `horizontal-tb`). It is useful for controlling the display of languages that use vertical script, and also for making vertical table headers.
@@ -28,7 +24,8 @@ text-orientation: use-glyph-orientation;
 /* Global values */
 text-orientation: inherit;
 text-orientation: initial;
-text-orientation: initial;
+text-orientation: revert;
+text-orientation: revert-layer;
 text-orientation: unset;
 ```
 
@@ -87,6 +84,6 @@ p {
 ## See also
 
 - The other vertical-script related CSS properties: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, and {{cssxref("unicode-bidi")}}.
-- [CSS Logical properties](/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
-- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>
+- Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>

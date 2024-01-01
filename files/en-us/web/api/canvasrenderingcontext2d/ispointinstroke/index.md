@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.isPointInStroke()
+title: "CanvasRenderingContext2D: isPointInStroke() method"
+short-title: isPointInStroke()
 slug: Web/API/CanvasRenderingContext2D/isPointInStroke
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.isPointInStroke
 ---
+
 {{APIRef}}
 
 The
@@ -18,9 +15,9 @@ area contained by the stroking of a path.
 
 ## Syntax
 
-```js
-ctx.isPointInStroke(x, y);
-ctx.isPointInStroke(path, x, y);
+```js-nolint
+isPointInStroke(x, y)
+isPointInStroke(path, x, y)
 ```
 
 ### Parameters
@@ -56,9 +53,9 @@ within the area of the current path's stroke.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-const result = document.getElementById('result');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+const result = document.getElementById("result");
 
 ctx.rect(10, 10, 100, 100);
 ctx.stroke();
@@ -84,26 +81,26 @@ otherwise it is red.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create ellipse
 const ellipse = new Path2D();
-ellipse.ellipse(150, 75, 40, 60, Math.PI * .25, 0, 2 * Math.PI);
+ellipse.ellipse(150, 75, 40, 60, Math.PI * 0.25, 0, 2 * Math.PI);
 ctx.lineWidth = 25;
-ctx.strokeStyle = 'red';
+ctx.strokeStyle = "red";
 ctx.fill(ellipse);
 ctx.stroke(ellipse);
 
 // Listen for mouse moves
-canvas.addEventListener('mousemove', function(event) {
+canvas.addEventListener("mousemove", (event) => {
   // Check whether point is inside ellipse's stroke
-  if (ctx.isPointInStroke(ellipse, event.offsetX, event.offsetY)) {
-    ctx.strokeStyle = 'green';
-  }
-  else {
-    ctx.strokeStyle = 'red';
-  }
+  const isPointInStroke = ctx.isPointInStroke(
+    ellipse,
+    event.offsetX,
+    event.offsetY,
+  );
+  ctx.strokeStyle = isPointInStroke ? "green" : "red";
 
   // Draw ellipse
   ctx.clearRect(0, 0, canvas.width, canvas.height);

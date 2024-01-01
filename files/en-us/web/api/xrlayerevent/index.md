@@ -1,34 +1,31 @@
 ---
 title: XRLayerEvent
 slug: Web/API/XRLayerEvent
-tags:
-  - API
-  - Interface
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.XRLayerEvent
 ---
-{{APIRef("WebXR Device API")}} {{secureContext_header}}
+
+{{APIRef("WebXR Device API")}} {{secureContext_header}}{{SeeCompatTable}}
 
 The **`XRLayerEvent`** interface of the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) is the event type for events related to a change of state of an {{domxref("XRLayer")}} object. These events occur, for example, when the layer needs to be redrawn.
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("XRLayerEvent.XRLayerEvent", "XRLayerEvent()")}}
+- {{domxref("XRLayerEvent.XRLayerEvent", "XRLayerEvent()")}} {{Experimental_Inline}}
   - : Creates and returns a new `XRLayerEvent` object.
 
-## Properties
+## Instance properties
 
 _In addition to properties inherited from its parent interface, {{domxref("Event")}}, `XRLayerEvent` provides the following:_
 
-- {{domxref("XRLayerEvent.layer", "layer")}} {{ReadOnlyInline}}
+- {{domxref("XRLayerEvent.layer", "layer")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The {{domxref("XRLayer")}} which generated the event.
 
-## Methods
+## Instance methods
 
 _While `XRSessionEvent` defines no methods, it inherits methods from its parent interface, {{domxref("Event")}}._
 

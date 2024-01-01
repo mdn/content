@@ -1,23 +1,21 @@
 ---
-title: clearInterval()
+title: clearInterval() global function
+short-title: clearInterval()
 slug: Web/API/clearInterval
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - clearInterval
+page-type: web-api-global-function
 browser-compat: api.clearInterval
 ---
-{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
 was previously established by a call to {{domxref("setInterval", "setInterval()")}}.
+If the parameter provided does not identify a previously established action,
+this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 clearInterval(intervalID)
 ```
 
@@ -29,19 +27,18 @@ clearInterval(intervalID)
 
 It's worth noting that the pool of IDs used by
 {{domxref("setInterval", "setInterval()")}} and
-{{domxref("setTimeout", "setTimeout()")}} are shared, which
+{{domxref("setTimeout()")}} are shared, which
 means you can technically use `clearInterval()` and
 {{domxref("clearTimeout", "clearTimeout()")}} interchangeably.
 However, for clarity, you should avoid doing so.
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
-See the [`setInterval()`
-examples](/en-US/docs/Web/API/setInterval#Examples).
+See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
 
 ## Specifications
 
@@ -53,9 +50,7 @@ examples](/en-US/docs/Web/API/setInterval#Examples).
 
 ## See also
 
-- [JavaScript timers](/en-US/docs/JavaScript/Timers)
-- {{domxref("setTimeout")}}
-- {{domxref("setInterval")}}
-- {{domxref("clearTimeout")}}
-- {{domxref("Window.requestAnimationFrame")}}
-- [_Daemons_ management](/en-US/docs/JavaScript/Timers/Daemons)
+- {{domxref("setTimeout()")}}
+- {{domxref("setInterval()")}}
+- {{domxref("clearTimeout()")}}
+- {{domxref("Window.requestAnimationFrame()")}}

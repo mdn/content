@@ -1,16 +1,11 @@
 ---
-title: Notification.data
+title: "Notification: data property"
+short-title: data
 slug: Web/API/Notification/data
-tags:
-  - API
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
-  - data
+page-type: web-api-instance-property
 browser-compat: api.Notification.data
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`data`** read-only property of the
@@ -21,13 +16,7 @@ data, as specified in the `data` option of the
 The notification's data can be any arbitrary data that you want associated with the
 notification.
 
-## Syntax
-
-```js
-var data = Notification.data;
-```
-
-### Value
+## Value
 
 A structured clone.
 
@@ -38,14 +27,17 @@ created, then the notification is fired using the `Notification()`
 constructor.
 
 ```js
-var options = {
-  body: 'Do you like my body?',
-  data: 'I like peas.'
-}
+const options = {
+  body: "Your code submission has received 3 new review comments.",
+  data: {
+    url: "https://example.com/review/12345",
+    status: "open",
+  },
+};
 
-var n = new Notification('Test notification',options);
+const n = new Notification("New review activity", options);
 
-console.log(n.data) // should return 'I like peas.'
+console.log(n.data); // Logs the data object
 ```
 
 ## Specifications
@@ -58,5 +50,4 @@ console.log(n.data) // should return 'I like peas.'
 
 ## See also
 
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

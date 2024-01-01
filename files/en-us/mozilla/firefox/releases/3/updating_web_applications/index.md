@@ -1,12 +1,12 @@
 ---
 title: Updating web applications for Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
-tags:
-  - Firefox 3
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
-There are a number of changes in the upcoming Firefox 3 that may affect your web site or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
+There are a number of changes in the upcoming Firefox 3 that may affect your website or web application, as well as new features you may wish to take advantage of. This article will serve as a starting point as you work on updating your content to take the fullest possible advantage of Firefox 3.
 
 ## DOM changes
 
@@ -25,11 +25,15 @@ Firefox 3 closes a security bug in frames and iframes that allowed them to inher
 
 The `<script>` element in `text/html` documents now requires a closing `</script>` in HTML 4 documents, even if you're not including any content in between. While in previous versions of Firefox, you could do:
 
-    <script ... />
+```html
+<script … />
+```
 
 Now the markup must comply with the HTML specifications (if it's actually HTML), and hence you must actually close it, like this:
 
-    <script ...></script>
+```html
+<script …></script>
+```
 
 This improves both compatibility and security.
 
@@ -41,19 +45,21 @@ font-size values in em and ex units used to be affected by the user's minimum fo
 
 font-size values in em and ex units are now based on an "intended font size" that is not affected by the user's minimum font size. In other words, font sizes are always calculated according to the designer's intention and are adjusted for minimum font size afterwards.
 
-See {{Bug(434718)}}, especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bugzilla.mozilla.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
+See [Firefox bug 434718](https://bugzil.la/434718), especially its NOT A CASE FOR THE BUG TEMPLATE - The following link points to a Bugzilla attachment, not a Bugzilla bug; if you use the attachment number as a bug number, it becomes nonsense [attachment 322943](https://bug434718.bmoattachments.org/attachment.cgi?id=322943) NOT A CASE FOR THE BUG TEMPLATE for a demonstration (must be watched with a minimum font size >= 6 to see the difference: the two box cascades behave differently in Firefox 2, because the em-based font-size "bounces" off the minimum font size).
 
 ## Security changes
 
 ### Chrome access
 
-In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons -- which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
+In prior versions of Firefox, any web page could load scripts or images from chrome using the `chrome://` protocol. Among other things, this made it possible for sites to detect the presence of add-ons — which could be used to breach a user's security by bypassing add-ons that add security features to the browser.
 
 Firefox 3 only allows web content to access items in the `chrome://browser/` and `chrome://toolkit/` spaces. These files are intended to be accessible by web content. All other chrome content is now blocked from access by the web.
 
 There is, however, a way for extensions to make their content web-accessible. They can specify a special flag in their `chrome.manifest` file, like this:
 
-    content mypackage location/ contentaccessible=yes
+```plain
+content mypackage location/ contentaccessible=yes
+```
 
 This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
 
@@ -71,15 +77,15 @@ In prior versions of Firefox, there were cases in which when the user submitted 
 
 ### Using remote JARs in frames
 
-Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/security/announce/2008/mfsa2008-23.html).
+Using code in JAR files loaded from other domains is no longer allowed in frames; this mitigates a [potential attack vector](https://www.mozilla.org/en-US/security/advisories/mfsa2008-23/).
 
 ### Changes to same-origin policy for file: URIs
 
-The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Same-origin_policy_for_file:_URIs) for details.
+The same-origin policy for file: URIs has changed in Firefox 3. This may affect your content; please see [Same-origin policy for file: URIs](/en-US/docs/Web/Security/Same-origin_policy#file_origins) for details.
 
 ## JavaScript changes
 
-Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your web site or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
+Firefox 3 supports [JavaScript 1.8](/en-US/docs/New_in_JavaScript_1.8). One important change that may require updates to your website or application is that the obsolete and non-standard `Script` object is no longer supported. This is not the `<script>` tag, but a JavaScript object that was never standardized. It is unlikely this is something you ever used anyway, so you're probably fine.
 
 ## See also
 

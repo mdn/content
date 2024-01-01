@@ -1,76 +1,89 @@
 ---
-title: 'Element: scroll event'
+title: "Element: scroll event"
+short-title: scroll
 slug: Web/API/Element/scroll_event
-tags:
-  - API
-  - Element
-  - Event
-  - Reference
-  - Scroll
+page-type: web-api-event
 browser-compat: api.Element.scroll_event
 ---
+
 {{APIRef}}
 
 The **`scroll`** event fires when an element has been scrolled.
+To detect when scrolling has completed, see the {{domxref("Element/scrollend_event", "Element: scrollend event")}}.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
 
-> **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("scroll", (event) => {});
+
+onscroll = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
-### Scroll event throttling
+The following examples show how to use the `scroll` event with an event listener and with the `onscroll` event handler property.
+The {{DOMxRef("setTimeout()")}} method is used to throttle the event handler because `scroll` events can fire at a high rate.
+For additional examples that use {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, see the {{domxref("Document/scroll_event", "Document: scroll event")}} page.
 
-Since `scroll` events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.
+### Using `scroll` with an event listener
 
-Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the `scroll` event for `requestAnimationFrame`.
+The following example shows how to use the `scroll` event to detect when the user is scrolling inside an element:
+
+```html
+<div
+  id="scroll-box"
+  style="overflow: scroll; height: 100px; width: 100px; float: left;">
+  <p style="height: 200px; width: 200px;">Scroll me!</p>
+</div>
+<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+```
 
 ```js
-// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+const element = document.querySelector("div#scroll-box");
+const output = document.querySelector("p#output");
 
-let last_known_scroll_position = 0;
-let ticking = false;
-
-function doSomething(scroll_pos) {
-  // Do something with the scroll position
-}
-
-window.addEventListener('scroll', function(e) {
-  last_known_scroll_position = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(function() {
-      doSomething(last_known_scroll_position);
-      ticking = false;
-    });
-
-    ticking = true;
-  }
+element.addEventListener("scroll", (event) => {
+  output.innerHTML = "Scroll event fired!";
+  setTimeout(() => {
+    output.innerHTML = "Waiting on scroll events...";
+  }, 1000);
 });
 ```
 
-> **Note:** You can find more examples on the {{domxref("Document/resize_event", "resize")}} event page.
+{{EmbedLiveSample("Using_scroll_with_an_event_listener", "100%", 120)}}
+
+### Using `onscroll` event handler property
+
+The following example shows how to use the `onscroll` event handler property to detect when the user is scrolling:
+
+```html
+<div
+  id="scroll-box"
+  style="overflow: scroll; height: 100px; width: 100px; float: left;">
+  <p style="height: 200px; width: 200px;">Scroll me!</p>
+</div>
+<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+```
+
+```js
+const element = document.querySelector("div#scroll-box");
+const output = document.querySelector("p#output");
+
+element.onscroll = (event) => {
+  output.innerHTML = "Element scroll event fired!";
+  setTimeout(() => {
+    output.innerHTML = "Waiting on scroll events...";
+  }, 1000);
+};
+```
+
+{{EmbedLiveSample("Using_onscroll_event_handler_property", "100%", 120)}}
 
 ## Specifications
 
@@ -82,4 +95,6 @@ window.addEventListener('scroll', function(e) {
 
 ## See also
 
-- Document: {{domxref("Document/scroll_event", "scroll")}} event
+- [Element `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event)
+- [Document `scroll` event](/en-US/docs/Web/API/Document/scroll_event)
+- [Document `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event)

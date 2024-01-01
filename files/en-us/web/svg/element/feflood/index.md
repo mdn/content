@@ -1,12 +1,10 @@
 ---
 title: <feFlood>
 slug: Web/SVG/Element/feFlood
-tags:
-  - Element
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFlood
 ---
+
 {{SVGRef}}
 
 The **`<feFlood>`** SVG filter primitive fills the filter subregion with the color and opacity defined by {{SVGAttr("flood-color")}} and {{SVGAttr("flood-opacity")}}.
@@ -19,35 +17,40 @@ The **`<feFlood>`** SVG filter primitive fills the filter subregion with the col
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-*   [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-*   {{SVGAttr("class")}}
-*   {{SVGAttr("style")}}
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
+- {{SVGAttr("class")}}
+- {{SVGAttr("style")}}
 
 ### Specific attributes
 
-*   {{SVGAttr("flood-color")}}
-*   {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("flood-color")}}
+- {{SVGAttr("flood-opacity")}}
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
 ## Example
 
-### HTML Content
+### HTML
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <defs>
     <filter id="floodFilter" filterUnits="userSpaceOnUse">
-      <feFlood x="50" y="50" width="100" height="100"
-          flood-color="green" flood-opacity="0.5"/>
+      <feFlood
+        x="50"
+        y="50"
+        width="100"
+        height="100"
+        flood-color="green"
+        flood-opacity="0.5" />
     </filter>
   </defs>
 
-  <use style="filter: url(#floodFilter);"/>
+  <use style="filter: url(#floodFilter);" />
 </svg>
 ```
 
@@ -65,23 +68,22 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("animateColor")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feBlend")}}
-*   {{SVGElement("feColorMatrix")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feComposite")}}
-*   {{SVGElement("feConvolveMatrix")}}
-*   {{SVGElement("feDiffuseLighting")}}
-*   {{SVGElement("feDisplacementMap")}}
-*   {{SVGElement("feGaussianBlur")}}
-*   {{SVGElement("feImage")}}
-*   {{SVGElement("feMerge")}}
-*   {{SVGElement("feMorphology")}}
-*   {{SVGElement("feOffset")}}
-*   {{SVGElement("feSpecularLighting")}}
-*   {{SVGElement("feTile")}}
-*   {{SVGElement("feTurbulence")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feBlend")}}
+- {{SVGElement("feColorMatrix")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feComposite")}}
+- {{SVGElement("feConvolveMatrix")}}
+- {{SVGElement("feDiffuseLighting")}}
+- {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feGaussianBlur")}}
+- {{SVGElement("feImage")}}
+- {{SVGElement("feMerge")}}
+- {{SVGElement("feMorphology")}}
+- {{SVGElement("feOffset")}}
+- {{SVGElement("feSpecularLighting")}}
+- {{SVGElement("feTile")}}
+- {{SVGElement("feTurbulence")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

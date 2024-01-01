@@ -1,17 +1,15 @@
 ---
-title: Document.createEvent()
+title: "Document: createEvent() method"
+short-title: createEvent()
 slug: Web/API/Document/createEvent
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.createEvent
 ---
+
+{{APIRef("DOM")}}
+
 > **Warning:** Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.
 > Use [event constructors](/en-US/docs/Web/API/CustomEvent) instead.
-
-{{ApiRef("DOM")}}
 
 Creates an [event](/en-US/docs/Web/API/Event) of the type specified. The
 returned object should be first initialized and can then be passed to
@@ -19,29 +17,36 @@ returned object should be first initialized and can then be passed to
 
 ## Syntax
 
-```js
-var event = document.createEvent(type);
+```js-nolint
+createEvent(type)
 ```
 
-- `event` is the created [Event](/en-US/docs/Web/API/Event) object.
-- `type` is a string that represents the type of event to be
-  created. Possible event types include `"UIEvents"`,
-  `"MouseEvents"`, `"MutationEvents"`, and
-  `"HTMLEvents"`. See {{Anch("Notes")}} section for details.
+### Parameters
 
-## Example
+- `type`
+  - : A string that represents the type of event to be created. Possible event types include `"UIEvents"`, `"MouseEvents"`, `"MutationEvents"`, and `"HTMLEvents"`. See [Notes](#notes) section for details.
+
+### Return value
+
+An [Event](/en-US/docs/Web/API/Event) object.
+
+## Examples
 
 ```js
 // Create the event.
-var event = document.createEvent('Event');
+const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // Listen for the event.
-elem.addEventListener('build', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "build",
+  (e) => {
+    // e.target matches elem
+  },
+  false,
+);
 
 // Target can be any Element or other EventTarget.
 elem.dispatchEvent(event);
@@ -50,8 +55,7 @@ elem.dispatchEvent(event);
 ## Notes
 
 Event type strings suitable for passing to `createEvent()` are listed in the
-[DOM standard — see the
-table in step 2](https://dom.spec.whatwg.org/#dom-document-createevent). Bear in mind that most event objects now have constructors, which
+[DOM standard — see the table in step 2](https://dom.spec.whatwg.org/#dom-document-createevent). Bear in mind that most event objects now have constructors, which
 are the modern recommended way to create event object instances.
 
 Gecko supports some non-standard event object aliases, which are listed below.

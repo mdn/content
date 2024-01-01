@@ -1,17 +1,10 @@
 ---
 title: A basic 2D WebGL animation example
 slug: Web/API/WebGL_API/Basic_2D_animation_example
-tags:
-  - 2D Animation
-  - 2D Graphics
-  - Animation
-  - Drawing
-  - Example
-  - Graphics
-  - WebGL
-  - WebGL API
+page-type: guide
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 In this WebGL example, we create a canvas and within it render a rotating square using WebGL. The coordinate system we use to represent our scene is the same as the canvas's coordinate system. That is, (0, 0) is at the top-left corner and the bottom-right corner is at (600, 460).
 
@@ -113,11 +106,13 @@ let aVertexPosition;
 
 // Animation timing
 
+let shaderProgram;
+let currentAngle;
 let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 ```
 
-Initializing the program is handled through a {{event("load")}} event handler called `startup()`:
+Initializing the program is handled through a {{domxref("Window/load_event", "load")}} event handler called `startup()`:
 
 ```js
 window.addEventListener("load", startup, false);
@@ -129,23 +124,22 @@ function startup() {
   const shaderSet = [
     {
       type: gl.VERTEX_SHADER,
-      id: "vertex-shader"
+      id: "vertex-shader",
     },
     {
       type: gl.FRAGMENT_SHADER,
-      id: "fragment-shader"
-    }
+      id: "fragment-shader",
+    },
   ];
 
   shaderProgram = buildShaderProgram(shaderSet);
 
-  aspectRatio = glCanvas.width/glCanvas.height;
+  aspectRatio = glCanvas.width / glCanvas.height;
   currentRotation = [0, 1];
   currentScale = [1.0, aspectRatio];
 
   vertexArray = new Float32Array([
-      -0.5, 0.5, 0.5, 0.5, 0.5, -0.5,
-      -0.5, 0.5, 0.5, -0.5, -0.5, -0.5
+    -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5,
   ]);
 
   vertexBuffer = gl.createBuffer();
@@ -153,7 +147,7 @@ function startup() {
   gl.bufferData(gl.ARRAY_BUFFER, vertexArray, gl.STATIC_DRAW);
 
   vertexNumComponents = 2;
-  vertexCount = vertexArray.length/vertexNumComponents;
+  vertexCount = vertexArray.length / vertexNumComponents;
 
   currentAngle = 0.0;
 
@@ -185,17 +179,17 @@ The `buildShaderProgram()` function accepts as input an array of objects describ
 
 ```js
 function buildShaderProgram(shaderInfo) {
-  let program = gl.createProgram();
+  const program = gl.createProgram();
 
-  shaderInfo.forEach(function(desc) {
-    let shader = compileShader(desc.id, desc.type);
+  shaderInfo.forEach((desc) => {
+    const shader = compileShader(desc.id, desc.type);
 
     if (shader) {
       gl.attachShader(program, shader);
     }
   });
 
-  gl.linkProgram(program)
+  gl.linkProgram(program);
 
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     console.log("Error linking shader program:");
@@ -224,14 +218,18 @@ The `compileShader()` function, below, is called by `buildShaderProgram()` to co
 
 ```js
 function compileShader(id, type) {
-  let code = document.getElementById(id).firstChild.nodeValue;
-  let shader = gl.createShader(type);
+  const code = document.getElementById(id).firstChild.nodeValue;
+  const shader = gl.createShader(type);
 
   gl.shaderSource(shader, code);
   gl.compileShader(shader);
 
   if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-    console.log(`Error compiling ${type === gl.VERTEX_SHADER ? "vertex" : "fragment"} shader:`);
+    console.log(
+      `Error compiling ${
+        type === gl.VERTEX_SHADER ? "vertex" : "fragment"
+      } shader:`,
+    );
     console.log(gl.getShaderInfoLog(shader));
   }
   return shader;
@@ -256,18 +254,15 @@ function animateScene() {
   gl.clearColor(0.8, 0.9, 1.0, 1.0);
   gl.clear(gl.COLOR_BUFFER_BIT);
 
-  let radians = currentAngle * Math.PI / 180.0;
+  const radians = (currentAngle * Math.PI) / 180.0;
   currentRotation[0] = Math.sin(radians);
   currentRotation[1] = Math.cos(radians);
 
   gl.useProgram(shaderProgram);
 
-  uScalingFactor =
-      gl.getUniformLocation(shaderProgram, "uScalingFactor");
-  uGlobalColor =
-      gl.getUniformLocation(shaderProgram, "uGlobalColor");
-  uRotationVector =
-      gl.getUniformLocation(shaderProgram, "uRotationVector");
+  uScalingFactor = gl.getUniformLocation(shaderProgram, "uScalingFactor");
+  uGlobalColor = gl.getUniformLocation(shaderProgram, "uGlobalColor");
+  uRotationVector = gl.getUniformLocation(shaderProgram, "uRotationVector");
 
   gl.uniform2fv(uScalingFactor, currentScale);
   gl.uniform2fv(uRotationVector, currentRotation);
@@ -275,18 +270,23 @@ function animateScene() {
 
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
-  aVertexPosition =
-      gl.getAttribLocation(shaderProgram, "aVertexPosition");
+  aVertexPosition = gl.getAttribLocation(shaderProgram, "aVertexPosition");
 
   gl.enableVertexAttribArray(aVertexPosition);
-  gl.vertexAttribPointer(aVertexPosition, vertexNumComponents,
-        gl.FLOAT, false, 0, 0);
+  gl.vertexAttribPointer(
+    aVertexPosition,
+    vertexNumComponents,
+    gl.FLOAT,
+    false,
+    0,
+    0,
+  );
 
   gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
 
-  window.requestAnimationFrame(function(currentTime) {
-    let deltaAngle = ((currentTime - previousTime) / 1000.0)
-          * degreesPerSecond;
+  requestAnimationFrame((currentTime) => {
+    const deltaAngle =
+      ((currentTime - previousTime) / 1000.0) * degreesPerSecond;
 
     currentAngle = (currentAngle + deltaAngle) % 360;
 
@@ -298,7 +298,7 @@ function animateScene() {
 
 The first thing that needs to be done in order to draw a frame of the animation is to clear the background to the desired color. In this case, we set the viewport based on the size of the {{HTMLElement("canvas")}}, call {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}} to set the color to use when clearing content, then we clear the buffer with {{domxref("WebGLRenderingContext.clear", "clear()")}}.
 
-Next, the current rotation vector is computed by converting the current rotation in degrees (`currentAngle`) into {{interwiki("wikipedia", "radians")}}, then setting the first component of the rotation vector to the {{interwiki("wikipedia", "sine")}} of that value and the second component to the {{interwiki("wikipedia", "cosine")}}. The `currentRotation` vector is now the location of the point on the {{interwiki("wikipedia", "unit circle")}} located at the angle `currentAngle`.
+Next, the current rotation vector is computed by converting the current rotation in degrees (`currentAngle`) into [radians](https://en.wikipedia.org/wiki/Radians), then setting the first component of the rotation vector to the [sine](https://en.wikipedia.org/wiki/Sine) of that value and the second component to the [cosine](https://en.wikipedia.org/wiki/Cosine). The `currentRotation` vector is now the location of the point on the [unit circle](https://en.wikipedia.org/wiki/Unit_circle) located at the angle `currentAngle`.
 
 {{domxref("WebGLRenderingContext.useProgram", "useProgram()")}} is called to activate the GLSL shading program we established previously. Then we obtain the locations of each of the uniforms used to share information between the JavaScript code and the shaders (with {{domxref("WebGLRenderingContext.getUniformLocation", "getUniformLocation()")}}).
 
@@ -308,7 +308,7 @@ The uniform named `uScalingFactor` is set to the `currentScale` value previously
 
 `uGlobalColor` is set using {{domxref("WebGLRenderingContext/uniform", "uniform4fv()")}} to the color we wish to use when drawing the square. This is a 4-component floating-point vector (one component each for red, green, blue, and alpha).
 
-Now that that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+Now that's all out of the way, we can set up the vertex buffer and draw our shape, first, the buffer of vertexes that will be used to draw the triangles of the shape is set by calling {{domxref("WebGLRenderingContext.bindBuffer", "bindBuffer()")}}. Then the vertex position attribute's index is obtained from the shader program by calling {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 
 With the index of the vertex position attribute now available in `aVertexPosition`, we call `enableVertexAttribArray()` to enable the position attribute so it can be used by the shader program (in particular, by the vertex shader).
 

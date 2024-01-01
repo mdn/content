@@ -1,234 +1,226 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - Web
+page-type: javascript-statement
 browser-compat: javascript.statements.switch
 ---
+
 {{jsSidebar("Statements")}}
 
-The **`switch`** statement evaluates
-an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators),
-matching the expression's value to a `case` clause, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) associated
-with that `case`, as well as statements in `case`s that follow
-the matching `case`.
+The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html", "taller")}}
 
 ## Syntax
 
-```js
+```js-nolint
 switch (expression) {
-  case value1:
-    //Statements executed when the
-    //result of expression matches value1
-    [break;]
-  case value2:
-    //Statements executed when the
-    //result of expression matches value2
-    [break;]
-  ...
-  case valueN:
-    //Statements executed when the
-    //result of expression matches valueN
-    [break;]
-  [default:
-    //Statements executed when none of
-    //the values match the value of the expression
-    [break;]]
+  case caseExpression1:
+    statements
+  case caseExpression2:
+    statements
+  // …
+  case caseExpressionN:
+    statements
+  default:
+    statements
 }
 ```
 
 - `expression`
   - : An expression whose result is matched against each `case` clause.
-- `case valueN` {{optional_inline}}
-  - : A `case` clause used to match against `expression`.
-    If the `expression` matches the specified
-    `valueN`, the statements inside the `case` clause are
-    executed until either the end of the `switch` statement or a
-    `break`.
+- `case caseExpressionN` {{optional_inline}}
+  - : A `case` clause used to match against `expression`. If the value of `expression` matches the value of any `caseExpressionN`, execution starts from the first statement after that `case` clause until either the end of the `switch` statement or the first encountered `break`.
 - `default` {{optional_inline}}
-  - : A `default` clause; if provided, this clause is executed if the value of
-    `expression` doesn't match any of the `case` clauses.
+  - : A `default` clause; if provided, this clause is executed if the value of `expression` doesn't match any of the `case` clauses. A `switch` statement can only have one `default` clause.
 
 ## Description
 
-A `switch` statement first evaluates its expression. It then looks for the
-first `case` clause whose expression evaluates to the same value as the
-result of the input expression (using the [strict
-comparison](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) and transfers control to that clause, executing the
-associated statements. (If multiple `case`s match the provided value, the
-first `case` that matches is selected, even if the `case`s are not
-equal to each other.)
+A `switch` statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) comparison) and transfers control to that clause, executing all statements following that clause.
 
-If no matching `case` clause is found, the program looks for the optional
-`default` clause, and if found, transfers control to that clause, executing
-the associated statements. If no `default` clause is found, the program
-continues execution at the statement following the end of `switch`. By
-convention, the `default` clause is the last clause, but it does not need to
-be so.
+The clause expressions are only evaluated when necessary — if a match is already found, subsequent `case` clause expressions will not be evaluated, even when they will be visited by [fall-through](#breaking_and_fall-through).
 
-The optional
-[`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break)
-statement associated with each `case` label ensures that the program breaks
-out of `switch` once the matched statement is executed and continues
-execution at the statement following `switch`. If `break` is
-omitted, the program continues execution at the next statement in the
-`switch` statement. The
-[`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break)
-statement is not required if a
-[`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return)
-statement precedes it.
+```js
+switch (undefined) {
+  case console.log(1):
+  case console.log(2):
+}
+// Only logs 1
+```
+
+If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing statements following that clause. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. By convention, the `default` clause is the last clause, but it does not need to be so. A `switch` statement may only have one `default` clause; multiple `default` clauses will result in a {{jsxref("SyntaxError")}}.
+
+### Breaking and fall-through
+
+You can use the [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement within a `switch` statement's body to break out early, often when all statements between two `case` clauses have been executed. Execution will continue at the first statement following `switch`.
+
+If `break` is omitted, execution will proceed to the next `case` clause, even to the `default` clause, regardless of whether the value of that clause's expression matches. This behavior is called "fall-through".
+
+```js
+const foo = 0;
+switch (foo) {
+  case -1:
+    console.log("negative 1");
+    break;
+  case 0: // Value of foo matches this criteria; execution starts from here
+    console.log(0);
+  // Forgotten break! Execution falls through
+  case 1: // no break statement in 'case 0:' so this case will run as well
+    console.log(1);
+    break; // Break encountered; will not continue into 'case 2:'
+  case 2:
+    console.log(2);
+    break;
+  default:
+    console.log("default");
+}
+// Logs 0 and 1
+```
+
+In the appropriate context, other control-flow statements also have the effect of breaking out of the `switch` statement. For example, if the `switch` statement is contained in a function, then a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement terminates the execution of the function body and therefore the `switch` statement. If the `switch` statement is contained in a loop, then a [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement stops the `switch` statement and jumps to the next iteration of the loop.
+
+### Lexical scoping
+
+The `case` and `default` clauses are like [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label): they indicate possible places that control flow may jump to. However, they don't create lexical [scopes](/en-US/docs/Glossary/Scope) themselves (neither do they automatically break out — as demonstrated above). For example:
+
+```js-nolint example-bad
+const action = "say_hello";
+switch (action) {
+  case "say_hello":
+    const message = "hello";
+    console.log(message);
+    break;
+  case "say_hi":
+    const message = "hi";
+    console.log(message);
+    break;
+  default:
+    console.log("Empty action received.");
+}
+```
+
+This example will output the error "Uncaught SyntaxError: Identifier 'message' has already been declared", because the first `const message = 'hello';` conflicts with the second `const message = 'hi';` declaration, even when they're within their own separate case clauses. Ultimately, this is due to both `const` declarations being within the same block scope created by the `switch` body.
+
+To fix this, whenever you need to use `let` or `const` declarations in a `case` clause, wrap it in a block.
+
+```js
+const action = "say_hello";
+switch (action) {
+  case "say_hello": {
+    const message = "hello";
+    console.log(message);
+    break;
+  }
+  case "say_hi": {
+    const message = "hi";
+    console.log(message);
+    break;
+  }
+  default: {
+    console.log("Empty action received.");
+  }
+}
+```
+
+This code will now output `hello` in the console as it should, without any errors.
 
 ## Examples
 
-### Using `switch`
+### Using switch
 
-In the following example, if `expr` evaluates to `Bananas`, the
-program matches the value with case `case 'Bananas'` and executes the
-associated statement. When `break` is encountered, the program breaks out of
-`switch` and executes the statement following `switch`. If
-`break` were omitted, the statement for the `case 'Cherries'`
-would also be executed.
+In the following example, if `expr` evaluates to `Bananas`, the program matches the value with case `case 'Bananas'` and executes the associated statement. When `break` is encountered, the program breaks out of `switch` and executes the statement following `switch`. If `break` were omitted, the statement for the `case 'Cherries'` would also be executed.
 
 ```js
 switch (expr) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.');
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
     break;
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.');
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
     break;
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.');
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
     break;
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.');
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
     break;
-  case 'Mangoes':
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.');
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
     break;
   default:
-    console.log('Sorry, we are out of ' + expr + '.');
+    console.log(`Sorry, we are out of ${expr}.`);
 }
 
 console.log("Is there anything else you'd like?");
 ```
 
-### What happens if I forgot a `break`?
+### Putting the default clause between two case clauses
 
-If you forget a `break` then the script will run from the `case`
-where the criterion is met and will run the cases after that **regardless if a
-criterion was met**.
-
-See example here:
+If no match is found, execution will start from the `default` clause, and execute all statements after that.
 
 ```js
-var foo = 0;
-switch (foo) {
-  case -1:
-    console.log('negative 1');
-    break;
-  case 0: // foo is 0 so criteria met here so this block will run
-    console.log(0);
-    // NOTE: the forgotten break would have been here
-  case 1: // no break statement in 'case 0:' so this case will run as well
-    console.log(1);
-    break; // it encounters this break so will not continue into 'case 2:'
-  case 2:
-    console.log(2);
-    break;
-  default:
-    console.log('default');
-}
-```
-
-### Can I put a `default` between cases?
-
-Yes, you can! JavaScript will drop you back to the `default` if it can't
-find a match:
-
-```js
-var foo = 5;
+const foo = 5;
 switch (foo) {
   case 2:
     console.log(2);
     break; // it encounters this break so will not continue into 'default:'
   default:
-    console.log('default')
-    // fall-through
+    console.log("default");
+  // fall-through
   case 1:
-    console.log('1');
+    console.log("1");
 }
 ```
 
-It also works when you put `default` before all other `case`s.
+It also works when you put `default` before all other `case` clauses.
 
-### Methods for multi-criteria `case`
+### Taking advantage of fall-through
 
-This technique is also commonly called fall-through.
+This method takes advantage of the fact that if there is no `break` below a `case` clause, execution will continue to the next `case` clause regardless if that `case` meets the criteria.
 
-#### Multi-`case` : single operation
-
-This method takes advantage of the fact that if there is no break below a
-`case` clause it will continue to execute the next `case` clause
-regardless if the `case` meets the criteria. (See the section [What happens if I forgot a
-`break`?](#what_happens_if_i_forgot_a_break))
-
-This is an example of a single operation sequential `case` statement, where
-four different values perform exactly the same.
+The following is an example of a single operation sequential `case` statement, where four different values perform exactly the same.
 
 ```js
-var Animal = 'Giraffe';
+const Animal = "Giraffe";
 switch (Animal) {
-  case 'Cow':
-  case 'Giraffe':
-  case 'Dog':
-  case 'Pig':
-    console.log('This animal is not extinct.');
+  case "Cow":
+  case "Giraffe":
+  case "Dog":
+  case "Pig":
+    console.log("This animal is not extinct.");
     break;
-  case 'Dinosaur':
+  case "Dinosaur":
   default:
-    console.log('This animal is extinct.');
+    console.log("This animal is extinct.");
 }
 ```
 
-#### Multi-`case` : chained operations
-
-This is an example of a multiple-operation sequential `case` clause, where,
-depending on the provided integer, you can receive different output. This shows you that
-it will traverse in the order that you put the `case` clauses, and it does
-not have to be numerically sequential. In JavaScript, you can even mix in definitions of
-strings into these `case` statements as well.
+The following is an example of a multiple-operation sequential `case` clause, where, depending on the provided integer, you can receive different output. This shows you that it will traverse in the order that you put the `case` clauses, and it does not have to be numerically sequential. In JavaScript, you can even mix in definitions of strings into these `case` statements as well.
 
 ```js
-var foo = 1;
-var output = 'Output: ';
+const foo = 1;
+let output = "Output: ";
 switch (foo) {
   case 0:
-    output += 'So ';
+    output += "So ";
   case 1:
-    output += 'What ';
-    output += 'Is ';
+    output += "What ";
+    output += "Is ";
   case 2:
-    output += 'Your ';
+    output += "Your ";
   case 3:
-    output += 'Name';
+    output += "Name";
   case 4:
-    output += '?';
+    output += "?";
     console.log(output);
     break;
   case 5:
-    output += '!';
+    output += "!";
     console.log(output);
     break;
   default:
-    console.log('Please pick a number from 0 to 5!');
+    console.log("Please pick a number from 0 to 5!");
 }
 ```
 
@@ -244,65 +236,53 @@ The output from this example:
 | `4`                                                   | Output: ?                         |
 | `5`                                                   | Output: !                         |
 
-### Block-scope variables within `switch` statements
+### An alternative to if...else chains
 
-With ECMAScript 2015 (ES6) support made available in most modern browsers, there will
-be cases where you would want to use {{jsxref("Statements/let", "let")}} and
-{{jsxref("Statements/const", "const")}} statements to declare block-scoped variables.
-
-Take a look at this example:
+You may often find yourself doing a series of [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) matches.
 
 ```js
-const action = 'say_hello';
-switch (action) {
-  case 'say_hello':
-    let message = 'hello';
-    console.log(message);
+if ("fetch" in globalThis) {
+  // Fetch a resource with fetch
+} else if ("XMLHttpRequest" in globalThis) {
+  // Fetch a resource with XMLHttpRequest
+} else {
+  // Fetch a resource with some custom AJAX logic
+}
+```
+
+This pattern is not doing a sequence of `===` comparisons, but you can still convert it to a `switch` construct.
+
+```js
+switch (true) {
+  case "fetch" in globalThis:
+    // Fetch a resource with fetch
     break;
-  case 'say_hi':
-    let message = 'hi';
-    console.log(message);
+  case "XMLHttpRequest" in globalThis:
+    // Fetch a resource with XMLHttpRequest
     break;
   default:
-    console.log('Empty action received.');
+    // Fetch a resource with some custom AJAX logic
     break;
 }
 ```
 
-This example will output the error
-`Uncaught SyntaxError: Identifier 'message' has already been declared` which
-you were not probably expecting.
-
-This is because the first `let message = 'hello';` conflicts with second let
-statement `let message = 'hi';` even they're within their own separate case
-clauses `case 'say_hello':` and `case 'say_hi':`. Ultimately, this
-is due to both `let` statements being interpreted as duplicate declarations
-of the same variable name within the same block scope.
-
-We can easily fix this by wrapping our `case` clauses with brackets:
+The `switch (true)` pattern as an alternative to `if...else` is especially useful if you want to utilize the fall-through behavior.
 
 ```js
-const action = 'say_hello';
-switch (action) {
-  case 'say_hello': { // added brackets
-    let message = 'hello';
-    console.log(message);
+switch (true) {
+  case isSquare(shape):
+    console.log("This shape is a square.");
+  // Fall-through, since a square is a rectangle as well!
+  case isRectangle(shape):
+    console.log("This shape is a rectangle.");
+  case isQuadrilateral(shape):
+    console.log("This shape is a quadrilateral.");
     break;
-  } // added brackets
-  case 'say_hi': { // added brackets
-    let message = 'hi';
-    console.log(message);
+  case isCircle(shape):
+    console.log("This shape is a circle.");
     break;
-  } // added brackets
-  default: { // added brackets
-    console.log('Empty action received.');
-    break;
-  } // added brackets
 }
 ```
-
-This code will now output `hello` in the console as it should, without any
-errors at all.
 
 ## Specifications
 

@@ -1,19 +1,16 @@
 ---
-title: URL.search
+title: "URL: search property"
+short-title: search
 slug: Web/API/URL/search
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
+page-type: web-api-instance-property
 browser-compat: api.URL.search
 ---
+
 {{ApiRef("URL API")}}
 
 The **`search`** property of the {{domxref("URL")}} interface
 is a search string, also called a _query string_, that is a
-{{domxref("USVString")}} containing a `'?'` followed by the parameters of the
+string containing a `'?'` followed by the parameters of the
 URL.
 
 Modern browsers provide the {{domxref("URL.searchParams")}} property to make it easy to
@@ -21,21 +18,16 @@ parse out the parameters from the query string.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-const searchParams = object.search
-url.search = newSearchParams
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
 ```js
-const url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123');
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123",
+);
 console.log(url.search); // Logs "?q=123"
 ```
 

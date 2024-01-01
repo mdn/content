@@ -1,35 +1,29 @@
 ---
-title: Window.matchMedia()
+title: "Window: matchMedia() method"
+short-title: matchMedia()
 slug: Web/API/Window/matchMedia
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - JavaScript
-  - Media Queries
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.matchMedia
 ---
+
 {{APIRef}}
 
 The {{domxref("Window")}} interface's **`matchMedia()`** method
 returns a new {{domxref("MediaQueryList")}} object that can then be used to determine if
-the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries) string,
-as well as to monitor the document to detect when it matches (or stops matching) that
+the {{domxref("document")}} matches the [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) string,
+as well as to monitor the document to detect when it matches (or stops matching) that
 media query.
 
 ## Syntax
 
-```js
-mqList = window.matchMedia(mediaQueryString)
+```js-nolint
+matchMedia(mediaQueryString)
 ```
 
 ### Parameters
 
 - `mediaQueryString`
-  - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
+  - : A string specifying the media query to parse into a {{domxref("MediaQueryList")}}.
 
 ### Return value
 
@@ -39,7 +33,7 @@ time.
 
 ## Usage notes
 
-You can use the returned media query to perform both instantanteous and event-driven
+You can use the returned media query to perform both instantaneous and event-driven
 checks to see if the document matches the media query.
 
 To perform a one-time, instantaneous check to see if the document matches the media
@@ -49,12 +43,12 @@ requirements.
 
 If you need to be kept aware of whether or not the document matches the media query at
 all times, you can instead watch for the {{domxref("MediaQueryList.change_event",
-  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#example)
+  "change")}} event to be delivered to the object. There's [a good example of this](/en-US/docs/Web/API/Window/devicePixelRatio#monitoring_screen_resolution_or_zoom_level_changes)
 in the article on {{domxref("Window.devicePixelRatio")}}.
 
 ## Examples
 
-This example runs the media query `(max-width: 600px)` and  displays the
+This example runs the media query `(max-width: 600px)` and displays the
 value of the resulting `MediaQueryList`'s `matches` property in a
 {{HTMLElement("span")}}; as a result, the output will say "true" if the viewport is less
 than or equal to 600 pixels wide, and will say "false" if the window is wider than that.
@@ -62,7 +56,7 @@ than or equal to 600 pixels wide, and will say "false" if the window is wider th
 ### JavaScript
 
 ```js
-let mql = window.matchMedia('(max-width: 600px)');
+let mql = window.matchMedia("(max-width: 600px)");
 
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
@@ -83,7 +77,9 @@ A simple `<span>` to receive the output.
 
 ```css hidden
 .mq-value {
-  font: 18px arial, sans-serif;
+  font:
+    18px arial,
+    sans-serif;
   font-weight: bold;
   color: #88f;
   padding: 0.4em;
@@ -95,8 +91,7 @@ A simple `<span>` to receive the output.
 
 {{EmbedLiveSample("Examples", "100%", "60")}}
 
-See [Testing media
-queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries) for additional code examples.
+See [Testing media queries programmatically](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries) for additional code examples.
 
 ## Specifications
 
@@ -108,6 +103,6 @@ queries programmatically](/en-US/docs/Web/CSS/Media_Queries/Testing_media_querie
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("MediaQueryList")}}

@@ -1,17 +1,16 @@
 ---
-title: IdleDetector.userState
+title: "IdleDetector: userState property"
+short-title: userState
 slug: Web/API/IdleDetector/userState
-tags:
-  - API
-  - Property
-  - Reference
-  - userState
-  - IdleDetector
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.IdleDetector.userState
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Idle Detection API")}} 
 
-The **`userState`** read-only property of the {{domxref("IdleDetector")}} interface returns a string indicating whether the users has interacted with the device since the call to `start()`.
+{{securecontext_header}}{{APIRef("Idle Detection API")}}{{SeeCompatTable}}
+
+The **`userState`** read-only property of the {{domxref("IdleDetector")}} interface returns a string indicating whether the user has interacted with the device since the call to `start()`.
 
 ## Value
 
@@ -22,10 +21,10 @@ Either `"active"` or `"idle"` if {{domxref("IdleDetector.start()")}} has been ca
 In the following example, the `change` callback prints the status of `userState` and `screenState` to the console.
 
 ```js
-idleDetector.addEventListener('change', () => {
-    const userState = idleDetector.userState;
-    const screenState = idleDetector.screenState;
-    console.log(`Idle change: ${userState}, ${screenState}.`);
+idleDetector.addEventListener("change", () => {
+  const userState = idleDetector.userState;
+  const screenState = idleDetector.screenState;
+  console.log(`Idle change: ${userState}, ${screenState}.`);
 });
 ```
 
@@ -36,5 +35,3 @@ idleDetector.addEventListener('change', () => {
 ## Browser compatibility
 
 {{Compat}}
-
-

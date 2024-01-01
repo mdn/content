@@ -1,21 +1,20 @@
 ---
 title: <xsl:fallback>
 slug: Web/XSLT/Element/fallback
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - fallback
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:fallback>` element specifies what template to use if a given extension (or, eventually, newer version) element is not supported.
 
 ### Syntax
 
-    <xsl:fallback>
-    	TEMPLATE
-    </xsl:fallback>
+```xml
+<xsl:fallback>
+  TEMPLATE
+</xsl:fallback>
+```
 
 ### Required Attributes
 

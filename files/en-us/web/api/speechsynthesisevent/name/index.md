@@ -1,43 +1,28 @@
 ---
-title: SpeechSynthesisEvent.name
+title: "SpeechSynthesisEvent: name property"
+short-title: name
 slug: Web/API/SpeechSynthesisEvent/name
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - SpeechSynthesisEvent
-  - Web Speech API
-  - name
-  - speech
-  - synthesis
+page-type: web-api-instance-property
 browser-compat: api.SpeechSynthesisEvent.name
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`name`** read-only property of the
-{{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with
-certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}}
-is being spoken: the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in
-the case of a {{event("mark")}} event, or the type of boundary reached in the case of
-a {{event("boundary")}} event.
+{{APIRef("Web Speech API")}}
 
-## Syntax
+The **`name`** read-only property of the {{domxref("SpeechSynthesisUtterance")}} interface returns the name associated with certain types of events occurring as the {{domxref("SpeechSynthesisUtterance.text")}} is being spoken:
+the name of the [SSML](https://www.w3.org/TR/speech-synthesis/#S3.3.2) marker reached in the case of a {{domxref("SpeechSynthesisUtterance.mark_event", "mark")}} event, or the type of boundary reached in the case of a {{domxref("SpeechSynthesisUtterance.boundary_event", "boundary")}} event.
 
-```js
-event.name;
-```
+## Value
 
-### Value
-
-A {{domxref("DOMString")}}.
+A string.
 
 ## Examples
 
 ```js
-utterThis.onboundary = function(event) {
-  console.log(event.name + ' boundary reached after ' + event.elapsedTime + ' seconds.');
-}
+utterThis.onboundary = (event) => {
+  console.log(
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
+  );
+};
 ```
 
 ## Specifications

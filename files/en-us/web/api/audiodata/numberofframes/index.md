@@ -1,19 +1,18 @@
 ---
-title: AudioData.numberOfFrames
+title: "AudioData: numberOfFrames property"
+short-title: numberOfFrames
 slug: Web/API/AudioData/numberOfFrames
-tags:
-  - API
-  - Property
-  - Reference
-  - numberOfFrames
-  - AudioData
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioData.numberOfFrames
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`numberOfFrames`** read-only property of the {{domxref("AudioData")}} interface returns the number of frames in the `AudioData` object.
 
-### Value
+## Value
 
 An integer.
 
@@ -32,5 +31,3 @@ console.log(AudioData.numberOfFrames);
 ## Browser compatibility
 
 {{Compat}}
-
-

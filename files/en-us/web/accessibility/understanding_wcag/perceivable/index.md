@@ -1,23 +1,18 @@
 ---
 title: Perceivable
-slug: Web/Accessibility/Understanding_WCAG/Perceivable 
-tags:
-  - Accessibility
-  - Principle 1
-  - WCAG
-  - Web Content Accessibility Guidelines
-  - contrast
-  - different presentation
-  - text alternatives
-  - time-based media
+slug: Web/Accessibility/Understanding_WCAG/Perceivable
+page-type: guide
 ---
-This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+
+This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
+
+> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
-The key here is that text can be converted to other forms that people with disabilities can use.  For example, it can be spoken by a screenreader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
+The key here is that text can be converted to other forms that people with disabilities can use. For example, it can be spoken by a screen reader, converted to large print, or represented on a braille display. Non-text content refers to multimedia such as images, audio, and video.
 
 <table class="standard-table">
   <thead>
@@ -29,7 +24,7 @@ The key here is that text can be converted to other forms that people with disab
   </thead>
   <tbody>
     <tr>
-      <td rowspan="5">1.1.1 Provide text equivalents  (A)</td>
+      <td rowspan="5">1.1.1 Provide text equivalents (A)</td>
       <td>
         All images that convey meaningful content should be given suitable
         alternative text.
@@ -44,7 +39,7 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         Complex images or charts should have an accessible alternative provided,
         either on the same page or via a link. Use a regular link instead of
-        a `longdesc` attribute.
+        a `longdesc` attribute.
       </td>
       <td>
         <p>
@@ -67,10 +62,10 @@ The key here is that text can be converted to other forms that people with disab
       </td>
       <td>
         <p>
-          See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
+          See <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives"
             >Text alternatives</a
           >
-          for static caption options, and
+          for static caption options, and
           <a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts"
             >Audio transcripts</a
           >,
@@ -92,7 +87,7 @@ The key here is that text can be converted to other forms that people with disab
       </td>
       <td>
         Buttons are simple—you should make sure the button text describes the
-        function of the button (e.g., <code
+        function of the button (e.g., <code
           >&#x3C;button>Upload image&#x3C;/button></code
         >). For more information on other UI controls, see
         <a href="/en-US/docs/Learn/Accessibility/HTML#ui_controls"
@@ -112,9 +107,9 @@ The key here is that text can be converted to other forms that people with disab
           <a
             href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders"
             >Backgrounds</a
-          >).  If you have to include an image via an
+          >). If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
-          (`alt=""`). Otherwise, screenreaders may try to read out
+          (<code>alt=""</code>). Otherwise, screen readers may try to read out
           the filepath, etc.
         </p>
         <p>
@@ -149,12 +144,12 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     </tr>
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
-       <td>You should provide captions for video presented on the web (e.g., HTML5 video). This is for the benefit of people who can't hear the audio part of the video.</td>
-       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML5 video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+       <td>You should provide captions for video presented on the web (e.g., HTML video). This is for the benefit of people who can't hear the audio part of the video.</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
     </tr>
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
-       <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML5 video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
+       <td>You should provide text transcripts or audio descriptions for video presented on the web (e.g., HTML video. This is for the benefit of people who can't see the visual part of the video, and don't get the full content from the audio alone.</td>
        <td>See&nbsp;<a href="/en-US/docs/Learn/Accessibility/Multimedia#audio_transcripts">Audio transcripts</a> for transcript information. No audio description tutorial is available yet.</td>
     </tr>
     <tr>
@@ -215,18 +210,18 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Text labels and the form elements they describe. These are
             associated unambiguously using the {{htmlelement("label")}}
-            element, which can be picked up by screenreaders, etc.
+            element, which can be picked up by screen readers, etc.
           </li>
           <li>
             Image alt text. Content images should have text available that
             clearly describes the image's contents, which can be
-            programmatically associated with it (e.g., `alt` text),
+            programmatically associated with it (e.g., `alt` text),
             or otherwise is easy to associate (e.g., describes it and is sat
-            right next to it). This should mean that the full meaning can still
+            right next to it). This should mean that the full meaning can still
             be inferred even if you can't see the image.
           </li>
           <li>
-            Lists. If the order of list items is important, use an ordered list
+            Lists. If the order of list items is important, use an ordered list
             ({{htmlelement("ol")}}).
           </li>
         </ul>
@@ -287,10 +282,10 @@ This guideline refers to the ability of content to be consumed by users in multi
             "Listen to the audio instructions for guidance"<br />This is
             obviously problematic—audio will be inaccessible to those with
             hearing impairments, whereas text can be read, but also spoken by a
-            screenreader if required.
+            screen reader if required.
           </li>
           <li>
-            "Swipe from the right hand side of the screen to reveal the menu"<br />Some
+            "Swipe from the right-hand side of the screen to reveal the menu"<br />Some
             users might not be able to swipe the screen, either due to
             disability or because their device does not support touch. An
             alternative should be provided, such as a keyboard shortcut or
@@ -324,13 +319,13 @@ This guideline refers to the ability of content to be consumed by users in multi
         <p>
           <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html"
             >Understanding Orientation</a
-          > 
+          >
         </p>
       </td>
     </tr>
     <tr>
       <td>
-        1.3.5 Identify Input Purpose (AA) <em
+        1.3.5 Identify Input Purpose (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -342,7 +337,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.   
+          to programmatically identify the purpose of a field.
         </p>
       </td>
       <td>
@@ -354,7 +349,7 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td>
-        1.3.6 Identify Purpose (AAA) <em
+        1.3.6 Identify Purpose (AAA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -422,7 +417,7 @@ This guideline relates to making sure core content is easy to discern from backg
         Use native `&#x3C;button>`s to provide accessible keyboard
         controls, as shown in
         <a
-          href="/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics"
+          href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
           >Video player styling basics</a
         >.
       </td>
@@ -513,14 +508,14 @@ This guideline relates to making sure core content is easy to discern from backg
             maximum readability.
           </li>
           <li>
-            Text should not be fully justified (e.g., <code
+            Text should not be fully justified (e.g., <code
               >text-align: justify;</code
             >).
           </li>
           <li>
             Line height should be at least 1.5 times the text size within
-            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
-            times the text size between paragraphs (e.g., <code
+            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
+            times the text size between paragraphs (e.g., <code
               >padding: 2.25rem;</code
             >).
           </li>
@@ -543,7 +538,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.10 Reflow (AA) <em
+        1.4.10 Reflow (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -552,8 +547,8 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         <ul>
           <li>
-            No horizontal scrolling for left-to-right languages (like English)
-            or right-to-left languages (like Arabic)   
+            No horizontal scrolling for left-to-right languages (like English)
+            or right-to-left languages (like Arabic)
           </li>
           <li>
             No vertical scrolling for top-to-bottom languages (like Japanese)
@@ -572,7 +567,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.11 Non-Text Contrast(AA) <em
+        1.4.11 Non-Text Contrast(AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -580,7 +575,7 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         Minimum color contrast ratio of 3:1 for user interface components and
-        graphical objects. 
+        graphical objects.
       </td>
       <td>
         <a
@@ -591,7 +586,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.12 Text Spacing (AA) <em
+        1.4.12 Text Spacing (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -600,7 +595,7 @@ This guideline relates to making sure core content is easy to discern from backg
       <td>
         <p>
           No loss of content or functionality occurs when the following styles
-          are applied: 
+          are applied:
         </p>
         <ul>
           <li>
@@ -623,7 +618,7 @@ This guideline relates to making sure core content is easy to discern from backg
     </tr>
     <tr>
       <td>
-        1.4.13 Content on Hover or Focus (AA) <em
+        1.4.13 Content on Hover or Focus (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -639,7 +634,7 @@ This guideline relates to making sure core content is easy to discern from backg
           <li>dismissible (can be closed/removed)</li>
           <li>
             hoverable (the additional content does not disappear when the
-            pointer is over it) 
+            pointer is over it)
           </li>
           <li>
             persistent (the additional content does not disappear without user
@@ -661,9 +656,9 @@ This guideline relates to making sure core content is easy to discern from backg
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
-  1.  Perceivable
-  2.  [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  3.  [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  4.  [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  1. Perceivable
+  2. [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
+  3. [Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  4. [Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)

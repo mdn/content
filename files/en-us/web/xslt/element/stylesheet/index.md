@@ -1,13 +1,11 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
-tags:
-  - Element
-  - Reference
-  - StyleSheet
-  - XSLT
+page-type: xslt-element
+spec-urls: https://www.w3.org/TR/xslt-30/#stylesheet-element
 ---
-{{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/XSLT")}}
+
+{{XsltSidebar}}
 
 The `<xsl:stylesheet>` element (or the equivalent `<xsl:transform>` element) is the outermost element of a stylesheet.
 
@@ -19,12 +17,12 @@ A pseudo-attribute required to identify the document as an XSLT stylesheet. Typi
 
 ```xml
 <xsl:stylesheet
-	version="NUMBER"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	id="NAME"
-	extension-element-prefixes="LIST-OF-NAMES"
-	exclude-result-prefixes="LIST-OF-NAMES">
-		ENTIRE STYLESHEET
+  version="NUMBER"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  id="NAME"
+  extension-element-prefixes="LIST-OF-NAMES"
+  exclude-result-prefixes="LIST-OF-NAMES">
+    ENTIRE STYLESHEET
 </xsl:stylesheet>
 ```
 
@@ -62,8 +60,4 @@ Required outermost element of stylesheet.
 
 ## Specifications
 
-| Specification                                                                                    | Status                       | Comment                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("XSLT 3.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 3.0")}} | Added the attributes `default-mode`, `expand-text`, and `use-when`.                                                                                                        |
-| [XSLT 2.0](https://www.w3.org/TR/xslt20/#stylesheet-element)                                     |                              | Added the attributes `xpath-default-namespace`, `default-validation`, `default-collation`, and `input-type-annotations` and made all attributes except `version` optional. |
-| [XSLT 1.0](https://www.w3.org/TR/xslt-10/#stylesheet-element)                                    |                              | Initial definition                                                                                                                                                         |
+{{Specifications}}

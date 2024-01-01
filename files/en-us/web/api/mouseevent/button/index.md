@@ -1,22 +1,17 @@
 ---
-title: MouseEvent.button
+title: "MouseEvent: button property"
+short-title: button
 slug: Web/API/MouseEvent/button
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.button
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`MouseEvent.button`** read-only property indicates which button was pressed on the mouse to trigger the event.
 
 This property only guarantees to indicate which buttons are pressed during events caused by pressing or releasing one or multiple buttons.
-As such, it is not reliable for events such as {{event("mouseenter")}}, {{event("mouseleave")}}, {{event("mouseover")}}, {{event("mouseout")}} or {{event("mousemove")}}.
+As such, it is not reliable for events such as {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, or {{domxref("Element/mousemove_event", "mousemove")}}.
 
 Users may change the configuration of buttons on their pointing device so that if an event's button property is zero, it may not have been caused by the button that is physically left–most on the pointing device; however, it should behave as if the left button was clicked in the standard button layout.
 
@@ -36,47 +31,45 @@ A number representing a given button:
 
 As noted above, buttons may be configured differently to the standard "left to right" layout.
 A mouse configured for left-handed use may have the button actions reversed.
-Some pointing devices only have one button and use keyboard or other input mechanisms to indicate main, secondary, auxilary, etc.
+Some pointing devices only have one button and use keyboard or other input mechanisms to indicate main, secondary, auxiliary, etc.
 Others may have many buttons mapped to different functions and button values.
 
-## Example
+## Examples
 
 ### HTML
 
 ```html
-<button id="button" oncontextmenu="event.preventDefault();">Click here with your mouse...</button>
+<button id="button" oncontextmenu="event.preventDefault();">
+  Click here with your mouse…
+</button>
 <p id="log"></p>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('#button');
-let log = document.querySelector('#log');
-button.addEventListener('mouseup', logMouseButton);
-
-function logMouseButton(e) {
-  if (typeof e === 'object') {
-    switch (e.button) {
-      case 0:
-        log.textContent = 'Left button clicked.';
-        break;
-      case 1:
-        log.textContent = 'Middle button clicked.';
-        break;
-      case 2:
-        log.textContent = 'Right button clicked.';
-        break;
-      default:
-        log.textContent = `Unknown button code: ${e.button}`;
-    }
+let button = document.querySelector("#button");
+button.addEventListener("mouseup", (e) => {
+  let log = document.querySelector("#log");
+  switch (e.button) {
+    case 0:
+      log.textContent = "Left button clicked.";
+      break;
+    case 1:
+      log.textContent = "Middle button clicked.";
+      break;
+    case 2:
+      log.textContent = "Right button clicked.";
+      break;
+    default:
+      log.textContent = `Unknown button code: ${e.button}`;
   }
-}
+});
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

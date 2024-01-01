@@ -1,13 +1,9 @@
 ---
 title: Web media technologies
 slug: Web/Media
-tags:
-  - Audio
-  - Landing
-  - Media
-  - Video
-  - Web
+page-type: landing-page
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Over the years, the Web's ability to present, create, and manage audio, video, and other media has grown at an increasing pace. Today, there are a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to not only perform these tasks, but use media in tandem with other technologies to do truly remarkable things. This article lists the various APIs with links to documentation you may find helpful in mastering them.
@@ -31,7 +27,7 @@ These articles cover HTML features for media developers.
 
 - [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)
   - : The Media Capabilities API lets you determine the encoding and decoding capabilities of the device your app or site is running on. This lets you make real-time decisions about what formats to use and when.
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
   - : A reference for the API which makes it possible to stream, record, and manipulate media both locally and across a network. This includes using local cameras and microphones to capture video, audio, and still images.
 - [Media Session API](/en-US/docs/Web/API/Media_Session_API)
   - : The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing. It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices.
@@ -47,7 +43,7 @@ These articles cover HTML features for media developers.
 - [Using audio and video in HTML](/en-US/docs/Web/Media/HTML_media)
   - : A guide to using the HTML `<audio>` and `<video>` elements.
 - [Accessible multimedia](/en-US/docs/Learn/Accessibility/Multimedia)
-  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
+  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
   - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
 - [Streaming audio and video](/en-US/docs/Web/Media/Streaming)
@@ -67,5 +63,5 @@ Related topics which may be of interest, since they can be used in tandem with m
   - : WebGL provides an OpenGL ES compatible API on top of the existing Canvas API, making it possible to do powerful 3D graphics on the Web. Through a canvas, this can be used to add 3D imagery to media content.
 - [WebXR](/en-US/docs/Web/API/WebXR_Device_API)
   - : WebXR, which has replaced the now-obsolete WebVR API, is a technology that provides support for creating virtual reality (VR) and augmented reality (AR) content. The mixed reality content can then be displayed on the device's screen or using goggles or a headset.
-- [WebVR](/en-US/docs/Web/API/WebVR_API) {{deprecated_inline}}
+- [WebVR](/en-US/docs/Web/API/WebVR_API) {{deprecated_inline}}
   - : The Web Virtual Reality API supports virtual reality (VR) devices such as the Oculus Rift or the HTC Vive, making it possible for developers to translate position and movement of the user into movement within a 3D scene which is then presented on the device. WebVR has been replaced by WebXR, and is due to be removed from browsers soon.

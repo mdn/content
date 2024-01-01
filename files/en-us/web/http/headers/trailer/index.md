@@ -1,14 +1,10 @@
 ---
 title: Trailer
 slug: Web/HTTP/Headers/Trailer
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
-  - Payload header
+page-type: http-header
 browser-compat: http.headers.Trailer
 ---
+
 {{HTTPSidebar}}
 
 The **Trailer** response header allows the sender to include additional
@@ -38,7 +34,7 @@ digital signature, or post-processing status.
 
 ## Syntax
 
-```
+```http
 Trailer: header-names
 ```
 
@@ -67,7 +63,7 @@ Trailer: header-names
 In this example, the {{HTTPHeader("Expires")}} header is used at the end of the chunked
 message and serves as a trailing header.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/plain
 Transfer-Encoding: chunked

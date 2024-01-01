@@ -1,19 +1,20 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
-tags:
-  - HTML DOM
-  - Non-standard
-  - Property
-  - Reference
-  - Window
-browser-compat: api.Window.sidebar
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 ---
-{{APIRef}} {{Deprecated_Header}} {{Non-standard_header}}
+
+{{APIRef}} {{Deprecated_Header}}
+
+> **Warning:** This non-standard Firefox-only alias of the [`window.external`](/en-US/docs/Web/API/Window/external) property [has been removed](#browser_compatibility).
 
 Returns a sidebar object which contains several methods for registering add-ons with the browser.
 
-## Methods
+## Instance methods
 
 The sidebar object returned has the following methods:
 
@@ -98,4 +99,5 @@ Mozilla-specific. Not part of any standard.
 
 ## Browser compatibility
 
-{{Compat}}
+Removed in Firefox 102.
+For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).

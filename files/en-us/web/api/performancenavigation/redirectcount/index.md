@@ -1,19 +1,14 @@
 ---
-title: PerformanceNavigation.redirectCount
+title: "PerformanceNavigation: redirectCount property"
+short-title: redirectCount
 slug: Web/API/PerformanceNavigation/redirectCount
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceNavigation
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 The legacy
 **`PerformanceNavigation.redirectCount`**
@@ -23,11 +18,9 @@ REDIRECTs done before reaching the page.
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete).
 > Please use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
-## Syntax
+## Value
 
-```js
-amount = performanceNavigation.redirectCount;
-```
+An `unsigned short`.
 
 ## Specifications
 

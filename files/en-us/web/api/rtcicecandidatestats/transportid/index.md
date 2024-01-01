@@ -1,27 +1,11 @@
 ---
-title: RTCIceCandidateStats.transportId
+title: "RTCIceCandidateStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCIceCandidateStats/transportId
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - transportID
-browser-compat: api.RTCIceCandidateStats.transportId
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_local-candidate.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
@@ -29,15 +13,9 @@ The {{domxref("RTCIceCandidateStats")}} dictionary's
 identifies the transport that produced the {{domxref("RTCTransportStats")}} from which
 information about this candidate was taken.
 
-## Syntax
+## Value
 
-```js
-transportID = rtcIceCandidateStats.transportId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} whose value uniquely identifies the transport from which any
+A string whose value uniquely identifies the transport from which any
 transport-related information accumulated in the {{domxref("RTCIceCandidateStats")}} was
 taken. This can be used to compare candidates that would use the same transport, for
 example.

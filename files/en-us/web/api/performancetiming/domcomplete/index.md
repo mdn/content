@@ -1,19 +1,14 @@
 ---
-title: PerformanceTiming.domComplete
+title: "PerformanceTiming: domComplete property"
+short-title: domComplete
 slug: Web/API/PerformanceTiming/domComplete
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - HTML
-  - Navigation Timing
-  - PerformanceTiming
-  - Property
-  - Read-only
-  - legacy
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.PerformanceTiming.domComplete
 ---
-{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
+
+{{APIRef("Performance API")}}{{Deprecated_Header}}
 
 > **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
@@ -23,14 +18,12 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the parser finished its work on the main
 document, that is when its {{domxref("Document.readyState")}} changes to
-`'complete'` and the corresponding {{event("readystatechange")}} event is
+`'complete'` and the corresponding {{domxref("Document/readystatechange_event", "readystatechange")}} event is
 thrown.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.domComplete;
-```
+An `unsigned long long`.
 
 ## Specifications
 

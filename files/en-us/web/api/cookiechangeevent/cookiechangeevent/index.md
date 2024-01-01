@@ -1,35 +1,42 @@
 ---
-title: CookieChangeEvent()
+title: "CookieChangeEvent: CookieChangeEvent() constructor"
+short-title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CookieChangeEvent
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
 
-The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object which is the event type passed to {{domxref("CookieStore.onchange()")}}. This constructor is called by the browser when a change event occurs.
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-> **Note:** This event constructor is generally not needed for production web sites. It's primary use is for tests that require an instance of this event.
+The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object
+which is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur.
+This constructor is called by the browser when a change event occurs.
+
+> **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 
 ## Syntax
 
-    var CookieChangeEvent = new CookieChangeEvent(type,eventInitDict);
+```js-nolint
+new CookieChangeEvent(type)
+new CookieChangeEvent(type, options)
+```
 
 ### Parameters
 
 - `type`
-  - : A {{domxref("DOMString")}} with the value `"changed"` or `"deleted"`.
-- `eventInitDict`{{Optional_Inline}}
+  - : A string with the name of the event. It is case-sensitive and browsers always set it to `change`.
+- `options` {{Optional_Inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `changed`{{Optional_Inline}}
+      - : An array containing the changed cookies.
+    - `deleted`{{Optional_Inline}}
+      - : An array containing the deleted cookies.
 
-  - : An object containing:
+### Return value
 
-    - `changed`
-      - : An array containing a changed cookie.
-    - `deleted`
-      - : An array containing a deleted cookie.
+A new {{domxref("CookieChangeEvent")}} object.
 
 ## Specifications
 

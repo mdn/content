@@ -1,20 +1,10 @@
 ---
 title: Payment Request API
 slug: Web/API/Payment_Request_API
-tags:
-  - API
-  - Commerce
-  - Credit Card
-  - Intermediate
-  - Landing
-  - NeedsContent
-  - Overview
-  - Payment Request
-  - Payment Request API
-  - Reference
-  - Secure context
-  - payment
+page-type: web-api-overview
+browser-compat: api.PaymentRequest
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 The Payment Request API provides a consistent user experience for both merchants and users. It is not a new way for paying for things; rather, it's a way for users to select their preferred way of paying for things, and make that information available to a merchant.
@@ -27,7 +17,7 @@ To request a payment, a web page creates a {{domxref("PaymentRequest")}} object 
 
 You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API).
 
-> **Note:** The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the {{htmlattrxref("allowpaymentrequest","iframe")}} attribute set on them.
+> **Note:** The API is available inside cross-origin {{htmlelement("iframe")}} elements only if they have had the [`allowpaymentrequest`](/en-US/docs/Web/HTML/Element/iframe#allowpaymentrequest) attribute set on them.
 
 ## Interfaces
 
@@ -46,25 +36,13 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - {{domxref('MerchantValidationEvent')}}
   - : Represents the browser requiring the merchant (website) to validate themselves as allowed to use a particular payment handler (e.g., registered as allowed to use Apple Pay).
 
-## Dictionaries
-
-- {{domxref("AddressErrors")}}
-  - : A dictionary containing strings providing descriptive explanations of any errors in any {{domxref("PaymentAddress")}} entries which have errors.
-- {{domxref("PaymentRequestUpdateEvent.updateWith#parameters", "PaymentDetailsUpdate")}}
-  - : An object describing changes that need to be made to the payment details in the event that the server needs to update information following the instantiation of the payment interface but before the user begins to interact with it.
-
 ## Specifications
 
-| Specification                                                                  |
-| ------------------------------------------------------------------------------ |
-| [Payment Request API](https://w3c.github.io/payment-request/)                  |
-| [Payment Method Identifiers](https://w3c.github.io/payment-method-id/)         |
+{{Specifications}}
 
 ## Browser compatibility
 
-### PaymentRequest interface
-
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## See also
 
@@ -74,4 +52,4 @@ You can find a complete guide in [Using the Payment Request API](/en-US/docs/Web
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
 - [Samsung Pay Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)
 - [W3C Payment Request API FAQ](https://github.com/w3c/payment-request-info/wiki/FAQ)
-- Feature Policy directive {{httpheader("Feature-Policy/payment", "payment")}}
+- Permissions Policy directive {{httpheader("Permissions-Policy/payment", "payment")}}

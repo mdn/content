@@ -1,26 +1,22 @@
 ---
-title: XRWebGLBinding.nativeProjectionScaleFactor
+title: "XRWebGLBinding: nativeProjectionScaleFactor property"
+short-title: nativeProjectionScaleFactor
 slug: Web/API/XRWebGLBinding/nativeProjectionScaleFactor
-tags:
-  - API
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.nativeProjectionScaleFactor
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only **`nativeProjectionScaleFactor`** property of the {{domxref("XRWebGLBinding")}} interface represents the scaling factor by which the projection layer's resolution is multiplied by to get the native resolution of the WebXR device's frame buffer.
 
-For more details, see {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.
+For more details, see {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}}.
 
 ## Value
 
-A floating-point number representing by how much the devices's native frame buffer size is scaled by.
+A floating-point number representing by how much the device's native frame buffer size is scaled by.
 
 ## Specifications
 
@@ -32,4 +28,4 @@ A floating-point number representing by how much the devices's native frame buff
 
 ## See also
 
-- {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor()")}}
+- {{domxref("XRWebGLLayer.getNativeFramebufferScaleFactor_static", "XRWebGLLayer.getNativeFramebufferScaleFactor()")}}

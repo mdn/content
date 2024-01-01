@@ -1,18 +1,11 @@
 ---
-title: OrientationSensor.quaternion
+title: "OrientationSensor: quaternion property"
+short-title: quaternion
 slug: Web/API/OrientationSensor/quaternion
-tags:
-  - API
-  - Generic Sensor API
-  - Orientation Sensor API
-  - OrientationSensor
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
+page-type: web-api-instance-property
 browser-compat: api.OrientationSensor.quaternion
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`quaternion`** read-only
@@ -20,21 +13,15 @@ property of the {{domxref("OrientationSensor")}} interface returns a four elemen
 {{jsxref('Array')}} whose elements contain the components of the unit
 {{Glossary("quaternion")}} representing the device's orientation.
 
-## Syntax
-
-```js
-var quaternion = orientationInstance.quaternion
-```
-
 Because {{domxref('OrientationSensor')}} is a base class, `quaternion` may
 only be read from one of its derived classes.
 
-### Value
+## Value
 
 An {{jsxref('Array')}} whose values are the x, y, z, and w components of the quaternion
 representing the device orientation.
 
-## Example
+## Examples
 
 ```js
 // TBD

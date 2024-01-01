@@ -1,22 +1,16 @@
 ---
-title: Locks.name
+title: "Lock: name property"
+short-title: name
 slug: Web/API/Lock/name
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Web Locks API
-  - lock
-  - mode
-  - name
+page-type: web-api-instance-property
 browser-compat: api.Lock.name
 ---
-{{SeeCompatTable}}{{APIRef("Web Locks")}}
+
+{{APIRef("Web Locks API")}}{{securecontext_header}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
-{{domxref('LockManager.request')}} selected when the lock was requested.
+{{domxref('LockManager.request')}} selected when the lock was requested.
 
 The name of a lock is passed by script when the lock is requested. The name is selected
 by the developer to represent an abstract resource for which use is being coordinated
@@ -24,20 +18,16 @@ across multiple tabs, workers, or other code within the origin. For example, if 
 tab of a web application should be synchronizing network resources with an offline
 database, it could use a lock name such as `"net_db_sync"`.
 
-## Syntax
+{{AvailableInWorkers}}
 
-```js
-var name = Lock.name
-```
+## Value
 
-### Value
+A string.
 
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 The following examples show how the name property passed in the call
-to {{domxref('LockManager.request()')}}. `LockManager` is the object returned
+to {{domxref('LockManager.request()')}}. {{domxref('LockManager')}} is the object returned
 by {{domxref('navigator.locks')}}.
 
 ```js

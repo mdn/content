@@ -1,35 +1,32 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - Element Lists
-  - HTMLCollection
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLCollection
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLCollection`** interface represents a generic collection (array-like object similar to {{jsxref("Functions/arguments", "arguments")}}) of elements (in document order) and offers methods and properties for selecting from the list.
 
 > **Note:** This interface is called `HTMLCollection` for historical reasons (before the modern DOM, collections implementing this interface could only have HTML elements as their items).
 
-An `HTMLCollection` in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (eg. using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.
+An `HTMLCollection` in the HTML DOM is live; it is automatically updated when the underlying document is changed. For this reason it is a good idea to make a copy (e.g., using {{jsxref("Array/from", "Array.from")}}) to iterate over if adding, moving, or removing nodes.
 
-## Properties
+> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
 
-- {{domxref("HTMLCollection.length")}} {{readonlyInline}}
+## Instance properties
+
+- {{domxref("HTMLCollection.length")}} {{ReadOnlyInline}}
   - : Returns the number of items in the collection.
 
-## Methods
+## Instance methods
 
 - {{domxref("HTMLCollection.item()")}}
 
-  - : Returns the specific node at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
+  - : Returns the specific element at the given zero-based `index` into the list. Returns `null` if the `index` is out of range.
 
-    An alternative to accessing `collection[i]` (which instead returns  `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
+    An alternative to accessing `collection[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.
 
 - {{domxref("HTMLCollection.namedItem()")}}
 
@@ -39,12 +36,12 @@ An `HTMLCollection` in the HTML DOM is live; it is automatically updated when th
 
 ## Usage in JavaScript
 
-`HTMLCollection` also exposes its members directly as properties by both name and index. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. Currently `HTMLCollections` does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML5 does permit these.
+`HTMLCollection` also exposes its members as properties by name and index. HTML IDs may contain `:` and `.` as valid characters, which would necessitate using bracket notation for property access. Currently, an `HTMLCollection` object does not recognize purely numeric IDs, which would cause conflict with the array-style access, though HTML does permit these.
 
 For example, assuming there is one `<form>` element in the document and its `id` is `myForm`:
 
 ```js
-var elem1, elem2;
+let elem1, elem2;
 
 // document.forms is an HTMLCollection
 

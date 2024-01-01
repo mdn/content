@@ -1,14 +1,10 @@
 ---
 title: <feFuncA>
 slug: Web/SVG/Element/feFuncA
-tags:
-  - Element
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG Filter
+page-type: svg-element
 browser-compat: svg.elements.feFuncA
 ---
+
 {{SVGRef}}
 
 The **`<feFuncA>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the transfer function for the alpha component of the input graphic of its parent {{SVGElement("feComponentTransfer")}} element.
@@ -21,14 +17,14 @@ The **`<feFuncA>`** [SVG](/en-US/docs/Web/SVG) filter primitive defines the tran
 
 ### Global attributes
 
-*   [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-*   [Transfer function attributes](/en-US/docs/Web/SVG/Attribute#transfer_function_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
+- [Transfer function attributes](/en-US/docs/Web/SVG/Attribute#transfer_function_attributes)
 
 ### Specific attributes
 
-*None*
+None.
 
-## DOM Interface
+## DOM Interface
 
 This element implements the {{domxref("SVGFEFuncAElement")}} interface.
 
@@ -42,11 +38,11 @@ This element implements the {{domxref("SVGFEFuncAElement")}} interface.
 
 ## See also
 
-*   {{SVGElement("filter")}}
-*   {{SVGElement("animate")}}
-*   {{SVGElement("set")}}
-*   {{SVGElement("feComponentTransfer")}}
-*   {{SVGElement("feFuncR")}}
-*   {{SVGElement("feFuncB")}}
-*   {{SVGElement("feFuncG")}}
-*   [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)
+- {{SVGElement("filter")}}
+- {{SVGElement("animate")}}
+- {{SVGElement("set")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncG")}}
+- [SVG tutorial: Filter effects](/en-US/docs/Web/SVG/Tutorial/Filter_effects)

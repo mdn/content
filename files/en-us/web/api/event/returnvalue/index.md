@@ -1,13 +1,14 @@
 ---
-title: Event.returnValue
+title: "Event: returnValue property"
+short-title: returnValue
 slug: Web/API/Event/returnValue
-tags:
-  - Property
-  - Reference
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Event.returnValue
 ---
-{{APIRef("DOM Events")}}{{Deprecated_Header}}
+
+{{APIRef("DOM")}}{{Deprecated_Header}}
 
 The {{domxref("Event")}} property
 **`returnValue`** indicates whether the default action for
@@ -30,7 +31,6 @@ canceled; otherwise, if the event has been canceled or the default has been prev
 the value is `false`.
 
 The value of `returnValue` is the opposite of the value returned by
-
 {{domxref("Event.defaultPrevented", "defaultPrevented")}}.
 
 ## Specifications
@@ -40,3 +40,7 @@ The value of `returnValue` is the opposite of the value returned by
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLDialogElement.returnValue")}}: the return value for the {{HTMLElement("dialog")}}.

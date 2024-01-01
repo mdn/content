@@ -1,43 +1,38 @@
 ---
-title: Element.matches()
+title: "Element: matches() method"
+short-title: matches()
 slug: Web/API/Element/matches
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - msMatchesSelector
-  - webkitMatchesSelector
+page-type: web-api-instance-method
 browser-compat: api.Element.matches
 ---
+
 {{APIRef("DOM")}}
 
-The **`matches()`** method checks to see if the
-{{domxref("Element")}} would be selected by the provided
-`selectorString` -- in other words -- checks if the element "is"
-the selector.
+The **`matches()`** method of the {{domxref("Element")}} interface tests whether the element would be selected by the specified [CSS selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ## Syntax
 
-```js
-var result = element.matches(selectorString);
+```js-nolint
+matches(selectors)
 ```
 
 ### Parameters
 
-`selectorString` is a string representing the selector to test.
+- `selectors`
+  - : A string containing valid [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) to test the {{domxref("Element")}} against.
 
 ### Return value
 
-`result` is a boolean value.
+`true` if the {{domxref("Element")}} matches the `selectors`. Otherwise, `false`.
 
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the specified selector string is invalid.
+  - : Thrown if `selectors` cannot be parsed as a CSS selector list.
 
-## Example
+## Examples
+
+### HTML
 
 ```html
 <ul id="birds">
@@ -45,16 +40,18 @@ var result = element.matches(selectorString);
   <li class="endangered">Philippine eagle</li>
   <li>Great white pelican</li>
 </ul>
+```
 
-<script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+### JavaScript
 
-  for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('The ' + birds[i].textContent + ' is endangered!');
-    }
+```js
+const birds = document.querySelectorAll("li");
+
+for (const bird of birds) {
+  if (bird.matches(".endangered")) {
+    console.log(`The ${bird.textContent} is endangered!`);
   }
-</script>
+}
 ```
 
 This will log "The Philippine eagle is endangered!" to the console, since the element
@@ -70,7 +67,5 @@ has indeed a `class` attribute with value `endangered`.
 
 ## See also
 
-- [The syntax of
-  Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-- Other methods that take selectors: {{domxref("element.querySelector()")}} and
-  {{domxref("element.closest()")}}.
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("element.closest()")}}.

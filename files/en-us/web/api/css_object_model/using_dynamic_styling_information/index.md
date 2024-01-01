@@ -1,13 +1,9 @@
 ---
 title: Using dynamic styling information
 slug: Web/API/CSS_Object_Model/Using_dynamic_styling_information
-tags:
-  - API
-  - Beginner
-  - CSSOM
-  - Guide
-  - NeedsBeginnerUpdate
+page-type: guide
 ---
+
 {{DefaultAPISidebar("CSSOM")}}
 
 The CSS Object Model (CSSOM), part of the DOM, exposes specific interfaces allowing manipulation of a wide amount of information regarding CSS. Initially defined in the _DOM Level 2 Style_ recommendation, these interfaces forms now a specification, _CSS Object Model (CSSOM)_ which aims at superseding it.
@@ -23,22 +19,23 @@ To get to the `style` objects from the `document`, you can use the {{domxref("Do
 In this example the background of the page is set to red using CSS. The JavaScript then accesses the property using the CSSOM and changes the background to blue.
 
 ```html
-<html>
-<head>
-<title>Modifying a stylesheet rule with CSSOM</title>
-<style type="text/css">
-body {
- background-color: red;
-}
-</style>
-<script type="text/javascript">
-var stylesheet = document.styleSheets[0];
-stylesheet.cssRules[0].style.backgroundColor="aqua";
-</script>
-</head>
-<body>
-The stylesheet declaration for the body's background color is modified via JavaScript.
-</body>
+<html lang="en">
+  <head>
+    <title>Modifying a stylesheet rule with CSSOM</title>
+    <style>
+      body {
+        background-color: red;
+      }
+    </style>
+    <script>
+      const stylesheet = document.styleSheets[0];
+      stylesheet.cssRules[0].style.backgroundColor = "aqua";
+    </script>
+  </head>
+  <body>
+    The stylesheet declaration for the body's background color is modified via
+    JavaScript.
+  </body>
 </html>
 ```
 
@@ -52,47 +49,46 @@ To modify styles to a document using CSS syntax, one can insert rules or insert 
 
 ## Modify an element's style
 
-The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g, `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
+The element {{domxref("HTMLElement.style", "style")}} property (see also the section "DOM Style Object" below) can also be used to get and set the styles on an element. However, this property only returns style attributes that have been set _in-line_ (e.g., `<td style="background-color: lightblue">` returns the string "`background-color:lightblue`", or directly for that element using `element.style.propertyName`, even though there may be other styles on the element from a stylesheet).
 
 Also, when you set this property on an element, you override any styles that have been set elsewhere for that element's particular property you are setting. Setting the `border` property, for example, will override settings made elsewhere for that element's `border` property in the head section, or external style sheets. However, this will not affect any other property declarations for that element's styles, such as padding or margin or font, for example.
 
 To change a particular element's style, you can adapt the following example for the element(s) you want to style.
 
 ```html
-<html>
-<head>
-<title>simple style example</title>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>simple style example</title>
 
-<script type="text/javascript">
+    <script>
+      function alterStyle(elem) {
+        elem.style.background = "green";
+      }
 
-function alterStyle(elem) {
-  elem.style.background = 'green';
-}
+      function resetStyle(elemId) {
+        const elem = document.getElementById(elemId);
+        elem.style.background = "white";
+      }
+    </script>
+    <style>
+      #p1 {
+        border: solid blue 2px;
+      }
+    </style>
+  </head>
 
-function resetStyle(elemId) {
-  elem = document.getElementById(elemId);
-  elem.style.background = 'white';
-}
-</script>
+  <body>
+    <!-- passes a reference to the element's object as parameter 'this'. -->
+    <p id="p1" onclick="alterStyle(this);">
+      Click here to change background color.
+    </p>
 
-<style type="text/css">
-#p1 {
-  border: solid blue 2px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- passes a reference to the element's object as parameter 'this'. -->
-<p id="p1" onclick="alterStyle(this);">
- Click here to change background color.
-</p>
-
-<!-- passes the 'p1' id of another element's style to modify. -->
-<button onclick="resetStyle('p1');">Reset background color</button>
-
-</body>
+    <!-- passes the 'p1' id of another element's style to modify. -->
+    <button onclick="resetStyle('p1');">Reset background color</button>
+  </body>
 </html>
 ```
 
@@ -109,26 +105,28 @@ The `style` object represents an individual style statement. The style object is
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
 ```html
-<!DOCTYPE html>
-<html>
- <head>
-  <title>style Property Example</title>
-  <link rel="StyleSheet" href="example.css" type="text/css">
-  <script type="text/javascript">
-    function stilo() {
-      document.getElementById('d').style.color = 'orange';
-    }
-    function resetStyle() {
-      document.getElementById('d').style.color = 'black';
-    }
-  </script>
- </head>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Style Property Example</title>
+    <link rel="StyleSheet" href="example.css" />
+    <script>
+      function setStyle() {
+        document.getElementById("d").style.color = "orange";
+      }
+      function resetStyle() {
+        document.getElementById("d").style.color = "black";
+      }
+    </script>
+  </head>
 
- <body>
-  <div id="d" class="thunder">Thunder</div>
-  <button onclick="stilo()">Click here to change text color</button>
-  <button onclick="resetStyle()">Reset text color</button>
- </body>
+  <body>
+    <div id="d" class="thunder">Thunder</div>
+    <button onclick="setStyle()">Click here to change text color</button>
+    <button onclick="resetStyle()">Reset text color</button>
+  </body>
 </html>
 ```
 
@@ -141,8 +139,8 @@ The **media** and **type** of the style may or may not be given.
 Note that you can also change style of an element by getting a reference to it and then use its [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method to specify the CSS property and its value.
 
 ```js
-var el = document.getElementById('some-element');
-el.setAttribute('style', 'background-color:darkblue;');
+const el = document.getElementById("some-element");
+el.setAttribute("style", "background-color:darkblue;");
 ```
 
 Be aware, however, that `setAttribute` removes all other `style` properties that may already have been defined in the element's `style` object. If the `some-element` element above had an in–line `style` attribute of say `style="font-size: 18px"`, that value would be removed by the use of `setAttribute`.

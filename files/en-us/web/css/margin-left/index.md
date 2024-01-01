@@ -1,21 +1,17 @@
 ---
 title: margin-left
 slug: Web/CSS/margin-left
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-left
 ---
+
 {{CSSRef}}
 
-The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
 {{EmbedInteractiveExample("pages/css/margin-left.html")}}
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
 
@@ -23,9 +19,9 @@ In the rare cases where width is overconstrained (i.e., when all of `width`, `ma
 
 ```css
 /* <length> values */
-margin-left: 10px;  /* An absolute length */
-margin-left: 1em;   /* relative to the text size */
-margin-left: 5%;    /* relative to the nearest block container's width */
+margin-left: 10px; /* An absolute length */
+margin-left: 1em; /* relative to the text size */
+margin-left: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-left: auto;
@@ -34,6 +30,7 @@ margin-left: auto;
 margin-left: inherit;
 margin-left: initial;
 margin-left: revert;
+margin-left: revert-layer;
 margin-left: unset;
 ```
 
@@ -44,7 +41,7 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the containing block.
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
 
   - : The left margin receives a share of the unused horizontal space, as determined mainly by the layout mode that is used. If the values of `margin-left` and `margin-right` are both `auto`, the calculated space is evenly distributed. This table summarizes the different cases:
@@ -150,13 +147,36 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ## Examples
 
-### Setting left margin using pixels and percentages
+Percentage values for `margin-left` are relative to the container's inline size.
+
+### CSS
 
 ```css
-.content { margin-left: 5%; }
-.sidebox { margin-left: 10px; }
-.logo    { margin-left: -5px; }
+.example {
+  margin-left: 50%;
+}
 ```
+
+### HTML
+
+```html
+<p>
+  A large rose-tree stood near the entrance of the garden: the roses growing on
+  it were white, but there were three gardeners at it, busily painting them red.
+</p>
+<p class="example">
+  Alice thought this a very curious thing, and she went nearer to watch them,
+  and just as she came up to them she heard one of them say, "Look out now,
+  Five! Don't go splashing paint over me like that!"
+</p>
+<p>
+  "I couldn't help it," said Five, in a sulky tone; "Seven jogged my elbow."
+</p>
+```
+
+### Result
+
+{{EmbedLiveSample("","","250")}}
 
 ## Specifications
 

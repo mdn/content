@@ -1,17 +1,14 @@
 ---
-title: Window.outerWidth
+title: "Window: outerWidth property"
+short-title: outerWidth
 slug: Web/API/Window/outerWidth
-tags:
-  - API
-  - CSSOM View
-  - NeedsContent
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Window.outerWidth
 ---
+
 {{APIRef}}
 
-**`Window.outerWidth`** read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
+**`Window.outerWidth`** read-only property returns the width of the outside of the browser window. It represents the width of the whole browser window including sidebar (if expanded), window chrome and window resizing borders/handles.
 
 ## Notes
 

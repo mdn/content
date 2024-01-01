@@ -1,41 +1,29 @@
 ---
-title: Navigator.productSub
+title: "Navigator: productSub property"
+short-title: productSub
 slug: Web/API/Navigator/productSub
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Read-only
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.productSub
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.productSub`** read-only property returns the
 build number of the current browser.
 
-## Syntax
+## Value
+
+A string.
+
+## Examples
 
 ```js
-prodSub = navigator.productSub
+document.body.textContent = `productSub: ${navigator.productSub}`;
 ```
 
-- `prodSub` is a string.
-
-## Example
-
-```js
-<script>
-function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
-  dt.data = navigator.productSub;
-}
-</script>
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
-```
+{{ EmbedLiveSample("Examples") }}
 
 ## Notes
 

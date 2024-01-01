@@ -1,43 +1,19 @@
 ---
 title: nop
 slug: WebAssembly/Reference/Control_flow/nop
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
 **`nop`** stands for no-operation. It literally does nothing.
+
+{{EmbedInteractiveExample("pages/wat/nop.html", "tabbed-shorter")}}
 
 ## Syntax
 
 ```wasm
 nop
-```
-
-## Full working example
-
-Wasm file
-
-```wasm
-(module
-  (func (export "do_nothing")
-    nop
-  )
-)
-```
-
-JavaScript file
-
-```js
-WebAssembly.instantiateStreaming(
-  fetch("../out/main.wasm")
-).then(result => {
-  result.instance.exports.do_nothing();
-});
 ```
 
 | Instruction | Binary opcode |

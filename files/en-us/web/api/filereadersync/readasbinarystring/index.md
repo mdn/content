@@ -1,22 +1,26 @@
 ---
-title: FileReaderSync.readAsBinaryString()
+title: "FileReaderSync: readAsBinaryString() method"
+short-title: readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
-tags:
-  - Reference
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.FileReaderSync.readAsBinaryString
 ---
+
 {{APIRef("File API")}}{{deprecated_header}}
 
 > **Note:** This method is deprecated in favor of {{DOMxRef("FileReaderSync.readAsArrayBuffer","readAsArrayBuffer()")}}.
 
-The `readAsBinaryString()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into an {{DOMxRef("DOMString")}}. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+The **`readAsBinaryString()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
-```js
-readAsBinaryString(File);
-readAsBinaryString(Blob);
+```js-nolint
+readAsBinaryString(File)
+readAsBinaryString(Blob)
 ```
 
 ### Parameters
@@ -26,7 +30,7 @@ readAsBinaryString(Blob);
 
 ### Return value
 
-A {{DOMxRef("DOMString")}} representing the input data.
+A string representing the input data.
 
 ## Exceptions
 
@@ -52,8 +56,8 @@ A {{DOMxRef("DOMString")}} representing the input data.
 
 ## See also
 
-- [File API](/en-US/docs/API/File_API)
+- [File API](/en-US/docs/Web/API/File_API)
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

@@ -1,21 +1,14 @@
 ---
-title: FileReader.readAsArrayBuffer()
+title: "FileReader: readAsArrayBuffer() method"
+short-title: readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
-tags:
-  - API
-  - DOM
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
-  - readAsArrayBuffer
+page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsArrayBuffer
 ---
-{{APIRef("File API")}}
 
-The {{domxref("FileReader")}} interface's
-**`readAsArrayBuffer()`** method is used to start reading the
+{{APIRef("File API")}}{{AvailableInWorkers}}
+
+The **`readAsArrayBuffer()`** method of the {{domxref("FileReader")}} interface is used to start reading the
 contents of a specified {{domxref("Blob")}} or {{domxref("File")}}. When the read
 operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
 `DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} is
@@ -27,14 +20,18 @@ contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
 ## Syntax
 
-```js
-instanceOfFileReader.readAsArrayBuffer(blob);
+```js-nolint
+readAsArrayBuffer(blob)
 ```
 
 ### Parameters
 
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

@@ -1,53 +1,44 @@
 ---
-title: 'Window: resize event'
+title: "Window: resize event"
+short-title: resize
 slug: Web/API/Window/resize_event
-tags:
-  - API
-  - Reference
-  - Web
-  - Window
-  - events
-  - resize
+page-type: web-api-event
 browser-compat: api.Window.resize_event
 ---
+
 {{APIRef}}
 
 The **`resize`** event fires when the document view (window) has been resized.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onresize", "onresize")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
 
 In some earlier browsers it was possible to register `resize` event handlers on any HTML element. It is still possible to set `onresize` attributes or use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to set a handler on any element. However, `resize` events are only fired on the {{domxref("Window", "window")}} object (i.e. returned by {{domxref("document.defaultView")}}). Only handlers registered on the `window` object will receive `resize` events.
 
-There is a proposal to allow all elements to be notified of resize changes. See [Resize Observer](https://wicg.github.io/ResizeObserver/) to read the draft document, and [GitHub issues](https://github.com/WICG/ResizeObserver/issues) to read the on-going discussions.
+While the `resize` event fires only for the window nowadays, you can get resize notifications for other elements using the [ResizeObserver](/en-US/docs/Web/API/ResizeObserver) API.
 
-If the resize event is triggered too many times for your application, see [Optimizing window.onresize](http://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+If the resize event is triggered too many times for your application, see [Optimizing window.onresize](https://web.archive.org/web/20220714020647/https://bencentra.com/code/2015/02/27/optimizing-window-resize.html) to control the time after which the event fires.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("resize", (event) => {});
+
+onresize = (event) => {};
+```
+
+## Event type
+
+A generic {{domxref("Event")}}.
 
 ## Examples
 
 ### Window size logger
 
-The following example reports the window size each time it is resized. Bear in mind that since the example is running in an `<iframe>`, you'll need to actually get the `<iframe>` to resize before you see an effect.
+The following example reports the window size each time it is resized.
+
+#### HTML
 
 ```html
 <p>Resize the browser window to fire the <code>resize</code> event.</p>
@@ -55,9 +46,11 @@ The following example reports the window size each time it is resized. Bear in m
 <p>Window width: <span id="width"></span></p>
 ```
 
+#### JavaScript
+
 ```js
-const heightOutput = document.querySelector('#height');
-const widthOutput = document.querySelector('#width');
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
 
 function reportWindowSize() {
   heightOutput.textContent = window.innerHeight;
@@ -67,14 +60,20 @@ function reportWindowSize() {
 window.onresize = reportWindowSize;
 ```
 
+#### Result
+
 {{EmbedLiveSample("Window_size_logger")}}
+
+> **Note:** The example output here is in an {{HTMLElement("iframe")}}, so the reported width and height values are for the `<iframe>`, not the window that this page is in. In particular, it will be hard to adjust the window size so as to see a difference in the reported height.
+>
+> The effect is easier to see if you [view the example in its own window](https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Window/resize_event/_sample_.window_size_logger.html).
 
 ### addEventListener equivalent
 
 You could set up the event handler using the [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-window.addEventListener('resize', reportWindowSize);
+window.addEventListener("resize", reportWindowSize);
 ```
 
 ## Specifications
@@ -84,7 +83,3 @@ window.addEventListener('resize', reportWindowSize);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("GlobalEventHandlers.onresize")}}

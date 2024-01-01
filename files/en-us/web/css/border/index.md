@@ -1,15 +1,10 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Shorthand property
-  - Layout
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border
 ---
+
 {{CSSRef("CSS Borders")}}
 
 The **`border`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
@@ -42,6 +37,8 @@ border: medium dashed green;
 /* Global values */
 border: inherit;
 border: initial;
+border: revert;
+border: revert-layer;
 border: unset;
 ```
 
@@ -53,7 +50,7 @@ The `border` property may be specified using one, two, or three of the values li
 
 - `<line-width>`
   - : Sets the thickness of the border. Defaults to `medium` if absent. See {{Cssxref("border-width")}}.
-- `<line-style>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : Sets the style of the border. Defaults to `none` if absent. See {{Cssxref("border-style")}}.
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the border. Defaults to `currentcolor` if absent. See {{Cssxref("border-color")}}.
@@ -121,5 +118,6 @@ div {
 - {{Cssxref("border-width")}}
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- {{Cssxref("outline")}}
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

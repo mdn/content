@@ -1,29 +1,25 @@
 ---
 title: DataView() constructor
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-tags:
-  - Constructor
-  - DataView
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - Polyfill
+page-type: javascript-constructor
 browser-compat: javascript.builtins.DataView.DataView
 ---
+
 {{JSRef}}
 
-The **`DataView()`** constructor is used to create
-{{jsxref("DataView")}} objects.
+The **`DataView()`** constructor creates {{jsxref("DataView")}} objects.
 
 {{EmbedInteractiveExample("pages/js/dataview-constructor.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 new DataView(buffer)
 new DataView(buffer, byteOffset)
 new DataView(buffer, byteOffset, byteLength)
 ```
+
+> **Note:** `DataView()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -39,32 +35,20 @@ new DataView(buffer, byteOffset, byteLength)
 
 ### Return value
 
-A new `DataView` object representing the specified data buffer. (That
-probably wasn't a very helpful description.)
-
-You can think of the returned object as an "interpreter" of the array buffer of bytes —
-it knows how to convert numbers to fit within the buffer correctly, both when reading
-and writing to it. This means handling integer and float conversion, endianness, and
-other details of representing numbers in binary form.
+A new {{jsxref("DataView")}} object representing the specified data buffer.
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-
-  - : Thrown if the `byteOffset` or `byteLength` parameter values
-    result in the view extending past the end of the buffer.
-
-    For example, if the buffer is 16 bytes long, the `byteOffset` is 8, and
-    the `byteLength` is 10, this error is thrown because the resulting view
-    tries to extend 2 bytes past the total length of the buffer.
+  - : Thrown if the `byteOffset` or `byteLength` parameter values result in the view extending past the end of the buffer. In other words, `byteOffset + byteLength > buffer.byteLength`.
 
 ## Examples
 
 ### Using DataView
 
 ```js
-var buffer = new ArrayBuffer(16);
-var view = new DataView(buffer, 0);
+const buffer = new ArrayBuffer(16);
+const view = new DataView(buffer, 0);
 
 view.setInt16(1, 42);
 view.getInt16(1); // 42
@@ -80,5 +64,5 @@ view.getInt16(1); // 42
 
 ## See also
 
-- A polyfill of `DataView` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `DataView` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("DataView")}}

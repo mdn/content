@@ -1,21 +1,20 @@
 ---
 title: <xsl:copy>
 slug: Web/XSLT/Element/copy
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - copy
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:copy>` element transfers a shallow copy (the node and any associated namespace node) of the current node to the output document. It does not copy any children or attributes of the current node.
 
 ### Syntax
 
-    <xsl:copy use-attribute-sets=LIST-OF-NAMES>
-    	TEMPLATE
-    </xsl:copy>
+```xml
+<xsl:copy use-attribute-sets=LIST-OF-NAMES>
+  TEMPLATE
+</xsl:copy>
+```
 
 ### Required Attributes
 

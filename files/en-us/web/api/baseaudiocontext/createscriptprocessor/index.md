@@ -1,16 +1,13 @@
 ---
-title: BaseAudioContext.createScriptProcessor()
+title: "BaseAudioContext: createScriptProcessor() method"
+short-title: createScriptProcessor()
 slug: Web/API/BaseAudioContext/createScriptProcessor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createScriptProcessor
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
+
 {{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
@@ -20,8 +17,8 @@ creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.
 
 ## Syntax
 
-```js
-var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels);
+```js-nolint
+createScriptProcessor(bufferSize, numberOfInputChannels, numberOfOutputChannels)
 ```
 
 ### Parameters
@@ -54,94 +51,88 @@ var scriptProcessor = audioCtx.createScriptProcessor(bufferSize, numberOfInputCh
 > **Note:** It is invalid for both `numberOfInputChannels` and
 > `numberOfOutputChannels` to be zero.
 
-### Returns
+### Return value
 
 A {{domxref("ScriptProcessorNode")}}.
 
-## Example
+## Examples
 
-The following example shows basic usage of a `ScriptProcessorNode` to take a
-track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit
-of white noise to each audio sample of the input track (buffer) and play it through the
-{{domxref("AudioDestinationNode")}}. For each channel and each sample frame, the
-`scriptNode.onaudioprocess` function takes the associated
-`audioProcessingEvent` and uses it to loop through each channel of the input
-buffer, and each sample in each channel, and add a small amount of white noise, before
-setting that result to be the output sample in each case.
+### Adding white noise using a script processor
 
-> **Note:** For a full working example, see our [script-processor-node](https://mdn.github.io/webaudio-examples/script-processor-node/)
-> github repo (also view the [source
-> code](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/index.html).)
+The following example shows how to use a `ScriptProcessorNode` to take a track loaded via {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}}, process it, adding a bit of white noise to each audio sample of the input track, and play it through the {{domxref("AudioDestinationNode")}}.
+
+For each channel and each sample frame, the script node's {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} event handler uses the associated `audioProcessingEvent` to loop through each channel of the input buffer, and each sample in each channel, and add a small amount of white noise, before setting that result to be the output sample in each case.
+
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/script-processor-node/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/).
 
 ```js
-var myScript = document.querySelector('script');
-var myPre = document.querySelector('pre');
-var playButton = document.querySelector('button');
+const myScript = document.querySelector("script");
+const myPre = document.querySelector("pre");
+const playButton = document.querySelector("button");
 
 // Create AudioContext and buffer source
-var audioCtx = new AudioContext();
-source = audioCtx.createBufferSource();
+let audioCtx;
 
-// Create a ScriptProcessorNode with a bufferSize of 4096 and a single input and output channel
-var scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
-console.log(scriptNode.bufferSize);
+async function init() {
+  audioCtx = new AudioContext();
+  const source = audioCtx.createBufferSource();
 
-// load in an audio track via XHR and decodeAudioData
+  // Create a ScriptProcessorNode with a bufferSize of 4096 and
+  // a single input and output channel
+  const scriptNode = audioCtx.createScriptProcessor(4096, 1, 1);
 
-function getData() {
-  request = new XMLHttpRequest();
-  request.open('GET', 'viper.ogg', true);
-  request.responseType = 'arraybuffer';
-  request.onload = function() {
-    var audioData = request.response;
-
-    audioCtx.decodeAudioData(audioData, function(buffer) {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
-    },
-    function(e){"Error with decoding audio data" + e.err});
+  // Load in an audio track using fetch() and decodeAudioData()
+  try {
+    const response = await fetch("viper.ogg");
+    const arrayBuffer = await response.arrayBuffer();
+    source.buffer = await audioCtx.decodeAudioData(arrayBuffer);
+  } catch (err) {
+    console.error(
+      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+    );
   }
-  request.send();
-}
 
-// Give the node a function to process audio events
-scriptNode.onaudioprocess = function(audioProcessingEvent) {
-  // The input buffer is the song we loaded earlier
-  var inputBuffer = audioProcessingEvent.inputBuffer;
+  // Give the node a function to process audio events
+  scriptNode.addEventListener("audioprocess", (audioProcessingEvent) => {
+    // The input buffer is the song we loaded earlier
+    let inputBuffer = audioProcessingEvent.inputBuffer;
 
-  // The output buffer contains the samples that will be modified and played
-  var outputBuffer = audioProcessingEvent.outputBuffer;
+    // The output buffer contains the samples that will be modified and played
+    let outputBuffer = audioProcessingEvent.outputBuffer;
 
-  // Loop through the output channels (in this case there is only one)
-  for (var channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
-    var inputData = inputBuffer.getChannelData(channel);
-    var outputData = outputBuffer.getChannelData(channel);
+    // Loop through the output channels (in this case there is only one)
+    for (let channel = 0; channel < outputBuffer.numberOfChannels; channel++) {
+      let inputData = inputBuffer.getChannelData(channel);
+      let outputData = outputBuffer.getChannelData(channel);
 
-    // Loop through the 4096 samples
-    for (var sample = 0; sample < inputBuffer.length; sample++) {
-      // make output equal to the same as the input
-      outputData[sample] = inputData[sample];
+      // Loop through the 4096 samples
+      for (let sample = 0; sample < inputBuffer.length; sample++) {
+        // make output equal to the same as the input
+        outputData[sample] = inputData[sample];
 
-      // add noise to each output sample
-      outputData[sample] += ((Math.random() * 2) - 1) * 0.2;
+        // add noise to each output sample
+        outputData[sample] += (Math.random() * 2 - 1) * 0.1;
+      }
     }
-  }
-}
+  });
 
-getData();
-
-// wire up play button
-playButton.onclick = function() {
   source.connect(scriptNode);
   scriptNode.connect(audioCtx.destination);
   source.start();
+
+  // When the buffer source stops playing, disconnect everything
+  source.addEventListener("ended", () => {
+    source.disconnect(scriptNode);
+    scriptNode.disconnect(audioCtx.destination);
+  });
 }
 
-// When the buffer source stops playing, disconnect everything
-source.onended = function() {
-  source.disconnect(scriptNode);
-  scriptNode.disconnect(audioCtx.destination);
-}
+// wire up play button
+playButton.addEventListener("click", () => {
+  if (!audioCtx) {
+    init();
+  }
+});
 ```
 
 ## Specifications

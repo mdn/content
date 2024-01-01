@@ -1,20 +1,10 @@
 ---
 title: border-inline-start
 slug: Web/CSS/border-inline-start
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Experimental
-  - Reference
-  - border-inline
-  - border-inline-start
-  - border-inline-start-color
-  - border-inline-start-style
-  - border-inline-start-width
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-inline-start
 ---
+
 {{CSSRef}}
 
 The **`border-inline-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) for setting the individual logical inline-start border property values in a single place in the style sheet.
@@ -40,6 +30,7 @@ border-inline-start: medium dashed green;
 border-inline-start: inherit;
 border-inline-start: initial;
 border-inline-start: revert;
+border-inline-start: revert-layer;
 border-inline-start: unset;
 ```
 
@@ -55,8 +46,8 @@ The `border-inline-start` is specified with one or more of the following, in any
   - : The width of the border. See {{cssxref("border-width")}}.
 - `<'border-style'>`
   - : The line style of the border. See {{cssxref("border-style")}}.
-- `<'color'>`
-  - : The color of the border. See {{cssxref("color")}}.
+- {{CSSXref("&lt;color&gt;")}}
+  - : The color of the border.
 
 ## Formal definition
 
@@ -103,5 +94,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

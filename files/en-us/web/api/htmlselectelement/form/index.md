@@ -1,57 +1,48 @@
 ---
-title: HTMLSelectElement.form
+title: "HTMLSelectElement: form property"
+short-title: form
 slug: Web/API/HTMLSelectElement/form
-tags:
-  - API
-  - HTMLSelectElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLSelectElement.form
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLSelectElement.form`** read-only property returns a
 {{domxref("HTMLFormElement")}} representing the form that this element is associated
-with. If the element is not associated with of a {{HTMLElement("form")}} element, then
+with. If the element is not associated with a {{HTMLElement("form")}} element, then
 it returns `null`.
 
-## Syntax
+## Value
 
-```js
-aForm = aSelectElement.form.selectname;
-```
+A {{domxref("HTMLFormElement")}}.
 
-## Example
-
-### HTML
+## Examples
 
 ```html
-<form action="http://www.google.com/search" method="get">
- <label>Google: <input type="search" name="q"></label> <input type="submit" value="Search...">
+<form id="pet-form">
+  <label for="pet-select">Choose a pet</label>
+  <select name="pets" id="pet-select">
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="parrot">Parrot</option>
+  </select>
+
+  <button type="submit">Submit</button>
 </form>
-```
 
-### Javascript
+<label for="lunch-select">Choose your lunch</label>
+<select name="lunch" id="lunch-select">
+  <option value="salad">Salad</option>
+  <option value="sandwich">Sandwich</option>
+</select>
 
-A property available on all form elements, "type" returns the type of the calling form
-element. For SELECT, the two possible values are "`select-one`" or
-"`select-multiple`", depending on the type of selection list. The below code
-gives all SELECT elements in a particular form a CSS class of
-"`selectclass`":
+<script>
+  const petSelect = document.getElementById("pet-select");
+  const petForm = petSelect.form; // <form id="pet-form">
 
-```html
-<script type="text/javascript">
-var form_element = document.getElementById('subscribe_form');
-var vist = form_element.style;
-if (vist.display=='' || vist.display=='none')
-{
-  vist.display = 'block';
-}
-else
-{
-  vist.display = 'none';
-}
+  const lunchSelect = document.getElementById("lunch-select");
+  const lunchForm = lunchSelect.form; // null
 </script>
 ```
 

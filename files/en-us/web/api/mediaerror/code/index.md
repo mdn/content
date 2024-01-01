@@ -1,38 +1,23 @@
 ---
-title: MediaError.code
+title: "MediaError: code property"
+short-title: code
 slug: Web/API/MediaError/code
-tags:
-  - API
-  - Audio
-  - Code
-  - Errors
-  - HTML DOM
-  - Media
-  - MediaError
-  - Property
-  - Read-only
-  - Reference
-  - Video
+page-type: web-api-instance-property
 browser-compat: api.MediaError.code
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only property **`MediaError.code`** returns a numeric
 value which represents the kind of error that occurred on a media element. To get a text
 string with specific diagnostic information, see {{domxref("MediaError.message")}}.
 
-## Syntax
-
-```js
-var myError = mediaError.code;
-```
-
-### Value
+## Value
 
 A numeric value indicating the general type of error which occurred. The possible
-values are described below, in {{anch("Media error code constants")}}.
+values are described below, in [Media error code constants](#media_error_code_constants).
 
-#### Media error code constants
+### Media error code constants
 
 <table class="no-markdown">
   <thead>
@@ -79,16 +64,18 @@ values are described below, in {{anch("Media error code constants")}}.
   </tbody>
 </table>
 
-## Example
+## Examples
 
 This example creates a {{HTMLElement("video")}} element, establishes an error handler
-for it, and then sets the element's {{htmlattrxref("src", "video")}} attribute to the
+for it, and then sets the element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute to the
 video resource to present in the element. The error handler outputs a message
 
 ```js
-var obj = document.createElement('video');
-obj.onerror = function() {console.log("Error with media: " + obj.error.code);}
-obj.src="https://example.com/blahblah.mp4";
+const obj = document.createElement("video");
+obj.onerror = () => {
+  console.error(`Error with media: ${obj.error.code}`);
+};
+obj.src = "https://example.com/blahblah.mp4";
 ```
 
 ## Specifications
@@ -101,4 +88,4 @@ obj.src="https://example.com/blahblah.mp4";
 
 ## See also
 
-- The interface defining it, {{domxref("MediaError")}}.
+- {{domxref("MediaError")}}: Interface used to define the `MediaError.code` property

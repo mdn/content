@@ -1,24 +1,12 @@
 ---
-title: XMLHttpRequest.upload
+title: "XMLHttpRequest: upload property"
+short-title: upload
 slug: Web/API/XMLHttpRequest/upload
-tags:
-  - AJAX
-  - API
-  - Monitoring XMLHttpRequest
-  - Property
-  - Read-only
-  - Reference
-  - Sending Files
-  - Uploading
-  - XHR
-  - XHR Uploads
-  - XMLHttpRequest
-  - XMLHttpRequest Uploads
-  - XMLHttpRequestUpload
-  - upload
+page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.upload
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} `upload` property returns an {{domxref("XMLHttpRequestUpload")}} object that can be observed to monitor an upload's progress.
 
@@ -34,47 +22,34 @@ The following events can be triggered on an upload object and used to monitor th
   <thead>
     <tr>
       <th>Event</th>
-      <th>Event listener</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{event("loadstart")}}</td>
-      <td>
-        {{domxref("XMLHttpRequest.onloadstart", "onloadstart")}}
-      </td>
+      <td>{{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}</td>
       <td>The upload has begun.</td>
     </tr>
     <tr>
-      <td>{{event("progress")}}</td>
-      <td>
-        {{domxref("XMLHttpRequest.onprogress", "onprogress")}}
-      </td>
+      <td>{{domxref("XMLHttpRequestUpload/progress_event", "progress")}}</td>
       <td>
         Periodically delivered to indicate the amount of progress made so far.
       </td>
     </tr>
     <tr>
-      <td>{{event("abort")}}</td>
-      <td>{{domxref("XMLHttpRequest.onabort", "onabort")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/abort_event", "abort")}}</td>
       <td>The upload operation was aborted.</td>
     </tr>
     <tr>
-      <td>{{event("error")}}</td>
-      <td>{{domxref("XMLHttpRequest.onerror", "onerror")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/error_event", "error")}}</td>
       <td>The upload failed due to an error.</td>
     </tr>
     <tr>
-      <td>{{event("load")}}</td>
-      <td>{{domxref("XMLHttpRequest.onload", "onload")}}</td>
+      <td>{{domxref("XMLHttpRequestUpload/load_event", "load")}}</td>
       <td>The upload completed successfully.</td>
     </tr>
     <tr>
-      <td>{{event("timeout")}}</td>
-      <td>
-        {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}}
-      </td>
+      <td>{{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}</td>
       <td>
         The upload timed out because a reply did not arrive within the time
         interval specified by the
@@ -82,10 +57,7 @@ The following events can be triggered on an upload object and used to monitor th
       </td>
     </tr>
     <tr>
-      <td>{{event("loadend")}}</td>
-      <td>
-        {{domxref("XMLHttpRequest.onloadend", "onloadend")}}
-      </td>
+      <td>{{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}</td>
       <td>
         The upload finished. This event does not differentiate between success
         or failure, and is sent at the end of the upload regardless of the
@@ -107,6 +79,5 @@ The following events can be triggered on an upload object and used to monitor th
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [FileHandle API](/en-US/docs/Web/API/File_Handle_API)
-- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- {{domxref("XMLHttpRequestUpload")}}

@@ -1,37 +1,68 @@
 ---
-title: <hgroup>
+title: "<hgroup>: The Heading Group element"
 slug: Web/HTML/Element/hgroup
-tags:
-  - Deprecated
-  - Element
-  - Experimental
-  - HTML
-  - HTML5
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-> **Warning:** `<hgroup>` should not be used because no assistive technology supports it, and as a result it has a detrimental effect on assistance for headings placed within it.
->
-> For more information see the [Usage notes below](#usage_notes).
-
-The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level heading for a section of a document. It groups a set of [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements.
+The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+
+> **Note:** The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification but is still part of the WHATWG specification and is at least partially supported by most browsers.
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+The `<hgroup>` element allows the grouping of a heading with any secondary content, such as subheadings, an alternative title, or tagline. Each of these types of content represented as a `<p>` element within the `<hgroup>`.
+
+The `<hgroup>` itself has no impact on the document outline of a web page. Rather, the single allowed heading within the `<hgroup>` contributes to the document outline.
+
+## Examples
+
+```html
+<!doctype html>
+<title>HTML Standard</title>
+<body>
+  <hgroup id="document-title">
+    <h1>HTML: Living Standard</h1>
+    <p>Last Updated 12 July 2022</p>
+  </hgroup>
+  <p>Some intro to the document.</p>
+  <h2>Table of contents</h2>
+  <ol id="toc">
+    …
+  </ol>
+  <h2>First section</h2>
+  <p>Some intro to the first section.</p>
+</body>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
+## Accessibility concerns
+
+The `<hgroup>` presently has no strong accessibility semantics. The content of the element (a heading and optional paragraphs) is what is exposed by browser accessibility APIs.
+
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >, heading content, palpable content.
       </td>
@@ -39,9 +70,11 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        One or more {{HTMLElement("h1")}}, {{HTMLElement("h2")}},
-        {{HTMLElement("h3")}}, {{HTMLElement("h4")}},
-        {{HTMLElement("h5")}}, and/or {{HTMLElement("h6")}}.
+        Zero or more {{HTMLElement("p")}} elements, followed by one
+        {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
+        {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
+        {{HTMLElement("Heading_Elements", "h5")}}, or {{HTMLElement("Heading_Elements", "h6")}} element,
+        followed by zero or more {{HTMLElement("p")}} elements.
       </td>
     </tr>
     <tr>
@@ -52,7 +85,7 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >.
       </td>
@@ -60,8 +93,10 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -76,70 +111,6 @@ The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a multi-level
   </tbody>
 </table>
 
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-> **Note:** The `<hgroup>` element has been removed from the HTML5 (W3C) specification, but it still is in the WHATWG version of HTML. It is partially implemented in most browsers, though, so is unlikely to go away.
-> However, given that a key purpose of the `<hgroup>` element is to affect how headings are displayed by [the outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm)—but **the HTML outline algorithm is not implemented in any browsers**—then the `<hgroup>` semantics are in practice only theoretical.
-> So the HTML5 (W3C) specification provides advice on how to mark up [Subheadings, subtitles, alternative titles and taglines](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements) without using `<hgroup>`.
-
-The `<hgroup>` element allows the primary heading for a document section to be grouped with any secondary headings—such as subheadings or alternative titles—to form a _multi-level_ heading.
-
-In other words, the `<hgroup>` element prevents any of its secondary [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children from creating separate sections of their own in the outline—as those [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) elements otherwise normally would if they were not children of any `<hgroup>`.
-
-So in the abstract outline produced by the [HTML outline algorithm defined in the HTML specification](/en-US/docs/Web/HTML/Element/Heading_Elements#the_html5_outline_algorithm), the `<hgroup>` as a whole forms a single logical heading, with the entire set of [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) children of the `<hgroup>` going into the outline as one _multi-level_ unit, to comprise that single logical heading in the abstract outline.
-
-To produce any (non-abstract) _rendered_ view of such an outline, some choice must be made in the design of the rendering tool about how to render `<hgroup>` headings in such a way as to convey their multi-level nature. There are a variety of ways an `<hgroup>` might be shown in a rendered outline; for example:
-
-- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (“`: `”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
-- an `<hgroup>` might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)
-
-Consider the following HTML document:
-
-```html
-<!DOCTYPE html>
-<title>HTML Standard</title>
-<body>
-  <hgroup id="document-title">
-    <h1>HTML</h1>
-    <h2>Living Standard — Last Updated 12 August 2016</h2>
-  </hgroup>
-  <p>Some intro to the document.</p>
-  <h2>Table of contents</h2>
-  <ol id=toc>...</ol>
-  <h2>First section</h2>
-  <p>Some intro to the first section.</p>
-</body>
-```
-
-A rendered outline for that document might look like the following:
-
-![](outline-colon.png)
-
-That is, the rendered outline might show the primary title, _HTML_, followed by a colon and space, followed by the secondary title, _Living Standard — Last Updated 12 August 2016_.
-
-Or, the rendered outline for that document might instead look like the following:
-
-![Rendered outline that includes an <hgroup> element, with parens around the secondary heading](outline-paren.png)
-
-That is, the rendered outline might show the primary title, _HTML_, followed by the secondary title shown in parentheses: _(Living Standard — Last Updated 12 August 2016)_.
-
-## Examples
-
-```html
-<hgroup id="document-title">
-  <h1>HTML</h1>
-  <h2>Living Standard — Last Updated 12 August 2016</h2>
-</hgroup>
-```
-
-## Accessibility concerns
-
-The presence of `hgroup` may remove information reported to assistive technology about the subheading portion of the heading group.
-
 ## Specifications
 
 {{Specifications}}
@@ -150,5 +121,5 @@ The presence of `hgroup` may remove information reported to assistive technology
 
 ## See also
 
-- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [Sections and outlines of an HTML5 document](/en-US/docs/Web/HTML/Element/Heading_Elements).
+- Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- [Sections and outlines of an HTML document](/en-US/docs/Web/HTML/Element/Heading_Elements).

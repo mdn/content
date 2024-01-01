@@ -1,39 +1,32 @@
 ---
-title: OverconstrainedError()
+title: "OverconstrainedError: OverconstrainedError() constructor"
+short-title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - OverconstrainedError
-  - Reference
-  - Video
+page-type: web-api-constructor
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-The **`OverconstrainedError`** constructor
+{{APIRef("Media Capture and Streams")}}
+
+The **`OverconstrainedError()`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
-desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
+desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
 met. When this event is thrown on a `MediaStreamTrack`, it is muted until
 either the current constraints can be established or until satisfiable constraints are
 applied.
 
 ## Syntax
 
-```js
-var OverconstrainedError = new OverconstrainedError()
+```js-nolint
+new OverconstrainedError()
 ```
 
 ### Parameters
 
-- constraint
-  - : The constraint that was not satified.
-- message
-  - : Text for the error's `message` property.
+- `constraint`
+  - : The constraint that was not satisfied.
+- `message` {{optional_inline}}
+  - : Text for the error's `message` property. Defaults to an empty string.
 
 ## Specifications
 

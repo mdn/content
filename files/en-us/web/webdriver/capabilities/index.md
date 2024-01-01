@@ -1,11 +1,11 @@
 ---
 title: Capabilities
 slug: Web/WebDriver/Capabilities
-tags:
-  - Reference
-  - WebDriver
-  - capabilities
+page-type: landing-page
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver")}}
+
 WebDriver **_capabilities_** are used to communicate the features supported by a [session](/en-US/docs/Web/WebDriver). A client may also use capabilities to define which features it requires the driver to satisfy when [creating a new session](/en-US/docs/Web/WebDriver/Commands/NewSession).
 
 When a WebDriver session is created it returns a set of capabilities describing the negotiated, effective capabilities of the session. Some of the capabilities included in this set are [standard and shared between all browsers](#list-of-capabilities), but the set may also contain [browser-specific capabilities](#vendor-specific-capabilities) and these are always prefixed.
@@ -45,12 +45,9 @@ This can be useful when you want a driver that runs on macOS or Linux, but not W
 
 ```json
 {
-  "capabilities": {
-    "firstMatch": [
-      {"platformName": "macos"},
-      {"platformName": "linux"}
-    ]
-  }
+  "capabilities": {
+    "firstMatch": [{ "platformName": "macos" }, { "platformName": "linux" }]
+  }
 }
 ```
 
@@ -60,15 +57,12 @@ This can be useful when you want a driver that runs on macOS or Linux, but not W
 
 ```json
 {
-  "capabilities": {
-    "alwaysMatch": {
-      "browserName": "firefox"
-    },
-    "firstMatch": [
-      {"platformName": "macos"},
-      {"platformName": "linux"}
-    ]
-  }
+  "capabilities": {
+    "alwaysMatch": {
+      "browserName": "firefox"
+    },
+    "firstMatch": [{ "platformName": "macos" }, { "platformName": "linux" }]
+  }
 }
 ```
 
@@ -76,12 +70,12 @@ The previous example is exactly equivalent to putting the Firefox requirement in
 
 ```json
 {
-  "capabilities":{
-    "firstMatch":[
-      {"browserName": "firefox", "platformName":"macos"},
-      {"browserName": "firefox", "platformName":"linux"}
-    ]
-  }
+  "capabilities": {
+    "firstMatch": [
+      { "browserName": "firefox", "platformName": "macos" },
+      { "browserName": "firefox", "platformName": "linux" }
+    ]
+  }
 }
 ```
 
@@ -89,21 +83,18 @@ Which you choose of the two preceding examples is not important, but it can matt
 
 ```json
 {
-  "capabilities": {
-    "alwaysMatch": {
-      "browserName": "firefox",
-      "moz:firefoxOptions": {
-        "profile": "<base64 encoded profile>",
-        "args": ["-headless"],
-        "prefs": {"dom.ipc.processCount": 8},
-        "log":{"level": "trace"}
-      }
-    },
-    "firstMatch": [
-      {"platformName": "macos"},
-      {"platformName": "linux"}
-    ]
-  }
+  "capabilities": {
+    "alwaysMatch": {
+      "browserName": "firefox",
+      "moz:firefoxOptions": {
+        "profile": "<base64 encoded profile>",
+        "args": ["-headless"],
+        "prefs": { "dom.ipc.processCount": 8 },
+        "log": { "level": "trace" }
+      }
+    },
+    "firstMatch": [{ "platformName": "macos" }, { "platformName": "linux" }]
+  }
 }
 ```
 
@@ -135,24 +126,22 @@ Converting a legacy capabilities object into the new style is easy. The first th
 Take this deprecated capabilities object:
 
 ```json
-{"desiredCapabilities": {"browserName": "firefox"}}
+{ "desiredCapabilities": { "browserName": "firefox" } }
 ```
 
 This would be functionally equivalent in the new style:
 
 ```json
-{"capabilities": {"firstMatch": [{"browserName": "firefox"}]}}
+{ "capabilities": { "firstMatch": [{ "browserName": "firefox" }] } }
 ```
 
-But because there is only one `firstMatch` arm, and we know that session creation will fail if the server doesn’t have a Firefox installed, it is also equivalent to this:
+But because there is only one `firstMatch` arm, and we know that session creation will fail if the server doesn't have a Firefox installed, it is also equivalent to this:
 
 ```json
-{"capabilities": {"alwaysMatch": {"browserName": "firefox"}}}
+{ "capabilities": { "alwaysMatch": { "browserName": "firefox" } } }
 ```
 
 ## See also
 
 - [New Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
 - [Delete Session](/en-US/docs/Web/WebDriver/Commands/NewSession) command
-
-{{QuickLinksWithSubpages}}

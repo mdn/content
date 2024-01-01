@@ -1,18 +1,17 @@
 ---
 title: widows
 slug: Web/CSS/widows
-tags:
-  - CSS
-  - CSS Fragmentation
-  - CSS Multi-column Layout
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.widows
 ---
+
 {{CSSRef}}
 
-The **`widows`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/Paged_Media), region, or [column](/en-US/docs/Web/CSS/CSS_Columns).
+The **`widows`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of lines in a block container that must be shown at the _top_ of a [page](/en-US/docs/Web/CSS/CSS_paged_media), region, or [column](/en-US/docs/Web/CSS/CSS_multicol_layout).
+
+In typography, a _widow_ is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)
+
+## Syntax
 
 ```css
 /* <integer> values */
@@ -23,12 +22,9 @@ widows: 3;
 widows: inherit;
 widows: initial;
 widows: revert;
+widows: revert-layer;
 widows: unset;
 ```
-
-In typography, a _widow_ is the last line of a paragraph that appears alone at the top of a page. (The paragraph is continued from a prior page.)
-
-## Syntax
 
 ### Values
 
@@ -52,8 +48,14 @@ In typography, a _widow_ is the last line of a paragraph that appears alone at t
 ```html
 <div>
   <p>This is the first paragraph containing some text.</p>
-  <p>This is the second paragraph containing some more text than the first one. It is used to demonstrate how widows work.</p>
-  <p>This is the third paragraph. It has a little bit more text than the first one.</p>
+  <p>
+    This is the second paragraph containing some more text than the first one.
+    It is used to demonstrate how widows work.
+  </p>
+  <p>
+    This is the third paragraph. It has a little bit more text than the first
+    one.
+  </p>
 </div>
 ```
 
@@ -90,4 +92,4 @@ p:first-child {
 ## See also
 
 - {{cssxref("orphans")}}
-- [Paged media](/en-US/docs/Web/CSS/Paged_Media)
+- [Paged media](/en-US/docs/Web/CSS/CSS_paged_media)
