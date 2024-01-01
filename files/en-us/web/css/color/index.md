@@ -114,7 +114,7 @@ p {
   color: rgb(100% 0% 0%);
 }
 p {
-  color: hsl(0, 100%, 50%);
+  color: hsl(0 100% 50%);
 }
 
 /* 50% translucent */
@@ -125,7 +125,7 @@ p {
   color: rgb(255 0 0 / 50%);
 }
 p {
-  color: hsla(0, 100%, 50%, 0.5);
+  color: hsl(0 100% 50% / 50%);
 }
 ```
 
