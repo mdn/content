@@ -91,8 +91,8 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 }
 
 .exampletwo {
-  background-color: rgb(153, 102, 153);
-  color: rgb(255, 255, 204);
+  background-color: rgb(153 102 153);
+  color: rgb(255 255 204);
 }
 
 .examplethree {

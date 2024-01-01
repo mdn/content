@@ -108,10 +108,10 @@ p {
   color: #ff0000;
 }
 p {
-  color: rgb(255, 0, 0);
+  color: rgb(255 0 0);
 }
 p {
-  color: rgb(100%, 0%, 0%);
+  color: rgb(100% 0% 0%);
 }
 p {
   color: hsl(0, 100%, 50%);
@@ -122,7 +122,7 @@ p {
   color: #ff000080;
 }
 p {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgb(255 0 0 / 50%);
 }
 p {
   color: hsla(0, 100%, 50%, 0.5);
