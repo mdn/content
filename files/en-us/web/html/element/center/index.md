@@ -26,6 +26,10 @@ This element implements the {{domxref("HTMLElement")}} interface.
 </center>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examlpe 1')}}
+
 ## Example 2 (CSS alternative)
 
 ```html
@@ -35,6 +39,10 @@ This element implements the {{domxref("HTMLElement")}} interface.
 </div>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examlpe 2')}}
+
 ## Example 3 (CSS alternative)
 
 ```html
@@ -43,6 +51,10 @@ This element implements the {{domxref("HTMLElement")}} interface.
   And so will this line.
 </p>
 ```
+
+### Result
+
+{{EmbedLiveSample('Examlpe 3')}}
 
 ## Note
 
