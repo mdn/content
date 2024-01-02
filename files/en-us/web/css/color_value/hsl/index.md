@@ -105,7 +105,7 @@ div.space-separated {
 }
 
 div.comma-separated {
-  background-color: hsl(0, 100%, 50%, 50%);
+  background-color: hsl(0, 100%, 50%, 0.5);
 }
 ```
 
@@ -138,7 +138,7 @@ div.hsl {
 }
 
 div.hsla {
-  background-color: hsla(0, 100%, 50%, 50%);
+  background-color: hsla(0, 100%, 50%, 0.5);
 }
 ```
 
