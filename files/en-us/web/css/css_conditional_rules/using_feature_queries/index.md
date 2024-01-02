@@ -12,7 +12,7 @@ Feature queries are created using the CSS at-rule [`@supports`](/en-US/docs/Web/
 
 ## Syntax
 
-CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/@media) at-rule. You will find feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
+CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module, which also defines the media query [`@media`](/en-US/docs/Web/CSS/@media) at-rule. Feature queries behave similarly to [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries). The difference is that with a media query, you are testing something about the environment in which the web page is running, whereas with feature queries you are testing browser support for CSS features.
 
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
@@ -24,7 +24,7 @@ A feature query consists of the `@supports` at-rule followed by the support cond
 @import url_to_import supports(<declaration>);
 ```
 
-For example, we can include a styles sheet if the user-agent supports red` as a valid value for the CSS {{cssxref("color")}} property (hint: it is):
+For example, we can apply a set of styles or import an entire stylesheet if the user-agent supports `red` as a valid value for the CSS {{cssxref("color")}} property:
 
 ```css
 @supports (color: red) {
@@ -34,11 +34,11 @@ For example, we can include a styles sheet if the user-agent supports red` as a 
 @import `/css/styles.css` supports(color: red);
 ```
 
-If you want to check if a browser supports the `row-gap` property, for example, you would write the following feature query. It doesn't matter which value you use in a lot of cases: if all you want is to check that the browser supports this property, then any valid value will do.
+As another example, if you want to check if a browser supports the `row-gap` property you would write the following feature query. It doesn't matter which value you use in a lot of cases: if all you want is to check that the browser supports this property, then any valid value will do.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
 
-The value part of the property value pair matters more if you are testing for new values of a particular property. All browsers support `color`, as `color: red`. This dates back to CSS1. However, there are often additional values added to properties in CSS,like [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative-colors), that may not be supported and [system colors](/en-US/docs/Web/CSS/system-color). Feature queries enable testing property and value pairs, meaning we can detect support for values.
+The value part of the property-value pair matters more if you are testing for new values of a particular property. All browsers support `color: red`: this dates back to CSS1. However, there are often additional values added to properties in CSS, like [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors), which may not be supported. Feature queries enable testing property and value pairs, meaning we can detect support for values.
 
 Expanding on the `color` property example above, here we check if the browser supports the `color: AccentColor` declaration:
 
@@ -76,7 +76,7 @@ You may need to test support for more than one property in your feature query. T
 }
 ```
 
-For example, if the CSS you want to run requires that the browser supports CSS Shapes and CSS Grid, you could create a rule that checks for both of these things. The following rule will only return true if `shape-outside: circle()` and `display: grid` are both supported by the browser.
+For example, if the CSS you want to run requires that the browser supports CSS Shapes and CSS Grid, you could create a rule that tests browser support for both of these features. The following rule will only return true if `shape-outside: circle()` and `display: grid` are both supported by the browser.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
 
@@ -96,11 +96,11 @@ This can be particularly useful if a feature is vendor prefixed, as you can test
 
 ## Limitations of feature queries
 
-The `@supports` rule tests to see if the browser can parse one or more property/value pairs, and therefore if it claims to support the feature(s). If the property and value pair is understood by the browser it returns a positive response. Feature queries checks that the declaration would be considered valid by the browser, but can not be used to check if a browser supports a thing properly, and without bugs. Feature queries cannot test for _partial implementations_.
+The `@supports` rule tests to see if browsers can parse one or more property/value pairs, and therefore if they claim to support the associated feature(s). If the property/value pairs are understood by a browser it returns a positive response. Feature queries check that declarations are considered valid by a browser, but can't be used to check if it supports a feature properly without bugs or spec violations. Feature queries cannot test for _partial implementations_.
 
 ## Summary
 
-Feature queries are a useful tool when progressively enhancing a site. As we've seen, they enable you to provide a good solution for all browsers, and an enhanced solution for those browsers that support newer properties and values.
+Feature queries are a useful tool for progressively enhancing a site. They enable you to provide a good solution for all browsers, and an enhanced solution for browsers that support newer properties and values.
 
 You don't need to use feature queries to start using new CSS features; CSS error handling means the browser simply ignores CSS it does not yet recognize. However, feature queries are a useful alternative to fallback declarations, and enable writing code once that can eventually be supported everywhere.
 

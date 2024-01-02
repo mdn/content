@@ -10,15 +10,15 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS conditional rules** module defines CSS features and support queries, enabling you to define styles that are only implemented if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewports. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
+The **CSS conditional rules** module defines CSS media and support queries, enabling you to define styles that are only applied if specific conditions are met. The conditional rules defined in this module are based on device, user-agent, and viewport capabilities. With conditional rules, you can target CSS styles based on query values or browser and device features, independent of the document being rendered.
 
-The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles. These were set as the value of the HTML {{HTMLElement("link")}} and {{HTMLElement("style")}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement and {{cssxref("@import")}} at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
+The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#media_types) specifying the intended destination medium for the linked styles, for example `screen` or `print`. These were set as the value of the HTML {{HTMLElement("link")}} and {{HTMLElement("style")}} elements' `media` attributes or as a comma-separated list of media types within an {{cssxref("@import")}} statement or at-rule. The ability to conditionally apply CSS rules has been greatly expanded since the CSS 2.1 and HTML 4.01 implementations that limited conditional queries to a few media types.
 
 CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
 The CSS conditional rules module also expanded `@media` to enable nesting at-rules with the [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) removing unused media types while adding many media features and conditions that can be targeted.
 
-The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent, rather than the viewport.
+The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
 
 There are plans to further extend possible queries by adding the generalized conditional rule `@when` and the chained conditional rule `@else`. These two at-rules are not yet supported.
 
@@ -63,7 +63,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 - [Using CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 
-  - : Applying CSS rules after checking browser's support for the specified property and value feature queries.
+  - : Selectively applying CSS rules after checking browser support for the specified properties and values via feature queries.
 
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 
@@ -71,7 +71,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 - [Supporting older browsers: feature queries](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers#feature_queries)
 
-  - : How to use feature queries to target CSS based on the browser's level of support for modern web features technology.
+  - : How to use feature queries to target CSS based on the browser's level of support for web features.
 
 - [Browser feature detection: CSS `@supports`](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection#supports)
 
