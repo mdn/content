@@ -22,7 +22,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 
 hsl(120deg 75% 25%)
 hsl(120 75% 25%) /* deg unit is optional */
-hsl(120deg 75% 25% / 0.6)
+hsl(120deg 75% 25% / 60%)
 hsl(none 75% 25%)
 
 /* Relative values */
@@ -35,7 +35,6 @@ hsl(from green h s l / 0.5)
 /* to the originating color's lightness channel value plus 0.6 */
 hsl(from blue h s calc(l + 0.2)) /* Chromiums */
 hsl(from blue h s calc(l + 20%)) /* Safari */
-```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
 
@@ -267,7 +266,7 @@ div.space-separated {
 }
 
 div.comma-separated {
-  background-color: hsl(0, 100%, 50%, 50%);
+  background-color: hsl(0, 100%, 50%, 0.5);
 }
 ```
 
@@ -300,7 +299,7 @@ div.hsl {
 }
 
 div.hsla {
-  background-color: hsla(0, 100%, 50%, 50%);
+  background-color: hsla(0, 100%, 50%, 0.5);
 }
 ```
 

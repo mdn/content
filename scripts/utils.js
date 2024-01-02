@@ -2,7 +2,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import childProcess from "node:child_process";
 
-const IMG_RX = /(\.png|\.jpg|\.svg|\.gif)$/gim;
+export const IMG_RX = /(\.png|\.jpg|\.svg|\.gif)$/gim;
+export const SLUG_RX = /(?<=\nslug: ).*?$/gm;
 
 export async function* walkSync(dir) {
   const files = await fs.readdir(dir, { withFileTypes: true });

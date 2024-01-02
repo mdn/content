@@ -132,7 +132,7 @@ Once a set is active:
 
 ## RWS security
 
-RWS has been designed with security in mind. It would be disasterous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
+RWS has been designed with security in mind. It would be disastrous if a bad actor site were able to claim to be part of a set and gain the privileges that entails. Lets consider a theoretical bad actor site, `evilsite.example.com`, and look at some examples of attacks it could try to make, all of which would fail:
 
 - **`evilsite.example.com` claims to be an associated site in another set**: If a site claiming to be in a set (`i.e.` by listing a primary in a `.well-known` file) is not included in the set submission and/or primary's `.well-known` file, it won't get the benefits of being in the set.
 - **`evilsite.example.com` claims to be a primary site, and submits a set that includes some would-be victim sites**: The submission process requires that `.well-known` files hosted by non-primary sites explicitly list out their primary. If this primary doesn't match the set submission (i.e. if the associated/service sites expect to have a different primary, or don't expect to be in a set at all), the submission will be rejected.
