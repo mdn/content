@@ -139,10 +139,10 @@ If we had used a {{HTMLElement('table')}} and semantic table elements our markup
 - `<integer>`
   - : An integer greater than or equal to the default value of 1 defining the number of columns spanned by the cell. The value must be less than what would cause a cell to overlap the next cell in the same row.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaColSpan")}}
-  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of the {{domxref("ARIAMixin")}} interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
+  - : The [`ariaColSpan`](/en-US/docs/Web/API/Element/ariaColSpan) property, part of each element's interface, reflects the value of the `aria-colspan` attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
 ## Associated roles
 

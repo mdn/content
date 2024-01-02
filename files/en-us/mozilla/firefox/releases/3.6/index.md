@@ -20,7 +20,7 @@ page-type: firefox-release-notes
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
-- [WOFF font support](/en-US/docs/Web/Guide/WOFF)
+- [WOFF font support](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
 - [Pointer events](/en-US/docs/Web/CSS/pointer-events)
   - : The {{cssxref("pointer-events")}} property lets content specify whether or not an element may be the target of mouse pointer events.

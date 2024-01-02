@@ -42,7 +42,7 @@ In the following example, the form provides a slider whose value can range betwe
 
 {{ EmbedLiveSample('Examples')}}
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 

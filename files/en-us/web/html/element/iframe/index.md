@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- `allowpaymentrequest` {{Experimental_Inline}}
+- `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
@@ -52,12 +52,12 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : Indicates when the browser should load the iframe:
 
     - `eager`
-      - : Load the iframe immediately, regardless if it is outside the visible viewport (this is the default value).
+      - : Load the iframe immediately on page load (this is the default value).
     - `lazy`
 
-      - : Defer loading of the iframe until it reaches a calculated distance from the viewport, as defined by the browser.
-        The intent is to avoid the network and storage bandwidth needed until its reasonably certain that it will be needed.
-        This improves the performance and cost in most typical use cases.
+      - : Defer loading of the iframe until it reaches a calculated distance from the {{glossary("visual viewport")}}, as defined by the browser.
+        The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
+        This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
         > **Note:** Loading is only deferred when JavaScript is enabled.
         > This is an anti-tracking measure.
@@ -170,6 +170,10 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 ## Positioning and scaling
 
 As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+
+## `error` and `load` event behavior
+
+The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
 ## Examples
 

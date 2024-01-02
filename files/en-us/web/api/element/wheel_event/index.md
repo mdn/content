@@ -26,7 +26,7 @@ onwheel = (event) => {};
 
 ## Event type
 
-A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 
@@ -123,4 +123,3 @@ el.addEventListener("wheel", zoom, { passive: false });
 ## See also
 
 - {{domxref("WheelEvent")}}
-- [Document: `wheel` event](/en-US/docs/Web/API/Element/wheel_event)
