@@ -32,7 +32,7 @@ The order is significant — the default capture devices will be listed first.
 
 Other than default devices, only devices for which permission has been granted are "available".
 
-If the media device is an input device, a {{domxref("InputDeviceInfo")}} object which extends {{domxref("MediaDeviceInfo")}} will be returned instead.
+If the media device is an input device, an {{domxref("InputDeviceInfo")}} object will be returned instead.
 
 If enumeration fails, the promise is rejected.
 
