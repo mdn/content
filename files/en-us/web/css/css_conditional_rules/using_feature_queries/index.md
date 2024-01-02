@@ -50,7 +50,7 @@ Expanding on the `color` property example above, here we check if the browser su
 @import `/css/styles.css` supports(color: AccentColor);
 ```
 
-In these examples, we've used feature queries to check if the user-agent supports a single CSS property of a specific value, listing the single declaration within parenthesis. You can test for multiple propperty values or for the lack of support
+In these examples, we've used feature queries to check if the user-agent supports a specific value of a CSS property, listing the single declaration within parenthesis. You can test for multiple property values or the lack of support.
 
 ## Testing for lack of support
 
