@@ -118,7 +118,7 @@ Legal values for each of these parameters are:
 - `red`, `green`, and `blue`
   - : Each must be an {{cssxref("&lt;integer&gt;")}} value between 0 and 255 (inclusive), or a {{cssxref("&lt;percentage&gt;")}} from 0% to 100%.
 - `alpha`
-  - : The alpha channel is percentage between 0% (fully transparent) and 100% (fully opaque), or a number between 0.0 (same as 0%) and 1.0 (same as 100%).
+  - : The alpha channel is specified as a percentage between 0% (fully transparent) and 100% (fully opaque), or a number between 0.0 (equivalent to 0%) and 1.0 (equivalent to 100%).
 
 For example, a bright red that's 50% opaque can be represented as `rgb(255 0 0 / 50%)` or `rgb(100% 0 0 / 0.5)`.
 
