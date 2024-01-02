@@ -71,7 +71,7 @@ tabbed-custom-element::part(tab):focus {
   box-shadow:
     0 0 0 1px #0a84ff inset,
     0 0 0 1px #0a84ff,
-    0 0 0 4px rgba(10, 132, 255, 0.3);
+    0 0 0 4px rgb(10 132 255 / 30%);
 }
 
 tabbed-custom-element::part(active) {
