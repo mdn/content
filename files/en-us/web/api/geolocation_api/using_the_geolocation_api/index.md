@@ -84,7 +84,7 @@ const watchID = navigator.geolocation.watchPosition(success, error, options);
 
 The user's location is described using a {{domxref("GeolocationPosition")}} object instance, which itself contains a {{domxref("GeolocationCoordinates")}} object instance.
 
-The `GeolocationPosition` instance contains only two things, a `coords` property that contains the `GeolocationCoordinates` instance, and a `timestamp` property that contains a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, at which the position data was retrieved.
+The `GeolocationPosition` instance contains only two things, a `coords` property that contains the `GeolocationCoordinates` instance, and a `timestamp` property that contains a timestamp, given as {{Glossary("Unix time")}} in milliseconds, at which the position data was retrieved.
 
 The `GeolocationCoordinates` instance contains a number of properties, but the two you'll use most commonly are `latitude` and `longitude`, which are what you need to draw your position on a map. Hence many Geolocation success callbacks look fairly simple:
 
