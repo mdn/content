@@ -19,7 +19,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 
 ```css
 hsl(120deg 75% 25%)
-hsl(120deg 75% 25% / 0.6)
+hsl(120deg 75% 25% / 60%)
 ```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
