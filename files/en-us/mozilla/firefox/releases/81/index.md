@@ -32,7 +32,7 @@ This article provides information about the changes in Firefox 81 that will affe
 
 #### Removals
 
-- The non-standard {{CSSxRef("::-moz-focus-outer")}} [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been removed ([Firefox bug 1655859](https://bugzil.la/1655859)).
+- The non-standard `::-moz-focus-outer` [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) has been removed ([Firefox bug 1655859](https://bugzil.la/1655859)).
 
 ### JavaScript
 

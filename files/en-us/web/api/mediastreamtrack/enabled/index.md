@@ -8,7 +8,7 @@ browser-compat: api.MediaStreamTrack.enabled
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`enabled`** property on the
+The **`enabled`** property of the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
 `true` if the track is allowed to render the source stream or
 `false` if it is not. This can be used to intentionally mute a

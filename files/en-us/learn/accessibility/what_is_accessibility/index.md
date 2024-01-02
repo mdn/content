@@ -12,7 +12,7 @@ This article starts the module off with a good look at what accessibility is —
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Basic computer literacy, and a basic understanding of HTML and CSS.</td>
+      <td>A basic understanding of HTML and CSS.</td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>

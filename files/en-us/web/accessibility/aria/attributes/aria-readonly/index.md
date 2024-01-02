@@ -32,7 +32,7 @@ If the non-changeable value shouldn't be able to receive focus, use [`aria-disab
 - `false` (default)
   - : The element is not readonly.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaReadOnly")}}
   - : The [`ariaReadOnly`](/en-US/docs/Web/API/Element/ariaReadOnly) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-readonly` attribute.

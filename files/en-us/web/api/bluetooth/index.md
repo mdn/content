@@ -34,11 +34,6 @@ _Inherits properties from its parent {{domxref("EventTarget")}}._
   - : Returns a {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object with the
     specified options.
 
-## Events
-
-- {{domxref("Bluetooth.availabilitychanged_event", "availabilitychanged")}} {{Experimental_Inline}}
-  - : An event that fires when Bluetooth capabilities have changed in availability.
-
 ## Specifications
 
 {{Specifications}}

@@ -25,9 +25,6 @@ Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_,
 - {{CSSxRef("-moz-image-region")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-orient")}} {{non-standard_inline}}
 - {{CSSxRef("font-smooth", "-moz-osx-font-smoothing")}} {{non-standard_inline}}
-- {{CSSxRef("overflow-clip-box")}} {{experimental_inline}} (To use inside the UA spreadsheet)
-- {{CSSxRef("overflow-clip-box-block")}} {{experimental_inline}} (To use inside the UA spreadsheet)
-- {{CSSxRef("overflow-clip-box-inline")}} {{experimental_inline}} (To use inside the UA spreadsheet)
 - {{CSSxRef("-moz-user-focus")}} {{non-standard_inline}}
 - {{CSSxRef("-moz-user-input")}} {{non-standard_inline}}
 - {{CSSxRef("user-modify", "-moz-user-modify")}} {{non-standard_inline}}

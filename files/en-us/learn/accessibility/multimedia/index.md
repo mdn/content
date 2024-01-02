@@ -13,8 +13,7 @@ Another category of content that can create accessibility problems is multimedia
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, and an understanding of
+        A basic understanding of HTML, CSS, JavaScript, and an understanding of
         <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
           >what accessibility is</a
         >.

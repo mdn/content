@@ -86,7 +86,7 @@ To make them more generalizable, these methods don't just accept `Set` objects, 
 
 ### Set-like objects
 
-All [set methods](#set_methods) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
 
 - A {{jsxref("Set/size", "size")}} property that contains a number.
 - A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.

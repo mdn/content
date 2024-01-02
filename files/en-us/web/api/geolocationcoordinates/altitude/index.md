@@ -8,10 +8,7 @@ browser-compat: api.GeolocationCoordinates.altitude
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.altitude`** read-only property is
-a `double` representing the altitude of the position in meters above the [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf)
-ellipsoid (which defines the nominal sea level surface). This value is `null`
-if the implementation cannot provide this data.
+The **`altitude`** read-only property of the {{domxref("GeolocationCoordinates")}} interface is a `double` representing the altitude of the position in meters above the [WGS84](https://gis-lab.info/docs/nima-tr8350.2-wgs84fin.pdf) ellipsoid (which defines the nominal sea level surface). This value is `null` if the implementation cannot provide this data.
 
 ## Value
 

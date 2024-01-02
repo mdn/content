@@ -514,6 +514,49 @@ We won't go over this in detail, since it's actually surprisingly simple. The mo
 
 We'll take another look at `fillStyle`, in more detail, later in this tutorial. Here, all we're doing is using it to change the fill color for paths from the default color of black to white, and then back again.
 
+### Shapes with holes
+
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape clockwise and the inner shape anticlockwise.
+
+```html hidden
+<html lang="en">
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
+</html>
+```
+
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+
+    // Outter shape clockwise ⟳
+    ctx.moveTo(0, 0);
+    ctx.lineTo(150, 0);
+    ctx.lineTo(75, 129.9);
+
+    // Inner shape anticlockwise ↺
+    ctx.moveTo(75, 20);
+    ctx.lineTo(50, 60);
+    ctx.lineTo(100, 60);
+
+    ctx.fill();
+  }
+}
+```
+
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Shapes_with_holes", 160, 160, "shape_with_hole.png")}}
+
+In the example above the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+
 ## Path2D objects
 
 As we have seen in the last example, there can be a series of paths and drawing commands to draw objects onto your canvas. To simplify the code and to improve performance, the {{domxref("Path2D")}} object, available in recent versions of browsers, lets you cache or record these drawing commands. You are able to play back your paths quickly.

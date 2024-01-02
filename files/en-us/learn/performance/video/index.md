@@ -13,10 +13,9 @@ As we learned in the previous section, media, namely images and video, account f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a

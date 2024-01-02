@@ -83,7 +83,7 @@ To do this:
    py -V
    ```
 
-3. This should return a version number. If this is OK, navigate to the directory that your example is inside, using the `cd` command.
+3. This should return a version number. If this is OK, navigate to the directory that contains the website code you want to test, using the `cd` command.
 
    ```bash
    # include the directory name to enter it, for example

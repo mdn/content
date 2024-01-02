@@ -36,7 +36,7 @@ The script subtag precedes the region subtag if both are present — `ru-Cyrl-BY
 
 To find the correct subtag codes for a language, try [the Language Subtag Lookup](https://r12a.github.io/app-subtags/).
 
-## Accessibility
+## Accessibility concerns
 
 WCAG Success Criterion 3.1.1 **requires** that a page language is specified in a way which may be 'programmatically determined' (i.e. via the **`lang`** attribute).
 

@@ -24,7 +24,7 @@ The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibilit
 - `<number>`
   - : A decimal number, below the maximum value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueMin")}}
   - : The [`ariaValueMin`](/en-US/docs/Web/API/Element/ariaValueMin) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemin` attribute.

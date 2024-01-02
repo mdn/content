@@ -17,10 +17,9 @@ In this lesson, we will take a look at some of the most frequently used value ty
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -216,11 +215,11 @@ Relative length units are relative to something else, perhaps the size of the pa
     </tr>
     <tr>
       <td><code>vb</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">block axis</a>.</td>
     </tr>
     <tr>
       <td><code>vi</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">inline axis</a>.</td>
     </tr>
     <tr>
       <td><code>svw, svh</code></td>

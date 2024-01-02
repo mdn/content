@@ -12,7 +12,7 @@ The **`mask-clip`** [CSS](/en-US/docs/Web/CSS) property determines the area whic
 ## Syntax
 
 ```css
-/* <geometry-box> values */
+/* <coord-box> values */
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;

@@ -77,4 +77,4 @@ The value `auto` defines a clipping path along the bounds of the viewport create
 
 ## Browser compatibility
 
-{{Compat}}s
+{{Compat}}

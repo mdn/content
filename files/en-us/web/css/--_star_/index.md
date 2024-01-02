@@ -22,7 +22,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 ```
 
 - `<declaration-value>`
-  - : This value matches any sequence of one or more tokens, so long as the sequence does not contain an disallowed token. It represents the entirety of what a valid declaration can have as its value.
+  - : This value matches any sequence of one or more tokens, so long as the sequence does not contain any disallowed token. It represents the entirety of what a valid declaration can have as its value.
 
 > **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
@@ -86,6 +86,7 @@ Custom properties are scoped to the element(s) they are declared on, and partici
 
 ## See also
 
-- [Using CSS variables](/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 - The {{cssxref("var", "var()")}} function
 - {{cssxref("@property")}} at-rule
+- [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Using_CSS_custom_properties) guide
+- [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables) module

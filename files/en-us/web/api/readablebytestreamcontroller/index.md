@@ -12,7 +12,7 @@ It allows control of the state and internal queue of a {{domxref("ReadableStream
 
 An instance of this controller type is created if an `underlyingSource` object with the property `type="bytes"` is passed as an argument to the [`ReadableStream()` constructor](/en-US/docs/Web/API/ReadableStream/ReadableStream#type).
 The `underlyingSource` object may also define [`start()`](/en-US/docs/Web/API/ReadableStream/ReadableStream#start) and [`pull()`](/en-US/docs/Web/API/ReadableStream/ReadableStream#pull) callback functions.
-These are called with the controller as a parameter, in order to setup the underlying source, and request data when needed.
+These are called with the controller as a parameter, in order to set up the underlying source, and request data when needed.
 
 The underlying source uses the controller to supply data to the stream via its [`byobRequest`](#readablebytestreamcontroller.byobrequest) property or [`enqueue()`](#readablebytestreamcontroller.enqueue) method.
 [`byobRequest`](#readablebytestreamcontroller.byobrequest) is a {{domxref("ReadableStreamBYOBRequest")}} object that represents a pending request from a consumer to make a zero-copy transfer of data direct to a consumer.

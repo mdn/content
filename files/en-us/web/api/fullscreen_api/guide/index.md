@@ -35,19 +35,6 @@ if (elem.requestFullscreen) {
 
 This code checks for the existence of the `requestFullscreen()` method before calling it.
 
-### Presentation differences
-
-It's worth noting a key difference here between the Gecko and WebKit implementations at this time: Gecko automatically adds CSS rules to the element to stretch it to fill the screen: "`width: 100%; height: 100%`". WebKit doesn't do this; instead, it centers the fullscreen element at the same size in a screen that's otherwise black. To get the same fullscreen behavior in WebKit, you need to add your own "`width: 100%; height: 100%;`" CSS rules to the element yourself:
-
-```css
-#myvideo:-webkit-full-screen {
-  width: 100%;
-  height: 100%;
-}
-```
-
-On the other hand, if you're trying to emulate WebKit's behavior on Gecko, you need to place the element you want to present inside another element, which you'll make fullscreen instead, and use CSS rules to adjust the inner element to match the appearance you want.
-
 ### Notification
 
 When fullscreen mode is successfully engaged, the document which contains the element receives a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event. When fullscreen mode is exited, the document again receives a {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event. Note that the {{domxref("Document/fullscreenchange_event", "fullscreenchange")}} event doesn't provide any information itself as to whether the document is entering or exiting fullscreen mode, but if the document has a non null {{DOMxRef("document.fullscreenElement", "fullscreenElement")}}, you know you're in fullscreen mode.
@@ -95,7 +82,7 @@ When the page is loaded, this code is run to set up an event listener to watch f
 document.addEventListener(
   "keydown",
   (e) => {
-    if (e.keyCode === 13) {
+    if (e.key === "Enter") {
       toggleFullScreen();
     }
   },

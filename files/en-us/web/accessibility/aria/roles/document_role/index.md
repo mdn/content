@@ -9,7 +9,7 @@ The `document` role is for focusable content within complex composite [widgets](
 
 ## Description
 
-The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), the `document` role inform assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
+The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role), the `document` role informs assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
 <div role="dialog">
@@ -76,6 +76,6 @@ The document role is an easy way to indirectly control assistive technology beha
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

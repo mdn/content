@@ -192,8 +192,8 @@ The dashed identifier is just a string preceded by two dashes: in this case we c
 ```js
 class MyCustomElement extends HTMLElement {
   constructor() {
-    this._internals = this.attachInternals();
     super();
+    this._internals = this.attachInternals();
   }
 
   get collapsed() {

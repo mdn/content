@@ -11,7 +11,7 @@ browser-compat: html.elements.script.type.speculationrules
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 ## Syntax
 

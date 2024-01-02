@@ -13,7 +13,7 @@ The **`SVGPatternElement`** interface corresponds to the {{SVGElement("pattern")
 
 ## Instance properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGPatternElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("pattern")}} element.
@@ -34,7 +34,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}} and implements the ones from {{domxref("SVGFitToViewBox")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGElement")}}._
 
 ## Specifications
 

@@ -134,4 +134,5 @@ The popover can be displayed by selecting the "Show popover" button, and dismiss
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

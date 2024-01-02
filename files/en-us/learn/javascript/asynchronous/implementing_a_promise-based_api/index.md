@@ -13,7 +13,7 @@ In the last article we discussed how to use APIs that return promises. In this a
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including event handling and the basics of promises.
       </td>
     </tr>

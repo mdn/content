@@ -50,8 +50,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("color-interpolation-filters")}}
 - {{SVGAttr("color-profile")}}
 - {{SVGAttr("color-rendering")}}
-- {{SVGAttr("contentScriptType")}}
-- {{SVGAttr("contentStyleType")}}
 - {{SVGAttr("crossorigin")}}
 - {{SVGAttr("cursor")}}
 - {{SVGAttr("cx")}}
@@ -85,7 +83,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("fill-opacity")}}
 - {{SVGAttr("fill-rule")}}
 - {{SVGAttr("filter")}}
-- {{SVGAttr("filterRes")}}
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
@@ -301,7 +298,6 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("vert-origin-x")}}
 - {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
-- {{SVGAttr("viewTarget")}}
 - {{SVGAttr("visibility")}}
 
 ### W

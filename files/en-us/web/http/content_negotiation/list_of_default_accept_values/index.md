@@ -40,7 +40,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 | Firefox prior to 47 [1]        | `image/png,image/*;q=0.8,*/*;q=0.5`                                        |
 | Safari (since Mac OS Big Sur)  | `image/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5` |
 | Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
-| Chrome                         | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
+| Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 
 \[1] This value can be modified using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
 

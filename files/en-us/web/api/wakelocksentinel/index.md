@@ -7,7 +7,7 @@ browser-compat: api.WakeLockSentinel
 
 {{securecontext_header}}{{APIRef("Screen Wake Lock API")}}
 
-The **`WakeLockSentinel`** interface of the [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakeLock.request()')}} method.
+The **`WakeLockSentinel`** interface of the {{domxref("Screen Wake Lock API", "", "", "nocode")}} provides a handle to the underlying platform wake lock and can be manually released and reacquired. An {{jsxref('Object')}} representing the wake lock is returned via the {{domxref('WakeLock.request()','navigator.wakeLock.request()')}} method.
 
 An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform wake lock. This can happen if the document becomes inactive or looses visibility, if the device is low on power or the user turns on a power save mode. Releasing all `WakeLockSentinel` instances of a given wake lock type will cause the underlying platform wake lock to be released.
 
@@ -15,7 +15,7 @@ An acquired `WakeLockSentinel` can be released manually via the {{domxref('WakeL
 
 ## Instance properties
 
-_This interface provides the following properties._
+_Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the `WakeLockSentinel` has been released.
@@ -24,17 +24,19 @@ _This interface provides the following properties._
   - : Returns a string representation of the currently acquired `WakeLockSentinel` type.
     Return values are:
 
-    - `'screen'`: A screen wake lock. Prevents devices from dimming or locking the screen.
+    - `screen`: A screen wake lock. Prevents devices from dimming or locking the screen.
+
+## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
+
+- {{domxref('WakeLockSentinel.release()', 'release()')}}
+  - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
 
 ## Events
 
 - {{domxref("WakeLockSentinel.release_event", "release")}}
   - : Fired when the {{domxref('WakeLockSentinel.release','release()')}} method is called or the wake lock is released by the user agent.
-
-## Instance methods
-
-- {{domxref('WakeLockSentinel.release()', 'release()')}}
-  - : Releases the `WakeLockSentinel`, returning a {{jsxref("Promise")}} that is resolved once the sentinel has been successfully released.
 
 ## Examples
 
@@ -78,3 +80,7 @@ wakeLockOffButton.addEventListener("click", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)

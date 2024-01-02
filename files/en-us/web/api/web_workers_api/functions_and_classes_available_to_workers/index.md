@@ -20,15 +20,18 @@ Some of the functions (a subset) that are common to all workers and to the main 
 
 - {{domxref("atob", "atob()")}}
 - {{domxref("btoa", "btoa()")}}
-- {{domxref("clearInterval", "clearInterval()")}}
+- {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
-- {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("fetch()")}}
 - {{domxref("queueMicrotask()")}}
+- {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 - {{domxref("structuredClone()")}}
-- {{domxref("window.requestAnimationFrame")}} (dedicated workers only)
-- {{domxref("window.cancelAnimationFrame")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()", "requestAnimationFrame()")}} (dedicated workers only)
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()", "cancelAnimationFrame()")}} (dedicated workers only)
 
 The following functions are **only** available to workers:
 
@@ -41,39 +44,47 @@ The following functions are **only** available to workers:
 
 The following Web APIs are available to workers:
 
-- {{domxref("Barcode_Detection_API","Barcode Detection API")}}
-- {{domxref("Broadcast_Channel_API","Broadcast Channel API")}}
-- {{domxref("Cache", "Cache API")}}
-- {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
-- {{domxref("Console API", "Console API")}}
-- [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) (e.g. {{domxref("Crypto")}})
-- [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
+- {{domxref("Background Fetch API", "", "", "nocode")}}
+- {{domxref("Background Synchronization API", "", "", "nocode")}}
+- {{domxref("Barcode Detection API", "", "", "nocode")}}
+- {{domxref("Broadcast Channel API", "", "", "nocode")}}
+- {{domxref("Canvas API", "", "", "nocode")}}
+- {{domxref("Channel Messaging API", "", "", "nocode")}}
+- {{domxref("Console API", "", "", "nocode")}}
+- {{domxref("Compression Streams API", "", "", "nocode")}}
+- {{domxref("CSS Font Loading API", "", "", "nocode")}}
 - {{domxref("CustomEvent")}}
-- {{domxref("Encoding_API", "Encoding API")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
-- {{domxref("Fetch_API", "Fetch API")}}
-- {{domxref("FileReader")}}
-- {{domxref("FileReaderSync")}} (only works in workers!)
-- {{domxref("FormData")}}
-- {{domxref("ImageBitmap")}}
-- {{domxref("ImageData")}}
-- {{domxref("IndexedDB_API", "IndexedDB")}}
-- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} (dedicated workers only)
-- [Network Information API](/en-US/docs/Web/API/Network_Information_API)
-- {{domxref("Notifications_API", "Notifications API")}}
-- {{domxref("OffscreenCanvas")}} (and all the canvas context APIs)
-- {{domxref("Performance_API","Performance API")}}, including:
-  - {{domxref("Performance")}}
-  - {{domxref("PerformanceEntry")}}
-  - {{domxref("PerformanceMeasure")}}
-  - {{domxref("PerformanceMark")}}
-  - {{domxref("PerformanceObserver")}}
-  - {{domxref("PerformanceResourceTiming")}}
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events)
-- {{domxref("ServiceWorkerRegistration")}}
-- {{domxref("URL_API","URL API")}} (e.g. {{domxref("URL")}})
-- {{domxref('WebCodecs_API','','','true')}}
-- {{domxref("WebSocket")}}
-- {{domxref("XMLHttpRequest")}}
+- {{domxref("Encoding API", "", "", "nocode")}} (e.g. {{domxref("TextEncoder")}}, {{domxref("TextDecoder")}})
+- {{domxref("Fetch API", "", "", "nocode")}}
+- {{domxref("File API", "", "", "nocode")}}
+- {{domxref("File System API", "", "", "nocode")}}
+- {{domxref("Idle Detection API", "", "", "nocode")}}
+- {{domxref("IndexedDB API", "", "", "nocode")}}
+- {{domxref("Media Capabilities API", "", "", "nocode")}}
+- {{domxref("Media Source Extensions API", "", "", "nocode")}} (dedicated workers only)
+- {{domxref("Network Information API", "", "", "nocode")}}
+- {{domxref("Notifications API", "", "", "nocode")}}
+- {{domxref("Payment Handler API", "", "", "nocode")}}
+- {{domxref("Performance API", "", "", "nocode")}}
+- {{domxref("Permissions API", "", "", "nocode")}}
+- {{domxref("Prioritized Task Scheduling API", "", "", "nocode")}}
+- {{domxref("Push API", "", "", "nocode")}}
+- {{domxref("Server-sent events", "", "", "nocode")}}
+- {{domxref("Service Worker API", "", "", "nocode")}}
+- {{domxref("Streams API", "", "", "nocode")}}
+- {{domxref("Trusted Types API", "", "", "nocode")}}
+- {{domxref("URL API", "", "", "nocode")}} (e.g. {{domxref("URL")}})
+- {{domxref("URL Pattern API", "", "", "nocode")}}
+- {{domxref("User-Agent Client Hints API", "", "", "nocode")}}
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- {{domxref("Web Crypto API", "", "", "nocode")}} (e.g. {{domxref("Crypto")}})
+- {{domxref("Web Locks API", "", "", "nocode")}}
+- {{domxref("Web Serial API", "", "", "nocode")}}
+- {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}
+- {{domxref("WebGPU API", "", "", "nocode")}}
+- {{domxref("WebUSB API", "", "", "nocode")}}
+- {{domxref("WebSockets API", "", "", "nocode")}}
+- {{domxref("XMLHttpRequest API", "", "", "nocode")}}
 
 Workers can also spawn other workers, so these APIs are also available:
 

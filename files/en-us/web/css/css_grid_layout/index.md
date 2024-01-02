@@ -151,6 +151,8 @@ The example below shows a three-column track grid with new rows created at a min
   - [Grid axis](/en-US/docs/Glossary/Grid_Axis)
   - [Grid row](/en-US/docs/Glossary/Grid_Row)
   - [Grid column](/en-US/docs/Glossary/Grid_Column)
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS display](/en-US/docs/Web/CSS/CSS_display) module
 - [Grid by Example](https://gridbyexample.com/) - A collection of usage examples and video tutorials
 - [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
 - [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)

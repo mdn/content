@@ -91,7 +91,7 @@ If you used just CSS to style the disabled state using an attribute selector, th
 - `false`
   - : The element is not disabled
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaDisabled")}}
   - : The [`ariaDisabled`](/en-US/docs/Web/API/Element/ariaDisabled) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-disabled` attribute, which indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.

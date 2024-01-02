@@ -337,7 +337,7 @@ Congratulations! You have completed the Svelte tutorial. In the previous article
 - Then we saw how to use stores to work with a central data repository, and we created our own custom store to persist our application's data to Web Storage.
 - We also took a look at Svelte's TypeScript support.
 
-In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to setup a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
+In this article we've learned about a couple of zero-fuss options to deploy our app in production and seen how to set up a basic pipeline to deploy our app to GitLab on every commit. Then we provided you with a list of Svelte resources to go further with your Svelte learning.
 
 Congratulations! After completing this series of tutorials you should have a strong base from which to start developing professional web applications with Svelte.
 

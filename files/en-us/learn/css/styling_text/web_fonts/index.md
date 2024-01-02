@@ -13,7 +13,7 @@ In the first article of the module, we explored the basic CSS features available
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study

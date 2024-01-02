@@ -17,8 +17,8 @@ For an introduction to regular expressions, read the [Regular expressions chapte
 
 There are two ways to create a `RegExp` object: a _literal notation_ and a _constructor_.
 
-- The _literal notation_ takes a pattern between two slashes, followed by optional flags, after the second slash.
-- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional flags as its second parameter.
+- The _literal notation_ takes a pattern between two slashes, followed by optional [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags), after the second slash.
+- The _constructor function_ takes either a string or a `RegExp` object as its first parameter and a string of optional [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) as its second parameter.
 
 The following three expressions create the same regular expression object:
 
@@ -38,7 +38,7 @@ Use a string as the first argument to the `RegExp()` constructor when you want t
 
 ### Flags in constructor
 
-The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the flags provided by the second.
+The expression `new RegExp(/ab+c/, flags)` will create a new `RegExp` using the source of the first parameter and the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) provided by the second.
 
 When using the constructor function, the normal string escape rules (preceding special characters with `\` when included in a string) are necessary.
 

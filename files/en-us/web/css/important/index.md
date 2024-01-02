@@ -142,7 +142,7 @@ Even when working to override high-specificity styles not under your control, su
 
 If you need to override an external stylesheet containing important declarations, create a cascade layer containing the needed overrides, and declare that layer first.
 
-### Accessibility
+### Accessibility concerns
 
 Important styles from a user stylesheet take precedence over the author style sheet's important declarations, meaning adding an `!important` flag to a site's styles will not prevent individual users with special requirements, such as large fonts, from being able to override your styles by adding important styles in their own user's style sheet.
 

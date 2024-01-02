@@ -49,8 +49,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : The specified attribute `name` contains one or more characters which are
-    not valid in attribute names.
+  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, a hyphen, or a period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 

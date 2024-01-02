@@ -57,7 +57,7 @@ If you give your {{HTMLElement('iframe')}}s a `title`, your images an `alt` attr
 - `<string>`
   - : A string of text that will be the accessible name for the object.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLabel")}}
   - : The [`ariaLabel`](/en-US/docs/Web/API/Element/ariaLabel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-label` attribute.

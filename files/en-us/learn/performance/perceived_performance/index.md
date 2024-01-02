@@ -15,10 +15,9 @@ This article provides a brief introduction to the factors that affect perceived 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a

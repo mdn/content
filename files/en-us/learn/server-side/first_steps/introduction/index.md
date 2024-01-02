@@ -13,7 +13,7 @@ Welcome to the MDN beginner's server-side programming course! In this first arti
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A basic understanding of what a web server is.
+        A basic understanding of what a web server is.
       </td>
     </tr>
     <tr>

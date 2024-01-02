@@ -129,7 +129,6 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [vr.mozilla.org](https://mixedreality.mozilla.org/) — The main Mozilla landing pad for WebVR, with demos, utilities, and other information.
 - [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.

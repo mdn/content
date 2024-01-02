@@ -167,31 +167,38 @@ extends layout
 block content
   h1= title
 
-  form(method='POST' action='')
+  form(method='POST')
     div.form-group
       label(for='title') Title:
-      input#title.form-control(type='text', placeholder='Name of book' name='title' required='true' value=(undefined===book ? '' : book.title) )
+      input#title.form-control(type='text', placeholder='Name of book' name='title' required value=(undefined===book ? '' : book.title) )
     div.form-group
       label(for='author') Author:
-      select#author.form-control(type='select', placeholder='Select author' name='author' required='true' )
+      select#author.form-control(name='author' required)
+        option(value='') --Please select an author--
         for author in authors
           if book
-            option(value=author._id selected=(author._id.toString()===book.author._id.toString() ? 'selected' : false) ) #{author.name}
+            if author._id.toString()===book.author._id.toString()
+              option(value=author._id selected) #{author.name}
+            else
+              option(value=author._id) #{author.name}
           else
             option(value=author._id) #{author.name}
     div.form-group
       label(for='summary') Summary:
-      textarea#summary.form-control(type='textarea', placeholder='Summary' name='summary' required='true') #{undefined===book ? '' : book.summary}
+      textarea#summary.form-control(placeholder='Summary' name='summary' required)= undefined===book ? '' : book.summary
     div.form-group
       label(for='isbn') ISBN:
-      input#isbn.form-control(type='text', placeholder='ISBN13' name='isbn' value=(undefined===book ? '' : book.isbn) required='true')
+      input#isbn.form-control(type='text', placeholder='ISBN13' name='isbn' value=(undefined===book ? '' : book.isbn) required)
     div.form-group
       label Genre:
       div
         for genre in genres
           div(style='display: inline; padding-right:10px;')
-            input.checkbox-input(type='checkbox', name='genre', id=genre._id, value=genre._id, checked=genre.checked )
-            label(for=genre._id) #{genre.name}
+            if genre.checked
+              input.checkbox-input(type='checkbox', name='genre', id=genre._id, value=genre._id, checked)
+            else
+              input.checkbox-input(type='checkbox', name='genre', id=genre._id, value=genre._id)
+            label(for=genre._id) &nbsp;#{genre.name}
     button.btn.btn-primary(type='submit') Submit
 
   if errors

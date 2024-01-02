@@ -23,7 +23,7 @@ Note that the CSS 2.1 specification describes documents as being in a horizontal
 
 ## Elements participating in a block formatting context
 
-Block elements in a horizontal writing mode such as English, layout vertically, one below the other.
+Block elements in a horizontal writing mode such as English, lay out vertically, one below the other.
 
 ![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 

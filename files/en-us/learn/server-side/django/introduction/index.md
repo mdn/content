@@ -15,7 +15,6 @@ We'll outline the main features, including some of the advanced functionality th
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy.
         A general understanding of <a href="/en-US/docs/Learn/Server-side/First_steps">server-side website programming</a>, and in particular the mechanics of <a href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">client-server interactions in websites</a>.
       </td>
     </tr>

@@ -12,8 +12,10 @@ At times, you may need to parse {{Glossary("XML")}} content and convert it into 
   - : Serializes DOM trees, converting them into strings containing XML.
 - {{domxref("DOMParser")}}
   - : Constructs a DOM tree by parsing a string containing XML, returning a {{domxref("XMLDocument")}} or {{domxref("Document")}} as appropriate based on the input data.
+- {{domxref("fetch()")}}
+  - : Loads content from a URL. XML content is returned as a text string which you can parse using `DOMParser`.
 - {{domxref("XMLHttpRequest")}}
-  - : Loads content from a URL; XML content is returned as an XML {{domxref("Document")}} object with a DOM tree built from the XML itself.
+  - : The precursor to `fetch()`. Unlike the `fetch()` API, `XMLHttpRequest` can return a resource as a `Document`, via its {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property.
 - [XPath](/en-US/docs/Web/XPath)
   - : A technology for creating strings that contain addresses for specific portions of an XML document, and locating XML nodes based on those addresses.
 
@@ -45,24 +47,18 @@ if (errorNode) {
 Here is sample code that reads and parses a URL-addressable XML file into a DOM tree:
 
 ```js
-const xhr = new XMLHttpRequest();
-
-xhr.onload = () => {
-  dump(xhr.responseXML.documentElement.nodeName);
-};
-
-xhr.onerror = () => {
-  dump("Error while getting XML.");
-};
-
-xhr.open("GET", "example.xml");
-xhr.responseType = "document";
-xhr.send();
+fetch("example.xml")
+  .then((response) => response.text())
+  .then((text) => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/xml");
+    console.log(doc.documentElement.nodeName);
+  });
 ```
 
-The value in the `xhr` object's {{domxref("XMLHttpRequest.responseXML", "responseXML")}} field is a {{domxref("Document")}} constructed by parsing the XML.
+This code fetches the resource as a text string, then uses {{domxref("DOMParser.parseFromString()")}} to construct an {{domxref("XMLDocument")}}.
 
-If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually a {{domxref("XMLDocument")}}. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
+If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually an `XMLDocument`. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
 
 > **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is an alias for the `Document` interface.
 
@@ -74,7 +70,7 @@ Use the following approaches to serialize the contents of the XML document you c
 
 ### Serializing DOM trees to strings
 
-First, create a DOM tree as described in [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("XMLHttpRequest") }}.
+First, create a DOM tree as described in [How to Create a DOM tree](/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). Alternatively, use a DOM tree obtained from {{ domxref("fetch()") }}.
 
 To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 
@@ -102,5 +98,6 @@ const docOuterHtml = document.documentElement.outerHTML;
 ## See also
 
 - [XPath](/en-US/docs/Web/XPath)
+- {{domxref("fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}

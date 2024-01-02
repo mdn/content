@@ -41,7 +41,7 @@ No role specific keyboard interactions
 ### Required JavaScript features
 
 - `onsubmit`
-  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("XMLHTTPRequest")}}.
+  - : The onSubmit event handler handles the event raised when the form is submitted. Anything that is not a `<form>` cannot be submitted, therefore you would have to use JavaScript to build an alternative data submission mechanism, for example with {{domxref("fetch()")}}.
 
 ## Examples
 
@@ -130,6 +130,6 @@ Using the {{HTMLElement('form')}} element will automatically communicate a secti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

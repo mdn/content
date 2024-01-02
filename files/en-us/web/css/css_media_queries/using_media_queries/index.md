@@ -233,10 +233,10 @@ _It has no effect on modern browsers._
 ## Syntax improvements in Level 4
 
 The Media Queries Level 4 specification includes some syntax improvements to make media queries using features that have a "range" type, for example width or height, less verbose.
-Level 4 adds a _range context_ for writing such queries. For example, using the `max-` functionality for width we might write the following:
+Level 4 adds a _range context_ for writing such queries.
+You can check the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#browser_compatibility) for details on support.
 
-> **Note:** The Media Queries Level 4 specification has reasonable support in modern browsers, but some media features are not well supported.
-> See the [`@media` browser compatibility table](/en-US/docs/Web/CSS/@media#browser_compatibility) for more details.
+To see how the "range" syntax works, let's look at an example that applies styles based on `max-width`:
 
 ```css
 @media (max-width: 30em) {
@@ -252,7 +252,7 @@ In Media Queries Level 4 this can be written as:
 }
 ```
 
-Using `min-` and `max-` we might test for a width between two values like so:
+Using `min-` and `max-` we can check for a width between two values like so:
 
 ```css
 @media (min-width: 30em) and (max-width: 50em) {
@@ -260,7 +260,7 @@ Using `min-` and `max-` we might test for a width between two values like so:
 }
 ```
 
-This would convert to the Level 4 syntax as:
+You can write this using the "range" syntax as:
 
 ```css
 @media (30em <= width <= 50em) {

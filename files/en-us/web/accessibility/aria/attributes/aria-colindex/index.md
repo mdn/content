@@ -80,7 +80,7 @@ If all the columns are in the DOM, neither `aria-colcount` nor `aria-colindex` a
 - `<integer>`
   - : Integer greater than or equal to 1 and less than or equal to the total number of columns if all were present.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaColIndex")}}
   - : The [`ariaColIndex`](/en-US/docs/Web/API/Element/ariaColIndex) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-colindex` attribute.

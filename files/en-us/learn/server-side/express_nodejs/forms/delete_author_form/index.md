@@ -95,29 +95,27 @@ Create **/views/author_delete.pug** and copy in the text below.
 extends layout
 
 block content
+
   h1 #{title}: #{author.name}
   p= author.lifespan
 
   if author_books.length
 
     p #[strong Delete the following books before attempting to delete this author.]
-
     div(style='margin-left:20px;margin-top:20px')
-
       h4 Books
-
       dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
+        each book in author_books
+          dt
+            a(href=book.url) #{book.title}
+          dd #{book.summary}
 
   else
     p Do you really want to delete this Author?
 
-    form(method='POST' action='')
+    form(method='POST')
       div.form-group
-        input#authorid.form-control(type='hidden',name='authorid', required='true', value=author._id )
+        input#authorid.form-control(type='hidden', name='authorid', value=author._id )
 
       button.btn.btn-primary(type='submit') Delete
 ```

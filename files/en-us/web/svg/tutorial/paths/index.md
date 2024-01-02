@@ -10,7 +10,7 @@ page-type: guide
 
 The {{SVGElement('path')}} element is the most powerful element in the SVG library of [basic shapes](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes). It can be used to create lines, curves, arcs, and more.
 
-Paths create complex shapes by combining multiple straight lines or curved lines. Complex shapes composed only of straight lines can be created as [`<polyline>`s](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#polyline). While `<polyline>`s and `<path>`s can create similar-looking shapes, `<polyline>`s require a lot of small straight lines to simulate curves, and don't scale well to larger sizes.
+Paths create complex shapes by combining multiple straight lines or curved lines. Complex shapes composed only of straight lines can be created as [`<polyline>`](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes#polyline) elements. While `<polyline>` and `<path>` elements can create similar-looking shapes, `<polyline>` elements require a lot of small straight lines to simulate curves and don't scale well to larger sizes.
 
 A good understanding of paths is important when drawing SVGs. While creating complex paths using an XML editor or text editor is not recommended, understanding how they work will allow to identify and repair display issues in SVGs.
 

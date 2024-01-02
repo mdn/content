@@ -28,7 +28,7 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 - `false`
   - : The text box only accepts a single line of input.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaMultiLine")}}
   - : The [`ariaMultiLine`](/en-US/docs/Web/API/Element/ariaMultiLine) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiline` attribute.

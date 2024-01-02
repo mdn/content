@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.ArrayBuffer.slice
 
 {{JSRef}}
 
-The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer`
-whose contents are a copy of this `ArrayBuffer`'s bytes from
-`begin`, inclusive, up to `end`, exclusive.
+The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 
 {{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
@@ -37,7 +35,7 @@ slice(start, end)
 
 ### Return value
 
-A new {{jsxref("ArrayBuffer")}} object.
+A new {{jsxref("ArrayBuffer")}} containing the extracted elements.
 
 ## Examples
 
@@ -59,3 +57,4 @@ const buf2 = buf1.slice(0);
 ## See also
 
 - {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer.prototype.slice()")}}

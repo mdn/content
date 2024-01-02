@@ -3,12 +3,12 @@ title: "RTCIceCandidatePairStats: state property"
 short-title: state
 slug: Web/API/RTCIceCandidatePairStats/state
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.state
+browser-compat: api.RTCStatsReport.type_candidate-pair.state
 ---
 
 {{APIRef("WebRTC")}}
 
-The **`state`** property in a string that indicates the state of the check list of which the candidate pair is a member.
+The **`state`** property is a string that indicates the state of the checklist of which the candidate pair is a member.
 
 ## Value
 
@@ -27,24 +27,23 @@ A string whose value is one of the following:
 
 ## ICE check lists
 
-During ICE negotiation, the ICE layer builds up a **check list**, which is
+During ICE negotiation, the ICE layer builds up a _checklist_, which is
 a list of potential pairings of ICE candidates. Each pair has a state, represented by a string literal.
 
-![A diagram showing how ICE candidate pairs change state as the check list is analyzed](ice-check-list-states.svg)
+![A diagram showing how ICE candidate pairs change state as the checklist is analyzed](ice-check-list-states.svg)
 
-When a candidate pair is added to the check list, it begins in the `frozen`
-state. As soon as there are no checks ongoing which block the pair from being analyzed,
+When a candidate pair is added to the checklist, it begins in the `frozen`
+state. As soon as there are no checks ongoing that block the pair from being analyzed,
 it is unfrozen and moves into the `waiting` state. This may happen
-immediately upon being added to the check list.
+immediately upon being added to the checklist.
 
-Each time a candidate pair is done being checked, the next-highest priority candidate
-pair remaining on the check list moves from the `waiting` state to the
+Each time a candidate pair is checked, the next-highest priority candidate
+pair remaining on the checklist moves from the `waiting` state to the
 `in-progress` state, and its check begins. If the check fails for any reason,
 the pair moves into its final state, `failed`. If the check succeeds, the
 pair ends up in the `succeeded` state.
-
-The ICE check list state for any given pair of ICE candidates can be found in the
-corresponding the `state` property.
+The ICE checklist state for any given pair of ICE candidates can be found in the
+corresponding `state` property.
 
 ## Specifications
 

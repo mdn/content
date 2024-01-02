@@ -139,12 +139,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 ### Obsolete properties
 
-- {{domxref("KeyboardEvent.char")}} {{Non-standard_inline}} {{Deprecated_inline}} {{ReadOnlyInline}}
-
-  - : Returns a string representing the character value of the key. If the key corresponds to a printable character, this value is a non-empty Unicode string containing that character. If the key doesn't have a printable representation, this is an empty string.
-
-    > **Note:** If the key is used as a macro that inserts multiple characters, this property's value is the entire string, not just the first character.
-
 - {{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}} {{ReadOnlyInline}}
 
   - : Returns a number representing the Unicode reference number of the key; this property is used only by the `keypress` event. For keys whose `char` property contains multiple characters, this is the Unicode value of the first character in that property. In Firefox 26 this returns codes for printable characters.
@@ -159,8 +153,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : This property is non-standard and has been deprecated in favor of {{domxref("KeyboardEvent.key")}}. It was part of an old version of DOM Level 3 Events.
-- {{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : This is a non-standard deprecated alias for {{domxref("KeyboardEvent.location")}}. It was part of an old version of DOM Level 3 Events.
 
 ## Instance methods
 

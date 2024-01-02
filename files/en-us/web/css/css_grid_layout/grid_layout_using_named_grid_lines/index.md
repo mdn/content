@@ -390,7 +390,7 @@ If working with a strict multiple column layout for example the named lines demo
 }
 ```
 
-We can then use that framework to layout our page. For example, to create a three column layout with a header and footer, I might have the following markup.
+We can then use that framework to lay out our page. For example, to create a three column layout with a header and footer, I might have the following markup.
 
 ```css hidden
 * {

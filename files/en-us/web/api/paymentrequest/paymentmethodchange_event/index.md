@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.PaymentRequest.paymentmethodchange_event
 ---
 
-{{APIRef}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`paymentmethodchange`** event is delivered the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when the user changes the payment method within a given payment handler.
 
@@ -34,9 +34,9 @@ A {{domxref("PaymentMethodChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties below, this interface includes properties inherited from {{domxref("PaymentRequestUpdateEvent")}}._
 
-- {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}} {{securecontext_inline}}
+- {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} {{ReadOnlyInline}}
   - : An object containing payment method-specific data useful when handling a payment method change. If no such information is available, this value is `null`.
-- {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}} {{securecontext_inline}}
+- {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} {{ReadOnlyInline}}
   - : A string containing the payment method identifier, a string which uniquely identifies a particular payment method. This identifier is usually a URL used during the payment process, but may be a standardized non-URL string as well, such as `basic-card`. The default value is the empty string, `""`.
 
 ## Examples

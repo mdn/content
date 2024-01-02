@@ -64,7 +64,7 @@ Generally when a Permissions Policy blocks the use of a powerful feature, the us
 
 See also [Permissions > Relationship to the Permissions Policy specification](https://w3c.github.io/permissions/#relationship-to-permissions-policy).
 
-## allowlists
+## Allowlists
 
 An allowlist is a list of origins that takes one or more of the following values contained in parentheses, separated by spaces:
 
@@ -138,7 +138,7 @@ Permissions-Policy: geolocation=(self https://example.com)
 Permissions-Policy: camera=*
 ```
 
-## iframe syntax
+## Iframe syntax
 
 For an `<iframe>` to have a feature enabled its allowed origin must also be in the allowlist for the parent page. Because of this [inheritance behavior](#inheritance_of_policies_for_embedded_content), it is a good idea to specify the widest acceptable support for a feature in the HTTP header, and then specify the subset of support you need in each `<iframe>`.
 

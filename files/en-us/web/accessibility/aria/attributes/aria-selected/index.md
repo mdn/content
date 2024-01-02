@@ -96,7 +96,7 @@ In this `tablist` example, the first `tab` is selected:
 - `undefined` (default)
   - : The element is not selectable.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSelected")}}
   - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.

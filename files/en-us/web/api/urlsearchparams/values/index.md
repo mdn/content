@@ -13,7 +13,7 @@ interface returns an {{jsxref("Iteration_protocols",'iterator')}} allowing itera
 through all values contained in this object. The values are string
 objects.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

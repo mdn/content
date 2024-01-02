@@ -218,8 +218,7 @@ Responses consist of the following elements:
 
 ## APIs based on HTTP
 
-The most commonly used API based on HTTP is the {{domxref("XMLHttpRequest")}} API, which can be used to exchange data between a {{Glossary("user agent")}} and a server.
-The modern {{domxref("Fetch API")}} provides the same features with a more powerful and flexible feature set.
+The most commonly used API based on HTTP is the [Fetch API](/en-US/docs/Web/API/Fetch_API), which can be used to make HTTP requests from JavaScript. The Fetch API replaces the {{domxref("XMLHttpRequest")}} API.
 
 Another API, [server-sent events](/en-US/docs/Web/API/Server-sent_events), is a one-way service that allows a server to send events to the client, using HTTP as a transport mechanism.
 Using the {{domxref("EventSource")}} interface, the client opens a connection and establishes event handlers.

@@ -6,7 +6,7 @@ page-type: guide
 
 {{XsltSidebar}}
 
-This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript internally, in extensions, and from websites. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
+This document describes the interface for using [XPath](/en-US/docs/Web/XPath) in JavaScript. Mozilla implements a fair amount of the [DOM 3 XPath](https://www.w3.org/TR/2004/NOTE-DOM-Level-3-XPath-20040226/), which means that XPath expressions can be run against both HTML and XML documents.
 
 The main interface to using XPath is the [evaluate](/en-US/docs/Web/API/Document/evaluate) function of the [document](/en-US/docs/Web/API/Document) object.
 
@@ -264,53 +264,6 @@ while (thisHeading) {
 ```
 
 Once we iterate to a node, we have access to all the standard DOM interfaces on that node. After iterating through all the `h2` elements returned from our expression, any further calls to `iterateNext()` will return `null`.
-
-### Evaluating against an XML document within an Extension
-
-The following uses an XML document located at `chrome://yourextension/content/peopleDB.xml` as an example.
-
-```xml
-<?xml version="1.0"?>
-<people xmlns:xul = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" >
-  <person>
-    <name first="george" last="bush" />
-    <address street="1600 pennsylvania avenue" city="washington" country="usa"/>
-    <phoneNumber>202-456-1111</phoneNumber>
-  </person>
-  <person>
-    <name first="tony" last="blair" />
-    <address street="10 downing street" city="london" country="uk"/>
-    <phoneNumber>020 7925 0918</phoneNumber>
-  </person>
-</people>
-```
-
-To make the contents of the XML document available within the extension, we create an [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object to load the document synchronously, the variable `xmlDoc` will contain the document as an [`XMLDocument`](/en-US/docs/Web/API/XMLDocument) object against which we can use the `evaluate` method
-
-JavaScript used in the extensions xul/js documents.
-
-```js
-const req = new XMLHttpRequest();
-
-req.open("GET", "chrome://yourextension/content/peopleDB.xml", false);
-req.send(null);
-
-const xmlDoc = req.responseXML;
-
-const nsResolver = xmlDoc.createNSResolver(
-  xmlDoc.ownerDocument === null
-    ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement,
-);
-
-const personIterator = xmlDoc.evaluate(
-  "//person",
-  xmlDoc,
-  nsResolver,
-  XPathResult.ANY_TYPE,
-  null,
-);
-```
 
 ## Appendix
 

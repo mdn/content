@@ -146,16 +146,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
-  - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
 - {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- `Window.returnValue` {{Deprecated_Inline}}
-  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
@@ -289,12 +285,6 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from the {{domxref("Document")}} contained in the window object.
 
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
-  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
-- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
-  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 - {{domxref("Window/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
 - {{domxref("Window/languagechange_event", "languagechange")}}
@@ -322,6 +312,15 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
 - {{domxref("Window/online_event", "online")}}
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
+
+### Device orientation events
+
+- {{domxref("Window.devicemotion_event", "devicemotion")}}
+  - : Fired at a regular interval, indicating the amount of physical force of acceleration the device is receiving and the rate of rotation, if available.
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current orientation of the device as compared to the Earth coordinate frame.
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}}
+  - : Fired when fresh data is available from the magnetometer orientation sensor about the current absolute orientation of the device as compared to the Earth coordinate frame.
 
 ### Focus events
 
@@ -354,7 +353,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window, the document and its resources are about to be unloaded.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-- {{domxref("Window/unload_event", "unload")}}
+- {{domxref("Window/unload_event", "unload")}} {{deprecated_inline}}
   - : Fired when the document or a child resource is being unloaded.
 
 ### Manifest events

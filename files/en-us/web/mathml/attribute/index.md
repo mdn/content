@@ -25,7 +25,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("mo") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator should be treated as an accent when used as an under- or over-script.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator should be treated as an accent when used as an under- or over-script.
       </td>
     </tr>
     <tr>
@@ -35,7 +35,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the under script should be treated as an accent.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the under script should be treated as an accent.
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
         {{ MathMLElement("munderover") }}
       </td>
       <td>
-         A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the over script should be treated as an accent.
+         A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the over script should be treated as an accent.
       </td>
     </tr>
     <tr>
@@ -143,7 +143,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><a href="/en-US/docs/Web/MathML/Global_attributes">All MathML elements</a></td>
       <td>
         <p>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether to set the
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether to set the
         <a href="/en-US/docs/Web/CSS/math-style">math-style</a>
         to <code>normal</code> (if true) or <code>compact</code> (otherwise).
         </p>
@@ -153,7 +153,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>fence</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether the operator is a fence (such as
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether the operator is a fence (such as
         parentheses). There is no visual effect for this attribute.
       </td>
     </tr>
@@ -292,7 +292,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>movablelimits</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/math-style">math-style</a> is set to <code>compact</code>.
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether attached under- and overscripts move to sub- and superscript positions when <a href="/en-US/docs/Web/CSS/math-style">math-style</a> is set to <code>compact</code>.
       </td>
     </tr>
     <tr>
@@ -384,7 +384,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>separator</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-      A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether
+      A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> specifying whether
         the operator is a separator (such as commas).
          There is no visual effect for this attribute.
       </td>
@@ -401,7 +401,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>stretchy</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator stretches to the size of the adjacent element.
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether the operator stretches to the size of the adjacent element.
       </td>
     </tr>
     <tr>
@@ -430,7 +430,7 @@ This is an alphabetical list of MathML attributes. More details for each attribu
       <td><code>symmetric</code></td>
       <td>{{ MathMLElement("mo") }}</td>
       <td>
-        A <a href="/en-US/docs/Web/MathML/Attribute/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
+        A <a href="/en-US/docs/Web/MathML/Values#mathml-specific_types"><code>&lt;boolean&gt;</code></a> indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
       </td>
     </tr>
     <tr>

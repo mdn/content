@@ -172,8 +172,7 @@ function animate() {
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- {{domxref("OffscreenCanvas")}}
-- [DedicatedWorkerGlobalScope](/en-US/docs/Web/API/DedicatedWorkerGlobalScope)
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)

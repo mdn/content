@@ -254,7 +254,7 @@ console.log(sameOriginContext.origin);
 
 For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
-## Accessibility
+## Accessibility concerns
 
 ### Avoid resorting to window.open()
 

@@ -79,7 +79,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 {{ EmbedLiveSample("Examples", 200, 50) }}
 
-## Accessibility Concerns
+## Accessibility concerns
 
 ### Labelling
 

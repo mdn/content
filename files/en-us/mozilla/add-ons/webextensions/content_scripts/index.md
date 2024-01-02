@@ -10,30 +10,20 @@ A content script is a part of your extension that runs in the context of a parti
 
 [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API), but they can't directly access the content of web pages. So if your extension needs to do that, you need content scripts.
 
-Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs.
+Just like the scripts loaded by normal web pages, content scripts can read and modify the content of their pages using the standard DOM APIs. However, they can only do this when [host permissions to the web page's origin have been granted](#permissions).
 
 Content scripts can only access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system, and thereby indirectly access the WebExtension APIs.
 
-> **Note:** Content scripts are only executed if the extension is granted [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
->
-> However, [restricted domains](#restricted_domains) can never be accessed, regardless of the granted permissions.
->
-> Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
-
 ## Loading content scripts
 
-You can load a content script into a web page in one of three ways:
+You can load a content script into a web page:
 
-<!-- markdownlint-disable MD005 -->
-
-1. - At install time, into pages that match URL patterns.
-   - : Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-2. - At runtime, into pages that match URL patterns.
-   - : Using {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
-3. - At runtime, into specific tabs.
-   - : Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).)
-
-<!-- markdownlint-enable MD005 -->
+1. At install time, into pages that match URL patterns.
+   - Using the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key in your `manifest.json`, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+2. At runtime, into pages that match URL patterns.
+   - Using {{WebExtAPIRef("scripting.registerContentScripts()")}} or (only in Manifest V2 in Firefox) {{WebExtAPIRef("contentScripts")}}, you can ask the browser to load a content script whenever the browser loads a page whose URL [matches a given pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). (This is similar to method 1, _except_ that you can add and remove content scripts at runtime.)
+3. At runtime, into specific tabs.
+   - Using {{WebExtAPIRef("scripting.executeScript()")}} or (in Manifest V2 only) {{WebExtAPIRef("tabs.executeScript()")}}, you can load a content script into a specific tab whenever you want. (For example, in response to the user clicking on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).)
 
 There is only one global scope _per frame, per extension_. This means that variables from one content script can directly be accessed by another content script, regardless of how the content script was loaded.
 
@@ -44,9 +34,19 @@ Using method (3), you can also load scripts into pages packaged with your extens
 > **Note:** [Dynamic JS module imports](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading) are now working in content scripts. For more details, see [Firefox bug 1536094](https://bugzil.la/1536094).
 > Only URLs with the _moz-extension_ scheme are allowed, which excludes data URLs ([Firefox bug 1587336](https://bugzil.la/1587336)).
 
-## Restricted domains
+## Permissions, restrictions, and limitations
 
-Even with the right [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), extensions cannot access some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
+### Permissions
+
+Registered content scripts are only executed if the extension is granted [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the domain.
+
+To inject scripts programmatically, the extension needs either the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). The `scripting` permission is required to use methods from the {{WebExtAPIRef("scripting")}} API.
+
+Starting with Manifest V3, host permissions are not automatically granted at install time. Users may opt in or out of host permissions after installing the extension.
+
+### Restricted domains
+
+Both [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) and the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) have exceptions for some domains. Content scripts are blocked from executing on these domains, for example, to protect the user from an extension escalating privileges through special pages.
 
 In Firefox, this includes the following domains:
 
@@ -68,6 +68,10 @@ Other browsers have similar restrictions over the websites extensions can be ins
 > **Note:** Because these restrictions include addons.mozilla.org, users who try to use your extension immediately after installation may find that it doesn't work. To avoid this, you should add an appropriate warning or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from `addons.mozilla.org`.
 
 The set of domains can be restricted further through enterprise policies: Firefox recognizes the `restricted_domains` policy as documented at [ExtensionSettings in mozilla/policy-templates](https://github.com/mozilla/policy-templates/blob/master/README.md#extensionsettings). Chrome's `runtime_blocked_hosts` policy is documented at [Configure ExtensionSettings policy](https://support.google.com/chrome/a/answer/9867568).
+
+### Limitations
+
+Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
 
 ## Content script environment
 

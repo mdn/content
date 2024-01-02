@@ -25,12 +25,14 @@ None.
 
 ### Return value
 
-`undefined`.
+None (`undefined`).
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active, if the navigation was not intercepted using {{domxref("NavigateEvent.intercept", "intercept()")}}, or if the default scroll behavior has already occurred.
+  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been cancelled.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
 
 ## Examples
 
