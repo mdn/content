@@ -37950,6 +37950,18 @@
       "Krinkle"
     ]
   },
+  "Web/API/HTMLElement/autofocus": {
+    "modified": "2020-10-15T21:42:28.924Z",
+    "contributors": [
+      "nali",
+      "sideshowbarker",
+      "connorshea",
+      "libbymc",
+      "Druzion",
+      "teoli",
+      "Rakhisharma"
+    ]
+  },
   "Web/API/HTMLElement/beforeinput_event": {
     "modified": "2020-11-11T09:54:44.715Z",
     "contributors": [
@@ -40833,18 +40845,6 @@
       "fscholz",
       "freaktechnik",
       "teoli"
-    ]
-  },
-  "Web/API/HTMLSelectElement/autofocus": {
-    "modified": "2020-10-15T21:42:28.924Z",
-    "contributors": [
-      "nali",
-      "sideshowbarker",
-      "connorshea",
-      "libbymc",
-      "Druzion",
-      "teoli",
-      "Rakhisharma"
     ]
   },
   "Web/API/HTMLSelectElement/checkValidity": {

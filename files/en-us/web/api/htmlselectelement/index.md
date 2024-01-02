@@ -15,8 +15,6 @@ The **`HTMLSelectElement`** interface represents a {{HTMLElement("select")}} HTM
 
 _This interface inherits the properties of {{domxref("HTMLElement")}}, and of {{domxref("Element")}} and {{domxref("Node")}}._
 
-- {{domxref("HTMLSelectElement.autofocus")}}
-  - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML attribute, which indicates whether the control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form-associated element in a document can have this attribute specified.
 - {{domxref("HTMLSelectElement.disabled")}}
   - : A boolean value reflecting the [`disabled`](/en-US/docs/Web/HTML/Element/select#disabled) HTML attribute, which indicates whether the control is disabled. If it is disabled, it does not accept clicks.
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
