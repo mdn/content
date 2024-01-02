@@ -54,7 +54,7 @@ This element implements the {{domxref("HTMLElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample('Examlpe 3')}}
+{{EmbedLiveSample("Example 3 (CSS alternative)")}}
 
 ## Note
 
