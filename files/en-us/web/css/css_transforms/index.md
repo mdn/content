@@ -43,7 +43,6 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
 - {{cssxref("transform-origin")}}
 - {{cssxref("transform-style")}}
 - {{cssxref("translate")}}
-- {{cssxref("transform-origin")}}
 
 ### Functions
 
