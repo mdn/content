@@ -29,9 +29,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This if a feature of the HTML parser that cannot be used after the parsing by setting the `shadowrootmode` attribute via JavaScript. Also, only allowed values will create the shadow root. Empty or any other value won't trigger this behavior.
 
+You may find the old non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has been removed and replaced by the standard `shadowrootmode` attribute.
+
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
 ## Examples
+
+### Table row generation
 
 First we start with the HTML portion of the example.
 
@@ -101,7 +105,52 @@ table td {
 }
 ```
 
-{{EmbedLiveSample("Examples", 500, 120)}}
+{{EmbedLiveSample("Table row generation", 500, 120)}}
+
+### Declarative shadow DOM
+
+```css hidden
+body {
+  font-family: sans-serif;
+}
+```
+
+```html
+<p hidden>
+  ⚠️ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+</p>
+<article>
+  <style>
+    p {
+      padding: 8px;
+      background-color: wheat;
+    }
+  </style>
+  <p>I'm in the DOM.</p>
+</article>
+<article>
+  <template shadowrootmode="open">
+    <style>
+      p {
+        padding: 8px;
+        background-color: plum;
+      }
+    </style>
+    <p>I'm in the Shadow DOM.</p>
+  </template>
+</article>
+```
+
+```js
+document
+  .querySelector("p[hidden]")
+  .toggleAttribute(
+    "hidden",
+    HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode"),
+  );
+```
+
+{{EmbedLiveSample("Declarative shadow DOM", 500, 120)}}
 
 ## Avoiding DocumentFragment pitfalls
 
