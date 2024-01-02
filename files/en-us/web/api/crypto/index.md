@@ -27,7 +27,7 @@ _This interface implements methods defined on {{domxref("Crypto/getRandomValues"
 
 - {{domxref("Crypto.getRandomValues()")}}
   - : Fills the passed {{ jsxref("TypedArray") }} with cryptographically sound random values.
-- {{domxref("Crypto.randomUUID()")}}
+- {{domxref("Crypto.randomUUID()")}} {{SecureContext_inline}}
   - : Returns a randomly generated, 36 character long v4 UUID.
 
 ## Usage notes

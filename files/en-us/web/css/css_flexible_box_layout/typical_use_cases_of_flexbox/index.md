@@ -78,7 +78,7 @@ In the live example below you can see our media object. I have used the alignmen
 
 Some things that you might want to try in this live example relate to the different ways you might want to constrain the media object in your design.
 
-To prevent the image growing too large, add a {{cssxref("max-width")}} to the image. As that side of the media object is using the initial values of flexbox it can shrink but not grow, and uses a `flex-basis` of auto. Any {{cssxref("width")}} or max-width applied to the image will become the `flex-basis`.
+To prevent the image from growing too large, you should add a {{cssxref("max-width")}} to the image. As that side of the media object uses the initial values of flexbox, it can shrink, but not grow, and uses a `flex-basis` of auto. Any {{cssxref("width")}} or max-width applied to the image will become the `flex-basis`.
 
 ```css
 .image img {

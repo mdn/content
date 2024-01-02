@@ -54,8 +54,6 @@ Blocking all third-party cookies would currently be problematic, for example in 
 2. The storage key for the cookie would be `{("https://shoppy.example"), ("3rd-party.example/chat")}`.
 3. The user visits various subdomains in the quest to solve their problem that also embed `https://3rd-party.example/chat`, including `https://support.shoppy.example` and `https://checkout.shoppy.example`. The new embedded instances are able to access the cookie because the partition key still matches.
 
-> **Note:** [First-party sets](https://github.com/WICG/first-party-sets) is a proposal that aims to allow site owners to declare a collection of related domains that will act like they are a single top-level site, for the purposes of cookie access mechanisms like CHIPS.
-
 ## Specifications
 
 {{Specifications}}
