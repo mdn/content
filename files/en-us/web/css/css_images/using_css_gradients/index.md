@@ -607,10 +607,10 @@ div {
       rgb(0 0 255 / 0%) 70.71%
     ),
     radial-gradient(
-      circle at 93.3% 75%,
-      rgb(0 255 0 / 50%),
-      rgb(0 255 0 / 0%) 70.71%
-    ) beige;
+        circle at 93.3% 75%,
+        rgb(0 255 0 / 50%),
+        rgb(0 255 0 / 0%) 70.71%
+      ) beige;
   border-radius: 50%;
 }
 ```
