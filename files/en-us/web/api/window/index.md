@@ -148,16 +148,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 ### Deprecated properties
 
-- {{domxref("Window.defaultStatus")}} {{Deprecated_Inline}}
-  - : Gets/sets the status bar text for the given window.
 - {{domxref("Window.event")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the **current event**, which is the event currently being handled by the JavaScript code's context, or `undefined` if no event is currently being handled. The {{domxref("Event")}} object passed directly to event handlers should be used instead whenever possible.
 - {{domxref("Window.external")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- `Window.returnValue` {{Deprecated_Inline}}
-  - : The return value to be returned to the function that called {{domxref("window.showModalDialog()")}} to display the window as a modal dialog.
 - {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
   - : Returns a reference to the window object of the sidebar
 - {{domxref("Window.status")}} {{Deprecated_Inline}}

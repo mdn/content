@@ -193,6 +193,8 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ### Unsafe keyword values
 
@@ -202,8 +204,9 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `'unsafe-allow-redirects'` {{experimental_inline}}
-  - : TBD
+- `'wasm-unsafe-eval'`
+  - : Allows the loading and execution of WebAssembly modules without the need to also allow unsafe JavaScript execution via `'unsafe-eval'`.
+    The single quotes are required.
 
 ### Hosts values
 

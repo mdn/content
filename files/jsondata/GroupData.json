@@ -655,6 +655,7 @@
         "HTMLLinkElement",
         "HTMLMapElement",
         "HTMLMediaElement",
+        "HTMLMenuElement",
         "HTMLMetaElement",
         "HTMLMeterElement",
         "HTMLModElement",
@@ -915,10 +916,7 @@
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
       ],
-      "methods": [
-        "HTMLCanvasElement.captureStream()",
-        "MediaDevices.getUserMedia()"
-      ],
+      "methods": ["HTMLCanvasElement.captureStream()"],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
     },
@@ -1361,11 +1359,15 @@
     },
     "Storage Access API": {
       "overview": ["Storage Access API"],
-      "guides": ["/docs/Web/API/Storage_Access_API/Using"],
+      "guides": [
+        "/docs/Web/API/Storage_Access_API/Using",
+        "/docs/Web/API/Storage_Access_API/Related_website_sets"
+      ],
       "interfaces": [],
       "methods": [
         "Document.hasStorageAccess()",
-        "Document.requestStorageAccess()"
+        "Document.requestStorageAccess()",
+        "Document.requestStorageAccessFor()"
       ],
       "properties": [],
       "events": []
@@ -1454,8 +1456,6 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFilterPrimitiveStandardAttributes",
-        "SVGFitToViewBox",
         "SVGFontElement",
         "SVGFontFaceElement",
         "SVGFontFaceFormatElement",
@@ -1498,14 +1498,12 @@
         "SVGSVGElement",
         "SVGSwitchElement",
         "SVGSymbolElement",
-        "SVGTests",
         "SVGTextContentElement",
         "SVGTextElement",
         "SVGTextPathElement",
         "SVGTextPositioningElement",
         "SVGTitleElement",
         "SVGTransform",
-        "SVGTransformable",
         "SVGTransformList",
         "SVGTRefElement",
         "SVGTSpanElement",
@@ -1513,8 +1511,6 @@
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
-        "SVGZoomAndPan",
-        "SVGZoomEvent",
         "TimeEvent"
       ],
       "methods": [],

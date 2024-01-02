@@ -702,7 +702,6 @@
         "'y'",
         "'width'",
         "'height'",
-        "'filterRes'",
         "'filterUnits'",
         "'primitiveUnits'",
         "'xlink:href'"

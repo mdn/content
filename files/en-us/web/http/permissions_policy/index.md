@@ -64,7 +64,7 @@ Generally when a Permissions Policy blocks the use of a powerful feature, the us
 
 See also [Permissions > Relationship to the Permissions Policy specification](https://w3c.github.io/permissions/#relationship-to-permissions-policy).
 
-## allowlists
+## Allowlists
 
 An allowlist is a list of origins that takes one or more of the following values contained in parentheses, separated by spaces:
 
