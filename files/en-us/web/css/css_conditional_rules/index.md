@@ -51,7 +51,7 @@ There are plans to further extend possible queries by adding the generalized con
 - {{domxref("CSSConditionRule")}}
 - {{domxref("CSSMediaRule")}}
 - {{domxref("CSSSupportsRule")}}
-- {{domxref("CSS.supports_static")}} method
+- {{domxref("CSS.supports_static", "supports()")}} method
 
 ### Terms and glossary definitions
 
