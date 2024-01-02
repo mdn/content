@@ -40,7 +40,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 
 ### XForms
 
-Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms) in Firefox 19.
+Support for XForms has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms) in Firefox 19.
 
 ## Changes for add-on and Mozilla developers
 

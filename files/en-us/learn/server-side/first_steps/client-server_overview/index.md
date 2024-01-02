@@ -13,7 +13,7 @@ Now that you know the purpose and potential benefits of server-side programming,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A basic understanding of what a web server is.
+        A basic understanding of what a web server is.
       </td>
     </tr>
     <tr>
