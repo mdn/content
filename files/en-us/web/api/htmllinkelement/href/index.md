@@ -12,7 +12,7 @@ The **`HTMLLinkElement.href`** property of the {{domxref("HTMLLinkElement")}} in
 
 It reflects the `href` attribute of the {{HTMLElement("link")}} element and is the empty string (`""`) if there are none.
 
-**Note:** Either this property or {{domxref("HTMLLinkElement/imagesrcset", "imageSrcset")}} must not be empty.
+**Note:** Either this property or {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} must not be empty.
 
 ## Value
 
