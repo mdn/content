@@ -13,7 +13,7 @@ In this article, we'll explain what asynchronous programming is, why we need it,
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including functions and event handlers.
       </td>
     </tr>
