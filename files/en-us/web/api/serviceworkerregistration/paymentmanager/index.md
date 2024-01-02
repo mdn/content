@@ -46,7 +46,7 @@ navigator.serviceWorker.register("serviceworker.js").then((registration) => {
 
 ## See also
 
-- {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
+- {{domxref("Payment Handler API", "", "", "nocode")}}
 - [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
 - [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
 - [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)

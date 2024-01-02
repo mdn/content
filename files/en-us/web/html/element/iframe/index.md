@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
-- `allowpaymentrequest` {{Experimental_Inline}}
+- `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 

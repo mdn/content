@@ -13,7 +13,7 @@ In this final article in our "Asynchronous JavaScript" module, we'll introduce _
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including event handling.
       </td>
     </tr>
