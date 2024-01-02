@@ -28,7 +28,7 @@ This element implements the {{domxref("HTMLElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample('Examlpe 1')}}
+{{EmbedLiveSample("Example 1")}}
 
 ## Example 2 (CSS alternative)
 
