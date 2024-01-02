@@ -13,8 +13,8 @@ Following on from the previous article, sometimes making complex UI controls tha
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, an understanding of the
+        A basic understanding of HTML, CSS, and
+        JavaScript. An understanding of the
         <a href="/en-US/docs/Learn/Accessibility"
           >previous articles in the course</a
         >.

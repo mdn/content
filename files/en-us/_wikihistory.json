@@ -37950,6 +37950,18 @@
       "Krinkle"
     ]
   },
+  "Web/API/HTMLElement/autofocus": {
+    "modified": "2020-10-15T21:42:28.924Z",
+    "contributors": [
+      "nali",
+      "sideshowbarker",
+      "connorshea",
+      "libbymc",
+      "Druzion",
+      "teoli",
+      "Rakhisharma"
+    ]
+  },
   "Web/API/HTMLElement/beforeinput_event": {
     "modified": "2020-11-11T09:54:44.715Z",
     "contributors": [
@@ -40833,18 +40845,6 @@
       "fscholz",
       "freaktechnik",
       "teoli"
-    ]
-  },
-  "Web/API/HTMLSelectElement/autofocus": {
-    "modified": "2020-10-15T21:42:28.924Z",
-    "contributors": [
-      "nali",
-      "sideshowbarker",
-      "connorshea",
-      "libbymc",
-      "Druzion",
-      "teoli",
-      "Rakhisharma"
     ]
   },
   "Web/API/HTMLSelectElement/checkValidity": {
@@ -66782,24 +66782,6 @@
   "Web/API/Window/cut_event": {
     "modified": "2020-10-15T22:16:14.635Z",
     "contributors": ["mfuji09", "wbamberg"]
-  },
-  "Web/API/Window/defaultStatus": {
-    "modified": "2019-04-05T17:00:29.943Z",
-    "contributors": [
-      "Loirooriol",
-      "sarafec",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "kohei.yoshino",
-      "Sheppy",
-      "feltronzach",
-      "Matej Lednar",
-      "Mgjbot",
-      "Dria",
-      "Callek",
-      "JesseW"
-    ]
   },
   "Web/API/Window/devicePixelRatio": {
     "modified": "2020-10-15T21:28:17.748Z",
