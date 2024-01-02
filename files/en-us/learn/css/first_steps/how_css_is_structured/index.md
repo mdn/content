@@ -288,7 +288,7 @@ While most values are relatively simple keywords or numeric values, there are so
 An example would be the `calc()` function, which can do simple math within CSS:
 
 ```html
-<div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+<div class="outer"><div class="box">The inner box is 90% - 30px.</div>
 ```
 
 ```css
