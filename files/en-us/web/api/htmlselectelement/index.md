@@ -56,12 +56,8 @@ _This interface inherits the methods of {{domxref("HTMLElement")}}, and of {{dom
 
 - {{domxref("HTMLSelectElement.add()")}}
   - : Adds an element to the collection of `option` elements for this `select` element.
-- {{domxref("HTMLSelectElement.blur()")}} {{deprecated_inline}}
-  - : Removes input focus from this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.checkValidity()")}}
   - : Checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable {{domxref("HTMLInputElement/invalid_event", "invalid")}} event at the element (and returns `false`).
-- {{domxref("HTMLSelectElement.focus()")}} {{deprecated_inline}}
-  - : Gives input focus to this element. _This method is now implemented on {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLSelectElement.item()")}}
   - : Gets an item from the options collection for this {{HTMLElement("select")}} element. You can also access an item by specifying the index in square brackets or parentheses, without calling this method explicitly.
 - {{domxref("HTMLSelectElement.namedItem()")}}
