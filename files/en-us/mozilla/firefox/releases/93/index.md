@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 93 that will affe
 
 - The {{domxref("Element.securitypolicyviolation_event","onsecuritypolicyviolation")}} global event handler property is now supported.
   This can be used to assign a handler for processing [`securitypolicyviolation`](/en-US/docs/Web/API/Element/securitypolicyviolation_event) events fired when there is a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation ([Firefox bug 1727302](https://bugzil.la/1727302)).
-- The `onslotchange` event handler property is now supported on {{domxref("HTMLSlotElement.onslotchange","HTMLSlotElement")}} and {{domxref("ShadowRoot")}}.
+- The `onslotchange` event handler property is now supported on {{domxref("HTMLSlotElement")}} and {{domxref("ShadowRoot")}}.
   This can be used to assign a handler for processing [`slotchange`](/en-US/docs/Web/API/HTMLSlotElement/slotchange_event) events, which are fired on {{HTMLElement("slot")}} elements when the node(s) contained in the slot change ([Firefox bug 1501983](https://bugzil.la/1501983)).
 
 #### Removals
