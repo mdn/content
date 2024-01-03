@@ -8,7 +8,7 @@ browser-compat: api.HTMLLinkElement.href
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLLinkElement.href`** property of the {{domxref("HTMLLinkElement")}} interface contains a string that is the URL associated with the link.
+The **`href`** property of the {{domxref("HTMLLinkElement")}} interface contains a string that is the URL associated with the link.
 
 It reflects the `href` attribute of the {{HTMLElement("link")}} element and is the empty string (`""`) if there are none.
 
