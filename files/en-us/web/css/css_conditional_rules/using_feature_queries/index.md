@@ -17,20 +17,24 @@ CSS feature queries are part of the [CSS conditional rules](/en-US/docs/Web/CSS/
 A feature query consists of the `@supports` at-rule followed by the support condition or a `supports()` function and declaration parameter within an `@import` at-rule declaration:
 
 ```css
+/* `@supports` at-rule */
 @supports <support-condition> {
   CSS rules to apply
 }
 
+/* `supports()` function */
 @import url_to_import supports(<declaration>);
 ```
 
 For example, we can apply a set of styles or import an entire stylesheet if the user-agent supports `red` as a valid value for the CSS {{cssxref("color")}} property:
 
 ```css
+/* `@supports` at-rule */
 @supports (color: red) {
   CSS rules to apply
 }
 
+/* `supports()` function */
 @import `/css/styles.css` supports(color: red);
 ```
 
@@ -43,10 +47,12 @@ The value part of the property-value pair matters more if you are testing for ne
 Expanding on the `color` property example above, here we check if the browser supports the `color: AccentColor` declaration:
 
 ```css
+/* `@supports` at-rule */
 @supports (color: AccentColor) {
   CSS rules to apply
 }
 
+/* `supports()` function */
 @import `/css/styles.css` supports(color: AccentColor);
 ```
 
@@ -57,6 +63,7 @@ In these examples, we've used feature queries to check if the user-agent support
 In addition to asking the browser if it supports a feature, you can test for the opposite by adding in the `not` keyword:
 
 ```css
+/* `@supports` at-rule with `not` */
 @supports not (property: value) {
   CSS rules to apply
 }
@@ -71,6 +78,7 @@ The CSS inside the following example feature query will run if the browser does 
 You may need to test support for more than one property in your feature query. To do so, you can include a list of features to test for, separated by `and` keywords:
 
 ```css
+/* multiple feature `@supports` at-rule */
 @supports (property1: value) and (property2: value) {
   CSS rules to apply
 }
@@ -85,6 +93,7 @@ For example, if the CSS you want to run requires that the browser supports CSS S
 You can also use `or`, if one property out of a selection could match to enable the CSS you want to use:
 
 ```css
+/* any feature `@supports` at-rule */
 @supports (property1: value) or (property2: value) {
   CSS rules to apply
 }
