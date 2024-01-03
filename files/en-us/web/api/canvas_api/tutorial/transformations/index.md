@@ -278,7 +278,7 @@ function draw() {
   }
 
   ctx.setTransform(-1, 0, 0, 1, 100, 100);
-  ctx.fillStyle = "rgba(255, 128, 255, 0.5)";
+  ctx.fillStyle = "rgb(255 128 255 / 50%)";
   ctx.fillRect(0, 50, 100, 100);
 }
 ```
