@@ -90,7 +90,7 @@ For example, if the CSS you want to run requires that the browser supports CSS S
 
 ## Testing for at least one of multiple features
 
-You can also use `or`, if one property out of a selection could match to enable the CSS you want to use:
+You can also use `or` to apply CSS only if one or more declarations are supported:
 
 ```css
 /* any feature `@supports` at-rule */
