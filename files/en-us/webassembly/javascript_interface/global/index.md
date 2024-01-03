@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
-browser-compat: javascript.builtins.WebAssembly.Global
+page-type: webassembly-interface
+browser-compat: webassembly.api.Global
 ---
 
 {{WebAssemblySidebar}}

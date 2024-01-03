@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.total
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`ProgressEvent.total`** read-only property is an unsigned
 64-bit integer value indicating the total size of the data being processed or

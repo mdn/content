@@ -13,11 +13,11 @@ The **`SVGSymbolElement`** interface corresponds to the {{SVGElement("symbol")}}
 
 ## Instance properties
 
-_This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}, and implements properties from {{domxref("SVGFitToViewBox")}}._
+_This interface doesn't implement any specific properties, but inherits properties from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
 ## Instance methods
 
-_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}, and implements methods from {{domxref("SVGFitToViewBox")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGraphicsElement")}}._
 
 ## Specifications
 

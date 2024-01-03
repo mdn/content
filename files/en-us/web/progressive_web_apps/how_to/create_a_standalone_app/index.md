@@ -74,5 +74,5 @@ function isStandaloneApp() {
 ## See also
 
 - [Web App Manifests](/en-US/docs/Web/Manifest).
-- [Display modes](https://web.dev/learn/pwa/app-design/#display-modes).
+- [Display modes](https://web.dev/learn/pwa/app-design/#display_modes).
 - Customize your app's title bar on desktop operating systems by using the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).

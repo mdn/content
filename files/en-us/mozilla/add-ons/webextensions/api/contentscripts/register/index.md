@@ -35,7 +35,7 @@ let registering = browser.contentScripts.register(
     - `allFrames` {{optional_inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `cookieStoreId` {{optional_inline}}
-      - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
+      - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
     - `excludeGlobs` {{optional_inline}}

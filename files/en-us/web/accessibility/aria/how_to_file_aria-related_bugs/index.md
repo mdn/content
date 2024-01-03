@@ -79,11 +79,6 @@ The state of ARIA technology has always depended on the community. If you notice
    <td></td>
   </tr>
   <tr>
-   <td>Microsoft Edge</td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File MS Edge Bugs</a></td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=ARIA">View existing MS Edge ARIA bugs</a></td>
-  </tr>
-  <tr>
    <td>Mozilla Firefox</td>
    <td><a href="https://bugzilla.mozilla.org/">File Firefox bugs </a></td>
    <td>Use Component: Disability Access APIs</td>

@@ -186,7 +186,7 @@ Last but not least, let's look at the CSS for the timer:
 
 .timer div {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 20%);
   left: 0;
   top: 0;
   width: 0;
@@ -458,8 +458,8 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
 - {{domxref("HTMLMediaElement")}}
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide to `<video>` and `<audio>` HTML.
-- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
+- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
+- [Audio and video manipulation](/en-US/docs/Web/Media/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 

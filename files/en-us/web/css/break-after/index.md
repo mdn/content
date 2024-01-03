@@ -76,9 +76,9 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a left page. It's the page placed on the left side of the spine of the book or the back side of the page in duplex printing.
 - `right`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a right page. It's the page placed on the right side of the spine of the book or the front side of the page in duplex printing.
-- `recto` {{experimental_inline}}
+- `recto`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a recto page. (A recto page is a right page in a left-to-right spread or a left page in a right-to-left spread.)
-- `verso` {{experimental_inline}}
+- `verso`
   - : Forces one or two page breaks right after the principal box, whichever will make the next page into a verso page. (A verso page is a left page in a left-to-right spread or a right page in a right-to-left spread.)
 
 #### Column break values

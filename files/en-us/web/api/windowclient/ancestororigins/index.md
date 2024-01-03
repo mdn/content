@@ -3,10 +3,12 @@ title: "WindowClient: ancestorOrigins property"
 short-title: ancestorOrigins
 slug: Web/API/WindowClient/ancestorOrigins
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.WindowClient.ancestorOrigins
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`ancestorOrigins`** read-only property of the {{domxref("WindowClient")}} interface is an array of strings listing the origins of all ancestors of the browsing context represented by this `WindowClient` in reverse order.
 

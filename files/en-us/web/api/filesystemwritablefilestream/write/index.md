@@ -44,11 +44,11 @@ A {{jsxref('Promise')}} that returns `undefined`.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if {{domxref('PermissionStatus.state')}} is not `granted`.
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
+- `QuotaExceededError` {{domxref("DOMException")}}
+  - : Thrown if the new size of the file is larger than the original size of the file, and exceeds the browser's [storage quota](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria).
 - {{jsxref("TypeError")}}
-  - : Returned if data is undefined, or if `position` or `size` aren't valid.
-- `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the specified `position` is larger than the length of the file data in bytes.
+  - : Thrown if `data` is undefined, or if `position` or `size` aren't valid.
 
 ## Examples
 
@@ -103,4 +103,4 @@ writableStream.write({ type: "truncate", size });
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

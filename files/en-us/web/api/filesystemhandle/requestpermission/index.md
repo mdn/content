@@ -31,8 +31,7 @@ requestPermission(fileSystemHandlePermissionDescriptor)
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
 
 ### Exceptions
 
@@ -80,4 +79,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

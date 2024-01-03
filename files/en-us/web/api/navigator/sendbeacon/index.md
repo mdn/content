@@ -95,7 +95,7 @@ However, this is extremely unreliable. In many situations, especially on mobile,
 2. When they are finished, they switch to a different app, instead of closing the tab.
 3. Later, they close the browser app using the phone's app manager.
 
-Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/bfcache/))
+Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/articles/bfcache))
 implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
 thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
@@ -129,11 +129,11 @@ document.addEventListener("visibilitychange", function logData() {
 ## See also
 
 - The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event.
-- {{domxref("Beacon_API","Beacon API", "" , "true")}} overview page.
+- {{domxref("Beacon_API","Beacon API", "", "true")}} overview page.
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.
 - [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
-- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.
+- [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.

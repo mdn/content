@@ -247,4 +247,4 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 - [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
-- [Samesite cookies explained](https://web.dev/samesite-cookies-explained/) (web.dev blog)
+- [Samesite cookies explained](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

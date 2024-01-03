@@ -95,17 +95,20 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 ### Non-leaking Arrow Functions
 
 Arrow functions introduce a short-hand braceless syntax that returns an expression.
-This can cause unintended side effects by returning the result of a function call that
-previously returned nothing. To be safe, when the return value of a function is not
-intended to be used, it can be passed to the void operator to ensure that (for example)
-changing APIs do not cause arrow functions' behaviors to change.
+This can cause unintended side effects if the expression is a function call where the returned value changes from `undefined` to some other value.
 
-```js
-button.onclick = () => void doSomething();
+For example, if `doSomething()` returns `false` in the code below, the checkbox will no longer be marked as checked or unchecked when the checkbox is clicked (setting the handler to `false` disables the default action).
+
+```js example-bad
+checkbox.onclick = () => doSomething();
 ```
 
-This ensures the return value of `doSomething` changing from
-`undefined` to `true` will not change the behavior of this code.
+This is unlikely to be desired behaviour!
+To be safe, when the return value of a function is not intended to be used, it can be passed to the `void` operator to ensure that (for example) changing APIs do not cause arrow functions' behaviors to change.
+
+```js example-good
+checkbox.onclick = () => void doSomething();
+```
 
 ## Specifications
 

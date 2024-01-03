@@ -173,5 +173,5 @@ If the user becomes distracted or navigates somewhere else, it is good to cancel
 
 ## See also
 
-- [Verify phone numbers on the web with WebOTP](https://developer.chrome.com/articles/web-otp/) on developer.chrome.com (2023)
-- [Fill OTP forms within cross-origin iframes with WebOTP API](https://web.dev/web-otp-iframe/)
+- [Verify phone numbers on the web with WebOTP](https://developer.chrome.com/docs/identity/web-apis/web-otp) on developer.chrome.com (2023)
+- [Fill OTP forms within cross-origin iframes with WebOTP API](https://web.dev/articles/web-otp-iframe)

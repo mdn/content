@@ -312,16 +312,22 @@ First, some HTML:
 
 ```html
 <form>
-  <p>
-    <fieldset>
-      <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
-      <!-- While only one radio button in a same-named group can be selected at a time,
-           and therefore only one radio button in a same-named group having the "required"
-           attribute suffices in making a selection a requirement -->
-      <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
-      <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
-    </fieldset>
-  </p>
+  <fieldset>
+    <legend>
+      Do you have a driver's license?<span aria-label="required">*</span>
+    </legend>
+    <!-- While only one radio button in a same-named group can be selected at a time,
+         and therefore only one radio button in a same-named group having the "required"
+         attribute suffices in making a selection a requirement -->
+    <input type="radio" required name="driver" id="r1" value="yes" /><label
+      for="r1"
+      >Yes</label
+    >
+    <input type="radio" required name="driver" id="r2" value="no" /><label
+      for="r2"
+      >No</label
+    >
+  </fieldset>
   <p>
     <label for="n1">How old are you?</label>
     <!-- The pattern attribute can act as a fallback for browsers which
@@ -329,13 +335,26 @@ First, some HTML:
          Please note that browsers that support the pattern attribute will make it
          fail silently when used with a number field.
          Its usage here acts only as a fallback -->
-    <input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+">
+    <input
+      type="number"
+      min="12"
+      max="120"
+      step="1"
+      id="n1"
+      name="age"
+      pattern="\d+" />
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
-    <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <label for="t1"
+      >What's your favorite fruit?<span aria-label="required">*</span></label
+    >
+    <input
+      type="text"
+      id="t1"
+      name="fruit"
+      list="l1"
+      required
+      pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range" />
     <datalist id="l1">
       <option>Banana</option>
       <option>Cherry</option>
@@ -347,7 +366,7 @@ First, some HTML:
   </p>
   <p>
     <label for="t2">What's your email address?</label>
-    <input type="email" id="t2" name="email">
+    <input type="email" id="t2" name="email" />
   </p>
   <p>
     <label for="t3">Leave a short message</label>
@@ -721,7 +740,7 @@ input.invalid {
   background-color: #fdd;
 }
 
-input:focus.invalid {
+input:focus:invalid {
   outline: none;
 }
 

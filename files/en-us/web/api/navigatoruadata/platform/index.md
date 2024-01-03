@@ -8,7 +8,7 @@ status:
 browser-compat: api.NavigatorUAData.platform
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`platform`** read-only property of the {{domxref("NavigatorUAData")}} interface returns the platform brand information.
 

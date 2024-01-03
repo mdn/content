@@ -13,10 +13,9 @@ The final selectors we will look at are called combinators, because they combine
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -66,7 +65,7 @@ If you remove the `>` that designates this as a child combinator, you end up wit
 
 ## Next-sibling combinator
 
-The next-sibling selector (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
+The **next-sibling combinator** (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
 p + img
@@ -82,7 +81,7 @@ If you insert some other element such as a `<h2>` in between the `<h1>` and the 
 
 ## Subsequent-sibling combinator
 
-If you want to select siblings of an element even if they are not directly adjacent, then you can use the subsequent-sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the **subsequent-sibling combinator** (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
 p ~ img
@@ -108,7 +107,7 @@ p ~ img {
 }
 ```
 
-The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be use to create complex selectors.
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors.
 
 ```css
 p {
@@ -123,6 +122,8 @@ p img {
 <!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/nesting.html -->
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
+
+> **Note:** In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
 
 ## Using combinators
 

@@ -145,7 +145,7 @@ class YourTestClass(TestCase):
         pass
 
     def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
+        print("setUp: Run once for every test method to set up clean data.")
         pass
 
     def test_false_is_false(self):
@@ -197,11 +197,11 @@ Run the tests in the root directory of _LocalLibrary_. You should see an output 
 
 Creating test database for alias 'default'...
 setUpTestData: Run once to set up non-modified data for all class methods.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_false.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_false_is_true.
-setUp: Run once for every test method to setup clean data.
+setUp: Run once for every test method to set up clean data.
 Method: test_one_plus_one_equals_two.
 .
 ======================================================================
@@ -582,7 +582,10 @@ Add the following test code to **/catalog/tests/test_views.py**. Here we first u
 import datetime
 
 from django.utils import timezone
-from django.contrib.auth.models import User # Required to assign User as a borrower
+
+# Get user model from settings
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 from catalog.models import BookInstance, Book, Genre, Language
 
@@ -922,17 +925,39 @@ While there are numerous other test tools that you can use, we'll just highlight
 
 ## Challenge yourself
 
-There are a lot more models and views we can test. As a simple task, try to create a test case for the `AuthorCreate` view.
+There are a lot more models and views we can test. As a challenge, try to create a test case for the `AuthorCreate` view.
 
 ```python
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
-    fields = '__all__'
-    initial = {'date_of_death':'12/10/2016'}
-    permission_required = 'catalog.can_mark_returned'
+    fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
+    initial = {'date_of_death': '11/11/2023'}
+    permission_required = 'catalog.add_author'
 ```
 
-Remember that you need to check anything that you specify or that is part of the design. This will include who has access, the initial date, the template used, and where the view redirects on success.
+Remember that you need to check anything that you specify or that is part of the design.
+This will include who has access, the initial date, the template used, and where the view redirects on success.
+
+You might use the following code to set up your test and assign your user the appropriate permission
+
+```python
+class AuthorCreateViewTest(TestCase):
+    """Test case for the AuthorCreate view (Created as Challenge)."""
+
+    def setUp(self):
+        # Create a user
+        test_user = User.objects.create_user(
+            username='test_user', password='some_password')
+
+        content_typeAuthor = ContentType.objects.get_for_model(Author)
+        permAddAuthor = Permission.objects.get(
+            codename="add_author",
+            content_type=content_typeAuthor,
+        )
+
+        test_user.user_permissions.add(permAddAuthor)
+        test_user.save()
+```
 
 ## Summary
 
@@ -948,7 +973,7 @@ The next and final tutorial shows how you can deploy your wonderful (and fully t
 - [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/4.2/intro/tutorial05/) (Django docs)
 - [Testing tools reference](https://docs.djangoproject.com/en/4.2/topics/testing/tools/) (Django docs)
 - [Advanced testing topics](https://docs.djangoproject.com/en/4.2/topics/testing/advanced/) (Django docs)
-- [A Guide to Testing in Django](https://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
+- [A Guide to Testing in Django](https://toastdriven.com/blog/2011/apr/09/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
 - [Workshop: Test-Driven Web Development with Django](https://test-driven-django-development.readthedocs.io/en/latest/index.html) (San Diego Python, 2014)
 - [Testing in Django (Part 1) - Best Practices and Examples](https://realpython.com/testing-in-django-part-1-best-practices-and-examples/) (RealPython, 2013)
 

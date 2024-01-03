@@ -90,6 +90,8 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions).
+
 ### Basic arithmetic
 
 - {{CSSxRef("calc", "calc()")}}
@@ -201,6 +203,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
   - : Defines CMYK colors in a device-independent way.
+- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+  - : Returns one of two provided colors based on the current color scheme.
 
 ## Image functions
 
@@ -255,6 +259,10 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an ellipse shape.
 - {{CSSxRef("basic-shape/inset","inset()")}}
   - : Defines an inset rectangle shape.
+- {{CSSxRef("basic-shape/rect","rect()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the distances from the top and left edges of the reference box.
+- {{CSSxRef("basic-shape/xywh","xywh()")}} {{Experimental_Inline}}
+  - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
 - {{CSSxRef("path", "path()")}}
