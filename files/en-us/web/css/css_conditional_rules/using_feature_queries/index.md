@@ -103,6 +103,54 @@ This can be particularly useful if a feature is vendor prefixed, as you can test
 
 {{EmbedGHLiveSample("css-examples/feature-queries/or.html", '100%', 600)}}
 
+## Additional feature query options
+
+Feature queries are not limited to property-value pairs. You can include [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax) functions in your feature query to target CSS based on whether the user-agent supports a specified font technology, font format, or selector syntax, respectively.
+
+For example, the `selector()` function can be used to import a stylesheet for browsers that support a vendor prefixed pseudo-element:
+
+```css
+/* a `selector()` query within a `supports()` function */
+@import `/css/webkitShadowStyles.css` supports(selector(::-webkit-inner-spin-button));
+```
+
+## Examples
+
+### Browser support test
+
+In this example, we check if the browser supports {{cssxref("system-color")}}, hiding support with `diplay: none` if the color type is not supported.
+
+#### HTML
+
+```html
+<p class="accentcolor">
+  Your browser does <span>not</span> support `accentcolor` as a color value
+</p>
+```
+
+#### CSS
+
+```css
+@supports (color: AccentColor) {
+  p {
+    color: green;
+    border: 2px solid;
+  }
+  span {
+    display: none;
+  }
+}
+@supports not (color: AccentColor) {
+  p {
+    color: red;
+  }
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Browser support test", "600", "50")}}
+
 ## Limitations of feature queries
 
 The `@supports` rule tests to see if browsers can parse one or more property/value pairs, and therefore if they claim to support the associated feature(s). If the property/value pairs are understood by a browser it returns a positive response. Feature queries check that declarations are considered valid by a browser, but can't be used to check if it supports a feature properly without bugs or spec violations. Feature queries cannot test for _partial implementations_.
@@ -112,8 +160,6 @@ The `@supports` rule tests to see if browsers can parse one or more property/val
 Feature queries are a useful tool for progressively enhancing a site. They enable you to provide a good solution for all browsers, and an enhanced solution for browsers that support newer properties and values.
 
 You don't need to use feature queries to start using new CSS features; CSS error handling means the browser simply ignores CSS it does not yet recognize. However, feature queries are a useful alternative to fallback declarations, and enable writing code once that can eventually be supported everywhere.
-
-Feature queries are not limited to property-value pairs. You can also check support for [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax).
 
 ### See also
 
