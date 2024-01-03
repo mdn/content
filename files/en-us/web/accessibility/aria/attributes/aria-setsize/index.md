@@ -48,7 +48,7 @@ To orient the user, assistive technologies would list the bananas above as "item
 - `<integer>`
   - : The number of items in the full set or `-1` is the set size is unknown.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSetSize")}}
   - : The [`ariaSetSize`](/en-US/docs/Web/API/Element/ariaSetSize) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-setsize` attribute.
