@@ -252,14 +252,14 @@ Let's examine a CSS example with several custom properties, transforms, `calc()`
 
 ```css
 :root {
-  --mainColor: hsl(198, 43%, 42%);
-  --black: hsl(0, 0%, 16%);
-  --white: hsl(0, 0%, 97%);
+  --mainColor: hsl(198 43% 42%);
+  --black: hsl(0 0% 16%);
+  --white: hsl(0 0% 97%);
   --unit: 1.2rem;
 }
 
 button {
-  --mainColor: hsl(198, 100%, 66%);
+  --mainColor: hsl(198 100% 66%);
   display: inline-block;
   padding: var(--unit) calc(var(--unit) * 2);
   width: calc(30% + 20px);
