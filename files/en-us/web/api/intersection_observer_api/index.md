@@ -170,8 +170,8 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
   position: relative;
   left: 175px;
   width: 150px;
-  background-color: rgb(245, 170, 140);
-  border: 2px solid rgb(201, 126, 17);
+  background-color: rgb(245 170 140);
+  border: 2px solid rgb(201 126 17);
   padding: 4px;
   margin-bottom: 6px;
 }
@@ -363,7 +363,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 ```css
 #box {
   background-color: rgba(40, 40, 190, 1);
-  border: 4px solid rgb(20, 20, 120);
+  border: 4px solid rgb(20 20 120);
   transition:
     background-color 1s,
     border 1s;
@@ -384,7 +384,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
   width: 350px;
   height: 350px;
   margin-top: 10px;
-  border: 4px solid rgb(20, 20, 120);
+  border: 4px solid rgb(20 20 120);
   text-align: center;
   padding: 20px;
 }

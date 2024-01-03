@@ -30,7 +30,7 @@ The valid strings you can enter should, according to the specification, be CSS {
 
 ctx.fillStyle = "orange";
 ctx.fillStyle = "#FFA500";
-ctx.fillStyle = "rgb(255, 165, 0)";
+ctx.fillStyle = "rgb(255 165 0)";
 ctx.fillStyle = "rgba(255, 165, 0, 1)";
 ```
 
@@ -43,9 +43,9 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)}, ${Math.floor(
+      ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)} ${Math.floor(
         255 - 42.5 * j,
-      )}, 0)`;
+      )} 0)`;
       ctx.fillRect(j * 25, i * 25, 25, 25);
     }
   }
@@ -75,7 +75,7 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
-      ctx.strokeStyle = `rgb(0, ${Math.floor(255 - 42.5 * i)}, ${Math.floor(
+      ctx.strokeStyle = `rgb(0 ${Math.floor(255 - 42.5 * i)} ${Math.floor(
         255 - 42.5 * j,
       )})`;
       ctx.beginPath();
@@ -167,13 +167,13 @@ function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // Draw background
-  ctx.fillStyle = "rgb(255, 221, 0)";
+  ctx.fillStyle = "rgb(255 221 0)";
   ctx.fillRect(0, 0, 150, 37.5);
-  ctx.fillStyle = "rgb(102, 204, 0)";
+  ctx.fillStyle = "rgb(102 204 0)";
   ctx.fillRect(0, 37.5, 150, 37.5);
-  ctx.fillStyle = "rgb(0, 153, 255)";
+  ctx.fillStyle = "rgb(0 153 255)";
   ctx.fillRect(0, 75, 150, 37.5);
-  ctx.fillStyle = "rgb(255, 51, 0)";
+  ctx.fillStyle = "rgb(255 51 0)";
   ctx.fillRect(0, 112.5, 150, 37.5);
 
   // Draw semi transparent rectangles
