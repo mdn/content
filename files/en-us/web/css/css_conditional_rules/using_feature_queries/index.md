@@ -124,7 +124,7 @@ In this example, we check if the browser supports the `AccentColor` {{cssxref("s
 
 ```html
 <p class="accentcolor">
-  Your browser does <span>not</span> support `accentcolor` as a color value
+  Your browser does <span>not</span> support `accentcolor` as a color value.
 </p>
 ```
 
