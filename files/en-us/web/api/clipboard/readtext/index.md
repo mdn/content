@@ -62,5 +62,3 @@ navigator.clipboard
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
-- {{domxref("Clipboard.writeText()")}}
-- {{domxref("Clipboard.write()")}}
