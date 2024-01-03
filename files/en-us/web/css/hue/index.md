@@ -155,7 +155,7 @@ p {
 }
 span {
   font-family: monospace;
-  background: rgb(0 0 0 / 0.1);
+  background: rgb(0 0 0 / 10%);
   padding: 3px;
 }
 #hue-slider {
