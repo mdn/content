@@ -2,13 +2,14 @@
 title: Supporting older browsers
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 page-type: learn-module-chapter
+browser-compat: css.properties.grid-template-columns
 ---
 
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
-There will be visitors to your site who use older browsers, or browsers which may not support the features you have used. This will always be the case on the web — as new features are developed, different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
+There will be visitors to your site who use older browsers, or browsers which may not support the features you have used. This will always be the case on the web — new features are continuously being added to CSS and therefore to browsers. Different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
 
 <table>
   <tbody>
@@ -35,15 +36,19 @@ There will be visitors to your site who use older browsers, or browsers which ma
 
 ## What is the browser landscape for your site?
 
-Every website is different in terms of target audience. Before deciding on the approach to take, find out the number of visitors coming to your site using older browsers. This is straightforward if you have an existing website which you are adding to or replacing, as you probably have analytics available which can tell you the technology people are using. If you have no analytics or this is a brand new site, then there are sites such as [Statcounter](https://gs.statcounter.com/) that can provide statistics filtered by location.
+Every website is different in terms of its target audience. Before deciding on the approach to take, find out the number of visitors coming to your site using older browsers. This is straightforward if you have an existing website you are adding to or replacing, as you probably have analytics available that can tell you the technology people are using. If you have no analytics or this is a brand new site, then there are sites such as [Statcounter](https://gs.statcounter.com/) that can provide statistics filtered by location.
 
-You should also consider the type of devices and the way people use your site, for example, you may expect a higher than an average number of mobile devices. Accessibility and people using assistive technology should always be considered, but for some sites that may be even more critical. In my experience, developers are often very worried about the experience of 1% of users in an old version of Internet Explorer, while not considering at all the far greater number who have accessibility needs.
+You should also consider the type of devices and the way people use your site. For example, you may expect a higher-than-average number of mobile devices. Accessibility and people using assistive technology should always be considered, but for some sites that may be even more critical. In my experience, developers are often very worried about the experience of 1% of users using the particular browser and operating system combination as their company's CEO, while not considering the far greater number who have accessibility needs.
 
 ## What is the support for the features you want to use?
 
-Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available. We are trying to make this easy for you at MDN, by providing browser compatibility information on each page detailing a CSS property. For example, take a look at the page for {{cssxref("grid-template-columns")}}. At the bottom of this page is a table, which lists major browsers along with the version they began supporting this property.
+Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available.
 
-![Browser compatibility table. This table provides information on which browsers are compatible with the technology that you are looking for and the version from which the browser started supporting that functionality. Browser and mobile phone browser compatibility information are displayed separately. The browser names take up the column headers.](browser-table.png)
+We try to help you at MDN, by providing browser compatibility information on every CSS property page. For example, take a look at the page for {{cssxref("grid-template-columns")}}, with special attention to the `subgrid` value. The following table is included at the bottom of that page. It lists the major browsers along with the version they began supporting this property.
+
+{{Compat}}
+
+These browser compatibility tables provide information on which browsers are compatible with the technology that you are looking for and the version from which the browser started supporting that functionality. Browser and mobile phone browser compatibility information are displayed separately. The browser names take up the column headers.
 
 Another popular way to find out about how well a feature is supported is the [Can I Use](https://caniuse.com/) website. This site lists the majority of Web Platform features with information about their browser support status. You can view usage statistics by location — useful if you work on a site that has users mostly for a specific area of the world. You can even link your Google Analytics account to get analysis based on your user data.
 
@@ -51,102 +56,25 @@ Understanding the technology your users have, and the support for things you mig
 
 ## Support doesn't mean "looks the same"
 
-A website can't possibly look the same in all browsers, because some of your users will be viewing the site on a phone and others on a large desktop screen. Similarly, some of your users will have an old browser version, and others the latest browser. Some of your users might be hearing your content read out to them by a screen reader, or have zoomed in on the page to be able to read it. Supporting everyone means serving a version of your content that is designed defensively, so that it will look great on modern browsers, but will still be usable at a basic level for users of older browsers.
+A website can't possibly look the same in all browsers. Some of your users will be viewing the site on a phone and others on a large desktop screen. Similarly, some of your users will have an old browser version, and others the latest browser. Some of your users might be hearing your content read out to them by a screen reader, or are zoomed in on the page to be able to read it. Supporting everyone means serving a version of your content that is designed defensively, so that it will look great on modern browsers, but will still be usable at a basic level for all users no matter how they are accessing your content.
 
-A basic level of support comes from structuring your content well so that the normal flow of your page makes sense. A user with a very limited feature phone might not get much of your CSS, but the content will flow in a way that makes reading easy. Therefore, a well-structured HTML document should always be your starting point. _If you remove your stylesheet, does your content make sense?_
+A basic level of support comes from structuring your content well so that the normal flow of your page makes sense. A user with a very limited data plan might not load images, fonts, or even your CSS, but the content should still be presented in a way that makes reading easy. A well-structured HTML document should always be your starting point. _If you remove your stylesheet, does your content make sense?_
 
-One option is to leave this plain view of the site as the fallback for people using very old or limited browsers. If you have a tiny number of people coming to the site in these browsers it may not make commercial sense to pour time into trying to give them a similar experience to people on modern browsers. It would be better to spend the time on things which make the site more [accessible](/en-US/docs/Web/Accessibility), thus serving far more users. There is a middle ground between a plain HTML page and all the bells and whistles, and CSS has actually made creating these fallbacks pretty straightforward.
+It doesn't make commercial sense to pour time into trying to give everyon identical experiences as user environments vary and is not something you can controll. It is helpful to render a plain, CSS-less view of your site to ensure a fallback experience of your site is accessible. This fallback may never be viewed by people using very old or limited browsers; but may be viewed by your main target audience — users of modern browsers — when their browser or Internet connection temporarily fails. It is better to focus on what you can control: it is better to spend the time to make the site [accessible](/en-US/docs/Web/Accessibility), thus serving more users. There is a middle ground between a plain HTML page and all the bells and whistles, and CSS makes creating fallbacks pretty straightforward.
 
 ## Creating fallbacks in CSS
 
-CSS specifications contain information that explains what the browser does when two layout methods are applied to the same item. This means that there is a definition for what happens if a floated item, for example, is also a Grid Item using CSS Grid Layout. Couple this information with the knowledge that browsers ignore CSS that they don't understand, and you have a way to create simple layouts using the [legacy techniques](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) we have already covered, which are then overwritten by your Grid layout in modern browsers that understand it.
+Browsers ignore CSS that they don't understand. When a browser doesn't recognize a new feature, it [discards the declaration as invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors) without throwing an error. This allows both old and new values to coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value.
 
-### Falling back from grid to float
+CSS specifications contain information that explains what the browser does when two similar features, such as layout methods, are applied to the same item. For example, there is a definition for what happens if a floated item is also a grid item using CSS grid container. There is also a definition for what happens when an element has both a `margin-top` and a `margin-block-start` set.
 
-In the example below, we have floated three `<div>`s so they display in a row. Any browser that does not support [CSS Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) will see the row of boxes as a floated layout. A floated item that becomes a grid item loses the float behavior, which means that by turning the wrapper into a Grid Container, the floated items become Grid Items. If the browser supports Grid Layout it will display the grid view; if not it ignores the `display: grid` and related properties and the floated layout is used.
-
-```css
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  background-color: rgb(79 185 227);
-  padding: 10px;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
-  padding: 1em;
-}
-```
-
-```html
-<div class="wrapper">
-  <div class="item">Item One</div>
-  <div class="item">Item Two</div>
-  <div class="item">Item Three</div>
-</div>
-```
-
-{{ EmbedLiveSample('Falling_back_from_grid_to_float', '100%', '200') }}
+These techniques were demonstrated in the [legacy techniques layout tutorial](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Back when grid wasn't fully supported, the browser ignored the grid styles. This tutorial is now a good demonstration of how newer features, in this case grid layout, are designed and defined to take precedence over older features, floats in this case, when their effects would otherwise conflict.
 
 ### Fallback methods
 
-There are a number of layout methods which can be used in a similar way to this float example. You can choose the one that makes the most sense for the layout pattern you need to create.
+As noted above, a browser will discard any CSS it doesn't understand. Check out the [CSS error handling guide](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). This enables using new CSS properties and new property values before they are universally supported. New CSS features that aren't understood are discarded as invalid. This enabled the use of [vendor-prefixing](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes)
 
-- Float (and clear)
-  - : As shown above, the float property ceases to affect the layout if floated items become flex or grid items. The {{cssxref("clear")}} property also has no effect once the cleared item becomes a flex or grid item.
-- display: inline-block
-  - : This method can be used to create column layouts, if an item has `display: inline-block` set but then becomes a flex or grid item, the inline-block behavior is ignored.
-- display: table
-  - : This method can be used to create table layouts, if an item has `display: table`, `display: table-cell`, etc., set but then becomes a flex or grid item, the display value is ignored.
-- Multiple-column Layout
-  - : For certain layouts you could use [multi-col](/en-US/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) as a fallback, if your container has any of the `column-*` properties defined on it and then becomes a grid container, the multicol behavior will not happen.
-- Flexbox as a Fallback for Grid
-  - : [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) has greater browser support than Grid due to being supported by IE10 and 11. If you make a flex container into a grid container, any `flex` property applied to the children will be ignored.
-
-For many layout tweaks in older browsers, you may find you can give a decent experience by using CSS in this way. We add a simpler layout based on older and well-supported techniques, then use the newer CSS to create the layout that over 90% of your audience will see. There are cases, however, when the fallback code will need to include something that the new browsers will also interpret. A good example of this is if we were to add percentage widths to our floated items to make the columns more like the grid display, stretching to fill the container.
-
-In the floated layout, the percentage is calculated from the container — 33.333% is a third of the container width. In Grid however that 33.333% is calculated from the grid area the item is placed in, so it actually becomes a third of the size we want once the Grid Layout is introduced.
-
-```css
-* {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  background-color: rgb(79 185 227);
-  padding: 10px;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207 232 220);
-  padding: 1em;
-  width: 33.333%;
-}
-```
-
-```html
-<div class="wrapper">
-  <div class="item">Item One</div>
-  <div class="item">Item Two</div>
-  <div class="item">Item Three</div>
-</div>
-```
-
-{{ EmbedLiveSample('Fallback_methods', '100%', '200') }}
-
+Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value.
 To deal with this issue we need to have a way to detect if Grid is supported and therefore if it will override the width. CSS has a solution for us here.
 
 ## Feature queries
