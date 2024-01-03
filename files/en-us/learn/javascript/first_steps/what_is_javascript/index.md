@@ -13,7 +13,7 @@ In this article we will look at JavaScript from a high level, answering question
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
+      <td>A basic understanding of HTML and CSS.</td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
@@ -51,7 +51,6 @@ button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
   border: 2px solid rgb(200 200 0 / 0.6);
   background-color: rgb(0 217 217 / 0.6);
   color: rgb(100 0 0 / 1);

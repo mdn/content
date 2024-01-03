@@ -38,5 +38,5 @@ navigator.serial.getPorts().then((ports) => {
 
 ## See also
 
-- [Read from and write to a serial port](https://developer.chrome.com/articles/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/docs/capabilities/serial)
 - [Getting started with the web serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)
