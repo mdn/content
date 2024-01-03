@@ -56,7 +56,10 @@ canvas.addEventListener("pointermove", (evt) => {
     let r = getRandomInt(0, 255);
     let g = getRandomInt(0, 255);
     let b = getRandomInt(0, 255);
-    style = { color: "rgb(" + r + " " + g + " " + b + " / 100%)", diameter: 10 };
+    style = {
+      color: "rgb(" + r + " " + g + " " + b + " / 100%)",
+      diameter: 10,
+    };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
       "rgb(" + r + " " + g + " " + b + " / 100%)";

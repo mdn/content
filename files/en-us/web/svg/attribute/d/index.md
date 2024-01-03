@@ -870,7 +870,10 @@ svg {
 
   <!-- Highlight the curve vertex and control points -->
   <g>
-    <polyline points="10,50 25,25 40,50" stroke="rgb(0 0 0 / 20%)" fill="none" />
+    <polyline
+      points="10,50 25,25 40,50"
+      stroke="rgb(0 0 0 / 20%)"
+      fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- Curve vertex points -->
