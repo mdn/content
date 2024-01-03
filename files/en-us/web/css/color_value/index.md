@@ -29,7 +29,7 @@ rgb(255 0 153 / 80%)
 
 /* HSL (Hue, Saturation, Lightness) */
 hsl(150 30% 60%)
-hsl(150 30% 60% / 0.8)
+hsl(150 30% 60% / 80%)
 
 /* HWB (Hue, Whiteness, Blackness) */
 hwb(12 50% 0%)
