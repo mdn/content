@@ -16,7 +16,7 @@ The first CSS conditional rules were [media types](/en-US/docs/Web/CSS/@media#me
 
 CSS conditional rules now include feature queries; the `@supports` at-rule enables targeting CSS styles based on a user-agent's CSS capabilities. Additional conditions include which selector, font-formats, and font-techs are supported.
 
-The CSS conditional rules module also expanded `@media` to enable nesting at-rules with the [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) removing unused media types while adding many media features and conditions that can be targeted.
+The CSS conditional rules module also expands `@media` to enable nesting at-rules, with the related [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module removing unused media types and adding many media features and conditions that can be targeted.
 
 The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
 

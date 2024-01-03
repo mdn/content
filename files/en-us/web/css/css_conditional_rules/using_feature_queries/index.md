@@ -105,12 +105,12 @@ This can be particularly useful if a feature is vendor prefixed, as you can test
 
 ## Additional feature query options
 
-Feature queries are not limited to property-value pairs. You can include [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax) functions in your feature query to target CSS based on whether the user-agent supports a specified font technology, font format, or selector syntax, respectively.
+Feature queries are not limited to property-value pairs. You can include [`font-tech()`](/en-US/docs/Web/CSS/@supports#font-tech), [`font-format()`](/en-US/docs/Web/CSS/@supports#font-format), and [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax) functions in your feature queries to selectively apply CSS based on whether the user-agent supports a specified font technology, font format, or selector syntax, respectively.
 
-For example, the `selector()` function can be used to import a stylesheet for browsers that support a vendor prefixed pseudo-element:
+For example, the `selector()` function can be used to import a stylesheet for browsers that support a vendor-prefixed pseudo-element:
 
 ```css
-/* a `selector()` query within a `supports()` function */
+/* A `selector()` query within a `supports()` function */
 @import `/css/webkitShadowStyles.css` supports(selector(::-webkit-inner-spin-button));
 ```
 
@@ -118,7 +118,7 @@ For example, the `selector()` function can be used to import a stylesheet for br
 
 ### Browser support test
 
-In this example, we check if the browser supports {{cssxref("system-color")}}, hiding support with `diplay: none` if the color type is not supported.
+In this example, we check if the browser supports the `AccentColor` {{cssxref("system-color")}}, hiding support with `display: none` if the color type is not supported.
 
 #### HTML
 
