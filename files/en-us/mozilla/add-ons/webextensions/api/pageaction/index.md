@@ -7,7 +7,7 @@ browser-compat: webextensions.api.pageAction
 
 {{AddonSidebar}}
 
-The API to control [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions), which is a clickable icon inside the browser's address bar.
+The API to control [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
 
 ![Paw print icon representing a page action](page-action.png)
 
