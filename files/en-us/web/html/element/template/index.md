@@ -7,9 +7,10 @@ browser-compat: html.elements.template
 
 {{HTMLSidebar}}
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} that is not to be rendered immediately when a page is loaded but may be instantiated subsequently during runtime using JavaScript.
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} fragments for two main use cases:
 
-Think of a template as a content fragment that is being stored for subsequent use in the document. While the parser does process the contents of the **`<template>`** element while loading the page, it does so only to ensure that those contents are valid; the element's contents are not rendered, however.
+1. To be later cloned and used via JavaScript to insert new content in the DOM. The element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment).
+2. To be immediately used by the HTML parser to generate Shadow DOM if the `shadowrootmode` attribute is present. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
 
 ## Attributes
 
@@ -27,9 +28,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** This if a feature of the HTML parser that cannot be used after the parsing by setting the `shadowrootmode` attribute via JavaScript. Also, only allowed values will create the shadow root. Empty or any other value won't trigger this behavior.
-
-You may find the old non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has been removed and replaced by the standard `shadowrootmode` attribute.
+    > **Note:** This is a feature of the HTML parser that cannot be used after the parsing by setting the `shadowrootmode` attribute via JavaScript. Only allowed values will create the shadow root. Empty or any other value won't trigger this behavior.
+    >
+    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has been removed and replaced by the standard `shadowrootmode` attribute.
 
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
@@ -109,6 +110,8 @@ table td {
 
 ### Declarative shadow DOM
 
+At the beginning of the markup, we have a hidden support warning that we will show later via JavaScript if the browser doesn't support the `shadowrootmode` attribute. After that, there are two {{HTMLElement("article")}} elements with nested {{HTMLElement("style")}} elements that behave differently. The first is global to the whole document, while the second is scoped to the shadow root generated in place of the `<template>` element because the `shadowrootmode` attribute is present.
+
 ```css hidden
 body {
   font-family: sans-serif;
@@ -142,12 +145,12 @@ body {
 ```
 
 ```js
+const isShadowRootModeSupported =
+  HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode");
+
 document
   .querySelector("p[hidden]")
-  .toggleAttribute(
-    "hidden",
-    HTMLTemplateElement.prototype.hasOwnProperty("shadowRootMode"),
-  );
+  .toggleAttribute("hidden", isShadowRootModeSupported);
 ```
 
 {{EmbedLiveSample("Declarative shadow DOM", 500, 120)}}
