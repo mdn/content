@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.showNotification
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}
 
 The `showNotification()` method of the
 {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
