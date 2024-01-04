@@ -118,13 +118,13 @@ For example, the `selector()` function can be used to import a stylesheet for br
 
 ### Browser support test
 
-In this example, we check if the browser supports the `AccentColor` {{cssxref("system-color")}}, hiding support with `display: none` if the color type is not supported.
+In this example, we check if the browser supports the `AccentColor` {{cssxref("system-color")}} and use `display: none` to change the default "not supported" message to a "supported" message if the color type is supported.
 
 #### HTML
 
 ```html
 <p class="accentcolor">
-  Your browser does <span>not</span> support `accentcolor` as a color value.
+  Your browser does <span>not</span> support <code>AccentColor</code> as a color value.
 </p>
 ```
 
