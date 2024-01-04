@@ -71,7 +71,7 @@ img
 
 > **Note:** Without a {{jsxref('Promise')}}-returning method, you
 > would add the image to the DOM in a {{domxref("Window/load_event", "load")}} event handler,
-> and handle the error in the {{domxref("Element/error_event", "error")}} event's handler.
+> and handle the error in the {{domxref("HTMLElement/error_event", "error")}} event's handler.
 
 ### Avoiding empty images
 

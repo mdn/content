@@ -21,7 +21,7 @@ To get started with BCD data in MDN pages, use the query string specified in the
 For example:
 
 - {{domxref("AbortController")}} compatibility data is defined in [api/AbortController.json](https://github.com/mdn/browser-compat-data/blob/main/api/AbortController.json) and can be queried using `api.AbortController`.
-- {{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in [http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/content-type.json) and the query is `http.headers.Content-Type`.
+- {{HTTPHeader("Content-Type")}} HTTP header compatibility data is defined in [http/headers/content-type.json](https://github.com/mdn/browser-compat-data/blob/main/http/headers/Content-Type.json) and the query is `http.headers.Content-Type`.
 - {{domxref("VRDisplay.capabilities")}} property compatibility data is defined in [api/VRDisplay.json](https://github.com/mdn/browser-compat-data/blob/main/api/VRDisplay.json) and its query is `api.VRDisplay.capabilities`.
 
 The compatibility data query should be specified in the page front-matter in the `browser-compat` key.

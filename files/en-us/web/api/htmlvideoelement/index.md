@@ -15,7 +15,7 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 
 ## Instance properties
 
-_Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
+_Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
   - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
@@ -47,7 +47,7 @@ _Inherits properties from its ancestor interfaces, {{domxref("HTMLMediaElement")
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._
+_Inherits methods from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
@@ -56,7 +56,9 @@ _Inherits methods from its parent, {{domxref("HTMLMediaElement")}}, and from its
 
 ## Events
 
-_Inherits events from its parent, {{domxref("HTMLMediaElement")}}, and from its ancestor {{domxref("HTMLElement")}}._ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits events from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
   - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode.

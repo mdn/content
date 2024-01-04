@@ -340,7 +340,7 @@ Moreover, our editor can display this warning even before calling the compiler:
 
 ![A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute](04-svelte-accessibility-support.png)
 
-You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs#Comments) beginning with `svelte-ignore`, like this:
+You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs/basic-markup#comments) beginning with `svelte-ignore`, like this:
 
 ```svelte
 <!-- svelte-ignore a11y-missing-attribute -->
@@ -548,8 +548,8 @@ body {
   padding: 1rem;
   position: relative;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 rgb(0 0 0 / 20%),
+    0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

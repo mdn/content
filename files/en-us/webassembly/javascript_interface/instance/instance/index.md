@@ -16,7 +16,7 @@ The **`WebAssembly.Instance()`** constructor creates a new
 > **Warning:** Since instantiation for large modules can be expensive,
 > developers should only use the `Instance()` constructor when synchronous
 > instantiation is absolutely required; the asynchronous
-> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) method should be used at all other
+> [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method should be used at all other
 > times.
 
 ```js
@@ -68,7 +68,7 @@ fetch("simple.wasm")
 ```
 
 However, the preferred way to get an `Instance` is through the asynchronous
-[`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) function, for example like this:
+[`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, for example like this:
 
 ```js
 const importObject = {

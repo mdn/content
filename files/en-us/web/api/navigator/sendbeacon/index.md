@@ -129,7 +129,7 @@ document.addEventListener("visibilitychange", function logData() {
 ## See also
 
 - The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event.
-- {{domxref("Beacon_API","Beacon API", "" , "true")}} overview page.
+- {{domxref("Beacon_API","Beacon API", "", "true")}} overview page.
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.

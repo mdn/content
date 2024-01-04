@@ -8,8 +8,6 @@ browser-compat: api.Window.cancelIdleCallback
 
 {{APIRef}}
 
-## Summary
-
 The **`window.cancelIdleCallback()`** method cancels a callback
 previously scheduled with {{domxref("window.requestIdleCallback()")}}.
 

@@ -5,7 +5,7 @@
 {
   "default": true,
   // Disabled, as some callouts include headings.
-  "header-increment": false,
+  "heading-increment": false,
   "ul-style": {
     "style": "dash"
   },
@@ -16,7 +16,7 @@
     "spaces_per_tab": 2
   },
   "line-length": false,
-  "no-duplicate-header": {
+  "no-duplicate-heading": {
     "allow_different_nesting": true
   },
   "single-title": {

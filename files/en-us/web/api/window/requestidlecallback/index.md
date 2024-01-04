@@ -1,5 +1,5 @@
 ---
-title: "window: requestIdleCallback() method"
+title: "Window: requestIdleCallback() method"
 short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
 page-type: web-api-instance-method

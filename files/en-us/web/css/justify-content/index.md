@@ -88,7 +88,7 @@ justify-content: unset;
 
   - : If the combined size of the items along the main axis is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 
-    > **Note:** While `stretch` is supported by flexible boxes (flexbox), when applied on a flexbox, as stretching is controlled by {{CSSXref("flex")}}, `stretch` behaves as `start`.
+    > **Note:** For [flexboxes](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox), the `stretch` value behaves as `flex-start` or `start`. This is because, in flexboxes, stretching is controlled using the {{CSSXref("flex-grow")}} property.
 
 - `safe`
   - : If the item overflows the alignment container, then the item is aligned as if the alignment mode is `start`. The desired alignment will not be implemented.
