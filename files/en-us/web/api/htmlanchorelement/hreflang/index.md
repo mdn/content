@@ -8,7 +8,7 @@ browser-compat: api.HTMLAnchorElement.hreflang
 
 {{ApiRef("HTML DOM")}}
 
-The **`hreflang`** property of the {{domxref("HTMLAnchorElement")}} interface contains a string that is the language of the linked resource.
+The **`hreflang`** property of the {{domxref("HTMLAnchorElement")}} interface is a string that is the language of the linked resource.
 
 It reflects the `hreflang` attribute of the {{HTMLElement("a")}} element and is the empty string (`""`) if there are none.
 
