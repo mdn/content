@@ -6,10 +6,12 @@ page-type: web-api-constructor
 browser-compat: api.Notification.Notification
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`Notification()`** constructor creates a new
 {{domxref("Notification")}} object instance, which represents a user notification.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
