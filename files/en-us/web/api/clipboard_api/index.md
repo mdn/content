@@ -28,6 +28,9 @@ Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{dom
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
 The default action can be overriden by the event handler — see each of the events for more information.
 
+> **Note:** In addition to transient activation, Chromium also requires `clipboard-read` and `clipboard-write` permissions, which are not supported (and will never be supported) by Firefox or Safari.
+> Both `clipboard-read` and `clipboard-write` have been removed from the [Permissions API](/en-US/docs/Web/API/Permissions_API) specification, but are still referenced in the Clipboard API specification.
+
 ## Interfaces
 
 - {{domxref("Clipboard")}} {{securecontext_inline}}
