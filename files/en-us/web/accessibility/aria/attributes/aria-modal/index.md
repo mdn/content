@@ -69,7 +69,7 @@ The `aria-modal` attribute exposes the existence of the modal to assistive techn
 - `true`
   - : Element is modal.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaModal")}}
   - : The [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.

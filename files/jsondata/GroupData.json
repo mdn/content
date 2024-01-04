@@ -652,6 +652,7 @@
         "HTMLLinkElement",
         "HTMLMapElement",
         "HTMLMediaElement",
+        "HTMLMenuElement",
         "HTMLMetaElement",
         "HTMLMeterElement",
         "HTMLModElement",
@@ -912,10 +913,7 @@
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints"
       ],
-      "methods": [
-        "HTMLCanvasElement.captureStream()",
-        "MediaDevices.getUserMedia()"
-      ],
+      "methods": ["HTMLCanvasElement.captureStream()"],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
     },
@@ -1455,8 +1453,6 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFilterPrimitiveStandardAttributes",
-        "SVGFitToViewBox",
         "SVGFontElement",
         "SVGFontFaceElement",
         "SVGFontFaceFormatElement",
@@ -1499,14 +1495,12 @@
         "SVGSVGElement",
         "SVGSwitchElement",
         "SVGSymbolElement",
-        "SVGTests",
         "SVGTextContentElement",
         "SVGTextElement",
         "SVGTextPathElement",
         "SVGTextPositioningElement",
         "SVGTitleElement",
         "SVGTransform",
-        "SVGTransformable",
         "SVGTransformList",
         "SVGTRefElement",
         "SVGTSpanElement",
@@ -1514,8 +1508,6 @@
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
-        "SVGZoomAndPan",
-        "SVGZoomEvent",
         "TimeEvent"
       ],
       "methods": [],
