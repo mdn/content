@@ -86,6 +86,8 @@ _Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
 
 ## Events
 
+_Also inherits events from its parent interface, {{domxref("EventTarget")}}_.
+
 - {{domxref("Notification.click_event", "click")}}
   - : Fires when the user clicks the notification.
 - {{domxref("Notification.close_event", "close")}}
