@@ -30,7 +30,7 @@ lock(keyCodes)
 
 - `keyCodes` {{optional_inline}}
   - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ### Return value
 
@@ -41,7 +41,7 @@ A {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}} when the lock
 - `AbortError` {{domxref("DOMException")}}
   - : Thrown if a new call to `lock()` is made before the current one has finished.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Thrown if any key in keyCodes is not a valid key code attribute value.
+  - : Thrown if any key in `keyCodes` is not a valid [key code attribute value](https://www.w3.org/TR/uievents-code/#key-code-attribute-value).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if `lock()` is not called in an active top-level browsing context.
 

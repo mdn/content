@@ -167,9 +167,12 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
 - [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas)
 - [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html) (2009)
 - [Canvas cheat sheet](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (pdf) (2015)
-- [Canvas cheat sheet](https://www.coding-dude.com/wp/wp-content/uploads/2020/09/HTML5-canvas-cheat-sheet.pdf) (pdf) (2020)
-- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) (2013)
+- [Safari HTML canvas guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) via Apple (2013)
+- [`CanvasRenderingContext2D` 2D drawing context for a canvas element](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) via Apple.com
+- [WebGL](/en-US/docs/Web/API/WebGL_API) API
+- {{HTMLElement("img")}}
+- [SVG](/en-US/docs/Web/SVG)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)

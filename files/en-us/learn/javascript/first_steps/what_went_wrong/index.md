@@ -13,7 +13,7 @@ When you built up the "Guess the number" game in the previous article, you may h
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -115,7 +115,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    console.log(lowOrHi);
    ```
 
-   This code will print the value of `lowOrHi` to the console after we tried to set it in line 49. See {{domxref("console.log()")}} for more information.
+   This code will print the value of `lowOrHi` to the console after we tried to set it in line 49. See {{domxref("console/log_static", "console.log()")}} for more information.
 
 7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 49. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
 

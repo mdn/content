@@ -235,67 +235,51 @@ Each message is serialized using JSON, UTF-8 encoded and is preceded with an uns
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
-You can quickly get started sending and receiving messages with this NodeJS code:
+You can quickly get started sending and receiving messages with this NodeJS code, `nm_nodejs.mjs`:
 
 ```js
-#!/usr/local/bin/node
+#!/usr/bin/env -S /full/path/to/node
 
-(() => {
-  let payloadSize = null;
+import fs from "node:fs/promises";
 
-  // A queue to store the chunks as we read them from stdin.
-  // This queue can be flushed when `payloadSize` data has been read
-  let chunks = [];
+async function getMessage() {
+  const header = new Uint32Array(1);
+  await readFullAsync(1, header);
+  const message = await readFullAsync(header[0]);
+  return message;
+}
 
-  // Only read the size once for each payload
-  const sizeHasBeenRead = () => Boolean(payloadSize);
-
-  // All the data has been read, reset everything for the next message
-  const flushChunksQueue = () => {
-    payloadSize = null;
-    chunks.splice(0);
-  };
-
-  const processData = () => {
-    // Create one big buffer with all the chunks
-    const stringData = Buffer.concat(chunks);
-
-    // The browser will emit the size as a header of the payload,
-    // if it hasn't been read yet, do it.
-    // The next time we'll need to read the payload size is when all of the data
-    // of the current payload has been read (i.e. data.length >= payloadSize + 4)
-    if (!sizeHasBeenRead()) {
-      payloadSize = stringData.readUInt32LE(0);
+async function readFullAsync(length, buffer = new Uint8Array(65536)) {
+  const data = [];
+  while (data.length < length) {
+    const input = await fs.open("/dev/stdin");
+    const { bytesRead } = await input.read({ buffer });
+    await input.close();
+    if (bytesRead === 0) {
+      break;
     }
+    data.push(...buffer.subarray(0, bytesRead));
+  }
+  return new Uint8Array(data);
+}
 
-    // If the data we have read so far is >= to the size advertised in the header,
-    // it means we have all of the data sent.
-    // We add 4 here because that's the size of the bytes that hold the payloadSize
-    if (stringData.length >= payloadSize + 4) {
-      // Remove the header
-      const contentWithoutSize = stringData.slice(4, payloadSize + 4);
+async function sendMessage(message) {
+  const header = new Uint32Array([message.length]);
+  const stdout = await fs.open(`/proc/${process.pid}/fd/1`, "w");
+  await stdout.write(header);
+  await stdout.write(message);
+  await stdout.close();
+}
 
-      // Reset the read size and the queued chunks
-      flushChunksQueue();
-
-      const json = JSON.parse(contentWithoutSize);
-      // Do something with the data…
-    }
-  };
-
-  process.stdin.on("readable", () => {
-    // A temporary variable holding the nodejs.Buffer of each
-    // chunk of data read off stdin
-    let chunk = null;
-
-    // Read all of the available data
-    while ((chunk = process.stdin.read()) !== null) {
-      chunks.push(chunk);
-    }
-
-    processData();
-  });
-})();
+while (true) {
+  try {
+    const message = await getMessage();
+    await sendMessage(message);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+}
 ```
 
 Here's another example written in Python. It listens for messages from the extension. Note that the file has to be executable on Linux. If the message is `"ping"`, then it responds with a message `"pong"`.

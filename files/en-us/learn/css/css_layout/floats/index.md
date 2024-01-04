@@ -95,7 +95,7 @@ body {
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -145,7 +145,7 @@ To float the box, add the {{cssxref("float")}} and {{cssxref("margin-right")}} p
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -166,7 +166,7 @@ Add a class of `special` to the first paragraph of text, the one immediately fol
 
 ```css
 .special {
-  background-color: rgb(148, 255, 172);
+  background-color: rgb(148 255 172);
   padding: 10px;
   color: purple;
 }
@@ -223,7 +223,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -293,12 +293,12 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 
 .special {
-  background-color: rgb(148, 255, 172);
+  background-color: rgb(148 255 172);
   padding: 10px;
   color: purple;
 }
@@ -341,7 +341,7 @@ In your CSS, add the following rule for the `.wrapper` class and then reload the
 
 ```css live-sample___the_problem
 .wrapper {
-  background-color: rgb(148, 255, 172);
+  background-color: rgb(148 255 172);
   padding: 10px;
   color: purple;
 }
@@ -395,7 +395,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   color: black;
 }
@@ -411,7 +411,7 @@ To solve this problem is to use the value `flow-root` of the `display` property.
 
 ```css
 .wrapper {
-  background-color: rgb(148, 255, 172);
+  background-color: rgb(148 255 172);
   padding: 10px;
   color: purple;
   display: flow-root;
@@ -467,7 +467,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
   color: black;
 }

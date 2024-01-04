@@ -142,7 +142,7 @@ This renders like so:
 
 {{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
 
-### Accessibility Concerns
+### Accessibility concerns
 
 When a control has a `pattern` attribute, the `title` attribute, if used, must describe the pattern. Relying on the `title` attribute for the visual display of text content is generally discouraged as many user agents do not expose the attribute in an accessible manner. Some browsers show a tooltip when an element with a title is hovered, but that leaves out keyboard-only and touch-only users. This is one of the several reasons you must include information informing users how to fill out the control to match the requirements.
 

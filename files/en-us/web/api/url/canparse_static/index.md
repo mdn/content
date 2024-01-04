@@ -10,7 +10,7 @@ browser-compat: api.URL.canParse_static
 
 The **`URL.canParse()`** static method of the {{domxref("URL")}} interface returns a boolean indicating whether or not an absolute URL, or a relative URL combined with a base URL, are parsable and valid.
 
-This a fast and easy alternative to constructing a `URL` within a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
+This is a fast and easy alternative to constructing a `URL` within a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
 It returns `true` for the same values for which the [`URL()` constructor](/en-US/docs/Web/API/URL/URL) would succeed, and `false` for the values that would cause the constructor to throw.
 
 ## Syntax
