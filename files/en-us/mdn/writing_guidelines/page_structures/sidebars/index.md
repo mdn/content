@@ -90,7 +90,7 @@ For example, adding the following at the end of a markdown file (and removing an
 
 If listed as the last content in the page, Yari, the engine that renders MDN, recognizes the `Quick_links` ID in the opening tag and converts the content of the identified `<section>` into a sidebar.
 
-The `{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to the ARIA Roles landing page followed by an unordered list containing a link to each `role`.
+The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to the ARIA Roles landing page followed by an unordered list containing a link to each `role`.
 
 You can create a sidebar without including a list-of-links creating macro:
 
