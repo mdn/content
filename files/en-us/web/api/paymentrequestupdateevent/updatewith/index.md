@@ -44,7 +44,7 @@ updateWith(details)
     - `modifiers` {{optional_inline}}
       - : An array of objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
     - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
-      - : An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.
+      - : An object which includes an error message for each property of the shipping address that could not be validated.
     - `shippingOptions` {{optional_inline}}
       - : An array of objects, each describing one available shipping option from which the user may choose.
     - `total` {{optional_inline}}
