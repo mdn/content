@@ -209,7 +209,6 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 - {{CSSxRef("::-webkit-meter-inner-element", "::-webkit-meter-inner-element")}}
 - {{CSSxRef("::-webkit-meter-optimum-value", "::-webkit-meter-optimum-value")}}
 - {{CSSxRef("::-webkit-meter-suboptimum-value", "::-webkit-meter-suboptimum-value")}}
-- {{CSSxRef("::-webkit-outer-spin-button", "::-webkit-outer-spin-button")}}
 - {{CSSxRef("::-webkit-progress-bar", "::-webkit-progress-bar")}}
 - {{CSSxRef("::-webkit-progress-inner-element", "::-webkit-progress-inner-element")}}
 - {{CSSxRef("::-webkit-progress-value", "::-webkit-progress-value")}}
