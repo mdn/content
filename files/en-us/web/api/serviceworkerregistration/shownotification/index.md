@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerRegistration.showNotification
 
 {{APIRef("Web Notifications")}}
 
-The `showNotification()` method of the
+The **`showNotification()`** method of the
 {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
 service worker.
 
@@ -89,8 +89,8 @@ showNotification(title, options)
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
     - `timestamp` {{optional_inline}}
-      - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, representing the time associated with the notification. This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
-    - `vibrate` {{experimental_inline}}
+      - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, representing the time associated with the notification. This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
+    - `vibrate` {{optional_inline}} {{experimental_inline}}
       - : A vibration pattern to run with the display of the
         notification. A vibration pattern can be an array with as few as one member. The
         values are times in milliseconds where the even indices (0, 2, 4, etc.) indicate
