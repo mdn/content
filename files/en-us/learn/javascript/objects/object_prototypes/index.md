@@ -82,7 +82,7 @@ Every object in JavaScript has a built-in property, which is called its **protot
 
 > **Note:** The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
 
-When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case `undefined` is returned.
+When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case `null` is returned.
 
 So when we call `myObject.toString()`, the browser:
 
