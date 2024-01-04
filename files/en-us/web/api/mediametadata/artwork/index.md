@@ -10,12 +10,19 @@ browser-compat: api.MediaMetadata.artwork
 
 The **`artwork`** property of the
 {{domxref("MediaMetaData")}} interface returns or sets an array of
-{{domxref("MediaImage")}} objects representing images associated with playing
+objects representing images associated with playing
 media.
 
 ## Value
 
-An {{jsxref("Array")}} of {{domxref("MediaImage")}} objects.
+An {{jsxref("Array")}} of objects, each containing the following fields:
+
+- `src`
+  - : The URL from which the user agent fetches the image's data.
+- `sizes` {{optional_inline}}
+  - : Specifies the resource in multiple sizes so the user agent doesn't have to scale a single image. It defaults to the empty string (`""`).
+- `type` {{optional_inline}}
+  - : The {{Glossary("MIME type")}} hint for the user agent that allows it to ignore images of types that it doesn't support. However, the user agent may still use MIME type sniffing after downloading the image to determine its type. It defaults to the empty string (`""`).
 
 ## Examples
 
@@ -71,7 +78,3 @@ if ("mediaSession" in navigator) {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("MediaImage")}}

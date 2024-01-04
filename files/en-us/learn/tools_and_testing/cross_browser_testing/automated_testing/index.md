@@ -13,22 +13,14 @@ Manually running tests on several browsers and devices, several times per day, c
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross-browser testing</a
-        >.
+        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages;
+        an idea of the high level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To provide an understanding of what automated testing entails, how it
-        can make your life easier, and how to make use of some of the commercial
-        products that make things easier.
+        To provide an understanding of what automated testing entails, how it can make your life easier, and how to make use of some of the commercial products that make things easier.
       </td>
     </tr>
   </tbody>
@@ -115,7 +107,25 @@ With this, you are ready to move on.
 Let's look at setting up Gulp and using it to automate some testing tools.
 
 1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.
-2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
+   Also, update the `package.json` file with the line: `"type": "module"` so that it'll look something like this:
+
+   ```json
+   {
+     "name": "node-test",
+     "version": "1.0.0",
+     "description": "Test for npm projects",
+     "main": "index.js",
+     "scripts": {
+       "test": "test"
+     },
+     "author": "Chris Mills",
+     "license": "MIT",
+     "type": "module"
+   }
+   ```
+
+2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder.
+   You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
 3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
 
    ```bash
@@ -128,15 +138,15 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    npm install --save-dev gulp
    ```
 
-5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
+5. Now create a new file inside your project directory called `gulpfile.mjs`. This is the file that will run all our tasks. Inside this file, put the following:
 
    ```js
-   const gulp = require("gulp");
+   import gulp from "gulp";
 
-   exports.default = function (cb) {
+   export default function (cb) {
      console.log("Gulp running");
      cb();
-   };
+   }
    ```
 
    This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
@@ -172,13 +182,13 @@ To use each plugin, you need to first install it via npm, then require any depen
 2. Add the following dependency to `gulpfile.js`:
 
    ```js
-   const htmltidy = require("gulp-htmltidy");
+   import htmltidy from "gulp-htmltidy";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html() {
+   export function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
@@ -186,16 +196,10 @@ To use each plugin, you need to first install it via npm, then require any depen
    }
    ```
 
-4. Export the html task using:
+4. Change the default export to:
 
    ```js
-   exports.html = html;
-   ```
-
-5. Change the default export to:
-
-   ```js
-   exports.default = html;
+   export default html;
    ```
 
 Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
@@ -216,14 +220,14 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const autoprefixer = require("gulp-autoprefixer");
-   const csslint = require("gulp-csslint");
+   import autoprefixer from "gulp-autoprefixer";
+   import csslint from "gulp-csslint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css() {
+   export function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -245,22 +249,10 @@ In the input version of the file, you may have noticed that we put an empty {{ht
    ]
    ```
 
-5. Add this line after the const definitions:
+5. Change the default task to:
 
    ```js
-   const { series } = require("gulp");
-   ```
-
-6. Export the css task using:
-
-   ```js
-   exports.css = css;
-   ```
-
-7. Change the default task to:
-
-   ```js
-   exports.default = series(html, css);
+   export default gulp.series(html, css);
    ```
 
 Here we grab our `style.css` file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the `build` directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!
@@ -278,14 +270,14 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const babel = require("gulp-babel");
-   const jshint = require("gulp-jshint");
+   import babel from "gulp-babel";
+   import jshint from "gulp-jshint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js() {
+   export function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -299,16 +291,10 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
    }
    ```
 
-4. Export the js task using:
+4. Change the default task to:
 
    ```js
-   exports.js = js;
-   ```
-
-5. Change the default task to:
-
-   ```js
-   exports.default = series(html, css, js);
+   export default gulp.series(html, css, js);
    ```
 
 Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
@@ -326,13 +312,11 @@ If you get errors, check that you've added all the dependencies and the tests as
 Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.js`:
 
 ```js
-function watch() {
+export function watch() {
   gulp.watch("src/*.html", html);
   gulp.watch("src/*.css", css);
   gulp.watch("src/*.js", js);
 }
-
-exports.watch = watch;
 ```
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
@@ -430,32 +414,25 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require("saucelabs");
+   const SauceLabs = require("saucelabs").default;
 
-   let myAccount = new SauceLabs({
-     username: "your-sauce-username",
-     password: "your-sauce-api-key",
-   });
-
-   myAccount.getAccountDetails((err, res) => {
-     console.log(res);
-     myAccount.getServiceStatus((err, res) => {
-       // Status of the Sauce Labs services
-       console.log(res);
-       myAccount.getJobs((err, jobs) => {
-         // Get a list of all your jobs
-         for (const job of jobs) {
-           myAccount.showJob(job.id, (err, res) => {
-             let str = `${res.id}: Status: ${res.status}`;
-             if (res.error) {
-               str += `\x1b[31m Error: ${res.error}\x1b[0m`;
-             }
-             console.log(str);
-           });
-         }
-       });
+   (async () => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
      });
-   });
+
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
+
+     // Get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true,
+     });
+
+     console.log(jobs);
+   })();
    ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
@@ -558,7 +535,7 @@ Let's have a brief look at how we'd access the API using Node.js.
    getPlanDetails();
    ```
 
-3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack automation dashboard](https://www.browserstack.com/automate). Fill these in now.
+3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the Authentication & Security section. Fill these in now.
 4. Make sure everything is saved, and run your file like so:
 
    ```bash

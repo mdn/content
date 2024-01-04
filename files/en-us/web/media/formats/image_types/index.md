@@ -47,7 +47,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Firefox (still images only: animated images not implemented), Opera, Safari.
+          <strong>Supported:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
         </p>
       </td>
     </tr>
@@ -300,7 +300,7 @@ AVIF does not support progressive rendering, so files must be fully downloaded b
 This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
-AVIF is supported in Chrome, Opera, Safari and Firefox (Firefox supports still images but not animations), but not on Edge or IE.
+AVIF is supported in Chrome, Edge, Opera, Safari and Firefox (Firefox supports still images but not animations).
 As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
@@ -326,7 +326,7 @@ As support is not yet comprehensive (and has little historical depth) you should
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        Chrome 85, Opera 71, Firefox 93, and Safari 16.1.
+        Chrome 85, Edge 121, Opera 71, Firefox 93, and Safari 16.1.
         <ul>
           <li>
             Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
@@ -998,10 +998,10 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
       <td>
         ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>, <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>, <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. No known royalty-bearing patents.
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a> rules apply. No known royalty-bearing patents.
       </td>
     </tr>
   </tbody>
@@ -1112,11 +1112,11 @@ It's not generally useful for strictly bitmap or photographic images, although i
         >, <a href="http://www.ercim.org/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>,
         <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,
-        <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
+        <a href="https://www.w3.org/policies/#trademarks">trademark</a>,
+        <a href="https://www.w3.org/copyright/document-license/">document use</a>
         and
-        <a href="https://www.w3.org/Consortium/Legal/copyright-software">software licensing</a>
+        <a href="https://www.w3.org/copyright/software-license/">software licensing</a>
         rules apply. No known royalty-bearing patents.
       </td>
     </tr>
@@ -1363,7 +1363,7 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
   </tbody>
 </table>
 
-> **Note:** Despite having [announced support](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174) for WebP in Safari 14, as of version 14.0 .webp images do not display natively on a macOS desktop, whereas Safari on iOS 14 does display .webp images properly.
+> **Note:** On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
 
 ### XBM (X Window System Bitmap file)
 

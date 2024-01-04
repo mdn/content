@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
+In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. It is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage, but there are other types of multimedia to consider. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images, and we'll introduce other graphics available to the web platform.
 
 <table>
 <caption>Multimedia and Embedding Images</caption>
@@ -14,10 +14,9 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -361,7 +360,7 @@ Creators of original work such as songs, books, or software often release their 
 
 - Obtain explicit, written permission from the copyright holder.
 - Pay a license fee to use them. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
-- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
+- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://copyrightservice.co.uk/copyright/p27_work_of_others) in your jurisdiction.
 
 Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
 
@@ -607,6 +606,21 @@ The resulting embedded image is arguably easier to position and control than HTM
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.
 
 > **Note:** You'll learn a lot more about [CSS background images](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) in our [CSS](/en-US/docs/Learn/CSS) topic.
+
+## Other graphics on the web
+
+We've seen that static images can be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. The browser offers ways of creating 2D and 3D graphics with code, as well as including video from uploaded files or live streamed from a user's camera. Here are links to articles that provide insight into these more advanced graphics topics:
+
+- [Canvas](/en-US/docs/Web/API/Canvas_API)
+  - : The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.
+- [SVG](/en-US/docs/Web/SVG)
+  - : Scalable Vector Graphics (SVG) lets you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : The WebGL API guide will get your started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : Just like `<img>`, you can use HTML to embed {{htmlelement("video")}} and {{htmlelement("audio")}} into a web page and control its playback.
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+  - : The RTC in WebRTC stands for Real-Time Communications, a technology that enables audio/video streaming and data sharing between browser clients (peers).
 
 ## Test your skills!
 

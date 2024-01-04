@@ -13,10 +13,9 @@ Everything in CSS has a box around it, and understanding these boxes is key to b
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -123,7 +122,7 @@ The below diagram shows these layers:
 
 ### The standard CSS box model
 
-In the standard box model, if you give a box an `inline-size` and a `block-size` (or `width` and a `height`) attributes, this defines the inline-size and block-size (width and height in horizontal languages) of the _content box_. Any padding and border is then added to those dimensions to get the total size taken up by the box (see image below).
+In the standard box model, if you set `inline-size` and `block-size` (or `width` and `height`) property values on a box, these values define the `inline-size` and `block-size` (`width` and `height` in horizontal languages) of the _content box_. Any padding and borders are then added to those dimensions to get the total size taken up by the box (see the image below).
 
 If we assume that a box has the following CSS:
 

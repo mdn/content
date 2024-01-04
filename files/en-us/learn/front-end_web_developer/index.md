@@ -63,7 +63,7 @@ Time to complete: 35–50 hours
 
 #### Prerequisites
 
-Nothing except basic computer literacy, and a basic web development environment.
+A basic web development environment.
 
 #### How will I know I'm ready to move on?
 
