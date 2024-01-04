@@ -1,5 +1,5 @@
 ---
-title: 'HTMLAnchorElement: hreflang property'
+title: "HTMLAnchorElement: hreflang property"
 short-title: hreflang
 slug: Web/API/HTMLAnchorElement/hreflang
 page-type: web-api-instance-property
