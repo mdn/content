@@ -30,6 +30,7 @@ The default action can be overriden by the event handler — see each of the eve
 
 > **Note:** In addition to transient activation, Chromium also requires `clipboard-read` and `clipboard-write` permissions, which are not supported (and will never be supported) by Firefox or Safari.
 > Both `clipboard-read` and `clipboard-write` have been removed from the [Permissions API](/en-US/docs/Web/API/Permissions_API) specification, but are still referenced in the Clipboard API specification.
+> Chromium is expected to remove `clipboard-read` in future but [consensus has not been reached](https://github.com/w3c/clipboard-apis/issues/163) for the removal of `clipboard-write`.
 
 ## Interfaces
 
