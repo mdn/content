@@ -14,7 +14,7 @@ It reflects the `hreflang` attribute of the {{HTMLElement("a")}} element and is 
 
 Web browsers and search engines may use this information to understand the language of the linked content better, but they are not required to follow it. The value provided for the `hreflang` attribute adheres to the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. If not, it is ignored.
 
-Despite the presence of the `hreflang` attribute, web browsers are instructed not to rely solely on this when fetching the linked resource. Instead, they should use language information directly associated with the resource (e.g. through HTTP headers) to determine its language.
+Web browsers do not rely solely on the `hreflang` attribute after fetching the linked resource. Instead, they use language information directly associated with the resource (e.g., through HTTP headers) to determine its language.
 
 ## Value
 
