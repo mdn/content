@@ -9,8 +9,6 @@ browser-compat:
   - api.NavigationDestination
   - api.NavigationHistoryEntry
   - api.NavigationTransition
-  - api.NavigateEvent
-  - api.NavigationCurrentEntryChangeEvent
 spec-urls: https://html.spec.whatwg.org/multipage/nav-history-apis.html#navigation-api
 ---
 
@@ -103,7 +101,7 @@ There are a few perceived limitations with the Navigation API:
 
 ## Extensions to other interfaces
 
-- {{domxref("Window.navigation")}} {{Experimental_Inline}}
+- {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. This is the entry point for the Navigation API.
 
 ## Examples
