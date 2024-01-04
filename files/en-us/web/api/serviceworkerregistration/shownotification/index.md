@@ -102,6 +102,11 @@ showNotification(title, options)
 
 A {{jsxref('Promise')}} that resolves to `undefined`.
 
+### Exceptions
+
+- `TypeError`
+  - : Thrown if current service worker's state is not `activating` or `activated`, or if the user has explicitly denied the browser's permission request to use the API.
+
 ## Examples
 
 ```js
