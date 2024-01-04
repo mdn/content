@@ -316,6 +316,6 @@ document.getElementById("buyButton").onclick = requestPayment;
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref('PaymentRequest.abort()')}}
-- {{domxref("PaymentRequest.retry()")}}
-- {{domxref("PaymentRequest.complete()")}}
 - {{domxref("PaymentResponse")}}
+- {{domxref("PaymentResponse.retry()")}}
+- {{domxref("PaymentResponse.complete()")}}
