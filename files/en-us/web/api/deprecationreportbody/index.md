@@ -108,4 +108,4 @@ The `reports` parameter contains an array of all the reports in the observer's r
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)

@@ -21,6 +21,10 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 - {{domxref("caches", "WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
+- {{domxref("crossOriginIsolated", "WorkerGlobalScope.crossOriginIsolated")}} {{ReadOnlyInline}}
+  - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
+- {{domxref("crypto_property", "WorkerGlobalScope.crypto")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
 - {{domxref("indexedDB", "WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
@@ -35,7 +39,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("performance_property", "WorkerGlobalScope.performance")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Performance")}} associated with the worker. It is a regular performance object, except that only a subset of its property and methods are available to workers.
-- {{domxref("Window.scheduler", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("scheduler_property", "WorkerGlobalScope.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("WorkerGlobalScope.self")}} {{ReadOnlyInline}}
   - : Returns a reference to the `WorkerGlobalScope` itself. Most of the time it is a specific scope like {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}} or {{domxref("ServiceWorkerGlobalScope")}}.
@@ -51,25 +55,29 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ### Standard methods
 
-- {{domxref("atob", "WorkerGlobalScope.atob()")}}
+- {{domxref("atob()", "WorkerGlobalScope.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
-- {{domxref("btoa", "WorkerGlobalScope.btoa()")}}
-  - : Creates a base-64 encoded ASCII string from a string of binary data.
-- {{domxref("clearInterval", "WorkerGlobalScope.clearInterval()")}}
+- {{domxref("btoa()", "WorkerGlobalScope.btoa()")}}
+  - : Creates a base-64 encoded {{Glossary("ASCII")}} string from a string of binary data.
+- {{domxref("clearInterval()", "WorkerGlobalScope.clearInterval()")}}
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
-- {{domxref("clearTimeout", "WorkerGlobalScope.clearTimeout()")}}
+- {{domxref("clearTimeout()", "WorkerGlobalScope.clearTimeout()")}}
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
-- {{domxref("createImageBitmap", "WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
-- {{domxref("fetch", "WorkerGlobalScope.fetch()")}}
+- {{domxref("fetch()", "WorkerGlobalScope.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`
-- {{domxref("setInterval", "WorkerGlobalScope.setInterval()")}}
+  - : Imports one or more scripts into the worker's scope. You can specify as many as you'd like, separated by commas. For example: `importScripts('foo.js', 'bar.js');`.
+- {{domxref("queueMicrotask()", "WorkerGlobalScope.queueMicrotask()")}}
+  - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
+- {{domxref("setInterval()", "WorkerGlobalScope.setInterval()")}}
   - : Schedules a function to execute every time a given number of milliseconds elapses.
-- {{domxref("setTimeout", "WorkerGlobalScope.setTimeout()")}}
+- {{domxref("setTimeout()", "WorkerGlobalScope.setTimeout()")}}
   - : Schedules a function to execute in a given amount of time.
-- {{domxref("reportError", "WorkerGlobalScope.reportError()")}}
+- {{domxref("structuredClone()", "WorkerGlobalScope.structuredClone()")}}
+  - : Creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+- {{domxref("reportError()", "WorkerGlobalScope.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.
 
 ### Non-standard methods
@@ -79,18 +87,20 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
 ## Events
 
-- `error`
-  - : Fires when an error occurred.
-- `offline`
-  - : Fires when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
-- `online`
-  - : Fires when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
-- [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
-  - : Fires at the global/worker scope object when the user's preferred languages change.
-- `rejectionhandled` {{non-standard_inline}}
-  - : Fires on handled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
-- `unhandledrejection` {{non-standard_inline}}
-  - : Fires on unhandled [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
+- {{domxref("WorkerGlobalScope/error_event", "error")}}
+  - : Fired when an error occurred.
+- {{domxref("WorkerGlobalScope/languagechange_event", "languagechange")}}
+  - : Fired at the global/worker scope object when the user's preferred languages change.
+- {{domxref("WorkerGlobalScope/offline_event", "offline")}}
+  - : Fired when the browser has lost access to the network and the value of `navigator.onLine` switched to `false`.
+- {{domxref("WorkerGlobalScope/online_event", "online")}}
+  - : Fired when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
+- {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
+  - : Fired on handled {{jsxref("Promise")}} rejection events.
+- {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
+  - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
+- {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
+  - : Fired on unhandled {{jsxref("Promise")}} rejection events.
 
 ## Example
 
@@ -114,5 +124,5 @@ console.log(navigator);
 ## See also
 
 - Other global object interface: {{domxref("Window")}}, {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, {{domxref("ServiceWorkerGlobalScope")}}
-- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}}, {{domxref("WorkerGlobalScope")}}, and {{domxref("ServiceWorkerGlobalScope")}}
+- Other Worker-related interfaces: {{domxref("Worker")}}, {{domxref("WorkerLocation")}} and {{domxref("WorkerNavigator")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

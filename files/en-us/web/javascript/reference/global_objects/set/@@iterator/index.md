@@ -19,6 +19,10 @@ The initial value of this property is the same function object as the initial va
 set[Symbol.iterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The same return value as {{jsxref("Set.prototype.values()")}}: a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the values of the set.
@@ -54,7 +58,7 @@ const setIter = mySet[Symbol.iterator]();
 
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+console.log(setIter.next().value); // {}
 ```
 
 ## Specifications

@@ -44,16 +44,16 @@ Intl.DateTimeFormat(locales, options)
 
 - `options` {{optional_inline}}
 
-  - : An object. For ease of reading, the property list is broken into sections based on their purposes.
+  - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
 
 #### Locale options
 
 - `localeMatcher`
   - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
 - `calendar`
-  - : The calendar to use. For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The calendar to use, such as `"chinese"`, `"gregory"`, `"persian"`, and so on. For a list of supported calendar types, see [`Intl.Locale.prototype.getCalendars()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCalendars#supported_calendar_types). This option can also be set through the `ca` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `numberingSystem`
-  - : The numbering system to use for number formatting. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
+  - : The numbering system to use for number formatting, such as `"arab"`, `"hans"`, `"mathsans"`, and so on. For a list of supported numbering system types, see [`Intl.Locale.prototype.getNumberingSystems()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types). This option can also be set through the `nu` Unicode extension key; if both are provided, this `options` property takes precedence.
 - `hour12`
   - : Whether to use 12-hour time (as opposed to 24-hour time). Possible values are `true` and `false`; the default is locale dependent. This option overrides the `hc` locale extension tag and/or the `hourCycle` option in case both are present. It sets `hourCycle` to `"h11"` or `"h12"` when `true`, and `"h23"` or `"h24"` when `false`, the exact choice depending on the locale — for example, if the locale most prefers `"h23"` but `hour12` is `true`, then the final hour cycle is `"h11"`.
 - `hourCycle`
@@ -121,7 +121,7 @@ Intl.DateTimeFormat(locales, options)
     - `"shortOffset"`
       - : Short localized GMT format (e.g., `GMT-8`)
     - `"longOffset"`
-      - : Long localized GMT format (e.g., `GMT-0800`)
+      - : Long localized GMT format (e.g., `GMT-08:00`)
     - `"shortGeneric"`
       - : Short generic non-location format (e.g.: `PT`, `Los Angeles Zeit`).
     - `"longGeneric"`
@@ -186,7 +186,7 @@ This behavior, called `ChainDateTimeFormat`, does not happen when `Intl.DateTime
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : If `locales` or `options` contain invalid values.
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -307,4 +307,4 @@ for (const zoneName of timezoneNames) {
 
 - {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Intl.supportedValuesOf()")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

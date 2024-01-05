@@ -61,7 +61,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array","arrays","","true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Array", "arrays", "", "true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
   - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
@@ -72,7 +72,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/Empty", "Empty", "", 1)}}
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
 - {{jsxref("Statements/block", "Block", "", 1)}}
-  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly braces.
 - {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
   - : An expression statement evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
 - {{jsxref("Statements/debugger", "debugger")}}
@@ -83,7 +83,7 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to import functions exported from an external module, another script.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
-- {{jsxref("Statements/with", "with")}} {{Deprecated_Inline}}
+- {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
   - : Extends the scope chain for a statement.
 
 ## Difference between statements and declarations
@@ -125,7 +125,7 @@ if (condition)
   var i = 0;
 ```
 
-You can see declarations as "{{glossary("binding")}} identifiers to values", and statements as "carrying out actions". The fact that `var` is a statement instead of a declaration is a special case, because it doesn't follow normal lexical scoping rules and may create side effects — in the form of creating global variables, mutating existing `var`-defined variables, and defining variables that are visible outside of its block (because `var`-defined variables aren't block-scoped).
+You can see declarations as "{{Glossary("binding")}} identifiers to values", and statements as "carrying out actions". The fact that `var` is a statement instead of a declaration is a special case, because it doesn't follow normal lexical scoping rules and may create side effects — in the form of creating global variables, mutating existing `var`-defined variables, and defining variables that are visible outside of its block (because `var`-defined variables aren't block-scoped).
 
 As another example, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) can only be attached to statements.
 
@@ -153,4 +153,4 @@ if (condition) {
 
 ## See also
 
-- [Operators](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators)

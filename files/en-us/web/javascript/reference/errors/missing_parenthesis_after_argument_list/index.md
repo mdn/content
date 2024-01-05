@@ -44,7 +44,7 @@ console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
-Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), or take advantage of the fact that [`console.log`](/en-US/docs/Web/API/console/log) accepts multiple parameters:
+Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), or take advantage of the fact that [`console.log`](/en-US/docs/Web/API/console/log_static) accepts multiple parameters:
 
 ```js example-good
 console.log(`PI: ${Math.PI}`);
@@ -70,4 +70,4 @@ console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

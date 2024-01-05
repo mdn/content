@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.trim
 
 The **`trim()`** method of {{jsxref("String")}} values removes whitespace from both ends of this string and returns a new string, without modifying the original string.
 
-To return a new string with whitespace trimmed from just one end, use {{jsxref("String.prototype.trimStart()", "trimStart()")}} or {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}.
+To return a new string with whitespace trimmed from just one end, use {{jsxref("String/trimStart", "trimStart()")}} or {{jsxref("String/trimEnd", "trimEnd()")}}.
 
 {{EmbedInteractiveExample("pages/js/string-trim.html")}}
 
@@ -18,6 +18,10 @@ To return a new string with whitespace trimmed from just one end, use {{jsxref("
 ```js-nolint
 trim()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

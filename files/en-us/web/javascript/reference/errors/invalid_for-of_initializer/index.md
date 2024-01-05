@@ -58,5 +58,5 @@ for (let value of iterable) {
 ## See also
 
 - [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – disallows an initializer in strict mode as well ([SyntaxError: for-in loop head declarations may not have initializers](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – allows to define an initializer when iterating.
+- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for)

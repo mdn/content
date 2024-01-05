@@ -52,7 +52,7 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
 
-If you're not sure where to start, reach out to us on [the Discord server](/en-US/docs/MDN/Community/Communication_channels#discord_server) and ask for feedback.
+If you're not sure where to start, reach out to us on [the Discord server](/discord) and ask for feedback.
 
 ### Open a pull request
 

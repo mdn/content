@@ -47,6 +47,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
+    - SMS text messages with `sms:` URLs
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
 
 - `hreflang`
@@ -267,7 +268,7 @@ document
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
-## Accessibility
+## Accessibility concerns
 
 ### Strong link text
 
@@ -364,8 +365,8 @@ A **skip link** is a link placed as early as possible in {{HTMLElement("body")}}
 
   <header>…</header>
 
-  <main id="content"></main>
   <!-- The skip link jumps to here -->
+  <main id="content"></main>
 </body>
 ```
 
@@ -464,9 +465,6 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.
@@ -477,9 +475,7 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> when <code>href</code> attribute is
         present, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

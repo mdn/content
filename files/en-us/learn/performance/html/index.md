@@ -13,10 +13,9 @@ HTML is by default fast and accessible. It is our job, as developers, to ensure 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -132,7 +131,7 @@ There are, however, some key differences between providing sources for images an
 
 ### Lazy loading images
 
-A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwith loading images that the user will never see.
+A very useful technique for improving performance is **lazy loading**. This refers to the practice of not loading all images immediately when the HTML is rendered, but instead only loading them when they are actually visible to the user in the viewport (or imminently visible). This means that the immediately visible/usable content is ready to use more quickly, whereas subsequent content only has its images rendered when scrolled to, and the browser won't waste bandwidth loading images that the user will never see.
 
 Lazy loading has historically been handled using JavaScript, but browsers now have a `loading` attribute available that can instruct the browser to lazy load images automatically:
 
@@ -140,7 +139,7 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 <img src="800w.jpg" alt="Family portrait" loading="lazy" />
 ```
 
-See [Browser-level image lazy loading for the web](https://web.dev/browser-level-image-lazy-loading/) on web.dev for detailed information.
+See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
 You can also lazy load video content by using the `preload` attribute. For example:
 
@@ -153,7 +152,7 @@ You can also lazy load video content by using the `preload` attribute. For examp
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-See [Lazy loading video](https://web.dev/lazy-loading-video/) on web.dev for detailed information.
+See [Lazy loading video](https://web.dev/articles/lazy-loading-video) on web.dev for detailed information.
 
 ## Handling embedded content
 
@@ -185,7 +184,7 @@ In the same way as `<img>` elements, you can also use the `loading` attribute to
 </iframe>
 ```
 
-See [It's time to lazy-load offscreen iframes!](https://web.dev/iframe-lazy-loading/) for more information.
+See [It's time to lazy-load offscreen iframes!](https://web.dev/articles/iframe-lazy-loading) for more information.
 
 ## Handling resource loading order
 
@@ -223,7 +222,7 @@ pElem.addEventListener("click", () => {
 });
 ```
 
-We can apply this script to the page by refering to it in a `<script>` element like this:
+We can apply this script to the page by referring to it in a `<script>` element like this:
 
 ```html
 <script src="index.js"></script>
@@ -258,7 +257,7 @@ Upon coming across a `rel="preload"` link, the browser will fetch the referenced
 See the following articles for detailed information on using `rel="preload"`:
 
 - [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload)
-- [Preload critical assets to improve loading speed](https://web.dev/preload-critical-assets/) on web.dev (2020)
+- [Preload critical assets to improve loading speed](https://web.dev/articles/preload-critical-assets) on web.dev (2020)
 
 > **Note:** You can use `rel="preload"` to preload CSS and JavaScript files as well.
 

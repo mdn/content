@@ -17,6 +17,10 @@ The **`values()`** method of {{jsxref("Array")}} instances returns a new _[array
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
@@ -158,7 +162,7 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.values` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}

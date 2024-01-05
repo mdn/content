@@ -1,5 +1,7 @@
 affordance
 affordances
+APNG
+Axess
 bézier
 Bhattacharya
 Brosset
@@ -21,10 +23,12 @@ hulki
 i'gyu
 Kazotetsu
 Letorey
+mathml
 mdnplay
 menclose
 mfenced
 mfrac
+mitigations
 mmultiscripts
 mozjpeg
 mphantom
@@ -43,11 +47,13 @@ mtext
 mtr
 munder
 munderover
+Navigations
 Neethling
 nolint
 okan
 Oklab
 oklch
+Paciello
 prophoto
 rgba
 ripgrep
@@ -59,6 +65,7 @@ upvotes
 Verou
 vmin
 Weyl
+WHATWG
 Willee
 worklets
 Yari

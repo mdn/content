@@ -62,7 +62,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### Developer tools
 
-- The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) now caches error messages and log entries added using {{domxref("console.log()")}} if the console isn't currently open, and displays them when the console is opened.
+- The [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) now caches error messages and log entries added using {{domxref("console/log_static", "console.log()")}} if the console isn't currently open, and displays them when the console is opened.
 - You can now reset the zoom level, panning, and rotation in the [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) by pressing the "r" key.
 - You can now hide nodes in the [3D view](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) by pressing the "x" key after selecting them.
 - The [source editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor) has a several new editing features and keyboard shortcuts; see [Using the Source Editor](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#source-editor) for details

@@ -90,7 +90,7 @@ The _effect_ of that line is fine — in that, each time a comment node is found
 …and then, when there are no more comment nodes in the document:
 
 1. `iterator.nextNode()` returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
-2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Truthy).
+2. The value of `currentNode = iterator.nextNode()` is therefore also `null`, which is [falsy](/en-US/docs/Glossary/Falsy).
 3. So the loop ends.
 
 The problem with this line is: conditions typically use [comparison operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#comparison_operators) such as `===`, but the `=` in that line isn't a comparison operator — instead, it's an [assignment operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators). So that `=` _looks like_ it's a typo for `===` — even though it's _not_ actually a typo.

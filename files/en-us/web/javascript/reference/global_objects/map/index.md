@@ -7,10 +7,8 @@ browser-compat: javascript.builtins.Map
 
 {{JSRef}}
 
-The **`Map`** object holds key-value pairs and remembers the original insertion
-order of the keys. Any value (both objects and
-{{glossary("Primitive", "primitive values")}}) may be used as
-either a key or a value.
+The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
+Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
@@ -307,7 +305,7 @@ The following are examples of read-only `Map`-like browser objects:
 
 ## Static methods
 
-- {{jsxref("Map.groupBy()")}} {{Experimental_Inline}}
+- {{jsxref("Map.groupBy()")}}
   - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 ## Instance properties
@@ -429,7 +427,7 @@ for (const [key, value] of myMap.entries()) {
 ### Iterating Map with forEach()
 
 Maps can be iterated using the
-{{jsxref("Map.prototype.forEach", "forEach()")}} method:
+{{jsxref("Map/forEach", "forEach()")}} method:
 
 ```js
 myMap.forEach((value, key) => {
@@ -532,8 +530,7 @@ console.log(merged.get(3)); // three
 
 ## See also
 
-- A polyfill of `Map` is available in
-  [`core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

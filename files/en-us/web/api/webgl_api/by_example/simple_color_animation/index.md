@@ -80,7 +80,7 @@ window.addEventListener(
       // Stop animation by clearing the timer.
       clearInterval(timer);
     }
-    // Call stopAnimation() once to setup the initial event
+    // Call stopAnimation() once to set up the initial event
     // handlers for canvas and button.
     stopAnimation({ type: "click" });
 

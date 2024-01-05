@@ -7,13 +7,23 @@
 name: PR Test
 
 on:
-  pull_request:
+  # The `GITHUB_TOKEN` in workflows triggered by the `pull_request_target` event
+  # is granted read/write repository access.
+  # Please pay attention to limit the permissions of each job!
+  # https://docs.github.com/actions/using-jobs/assigning-permissions-to-jobs
+  pull_request_target:
     branches:
       - main
 
 jobs:
   tests:
+    if: github.repository == 'mdn/content'
     runs-on: ubuntu-latest
+    # Set the permissions to `read-all`, preventing the workflow from
+    # any accidental write access to the repository.
+    permissions: read-all
+    outputs:
+      has_assets: ${{ steps.build-content.outputs.has_assets }}
     env:
       BASE_SHA: ${{ github.event.pull_request.base.sha }}
       HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -24,36 +34,11 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
         with:
-          node-version-file: ".nvmrc"
-          cache: yarn
-
-      # This is a "required" workflow so path filtering can not be used:
-      # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
-      # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@v2
-        name: See if any file needs checking
-        id: filter
-        with:
-          filters: |
-            required_files :
-              - ".nvmrc"
-              - ".github/workflows/pr-test.yml"
-              - "files/en-us/**"
-
-      - name: Install all yarn packages
-        if: steps.filter.outputs.required_files == 'true'
-        run: yarn --frozen-lockfile
-        env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ref: "${{ env.HEAD_SHA }}"
 
       - name: Get changed files
-        if: steps.filter.outputs.required_files == 'true'
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
@@ -70,7 +55,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup Node.js environment
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Install all yarn packages
+        if: ${{ env.GIT_DIFF_CONTENT }} || ${{ env.GIT_DIFF_FILES }}
+        run: yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build changed content
+        id: build-content
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           CONTENT_ROOT: ${{ github.workspace }}/files
@@ -119,6 +119,9 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O ${{ env.BUILD_OUT_ROOT }}/DIFF
 
+          # Set the output variable so the next job could skip if there are no assets
+          echo "has_assets=true" >> "$GITHUB_OUTPUT"
+
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         run: |
@@ -127,7 +130,7 @@ jobs:
           # Show the final disk usage size of the build.
           du -sh ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
@@ -140,3 +143,13 @@ jobs:
 
           export CONTENT_ROOT=$(pwd)/files
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
+
+  review:
+    needs: tests
+    if: ${{ needs.tests.outputs.has_assets }}
+    # write permissions are required to create a comment in the corresponding PR
+    permissions: write-all
+    uses: ./.github/workflows/pr-review-companion.yml
+    # inherit the secrets from the parent workflow
+    # https://docs.github.com/actions/using-workflows/reusing-workflows#using-inputs-and-secrets-in-a-reusable-workflow
+    secrets: inherit

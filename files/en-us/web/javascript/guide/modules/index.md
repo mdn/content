@@ -7,7 +7,7 @@ browser-compat:
   - javascript.statements.export
 ---
 
-{{JSSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
+{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
@@ -19,7 +19,7 @@ It has therefore made sense in recent years to start thinking about providing me
 
 The good news is that modern browsers have started to support module functionality natively, and this is what this article is all about. This can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips.
 
-Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import", "import")}} and {{JSxRef("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
+Use of native JavaScript modules is dependent on the {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements; these are supported in browsers as shown in the compatibility table below.
 
 ## Browser compatibility
 
@@ -27,7 +27,7 @@ Use of native JavaScript modules is dependent on the {{JSxRef("Statements/import
 
 ## Introducing an example
 
-To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/master/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
 
 These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
@@ -35,7 +35,7 @@ These are fairly trivial, but have been kept deliberately simple to demonstrate 
 
 ## Basic example structure
 
-In our first example (see [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules)) we have a file structure as follows:
+In our first example (see [basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules)) we have a file structure as follows:
 
 ```plain
 index.html
@@ -83,7 +83,7 @@ It is also worth noting that:
 
 ## Exporting module features
 
-The first thing you do to get access to module features is export them. This is done using the {{JSxRef("Statements/export", "export")}} statement.
+The first thing you do to get access to module features is export them. This is done using the {{jsxref("Statements/export", "export")}} statement.
 
 The easiest way to use it is to place it in front of any items you want exported out of the module, for example:
 
@@ -114,7 +114,7 @@ Once you've exported some features out of your module, you need to import them i
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
+You use the {{jsxref("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
 
 The _module specifier_ provides a string that the JavaScript environment can resolve to a path to the module file.
 In a browser, this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
@@ -132,7 +132,7 @@ becomes
 ./modules/square.js
 ```
 
-You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js).
+You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/basic-modules/main.js).
 
 > **Note:** In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
 > This kind of specifier can be used in a browser environment if you first define an [import map](#importing_modules_using_import_maps).
@@ -171,8 +171,8 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
     "imports": {
       "shapes": "./shapes/square.js",
       "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
       "https://example.com/shapes/square.js": "./shapes/square.js",
+      "https://example.com/shapes/": "/shapes/square/",
       "../shapes/square": "./shapes/square.js"
     }
   }
@@ -181,6 +181,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 
 The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Element/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Element/script/type/importmap).
 There can only be one import map in the document, and because it is used to resolve which modules are loaded in both static and dynamic imports, it must be declared before any `<script>` elements that import modules.
+Note that the import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
 If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.
@@ -192,7 +193,7 @@ import { name as squareNameOne } from "shapes";
 import { name as squareNameTwo } from "shapes/square";
 
 // Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/moduleshapes/square.js";
+import { name as squareNameThree } from "https://example.com/shapes/square.js";
 ```
 
 If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
@@ -200,7 +201,7 @@ This allows remapping of whole classes of URLs.
 
 ```js
 // Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/square.js";
+import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
 ```
 
 It is possible for multiple keys in an import map to be valid matches for a module specifier.
@@ -385,7 +386,7 @@ You can only use `import` and `export` statements inside modules, not regular sc
 ## Other differences between modules and standard scripts
 
 - You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
-- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.
+- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Element/script#attributes)) when loading a module script; modules are deferred automatically.
 - Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
 - Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
@@ -485,7 +486,7 @@ import {
 } from "./modules/module.js";
 ```
 
-Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/master/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
+Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/main/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
 
 Inside each of these modules, we've got features with the same names being exported, and therefore each has the same `export` statement at the bottom:
 
@@ -567,7 +568,7 @@ Module.function1();
 Module.function2();
 ```
 
-Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/master/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
+Again, let's look at a real example. If you go to our [module-objects](https://github.com/mdn/js-examples/tree/main/module-examples/module-objects) directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
@@ -597,7 +598,7 @@ So you can now write the code just the same as before (as long as you include th
 
 As we hinted at earlier, you can also export and import classes; this is another option for avoiding conflicts in your code, and is especially useful if you've already got your module code written in an object-oriented style.
 
-You can see an example of our shape drawing module rewritten with ES classes in our [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) directory. As an example, the [`square.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) file now contains all its functionality in a single class:
+You can see an example of our shape drawing module rewritten with ES classes in our [classes](https://github.com/mdn/js-examples/tree/main/module-examples/classes) directory. As an example, the [`square.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/modules/square.js) file now contains all its functionality in a single class:
 
 ```js
 class Square {
@@ -619,7 +620,7 @@ which we then export:
 export { Square };
 ```
 
-Over in [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/main.js), we import it like this:
+Over in [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js), we import it like this:
 
 ```js
 import { Square } from "./modules/square.js";
@@ -643,7 +644,7 @@ export * from "x.js";
 export { name } from "x.js";
 ```
 
-For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
+For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
 
 ```plain
 modules/
@@ -661,7 +662,7 @@ In each of the submodules, the export is of the same form, e.g.
 export { Square };
 ```
 
-Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js), we include the following lines:
+Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/main/module-examples/module-aggregation/modules/shapes.js), we include the following lines:
 
 ```js
 export { Square } from "./shapes/square.js";
@@ -691,7 +692,7 @@ import { Square, Circle, Triangle } from "./modules/shapes.js";
 
 A recent addition to JavaScript modules functionality is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
 
-This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
+This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -704,9 +705,9 @@ import("./modules/myModule.js").then((module) => {
 
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
-Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/master/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
+Let's look at an example. In the [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.
 
-In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
+In this example we've only made changes to our [`index.html`](https://github.com/mdn/js-examples/blob/main/module-examples/dynamic-module-imports/index.html) and [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/dynamic-module-imports/main.js) files — the module exports remain the same as before.
 
 Over in `main.js` we've grabbed a reference to each button using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) call, for example:
 
@@ -753,9 +754,9 @@ Another advantage of dynamic imports is that they are always available, even in 
 
 Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
-Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/master/module-examples/top-level-await) directory, which extends from the previous examples.
+Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) directory, which extends from the previous examples.
 
-Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file:
+Firstly we'll declare our color palette in a separate [`colors.json`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/data/colors.json) file:
 
 ```json
 {
@@ -767,7 +768,7 @@ Firstly we'll declare our color palette in a separate [`colors.json`](https://gi
 }
 ```
 
-Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) which uses a fetch request to load the [`colors.json`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/data/colors.json) file and return the data as an object.
+Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) which uses a fetch request to load the [`colors.json`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/data/colors.json) file and return the data as an object.
 
 ```js
 // fetch request
@@ -780,7 +781,7 @@ Notice the last export line here.
 
 We're using the keyword `await` before specifying the constant `colors` to export. This means any other modules which include this one will wait until `colors` has been downloaded and parsed before using it.
 
-Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) file:
+Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) file:
 
 ```js
 import colors from "./modules/getColors.js";
@@ -822,11 +823,11 @@ const triangle1 = new Module.Triangle(
 );
 ```
 
-This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/master/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
 ## Import declarations are hoisted
 
-Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the line that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
 
 So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
 
@@ -979,9 +980,9 @@ Here are a few tips that may help you if you are having trouble getting your mod
 
 ## See also
 
-- [Using JavaScript modules on the web](https://v8.dev/features/modules#mjs), by Addy Osmani and Mathias Bynens
-- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/), Hacks blog post by Lin Clark
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post by Jason Orendorff
-- [Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html), Book by Axel Rauschmayer
+- [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
+- [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
+- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer
 
 {{Previous("Web/JavaScript/Guide/Meta_programming")}}

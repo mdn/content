@@ -140,7 +140,7 @@ _No changes._
 - The {{domxref("File")}} interface's property {{domxref("File.lastModifiedDate", "lastModifiedDate")}} has been removed ([Firefox bug 1458883](https://bugzil.la/1458883)).
 - The `Node.setUserData` and `Node.getUserData` methods have been removed from the platform completely ([Firefox bug 749981](https://bugzil.la/749981)).
 - The `Element.createShadowRoot()` method has been removed. Use {{domxref("Element.attachShadow()")}} instead ([Firefox bug 1453789](https://bugzil.la/1453789)).
-- The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL_static")}} method has been removed ([Firefox bug 1454889](https://bugzil.la/1454889)).
+- The {{domxref("MediaStream")}} overload of the {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} method has been removed ([Firefox bug 1454889](https://bugzil.la/1454889)).
 
 ### SVG
 

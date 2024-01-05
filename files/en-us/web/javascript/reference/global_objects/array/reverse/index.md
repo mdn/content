@@ -19,6 +19,10 @@ To reverse the elements in an array without mutating the original array, use {{j
 reverse()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The reference to the original array, now reversed. Note that the array is reversed _[in place](https://en.wikipedia.org/wiki/In-place_algorithm)_, and no copy is made.
@@ -107,7 +111,7 @@ console.log(Array.prototype.reverse.call(arrayLike));
 ## See also
 
 - [Polyfill of `Array.prototype.reverse` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.join()")}}
 - {{jsxref("Array.prototype.sort()")}}

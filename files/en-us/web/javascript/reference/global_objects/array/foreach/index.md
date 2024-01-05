@@ -34,21 +34,13 @@ forEach(callbackFn, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
-The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order. Unlike {{jsxref("Array.prototype.map()", "map()")}}, `forEach()` always returns {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain.
+The `forEach()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array in ascending-index order. Unlike {{jsxref("Array/map", "map()")}}, `forEach()` always returns {{jsxref("undefined")}} and is not chainable. The typical use case is to execute side effects at the end of a chain. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
-
-`forEach()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `forEach()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
-
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `forEach()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -77,27 +69,6 @@ To run a series of asynchronous operations sequentially or concurrently, see [pr
 
 ## Examples
 
-### Using forEach() on sparse arrays
-
-```js-nolint
-const arraySparse = [1, 3, /* empty */, 7];
-let numCallbackRuns = 0;
-
-arraySparse.forEach((element) => {
-  console.log({ element });
-  numCallbackRuns++;
-});
-
-console.log({ numCallbackRuns });
-
-// { element: 1 }
-// { element: 3 }
-// { element: 7 }
-// { numCallbackRuns: 3 }
-```
-
-The callback function is not invoked for the missing value at index 2.
-
 ### Converting a for loop to forEach
 
 ```js
@@ -118,7 +89,7 @@ items.forEach((item) => {
 ### Printing the contents of an array
 
 > **Note:** In order to display the content of an array in the console,
-> you can use {{domxref("console/table", "console.table()")}}, which prints a formatted
+> you can use {{domxref("console/table_static", "console.table()")}}, which prints a formatted
 > version of the array.
 >
 > The following example illustrates an alternative approach, using
@@ -152,7 +123,7 @@ class Counter {
     this.count = 0;
   }
   add(array) {
-    // Only function expressions will have its own this binding
+    // Only function expressions have their own this bindings.
     array.forEach(function countEntry(entry) {
       this.sum += entry;
       ++this.count;
@@ -199,29 +170,6 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
-### Modifying the array during iteration
-
-The following example logs `one`, `two`, `four`.
-
-When the entry containing the value `two` is reached, the first entry of the
-whole array is shifted off—resulting in all remaining entries moving up one position.
-Because element `four` is now at an earlier position in the array,
-`three` will be skipped.
-
-`forEach()` does not make a copy of the array before iterating.
-
-```js
-const words = ["one", "two", "three", "four"];
-words.forEach((word) => {
-  console.log(word);
-  if (word === "two") {
-    words.shift(); //'one' will delete from array
-  }
-}); // one // two // four
-
-console.log(words); // ['two', 'three', 'four']
-```
-
 ### Flatten an array
 
 The following example is only here for learning purpose. If you want to flatten an
@@ -244,6 +192,47 @@ const flatten = (arr) => {
 const nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]];
 console.log(flatten(nested)); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses `filter()` to extract the positive values and then uses `forEach()` to log its neighbors.
+
+```js
+const numbers = [3, -1, 1, 4, 1, 5];
+numbers
+  .filter((num) => num > 0)
+  .forEach((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    console.log(arr[idx - 1], num, arr[idx + 1]);
+  });
+// undefined 3 1
+// 3 1 4
+// 1 4 1
+// 4 1 5
+// 1 5 undefined
+```
+
+### Using forEach() on sparse arrays
+
+```js-nolint
+const arraySparse = [1, 3, /* empty */, 7];
+let numCallbackRuns = 0;
+
+arraySparse.forEach((element) => {
+  console.log({ element });
+  numCallbackRuns++;
+});
+
+console.log({ numCallbackRuns });
+
+// { element: 1 }
+// { element: 3 }
+// { element: 7 }
+// { numCallbackRuns: 3 }
+```
+
+The callback function is not invoked for the missing value at index 2.
 
 ### Calling forEach() on non-array objects
 
@@ -274,7 +263,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## See also
 
 - [Polyfill of `Array.prototype.forEach` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.map()")}}

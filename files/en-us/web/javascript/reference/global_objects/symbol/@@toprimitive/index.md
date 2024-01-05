@@ -12,8 +12,13 @@ The **`[@@toPrimitive]()`** method of {{jsxref("Symbol")}} values returns this s
 ## Syntax
 
 ```js-nolint
-Symbol()[Symbol.toPrimitive](hint)
+symbolValue[Symbol.toPrimitive](hint)
 ```
+
+### Parameters
+
+- `hint`
+  - : A string value indicating the primitive value to return. The value is ignored.
 
 ### Return value
 

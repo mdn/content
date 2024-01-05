@@ -46,7 +46,7 @@ Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes r
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
 - `contain`
-  - : Default scroll overflow behavior is observed inside the element this value is set on (e.g. "bounce" effects or refreshes), but no scroll chaining occurs to neighboring scrolling areas, e.g. underlying elements will not scroll.
+  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no scroll chaining occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
 - `none`
   - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
 
@@ -56,7 +56,7 @@ By default, mobile browsers tend to provide a "bounce" effect or even a page ref
 
 In some cases, these behaviors are not desirable. You can use `overscroll-behavior` to get rid of unwanted scroll chaining and the browser's Facebook/Twitter app-inspired "pull to refresh"-type behavior.
 
-Note that this property applies only to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) is not a scroll container, this property cannot be used to stop scroll chaining for iframes.
+Note that this property applies only to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) is not a scroll container, setting this property on an iframe has no effect. To control scroll chaining from an iframe, set `overscroll-behavior` on both the [`<html>`](/en-US/docs/Web/HTML/Element/html) and the [`<body>`](/en-US/docs/Web/HTML/Element/body) elements of the iframe's document.
 
 ## Formal definition
 

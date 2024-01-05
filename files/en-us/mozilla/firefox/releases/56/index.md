@@ -116,8 +116,8 @@ _No changes._
 - [privacy.services](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/services) now includes passwordSavingEnabled
 - [privacy.websites.referrersEnabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) now supports "gopher"
-- proxy.registerProxyScript() is renamed to [proxy.register()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register)
-- [proxy.unregister()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister)
+- proxy.registerProxyScript() is renamed to [proxy.register()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [proxy.unregister()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
 - [runtime.onInstalled](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled) gets `temporary` flag
 - [tabs.print()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/print), [tabs.PageSettings](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings), [tabs.printPreview()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/printPreview), [tabs.saveAsPDF()](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF)
 - [tabs.Tab.lastAccessed](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab)

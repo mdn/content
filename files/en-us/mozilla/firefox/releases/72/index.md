@@ -64,7 +64,7 @@ _No changes._
 
 #### New APIs
 
-- {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/FormData/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ([Firefox bug 1594708](https://bugzil.la/1594708)).
+- {{domxref("FormDataEvent")}} and [event-based form participation](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects#using_a_formdata_event) is now enabled by default ([Firefox bug 1594708](https://bugzil.la/1594708)).
 - The {{domxref("crossOriginIsolated")}} property is now supported ([Firefox bug 1591892](https://bugzil.la/1591892)).
 
 #### DOM
@@ -86,12 +86,12 @@ _No changes._
 
 #### DOM events
 
-- {{domxref("Notification.requestPermission_static")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}} and {{domxref("PushManager.subscribe()")}} can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1593644](https://bugzil.la/1593644)).
 
 #### Media, Web Audio, and WebRTC
 
 - The {{domxref("MediaDevices.getDisplayMedia()")}} method can now only be called in response to a user gesture such as a [`click`](/en-US/docs/Web/API/Element/click_event) event ([Firefox bug 1580944](https://bugzil.la/1580944)).
-- The {{domxref("RTCRtpContributingSource")}} dictionary can now include the {{domxref("RTCRtpContributingSource.rtpTimestamp", "rtpTimestamp")}} property, which is a source-generated time at which the packet's media was generated or sampled ([Firefox bug 1583867](https://bugzil.la/1583867)).
+- The `RTCRtpContributingSource` dictionary can now include the `rtpTimestamp` property, which is a source-generated time at which the packet's media was generated or sampled ([Firefox bug 1583867](https://bugzil.la/1583867)).
 
 #### Removals
 

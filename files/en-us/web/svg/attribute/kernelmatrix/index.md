@@ -35,12 +35,12 @@ svg {
   </filter>
 
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     width="200"
     height="200"
     style="filter:url(#convolveMatrix1);" />
   <image
-    xlink:href="mdn_logo_only_color.png"
+    href="mdn_logo_only_color.png"
     width="200"
     height="200"
     style="filter:url(#convolveMatrix2); transform:translateX(220px);" />

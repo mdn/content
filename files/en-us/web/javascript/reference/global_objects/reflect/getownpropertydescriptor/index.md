@@ -79,4 +79,4 @@ Object.getOwnPropertyDescriptor("foo", 0);
 - [Polyfill of `Reflect.getOwnPropertyDescriptor` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-- [`Proxy`'s `getOwnPropertyDescriptor` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor)
+- [`handler.getOwnPropertyDescriptor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor)

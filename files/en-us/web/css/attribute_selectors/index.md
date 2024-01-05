@@ -58,9 +58,9 @@ a[class~="logo"] {
 - `[attr*=value]`
   - : Represents elements with an attribute name of _attr_ whose value contains at least one occurrence of _value_ within the string.
 - `[attr operator value i]`
-  - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the ASCII range).
+  - : Adding an `i` (or `I`) before the closing bracket causes the value to be compared case-insensitively (for characters within the {{Glossary("ASCII")}} range).
 - `[attr operator value s]` {{Experimental_Inline}}
-  - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the ASCII range).
+  - : Adding an `s` (or `S`) before the closing bracket causes the value to be compared case-sensitively (for characters within the {{Glossary("ASCII")}} range).
 
 ## Examples
 
@@ -186,22 +186,22 @@ Note that if a modifier is not supported by the user agent, then the selector wi
 
 ```css
 /* Case-sensitivity depends on document language */
-ol[type="a"] {
+ol[type="a"]:first-child {
   list-style-type: lower-alpha;
   background: red;
 }
 
-ol[type="b" s] {
+ol[type="i" s] {
   list-style-type: lower-alpha;
   background: lime;
 }
 
-ol[type="B" s] {
+ol[type="I" s] {
   list-style-type: upper-alpha;
   background: grey;
 }
 
-ol[type="c" i] {
+ol[type="a" i] {
   list-style-type: upper-alpha;
   background: green;
 }
@@ -215,13 +215,13 @@ ol[type="c" i] {
     Red background for case-insensitive matching (default for the type selector)
   </li>
 </ol>
-<ol type="b">
+<ol type="i">
   <li>Lime background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
-<ol type="B">
+<ol type="I">
   <li>Grey background if `s` modifier is supported (case-sensitive match)</li>
 </ol>
-<ol type="C">
+<ol type="A">
   <li>
     Green background if `i` modifier is supported (case-insensitive match)
   </li>

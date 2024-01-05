@@ -52,7 +52,7 @@ No notable changes
 
 #### DOM
 
-- The reason for an abort signal can now be set using {{domxref("AbortController.abort()")}} (or {{domxref("AbortSignal.abort_static")}}), and will be available in the {{domxref("AbortSignal.reason")}} property.
+- The reason for an abort signal can now be set using {{domxref("AbortController.abort()")}} (or {{domxref("AbortSignal.abort_static", "AbortSignal.abort()")}}), and will be available in the {{domxref("AbortSignal.reason")}} property.
   This reason defaults to being an "AbortError" {{domxref("DOMException")}}.
   The reason can be thrown or handled via promise rejection as appropriate.
   ([Firefox bug 1737771](https://bugzil.la/1737771)).

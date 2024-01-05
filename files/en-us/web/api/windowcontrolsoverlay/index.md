@@ -28,7 +28,7 @@ of the title bar area in desktop Progressive Web Apps, and an event to know when
 
 Listen to these events using {{domxref('EventTarget.addEventListener()')}} or by assigning an event listener to the relevant `oneventname` property of this interface.
 
-- [`geometrychange`](/en-US/docs/Web/API/WindowControlsOverlay/geometrychange_event) {{Experimental_Inline}}
+- {{domxref("WindowControlsOverlay/geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
   - : Fired when the geometry of the title bar area changes.
 
 ## Examples

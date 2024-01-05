@@ -17,6 +17,10 @@ The **`valueOf()`** method of {{jsxref("String")}} values returns this string va
 valueOf()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the primitive value of a given {{jsxref("String")}} object.

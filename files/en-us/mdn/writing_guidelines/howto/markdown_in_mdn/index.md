@@ -10,13 +10,13 @@ This page describes how we use Markdown to write documentation on MDN Web Docs. 
 
 ## Baseline: GitHub-Flavored Markdown
 
-The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark ([https://spec.commonmark.org/](https://spec.commonmark.org/)).
+The baseline for MDN Markdown is GitHub-Flavored Markdown (GFM): <https://github.github.com/gfm/>. This means that you can refer to the GFM specification for anything not explicitly specified in this page. GFM in turn is a superset of CommonMark (<https://spec.commonmark.org/>).
 
 ## Links
 
 The GFM specification defines two basic types of links:
 
-- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text
+- [inline links](https://github.github.com/gfm/#inline-link), in which the destination is given immediately after the link text.
 - [reference links](https://github.github.com/gfm/#reference-link), in which the destination is defined elsewhere in the document.
 
 On MDN we allow only inline links.
@@ -477,7 +477,7 @@ The main limitations of GFM table syntax are:
 - GFM tables may not have a header column.
 - GFM won't parse GFM block elements in table cells. For example, you can't have a list in a table cell.
 - GFM tables cannot have classes assigned to them.
-- GFM doesn't support any table elements beyond `<table>`, `<tr>`, and `<th>`, and `<td>`.
+- GFM doesn't support any table elements beyond `<table>`, `<tr>`, `<th>`, and `<td>`.
 - GFM doesn't support any table element attributes like `colspan`, `rowspan`, or `scope`.
 
 If an author needs to use any of the unsupported features, they should write the table in HTML.
@@ -486,7 +486,7 @@ Note that we don't recommend the general use of `<caption>` elements on tables, 
 
 #### GFM table maximum width
 
-Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "ASCII art" approach to tables that is not readable when table rows get long. Consider the following table:
+Even when a table could be written in GFM it is sometimes better to use HTML, because GFM uses an "{{Glossary("ASCII")}} art" approach to tables that is not readable when table rows get long. Consider the following table:
 
 ```html
 <table>

@@ -77,7 +77,7 @@ This is the third caption
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 

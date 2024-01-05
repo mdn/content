@@ -1,5 +1,5 @@
 ---
-title: Function expression
+title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
@@ -37,7 +37,7 @@ function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **Note:** An expression statement cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
+> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
 
 ### Parameters
 
@@ -102,7 +102,7 @@ console.log(foo); // 1
 
 ## Examples
 
-### Creating an unnamed function
+### Using function expression
 
 The following example defines an unnamed function and assigns it to `x`. The function returns the square of its argument:
 
@@ -148,12 +148,8 @@ An anonymous function is created and called:
 
 ## See also
 
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Function")}}
 - {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
-- {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("GeneratorFunction")}} object
-- {{jsxref("Statements/async_function", "async function")}} declaration
-- {{jsxref("Operators/async_function", "async function")}} expression

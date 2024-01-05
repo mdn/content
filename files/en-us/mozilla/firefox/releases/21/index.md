@@ -17,7 +17,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### JavaScript
 
-- [E4X](/en-US/docs/E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
+- EcmaScript for XML (E4X), an ancient JavaScript extension, has been removed. Implemented only in Gecko, it never got significant traction ([Firefox bug 788293](https://bugzil.la/788293)).
 - [parseInt](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) no longer treats strings with leading "0" as octal ([Firefox bug 786135](https://bugzil.la/786135)).
 
 ### CSS
@@ -37,7 +37,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 - Some new keyCodes for ancient keyboard layout such as AS/400 are now supported on Windows and Linux ([Firefox bug 833719](https://bugzil.la/833719)).
 - Various keyCode values for OEM specific keys on Windows are now supported again ([Firefox bug 833719](https://bugzil.la/833719)).
 - The function [`window.crypto.getRandomValues`](/en-US/docs/Web/API/Crypto/getRandomValues) has been implemented ([Firefox bug 440046](https://bugzil.la/440046)).
-- The methods {{domxref("NodeIterator.expandEntityReferences()")}} and {{domxref("TreeWalker.expandEntityReferences()")}}, no more in the latest DOM spec, has been removed ([Firefox bug 672190](https://bugzil.la/672190)).
+- The non-standard methods `NodeIterator.expandEntityReferences()` and `TreeWalker.expandEntityReferences()` have been removed ([Firefox bug 672190](https://bugzil.la/672190)).
 - CSSOM: the method {{domxref("CSSKeyframesRule")}}`.insertRule` has been removed to {{domxref("CSSKeyframesRule")}}`.appendRule` to match a spec change ([Firefox bug 841896](https://bugzil.la/841896)).
 - CSSOM If the given parameter given to {{domxref("CSSStyleSheet.insertRule")}} contains more than one rule, a {{domxref("DOMException")}} with a `SYNTAX_ERR` is now thrown ([Firefox bug 765599](https://bugzil.la/765599)).
 - Until now, when the same headers were repeatedly set with [`XMLHttpRequest.setRequestHeader`](/en-US/docs/Web/API/XMLHttpRequest#setrequestheader), the last-specified value was used. This behavior has been changed to comply with the spec, so those values will be properly combined ([Firefox bug 819051](https://bugzil.la/819051)).
@@ -56,7 +56,7 @@ Firefox 21 was released on May 14, 2013. This article lists key changes that are
 
 ### Worker
 
-- The functions {{domxref("URL/createObjectURL_static")}} and {{domxref("URL/revokeObjectURL_static")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+- The functions {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} are now included in the set of [functions available to workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
 
 ## Changes for add-on and Mozilla developers
 

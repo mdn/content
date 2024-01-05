@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Object.lookupGetter
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 > **Note:** This feature is deprecated in favor of the {{jsxref("Object.getOwnPropertyDescriptor()")}} API. This method's behavior is only specified for web compatibility, and is not required to be implemented in any platform. It may not work everywhere.
 
@@ -34,7 +34,7 @@ All objects that inherit from `Object.prototype` (that is, all except [`null`-pr
 
 `__lookupGetter__()` walks up the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) to find the specified property. If any object along the prototype chain has the specified [own property](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn), the `get` attribute of the [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) for that property is returned. If that property is a data property, `undefined` is returned. If the property is not found along the entire prototype chain, `undefined` is also returned.
 
-`__lookupGetter__()` is defined in the spec as "normative optional", which means no implementation is required to implement this. However, all major browsers implement it, and due to its continued usage, it's unlikely to be removed. If a browser implements `__lookupGetter__()`, it also needs to implement the [`__lookupSetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), and [`__defineSetter__()`](Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods.
+`__lookupGetter__()` is defined in the spec as "normative optional", which means no implementation is required to implement this. However, all major browsers implement it, and due to its continued usage, it's unlikely to be removed. If a browser implements `__lookupGetter__()`, it also needs to implement the [`__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), and [`__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) methods.
 
 ## Examples
 
@@ -100,8 +100,8 @@ console.log(findGetter(obj2, "foo")); // [Function: get foo]
 
 - [Polyfill of `Object.prototype.__lookupGetter__` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.prototype.__lookupSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
-- {{jsxref("Functions/get", "get")}} syntax
-- {{jsxref("Object.getOwnPropertyDescriptor()")}} and {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Functions/get", "get")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - [`Object.prototype.__defineGetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
 - [`Object.prototype.__defineSetter__()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JS Guide: Defining Getters and Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters)

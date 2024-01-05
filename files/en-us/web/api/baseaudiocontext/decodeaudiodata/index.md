@@ -58,80 +58,55 @@ In this section we will first cover the promise-based syntax and then the callba
 
 ### Promise-based syntax
 
-In this example `fetchData()` uses {{domxref("fetch()")}} to retrieve an audio
-file asynchronously and decodes it into an {{domxref("AudioBuffer")}}. It then caches the
-`audioBuffer` in the global `buffer` variable for later playback.
+In this example `loadAudio()` uses {{domxref("fetch()")}} to retrieve an audio file and decodes it into an {{domxref("AudioBuffer")}}. It then caches the `audioBuffer` in the global `buffer` variable for later playback.
 
-> **Note:** This example is based on a fully functioning web page that you can [run live](https://mdn.github.io/webaudio-examples/decode-audio-promise/). The complete source code is [here](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-promise).
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
 
 ```js
-const audioCtx = new AudioContext();
+let audioCtx;
 let buffer;
+let source;
 
-fetchAudio("viper").then((buf) => {
-  // executes when buffer has been decoded
-  buffer = buf;
-});
-
-// fetchAudio() returns a Promise
-// it uses fetch() to load an audio file
-// it uses decodeAudioData to decode it into an AudioBuffer
-// decoded AudioBuffer is buf argument for Promise.then((buf) => {})
-// play.onclick() creates a single-use AudioBufferSourceNode
-async function fetchAudio(name) {
+async function loadAudio() {
   try {
-    let rsvp = await fetch(`${name}.mp3`);
-    return context.decodeAudioData(await rsvp.arrayBuffer()); // returns a Promise, buffer is arg for .then((arg) => {})
+    // Load an audio file
+    const response = await fetch("viper.mp3");
+    // Decode it
+    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
   } catch (err) {
-    console.log(
-      `Unable to fetch the audio file: ${name} Error: ${err.message}`,
-    );
+    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
   }
 }
 ```
 
 ### Callback syntax
 
-In this example `getAudio()` uses XHR to load an audio track.
-It sets the `responseType` of the request to `arraybuffer` so that
-it returns an array buffer as its `response`. It caches the the array buffer
-in the local `audioData` variable in the XHR `onload` event handler, then
-passes it to `decodeAudioData()`. The success callback caches the decoded
-{{domxref("AudioBuffer")}} in the global `buffer` variable for later playback.
+In this example `loadAudio()` uses {{domxref("fetch()")}} to retrieve an audio
+file and decodes it into an {{domxref("AudioBuffer")}} using the callback-based version of `decodeAudioData()`. In the callback, it plays the decoded buffer.
 
-> **Note:** You can [run the example live](https://mdn.github.io/webaudio-examples/decode-audio-data/) and access the [source code](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/callback/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/callback/).
 
 ```js
-const audioCtx = new AudioContext();
-let buffer;
+let audioCtx;
+let source;
 
-getAudio("viper");
+function playBuffer(buffer) {
+  source = audioCtx.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioCtx.destination);
+  source.loop = true;
+  source.start();
+}
 
-// getAudio() has no return value
-// it uses XHR to load an audio file
-// it uses decodeAudioData to decode it into an AudioBuffer
-// decoded AudioBuffer is buf argument to callback function
-// play.onclick() creates a single-use AudioBufferSourceNode
-function getAudio(name) {
-  request = new XMLHttpRequest();
-  request.open("GET", `${name}.mp3`, true);
-  request.responseType = "arraybuffer";
-  request.onload = () => {
-    let audioData = request.response;
-    audioCtx.decodeAudioData(
-      audioData,
-      (buf) => {
-        // executes when buffer has been decoded
-        buffer = buf;
-      },
-      (err) => {
-        console.error(
-          `Unable to get the audio file: ${name} Error: ${err.message}`,
-        );
-      },
-    );
-  };
-  request.send();
+async function loadAudio() {
+  try {
+    // Load an audio file
+    const response = await fetch("viper.mp3");
+    // Decode it
+    audioCtx.decodeAudioData(await response.arrayBuffer(), playBuffer);
+  } catch (err) {
+    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+  }
 }
 ```
 

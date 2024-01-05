@@ -16,14 +16,15 @@ The **`call()`** method of {{jsxref("Function")}} instances calls this function 
 ```js-nolint
 call(thisArg)
 call(thisArg, arg1)
-call(thisArg, arg1, /* …, */ argN)
+call(thisArg, arg1, arg2)
+call(thisArg, arg1, arg2, /* …, */ argN)
 ```
 
 ### Parameters
 
 - `thisArg`
   - : The value to use as `this` when calling `func`. If the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) will be replaced with the global object, and primitive values will be converted to objects.
-- `arg1, …, argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
   - : Arguments for the function.
 
 ### Return value
@@ -124,5 +125,5 @@ slice(arguments);
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
 - {{jsxref("Reflect.apply()")}}
-- [Spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Spread syntax (`...`)](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [Introduction to Object-Oriented JavaScript](/en-US/docs/Learn/JavaScript/Objects)

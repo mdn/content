@@ -16,14 +16,14 @@ beginning of an array and returns the new length of the array.
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* …, */ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : The elements to add to the front of the `arr`.
 
 ### Return value
@@ -117,7 +117,7 @@ console.log(plainObj);
 ## See also
 
 - [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}

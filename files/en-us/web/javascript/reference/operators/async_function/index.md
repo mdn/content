@@ -52,7 +52,7 @@ An `async function` expression is very similar to, and has almost the same synta
 
 ## Examples
 
-### Simple example
+### Using async function expression
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -94,6 +94,8 @@ add(10).then((v) => {
 
 ## See also
 
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("AsyncFunction")}} object
+- {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}

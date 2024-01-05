@@ -17,9 +17,13 @@ The **`clear()`** method of {{jsxref("Map")}} instances removes all elements fro
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

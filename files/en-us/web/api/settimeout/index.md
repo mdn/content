@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.setTimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`setTimeout()`** method sets a timer which executes a function or specified
 piece of code once the timer expires.

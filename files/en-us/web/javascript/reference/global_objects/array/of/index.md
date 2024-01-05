@@ -17,14 +17,14 @@ arguments.
 
 ```js-nolint
 Array.of()
-Array.of(element0)
-Array.of(element0, element1)
-Array.of(element0, element1, /* …, */ elementN)
+Array.of(element1)
+Array.of(element1, element2)
+Array.of(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : Elements used to create the array.
 
 ### Return value
@@ -88,7 +88,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 ## See also
 
 - [Polyfill of `Array.of` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.from()")}}

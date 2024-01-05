@@ -115,7 +115,6 @@ order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter
-  in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

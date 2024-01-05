@@ -158,4 +158,4 @@ const x = document.forms.form_name.elements[strFormControl].value;
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

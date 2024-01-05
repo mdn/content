@@ -118,7 +118,7 @@ fetch("some.json", {
     /* consume the (possibly stale) response */
   })
   .catch((error) => {
-    /* Can be an AbortError/DOMError or a TypeError */
+    /* Can be an AbortError/DOMException or a TypeError */
   });
 ```
 

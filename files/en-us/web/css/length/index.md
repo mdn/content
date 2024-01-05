@@ -31,7 +31,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 
 > **Note:** These units, especially `em` and `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
-- `cap` {{experimental_inline}}
+- `cap`
   - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
   - : Represents the width or more precisely the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
@@ -229,15 +229,15 @@ html {
   height: 50px;
   background-color: #999;
   box-shadow:
-    inset 3px 3px 5px rgb(255 255 255 / 0.5),
-    inset -3px -3px 5px rgb(0 0 0 / 0.5);
+    inset 3px 3px 5px rgb(255 255 255 / 50%),
+    inset -3px -3px 5px rgb(0 0 0 / 50%);
 }
 
 .result {
   height: 20px;
   box-shadow:
-    inset 3px 3px 5px rgba(255 255 255 / 0.5),
-    inset -3px -3px 5px rgb(0 0 0 / 0.5);
+    inset 3px 3px 5px rgb(255 255 255 / 50%),
+    inset -3px -3px 5px rgb(0 0 0 / 50%);
   background-color: orange;
   display: flex;
   align-items: center;

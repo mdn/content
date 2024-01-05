@@ -17,6 +17,10 @@ The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set ite
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).

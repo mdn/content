@@ -482,13 +482,29 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_background": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles." src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. The background of the page is red." src="ntp-background.png" /></p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>ntp_card_background</code></td>
+      <td>
+        <p>The new tab page card background color.</p>
+        <details open>
+          <summary>See example</summary>
+          <pre class="brush: json">
+"theme": {
+  "colors": {
+     "ntp_card_background": "red"
+  }
+}</pre
+          >
+        </details>
+        <p><img alt="Firefox showing a new tab page. On the page, the background to the search bar and shortcut buttons is red." src="ntp-card-background.png" /></p>
       </td>
     </tr>
     <tr>
@@ -498,7 +514,7 @@ All these properties can be specified as either a string containing any valid [C
         <div class="notecard note">
           <p>
             <strong>Note:</strong> Ensure the color used contrasts well with
-            that used in <code>ntp_background</code>.
+            that used in <code>ntp_background</code> and <code>ntp_card_background</code>.
           </p>
         </div>
         <details open>
@@ -506,13 +522,12 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-     "ntp_background": "red",
-     "ntp_text": "white"
+     "ntp_text": "red"
   }
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is white. The new tab page background is red, with google search at the top, follow by top sites shortcut and recommended articles. The color of the text in the new tab page is white." src="ntp_colors.png" /></p>
+        <p><img alt="Firefox showing a new tab page. On the page, the text is in red." src="ntp-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -657,7 +672,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The background color of the sidebar is red." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>
@@ -674,7 +689,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a red horizontal separator between the sidebar title and the sidebar menu. The border and splitter color of the sidebar is red." src="sidebar-border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -692,7 +707,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The background color of a highlighted row in the sidebar is red with white text." src="sidebar-highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -716,7 +731,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img alt="A closeup of the firefox browser bookmarks sidebar with a highlighted item. The color of the text of a highlighted row in the sidebar is red. The text color contrasts well with the pink background color of the highlighted row." src="sidebar-highlight-text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -742,7 +757,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar_colors.png" /></p>
+        <p><img alt="A close-up screenshot of a browser windows's open sidebar. The color of the text inside the sidebar is white. The text color contrasts well with the red background of the sidebar." src="sidebar-colors.png" /></p>
       </td>
     </tr>
     <tr>

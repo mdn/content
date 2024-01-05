@@ -28,7 +28,7 @@ Functional notation: `color(colorspace c1 c2 c3[ / A])`
 
 - `c1`, `c2`, `c3`
 
-  - : {{CSSXref("number")}}, {{CSSXref("percentage")}} values or the keyword `none`, which provide the component values in the color space.
+  - : {{CSSXref("number")}} between 0 and 1, a {{CSSXref("percentage")}} or the keyword `none`, which provide the component values in the color space.
 
 - `A` {{optional_inline}}
 

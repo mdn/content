@@ -13,10 +13,9 @@ In this lesson, we will take a look at some of the creative things you can do wi
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -44,8 +43,8 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
   background:
     linear-gradient(
         105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
       ) center center / 400px 200px no-repeat,
     url(big-star.png) center no-repeat,
     rebeccapurple;

@@ -20,7 +20,7 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
   - : The connection's {{domxref("RTCDataChannel")}} has failed.
 - `dtls-failure`
   - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was
-    terminated with a fatal error. The error's {{domxref("RTCError.message", "message")}}
+    terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}}
     contains details about the nature of the error. If a fatal error is _received_,
     the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is
     set to the value of the DTLSL alert received. If, on the other hand, a fatal error was

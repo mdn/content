@@ -253,7 +253,7 @@ When a {{domxref("Element/click_event", "click")}} event occurs, here's what hap
   - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
 - Lines 11-15
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
     Then the download button's [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 
@@ -288,6 +288,5 @@ You can {{LiveSampleLink("Example_of_recording_a_media_element", "view the full 
 
 ## See also
 
-- [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)
-- [Using the MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) landing page
+- {{domxref("MediaDevices.getUserMedia()")}}

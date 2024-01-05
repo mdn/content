@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.String.italics
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
 The **`italics()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("i")}} element (`<i>str</i>`), which causes this string to be displayed as italic.
 
@@ -19,6 +19,10 @@ The **`italics()`** method of {{jsxref("String")}} values creates a string that 
 italics()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string beginning with an `<i>` start tag, then the text `str`, and then an `</i>` end tag.
@@ -27,14 +31,27 @@ A string beginning with an `<i>` start tag, then the text `str`, and then an `</
 
 ### Using italics()
 
-The following example uses deprecated string methods to change the formatting of a string:
+The code below creates an HTML string and then replaces the document's body with it:
 
 ```js
-const worldString = "Hello, world";
-console.log(worldString.blink()); // <blink>Hello, world</blink>
-console.log(worldString.bold()); // <b>Hello, world</b>
-console.log(worldString.italics()); // <i>Hello, world</i>
-console.log(worldString.strike()); // <strike>Hello, world</strike>
+const contentString = "Hello, world";
+
+document.body.innerHTML = contentString.italics();
+```
+
+This will create the following HTML:
+
+```html
+<i>Hello, world</i>
+```
+
+Instead of using `italics()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement). For example:
+
+```js
+const contentString = "Hello, world";
+const elem = document.createElement("i");
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## Specifications
@@ -48,6 +65,5 @@ console.log(worldString.strike()); // <strike>Hello, world</strike>
 ## See also
 
 - [Polyfill of `String.prototype.italics` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.blink()")}}
-- {{jsxref("String.prototype.bold()")}}
-- {{jsxref("String.prototype.strike()")}}
+- [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- {{HTMLElement("i")}}

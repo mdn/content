@@ -34,7 +34,7 @@ forEach(callbackFn, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Description
 

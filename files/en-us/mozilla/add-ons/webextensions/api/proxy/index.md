@@ -33,15 +33,6 @@ To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Ad
 - {{WebExtAPIRef("proxy.settings")}}
   - : Get and set proxy settings.
 
-## Functions
-
-> **Warning:** You should not use these methods ({{WebExtAPIRef("proxy.register()")}} or {{WebExtAPIRef("proxy.unregister()")}}) to register and remove an extended [Proxy Auto-Configuration (PAC) file](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). They were deprecated in Firefox 68 and removed in Firefox 71.
-
-- {{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}
-  - : Registers the given proxy script.
-- {{WebExtAPIRef("proxy.unregister()")}} {{Deprecated_Inline}}
-  - : Unregisters the proxy script.
-
 ## Events
 
 - {{WebExtAPIRef("proxy.onError")}}

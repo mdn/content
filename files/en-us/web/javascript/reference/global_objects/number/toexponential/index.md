@@ -52,8 +52,7 @@ point.
 If a number has more digits than requested by the
 `fractionDigits` parameter, the number is rounded to the nearest
 number represented by `fractionDigits` digits. See the discussion
-of rounding in the description of the {{jsxref("Number.prototype.toFixed",
-  "toFixed()")}} method, which also applies to `toExponential()`.
+of rounding in the description of the {{jsxref("Number/toFixed", "toFixed()")}} method, which also applies to `toExponential()`.
 
 ## Examples
 
@@ -79,7 +78,7 @@ console.log((77).toExponential()); // 7.7e+1
 
 ## See also
 
-- [A polyfill of `Number.prototype.toExponential`](https://github.com/zloirock/core-js#ecmascript-number) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Number.prototype.toExponential` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
 - {{jsxref("Number.prototype.toString()")}}

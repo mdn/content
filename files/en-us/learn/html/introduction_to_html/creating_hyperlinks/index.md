@@ -64,7 +64,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/en-US/).
 
 ### Block level links
 
-As mentioned before, almost any content can be made into a link, even [block-level elements](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements).
+As mentioned before, almost any content can be made into a link, even {{Glossary("Block/CSS", "block-level elements")}}.
 If you want to make a heading element a link then wrap it in an anchor (`<a>`) element as shown in the following code snippet:
 
 ```html
@@ -81,7 +81,7 @@ This turns the heading into a link:
 
 ### Image links
 
-If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the local image file referenced with the {{htmlelement("img")}} element. The example below references an image file saved locally.
+If you have an image you want to make into a link, use the {{htmlelement("a")}} element to wrap the image file referenced with the {{htmlelement("img")}} element. The example below uses a relative path to reference a locally stored SVG image file.
 
 ```css hidden
 img {
@@ -93,7 +93,7 @@ img {
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
-  <img src="mdn_logo.svg" alt="MDN Web Docs homepage" />
+  <img src="mdn_logo.svg" alt="MDN Web Docs" />
 </a>
 ```
 

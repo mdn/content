@@ -7,7 +7,7 @@ browser-compat: javascript.operators.async_generator_function
 
 {{jsSidebar("Operators")}}
 
-The **`async function*`** keywords can be used to define an asynchronous generator function inside an expression.
+The **`async function*`** keywords can be used to define an async generator function inside an expression.
 
 You can also define async generator functions using the [`async function*` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*).
 
@@ -54,7 +54,7 @@ An `async function*` expression is very similar to, and has almost the same synt
 
 ## Examples
 
-### Using async function\*
+### Using async function\* expression
 
 The following example defines an unnamed asynchronous generator function and assigns it to `x`. The function yields the square of its argument:
 
@@ -77,11 +77,10 @@ x(6)
 
 ## See also
 
-- {{jsxref("Statements/async_function*", "async function*")}} statement
-- {{jsxref("AsyncGeneratorFunction")}} object
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("GeneratorFunction")}} object
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/async_function*", "async function*")}}
+- {{jsxref("AsyncGeneratorFunction")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Function")}} object
-- {{jsxref("Functions", "Functions", "", 1)}}

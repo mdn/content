@@ -32,12 +32,14 @@ getRootNode(options)
 ### Return value
 
 An object inheriting from {{domxref('Node')}}. This will differ in exact form depending
-on where you called `getRootNode()`; for example:
+on where you call `getRootNode()`; for example:
 
 - Calling it on an element inside a standard web page will return an
   {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
 - Calling it on an element inside a shadow DOM will return the associated
   {{domxref("ShadowRoot")}}.
+- Calling it on an element that is not attached to a document or a shadow tree will return
+  the root of the DOM tree it belongs to.
 
 ## Examples
 
@@ -52,7 +54,7 @@ const rootNode = node.getRootNode();
 ### Example 2
 
 This more complex example shows the difference between returning a normal root, and a
-root including the shadow root.
+root including the shadow root:
 
 ```html
 <div class="parent">
@@ -90,6 +92,23 @@ output.textContent += `shadowChild.getRootNode({composed:true}).nodeName : ${
 ```
 
 {{ EmbedLiveSample('Example 2', '100%', '200px') }}
+
+### Example 3
+
+This example returns the root of the unmounted tree.
+Note `element` here is the root of the tree (as it has no parent), so by definition its root is itself:
+
+```js
+const element = document.createElement("p");
+const child = document.createElement("span");
+
+element.append(child);
+
+const rootNode = child.getRootNode(); // <p><span></span></p>
+
+element === rootNode; // true
+element === element.getRootNode(); // true
+```
 
 ## Specifications
 

@@ -32,7 +32,7 @@ lastIndexOf(searchElement, fromIndex)
 
 ### Return value
 
-The last index of the element in the array; `-1` if not found.
+The last index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
@@ -68,7 +68,7 @@ array.lastIndexOf(NaN); // -1
 ### Finding all the occurrences of an element
 
 The following example uses `lastIndexOf` to find all the indices of an
-element in a given array, using {{jsxref("Array.prototype.push", "push")}} to add them
+element in a given array, using {{jsxref("Array/push", "push()")}} to add them
 to another array as they are found.
 
 ```js
@@ -88,7 +88,7 @@ console.log(indices);
 Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
-{{jsxref("Array.prototype.indexOf", "indexOf")}} method.
+{{jsxref("Array/indexOf", "indexOf()")}} method.
 
 ### Using lastIndexOf() on sparse arrays
 
@@ -127,7 +127,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

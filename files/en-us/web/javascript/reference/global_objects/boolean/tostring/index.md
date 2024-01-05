@@ -17,6 +17,10 @@ The **`toString()`** method of {{jsxref("Boolean")}} values returns a string rep
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the specified boolean value.

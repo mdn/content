@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.String.toUpperCase
 
 The **`toUpperCase()`** method of {{jsxref("String")}} values returns this string converted to uppercase.
 
-{{EmbedInteractiveExample("pages/js/string-touppercase.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-touppercase.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toUpperCase()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

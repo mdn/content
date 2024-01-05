@@ -55,13 +55,13 @@ In the string `"cbbabbbbcdebc"`, this pattern will match the substring `"abbbbc"
 
 The following pages provide lists of the different special characters that fit into each category, along with descriptions and examples.
 
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
   - : Assertions include boundaries, which indicate the beginnings and endings of lines and words, and other patterns indicating in some way that a match is possible (including look-ahead, look-behind, and conditional expressions).
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
   - : Distinguish different types of characters. For example, distinguishing between letters and digits.
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
   - : Groups group multiple patterns as a whole, and capturing groups provide extra submatch information when using a regular expression pattern to match against a string. Backreferences refer to a previously captured group in the same regular expression.
-- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
+- [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
   - : Indicate numbers of characters or expressions to match.
 
 If you want to look at all the special characters that can be used in regular expressions in a single table, see the following:
@@ -159,7 +159,7 @@ For instance, to match the string "C:\\" where "C" can be any letter, you'd use 
 If using the `RegExp` constructor with a string literal, remember that the backslash is an escape in string literals, so to use it in the regular expression, you need to escape it at the string literal level.
 `/a\*b/` and `new RegExp("a\\*b")` create the same expression, which searches for "a" followed by a literal "\*" followed by "b".
 
-If escape strings are not already part of your pattern you can add them using {{jsxref('String.prototype.replace()')}}:
+If escape strings are not already part of your pattern you can add them using {{jsxref("String.prototype.replace()")}}:
 
 ```js
 function escapeRegExp(string) {
@@ -179,7 +179,7 @@ Once remembered, the substring can be recalled for other use. See [Groups and ba
 
 ## Using regular expressions in JavaScript
 
-Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("RegExp/test", "test()")}} and {{jsxref("RegExp/exec", "exec()")}} and with the {{jsxref("String")}} methods {{jsxref("String/match", "match()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}}.
+Regular expressions are used with the {{jsxref("RegExp")}} methods {{jsxref("RegExp/test", "test()")}} and {{jsxref("RegExp/exec", "exec()")}} and with the {{jsxref("String")}} methods {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/replaceAll", "replaceAll()")}}, {{jsxref("String/search", "search()")}}, and {{jsxref("String/split", "split()")}}.
 
 | Method                                          | Description                                                                                                      |
 | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -311,7 +311,7 @@ These flags can be used separately or together in any order, and are included as
 | `d`  | Generate indices for substring matches.                                                       | {{jsxref("RegExp/hasIndices", "hasIndices")}}   |
 | `g`  | Global search.                                                                                | {{jsxref("RegExp/global", "global")}}           |
 | `i`  | Case-insensitive search.                                                                      | {{jsxref("RegExp/ignoreCase", "ignoreCase")}}   |
-| `m`  | Allows `^` and `$` to match newline characters.                                               | {{jsxref("RegExp/multiline", "multiline")}}     |
+| `m`  | Allows `^` and `$` to match next to newline characters.                                       | {{jsxref("RegExp/multiline", "multiline")}}     |
 | `s`  | Allows `.` to match newline characters.                                                       | {{jsxref("RegExp/dotAll", "dotAll")}}           |
 | `u`  | "Unicode"; treat a pattern as a sequence of Unicode code points.                              | {{jsxref("RegExp/unicode", "unicode")}}         |
 | `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
@@ -453,7 +453,7 @@ form.addEventListener("submit", (event) => {
 
 #### Result
 
-{{ EmbedLiveSample('Using_special_characters_to_verify_input') }}
+{{EmbedLiveSample("Using_special_characters_to_verify_input")}}
 
 ## Tools
 

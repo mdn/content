@@ -10,20 +10,20 @@ browser-compat: javascript.builtins.Array.concat
 The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.
 
-{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-concat.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 concat()
-concat(value0)
-concat(value0, value1)
-concat(value0, value1, /* …, */ valueN)
+concat(value1)
+concat(value1, value2)
+concat(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters
 
-- `valueN` {{optional_inline}}
+- `value1`, …, `valueN` {{optional_inline}}
   - : Arrays and/or values to concatenate into a new array. If all
     `valueN` parameters are omitted, `concat` returns a
     [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
@@ -154,7 +154,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.unshift()")}}

@@ -6,7 +6,7 @@ browser-compat: javascript.grammar
 spec-urls: https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 This page describes JavaScript's lexical grammar. JavaScript source text is just a sequence of characters — in order for the interpreter to understand it, the string has to be _parsed_ to a more structured representation. The initial step of parsing is called [lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis), in which the text gets scanned from left to right and is converted into a sequence of individual, atomic input elements. Some input elements are insignificant to the interpreter, and will be stripped after this step — they include [white space](#white_space) and [comments](#comments). The others, including [identifiers](#identifiers), [keywords](#keywords), [literals](#literals), and punctuators (mostly [operators](/en-US/docs/Web/JavaScript/Reference/Operators)), will be used for further syntax analysis. [Line terminators](#line_terminators) and multiline comments are also syntactically insignificant, but they guide the process for [automatic semicolons insertion](#automatic_semicolon_insertion) to make certain invalid token sequences become valid.
 
@@ -155,7 +155,7 @@ class C {
 lbl: console.log(1); // Label
 ```
 
-In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to ASCII — many Unicode code points are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
+In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to {{Glossary("ASCII")}} — many Unicode code points are allowed as well. Namely, any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category can start an identifier, while any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category can appear after the first character.
 
 > **Note:** If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e. ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\u200c\u200d\p{ID_Continue}]*/u` (excluding unicode escape sequences).
 
@@ -558,7 +558,7 @@ Some [JavaScript statements](/en-US/docs/Web/JavaScript/Reference/Statements)' s
 - [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/en-US/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break), [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
-- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields))
+- Class field declarations ([public](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) or [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties))
 - [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import), [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export)
 
 However, to make the language more approachable and convenient, JavaScript is able to automatically insert semicolons when consuming the token stream, so that some invalid token sequences can be "fixed" to valid syntax. This step happens after the program text has been parsed to tokens according to the lexical grammar. There are three cases when semicolons are automatically inserted:
@@ -829,6 +829,6 @@ There are the following rules-of-thumb for dealing with ASI, if you want to enfo
 
 ## See also
 
-- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide
 - [Micro-feature from ES6, now in Firefox Aurora and Nightly: binary and octal numbers](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/) by Jeff Walden (2013)
 - [JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes) by Mathias Bynens (2011)

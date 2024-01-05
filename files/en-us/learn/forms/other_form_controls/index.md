@@ -13,7 +13,7 @@ We now look at the functionality of non-`<input>` form elements in detail, from 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
+        A basic
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >.
@@ -273,7 +273,7 @@ All browsers that implement the {{HTMLElement("meter")}} element use those value
 Such a bar is created by using the {{HTMLElement("meter")}} element. This is for implementing any kind of meter; for example, a bar showing the total space used on a disk, which turns red when it starts to get full.
 
 ```html
-<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+<meter min="0" max="100" value="75" low="33" high="66" optimum="0">75</meter>
 ```
 
 {{EmbedLiveSample("Meter", 120, 120)}}

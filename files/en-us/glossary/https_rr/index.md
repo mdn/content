@@ -15,5 +15,4 @@ Further, the presence of an _HTTPS RR_ signals that all useful {{Glossary("HTTP"
 
 - [Service binding and parameter specification via the DNS (DNS SVCB and HTTPS RRs)](https://datatracker.ietf.org/doc/draft-ietf-dnsop-svcb-https/00/) (Draft IETF specification: draft-ietf-dnsop-svcb-https-00)
 - [Strict Transport Security vs. HTTPS Resource Records: the showdown](https://emilymstark.com/2020/10/24/strict-transport-security-vs-https-resource-records-the-showdown.html) (Emily M. Stark blog)
-- {{glossary("SSL")}}
 - {{glossary("TLS")}}

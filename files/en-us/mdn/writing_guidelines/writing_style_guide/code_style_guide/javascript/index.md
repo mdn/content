@@ -225,7 +225,7 @@ array.forEach((value /* , index, array */) => {
 
 ### Function names
 
-For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
 The following is a correct example of a function name:
 
@@ -301,7 +301,7 @@ function doIt() {
   };
   ```
 
-- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _expression body_) when possible:
 
   ```js example-good
   arr.map((e) => e.id);

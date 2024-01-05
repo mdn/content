@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.clearAppBadge
 ---
 
-{{APIRef("Badging API")}}
+{{APIRef("Badging API")}}{{securecontext_header}}
 
 The **`clearAppBadge()`** method of the {{domxref("Navigator")}} interface clears a badge on the current app's icon by setting it to `nothing`. The value `nothing` indicates that no badge is currently set, and the status of the badge is _cleared_.
 
@@ -26,8 +26,12 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ### Exceptions
 
-- `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("Navigator")}} does not have a document that this action can be acted on.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the document is not fully active.
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if {{domxref('PermissionStatus.state')}} is not `granted`.
 
 ## Examples
 
@@ -47,4 +51,4 @@ navigator.clearAppBadge();
 
 ## See also
 
-- [Badging for app icons](https://web.dev/badging-api/)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api/)

@@ -71,7 +71,7 @@ Number(2n) / 2; // 1
 - [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
 - [Subtraction (`-`)](/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction)
 - [Multiplication (`*`)](/en-US/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder (`/`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Remainder (`%`)](/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
 - [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [Increment (`++`)](/en-US/docs/Web/JavaScript/Reference/Operators/Increment)
 - [Decrement (`--`)](/en-US/docs/Web/JavaScript/Reference/Operators/Decrement)

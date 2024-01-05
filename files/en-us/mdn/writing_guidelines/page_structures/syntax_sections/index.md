@@ -12,7 +12,7 @@ The syntax section of an MDN reference page contains a syntax box defining the e
 
 Syntax sections for API reference pages are written manually, and may differ slightly based on the feature being documented.
 The section starts with a heading (typically level two heading `##`) named "Syntax", and must be included at the top of the reference page (just below the introductory material).
-Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ``` [markup-language] ` class.
+Below the heading is a code block showing the feature's exact syntax, demarcated using code fence ` ```[markup-language] ` class.
 
 The example below shows the Markdown code for a typical Syntax section (for a JavaScript function):
 
@@ -26,6 +26,9 @@ slice(start, end)
 ```
 ````
 
+> **Note:** The markup-language used in this case is `js-nolint`, where `js` indicates that JavaScript syntax highlighting should be used.
+> For JavaScript syntax sections `-nolint` is also required because the syntax section is deliberatively not "quite" JavaScript and we don't want the linter to "fix" it (return values and end-of-line semicolons are omitted).
+
 ### General style rules
 
 A few rules to follow in terms of markup within the syntax block:
@@ -36,7 +39,7 @@ A few rules to follow in terms of markup within the syntax block:
 
   ```js-nolint
   querySelector(selector)
-  //responseStr = element.querySelector(selector)
+  // responseStr = element.querySelector(selector)
 
   new IntersectionObserver(callback, options)
   // const observer = new IntersectionObserver(callback, options)
@@ -58,7 +61,7 @@ or this (from {{DOMxRef("Document.hasStorageAccess()")}}):
 hasStorageAccess()
 ```
 
-When the method is static, for example {{DOMxRef("URL.createObjectURL()")}}, then provide its interface as well:
+When the method is static, for example {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}, then provide its interface as well:
 
 ```js-nolint
 URL.createObjectURL(object)
@@ -153,16 +156,37 @@ For methods that accept an arbitrary number of parameters, the syntax block is w
 
 ```js-nolint
 unshift()
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* …, */ elementN)
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
+```
+
+Prefer starting numbering from 1, which allows writing description like "`unshift` adds N elements to the beginning of the array", as well as "the first element" (instead of "the zeroth element").
+
+Note that the case of passing zero rest parameters is always included, even when it doesn't make much sense. Then, in the "Parameters" section, write this:
+
+```md
+- `element1`, …, `elementN`
+  - : The elements to add to the front of the array.
+```
+
+Add `\{{optional_inline}}` here when passing zero rest parameters makes sense.
+
+Another example with some positional parameters before the rest parameter:
+
+```js-nolint
+splice(start)
+splice(start, deleteCount)
+splice(start, deleteCount, item1)
+splice(start, deleteCount, item1, item2)
+splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
 
 #### Parameters section
 
 Next, include a "Parameters" subsection, which explains what each parameter should be, in a description list. Parameters that are objects containing multiple members can include a nested description list, which itself includes an explanation of what each member should be. Optional parameters should be marked with an \\{{optional_inline}} macro call next to their name in the description term.
 
-The name of each parameter in the list should be contained in a {{HTMLElement("code")}} block.
+The name of each parameter in the list should be contained in markdown code fence notation `` ` ` ``.
 
 > **Note:** Even if the feature does not take any parameters, you need to include a "Parameters" section, with content of "None".
 
@@ -253,7 +277,7 @@ HTTP header syntax (and Content-Security-Policy) is documented in two separate s
 
 The "Syntax" section shows what a header's syntax will look like, using a syntax block styled using the "Syntax Box" style, including formal syntax to show exactly what directives can be included in the value, in what order, etc. For example, the {{HTTPHeader("If-None-Match")}} header's syntax block looks like this:
 
-```plain
+```http
 If-None-Match: <etag_value>
 If-None-Match: <etag_value>, <etag_value>, …
 If-None-Match: *
@@ -269,7 +293,7 @@ The "Directive" section contains a description list containing the names and des
 
 Request method syntax is really simple, just containing a syntax block styled using the "Syntax Box" style that shows how the method syntax is structured. The syntax for the [GET method](/en-US/docs/Web/HTTP/Methods/GET) looks like this:
 
-```plain
+```http
 GET /index.html
 ```
 
@@ -277,7 +301,7 @@ GET /index.html
 
 Again, the syntax for HTTP response status codes is really simple — a syntax block including the code and name. For example:
 
-```plain
+```http
 404 Not Found
 ```
 

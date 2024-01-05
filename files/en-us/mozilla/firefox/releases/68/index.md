@@ -129,7 +129,7 @@ _No changes._
 
 - Removed the non-standard `XMLDocument.load()` method ([Firefox bug 332175](https://bugzil.la/332175)).
 - Removed the non-standard `XMLDocument.async` property ([Firefox bug 1328138](https://bugzil.la/1328138)).
-- The {{domxref("RTCIceServer.credentialType")}} `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
+- The `RTCIceServer.credentialType` `token` value has been removed ([Firefox bug 1529595](https://bugzil.la/1529595)).
 
 ### HTTP
 
@@ -163,7 +163,7 @@ _No changes._
 
 ### API changes
 
-- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) functions have been deprecated and will be removed from Firefox 71 ([Firefox bug 1545811](https://bugzil.la/1545811)).
+- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) functions have been deprecated and will be removed from Firefox 71 ([Firefox bug 1545811](https://bugzil.la/1545811)).
 - A `boolean` flag, `incognito`, has been added to the [proxy.RequestDetails](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails). object. When `true`, it indicates that this was a private browsing request ([Firefox bug 1545163](https://bugzil.la/1545163)).
 - The [webRequest.RequestFilter](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) parameters can include an incognito parameter. If provided, requests that do not match the incognito state (`true` or `false`) will be filtered out ([Firefox bug 1548177](https://bugzil.la/1548177)).
 - A `string` value, `cookieStoreId`, representing the cookie store ID of the current context, has been added to the [proxy.RequestDetails](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/RequestDetails). object ([Firefox bug 1545420](https://bugzil.la/1545420)).

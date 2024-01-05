@@ -9,7 +9,7 @@ browser-compat: javascript.operators.nullish_coalescing_assignment
 
 The **nullish coalescing assignment (`??=`)** operator, also known as the **logical nullish assignment** operator, only evaluates the right operand and assigns to the left if the left operand is {{Glossary("nullish")}} (`null` or `undefined`).
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
 
 ## Syntax
 
@@ -19,11 +19,7 @@ x ??= y
 
 ## Description
 
-Nullish coalescing assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ??= y` is equivalent to:
-
-```js
-x ?? (x = y);
-```
+Nullish coalescing assignment [_short-circuits_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting), meaning that `x ??= y` is equivalent to `x ?? (x = y)`, except that the expression `x` is only evaluated once.
 
 No assignment is performed if the left-hand side is not nullish, due to short-circuiting of the [nullish coalescing](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) operator. For example, the following does not throw an error, despite `x` being `const`:
 

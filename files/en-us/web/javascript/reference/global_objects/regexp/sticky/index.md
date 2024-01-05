@@ -43,7 +43,7 @@ For the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ex
 - [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: replaces once at the current `lastIndex` and updates `lastIndex`.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
-- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
+- [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) (which calls [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)): `y`, `g` and `gy` are all different.
   - For `y` regexes: `replaceAll()` throws.
   - For `g` and `gy` regexes: replaces all occurrences matched by `exec()`.
 
@@ -94,10 +94,10 @@ regex2.test(".\nfoo"); // true - index 2 is the beginning of a line
 
 - [Polyfill of the `sticky` flag in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.unicode")}}

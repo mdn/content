@@ -13,7 +13,7 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including event handling.
       </td>
     </tr>
@@ -143,7 +143,7 @@ In the last article, we saw that error handling can get very difficult with nest
 
 To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation _succeeds_, the handler passed to `catch()` is called when the asynchronous operation _fails_.
 
-If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fails. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
+If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fail. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
 
 Try this version of our `fetch()` code. We've added an error handler using `catch()`, and also modified the URL so the request will fail.
 
@@ -179,7 +179,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
-Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
+Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404).
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 

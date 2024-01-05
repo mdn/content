@@ -42,7 +42,7 @@ For more information on the options see [Database integration](https://expressjs
 There are two common approaches for interacting with a database:
 
 - Using the databases' native query language, such as SQL.
-- Using an Object Data Model ("ODM") or an Object Relational Model ("ORM"). An ODM/ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
+- Using an Object Relational Mapper ("ORM"). An ORM represents the website's data as JavaScript objects, which are then mapped to the underlying database. Some ORMs are tied to a specific database, while others provide a database-agnostic backend.
 
 The very best _performance_ can be gained by using SQL, or whatever query language is supported by the database. ODM's are often slower because they use translation code to map between objects and the database format, which may not use the most efficient database queries (this is particularly true if the ODM supports different database backends, and must make greater compromises in terms of what database features are supported).
 
@@ -212,7 +212,7 @@ async function main() {
 }
 ```
 
-> **Note:** As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within a function declared using `async function` ( section).
+> **Note:** As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within an `async` function.
 > We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
 
 You can get the default `Connection` object with `mongoose.connection`.
@@ -313,12 +313,12 @@ Mongoose provides built-in and custom validators, and synchronous and asynchrono
 The built-in validators include:
 
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
-- [Numbers](https://mongoosejs.com/docs/api.html#schema-number-js) have [min](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](https://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
-- [Strings](https://mongoosejs.com/docs/api.html#schema-string-js) have:
+- [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
+- [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
 
-  - [enum](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
-  - [match](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
-  - [maxLength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minLength](https://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
+  - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
+  - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
+  - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
 
 The example below (slightly modified from the Mongoose documents) shows how you can specify some of the validator types and error messages:
 
@@ -402,7 +402,7 @@ You can search for records using query methods, specifying the query conditions 
 ```js
 const Athlete = mongoose.model("Athlete", yourSchema);
 
-// find all athletes who play tennis, selecting the 'name' and 'age' fields
+// find all athletes who play tennis, returning the 'name' and 'age' fields
 const tennisPlayers = await Athlete.find(
   { sport: "Tennis" },
   "name age",
@@ -412,7 +412,7 @@ const tennisPlayers = await Athlete.find(
 > **Note:** It is important to remember that not finding any results is **not an error** for a search — but it may be a fail-case in the context of your application.
 > If your application expects a search to find a value you can check the number of entries returned in the result.
 
-Query APIs, such as [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>), return a variable of type [Query](https://mongoosejs.com/docs/api.html#query-js).
+Query APIs, such as [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>), return a variable of type [Query](https://mongoosejs.com/docs/api/query.html).
 You can use a query object to build up a query in parts before executing it with the [`exec()`](https://mongoosejs.com/docs/api/query.html#Query.prototype.exec) method.
 `exec()` executes the query and returns a promise that you can `await` on for the result.
 
@@ -453,7 +453,7 @@ The [`find()`](<https://mongoosejs.com/docs/api/model.html#Model.find()>) method
 
 - [`findById()`](<https://mongoosejs.com/docs/api/model.html#Model.findById()>): Finds the document with the specified `id` (every document has a unique `id`).
 - [`findOne()`](<https://mongoosejs.com/docs/api/model.html#Model.findOne()>): Finds a single document that matches the specified criteria.
-- [`findByIdAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndRemove()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
+- [`findByIdAndDelete()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndDelete()>), [`findByIdAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findByIdAndUpdate()>), [`findOneAndRemove()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndRemove()>), [`findOneAndUpdate()`](<https://mongoosejs.com/docs/api/model.html#Model.findOneAndUpdate()>): Finds a single document by `id` or criteria and either updates or removes it. These are useful convenience functions for updating and removing records.
 
 > **Note:** There is also a [`countDocuments()`](<https://mongoosejs.com/docs/api/model.html#Model.countDocuments()>) method that you can use to get the number of items that match conditions. This is useful if you want to perform a count without actually fetching the records.
 
@@ -473,12 +473,12 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const authorSchema = Schema({
+const authorSchema = new Schema({
   name: String,
   stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
-const storySchema = Schema({
+const storySchema = new Schema({
   author: { type: Schema.Types.ObjectId, ref: "Author" },
   title: String,
 });
@@ -572,18 +572,19 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
-1. Click the **Build a Database** button in the _Database Deployments_ section.
+1. Click the **+ Create** button in the _Overview_ section.
    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 
-2. This will open the _Deploy a cloud database_ screen. Click on the **Create** button under the _Shared_ deployment option.
+2. This will open the _Deploy your database_ screen. Click on the **M0 FREE** option template.
    ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 
-3. This will open the _Create a Shared Cluster_ screen.
+3. Scroll down the page to see the different options you can choose.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
 
-   - Select any provider from the _Cloud Provider & Region_ section. Different regions offer different providers.
-   - _Cluster Tier_ and _Additional Settings_ don't need to be changed. You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
-   - Click the **Create Cluster** button (creation of the cluster will take some minutes).
+   - Select any provider and region from the _Provider_ and _Region_ sections. Different regions offer different providers.
+   - You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
+   - Tags are optional. We will not use them here.
+   - Click the **Create** button (creation of the cluster will take some minutes).
 
 4. This will open the _Security Quickstart_ section.
    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
@@ -598,10 +599,10 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
    - Click the **Finish and Close** button.
 
-5. This will open the following screen. Click on the **Go to Databases** button.
+5. This will open the following screen. Click on the **Go to Overview** button.
    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
-6. You will return to the _Database Deployments_ screen. Click the **Browse Collections** button.
+6. You will return to the _Overview_ screen. Click the on the _Database_ section under the _Deployment_ menu on the left. Click the **Browse Collections** button.
    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
 7. This will open the _Collections_ section. Click the **Add My Own Data** button.
@@ -624,13 +625,14 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
 11. This will open the _Connect to Cluster_ screen.
-    Click the **Connect your application** option.
+    Click the **Drivers** option under the _Connect to your application_ section.
     ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
 12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
     - Select the Node driver and version as shown.
+    - **DO NOT** follow the step 2.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
     - Update the username and password with your user's password.

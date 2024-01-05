@@ -5,7 +5,7 @@ page-type: web-api-overview
 browser-compat: api.StorageManager
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Storage")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 
 The [Storage Standard](https://storage.spec.whatwg.org) defines a shared storage system designed to be used by all APIs and technologies that websites can use to store data in a user's browser.
 
@@ -17,7 +17,11 @@ This article gives an overview of the way user agents store and maintain website
 
 This article also gives an overview of the {{domxref("StorageManager")}} interface used to estimate available storage for a site.
 
-## Storage buckets
+{{AvailableInWorkers}}
+
+## Concepts and usage
+
+### Storage buckets
 
 The storage system described by the Storage Standard, where site data is stored, usually consists of a single _bucket_ for each {{Glossary("origin")}}.
 
@@ -25,7 +29,7 @@ In essence, every website has its own storage space into which its data gets pla
 
 To learn more, see [How browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_browsers_separate_data_from_different_websites)
 
-## Bucket modes
+### Bucket modes
 
 Each site storage bucket has a _mode_ that describes the data retention policy for that bucket. There are two modes:
 
@@ -64,7 +68,7 @@ if (navigator.storage && navigator.storage.persist) {
 
 To learn more, see [Does browser-stored data persist?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#does_browser-stored_data_persist).
 
-## Quotas and usage estimates
+### Quotas and usage estimates
 
 The user agent determines, using whatever mechanism it chooses, the maximum amount of storage a given site can use. This maximum is the origin's **quota**. The amount of this space which is in use by the site is called its **usage**. Both of these values are estimates; there are several reasons why they're not precise:
 
@@ -83,7 +87,7 @@ navigator.storage.estimate().then((estimate) => {
 
 For more information about how much data an origin can store, see [How much data can be stored?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_much_data_can_be_stored).
 
-## Data eviction
+### Data eviction
 
 Data eviction is the process by which a user agent deletes an origin's stored data. This can happen, for example, when the device used to store the data is running low on storage space.
 
@@ -92,6 +96,18 @@ When clearing the data stored by an origin, the origin's bucket is treated as a 
 If a bucket is marked as `"persistent"`, the contents won't be cleared by the user agent without either the data's origin itself or the user specifically doing so. This includes scenarios such as the user selecting a "Clear Caches" or "Clear Recent History" option. The user will be asked specifically for permission to remove persistent site storage buckets.
 
 To learn more, see [When is data evicted?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#when_is_data_evicted).
+
+## Interfaces
+
+- {{domxref("StorageManager")}}
+  - : Provides an interface for managing persistence permissions and estimating available storage.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.storage")}} {{ReadOnlyInline}}
+  - : Returns the singleton {{domxref("StorageManager")}} object used for managing persistence permissions and estimating available storage on a site-by-site/app-by-app basis.
+- {{domxref("WorkerNavigator.storage")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("StorageManager")}} interface for managing persistence permissions and estimating available storage.
 
 ## Specifications
 
@@ -104,6 +120,6 @@ To learn more, see [When is data evicted?](/en-US/docs/Web/API/Storage_API/Stora
 ## See also
 
 - [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
-- [Storage for the web on web.dev](https://web.dev/storage-for-the-web/)
-- [Persistent storage on web.dev](https://web.dev/persistent-storage/)
+- [Storage for the web on web.dev](https://web.dev/articles/storage-for-the-web)
+- [Persistent storage on web.dev](https://web.dev/articles/persistent-storage)
 - [Chrome Web Storage and Quota Concepts](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit)

@@ -34,7 +34,7 @@ A locale identifier is a string that consists of:
 5. One or more BCP 47 extension sequences {{optional_inline}}
 6. A private-use extension sequence {{optional_inline}}
 
-Each subtag and sequence are separated by hyphens. Locale identifiers are case-insensitive ASCII. However, it's conventional to use title case (the first letter is capitalized, successive letters are lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
+Each subtag and sequence are separated by hyphens. Locale identifiers are case-insensitive {{Glossary("ASCII")}}. However, it's conventional to use title case (the first letter is capitalized, successive letters are lower case) for script subtags, upper case for region subtags, and lower case for everything else. For example:
 
 - `"hi"`: Hindi (language)
 - `"de-AT"`: German (language) as used in Austria (region)
@@ -76,7 +76,7 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive date and time formatting.
 - {{jsxref("Intl.DisplayNames")}}
   - : Constructor for objects that enable the consistent translation of language, region and script display names.
-- {{jsxref("Intl.DurationFormat")}} {{Experimental_Inline}}
+- {{jsxref("Intl.DurationFormat")}} {{experimental_inline}}
   - : Constructor for objects that enable locale-sensitive duration formatting.
 - {{jsxref("Intl.ListFormat")}}
   - : Constructor for objects that enable language-sensitive list formatting.
@@ -123,6 +123,24 @@ log("en-US"); // 5/24/2012 26,254.39
 log("de-DE"); // 24.5.2012 26.254,39
 ```
 
+### Using the browser's preferred language
+
+Instead of passing a hardcoded locale name to the `Intl` methods, you can use the user's preferred language provided by {{domxref("navigator.language")}}:
+
+```js
+const date = new Date("2012-05-24");
+
+const formattedDate = new Intl.DateTimeFormat(navigator.language).format(date);
+```
+
+Alternatively, the {{domxref("navigator.languages")}} property provides a sorted list of the user's preferred languages. This list can be passed directly to the `Intl` constructors to implement preference-based fallback selection of locales. The [locale negotiation](#locale_identification_and_negotiation) process is used to pick the most appropriate locale available:
+
+```js
+const count = 26254.39;
+
+const formattedCount = new Intl.NumberFormat(navigator.languages).format(count);
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -133,24 +151,11 @@ log("de-DE"); // 24.5.2012 26.254,39
 
 ## See also
 
-- Introduction: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
-- Constructors
-
-  - {{jsxref("Intl/Collator", "Intl.Collator()")}}
-  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
-  - {{jsxref("Intl/DisplayNames", "Intl.DisplayNames()")}}
-  - {{jsxref("Intl/DurationFormat", "Intl.DurationFormat()")}}
-  - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
-  - {{jsxref("Intl/Locale", "Intl.Locale()")}}
-  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat()")}}
-  - {{jsxref("Intl/PluralRules", "Intl.PluralRules()")}}
-  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
-  - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
-
-- Methods
-
-  - {{jsxref("String.prototype.localeCompare()")}}
-  - {{jsxref("Number.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleString()")}}
-  - {{jsxref("Date.prototype.toLocaleDateString()")}}
-  - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxref("String.prototype.localeCompare()")}}
+- {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{domxref("navigator.language")}}
+- {{domxref("navigator.languages")}}
+- [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html) by Norbert Lindenberg (2012)

@@ -13,7 +13,7 @@ browser-compat: html.manifest.shortcuts
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>Object</code></td>
+      <td><code>Array</code></td>
     </tr>
   </tbody>
 </table>
@@ -99,4 +99,4 @@ The following is a list of shortcuts a calendar app might have:
 
 ## See also
 
-- [Creating shortcut action menus for PWAs](en-US/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)
+- [Creating shortcut action menus for PWAs](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)

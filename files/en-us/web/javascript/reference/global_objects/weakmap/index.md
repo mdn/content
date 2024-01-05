@@ -123,7 +123,7 @@ class ClearableWeakMap {
 
 ### Emulating private members
 
-Developers can use a {{jsxref("WeakMap")}} to associate private data to an object, with the following benefits:
+Developers can use a `WeakMap` to associate private data to an object, with the following benefits:
 
 - Compared to a {{jsxref("Map")}}, a WeakMap does not hold strong references to the object used as the key, so the metadata shares the same lifetime as the object itself, avoiding memory leaks.
 - Compared to using non-enumerable and/or {{jsxref("Symbol")}} properties, a WeakMap is external to the object and there is no way for user code to retrieve the metadata through reflective methods like {{jsxref("Object.getOwnPropertySymbols")}}.
@@ -168,7 +168,7 @@ thing.showPrivate();
 // 1
 ```
 
-This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields):
+This is roughly equivalent to the following, using [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties):
 
 ```js
 class Thing {
@@ -269,8 +269,8 @@ This only works if your function's input is an object. Moreover, even if the inp
 ## See also
 
 - [Polyfill of `WeakMap` in `core-js`](https://github.com/zloirock/core-js#weakmap)
-- [WeakMap object](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object) in the [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) guide
-- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html)
+- [Keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections#weakmap_object)
+- [Hiding Implementation Details with ECMAScript 6 WeakMaps](https://fitzgeraldnick.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) by Nick Fitzgerald (2014)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

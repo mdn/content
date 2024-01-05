@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.TypedArray.toSorted
 
 {{JSRef}}
 
-The **`toSorted()`** method of {{jsxref("TypedArray")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("TypedArray/sort", "sort()")}} method. It returns a new typed array with the elements sorted in ascending order. This method has the same algorithm as {{jsxref("Array.prototype.toSorted()")}}.
+The **`toSorted()`** method of {{jsxref("TypedArray")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("TypedArray/sort", "sort()")}} method. It returns a new typed array with the elements sorted in ascending order. This method has the same algorithm as {{jsxref("Array.prototype.toSorted()")}}, except that it sorts the values numerically instead of as strings by default.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ toSorted(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
+  - : Specifies a function that defines the sort order. If omitted, the typed array elements are sorted according to numeric value.
 
     - `a`
       - : The first element for comparison.
@@ -61,7 +61,7 @@ console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.sort()")}}
 - {{jsxref("TypedArray.prototype.toReversed()")}}
 - {{jsxref("TypedArray.prototype.with()")}}

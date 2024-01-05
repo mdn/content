@@ -307,6 +307,6 @@ Again, using `Object.setPrototypeOf()` may have adverse performance effects, so 
 
 ## See also
 
-- {{jsxref("statements/class", "Class declaration")}}
-- {{jsxref("Classes/constructor", "Class constructor")}}
-- Glossary: {{Glossary("constructor")}}
+- {{jsxref("Statements/class", "class")}}
+- {{jsxref("Classes/constructor", "constructor")}}
+- {{Glossary("Constructor")}}

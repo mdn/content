@@ -123,11 +123,11 @@ The language specifies APIs that either produce or consume iterables and iterato
 ### Built-in iterables
 
 {{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) (returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)) are all built-in iterables, because each of their `prototype` objects implements an `@@iterator` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
-[`ReadableStream`](/en-US/docs/Web/API/ReadableStream) is the only built-in async iterable at the time of writing.
+There is no object in the core JavaScript language that is async iterable. Some web APIs, such as {{domxref("ReadableStream")}}, have the `Symbol.asyncIterator` method set by default.
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
 
-The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}} (currently unexposed), which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. In the future, these built-in iterators may have additional [helper methods](https://github.com/tc39/proposal-iterator-helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
+The iterators returned from built-in iterables actually all inherit from a common class {{jsxref("Iterator")}}, which implements the aforementioned `[Symbol.iterator]() { return this; }` method, making them all iterable iterators. The `Iterator` class also provides additional [helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) in addition to the `next()` method required by the iterator protocol. You can inspect an iterator's prototype chain by logging it in a graphical console.
 
 ```plain
 console.log([][Symbol.iterator]());
@@ -348,7 +348,7 @@ console.log(it.next().value); // 2
 
 ### Defining an iterable with a class
 
-State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) as well.
+State encapsulation can be done with [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) as well.
 
 ```js
 class SimpleClass {
@@ -437,7 +437,7 @@ console.log(`${someString}`); // "hi"
 
 ## See also
 
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Symbol.iterator")}}
 - {{jsxref("Iterator")}}

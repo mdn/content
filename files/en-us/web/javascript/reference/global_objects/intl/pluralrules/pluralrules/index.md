@@ -22,71 +22,37 @@ new Intl.PluralRules(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
 
-  - : An object with some or all of the following properties:
+  - : An object containing the following properties, in the order they are retrieved (all of them are optional):
 
     - `localeMatcher`
-      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is
-        `"best fit"`. For information about this option, see the {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}} page.
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `type`
-
       - : The type to use. Possible values are:
+        - `"cardinal"` (default)
+          - : For cardinal numbers (referring to the quantity of things).
+        - `"ordinal"`
+          - : For ordinal number (referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).
 
-        - `"cardinal"` for cardinal numbers (referring to the quantity of things). This is the default value.
-        - `"ordinal"` for ordinal number (referring to the ordering or ranking of things, e.g. "1st", "2nd", "3rd" in English).
-
-    - `roundingMode` {{experimental_inline}}
-
-      - : Specifies how fractional values are rounded.
-        The options are: `"ceil"`, `"floor"`, `"expand"`, `"trunc"`, `"halfCeil"`, `"halfFloor"`, `"halfExpand"` (default), `"halfTrunc"`, `"halfEven"`.
-        The meanings of the values are documented in more detail in the corresponding [`Intl.NumberFormat` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingmode) option.
-
-    - `roundingPriority` {{experimental_inline}}
-
-      - : Specify how rounding conflicts will be resolved if both "FractionDigits" ([`minimumFractionDigits`](#minimumfractiondigits)/[`maximumFractionDigits`](#maximumfractiondigits)) and "SignificantDigits" ([`minimumSignificantDigits`](#minimumsignificantdigits)/[`maximumSignificantDigits`](#maximumsignificantdigits)) are specified:
-
-        - `"auto"`: the result from the significant digits property is used (default).
-        - `"morePrecision"`: the result from the property that results in more precision is used.
-        - `"lessPrecision"`: the result from the property that results in less precision is used.
-
-        Note that for values other than `auto` the result with more precision is calculated from the [`maximumSignificantDigits`](#minimumsignificantdigits) and [`maximumFractionDigits`](#maximumfractiondigits) (minimum fractional and significant digit settings are ignored).
-
-    - `roundingIncrement` {{experimental_inline}}
-
-      - : Specifies the rounding-increment precision.
-        Must be one of the following integers:
-        `1`, `2`, `5`, `10`, `20`, `25`, `50`, `100`, `200`, `250`, `500`, `1000`, `2000`, `2500`, `5000`.
-        The behavior is described in more detail in the corresponding [`Intl.NumberFormat` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#roundingincrement) option.
-
-    - `trailingZeroDisplay` {{experimental_inline}}
-
-      - : A string expressing the strategy for displaying trailing zeros on whole numbers.
-        The default is `"auto"`.
-
-        - `"auto"`: keep trailing zeros according to `minimumFractionDigits` and `minimumSignificantDigits`.
-        - `"stripIfInteger"`: remove the fraction digits _if_ they are all zero.
-          This is the same as `auto` if any of the fraction digits is non-zero.
-
-    The following properties fall into two groups:
-    `minimumIntegerDigits`, `minimumFractionDigits`, and `maximumFractionDigits` in one group, and `minimumSignificantDigits` and `maximumSignificantDigits` in the other. If at least one property from the second group is defined, then the first group is ignored.
+    `Intl.PluralRules` also supports the `Intl.NumberFormat()` [digit options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#digit_options) (see `Intl.NumberFormat()` for details):
 
     - `minimumIntegerDigits`
-      - : The minimum number of integer digits to use. Possible values are from 1 to 21; the default is 1.
     - `minimumFractionDigits`
-      - : The minimum number of fraction digits to use. Possible values are from 0 to 20;
-        the default for plain number and percent formatting is 0;
-        the default for currency formatting is the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 if the list doesn't provide that information).
     - `maximumFractionDigits`
-      - : The maximum number of fraction digits to use.
-        Possible values are from 0 to 20; the default for plain number formatting is the larger of `minimumFractionDigits` and 3; the default for currency formatting is the larger of `minimumFractionDigits` and the number of minor unit digits provided by the [ISO 4217 currency code list](https://www.six-group.com/dam/download/financial-information/data-center/iso-currrency/lists/list-one.xml) (2 if the list doesn't provide that information); the default for percent formatting is the larger of `minimumFractionDigits` and 0.
     - `minimumSignificantDigits`
-      - : The minimum number of significant digits to use.
-        Possible values are from 1 to 21; the default is 1.
     - `maximumSignificantDigits`
-      - : The maximum number of significant digits to use.
-        Possible values are from 1 to 21; the default is 21.
+    - `roundingPriority`
+    - `roundingIncrement`
+    - `roundingMode`
+
+    These options are interpreted as if the `notation` option from `Intl.NumberFormat` is `"standard"` and `style` is `"decimal"`.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -147,4 +113,4 @@ formatOrdinals(103); // '103rd'
 ## See also
 
 - {{jsxref("Intl.PluralRules")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

@@ -7,7 +7,7 @@ browser-compat: javascript.statements.generator_function
 
 {{jsSidebar("Statements")}}
 
-The **`function*`** declaration creates a {{glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{glossary("binding", "bindings")}}) saved across re-entrances.
+The **`function*`** declaration creates a {{Glossary("binding")}} of a new generator function to a given name. A generator function can be exited and later re-entered, with its context (variable {{Glossary("binding", "bindings")}}) saved across re-entrances.
 
 You can also define generator functions using the [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*).
 
@@ -263,9 +263,9 @@ for (const power of powers(2)) {
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("GeneratorFunction")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Statements/function", "function")}}
@@ -275,7 +275,7 @@ for (const power of powers(2)) {
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Generator")}}
-- [Regenerator](https://facebook.github.io/regenerator/)
-- [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
-- [Task.js](https://github.com/mozilla/task.js)
-- [Iterating generators asynchronously](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)
+- [Regenerator](https://github.com/facebook/regenerator) on GitHub
+- [Promises and Generators: control flow utopia](https://youtu.be/qbKWsbJ76-s) presentation by Forbes Lindesay at JSConf (2013)
+- [Task.js](https://github.com/mozilla/task.js) on GitHub
+- [You Don't Know JS: Async & Performance, Ch.4: Generators](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md) by Kyle Simpson

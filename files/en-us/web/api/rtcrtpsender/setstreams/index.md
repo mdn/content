@@ -14,16 +14,15 @@ The {{domxref("RTCRtpSender")}} method **`setStreams()`** associates the sender'
 
 ```js-nolint
 setStreams()
-setStreams(mediaStream0)
-setStreams(mediaStream0, mediaStream1)
-setStreams(mediaStream0, mediaStream1, /* …, */ mediaStreamN)
+setStreams(mediaStream1)
+setStreams(mediaStream1, mediaStream2)
+setStreams(mediaStream1, mediaStream2, /* …, */ mediaStreamN)
 ```
 
 ### Parameters
 
 - `mediaStreamN` {{optional_inline}}
-  - : An arbitrary number of {{domxref("MediaStream")}} objects specified as arguments, that identify the streams to which the
-    `RTCRtpSender`'s {{domxref("RTCRtpSender.track", "track")}} belongs.
+  - : An arbitrary number of {{domxref("MediaStream")}} objects specified as arguments, that identify the streams to which the `RTCRtpSender`'s {{domxref("RTCRtpSender.track", "track")}} belongs.
     If this parameter isn't specified, no new streams will be associated with the track.
 
 ### Return value

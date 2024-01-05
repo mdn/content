@@ -5,7 +5,7 @@ page-type: javascript-operator
 browser-compat: javascript.operators.optional_chaining
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 The **optional chaining (`?.`)** operator accesses an object's property or calls a function. If the object accessed or function called using this operator is {{jsxref("undefined")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), the expression short circuits and evaluates to {{jsxref("undefined")}} instead of throwing an error.
 
@@ -21,7 +21,7 @@ obj.func?.(args)
 
 ## Description
 
-The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{JSxRef("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
+The `?.` operator is like the `.` chaining operator, except that instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}), the expression short-circuits with a return value of `undefined`. When used with function calls, it returns `undefined` if the given function does not exist.
 
 This results in shorter and simpler expressions when accessing chained properties when the possibility exists that a reference may be missing. It can also be helpful while exploring the content of an object when there's no known guarantee as to which properties are required.
 
@@ -38,7 +38,7 @@ non-`undefined`) before accessing the value of
 `obj.first.second`. This prevents the error that would occur if you accessed
 `obj.first.second` directly without testing `obj.first`.
 
-This is an idiomatic pattern in JavaScript, but it gets verbose when the chain is long, and it's not safe. For example, if `obj.first` is a {{glossary("Falsy")}} value that's not `null` or `undefined`, such as `0`, it would still short-circuit and make `nestedProp` become `0`, which may not be desirable.
+This is an idiomatic pattern in JavaScript, but it gets verbose when the chain is long, and it's not safe. For example, if `obj.first` is a {{Glossary("Falsy")}} value that's not `null` or `undefined`, such as `0`, it would still short-circuit and make `nestedProp` become `0`, which may not be desirable.
 
 With the optional chaining operator (`?.`), however, you don't have to
 explicitly test and short-circuit based on the state of `obj.first` before
@@ -84,10 +84,10 @@ found:
 const result = someInterface.customMethod?.();
 ```
 
-However, if there is a property with such a name which is not a function, using `?.` will still raise a {{JSxRef("TypeError")}} exception "someInterface.customMethod is not a function".
+However, if there is a property with such a name which is not a function, using `?.` will still raise a {{jsxref("TypeError")}} exception "someInterface.customMethod is not a function".
 
 > **Note:** If `someInterface` itself is `null` or
-> `undefined`, a {{JSxRef("TypeError")}} exception will still be
+> `undefined`, a {{jsxref("TypeError")}} exception will still be
 > raised ("someInterface is null"). If you expect that
 > `someInterface` itself may be `null` or `undefined`,
 > you have to use `?.` at this position as
@@ -103,7 +103,7 @@ You can also use the optional chaining operator with [bracket notation](/en-US/d
 const nestedProp = obj?.["prop" + "Name"];
 ```
 
-This is particularly useful for arrays, since array indices must be accessed with brackets.
+This is particularly useful for arrays, since array indices must be accessed with square brackets.
 
 ```js
 function printMagicIndex(arr) {
@@ -111,7 +111,7 @@ function printMagicIndex(arr) {
 }
 
 printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
-printMagicIndex(); // undefined; if not using ?., this would throw
+printMagicIndex(); // undefined; if not using ?., this would throw an error: "Cannot read properties of undefined (reading '42')"
 ```
 
 ### Optional chaining not valid on the left-hand side of an assignment

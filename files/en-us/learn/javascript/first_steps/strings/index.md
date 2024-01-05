@@ -13,7 +13,7 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -227,7 +227,7 @@ What happens when we try to concatenate a string and a number? Let's try it in o
 ```js
 const name = "Front ";
 const number = 242;
-console.log(`${name}${number}`); // "Front 242"
+console.log(name + number); // "Front 242"
 ```
 
 You might expect this to return an error, but it works just fine. How numbers should be displayed as strings is fairly well-defined, so the browser automatically converts the number to a string and concatenates the two strings.

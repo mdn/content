@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Intl.Segments.@@iterator
 
 The **`[@@iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [segments iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment.
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-@@iterator.html")}}
+{{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
 
 ## Syntax
 
 ```js-nolint
 segments[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

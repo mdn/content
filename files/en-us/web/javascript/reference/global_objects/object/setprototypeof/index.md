@@ -138,4 +138,4 @@ Subclassing without `extends` is mentioned in [ES-6 subclassing](https://hacks.m
 - {{jsxref("Object.getPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - [Inheritance chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#building_longer_inheritance_chains)
-- [ES-6 subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/)
+- [ES6 In Depth: Subclassing](https://hacks.mozilla.org/2015/08/es6-in-depth-subclassing/) on hacks.mozilla.org (2015)
