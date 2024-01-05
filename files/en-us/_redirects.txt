@@ -1574,7 +1574,6 @@
 /en-US/docs/DOM/NodeList	/en-US/docs/Web/API/NodeList
 /en-US/docs/DOM/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/DOM/NodeList.item2	/en-US/docs/Web/API/NodeList/item
-/en-US/docs/DOM/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/DOM/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/DOM/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/DOM/PannerNode	/en-US/docs/Web/API/PannerNode
@@ -2099,7 +2098,6 @@
 /en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2559,7 +2557,6 @@
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM:window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM:window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2896,7 +2893,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.root	/en-US/docs/Web/API/NodeIterator/root
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Document_Object_Model_(DOM)/NodeList	/en-US/docs/Web/API/NodeList
-/en-US/docs/Document_Object_Model_(DOM)/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/Document_Object_Model_(DOM)/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Document_Object_Model_(DOM)/Plugin	/en-US/docs/Web/API/Plugin
 /en-US/docs/Document_Object_Model_(DOM)/PluginArray	/en-US/docs/Web/API/PluginArray
@@ -3274,7 +3270,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
@@ -8556,6 +8551,7 @@
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.disabled	/en-US/docs/Web/API/HTMLSelectElement/disabled
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.form	/en-US/docs/Web/API/HTMLSelectElement/form
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex	/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
+/en-US/docs/Web/API/HTMLSelectElement/autofocus	/en-US/docs/Web/API/HTMLElement/autofocus
 /en-US/docs/Web/API/HTMLStyleElement.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/HTMLStyleElement.scoped	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/Web/API/HTMLStyleElement.type	/en-US/docs/Web/API/HTMLStyleElement/type
@@ -10770,7 +10766,6 @@
 /en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Web/API/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Web/API/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -11328,6 +11323,7 @@
 /en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
+/en-US/docs/Web/CSS/::-webkit-outer-spin-button	/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-button	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-corner	/en-US/docs/Web/CSS/::-webkit-scrollbar
@@ -13686,7 +13682,6 @@
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape

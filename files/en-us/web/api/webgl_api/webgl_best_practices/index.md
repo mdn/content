@@ -260,7 +260,7 @@ if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
 }
 
 gl.linkProgram(prog);
-if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
+if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
   console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
@@ -271,7 +271,7 @@ Consider:
 gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
-if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
+if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
   console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
   console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
   console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);

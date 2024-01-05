@@ -66,7 +66,7 @@ If the element representing the current page in the breadcrumb was not a link, t
 - `false` (default)
   - : Does not represent the current item within a set.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaCurrent")}}
   - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
