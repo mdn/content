@@ -31,14 +31,14 @@ checkVisibility(options)
     The possible options are:
 
     - `contentVisibilityAuto`
-      - : `true` to check if the element has [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility#auto) and is currently skipping its rendering.
+      - : `true` to check if the element {{cssxref("content-visibility")}} property is set to (or inherits) the value [`auto`](/en-US/docs/Web/CSS/content-visibility#auto), and it is currently skipping its rendering.
         `false` by default.
     - `opacityProperty`
       - : `true` to check if the element has an opacity of `0`.
         `false` by default.
     - `visibilityProperty`
 
-      - : `true` to check if the element is invisible due to its CSS [`visibility`](/en-US/docs/Web/CSS/visibility) value.
+      - : `true` to check if the element is invisible due to the value of its {{cssxref("visibility")}} property.
         `false` by default.
 
         > **Note:** Invisible elements include those that have [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), and some element types that have [`visibility: collapse`](/en-US/docs/Web/CSS/visibility#collapse).
@@ -52,10 +52,10 @@ checkVisibility(options)
 
 `false` if any of the following conditions are met, otherwise `true`:
 
-- the element doesn't have an associated box
+- The element doesn't have an associated box.
 - The element has [`content-visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden).
-- `opacityProperty` (or `checkOpacity`) is `true` and the element has an opacity of `0`.
-- `visibilityProperty` (or `checkVisibilityCSS`) is `true` and the element is invisible due to the CSS [`visibility`](/en-US/docs/Web/CSS/visibility) property.
+- `opacityProperty` (or `checkOpacity`) is `true` and the element {{cssxref("opacity ")}} property has (or inherits) a value of `0`.
+- `visibilityProperty` (or `checkVisibilityCSS`) is `true` and the element is invisible due to the value of its {{cssxref("visibility")}} property.
 - `contentVisibilityAuto` is `true` and element rendering is being skipped due to [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility#auto)
 
 ## Examples
