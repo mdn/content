@@ -46,13 +46,15 @@ get(options)
 
         - `"conditional"`: Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
 
-        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
+        - `"optional"`: If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
 
         - `"required"`: The user will always be asked to authenticate, even if prevent silent access (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is set to `false`. This value is intended for situations where you want to force user authentication — for example if you want a user to reauthenticate when a sensitive operation is being performed (like confirming a credit card payment), or when switching users.
 
-        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically log the user in if possible; if consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
+        - `"silent"`: The user will not be asked to authenticate. The user agent will automatically reauthenticate the user and log them in if possible. If consent is required, the promise will fulfill with `null`. This value is intended for situations where you would want to automatically sign a user in upon visiting a web app if possible, but if not, you don't want to present them with a confusing login dialog box. Instead, you'd want to wait for them to explicitly click a "Login/Signup" button.
 
         If `mediation` is omitted, it will default to `"optional"`.
+
+        > **Note:** In the case of a federated authentication (FedCM API) request, whether the `get()` call resulted in attempted automatic reauthentication or not is communicated to the IdP (via the `is_auto_selected` value sent to the IdP's `id_assertion_endpoint` during validation; see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow)) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
@@ -126,7 +128,13 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters.
+
+There are conditions under which a FedCM request is not sucessful, but an exception is not thrown:
+
+- If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently. See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API#update_login_status_using_the_login_status_api) for more information about FedCM login status.
+- If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
+- If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response containing information about the nature of the error. This is exposed in the promise rejection as shown in the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below.
 
 ### Exceptions
 
@@ -137,7 +145,9 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} 
 
 ### Examples
 
-Relying parties can call `get()` with the `identity` option to make a request for users to login to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
+#### Basic example
+
+Relying parties can call `get()` with the `identity` option to make a request for users to sign in to the relying party via an identity provider (IdP), using identity federation. A typical request would look like this:
 
 ```js
 async function signIn() {
@@ -156,6 +166,8 @@ async function signIn() {
 ```
 
 Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+
+#### Example including context and login hint
 
 A similar call including the `context` and `loginHint` extensions would look like so:
 
@@ -177,7 +189,33 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+
+#### Example including Error API information
+
+If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed in the promise rejection. For example:
+
+```js
+async function signIn() {
+  try {
+    const identityCredential = await navigator.credentials.get({
+      identity: {
+        providers: [
+          {
+            configURL: "https://accounts.idp.example/config.json",
+            clientId: "********",
+            nonce: "******",
+          },
+        ],
+      },
+    });
+  } catch (e) {
+    // Report the error to the user in some way
+    const code = e.code;
+    const url = e.url;
+  }
+}
+```
 
 ## WebOTP API
 

@@ -1,0 +1,62 @@
+---
+title: Set-Login
+slug: Web/HTTP/Headers/Set-Login
+page-type: http-header
+browser-compat: http.headers.Set-Login
+---
+
+{{HTTPSidebar}}{{SeeCompatTable}}
+
+The **`Set-Login`** {{Glossary("Response header", "response header")}} sets the login status of a federated identity provider (IdP), when set in a top-level navigation or a same-origin subresource request.
+
+See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API#update_login_status_using_the_login_status_api) for more information about FedCM login status.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+
+## Syntax
+
+```http
+Set-Login: status
+```
+
+Servers should ignore this header if it contains any other value.
+
+## Directives
+
+- `status`
+  - : A string representing the login status to set for the IdP. Possible values are `logged-in` and `logged-out`.
+
+## Examples
+
+```http
+Set-Login: logged-in
+
+Set-Login: logged-out
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)

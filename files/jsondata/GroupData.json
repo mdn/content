@@ -213,6 +213,7 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
+        "IdentityCredential",
         "OTPCredential",
         "PasswordCredential",
         "PublicKeyCredential"
@@ -459,7 +460,11 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential", "IdentityProvider"],
+      "interfaces": [
+        "IdentityCredential",
+        "IdentityProvider",
+        "NavigatorLogin"
+      ],
       "methods": ["CredentialsContainer.get()"],
       "properties": [],
       "events": []
