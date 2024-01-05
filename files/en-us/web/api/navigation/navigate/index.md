@@ -110,6 +110,9 @@ async function navigateHandler() {
     info: { animation: "swipe-right" },
     state: { infoPaneOpen: true },
   }).finished;
+
+  // Update application state
+  // ...
 }
 ```
 

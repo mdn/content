@@ -55,6 +55,7 @@ async function handleReload() {
     state: { infoPaneOpen: true },
   }).finished;
 
+  // Update application state
   // ...
 }
 ```
@@ -67,6 +68,7 @@ async function handleReload() {
     state: { ...navigation.currentEntry.getState(), newState: 3 },
   }).finished;
 
+  // Update application state
   // ...
 }
 ```
