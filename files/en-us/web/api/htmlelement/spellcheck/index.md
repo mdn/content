@@ -41,12 +41,6 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
 <div>
   <input id="spellcheck-controller" type="checkbox" checked />
 </div>
-<div>
-  <span
-    >Note that you must enable the browser setting of spelling and grammar
-    check</span
-  >
-</div>
 ```
 
 ```js
@@ -66,6 +60,8 @@ controller.addEventListener("change", (e) => {
 ```
 
 {{EmbedLiveSample('Examples', 600, 200)}}
+
+Note that you must enable the browser setting to check spelling and grammar.
 
 ## Specifications
 
