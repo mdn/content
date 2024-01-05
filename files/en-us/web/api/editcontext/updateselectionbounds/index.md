@@ -8,15 +8,27 @@ browser-compat: api.EditContext.updateSelectionBounds
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext.updateSelectionBounds()`** method ...
+The **`EditContext.updateSelectionBounds()`** method of the {{domxref("EditContext")}} interface is used to inform the operating system about the position and size of the text selection within the editable region that's associated with the `EditContext` object.
+
+TODO: WHAT DOES CALLING THIS METHOD DO? WHY AND WHEN DOES EDITCONTEXT NEED IT?
 
 ## Syntax
 
 ```js-nolint
-updateSelectionBounds()
+updateSelectionBounds(selectionBounds)
 ```
 
-### Return value
+### Parameters
+
+- `selectionBounds`
+  - : A {{jsxref("DOMRect")}} object representing the new selection bounds.
+
+### Exceptions
+
+- If no argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
+- If the provided argument is not a {{jsxref("DOMRect")}} a `TypeError` {{domxref("DOMException")}} is thrown.
+
+## Example
 
 ...
 

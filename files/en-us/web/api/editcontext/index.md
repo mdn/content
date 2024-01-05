@@ -9,7 +9,7 @@ browser-compat: api.EditContext
 
 The **`EditContext`** interface represents the text edition context of an element that was made editable by using the {{domxref("EditContext API", "", "", "nocode")}}.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as IME composition or emoji picker.
+The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("IME")}} (Input Method Editor) composition or emoji picker.
 
 ## Constructor
 
@@ -25,7 +25,7 @@ The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich t
 - {{domxref("EditContext.selectionEnd")}} {{ReadOnlyInline}}
   - : The offset, within the editable text content, of the end of the current selection.
 - {{domxref("EditContext.characterBoundsRangeStart")}} {{ReadOnlyInline}}
-  - : TODO???
+  - : The offset, within the editable text content, where the last IME composition started.
 
 ## Instance methods
 

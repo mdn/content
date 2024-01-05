@@ -29,15 +29,27 @@ When creating your own custom editable region by using the {{domxref("EditContex
 ## Instance properties
 
 - {{domxref("TextFormat.rangeStart")}} {{readonlyinline}}
-  - : ...
+  - : The start position of the text range that needs to be formatted with the given text format.
 - {{domxref("TextFormat.rangeEnd")}} {{readonlyinline}}
-  - : ...
+  - : The end position of the text range that needs to be formatted with the given text format.
 - {{domxref("TextFormat.underlineStyle")}} {{readonlyinline}}
-  - : ...
+  - : The style of the underline that needs to be applied to the text range that is being formatted.
 - {{domxref("TextFormat.underlineThickness")}} {{readonlyinline}}
-  - : ...
+  - : The thickness of the underline that needs to be applied to the text range that is being formatted.
 
 ## Example
+
+```js-nolint
+editContext.addEventListener("textformatupdate", (event) => {
+  // Get the TextFormat instances.
+  const formats = e.getTextFormats();
+
+  // Iterate over the TextFormat instances.
+  for (const format of formats) {
+    console.log(`Applying a ${format.underlineThickness} ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`);
+  }
+});
+```
 
 ## Specifications
 
