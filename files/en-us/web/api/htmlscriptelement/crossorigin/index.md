@@ -8,7 +8,7 @@ browser-compat: api.HTMLScriptElement.crossOrigin
 
 {{APIRef("HTML DOM")}}
 
-The **`crossOrigin`** property of the {{domxref("HTMLScriptElement")}} interface controls the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} setting to use when fetching the script and any scripts it imports. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if error information will be exposed.
+The **`crossOrigin`** property of the {{domxref("HTMLScriptElement")}} interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the script element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls if full error information will be exposed. For module scripts, it controls the script itself and any script it imports. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 
 ## Value
 
