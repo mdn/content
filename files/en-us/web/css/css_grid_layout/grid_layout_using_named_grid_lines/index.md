@@ -214,9 +214,9 @@ To position `overlay` using these implicit named lines is the same as positionin
   z-index: 10;
   grid-column: main-start / main-end;
   grid-row: hd-start / ft-end;
-  border: 4px solid rgb(92, 148, 13);
-  background-color: rgba(92, 148, 13, 0.4);
-  color: rgb(92, 148, 13);
+  border: 4px solid rgb(92 148 13);
+  background-color: rgb(92 148 13 / 40%);
+  color: rgb(92 148 13);
   font-size: 150%;
 }
 ```

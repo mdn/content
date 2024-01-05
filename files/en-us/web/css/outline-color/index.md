@@ -16,7 +16,7 @@ The **`outline-color`** CSS property sets the color of an element's outline.
 ```css
 /* <color> values */
 outline-color: #f92525;
-outline-color: rgb(30, 222, 121);
+outline-color: rgb(30 222 121);
 outline-color: blue;
 
 /* Keyword value */
