@@ -29,7 +29,6 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
     id="spellcheck-element"
     contenteditable="true"
     spellcheck="true"
-    autofocus
     >testt</span
   >
 </div>
