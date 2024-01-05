@@ -228,7 +228,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **Note:** Partitioned cookies must be set with `Secure` and `Path=/`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+> **Note:** Partitioned cookies must be set with `Secure`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
 
 ## Specifications
 
