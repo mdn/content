@@ -59,6 +59,8 @@ new Notification(title, options)
         notification. This can be of any data type.
     - `vibrate`
       - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification. If specified, `silent` must not be `true`.
+    - `timestamp`
+      - : A number representing the time at which a notification is created or applicable (past, present, or future).
     - `renotify`
       - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction`
