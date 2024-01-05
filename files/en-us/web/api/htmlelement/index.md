@@ -73,7 +73,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string containing the text that appears in a popup box when mouse is over the element.
 - {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
-- {{DOMxRef("HTMLElement.virtualkeyboardpolicy")}} {{Experimental_Inline}}
+- {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
   - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element is contenteditable (like {{htmlelement("input")}}, {{htmlelement("textarea")}} or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set on the element).
 
 ## Instance methods
