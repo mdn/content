@@ -46,7 +46,7 @@ async function signIn() {
 
 A successful `get()` call that includes an `identity` option fulfills with an `IdentityCredential` instance, which can be used to access the `isAutoSelected` value. This can then be used to run code for automatic or non-automatic sign-in cases, as appropriate.
 
-Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
 ## Specifications
 

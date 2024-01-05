@@ -54,7 +54,7 @@ get(options)
 
         If `mediation` is omitted, it will default to `"optional"`.
 
-        > **Note:** In the case of a federated authentication (FedCM API) request, whether the `get()` call resulted in attempted automatic reauthentication or not is communicated to the IdP (via the `is_auto_selected` value sent to the IdP's `id_assertion_endpoint` during validation; see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow)) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
+        > **Note:** In the case of a federated authentication (FedCM API) request, whether the `get()` call resulted in attempted automatic reauthentication or not is communicated to the IdP (via the `is_auto_selected` value sent to the IdP's `id_assertion_endpoint` during validation; see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow)) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
@@ -118,11 +118,11 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
 - `providers`
   - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
     - `configURL`
-      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) section on the _FedCM API_ landing page for more information.
+      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) section on the _FedCM API_ landing page for more information.
     - `clientId`
       - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
     - `loginHint` {{optional_inline}}
-      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint).
+      - : A string providing a hint about the account option(s) the browser should provide for the user to sign in with. This is useful in cases where the user has already signed in and the site asks them to reauthenticate. Otherwise, the reauthentication process can be confusing when a user has multiple accounts and can't remember which one they used to sign in previously. The value for the `loginHint` property can be taken from the user's previous sign-in, and is matched against the `login_hints` values provided by the IdP in the array of user information returned from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
@@ -132,9 +132,9 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} 
 
 There are conditions under which a FedCM request is not sucessful, but an exception is not thrown:
 
-- If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently. See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API#update_login_status_using_the_login_status_api) for more information about FedCM login status.
+- If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently. See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
 - If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
-- If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response containing information about the nature of the error. This is exposed in the promise rejection as shown in the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below.
+- If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response containing information about the nature of the error. This is exposed in the promise rejection as shown in the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below.
 
 ### Exceptions
 
@@ -165,7 +165,7 @@ async function signIn() {
 }
 ```
 
-Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API#fedcm_sign-in_flow).
+Check out [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details on how this works. This call will start off the sign-in flow described in [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
 #### Example including context and login hint
 
@@ -193,7 +193,7 @@ async function signIn() {
 
 #### Example including Error API information
 
-If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed in the promise rejection. For example:
+If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed in the promise rejection. For example:
 
 ```js
 async function signIn() {

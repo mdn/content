@@ -16,7 +16,7 @@ This pattern is already common on sites that use identity federation for sign-in
 
 ## Usage notes
 
-When `getUserInfo()` is called, the browser will make a request to the IdP [accounts list endpoint](/en-US/docs/Web/API/FedCM_API#the_accounts_list_endpoint) for the user information only when both the below conditions are true:
+When `getUserInfo()` is called, the browser will make a request to the IdP [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) for the user information only when both the below conditions are true:
 
 - The user has previously signed in to the RP with the IdP via FedCM on the same browser instance, and the data hasn't been cleared.
 - The user is signed in to the IdP on the same browser instance.
@@ -40,7 +40,7 @@ IdentityProvider.getUserInfo(config)
 - `config`
   - : A configuration object, which can contain the following properties:
     - `configURL`
-      - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for the identity provider from which you want to get user information.
+      - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for the identity provider from which you want to get user information.
     - `clientId`
       - : The RP's client identifier issued by the IdP.
 

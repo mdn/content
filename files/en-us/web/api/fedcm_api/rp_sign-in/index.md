@@ -10,7 +10,7 @@ This article describes the process by which a relying party (RP) can use the Fed
 
 ## Calling the get() method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to make a request for users to sign in to the RP with an IdP, using the available IdP config and endpoints ([as described above](#provide_a_config_file_and_endpoints)). A typical request might look like this:
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to make a request for users to sign in to the RP with an IdP, using the available [IdP config and endpoints](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints). A typical request might look like this:
 
 ```js
 async function signIn() {
@@ -34,9 +34,9 @@ The `identity.providers` property takes an array of objects containing the path 
 
 - `identity.context` specifies the context in which the user is authenticating with FedCM. For example, is it a first-time signup for this account, or a sign-in with an existing account? The browser uses this information to vary the text in its FedCM UI to better suit the context.
 - `identity.providers.nonce` provides a random nonce value that ensures the response is issued for this specific request, preventing {{glossary("replay attack", "replay attacks")}}.
-- `identity.providers.loginHint` provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](#the_accounts_list_endpoint).
+- `identity.providers.loginHint` provides a hint about the account option(s) the browser should present for user sign-in. This hint is matched against the `login_hints` values that the IdP provides from the [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint).
 
-The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developer.chrome.com/docs/privacy-sandbox/fedcm/#sign-into-rp).
+The browser requests the IdP config file and carries out the sign-in flow detailed below. For more information on the kind of interaction a user might expect from the browser-supplied UI, see [Sign in to the relying party with the identity provider](https://developers.google.com/privacy-sandbox/3pcd/fedcm#sign-in).
 
 ## FedCM sign-in flow
 
@@ -62,7 +62,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
 3. The IdP responds with the requested files. The config file URL is validated against the list of valid config URLs inside the well-known file.
 
-4. If the browser has the [IdP's login status](#update_login_status_using_the_login_status_api) set to `"logged-in"`, it makes a request to the `accounts_endpoint` inside the [IdP config file](#provide_a_config_file_and_endpoints) for the list of accounts that the user is currently signed in to (if the login status is `"logged-out"`, the `get()` call silently fails). This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+4. If the browser has the [IdP's login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) set to `"logged-in"`, it makes a request to the `accounts_endpoint` inside the [IdP config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for the list of accounts that the user is currently signed in to (if the login status is `"logged-out"`, the `get()` call silently fails). This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
    For example:
 
@@ -121,7 +121,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
    > **Note:** If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
 
-   If the call fails, an error payload is returned as explained in [The ID assertion endpoint](/en-US/docs/Web/API/FedCM_API#the_id_assertion_endpoint).
+   If the call fails, an error payload is returned as explained in [The ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint).
 
 10. The IdP checks that the account ID sent by the RP matches the ID for the account that is already signed in, and that the `Origin` matches the origin of the RP, which will have been registered in advance with the IdP. If everything looks good, it responds with the validation token.
 

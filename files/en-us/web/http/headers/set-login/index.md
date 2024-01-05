@@ -9,7 +9,7 @@ browser-compat: http.headers.Set-Login
 
 The **`Set-Login`** {{Glossary("Response header", "response header")}} sets the login status of a federated identity provider (IdP), when set in a top-level navigation or a same-origin subresource request.
 
-See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API#update_login_status_using_the_login_status_api) for more information about FedCM login status.
+See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
 
 <table class="properties">
   <tbody>

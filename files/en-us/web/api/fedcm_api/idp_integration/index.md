@@ -114,7 +114,7 @@ This includes the following information:
 - `approved_clients` {{optional_inline}}
   - : An array of RP clients that the user has registered with.
 - `login_hints` {{optional_inline}}
-  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#identity_object_structure) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
+  - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#providers_2) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
@@ -196,7 +196,7 @@ The IdP should update the user's login status when they sign in to or out of the
 
 ### How login status affects federated sign-in flow
 
-Later on, when an [RP attempts federated sign-in](#rp_federated_sign-in), the login status is checked:
+Later on, when an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
 - If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
 - If the login status is `"logged-out"`, no HTTP request is made, and the FedCM request fails silently. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.

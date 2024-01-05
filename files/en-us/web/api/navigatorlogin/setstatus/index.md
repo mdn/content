@@ -13,7 +13,7 @@ browser-compat: api.NavigatorLogin.setStatus
 The **`setStatus()`** method of the
 {{domxref("NavigatorLogin")}} interface sets the login status of a federated identity provider (IdP), when called from the IdP's origin.
 
-See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API#update_login_status_using_the_login_status_api) for more information about FedCM login status.
+See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
 
 ## Syntax
 

@@ -28,12 +28,12 @@ FedCM aims to work around this problem, providing a dedicated mechanism for fede
 
 There are two parts to using the FedCM API, which are covered in the linked guides below:
 
-1. [IdP integration with FedCM](#idp_integration_with_fedcm)
-2. [RP federated sign-in](#rp_federated_sign-in).
+1. [IdP integration with FedCM](/en-US/docs/Web/API/FedCM_API/IDP_integration).
+2. [RP federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in) using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
 
 ## Permissions Policy integration and IFrame support
 
-The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
+The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
 
 Developers can explicitly grant permission for an {{htmlelement("iframe")}} to use FedCM via the `allow` attribute:
 
@@ -53,7 +53,7 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 - {{domxref("IdentityProvider")}}
   - : Represents an IdP and provides access to related information and functionality.
 - {{domxref("NavigatorLogin")}}
-  - : Defines login functionality for IdPs, including the {{domxref("NavigatorLogin.setStatus", "Navigator.login.setStatus()")}} method for [updating login status](#update_login_status_using_the_login_status_api).
+  - : Defines login functionality for IdPs, including the {{domxref("NavigatorLogin.setStatus", "Navigator.login.setStatus()")}} method for [updating login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api).
 
 ## Extensions to other interfaces
 
@@ -65,7 +65,7 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 ## HTTP headers
 
 - {{httpheader("Set-Login")}}
-  - : Provides a mechanism for [updating login status](#update_login_status_using_the_login_status_api) via HTTP.
+  - : Provides an HTTP mechanism for [updating login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) via HTTP.
 
 ## Examples
 
