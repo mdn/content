@@ -33,7 +33,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Examples
 
-This example moves the last identity to the start and then back to the end.
+This example moves the first identity to the end and then back to the start.
 
 ```js
 let identities = await browser.contextualIdentities.query({});
@@ -64,16 +64,25 @@ This example moves the "Personal" identity to before "Work". The example assumes
 ```js
 let identities = await browser.contextualIdentities.query({});
 
-// Find the cookieStoreId of the container with the name "Personal".
-let personalId = identities.find((ci) => ci.name === "Personal")?.cookieStoreId;
-if (!personalId) {
+// Find the index and ID of the container with the name "Personal".
+let personalIndex = identities.findIndex((ci) => ci.name === "Personal");
+if (personalIndex === -1) {
   throw new Error("Personal container not found");
 }
+let personalId = identities[personalIndex].cookieStoreId;
 
 // Find the index of the container with the name "Work".
 let workIndex = identities.findIndex((identity) => identity.name === "Work");
 if (workIndex === -1) {
   throw new Error("Work container not found!");
+}
+
+if (personalIndex < workIndex) {
+  // When the Personal identity moves, all following
+  // identities shift to the left by one. To place
+  // the Personal identity before the Work identity,
+  // we should therefore subtract one.
+  workIndex--;
 }
 await browser.contextualIdentities.move(personalId, workIndex);
 ```
