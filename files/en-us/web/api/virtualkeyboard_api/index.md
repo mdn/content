@@ -116,7 +116,7 @@ The code snippet below shows how to use the `virtualkeyboardpolicy` attribute an
 - {{domxref("Navigator.virtualKeyboard")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a reference to the {{DOMxRef("VirtualKeyboard")}} API, to take control of the on-screen virtual keyboard.
 - {{domxref("HTMLElement.virtualkeyboardpolicy")}} {{experimental_inline}}
-  - : A string indicating whether the default handling of the virtualkeyboard by the browser is enabled, if the element is contenteditable, or is handled via script manually.
+  - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) set).
 
 ## Specifications
 
