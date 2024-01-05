@@ -63,6 +63,8 @@ controller.addEventListener("change", (e) => {
     label.innerText = "The spelling and grammar will not be checked:";
   }
 });
+
+element.focus()
 ```
 
 {{EmbedLiveSample('Examples', 600, 200)}}
