@@ -20,15 +20,41 @@ A boolean value that is `true` if an element's attribute values and the values o
 
 The following example shows how to enable or disable translation via script:
 
+```html
+<div>
+  <span>The content will always be translated:</span>
+</div>
+<div>
+  <span translate="yes">El contenido será traducido</div>
+</div>
+<div>
+  <span id="translate-label">The content will be translated:</span>
+</div>
+<div>
+  <span id="translate-element" translate="no">El contenido puede ser traducido.</div>
+</div>
+<div>
+  <span>Change the checkbox to enable or disable translation</span>
+</div>
+<div>
+  <input id="translate-controller" type="checkbox" />
+</div>
+```
+
 ```js
-const translateElement = document.querySelector(".translate-element");
-const noTranslateElement = document.querySelector(".no-translate-element");
+const label = document.getElementById('translate-label')
+const element = document.getElementById('translate-element')
+const controller = document.getElementById('translate-controller')
 
-// Enable translation
-translateElement.translate = true;
-
-// Disable translation
-noTranslateElement.translate = false;
+controller.addEventListener('change', (e) => {
+  if (controller.checked) {
+    element.translate = true
+    label.innerText = 'The content will be translated:'
+  } else {
+    element.translate = false
+    label.innerText = 'The content will not be translated:'
+  }
+})
 ```
 
 ## Specifications
