@@ -10,7 +10,7 @@ browser-compat: api.HTMLAnchorElement.hreflang
 
 The **`hreflang`** property of the {{domxref("HTMLAnchorElement")}} interface contains a string that is the language of the linked resource.
 
-It reflects the `hreflang` attribute of the {{HTMLElement("a")}} element and is the empty string (`""`) if there are none.
+It reflects the `hreflang` attribute of the {{HTMLElement("a")}} element and is the empty string (`""`) if there is no `hreflang` element.
 
 Web browsers and search engines may use this information to better understand the language of the linked content, but they are not required to follow it. The value provided for the `hreflang` attribute must adhere to format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
