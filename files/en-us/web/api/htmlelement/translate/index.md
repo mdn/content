@@ -29,7 +29,6 @@ translateElement.translate = true;
 
 // Disable translation
 noTranslateElement.translate = false;
-
 ```
 
 ## Specifications
