@@ -312,6 +312,10 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
+    "BufferedChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ByteLengthQueuingStrategy": {
       "inh": "",
       "impl": []
@@ -1998,6 +2002,14 @@
     },
     "Magnetometer": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
       "impl": []
     },
     "MathMLElement": {

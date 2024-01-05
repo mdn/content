@@ -13,7 +13,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
+        A basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
       </td>
     </tr>
     <tr>

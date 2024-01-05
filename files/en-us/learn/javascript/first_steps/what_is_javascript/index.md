@@ -13,7 +13,7 @@ In this article we will look at JavaScript from a high level, answering question
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
-      <td>Basic computer literacy, a basic understanding of HTML and CSS.</td>
+      <td>A basic understanding of HTML and CSS.</td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>

@@ -120,3 +120,8 @@ output {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}

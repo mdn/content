@@ -66,7 +66,7 @@ We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide t
 - `undefined` (default)
   - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaHidden")}}
   - : The [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.

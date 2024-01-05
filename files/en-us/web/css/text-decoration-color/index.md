@@ -22,7 +22,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 text-decoration-color: currentcolor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
+text-decoration-color: rgb(255 128 128 / 50%);
 text-decoration-color: transparent;
 
 /* Global values */
