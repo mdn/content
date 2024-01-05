@@ -30,6 +30,9 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 const anchorElement = document.getElementById("exampleLink");
 console.log(anchorElement.hreflang); // Outputs: "en-IN"
 ```
+## Result
+
+{{EmbedLiveSample("Example")}}
 
 ## Specifications
 
