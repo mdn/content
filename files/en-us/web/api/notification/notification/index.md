@@ -83,6 +83,10 @@ new Notification(title, options)
         notification is silent (no sounds or vibrations issued), regardless of the device
         settings. The default is `false`, which means it won't be silent. If `true`, then `vibrate` must not be present.
 
+### Return value
+
+An instance of the {{domxref("Notification")}} object.
+
 ### Exceptions
 
 - {{jsxref("TypeError")}}
