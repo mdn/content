@@ -24,16 +24,24 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 
 ```html
 <a id="exampleLink" href="https://example.com" hreflang="en-IN">Example Link</a>
+<p class="hreflang"></p>
+```
+
+```css
+#exampleLink{
+    font-size:1.5rem
+}
 ```
 
 ```js
 const anchorElement = document.getElementById("exampleLink");
+const pTag = document.querySelector('.hreflang');
 console.log(anchorElement.hreflang); // Outputs: "en-IN"
+pTag.textContent = anchorElement.hreflang;
 ```
-
 ## Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Example",100,100)}}
 
 ## Specifications
 
