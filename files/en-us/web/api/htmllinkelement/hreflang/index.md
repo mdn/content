@@ -25,5 +25,3 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 {{Compat}}
 
 ## See also
-
-- {{domxref("HTMLAnchorElement.hreflang")}} property
