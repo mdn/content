@@ -73754,18 +73754,6 @@
       "yusufgulled"
     ]
   },
-  "Web/CSS/::-webkit-outer-spin-button": {
-    "modified": "2020-10-15T21:48:38.043Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "AjayPoshak"
-    ]
-  },
   "Web/CSS/::-webkit-progress-bar": {
     "modified": "2020-10-15T21:41:33.061Z",
     "contributors": [
