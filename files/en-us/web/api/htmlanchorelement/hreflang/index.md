@@ -28,8 +28,8 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 ```
 
 ```css
-#exampleLink{
-    font-size:1.5rem
+#exampleLink {
+    font-size: 1.5rem
 }
 ```
 
