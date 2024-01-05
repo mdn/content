@@ -18,10 +18,10 @@ It reflects the value of the [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Glob
 
 An enumerated value; possible values are:
 
-- `"auto"` or an empty string (`""`):
-  - The default handling of the virtualkeyboard by the browser is enabled.
-- `"manual"`:
-  - The default handling of the virtualkeyboard in a browser is prevented and the virtualkeyboard needs to be handled by the script.
+- `"auto"` or an empty string (`""`)
+  - The browser automatically shows the virtual keyboard when the user taps or focuses the element.
+- `"manual"`
+  - The browser does not automatically show the virtual keyboard: showing/hiding the virtual keyboard is handled manually by the script.
 
 ## Examples
 
