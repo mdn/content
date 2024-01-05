@@ -1574,7 +1574,6 @@
 /en-US/docs/DOM/NodeList	/en-US/docs/Web/API/NodeList
 /en-US/docs/DOM/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/DOM/NodeList.item2	/en-US/docs/Web/API/NodeList/item
-/en-US/docs/DOM/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/DOM/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/DOM/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/DOM/PannerNode	/en-US/docs/Web/API/PannerNode
@@ -2894,7 +2893,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.root	/en-US/docs/Web/API/NodeIterator/root
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Document_Object_Model_(DOM)/NodeList	/en-US/docs/Web/API/NodeList
-/en-US/docs/Document_Object_Model_(DOM)/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/Document_Object_Model_(DOM)/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Document_Object_Model_(DOM)/Plugin	/en-US/docs/Web/API/Plugin
 /en-US/docs/Document_Object_Model_(DOM)/PluginArray	/en-US/docs/Web/API/PluginArray
@@ -11327,6 +11325,7 @@
 /en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
+/en-US/docs/Web/CSS/::-webkit-outer-spin-button	/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-button	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-corner	/en-US/docs/Web/CSS/::-webkit-scrollbar

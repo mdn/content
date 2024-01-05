@@ -50529,19 +50529,6 @@
       "SignpostMarv"
     ]
   },
-  "Web/API/NotifyAudioAvailableEvent": {
-    "modified": "2019-03-24T00:05:46.158Z",
-    "contributors": [
-      "Sheppy",
-      "alsntjsu",
-      "fscholz",
-      "teoli",
-      "kscarfone",
-      "ethertank",
-      "jswisher",
-      "sebmozilla"
-    ]
-  },
   "Web/API/OES_element_index_uint": {
     "modified": "2020-10-15T21:43:51.807Z",
     "contributors": ["fscholz", "nmve", "teoli"]
@@ -73765,18 +73752,6 @@
       "mfluehr",
       "chrisdavidmills",
       "yusufgulled"
-    ]
-  },
-  "Web/CSS/::-webkit-outer-spin-button": {
-    "modified": "2020-10-15T21:48:38.043Z",
-    "contributors": [
-      "Sheppy",
-      "wbamberg",
-      "fscholz",
-      "teoli",
-      "mfluehr",
-      "Sebastianz",
-      "AjayPoshak"
     ]
   },
   "Web/CSS/::-webkit-progress-bar": {
