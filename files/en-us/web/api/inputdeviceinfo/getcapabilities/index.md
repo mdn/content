@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A `MediaTrackCapabilities` object containing the following members:
+A `MediaTrackCapabilities` object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties, containing the following members:
 
 - `deviceId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the device ID.
@@ -84,3 +84,7 @@ navigator.mediaDevices.enumerateDevices().then((devices) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("MediaStreamTrack.getCapabilities()")}}, which also return a `MediaTrackCapabilities` object.
