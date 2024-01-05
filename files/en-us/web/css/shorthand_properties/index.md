@@ -226,6 +226,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("list-style")}}
   - {{cssxref("margin")}}
   - {{cssxref("mask")}}
+  - {{cssxref("mask-border")}}
   - {{cssxref("offset")}}
   - {{cssxref("outline")}}
   - {{cssxref("overflow")}}
