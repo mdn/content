@@ -49,7 +49,7 @@ _Also inherits properties from its parent interface,_ {{domxref("EventTarget")}}
 _Also inherits methods from its parent interface,_ {{domxref("EventTarget")}}.
 
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
+  - : Returns a list of the notifications in the order that they were created from the current origin via the current service worker registration.
 - {{domxref("ServiceWorkerRegistration.showNotification()")}}
   - : Displays the notification with the requested title.
 - {{domxref("ServiceWorkerRegistration.unregister()")}}
