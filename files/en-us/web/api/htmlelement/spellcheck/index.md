@@ -20,20 +20,41 @@ A boolean value that is `true` if the spelling and grammar of the text content i
 
 The following example shows how to control the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint via script:
 
-```js
-const spellcheckElement = document.querySelector(".spellcheck-element");
-const noSpellcheckElement = document.querySelector(".no-spellcheck-element");
-
-// The spelling and grammar of text content in the element may be checked
-if (!spellcheckElement.spellcheck) {
-  spellcheckElement.spellcheck = true;
-}
-
-// The spelling and grammar of text content in the element may not be checked
-if (noSpellcheckElement.spellcheck) {
-  noSpellcheckElement.spellcheck = false;
-}
+```html
+<div>
+  <span id="spellcheck-label">The spelling and grammar may be checked:</span>
+</div>
+<div>
+  <span id="spellcheck-element" contenteditable="true" spellcheck="true" autofocus>testt</span>
+</div>
+<div>
+  <span>Change the checkbox to enable or disable spelling and grammar check</span>
+</div>
+<div>
+  <input id="spellcheck-controller" type="checkbox" checked />
+</div>
+<div>
+  <span>Note that you must enable the browser setting of spelling and grammar check</span>
+</div>
 ```
+
+```js
+const label = document.getElementById('spellcheck-label');
+const element = document.getElementById('spellcheck-element');
+const controller = document.getElementById('spellcheck-controller');
+
+controller.addEventListener('change', (e) => {
+  if (controller.checked) {
+    element.spellcheck = true;
+    label.innerText = 'The spelling and grammar may be checked:';
+  } else {
+    element.spellcheck = false;
+    label.innerText = 'The spelling and grammar will not be checked:';
+  }
+})
+```
+
+{{EmbedLiveSample('Examples', 600, 200)}}
 
 ## Specifications
 
