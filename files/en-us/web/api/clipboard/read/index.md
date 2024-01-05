@@ -46,7 +46,8 @@ This example uses the `read()` method to read image data from the clipboard.
 Copy the butterfly image on the left using the "Copy image" context menu item, then click in the empty frame on the right.
 The example will fetch the image data and display the image data in the empty frame.
 
-> **Note:** Browsers that gate access to the method using the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission (now removed from specification) may require you to grant permission in order to paste the image.
+> **Note:** Chromium browsers gate access to the `read()` method using the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission (now removed from specification) and do not require transient activation.
+> If prompted, you will need to grant permission in order to paste the image.
 
 #### HTML
 
@@ -82,7 +83,36 @@ function log(text) {
 }
 ```
 
-This code reads the clipboard when the destination element is clicked and copies the image data into the element.
+Chromium browsers gate access to the clipboard using the [Permissions API](/en-US/docs/Web/API/Permissions_API) permission `clipboard-read`, while other browsers use transient activation.
+On chromium browsers we can check the permission using {{domxref("Permissions.query()")}}, but this will raise a `TypeError` exception on browsers where the permission is not supported.
+To cope with the different implementations, we define the following `checkPermission()` function that returns the permission value if the permission exists, `undefined` if it does not (or cannot be retrieved), and re-throws the exception if there is any other error.
+
+```js
+async function checkPermission() {
+  // Check the clipboard-read permission.
+  // Catch and log exception if permission is not defined (TypeError)
+  // On Firefox and Safari returns `undefined`
+  try {
+    const permission = await navigator.permissions.query({
+      name: "clipboard-read",
+    });
+    return permission.state;
+  } catch (error) {
+    if (error instanceof TypeError) {
+      // Permission not defined or unavailable.
+      console.error(error.message);
+      //returns undefined
+    } else {
+      // Rethrow other errors, such as invalid state.
+      throw error;
+    }
+  }
+}
+```
+
+The remaining code reads the clipboard when the destination element is clicked and copies the image data into the element.
+It checks the result of the `checkPermission()` method defined above, and throws an error if permission is explicitly denied.
+Otherwise it attempts to read the clipboard and will paste PNG image data if found.
 
 ```js
 const destinationImage = document.querySelector("#destination");
@@ -90,10 +120,16 @@ destinationImage.addEventListener("click", pasteImage);
 
 async function pasteImage() {
   try {
+    const permission = await checkPermission();
+    if (permission === "denied") {
+      throw new Error("Not allowed to read clipboard.");
+    }
+
+    // Read clipboard if not defined (or permission not supported).
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
       if (!item.types.includes("image/png")) {
-        throw new Error("Clipboard does not contain image data.");
+        throw new Error("Clipboard does not contain PNG image data.");
       }
       const blob = await item.getType("image/png");
       destinationImage.src = URL.createObjectURL(blob);

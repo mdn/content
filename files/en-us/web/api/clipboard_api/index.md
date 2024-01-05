@@ -24,13 +24,16 @@ It is usually implemented as an anonymous, temporary [data buffer](https://en.wi
 The Clipboard API allows users to programmatically read and write text and other kinds of data to and from the system clipboard in [secure contexts](/en-US/docs/Web/Security/Secure_Contexts), provided the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/User_activation) is required).
 Browsers may place additional restrictions over use of the methods to access the clipboard, such as requiring user approval to read or write cross-origin content, or at all!
 
+Chromium browsers require the `clipboard-read` and `clipboard-write` permissions from the [Permissions API](/en-US/docs/Web/API/Permissions_API) to read from, and write to, the clipboard.
+The also do not require transient activation.
+
+> **Note:** The `clipboard-read` and `clipboard-write` permissions are not supported by Firefox or Safari.
+> They have been removed from the [Permissions API](/en-US/docs/Web/API/Permissions_API) specification, but are still referenced in the Clipboard API specification.
+> Chromium is expected to remove `clipboard-read` in future but [consensus has not been reached](https://github.com/w3c/clipboard-apis/issues/163) for the removal of `clipboard-write`.
+
 Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} operations modifying the clipboard.
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
 The default action can be overriden by the event handler — see each of the events for more information.
-
-> **Note:** In addition to transient activation, Chromium also requires `clipboard-read` and `clipboard-write` permissions, which are not supported (and will never be supported) by Firefox or Safari.
-> Both `clipboard-read` and `clipboard-write` have been removed from the [Permissions API](/en-US/docs/Web/API/Permissions_API) specification, but are still referenced in the Clipboard API specification.
-> Chromium is expected to remove `clipboard-read` in future but [consensus has not been reached](https://github.com/w3c/clipboard-apis/issues/163) for the removal of `clipboard-write`.
 
 ## Interfaces
 
