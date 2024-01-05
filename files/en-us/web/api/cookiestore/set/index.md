@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.set
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
