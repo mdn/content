@@ -28,14 +28,14 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 ```
 
 ```css
-#exampleLink{
-    font-size:1.5rem
+#exampleLink {
+    font-size : 1.5rem
 }
 ```
 
 ```js
 const anchorElement = document.getElementById("exampleLink");
-const pTag = document.querySelector('.hreflang');
+const pTag = document.querySelector(".hreflang");
 console.log(anchorElement.hreflang); // Outputs: "en-IN"
 pTag.textContent = anchorElement.hreflang;
 ```
