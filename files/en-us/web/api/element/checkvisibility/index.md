@@ -159,12 +159,12 @@ function updateCSS() {
   });
 
   // Output the results of the tests
-  visibility_check.innerHTML = `<p>Result of check on element below (may be hidden):</p>
+  visibility_check.innerHTML = `<p>Checks on element below (may be hidden):</p>
     <ul>
-      <li>default: ${defaultVisibilityCheck}</li>
-      <li>opacity: ${opacityVisibilityCheck}</li>
-      <li>visibility: ${cssVisibilityCheck}</li>
-      <li>contentVisibilityAuto: ${contentVisibilityAutoCheck}</li>
+      <li>Result of <code>checkVisibility()</code>: ${defaultVisibilityCheck}</li>
+      <li>Result of <code>checkVisibility({opacityProperty: true})</code>: ${opacityVisibilityCheck}</li>
+      <li>Result of <code>checkVisibility({visibilityProperty: true})</code>: ${cssVisibilityCheck}</li>
+      <li>Result of <code>checkVisibility({contentVisibilityAuto: true})</code>: ${contentVisibilityAutoCheck}</li>
     </ul>`;
 }
 ```
