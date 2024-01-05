@@ -95,9 +95,12 @@ An instance of the {{domxref("Notification")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if one of the following is true:
-    - `options.silent` is `true` and `options.vibrate` is specified.
-    - `options.renotify` is `true` but `options.tag` is empty.
+  - : Thrown if:
+    - The constructor is called within the {{domxref("ServiceWorkerGlobalScope")}}.
+    - `silent` option is `true` and `vibrate` option is specified.
+    - `renotify` option is `true` but `tag` option is empty.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if serialize the `data` option failed for some reason.
 
 ## Examples
 
