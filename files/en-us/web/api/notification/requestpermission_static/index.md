@@ -10,8 +10,6 @@ browser-compat: api.Notification.requestPermission_static
 
 The **`requestPermission()`** static method of the {{domxref("Notification")}} interface requests permission from the user for the current origin to display notifications.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
 ```js-nolint
