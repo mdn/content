@@ -8,7 +8,7 @@ browser-compat: api.EditContext.compositionend_event
 
 {{APIRef("EditContext API")}}
 
-The `compositionend` event fires when ...
+The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("IME")}} (Input Method Editor) window ends.
 
 ## Syntax
 
@@ -22,10 +22,33 @@ oncompositionend = (event) => {};
 
 ## Example
 
-In the following example...
+In the following example, the editable region's border is set to red when the `compositionstart` event fires, and back to black when the `compositionend` event fires.
 
-```js
+```css
+#text-editor {
+  border: 1px solid black;
+}
+#text-editor.is-composing {
+  border-color: red;
+}
+```
 
+```html
+<div id="text-editor"></div>
+```
+
+```js-nolint
+const editorElement = document.getElementById("text-editor");
+const editContext = new EditContext();
+editorElement.editContext = editContext;
+
+editContext.addEventListener("compositionstart", (event) => {
+  editorElement.classList.add("is-composing");
+});
+
+editContext.addEventListener("compositionend", (event) => {
+  editorElement.classList.remove("is-composing");
+});
 ```
 
 ## Specifications

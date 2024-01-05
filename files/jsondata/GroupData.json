@@ -422,7 +422,12 @@
     },
     "EditContext API": {
       "overview": ["EditContext API"],
-      "interfaces": ["EditContext", "TextFormat"],
+      "interfaces": [
+        "EditContext",
+        "TextFormat",
+        "TextUpdateEvent",
+        "TextFormatUpdateEvent"
+      ],
       "methods": [],
       "properties": [],
       "events": []

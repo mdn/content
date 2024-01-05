@@ -8,15 +8,23 @@ browser-compat: api.TextFormat.rangeEnd
 
 {{APIRef("EditContext API")}}
 
-The **`rangeEnd`** property of the {{domxref("TextFormat")}} interface ...
+The **`rangeEnd`** property of the {{domxref("TextFormat")}} interface indicates the end position of the text range that needs to be formatted with the given text format.
 
 ## Value
 
-...
+A {{jsxref("Number")}}.
 
-## Examples
+## Example
 
-...
+```js-nolint
+editContext.addEventListener("textformatupdate", (event) => {
+  const formats = e.getTextFormats();
+
+  for (const format of formats) {
+    console.log(`IME wants to apply formatting between ${format.rangeStart} and ${format.rangeEnd}.`);
+  }
+});
+```
 
 ## Specifications
 

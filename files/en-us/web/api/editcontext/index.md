@@ -19,67 +19,49 @@ The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich t
 ## Instance properties
 
 - {{domxref("EditContext.text")}} {{ReadOnlyInline}}
-  - : ...
+  - : The editable content of the element.
 - {{domxref("EditContext.selectionStart")}} {{ReadOnlyInline}}
-  - : ...
+  - : The offset, within the editable text content, of the start of the current selection.
 - {{domxref("EditContext.selectionEnd")}} {{ReadOnlyInline}}
-  - : ...
+  - : The offset, within the editable text content, of the end of the current selection.
 - {{domxref("EditContext.characterBoundsRangeStart")}} {{ReadOnlyInline}}
-  - : ...
+  - : TODO???
 
 ## Instance methods
 
 _`EditContext` is based on the {{domxref("EventTarget")}} interface, and includes its methods._
 
 - {{domxref("EditContext.attachedElements()")}}
-  - : ...
+  - : An {{jsxref("Array")}} containing one {{domxref("HTMLElement")}} object which is the element that's associated with the `EditContext` object.
 - {{domxref("EditContext.characterBounds()")}}
-  - : ...
+  - : The list of bounding rectangles for the characters in the `EditContext` object.
 - {{domxref("EditContext.updateText()")}}
-  - : ...
+  - : Updates the internal text content of the `EditContext` object.
 - {{domxref("EditContext.updateSelection()")}}
-  - : ...
+  - : Updates the internal state of the selection within the editable text context.
 - {{domxref("EditContext.updateControlBounds()")}}
-  - : ...
+  - : TODO???
 - {{domxref("EditContext.updateSelectionBounds()")}}
-  - : ...
+  - : TODO???
 - {{domxref("EditContext.updateCharacterBounds()")}}
-  - : ...
+  - : Informs the operating system about the position and size of the characters in the `EditContext` object.
 
 ## Events
 
 - {{domxref("EditContext.textupdate_event", "textupdate")}}
-  - : Fired when ...
+  - : Fired when the user has made changes to the text or selection.
 - {{domxref("EditContext.textformatupdate_event", "textformatupdate")}}
-  - : Fired when ...
+  - : Fired when composition using an {{glossary("IME")}} (Input Method Editor) window is happening and the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 - {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}}
-  - : Fired when ...
+  - : Fired when the operating system needs to know the size and position of certain characters within the editable text region of the `EditContext` object, in order to display an IME window.
 - {{domxref("EditContext.compositionstart_event", "compositionstart")}}
-  - : Fired when ...
+  - : Fired when composition using an IME window is starting.
 - {{domxref("EditContext.compositionend_event", "compositionend")}}
-  - : Fired when ...
+  - : Fired when composition using an IME window is ending.
 
-## Examples
+## Example
 
-### Example 1 title
-
-This example shows how ...
-
-#### HTML
-
-```html
-<to-do></to-do>
-```
-
-#### JavaScript
-
-```js
-function todo() {}
-```
-
-#### Result
-
-{{EmbedLiveSample("Example 1 title")}}
+TODO???
 
 ## Specifications
 

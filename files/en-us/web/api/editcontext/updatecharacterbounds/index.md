@@ -8,17 +8,95 @@ browser-compat: api.EditContext.updateCharacterBounds
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext.updateCharacterBounds()`** method ...
+The **`EditContext.updateCharacterBounds()`** method of the {{domxref("EditContext")}} interface should be called as response to a {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event to inform the operating system about the position and size of the characters in the `EditContext` object.
+
+The character bounds information is then used by the operating system to correctly position the {{glossary("IME")}} (Input Method Editor) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a `<canvas>` element.
+
+### When to use the `updateCharacterBounds` method
+
+The following steps describe when to use the `updateCharacterBounds()` method:
+
+1. The user interacts with the text in the editable text region.
+2. The `EditContext` object automatically updates its internal text content, and fires {{domxref("EditContext.textupdate_event", "textupdate")}} events as needed.
+3. Depending on the input method used by the user, the operating system may need to know the position and size of the characters. If needed, the operating system indicates that it requires this information.
+4. The `EditContext` object fires a {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event.
+5. The event handler for the `characterboundsupdate` event calculates the character bounds for the text, and then calls the `updateCharacterBounds()` method to give the operating system the information it needs.
+
+### Avoid sudden jumps in the IME window position
+
+Calculating the character bounds and calling `updateCharacterBounds` synchronously, within the `characterboundsupdate` event ensures that the operating system has the information it needs when it displays the IME window. If you don't call `updateCharacterBounds()` synchronously within the event handler, users may observe the IME window being displayed in the wrong position before being moved to the correct position.
+
+### Which characters to include
+
+The `updateCharacterBounds()` method should only be called when the operating system indicates that it requires the information, and only for the characters that are included in the current IME composition.
+
+The event object passed to the `characterboundsupdate` event handler contains a `rangeStart` and `rangeEnd` properties that indicate the range of characters that are currently being composed. The `updateCharacterBounds()` method should only be called for the characters in this range.
 
 ## Syntax
 
 ```js-nolint
-updateCharacterBounds()
+updateCharacterBounds(rangeStart, characterBounds)
 ```
 
-### Return value
+### Parameters
 
-...
+- `rangeStart`
+  - : A number representing the start of the range of text for which character bounds are provided.
+- `characterBounds`
+  - : An {{jsxref("Array")}} containing {{domxref("DOMRect")}} objects representing the character bounds.
+
+### Exceptions
+
+- If less than two arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
+- if `rangeStart` is not a number or `characterBounds` is not iterable, a `TypeError` {{domxref("DOMException")}} is thrown.
+
+## Example
+
+This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information.
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js-nolint
+const FONT_SIZE = 40;
+const FONT = `${FONT_SIZE}px Arial`;
+
+const canvas = document.getElementById("editor-canvas");
+const ctx = canvas.getContext("2d");
+ctx.font = FONT;
+
+const editContext = new EditContext();
+canvas.editContext = editContext;
+
+function computeCharacterBound(offset) {
+  // Measure the width from the start of the text to the character.
+  const widthBeforeChar = canvasCtx.measureText(editContext.text.substring(0, offset)).width;
+
+  // Measure the character width.
+  const charWidth = canvasCtx.measureText(editContext.text[offset]).width;
+
+  const charX = canvas.offsetLeft + widthBeforeChar;
+  const charY = canvas.offsetTop;
+
+  // Return a DOMRect representing the character bounds.
+  return DOMRect.fromRect({
+    x: charX,
+    y: charY - FONT_SIZE,
+    width: charWidth,
+    height: FONT_SIZE
+  });
+}
+
+editContext.addEventListener("characterboundsupdate", e => {
+  const charBounds = [];
+  for (let offset = e.rangeStart; offset < e.rangeEnd; offset++) {
+    charBounds.push(computeCharacterBound(offset));
+  }
+
+  editContext.updateCharacterBounds(e.rangeStart, charBounds);
+});
+```
 
 ## Specifications
 

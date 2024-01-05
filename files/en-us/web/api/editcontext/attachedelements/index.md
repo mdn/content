@@ -8,7 +8,7 @@ browser-compat: api.EditContext.attachedElements
 
 {{APIRef("EditContext API")}}
 
-The **`attachedElements()`** method of the {{domxref("EditContext")}} interface returns an {{jsxref("Array")}} containing the element that's associated with the `EditContext` object.
+The **`attachedElements()`** method of the {{domxref("EditContext")}} interface returns an {{jsxref("Array")}} that contains only one item. This item is the element that's associated with the `EditContext` object.
 
 ## Syntax
 

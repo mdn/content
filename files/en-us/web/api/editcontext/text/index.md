@@ -8,17 +8,42 @@ browser-compat: api.EditContext.text
 
 {{APIRef("EditContext API")}}
 
-The **`text`** read-only property of the {{domxref("EditContext")}} interface represents the editable text content of the element.
+The **`text`** read-only property of the {{domxref("EditContext")}} interface represents the editable content of the element.
 
 ## Value
 
-A string containing the current editable text content. Its initial value is the empty string.
+A string containing the current editable content of the element that's attached to the `EditContext` object. Its initial value is the empty string.
 
-This string may or may not be equal to the `textContent` value of the DOM element that's associated to the `EditContext`. The associated element might, for example, be a `<canvas>` element, which doesn't have a `textContent` property. Or, the associated element might be a `<div>` element, but which contains a different text content, for a more advanced rendering.
+This string may or may not be equal to the value of the {{domxref("Node.textContent", "textContent")}} property of the DOM element that's associated to the `EditContext`. The associated element might, for example, be a `<canvas>` element, which doesn't have a `textContent` property. Or, the associated element might be a `<div>` element that contains text that's different than the `EditContext.text` value, for more advanced rendering.
 
-## Examples
+The `text` property of the `EditContext` object can be used as the model for the editable text region. Other properties of the `EditContext` object, such as `selectionStart` and `selectionEnd` refer to offsets within the `text` string.
 
-...
+## Example
+
+In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `text` property is used to draw the text.
+
+```html
+<canvas id="editor-canvas"></canvas>
+```
+
+```js-nolint
+const canvas = document.getElementById("editor-canvas");
+const ctx = canvas.getContext("2d");
+const editContext = new EditContext();
+canvas.editContext = editContext;
+
+function render() {
+  // Clear the canvas.
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Render the text.
+  ctx.fillText(editContext.text, 10, 10);
+}
+
+editContext.addEventListener("textupdate", e => {
+  render();
+});
+```
 
 ## Specifications
 
