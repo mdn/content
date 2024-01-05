@@ -11323,6 +11323,7 @@
 /en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
+/en-US/docs/Web/CSS/::-webkit-outer-spin-button	/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-button	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-corner	/en-US/docs/Web/CSS/::-webkit-scrollbar
