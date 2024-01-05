@@ -57,6 +57,8 @@ controller.addEventListener('change', (e) => {
 })
 ```
 
+{{EmbedLiveSample('Examples', 600, 200)}}
+
 ## Specifications
 
 {{Specifications}}
