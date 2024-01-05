@@ -25,10 +25,7 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
   <span id="spellcheck-label">The spelling and grammar may be checked:</span>
 </div>
 <div>
-  <span
-    id="spellcheck-element"
-    contenteditable="true"
-    spellcheck="true"
+  <span id="spellcheck-element" contenteditable="true" spellcheck="true"
     >testt</span
   >
 </div>
