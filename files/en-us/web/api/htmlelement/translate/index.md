@@ -42,19 +42,19 @@ The following example shows how to enable or disable translation via script:
 ```
 
 ```js
-const label = document.getElementById('translate-label')
-const element = document.getElementById('translate-element')
-const controller = document.getElementById('translate-controller')
+const label = document.getElementById("translate-label");
+const element = document.getElementById("translate-element");
+const controller = document.getElementById("translate-controller");
 
-controller.addEventListener('change', (e) => {
+controller.addEventListener("change", (e) => {
   if (controller.checked) {
-    element.translate = true
-    label.innerText = 'The content will be translated:'
+    element.translate = true;
+    label.innerText = "The content will be translated:";
   } else {
-    element.translate = false
-    label.innerText = 'The content will not be translated:'
+    element.translate = false;
+    label.innerText = "The content will not be translated:";
   }
-})
+});
 ```
 
 ## Specifications
