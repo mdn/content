@@ -8,13 +8,14 @@ browser-compat: api.Element.checkVisibility
 
 {{APIRef("DOM")}}
 
-The **`checkVisibility()`** method of the {{domxref("Element")}} interface performs checks to determine whether the element is visible.
+The **`checkVisibility()`** method of the {{domxref("Element")}} interface checks whether the element is visible.
 
-The method returns `false` if the element doesn't have an associated box, such as those that have the CSS property [`display: none`](/en-US/docs/Web/CSS/display#none) or [`display: contents`](/en-US/docs/Web/CSS/display#contents).
-The method also returns `false` if the element is not being rendered because the element or an an ancestor element sets the property value as [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden).
+The method returns `false` in either of the following situations:
+- The element doesn't have an associated box, for example because the CSS {{cssxref("display")}} property is set to [`none`](/en-US/docs/Web/CSS/display#none) or [`contents`](/en-US/docs/Web/CSS/display#contents).
+- The element is not being rendered because the element or an an ancestor element sets the {{cssxref("content-visibility")}} property to [`hidden`](/en-US/docs/Web/CSS/content-visibility#hidden).
 
 The optional parameter enables additional checks to test for other interpretations of what "visible" means.
-For example, you can further check whether an element has an opacity of `0`, if the CSS [`visibility`](/en-US/docs/Web/CSS/visibility) means that the element is invisible, or if its rendering is currently being skipped because it has the property [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility#auto).
+For example, you can further check whether an element has an opacity of `0`, if the CSS [`visibility`](/en-US/docs/Web/CSS/visibility) means that the element is invisible, or if its rendering is currently being skipped because it has the {{cssxref("content-visibility")}} property set to [`auto`](/en-US/docs/Web/CSS/content-visibility#auto).
 
 ## Syntax
 
@@ -174,7 +175,7 @@ If you change the selection the results will be applied to the test element (blu
 So for example, if you set the `opacity: 0` that test (only) should indicate `false`.
 However if you set `display: none` then all tests should return `false.
 
-{{ EmbedLiveSample('Using hidden to manually manage visibility', "100%", "200" ) }}
+{{ EmbedLiveSample('Test checkVisibility() with varied CSS', "100%", "200" ) }}
 
 ## Specifications
 
