@@ -94,12 +94,6 @@ To change the iframe's dimensions try resizing the dotted red border from bottom
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
     _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
-  - : The default scripting language used by the SVG fragment.
-    _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
-  - : The default style sheet language used by the SVG fragment.
-    _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**

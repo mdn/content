@@ -1574,7 +1574,6 @@
 /en-US/docs/DOM/NodeList	/en-US/docs/Web/API/NodeList
 /en-US/docs/DOM/NodeList.item	/en-US/docs/Web/API/NodeList/item
 /en-US/docs/DOM/NodeList.item2	/en-US/docs/Web/API/NodeList/item
-/en-US/docs/DOM/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/DOM/Option	/en-US/docs/Web/API/HTMLOptionElement/Option
 /en-US/docs/DOM/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/DOM/PannerNode	/en-US/docs/Web/API/PannerNode
@@ -2099,7 +2098,6 @@
 /en-US/docs/DOM/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/DOM/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/DOM/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2174,7 +2172,6 @@
 /en-US/docs/DOM/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/DOM/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/DOM/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/DOM/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -2560,7 +2557,6 @@
 /en-US/docs/DOM:window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/DOM:window.content	/en-US/docs/Web/API/Window
 /en-US/docs/DOM:window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/DOM:window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/DOM:window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/DOM:window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/DOM:window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -2608,7 +2604,6 @@
 /en-US/docs/DOM:window.onclick	/en-US/docs/Web/API/Element/click_event
 /en-US/docs/DOM:window.onclose	/en-US/docs/Web/API/HTMLDialogElement/close_event
 /en-US/docs/DOM:window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
-/en-US/docs/DOM:window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/DOM:window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/DOM:window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/DOM:window.onkeydown	/en-US/docs/Web/API/Element/keydown_event
@@ -2898,7 +2893,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.root	/en-US/docs/Web/API/NodeIterator/root
 /en-US/docs/Document_Object_Model_(DOM)/NodeIterator.whatToShow	/en-US/docs/Web/API/NodeIterator/whatToShow
 /en-US/docs/Document_Object_Model_(DOM)/NodeList	/en-US/docs/Web/API/NodeList
-/en-US/docs/Document_Object_Model_(DOM)/NotifyAudioAvailableEvent	/en-US/docs/Web/API/NotifyAudioAvailableEvent
 /en-US/docs/Document_Object_Model_(DOM)/Orientation_and_motion_data_explained	/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /en-US/docs/Document_Object_Model_(DOM)/Plugin	/en-US/docs/Web/API/Plugin
 /en-US/docs/Document_Object_Model_(DOM)/PluginArray	/en-US/docs/Web/API/PluginArray
@@ -3276,7 +3270,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Document_Object_Model_(DOM)/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Document_Object_Model_(DOM)/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Document_Object_Model_(DOM)/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Document_Object_Model_(DOM)/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
 /en-US/docs/Document_Object_Model_(DOM)/window.forward	/en-US/docs/Web/API/Window/forward
@@ -3329,7 +3322,6 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Document_Object_Model_(DOM)/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Document_Object_Model_(DOM)/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Document_Object_Model_(DOM)/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Document_Object_Model_(DOM)/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -6500,8 +6492,6 @@
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
-/en-US/docs/SVG/Attribute/contentScriptType	/en-US/docs/Web/SVG/Attribute/contentScriptType
-/en-US/docs/SVG/Attribute/contentStyleType	/en-US/docs/Web/SVG/Attribute/contentStyleType
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6521,7 +6511,6 @@
 /en-US/docs/SVG/Attribute/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/SVG/Attribute/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/SVG/Attribute/filter	/en-US/docs/Web/SVG/Attribute/filter
-/en-US/docs/SVG/Attribute/filterRes	/en-US/docs/Web/SVG/Attribute/filterRes
 /en-US/docs/SVG/Attribute/filterUnits	/en-US/docs/Web/SVG/Attribute/filterUnits
 /en-US/docs/SVG/Attribute/flood-color	/en-US/docs/Web/SVG/Attribute/flood-color
 /en-US/docs/SVG/Attribute/flood-opacity	/en-US/docs/Web/SVG/Attribute/flood-opacity
@@ -7592,7 +7581,6 @@
 /en-US/docs/Web/API/BlobBuilder	/en-US/docs/Web/API/Blob
 /en-US/docs/Web/API/BlobEvent.BlobEvent	/en-US/docs/Web/API/BlobEvent/BlobEvent
 /en-US/docs/Web/API/BlobEvent.data	/en-US/docs/Web/API/BlobEvent/data
-/en-US/docs/Web/API/Bluetooth/onavailabilitychanged	/en-US/docs/Web/API/Bluetooth/availabilitychanged_event
 /en-US/docs/Web/API/BluetoothAdvertisingData	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/appearance	/en-US/docs/Web/API/Web_Bluetooth_API
 /en-US/docs/Web/API/BluetoothAdvertisingData/manufacturerData	/en-US/docs/Web/API/Web_Bluetooth_API
@@ -8563,6 +8551,7 @@
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.disabled	/en-US/docs/Web/API/HTMLSelectElement/disabled
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.form	/en-US/docs/Web/API/HTMLSelectElement/form
 /en-US/docs/Web/API/HTMLSelectElement/HTMLSelectElement.selectedIndex	/en-US/docs/Web/API/HTMLSelectElement/selectedIndex
+/en-US/docs/Web/API/HTMLSelectElement/autofocus	/en-US/docs/Web/API/HTMLElement/autofocus
 /en-US/docs/Web/API/HTMLStyleElement.media	/en-US/docs/Web/API/HTMLStyleElement/media
 /en-US/docs/Web/API/HTMLStyleElement.scoped	/en-US/docs/Web/API/HTMLStyleElement
 /en-US/docs/Web/API/HTMLStyleElement.type	/en-US/docs/Web/API/HTMLStyleElement/type
@@ -8914,7 +8903,7 @@
 /en-US/docs/Web/API/MediaRecorder.onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder.onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder.onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder.onwarning	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder.pause	/en-US/docs/Web/API/MediaRecorder/pause
 /en-US/docs/Web/API/MediaRecorder.requestData	/en-US/docs/Web/API/MediaRecorder/requestData
 /en-US/docs/Web/API/MediaRecorder.resume	/en-US/docs/Web/API/MediaRecorder/resume
@@ -8930,7 +8919,8 @@
 /en-US/docs/Web/API/MediaRecorder/onresume	/en-US/docs/Web/API/MediaRecorder/resume_event
 /en-US/docs/Web/API/MediaRecorder/onstart	/en-US/docs/Web/API/MediaRecorder/start_event
 /en-US/docs/Web/API/MediaRecorder/onstop	/en-US/docs/Web/API/MediaRecorder/stop_event
-/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder/warning_event
+/en-US/docs/Web/API/MediaRecorder/onwarning	/en-US/docs/Web/API/MediaRecorder
+/en-US/docs/Web/API/MediaRecorder/warning_event	/en-US/docs/Web/API/MediaRecorder
 /en-US/docs/Web/API/MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API
 /en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API	/en-US/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 /en-US/docs/Web/API/MediaSessionAction	/en-US/docs/Web/API/MediaSession/setActionHandler
@@ -8963,14 +8953,15 @@
 /en-US/docs/Web/API/MediaStreamTrack.kind	/en-US/docs/Web/API/MediaStreamTrack/kind
 /en-US/docs/Web/API/MediaStreamTrack.label	/en-US/docs/Web/API/MediaStreamTrack/label
 /en-US/docs/Web/API/MediaStreamTrack.onmute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
-/en-US/docs/Web/API/MediaStreamTrack.onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event
+/en-US/docs/Web/API/MediaStreamTrack.onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack.onunmute	/en-US/docs/Web/API/MediaStreamTrack/unmute_event
 /en-US/docs/Web/API/MediaStreamTrack.readyState	/en-US/docs/Web/API/MediaStreamTrack/readyState
 /en-US/docs/Web/API/MediaStreamTrack.stop	/en-US/docs/Web/API/MediaStreamTrack/stop
 /en-US/docs/Web/API/MediaStreamTrack/onended	/en-US/docs/Web/API/MediaStreamTrack/ended_event
 /en-US/docs/Web/API/MediaStreamTrack/onmute	/en-US/docs/Web/API/MediaStreamTrack/mute_event
-/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event
+/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack/onunmute	/en-US/docs/Web/API/MediaStreamTrack/unmute_event
+/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrack/remote	/en-US/docs/Web/API/MediaStreamTrack
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
 /en-US/docs/Web/API/MediaStreamTrackAudioSourceOptions/mediaStreamTrack	/en-US/docs/Web/API/MediaStreamTrackAudioSourceNode
@@ -10065,6 +10056,7 @@
 /en-US/docs/Web/API/WebRTC_API/Architecture	/en-US/docs/Web/API/WebRTC_API/Protocols
 /en-US/docs/Web/API/WebRTC_API/Architecture/Connectivity	/en-US/docs/Web/API/WebRTC_API/Connectivity
 /en-US/docs/Web/API/WebRTC_API/Architecture/Protocols	/en-US/docs/Web/API/WebRTC_API/Protocols
+/en-US/docs/Web/API/WebRTC_API/High-level_guide	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Interface_overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
 /en-US/docs/Web/API/WebRTC_API/Introduction	/en-US/docs/Web/API/WebRTC_API
 /en-US/docs/Web/API/WebRTC_API/Overview	/en-US/docs/Web/API/WebRTC_API#WebRTC_concepts_and_usage
@@ -10774,7 +10766,6 @@
 /en-US/docs/Web/API/window.content	/en-US/docs/Web/API/Window
 /en-US/docs/Web/API/window.crypto	/en-US/docs/Web/API/crypto_property
 /en-US/docs/Web/API/window.crypto.getRandomValues	/en-US/docs/Web/API/Crypto/getRandomValues
-/en-US/docs/Web/API/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/Web/API/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/Web/API/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/Web/API/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -10848,7 +10839,6 @@
 /en-US/docs/Web/API/window.oncontextmenu	/en-US/docs/Web/API/Element/contextmenu_event
 /en-US/docs/Web/API/window.ondevicemotion	/en-US/docs/Web/API/Window/devicemotion_event
 /en-US/docs/Web/API/window.ondeviceorientation	/en-US/docs/Web/API/Window/deviceorientation_event
-/en-US/docs/Web/API/window.ondragdrop	/en-US/docs/Web/API/Window/ondragdrop
 /en-US/docs/Web/API/window.onerror	/en-US/docs/Web/API/Window/error_event
 /en-US/docs/Web/API/window.onfocus	/en-US/docs/Web/API/Window/focus_event
 /en-US/docs/Web/API/window.onhashchange	/en-US/docs/Web/API/Window/hashchange_event
@@ -11333,6 +11323,7 @@
 /en-US/docs/Web/CSS/::-ms-browse	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-file-upload-button	/en-US/docs/Web/CSS/::file-selector-button
 /en-US/docs/Web/CSS/::-webkit-input-placeholder	/en-US/docs/Web/CSS/::placeholder
+/en-US/docs/Web/CSS/::-webkit-outer-spin-button	/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 /en-US/docs/Web/CSS/::-webkit-resizer	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-button	/en-US/docs/Web/CSS/::-webkit-scrollbar
 /en-US/docs/Web/CSS/::-webkit-scrollbar-corner	/en-US/docs/Web/CSS/::-webkit-scrollbar
@@ -11479,6 +11470,7 @@
 /en-US/docs/Web/CSS/CSS_User_Interface	/en-US/docs/Web/CSS/CSS_basic_user_interface
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
+/en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
@@ -13690,7 +13682,6 @@
 /en-US/docs/window.closed	/en-US/docs/Web/API/Window/closed
 /en-US/docs/window.confirm	/en-US/docs/Web/API/Window/confirm
 /en-US/docs/window.crypto	/en-US/docs/Web/API/crypto_property
-/en-US/docs/window.defaultStatus	/en-US/docs/Web/API/Window/defaultStatus
 /en-US/docs/window.document	/en-US/docs/Web/API/Window/document
 /en-US/docs/window.dump	/en-US/docs/Web/API/Window/dump
 /en-US/docs/window.escape	/en-US/docs/Web/JavaScript/Reference/Global_Objects/escape

@@ -36,7 +36,7 @@ The content of the description, whether set by `aria-description` or `aria-descr
 - `<string>`
   - : The value is a string, an unconstrained value type, that is intended to be conveyed to the assistive technology user.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaDescription")}}
   - : The [`ariaDescription`](/en-US/docs/Web/API/Element/ariaDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-description` attribute, which defines a string value that describes or annotates the current element.

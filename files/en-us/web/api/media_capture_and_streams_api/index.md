@@ -44,7 +44,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
-- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
 

@@ -58,4 +58,6 @@ window.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
+- The {{domxref("Document/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Document")}} interface
+- The {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("WorkerGlobalScope")}} interface
 - [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)
