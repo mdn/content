@@ -11,6 +11,7 @@ browser-compat: api.Element.checkVisibility
 The **`checkVisibility()`** method of the {{domxref("Element")}} interface checks whether the element is visible.
 
 The method returns `false` in either of the following situations:
+
 - The element doesn't have an associated box, for example because the CSS {{cssxref("display")}} property is set to [`none`](/en-US/docs/Web/CSS/display#none) or [`contents`](/en-US/docs/Web/CSS/display#contents).
 - The element is not being rendered because the element or an an ancestor element sets the {{cssxref("content-visibility")}} property to [`hidden`](/en-US/docs/Web/CSS/content-visibility#hidden).
 
@@ -34,7 +35,7 @@ checkVisibility(options)
       - : `true` to check if the element {{cssxref("content-visibility")}} property is set to (or inherits) the value [`auto`](/en-US/docs/Web/CSS/content-visibility#auto), and it is currently skipping its rendering.
         `false` by default.
     - `opacityProperty`
-      - : `true` to check if the element has an opacity of `0`.
+      - : `true` to check if the element {{cssxref("opacity")}} property is set to (or inherits) a value of `0`.
         `false` by default.
     - `visibilityProperty`
 
@@ -56,7 +57,7 @@ checkVisibility(options)
 - The element has [`content-visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden).
 - `opacityProperty` (or `checkOpacity`) is `true` and the element {{cssxref("opacity ")}} property has (or inherits) a value of `0`.
 - `visibilityProperty` (or `checkVisibilityCSS`) is `true` and the element is invisible due to the value of its {{cssxref("visibility")}} property.
-- `contentVisibilityAuto` is `true` and element rendering is being skipped due to [`content-visibility: auto`](/en-US/docs/Web/CSS/content-visibility#auto)
+- `contentVisibilityAuto` is `true`, the {{cssxref("content-visibility")}} property is [`auto`](/en-US/docs/Web/CSS/content-visibility#auto), and element rendering is being skipped.
 
 ## Examples
 
