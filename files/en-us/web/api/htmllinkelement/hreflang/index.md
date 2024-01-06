@@ -25,12 +25,12 @@ A string that contains a language tag, or the empty string (`""`) if there is no
   hreflang="fr"
   type="text/html"
   title="French HTML" />
-<p></p>
+<p class="tag"></p>
 ```
 
 ```javascript
 const myLink = document.querySelector("link");
-const pTag = document.querySelector("p");
+const pTag = document.querySelector("tag");
 pTag.textContent = myLink.hreflang;
 ```
 
