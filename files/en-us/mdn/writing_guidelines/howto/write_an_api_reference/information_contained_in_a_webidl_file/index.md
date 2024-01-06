@@ -355,9 +355,9 @@ The parameters of a method are listed in the Syntax section of the method sub-pa
 DOMString canPlayType(DOMString type);
 ```
 
-The return value type is indicated before the method name — in the above case the value is an object of type `DOMString`. If followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
+The return value type is indicated before the method name — in the above case the value is an object of type `DOMString`. If the return type is followed by a question mark (`'?'`), a value of `null` can be returned too, and the documentation must explain _when_ this may happen. If no question mark is present, like here, the return value can't be `null`.
 
-The keyword `void` means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should simply contain a sentence "None (\{{jsxref("undefined")}}).".
+If the return value is the `void` keyword, it means that there is no return value. It is not a return value type. If the WebIDL entry reads `void`, the _Return value_ section in the docs should simply state "None (\{{jsxref("undefined")}}).".
 
 ### Throwing exceptions
 
@@ -437,15 +437,15 @@ The iterator will iterate over values of type _valueType_. The generated methods
 - `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes (that are `unsigned long`).
 - `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values.
 - `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
-- `forEach()`, which generates an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values, and then calls a given callback function one for each entry in the list.
+- `forEach()`, which executes a given callback function once for each entry in the list.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
 
-> **Note:** the value pairs to iterate over can be defined in three different ways:
->
-> 1. In the webidl file, use the `iterable<valueType>` notation. E.g. {{domxref('DOMTokenList')}}.
-> 2. In the webidl file, implicitly, if the interface supports indexed properties, that is when the interface has a `getter` methods with a parameter of type `unsigned long`.
-> 3. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually starts with: _"The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…"_.
+The values to iterate over can be defined in one of the following ways:
+
+- In the WebIDL file, using the `iterable<valueType>` notation. For example, see {{domxref('DOMTokenList')}}.
+- Implicitly in the WebIDL file, if the interface supports indexed properties. This is indicated when the interface includes `getter` methods with a parameter of type `unsigned long`.
+- Outside the WebIDL file, in the accompanying prose. Such a prose is typically found in the specification and usually starts with: _"The [values to iterate over](https://webidl.spec.whatwg.org/#dfn-value-iterator)…"_.
 
 #### Pair iterator
 
@@ -455,17 +455,17 @@ iterable<keyType, valueType>
 
 The iterator will iterate over values of type _valueType_ with keys of type _keyType_, that is the value pairs. The generated methods will be:
 
-- `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the value pairs. E.g. {{domxref('FormData.entries()')}}
-- `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('FormData.values()')}}
-- `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('FormData.keys()')}}
-- `forEach()` that generates an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the value pairs, and then calls a given callback function one for each entry in the list. E.g. {{domxref('Headers.forEach()')}}
+- `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the value pairs. For example, see {{domxref('FormData.entries()')}}.
+- `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. For example, see {{domxref('FormData.values()')}}.
+- `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. For example, see {{domxref('FormData.keys()')}}.
+- `forEach()`, which executes a given callback function once for each entry in the list. For example, see {{domxref('Headers.forEach()')}}.
 
 Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
-> **Note:** the value pairs to iterate over can be defined in two different ways:
->
-> 1. In the webidl file, use the `iterable<keyType, valueType>` notation. E.g. {{domxref('FormData')}}.
-> 2. Outside the webidl file, in the prose accompanying it. Such a prose is in the spec and usually has a sentence like this: _"The [value pairs to iterate over](https://webidl.spec.whatwg.org/#dfn-value-pairs-to-iterate-over) are the list of value pairs with the [key](https://webidl.spec.whatwg.org/#value-pair-key) bein...and the [value](https://webidl.spec.whatwg.org/#value-pair-value) being..."_.
+The value pairs to iterate over can be defined in one of the following ways:
+
+- In the WebIDL file, using the `iterable<keyType, valueType>` notation. For example, see {{domxref('FormData')}}.
+- Outside the WebIDL file, in the accompanying prose. Such a prose is typically found in the specification and usually starts with: _"The [value pairs to iterate over](https://webidl.spec.whatwg.org/#dfn-value-pairs-to-iterate-over)…"_.
 
 ### Set-like methods
 
@@ -477,10 +477,10 @@ setlike<valueType>
 
 The generated properties will be:
 
-- `entries()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes. E.g. {{domxref('NodeList.entries()')}}.
-- `values()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. E.g. {{domxref('NodeList.values()')}}.
-- `keys()` that returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. E.g. {{domxref('NodeList.keys()')}},
-- `forEach()`.
+- `entries()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the indexes. For example, see {{domxref('NodeList.entries()')}}.
+- `values()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the values. For example, see {{domxref('NodeList.values()')}}.
+- `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. For example, see {{domxref('NodeList.keys()')}}.
+- `forEach()`, which executes a given callback function once for each entry in the list. For example, see {{domxref('NodeList.forEach()')}}.
 
 In cases where the set-like declaration is not prefixed by read-only, the following methods are also generated:
 
