@@ -6,8 +6,6 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-{{LandingPageListSubPages}}
-
 This page lists many of the general-purpose macros created for use on MDN.
 For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 

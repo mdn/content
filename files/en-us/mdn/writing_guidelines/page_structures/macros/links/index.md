@@ -8,7 +8,7 @@ page-type: mdn-writing-guide
 
 MDN provides numerous macros to create links to MDN content that are always-up-to-date. In this guide, you will learn about MDN cross-reference macros that can be included in your content to include a single link to another page or a list of links to all of a document's subpages.
 
-### Lists of links
+## Lists of links
 
 MDN provides macros that create a list of links:
 
@@ -16,17 +16,25 @@ MDN provides macros that create a list of links:
 
   - : Inserts a definition list ({{HTMLelement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLelement("dt")}} term and its SEO summary as the {{HTMLelement("dd")}} term. The summary is the first paragraph of content.
 
-  The optional parameter accepts the slug or the parent page of the directory of pages to output instead of the subpages of the current page.
+- [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpagesForSidebar.ejs)
 
-- `\{{ListSubpagesForSidebar(<parameters>)}}`
+  - : When included without parameters, inserts an ordered list of links to the current page's subpages. This macro is most often used within [sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars#sidebars_adding_additional_content) (hence the macro name), where the bullets are not rendered. The first parameter is a slug of the link tree's parent page. The link text is displayed as code. Setting a second parameter to `true` or `1` converts the links to plain text. Setting a third parameter to `true` or `1` adds a link the slug (parent) page at the top of the list with "Overview" as the link text.
 
-  - : Inserts a tree of subpages of the slug of the pages specified as the first parameter. Include two parameters, with the second being `true` or `1`, to display the links as plain text instead of like code. Include a third parameter, set to `true` or `1`, to include the parent page at the top of the list with the link text "Overview".
+### Example link list
 
-To add include either list of links as part of a sidebar, include the macro as described in [Sidebars: adding additional content](#sidebars-adding-additional-content).
+To include an ordered list of links which includes this page and its siblings, you write the following:
 
-### Cross-reference links
+```md
+\{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
+```
 
-In addition to macros that create lists of links, there are macros that quickly create a single link to cross-reference a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced.
+This produces:
+
+{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
+
+## Cross-reference links
+
+In addition to macros that create lists of links, there are macros that create a single link to cross-reference a CSS, JavaScript, SVG, or HTML feature, including attributes, elements, properties, data types, and APIs. The macros that create single links require at least one parameter: the feature being referenced.
 
 Some of these macros include (see [all the macros on Github](https://github.com/mdn/yari/tree/main/kumascript/macros)):
 
@@ -40,9 +48,15 @@ Some of these macros include (see [all the macros on Github](https://github.com/
 - [`\{{HTTPMethod("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPMethod.ejs)
 - [`\{{HTTPStatus("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPStatus.ejs)
 
-All the macros accept additional parameters. By default, the text displayed is the linked resource as written in the first parameter. The second parameter, if present, provides the link text. In most cases, these links are displayed like code, in a monospace font. To prevent HTML code semantics and CSS code styling, some of the cross-reference macros include a parameter with the value of `"nocode"` to disable this styling.
+The first parameter of each of these macros is the last section of the slug of the document being referenced. For `\{{HTMLElement("")}}`, it is the part of the slug that comes after `Web/HTML/Element/` in the slug. For `\{{CSSxRef("")}}`, it is the part of the slug that comes after `Web/CSS/` in the slug.
+
+All the macros accept additional parameters. By default, the text displayed is the linked resource as written in the first parameter, in angle brackets for the case of `\{{HTMLElement()}}`. This may not be what you want. For example, the slug for the range input type is `Web/HTML/Element/input/range`. Including `\{{HTMLElement("input/range")}}` produces "{{HTMLElement("input/range")}}". That is not what you want. The second parameter, if present, provides the link text. You can include the text for the link as the second parameter. In this case we write `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` which produces "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". When including link text for the second parameter that includes a space, this particular macro removes the {{htmlelement("code")}} and angle brackets. So we added them back in.
+
+To prevent HTML code semantics and CSS code styling, some of the cross-reference macros include a parameter with the value of `"nocode"` to disable this styling.
 
 For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
+
+Check the source code for each macro to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
 
 To learn which parameters each macro supports along with the order of parameters for each macro, the macro's source file, linked above, includes documentation. There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
@@ -65,52 +79,3 @@ There are around 100 [available macros](https://github.com/mdn/yari/tree/main/ku
 - [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
 - [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
-
-## LEGACY CONTENT
-
-still working on this. this was cut from the previous version
-
-### Sidebars: adding additional content
-
-Each of the Quicklink macros listed above creates a predefined sidebar structure.
-If you need to append links before or after the sidebar structure generated by the macro, you can do so by:
-
-1. Remove any sidebar Quicklink macro appearing immediately after the frontmatter and before the content, as each document can only have one sidebar.
-2. At the end of the markdown file, add an HTML {{htmlelement("section")}} element and add `id="Quick_links"` (Hence the name "Quicklinks") to the opening tag.
-3. Nest both the macro and any additional links within this `<section>`.
-
-For example, adding the following at the end of a markdown file (and removing any sidebar macro from below the frontmatter), will create a sidebar containing the links to all the ARIA role pages, preceded by a link to the ARIA roles overview page:
-
-```md
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   \{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", "true")}}
-
-</section>
-```
-
-> **Note:** This `<section>` must be appended to the end of the page, instead of between the frontmatter and the page content.
-
-You can also fully craft a sidebar with more than one Quicklinks macro, without including a Quicklinks macro, with cross reference macros, or any combination of macros and markdown. The steps to creating a sidebar without a Quicklinks macro are similar to the steps for the ARIA example above:
-
-1. Remove any sidebar Quicklink macro appearing immediately after the frontmatter and before the content.
-2. At the end of the markdown file, add the following HTML markup as the last content of the markdown file: `<section id="Quick_links"></section>`.
-3. Add an unordered list of links written in markdown between the opening and closing `<section>` tags.
-
-```md
-<section id="Quick_links">
-
-- [WAI-ARIA `button` role](/en-US/docs/Web/Accessibility/ARIA/Roles/Button_role)
-- \{{HTMLElement("button")}}
-- \{{HTMLElement("input/button", "button")}} \{{HTMLElement("input")}}
-
-</section>
-```
-
-> **Note:** To include content in your sidebar along with a quicklink macro, the extra content and the quicklinks macro must be placed at the end of the document. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
-
-## Main content area links
-
-Macros are not limited to sidebars or even to long lists of links.
