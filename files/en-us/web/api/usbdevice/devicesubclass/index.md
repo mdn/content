@@ -1,31 +1,21 @@
 ---
-title: USBDevice.deviceSubclass
+title: "USBDevice: deviceSubclass property"
+short-title: deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceSubclass
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceSubclass
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`deviceSubclass`** read only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for
 the purpose of loading a USB driver that will work with that device. The other two
-properties are USBDevice.deviceClass and USBDevice.deviceProtocol.
+properties are USBDevice.deviceClass and USBDevice.deviceProtocol.
 
-## Syntax
-
-```js
-var serialNumber = USBDevice.deviceSubclass
-```
-
-### Value
+## Value
 
 A number.
 

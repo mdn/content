@@ -1,16 +1,10 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.visibility
 ---
+
 {{CSSRef}}
 
 The **`visibility`** CSS property shows or hides an element without changing the layout of a document. The property can also hide rows or columns in a {{HTMLElement("table")}}.
@@ -31,6 +25,7 @@ visibility: collapse;
 visibility: inherit;
 visibility: initial;
 visibility: revert;
+visibility: revert-layer;
 visibility: unset;
 ```
 
@@ -52,11 +47,11 @@ The `visibility` property is specified as one of the keyword values listed below
 
 ## Accessibility concerns
 
-Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
+Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
 ## Interpolation
 
-Visibility values are interpolated between _visible_ and _not-visible_. One of the start or ending values must therefore be `visible` or no interpolation can happen. The value is interpolated as a discrete step, where values of the timing function between `0` and `1` map to `visible` and other values of the timing function (which occur only at the start/end of the transition or as a result of `cubic-bezier()` functions with y values outside of \[0, 1]) map to the closer endpoint.
+When animated, visibility values are interpolated between _visible_ and _not-visible_. One of the start or ending values must therefore be `visible` or no {{Glossary("interpolation")}} can happen. The value is interpolated as a discrete step, where values of the easing function between `0` and `1` map to `visible` and other values of the easing function (which occur only at the start/end of the transition or as a result of `cubic-bezier()` functions with y values outside of \[0, 1]) map to the closer endpoint.
 
 ## Notes
 
@@ -80,7 +75,10 @@ Visibility values are interpolated between _visible_ and _not-visible_. One of t
 ```html
 <p class="visible">The first paragraph is visible.</p>
 <p class="not-visible">The second paragraph is NOT visible.</p>
-<p class="visible">The third paragraph is visible. Notice the second paragraph is still occupying space.</p>
+<p class="visible">
+  The third paragraph is visible. Notice the second paragraph is still occupying
+  space.
+</p>
 ```
 
 #### CSS

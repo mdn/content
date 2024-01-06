@@ -1,15 +1,10 @@
 ---
 title: Sec-Fetch-User
 slug: Web/HTTP/Headers/Sec-Fetch-User
-tags:
-  - Sec-Fetch-User
-  - Fetch metadate request headers
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-User
 ---
+
 {{HTTPSidebar}}
 
 The **`Sec-Fetch-User`** {{Glossary("Fetch metadata request header", "fetch metadata request header")}} is only sent for requests initiated by user activation, and its value will always be `?1`.
@@ -37,7 +32,7 @@ A server can use this header to identify whether a navigation request from a doc
 
 ## Syntax
 
-```
+```http
 Sec-Fetch-User: ?1
 ```
 
@@ -49,7 +44,7 @@ The value will always be `?1`. When a request is triggered by something other th
 
 If a user clicks on a page link to another page on the same origin, the resulting request would have the following headers:
 
-```
+```http
 Sec-Fetch-Dest: document
 Sec-Fetch-Mode: navigate
 Sec-Fetch-Site: same-origin
@@ -72,5 +67,5 @@ Sec-Fetch-User: ?1
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

@@ -1,29 +1,12 @@
 ---
-title: queueMicrotask()
+title: queueMicrotask() global function
+short-title: queueMicrotask()
 slug: Web/API/queueMicrotask
-tags:
-  - API
-  - HTML DOM
-  - Intervals
-  - JavaScript
-  - Method
-  - Microtask
-  - Performance
-  - Reference
-  - Scheduling
-  - ServiceWorker
-  - SharedWorker
-  - Tasks
-  - Timers
-  - Window
-  - Worker
-  - asynchronous
-  - queueMicrotask
-  - setTimeout
-  - Polyfill
+page-type: web-api-global-function
 browser-compat: api.queueMicrotask
 ---
-{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`queueMicrotask()`** method,
 which is exposed on the {{domxref("Window")}} or {{domxref("Worker")}} interface,
@@ -40,16 +23,15 @@ execution context, potentially depending on work you need to complete. You can l
 more about how to use microtasks and why you might choose to do so in our [microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide).
 
 The importance of microtasks comes in its ability to perform tasks asynchronously but
-in a specific order. See [Using microtasks in JavaScript
-with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
+in a specific order. See [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide) for more details.
 
 Microtasks are especially useful for libraries and frameworks that need to perform
 final cleanup or other just-before-rendering tasks.
 
 ## Syntax
 
-```js
-queueMicrotask(function);
+```js-nolint
+queueMicrotask(() => {/* ... */})
 ```
 
 ### Parameters
@@ -61,18 +43,17 @@ queueMicrotask(function);
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 queueMicrotask(() => {
   // function contents here
-})
+});
 ```
 
-Taken from the [queueMicrotask
-spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
+Taken from the [queueMicrotask spec](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing):
 
 ```js
 MyElement.prototype.loadData = function (url) {
@@ -82,28 +63,15 @@ MyElement.prototype.loadData = function (url) {
       this.dispatchEvent(new Event("load"));
     });
   } else {
-    fetch(url).then(res => res.arrayBuffer()).then(data => {
-      this._cache[url] = data;
-      this._setData(data);
-      this.dispatchEvent(new Event("load"));
-    });
+    fetch(url)
+      .then((res) => res.arrayBuffer())
+      .then((data) => {
+        this._cache[url] = data;
+        this._setData(data);
+        this.dispatchEvent(new Event("load"));
+      });
   }
 };
-```
-
-## When queueMicrotask() isn't available
-
-The code below is basically a monkey-patch for `queueMicrotask()` for modern
-engines. It creates a microtask by using a promise that resolves immediately.
-
-```js
-if (typeof self.queueMicrotask !== "function") {
-  self.queueMicrotask = function (callback) {
-    Promise.resolve()
-      .then(callback)
-      .catch(e => setTimeout(() => { throw e; })); // report exceptions
-  };
-}
 ```
 
 ## Specifications
@@ -116,11 +84,8 @@ if (typeof self.queueMicrotask !== "function") {
 
 ## See also
 
-- A polyfill of `queueMicrotask` is available in [`core-js`](https://github.com/zloirock/core-js#queuemicrotask)
-- [Using microtasks in
-  JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
+- [Polyfill of `queueMicrotask()` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
+- [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
-- [queueMicrotask
-  explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
-- [Tasks,
-  microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald
+- [queueMicrotask explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
+- [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) by Jake Archibald

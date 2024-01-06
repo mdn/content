@@ -1,11 +1,9 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Landing
-  - Mozilla
+page-type: landing-page
 ---
+
 {{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/firefox/) is Mozilla's popular Web browser, available for multiple platforms including Windows, macOS, and Linux on the desktop and all Android and iOS mobile devices. With broad compatibility, the latest in Web technologies, and powerful development tools, Firefox is a great choice for both Web developers and end users.
@@ -16,12 +14,12 @@ Learn how to create add-ons for [Firefox](https://www.mozilla.org/firefox/), how
 
 ## Key resources
 
+- Firefox developer guide
+  - : Our [developer guide](https://firefox-source-docs.mozilla.org/contributing/index.html) explains how to get Firefox source code, how to build it on Linux, macOS and Windows, how to find your way around, and how to contribute to the project.
+- Firefox add-on guide
+  - : The [Add-on guide](/en-US/docs/Mozilla/Add-ons) provides information about developing and deploying Firefox extensions.
 - Developer release notes
-  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both Web sites and add-ons arrive in each version of Firefox.
-- Project documentation
-  - : Get detailed information about [the internals of Firefox](/en-US/docs/Mozilla) and its build system, so you can find your way around in the code.
-- Developer guide
-  - : Our [developer guide](https://firefox-source-docs.mozilla.org/contributing/index.html) provides details on how to get and compile the Firefox source code, how to find your way around, and how to contribute to the project.
+  - : [Developer-focused release notes](/en-US/docs/Mozilla/Firefox/Releases); learn what new capabilities for both websites and add-ons arrive in each version of Firefox.
 
 ## Firefox channels
 
@@ -31,7 +29,7 @@ Firefox is available in five **channels**.
 
 Each night we build Firefox from the latest code in [mozilla-central](https://hg.mozilla.org/mozilla-central/). These builds are for Firefox developers or those who want to try out the very latest cutting edge features while they're still under active development.
 
-[Download Firefox Nightly](https://nightly.mozilla.org/)
+[Download Firefox Nightly](https://www.mozilla.org/firefox/channel/desktop/#nightly)
 
 ### Firefox Developer Edition
 
@@ -49,13 +47,13 @@ Every four weeks, we take the features that are stable enough, and create a new 
 
 After stabilizing for another four weeks in Beta, we're ready to ship the new features to hundreds of millions of users in a new release version of Firefox.
 
-[Download Firefox](https://www.mozilla.org/firefox/channel/#firefox)
+[Download Firefox](https://www.mozilla.org/firefox/new/)
 
 ### Firefox Extended Support Release (ESR)
 
 Firefox ESR is the long-term support edition of Firefox for desktop for use by organizations including schools, universities, businesses and others who need extended support for mass deployments.
 
-[Download Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
+[Download Firefox ESR](https://www.mozilla.org/firefox/all/#product-desktop-esr)
 
 ## Contents
 
@@ -63,5 +61,5 @@ Firefox ESR is the long-term support edition of Firefox for desktop for use by o
 
 ## See also
 
-- [Mailing list](https://mail.mozilla.org/listinfo/firefox-dev)
+- [Mailing list](https://groups.google.com/a/mozilla.org/g/firefox-dev)
 - [Release schedule](https://wiki.mozilla.org/Release_Management/Calendar)

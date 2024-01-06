@@ -1,24 +1,15 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
-tags:
-  - '::placeholder'
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
 browser-compat: css.selectors.placeholder
 ---
+
 {{CSSRef}}
 
-The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the {{htmlattrxref("placeholder","input","placeholder text",1)}} in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
+The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Element/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
-```css
-::placeholder {
-  color: blue;
-  font-size: 1.5em;
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-placeholder.html", "tabbed-shorter")}}
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 
@@ -26,7 +17,11 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 ## Syntax
 
-{{csssyntax}}
+```css
+::placeholder {
+  /* ... */
+}
+```
 
 ## Accessibility concerns
 
@@ -36,9 +31,9 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 
 Placeholder text typically has a lighter color treatment to indicate that it is a suggestion for what kind of input will be valid, and is not actual input of any kind.
 
-It is important to ensure that the contrast ratio between the color of the placeholder text and the background of the input is high enough that people experiencing low vision conditions will be able to read it while also making sure there is enough of a difference between the placeholder text and input text color that users do not mistake the placeholder for inputed data.
+It is important to ensure that the contrast ratio between the color of the placeholder text and the background of the input is high enough that people experiencing low vision conditions will be able to read it while also making sure there is enough of a difference between the placeholder text and input text color that users do not mistake the placeholder for inputted data.
 
-Color contrast ratio is determined by comparing the luminosity of the placeholder text and the input background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger.
+Color contrast ratio is determined by comparing the luminosity of the placeholder text and the input background color values. In order to meet current [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), a ratio of 4.5:1 is required for text content and 3:1 for larger text such as headings. Large text is defined as 18.66px and bold or larger, or 24px or larger.
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
@@ -48,29 +43,30 @@ Color contrast ratio is determined by comparing the luminosity of the placeholde
 
 Placeholder text with sufficient color contrast may be interpreted as entered input. Placeholder text will also disappear when a person enters content into an {{htmlelement("input")}} element. Both of these circumstances can interfere with successful form completion, especially for people with cognitive concerns.
 
-An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) to programmatically associate the {{HTMLElement("input")}} with its hint.
+An alternate approach to providing placeholder information is to include it outside of the input in close visual proximity, then use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) to programmatically associate the {{HTMLElement("input")}} with its hint.
 
 With this implementation, the hint content is available even if information is entered into the input field, and the input appears free of preexisting input when the page is loaded. Most screen reading technology will use `aria-describedby` to read the hint after the input's label text is announced, and the person using the screen reader can mute it if they find the extra information unnecessary.
 
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ### Windows High Contrast Mode
 
-Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](/en-US/docs/Web/CSS/@media/-ms-high-contrast). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
-
-- [Greg Whitworth — How to use -ms-high-contrast](https://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast)
+Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/)). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
 
 ### Labels
 
-Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the {{htmlattrxref("for", "label")}} and {{htmlattrxref("id")}} attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
+Placeholders are not a replacement for the {{htmlelement("label")}} element. Without a label that has been programmatically associated with an input using a combination of the [`for`](/en-US/docs/Web/HTML/Element/label#for) and [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attributes, assistive technology such as screen readers cannot parse {{htmlelement("input")}} elements.
 
-- [MDN Basic form hints](/en-US/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
 ## Examples
@@ -82,7 +78,7 @@ This example shows some of the adjustments that you can make to the styles of pl
 #### HTML
 
 ```html
-<input placeholder="Type here...">
+<input placeholder="Type here" />
 ```
 
 #### CSS
@@ -106,8 +102,8 @@ Some browsers (such as Firefox) set the default {{cssxref("opacity")}} of placeh
 #### HTML
 
 ```html
-<input placeholder="Default opacity...">
-<input placeholder="Full opacity..." class="force-opaque">
+<input placeholder="Default opacity" />
+<input placeholder="Full opacity" class="force-opaque" />
 ```
 
 #### CSS

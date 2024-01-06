@@ -1,48 +1,26 @@
 ---
-title: RTCError.errorDetail
+title: "RTCError: errorDetail property"
+short-title: errorDetail
 slug: Web/API/RTCError/errorDetail
-tags:
-  - API
-  - Audio
-  - Error
-  - Error code
-  - Media
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - Type
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - details
-  - errorDetail
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCError.errorDetail
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only
 **`errorDetail`** property is a string indicating the [WebRTC](/en-US/docs/Web/API/WebRTC_API)-specific error code that occurred.
 
-## Syntax
-
-```js
-let rtcErrorDetail = rtcError.errorDetail;
-```
-
-### Value
+## Value
 
 A read-only string whose value indicates the type of WebRTC-specific error that
-occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken from the
-`RTCErrorDetailType` enumeration:
+occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
 
 - `data-channel-failure`
   - : The connection's {{domxref("RTCDataChannel")}} has failed.
 - `dtls-failure`
   - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was
-    terminated with a fatal error. The error's {{domxref("RTCError.message", "message")}}
+    terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}}
     contains details about the nature of the error. If a fatal error is _received_,
     the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is
     set to the value of the DTLSL alert received. If, on the other hand, a fatal error was
@@ -54,7 +32,7 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are taken f
     certificate against the provided fingerprints, this error doesn't occur, though this
     situation may result instead in a `dtls-failure` error.
 - `hardware-encoder-error`
-  - : The hardsare encoder doesn't support the given configuration parameters.
+  - : The hardware encoder doesn't support the given configuration parameters.
 - `hardware-encoder-not-available`
   - : The hardware encoder resources required to accomplish the requested operation aren't
     available.

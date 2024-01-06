@@ -1,17 +1,11 @@
 ---
 title: Math (math)
 slug: Web/EXSLT/math
-tags:
-  - EXSLT
-  - Overview
-  - Reference
+page-type: landing-page
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 The EXSLT Math package provides functions for working with numeric values and comparing nodes. The namespace for the Math package is `http://exslt.org/math`.
 
 {{SubpagesWithSummaries}}
-
-## Browser compatibility
-
-{{Compat("xslt.exslt.math")}}

@@ -1,11 +1,11 @@
 ---
 title: TLD
 slug: Glossary/TLD
-tags:
-  - Glossary
-  - Web
-  - WebMechanics
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 A TLD (_top-level domain_) is the most generic {{Glossary("domain")}} in the Internet's hierarchical {{Glossary("DNS")}} (domain name system). A TLD is the final component of a {{Glossary("domain name")}}, for example, "org" in `developer.mozilla.org`.
 
 {{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) designates organizations to manage each TLD. Depending on how strict an administrating organization might be, TLD often serves as a clue to the purpose, ownership, or nationality of a website.
@@ -30,5 +30,5 @@ Here org is the TLD; mozilla.org is the second-level domain name; and developer 
 
 ## See also
 
-- {{Interwiki("wikipedia", "TLD")}} on Wikipedia
+- [TLD](https://en.wikipedia.org/wiki/TLD) on Wikipedia
 - [List of top-level domains](https://www.iana.org/domains/root/db)

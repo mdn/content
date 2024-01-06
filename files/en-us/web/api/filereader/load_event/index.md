@@ -1,38 +1,43 @@
 ---
-title: 'FileReader: load event'
+title: "FileReader: load event"
+short-title: load
 slug: Web/API/FileReader/load_event
-tags:
-  - API
-  - Event
-  - FileReader
-  - Web
-  - load
+page-type: web-api-event
 browser-compat: api.FileReader.load_event
 ---
-{{APIRef}}
 
-The `load` event is fired when a file has been read successfully.
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{domxref("FileReader.onload")}}</td>
-    </tr>
-  </tbody>
-</table>
+The **`load`** event is fired when a file has been read successfully.
+
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("load", (event) => {});
+
+onload = (event) => {};
+```
+
+## Event type
+
+A {{domxref("ProgressEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## Event properties
+
+_Also inherits properties from its parent {{domxref("Event")}}_.
+
+- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
+  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
 
 ## Examples
 
@@ -42,22 +47,22 @@ The `load` event is fired when a file has been read successfully.
 
 ```html
 <div class="example">
-
-    <div class="file-select">
-        <label for="avatar">Choose a profile picture:</label>
-        <input type="file"
-               id="avatar" name="avatar"
-               accept="image/png, image/jpeg">
-    </div>
-
-    <img src="" class="preview" height="200" alt="Image preview...">
-
-    <div class="event-log">
-        <label>Event log:</label>
-        <textarea readonly class="event-log-contents"></textarea>
-    </div>
-
+  <div class="file-select">
+    <label for="avatar">Choose a profile picture:</label>
+    <input
+      type="file"
+      id="avatar"
+      name="avatar"
+      accept="image/png, image/jpeg" />
   </div>
+
+  <img src="" class="preview" height="200" alt="Image preview" />
+
+  <div class="event-log">
+    <label for="eventLog">Event log:</label>
+    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  </div>
+</div>
 ```
 
 ```css hidden
@@ -69,15 +74,16 @@ img.preview {
   width: 18rem;
   height: 5rem;
   border: 1px solid black;
-  margin: .2rem;
-  padding: .2rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  resize: none;
 }
 
 .example {
   display: grid;
   grid-template-areas:
-              "select  log"
-              "preview log";
+    "select  log"
+    "preview log";
 }
 
 .file-select {
@@ -92,50 +98,46 @@ img.preview {
   grid-area: log;
 }
 
-.event-log>label {
+.event-log > label {
   display: block;
-}
-
-.event-log-contents {
-  resize: none;
 }
 ```
 
-#### JS
+#### JavaScript
 
 ```js
 const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector('img.preview');
-const eventLog = document.querySelector('.event-log-contents');
+const preview = document.querySelector("img.preview");
+const eventLog = document.querySelector(".event-log-contents");
 const reader = new FileReader();
 
 function handleEvent(event) {
-    eventLog.textContent = eventLog.textContent + `${event.type}: ${event.loaded} bytes transferred\n`;
+  eventLog.textContent += `${event.type}: ${event.loaded} bytes transferred\n`;
 
-    if (event.type === "load") {
-        preview.src = reader.result;
-    }
+  if (event.type === "load") {
+    preview.src = reader.result;
+  }
 }
 
 function addListeners(reader) {
-    reader.addEventListener('loadstart', handleEvent);
-    reader.addEventListener('load', handleEvent);
-    reader.addEventListener('loadend', handleEvent);
-    reader.addEventListener('progress', handleEvent);
-    reader.addEventListener('error', handleEvent);
-    reader.addEventListener('abort', handleEvent);
+  reader.addEventListener("loadstart", handleEvent);
+  reader.addEventListener("load", handleEvent);
+  reader.addEventListener("loadend", handleEvent);
+  reader.addEventListener("progress", handleEvent);
+  reader.addEventListener("error", handleEvent);
+  reader.addEventListener("abort", handleEvent);
 }
 
 function handleSelected(e) {
-    eventLog.textContent = '';
-    const selectedFile = fileInput.files[0];
-    if (selectedFile) {
-        addListeners(reader);
-        reader.readAsDataURL(selectedFile);
-    }
+  eventLog.textContent = "";
+  const selectedFile = fileInput.files[0];
+  if (selectedFile) {
+    addListeners(reader);
+    reader.readAsDataURL(selectedFile);
+  }
 }
 
-fileInput.addEventListener('change', handleSelected);
+fileInput.addEventListener("change", handleSelected);
 ```
 
 #### Result

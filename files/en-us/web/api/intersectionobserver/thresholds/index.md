@@ -1,36 +1,24 @@
 ---
-title: IntersectionObserver.thresholds
+title: "IntersectionObserver: thresholds property"
+short-title: thresholds
 slug: Web/API/IntersectionObserver/thresholds
-tags:
-  - API
-  - Draft
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - NeedsExample
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.thresholds
 ---
-{{APIRef("Intersection Observer API")}}{{draft}}
+
+{{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} interface's read-only
 **`thresholds`** property returns the list of intersection
 thresholds that was specified when the observer was instantiated with
 {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. If
-only one threshold ratio was provided when instanitating the object, this will be an
+only one threshold ratio was provided when instantiating the object, this will be an
 array containing that single value.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API", "Thresholds")}} to
+See the [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API#thresholds) page to
 learn how thresholds work.
 
-## Syntax
-
-```js
-var thresholds = IntersectionObserver.thresholds;
-```
-
-### Value
+## Value
 
 An array of intersection thresholds, originally specified using the
 `threshold` property when instantiating the observer. If only one observer
@@ -44,7 +32,7 @@ If no `threshold` option was included when
 
 > **Note:** Although the `options` object you can specify when creating an
 > {{domxref("IntersectionObserver")}} has a field named
-> {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called
+> `threshold`, this property is called
 > `thresholds`. Confusing? Yes. If you accidentally use
 > `thresholds` as the name of the field in your `options`, the
 > `thresholds` array will wind up being `[0.0]`, which is likely

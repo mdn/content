@@ -1,30 +1,19 @@
 ---
-title: FileReader.error
+title: "FileReader: error property"
+short-title: error
 slug: Web/API/FileReader/error
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.FileReader.error
 ---
-{{APIRef("File API")}}
 
-The {{domxref("FileReader")}} **`error`** property returns the
+{{APIRef("File API")}}{{AvailableInWorkers}}
+
+The **`error`** read-only property of the {{domxref("FileReader")}} interface returns the
 error that occurred while reading the file.
-
-## Syntax
-
-```js
-var error = instanceOfFileReader.error
-```
 
 ## Value
 
-A {{domxref("DOMError")}} containing the relevant error. In Chrome 48+/Firefox 58+ this
-property returns a {{domxref("DOMException")}} because `DOMError` has been
-removed from the DOM standard.
+A {{domxref("DOMException")}} containing the relevant error.
 
 ## Specifications
 

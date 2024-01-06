@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.getIndexedParameter()
+title: "WebGL2RenderingContext: getIndexedParameter() method"
+short-title: getIndexedParameter()
 slug: Web/API/WebGL2RenderingContext/getIndexedParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getIndexedParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.getIndexedParameter()`** method
@@ -17,8 +14,8 @@ information about a given `target`.
 
 ## Syntax
 
-```js
-any gl.getIndexedParameter(target, index);
+```js-nolint
+getIndexedParameter(target, index)
 ```
 
 ### Parameters
@@ -38,6 +35,16 @@ any gl.getIndexedParameter(target, index);
     - `gl.UNIFORM_BUFFER_SIZE`: Returns a {{domxref("WebGL_API/Types", "GLsizeiptr")}}.
     - `gl.UNIFORM_BUFFER_START`: Returns a {{domxref("WebGL_API/Types", "GLintptr")}}.
 
+    When using the {{domxref("OES_draw_buffers_indexed")}} WebGL 2 extension, the following values are available additionally:
+
+    - `gl.BLEND_EQUATION_RGB`: Returns the RGB blend equation for the draw buffer at `index`.
+    - `gl.BLEND_EQUATION_ALPHA`: Returns the alpha blend equation for the draw buffer at `index`.
+    - `gl.BLEND_SRC_RGB`: Returns the source RGB blend function for the draw buffer at `index`.
+    - `gl.BLEND_SRC_ALPHA`: Returns the source alpha blend function for the draw buffer at `index`.
+    - `gl.BLEND_DST_RGB`: Returns the destination RGB blend function for the draw buffer at `index`.
+    - `gl.BLEND_DST_ALPHA`: Returns the destination alpha blend function for the draw buffer at `index`.
+    - `gl.COLOR_WRITEMASK`: Returns an array containing color components are enabled for the draw buffer at `index`.
+
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the `target` that is
     queried.
@@ -49,7 +56,7 @@ Depends on the requested information (as specified with `target`).
 ## Examples
 
 ```js
-var binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
+const binding = gl.getIndexedParameter(gl.TRANSFORM_FEEDBACK_BUFFER_BINDING, 0);
 ```
 
 ## Specifications

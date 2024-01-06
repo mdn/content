@@ -1,28 +1,18 @@
 ---
-title: Element.ariaExpanded
+title: "Element: ariaExpanded property"
+short-title: ariaExpanded
 slug: Web/API/Element/ariaExpanded
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaExpanded
-  - AriaAttributes
-  - AriaMixin
-  - Element
+page-type: web-api-instance-property
 browser-compat: api.Element.ariaExpanded
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
-The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the `aria-expanded` attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
+The **`ariaExpanded`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute, which indicates whether a grouping element owned or controlled by this element is expanded or collapsed.
 
-## Syntax
+## Value
 
-    var ariaExpanded = element.ariaExpanded;
-    element.ariaExpanded = ariaExpanded
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"true"`
   - : The grouping element this element owns or controls is expanded.
@@ -38,7 +28,13 @@ In this example the `aria-expanded` attribute on the element with an ID of `anim
 ```html
 <div class="animals-combobox">
   <label for="animal">Animal</label>
-  <input id="animal" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true">
+  <input
+    id="animal"
+    type="text"
+    role="combobox"
+    aria-autocomplete="list"
+    aria-expanded="false"
+    aria-haspopup="true" />
   <button id="animals-button" tabindex="-1" aria-label="Open">▽</button>
   <ul id="animals-listbox" role="listbox" aria-label="Animals">
     <li id="animal-cat" role="option">Cat</li>
@@ -48,7 +44,7 @@ In this example the `aria-expanded` attribute on the element with an ID of `anim
 ```
 
 ```js
-let el = document.getElementById('animal');
+let el = document.getElementById("animal");
 console.log(el.ariaExpanded); // false
 el.ariaExpanded = "true";
 console.log(el.ariaExpanded); // true

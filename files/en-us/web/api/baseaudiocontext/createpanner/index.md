@@ -1,16 +1,11 @@
 ---
-title: BaseAudioContext.createPanner()
+title: "BaseAudioContext: createPanner() method"
+short-title: createPanner()
 slug: Web/API/BaseAudioContext/createPanner
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createPanner
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createPanner
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createPanner()` method of the {{ domxref("BaseAudioContext") }}
@@ -28,19 +23,23 @@ audio.
 
 ## Syntax
 
-```js
-createPanner();
+```js-nolint
+createPanner()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("PannerNode")}}.
 
-## Example
+## Examples
 
 In the following example, you can see an example of how the `createPanner()`
-method, {{domxref("AudioListener")}}  and {{domxref("PannerNode")}} would be used to
-control audio spatialisation. Generally you will define the position in 3D space that
+method, {{domxref("AudioListener")}} and {{domxref("PannerNode")}} would be used to
+control audio spatialization. Generally you will define the position in 3D space that
 your audio listener and panner (source) occupy initially, and then update the position
 of one or both of these as the application is used. You might be moving a character
 around inside a game world for example, and wanting delivery of audio to change
@@ -50,8 +49,7 @@ as a stereo. In the example you can see this being controlled by the functions
 panner position via the `PositionPanner()` function.
 
 To see a complete implementation, check out our [panner-node example](https://mdn.github.io/webaudio-examples/panner-node/)
-([view the
-source code](https://github.com/mdn/webaudio-examples/tree/master/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
+([view the source code](https://github.com/mdn/webaudio-examples/tree/main/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
 play a track on a boom box and then walk around the boom box to see how the sound
 changes!
 
@@ -63,21 +61,20 @@ new properties.
 
 ```js
 // set up listener and panner position information
-var WIDTH = window.innerWidth;
-var HEIGHT = window.innerHeight;
+const WIDTH = window.innerWidth;
+const HEIGHT = window.innerHeight;
 
-var xPos = Math.floor(WIDTH/2);
-var yPos = Math.floor(HEIGHT/2);
-var zPos = 295;
+const xPos = Math.floor(WIDTH / 2);
+const yPos = Math.floor(HEIGHT / 2);
+const zPos = 295;
 
 // define other variables
 
-var AudioContext = window.AudioContext || window.webkitAudioContext;
-var audioCtx = new AudioContext();
+const audioCtx = new AudioContext();
 
-var panner = audioCtx.createPanner();
-panner.panningModel = 'HRTF';
-panner.distanceModel = 'inverse';
+const panner = audioCtx.createPanner();
+panner.panningModel = "HRTF";
+panner.distanceModel = "inverse";
 panner.refDistance = 1;
 panner.maxDistance = 10000;
 panner.rolloffFactor = 1;
@@ -85,17 +82,17 @@ panner.coneInnerAngle = 360;
 panner.coneOuterAngle = 0;
 panner.coneOuterGain = 0;
 
-if(panner.orientationX) {
+if (panner.orientationX) {
   panner.orientationX.setValueAtTime(1, audioCtx.currentTime);
   panner.orientationY.setValueAtTime(0, audioCtx.currentTime);
   panner.orientationZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
-  panner.setOrientation(1,0,0);
+  panner.setOrientation(1, 0, 0);
 }
 
-var listener = audioCtx.listener;
+const listener = audioCtx.listener;
 
-if(listener.forwardX) {
+if (listener.forwardX) {
   listener.forwardX.setValueAtTime(0, audioCtx.currentTime);
   listener.forwardY.setValueAtTime(0, audioCtx.currentTime);
   listener.forwardZ.setValueAtTime(-1, audioCtx.currentTime);
@@ -103,44 +100,44 @@ if(listener.forwardX) {
   listener.upY.setValueAtTime(1, audioCtx.currentTime);
   listener.upZ.setValueAtTime(0, audioCtx.currentTime);
 } else {
-  listener.setOrientation(0,0,-1,0,1,0);
+  listener.setOrientation(0, 0, -1, 0, 1, 0);
 }
 
-var source;
+let source;
 
-var play = document.querySelector('.play');
-var stop = document.querySelector('.stop');
+const play = document.querySelector(".play");
+const stop = document.querySelector(".stop");
 
-var boomBox = document.querySelector('.boom-box');
+const boomBox = document.querySelector(".boom-box");
 
-var listenerData = document.querySelector('.listener-data');
-var pannerData = document.querySelector('.panner-data');
+const listenerData = document.querySelector(".listener-data");
+const pannerData = document.querySelector(".panner-data");
 
-leftBound = (-xPos) + 50;
+leftBound = -xPos + 50;
 rightBound = xPos - 50;
 
-xIterator = WIDTH/150;
+xIterator = WIDTH / 150;
 
 // listener will always be in the same place for this demo
 
-if(listener.positionX) {
+if (listener.positionX) {
   listener.positionX.setValueAtTime(xPos, audioCtx.currentTime);
   listener.positionY.setValueAtTime(yPos, audioCtx.currentTime);
   listener.positionZ.setValueAtTime(300, audioCtx.currentTime);
 } else {
-  listener.setPosition(xPos,yPos,300);
+  listener.setPosition(xPos, yPos, 300);
 }
 
 listenerData.textContent = `Listener data: X ${xPos} Y ${yPos} Z 300`;
 
 // panner will move as the boombox graphic moves around on the screen
 function positionPanner() {
-  if(panner.positionX) {
+  if (panner.positionX) {
     panner.positionX.setValueAtTime(xPos, audioCtx.currentTime);
     panner.positionY.setValueAtTime(yPos, audioCtx.currentTime);
     panner.positionZ.setValueAtTime(zPos, audioCtx.currentTime);
   } else {
-    panner.setPosition(xPos,yPos,zPos);
+    panner.setPosition(xPos, yPos, zPos);
   }
   pannerData.textContent = `Panner data: X ${xPos} Y ${yPos} Z ${zPos}`;
 }

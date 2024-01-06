@@ -1,16 +1,10 @@
 ---
 title: browserSettings.allowPopupsForUserEvents
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - WebExtensions
-  - allowPopupsForUserEvents
-  - browserSettings
+page-type: webextension-api-property
 browser-compat: webextensions.api.browserSettings.allowPopupsForUserEvents
 ---
+
 {{AddonSidebar()}}
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object that can be used to enable or disable the ability of web pages to open popups in response to user actions.
@@ -23,7 +17,7 @@ For example, suppose a web page has code like this:
 
 ```js
 window.addEventListener("click", (e) => {
-  window.open("https://example.com","myPopup",'height=400,width=400');
+  window.open("https://example.com", "myPopup", "height=400,width=400");
 });
 ```
 
@@ -39,10 +33,11 @@ Toggle the setting:
 
 ```js
 function toggleAllowPopup() {
-
   function toggle(current) {
     console.log(`Current value: ${current.value}`);
-    browser.browserSettings.allowPopupsForUserEvents.set({value: !current.value});
+    browser.browserSettings.allowPopupsForUserEvents.set({
+      value: !current.value,
+    });
   }
 
   browser.browserSettings.allowPopupsForUserEvents.get({}).then(toggle);

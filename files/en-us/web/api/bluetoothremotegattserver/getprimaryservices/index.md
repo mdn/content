@@ -1,38 +1,34 @@
 ---
-title: BluetoothRemoteGATTServer.getPrimaryServices()
+title: "BluetoothRemoteGATTServer: getPrimaryServices() method"
+short-title: getPrimaryServices()
 slug: Web/API/BluetoothRemoteGATTServer/getPrimaryServices
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - getPrimaryServices()
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.getPrimaryServices
 ---
-{{SeeCompatTable}}
+
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **BluetoothRemoteGATTServer.getPrimaryServices()** method returns a
 promise to a list of primary {{domxref("BluetoothRemoteGATTService")}} objects offered by the
-bluetooth device for a specified `BluetoothServiceUUID`.
+Bluetooth device for a specified `BluetoothServiceUUID`.
 
 ## Syntax
 
-```js
-BluetoothRemoteGATTServer.getPrimaryServices(bluetoothServiceUUID).then(function(bluetoothGATTServices) { ... })
+```js-nolint
+getPrimaryServices(bluetoothServiceUUID)
 ```
-
-### Returns
-
-A {{jsxref("Promise")}} that resolves to a list of {{domxref("BluetoothRemoteGATTService")}}
-objects.
 
 ### Parameters
 
-- `BluetoothServiceUUID`
+- `bluetoothServiceUUID`
   - : A Bluetooth service universally unique identifier for a specified device.
+
+### Return value
+
+A {{jsxref("Promise")}} that resolves to a list of {{domxref("BluetoothRemoteGATTService")}}
+objects.
 
 ## Specifications
 

@@ -1,49 +1,27 @@
 ---
-title: GeolocationCoordinates.longitude
+title: "GeolocationCoordinates: longitude property"
+short-title: longitude
 slug: Web/API/GeolocationCoordinates/longitude
-tags:
-  - API
-  - GPS
-  - Geolocation
-  - Geolocation API
-  - GeolocationCoordinates
-  - Global Positioning System
-  - Property
-  - Read-only
-  - Reference
-  - Secure context
-  - longitude
+page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The {{domxref("GeolocationCoordinates")}} interface's read-only
-**`longitude`** property is a double-precision floating point
-value which represents the longitude of a geographical position, specified in decimal
-degrees. Together with a {{domxref("DOMTimeStamp")}} indicating a time of measurement,
-the `GeolocationCoordinates` object is part of the
-{{domxref("GeolocationPosition")}} interface, which is the object type returned by
-Geolocation API functions that obtain and return a geographical position.
+The **`longitude`** read-only property of the {{domxref("GeolocationCoordinates")}} interface is a number which represents the longitude of a geographical position, specified in decimal degrees.
+Together with a timestamp, given as {{Glossary("Unix time")}} in milliseconds, indicating a time of measurement, the `GeolocationCoordinates` object is part of the {{domxref("GeolocationPosition")}} interface, which is the object type returned by Geolocation API functions that obtain and return a geographical position.
 
-## Syntax
-
-```js
-let longitude = geolocationCoordinatesInstance.longitude
-```
-
-### Value
+## Value
 
 The value in `longitude` is the geographical longitude of the location on
 Earth described by the `Coordinates` object, in decimal degrees. The value is
 defined by the World Geodetic System 1984 specification (WGS 84).
 
 > **Note:** The zero meridian (also known as the prime meridian or the
-> reference meridian) is not precisely the same as the Greenwhich meridian that most
-> people think of. It is, instead, the {{interwiki("wikipedia", "IERS Reference
-    Meridian")}}, which is located 5.3 {{interwiki("wikipedia", "arcseconds")}} (102
-> meters / 335 feet) east of the {{interwiki("wikipedia", "Greenwich meridian")}}. This
-> is the same standard used by the {{interwiki("wikipedia", "Global Positioning
-    System")}} (GPS).
+> reference meridian) is not precisely the same as the Greenwich meridian that most
+> people think of. It is, instead, the [IERS Reference Meridian](https://en.wikipedia.org/wiki/IERS_Reference_Meridian), which is located 5.3 [arcseconds](https://en.wikipedia.org/wiki/Arcseconds) (102
+> meters / 335 feet) east of the [Greenwich meridian](https://en.wikipedia.org/wiki/Greenwich_meridian). This
+> is the same standard used by the [Global Positioning System](https://en.wikipedia.org/wiki/Global_Positioning_System) (GPS).
 
 ## Examples
 
@@ -60,8 +38,8 @@ let button = document.getElementById("get-location");
 let latText = document.getElementById("latitude");
 let longText = document.getElementById("longitude");
 
-button.addEventListener("click", function() {
-  navigator.geolocation.getCurrentPosition(function(position) {
+button.addEventListener("click", () => {
+  navigator.geolocation.getCurrentPosition((position) => {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
 
@@ -72,12 +50,12 @@ button.addEventListener("click", function() {
 ```
 
 After setting up variables to more conveniently reference the button element and the
-two elements into which the latitude and logitude will be drawn, the event listener is
+two elements into which the latitude and longitude will be drawn, the event listener is
 established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}
 on the {{HTMLElement("button")}} element. When the user clicks the button, we'll fetch
 and display the location information.
 
-Upon receiving a {{event("click")}} event, we call
+Upon receiving a {{domxref("Element/click_event", "click")}} event, we call
 {{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} to request the
 device's current position. This is an asynchronous request, so we provide a callback
 which receives as in put a {{domxref("GeolocationPosition")}} object describing the
@@ -95,12 +73,10 @@ The HTML used to present the results looks like this:
 
 ```html
 <p>
-  Your location is <span id="latitude">0.00</span>°
-  latitude by <span id="longitude">0.00</span>° longitude.
+  Your location is <span id="latitude">0.00</span>° latitude by
+  <span id="longitude">0.00</span>° longitude.
 </p>
-<button id="get-location">
-  Get My Location
-</button>
+<button id="get-location">Get My Location</button>
 ```
 
 ### Result

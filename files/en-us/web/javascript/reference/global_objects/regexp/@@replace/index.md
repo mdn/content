@@ -1,87 +1,94 @@
 ---
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace
 ---
+
 {{JSRef}}
 
-The **`[@@replace]()`** method replaces some or all matches of
-a `this` pattern in a string by a `replacement`, and returns the
-result of the replacement as a new string. The `replacement` can be a string
-or a function to be called for each match.
+The **`[@@replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
 
 ## Syntax
 
-```js
-regexp[Symbol.replace](str, newSubStr|function)
+```js-nolint
+regexp[Symbol.replace](str, replacement)
 ```
 
 ### Parameters
 
 - `str`
   - : A {{jsxref("String")}} that is a target of the replacement.
-- `newSubStr` (replacement)
-  - : The {{jsxref("String")}} that replaces the substring. A number of special
-    replacement patterns are supported; see the {{jsxref("String.prototype.replace",
-    "Specifying a string as a parameter", "#Specifying_a_string_as_a_parameter", 1)}}
-    section in {{jsxref("String.prototype.replace()")}} page.
-- `function` (replacement)
-  - : A function to be invoked to create the new substring. The arguments supplied to this
-    function are described in the {{jsxref("String.prototype.replace", "Specifying a
-    function as a parameter", "#Specifying_a_function_as_a_parameter", 1)}} section in
-    {{jsxref("String.prototype.replace()")}} page.
+- `replacement`
+  - : Can be a string or a function.
+    - If it's a string, it will replace the substring matched by the current regexp. A number of special replacement patterns are supported; see the [Specifying a string as the replacement](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_string_as_the_replacement) section of `String.prototype.replace`.
+    - If it's a function, it will be invoked for every match and the return value is used as the replacement text. The arguments supplied to this function are described in the [Specifying a function as the replacement](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#specifying_a_function_as_the_replacement) section of `String.prototype.replace`.
 
 ### Return value
 
-A new string with some or all matches of a pattern replaced by a replacement.
+A new string, with one, some, or all matches of the pattern replaced by the specified replacement.
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.replace()")}} if the
-`pattern` argument is a {{jsxref("RegExp")}} object.  For example, following
-two examples return same result.
+This method is called internally in {{jsxref("String.prototype.replace()")}} and {{jsxref("String.prototype.replaceAll()")}} if the `pattern` argument is a {{jsxref("RegExp")}} object. For example, the following two examples return the same result.
 
 ```js
-'abc'.replace(/a/, 'A');
+"abc".replace(/a/, "A");
 
-/a/[Symbol.replace]('abc', 'A');
+/a/[Symbol.replace]("abc", "A");
 ```
 
-This method exists for customizing replace behavior in `RegExp` subclass.
+If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once. For each `exec()` result, the substitution will be prepared based on the description in [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#description).
 
-If pattern argument is **not** a {{jsxref("RegExp")}} object,
-{{jsxref("String.prototype.replace()")}} doesn't call this method, nor creates a
-{{jsxref("RegExp")}} object.
+Because `@@replace` would keep calling `exec()` until it returns `null`, and `exec()` would automatically reset the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when the last match fails, `@@replace` would typically not have side effects when it exits. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `lastIndex` would not be reset. In this case, each call to `replace()` may return a different result.
+
+```js
+const re = /a/y;
+
+for (let i = 0; i < 5; i++) {
+  console.log("aaa".replace(re, "b"), re.lastIndex);
+}
+
+// baa 1
+// aba 2
+// aab 3
+// aaa 0
+// baa 1
+```
+
+When the regex is sticky and global, it would still perform sticky matches — i.e. it would fail to match any occurrences beyond the `lastIndex`.
+
+```js
+console.log("aa-a".replace(/a/gy, "b")); // "bb-a"
+```
+
+If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
+
+```js
+console.log("😄".replace(/(?:)/g, " ")); // " \ud83d \ude04 "
+console.log("😄".replace(/(?:)/gu, " ")); // " 😄 "
+```
+
+This method exists for customizing replace behavior in `RegExp` subclasses.
 
 ## Examples
 
 ### Direct call
 
-This method can be used in almost the same way as
-{{jsxref("String.prototype.replace()")}}, except the different `this` and the
-different arguments order.
+This method can be used in almost the same way as {{jsxref("String.prototype.replace()")}}, except the different `this` and the different arguments order.
 
 ```js
-var re = /-/g;
-var str = '2016-01-01';
-var newstr = re[Symbol.replace](str, '.');
-console.log(newstr);  // 2016.01.01
+const re = /-/g;
+const str = "2016-01-01";
+const newstr = re[Symbol.replace](str, ".");
+console.log(newstr); // 2016.01.01
 ```
 
 ### Using @@replace in subclasses
 
-Subclasses of {{jsxref("RegExp")}} can override the `[@@replace]()` method
-to modify the default behavior.
+Subclasses of {{jsxref("RegExp")}} can override the `[@@replace]()` method to modify the default behavior.
 
 ```js
 class MyRegExp extends RegExp {
@@ -91,17 +98,17 @@ class MyRegExp extends RegExp {
   }
   [Symbol.replace](str, replacement) {
     // Perform @@replace |count| times.
-    var result = str;
-    for (var i = 0; i < this.count; i++) {
+    let result = str;
+    for (let i = 0; i < this.count; i++) {
       result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
     }
     return result;
   }
 }
 
-var re = new MyRegExp('\\d', '', 3);
-var str = '01234567';
-var newstr = str.replace(re, '#'); // String.prototype.replace calls re[@@replace].
+const re = new MyRegExp("\\d", "", 3);
+const str = "01234567";
+const newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
 console.log(newstr); // ###34567
 ```
 
@@ -115,10 +122,13 @@ console.log(newstr); // ###34567
 
 ## See also
 
-- A polyfill of `RegExp.prototype[@@replace]` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
-- {{jsxref("RegExp.prototype.@@match()", "RegExp.prototype[@@match]()")}}
-- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
-- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("String.prototype.replaceAll()")}}
+- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
+- {{jsxref("Symbol.replace")}}

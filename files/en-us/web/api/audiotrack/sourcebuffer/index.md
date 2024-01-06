@@ -1,21 +1,11 @@
 ---
-title: AudioTrack.sourceBuffer
+title: "AudioTrack: sourceBuffer property"
+short-title: sourceBuffer
 slug: Web/API/AudioTrack/sourceBuffer
-tags:
-  - API
-  - Audio
-  - AudioTrack
-  - HTML DOM
-  - MSE
-  - Media
-  - Media Source Extensions
-  - Property
-  - Read-only
-  - Reference
-  - SourceBuffer
-  - track
+page-type: web-api-instance-property
 browser-compat: api.AudioTrack.sourceBuffer
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **{{domxref("AudioTrack")}}**
@@ -25,13 +15,7 @@ created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has 
 removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent
 media source.
 
-## Syntax
-
-```js
-var sourceBuffer = AudioTrack.sourceBuffer;
-```
-
-### Value
+## Value
 
 A {{domxref("SourceBuffer")}} or null.
 

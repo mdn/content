@@ -1,27 +1,18 @@
 ---
-title: ElementInternals.role
+title: "ElementInternals: role property"
+short-title: role
 slug: Web/API/ElementInternals/role
-tags:
-  - API
-  - Property
-  - Reference
-  - role
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.role
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`role`** read-only property of the {{domxref("ElementInternals")}} interface returns the [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the element. For example, a checkbox might have [`role="checkbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
+{{APIRef("Web Components")}}
 
-## Syntax
+The **`role`** read-only property of the {{domxref("ElementInternals")}} interface returns the [WAI-ARIA role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the element. For example, a checkbox might have [`role="checkbox"`](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role).
 
-```js
-let role = ElementInternals.role;
-```
+## Value
 
-### Value
-
-A {{domxref("DOMString")}} which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
+A string which contains an ARIA role. A full list of ARIA roles can be found on the [ARIA techniques page](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques).
 
 ## Examples
 

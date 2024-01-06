@@ -1,19 +1,15 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scroll-margin-inline
+page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-inline
 ---
+
 {{CSSRef}}
 
 The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
+
+{{EmbedInteractiveExample("pages/css/scroll-margin-inline.html")}}
 
 ## Constituent properties
 
@@ -27,23 +23,24 @@ This property is a shorthand for the following CSS properties:
 ```css
 /* <length> values */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em ;
+scroll-margin-inline: 1em 0.5em;
 
 /* Global values */
 scroll-margin-inline: inherit;
 scroll-margin-inline: initial;
 scroll-margin-inline: revert;
+scroll-margin-inline: revert-layer;
 scroll-margin-inline: unset;
 ```
 
 ### Values
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : An outset from the corresponding edge of the scroll container.
 
 ## Description
 
-The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
+The scroll-margin values represent outsets defining the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container's coordinate space), then adding the specified outsets.
 
 ## Formal definition
 
@@ -76,7 +73,7 @@ The HTML that represents the blocks is very simple:
 
 #### CSS
 
-Let's walk through the CSS. the outer container is styled like this:
+Let's walk through the CSS. The outer container is styled like this:
 
 ```css
 .scroller {
@@ -114,7 +111,7 @@ The child elements are styled as follows:
 }
 ```
 
-The most relevant part here is `scroll-snap-align: end`, which specifies that the right-hand edges (the "ends" along the x axis, in our case) are the designated snap points.
+The most relevant part here is `scroll-snap-align: end`, which specifies that the right-hand edges (the "ends" along the x axis, in our case) are the designated snap points.
 
 Last of all we specify the scroll margin values, a different one for the second and third child elements:
 
@@ -148,5 +145,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

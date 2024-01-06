@@ -1,28 +1,18 @@
 ---
-title: RTCDtlsTransport.iceTransport
+title: "RTCDtlsTransport: iceTransport property"
+short-title: iceTransport
 slug: Web/API/RTCDtlsTransport/iceTransport
-tags:
-  - API
-  - Property
-  - RTCDtlsTransport
-  - Read-only
-  - Reference
-  - iceTransport
+page-type: web-api-instance-property
 browser-compat: api.RTCDtlsTransport.iceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **{{DOMxRef("RTCDtlsTransport")}}**
-property **`iceTransport`** contains areference
+property **`iceTransport`** contains a reference
 to the underlying {{DOMxRef("RTCIceTransport")}}.
 
-## Syntax
-
-```js
-var iceTransport = rtcDtlsTransport.iceTransport;
-```
-
-### Value
+## Value
 
 The underlying {{DOMxRef("RTCIceTransport")}} instance.
 

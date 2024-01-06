@@ -1,11 +1,11 @@
 ---
-title: DOMTokenList.values()
+title: "DOMTokenList: values() method"
+short-title: values()
 slug: Web/API/DOMTokenList/values
-tags:
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.values
 ---
+
 {{APIRef("DOM")}}
 
 The **`values()`** method of the {{domxref("DOMTokenList")}} interface
@@ -15,8 +15,8 @@ The individual values are strings.
 
 ## Syntax
 
-```js
-tokenList.values();
+```js-nolint
+tokenList.values()
 ```
 
 ### Parameters
@@ -48,7 +48,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.values();
 
-for(let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value}) `;
 }
 ```

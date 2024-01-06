@@ -1,30 +1,21 @@
 ---
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Attribute
-  - Beginner
-  - CodingScripting
-  - Comment
-  - Element
-  - Guide
-  - HTML
-  - entity reference
-  - whitespace
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-In this article we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!
+In this article, we cover the absolute basics of HTML. To get you started, this article defines elements, attributes, and all the other important terms you may have heard. It also explains where these fit into HTML. You will learn how HTML elements are structured, how a typical HTML page is structured, and other important basic language features. Along the way, there will be an opportunity to play with HTML too!
 
 <table>
   <tbody>
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -44,11 +35,13 @@ In this article we cover the absolute basics of HTML. To get you started, this a
 
 ## What is HTML?
 
-{{glossary("HTML")}} (Hypertext Markup Language) is not a programming language. It is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on.  For example, consider the following line of text:
+{{glossary("HTML")}} (HyperText Markup Language) is a _markup language_ that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of {{glossary("Element", "elements")}}, which you use to enclose, wrap, or _mark up_ different parts of content to make it appear or act in a certain way. The enclosing {{glossary("Tag", "tags")}} can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
 
-    My cat is very grumpy
+```plain
+My cat is very grumpy
+```
 
-If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph  ({{htmlelement("p")}}) element:
+If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph ({{htmlelement("p")}}) element:
 
 ```html
 <p>My cat is very grumpy</p>
@@ -60,7 +53,7 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 
 Let's further explore our paragraph element from the previous section:
 
-![](grumpy-cat-small.png)
+![A sample code snippet demonstrating the structure of an html element.<p> My cat is very grumpy </p>.](grumpy-cat-small.png)
 
 The anatomy of our element is:
 
@@ -78,25 +71,26 @@ If you make a mistake, you can clear your work using the _Reset_ button. If you 
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
   This is my text.
 </textarea>
 
 <div class="controls">
-  <input id="reset" type="button" value="Reset" />
+  <input id="reset" type="button" value="Reset" />
   <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```css hidden
 html {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
 h2 {
@@ -117,49 +111,48 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution = "<em>This is my text.</em>";
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<em>This is my text.</em>';
-var solutionEntry = htmlSolution;
-
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -168,13 +161,16 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -183,10 +179,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -200,7 +196,7 @@ textarea.onkeyup = function(){
 
 ### Nesting elements
 
-Elements can be placed within other elements. This is called _nesting_. If we wanted to state that our cat is **very** grumpy, we could wrap the word _very_ in a {{htmlelement("strong")}} element, which means that the word is to have strong(er) text formatting:
+Elements can be placed within other elements. This is called _nesting_. If we wanted to state that our cat is **very** grumpy, we could wrap the word _very_ in a {{htmlelement("strong")}} element, which means that the word is to have strong(er) text formatting:
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>
@@ -210,58 +206,35 @@ There is a right and wrong way to do nesting. In the example above, we opened th
 
 The following is an example of the _wrong_ way to do nesting:
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
 The **tags have to open and close in a way that they are inside or outside one another**. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.
 
-### Block versus inline elements
+### Void elements
 
-There are two important categories of elements to know in HTML: block-level elements and inline elements.
-
-- Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.
-- Inline elements are contained within block-level elements, and surround only small parts of the document’s content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document. It is typically used with text, for example an {{htmlelement("a")}} element creates a hyperlink, and elements such as {{htmlelement("em")}} or {{htmlelement("strong")}} create emphasis.
-
-Consider the following example:
+Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called {{glossary("void element", "void elements")}}. For example, the {{htmlelement("img")}} element embeds an image file onto a page:
 
 ```html
-<em>first</em><em>second</em><em>third</em>
-
-<p>fourth</p><p>fifth</p><p>sixth</p>
-```
-
-{{htmlelement("em")}} is an inline element. As you see below, the first three elements sit on the same line, with no space in between. On the other hand, {{htmlelement("p")}} is a block-level element. Each _p_ element appears on a new line, with space above and below. (The spacing is due to default [CSS styling](/en-US/docs/Learn/CSS/First_steps) that the browser applies to paragraphs.)
-
-{{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}
-
-> **Note:** HTML5 redefined the element categories: see [Element content categories](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). While these definitions are more accurate and less ambiguous than their predecessors, the new definitions are a lot more complicated to understand than _block_ and _inline._ This article will stay with these two terms.
-
-> **Note:** The terms _block_ and _inline_, as used in this article, should not be confused with [the types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) that have the same names. While the names correlate by default, changing the CSS display type doesn't change the category of the element, and doesn't affect which elements it can contain and which elements it can be contained in. One reason HTML5 dropped these terms was to prevent this rather common confusion.
-
-> **Note:** Find useful reference pages that include lists of block and inline elements. See [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements) and [Inline elements](/en-US/docs/Web/HTML/Inline_elements).
-
-### Empty elements
-
-Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. For example, the {{htmlelement("img")}} element embeds an image file onto a page:
-
-```html
-<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+  alt="Firefox icon" />
 ```
 
 This would output the following:
 
-{{ EmbedLiveSample('Empty_elements', 700, 300, "", "") }}
+{{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** Empty elements are sometimes called _void elements_.
+> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
 Elements can also have attributes. Attributes look like this:
 
-![&amp;amp;amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;amp;amp;lt;/p>](grumpy-cat-attribute-small.png)
+![paragraph tag with 'class="editor-note"' attribute emphasized](grumpy-cat-attribute-small.png)
 
-Attributes contain extra information about the element that won't appear in the content. In this example, the **`class`** attribute is an identifying name used to target the element with style information.
+Attributes contain extra information about the element that won't appear in the content. In this example, the **`class`** attribute is an identifying name used to target the element with style information.
 
 An attribute should have:
 
@@ -271,38 +244,45 @@ An attribute should have:
 
 ### Active learning: Adding attributes to an element
 
-Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+The `<img>` element can take a number of attributes, including:
 
-- **`href`**: This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- **`title`**: The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- **`target`**: The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `src`
+  - : The `src` attribute is a **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
+- `alt`
+  - : The `alt` attribute specifies a text description of the image. For example: `alt="The Firefox icon"`.
+- `width`
+  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`.
+- `height`
+  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`.
 
-Edit the line below in the _Input_ area to turn it into a link to your favorite website.
+Edit the line below in the _Input_ area to turn it into an image.
 
-1.  Add the `<a>` element.
-2.  Add the `href` attribute and the `title` attribute.
-3.  Specify the `target` attribute to open the link in the new tab.
+1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
+2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
+3. Set the `alt` attribute.
+4. Add the `width` and `height` attributes.
 
-You'll be able to see your changes update live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute, and when clicked, navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name, and between each attribute.
+You will be able to see your changes live in the _Output_ area.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
+&lt;img alt="I should be an image" &gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -329,49 +309,50 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution =
+  '<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" width="100" height="100" />';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
-var solutionEntry = htmlSolution;
-
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -380,13 +361,16 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -395,10 +379,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -412,39 +396,41 @@ textarea.onkeyup = function(){
 
 ### Boolean attributes
 
-Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the {{htmlattrxref("disabled", "input")}} attribute, which you can assign to form input elements. (You use this to _disable_ the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
+Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, which you can assign to form input elements. (You use this to _disable_ the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
 
-    <input type="text" disabled="disabled">
+```html
+<input type="text" disabled="disabled" />
+```
 
 As shorthand, it is acceptable to write this as follows:
 
 ```html
 <!-- using the disabled attribute prevents the end user from entering text into the input box -->
-<input type="text" disabled>
+<input type="text" disabled />
 
 <!-- text input is allowed, as it doesn't contain the disabled attribute -->
-<input type="text">
+<input type="text" />
 ```
 
-For reference, the example above also includes a non-disabled form input element.The HTML from the example above produces this result:
+For reference, the example above also includes a non-disabled form input element. The HTML from the example above produces this result:
 
 {{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "") }}
 
 ### Omitting quotes around attribute values
 
-If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with _only_ the `href` attribute, like this:
+If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element in the code snippet below, `<a>`, is called an anchor. Anchors enclose text and turn them into links. The `href` attribute specifies the web address the link points to. You can write this basic version below with _only_ the `href` attribute, like this:
 
 ```html
 <a href=https://www.mozilla.org/>favorite website</a>
 ```
 
-However, as soon as we add the `title` attribute in this way, there are problems:
+Anchors can also have a `title` attribute, a description of the linked page. However, as soon as we add the `title` in the same fashion as the `href` attribute there are problems:
 
-```html example-bad
+```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
 ```
 
-As written above, the browser misinterprets the markup, mistaking the `title` attribute for three attributes:  a title attribute with the value _The_, and two Boolean attributes, `Mozilla` and `homepage`. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!
+As written above, the browser misinterprets the markup, mistaking the `title` attribute for three attributes: a title attribute with the value `The`, and two Boolean attributes, `Mozilla` and `homepage`. Obviously, this is not intended! It will cause errors or unexpected behavior, as you can see in the live example below. Try hovering over the link to view the title text!
 
 {{ EmbedLiveSample('Omitting_quotes_around_attribute_values', 700, 100, "", "") }}
 
@@ -452,36 +438,38 @@ Always include the attribute quotes. It avoids such problems, and results in mor
 
 ### Single or double quotes?
 
-In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
+In this article, you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent:
 
-```html
-<a href="https://www.example.com">A link to my example.</a>
-
+```html-nolint
 <a href='https://www.example.com'>A link to my example.</a>
+
+<a href="https://www.example.com">A link to my example.</a>
 ```
 
-Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing quotes that will go wrong:
+Make sure you don't mix single quotes and double quotes. This example (below) shows a kind of mixing of quotes that will go wrong:
 
-```html example-bad
+```html-nolint example-bad
 <a href="https://www.example.com'>A link to my example.</a>
 ```
 
-However, if you use one type of quote, you can include the other type of quote _inside_ your attribute values:
+However, if you use one type of quote, you can include the other type of quote _inside_ your attribute values:
 
 ```html
-<a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+<a href="https://www.example.com" title="Isn't this fun?">
+  A link to my example.
+</a>
 ```
 
 To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
 
-```html example-bad
-<a href='https://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+```html-nolint example-bad
+<a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
 ```
 
 Instead, you need to do this:
 
-```html
-<a href='https://www.example.com' title='Isn&apos;t this fun?'>A link to my example.</a>
+```html-nolint
+<a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
 ```
 
 ## Anatomy of an HTML document
@@ -489,10 +477,10 @@ Instead, you need to do this:
 Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -503,58 +491,60 @@ Individual HTML elements aren't very useful on their own. Next, let's examine ho
 
 Here we have:
 
-1.  `<!DOCTYPE html>`: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
+1. `<!DOCTYPE html>`: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:
 
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
+   More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
 
-2.  `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
-3.  `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You'll learn more about this in the next article of the series.
-4.  `<meta charset="utf-8">`: This element specifies the character set for your document to UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
-5.  `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
-6.  `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+2. `<html></html>`: The {{htmlelement("html")}} element. This element wraps all the content on the page. It is sometimes known as the root element.
+3. `<head></head>`: The {{htmlelement("head")}} element. This element acts as a container for everything you want to include on the HTML page, **that isn't the content** the page will show to viewers. This includes keywords and a page description that would appear in search results, CSS to style content, character set declarations, and more. You will learn more about this in the next article of the series.
+4. `<meta charset="utf-8">`: The {{htmlelement("meta")}} element. This element represents metadata that cannot be represented by other HTML meta-related elements, like {{htmlelement("base")}}, {{htmlelement("link")}}, {{htmlelement("script")}}, {{htmlelement("style")}} or {{htmlelement("title")}}. The [`charset`](/en-US/docs/Web/HTML/Element/meta#charset) attribute specifies the character encoding for your document as UTF-8, which includes most characters from the vast majority of human written languages. With this setting, the page can now handle any textual content it might contain. There is no reason not to set this, and it can help avoid some problems later.
+5. `<title></title>`: The {{htmlelement("title")}} element. This sets the title of the page, which is the title that appears in the browser tab the page is loaded in. The page title is also used to describe the page when it is bookmarked.
+6. `<body></body>`: The {{htmlelement("body")}} element. This contains _all_ the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
 
 ### Active learning: Adding some features to an HTML document
 
 If you want to experiment with writing some HTML on your local computer, you can:
 
-1.  Copy the HTML page example listed above.
-2.  Create a new file in your text editor.
-3.  Paste the code into the new text file.
-4.  Save the file as `index.html`.
+1. Copy the HTML page example listed above.
+2. Create a new file in your text editor.
+3. Paste the code into the new text file.
+4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area Github repo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html).
+> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
-You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially the page looks like this:
+You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
 
 ![A simple HTML page that says This is my page](template-screenshot.png)In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the {{htmlelement("body")}} element, in this case). Sharpen your skills by implementing the following tasks:
 
-- Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
+- Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
 - Edit the paragraph content to include text about a topic that you find interesting.
 - Make important words stand out in bold by wrapping them inside a `<strong>` opening tag and `</strong>` closing tag.
 - Add a link to your paragraph, as [explained earlier in the article](#active_learning_adding_attributes_to_an_element).
-- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](#empty_elements). Earn bonus points if you manage to link to a different image (either locally on your computer, or somewhere else on the web).
+- Add an image to your document. Place it below the paragraph, as [explained earlier in the article](#void_elements). Earn bonus points if you manage to link to a different image (either locally on your computer or somewhere else on the web).
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
   &lt;p&gt;This is my page&lt;/p&gt;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -564,7 +554,7 @@ html {
 }
 
 h1 {
- color: blue;
+  color: blue;
 }
 
 h2 {
@@ -589,49 +579,50 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
-var code = textarea.value;
-var userEntry = textarea.value;
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
 
 function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+const htmlSolution =
+  '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>. My favorite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p> <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg" alt="Rush Moving Pictures album cover">';
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<h1>Some music</h1><p>I really enjoy <strong>playing the drums</strong>. One of my favorite drummers is Neal Peart, who\ plays in the band <a href="https://en.wikipedia.org/wiki/Rush_%28band%29" title="Rush Wikipedia article">Rush</a>.\ My favourite Rush album is currently <a href="http://www.deezer.com/album/942295">Moving Pictures</a>.</p>\ <img src="http://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg">';
-var solutionEntry = htmlSolution;
-
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -640,13 +631,16 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
+  caretPos += text.length;
   textarea.selectionStart = caretPos;
   textarea.selectionEnd = caretPos;
   textarea.focus();
@@ -654,11 +648,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function(){
+textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -668,42 +661,62 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 1075, "", "") }}
+{{ EmbedLiveSample('Active_learning_Adding_some_features_to_an_HTML_document', 700, 500) }}
 
 ### Whitespace in HTML
 
 In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:
 
-```html
-<p>Dogs are silly.</p>
+```html-nolint
+<p id="noWhitespace">Dogs are silly.</p>
 
-<p>Dogs        are
-         silly.</p>
+<p id="whitespace">Dogs
+    are
+        silly.</p>
 ```
 
-No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
+No matter how much whitespace you use inside HTML element content (which can include one or more space characters, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.
 
-It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.
+It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.
+
+Let's have a look at how the browser renders the two paragraphs above with and without whitespace:
+
+{{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
+
+> **Note:** Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
+> This may return unexpected results if the whitespace is trimmed by the browser.
+
+```js
+const noWhitespace = document.getElementById("noWhitespace").innerHTML;
+console.log(noWhitespace);
+// "Dogs are silly."
+
+const whitespace = document.getElementById("whitespace").innerHTML;
+console.log(whitespace);
+// "Dogs
+//    are
+//        silly."
+```
 
 ## Entity references: Including special characters in HTML
 
-In HTML, the characters `<`, `>`,`"`,`'` and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
+In HTML, the characters `<`, `>`,`"`,`'`, and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
 
 You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
-| Literal character |  Character reference equivalent  |
-| ----------------- | -------------------------------- |
-| <                 | `&lt;`                           |
-| >                 | `&gt;`                           |
-| "                 | `&quot;`                         |
-| '                 | `&apos;`                         |
-| &                 | `&amp;`                          |
+| Literal character | Character reference equivalent |
+| ----------------- | ------------------------------ |
+| <                 | `&lt;`                         |
+| >                 | `&gt;`                         |
+| "                 | `&quot;`                       |
+| '                 | `&apos;`                       |
+| &                 | `&amp;`                        |
 
-The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;' , quotation for ' \&quot; ' and similarly for others. To find more about entity reference, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
+The character reference equivalent could be easily remembered because the text it uses can be seen as less than for `&lt;`, quotation for `&quot;` and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
 In the example below, there are two paragraphs:
 
-```html
+```html-nolint
 <p>In HTML, you define a paragraph using the <p> element.</p>
 
 <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
@@ -717,9 +730,9 @@ In the live output below, you can see that the first paragraph has gone wrong. T
 
 ## HTML comments
 
-HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.
+HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.
 
-To write an HTML comment, wrap it in the special markers `<!--` and `-->`. For example:
+To write an HTML comment, wrap it in the special markers `<!--` and `-->`. For example:
 
 ```html
 <p>I'm not inside a comment</p>
@@ -727,7 +740,7 @@ To write an HTML comment, wrap it in the special markers `<!--` and `-->`. For 
 <!-- <p>I am!</p> -->
 ```
 
-As you can see below, only the first paragraph displays in the live output.
+As you can see below, only the first paragraph is displayed in the live output.
 
 {{ EmbedLiveSample('HTML_comments', 700, 100, "", "") }}
 
@@ -735,24 +748,12 @@ As you can see below, only the first paragraph displays in the live output.
 
 You made it to the end of the article! We hope you enjoyed your tour of the basics of HTML.
 
-At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
+At this point, you should understand what HTML looks like, and how it works at a basic level. You should also be able to write a few elements and attributes. The subsequent articles of this module go further on some of the topics introduced here, as well as presenting other concepts of the language.
 
-> **Note:** As you start to learn more about HTML, consider learning the basics of Cascading Style Sheets, or [CSS](/en-US/docs/Learn/CSS). CSS is the language used to style web pages. (for example, changing fonts or colors, or altering the page layout) HTML and CSS work well together, as you will soon discover.
+- As you start to learn more about HTML, consider learning the basics of CSS (Cascading Style Sheets). [CSS](/en-US/docs/Learn/CSS) is the language used to style web pages, such as changing fonts or colors or altering the page layout. HTML and CSS work well together, as you will soon discover.
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/HTML/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## In this module
-
-- [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Document and website structure](/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

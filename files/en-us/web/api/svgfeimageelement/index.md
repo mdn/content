@@ -1,21 +1,17 @@
 ---
 title: SVGFEImageElement
 slug: Web/API/SVGFEImageElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGFEImageElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEImageElement`** interface corresponds to the {{SVGElement("feImage")}} element.
 
-{{InheritanceDiagram(600, 140)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -24,7 +20,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEImageElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
 - {{domxref("SVGFEImageElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedString")}} that reflects the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
 - {{domxref("SVGFEImageElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given element.
 - {{domxref("SVGFEImageElement.result")}} {{ReadOnlyInline}}
@@ -36,7 +32,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEImageElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

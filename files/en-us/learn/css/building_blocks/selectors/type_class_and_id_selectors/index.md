@@ -1,14 +1,9 @@
 ---
 title: Type, class, and ID selectors
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-tags:
-  - Beginner
-  - CSS
-  - Class
-  - Learn
-  - Selectors
-  - id
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 In this lesson, we examine some of the simplest selectors, which you will probably use most frequently in your work.
@@ -18,10 +13,9 @@ In this lesson, we examine some of the simplest selectors, which you will probab
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -45,7 +39,7 @@ In this lesson, we examine some of the simplest selectors, which you will probab
 
 ## Type selectors
 
-A **type selector** is sometimes referred to as a _tag name selector_ or _element selector_ because it selects an HTML tag/element in your document. In the example below, we have used the `span`, `em` and `strong` selectors.
+A **type selector** is sometimes referred to as a _tag name selector_ or _element selector_ because it selects an HTML tag/element in your document. Type selectors are not case-sensitive. In the example below, we have used the `span`, `em` and `strong` selectors.
 
 **Try adding a CSS rule to select the `<h1>` element and change its color to blue.**
 
@@ -83,7 +77,7 @@ Although both do the same thing, the readability is significantly improved.
 
 ## Class selectors
 
-The class selector starts with a dot (`.`) character. It will select everything in the document with that class applied to it. In the live example below we have created a class called `highlight`, and have applied it to several places in my document. All of the elements that have the class applied are highlighted.
+The case-sensitive class selector starts with a dot (`.`) character. It will select everything in the document with that class applied to it. In the live example below we have created a class called `highlight`, and have applied it to several places in my document. All of the elements that have the class applied are highlighted.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
 
@@ -107,37 +101,16 @@ We can tell the browser that we only want to match the element if it has two cla
 
 ## ID selectors
 
-An ID selector begins with a `#` rather than a dot character, but is used in the same way as a class selector. However, an ID can be used only once per page, and elements can only have a single `id` value applied to them. It can select an element that has the `id` set on it, and you can precede the ID with a type selector to only target the element if both the element and ID match. You can see both of these uses in the following example:
+The case-sensitive ID selector begins with a `#` rather than a dot character, but is used in the same way as a class selector. However, an ID can be used only once per page, and elements can only have a single `id` value applied to them. It can select an element that has the `id` set on it, and you can precede the ID with a type selector to only target the element if both the element and ID match. You can see both of these uses in the following example:
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/id.html", '100%', 750)}}
 
 > **Warning:** Using the same ID multiple times in a document may appear to work for styling purposes, but don't do this. It results in invalid code, and will cause strange behavior in many places.
 
-> **Note:** As we learned in the lesson on specificity, an ID has high specificity. It will overrule most other selectors. In most cases, it is preferable to add a class to an element instead of an ID. However, if using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — this will work.
+> **Note:** The ID selector has high {{cssxref("specificity")}}. This means styles applied based on matching an ID selector will overrule styles applied based on other selector, including class and type selectors. Because an ID can only occur once on a page and because of the high specificity of ID selectors, it is preferable to add a class to an element instead of an ID. If using the ID is the only way to target the element — perhaps because you do not have access to the markup and cannot edit it — consider using the ID within an an [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors), such as `p[id="header"]`. [Learn specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-## In the next article
+## Summary
 
-We'll continue exploring selectors by looking at [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
+That wraps up Type, class, and ID selectors. We'll continue exploring selectors by looking at [attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1.  [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3.  [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)

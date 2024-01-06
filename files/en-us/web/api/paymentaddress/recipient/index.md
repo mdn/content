@@ -1,31 +1,23 @@
 ---
-title: PaymentAddress.recipient
+title: "PaymentAddress: recipient property"
+short-title: recipient
 slug: Web/API/PaymentAddress/recipient
-tags:
-  - API
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Property
-  - Reference
-  - paymentAddress
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.recipient
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`recipient`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the name of the
 recipient, purchaser, or contact person at the payment address.
 
-## Syntax
+## Value
 
-```js
-var paymentRecipient = PaymentAddress.recipient;
-```
-
-### Value
-
-A {{domxref("DOMString")}} giving the name of the person receiving  or paying for the
+A string giving the name of the person receiving or paying for the
 purchase, or the name of a contact person in other contexts. If no name is available,
 this string is empty.
 

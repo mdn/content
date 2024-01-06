@@ -1,29 +1,29 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - padding-block
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.padding-block
 ---
+
 {{CSSRef}}
 
 The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
+
+{{EmbedInteractiveExample("pages/css/padding-block.html")}}
 
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("padding-block-end")}}
 - {{cssxref("padding-block-start")}}
+- {{cssxref("padding-block-end")}}
 
 ## Syntax
 
 ```css
 /* <length> values */
-padding-block: 10px 20px;  /* An absolute length */
-padding-block: 1em 2em;   /* relative to the text size */
+padding-block: 10px 20px; /* An absolute length */
+padding-block: 1em 2em; /* relative to the text size */
 padding-block: 10px; /* sets both start and end values */
 
 /* <percentage> values */
@@ -33,6 +33,7 @@ padding-block: 5% 2%; /* relative to the nearest block container's width */
 padding-block: inherit;
 padding-block: initial;
 padding-block: revert;
+padding-block: revert-layer;
 padding-block: unset;
 ```
 
@@ -96,5 +97,6 @@ div {
 
 ## See also
 
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

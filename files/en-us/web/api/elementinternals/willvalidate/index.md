@@ -1,27 +1,20 @@
 ---
-title: ElementInternals.willValidate
+title: "ElementInternals: willValidate property"
+short-title: willValidate
 slug: Web/API/ElementInternals/willValidate
-tags:
-  - API
-  - Property
-  - Reference
-  - willValidate
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.willValidate
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns true if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+{{APIRef("Web Components")}}
 
-## Syntax
+The **`willValidate`** read-only property of the {{domxref("ElementInternals")}} interface returns `true` if the element is a submittable element that is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 
-```js
-let willValidate = ElementInternals.willValidate;
-```
+Elements that are barred from being candidates for constraint validation include those that have the attributes: `disabled`, `hidden` or `readonly`, input elements of `type=button` or `type=reset`, or any element that is a {{htmlelement("datalist")}} element or has a `<datalist>` element ancestor.
 
-### Value
+## Value
 
-A boolean value, true if the element is a candidate for constraint validation.
+`true` if the element is a candidate for constraint validation, otherwise `false`.
 
 ### Exceptions
 
@@ -39,12 +32,12 @@ class CustomCheckbox extends HTMLElement {
   constructor() {
     super();
     this.internals_ = this.attachInternals();
-
-    /* ... */
-
   }
-  window.customElements.define("custom-checkbox", CustomCheckbox);
-})();
+
+  // …
+}
+
+window.customElements.define("custom-checkbox", CustomCheckbox);
 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.willValidate); // true

@@ -1,15 +1,10 @@
 ---
 title: background-position-x
 slug: Web/CSS/background-position-x
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-position-x
 ---
+
 {{CSSRef}}
 
 The **`background-position-x`** [CSS](/en-US/docs/Web/CSS) property sets the initial horizontal position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
@@ -47,6 +42,7 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: revert;
+background-position-x: revert-layer;
 background-position-x: unset;
 ```
 
@@ -63,7 +59,7 @@ The `background-position-x` property is specified as one or more values, separat
 - {{cssxref("&lt;length&gt;")}}
   - : The offset of the given background image's left vertical edge from the background position layer's left vertical edge. (Some browsers allow assigning the right edge for offset).
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the _right_ edge of the background image is aligned with the _right_ edge of the container, thus a value of 50% horizontally centers the background image.
+  - : The offset of the given background image's horizontal position relative to the container. A value of 0% means that the left edge of the background image is aligned with the left edge of the container, and a value of 100% means that the _right_ edge of the background image is aligned with the _right_ edge of the container, thus a value of 50% horizontally centers the background image.
 
 ## Formal definition
 
@@ -89,19 +85,47 @@ The following example shows a simple background image implementation, with backg
 
 ```css
 div {
-  width: 300px;
-  height: 300px;
-  background-color: skyblue;
-  background-image: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom 10px;
+  width: 300px;
+  height: 300px;
+  background-color: skyblue;
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
 }
 ```
 
 #### Result
 
 {{EmbedLiveSample('Basic_example', '100%', 300)}}
+
+### Side-relative values
+
+The following example shows support for side-relative offset syntax, which allows the developer to offset the background from any edge.
+
+#### HTML
+
+```html
+<div></div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 300px;
+  height: 300px;
+  background-color: seagreen;
+  background-image: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png);
+  background-repeat: no-repeat;
+  background-position-x: right 20px;
+  background-position-y: bottom 10px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Side-relative_values', '100%', 300)}}
 
 ## Specifications
 
@@ -115,6 +139,4 @@ div {
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

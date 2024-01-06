@@ -1,12 +1,10 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.omnibox
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -20,11 +18,15 @@ browser-compat: webextensions.manifest.omnibox
       <td>No</td>
     </tr>
     <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
+    </tr>
+    <tr>
       <th scope="row">Example</th>
       <td>
         <pre class="brush: json">
 "omnibox": {
-  "keyword": "mdn"
+  "keyword": "mdn"
 }</pre
         >
       </td>

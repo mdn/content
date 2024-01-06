@@ -1,15 +1,11 @@
 ---
-title: ResizeObserverEntry.contentBoxSize
+title: "ResizeObserverEntry: contentBoxSize property"
+short-title: contentBoxSize
 slug: Web/API/ResizeObserverEntry/contentBoxSize
-tags:
-  - API
-  - Property
-  - Reference
-  - Resize Observer API
-  - ResizeObserverEntry
-  - contentBoxSize
+page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.contentBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`contentBoxSize`** read-only property of
@@ -31,14 +27,12 @@ The array is necessary to support elements that have multiple fragments, which o
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
 > **Note:** For more explanation of writing modes and block and inline
-> dimensions, read [Handling
-> different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
 
 The following snippet is taken from the [resize-observer-border-radius.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-border-radius.html)
-([see
-source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-border-radius.html)) example. This example includes a green box, sized as a percentage of the
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-border-radius.html)) example. This example includes a green box, sized as a percentage of the
 viewport size. When the viewport size is changed, the box's rounded corners change in
 proportion to the size of the box. We could just implement this using
 {{cssxref("border-radius")}} with a percentage, but that quickly leads to ugly-looking
@@ -46,19 +40,37 @@ elliptical corners; this solution gives you nice square corners that scale with 
 size.
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize && entry.contentBoxSize.length > 0) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize[0].inlineSize/10) +
-                                                      (entry.contentBoxSize[0].blockSize/10)) + 'px';
+    if (entry.contentBoxSize) {
+      // The standard makes contentBoxSize an array...
+      if (entry.contentBoxSize[0]) {
+        entry.target.style.borderRadius =
+          Math.min(
+            100,
+            entry.contentBoxSize[0].inlineSize / 10 +
+              entry.contentBoxSize[0].blockSize / 10,
+          ) + "px";
+      } else {
+        // ...but old versions of Firefox treat it as a single item
+        entry.target.style.borderRadius =
+          Math.min(
+            100,
+            entry.contentBoxSize.inlineSize / 10 +
+              entry.contentBoxSize.blockSize / 10,
+          ) + "px";
+      }
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Specifications

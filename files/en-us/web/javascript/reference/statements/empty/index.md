@@ -1,12 +1,10 @@
 ---
-title: empty
+title: Empty statement
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - JavaScript
-  - Language feature
-  - Statement
+page-type: javascript-statement
 browser-compat: javascript.statements.empty
 ---
+
 {{jsSidebar("Statements")}}
 
 An **empty statement** is used to provide no statement, although the
@@ -16,7 +14,7 @@ JavaScript syntax would expect one.
 
 ## Syntax
 
-```js
+```js-nolint
 ;
 ```
 
@@ -26,7 +24,7 @@ The empty statement is a semicolon (`;`) indicating that no statement will
 be executed, even if JavaScript syntax requires one.
 
 The opposite behavior, where you want multiple statements, but JavaScript only allows a
-single one, is possible using a[ block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
+single one, is possible using a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block),
 which combines several statements into a single one.
 
 ## Examples
@@ -36,8 +34,8 @@ which combines several statements into a single one.
 The empty statement is sometimes used with loop statements. See the following example
 with an empty loop body:
 
-```js
-let arr = [1, 2, 3];
+```js-nolint
+const arr = [1, 2, 3];
 
 // Assign all array values to 0
 for (let i = 0; i < arr.length; arr[i++] = 0) /* empty statement */ ;
@@ -53,9 +51,9 @@ not really obvious to distinguish from a normal semicolon.
 
 In the following example, the usage is probably not intentional:
 
-```js example-bad
-if (condition);       // Caution, this "if" does nothing!
-   killTheUniverse()  // So this always gets executed!!!
+```js-nolint example-bad
+if (condition);      // Caution, this "if" does nothing!
+  killTheUniverse(); // So this always gets executed!!!
 ```
 
 ## Specifications
@@ -68,4 +66,4 @@ if (condition);       // Caution, this "if" does nothing!
 
 ## See also
 
-- {{jsxref("Statements/block", "Block statement")}}
+- [Block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)

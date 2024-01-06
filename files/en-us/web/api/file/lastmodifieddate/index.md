@@ -1,49 +1,40 @@
 ---
-title: File.lastModifiedDate
+title: "File: lastModifiedDate property"
+short-title: lastModifiedDate
 slug: Web/API/File/lastModifiedDate
-tags:
-  - API
-  - Deprecated
-  - File
-  - File API
-  - Files
-  - Property
-  - Read-only
-  - Reference
-  - lastModifiedDate
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.File.lastModifiedDate
 ---
-{{APIRef("File API") }} {{deprecated_header}}
 
-The **`File.lastModifiedDate`** read-only property returns the last modified date of the file. Files without a known last modified date returns the current date .
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-## Syntax
+The **`lastModifiedDate`** read-only property of the {{domxref("File")}} interface returns the last modified date of the file. Files without a known last modified date return the current date.
 
-    var time = instanceOfFile.lastModifiedDate
-
-### Value
+## Value
 
 A [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object indicating the date and time at which the file was last modified.
 
-## Example
+## Examples
 
 ```js
 // fileInput is a HTMLInputElement: <input type="file" multiple id="myfileinput">
-var fileInput = document.getElementById("myfileinput");
+const fileInput = document.getElementById("myfileinput");
 
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
-
-for (var i = 0; i < files.length; i++) {
-  alert(files[i].name + " has a last modified date of " + files[i].lastModifiedDate);
+for (const file of fileInput.files) {
+  console.log(
+    `${file.name} has a last modified date of ${file.lastModifiedDate}`,
+  );
 }
 ```
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
+To offer protection against timing attacks and {{glossary("fingerprinting")}}, the precision of `someFile.lastModifiedDate.getTime()` might get rounded depending on browser settings.
 
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
@@ -51,21 +42,21 @@ someFile.lastModifiedDate.getTime();
 // 1519211809934
 // 1519211810362
 // 1519211811670
-// ...
+// …
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 someFile.lastModifiedDate.getTime();
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...
+// …
 ```
 
 In Firefox, you can also enable `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
 ## Specifications
 
-_Though present in early draft of the File API spec, this property has been removed from it and is now non-standard. Use {{domxref("File.lastModified")}} instead._
+_Though present in early draft of the File API spec, this property has been removed from it and is now non-standard. Use {{domxref("File.lastModified")}} instead._
 
 ## Browser compatibility
 

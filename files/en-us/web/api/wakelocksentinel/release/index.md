@@ -1,17 +1,12 @@
 ---
-title: WakeLockSentinel.release()
+title: "WakeLockSentinel: release() method"
+short-title: release()
 slug: Web/API/WakeLockSentinel/release
-tags:
-  - API
-  - Method
-  - Reference
-  - Screen Wake Lock API
-  - Wake Lock
-  - WakeLockSentinel
-  - screen
+page-type: web-api-instance-method
 browser-compat: api.WakeLockSentinel.release
 ---
-{{draft}}{{securecontext_header}}{{DefaultAPISidebar("Screen Wake Lock API")}}
+
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
 The **`release()`** method of the
 {{domxref("WakeLockSentinel")}} interface releases the
@@ -20,8 +15,8 @@ once the sentinel has been successfully released.
 
 ## Syntax
 
-```js
-WakeLockSentinel.release().then(...);
+```js-nolint
+release()
 ```
 
 ### Parameters
@@ -30,11 +25,11 @@ None.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-No exceptions are thrown. You should always listen for the {{domxref('onrelease')}}
+No exceptions are thrown. You should always listen for the {{domxref("WakeLockSentinel/release_event", "release")}}
 event to check if a wake lock has been released.
 
 ## Examples
@@ -43,9 +38,9 @@ In this example, when a user clicks a button the {{domxref("WakeLockSentinel")}}
 released.
 
 ```js
-wakeLockOffButton.addEventListener('click', () => {
+wakeLockOffButton.addEventListener("click", () => {
   WakeLockSentinel.release();
-})
+});
 ```
 
 ## Specifications
@@ -58,5 +53,4 @@ wakeLockOffButton.addEventListener('click', () => {
 
 ## See also
 
-- {{DOMxRef("WakeLockSentinel")}}
-- {{DOMxRef("WakeLock.request", "navigator.wakeLock.request()")}}
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)

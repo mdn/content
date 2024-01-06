@@ -1,15 +1,11 @@
 ---
-title: RTCDataChannel.id
+title: "RTCDataChannel: id property"
+short-title: id
 slug: Web/API/RTCDataChannel/id
-tags:
-  - Property
-  - RTCDataChannel
-  - Read-only
-  - Reference
-  - WebRTC
-  - id
+page-type: web-api-instance-property
 browser-compat: api.RTCDataChannel.id
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only `RTCDataChannel` property
@@ -23,17 +19,7 @@ Each {{domxref("RTCPeerConnection")}} can therefore have up to a theoretical max
 65,534 data channels on it, although the actual maximum may vary from browser to
 browser.
 
-> **Note:** In early versions of the WebRTC specification, this property's name was
-> {{domxref("RTCDataChannel.stream", "stream")}}. Code that uses that property needs to
-> be updated.
-
-## Syntax
-
-```js
-var id = aDataChannel.id;
-```
-
-### Value
+## Value
 
 An `unsigned short` value (that is, an integer between 0 and 65,535) which
 uniquely identifies the data channel.
@@ -47,10 +33,12 @@ This can be also useful for logging and debugging purposes.
 
 ## Example
 
-    var pc = new RTCPeerConnection();
-    var dc = pc.createDataChannel("my channel");
+```js
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-    console.log("Channel id: " + dc.id);
+console.log(`Channel id: ${dc.id}`);
+```
 
 ## Specifications
 

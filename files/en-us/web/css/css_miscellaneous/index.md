@@ -1,15 +1,12 @@
 ---
-title: CSS Miscellaneous
-slug: Web/CSS/CSS_Miscellaneous
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
+title: CSS miscellaneous
+slug: Web/CSS/CSS_miscellaneous
+page-type: css-module
 ---
+
 {{CSSRef}}
 
-These pages contain CSS properties that are highly experimental or don't fit in any other categories.
+These pages contain CSS properties that are supported by browsers but either aren't included in a CSS specification, don't fit into any other CSS categories, or are experimental.
 
 ## Reference
 
@@ -17,10 +14,6 @@ These pages contain CSS properties that are highly experimental or don't fit in 
 
 - {{cssxref("all")}}
 - {{cssxref("text-rendering")}}
-
-## Guides
-
-_None._
 
 ## Specifications
 

@@ -1,15 +1,11 @@
 ---
-title: ConvolverNode.normalize
+title: "ConvolverNode: normalize property"
+short-title: normalize
 slug: Web/API/ConvolverNode/normalize
-tags:
-  - API
-  - ConvolverNode
-  - Property
-  - Reference
-  - Web Audio API
-  - parent
+page-type: web-api-instance-property
 browser-compat: api.ConvolverNode.normalize
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `normalize` property of the {{ domxref("ConvolverNode") }} interface
@@ -23,49 +19,37 @@ set to `false`, then the convolution will be rendered with no
 pre-processing/scaling of the impulse response. Changes to this value do not take
 effect until the next time the `buffer` attribute is set.
 
-## Syntax
-
-```js
-var audioCtx = new AudioContext();
-var convolver = audioCtx.createConvolver();
-convolver.normalize = false;
-```
-
-### Value
+## Value
 
 A boolean.
 
-## Example
+## Examples
+
+### Switching normalization off
+
+The following example creates a convolver node and assigns it an {{domxref("AudioBuffer")}}. Before assigning the audio buffer, it sets `normalize` to `false`.
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var convolver = audioCtx.createConvolver();
+const audioCtx = new AudioContext();
+// ...
 
-  ...
+const convolver = audioCtx.createConvolver();
+// ...
 
-// grab audio track via XHR for convolver node
-
-var soundSource, concertHallBuffer;
-
-ajaxRequest = new XMLHttpRequest();
-ajaxRequest.open('GET', 'concert-crowd.ogg', true);
-ajaxRequest.responseType = 'arraybuffer';
-
-ajaxRequest.onload = function() {
-  var audioData = ajaxRequest.response;
-  audioCtx.decodeAudioData(audioData, function(buffer) {
-      concertHallBuffer = buffer;
-      soundSource = audioCtx.createBufferSource();
-      soundSource.buffer = concertHallBuffer;
-    }, function(e){"Error with decoding audio data" + e.err});
+// Grab audio track via fetch() for convolver node
+try {
+  const response = await fetch(
+    "https://mdn.github.io/voice-change-o-matic/audio/concert-crowd.ogg",
+  );
+  const arrayBuffer = await response.arrayBuffer();
+  const decodedAudio = await audioCtx.decodeAudioData(arrayBuffer);
+  convolver.normalize = false; // must be set before the buffer, to take effect
+  convolver.buffer = decodedAudio;
+} catch (error) {
+  console.error(
+    `Unable to fetch the audio file: ${name} Error: ${err.message}`,
+  );
 }
-
-ajaxRequest.send();
-
-  ...
-
-convolver.normalize = false; // must be set before the buffer, to take effect
-convolver.buffer = concertHallBuffer;
 ```
 
 ## Specifications

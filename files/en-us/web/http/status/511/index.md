@@ -1,13 +1,10 @@
 ---
 title: 511 Network Authentication Required
 slug: Web/HTTP/Status/511
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Server error
-  - Status code
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-6
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`511 Network Authentication Required`** response
@@ -23,15 +20,13 @@ Control (MAC) addresses.
 
 ## Status
 
-```
+```http
 511 Network Authentication Required
 ```
 
 ## Specifications
 
-| Specification                                                                    | Title                        |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{RFC("6585", "511 Network Authentication Required" , "6")}} | Additional HTTP Status Codes |
+{{Specifications}}
 
 ## See also
 

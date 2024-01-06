@@ -1,24 +1,22 @@
 ---
-title: BackgroundFetchManager.getIds()
+title: "BackgroundFetchManager: getIds() method"
+short-title: getIds()
 slug: Web/API/BackgroundFetchManager/getIds
-tags:
-  - API
-  - Method
-  - Reference
-  - getIds
-  - BackgroundFetchManager
-  - Experimental
-  - Service Workers
-  - Fetch
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.BackgroundFetchManager.getIds
 ---
-{{DefaultAPISidebar("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`getIds()`** method of the {{domxref("BackgroundFetchManager")}} interface returns the IDs of all registered background fetches.
 
 ## Syntax
 
-    let stringArray = BackgroundFetchManager.getIds();
+```js-nolint
+getIds()
+```
 
 ### Parameters
 
@@ -34,7 +32,7 @@ None.
 
 ## Examples
 
-The following examples shows how to retrieve the IDs of all registered background fetches. With an active {{domxref('ServiceWorker', 'service worker')}}, use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the \`BackgroundFetchManager\` object and call its \`get()\` method.
+The following examples shows how to retrieve the IDs of all registered background fetches. With an active [service worker](/en-US/docs/Web/API/ServiceWorker), use the {{domxref('ServiceWorkerRegistration.backgroundFetch')}} property to access the `BackgroundFetchManager` object and call its `getIds()` method.
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {

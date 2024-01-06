@@ -1,29 +1,18 @@
 ---
 title: inputmode
 slug: Web/HTML/Global_attributes/inputmode
-tags:
-  - Attribute
-  - Editing
-  - Forms
-  - Global attributes
-  - HTML
-  - Input
-  - Reference
-  - Text
-  - Web
-  - contenteditable
-  - global
-  - inputmode
-  - text input
+page-type: html-attribute
 browser-compat: html.global_attributes.inputmode
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`inputmode`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an enumerated attribute that hints at the type of data that might be entered by the user while editing the element or its contents.
+The **`inputmode`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that hints at the type of data that might be entered by the user while editing the element or its contents.
 This allows a browser to display an appropriate virtual keyboard.
 
-It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element while in {{HTMLAttrxRef("contenteditable")}} mode.
+It is used primarily on {{HTMLElement("input")}} elements, but is usable on any element in [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes#contenteditable) mode.
+
+It's important to understand that the `inputmode` attribute doesn't cause any validity requirements to be enforced on input. To require that input conforms to a particular data type, choose an appropriate [`<input> element type`](/en-US/docs/Web/HTML/Element/input#input_types). For specific guidance on choosing {{HTMLElement("input")}} types, see the [Values](#values) section.
 
 ## Values
 
@@ -45,7 +34,7 @@ The attribute can have any of the following values:
     Inputs that *require\* a telephone number should typically use `{{HTMLElement("input/tel", '&lt;input type="tel"&gt;')}}` instead.
 - `search`
   - : A virtual keyboard optimized for search input.
-    For instance, the [return/submit key](https://html.spec.whatwg.org/dev/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled “Search”, along with possible other optimizations.
+    For instance, the [return/submit key](https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute) may be labeled "Search", along with possible other optimizations.
     Inputs that _require_ a search query should typically use `{{HTMLElement("input/search", '&lt;input type="search"&gt;')}}` instead.
 - `email`
   - : A virtual keyboard optimized for entering email addresses.

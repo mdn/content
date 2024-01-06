@@ -1,21 +1,17 @@
 ---
 title: flex-wrap
 slug: Web/CSS/flex-wrap
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.flex-wrap
 ---
-{{ CSSRef}}
+
+{{CSSRef}}
 
 The **`flex-wrap`** [CSS](/en-US/docs/Web/CSS) property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked.
 
 {{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) for more properties and information.
+See [Using CSS flexible boxes](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for more properties and information.
 
 ## Syntax
 
@@ -28,6 +24,7 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: revert;
+flex-wrap: revert-layer;
 flex-wrap: unset;
 ```
 
@@ -59,19 +56,19 @@ The following values are accepted:
 #### HTML
 
 ```html
-<h4>This is an example for flex-wrap:wrap </h4>
+<h4>This is an example for flex-wrap:wrap</h4>
 <div class="content">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:nowrap </h4>
+<h4>This is an example for flex-wrap:nowrap</h4>
 <div class="content1">
   <div class="red">1</div>
   <div class="green">2</div>
   <div class="blue">3</div>
 </div>
-<h4>This is an example for flex-wrap:wrap-reverse </h4>
+<h4>This is an example for flex-wrap:wrap-reverse</h4>
 <div class="content2">
   <div class="red">1</div>
   <div class="green">2</div>
@@ -87,26 +84,26 @@ The following values are accepted:
 .content1,
 .content2 {
   color: #fff;
-  font: 100 24px/100px sans-serif;
+  font: 100 24px/100px sans-serif;
   height: 150px;
   width: 897px;
-  text-align: center;
+  text-align: center;
 }
 
 .content div,
 .content1 div,
 .content2 div {
-  height: 50%;
-  width: 300px;
+  height: 50%;
+  width: 300px;
 }
 .red {
-  background: orangered;
+  background: orangered;
 }
 .green {
-  background: yellowgreen;
+  background: yellowgreen;
 }
 .blue {
-  background: steelblue;
+  background: steelblue;
 }
 
 /* Flexbox Styles */
@@ -115,18 +112,18 @@ The following values are accepted:
   flex-wrap: wrap;
 }
 .content1 {
-  display: flex;
-  flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 .content2 {
-  display: flex;
-  flex-wrap: wrap-reverse;
+  display: flex;
+  flex-wrap: wrap-reverse;
 }
 ```
 
 #### Results
 
-{{ EmbedLiveSample('Setting_flex_container_wrap_values', '700px', '700px', '', 'Web/CSS/flex-wrap') }}
+{{ EmbedLiveSample('Setting flex container wrap values', '', '700') }}
 
 ## Specifications
 
@@ -138,5 +135,6 @@ The following values are accepted:
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS {{CSSXRef("flex-flow")}} shorthand property for the CSS `flex-wrap` and {{CSSXRef("flex-direction")}} properties.
+- Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_

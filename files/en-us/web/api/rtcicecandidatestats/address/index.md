@@ -1,24 +1,11 @@
 ---
-title: RTCIceCandidateStats.address
+title: "RTCIceCandidateStats: address property"
+short-title: address
 slug: Web/API/RTCIceCandidateStats/address
-tags:
-  - API
-  - Address
-  - Domain
-  - Domain Name
-  - FQDN
-  - IP
-  - IPv4
-  - IPv6
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-browser-compat: api.RTCIceCandidateStats.address
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_local-candidate.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`address`** property of the
@@ -30,24 +17,18 @@ well.
 When a domain name is specified, the first IP address selected for that
 address is used, even if the domain name maps to multiple IP addresses.
 
-## Syntax
-
-```js
-candidateAddress = rtcIceCandidateStats.address;
-```
-
-### Value
+## Value
 
 Either an IPv4 or IPv6 address or a fully-qualified domain name, which corresponds to
 the candidate.
 
 - If the value of `address` is comprised entirely of digits from 0-9 with
   periods as separators, the value is interpreted as an IPv4 address.
-- If the value is entirely comprised of hexadecimal digits and colon (":") 
+- If the value is entirely comprised of hexadecimal digits and colon (":")
   characters, it is interpreted as an IPv6 address.
 - Otherwise, the `address` is presumed to be a fully-qualified domain name,
   which is resolved first using an AAAA record (assuming IPv6 is available), then using
-  an A record (if no result is found or the device onlu supports IPv4). If multiple IP
+  an A record (if no result is found or the device only supports IPv4). If multiple IP
   addresses are returned in response to the query, the {{Glossary("user agent")}}
   selects one, which is then used for the duration of ICE processing.
 

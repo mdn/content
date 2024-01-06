@@ -1,14 +1,10 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-tags:
-  - API
-  - Interface
-  - NeedsContent
-  - WebSocket
-  - WebSockets
+page-type: web-api-interface
 browser-compat: api.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The `WebSocket` object provides the API for creating and managing a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection to a server, as well as for sending and receiving data on the connection.
@@ -17,39 +13,33 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructor
 
-- {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
+- {{domxref("WebSocket.WebSocket", "WebSocket()")}}
   - : Returns a newly created `WebSocket` object.
 
-## Properties
+## Instance properties
 
 - {{domxref("WebSocket.binaryType")}}
   - : The binary data type used by the connection.
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxref("WebSocket.bufferedAmount")}} {{ReadOnlyInline}}
   - : The number of bytes of queued data.
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxref("WebSocket.extensions")}} {{ReadOnlyInline}}
   - : The extensions selected by the server.
-- {{domxref("WebSocket.onclose")}}
-  - : An event listener to be called when the connection is closed.
-- {{domxref("WebSocket.onerror")}}
-  - : An event listener to be called when an error occurs.
-- {{domxref("WebSocket.onmessage")}}
-  - : An event listener to be called when a message is received from the server.
-- {{domxref("WebSocket.onopen")}}
-  - : An event listener to be called when the connection is opened.
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxref("WebSocket.protocol")}} {{ReadOnlyInline}}
   - : The sub-protocol selected by the server.
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxref("WebSocket.readyState")}} {{ReadOnlyInline}}
   - : The current state of the connection.
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
+- {{domxref("WebSocket.url")}} {{ReadOnlyInline}}
   - : The absolute URL of the WebSocket.
 
-## Methods
+## Instance methods
 
-- {{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}
+- {{domxref("WebSocket.close()")}}
   - : Closes the connection.
-- {{domxref("WebSocket.send", "WebSocket.send(data)")}}
+- {{domxref("WebSocket.send()")}}
   - : Enqueues data to be transmitted.
 
 ## Events
@@ -58,31 +48,31 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("WebSocket/close_event", "close")}}
   - : Fired when a connection with a `WebSocket` is closed.
-    Also available via the {{domxref("WebSocket/onclose", "onclose")}} property
+    Also available via the `onclose` property
 - {{domxref("WebSocket/error_event", "error")}}
   - : Fired when a connection with a `WebSocket` has been closed because of an error, such as when some data couldn't be sent.
-    Also available via the {{domxref("WebSocket/onerror", "onerror")}} property.
+    Also available via the `onerror` property.
 - {{domxref("WebSocket/message_event", "message")}}
   - : Fired when data is received through a `WebSocket`.
-    Also available via the {{domxref("WebSocket/onmessage", "onmessage")}} property.
+    Also available via the `onmessage` property.
 - {{domxref("WebSocket/open_event", "open")}}
   - : Fired when a connection with a `WebSocket` is opened.
-    Also available via the {{domxref("WebSocket/onopen", "onopen")}} property.
+    Also available via the `onopen` property.
 
 ## Examples
 
 ```js
 // Create WebSocket connection.
-const socket = new WebSocket('ws://localhost:8080');
+const socket = new WebSocket("ws://localhost:8080");
 
 // Connection opened
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
 });
 
 // Listen for messages
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
+socket.addEventListener("message", (event) => {
+  console.log("Message from server ", event.data);
 });
 ```
 

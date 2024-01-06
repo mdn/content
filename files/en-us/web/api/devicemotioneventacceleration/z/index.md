@@ -1,33 +1,21 @@
 ---
-title: 'DeviceMotionEventAcceleration: z'
+title: "DeviceMotionEventAcceleration: z property"
+short-title: z
 slug: Web/API/DeviceMotionEventAcceleration/z
-tags:
-  - API
-  - DeviceAcceleration
-  - NeedsExample
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventAcceleration.z
 ---
-{{ APIRef("Device Orientation Events") }}
 
-## Summary
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-This read-only property indicates the amount of acceleration that occurred along the Z
+The **`z`** read-only property of the {{domxref("DeviceMotionEventAcceleration")}} interface indicates the amount of acceleration that occurred along the Z
 axis in a [`DeviceMotionEventAcceleration`](/en-US/docs/Web/API/DeviceMotionEventAcceleration)
 object.
 
-## Syntax
+## Value
 
-```js
-var zAccel = DeviceMotionEventAcceleration.z;
-```
-
-### Return value
-
-- `z`
-  - : A `double` indicating the amount of acceleration along the Z axis. See [Accelerometer values
-    explained](/en-US/docs/Web/API/Detecting_device_orientation) for details.
+A `double` indicating the amount of acceleration along the Z axis.
+See [Accelerometer values explained](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation) for details.
 
 ## Specifications
 
@@ -36,8 +24,3 @@ var zAccel = DeviceMotionEventAcceleration.z;
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [`DeviceMotionEventAcceleration.x`](/en-US/docs/Web/API/DeviceMotionEventAcceleration.x)
-- [`DeviceMotionEventAcceleration.y`](/en-US/docs/Web/API/DeviceMotionEventAcceleration.y)

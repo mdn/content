@@ -1,29 +1,16 @@
 ---
-title: DOMRectReadOnly.y
+title: "DOMRectReadOnly: y property"
+short-title: "y"
 slug: Web/API/DOMRectReadOnly/y
-tags:
-  - API
-  - DOM
-  - DOMRect
-  - DOMRectReadOnly
-  - Experimental
-  - Geometry
-  - Property
-  - Reference
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.DOMRectReadOnly.y
 ---
-{{APIRef("DOM")}}{{ SeeCompatTable() }}
+
+{{APIRef("Geometry Interfaces")}}
 
 The **`y`** read-only property of the **`DOMRectReadOnly`** interface represents the y coordinate of the `DOMRect`'s origin.
 
-## Syntax
-
-```js
-var recY = DOMRect.y;
-```
-
-### Value
+## Value
 
 A double.
 

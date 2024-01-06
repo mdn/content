@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.createQuery()
+title: "WebGL2RenderingContext: createQuery() method"
+short-title: createQuery()
 slug: Web/API/WebGL2RenderingContext/createQuery
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.createQuery
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createQuery()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates and initializes
@@ -17,8 +14,8 @@ information.
 
 ## Syntax
 
-```js
-WebGLQuery gl.createQuery();
+```js-nolint
+createQuery()
 ```
 
 ### Parameters
@@ -35,7 +32,7 @@ A {{domxref("WebGLQuery")}} object.
 `WebGLQuery` objects are not available in WebGL 1.
 
 ```js
-var query = gl.createQuery();
+const query = gl.createQuery();
 ```
 
 ## Specifications

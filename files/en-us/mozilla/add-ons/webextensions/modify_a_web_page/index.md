@@ -1,9 +1,9 @@
 ---
 title: Modify a web page
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 One of the most common use cases for an extension is to modify a web page. For example, an extension might want to change the style applied to a page, hide particular DOM nodes, or inject extra DOM nodes into the page.
@@ -27,7 +27,6 @@ First of all, create a new directory called "modify-page". In that directory, cr
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
@@ -38,7 +37,6 @@ First of all, create a new directory called "modify-page". In that directory, cr
       "js": ["page-eater.js"]
     }
   ]
-
 }
 ```
 
@@ -53,16 +51,14 @@ Next, create a file called "page-eater.js" inside the "modify-page" directory, a
 ```js
 document.body.textContent = "";
 
-var header = document.createElement('h1');
+let header = document.createElement("h1");
 header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/):
+Now [install the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), and visit [https://developer.mozilla.org/](/). The page should look like this:
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
-
-> **Note:** Although this video shows the content script working in [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), content scripts are currently blocked for this site.
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## Modifying pages programmatically
 
@@ -72,20 +68,15 @@ First, update "manifest.json" so it has the following contents:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "modify-page",
   "version": "1.0",
 
-  "permissions": [
-    "activeTab",
-    "contextMenus"
-  ],
+  "permissions": ["activeTab", "contextMenus"],
 
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -94,18 +85,18 @@ Here, we've removed the `content_scripts` key, and added two new keys:
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): To inject scripts into pages we need permissions for the page we're modifying. The [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) is a way to get this temporarily for the currently active tab. We also need the `contextMenus` permission to be able to add context menu items.
 - [`background`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): We're using this to load a persistent ["background script"](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) called `background.js`, in which we'll set up the context menu and inject the content script.
 
-Let's create this file. Create a new file called `background.js` in the `modify-page` directory, and give it the following contents:
+Let's create this file. Create a new file called `background.js` in the `modify-page` directory, and give it the following contents:
 
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
   }
 });
@@ -124,9 +115,7 @@ modify-page/
 
 Now [reload the extension](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on), open a page (any page, this time) activate the context menu, and select "Eat this page":
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
-
-> **Note:** Although this video shows the content script working in [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/), content scripts are currently blocked for this site.
+![Option to eat a page on the context menu](eat_from_menu.png)
 
 ## Messaging
 
@@ -184,32 +173,32 @@ Content scripts and background scripts can't directly access each other's state.
 
 Let's update our example to show how to send a message from the background script.
 
-First, edit `background.js` so that it has these contents:
+First, edit `background.js` so that it has these contents:
 
 ```js
 browser.contextMenus.create({
   id: "eat-page",
-  title: "Eat this page"
+  title: "Eat this page",
 });
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the extension!"
+    replacement: "Message from the extension!",
   });
 }
 
 function onExecuted(result) {
-    let querying = browser.tabs.query({
-        active: true,
-        currentWindow: true
-    });
-    querying.then(messageTab);
+  let querying = browser.tabs.query({
+    active: true,
+    currentWindow: true,
+  });
+  querying.then(messageTab);
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
     let executing = browser.tabs.executeScript({
-      file: "page-eater.js"
+      file: "page-eater.js",
     });
     executing.then(onExecuted);
   }
@@ -218,12 +207,12 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 Now, after injecting `page-eater.js`, we use [`tabs.query()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) to get the currently active tab, and then use [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) to send a message to the content scripts loaded into that tab. The message has the payload `{replacement: "Message from the extension!"}`.
 
-Next, update `page-eater.js` like this:
+Next, update `page-eater.js` like this:
 
 ```js
 function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-  let header = document.createElement('h1');
+  let header = document.createElement("h1");
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
@@ -232,17 +221,17 @@ browser.runtime.onMessage.addListener(eatPageReceiver);
 
 Now, instead of just eating the page right away, the content script listens for a message using [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). When a message arrives, the content script runs essentially the same code as before, except that the replacement text is taken from `request.replacement`.
 
-Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
+Since [`tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) is an asynchronous function, and to ensure we send message only after listener has been added in `page-eater.js`, we use `onExecuted()` which will be called after `page-eater.js` executed.
 
-> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](/en-US/docs/Tools/Browser_Console) to view `console.log` in background script.
+> **Note:** Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (or <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> on macOS) OR `web-ext run --bc` to open [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) to view `console.log` in background script.
 >
-> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger)  which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
+> Alternatively, use [Add-on Debugger](/en-US/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
 
-If we want send messages back from the content script to the background page,  we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
+If we want send messages back from the content script to the background page, we would use [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
 
 ```js
 browser.runtime.sendMessage({
-    title: "from page-eater.js"
+  title: "from page-eater.js",
 });
 ```
 
@@ -260,12 +249,12 @@ browser.runtime.sendMessage({
 - [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Examples using `content_scripts`:
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
+  - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/main/emoji-substitution)
+  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - Examples using `tabs.executeScript()`:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)
+  - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
+  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

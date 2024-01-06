@@ -1,16 +1,11 @@
 ---
-title: BaseAudioContext.createDynamicsCompressor()
+title: "BaseAudioContext: createDynamicsCompressor() method"
+short-title: createDynamicsCompressor()
 slug: Web/API/BaseAudioContext/createDynamicsCompressor
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDynamicsCompressor
+page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createDynamicsCompressor
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `createDynamicsCompressor()` method of the {{
@@ -30,28 +25,30 @@ help avoid clipping (distorting) of the audio output.
 
 ## Syntax
 
-```js
-baseAudioCtx.createDynamicsCompressor();
+```js-nolint
+createDynamicsCompressor()
 ```
 
-### Returns
+### Parameters
+
+None.
+
+### Return value
 
 A {{domxref("DynamicsCompressorNode")}}.
 
-## Example
+## Examples
 
 The code below demonstrates a simple usage of `createDynamicsCompressor()`
-to add compression to an audio track. For a more complete example, have a look at our [basic Compressor
-example](https://mdn.github.io/webaudio-examples/compressor-example/) ([view
-the source code](https://github.com/mdn/webaudio-examples/tree/master/compressor-example)).
+to add compression to an audio track. For a more complete example, have a look at our [basic Compressor example](https://mdn.github.io/webaudio-examples/compressor-example/) ([view the source code](https://github.com/mdn/webaudio-examples/tree/main/compressor-example)).
 
 ```js
 // Create a MediaElementAudioSourceNode
 // Feed the HTMLMediaElement into it
-var source = audioCtx.createMediaElementSource(myAudio);
+const source = audioCtx.createMediaElementSource(myAudio);
 
 // Create a compressor node
-var compressor = audioCtx.createDynamicsCompressor();
+const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
@@ -61,24 +58,24 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);
 // connect the AudioBufferSourceNode to the destination
 source.connect(audioCtx.destination);
 
-button.onclick = function() {
-  var active = button.getAttribute('data-active');
-  if(active == 'false') {
-    button.setAttribute('data-active', 'true');
-    button.textContent = 'Remove compression';
+button.onclick = () => {
+  const active = button.getAttribute("data-active");
+  if (active === "false") {
+    button.setAttribute("data-active", "true");
+    button.textContent = "Remove compression";
 
     source.disconnect(audioCtx.destination);
     source.connect(compressor);
     compressor.connect(audioCtx.destination);
-  } else if(active == 'true') {
-    button.setAttribute('data-active', 'false');
-    button.textContent = 'Add compression';
+  } else if (active === "true") {
+    button.setAttribute("data-active", "false");
+    button.textContent = "Add compression";
 
     source.disconnect(compressor);
     compressor.disconnect(audioCtx.destination);
     source.connect(audioCtx.destination);
   }
-}
+};
 ```
 
 ## Specifications

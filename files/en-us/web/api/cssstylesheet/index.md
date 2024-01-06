@@ -1,56 +1,50 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Interface
-  - Layout
-  - Object Model
-  - Reference
-  - StyleSheet
+page-type: web-api-interface
 browser-compat: api.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
+
+{{InheritanceDiagram}}
 
 A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.
 
 For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
 
 ```css
-h1, h2 {
+h1,
+h2 {
   font-size: 16pt;
 }
 ```
 
 Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
 
-See the {{anch("Obtaining a StyleSheet")}} section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
+See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
 
 ## Constructor
 
 - {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}}
   - : Creates a new `CSSStyleSheet` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
-- {{domxref("CSSStyleSheet.cssRules")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
 
   - : Returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of the {{domxref("CSSRule")}} objects that comprise the stylesheet.
 
-    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a`SecurityError`.
+    > **Note:** In some browsers, if a stylesheet is loaded from a different domain, accessing `cssRules` results in a `SecurityError`.
 
-- {{domxref("CSSStyleSheet.ownerRule")}}{{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.ownerRule")}} {{ReadOnlyInline}}
   - : If this stylesheet is imported into the document using an {{cssxref("@import")}} rule, the `ownerRule` property returns the corresponding {{domxref("CSSImportRule")}}; otherwise, this property's value is `null`.
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 
@@ -67,20 +61,20 @@ _Inherits methods from its parent, {{domxref("StyleSheet")}}._
 
 _These properties are legacy properties as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}}
+- {{domxref("CSSStyleSheet.rules", "rules")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : The `rules` property is functionally identical to the standard {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property; it returns a live {{domxref("CSSRuleList")}} which maintains an up-to-date list of all of the rules in the style sheet.
 
 ## Legacy methods
 
 _These methods are legacy methods as introduced by Microsoft; these are maintained for compatibility with existing sites._
 
-- {{domxref("CSSStyleSheet.addRule", "addRule()")}}
+- {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
 
   - : Adds a new rule to the stylesheet given the selector to which the style applies and the style block to apply to the matching elements.
 
     This differs from {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, which takes the textual representation of the entire rule as a single string.
 
-- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}}
+- {{domxref("CSSStyleSheet.removeRule", "removeRule()")}} {{Deprecated_Inline}}
   - : Functionally identical to {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; removes the rule at the specified index from the stylesheet's rule list.
 
 ## Obtaining a StyleSheet
@@ -126,7 +120,7 @@ A (possibly incomplete) list of ways a stylesheet can be associated with a docum
     </tr>
     <tr>
       <td>
-        CSS {{cssxref("@import")}} rule in other style sheets applied to
+        CSS {{cssxref("@import")}} rule in other style sheets applied to
         the document
       </td>
       <td>Yes</td>

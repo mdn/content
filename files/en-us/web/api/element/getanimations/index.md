@@ -1,42 +1,31 @@
 ---
-title: Element.getAnimations()
+title: "Element: getAnimations() method"
+short-title: getAnimations()
 slug: Web/API/Element/getAnimations
-tags:
-  - API
-  - Animatable
-  - CSS
-  - CSS Animations
-  - CSS Transitions
-  - Element
-  - Experimental
-  - Method
-  - Reference
-  - Transitions
-  - Web Animations
-  - getAnimations
-  - waapi
-  - web animations api
+page-type: web-api-instance-method
 browser-compat: api.Element.getAnimations
 ---
-{{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 
-The `getAnimations()` method of the {{domxref("Element")}} interface
-(specified on the `Animatable` mixin) returns an array of all
+{{APIRef("Web Animations")}}
+
+The `getAnimations()` method of the {{domxref("Element")}} interface
+(specified on the `Animatable` mixin) returns an array of all
 {{domxref("Animation")}} objects affecting this element or which are scheduled to do so
-in future. It can optionally return {{domxref("Animation")}} objects for descendant
+in future. It can optionally return {{domxref("Animation")}} objects for descendant
 elements too.
 
-> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
+> **Note:** This array includes [CSS Animations](/en-US/docs/Web/CSS/CSS_animations), [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions), and [Web Animations](/en-US/docs/Web/API/Web_Animations_API).
 
 ## Syntax
 
-```js
-const animations = Element.getAnimations(options);
+```js-nolint
+getAnimations()
+getAnimations(options)
 ```
 
 ### Parameters
 
-- `options {{optional_inline}}`
+- `options` {{optional_inline}}
 
   - : An options object containing the following property:
 
@@ -59,8 +48,7 @@ descendants to finish before removing the element from the document.
 
 ```js
 Promise.all(
-  elem.getAnimations({ subtree: true })
-    .map(animation => animation.finished)
+  elem.getAnimations({ subtree: true }).map((animation) => animation.finished),
 ).then(() => elem.remove());
 ```
 
@@ -75,7 +63,7 @@ Promise.all(
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
+- [CSS Animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS Transitions](/en-US/docs/Web/CSS/CSS_transitions)
 - {{domxref("Document.getAnimations()")}} - Fetch all animations in the document
 - {{domxref("Animation")}}

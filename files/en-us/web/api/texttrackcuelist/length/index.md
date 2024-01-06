@@ -1,25 +1,16 @@
 ---
-title: TextTrackCueList.length
+title: "TextTrackCueList: length property"
+short-title: length
 slug: Web/API/TextTrackCueList/length
-tags:
-  - API
-  - Property
-  - Reference
-  - length
-  - TextTrackCueList
-  - WebVTT
-  - Media
+page-type: web-api-instance-property
 browser-compat: api.TextTrackCueList.length
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`length`** read-only property of the {{domxref("TextTrackCueList")}} interface returns the number of cues in the list.
 
-## Syntax
-
-    var length = TextTrackCueList.length;
-
-### Value
+## Value
 
 An `unsigned long` which is the number of cues in the list.
 
@@ -27,33 +18,35 @@ An `unsigned long` which is the number of cues in the list.
 
 The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.length` returns the number of cues in the list. Using the WebVTT track below, the value of `length` is 5.
 
-    WEBVTT
+```plain
+WEBVTT
 
-    first
-    00:00:00.000 --> 00:00:00.999  line:80%
-    Hildy!
+first
+00:00:00.000 --> 00:00:00.999  line:80%
+Hildy!
 
-    second
-    00:00:01.000 --> 00:00:01.499 line:80%
-    How are you?
+second
+00:00:01.000 --> 00:00:01.499 line:80%
+How are you?
 
-    third
-    00:00:01.500 --> 00:00:02.999 line:80%
-    Tell me, is the ruler of the universe in?
+third
+00:00:01.500 --> 00:00:02.999 line:80%
+Tell me, is the ruler of the universe in?
 
-    fourth
-    00:00:03.000 --> 00:00:04.299 line:80%
-    Yes, they're in - in a bad humor
+fourth
+00:00:03.000 --> 00:00:04.299 line:80%
+Yes, they're in - in a bad humor
 
-    fifth
-    00:00:04.300 --> 00:00:06.000 line:80%
-    Somebody must've stolen the crown jewels
+fifth
+00:00:04.300 --> 00:00:06.000 line:80%
+Somebody must've stolen the crown jewels
+```
 
 ```js
-let video = document.getElementById("video");
-video.onplay = function () {
-  console.log(video.textTracks[0].cues.length) //5;
-}
+const video = document.getElementById("video");
+video.onplay = () => {
+  console.log(video.textTracks[0].cues.length); // 5
+};
 ```
 
 ## Specifications

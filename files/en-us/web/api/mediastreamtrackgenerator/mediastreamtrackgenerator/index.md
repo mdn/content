@@ -1,35 +1,36 @@
 ---
-title: MediaStreamTrackGenerator.MediaStreamTrackGenerator()
+title: "MediaStreamTrackGenerator: MediaStreamTrackGenerator() constructor"
+short-title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
-tags:
-  - API
-  - Constructor
-  - Reference
-  - MediaStreamTrackGenerator
+page-type: web-api-constructor
+status:
+  - experimental
+  - non-standard
 browser-compat: api.MediaStreamTrackGenerator.MediaStreamTrackGenerator
 ---
-{{DefaultAPISidebar("Insertable Streams for MediaStreamTrack API")}}
+
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The **`MediaStreamTrackGenerator()`** constructor creates a new {{domxref("MediaStreamTrackGenerator")}} object which consumes a stream of media frames and exposes a {{domxref("MediaStreamTrack")}}.
 
 ## Syntax
 
-```js
-new MediaStreamTrackGenerator(options);
+```js-nolint
+new MediaStreamTrackGenerator(options)
 ```
 
 ### Parameters
 
 - `options`
-  - : An object containing the property `kind`, which is a {{domxref("DOMString", "string")}} with one of the following values:
-      - `"audio"`
-        - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
-      - `"video"`
-        - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
+  - : An object containing the property `kind`, which is one of the following strings:
+    - `"audio"`
+      - : Specifies that the stream accepts {{domxref("AudioTrack")}} objects.
+    - `"video"`
+      - : Specifies that the stream accepts {{domxref("VideoTrack")}} objects.
 
 ## Exceptions
 
-- {{domxref("DOMException")}} `TypeError`
+- {{jsxref("TypeError")}}
   - : Thrown if `init.kind` is not `"video"` or `"audio"`.
 
 ## Examples
@@ -37,7 +38,7 @@ new MediaStreamTrackGenerator(options);
 In the following example a new video `MediaStreamTrackGenerator` is created.
 
 ```js
-const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
+const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 ```
 
 ## Specifications
@@ -50,4 +51,4 @@ const trackGenerator = new MediaStreamTrackGenerator({ kind: 'video' });
 
 ## See also
 
-- [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/)
+- [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing)

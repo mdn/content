@@ -1,49 +1,62 @@
 ---
-title: 'Element: mousewheel event'
+title: "Element: mousewheel event"
+short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
-tags:
-  - DOM
-  - Deprecated
-  - Event
-  - Interface
-  - Non-standard
-  - UI
-  - mouse
-  - mousewheel
-  - scrolling
-  - wheel
+page-type: web-api-event
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Element.mousewheel_event
 ---
+
 {{APIRef}}{{deprecated_header}}{{ Non-standard_header() }}
 
 The _obsolete_ and _non-standard_ **`mousewheel`** event is fired asynchronously at an {{domxref("Element")}} to provide updates while a mouse wheel or similar device is operated. The `mousewheel` event was never part of any standard, and while it was implemented by several browsers, it was never implemented by Firefox.
 
 > **Note:** Instead of this obsolete event, use the standard {{domxref("Element.wheel_event", "wheel")}} event.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>
-        {{domxref("WheelEvent")}}
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("GlobalEventHandlers.onmousewheel", "onmousewheel")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("mousewheel", (event) => {});
+
+onmousewheel = (event) => {};
+```
+
+## Event type
+
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.
+
+{{InheritanceDiagram("WheelEvent")}}
+
+## Event properties
+
+_This interface inherits properties from its ancestors, {{DOMxRef("MouseEvent")}}, {{DOMxRef("UIEvent")}}, and {{DOMxRef("Event")}}._
+
+- {{DOMxRef("WheelEvent.deltaX")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.deltaY")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the vertical scroll amount.
+- {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
+  - : Returns a `double` representing the scroll amount for the z-axis.
+- {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
+
+  - : Returns an `unsigned long` representing the unit of the `delta*` values' scroll amount. Permitted values are:
+
+    | Constant                     | Value  | Description                                                                                                                                                  |
+    | ---------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `WheelEvent.DOM_DELTA_PIXEL` | `0x00` | The `delta*` values are specified in pixels.                                                                                                                 |
+    | `WheelEvent.DOM_DELTA_LINE`  | `0x01` | The `delta*` values are specified in lines. Each mouse click scrolls a line of content, where the method used to calculate line height is browser dependent. |
+    | `WheelEvent.DOM_DELTA_PAGE`  | `0x02` | The `delta*` values are specified in pages. Each mouse click scrolls a page of content.                                                                      |
+
+- {{DOMxRef("WheelEvent.wheelDelta")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer (32-bit) representing the distance in pixels.
+- {{DOMxRef("WheelEvent.wheelDeltaX")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the horizontal scroll amount.
+- {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : Returns an integer representing the vertical scroll amount.
 
 ## The detail property
 
@@ -63,10 +76,6 @@ The `wheelDeltaX` attribute value indicates the `wheelDelta` attribute value alo
 
 The `wheelDeltaY` attribute value indicates the `wheelDelta` attribute value along the vertical axis. The sign of the value is the same as the `wheelDelta` attribute value.
 
-### Internet Explorer
-
-The value is the same as the delta value of Windows' `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. It means that if the mouse wheel doesn't support high resolution scroll, the value is 120 per notch. The value isn't changed even if the scroll amount of system settings is page scroll.
-
 ### Chrome
 
 On Windows, the value is the same as the delta value of `WM_MOUSEWHEEL` or `WM_MOUSEHWHEEL`. And also, the value isn't changed even if the scroll amount of system settings is page scroll, i.e., the value is the same as IE on Windows.
@@ -80,8 +89,6 @@ If the device supports continuous scroll (e.g., trackpad of MacBook or mouse whe
 If the device does **not** support continuous scroll (typically, old mouse wheel which cannot be turned smoothly), the value is computed from non-accelerated scroll amount (120 per notch). In this case, the value is different from Safari.
 
 This difference makes a serious issue for web application developers. That is, web developers cannot know if `mousewheel` event is caused by which device.
-
-See `WebInputEventFactory::mouseWheelEvent` of the [Chromium's source code](http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm) for the detail.
 
 ### Safari
 
@@ -107,5 +114,4 @@ Not part of any specification.
 
 ## See also
 
-- Gecko's legacy mouse wheel events: `DOMMouseScroll`, `MozMousePixelScroll`
-- Standardized wheel event: `wheel`
+- The standard {{domxref("Element/wheel_event", "wheel")}} event to listen to instead.

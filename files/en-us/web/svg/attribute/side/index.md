@@ -1,28 +1,34 @@
 ---
 title: side
 slug: Web/SVG/Attribute/side
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - experimental
 browser-compat: svg.elements.textPath.side
 ---
-{{SVGRef}}
+
+{{SVGRef}}{{SeeCompatTable}}
 
 The **`side`** attribute determines the side of a path the text is placed on (relative to the path direction).
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("textPath")}}
+- {{SVGElement("textPath")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 
 text {
-  font: 25px Arial, Helvetica, sans-serif;
+  font:
+    25px Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 
@@ -35,8 +41,20 @@ text {
     <textPath href="#circle2" side="right">Text right from the path</textPath>
   </text>
 
-  <circle id="circle1" cx="100" cy="100" r="70" fill="transparent" stroke="silver"/>
-  <circle id="circle2" cx="320" cy="100" r="70" fill="transparent" stroke="silver"/>
+  <circle
+    id="circle1"
+    cx="100"
+    cy="100"
+    r="70"
+    fill="transparent"
+    stroke="silver" />
+  <circle
+    id="circle2"
+    cx="320"
+    cy="100"
+    r="70"
+    fill="transparent"
+    stroke="silver" />
 </svg>
 ```
 
@@ -61,31 +79,14 @@ text {
   </tbody>
 </table>
 
-*   `left`
-    *   : This value places the text on the left side of the path (relative to the path direction).
-*   `right`
-    *   : This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.
+- `left`
+  - : This value places the text on the left side of the path (relative to the path direction).
+- `right`
+  - : This value places the text on the right side of the path (relative to the path direction). This effectively reverses the path direction.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "text.html#TextPathElementSideAttribute", "side")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

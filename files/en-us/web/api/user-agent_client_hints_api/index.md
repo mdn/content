@@ -1,22 +1,21 @@
 ---
 title: User-Agent Client Hints API
 slug: Web/API/User-Agent_Client_Hints_API
-tags:
-  - API
-  - User-Agent Client Hints API
-  - Overview
-  - Reference
+page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.NavigatorUAData
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
 
-The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Glossary/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
+{{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
+
+The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 
 ## Concepts and Usage
 
 Parsing the User-Agent string has historically been the way to get information about the user's browser or device. A typical user agent string looks like the following example, identifying Chrome 92 on Windows:
 
-```html
+```plain
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36
 ```
 
@@ -26,12 +25,14 @@ In order to decide what to return, the information accessed via this API is spli
 
 ### Use cases for User-Agent Client Hints
 
-The [User-Agent Client Hints Explainer]() explains some potential use cases for the API. These include:
+Potential use cases include:
 
 - Providing custom-tailored polyfills to users on identifying that their browser lacked some web platform feature.
 - Working around browser bugs.
 - Recording browser analytics.
-- Adapting content based on user-agent information. This includes serving different content to mobile devices, in particular devices identified as low-powered. It might also include adapting the design to tailor the interfaces to the user's OS, or providing links to OS-specific ones.
+- Adapting content based on user-agent information.
+  This includes serving different content to mobile devices, in particular devices identified as low-powered.
+  It might also include adapting the design to tailor the interfaces to the user's OS, or providing links to OS-specific ones.
 - Providing a notification when a user logs in from a different browser or device, as a security feature.
 - Providing the correct binary executable, on a site offering a download.
 - Collecting information about the browser and device to identify application errors.
@@ -57,13 +58,17 @@ console.log(navigator.userAgentData.brands);
 In the following example a number of hints are requested using the {{domxref("NavigatorUAData.getHighEntropyValues()")}} method. When the promise resolves, this information is printed to the console.
 
 ```js
-navigator.userAgentData.getHighEntropyValues(
-  ["architecture",
-  "model",
-  "platform",
-  "platformVersion",
-  "uaFullVersion"])
-  .then(ua => { console.log(ua) });
+navigator.userAgentData
+  .getHighEntropyValues([
+    "architecture",
+    "model",
+    "platform",
+    "platformVersion",
+    "fullVersionList",
+  ])
+  .then((ua) => {
+    console.log(ua);
+  });
 ```
 
 ## Specifications
@@ -76,5 +81,5 @@ navigator.userAgentData.getHighEntropyValues(
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
-- [Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch)

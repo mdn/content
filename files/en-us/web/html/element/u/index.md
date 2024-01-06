@@ -1,22 +1,11 @@
 ---
-title: '<u>: The Unarticulated Annotation (Underline) element'
+title: "<u>: The Unarticulated Annotation (Underline) element"
 slug: Web/HTML/Element/u
-tags:
-  - Annotation
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Unarticulated Annotation
-  - Underline
-  - Web
+page-type: html-element
 browser-compat: html.elements.u
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
 
@@ -24,64 +13,7 @@ The **`<u>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline t
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
-See the {{anch("Usage notes")}} section for further details on when it's appropriate to use `<u>` and when it isn't.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
+See the [Usage notes](#usage_notes) section for further details on when it's appropriate to use `<u>` and when it isn't.
 
 ## Attributes
 
@@ -95,7 +27,7 @@ Along with other pure styling elements, the original HTML Underline (`<u>`) elem
 
 ### Use cases
 
-Valid use cases for the `<u>` element include annotating spelling errors, applying a {{interwiki("wikipedia", "proper name mark")}} to denote proper names in Chinese text, and other forms of annotation.
+Valid use cases for the `<u>` element include annotating spelling errors, applying a [proper name mark](https://en.wikipedia.org/wiki/Proper_name_mark) to denote proper names in Chinese text, and other forms of annotation.
 
 You should _not_ use `<u>` to underline text for presentation purposes, or to denote titles of books.
 
@@ -123,8 +55,7 @@ This example uses the `<u>` element and some CSS to display a paragraph which in
 #### HTML
 
 ```html
-<p>This paragraph includes a <u class="spelling">wrnogly</u>
-spelled word.</p>
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
 In the HTML, we see the use of `<u>` with a class, `spelling`, which is used to indicate the misspelling of the word "wrongly".
@@ -157,7 +88,7 @@ To underline text without implying any semantic meaning, use a {{HTMLElement("sp
 
 ```html
 <span class="underline">Today's Special</span>
-<br>
+<br />
 Chicken Noodle Soup With Carrots
 ```
 
@@ -202,6 +133,67 @@ cite {
 
 {{EmbedLiveSample("Styling_the_cite_element", 650, 80)}}
 
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Specifications
 
 {{Specifications}}
@@ -213,4 +205,4 @@ cite {
 ## See also
 
 - The {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}}, and {{HTMLElement("cite")}} elements should usually be used instead.
-- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.
+- The CSS {{cssxref("text-decoration")}} property should be used for non-semantic underlining.

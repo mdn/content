@@ -1,13 +1,11 @@
 ---
-title: For Further Reading
+title: For further reading
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-tags:
-  - NeedsContent
-  - NeedsHelp
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
+page-type: guide
 ---
+
+{{XsltSidebar}}
+
 [« Transforming XML with XSLT](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT)
 
 ## Print
@@ -56,62 +54,26 @@ tags:
   - **The W3C homepage**: <https://www.w3.org>
   - **The main XSL page**: <https://www.w3.org/Style/XSL/>
   - **XSLT specifications overview**: <https://www.w3.org/TR/xslt/>
-  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](http://lists.w3.org/Archives/Public/www-style/)
+  - **Archive of public style (CSS and XSLT) discussions**: [https://lists.w3.org/Archives/Public/www-style/](https://lists.w3.org/Archives/Public/www-style/)
   - **XPath specifications overview**: <https://www.w3.org/TR/xpath/>
 
     - The World Wide Web Consortium is the body that publishes Recommendations for a number of web-based technologies, many of which become the de-facto standard.
 
 ### Articles
 
-- **Hands-on XSL**
-
-  - **Author**: Don R. Day
-  - **Location**: <https://www.ibm.com/developerworks/library/x-hands-on-xsl/>
-
-<!---->
-
-- **What is XSLT?**
-
-  - **Author**: G. Ken Holman
-  - **Location**: <https://www.xml.com/pub/a/2000/08/holman/index.html>
+- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) by Don R. Day
+- [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### Tutorials/Examples
 
-- **Jeni's XSLT Pages**
-
-  - **Index**: <http://www.jenitennison.com/xslt/>
-
-<!---->
-
-- **XMLPitstop.com**
-
-  - **StyleSheet Center**: <http://www.xmlpitstop.com/default_datatype_SSC.html>
-
-<!---->
-
-- **XSL Tutorial**
-
-  - **Index**: <https://nwalsh.com/docs/tutorials/xsl/>
+- [Jeni's XSLT Pages](https://www.jenitennison.com/xslt/)
+- [XMLPitstop.com](https://web.archive.org/web/20211209064736/https://www.xmlpitstop.com/default_datatype_SSC.html)
+- [XSL Tutorial](https://nwalsh.com/docs/tutorials/xsl/)
 
 ### Other
 
-- **Cover Pages**
-
-  - **Extensible Stylesheet Language (XSL)**: <http://xml.coverpages.org/xsl.html>
-
-<!---->
-
+- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
-  - **Subscribe**: <http://www.mulberrytech.com/xsl/xsl-list/>
+  - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
   - **Archives**: <https://www.biglist.com/lists/xsl-list/archives/>
-
-    - The XSL-List is a very active general mailing list, hosted by [Mulberry Technologies](http://mulberrytech.com/)
-
-<!---->
-
-- **mozilla.dev.tech.xslt**
-
-  - **Google Groups**: <https://groups.google.com/g/mozilla.dev.tech.xslt>
-
-    - This is a newsgroup that discusses Netscape-specific XSLT issues.

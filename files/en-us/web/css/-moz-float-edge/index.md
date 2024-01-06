@@ -1,19 +1,18 @@
 ---
-title: '-moz-float-edge'
+title: "-moz-float-edge"
 slug: Web/CSS/-moz-float-edge
-tags:
-  - CSS
-  - CSS Property
-  - CSS:Mozilla Extensions
-  - Layout
-  - NeedsCompatTable
-  - Non-standard
-  - recipe:css-property
+page-type: css-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: css.properties.-moz-float-edge
 ---
-{{CSSRef}}{{Non-standard_header}}
+
+{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
 The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -27,8 +26,6 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 -moz-float-edge: initial;
 -moz-float-edge: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -47,7 +44,10 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Examples
 
@@ -86,4 +86,4 @@ Not part of any standard.
 
 ## See also
 
-- {{bug(432891)}}
+- [Firefox bug 432891](https://bugzil.la/432891)

@@ -1,31 +1,33 @@
 ---
 title: Sidebars
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 A sidebar is a pane that is displayed at the side of the browser window, next to the web page. This page describes sidebars, specifying them, designing them, and examples of use.
 
-The browser provides a UI that enables the user to see the currently available sidebars and to select a sidebar to display. For example, Firefox has a "View > Sidebar" menu. Only one sidebar can be shown at a time, and that sidebar will be displayed for all tabs and all browser windows.
+The browser provides a UI that enables the user to select a sidebar to display. For example, Firefox has the "View" > "Sidebar" menu. Each browser window can display its own sidebar, which is displayed on every tab in the window.
 
 The browser may include a number of built-in sidebars. For example, Firefox includes a sidebar for interacting with bookmarks:
 
-![](bookmarks-sidebar.png)Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+![Annotator sidebar with a box allowing the user to take notes about the page.](bookmarks-sidebar.png)
 
-Like a browser action popup, the sidebar's contents are specified as an HTML document. When the user opens the sidebar, the sidebar's document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
+Using the [`sidebar_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json key, an extension can add its own sidebar to the browser. It will be listed alongside the built-in sidebars, and the user will be able to open it using the same mechanism as for the built-in sidebars.
+
+Like a browser action popup, the sidebar's contents are specified as an HTML document. When the user opens the sidebar, the sidebar's document is loaded into every open browser window. Each window gets its own instance of the document. When new windows are opened, they get their own sidebar documents as well.
 
 A document for a particular tab can be set using the {{WebExtAPIRef("sidebarAction.setPanel()")}} function. A sidebar can figure out which window it belongs to using the {{WebExtAPIRef("windows.getCurrent()")}} API:
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```
 
-This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+This is useful if a sidebar wants to display different content for different windows. For an example of this, see the ["annotate-page" example](https://github.com/mdn/webextensions-examples/tree/main/annotate-page).
 
 Sidebar documents get access to the same set of privileged JavaScript APIs that the extension's background and popup scripts get. They can get direct access to the background page (unless the sidebar belongs to an incognito mode window) using {{WebExtAPIRef("runtime.getBackgroundPage()")}}, and can interact with content scripts or native applications using messaging APIs like {{WebExtAPIRef("tabs.sendMessage()")}} and {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
 
@@ -51,8 +53,8 @@ Title and icon are shown to the user in any UI provided by the browser to list s
 
 ## Sidebar design
 
-For details on how to design a sidebar's web page to match the style of Firefox, see the [Photon Design System](https://design.firefox.com/photon/index.html) documentation.
+For details on how to design a sidebar's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/) documentation.
 
 ## Example
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) example which implements a sidebar.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [annotate-page](https://github.com/mdn/webextensions-examples/tree/main/annotate-page) example which implements a sidebar.

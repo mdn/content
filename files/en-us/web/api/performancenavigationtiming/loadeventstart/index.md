@@ -1,56 +1,59 @@
 ---
-title: PerformanceNavigationTiming.loadEventStart
+title: "PerformanceNavigationTiming: loadEventStart property"
+short-title: loadEventStart
 slug: Web/API/PerformanceNavigationTiming/loadEventStart
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceNavigationTiming.loadEventStart
 ---
-{{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
-The **`loadEventStart`** read-only property returns a
-{{domxref("DOMHighResTimeStamp","timestamp")}} representing the time value equal to the
-time immediately before the load event of the current document is fired.
+{{APIRef("Performance API")}}
 
-## Syntax
+The **`loadEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
+
+## Value
+
+A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`load`](/en-US/docs/Web/API/Window/load_event) event handler starts.
+
+## Examples
+
+### Measuring `load` event handler time
+
+The `loadEventStart` property can be used to measure how long it takes process the[`load`](/en-US/docs/Web/API/Window/load_event) event handler.
+
+This is useful to measure the time of long running [`load`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
 ```js
-perfEntry.loadEventStart;
+window.addEventListener("load", (event) => {
+  // Some long running code
+});
 ```
 
-### Return Value
-
-A {{domxref("DOMHighResTimeStamp","timestamp")}} representing a time value equal to the
-time immediately before the load event of the current document is fired.
-
-## Example
-
-The following example illustrates this property's usage.
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `navigation` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-function print_nav_timing_data() {
-  // Use getEntriesByType() to just get the "navigation" events
-  var perfEntries = performance.getEntriesByType("navigation");
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const loadEventTime = entry.loadEventEnd - entry.loadEventStart;
+    if (loadEventTime > 0) {
+      console.log(`${entry.name}: load event handler time: ${loadEventTime}ms`);
+    }
+  });
+});
 
-  for (var i=0; i < perfEntries.length; i++) {
-    console.log("= Navigation entry[" + i + "]");
-    var p = perfEntries[i];
-    // dom Properties
-    console.log("DOM content loaded = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
-    console.log("DOM complete = " + p.domComplete);
-    console.log("DOM interactive = " + p.interactive);
+observer.observe({ type: "navigation", buffered: true });
+```
 
-    // document load and unload time
-    console.log("document load = " + (p.loadEventEnd - p.loadEventStart));
-    console.log("document unload = " + (p.unloadEventEnd - p.unloadEventStart));
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `navigation` performance entries present in the browser's performance timeline at the time you call this method:
 
-    // other properties
-    console.log("type = " + p.type);
-    console.log("redirectCount = " + p.redirectCount);
+```js
+const entries = performance.getEntriesByType("navigation");
+entries.forEach((entry) => {
+  const loadEventTime = entry.loadEventEnd - entry.loadEventStart;
+  if (loadEventTime > 0) {
+    console.log(`${entry.name}:
+      load event handler time: ${loadEventTime}ms`);
   }
-}
+});
 ```
 
 ## Specifications
@@ -60,3 +63,7 @@ function print_nav_timing_data() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [`load`](/en-US/docs/Web/API/Window/load_event) event

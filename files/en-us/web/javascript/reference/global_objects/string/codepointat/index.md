@@ -1,138 +1,83 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.codePointAt
 ---
+
 {{JSRef}}
 
-The **`codePointAt()`** method returns a non-negative integer
-that is the UTF-16 code point value.
+The **`codePointAt()`** method of {{jsxref("String")}} values returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-codepointat.html", "shorter")}}
 
 ## Syntax
 
-```js
-codePointAt(pos)
+```js-nolint
+codePointAt(index)
 ```
 
 ### Parameters
 
-- `pos`
-  - : Position of an element in `str` to return the code point value
-    from.
+- `index`
+  - : Zero-based index of the character to be returned. [Converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion) — `undefined` is converted to 0.
 
 ### Return value
 
-A decimal number representing the code point value of the character at the given `pos`.
+A non-negative integer representing the code point value of the character at the given `index`.
 
-- If there is no element at `pos`, returns [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
-- If the element at `pos` is a UTF-16 high surrogate, returns the code point of the surrogate _pair_.
-- If the element at `pos` is a UTF-16 low surrogate, returns _only_ the low surrogate code point.
+- If `index` is out of the range of `0` – `str.length - 1`, `codePointAt()` returns {{jsxref("undefined")}}.
+- If the element at `index` is a UTF-16 leading surrogate, returns the code point of the surrogate _pair_.
+- If the element at `index` is a UTF-16 trailing surrogate, returns _only_ the trailing surrogate code unit.
+
+## Description
+
+Characters in a string are indexed from left to right. The index of the first character is `0`, and the index of the last character in a string called `str` is `str.length - 1`.
+
+Unicode code points range from `0` to `1114111` (`0x10FFFF`). In UTF-16, each string index is a code unit with value `0` – `65535`. Higher code points are represented by _a pair_ of 16-bit surrogate pseudo-characters. Therefore, `codePointAt()` returns a code point that may span two string indices. For information on Unicode, see [UTF-16 characters, Unicode code points, and grapheme clusters](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 
 ## Examples
 
 ### Using codePointAt()
 
 ```js
-'ABC'.codePointAt(0)                        // 65
-'ABC'.codePointAt(0).toString(16)           // 41
+"ABC".codePointAt(0); // 65
+"ABC".codePointAt(0).toString(16); // 41
 
-'😍'.codePointAt(0)                         // 128525
-'\ud83d\ude0d'.codePointAt(0)               // 128525
-'\ud83d\ude0d'.codePointAt(0).toString(16)  // 1f60d
+"😍".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0); // 128525
+"\ud83d\ude0d".codePointAt(0).toString(16); // 1f60d
 
-'😍'.codePointAt(1)                         // 56845
-'\ud83d\ude0d'.codePointAt(1)               // 56845
-'\ud83d\ude0d'.codePointAt(1).toString(16)  // de0d
+"😍".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1); // 56845
+"\ud83d\ude0d".codePointAt(1).toString(16); // de0d
 
-'ABC'.codePointAt(42)                       // undefined
+"ABC".codePointAt(42); // undefined
 ```
 
 ### Looping with codePointAt()
 
-Because indexing to a `pos` whose element is a UTF-16 low surrogate, returns _only_ the low surrogate,
-it's better not to index directly into a UTF-16 string.
+Because using string indices for looping causes the same code point to be visited twice (once for the leading surrogate, once for the trailing surrogate), and the second time `codePointAt()` returns _only_ the trailing surrogate, it's better to avoid looping by index.
 
-Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement
-or an Array's [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method
-(or anything which correctly iterates UTF-16 surrogates) to iterate the string, using `codePointAt(0)` to get the code point of each element.
+```js example-bad
+const str = "\ud83d\udc0e\ud83d\udc71\u2764";
 
-```js
-for (let codePoint of '\ud83d\udc0e\ud83d\udc71\u2764') {
-   console.log(codePoint.codePointAt(0).toString(16))
+for (let i = 0; i < str.length; i++) {
+  console.log(str.codePointAt(i).toString(16));
 }
-// '1f40e', '1f471', '2764'
+// '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-## Polyfill
-
-The following extends Strings to include the `codePointAt()` function as
-specified in ECMAScript 2015 for browsers without native support.
+Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
 
 ```js
-/*! https://mths.be/codepointat v0.2.0 by @mathias */
-if (!String.prototype.codePointAt) {
-  (function() {
-    'use strict'; // needed to support `apply`/`call` with `undefined`/`null`
-    var defineProperty = (function() {
-      // IE 8 only supports `Object.defineProperty` on DOM elements
-      try {
-        var object = {};
-        var $defineProperty = Object.defineProperty;
-        var result = $defineProperty(object, object, object) && $defineProperty;
-      } catch(error) {}
-      return result;
-    }());
-    var codePointAt = function(position) {
-      if (this == null) {
-        throw TypeError();
-      }
-      var string = String(this);
-      var size = string.length;
-      // `ToInteger`
-      var index = position ? Number(position) : 0;
-      if (index != index) { // better `isNaN`
-        index = 0;
-      }
-      // Account for out-of-bounds indices:
-      if (index < 0 || index >= size) {
-        return undefined;
-      }
-      // Get the first code unit
-      var first = string.charCodeAt(index);
-      var second;
-      if ( // check if it’s the start of a surrogate pair
-        first >= 0xD800 && first <= 0xDBFF && // high surrogate
-        size > index + 1 // there is a next code unit
-      ) {
-        second = string.charCodeAt(index + 1);
-        if (second >= 0xDC00 && second <= 0xDFFF) { // low surrogate
-          // https://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-          return (first - 0xD800) * 0x400 + second - 0xDC00 + 0x10000;
-        }
-      }
-      return first;
-    };
-    if (defineProperty) {
-      defineProperty(String.prototype, 'codePointAt', {
-        'value': codePointAt,
-        'configurable': true,
-        'writable': true
-      });
-    } else {
-      String.prototype.codePointAt = codePointAt;
-    }
-  }());
+for (const codePoint of str) {
+  console.log(codePoint.codePointAt(0).toString(16));
 }
+// '1f40e', '1f471', '2764'
+
+[...str].map((cp) => cp.codePointAt(0).toString(16));
+// ['1f40e', '1f471', '2764']
 ```
 
 ## Specifications
@@ -145,7 +90,7 @@ if (!String.prototype.codePointAt) {
 
 ## See also
 
-- A polyfill of `String.prototype.codePointAt` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `String.prototype.codePointAt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.fromCodePoint()")}}
 - {{jsxref("String.fromCharCode()")}}
 - {{jsxref("String.prototype.charCodeAt()")}}

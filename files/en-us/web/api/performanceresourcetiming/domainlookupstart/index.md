@@ -1,67 +1,68 @@
 ---
-title: PerformanceResourceTiming.domainLookupStart
+title: "PerformanceResourceTiming: domainLookupStart property"
+short-title: domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Performance
+page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.domainLookupStart
 ---
-{{APIRef("Resource Timing API")}}
 
-The **`domainLookupStart`** read-only property returns the
-{{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the
-domain name lookup for the resource.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
+The **`domainLookupStart`** read-only property returns the {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts the domain name lookup for the resource.
 
-## Syntax
+## Value
+
+The `domainLookupStart` property can have the following values:
+
+- A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.
+- `0` if the resource was instantaneously retrieved from a cache.
+- `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+
+## Examples
+
+### Measuring DNS lookup time
+
+The `domainLookupStart` and {{domxref("PerformanceResourceTiming.domainLookupEnd", "domainLookupEnd")}} properties can be used to measure how long it takes for the DNS lookup to happen.
 
 ```js
-resource.domainLookupStart;
+const dns = entry.domainLookupEnd - entry.domainLookupStart;
 ```
 
-### Return value
-
-A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain
-name lookup for the resource.
-
-## Example
-
-In the following example, the value of the `*Start` and `*End`
-properties of all "`resource`"
-{{domxref("PerformanceEntry.entryType","type")}} events are logged.
+Example using a {{domxref("PerformanceObserver")}}, which notifies of new `resource` performance entries as they are recorded in the browser's performance timeline. Use the `buffered` option to access entries from before the observer creation.
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
-
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const dns = entry.domainLookupEnd - entry.domainLookupStart;
+    if (dns > 0) {
+      console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `resource` performance entries present in the browser's performance timeline at the time you call this method:
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const dns = entry.domainLookupEnd - entry.domainLookupStart;
+  if (dns > 0) {
+    console.log(`${entry.name}: DNS lookup duration: ${dns}ms`);
   }
-}
+});
+```
+
+### Cross-origin timing information
+
+If the value of the `domainLookupStart` property is `0`, the resource might be a cross-origin request. To allow seeing cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
+
+For example, to allow `https://developer.mozilla.org` to see timing resources, the cross-origin resource should send:
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## Specifications
@@ -71,3 +72,7 @@ function print_start_and_end_properties(perfEntry) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

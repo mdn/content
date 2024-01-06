@@ -1,16 +1,14 @@
 ---
 title: call
 slug: WebAssembly/Reference/Control_flow/call
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
-**`call`** calls a function. `call_indirect` calls a function in a table.
+**`call`** calls a function, `return_call` being the tail-call version of it. `call_indirect` calls a function in a table with the `return_call_indirect` tail-call version as well.
+
+{{EmbedInteractiveExample("pages/wat/call.html", "tabbed-standard")}}
 
 ## Syntax
 
@@ -18,39 +16,14 @@ tags:
 call $greet
 ```
 
-## Full working example
+| Instruction            | Binary opcode |
+| ---------------------- | ------------- |
+| `call`                 | `0x10`        |
+| `call_indirect`        | `0x11`        |
+| `return_call`          | `0x12`        |
+| `return_call_indirect` | `0x13`        |
 
-Wasm file
+## See also
 
-```wasm
-(module
-  (import "env" "greet" (func $greet))
-
-  (func
-    ;; call the greet function
-    call $greet
-  )
-
-  (start 1) ;; run the first function automatically
-)
-```
-
-JavaScript file
-
-```js
-WebAssembly.instantiateStreaming(
-  fetch("../out/main.wasm"),
-  {
-    env: {
-      greet: function() {
-        console.log("Hello");
-      }
-    }
-  }
-);
-```
-
-| Instruction     | Binary opcode |
-| --------------- | ------------- |
-| `call`          | `0x10`        |
-| `call_indirect` | `0x11`        |
+- [Tail Call Extension proposal overview](https://github.com/WebAssembly/tail-call/blob/main/proposals/tail-call/Overview.md)
+- [V8 on WebAssembly tail calls support](https://v8.dev/blog/wasm-tail-call)

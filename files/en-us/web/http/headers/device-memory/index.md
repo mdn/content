@@ -1,19 +1,13 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Device-Memory
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Experimental
+page-type: http-header
 browser-compat: http.headers.Device-Memory
 ---
-{{HTTPSidebar}} {{SeeCompatTable}} {{securecontext_header}}
 
-The **`Device-Memory`** {{Glossary("Client hints","device client hint")}} request header field indicates the approximate amount of available RAM on the client device. The header is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
+{{HTTPSidebar}}{{securecontext_header}}
+
+The **`Device-Memory`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the approximate amount of available RAM on the client device. The header is part of the {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}.
 
 <table class="properties">
   <tbody>
@@ -21,7 +15,7 @@ The **`Device-Memory`** {{Glossary("Client hints","device client hint")}} reques
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -39,7 +33,7 @@ The **`Device-Memory`** {{Glossary("Client hints","device client hint")}} reques
 
 ## Syntax
 
-```
+```http
 Device-Memory: <number>
 ```
 
@@ -48,19 +42,19 @@ Device-Memory: <number>
 - `<number>`
   - : The approximate amount of device RAM. Possible values are: `0.25`, `0.5`, `1`, `2`, `4`, `8`.
 
-The amount of device RAM can be used as a fingerprinting variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
+The amount of device RAM can be used as a {{glossary("fingerprinting")}} variable, so values for the header are intentionally coarse to reduce the potential for its misuse.
 
 ## Examples
 
 The server first needs to opt in to receive `Device-Memory` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Device-Memory`.
 
-```
+```http
 Accept-CH: Device-Memory
 ```
 
 Then on subsequent requests the client might send `Device-Memory` header back:
 
-```
+```http
 Device-Memory: 1
 ```
 
@@ -74,9 +68,10 @@ Device-Memory: 1
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
-- [Device Memory API](/en-US/docs/Web/API/Device_Memory_API)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
+- {{DOMxRef("Device Memory API", "Device Memory API", "", "nocode")}}
 - {{DOMxRef("Navigator.deviceMemory")}}
+- {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
@@ -85,4 +80,4 @@ Device-Memory: 1
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

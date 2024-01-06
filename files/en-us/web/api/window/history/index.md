@@ -1,26 +1,26 @@
 ---
-title: Window.history
+title: "Window: history property"
+short-title: history
 slug: Web/API/Window/history
-tags:
-  - API
-  - HTML DOM
-  - History API
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.history
 ---
+
 {{APIRef}}
 
 The `Window.history` read-only property returns a reference to the {{domxref("History")}} object, which provides an interface for manipulating the browser _session history_ (pages visited in the tab or frame that the current page is loaded in).
 
 See [Manipulating the browser history](/en-US/docs/Web/API/History_API) for examples and details. In particular, that article explains security features of the {{domxref("History.pushState", "pushState()")}} and {{domxref("History.replaceState", "replaceState()")}} methods that you should be aware of before using them.
 
-## Example
+## Value
+
+A reference to the {{domxref("History")}} object.
+
+## Examples
 
 ```js
-history.back();     // equivalent to clicking back button
-history.go(-1);     // equivalent to history.back();
+history.back(); // equivalent to clicking back button
+history.go(-1); // equivalent to history.back();
 ```
 
 ## Notes

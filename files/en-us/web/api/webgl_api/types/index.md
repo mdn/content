@@ -1,12 +1,14 @@
 ---
 title: WebGL types
 slug: Web/API/WebGL_API/Types
-tags:
-  - Reference
-  - Types
-  - WebGL
+page-type: guide
+spec-urls:
+  - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.1
+  - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.1
+  - https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 The following types are used in [WebGL](/en-US/docs/Web/API/WebGL_API) interfaces.
 
@@ -77,27 +79,27 @@ These types are used within a {{domxref("WebGLRenderingContext")}}.
     <tr>
       <td><code>GLubyte</code></td>
       <td><code>octet</code></td>
-      <td>8-bit twos complement unsigned integer.</td>
+      <td>8-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLushort</code></td>
       <td><code>unsigned short</code></td>
-      <td>16-bit twos complement unsigned integer.</td>
+      <td>16-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLuint</code></td>
       <td><code>unsigned long</code></td>
-      <td>32-bit twos complement unsigned integer.</td>
+      <td>32-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLfloat</code></td>
       <td><code>unrestricted float</code></td>
-      <td>32-bit IEEE floating point number.</td>
+      <td>32-bit IEEE floating point number.</td>
     </tr>
     <tr>
       <td><code>GLclampf</code></td>
       <td><code>unrestricted float</code></td>
-      <td>Clamped 32-bit IEEE floating point number.</td>
+      <td>Clamped 32-bit IEEE floating point number.</td>
     </tr>
   </tbody>
 </table>
@@ -120,32 +122,7 @@ These types are used within [WebGL extensions](/en-US/docs/Web/API/WebGL_API/Usi
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL', "#5.1", "Types")}}</td>
-      <td>{{Spec2('WebGL')}}</td>
-      <td>Initial definition</td>
-    </tr>
-    <tr>
-      <td>{{SpecName('WebGL2', "#3.1", "Types")}}</td>
-      <td>{{Spec2('WebGL2')}}</td>
-      <td>Defines additional types.</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}}
-      </td>
-      <td>{{Spec2('EXT_disjoint_timer_query')}}</td>
-      <td>Adds <code>GLuint64EXT</code></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

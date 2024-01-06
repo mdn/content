@@ -1,28 +1,20 @@
 ---
-title: CSSPseudoElement.element
+title: "CSSPseudoElement: element property"
+short-title: element
 slug: Web/API/CSSPseudoElement/element
-tags:
-  - API
-  - CSSPseudoElement
-  - Element
-  - Experimental
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.element
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`element`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns a reference to the originating element
 of the pseudo-element, in other words its parent element.
 
-## Syntax
-
-```js
-var originatingElement = cssPseudoElement.element;
-```
-
-### Value
+## Value
 
 An {{DOMxRef('Element')}} representing the pseudo-element's originating element.
 
@@ -32,16 +24,16 @@ The example below demonstrates the relationship between
 `CSSPseudoElement.element` and {{DOMxRef('Element.pseudo()')}}:
 
 ```js
-const myElement = document.querySelector('q');
-const cssPseudoElement = myElement.pseudo('::after');
+const myElement = document.querySelector("q");
+const cssPseudoElement = myElement.pseudo("::after");
 const originatingElement = cssPseudoElement.element;
 
-console.log(myElement === originatingElement);                  // Outputs true
-console.log(myElement.parentElement === originatingElement);    // Outputs false
-console.log(myElement.lastElementChild === cssPseudoElement);   // Outputs false
-console.log(myElement.lastChild === cssPseudoElement);          // Outputs false
+console.log(myElement === originatingElement); // Outputs true
+console.log(myElement.parentElement === originatingElement); // Outputs false
+console.log(myElement.lastElementChild === cssPseudoElement); // Outputs false
+console.log(myElement.lastChild === cssPseudoElement); // Outputs false
 console.log(myElement.nextElementSibling === cssPseudoElement); // Outputs false
-console.log(myElement.nextSibling === cssPseudoElement);        // Outputs false
+console.log(myElement.nextSibling === cssPseudoElement); // Outputs false
 ```
 
 ## Specifications

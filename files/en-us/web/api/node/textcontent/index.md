@@ -1,14 +1,14 @@
 ---
-title: Node.textContent
+title: "Node: textContent property"
+short-title: textContent
 slug: Web/API/Node/textContent
-tags:
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Node.textContent
 ---
+
 {{APIRef("DOM")}}
 
-The **`textContent`** property of the {{domxref ("Node")}}
+The **`textContent`** property of the {{domxref("Node")}}
 interface represents the text content of the node and its descendants.
 
 > **Note:** `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,
@@ -16,10 +16,10 @@ interface represents the text content of the node and its descendants.
 
 ## Value
 
-A string, or {{jsxref("null")}}. Its value depends on the situation:
+A string, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). Its value depends on the situation:
 
 - If the node is a {{domxref("document")}} or a {{glossary("doctype")}},
-  `textContent` returns {{jsxref("null")}}.
+  `textContent` returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
   > **Note:** To get _all_ of the text and [CDATA data](/en-US/docs/Web/API/CDATASection) for the whole
   > document, use `document.documentElement.textContent`.
@@ -54,12 +54,6 @@ important differences:
     {{glossary("reflow")}} to ensure up-to-date computed styles. (Reflows can
     be computationally expensive, and thus should be avoided when possible.)
 
-- Both `textContent` and `innerText` remove child nodes when altered,
-  but altering `innerText` in Internet Explorer (version 11 and below) also
-  _permanently destroys_ all descendant text nodes. It is impossible to
-  insert the nodes again into any other element or into the same element after doing
-  so.
-
 ### Differences from innerHTML
 
 {{domxref("Element.innerHTML")}} returns HTML, as its name indicates. Sometimes people
@@ -71,23 +65,23 @@ Moreover, using `textContent` can prevent {{glossary("Cross-site_scripting", "XS
 
 ## Examples
 
-Given this HTML fragment:
+Start with this HTML fragment.
 
 ```html
 <div id="divA">This is <span>some</span> text!</div>
 ```
 
-... you can use `textContent` to get the element's text content:
+You can use `textContent` to get the element's text content:
 
 ```js
-let text = document.getElementById('divA').textContent;
+let text = document.getElementById("divA").textContent;
 // The text variable is now: 'This is some text!'
 ```
 
-... or set the element's text content:
+If you prefer to set the element's text content, you can do:
 
 ```js
-document.getElementById('divA').textContent = 'This text is different!';
+document.getElementById("divA").textContent = "This text is different!";
 // The HTML for divA is now:
 // <div id="divA">This text is different!</div>
 ```
@@ -104,5 +98,5 @@ document.getElementById('divA').textContent = 'This text is different!';
 
 - {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.innerHTML")}}
-- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText)
+- [More on differences between `innerText` and `textContent`](http://perfectionkills.com/the-poor-misunderstood-innerText/)
   (blog post)

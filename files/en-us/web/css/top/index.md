@@ -1,14 +1,10 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.top
 ---
+
 {{CSSRef}}
 
 The **`top`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the vertical position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
@@ -17,12 +13,16 @@ The **`top`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the
 
 The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of top edge and the inner border of the top edge of its containing block.
 - When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
 - When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `top` property has _no effect_.
 
-When both `top` and {{cssxref("bottom")}} are specified, `position` is set to `absolute` or `fixed`, _and_ {{cssxref("height")}} is unspecified (either `auto` or `100%`) both the `top` and `bottom` distances are respected. In all other situations, if {{cssxref("height")}} is constrained in any way or `position` is set to `relative`, the `top` property takes precedence and the `bottom` property is ignored.
+When both `top` and {{cssxref("bottom")}} values are specified, there are three different cases:
+
+- If `position` is set to `absolute` or `fixed` and {{cssxref("height")}} is unspecified (either `auto` or `100%`), both the `top` and `bottom` values are respected.
+- If `position` is set to `relative` or `height` is constrained, the `top` property takes precedence and the `bottom` property is ignored.
+- If `position` is set to `sticky`, both `top` and `bottom` values are considered. This means that a sticky element can potentially move up and down within its containing block based on the values of these two properties as long as the element's position box remains contained within its containing block.
 
 ## Syntax
 
@@ -41,6 +41,7 @@ top: auto;
 top: inherit;
 top: initial;
 top: revert;
+top: revert-layer;
 top: unset;
 ```
 

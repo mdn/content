@@ -1,13 +1,10 @@
 ---
 title: incognito
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
-tags:
-  - Add-ons
-  - WebExtensions
-  - incognito
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.incognito
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -19,6 +16,10 @@ browser-compat: webextensions.manifest.incognito
     <tr>
       <th scope="row">Mandatory</th>
       <td>No</td>
+    </tr>
+    <tr>
+      <th scope="row">Manifest version</th>
+      <td>2 or higher</td>
     </tr>
     <tr>
       <th scope="row">Example</th>
@@ -33,7 +34,9 @@ browser-compat: webextensions.manifest.incognito
 
 Use the `incognito` key to control how the extension works with private browsing windows.
 
-This is a string which may take any of the following values:
+> **Note:** By default, extensions do not run in private browsing windows. Whether an extension can access private browsing windows is under user control. For details, see [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing). Your extension can check whether it can access private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}.
+
+This is a string that can take any of these values:
 
 - "spanning" (the default): the extension will see events from private and non-private windows and tabs. Windows and tabs will get an `incognito` property in the [`Window`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) or [`Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) that represents them. This property indicates whether or not the object is private:
 

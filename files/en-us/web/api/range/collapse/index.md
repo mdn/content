@@ -1,13 +1,11 @@
 ---
-title: Range.collapse()
+title: "Range: collapse() method"
+short-title: collapse()
 slug: Web/API/Range/collapse
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.collapse
 ---
+
 {{APIRef("DOM")}}
 
 The **`Range.collapse()`** method collapses the
@@ -19,8 +17,9 @@ see the {{domxref("Range.collapsed")}} property.
 
 ## Syntax
 
-```js
-range.collapse(toStart);
+```js-nolint
+collapse()
+collapse(toStart)
 ```
 
 ### Parameters
@@ -30,12 +29,16 @@ range.collapse(toStart);
     to its start, `false` to its end. If omitted, it defaults to
     `false` {{experimental_inline}}.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
-referenceNode = document.getElementsByTagName("div").item(0);
+const referenceNode = document.getElementsByTagName("div").item(0);
 range.selectNode(referenceNode);
 range.collapse(true);
 ```

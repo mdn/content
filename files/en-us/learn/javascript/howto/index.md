@@ -1,11 +1,9 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-tags:
-  - Beginner
-  - JavaScript
-  - Learn
+page-type: landing-page
 ---
+
 {{LearnSidebar}}
 
 The following links point to solutions to common problems you may encounter when writing JavaScript.
@@ -25,9 +23,9 @@ Some common built-in browser functions that cause problems are:
 | `getElementsByClassName()` | `getElementByClassName()` |
 | `getElementById()`         | `getElementsById()`       |
 
-### Semi-colon position
+### Semicolon position
 
-You need to make sure you don't place any semi-colons incorrectly. For example:
+You need to make sure you don't place any semicolons incorrectly. For example:
 
 | Correct                     | Wrong                       |
 | --------------------------- | --------------------------- |
@@ -41,8 +39,8 @@ One of the most common errors is to declare the function, but not call it anywhe
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 This code won't do anything unless you call it with the following statement:
@@ -73,9 +71,9 @@ With [Objects](/en-US/docs/Learn/JavaScript/Objects), however, you need to take 
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Basic definitions
@@ -85,9 +83,6 @@ const myObject = {
 - [What are strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings)
 - [What is an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array)
 - [What is a loop?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [What is a function?](/en-US/docs/Learn/JavaScript/Building_blocks/Functions)
 - [What is an event?](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 - [What is an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#object_basics)
@@ -106,9 +101,9 @@ const myObject = {
 
 - [How do you declare a variable?](/en-US/docs/Learn/JavaScript/First_steps/Variables#declaring_a_variable)
 - [How do you initialize a variable with a value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#initializing_a_variable)
-- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
+- [How do you update a variable's value?](/en-US/docs/Learn/JavaScript/First_steps/Variables#updating_a_variable) (also see [Assignment operators](/en-US/docs/Learn/JavaScript/First_steps/Math#assignment_operators))
 - [What data types can values have in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Variables#variable_types)
-- [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#loose_typing)
+- [What does 'loosely typed' mean?](/en-US/docs/Learn/JavaScript/First_steps/Variables#dynamic_typing)
 
 ### Math
 
@@ -121,28 +116,29 @@ const myObject = {
 ### Strings
 
 - [How do you create a string in JavaScript?](/en-US/docs/Learn/JavaScript/First_steps/Strings#creating_a_string)
-- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#single_quotes_versus_double_quotes)
+- [Do you have to use single quotes or double quotes?](/en-US/docs/Learn/JavaScript/First_steps/Strings#single_quotes_vs._double_quotes)
 - [How do you escape characters in strings?](/en-US/docs/Learn/JavaScript/First_steps/Strings#escaping_characters_in_a_string)
 - [How do you join strings together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenating_strings)
-- [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings)
+- [Can you join strings and numbers together?](/en-US/docs/Learn/JavaScript/First_steps/Strings#numbers_vs._strings)
 - [How do you find the length of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#finding_the_length_of_a_string)
 - [How do you find what character is at a certain position in a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character)
-- [How do you find and extract a specific substring from a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#finding_a_substring_inside_a_string_and_extracting_it)
+- [How do you find and extract a specific substring from a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#extracting_a_substring_from_a_string)
 - [How do you change the case of a string?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#changing_case)
 - [How do you replace one specific substring with another?](/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#updating_parts_of_a_string)
 
 ### Arrays
 
-- [How do you create an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#creating_an_array)
+- [How do you create an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#creating_arrays)
 - [How do you access and modify the items in an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#accessing_and_modifying_array_items) (this includes multidimensional arrays)
 - [How do you find the length of an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#finding_the_length_of_an_array)
-- [How do you add and remove array items?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#adding_and_removing_array_items)
+- [How do you add items to an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#adding_items)
+- [How do you remove items from an array?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#removing_items)
 - [How do you split a string into array items, or join array items into a string?](/en-US/docs/Learn/JavaScript/First_steps/Arrays#converting_between_strings_and_arrays)
 
 ### Debugging JavaScript
 
 - [What are the basic types of error?](/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong#types_of_error)
-- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools)
+- [What are browser developer tools, and how do you access them?](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
 - [How do you log a value to the JavaScript console?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#the_console_api)
 - [How do you use breakpoints and other JavaScript debugging features?](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_the_javascript_debugger)
 
@@ -151,8 +147,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 ### Making decisions in code
 
 - [How do you execute different blocks of code, depending on a variable's value or other condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements)
-- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if_..._else)
+- [How do you use if ...else statements?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#if...else_statements)
+- [How do you nest one decision block inside another?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#nesting_if...else)
 - [How do you use AND, OR, and NOT operators in JavaScript?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#logical_operators_and_or_and_not)
 - [How do you conveniently handle a large number of choices for one condition?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)
 - [How do you use a ternary operator to make a quick choice between two options based on a true or false test?](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#ternary_operator)
@@ -162,7 +158,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [How do you run the same bit of code over and over again?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)
 - [How do you exit a loop before the end if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#exiting_loops_with_break)
 - [How do you skip to the next iteration of a loop if a certain condition is met?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#skipping_iterations_with_continue)
-- [How do you use while and do ... while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
+- [How do you use while and do...while loops?](/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)
 
 ## Intermediate use cases
 
@@ -184,9 +180,9 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What is bracket notation?](/en-US/docs/Learn/JavaScript/Objects/Basics#bracket_notation)
 - [How do you get and set the methods and properties of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#setting_object_members)
 - [What is `this`, in the context of an object?](/en-US/docs/Learn/JavaScript/Objects/Basics#what_is_this)
-- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#object-oriented_programming_from_10000_meters)
-- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#constructors_and_object_instances)
-- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS#other_ways_to_create_object_instances)
+- [What is object-oriented programming?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object-oriented_programming_from_10000_meters)
+- [What are constructors and instances, and how do you create them?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#constructors_and_object_instances)
+- [What different ways are there to create objects in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#other_ways_to_create_object_instances)
 
 ### JSON
 
@@ -198,7 +194,7 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 
 - [What are event handlers and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_handler_properties)
 - [What are inline event handlers?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_%e2%80%94_don%27t_use_these)
-- [What does the `addEventListener()` function do, and how do you use it?](</en-US/docs/Learn/JavaScript/Building_blocks/Events#addeventlistener()_and_removeeventlistener()>)
+- [What does the `addEventListener()` function do, and how do you use it?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#using_addeventlistener)
 - [Which mechanism should I use to add event code to my web pages?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#what_mechanism_should_i_use)
 - [What are event objects, and how do you use them?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects)
 - [How do you prevent default event behavior?](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior)
@@ -210,8 +206,8 @@ For more information on JavaScript debugging, see [Handling common JavaScript pr
 - [What are object prototypes?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 - [What is the constructor property, and how can you use it?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_constructor_property)
 - [How do you add methods to the constructor?](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#modifying_prototypes)
-- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Inheritance)
-- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Inheritance#object_member_summary)
+- [How do you create a new constructor that inherits its members from a parent constructor?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [When should you use inheritance in JavaScript?](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#object_member_summary)
 
 ### Web APIs
 

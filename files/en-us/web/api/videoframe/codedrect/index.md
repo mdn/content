@@ -1,19 +1,16 @@
 ---
-title: VideoFrame.codedRect
+title: "VideoFrame: codedRect property"
+short-title: codedRect
 slug: Web/API/VideoFrame/codedRect
-tags:
-  - API
-  - Property
-  - Reference
-  - codedRect
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.codedRect
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`codedRect`** property of the {{domxref("VideoFrame")}} interface returns a {{domxref("DOMRectReadOnly")}} with the width and height matching {{domxref("VideoFrame.codedWidth")}} and {{domxref("VideoFrame.codedHeight")}}.
 
-### Value
+## Value
 
 A {{domxref("DOMRectReadOnly")}}.
 
@@ -32,5 +29,3 @@ console.log(VideoFrame.codedRect);
 ## Browser compatibility
 
 {{Compat}}
-
-

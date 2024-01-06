@@ -1,29 +1,18 @@
 ---
-title: AnalyserNode.maxDecibels
+title: "AnalyserNode: maxDecibels property"
+short-title: maxDecibels
 slug: Web/API/AnalyserNode/maxDecibels
-tags:
-  - API
-  - AnalyserNode
-  - Property
-  - Reference
-  - Web Audio API
-  - maxDecibels
+page-type: web-api-instance-property
 browser-compat: api.AnalyserNode.maxDecibels
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxDecibels`** property of the {{domxref("AnalyserNode")}} interface is a double value representing the maximum power value in the scaling range for the FFT analysis data, for conversion to unsigned byte values — basically, this specifies the maximum value for the range of results when using `getByteFrequencyData()`.
 
-## Syntax
+## Value
 
-```js
-var curValue = analyserNode.maxDecibels;
-analyserNode.maxDecibels = newValue;
-```
-
-### Value
-
-A double, representing the maximum [decibel](https://en.wikipedia.org/wiki/Decibel "Decibel on Wikipedia") value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-30` dB.
+A double, representing the maximum [decibel](https://en.wikipedia.org/wiki/Decibel) value for scaling the FFT analysis data, where `0` dB is the loudest possible sound, `-10` dB is a 10th of that, etc. The default value is `-30` dB.
 
 When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `maxDecibels` or higher will be returned as `255`.
 
@@ -32,22 +21,23 @@ When getting data from `getByteFrequencyData()`, any frequencies with an amplitu
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if a value less than or equal to `AnalyserNode.minDecibels` is set.
 
-## Example
+## Examples
 
-The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bargraph style" output of the current audio input. For more complete applied examples/information, check out our [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (see [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205) for relevant code).
+The following example shows basic usage of an {{domxref("AudioContext")}} to create an `AnalyserNode`, then {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} to collect frequency data repeatedly and draw a "winamp bar graph style" output of the current audio input.
+For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-var analyser = audioCtx.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;
 
-  ...
+// …
 
 analyser.fftSize = 256;
-var bufferLength = analyser.frequencyBinCount;
+const bufferLength = analyser.frequencyBinCount;
 console.log(bufferLength);
-var dataArray = new Uint8Array(bufferLength);
+const dataArray = new Uint8Array(bufferLength);
 
 canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
 
@@ -56,22 +46,22 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+  canvasCtx.fillStyle = "rgb(0, 0, 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-  var barWidth = (WIDTH / bufferLength) * 2.5;
-  var barHeight;
-  var x = 0;
+  const barWidth = (WIDTH / bufferLength) * 2.5;
+  let barHeight;
+  let x = 0;
 
-  for(var i = 0; i < bufferLength; i++) {
+  for (let i = 0; i < bufferLength; i++) {
     barHeight = dataArray[i];
 
-    canvasCtx.fillStyle = 'rgb(' + (barHeight+100) + ',50,50)';
-    canvasCtx.fillRect(x,HEIGHT-barHeight/2,barWidth,barHeight/2);
+    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
 
     x += barWidth + 1;
   }
-};
+}
 
 draw();
 ```

@@ -1,16 +1,18 @@
 ---
 title: return
 slug: WebAssembly/Reference/Control_flow/return
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
-**`return`** returns from a function. If there's a value left on the stack, it returns that value; otherwise it returns nothing/void.
+**`return`** returns from a function.
+
+- If there are no values left on the stack, it returns nothing/void.
+- If there are the same amount of values left on the stack as specified in the function's type signature, it returns those values.
+- If there are more values that the function's return type specifies, then the excess values are popped from the stack and discarded, and the last N values are returned.
+
+{{EmbedInteractiveExample("pages/wat/return.html", "tabbed-taller")}}
 
 ## Syntax
 
@@ -19,33 +21,10 @@ f32.const 4.3
 return
 ```
 
-## Full working example
-
-Wasm file
-
 ```wasm
-(module
-
-  (func (export "get_90") (result i32)
-
-    ;; load 90 onto the stack and return it
-    i32.const 90
-    return
-
-  )
-
-)
-```
-
-JavaScript file
-
-```js
-WebAssembly.instantiateStreaming(
-  fetch("../out/main.wasm")
-).then(result => {
-    let get_90 = result.instance.exports.get_90;
-    console.log(get_90());
-  });
+i32.const 7
+f32.const 4.3
+return
 ```
 
 | Instruction | Binary opcode |

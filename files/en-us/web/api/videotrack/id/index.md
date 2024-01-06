@@ -1,21 +1,11 @@
 ---
-title: VideoTrack.id
+title: "VideoTrack: id property"
+short-title: id
 slug: Web/API/VideoTrack/id
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - Video
-  - Video Track
-  - VideoTrack
-  - id
-  - track
+page-type: web-api-instance-property
 browser-compat: api.VideoTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a
@@ -29,15 +19,9 @@ the media associated with a media element.
 The track ID can also be used as the fragment of a URL that loads the specific track
 (if the media supports media fragments).
 
-## Syntax
+## Value
 
-```js
-var trackID = VideoTrack.id;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which identifies the track, suitable for use when calling
+A string which identifies the track, suitable for use when calling
 {{domxref("VideoTrackList.getTrackById", "getTrackById()")}} on an
 {{domxref("VideoTrackList")}} such as the one specified by a media element's
 {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.

@@ -1,30 +1,22 @@
 ---
-title: CSSPseudoElement.type
+title: "CSSPseudoElement: type property"
+short-title: type
 slug: Web/API/CSSPseudoElement/type
-tags:
-  - API
-  - CSSPseudoElement
-  - Experimental
-  - Property
-  - Reference
-  - Type
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.CSSPseudoElement.type
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`type`** read-only property of the
 {{DOMxRef('CSSPseudoElement')}} interface returns the type of the pseudo-element as a
-string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_Selectors#pseudo-elements).
+string, represented in the form of a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors#pseudo-elements).
 
-## Syntax
+## Value
 
-```js
-var typeOfPseudoElement = cssPseudoElement.type;
-```
-
-### Value
-
-A {{DOMxRef('CSSOMString')}} containing one of the following values:
+A string containing one of the following values:
 
 - {{CSSxRef('::before', '"::before"')}}
 - {{CSSxRef('::after', '"::after"')}}
@@ -36,8 +28,8 @@ The example below demonstrates the relationship between
 `CSSPseudoElement.type` and {{DOMxRef('Element.pseudo()')}}:
 
 ```js
-const myElement = document.querySelector('q');
-const mySelector = '::after';
+const myElement = document.querySelector("q");
+const mySelector = "::after";
 const cssPseudoElement = myElement.pseudo(mySelector);
 const typeOfPseudoElement = cssPseudoElement.type;
 
@@ -55,5 +47,4 @@ console.log(mySelector === typeOfPseudoElement); // Outputs true
 ## See also
 
 - {{DOMxRef('Element.pseudo()')}}
-- [Index
-  of standard pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements)
+- [Index of standard pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#index_of_standard_pseudo-elements)

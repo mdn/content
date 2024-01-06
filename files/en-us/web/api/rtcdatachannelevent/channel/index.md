@@ -1,27 +1,17 @@
 ---
-title: RTCDataChannelEvent.channel
+title: "RTCDataChannelEvent: channel property"
+short-title: channel
 slug: Web/API/RTCDataChannelEvent/channel
-tags:
-  - Property
-  - RTCDataChannelEvent
-  - Read-only
-  - Reference
-  - WebRTC
-  - channel
+page-type: web-api-instance-property
 browser-compat: api.RTCDataChannelEvent.channel
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCDataChannelEvent.channel`**
 returns the {{domxref("RTCDataChannel")}} associated with the event.
 
-## Syntax
-
-```js
- var channel = RTCDataChannelEvent.channel;
-```
-
-### Value
+## Value
 
 A {{domxref("RTCDataChannel")}} object representing the data channel linking the
 receiving {{domxref("RTCPeerConnection")}} to its remote peer.
@@ -33,12 +23,12 @@ the channel from the event object and saves it locally for use by the code handl
 traffic.
 
 ```js
-pc.ondatachannel = function(event) {
+pc.ondatachannel = (event) => {
   inboundDataChannel = event.channel;
   inboundDataChannel.onmessage = handleIncomingMessage;
   inboundDataChannel.onopen = handleChannelOpen;
   inboundDataChannel.onclose = handleChannelClose;
-}
+};
 ```
 
 ## Specifications
@@ -53,7 +43,5 @@ pc.ondatachannel = function(event) {
 
 - {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}}
 - {{domxref("RTCDataChannel")}}
-- {{domxref("RTCPeerConnection.ondatachannel")}}
-- [A simple
-  RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
+- [A simple RTCDataChannel sample](/en-US/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample)
 - {{domxref("RTCPeerConnection")}}

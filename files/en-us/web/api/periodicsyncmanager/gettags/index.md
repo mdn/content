@@ -1,18 +1,14 @@
 ---
-title: PeriodicSyncManager.getTags()
+title: "PeriodicSyncManager: getTags() method"
+short-title: getTags()
 slug: Web/API/PeriodicSyncManager/getTags
-tags:
-  - Background Sync
-  - Method
-  - Offline
-  - PWA
-  - PeriodicSyncManager
-  - Service Worker
-  - Web Periodic Background Synchronization API
-  - periodic sync
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PeriodicSyncManager.getTags
 ---
-{{draft}}{{DefaultAPISidebar("Periodic Background Sync")}}
+
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
 
 The **`getTags()`** method of the
 {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that
@@ -21,8 +17,8 @@ currently registered for periodic syncing.
 
 ## Syntax
 
-```js
-var tags = PeriodicSyncManager.getTags();
+```js-nolint
+getTags()
 ```
 
 ### Parameters
@@ -44,10 +40,9 @@ The following example uses the `getTags()` method to check if a periodic
 sync task with a given tag is registered.
 
 ```js
-navigator.serviceWorker.ready.then(registration => {
-  registration.periodicSync.getTags().then(tags => {
-    if (tags.includes('get-latest-news'))
-      skipDownloadingLatestNewsOnPageLoad();
+navigator.serviceWorker.ready.then((registration) => {
+  registration.periodicSync.getTags().then((tags) => {
+    if (tags.includes("get-latest-news")) skipDownloadingLatestNewsOnPageLoad();
   });
 });
 ```
@@ -64,7 +59,5 @@ navigator.serviceWorker.ready.then(registration => {
 
 ## See also
 
-- [Richer offline experiences with
-  the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
-- [A
-  Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

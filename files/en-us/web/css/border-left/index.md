@@ -1,35 +1,31 @@
 ---
 title: border-left
 slug: Web/CSS/border-left
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-left
 ---
+
 {{CSSRef}}
 
 The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/border).
 
 {{EmbedInteractiveExample("pages/css/border-left.html")}}
 
-As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. This means that ...
+As with all shorthand properties, `border-left` always sets the values of all of the properties that it can set, even if they are not specified. It sets those that are not specified to their default values. Consider the following code:
 
 ```css
 border-left-style: dotted;
 border-left: thick green;
 ```
 
-... is actually the same as ...
+It is actually the same as this one:
 
 ```css
 border-left-style: dotted;
 border-left: none thick green;
 ```
 
-... and the value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
+The value of {{cssxref("border-left-style")}} given before `border-left` is ignored. Since the default value of {{cssxref("border-left-style")}} is `none`, not specifying the `border-style` part results in no border.
 
 ## Constituent properties
 
@@ -50,6 +46,7 @@ border-left: medium dashed blue;
 border-left: inherit;
 border-left: initial;
 border-left: revert;
+border-left: revert-layer;
 border-left: unset;
 ```
 
@@ -79,9 +76,7 @@ The three values of the shorthand property can be specified in any order, and on
 #### HTML
 
 ```html
-<div>
-  This box has a border on the left side.
-</div>
+<div>This box has a border on the left side.</div>
 ```
 
 #### CSS
@@ -114,5 +109,5 @@ div {
 - {{cssxref("border")}}
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)

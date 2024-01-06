@@ -1,16 +1,13 @@
 ---
 title: margin-bottom
 slug: Web/CSS/margin-bottom
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.margin-bottom
 ---
+
 {{CSSRef}}
 
-The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
 {{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
@@ -22,9 +19,9 @@ This property has no effect on _non-[replaced](/en-US/docs/Web/CSS/Replaced_elem
 
 ```css
 /* <length> values */
-margin-bottom: 10px;  /* An absolute length */
-margin-bottom: 1em;   /* relative to the text size */
-margin-bottom: 5%;    /* relative to the nearest block container's width */
+margin-bottom: 10px; /* An absolute length */
+margin-bottom: 1em; /* relative to the text size */
+margin-bottom: 5%; /* relative to the nearest block container's width */
 
 /* Keyword values */
 margin-bottom: auto;
@@ -33,6 +30,7 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: revert;
+margin-bottom: revert-layer;
 margin-bottom: unset;
 ```
 
@@ -43,7 +41,7 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 - {{cssxref("&lt;length&gt;")}}
   - : The size of the margin as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the margin as a percentage, relative to the _width_ of the containing block.
+  - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Containing_block).
 - `auto`
   - : The browser selects a suitable value to use. See {{cssxref("margin")}}.
 
@@ -63,9 +61,9 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 
 ```html
 <div class="container">
-<div class="box0">Box 0</div>
-<div class="box1">Box 1</div>
-<div class="box2">Box one's negative margin pulls me up</div>
+  <div class="box0">Box 0</div>
+  <div class="box1">Box 1</div>
+  <div class="box2">Box one's negative margin pulls me up</div>
 </div>
 ```
 
@@ -75,17 +73,17 @@ CSS for divs to set margin-bottom and height
 
 ```css
 .box0 {
-    margin-bottom:1em;
-    height:3em;
+  margin-bottom: 1em;
+  height: 3em;
 }
 .box1 {
-    margin-bottom:-1.5em;
-    height:4em;
+  margin-bottom: -1.5em;
+  height: 4em;
 }
 .box2 {
-    border:1px dashed black;
-    border-width:1px 0;
-    margin-bottom:2em;
+  border: 1px dashed black;
+  border-width: 1px 0;
+  margin-bottom: 2em;
 }
 ```
 
@@ -93,13 +91,13 @@ Some definitions for container and divs so margins' effects can be seen more cle
 
 ```css
 .container {
-    background-color:orange;
-    width:320px;
-    border:1px solid black;
+  background-color: orange;
+  width: 320px;
+  border: 1px solid black;
 }
 div {
-    width:320px;
-    background-color:gold;
+  width: 320px;
+  background-color: gold;
 }
 ```
 

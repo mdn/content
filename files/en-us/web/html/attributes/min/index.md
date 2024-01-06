@@ -1,20 +1,19 @@
 ---
-title: 'HTML attribute: min'
+title: "HTML attribute: min"
 slug: Web/HTML/Attributes/min
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - min
-  - Reference
+page-type: html-attribute
+browser-compat:
+  - html.elements.input.min
+  - html.elements.meter.min
 ---
 
 {{HTMLSidebar}}
 
-The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#attr-value) of the element is less than this, the element fails [constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation). This value must be less than or equal to the value of the `max` attribute. If a value is specified for `min` that isn't a valid number, the input has no minimum value.
+The **`min`** attribute defines the minimum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is less than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be less than or equal to the value of the `max` attribute.
 
-Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element, the `min` attribute is a number that specifies the most negative value a form control to be considered valid.
+Some input types have a default minimum. If the input has no default minimum and a value is specified for `min` that can't be converted to a valid number (or no minimum value is set), the input has no minimum value.
+
+It is valid for the input types including: {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element.
 
 ### Syntax
 
@@ -28,7 +27,7 @@ Valid for the numeric input types, including the {{HTMLElement("input/date", "da
   <thead>
     <tr>
       <th>Input type</th>
-      <th>Example</th>
+      <th>Syntax</th>
       <th>Example</th>
     </tr>
   </thead>
@@ -79,9 +78,9 @@ Valid for the numeric input types, including the {{HTMLElement("input/date", "da
   </tbody>
 </table>
 
-> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in contraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
+> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
-See [Client-side validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
+See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
 
 For the {{htmlelement('meter')}} element, the `min` attribute defines the lower numeric bound of the measured range. This must be less than the minimum value ([`max`](/en-US/docs/Web/HTML/Attributes/max) attribute), if specified. In both cases, if omitted, the value defaults to 1.
 
@@ -127,7 +126,7 @@ input:invalid {
 Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
 
 ```html
-<input id="myNumber" name="myNumber" type="number" min="7.2" value="8">
+<input id="myNumber" name="myNumber" type="number" min="7.2" value="8" />
 ```
 
 Because `step` defaults to 1, valid values include `7.2`, `8.2`, `9.2`, and so on. The value 8 is not valid. As we included an invalid value, supporting browsers will show the value as invalid.
@@ -138,47 +137,23 @@ If not explicitly included, `step` defaults to 1 for `number` and `range`, and 1
 
 ## Accessibility concerns
 
-Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute).
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information. When using the `min` attribute, ensure this minimum requirement is understood by the user. Providing instructions within the {{htmlelement('label')}} may be sufficient. If providing instructions outside of labels, which allows more flexible positioning and design, consider using [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'input.html#the-min-and-max-attributes', 'min attribute')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('HTML5 W3C', 'input.html#the-min-and-max-attributes', 'min attribute')}}
-      </td>
-      <td>{{Spec2('HTML5 W3C')}}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## See also
 
 - [`step`](/en-US/docs/Web/HTML/Attributes/step)
 - [`max`](/en-US/docs/Web/HTML/Attributes/max)
 - other meter attributes: [`low`](/en-US/docs/Web/HTML/Attributes/low), [`high`](/en-US/docs/Web/HTML/Attributes/high), [`optimum`](/en-US/docs/Web/HTML/Attributes/optimum)
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Constraint validation API](/en-US/docs/Web/API/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Form validation](/en-US/docs/Learn/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
 - {{cssxref(':out-of-range')}}
 - {{htmlelement('input')}}

@@ -1,104 +1,38 @@
 ---
-title: '<time>: The (Date) Time element'
+title: "<time>: The (Date) Time element"
 slug: Web/HTML/Element/time
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML5
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.time
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<time>`** [HTML](/en-US/docs/Web/HTML) element represents a specific period in time. It may include the `datetime` attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
 
 It may represent one of the following:
 
 - A time on a 24-hour clock.
-- A precise date in the {{interwiki("wikipedia", "Gregorian calendar")}} (with optional time and timezone information).
+- A precise date in the [Gregorian calendar](https://en.wikipedia.org/wiki/Gregorian_calendar) (with optional time and timezone information).
 - [A valid time duration](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLTimeElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
-Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : This attribute indicates the time and/or date of the element and must be in one of the formats described below.
 
 ## Usage notes
 
-This element is for presenting dates and times in a machine readable format. For example, this can help a user agent offer to add an event to a user's calendar.
+This element is for presenting dates and times in a machine-readable format. For example, this can help a user agent offer to add an event to a user's calendar.
 
-This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
+This element should not be used for dates prior to the introduction of the Gregorian calendar (due to complications in calculating those dates).
 
-The _datetime value_ (the machine-readable value of the datetime) is the value of the element’s `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element’s child text content.
+The _datetime value_ (the machine-readable value of the datetime) is the value of the element's `datetime` attribute, which must be in the proper format (see below). If the element does not have a `datetime` attribute, **it must not have any element descendants**, and the _datetime value_ is the element's child text content.
 
-### Valid datetime Values
+### Valid datetime values
 
 - a valid year string
   - : `2011`
@@ -151,22 +85,83 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 ```
 
-#### Output
+#### Result
 
-{{EmbedLiveSample('Simple_example', 250, 60)}}
+{{EmbedLiveSample('Simple_example', 250, 80)}}
 
 ### `datetime` example
 
 #### HTML
 
 ```html
-<p>The concert took place on <time
-  datetime="2001-05-15T19:00">May 15</time>.</p>
+<p>
+  The concert took place on <time datetime="2001-05-15T19:00">May 15</time>.
+</p>
 ```
 
-#### Output
+#### Result
 
-{{EmbedLiveSample('datetime_example', 250, 60)}}
+{{EmbedLiveSample('datetime_example', 250, 80)}}
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >Phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTimeElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

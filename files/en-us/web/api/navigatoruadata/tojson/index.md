@@ -1,15 +1,14 @@
 ---
-title: NavigatorUAData.toJSON()
+title: "NavigatorUAData: toJSON() method"
+short-title: toJSON()
 slug: Web/API/NavigatorUAData/toJSON
-tags:
-  - API
-  - Method
-  - Reference
-  - toJSON
-  - NavigatorUAData
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.toJSON
 ---
-{{DefaultAPISidebar("")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _serializer_ that returns a JSON representation of the _low entropy_ properties of the `NavigatorUAData` object.
 
@@ -17,8 +16,8 @@ The **`toJSON()`** method of the {{domxref("NavigatorUAData")}} interface is a _
 
 ## Syntax
 
-```js
-NavigatorUAData.toJSON();
+```js-nolint
+toJSON()
 ```
 
 ### Parameters

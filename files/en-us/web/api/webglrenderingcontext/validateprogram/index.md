@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.validateProgram()
+title: "WebGLRenderingContext: validateProgram() method"
+short-title: validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.validateProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.validateProgram()`** method of the
@@ -18,23 +15,23 @@ used in the current WebGL state.
 
 ## Syntax
 
-```js
-void gl.validateProgram(program);
+```js-nolint
+validateProgram(program)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}} to validate.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -43,9 +40,9 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 gl.validateProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 
 gl.useProgram(program);

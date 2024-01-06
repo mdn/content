@@ -1,40 +1,28 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-tags:
-  - Atomics
-  - JavaScript
-  - Method
-  - Shared Memory
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.compareExchange
 ---
+
 {{JSRef}}
 
-The static
-**`Atomics.compareExchange()`**
-method exchanges a given replacement value at a given position in the array, if a given
-expected value equals the old value.  It returns the old value at that position whether
-it was equal to the expected value or not. This atomic operation guarantees that no
-other write happens until the modified value is written back.
+The **`Atomics.compareExchange()`** static method exchanges a given replacement value at a given position in the array, if a given expected value equals the old value. It returns the old value at that position whether it was equal to the expected value or not. This atomic operation guarantees that no other write happens until the modified value is written back.
 
 {{EmbedInteractiveExample("pages/js/atomics-compareexchange.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 ```
 
 ### Parameters
 
 - `typedArray`
-  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}},
-    {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}},
-    {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or
-    {{jsxref("BigUint64Array")}}.
+  - : An integer typed array. One of {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}}, {{jsxref("Uint32Array")}}, {{jsxref("BigInt64Array")}}, or {{jsxref("BigUint64Array")}}.
 - `index`
-  - : The position in the `typedArray` to exchange a
-    `value`.
+  - : The position in the `typedArray` to exchange a `replacementValue`.
 - `expectedValue`
   - : The value to check for equality.
 - `replacementValue`
@@ -42,15 +30,14 @@ Atomics.compareExchange(typedArray, index, expectedValue, replacementValue)
 
 ### Return value
 
-The old value at the given position
-(`typedArray[index]`).
+The old value at the given position (`typedArray[index]`).
 
 ### Exceptions
 
-- Throws a {{jsxref("TypeError")}}, if `typedArray` is not one
-  of the allowed integer types.
-- Throws a {{jsxref("RangeError")}}, if `index` is out of bounds
-  in the `typedArray`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `typedArray` is not one of the allowed integer types.
+- {{jsxref("RangeError")}}
+  - : Thrown if `index` is out of bounds in the `typedArray`.
 
 ## Examples
 

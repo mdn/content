@@ -1,13 +1,11 @@
 ---
-title: Document.createElementNS()
+title: "Document: createElementNS() method"
+short-title: createElementNS()
 slug: Web/API/Document/createElementNS
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 Creates an element with the specified namespace URI and qualified name.
@@ -17,39 +15,39 @@ To create an element without specifying a namespace URI, use the
 
 ## Syntax
 
-```js
-var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
+```js-nolint
+createElementNS(namespaceURI, qualifiedName)
+createElementNS(namespaceURI, qualifiedName, options)
 ```
 
 ### Parameters
 
-- _namespaceURI_
-  - : A string that specifies the [namespace
-    URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the element. The {{DOMxRef("element.namespaceURI",
-    "namespaceURI")}} property of the created element is initialized with the value of
-    _namespaceURI_. See [Valid Namespace
-    URIs](#important_namespace_uris).
-- _qualifiedName_
-  - : A string that specifies the type of element to be created. The
-    {{DOMxRef("element.nodeName", "nodeName")}} property of the created element is
-    initialized with the value of _qualifiedName_.
-- _options_{{Optional_Inline}}
+- `namespaceURI`
+  - : A string that specifies the [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI) to associate with the element.
+    The {{DOMxRef("element.namespaceURI", "namespaceURI")}} property of the created element is initialized with the value of _namespaceURI_.
+    See [Valid Namespace URIs](#important_namespace_uris).
+- `qualifiedName`
+  - : A string that specifies the type of element to be created.
+    The {{DOMxRef("node.nodeName", "nodeName")}} property of the created element is initialized with the value of _qualifiedName_.
+- `options` {{Optional_Inline}}
 
-  - : An optional `ElementCreationOptions` object containing a single property
-    named `is`, whose value is the tag name for a custom element previously
-    defined using `customElements.define()`. For backwards compatibility with
-    previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
-    some browsers will allow you to pass a string here instead of an object, where the
-    string's value is the custom element's tag name. See [Extending
-    native HTML elements](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) for more information on how to use this parameter.
+  - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
+    For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
+    some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
+    See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
 
-    The new element will be given an `is` attribute whose value is the custom
-    element's tag name. Custom elements are an experimental feature only available in some
-    browsers.
+    The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
 
 ### Return value
 
 The new {{DOMxRef("Element")}}.
+
+### Exceptions
+
+- `NamespaceError` {{domxref("DOMException")}}
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is not a valid [namespace URI](https://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI).
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if the [`qualifiedName`](#qualifiedname) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Important Namespace URIs
 
@@ -59,15 +57,11 @@ The new {{DOMxRef("Element")}}.
   - : `http://www.w3.org/2000/svg`
 - [MathML](/en-US/docs/Web/MathML)
   - : `http://www.w3.org/1998/Math/MathML`
-- [XUL](/en-US/docs/Mozilla/Tech/XUL) {{Non-standard_Inline}}
-  - : `http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul`
-- [XBL](/en-US/docs/Mozilla/Tech/XBL) {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : `http://www.mozilla.org/xbl`
 
-## Example
+## Examples
 
-This creates a new \<div> element in the {{Glossary("XHTML")}} namespace and
-appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of
+This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
+appends it to the vbox element. Although this is not an extremely useful XUL document, it does demonstrate the use of
 elements from two different namespaces within a single document:
 
 ```xml
@@ -118,4 +112,4 @@ elements from two different namespaces within a single document:
 - {{DOMxRef("document.createElement()")}}
 - {{DOMxRef("document.createTextNode()")}}
 - {{DOMxRef("Element.namespaceURI")}}
-- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114)
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

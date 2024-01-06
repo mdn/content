@@ -1,66 +1,52 @@
 ---
-title: 'AbortSignal: abort event'
+title: "AbortSignal: abort event"
+short-title: abort
 slug: Web/API/AbortSignal/abort_event
-tags:
-  - API
-  - AbortSignal
-  - DOM
-  - Event
-  - abort
+page-type: web-api-event
 browser-compat: api.AbortSignal.abort_event
 ---
-{{APIRef}}
 
-The **`abort`** event of the [Fetch API](/en-US/docs/Web/API/Fetch_API) is fired when a fetch request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
+{{APIRef("DOM")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/API/AbortSignal/onabort">onabort</a></code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+The **`abort`** event of the {{domxref("AbortSignal")}} is fired when the associated request is aborted, i.e. using {{domxref("AbortController.abort()")}}.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js-nolint
+addEventListener('abort', (event) => { })
+
+onabort = (event) => { }
+```
+
+## Event type
+
+A generic {{DOMxRef("Event")}} with no added properties.
 
 ## Examples
 
-In the following snippets, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not the signal has been aborted using the `onabort` property, and send an appropriate log to the console.
+In the following snippets, we create a new `AbortController` object, and get its {{domxref("AbortSignal")}} (available using the `signal` property). Later on we check whether or not the signal has been aborted using an event handler property,
 
-You can use the `abort` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
+You can detect the `abort` event using an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-signal.addEventListener('abort', function() {
- console.log('Request aborted');
-};
+signal.addEventListener("abort", () => {
+  console.log("Request aborted");
+});
 ```
 
-Or use the [`onabort`](/en-US/docs/Web/API/AbortSignal/onabort) event handler property:
+Or use the `onabort` event handler property:
 
 ```js
-var controller = new AbortController();
-var signal = controller.signal;
+const controller = new AbortController();
+const signal = controller.signal;
 
-signal.onabort = function() {
-  console.log('Request aborted');
+signal.onabort = () => {
+  console.log("Request aborted");
 };
 ```
 
@@ -71,7 +57,3 @@ signal.onabort = function() {
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Fetch API](/en-US/docs/Web/API/Fetch_API)

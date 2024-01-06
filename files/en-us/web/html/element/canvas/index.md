@@ -1,18 +1,11 @@
 ---
-title: '<canvas>: The Graphics Canvas element'
+title: "<canvas>: The Graphics Canvas element"
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.canvas
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
@@ -20,18 +13,18 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#embedded_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
           >embedded content</a
         >, palpable content.
       </td>
@@ -41,13 +34,13 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
       <td>
         Transparent but with no
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#interactive_content"
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
           >interactive content</a
         >
         descendants except for {{HTMLElement("a")}} elements,
         {{HTMLElement("button")}} elements,
         {{HTMLElement("input")}} elements whose
-        {{htmlattrxref("type", "input")}} attribute is
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
         <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
       </td>
     </tr>
@@ -59,7 +52,7 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -87,11 +80,11 @@ Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-U
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : The height of the coordinate space in CSS pixels. Defaults to 150.
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
-- {{htmlattrdef("width")}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
+  - : Lets the canvas know whether translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized. This is only supported by Mozilla-based browsers; use the standardized {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} instead.
+- `width`
   - : The width of the coordinate space in CSS pixels. Defaults to 300.
 
 ## Usage notes
@@ -100,7 +93,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 You should provide alternate content inside the `<canvas>` block. That content will be rendered both on older browsers that don't support canvas and in browsers with JavaScript disabled.
 
-### Required \</canvas> tag
+### Closing `</canvas>` tag
 
 Unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`).
 
@@ -112,26 +105,26 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 ### Maximum canvas size
 
-The maximum size of a `<canvas>` element is very large, but the exact size depends on the browser. The following is some data we've collected from various tests and other sources (e.g. [Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element)):
-
-| Browser | Maximum height | Maximum width | Maximum area                               |
-| ------- | -------------- | ------------- | ------------------------------------------ |
-| Chrome  | 32,767 pixels  | 32,767 pixels | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| Firefox | 32,767 pixels  | 32,767 pixels | 472,907,776 pixels (i.e., 22,528 x 20,992) |
-| Safari  | 32,767 pixels  | 32,767 pixels | 268,435,456 pixels (i.e., 16,384 x 16,384) |
-| IE      | 8,192 pixels   | 8,192 pixels  | ?                                          |
+The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://github.com/jhildenbiddle/canvas-size#test-results) (2021).
 
 > **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
+
+### Using an offscreen canvas
+
+A canvas can be rendered using the {{domxref("OffscreenCanvas")}} API where the document and canvas are decoupled.
+The benefit is that a [worker thread](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) can handle canvas rendering and the main thread of your web application is not blocked by canvas operations.
+By parallelizing work, other UI elements of your web application will remain responsive even if you are running complex graphics on an offscreen canvas.
+For more information, see the {{domxref("OffscreenCanvas")}} API documentation.
 
 ## Examples
 
 ### HTML
 
-This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to render the canvas, or if can't read a canvas.
+This code snippet adds a canvas element to your HTML document. A fallback text is provided if a browser is unable to read or render the canvas.
 
 ```html
-<canvas width="300" height="300">
-  An alternative text describing what your canvas displays.
+<canvas width="120" height="120">
+  An alternative text describing what your canvas displays.
 </canvas>
 ```
 
@@ -140,15 +133,16 @@ This code snippet adds a canvas element to your HTML document. A fallback text i
 Then in the JavaScript code, call {{domxref("HTMLCanvasElement.getContext()")}} to get a drawing context and start drawing onto the canvas:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+ctx.fillStyle = "green";
+// Add a rectangle at (10, 10) with size 100x100 pixels
 ctx.fillRect(10, 10, 100, 100);
 ```
 
 ### Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples', 600, 150)}}
 
 ## Accessibility concerns
 
@@ -158,7 +152,7 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## Specifications
@@ -171,8 +165,14 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 
 ## See also
 
-- [MDN canvas portal](/en-US/docs/Web/API/Canvas_API)
+- [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/docs/Web/Demos#canvas)
-- [Canvas introduction by Apple](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
+- [OffscreenCanvas](/en-US/docs/Web/API/OffscreenCanvas)
+- [Canvas cheat sheet](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html) (2009)
+- [Canvas cheat sheet](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf) (pdf) (2015)
+- [Safari HTML canvas guide](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html) via Apple (2013)
+- [`CanvasRenderingContext2D` 2D drawing context for a canvas element](https://developer.apple.com/documentation/webkitjs/canvasrenderingcontext2d) via Apple.com
+- [WebGL](/en-US/docs/Web/API/WebGL_API) API
+- {{HTMLElement("img")}}
+- [SVG](/en-US/docs/Web/SVG)
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)

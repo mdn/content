@@ -1,16 +1,11 @@
 ---
-title: ResizeObserver.disconnect()
+title: "ResizeObserver: disconnect() method"
+short-title: disconnect()
 slug: Web/API/ResizeObserver/disconnect
-tags:
-  - API
-  - Method
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - disconnect()
-  - observers
+page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.disconnect
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`disconnect()`** method of the
@@ -19,8 +14,8 @@ or {{domxref('SVGElement')}} targets.
 
 ## Syntax
 
-```js
-resizeObserver.disconnect();
+```js-nolint
+disconnect()
 ```
 
 ### Parameters
@@ -29,7 +24,7 @@ None.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -38,9 +33,9 @@ None.
 ## Examples
 
 ```js
-btn.addEventListener('click', () => {
+btn.addEventListener("click", () => {
   resizeObserver.disconnect();
-})
+});
 ```
 
 ## Specifications

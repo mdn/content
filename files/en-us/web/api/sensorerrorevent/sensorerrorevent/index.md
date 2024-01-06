@@ -1,18 +1,11 @@
 ---
-title: SensorErrorEvent()
+title: "SensorErrorEvent: SensorErrorEvent() constructor"
+short-title: SensorErrorEvent()
 slug: Web/API/SensorErrorEvent/SensorErrorEvent
-tags:
-  - API
-  - Constructor
-  - Error
-  - Generic Sensor API
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - SensorErrorEvent
-  - Sensors
+page-type: web-api-constructor
 browser-compat: api.SensorErrorEvent.SensorErrorEvent
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`SensorErrorEvent`** constructor
@@ -21,19 +14,23 @@ errors thrown by any of the interfaces based on {{domxref('Sensor')}}.
 
 ## Syntax
 
-```js
-sensorErrorEvent = new SensorErrorEvent(type, {error: domException});
+```js-nolint
+new SensorErrorEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
-  - : Will always be `'SensorErrorEvent'`.
-- _options_ {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `error`.
+- `options`
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `error`
+      - : A {{domxref('DOMException')}} object describing the error.
 
-  - : Currently only one option is supported:
+### Return value
 
-    - `error`: An instance of {{jsxref('DOMException')}}.
+A new {{domxref("SensorErrorEvent")}} object.
 
 ## Specifications
 

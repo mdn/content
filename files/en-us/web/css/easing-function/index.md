@@ -1,159 +1,166 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - CSS Data Type
-  - CSS Transitions
-  - Data Type
-  - Layout
-  - Reference
-  - easing-function
+page-type: css-type
+browser-compat: css.types.easing-function
 ---
+
 {{CSSRef}}
 
-The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) denotes a mathematical function that describes the rate at which a numerical value changes.
+The **`<easing-function>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a mathematical function that describes the rate at which a value changes.
 
-This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. It may also be used to interpolate between two colors in a color gradient.
-
-The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions, because they can be used to smooth down the start and end of the interpolation. They correlate an input ratio to an output ratio, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
-
-Depending on the specific function used, the calculated output can sometimes grow to be greater than `1.0` or smaller than `0.0` during the course of an animation. This causes the value to go farther than the final state, and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
-
-![](tf_with_output_gt_than_1.png)
-
-However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` curves exhibit this property.
-
-![](tf_with_output_gt_than_1_clipped.png)
+This transition between two values may be applied in different situations. It may be used to describe how fast values change during animations. This lets you vary the animation's speed over the course of its duration. You can specify an easing function for CSS [transition](/en-US/docs/Web/CSS/transition-timing-function) and [animation](/en-US/docs/Web/CSS/animation-timing-function) properties.
 
 ## Syntax
 
-There are three types of [easing function](/en-US/docs/Web/CSS/easing-function#easing_functions): linear, [cubic Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves), and staircase functions. The value of an `<easing-function>` type describes the easing function using one of those three types.
-
-### Easing functions
-
-CSS supports three kinds of easing functions: linear, the subset of the cubic Bézier curves that are functions, and staircase functions. The most useful of these functions are given a keyword that allows them to be easily referenced.
-
-#### The linear class of easing functions
-
-##### linear
-
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A straight diagonal line extends from the origin to the X 1 Y 1 position.](cubic-bezier-linear.png)
-
-The interpolation is done at a constant rate from beginning to end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 1.0, 1.0)`.
-
-#### The cubic-bezier() class of easing functions
-
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curved line extends from the origin to the X 1 Y 1 position. The X 0 Y 0 point of the line is labeled  'P₀ = (0, 0)'. Extending from the X 0 Y 0 point is a Bezier handle labeled 'P₁ = (0.075, 0.75)'. The X 1 Y 1 point of the line is labeled 'P₃ = (1, 1)'. Extending from the X 1 Y 1 point is a Bezier handle labeled 'P₂ = (0.0875, 0.36)'.](cubic-bezier-example.png)
-
-The `cubic-bezier()` functional notation defines a [cubic Bézier curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve#Cubic_B.C3.A9zier_curves). As these curves are continuous, they are often used to smooth down the start and end of the interpolation and are therefore sometimes called _easing functions_.
-
-A cubic Bézier curve is defined by four points P0, P1, P2, and P3. P0 and P3 are the start and the end of the curve and, in CSS these points are fixed as the coordinates are ratios (the abscissa the ratio of time, the ordinate the ratio of the output range). P0 is `(0, 0)` and represents the initial time or position and the initial state, P3 is `(1, 1)` and represents the final time or position and the final state.
-
-Not all cubic Bézier curves are suitable as easing functions as not all are [mathematical functions](https://en.wikipedia.org/wiki/Function_%28mathematics%29); i.e., curves that for a given abscissa have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P1 and P2 are both in the `[0, 1]` range.
-
-Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range may generate _bouncing_ effects.
-
-When you specify an invalid `cubic-bezier` curve, CSS ignores the whole property.
-
-##### Syntax
-
 ```css
-cubic-bezier(x1, y1, x2, y2)
+/* linear function and keyword */
+/* linear(<point-list>) */
+linear(1, -0.5, 0)
+linear
+
+/* cubic-bezier function and keywords */
+/* cubic-bezier(<x1>, <y1>, <x2>, <y2>) */
+cubic-bezier(0.25, 0.1, 0.25, 1)
+ease
+ease-in
+ease-out
+ease-in-out
+
+/* steps function and keywords */
+/* steps(<number-of-steps>, <direction>) */
+steps(4, end)
+steps(10, jump-both)
+step-start
+step-end
 ```
 
-where:
+### Values
 
-- **x1, y1, x2, y2**
-  - : Are {{cssxref("&lt;number&gt;")}} values representing the abscissas, and ordinates of the P1 and P2 points defining the cubic Bézier curve. x1 and x2 must be in the range \[0, 1] or the value is invalid.
+- `linear`
 
-#### Keywords for common cubic-bezier easing functions
+  - : Specifies a constant rate of interpolation, with no change in the rate of progress throughout the duration (that is, no acceleration or deceleration). This keyword value is equivalent to both [`cubic-bezier(0, 0, 1, 1)`](#cubic_bézier_easing_function) and [`linear(0, 1)`](#linear_easing_function) functions.
 
-##### ease
+![Graph of "Input progress" to "Output progress" showing a line extending from the origin to (1, 1).](linear.svg)
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A curving line extends from the origin to the X 1 Y 1 position, quickly rising and arcing.](cubic-bezier-ease.png)
+- `<linear-easing-function>`
 
-The interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1.0)`. It is similar to [`ease-in-out`](#ease-in-out), though it accelerates more sharply at the beginning.
+  - : Specifies a `linear()` function with one or more comma-separated _linear stops_, each containing up to two optional _stop lengths_, to control the progress of an animation or transition.
 
-##### ease-in
+    The `linear()` function specifies a `<linear-stop-list>`, a comma-separated list of points along the animation or transition progress. Each point or `<linear-stop>` in the list is specified as a {{cssxref("&lt;number&gt;")}} between `0` and `1`. By default, each stop in the `<linear-stop-list>` is equidistant. To have more control on the progress of the animation or transition, each point can include up to two optional {{cssxref("&lt;percentage&gt;")}} `<linear-stop-length>` values.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position, with most of the curve close to the origin, straightening out as it approaches X 1 Y 1.](cubic-bezier-ease-in.png)
+    - `<number>`: Represents a point in time along the duration of the animation or transition. The value should be between `0` and `1`, where `0` represents the start of the iteration and `1` represents the end.
 
-The interpolation starts slowly, and then progressively speeds up until the end, at which point it stops abruptly. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 1.0, 1.0)`.
+    - `<percentage>`: Indicates the position of a linear stop along the duration. It can take up to two values. If one value is specified, it defines the start of the associated linear stop. If two percentage values are specified, they define the length of the stop: the first percentage indicates the starting point and the second percentage indicates the ending point for that segment in the animation or transition. If no `<percentage>` value is specified, which is the default, the stops are spread evenly along the timeline.
 
-##### `ease-in-out`
+- `<cubic-bezier-easing-function>`
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position. The curve is symmetrical, resembling a stretched out letter S.](cubic-bezier-ease-in-out.png)
+  - : Specifies a [Bézier curve](/en-US/docs/Glossary/Bezier_curve) to shape the progress of an animation or a transition. In CSS, Bézier curves are defined by four control points that mathematically describe the curve: a starting point, an ending point, and two control points. The cubic Bézier easing function can be defined in one of these two ways: by creating a custom curve with a four-parameter `cubic-bezier()` function call or by using one of the predefined keyword values, which map to the commonly used Bézier curve parameters. The predefined keyword values include:
 
-The interpolation starts slowly, speeds up, and then slows down towards the end. This keyword represents the easing function `cubic-bezier(0.42, 0.0, 0.58, 1.0)`. At the beginning, it behaves like the [`ease-in`](#ease-in) function; at the end, it is like the [`ease-out`](#ease-out) function.
+    `ease`: This keyword represents the easing function `cubic-bezier(0.25, 0.1, 0.25, 1)`. It indicates that the interpolation starts slowly, accelerates sharply, and then slows gradually towards the end. It is similar to the `ease-in-out` keyword, though it accelerates more sharply at the beginning.
 
-##### ease-out
+    `ease-in`: This keyword represents the easing function `cubic-bezier(0.42, 0, 1, 1)`. It indicates that the interpolation starts slowly, then progressively speeds up until the end, at which point it stops abruptly.
 
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' A slightly curving line extends from the origin to the X 1 Y 1 position, starting as an almost straight diagonal line and curving as it gets close to X 1 Y 1.](cubic-bezer-ease-out.png)
+    `ease-out`: This keyword represents the easing function `cubic-bezier(0, 0, 0.58, 1)`. It indicates that the interpolation starts abruptly and then progressively slows down towards the end.
 
-The interpolation starts abruptly, and then progressively slows down towards the end. This keyword represents the easing function `cubic-bezier(0.0, 0.0, 0.58, 1.0)`.
+    `ease-in-out`: This keyword represents the easing function `cubic-bezier(0.42, 0, 0.58, 1)`. It indicates that the interpolation starts slowly, speeds up, and then slows down towards the end. At the beginning, it behaves like the `ease-in` keyword; at the end, it is like the `ease-out` keyword.
 
-#### The steps() class of easing functions
+    ![Graphs of "Input progress" to "Output progress", of which "ease" shows a curved line quickly rising from the origin to (1, 1); "ease-in" shows a shallow curved line from the origin that straightens out as it approaches (1, 1); "ease-out" shows a straight diagonal line that slightly curves as it gets close to (1, 1); and "ease-in-out" shows a symmetrical, "S"-shaped line curving from the origin to (1, 1).](ease.svg)
 
-The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) dividing the domain of output values in equidistant steps.This subclass of step functions are sometimes also called _staircase functions_.
+    `cubic-bezier()`: This function accepts four {{cssxref("&lt;number&gt;")}} values to shape a curve.
 
-##### Syntax
+    - {{cssxref("&lt;number&gt;")}}: Specifies the location of [P1 and P2 points](#cubic_bézier_easing_function) on the curve. `<x1>` and `<y1>` are the coordinates for point P1, and `<x2>` and `<y2>` are the coordinates for point P2. `<x1>` and `<x2>` values must be between `0` and `1`, otherwise the function will not work as expected.
+
+- `<step-easing-function>`
+
+  - : Specifies a `steps()` function that divides the animation into a set number of equal-length intervals or "steps", causing the animation to jump from one step to the next rather than transitioning smoothly. This parameter accepts one of the following two keyword values that map to predefined `steps()` functions or a custom `steps()` function:
+
+    `step-start`: This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`. It indicates that the interpolation jumps immediately to its final state, where it stays until the end.
+
+    `step-end`: This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`. It indicates that the interpolation stays in its initial state until the end, at which point it jumps directly to its final state.
+
+    ![Two graphs of "Input progress" to "Output progress". In the "step-start" graph, an unfilled circle represents the origin point (0,0), with a horizontal line extending from (0, 1) to (1, 1). In the "step-end" graph, a horizontal line extends from the origin to (1, 0), with an unfilled circle at (1,0) and a solid circle at (1, 1).](step.svg)
+
+    `steps()`: This function accepts a positive {{cssxref("&lt;integer&gt;")}} and an optional `<step-position>`.
+
+    - `<integer>`: Represents the number of equidistant intervals or 'steps'. It must be a positive integer greater than `0` unless the second parameter is `jump-none`, in which case, it must be a positive integer greater than `1`.
+    - `<step-position>`: Specifies the [timing of the jump](#steps_easing_function) to occur either at the start, at the end, at both start and end, or at neither. The possible keyword values include:
+
+      - `jump-start` denotes that the first jump occurs right at the start, essentially at the `0` point. No time is spent at the `0%` mark.
+      - `jump-end` denotes that the last jump occurs right at the end, essentially at the `1` point. No time is spent at the `100%` mark. This is the default value when no `<step-position>` is specified.
+      - `jump-none` denotes that no jump occurs either at the beginning or at the end, effectively removing a step during the duration. Instead, the progress holds steady at both the `0%` mark and `100%` marks. The duration of these holds is determined by dividing the total duration by the number of steps (1/n).
+      - `jump-both` denotes that jumps occur at both the beginning and the end, essentially occurring at both the `0` and `1`. Effectively, a step is added at both the ends. No time is spent at the `0%` and `100%` marks.
+      - `start` is the equivalent of `jump-start`.
+      - `end` is the equivalent of `jump-end`.
+
+## Description
+
+There are three types of easing functions:
+
+- [Linear](#linear_easing_function)
+- [Cubic Bézier](#cubic_bézier_easing_function)
+- [Steps](#steps_easing_function)
+
+### Linear easing function
+
+The `linear()` function creates a piecewise linear easing, allowing the approximation of complex animations and transitions by interpolating linearly between the specified points. The interpolation occurs at a constant rate from beginning to end. A typical use of the `linear()` function is to provide many points to approximate any curve.
+
+For example, the `linear(0, 0.25, 1)` function defines the linear stops at `0`, `0.25`, and `1`. The animation or transition starts at point `0`, moves linearly to `0.25`, and then continues linearly to point `1`. Since no `<linear-stop-length>` percentage is specified, the same duration (50%) is used to go from `0` to `0.25` and from `0.25` to `1`.
+
+![Graphs of "Input progress" to "Output progress", of which "linear(0, 0.25, 1)" shows a broken line connecting the origin, (0.5, 0.25), and (1, 1); and "linear(0, 0.25 75%, 1)" shows a broken line connecting the origin, (0.75, 0.25), and (1, 1).](linear_function.svg)
+
+By default, the stops are equidistant. So if there are 5 stops, they will be at 0%, 25%, 50%, 75%, and 100% of the duration. You can use optional `<linear-stop-length>` percentage values to provide finer control, defining the start and/or length of each segment, allowing for a more controlled progression of the transition.
+
+Let's look at an example where the progress of the animation is specified: `linear(0, 0.25 75%, 1)`. In this case, the animation progresses to `75%` of its total change in the first 25% of the duration (that is, to go from the timeline point `0` to `0.25`). The last 25% of the animation's total change is used during the remaining 75% of the duration (that is, to progress from the timeline point `0.25` to `1`). Consider another example of the `linear()` function: `linear(0.5 25% 75%, 1)`. Here, the animation reaches `25%` of its total change at the halfway point (`0.5`), and then instantly jumps to `75%` of its total change. Over the remaining 50% of the duration (`0.5` to `1`), it progresses from `75%` of its total change to 100%.
+
+> **Note:** The [`linear`](#linear) keyword is equivalent to the easing function `linear(0, 1)`. While the `linear` keyword is always interpreted as-is, the function `linear(0, 1)` gets interpreted as `linear(0 0%, 1 100%)`.
+
+### Cubic Bézier easing function
+
+The `cubic-bezier()` functional notation defines a cubic [Bézier curve](/en-US/docs/Glossary/Bezier_curve). The easing functions in the cubic-bezier subset of easing functions are often called "smooth" easing functions because they can be used to smooth down the start and end of the {{Glossary("interpolation")}}. They correlate an input progress to an output progress, both expressed as {{cssxref("&lt;number&gt;")}}s. For these values, `0.0` represents the initial state, and `1.0` represents the final state.
+
+![Graph of "Input progress" to "Output progress" showing an "S"-shaped line curving from the origin to (1, 1) with the Bezier control points P1(0.1, 0.6) and P2(0.7, 0.2).](cubic-bezier.svg)
+
+A cubic Bézier curve is defined by four points: P0, P1, P2, and P3. The points P0 and P3 represent the start and the end of the curve. In CSS, these points are fixed as the coordinates progress (the abscissa the input progress, the ordinate the output progress). P0 is `(0, 0)` and represents the initial progress and the initial state. P3 is `(1, 1)` and represents the final progress and the final state.
+
+Not all cubic Bézier curves are suitable as easing functions because not all are [mathematical functions](https://en.wikipedia.org/wiki/Function_%28mathematics%29); i.e., curves that for a given abscissa have zero or one value. With P0 and P3 fixed as defined by CSS, a cubic Bézier curve is a function, and is therefore valid, if and only if the abscissas of P1 and P2 are both in the `[0, 1]` range.
+
+Cubic Bézier curves with the P1 or P2 ordinate outside the `[0, 1]` range can cause the value to go farther than the final state and then return. In animations, for some properties, such as {{cssxref("left")}} or {{cssxref("right")}}, this creates a kind of "bouncing" effect.
+
+![Graphs of the easing function "cubic-bezier(0.3, 0.2, 0.2, 1.4)", one of which shows the output progress going above 1 starting from a certain input progress, the other shows the output progress reaching and then staying at 1.](cubic-bezier_out_of_range.svg)
+
+However, certain properties will restrict the output if it goes outside an allowable range. For example, a color component greater than `255` or smaller than `0` in {{CSSXref("color_value/rgb", "rgb()")}} will be clipped to the closest allowed value (`255` and `0`, respectively). Some `cubic-bezier()` values exhibit this property.
+
+When you specify an invalid cubic Bézier curve, CSS ignores the whole property.
+
+Each of the keywords [`ease`](#ease), [`ease-in`](#ease-in), [`ease-out`](#ease-out), and [`ease-in-out`](#ease-in-out) is equivalent to a specific `cubic-bezier()` value.
+
+### Steps easing function
+
+The `steps()` functional notation defines a [step function](https://en.wikipedia.org/wiki/Step_function) that divides the domain of output values in equidistant steps. This subclass of step functions are sometimes also called _staircase functions_.
+
+These are a few examples illustrating the `steps()` function:
 
 ```css
-steps(number_of_steps, direction)
+steps(2, jump-start) /* Or steps(2, start) */
+steps(4, jump-end) /* Or steps(4, end) */
+steps(5, jump-none)
+steps(3, jump-both)
 ```
 
-where:
+![Graphs of "Input progress" to "Output progress", of which "steps(2, jump-start)" shows horizontal lines extending 0.5 unit from (0, 0.5) and (0.5, 1), respectively, with empty circles at the origin and (0.5, 0.5); "steps(4, jump-end)" shows horizontal lines extending 0.25 unit from (0, 0), (0.25, 0.25), (0.5, 0.5), and (0.75, 0.75), respectively, with unfilled circles at (0.25, 0), (0.5, 0.25), and (0.75, 0.5), and a solid circle at (1, 1); "steps(5, jump-none)" shows horizontal lines extending 0.2 unit from (0, 0), (0.2, 0.25), (0.4, 0.5), (0.6, 0.75), and (0.8, 1), respectively, with unfilled circles at (0.2, 0), (0.4, 0.25), (0.6, 0.5), and (0.8, 0.75); "steps(3, jump-both)" shows horizontal lines extending 1/3 unit from (0, 0.25), (1/3, 0.5), and (2/3, 0.75),respectively , with a solid circle at (1, 1) and unfilled circles at the origin, (1/3, 0.25), (2/3, 0.5), and (1, 0.75).](jump.svg)
 
-- _number_of_steps_
-  - : Is a strictly positive {{cssxref("&lt;integer&gt;")}}, representing the amount of equidistant treads composing the stepping function.
-- _direction_
+Each of the keywords [`step-start`](#step-start) and [`step-end`](#step-end) is equivalent to a specific `steps()` value.
 
-  - : Is a keyword indicating if it the function is [left- or right-continuous](https://en.wikipedia.org/wiki/Left-continuous#Directional_and_semi-continuity):
+## Formal syntax
 
-    - `jump-start` denotes a left-continuous function, so that the first step or jump happens when the interpolation begins;
-    - `jump-end` denotes a right-continuous function, so that the last step or jump happens when the interpolation ends;
-    - `jump-both` denotes a right and left continuous function, includes pauses at both the 0% and 100% marks, effectively adding a step during the interpolation iteration;
-    - `jump-none` There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration
-    - `start` is the equivalent of `jump-start`
-    - `end` is the equivalent of `jump-end`
-
-    `end` is the default.
-
-##### steps( n, \<direction> )
-
-- `steps(2, jump-start)`
-  `steps(2, start)`
-
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Three dots are present, the first at the X 0 Y 0 position, the second at the X 0.5 Y 0.5 position, and the third at the X 1 Y 1 position. The second and third dots have horizontal lines extending 0.5 units backwards towards the Y axis.](steps-2-start.png)
-
-- `steps(4, jump-end) steps(4, end)`
-
-  ![Four steps, with a jump from the fourth step to the final value at the 100% mark.](steps-4-end.png)
-
-- `steps(5, jump-none)`
-
-  ![Five steps, with no jumps, so 20% of the time is at the beginning state or 0% mark and the last 20% is at the final state, or 100% mark.](step5none.png)
-
-- `steps(3, jump-both)`
-
-  ![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Five dots are present, the first at the X 0 Y 0 position, the second at the X 0 Y 0.25 position, the third at the X 0.5 Y 0.5 position, the fourth at the X 0.75 Y 0.75 position, and the fifth at the X 1 Y 1 position. The second, third, and fourth dots have horizontal lines extending 0.25 units forwards away from the Y axis.](step3both.png)
-
-##### step-start
-
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The second dot has a horizontal lines extending 1 units back towards the Y axis.](steps-1-start.png) The interpolation jumps immediately to its final state, where it stays until the end. This keyword represents the easing function `steps(1, jump-start)` or `steps(1, start)`.
-
-##### step-end
-
-![A graph with X and Y ranges from 0 to 1, with the X axis labeled 'Time ratio' and the Y axis labeled 'Output ratio.' Two dots are present, the first at the X 0 Y 0 position, and the second at the X 1 Y 1 position. The first dot has a horizontal lines extending 1 unit forwards away from the Y axis.](steps-1-end.png) The interpolation stays in its initial state until the end, at which point it jumps directly to its final state. This keyword represents the easing function `steps(1, jump-end)` or `steps(1, end)`.
+{{csssyntax}}
 
 ## Examples
 
-### Easing function comparison
+### Comparing the easing functions
 
-This example creates an animation that can be started and stopped again using the provided button, and a select menu that can be used to switch its easing function between the available keywords, plus a couple of `cubic-bezier()` and `steps()` options. The idea is to provide an easy comparison between different easing functions.
+This example provides an easy comparison between the different easing functions using an animation. From the drop-down menu, you can select an easing function – there are a couple of keywords and some `cubic-bezier()` and `steps()` options. After selecting an option, you can start and stop the animation using the provided button.
 
 #### HTML
 
@@ -169,6 +176,7 @@ This example creates an animation that can be started and stopped again using th
     <label for="easing-select">Choose an easing function:</label>
     <select id="easing-select">
       <option selected>linear</option>
+      <option>linear(0, 0.5 50%, 1)</option>
       <option>ease</option>
       <option>ease-in</option>
       <option>ease-in-out</option>
@@ -196,7 +204,11 @@ div > div {
   width: 50px;
   height: 50px;
   background-color: blue;
-  background-image: radial-gradient(circle at 10px 10px, rgba(25,255,255,0.8),rgba(25,255,255,0.4));
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgb(25 255 255 / 80%),
+    rgb(25 255 255 / 40%)
+  );
   border-radius: 50%;
   top: 25px;
   animation: 1.5s infinite alternate;
@@ -223,45 +235,45 @@ li {
 #### JavaScript
 
 ```js
-const selectElem = document.querySelector('select');
-const startBtn = document.querySelector('button');
-const divElem = document.querySelector('div > div');
+const selectElem = document.querySelector("select");
+const startBtn = document.querySelector("button");
+const divElem = document.querySelector("div > div");
 
-startBtn.addEventListener('click', () => {
-  if(startBtn.textContent === 'Start animation') {
-    divElem.style.animationName = 'move-right';
-    startBtn.textContent = 'Stop animation';
+startBtn.addEventListener("click", () => {
+  if (startBtn.textContent === "Start animation") {
+    divElem.style.animationName = "move-right";
+    startBtn.textContent = "Stop animation";
     divElem.style.animationTimingFunction = selectElem.value;
   } else {
-    divElem.style.animationName = 'unset';
-    startBtn.textContent = 'Start animation';
+    divElem.style.animationName = "unset";
+    startBtn.textContent = "Start animation";
   }
 });
 
-selectElem.addEventListener('change', () => {
+selectElem.addEventListener("change", () => {
   divElem.style.animationTimingFunction = selectElem.value;
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample('Easing_function_comparison', '100%', 200)}}
+{{EmbedLiveSample("comparing_the_easing_functions", "100%", 200)}}
 
-### cubic-bezier() function examples
+### Using the cubic-bezier() function
 
 These cubic Bézier curves are valid for use in CSS:
 
-```css
-/* The canonical Bézier curve with four <number> in the [0,1] range. */
+```css example-good
+/* The canonical Bézier curve with four <number> in the [0,1] range */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
-/* Using <integer> is valid as any <integer> is also a <number>. */
+/* Using <integer> is valid because any <integer> is also a <number>. */
 cubic-bezier(0, 0, 1, 1)
 
-/* Negative values for ordinates are valid, leading to bouncing effects.*/
+/* Negative values for ordinates are valid, leading to bouncing effects. */
 cubic-bezier(0.1, -0.6, 0.2, 0)
 
-/* Values > 1.0 for ordinates are also valid. */
+/* Values greater than 1.0 for ordinates are also valid. */
 cubic-bezier(0, 1.1, 0.8, 4)
 ```
 
@@ -269,7 +281,7 @@ These cubic Bézier curves definitions are invalid:
 
 ```css example-bad
 /* Though the animated output type may be a color,
-   Bézier curves work w/ numerical ratios.*/
+   Bézier curves work with numerical ratios. */
 cubic-bezier(0.1, red, 1.0, green)
 
 /* Abscissas must be in the [0, 1] range or
@@ -284,12 +296,12 @@ cubic-bezier(0.3, 2.1)
 cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 ```
 
-### steps() function examples
+### Using the steps() function
 
 These easing functions are valid:
 
-```css
-/* There is 5 treads, the last one happens
+```css example-good
+/* There are 5 treads, the last one happens
    right before the end of the animation. */
 steps(5, end)
 
@@ -301,9 +313,9 @@ steps(2, start)
 steps(2)
 ```
 
-> **Note:** If the animation contains multiple stops, then the steps specified in the `steps()` function will apply to each section. Therefore an animation with three segments and `steps(2)` will contain 6 steps in total, 2 per segment.
+> **Note:** If the animation contains multiple stops, then the steps specified in the `steps()` function will apply to each section. Therefore, an animation with three segments and `steps(2)` will contain 6 steps in total, 2 per segment.
 
-These easing function are invalid:
+These easing functions are invalid:
 
 ```css example-bad
 /* The first parameter must be an <integer> and
@@ -313,22 +325,21 @@ steps(2.0, jump-end)
 /* The amount of steps must be non-negative. */
 steps(-3, start)
 
-/* There must be at least one step.*/
+/* There must be at least one step. */
 steps(0, jump-none)
 ```
 
 ## Specifications
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS Easing 1', '#typedef-easing-function', '&lt;easing-function&gt;')}} | {{Spec2('CSS Easing 1')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.types.easing-function", 2)}}
+{{Compat}}
 
 ## See also
 
-- [CSS Animations](/en-US/docs/Web/CSS/CSS_Animations)
-- [CSS Transitions](/en-US/docs/Web/CSS/CSS_Transitions)
-- [cubic-bezier](http://cubic-bezier.com/)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations)
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)
+- [cubic-bezier](https://cubic-bezier.com/)
+- [`linear()` easing generator](https://linear-easing-generator.netlify.app/)

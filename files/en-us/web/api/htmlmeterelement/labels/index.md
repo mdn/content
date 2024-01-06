@@ -1,32 +1,23 @@
 ---
-title: HTMLMeterElement.labels
+title: "HTMLMeterElement: labels property"
+short-title: labels
 slug: Web/API/HTMLMeterElement/labels
-tags:
-  - API
-  - HTML DOM
-  - HTMLMeterElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLMeterElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLMeterElement.labels`** read-only property returns a
 {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with the
 {{HTMLElement("meter")}} element.
 
-## Syntax
-
-```js
-var labelElements = meter.labels;
-```
-
-### Return value
+## Value
 
 A {{domxref("NodeList")}} containing the `<label>` elements associated
 with the `<meter>` element.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -39,15 +30,15 @@ with the `<meter>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", () => {
   const meter = document.getElementById("test");
-  for(var i = 0; i < meter.labels.length; i++) {
-    console.log(meter.labels[i].textContent); // "Label 1" and "Label 2"
+  for (const label of meter.labels) {
+    console.log(label.textContent); // "Label 1" and "Label 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Example", "100%", 30)}}
+{{EmbedLiveSample("Examples", "100%", 30)}}
 
 ## Specifications
 

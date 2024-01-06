@@ -1,18 +1,14 @@
 ---
-title: 'CSP: referrer'
+title: "CSP: referrer"
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Deprecated
-  - Reference
-  - Security
-  - referrer
-browser-compat: http.headers.csp.Content-Security-Policy.referrer
+page-type: http-csp-directive
+status:
+  - deprecated
+  - non-standard
+browser-compat: http.headers.Content-Security-Policy.referrer
 ---
-{{HTTPSidebar}} {{deprecated_header}}
+
+{{HTTPSidebar}} {{deprecated_header}}{{Non-standard_header}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 **`referrer`** directive used to specify information in the
@@ -24,7 +20,7 @@ browsers.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: referrer <referrer-policy>;
 ```
 
@@ -51,7 +47,7 @@ where `<referrer-policy>` can be one of the following values:
 
 ## Examples
 
-```
+```http
 Content-Security-Policy: referrer "none";
 ```
 

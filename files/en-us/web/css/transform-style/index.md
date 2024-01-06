@@ -1,15 +1,10 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transforms
-  - Experimental
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transform-style
 ---
+
 {{CSSRef}}
 
 The **`transform-style`** [CSS](/en-US/docs/Web/CSS) property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
@@ -31,6 +26,7 @@ transform-style: preserve-3d;
 transform-style: inherit;
 transform-style: initial;
 transform-style: revert;
+transform-style: revert-layer;
 transform-style: unset;
 ```
 
@@ -71,7 +67,7 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 
 <div class="checkbox">
   <label for="preserve"><code>preserve-3d</code></label>
-  <input type="checkbox" id="preserve" checked>
+  <input type="checkbox" id="preserve" checked />
 </div>
 ```
 
@@ -99,32 +95,32 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 }
 
 .front {
-    background: rgba(90,90,90,.7);
-    transform: translateZ(50px);
+  background: rgb(90 90 90 / 70%);
+  transform: translateZ(50px);
 }
 
 .back {
-    background: rgba(0,210,0,.7);
-    transform: rotateY(180deg) translateZ(50px);
+  background: rgb(0 210 0 / 70%);
+  transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(210,0,0,.7);
+  background: rgb(210 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0,0,210,.7);
+  background: rgb(0 0 210 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(210,210,0,.7);
+  background: rgb(210 210 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(210,0,210,.7);
+  background: rgb(210 0 210 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
@@ -132,16 +128,12 @@ We also provide a checkbox allowing you to toggle between this, and `transform-s
 #### JavaScript
 
 ```js
-const cube = document.getElementById('example-element');
-const checkbox = document.getElementById('preserve');
+const cube = document.getElementById("example-element");
+const checkbox = document.getElementById("preserve");
 
-checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    cube.style.transformStyle = 'preserve-3d';
-  } else {
-    cube.style.transformStyle = 'flat';
-  }
-})
+checkbox.addEventListener("change", () => {
+  cube.style.transformStyle = checkbox.checked ? "preserve-3d" : "flat";
+});
 ```
 
 #### Result
@@ -158,4 +150,4 @@ checkbox.addEventListener('change', () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

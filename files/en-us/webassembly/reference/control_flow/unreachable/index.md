@@ -1,43 +1,19 @@
 ---
 title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
-**`unreachable`** is used to denote a point in code that should not be reachable. In the case where an `unreachable` is reached it throws an unrecoverable error.
+**`unreachable`** is used to denote a point in code that should not be reachable. `unreachable` is an unconditional trap: in the case where an `unreachable` is reached and executed, the instruction traps.
+
+{{EmbedInteractiveExample("pages/wat/unreachable.html", "tabbed-shorter")}}
 
 ## Syntax
 
 ```wasm
 unreachable
-```
-
-## Full working example
-
-Wasm file
-
-```wasm
-(module
-  (func (export "throw")
-    unreachable
-  )
-)
-```
-
-JavaScript file
-
-```js
-WebAssembly.instantiateStreaming(
-  fetch("../out/main.wasm")
-).then(result => {
-  result.instance.exports.throw();
-});
 ```
 
 | Instruction   | Binary opcode |

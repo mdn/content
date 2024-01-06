@@ -1,38 +1,37 @@
 ---
-title: ImageDecoder.close()
+title: "ImageDecoder: close() method"
+short-title: close()
 slug: Web/API/ImageDecoder/close
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - ImageDecoder
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ImageDecoder.close
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("ImageDecoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 
-```js
-ImageDecoder.close()
+```js-nolint
+close()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 The following example closes the `ImageDecoder`.
 
 ```js
-ImageDecoder.close();
+imageDecoder.close();
 ```
 
 ## Specifications

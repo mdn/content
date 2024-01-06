@@ -1,52 +1,32 @@
 ---
-title: XMLHttpRequest.setRequestHeader()
+title: "XMLHttpRequest: setRequestHeader() method"
+short-title: setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
-tags:
-  - API
-  - HTTP
-  - HTTP Header
-  - Method
-  - NeedsExample
-  - Reference
-  - Request header
-  - XHR
-  - XHR Request
-  - XMLHttpRequest
-  - header
-  - request
-  - setRequestHeader
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
-{{APIRef('XMLHttpRequest')}}
 
-The {{domxref("XMLHttpRequest")}} method
-**`setRequestHeader()`** sets the value of an HTTP request
-header. When using `setRequestHeader()`, you must call it after calling
-{{domxref("XMLHttpRequest.open", "open()")}}, but before calling
-{{domxref("XMLHttpRequest.send", "send()")}}. If this method is called several times
-with the same header, the values are merged into one single request header.
+{{APIRef("XMLHttpRequest API")}}
 
-Each time you call `setRequestHeader()` after the first time you call it,
-the specified text is appended to the end of the existing header's content.
+The {{domxref("XMLHttpRequest")}} method **`setRequestHeader()`** sets the value of an HTTP request header.
+When using `setRequestHeader()`, you must call it after calling {{domxref("XMLHttpRequest.open", "open()")}}, but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
+If this method is called several times with the same header, the values are merged into one single request header.
 
-If no {{HTTPHeader("Accept")}} header has been set using this, an `Accept`
-header with the type `"*/*"` is sent with the request when
-{{domxref("XMLHttpRequest.send", "send()")}} is called.
+Each time you call `setRequestHeader()` after the first time you call it, the specified text is appended to the end of the existing header's content.
 
-For security reasons, some headers can only be controlled by the user agent. These
-headers include the {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}
-and {{Glossary("Forbidden_response_header_name", "forbidden response header names",
-  1)}}.
+If no {{HTTPHeader("Accept")}} header has been set using this, an `Accept` header with the type `"*/*"` is sent with the request when {{domxref("XMLHttpRequest.send", "send()")}} is called.
 
-> **Note:** For your custom fields, you may encounter a "**not
-> allowed by Access-Control-Allow-Headers in preflight response**" exception
-> when you send requests across domains. In this situation, you need to set up the
-> {{HTTPHeader("Access-Control-Allow-Headers")}} in your response header at server side.
+For security reasons, there are several {{Glossary("Forbidden_header_name", "forbidden header names")}} whose values are controlled by the user agent. Any attempt to set a value for one of those headers from frontend JavaScript code will be ignored without warning or error.
+
+In addition, the [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
+
+> **Note:** For your custom fields, you may encounter a "**not allowed by Access-Control-Allow-Headers in preflight response**" exception when you send requests across domains.
+> In this situation, you need to set up the {{HTTPHeader("Access-Control-Allow-Headers")}} in your response header at server side.
 
 ## Syntax
 
-```js
-XMLHttpRequest.setRequestHeader(header, value)
+```js-nolint
+setRequestHeader(header, value)
 ```
 
 ### Parameters
@@ -58,7 +38,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 
@@ -70,7 +50,5 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

@@ -1,24 +1,11 @@
 ---
-title: XRRigidTransform()
+title: "XRRigidTransform: XRRigidTransform() constructor"
+short-title: XRRigidTransform()
 slug: Web/API/XRRigidTransform/XRRigidTransform
-tags:
-  - API
-  - AR
-  - Constructor
-  - Mixed Reality
-  - Orientation
-  - Position
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - XR
-  - XRRigidTransform
-  - augmented
-  - transform
+page-type: web-api-constructor
 browser-compat: api.XRRigidTransform.XRRigidTransform
 ---
+
 {{APIRef("WebXR Device API")}}
 
 The
@@ -30,7 +17,7 @@ coordinate systems across spaces.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRigidTransform()
 new XRRigidTransform(position)
 new XRRigidTransform(position, orientation)
@@ -41,7 +28,7 @@ new XRRigidTransform(position, orientation)
 - `position` {{optional_inline}}
   - : An object which specifies the coordinates
     at which the point or object is located. These dimensions are specified in meters. If
-    this parameter is left out or is invalid,  the
+    this parameter is left out or is invalid, the
     position used is assumed to be `{x: 0, y: 0, z: 0, w: 1}`. `w`
     must _always_ be 1.
 - `orientation` {{optional_inline}}
@@ -59,8 +46,8 @@ origin to the specified `position` and facing in the direction indicated by
 
 ### Exceptions
 
-- `TypeError`
-  - : The value of the `w` coordinate in the specified `position` is
+- {{jsxref("TypeError")}}
+  - : Thrown if the value of the `w` coordinate in the specified `position` is
     not 1.0.
 
 ## Examples
@@ -72,10 +59,10 @@ on a transform before requesting the first animation frame.
 ```js
 let animationFrameRequestID = 0;
 
-xrSession.requestReferenceSpace("local-floor")
-.then((refSpace) => {
+xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-        new XRRigidTransform(viewerPosition, viewerOrientation));
+    new XRRigidTransform(viewerPosition, viewerOrientation),
+  );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });
 ```
@@ -93,8 +80,7 @@ Then {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} i
 called to ask for a new animation frame to draw into. The `drawFrame()`
 callback will be executed when the system is ready to draw the next frame.
 
-You can find more examples in [Movement, orientation,
-and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
+You can find more examples in [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion).
 
 ## Specifications
 

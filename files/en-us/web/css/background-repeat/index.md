@@ -1,14 +1,10 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.background-repeat
 ---
+
 {{CSSRef}}
 
 The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
@@ -38,6 +34,7 @@ background-repeat: no-repeat round;
 background-repeat: inherit;
 background-repeat: initial;
 background-repeat: revert;
+background-repeat: revert-layer;
 background-repeat: unset;
 ```
 
@@ -143,27 +140,34 @@ background-repeat: unset;
 
 ```html
 <ol>
-  <li>no-repeat
+  <li>
+    no-repeat
     <div class="one"></div>
   </li>
-  <li>repeat
+  <li>
+    repeat
     <div class="two"></div>
   </li>
-  <li>repeat-x
+  <li>
+    repeat-x
     <div class="three"></div>
   </li>
-  <li>repeat-y
+  <li>
+    repeat-y
     <div class="four"></div>
   </li>
-  <li>space
-    <div class="five"></div>
-  </li>
-  <li>round
-    <div class="six"></div>
-  </li>
-  <li>repeat-x, repeat-y (multiple images)
-    <div class="seven"></div>
-  </li>
+  <li>
+    space
+    <div class="five"></div>
+  </li>
+  <li>
+    round
+    <div class="six"></div>
+  </li>
+  <li>
+    repeat-x, repeat-y (multiple images)
+    <div class="seven"></div>
+  </li>
 </ol>
 ```
 
@@ -180,9 +184,9 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(starsolid.gif);
-    width: 160px;
-    height: 70px;
+  background-image: url(starsolid.gif);
+  width: 160px;
+  height: 70px;
 }
 
 /* Background repeats */
@@ -207,10 +211,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
-  background-repeat: repeat-x,
-                     repeat-y;
+  background-image: url(starsolid.gif), url(favicon32.png);
+  background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
 ```
@@ -231,4 +233,4 @@ In this example, each list item is matched with a different value of `background
 
 ## See also
 
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

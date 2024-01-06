@@ -1,13 +1,10 @@
 ---
 title: Access-Control-Request-Method
 slug: Web/HTTP/Headers/Access-Control-Request-Method
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Request-Method
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Request-Method`** request header is used
@@ -31,7 +28,7 @@ actual request is made. This header is necessary as the preflight request is alw
 
 ## Syntax
 
-```
+```http
 Access-Control-Request-Method: <method>
 ```
 
@@ -43,7 +40,7 @@ Access-Control-Request-Method: <method>
 
 ## Examples
 
-```
+```http
 Access-Control-Request-Method: POST
 ```
 

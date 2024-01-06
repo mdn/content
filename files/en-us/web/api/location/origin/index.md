@@ -1,17 +1,15 @@
 ---
-title: 'Location: origin'
+title: "Location: origin property"
+short-title: origin
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Location.origin
 ---
+
 {{APIRef("Location")}}
 
 The **`origin`** read-only property of
-the {{domxref("Location")}} interface is a {{domxref("USVString")}} containing the
+the {{domxref("Location")}} interface is a string containing the
 Unicode serialization of the origin of the represented URL.
 
 That is:
@@ -20,24 +18,22 @@ That is:
   `'://'`, followed by the domain, followed by `':'`, followed by
   the port (the default port, `80` and `443` respectively, if
   explicitly specified);
-- for URL using `file:` scheme, the value is browser dependant;
+- for URL using `file:` scheme, the value is browser dependent;
 - for URL using the `blob:` scheme, the origin of the URL following
   `blob:`. E.g `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 
 ```js
 // On this page, returns the origin
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+const result = window.location.origin; // Returns:'https://developer.mozilla.org'
 ```
 
 ## Specifications

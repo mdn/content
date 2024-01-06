@@ -1,67 +1,79 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Full-screen
-  - Full-screen API
-  - Fullscreen API
-  - Pseudo-class
-  - Reference
-  - Selector
-  - fullscreen
-  - screen
+page-type: css-pseudo-class
 browser-compat: css.selectors.fullscreen
 ---
+
 {{CSSRef}}
 
-The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element which is currently in full-screen mode. If multiple elements have been put into full-screen mode, this selects them all.
+The **`:fullscreen`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches every element that is currently in fullscreen mode. If multiple elements have been put into fullscreen mode, this selects them all.
 
 ## Syntax
 
-{{csssyntax}}
+```css
+:fullscreen {
+  /* ... */
+}
+```
 
 ## Usage notes
 
-The `:fullscreen` pseudo-class lets you configure your stylesheets to automatically adjust the size, style, or layout of content when elements switch back and forth between full-screen and traditional presentations.
+The `:fullscreen` pseudo-class lets you configure your stylesheets to automatically adjust the size, style, or layout of content when elements switch back and forth between fullscreen and traditional presentations.
 
 ## Examples
 
-In this example, the color of a button is changed depending on whether or not the document is in full-screen mode. This is done without needing to specifically apply style changes using JavaScript.
+### Styling a Fullscreen Element
 
-### HTML
-
-The page's HTML looks like this:
+This example applies a different background color to a {{htmlelement("div")}} element, depending on whether or not it is in fullscreen mode. It includes a {{htmlelement("button")}} to toggle fullscreen on and off.
 
 ```html
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+<div class="element">
+  <h1>MDN :fullscreen pseudo-class demo</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.</p>
+  <p>
+    This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+    change the background color of the <code>.element</code> div.
+  </p>
 
-<button id="fs-toggle">Toggle Fullscreen</button>
+  <p>
+    Normally, the background is light yellow. In fullscreen mode, the background
+    is light pink.
+  </p>
+
+  <button class="toggle">Toggle Fullscreen</button>
+</div>
 ```
 
-The {{HTMLElement("button")}} with the ID `"fs-toggle"` will change between pale red and pale green depending on whether or not the document is in full-screen mode.
-
-### CSS
-
-The magic happens in the CSS. There are two rules here. The first establishes the background color of the "Toggle Full-screen Mode" button when the element is not in a full-screen state. The key is the use of the `:not(:fullscreen)`, which looks for the element to not have the `:fullscreen` pseudo-class applied to it.
+The `:fullscreen` pseudo-class is used to override the [`background-color`](/en-US/docs/Web/CSS/background-color) of the `<div>` when it is in fullscreen mode.
 
 ```css
-#fs-toggle:not(:fullscreen) {
-  background-color: #afa;
+.element {
+  background-color: lightyellow;
+}
+
+.element:fullscreen {
+  background-color: lightpink;
 }
 ```
 
-When the document _is_ in full-screen mode, the following CSS applies instead, setting the background color to a pale shade of red.
+The following JavaScript provides an event handler function that toggles fullscreen when the `<button>` is clicked.
 
-```css
-#fs-toggle:fullscreen {
-  background-color: #faa;
-}
+```js
+document.querySelector(".toggle").addEventListener("click", function (event) {
+  if (document.fullscreenElement) {
+    // If there is a fullscreen element, exit full screen.
+    document.exitFullscreen();
+    return;
+  }
+  // Make the .element div fullscreen.
+  document.querySelector(".element").requestFullscreen();
+});
 ```
+
+#### Demo
+
+[See the example live](https://jsfiddle.net/yookoala/oLc1uws0/).
 
 ## Specifications
 
@@ -75,7 +87,6 @@ When the document _is_ in full-screen mode, the following CSS applies instead, s
 
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
 - [Guide to the Fullscreen API](/en-US/docs/Web/API/Fullscreen_API/Guide)
-- {{cssxref(":not")}}
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreenElement") }}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}} attribute
+- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#allowfullscreen) attribute

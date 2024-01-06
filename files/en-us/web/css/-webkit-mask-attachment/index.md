@@ -1,19 +1,17 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Non-standard
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - non-standard
 browser-compat: css.properties.-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
-If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
+If a {{CSSxRef("mask-image")}} is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -28,10 +26,10 @@ If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` d
 /* Global values */
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
+-webkit-mask-attachment: revert;
+-webkit-mask-attachment: revert-layer;
 -webkit-mask-attachment: unset;
 ```
-
-## Syntax
 
 ### Values
 
@@ -46,7 +44,10 @@ If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` d
 
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+-webkit-mask-attachment =
+  <attachment>#
+```
 
 ## Examples
 
@@ -54,7 +55,7 @@ If a {{CSSxRef("-webkit-mask-image")}} is specified, `-webkit-mask-attachment` d
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```
@@ -69,10 +70,10 @@ Not part of any standard.
 
 ## See also
 
-- {{CSSxRef("-webkit-mask")}}
-- {{CSSxRef("-webkit-mask-clip")}}
+- {{CSSxRef("mask")}}
+- {{CSSxRef("mask-clip")}}
 - {{CSSxRef("-webkit-mask-box-image")}}
-- {{CSSxRef("-webkit-mask-origin")}}
-- {{CSSxRef("-webkit-mask-image")}}
+- {{CSSxRef("mask-origin")}}
+- {{CSSxRef("mask-image")}}
 - {{CSSxRef("-webkit-mask-composite")}}
-- {{CSSxRef("-webkit-mask-repeat")}}
+- {{CSSxRef("mask-repeat")}}

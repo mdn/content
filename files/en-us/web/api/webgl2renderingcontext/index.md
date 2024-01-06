@@ -1,13 +1,10 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-interface
 browser-compat: api.WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -15,13 +12,13 @@ The **WebGL2RenderingContext** interface provides the OpenGL ES 3.0 rendering co
 To get an object of this interface, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl2" as the argument:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl2');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl2");
 ```
 
 > **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
 
-The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
+The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
 ## Constants
 
@@ -74,8 +71,8 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 - {{domxref("WebGL2RenderingContext.texSubImage3D()")}}
   - : Specifies a sub-rectangle of the current 3D texture.
 - {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
-  - : Copies pixels from the current [`WebGLFramebuffer`](/en-US/docs/Web/API/WebGLFramebuffer "The WebGLFramebuffer interface is part of the WebGL API and represents a collection of buffers that serve as a rendering destination.") into an existing 3D texture sub-image.
-- {{domxref("WebGL2RenderingContext.compressedTexImage3D()")}}
+  - : Copies pixels from the current [`WebGLFramebuffer`](/en-US/docs/Web/API/WebGLFramebuffer) into an existing 3D texture sub-image.
+- {{domxref("WebGLRenderingContext.compressedTexImage2D")}}
   - : Specifies a three-dimensional texture image in a compressed format.
 - {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
   - : Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.
@@ -87,7 +84,9 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 
 ## Uniforms and attributes
 
-- {{domxref("WebGL2RenderingContext.uniform()", "WebGL2RenderingContext.uniform[1234][uif][v]()")}}
+<!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
+
+- [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform)
   - : Methods specifying values of uniform variables.
 - {{domxref("WebGL2RenderingContext.uniformMatrix()", "WebGL2RenderingContext.uniformMatrix[234]x[234]fv()")}}
   - : Methods specifying matrix values for uniform variables.
@@ -137,7 +136,7 @@ Methods for working with {{domxref("WebGLQuery")}} objects.
 - {{domxref("WebGL2RenderingContext.deleteSampler()")}}
   - : Deletes a given {{domxref("WebGLSampler")}} object.
 - {{domxref("WebGL2RenderingContext.bindSampler()")}}
-  - : Binds a given {{domxref("WebGLSampler")}} to a texture unit.
+  - : Binds a given {{domxref("WebGLSampler")}} to a texture unit.
 - {{domxref("WebGL2RenderingContext.isSampler()")}}
   - : Returns `true` if a given object is a valid {{domxref("WebGLSampler")}} object.
 - {{domxref("WebGL2RenderingContext.samplerParameter()", "WebGL2RenderingContext.samplerParameter[if]()")}}
@@ -169,7 +168,7 @@ Methods for working with {{domxref("WebGLQuery")}} objects.
 - {{domxref("WebGL2RenderingContext.isTransformFeedback()")}}
   - : Returns `true` if the passed object is a valid {{domxref("WebGLTransformFeedback")}} object.
 - {{domxref("WebGL2RenderingContext.bindTransformFeedback()")}}
-  - : Binds a passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
+  - : Binds a passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
 - {{domxref("WebGL2RenderingContext.beginTransformFeedback()")}}
   - : Starts a transform feedback operation.
 - {{domxref("WebGL2RenderingContext.endTransformFeedback()")}}
@@ -213,7 +212,7 @@ Methods for working with {{domxref("WebGLVertexArrayObject")}} (VAO) objects.
 - {{domxref("WebGL2RenderingContext.isVertexArray()")}}
   - : Returns `true` if a given object is a valid {{domxref("WebGLVertexArrayObject")}}.
 - {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
-  - : Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.
+  - : Binds a given {{domxref("WebGLVertexArrayObject")}} to the buffer.
 
 ## Specifications
 

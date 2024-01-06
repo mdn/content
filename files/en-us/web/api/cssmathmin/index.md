@@ -1,33 +1,33 @@
 ---
 title: CSSMathMin
 slug: Web/API/CSSMathMin
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathMin
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Interface
+page-type: web-api-interface
 browser-compat: api.CSSMathMin
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min()','min()')}} function.  It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+{{APIRef("CSS Typed Object Model API")}}
+
+The **`CSSMathMin`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents the CSS {{CSSXref('min','min()')}} function. It inherits properties and methods from its parent {{domxref('CSSNumericValue')}}.
+
+{{InheritanceDiagram}}
 
 ## Constructor
 
-- {{domxref("CSSMathMin.CSSMathMin()")}}
+- {{domxref("CSSMathMin.CSSMathMin", "CSSMathMin()")}} {{Experimental_Inline}}
   - : Creates a new `CSSMathMin` object.
 
-## Properties
+## Instance properties
 
-- {{domxref('CSSMathMin.values')}}{{ReadOnlyInline}}
+- {{domxref('CSSMathMin.values')}} {{ReadOnlyInline}}
   - : Returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
 
-## Methods
+## Static methods
 
-None.
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
+
+## Instance methods
+
+_The interface may also inherit methods from its parent interface, {{domxref("CSSMathValue")}}._
 
 ## Examples
 

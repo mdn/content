@@ -1,18 +1,12 @@
 ---
-title: window.requestIdleCallback()
+title: "Window: requestIdleCallback() method"
+short-title: requestIdleCallback()
 slug: Web/API/Window/requestIdleCallback
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - Window
-  - requestIdleCallback
-  - polyfill
+page-type: web-api-instance-method
 browser-compat: api.Window.requestIdleCallback
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`window.requestIdleCallback()`** method queues a function
 to be called during a browser's idle periods. This enables developers to perform
@@ -31,15 +25,10 @@ loop.
 
 ## Syntax
 
-```js
-window.requestIdleCallback(callback);
-window.requestIdleCallback(callback, options);
+```js-nolint
+requestIdleCallback(callback)
+requestIdleCallback(callback, options)
 ```
-
-### Return value
-
-An ID which can be used to cancel the callback by passing it into the
-{{domxref("window.cancelIdleCallback()")}} method.
 
 ### Parameters
 
@@ -52,13 +41,18 @@ An ID which can be used to cancel the callback by passing it into the
 
   - : Contains optional configuration parameters. Currently only one property is defined:
 
-    - `timeout`: If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
+    - `timeout`
+      - : If the number of milliseconds represented by this parameter has elapsed and the callback has not already been called, then a task to execute the callback is queued in the event loop (even if doing so risks causing a negative performance impact). `timeout` must be a positive value or it is ignored.
 
-## Example
+### Return value
+
+An ID which can be used to cancel the callback by passing it into the
+{{domxref("window.cancelIdleCallback()")}} method.
+
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example)
-in the article [Cooperative Scheduling
-of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -75,4 +69,3 @@ of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 - {{domxref("setTimeout()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("window.requestAnimationFrame")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

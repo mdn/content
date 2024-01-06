@@ -1,20 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.nominated
+title: "RTCIceCandidatePairStats: nominated property"
+short-title: nominated
 slug: Web/API/RTCIceCandidatePairStats/nominated
-tags:
-  - API
-  - Flag
-  - ICE
-  - Negotiation
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - nominated
-browser-compat: api.RTCIceCandidatePairStats.nominated
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_candidate-pair.nominated
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -22,13 +13,7 @@ The {{domxref("RTCIceCandidatePairStats")}} property
 described by the underlying `RTCIceCandidatePair` has been nominated to be
 used as the configuration for the WebRTC connection.
 
-## Syntax
-
-```js
-nominated = rtcIceCandidatePairStats.nominated;
-```
-
-### Value
+## Value
 
 A Boolean value which is set to `true` by the ICE layer if the controlling
 user agent has indicated that the candidate pair should be used to configure the WebRTC

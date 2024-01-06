@@ -1,18 +1,15 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-tags:
-  - Advanced
-  - CSS
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.scroll-snap-align
 ---
+
 {{CSSRef}}
 
-The `scroll-snap-align` property specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its snap area (as the alignment subject) within its snap container's snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
+
+{{EmbedInteractiveExample("pages/css/scroll-snap-align.html")}}
 
 ## Syntax
 
@@ -26,6 +23,7 @@ scroll-snap-align: center;
 scroll-snap-align: inherit;
 scroll-snap-align: initial;
 scroll-snap-align: revert;
+scroll-snap-align: revert-layer;
 scroll-snap-align: unset;
 ```
 
@@ -38,9 +36,7 @@ scroll-snap-align: unset;
 - `end`
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`
-  - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
-
-Safari currently has the two value syntax in the wrong order, the first value being inline the second block. See [bug #191865](https://bugs.webkit.org/show_bug.cgi?id=191865).
+  - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 
 ## Formal definition
 
@@ -60,5 +56,5 @@ Safari currently has the two value syntax in the wrong order, the first value be
 
 ## See also
 
-- [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_Scroll_Snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

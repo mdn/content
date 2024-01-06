@@ -1,23 +1,19 @@
 ---
 title: shortcuts
 slug: Web/Manifest/shortcuts
-tags:
-  - Manifest
-  - Web
-  - shortcuts
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.shortcuts
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
+      <td><code>Array</code></td>
     </tr>
   </tbody>
 </table>
@@ -38,7 +34,7 @@ Shortcut objects may contain the following values (only `name` and `url` are req
   <tbody>
     <tr>
       <td><code>name</code></td>
-      <td> A string that can be displayed to the user in a context menu.</td>
+      <td> A string that can be displayed to the user in a context menu.</td>
     </tr>
     <tr>
       <td><code>short_name</code></td>
@@ -50,14 +46,14 @@ Shortcut objects may contain the following values (only `name` and `url` are req
     <tr>
       <td><code>description</code></td>
       <td>
-         A string that describes the purpose of the shortcut. It may be exposed
+         A string that describes the purpose of the shortcut. It may be exposed
         to assistive technology.
       </td>
     </tr>
     <tr>
       <td><code>url</code></td>
       <td>
-         A URL within the application that opens when the shortcut is activated.
+         A URL within the application that opens when the shortcut is activated.
       </td>
     </tr>
     <tr>
@@ -100,3 +96,7 @@ The following is a list of shortcuts a calendar app might have:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Creating shortcut action menus for PWAs](/en-US/docs/Web/Progressive_web_apps/How_to/Expose_common_actions_as_shortcuts)

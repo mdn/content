@@ -1,10 +1,9 @@
 ---
 title: Simple header
 slug: Glossary/Simple_header
-tags:
-  - CORS
-  - Glossary
-  - HTTP
-  - Infrastructure
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 Old term for {{Glossary("CORS-safelisted request header")}}.

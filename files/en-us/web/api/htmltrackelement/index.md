@@ -1,38 +1,33 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLTrackElement
-  - Interface
-  - NeedsNewLayout
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLTrackElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTrackElement`** interface represents an {{Glossary("HTML")}} {{HTMLElement("track")}} element within the {{Glossary("DOM")}}. This element can be used as a child of either {{HTMLElement("audio")}} or {{HTMLElement("video")}} to specify a text track containing information such as closed captions or subtitles.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("kind", "track")}} HTML attribute, indicating how the text track is meant to be used. Possible values are: `subtitles`, `captions`, `descriptions`, `chapters`, or `metadata`.
+  - : A string that reflects the [`kind`](/en-US/docs/Web/HTML/Element/track#kind) HTML attribute, indicating how the text track is meant to be used. Possible values are: `subtitles`, `captions`, `descriptions`, `chapters`, or `metadata`.
 - {{domxref("HTMLTrackElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "track")}} HTML attribute, indicating the address of the text track data.
+  - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/track#src) HTML attribute, indicating the address of the text track data.
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("srclang", "track")}} HTML attribute, indicating the language of the text track data.
+  - : A string that reflects the [`srclang`](/en-US/docs/Web/HTML/Element/track#srclang) HTML attribute, indicating the language of the text track data.
 - {{domxref("HTMLTrackElement.label")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("label", "track")}} HTML attribute, indicating a user-readable title for the track.
+  - : A string that reflects the [`label`](/en-US/docs/Web/HTML/Element/track#label) HTML attribute, indicating a user-readable title for the track.
 - {{domxref("HTMLTrackElement.default")}}
-  - : A boolean value reflecting the {{htmlattrxref("default", "track")}} attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
+  - : A boolean value reflecting the [`default`](/en-US/docs/Web/HTML/Element/track#default) attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
-  - : Returns  an `unsigned short` that show the readiness state of the track:
+  - : Returns an `unsigned short` that show the readiness state of the track:
 
     | Constant  | Value | Description                                                                                                                                                                              |
     | --------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -44,17 +39,19 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : Returns {{Domxref("TextTrack")}} is the track element's text track data.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Events
 
-_The following events may be fired on a {{HTMLElement("track")}} element, in addition to any that may be fired at its parent, {{domxref("HTMLElement")}}._
+_Inherits events from its parent, {{domxref("HTMLElement")}}._
+
+Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
   - : Sent when the underlying {{domxref("TextTrack")}} has changed the currently-presented cues. This event is always sent to the `TextTrack` but is _also_ sent to the `HTMLTrackElement` if one is associated with the track.
-    You may also use the {{domxref("GlobalEventHandlers.oncuechange", "oncuechange")}} event handler to establish a handler for this event.
+    You may also use the `oncuechange` event handler to establish a handler for this event.
 
 ## Usage notes
 

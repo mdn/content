@@ -1,27 +1,22 @@
 ---
 title: DeviceMotionEventAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
-tags:
-  - API
-  - DeviceAcceleration
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Reference
+page-type: web-api-interface
 browser-compat: api.DeviceMotionEventAcceleration
 ---
-{{securecontext_header}}{{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
-A **`DeviceMotionEventAcceleration`** object provides information about the amount of acceleration the device is experiencing along all three axes.
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-## Properties
+The **`DeviceMotionEventAcceleration`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides information about the amount of acceleration the device is experiencing along all three axes.
 
-- {{domxref("DeviceMotionEventAcceleration.x")}} {{readonlyInline}}
-  - : The amount of acceleration along the X axis. **Read only.**
-- {{domxref("DeviceMotionEventAcceleration.y")}} {{readonlyInline}}
-  - : The amount of acceleration along the Y axis. **Read only.**
-- {{domxref("DeviceMotionEventAcceleration.z")}} {{readonlyInline}}
-  - : The amount of acceleration along the Z axis. **Read only.**
+## Instance properties
+
+- {{domxref("DeviceMotionEventAcceleration.x")}} {{ReadOnlyInline}}
+  - : The amount of acceleration along the X axis.
+- {{domxref("DeviceMotionEventAcceleration.y")}} {{ReadOnlyInline}}
+  - : The amount of acceleration along the Y axis.
+- {{domxref("DeviceMotionEventAcceleration.z")}} {{ReadOnlyInline}}
+  - : The amount of acceleration along the Z axis.
 
 ## Specifications
 

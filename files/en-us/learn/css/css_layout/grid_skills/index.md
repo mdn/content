@@ -1,23 +1,22 @@
 ---
-title: 'Test your skills: Grid Layout'
+title: "Test your skills: Grid"
 slug: Learn/CSS/CSS_layout/Grid_skills
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - Learn
+page-type: learn-module-assessment
 ---
+
 {{LearnSidebar}}
 
-The aim of this task is to get you working with CSS Grid Layout, and test that you understand how a grid and grid items behave. You will be working through three small tasks which use different elements of the material you have just covered.
+The aim of this skill test is to assess whether you understand how a [grid and grid items](/en-US/docs/Learn/CSS/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Grid Layout One
+## Task 1
 
-In this task you should create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally, and a 20-pixel gap between the column and row tracks.
+In this task, you should create a grid into which the four child elements will auto-place. The grid should have three columns sharing the available space equally and a 20-pixel gap between the column and row tracks. After that, try adding more child containers inside the parent container with the class of `grid` and see how they behave by default.
+
+Your final result should look like the image below:
 
 ![A three column grid with four items placed into it.](grid-task1.png)
 
@@ -27,29 +26,29 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid1-download.html) to work in your own editor or in an online editor.
 
-## Grid Layout Two
+## Task 2
 
-In this example we already have a grid defined. By editing the CSS rules for the two child elements, cause them to span over several grid tracks each; the second item should overlay the first as in the image below.
+In this task, we already have a grid defined. By editing the CSS rules for the two child elements, cause them to span over several grid tracks each. The second item should overlay the first as in the image below:
 
 ![A box with two items inside one overlaying the other.](grid-task2.png)
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 900)}}
 
-Additional questions:
+Additional question:
 
 - Can you now cause the first item to display on top without changing the order of items in the source?
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid2-download.html) to work in your own editor or in an online editor.
 
-## Grid Layout Three
+## Task 3
 
-There are four direct children in this grid; the starting point has them displayed using auto-placement. Use the grid-area and grid-template-areas properties to lay the items out as shown in the image.
+In this task, there are four direct children in this grid. The starting point has them displayed using auto-placement. Use the grid-area and grid-template-areas properties to lay the items out as shown in the image below:
 
 ![Four items displayed in a grid.](grid-task3.png)
 
@@ -59,32 +58,18 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid3-download.html) to work in your own editor or in an online editor.
 
-## Grid and Flex Layout 4
+## Task 4
 
-You will need to use both Grid Layout and Flexbox to recreate the example as seen in the image. You do not need to make any changes to the HTML in order to do this.
+In this task, you will need to use both grid layout and flexbox to recreate the example as seen in the image below. The gap between the column and row tracks should be 10px. You do not need to make any changes to the HTML in order to achieve this.
 
 ![Two rows of cards, each with an image and a set of tags.](grid-task4.png)
 
-Try updating the code below to create your example:
+Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 2000)}}
 
 > **Callout:**
 >
-> For assessment or further work purposes, [download the starting point for this task](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.
-
-## Assessment or further help
-
-You can practice these examples in the Interactive Editors mentioned above.
-
-If you'd like your work assessed, or are stuck and want to ask for help:
-
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
-
-    - A descriptive title such as "Assessment wanted for Grid layout 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+> [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/grid/grid4-download.html) to work in your own editor or in an online editor.

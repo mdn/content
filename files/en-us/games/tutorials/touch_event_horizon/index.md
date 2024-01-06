@@ -1,10 +1,9 @@
 ---
 title: Touch Event Horizon
 slug: Games/Tutorials/Touch_Event_Horizon
-tags:
-  - NeedsContent
-  - NeedsExample
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 This article is for Touch Event Horizon and A Game Related To It
@@ -15,11 +14,11 @@ This article is for Touch Event Horizon and A Game Related To It
 
 ## The example game
 
-![](touch-to-start.png)
+![Box with the text touch to start](touch-to-start.png)
 
-![](tapping.png)
+![Two circles placed side-by-side, one bigger than the other. The size of the circle represents a player's score. The scores are written above each circle.](tapping.png)
 
-[Github repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
+[GitHub repository](https://github.com/EnclaveGames/Touch-Event-Horizon)
 
 [Live demo](https://touch.enclavegames.com/)
 
@@ -37,4 +36,4 @@ touchmove
 
 ## Summary
 
-This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multi-player game relying on the Tap and Drag gestures.
+This tutorial shows how to use Touch Events to create a game on a \<canvas>. This is a multiplayer game relying on the Tap and Drag gestures.

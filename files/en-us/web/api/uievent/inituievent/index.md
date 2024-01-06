@@ -1,16 +1,14 @@
 ---
-title: UIEvent.initUIEvent()
+title: "UIEvent: initUIEvent() method"
+short-title: initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Event
-  - Method
-  - UIEvent
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.UIEvent.initUIEvent
 ---
-{{APIRef("DOM Events")}} {{deprecated_header}}
+
+{{APIRef("UI Events")}} {{deprecated_header}}
 
 The **`UIEvent.initUIEvent()`** method initializes a UI event
 once it's been created.
@@ -22,37 +20,40 @@ dispatched, it doesn't do anything anymore.
 
 > **Warning:** Do not use this method anymore as it is deprecated.
 >
-> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent",
-    "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
 
 ## Syntax
 
-```js
-event.initUIEvent(type, canBubble, cancelable, view, detail)
+```js-nolint
+initUIEvent(type, canBubble, cancelable, view, detail)
 ```
 
 ### Parameters
 
-- _`type`_
-  - : Is a {{domxref("DOMString")}} defining the type of event.
-- _`canBubble`_
-  - : Is a boolean value deciding whether the event should bubble up through the
+- `type`
+  - : A string defining the type of event.
+- `canBubble`
+  - : A boolean value deciding whether the event should bubble up through the
     event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }}
     will give its value.
-- _`cancelable`_
-  - : Is a boolean value defining whether the event can be canceled. Once set, the
+- `cancelable`
+  - : A boolean value defining whether the event can be canceled. Once set, the
     read-only property {{ domxref("Event.cancelable") }} will give its value.
-- _`view`_
-  - : Is the {{domxref("WindowProxy")}} associated with the event.
-- _`detail`_
-  - : Is an `unsigned long`  specifying some detail information about the
+- `view`
+  - : Is the {{glossary("WindowProxy")}} associated with the event.
+- `detail`
+  - : An `unsigned long` specifying some detail information about the
     event, depending on the type of event. For mouse events, it indicates how many times
     the mouse has been clicked on a given screen location.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
-var e = document.createEvent("UIEvent");
+const e = document.createEvent("UIEvent");
 // creates a click event that bubbles, can be cancelled,
 // and with its view and detail property initialized to window and 1,
 // respectively

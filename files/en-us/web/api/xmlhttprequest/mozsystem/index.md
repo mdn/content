@@ -1,17 +1,12 @@
 ---
-title: XMLHttpRequest.mozSystem
+title: "XMLHttpRequest: mozSystem property"
+short-title: mozSystem
 slug: Web/API/XMLHttpRequest/mozSystem
-tags:
-  - AP
-  - Non-standard
-  - Property
-  - Reference
-  - Same Origin Policy
-  - XHR
-  - XMLHttpRequest
-  - mozSystem
-  - origin
+page-type: web-api-instance-property
+status:
+  - non-standard
 ---
-{{draft}}{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 **`mozSystem`** is a boolean. If true, the same origin policy is not enforced on the request.

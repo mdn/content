@@ -1,17 +1,19 @@
 ---
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-variant-alternates
 ---
+
 {{CSSRef}}
 
 The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
+
+The {{cssxref("@font-feature-values")}} at-rule can be used to associate, for a given font face, a human-readable name with a numeric index that controls a particular OpenType font feature. For features that select alternative glyphs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), the `font-variant-alternates` property can then reference the human-readable name in order to apply the associated feature.
+
+This allows CSS rules to enable alternative glyphs without needing to know the specific index values that a particular font uses to control them.
+
+## Syntax
 
 ```css
 /* Keyword values */
@@ -28,15 +30,12 @@ font-variant-alternates: annotation(user-defined-ident);
 font-variant-alternates: swash(ident1) annotation(ident2);
 
 /* Global values */
-font-variant-alternates: initial;
 font-variant-alternates: inherit;
+font-variant-alternates: initial;
 font-variant-alternates: revert;
+font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
-
-The {{cssxref("@font-feature-values")}} at-rule can define names for alternative glyph functions (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), associating the name with OpenType parameters. This property allows those human-readable names (defined in {{cssxref("@font-feature-values")}}) in the stylesheet.
-
-## Syntax
 
 This property may take one of two forms:
 
@@ -76,48 +75,64 @@ This property may take one of two forms:
 
 ## Examples
 
-### HTML
+### Enabling swash glyphs
+
+In this example, we use the `@font-feature-values` at-rule to define a name for the `swash` feature of the [MonteCarlo](https://github.com/googlefonts/monte-carlo) font. The rule maps the name `"fancy"` to the index value `1`.
+
+We can then use that name inside `font-variant-alternates` to switch on swashes for that font. This is the equivalent of a line like `font-feature-settings: "swsh" 1`, except that the CSS applying the feature does not need to include, or even know, the index value needed for this particular font.
+
+#### HTML
 
 ```html
-<p>Firefox rocks!</p>
-<p class="variant">Firefox rocks!</p>
+<p>A Fancy Swash</p>
+<p class="variant">A Fancy Swash</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
-@font-feature-values "Leitura Display Swashes" {
-    @swash { fancy: 1 }
+@font-face {
+  font-family: MonteCarlo;
+  src: url("montecarlo-regular.woff2");
+}
+
+@font-feature-values "MonteCarlo" {
+  @swash {
+    fancy: 1;
+  }
 }
 
 p {
-  font-size: 1.5rem;
+  font-family: "MonteCarlo";
+  font-size: 3rem;
+  margin: 0.7rem 3rem;
 }
 
 .variant {
-  font-family: Leitura Display Swashes;
   font-variant-alternates: swash(fancy);
 }
 ```
 
-### Result
+#### Result
 
-> **Note:** You need to install the OpenType font _Leitura Display Swashes_ for this example to work. You can find a few free versions for testing purposes, for example from [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
-
-{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/font-variant-alternates') }}
+{{EmbedLiveSample("Enabling swash glyphs", 0, 230)}}
 
 ## Specifications
 
-Not part of any standard.
+{{Specifications}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-## See Also
+## See also
 
-- {{cssxref("font-variant")}}
-- {{cssxref("font-variant-caps")}}
-- {{cssxref("font-variant-east-asian")}}
-- {{cssxref("font-variant-ligatures")}}
-- {{cssxref("font-variant-numeric")}}
+- [`font-variant`](/en-US/docs/Web/CSS/font-variant)
+- [`font-variant-caps`](/en-US/docs/Web/CSS/font-variant-caps)
+- [`font-variant-east-asian`](/en-US/docs/Web/CSS/font-variant-east-asian)
+- [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji)
+- [`font-variant-ligatures`](/en-US/docs/Web/CSS/font-variant-ligatures)
+- [`font-variant-numeric`](/en-US/docs/Web/CSS/font-variant-numeric)
+- [`font-variant-position`](/en-US/docs/Web/CSS/font-variant-position)
+- [`@font-feature-values`](/en-US/docs/Web/CSS/@font-feature-values)
+- [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings)

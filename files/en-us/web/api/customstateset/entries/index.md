@@ -1,29 +1,28 @@
 ---
-title: CustomStateSet.entries()
+title: "CustomStateSet: entries() method"
+short-title: entries()
 slug: Web/API/CustomStateSet/entries
-tags:
-  - API
-  - Method
-  - Reference
-  - entries
-  - CustomStateSet
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CustomStateSet.entries
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns a new {{jsxref("Iterator")}} object, containing an array of `[value,value]` for each element in the `CustomStateSet`.
+{{APIRef("Web Components")}}{{SeeCompatTable}}
+
+The **`entries`** method of the {{domxref("CustomStateSet")}} interface returns a new [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object, containing an array of `[value,value]` for each element in the `CustomStateSet`.
 
 ## Syntax
 
-```js
-CustomStateSet.entries()
+```js-nolint
+entries()
 ```
 
 ### Parameters
 
 None.
 
-### Return Value
+### Return value
 
 A new iterator object that contains an array of `[value, value]` for each element in the `CustomStateSet`, in insertion order.
 
@@ -34,4 +33,3 @@ A new iterator object that contains an array of `[value, value]` for each elemen
 ## Browser compatibility
 
 {{Compat}}
-

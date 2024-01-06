@@ -1,22 +1,10 @@
 ---
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
-tags:
-  - 2D
-  - 3D
-  - API
-  - Canvas
-  - Context
-  - Drawing
-  - GL
-  - Graphics
-  - Interface
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - rendering
+page-type: web-api-interface
 browser-compat: api.WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES 2.0 graphics rendering context for the drawing surface of an HTML {{HTMLElement("canvas")}} element.
@@ -24,11 +12,11 @@ The **`WebGLRenderingContext`** interface provides an interface to the OpenGL ES
 To get an access to a WebGL context for 2D and/or 3D graphics rendering, call {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} on a `<canvas>` element, supplying "webgl" as the argument:
 
 ```js
-var canvas = document.getElementById('myCanvas');
-var gl = canvas.getContext('webgl');
+const canvas = document.getElementById("myCanvas");
+const gl = canvas.getContext("webgl");
 ```
 
-Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial "WebGL tutorial") has more information, examples, and resources on how to get started with WebGL.
+Once you have the WebGL rendering context for a canvas, you can render within it. The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 
 If you require a WebGL 2.0 context, see {{domxref("WebGL2RenderingContext")}}; this supplies access to an implementation of OpenGL ES 3.0 graphics.
 
@@ -41,19 +29,17 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
 The following properties and methods provide general information and functionality to deal with the WebGL context:
 
 - {{domxref("WebGLRenderingContext.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
-- {{domxref("WebGLRenderingContext.commit()")}} {{experimental_inline}}
-  - : Pushes frames back to the original {{domxref("HTMLCanvasElement")}}, if the context is not directly fixed to a specific canvas.
+  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("WebGLRenderingContext.drawingBufferWidth")}}
   - : The read-only width of the current drawing buffer. Should match the width of the canvas element associated with this context.
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : The read-only height of the current drawing buffer. Should match the height of the canvas element associated with this context.
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : Returns a `WebGLContextAttributes` object that contains the actual context parameters. Might return {{jsxref("null")}}, if the context is lost.
+  - : Returns a `WebGLContextAttributes` object that contains the actual context parameters. Might return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if the context is lost.
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : Returns `true` if the context is lost, otherwise returns `false`.
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
-  - : Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.
+  - : Ensures the context is compatible with the user's XR hardware, re-creating the context if necessary with a new configuration to do so. This can be used to start an application using standard 2D presentation, then transition to using a VR or AR mode later.
 
 ## Viewing and clipping
 
@@ -276,7 +262,8 @@ The following properties and methods provide general information and functionali
   - : Returns information about a vertex attribute at a given position.
 - {{domxref("WebGLRenderingContext.getVertexAttribOffset()")}}
   - : Returns the address of a given vertex attribute.
-- {{domxref("WebGLRenderingContext.uniform()", "WebGLRenderingContext.uniform[1234][fi][v]()")}}
+  <!-- markdownlint-disable MD052 -- text in code block is misidentified as image -->
+- [`WebGLRenderingContext.uniform[1234][fi][v]()`](/en-US/docs/Web/API/WebGLRenderingContext/uniform)
   - : Specifies a value for a uniform variable.
 - {{domxref("WebGLRenderingContext.uniformMatrix()", "WebGLRenderingContext.uniformMatrix[234]fv()")}}
   - : Specifies a matrix value for a uniform variable.
@@ -298,12 +285,19 @@ The following properties and methods provide general information and functionali
 - {{domxref("WebGLRenderingContext.flush()")}}
   - : Empties different buffer commands, causing all commands to be executed as quickly as possible.
 
+## Color spaces
+
+- {{domxref("WebGLRenderingContext.drawingBufferColorSpace")}}
+  - : Specifies the color space of the WebGL drawing buffer.
+- {{domxref("WebGLRenderingContext.unpackColorSpace")}} {{Experimental_Inline}}
+  - : Specifies the color space to convert to when importing textures.
+
 ## Working with extensions
 
 These methods manage WebGL extensions:
 
 - {{domxref("WebGLRenderingContext.getSupportedExtensions()")}}
-  - : Returns an {{jsxref("Array")}} of {{domxref("DOMString")}} elements with all the supported WebGL extensions.
+  - : Returns an {{jsxref("Array")}} of strings containing all the supported WebGL extensions.
 - {{domxref("WebGLRenderingContext.getExtension()")}}
   - : Returns an extension object.
 

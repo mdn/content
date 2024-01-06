@@ -1,21 +1,12 @@
 ---
-title: XMLHttpRequest.responseType
+title: "XMLHttpRequest: responseType property"
+short-title: responseType
 slug: Web/API/XMLHttpRequest/responseType
-tags:
-  - AJAX
-  - API
-  - HTTP
-  - HTTP Response
-  - HTTP Response Type
-  - Property
-  - Reference
-  - Response
-  - XHR
-  - XMLHttpRequest
-  - responseType
+page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseType
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} property
 **`responseType`** is an enumerated string value specifying
@@ -25,17 +16,9 @@ It also lets the author change the
 response type. If an empty string is set as the value of `responseType`, the
 default value of `text` is used.
 
-## Syntax
+## Value
 
-```js
-var type = XMLHttpRequest.responseType;
-
-XMLHttpRequest.responseType = type;
-```
-
-### Value
-
-A {{jsxref("String")}} which specifies what type of data the response contains.
+A string which specifies what type of data the response contains.
 It can take the following values:
 
 - `""`
@@ -45,13 +28,11 @@ It can take the following values:
 - `"blob"`
   - : The `response` is a {{domxref("Blob")}} object containing the binary data.
 - `"document"`
-  - : The `response` is an {{Glossary("HTML")}} {{domxref("Document")}} or {{Glossary("XML")}} {{domxref("XMLDocument")}}, as appropriate based on the MIME type of the received data. See [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest) to learn more about using XHR to fetch HTML content.
+  - : The `response` is an {{Glossary("HTML")}} {{domxref("Document")}} or {{Glossary("XML")}} {{domxref("XMLDocument")}}, as appropriate based on the MIME type of the received data. See [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) to learn more about using XHR to fetch HTML content.
 - `"json"`
   - : The `response` is a JavaScript object created by parsing the contents of received data as {{Glossary("JSON")}}.
 - `"text"`
-  - : The `response` is a text in a {{domxref("DOMString")}} object.
-- `"ms-stream"` {{non-standard_inline}}
-  - : The `response` is part of a streaming download; this response type is only allowed for download requests, and is only supported by Internet Explorer.
+  - : The `response` is a text in a string.
 
 > **Note:** When setting `responseType` to a particular value, the author should make
 > sure that the server is actually sending a response compatible with that format. If
@@ -61,11 +42,10 @@ It can take the following values:
 
 ### Exceptions
 
-- `InvalidAccessError`
+- `InvalidAccessError` {{domxref("DOMException")}}
   - : An attempt was made to change the value of `responseType` on
-    an`XMLHttpRequest` which is in synchronous mode but not in a
-    {{domxref("Worker")}}. For additional details, see {{anch("Synchronous XHR
-    restrictions")}} below.
+    an `XMLHttpRequest` which is in synchronous mode but not in a
+    {{domxref("Worker")}}. For additional details, see [Synchronous XHR restrictions](#synchronous_xhr_restrictions) below.
 
 ## Usage notes
 
@@ -96,10 +76,8 @@ ignored in a {{domxref("Worker")}}.
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - The response data: {{domxref("XMLHttpRequest.response", "response")}},
   {{domxref("XMLHttpRequest.responseText", "responseText")}}, and
   {{domxref("XMLHttpRequest.responseXML", "responseXML")}}

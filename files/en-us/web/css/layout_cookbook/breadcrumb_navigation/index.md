@@ -1,23 +1,19 @@
 ---
-title: Breadcrumb Navigation
+title: Breadcrumb navigation
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Navigation
-  - cookbook
-  - flexbox
+page-type: guide
+browser-compat: css.properties.flex
 ---
+
 {{CSSRef}}
 
-Breadcrumb navigation helps the user to understand their location in the website by providing a breadcrumb trail back to the start page.
+Breadcrumb navigation helps the user to understand their location in the website by providing a {{glossary("breadcrumb")}} trail back to the start page. The items typically display inline, with a separator between each item, indicating the hierarchy between individual pages.
 
 ![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Requirements
 
-The items typically display inline with a separator to indicate a hierarchy between individual pages.
+Display the hierarchy of the site by displaying inline links, with a separator between the items, indicating the hierarchy between individual pages, with the current page appearing last.
 
 ## Recipe
 
@@ -25,34 +21,30 @@ The items typically display inline with a separator to indicate a hierarchy betw
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
-> **Note:** The example above uses two selectors to insert content before every `li` except the first one. This could also be achieved using one selector only:
+> **Note:** The example above uses a complex selector to insert content before every `li` except the last one. This could also be achieved using a complex selector targeting all `li` elements except the first:
 >
->     .breadcrumb li:not(:first-child)::before {
->       content: "→";
->     }
+> ```css
+> .breadcrumb li:not(:first-child)::before {
+>   content: "→";
+> }
+> ```
 >
-> This solution uses a more complex selector, but requires less rules. Feel free to choose the solution that you prefer.
+> Feel free to choose the solution that you prefer.
 
 ## Choices made
 
-This pattern is laid out using a simple flex layout demonstrating how a line of CSS can give us our navigation. The separators are added using CSS Generated Content. You could change these to any separator that you like.
+To display list items inline, we use [flexbox layout](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), thus demonstrating how a line of CSS can give us our navigation. The separators are added using [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content). You could change these to any separator that you like.
 
 ## Accessibility concerns
 
-I have used the `aria-label` and `aria-current` attributes to help users understand what this navigation is and where the current page is in the structure. See the related links for more information.
+We used the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) and [`aria-current`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-current) attributes to help assistive technology users understand what this navigation is and where the current page is in the structure. See the related links for more information.
 
-## Browser compatibility
-
-The various layout methods have different browser support. See the charts below for details on basic support for the properties used.
-
-#### Flexbox
-
-{{Compat("css.properties.flex")}}
+Be aware that the arrows `→` added via `content` are exposed to screen readers and braille displays.
 
 ## See also
 
-- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
 - [Providing a Breadcrumb Trail](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
-- [Using the aria-current attribute](https://tink.uk/using-the-aria-current-attribute/)
+- [Using the `aria-current` attribute](https://tink.uk/using-the-aria-current-attribute/)

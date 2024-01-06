@@ -1,15 +1,11 @@
 ---
-title: WEBGL_compressed_texture_astc.getSupportedProfiles()
+title: "WEBGL_compressed_texture_astc: getSupportedProfiles() method"
+short-title: getSupportedProfiles()
 slug: Web/API/WEBGL_compressed_texture_astc/getSupportedProfiles
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
-  - WebGL extensions
+page-type: webgl-extension-method
 browser-compat: api.WEBGL_compressed_texture_astc.getSupportedProfiles
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_astc.getSupportedProfiles()`**
@@ -18,13 +14,17 @@ by the implementation.
 
 ## Syntax
 
-```js
-sequence<DOMString> ext.getSupportedProfiles();
+```js-nolint
+getSupportedProfiles()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-An {{jsxref("Array")}} of {{domxref("DOMString")}} elements indicating which ASTC
+An {{jsxref("Array")}} of string elements indicating which ASTC
 profiles are supported by the implementation. Currently, this can be:
 
 - "ldr": Low Dynamic Range.
@@ -38,7 +38,7 @@ tonal range of real-world scenes (100,000:1).
 ## Examples
 
 ```js
-var ext = gl.getExtension('WEBGL_compressed_texture_astc');
+const ext = gl.getExtension("WEBGL_compressed_texture_astc");
 ext.getSupportedProfiles(); // ["ldr"]
 ```
 

@@ -1,60 +1,51 @@
 ---
-title: WritableStreamDefaultWriter.closed
+title: "WritableStreamDefaultWriter: closed property"
+short-title: closed
 slug: Web/API/WritableStreamDefaultWriter/closed
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - Streams
-  - WritableStreamDefaultWriter
-  - closed
+page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.closed
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`closed`** read-only property of the
-{{domxref("WritableStreamDefaultWriter")}} interface returns a promise that fulfills if
-the stream becomes closed or the writer's lock is released, or rejects if the stream
-errors.
+{{domxref("WritableStreamDefaultWriter")}} interface returns a
+{{jsxref("Promise")}} that fulfills if the stream becomes closed, or rejects if
+the stream errors or the writer's lock is released.
 
-## Syntax
-
-```js
-var closed = writableStreamDefaultWriter.closed;
-```
-
-### Value
+## Value
 
 A {{jsxref("Promise")}}.
 
 ## Examples
 
 ```js
-const writableStream = new WritableStream({
-  start(controller) {
+const writableStream = new WritableStream(
+  {
+    start(controller) {},
+    write(chunk, controller) {
+      // ...
+    },
+    close(controller) {
+      // ...
+    },
+    abort(err) {
+      // ...
+    },
   },
-  write(chunk, controller) {
-    ...
-  },
-  close(controller) {
-    ...
-  },
-  abort(err) {
-    ...
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-...
+// ...
 
 const writer = writableStream.getWriter();
 
-..
+// ..
 
 // check if the stream is closed
 writer.closed.then(() => {
-  console.log('writer closed');
-})
+  console.log("writer closed");
+});
 ```
 
 ## Specifications

@@ -1,15 +1,11 @@
 ---
-title: MediaElementAudioSourceNode.mediaElement
+title: "MediaElementAudioSourceNode: mediaElement property"
+short-title: mediaElement
 slug: Web/API/MediaElementAudioSourceNode/mediaElement
-tags:
-  - API
-  - MediaElementAudioSourceNode
-  - Property
-  - Reference
-  - Web Audio API
-  - mediaElement
+page-type: web-api-instance-property
 browser-compat: api.MediaElementAudioSourceNode.mediaElement
 ---
+
 {{APIRef("Web Audio API")}}
 
 The {{domxref("MediaElementAudioSourceNode")}} interface's
@@ -22,13 +18,7 @@ either using the {{domxref("MediaElementAudioSourceNode.MediaElementAudioSourceN
   "MediaElementAudioSourceNode()")}} constructor or the
 {{domxref("AudioContext.createMediaElementSource()")}} method.
 
-## Syntax
-
-```js
-audioSourceElement = mediaElementAudioSourceNode.mediaElement;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLMediaElement")}} representing the element which contains the source
 of audio for the node.
@@ -37,11 +27,11 @@ of audio for the node.
 
 ```js
 const audioCtx = new window.AudioContext();
-const audioElem = document.querySelector('audio');
+const audioElem = document.querySelector("audio");
 
 let options = {
-  mediaElement: audioElem
-}
+  mediaElement: audioElem,
+};
 
 let source = new MediaElementAudioSourceNode(audioCtx, options);
 console.log(source.mediaElement);

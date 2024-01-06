@@ -1,19 +1,12 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: "XMLHttpRequest: overrideMimeType() method"
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
-tags:
-  - API
-  - File Type
-  - MIME Type
-  - Method
-  - Reference
-  - XHR
-  - XHR MIME Type
-  - XMLHttpRequest
-  - overrideMimeType
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`overrideMimeType()`** specifies a MIME type other than the
@@ -27,22 +20,22 @@ as such. This method must be called before calling {{domxref("XMLHttpRequest.sen
 
 ## Syntax
 
-```js
-XMLHttpRequest.overrideMimeType(mimeType)
+```js-nolint
+overrideMimeType(mimeType)
 ```
 
 ### Parameters
 
 - `mimeType`
-  - : A {{domxref("DOMString")}} specifying the MIME type to use instead of the one
+  - : A string specifying the MIME type to use instead of the one
     specified by the server. If the server doesn't specify a type,
     `XMLHttpRequest` assumes `"text/xml"`.
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example specifies a MIME type of `"text/plain"`, overriding the
 server's stated type for the data being received.
@@ -74,6 +67,5 @@ req.send();
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.responseType")}}

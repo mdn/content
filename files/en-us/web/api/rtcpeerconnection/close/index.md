@@ -1,14 +1,11 @@
 ---
-title: RTCPeerConnection.close()
+title: "RTCPeerConnection: close() method"
+short-title: close()
 slug: Web/API/RTCPeerConnection/close
-tags:
-  - Method
-  - RTCPeerConnection
-  - Reference
-  - WebRTC
-  - close
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.close
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCPeerConnection.close()`** method closes the current
@@ -16,8 +13,8 @@ peer connection.
 
 ## Syntax
 
-```js
-peerConnection.close();
+```js-nolint
+close()
 ```
 
 _This method has no parameters, and returns nothing._
@@ -31,7 +28,7 @@ stopping, but for all intents and purposes, they're stopped).
 Once this method returns, the signaling state as returned by
 {{domxref("RTCPeerConnection.signalingState")}} is `closed`.
 
-Make sure that you `delete` all references to the previous
+Make sure that you `delete` all references to the previous
 {{domxref("RTCPeerConnection")}} before attempting to create a new one that connects
 to the same remote peer, as not doing so might result in some errors depending on the
 browser.
@@ -39,19 +36,19 @@ browser.
 ## Example
 
 ```js
-var pc = new RTCPeerConnection();
-var dc = pc.createDataChannel("my channel");
+const pc = new RTCPeerConnection();
+const dc = pc.createDataChannel("my channel");
 
-dc.onmessage = function (event) {
-  console.log("received: " + event.data);
+dc.onmessage = (event) => {
+  console.log(`received: ${event.data}`);
   pc.close(); // We decided to close after the first received message
 };
 
-dc.onopen = function () {
+dc.onopen = () => {
   console.log("datachannel open");
 };
 
-dc.onclose = function () {
+dc.onclose = () => {
   console.log("datachannel close");
 };
 ```
@@ -66,6 +63,6 @@ dc.onclose = function () {
 
 ## See also
 
-- [WebRTC](/en-US/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.signalingState")}}

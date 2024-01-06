@@ -1,23 +1,22 @@
 ---
-title: SVGPointList.insertItemBefore()
+title: "SVGPointList: insertItemBefore() method"
+short-title: insertItemBefore()
 slug: Web/API/SVGPointList/insertItemBefore
-tags:
-  - API
-  - Method
-  - Reference
-  - insertItemBefore
-  - SVGPointList
+page-type: web-api-instance-method
 browser-compat: api.SVGPointList.insertItemBefore
 ---
+
 {{APIRef("SVG")}}
 
 The **`insertItemBefore()`** method of the {{domxref("SVGPointList")}} interface inserts a {{domxref("SVGPoint", "point")}} before another item in the list.
 
 ## Syntax
 
-```js
-SVGPointList.insertItemBefore(obj,index);
+```js-nolint
+insertItemBefore(obj, index)
 ```
+
+### Parameters
 
 - `obj`
   - : An {{domxref("SVGPoint")}} object containing the coordinates of the point to be inserted.
@@ -30,7 +29,7 @@ The {{domxref("SVGPoint")}} object that was inserted.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModicationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the list is read-only.
 
 ## Examples
@@ -39,8 +38,12 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```html
 <svg id="svg" viewBox="-10 -10 120 120" xmlns="http://www.w3.org/2000/svg">
-  <polyline id="example" stroke="black" fill="none"
-   points="50,0 21,90 98,35 2,35 79,90"/>
+  <polyline
+    id="example"
+    stroke="black"
+    fill="none"
+    points="50,0 21,90 98,35 2,35 79,90" />
+</svg>
 ```
 
 ```js
@@ -48,7 +51,7 @@ let example = document.getElementById("example");
 let svgpoint = document.getElementById("svg").createSVGPoint();
 svgpoint.y = 10;
 svgpoint.x = 10;
-console.log(example.points.insertItemBefore(svgpoint,2));
+console.log(example.points.insertItemBefore(svgpoint, 2));
 ```
 
 ## Specifications

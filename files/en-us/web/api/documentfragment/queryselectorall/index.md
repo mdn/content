@@ -1,13 +1,11 @@
 ---
-title: DocumentFragment.querySelectorAll()
+title: "DocumentFragment: querySelectorAll() method"
+short-title: querySelectorAll()
 slug: Web/API/DocumentFragment/querySelectorAll
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Method
+page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.querySelectorAll
 ---
+
 {{ApiRef("DOM")}}
 
 The **`DocumentFragment.querySelectorAll()`** method returns a
@@ -20,15 +18,21 @@ a `SYNTAX_ERR` value is raised.
 
 ## Syntax
 
-```js
-elementList = documentfragment.querySelectorAll(selectors);
+```js-nolint
+querySelectorAll(selectors)
 ```
 
 ### Parameters
 
-- _selectors_
-  - : Is a {{domxref("DOMString")}} containing one or more CSS selectors separated by
+- `selectors`
+  - : A string containing one or more CSS selectors separated by
     commas.
+
+### Return value
+
+A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
+each element that matches at least one of the specified selectors or an empty
+{{domxref("NodeList")}} in case of no matches.
 
 ## Examples
 
@@ -37,7 +41,7 @@ This example returns a list of all `div` elements within the
 "`alert`":
 
 ```js
-var matches = documentfrag.querySelectorAll("div.note, div.alert");
+const matches = documentfrag.querySelectorAll("div.note, div.alert");
 ```
 
 ## Specifications

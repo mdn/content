@@ -1,21 +1,11 @@
 ---
-title: AudioScheduledSourceNode.start()
+title: "AudioScheduledSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioScheduledSourceNode/start
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Media
-  - Method
-  - NeedsExample
-  - Node
-  - Reference
-  - Web Audio API
-  - play
-  - sound
-  - start
+page-type: web-api-instance-method
 browser-compat: api.AudioScheduledSourceNode.start
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `start()` method on
@@ -25,7 +15,7 @@ immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(when)
 ```
@@ -41,18 +31,18 @@ start(when)
 
 ### Return value
 
-{{jsxref("undefined")}}
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `InvalidStateNode`
-  - : The node has already been started. This error occurs even if the node is no longer
+- `InvalidStateNode` {{domxref("DOMException")}}
+  - : Thrown if the node has already been started. This error occurs even if the node is no longer
     running because of a prior call to {{domxref("AudioScheduledSourceNode.stop",
     "stop()")}}.
-- `RangeError`
-  - : The value specified for `when` is negative.
+- {{jsxref("RangeError")}}
+  - : Thrown if the value specified for `when` is negative.
 
-## Example
+## Examples
 
 This example demonstrates how to create an {{domxref("OscillatorNode")}} which is
 scheduled to start playing in 2 seconds and stop playing 1 second after that. The times

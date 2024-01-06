@@ -1,20 +1,11 @@
 ---
-title: RTCPeerConnection.setLocalDescription()
+title: "RTCPeerConnection: setLocalDescription() method"
+short-title: setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
-tags:
-  - API
-  - Descriptions
-  - Media
-  - Method
-  - Offer
-  - RTCPeerConnection
-  - Reference
-  - SDP
-  - WebRTC
-  - answer
-  - setLocalDescription
+page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCPeerConnection")}} method
@@ -34,10 +25,11 @@ negotiation is complete. Only then does the agreed-upon configuration take effec
 
 ## Syntax
 
-```js
-aPromise = RTCPeerConnection.setLocalDescription(sessionDescription);
+```js-nolint
+setLocalDescription()
+setLocalDescription(sessionDescription)
 
-pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{deprecated_inline}}
+setLocalDescription(sessionDescription, successCallback, errorCallback) // deprecated
 ```
 
 ### Parameters
@@ -48,9 +40,22 @@ pc.setLocalDescription(sessionDescription, successCallback, errorCallback); {{de
     the description is omitted, the WebRTC runtime tries to automatically do the right
     thing.
 
+### Return value
+
+A {{jsxref("Promise")}} which is fulfilled once the value of
+{{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
+the change cannot be applied (for example, if the specified description is incompatible
+with one or both of the peers on the connection). The promise's fulfillment handler
+receives no input parameters.
+
+> **Note:** The process of changing descriptions actually involves intermediary steps handled by
+> the WebRTC layer to ensure that an active connection can be changed without losing the
+> connection if the change does not succeed. See
+> [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
+
 #### Implicit description
 
-If you don't explicity provide a session description, the WebRTC runtime will try to
+If you don't explicitly provide a session description, the WebRTC runtime will try to
 handle it correctly. If the signaling state is one of `stable`,
 `have-local-offer`, or `have-remote-pranswer`, the WebRTC runtime
 automatically creates a new offer and sets that as the new local description. Otherwise,
@@ -64,35 +69,23 @@ serialized version of a {{domxref("RTCSessionDescription")}} browser object. The
 interchangeable:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(offer);
-});
+myPeerConnection
+  .createOffer()
+  .then((offer) => myPeerConnection.setLocalDescription(offer));
 ```
 
 This is equivalent to:
 
 ```js
-myPeerConnection.createOffer().then(function(offer) {
-  return myPeerConnection.setLocalDescription(new RTCSessionDescription(offer));
-});
+myPeerConnection
+  .createOffer()
+  .then((offer) =>
+    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)),
+  );
 ```
 
 For this reason, the {{domxref("RTCSessionDescription.RTCSessionDescription",
   "RTCSessionDescription()")}} constructor is deprecated.
-
-### Return value
-
-A {{jsxref("Promise")}} which is fulfilled once the value of
-{{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if
-the change cannot be applied (for example, if the specified description is incompatible
-with one or both of the peers on the connection). The promise's fulfillment handler
-receives no input parameters.
-
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by
-> the WebRTC layer to ensure that an active connection can be changed without losing the
-> connection if the change does not succeed. See
-> {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current
-    descriptions")}} for more details on this process.
 
 ### Deprecated parameters
 
@@ -161,7 +154,7 @@ async function handleNegotiationNeededEvent() {
     const offer = await pc.createOffer();
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
-  } catch(err) {
+  } catch (err) {
     reportError(err);
   }
 }

@@ -1,18 +1,16 @@
 ---
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
-tags:
-  - Extensions
-  - Firefox
-  - Firefox 3.6
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
 
 ## User interface changes
 
-[Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.](https://bugzilla.mozilla.org/show_bug.cgi?id=513147) The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.
+[Right-clicking on elements (including links and images) no longer offers a "Properties" menu item.](https://bugzil.la/513147) The properties dialog box was not useful for most users and has been removed. If your extension interacts with that menu item in any way, you'll need to revise your code to add it yourself, or contribute your own context menu entry directly.
 
 ## Add-on package changes
 
@@ -29,17 +27,17 @@ The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
   to work in HTML documents.
 - The [`name`](/en-US/docs/Web/XPath/Functions/name) and the [`local-name`](/en-US/docs/Web/XPath/Functions/local-name) functions in XPath returns the name of HTML elements in lower case. Previously, in HTML documents, they returned it in upper case.
 
-The most probable upgrade problem is the pattern `if (elt.localName == "FOO")`.
+The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 ### Example: Testing if an element is an HTML img element
 
 #### Firefox 3.6, both text/html and application/xhtml+xml
 
-`if (elt.localName == "img" && elt.namespaceURI == "http://www.w3.org/1999/xhtml")`
+`if (elt.localName === "img" && elt.namespaceURI === "http://www.w3.org/1999/xhtml")`
 
 #### Firefox 3.5 and 3.6, only extension-supplied text/html without foreign (e.g. SVG) script-inserted elements
 
-`if (elt.tagName == "IMG")`
+`if (elt.tagName === "IMG")`
 
 #### Firefox 3.5 and 3.6, both text/html and application/xhtml+xml
 

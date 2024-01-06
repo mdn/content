@@ -1,13 +1,10 @@
 ---
 title: SVGPreserveAspectRatio
 slug: Web/API/SVGPreserveAspectRatio
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGPreserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG preserveAspectRatio interface
@@ -21,7 +18,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
 <table class="no-markdown">
   <tbody>
     <tr>
-      <th scope="row">Also implement</th>
+      <th scope="row">Also implement</th>
       <td><em>None</em></td>
     </tr>
     <tr>
@@ -42,60 +39,26 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
       <td>
         <ul>
           <li><code>SVG_PRESERVEASPECTRATIO_UNKNOWN</code> = 0</li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code
-            ><code>_NONE</code> = 1
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code
-            ><code>_XMINYMIN</code> = 2
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMIDYMIN</code> = 3
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMAXYMIN</code> = 4
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMINYMID</code> = 5
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMIDYMID</code> = 6
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMAXYMID</code> = 7
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMINYMAX</code> = 8
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMIDYMAX</code> = 9
-          </li>
-          <li>
-            <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_</code
-            ><code>XMAXYMAX</code> = 10
-          </li>
+          <li><code>SVG_PRESERVEASPECTRATIO_NONE</code> = 1</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMINYMIN</code> = 2</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMIDYMIN</code> = 3</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMAXYMIN</code> = 4</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMINYMID</code> = 5</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMIDYMID</code> = 6</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMAXYMID</code> = 7</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMINYMAX</code> = 8</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMIDYMAX</code> = 9</li>
+          <li><code>SVG_PRESERVEASPECTRATIO_XMAXYMAX</code> = 10</li>
         </ul>
         <ul>
           <li><code>SVG_MEETORSLICE_UNKNOWN</code> = 0</li>
-          <li>
-            <code>SVG_</code><code>MEETORSLICE</code><code>_MEET</code> = 1
-          </li>
-          <li>
-            <code>SVG_</code><code>MEETORSLICE</code><code>_SLICE</code> = 2
-          </li>
+          <li><code>SVG_MEETORSLICE_MEET</code> = 1</li>
+          <li><code>SVG_MEETORSLICE_SLICE</code> = 2</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a
           href="https://www.w3.org/TR/SVG/coords.html#InterfaceSVGPreserveAspectRatio"
@@ -109,15 +72,17 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
 ## Constants
 
 <table class="no-markdown">
-  <tbody>
+  <thead>
     <tr>
       <th>Name</th>
       <th>Value</th>
       <th>Description</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_UNKNOWN</code>
+        <code>SVG_PRESERVEASPECTRATIO_UNKNOWN</code>
       </td>
       <td>0</td>
       <td>
@@ -128,7 +93,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_NONE</code>
+        <code>SVG_PRESERVEASPECTRATIO_NONE</code>
       </td>
       <td>1</td>
       <td>
@@ -138,7 +103,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMINYMIN</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMINYMIN</code>
       </td>
       <td>2</td>
       <td>
@@ -148,7 +113,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMIDYMIN</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMIDYMIN</code>
       </td>
       <td>3</td>
       <td>
@@ -158,7 +123,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMAXYMIN</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMAXYMIN</code>
       </td>
       <td>4</td>
       <td>
@@ -168,7 +133,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMINYMID</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMINYMID</code>
       </td>
       <td>5</td>
       <td>
@@ -178,7 +143,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMIDYMID</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMIDYMID</code>
       </td>
       <td>6</td>
       <td>
@@ -188,7 +153,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMAXYMID</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMAXYMID</code>
       </td>
       <td>7</td>
       <td>
@@ -198,7 +163,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMINYMAX</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMINYMAX</code>
       </td>
       <td>8</td>
       <td>
@@ -208,7 +173,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMIDYMAX</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMIDYMAX</code>
       </td>
       <td>9</td>
       <td>
@@ -218,7 +183,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
     </tr>
     <tr>
       <td>
-        <code>SVG_</code><code>PRESERVEASPECTRATIO</code><code>_XMAXYMAX</code>
+        <code>SVG_PRESERVEASPECTRATIO_XMAXYMAX</code>
       </td>
       <td>10</td>
       <td>
@@ -254,7 +219,7 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 <table class="no-markdown">
   <thead>
@@ -267,26 +232,26 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
   <tbody>
     <tr>
       <td><code>align</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the alignment value as specified by one of the
-        SVG_PRESERVEASPECTRATIO_* constants defined on this interface.
+        <code>SVG_PRESERVEASPECTRATIO_*</code> constants defined on this interface.
       </td>
     </tr>
     <tr>
       <td><code>meetOrSlice</code></td>
-      <td>unsigned short</td>
+      <td>unsigned short</td>
       <td>
         The type of the meet-or-slice value as specified by one of the
-        SVG_MEETORSLICE_* constants defined on this interface.
+        <code>SVG_MEETORSLICE_*</code> constants defined on this interface.
       </td>
     </tr>
   </tbody>
 </table>
 
-**Exceptions on setting:** a [`DOMException`](DOMException) with code `NO_MODIFICATION_ALLOWED_ERR` is raised on an attempt to change the value of an attribute on a read only object.
+**Exceptions on setting:** a [`DOMException`](/en-US/docs/Web/API/DOMException) with code `NO_MODIFICATION_ALLOWED_ERR` is raised on an attempt to change the value of an attribute on a read only object.
 
-## Methods
+## Instance methods
 
 The `SVGPreserveAspectRatio` interface do not provide any specific methods.
 

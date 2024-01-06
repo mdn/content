@@ -1,25 +1,19 @@
 ---
-title: PaymentRequest.prototype.id
+title: "PaymentRequest: id property"
+short-title: id
 slug: Web/API/PaymentRequest/id
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - id
+page-type: web-api-instance-property
 browser-compat: api.PaymentRequest.id
 ---
-{{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-The **`id`** read-only attribute of the
+{{securecontext_header}}{{APIRef("Payment Request API")}}
+
+The **`id`** read-only attribute of the
 {{domxref("PaymentRequest")}} interface returns a unique identifier for a particular
 {{domxref("PaymentRequest")}} instance.
 
-When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
-supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
+When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
+supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
 
 ## Example
 
@@ -47,18 +41,12 @@ console.log(response.requestId === request.id);
 
 // And in serialized form too
 const json = response.toJSON();
-console.log(json.requestId,response.requestId, request.id);
+console.log(json.requestId, response.requestId, request.id);
 ```
 
-## Syntax
+## Value
 
-```js
-var id = paymentRequest.id
-```
-
-### Value
-
-A {{domxref('DOMString')}}.
+A string.
 
 ## Specifications
 

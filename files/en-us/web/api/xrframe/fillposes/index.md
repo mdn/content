@@ -1,22 +1,20 @@
 ---
-title: XRFrame.fillPoses()
+title: "XRFrame: fillPoses() method"
+short-title: fillPoses()
 slug: Web/API/XRFrame/fillPoses
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRFrame.fillPoses
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`fillPoses()`** method of the {{domxref("XRFrame")}} interface populates a {{jsxref("Float32Array")}} with the matrices of the poses relative to a given base space and returns `true` if successful for all spaces.
 
 ## Syntax
 
-```js
+```js-nolint
 fillPoses(spaces, baseSpace, transforms)
 ```
 
@@ -35,7 +33,8 @@ A boolean indicating if all of the spaces have a valid pose.
 
 ### Exceptions
 
-- Throws a `TypeError` if the length of `spaces` multiplied by 16 is larger than the number of elements in `transforms`.
+- {{jsxref("TypeError")}}
+  - : Thrown if the length of `spaces` multiplied by 16 is larger than the number of elements in `transforms`.
 
 ## Examples
 

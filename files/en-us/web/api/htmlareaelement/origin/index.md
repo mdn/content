@@ -1,19 +1,16 @@
 ---
-title: HTMLAreaElement.origin
+title: "HTMLAreaElement: origin property"
+short-title: origin
 slug: Web/API/HTMLAreaElement/origin
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The
 **`HTMLAreaElement.origin`** read-only property is a
-{{domxref("USVString")}} containing the Unicode serialization of the origin of the
+string containing the Unicode serialization of the origin of the
 represented URL.
 
 That is:
@@ -22,19 +19,14 @@ That is:
   `'://'`, followed by the domain, followed by `':'`, followed by
   the port (the default port, `80` and `443` respectively, if
   explicitly specified);
-- for URL using `file:` scheme, the value is browser dependant;
+- for URL using `file:` scheme, the value is browser dependent;
 - for URL using the `blob:` scheme, the origin of the URL following
   `blob:`. E.g `"blob:https://mozilla.org"` will have
   `"https://mozilla.org".`
 
-## Syntax
+## Value
 
-```js
-// Getter
-string = area.origin;
-
-// No setter; read-only property
-```
+A string.
 
 ## Examples
 

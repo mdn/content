@@ -1,32 +1,20 @@
 ---
-title: ElementInternals.ariaRowCount
+title: "ElementInternals: ariaRowCount property"
+short-title: ariaRowCount
 slug: Web/API/ElementInternals/ariaRowCount
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRowCount
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaRowCount
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`ariaRowCount`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-rowcount` attribute, which defines the total number of rows in a table, grid, or treegrid.
+{{APIRef("Web Components")}}
+
+The **`ariaRowCount`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaRowCount = ElementInternals.ariaRowCount;
-ElementInternals.ariaRowCount = ariaRowCount;
-```
-
-### Value
-
-A {{domxref("DOMString")}} which contains an integer.
+A string which contains an integer.
 
 ## Examples
 
@@ -44,4 +32,4 @@ this.internals_.ariaRowCount = "100";
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

@@ -1,25 +1,28 @@
 ---
-title: CustomStateSet.keys()
+title: "CustomStateSet: keys() method"
+short-title: keys()
 slug: Web/API/CustomStateSet/keys
-tags:
-  - API
-  - Method
-  - Reference
-  - keys
-  - CustomStateSet
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CustomStateSet.keys
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`keys()`** method of the {{domxref("CustomStateSet")}} interface is an alias for {{domxref("CustomStateSet.values")}}.
 
 ## Syntax
 
-```js
-CustomStateSet.keys()
+```js-nolint
+keys()
 ```
 
-### Return Value
+### Parameters
+
+None.
+
+### Return value
 
 A new iterator object containing the values for each element in the given `CustomStateSet`, in insertion order.
 
@@ -30,4 +33,3 @@ A new iterator object containing the values for each element in the given `Custo
 ## Browser compatibility
 
 {{Compat}}
-

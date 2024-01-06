@@ -1,86 +1,63 @@
 ---
-title: PerformanceEntry.toJSON()
+title: "PerformanceEntry: toJSON() method"
+short-title: toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-tags:
-  - API
-  - Method
-  - Reference
-  - Web Performance
+page-type: web-api-instance-method
 browser-compat: api.PerformanceEntry.toJSON
 ---
-{{APIRef("Performance Timeline API")}}
 
-The **`toJSON()`** method is a _serializer_; it returns
-a JSON representation of the {{domxref("PerformanceEntry","performance entry")}} object.
+{{APIRef("Performance API")}}
 
-{{AvailableInWorkers}}
+The **`toJSON()`** method is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceEntry")}} object.
 
 ## Syntax
 
-```js
-json = perfEntry.toJSON();
+```js-nolint
+toJSON()
 ```
 
-### Arguments
+### Parameters
 
-- None
-  - :
+None.
 
 ### Return value
 
-- json
-  - : A JSON object that is the serialization of the {{domxref("PerformanceEntry")}}
-    object.
+A {{jsxref("JSON")}} object that is the serialization of the {{domxref("PerformanceEntry")}} object.
 
-## Example
+## Examples
 
-The following example shows the use of the `toJSON()` method.
+### Using the toJSON method
+
+In this example, calling `entry.toJSON()` returns a JSON representation of the {{domxref("PerformanceMark")}} object.
 
 ```js
-function run_PerformanceEntry() {
-  log("PerformanceEntry support ...");
+performance.mark("debug-marker", {
+  detail: "debugging-marker-123",
+});
 
-  if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
-    return;
-  }
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    console.log(entry.toJSON());
+  });
+});
 
-  // Create some performance entries via the mark() method
-  performance.mark("Begin");
-  do_work(50000);
-  performance.mark("End");
+observer.observe({ entryTypes: ["mark"] });
+```
 
-  // Use getEntries() to iterate through the each entry
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("Entry[" + i + "]");
-    check_PerformanceEntry(p[i]);
-  }
-}
-function check_PerformanceEntry(obj) {
-  var properties = ["name", "entryType", "startTime", "duration"];
-  var methods = ["toJSON"];
+This would log a JSON object like so:
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = Not supported");
-  }
-  for (var i=0; i < methods.length; i++) {
-    // check each method
-    var supported = typeof obj[methods[i]] == "function";
-    if (supported) {
-      var js = obj[methods[i]]();
-      log("..." + methods[i] + "() = " + JSON.stringify(js));
-    } else {
-      log("..." + methods[i] + " = Not supported");
-    }
-  }
+```json
+{
+  "name": "debug-marker",
+  "entryType": "mark",
+  "startTime": 158361,
+  "duration": 0
 }
 ```
+
+Note that it doesn't contain `PerformanceMark`'s {{domxref("PerformanceMark.detail", "detail")}} property.
+
+To get a JSON string, you can use [`JSON.stringify(entry)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
@@ -89,3 +66,7 @@ function check_PerformanceEntry(obj) {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("JSON")}}

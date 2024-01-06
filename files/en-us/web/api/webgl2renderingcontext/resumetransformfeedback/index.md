@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.resumeTransformFeedback()
+title: "WebGL2RenderingContext: resumeTransformFeedback() method"
+short-title: resumeTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/resumeTransformFeedback
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.resumeTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.resumeTransformFeedback()`**
@@ -17,8 +14,8 @@ transform feedback operation.
 
 ## Syntax
 
-```js
-void gl.resumeTransformFeedback();
+```js-nolint
+resumeTransformFeedback()
 ```
 
 ### Parameters
@@ -27,16 +24,16 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 gl.beginTransformFeedback(gl.TRIANGLES);
 gl.pauseTransformFeedback();
-//...
+//…
 gl.resumeTransformFeedback();
 gl.drawArrays(gl.TRIANGLES, 0, 3);
 gl.endTransformFeedback();

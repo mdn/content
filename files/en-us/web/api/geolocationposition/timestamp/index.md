@@ -1,26 +1,18 @@
 ---
-title: GeolocationPosition.timestamp
+title: "GeolocationPosition: timestamp property"
+short-title: timestamp
 slug: Web/API/GeolocationPosition/timestamp
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPosition
-  - Property
-  - Secure context
-  - timeStamp
+page-type: web-api-instance-property
 browser-compat: api.GeolocationPosition.timestamp
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationPosition.timestamp`** read-only property returns a {{domxref("DOMTimeStamp")}} object, represents the date and the time of the creation of the {{domxref("GeolocationPosition")}} object it belongs to. The precision is to the millisecond.
+The **`timestamp`** read-only property of the {{domxref("GeolocationPosition")}} interface represents the date and time that the position was acquired by the device.
 
-## Syntax
+## Value
 
-    var timestamp = geolocationPositionInstance.timestamp
-
-### Value
-
-A {{domxref("DOMTimeStamp")}} object instance.
+A number containing a timestamp, given as {{Glossary("Unix time")}} in milliseconds.
 
 ## Specifications
 

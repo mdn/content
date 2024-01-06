@@ -1,18 +1,20 @@
 ---
 title: PI Parameters
 slug: Web/XSLT/PI_Parameters
-tags:
-  - XSLT
+page-type: guide
 ---
+
+{{XsltSidebar}}
+
 ### Overview
 
-XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the [XSLTProcessor](/en-US/XSLTProcessor) in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
+XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the {{domxref("XSLTProcessor")}} in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
 
-To solve this two new PIs are implemented in [Firefox 2](/en-US/Firefox_2) (see {{ Anch("Supported versions") }} below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
+To solve this two new PIs are implemented in [Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2) (see [Supported versions](#supported_versions) below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
 
 The following document passes the two parameters "color" and "size" to the stylesheet "style.xsl".
 
-```plain
+```xml
 <?xslt-param name="color" value="blue"?>
 <?xslt-param name="size" select="2"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
@@ -24,7 +26,7 @@ Note that these PIs have no effect when transformation is done using the `XSLTPr
 
 The attributes in the `xslt-param` and `xslt-param-namespace` PIs are parsed using the rules defined in [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in `xml-stylesheet`.
 
-Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and onces occurring after any `xml-stylesheet` PIs.
+Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prolog of the document, i.e. before the first element tag. All PIs in the prolog must be honored, both ones occurring before and ones occurring after any `xml-stylesheet` PIs.
 
 If there are multiple `xml-stylesheet` PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple `xml-stylesheet` XSLT PIs are not supported in Firefox currently.
 
@@ -32,22 +34,22 @@ If there are multiple `xml-stylesheet` PIs the parameters apply to all styleshee
 
 The `xslt-param` PI supports 4 attributes:
 
-- name
+- `name`
   - : The local-name part of the parameter name. No syntax checking is done on the attribute, however if it is not a valid [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) it will never match any parameter in the stylesheet.
-- namespace
+- `namespace`
   - : The namespace of the parameter name. No syntax checking is done on the attribute.
-- value
-  - : Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be*string*.
-- select
-  - : An [XPath](/en-US/XPath) expression for the parameter. The value of the attribute is parsed as an XPath expression. The result of evaluating the expression is used as value for the parameter.
+- `value`
+  - : Contains the string value for the parameter. The value of the attribute is used as value for the parameter. The datatype will always be _string_.
+- `select`
+  - : An [XPath](/en-US/docs/Web/XPath) expression for the parameter. The value of the attribute is parsed as an XPath expression. The result of evaluating the expression is used as value for the parameter.
 
-If the **name** attribute is missing or empty the PI is ignored.
+If the `name` attribute is missing or empty the PI is ignored.
 
-If the **namespace** attribute is missing or empty the null namespace is used.
+If the `namespace` attribute is missing or empty the null namespace is used.
 
 It is not an error to specify a parameter name that does not exist in the stylesheet (or that is a variable in the stylesheet). The PI is ignored.
 
-If both **value** and **select** are present or if neither **value** nor **select** are present the PI is ignored.
+If both `value` and `select` are present or if neither `value` nor `select` are present the PI is ignored.
 
 Note that `value="..."` is not strictly equal to `select="'...'"` since the value can contain both apostrophe and quote characters.
 
@@ -55,19 +57,27 @@ Note that `value="..."` is not strictly equal to `select="'...'"` since the valu
 
 Set the parameter 'color' to the string 'red':
 
-    <?xslt-param name="color" value="red"?>
+```xml
+<?xslt-param name="color" value="red"?>
+```
 
 Set the parameter 'columns' to the number 2:
 
-    <?xslt-param name="columns" select="2"?>
+```xml
+<?xslt-param name="columns" select="2"?>
+```
 
 Set the parameter 'books' to a nodeset containing all `<book>` elements in the null namespace:
 
-    <?xslt-param name="books" select="//book"?>
+```xml
+<?xslt-param name="books" select="//book"?>
+```
 
 Set the parameter 'show-toc' to boolean `true`:
 
-     <?xslt-param name="show-toc" select="true()"?>
+```xml
+<?xslt-param name="show-toc" select="true()"?>
+```
 
 ##### The select attribute context
 
@@ -103,8 +113,10 @@ If **namespace** is missing, the PI is ignored. If **namespace** is empty, the p
 
 Set the parameter 'books' to a nodeset containing all `<book>` elements in the 'http\://www\.example.org/myNamespace' namespace:
 
-    <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
-    <?xslt-param name="books" select="//my:book"?>
+```xml
+<?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
+<?xslt-param name="books" select="//my:book"?>
+```
 
 ### Supported versions
 

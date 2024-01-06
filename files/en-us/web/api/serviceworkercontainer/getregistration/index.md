@@ -1,27 +1,24 @@
 ---
-title: ServiceWorkerContainer.getRegistration()
+title: "ServiceWorkerContainer: getRegistration() method"
+short-title: getRegistration()
 slug: Web/API/ServiceWorkerContainer/getRegistration
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerContainer
+page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.getRegistration
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`getRegistration()`** method of the
 {{domxref("ServiceWorkerContainer")}} interface gets a
-{{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
-client URL.  The method returns a {{jsxref("Promise")}} that resolves to
-a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
+{{domxref("ServiceWorkerRegistration")}} object whose scope URL matches the provided
+client URL. The method returns a {{jsxref("Promise")}} that resolves to
+a {{domxref("ServiceWorkerRegistration")}} or `undefined`.
 
 ## Syntax
 
-```js
-serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerRegistration) { ... });
+```js-nolint
+getRegistration()
+getRegistration(clientURL)
 ```
 
 ### Parameters
@@ -34,12 +31,13 @@ serviceWorkerContainer.getRegistration(clientURL).then(function(serviceWorkerReg
 A {{jsxref("Promise")}} that resolves to a {{domxref("ServiceWorkerRegistration")}}
 object or `undefined`.
 
-## Example
+## Examples
 
 ```js
-navigator.serviceWorker.getRegistration('/app').then(function(registration) {
-  if(registration){
-    document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
+navigator.serviceWorker.getRegistration("/app").then((registration) => {
+  if (registration) {
+    document.querySelector("#status").textContent =
+      "ServiceWorkerRegistration found.";
   }
 });
 ```

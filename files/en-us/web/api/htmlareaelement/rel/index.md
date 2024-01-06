@@ -1,36 +1,25 @@
 ---
-title: HTMLAreaElement.rel
+title: "HTMLAreaElement: rel property"
+short-title: rel
 slug: Web/API/HTMLAreaElement/rel
-tags:
-  - API
-  - HTML DOM
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.rel
 ---
+
 {{APIRef("HTML DOM")}}
 
-The **`HTMLAreaElement.rel`** property reflects the
-{{htmlattrxref("rel", "area")}} attribute. It is a {{domxref("DOMString")}} containing a
-space-separated list of [link types](/en-US/docs/Web/HTML/Link_types)
-indicating the relationship between the resource represented by the
-{{HTMLElement("area")}} element and the current document.
+The **`HTMLAreaElement.rel`** property reflects the [`rel`](/en-US/docs/Web/HTML/Attributes/rel) attribute. It is a string containing a space-separated list of link types indicating the relationship between the resource represented by the {{HTMLElement("area")}} element and the current document.
 
-## Syntax
+## Value
 
-```js
-var relstr = areaElt.rel;
-areaElt.rel = relstr;
-```
+A string.
 
-## Example
+## Examples
 
 ```js
-var areas = document.getElementsByTagName("area");
-var length = areas.length;
-for (var i = 0; i < length; i++) {
-  alert("Rel: " + areas[i].rel);
+const areas = document.getElementsByTagName("area");
+for (const area of areas) {
+  console.log(`Rel: ${area.rel}`);
 }
 ```
 

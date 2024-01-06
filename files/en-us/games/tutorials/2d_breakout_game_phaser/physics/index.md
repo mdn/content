@@ -1,16 +1,9 @@
 ---
 title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - physics
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
@@ -47,8 +40,8 @@ Remember to remove our old method of adding values to `x` and `y` from the `upda
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 
@@ -59,25 +52,24 @@ we are now handling this properly, with a physics engine.
 The latest code should look like this:
 
 ```js
-var ball;
+let ball;
 
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = '#eee';
-    game.load.image('ball', 'img/ball.png');
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-    ball = game.add.sprite(50, 50, 'ball');
-    game.physics.enable(ball, Phaser.Physics.ARCADE);
-    ball.body.velocity.set(150, 150);
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  ball = game.add.sprite(50, 50, "ball");
+  game.physics.enable(ball, Phaser.Physics.ARCADE);
+  ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 Try reloading `index.html` again — The ball should now be moving constantly in the given direction. At the moment, the physics engine has gravity and friction set to zero. Adding gravity would result in the ball falling down while friction would eventually stop the ball.

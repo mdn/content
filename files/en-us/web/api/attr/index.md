@@ -1,114 +1,50 @@
 ---
 title: Attr
 slug: Web/API/Attr
-tags:
-  - API
-  - DOM
+page-type: web-api-interface
 browser-compat: api.Attr
 ---
+
 {{APIRef("DOM")}}
 
-The **`Attr`** interface represents one of a DOM element's attributes as an object. In most DOM methods, you will directly retrieve the attribute as a string (e.g., {{domxref("Element.getAttribute()")}}), but certain functions (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating return `Attr` types.
+The **`Attr`** interface represents one of an element's attributes as an object. In most situations, you will directly retrieve the attribute value as a string (e.g., {{domxref("Element.getAttribute()")}}), but certain functions (e.g., {{domxref("Element.getAttributeNode()")}}) or means of iterating return `Attr` instances.
 
 {{InheritanceDiagram}}
 
-> **Warning:** Starting in Gecko 7.0 {{geckoRelease("7.0")}}, a number of deprecated properties and methods output warning messages to the console. You should revise your code accordingly. See [Deprecated properties and methods](#deprecated_properties_and_methods) for a complete list.
+The core idea of an object of type `Attr` is the association between a _name_ and a _value_. An attribute may also be part of a _namespace_ and, in this case, it also has a URI identifying the namespace, and a prefix that is an abbreviation for the namespace.
 
-## Properties
+The name is deemed _local_ when it ignores the eventual namespace prefix and deemed _qualified_ when it includes the prefix of the namespace, if any, separated from the local name by a colon (`:`). We have three cases: an attribute outside of a namespace, an attribute inside a namespace without a prefix defined, an attribute inside a namespace with a prefix:
 
-- {{domxref("Attr.name", "name")}} {{readOnlyInline}}
-  - : The attribute's name.
-- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the namespace URI of the attribute, or `null` if there is no namespace.
-- {{domxref("Attr.localName", "localName")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the local part of the qualified name of the attribute.
-- {{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}
-  - : A {{domxref("DOMString")}} representing the namespace prefix of the attribute, or `null` if no prefix is specified.
-- {{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}
+| Attribute | Namespace name | Namespace prefix | Attribute local name | Attribute qualified name |
+| --------- | -------------- | ---------------- | -------------------- | ------------------------ |
+| `myAttr`  | _none_         | _none_           | `myAttr`             | `myAttr`                 |
+| `myAttr`  | `mynamespace`  | _none_           | `myAttr`             | `myAttr`                 |
+| `myAttr`  | `mynamespace`  | `myns`           | `myAttr`             | `myns:myAttr`            |
 
-  - : The element holding the attribute.
+> **Note:** This interface represents only attributes present in the tree representation of the {{domxref("Element")}}, being a SVG, an HTML or a MathML element. It doesn't represent the _property_ of an interface associated with such element, such as {{domxref("HTMLTableElement")}} for a {{HTMLElement("table")}} element. (See {{Glossary("Attribute", "this article")}} for more information about attributes and how they are _reflected_ into properties.)
 
-    > **Note:** DOM Level 4 removed this property. The assumption was that since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
-    > As that doesn't hold true in cases like `Attr` objects being returned by {{domxref("Document.evaluate")}}, the DOM Living Standard reintroduced the property.
-    >
-    > Gecko outputs a deprecation note starting from Gecko 7.0 {{geckoRelease("7.0")}}. This note was removed again in Gecko 49.0 {{geckoRelease("49.0")}}.
+## Instance properties
 
-- {{domxref("Attr.specified", "specified")}} {{readOnlyInline}}
-  - : This property always returns `true`. Originally, it returned `true` if the attribute was explicitly specified in the source code or by a script, and `false` if its value came from the default one defined in the document's DTD.
+_This interface also inherits the properties of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
+
+- {{domxref("Attr.localName", "localName")}} {{ReadOnlyInline}}
+  - : A string representing the local part of the qualified name of the attribute.
+- {{domxref("Attr.name", "name")}} {{ReadOnlyInline}}
+  - : The attribute's _qualified name_. If the attribute is not in a namespace, it will be the same as {{domxref("attr.localName", "localName")}} property.
+- {{domxref("Attr.namespaceURI", "namespaceURI")}} {{ReadOnlyInline}}
+  - : A string representing the URI of the namespace of the attribute, or `null` if there is no namespace.
+- {{domxref("Attr.ownerElement", "ownerElement")}} {{ReadOnlyInline}}
+  - : The {{domxref("Element")}} the attribute belongs to.
+- {{domxref("Attr.prefix", "prefix")}} {{ReadOnlyInline}}
+  - : A string representing the namespace prefix of the attribute, or `null` if a namespace without prefix or no namespace are specified.
+- {{domxref("Attr.specified", "specified")}} {{ReadOnlyInline}} {{deprecated_inline}}
+  - : This property always returns `true`.
 - {{domxref("Attr.value", "value")}}
-  - : The attribute's value.
+  - : The attribute's value, a string that can be set and get using this property.
 
-## Deprecated properties and methods
+## Instance methods
 
-The following properties have been deprecated. Where available, the appropriate replacement is noted.
-
-- `attributes`
-  - : This property now always returns `NULL`.
-- `childNodes` {{deprecated_inline}}
-  - : This property now always returns an empty {{domxref("NodeList")}}.
-- `firstChild` {{deprecated_inline}}
-  - : This property now always returns `NULL`.
-- `isId` {{readOnlyInline}}
-  - : Indicates whether the attribute is an "ID attribute". An "ID attribute" being an attribute which value is expected to be unique across a DOM Document. In HTML DOM, "id" is the only ID attribute, but XML documents could define others. Whether or not an attribute is unique is often determined by a {{Glossary("DTD")}} or other schema description.
-- `lastChild` {{deprecated_inline}}
-  - : This property now always returns `NULL`.
-- `nextSibling`
-  - : This property now always returns `NULL`.
-- `nodeName`
-  - : Use {{domxref("Attr.name")}} instead.
-- `nodeType`
-  - : This property now always returns 2 (`ATTRIBUTE_NODE`).
-- `nodeValue`
-  - : Use {{domxref("Attr.value")}} instead.
-- `ownerDocument`
-  - : You shouldn't have been using this in the first place, so you probably don't care that this is going away.
-- `parentNode`
-  - : This property now always returns `NULL`.
-- `previousSibling`
-  - : This property now always returns `NULL`.
-- `schemaTypeInfo` {{deprecated_inline}} {{readOnlyInline}}
-  - : The type information associated with this attribute. While the type information contained in this attribute is guaranteed to be correct after loading the document or invoking {{domxref("Document.normalizeDocument")}}, this property may not be reliable if the node was moved.
-- `specified`
-  - : This property now always returns `true`.
-- `textContent`
-  - : Use {{domxref("Attr.value")}} instead.
-
-The following methods have been deprecated:
-
-- `appendChild()` {{deprecated_inline}}
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `cloneNode()`
-  - : You shouldn't have been using this in the first place, so you probably don't care that this is going away.
-- `createAttribute()`
-  - : Use {{domxref("Element.setAttribute()")}} instead.
-- `createAttributeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} instead.
-- `getAttributeNode()`
-  - : Use {{domxref("Element.getAttribute()")}} instead.
-- `getAttributeNodeNS()`
-  - : Use {{domxref("Element.getAttributeNS()")}} instead.
-- `hasAttributes()` {{deprecated_inline}}
-  - : This method now always returns false.
-- `hasChildNodes()`
-  - : This method now always returns false.
-- `insertBefore()`
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `isSupported()`
-  - : You shouldn't have been using this in the first place, so you probably don't care that this is going away.
-- `isEqualNode()`
-  - : You shouldn't have been using this in the first place, so you probably don't care that this is going away.
-- `normalize()`
-  - : You shouldn't have been using this in the first place, so you probably don't care that this is going away.
-- `removeAttributeNode()`
-  - : Use {{domxref("Element.removeAttribute()")}} instead.
-- `removeChild()` {{deprecated_inline}}
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `replaceChild()` {{deprecated_inline}}
-  - : Modify the value of {{domxref("Attr.value")}} instead.
-- `setAttributeNode()`
-  - : Use {{domxref("Element.setAttribute()")}} instead.
-- `setAttributeNodeNS()`
-  - : Use {{domxref("Element.setAttributeNS()")}} instead.
+_This interface has no specific methods, but inherits the methods of its parent interfaces, {{domxref("Node")}} and {{domxref("EventTarget")}}._
 
 ## Specifications
 
@@ -117,3 +53,7 @@ The following methods have been deprecated:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- Other nodes are {{domxref("CDATASection")}}, {{domxref("CharacterData")}}, {{domxref("Comment")}}, {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("ProcessingInstruction")}}, and {{domxref("Text")}}.

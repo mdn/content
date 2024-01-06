@@ -1,22 +1,19 @@
 ---
-title: WebGLRenderingContext.drawArrays()
+title: "WebGLRenderingContext: drawArrays() method"
+short-title: drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
-void gl.drawArrays(mode, first, count);
+```js-nolint
+drawArrays(mode, first, count)
 ```
 
 ### Parameters
@@ -35,14 +32,14 @@ void gl.drawArrays(mode, first, count);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- first
+- `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of indices to be rendered.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -50,7 +47,7 @@ None.
   `gl.INVALID_ENUM` error is thrown.
 - If `first` or `count` are negative, a
   `gl.INVALID_VALUE` error is thrown.
-- if `gl.CURRENT_PROGRAM` is {{jsxref("null")}}, a
+- if `gl.CURRENT_PROGRAM` is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), a
   `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples

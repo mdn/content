@@ -1,17 +1,18 @@
 ---
 title: name
 slug: Web/XPath/Functions/name
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `name` function returns a string representing the QName of the first node in a given node-set.
 
 ### Syntax
 
-    name( [node-set] )
+```plain
+name( [node-set] )
+```
 
 ### Arguments
 
@@ -28,7 +29,7 @@ A string representing the QName of a node.
 
 ### Defined
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
 ### Gecko support
 

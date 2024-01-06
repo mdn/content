@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.vertexAttribIPointer()
+title: "WebGL2RenderingContext: vertexAttribIPointer() method"
+short-title: vertexAttribIPointer()
 slug: Web/API/WebGL2RenderingContext/vertexAttribIPointer
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.vertexAttribIPointer()`** method
@@ -17,8 +14,8 @@ formats and locations of vertex attributes in a vertex attributes array.
 
 ## Syntax
 
-```js
-void gl.vertexAttribIPointer(index, size, type, stride, offset);
+```js-nolint
+vertexAttribIPointer(index, size, type, stride, offset)
 ```
 
 ### Parameters
@@ -43,13 +40,13 @@ void gl.vertexAttribIPointer(index, size, type, stride, offset);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
 Very similar to {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}. The main
 difference is that while values specified by `vertexAttribPointer` are
-always  interpreted as floating-point values in the shader (even if they were originally
+always interpreted as floating-point values in the shader (even if they were originally
 specified as integers in the buffer), this method allows specifying values which are
 interpreted as integers in the shader.
 
@@ -76,23 +73,24 @@ gl.bindAttribLocation(shaderProgram, 2, "boneIndices");
 ```
 
 ```html
-<script id="shader-vs" type="x-shader/x-vertex">#version 300 es
+<script id="shader-vs" type="x-shader/x-vertex">
+  #version 300 es
 
-uniform mat4 mvMatrix;
-uniform mat4 bones[120];
+  uniform mat4 mvMatrix;
+  uniform mat4 bones[120];
 
-in vec3 position;
-in vec4 boneWeights;
-in uvec4 boneIndices;//read as 4-component unsigned integer
+  in vec3 position;
+  in vec4 boneWeights;
+  in uvec4 boneIndices;//read as 4-component unsigned integer
 
-void main() {
-    vec4 skinnedPosition =
-        bones[boneIndices.s] * vec4(position, 1.0) * boneWeights.s +
-        bones[boneIndices.t] * vec4(position, 1.0) * boneWeights.t +
-        bones[boneIndices.p] * vec4(position, 1.0) * boneWeights.p +
-        bones[boneIndices.q] * vec4(position, 1.0) * boneWeights.q;
-    gl_Position = mvMatrix * skinnedPosition;
-}
+  void main() {
+      vec4 skinnedPosition =
+          bones[boneIndices.s] * vec4(position, 1.0) * boneWeights.s +
+          bones[boneIndices.t] * vec4(position, 1.0) * boneWeights.t +
+          bones[boneIndices.p] * vec4(position, 1.0) * boneWeights.p +
+          bones[boneIndices.q] * vec4(position, 1.0) * boneWeights.q;
+      gl_Position = mvMatrix * skinnedPosition;
+  }
 </script>
 ```
 

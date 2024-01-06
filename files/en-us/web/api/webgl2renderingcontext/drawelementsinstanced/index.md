@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.drawElementsInstanced()
+title: "WebGL2RenderingContext: drawElementsInstanced() method"
+short-title: drawElementsInstanced()
 slug: Web/API/WebGL2RenderingContext/drawElementsInstanced
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.drawElementsInstanced
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawElementsInstanced()`** method
@@ -17,14 +14,13 @@ array data like the {{domxref("WebGLRenderingContext.drawElements()",
   "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set
 of elements.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "",
-    1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax
 
-```js
-void gl.drawElementsInstanced(mode, count, type, offset, instanceCount);
+```js-nolint
+drawElementsInstanced(mode, count, type, offset, instanceCount)
 ```
 
 ### Parameters
@@ -43,29 +39,27 @@ void gl.drawElementsInstanced(mode, count, type, offset, instanceCount);
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
-- count
+- `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
-- type
+- `type`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
 
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
-    - When using the {{domxref("OES_element_index_uint")}} extension:
+    - `gl.UNSIGNED_INT` When using the {{domxref("OES_element_index_uint")}} extension.
 
-      - `gl.UNSIGNED_INT`
-
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} specifying an offset in the element array buffer. Must be
     a valid multiple of the size of the given `type`.
-- instanceCount
+- `instanceCount`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of instances of the set of elements
     to execute.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -73,7 +67,7 @@ None.
   `gl.INVALID_ENUM` error is thrown.
 - If `offset` is a valid multiple of the size of the given type, a
   `gl.INVALID_OPERATION` error is thrown.
-- If `count` or `instanceCount` are negative, a
+- If `count` or `instanceCount` are negative, a
   `gl.INVALID_VALUE` error is thrown.
 
 ## Examples

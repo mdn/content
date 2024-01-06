@@ -1,19 +1,15 @@
 ---
 title: ECT
 slug: Web/HTTP/Headers/ECT
-tags:
-  - ect
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Client hints
-  - Experimental
+page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.ect
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-The **`ECT`** {{Glossary("Client hints","network client hint")}} request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.
+The **`ECT`** [Client hint](/en-US/docs/Web/HTTP/Client_hints) request header field indicates the {{Glossary("effective connection type")}}: `slow-2g`, `2g`, `3g`, `4g`.
 
 <table class="properties">
   <tbody>
@@ -21,7 +17,7 @@ The **`ECT`** {{Glossary("Client hints","network client hint")}} request header 
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -31,7 +27,7 @@ The **`ECT`** {{Glossary("Client hints","network client hint")}} request header 
   </tbody>
 </table>
 
-The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data. For example, `2g` might be used to represent a slow wifi connection with high latency and low bandwidth, while `4g` might be used to represent a fast fibre-based broadband network.
+The value represents the "network profile" that best matches the connection's latency and bandwidth, rather than the actual mechanisms used for transferring the data. For example, `2g` might be used to represent a slow Wi-Fi connection with high latency and low bandwidth, while `4g` might be used to represent a fast fibre-based broadband network.
 
 The hint allows a server to choose what information is sent based on the broad characteristics of the network. For example, a server might choose to send smaller versions of images and other resources on less capable connections. The value might also be used as a starting point for determining what information is sent, which is further refined using information in {{HTTPHeader("RTT")}} and {{HTTPHeader("Downlink")}} hints.
 
@@ -39,7 +35,7 @@ The hint allows a server to choose what information is sent based on the broad c
 
 ## Syntax
 
-```
+```http
 ECT: <value>
 ```
 
@@ -52,13 +48,13 @@ ECT: <value>
 
 A server first needs to opt in to receive the `ECT` header by sending the {{HTTPHeader("Accept-CH")}} response header containing `ECT`.
 
-```
+```http
 Accept-CH: ECT
 ```
 
 Then on subsequent requests the client might send an `ECT` header back:
 
-```
+```http
 ECT: 2g
 ```
 
@@ -72,7 +68,7 @@ ECT: 2g
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Network client hints
 
   - {{HTTPHeader("Downlink")}}
@@ -80,5 +76,5 @@ ECT: 2g
   - {{HTTPHeader("Save-Data")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}
 - {{domxref("NetworkInformation.effectiveType")}}

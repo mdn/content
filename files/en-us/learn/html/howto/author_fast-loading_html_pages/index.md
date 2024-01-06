@@ -1,18 +1,14 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Performance
-  - Web
-  - Web Performance
+page-type: learn-faq
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 These tips are based on common knowledge and experimentation.
 
-An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and Internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
+An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
 
 Optimizing page load performance is not just for content which will be viewed by narrowband dial-up or mobile device visitors. It is just as important for broadband content and can lead to dramatic improvements even for your visitors with the fastest connections.
 
@@ -38,11 +34,11 @@ If you use background images a lot in your CSS, you can reduce the number of HTT
 
 For the purposes of this article, a CDN is a means to reduce the physical distance between your server and your visitor. As the distance between your server origin and visitor increases, the load times will increase. Suppose your website server is located in the United States and it has a visitor from India; the page load time will be much higher for the Indian visitor compared to a visitor from the US.
 
-A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/).
+A CDN is a geographically distributed network of servers that work together to shorten the distance between the user and your website. CDNs store cached versions of your website and serve them to visitors via the network node closest to the user, thereby reducing [latency](/en-US/docs/Web/Performance/Understanding_latency).
 
 Further reading:
 
-- [Understanding CDNs](https://www.incapsula.com/cdn-guide/what-is-cdn-how-it-works.html)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### Reduce domain lookups
 
@@ -60,10 +56,10 @@ So, in particular, for pages which are generated dynamically, a little research 
 
 More information:
 
-1.  [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2.  [HTTP 304: Not Modified](https://annevankesteren.nl/archives/2005/05/http-304)
-3.  [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
-4.  [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
+1. [HTTP Conditional Get for RSS Hackers](https://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
+2. [HTTP 304: Not Modified](https://annevankesteren.nl/2005/05/http-304)
+3. [HTTP ETag on Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag)
+4. [Caching in HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html)
 
 ### Optimally order the components of the page
 
@@ -73,15 +69,15 @@ Any dynamic features that require the page to complete loading before being used
 
 ### Reduce the number of inline scripts
 
-Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use modern [AJAX](/en-US/docs/Web/Guide/AJAX) methods to manipulate page content for modern browsers, rather than the older approaches based on `document.write()`.
+Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use [DOM APIs to manipulate page content](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents), rather than `document.write()`.
 
 ### Use modern CSS and valid markup
 
-Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text -- that "cost" much more than the equivalent text-and-CSS.
+Use of modern CSS reduces the amount of markup, can reduce the need for (spacer) images, in terms of layout, and can very often replace images of stylized text — that "cost" much more than the equivalent text-and-CSS.
 
 Using valid markup has other advantages. First, browsers will have no need to perform error-correction when parsing the HTML (this is aside from the philosophical issue of whether to allow format variation in user input and then programmatically "correct" or normalize it; or whether, instead, to enforce a strict, no-tolerance input format).
 
-Moreover, valid markup allows for the free use of other tools which can _pre-process_ your web pages. For example, [HTML Tidy](http://tidy.sourceforge.net/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
+Moreover, valid markup allows for the free use of other tools that can _pre-process_ your web pages. For example, [HTML Tidy](https://www.html-tidy.org/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
 
 ### Chunk your content
 
@@ -91,19 +87,29 @@ Tables are still considered valid markup but should be used for displaying tabul
 
 Rather than deeply nesting tables as in:
 
+```html
+<table>
+  <table>
     <table>
-      <table>
-        <table>
-              ...
-        </table>
-      </table>
+      …
     </table>
+  </table>
+</table>
+```
 
 use non-nested tables or divs as in
 
-    <table>...</table>
-    <table>...</table>
-    <table>...</table>
+```html
+<table>
+  …
+</table>
+<table>
+  …
+</table>
+<table>
+  …
+</table>
+```
 
 See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
@@ -113,7 +119,7 @@ SVG produced by most drawing applications often contains unnecessary metadata wh
 
 ### Minify and compress your images
 
-Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com),.
+Large images cause your page to take more time to load. Consider compressing your images before adding them to your page, using compression features built into image-manipulation tools such as Photoshop, or using a specialized tool such as [Compress Jpeg](https://compressjpeg.com/) or [Tiny PNG](https://tinypng.com).
 
 ### Specify sizes for images and tables
 
@@ -121,18 +127,20 @@ If the browser can immediately determine the height and/or width of your images 
 
 Tables should use the CSS selector: property combination:
 
-      table-layout: fixed;
+```css
+table-layout: fixed;
+```
 
 and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/Element/col) and the [`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup) elements.
 
 ### Use lazy loading for images
 
-By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
+By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the window's [`load`](/en-US/docs/Web/API/Window/load_event) event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
-To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
+To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
-<img src="./images/footerlogo.jpg" loading="lazy">
+<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
 ```
 
 Note that lazily-loaded images may not be available when the `load` event is fired. You can determine if a given image is loaded by checking to see if the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property is `true`.
@@ -141,7 +149,7 @@ Note that lazily-loaded images may not be available when the `load` event is fir
 
 To achieve the greatest improvements in page design, make sure that reasonable user-agent requirements are specified for projects. Do not require your content to appear pixel-perfect in all browsers, especially not in down-version browsers.
 
-Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Internet Explorer, Google Chrome, Opera, and Safari.
+Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Google Chrome, Opera, and Safari.
 
 Note, however, that many of the tips listed in this article are common-sense techniques which apply to any user agent, and can be applied to any web page, regardless of browser-support requirements.
 
@@ -159,11 +167,11 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('head')}}`
 
-    - `{{htmlelement('link')}}` ...
+    - `{{htmlelement('link')}}`
 
       CSS files required for page appearance. Minimize the number of files for performance while keeping unrelated CSS in separate files for maintenance.
 
-    - `{{htmlelement('script')}}` ...
+    - `{{htmlelement('script')}}`
 
       JavaScript files for functions **required** during the loading of the page, but not any interaction related JavaScript that can only run after page loads.
 
@@ -171,7 +179,7 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
   - `{{htmlelement('body')}}`
 
-    User visible page content in small chunks ( `{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
+    User visible page content in small chunks (`{{htmlelement('header')}}`/ `{{htmlelement('main')}}/` `{{htmlelement('table')}}`) that can be displayed without waiting for the full page to download.
 
     - `{{htmlelement('script')}}`
 
@@ -182,6 +190,5 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## See also
 
 - Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
-- The excellent and very complete [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
-- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed/pagespeed/)
-- [Paint Flashing Tool](/en-US/docs/Tools/Paint_Flashing_Tool)
+- The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

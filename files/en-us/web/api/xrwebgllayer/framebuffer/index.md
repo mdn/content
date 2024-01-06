@@ -1,40 +1,26 @@
 ---
-title: XRWebGLLayer.framebuffer
+title: "XRWebGLLayer: framebuffer property"
+short-title: framebuffer
 slug: Web/API/XRWebGLLayer/framebuffer
-tags:
-  - API
-  - AR
-  - Buffer
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebuffer
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebuffer`** is an opaque {{domxref("WebGLFramebuffer")}}
-which is used to buffer the rendered image if the [XR
-compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is being used. Otherwise, this property's value is
+which is used to buffer the rendered image if the [XR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is being used. Otherwise, this property's value is
 `null`. The opaque framebuffer is functionally nearly the same as a
 standard WebGL framebuffer, except for the differences covered in the section
-{{anch("How opaque framebuffers are special")}} below.
+[How opaque framebuffers are special](#how_opaque_framebuffers_are_special) below.
 
 ## Value
 
 A {{domxref("WebGLFramebuffer")}} object representing the framebuffer into which the 3D
-scene is being rendered, or `null` if the [XR
-compositor](en-US/docs/Web/API/WebXR_Device_API/Fundamentals#The_WebXR_compositor) is disabled for the session.
+scene is being rendered, or `null` if the [XR compositor](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals#the_webxr_compositor) is disabled for the session.
 
 ## Usage notes
 
@@ -64,17 +50,14 @@ framebuffer:
     "checkFramebufferStatus()")}} on the WebGL context from outside the animation frame
   callback causes the WebGL `FRAMEBUFFER_UNSUPPORTED` error (0x8CDD) to be
   reported.
-- Opaque framebuffers initialized with the {{domxref("WebXRLayerInit.depth",
-    "depth")}} property set to `false` will not have a depth buffer and will
+- Opaque framebuffers initialized with the `depth` property set to `false` will not have a depth buffer and will
   rely on the coordinates alone to determine distance.
-- Opaque framebuffers initialized without specifying a
-  {{domxref("WebXRLayerInit.stencil", "stencil")}} will not have a stencil buffer.
-- Opaque framebuffers will not have an alpha channel available unless the
-  {{domxref("WebGLLayerInit.alpha", "alpha")}} property is `true` when
+- Opaque framebuffers initialized without specifying a `stencil`")}}` will not have a stencil buffer.
+- Opaque framebuffers will not have an alpha channel available unless the `alpha` property is `true` when
   creating the layer.
 - The XR compositor assumes that opaque framebuffers use colors with premultiplied
-  allpha, regardless of whether or not the WebGL context's
-  {{domxref("WebGLContextAttributes.premultipliedAlpha", "premultipliedAlpha")}} context
+  alpha, regardless of whether or not the WebGL context's
+  `premultipliedAlpha`")}}` context
   attribute is set.
 
 > **Note:** The `depth` and `stencil` properties are
@@ -113,5 +96,3 @@ gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}
-- {{domxref("WebGLContextAttributes")}}

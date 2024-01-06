@@ -1,37 +1,30 @@
 ---
-title: Element.nextElementSibling
+title: "Element: nextElementSibling property"
+short-title: nextElementSibling
 slug: Web/API/Element/nextElementSibling
-tags:
-  - API
-  - DOM
-  - Element
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.Element.nextElementSibling
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.nextElementSibling`** read-only
 property returns the element immediately following the specified one in its parent's
 children list, or `null` if the specified element is the last one in the list.
 
-## Syntax
+## Value
 
-```js
-// Getter
-element = el.nextElementSibling;
+A {{domxref("Element")}} object, or `null`.
 
-// No setter; read-only property
-```
-
-## Example
+## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>
 <div id="div-02">Here is div-02</div>
 
-<script type="text/javascript">
-  let el = document.getElementById('div-01').nextElementSibling;
-  console.log('Siblings of div-01:');
+<script>
+  let el = document.getElementById("div-01").nextElementSibling;
+  console.log("Siblings of div-01:");
   while (el) {
     console.log(el.nodeName);
     el = el.nextElementSibling;
@@ -41,9 +34,11 @@ element = el.nextElementSibling;
 
 This example outputs the following into the console when it loads:
 
-    Siblings of div-01:
-    DIV
-    SCRIPT
+```plain
+Siblings of div-01:
+DIV
+SCRIPT
+```
 
 ## Specifications
 

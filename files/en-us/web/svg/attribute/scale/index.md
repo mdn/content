@@ -1,24 +1,24 @@
 ---
 title: scale
 slug: Web/SVG/Attribute/scale
-tags:
-  - Filters
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feDisplacementMap.scale
 ---
+
 {{SVGRef}}
 
 The **`scale`** attribute defines the displacement scale factor to be used on a {{SVGElement("feDisplacementMap")}} filter primitive. The amount is expressed in the coordinate system established by the {{SVGAttr("primitiveUnits")}} attribute on the {{SVGElement("filter")}} element.
 
 You can use this attribute with the following SVG elements:
 
-*   {{SVGElement("feDisplacementMap")}}
+- {{SVGElement("feDisplacementMap")}}
 
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -26,16 +26,25 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
-    <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="5" />
   </filter>
   <filter id="displacementFilter2" x="-20%" y="-20%" width="140%" height="140%">
-    <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" />
   </filter>
 
   <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter);""/>
-  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2); transform: translateX(240px);""/>
+  <circle cx="100" cy="100" r="80" style="filter: url(#displacementFilter2);
+  transform: translateX(240px);""/>
 </svg>
 ```
 
@@ -60,38 +69,15 @@ html, body, svg {
   </tbody>
 </table>
 
-*   `<number>`
-    *   : This value defines the scale factor for the displacement.
+- `<number>`
 
-        When the value of this attribute is `0`, this operation has no effect on the source image.
+  - : This value defines the scale factor for the displacement.
+
+    When the value of this attribute is `0`, this operation has no effect on the source image.
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("Filters 1.0", "#element-attrdef-fedisplacementmap-scale", "scale")}}
-      </td>
-      <td>{{Spec2("Filters 1.0")}}</td>
-      <td>No change</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "filters.html#feDisplacementMapScaleAttribute", "scale")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 

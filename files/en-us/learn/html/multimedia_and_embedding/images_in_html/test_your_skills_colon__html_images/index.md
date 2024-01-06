@@ -1,25 +1,20 @@
 ---
-title: 'Test your skills: HTML images'
-slug: >-
-  Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
-tags:
-  - Beginner
-  - HTML
-  - Images
-  - Learn
-  - test your skills
+title: "Test your skills: HTML images"
+slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
+page-type: learn-module-assessment
 ---
+
 {{learnsidebar}}
 
-The aim of this skill test is to assess whether you've understood our [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) article.
+The aim of this skill test is to assess whether you understand [images and how to embed them in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
-> If you get stuck, then ask us for help — see the {{anch("Assessment or further help")}} section at the bottom of this page.
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## HTML images 1
+## Task 1
 
-In this task we want you to embed a simple image of some Blueberries into the page. You need to:
+In this task, we want you to embed a simple image of some Blueberries into the page. You need to:
 
 - Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is in a folder inside the current folder called `images`.
 - Add some alternative text to an appropriate attribute to describe the image, for people that cannot see it.
@@ -31,42 +26,28 @@ Try updating the live code below to recreate the finished example:
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/images/images1-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images1-download.html) to work in your own editor or in an online editor.
 
-## HTML images 2
+## Task 2
 
-In this task you already have a full-featured image, but we'd like you to add a tooltip that appears when the image is moused over. You should put some appropriate information into the tooltip.
-
-Try updating the live code below to recreate the finished example:
-
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 700)}}
-
-> **Callout:**
->
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/images/images2-download.html) to work in your own editor or in an online editor.
-
-## HTML images 3
-
-In this final task you are provided with both a full-featured image and some caption text. What you need to do here is add elements that will associate the image with the caption.
+In this task, you already have a full-featured image, but we'd like you to add a tooltip that appears when the image is moused over. You should put some appropriate information into the tooltip.
 
 Try updating the live code below to recreate the finished example:
 
-{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 700)}}
+{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images2.html", '100%', 1000)}}
 
 > **Callout:**
 >
-> [Download the starting point for this task](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/images/images3-download.html) to work in your own editor or in an online editor.
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images2-download.html) to work in your own editor or in an online editor.
 
-## Assessment or further help
+## Task 3
 
-You can practice these examples in the Interactive Editors above.
+In this task, you are provided with both a full-featured image and some caption text. What you need to do here is add elements that will associate the image with the caption.
 
-If you would like your work assessed, or are stuck and want to ask for help:
+Try updating the live code below to recreate the finished example:
 
-1.  Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/). You can write the code yourself, or use the starting point files linked to in the above sections.
-2.  Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Your post should include:
+{{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/tasks/images/images3.html", '100%', 1000)}}
 
-    - A descriptive title such as "Assessment wanted for HTML image basics 1 skill test".
-    - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-    - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-    - A link to the actual task or assessment page, so we can find the question you want help with.
+> **Callout:**
+>
+> [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images3-download.html) to work in your own editor or in an online editor.

@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.save()
+title: "CanvasRenderingContext2D: save() method"
+short-title: save()
 slug: Web/API/CanvasRenderingContext2D/save
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.save
 ---
+
 {{APIRef}}
 
 The
@@ -46,17 +43,25 @@ The drawing state that gets saved onto a stack consists of:
 
 ## Syntax
 
-```js
-void ctx.save();
+```js-nolint
+save()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ### Saving the drawing state
 
-This example uses the `save()` method to save the default state and
+This example uses the `save()` method to save the current state and
 `restore()` to restore it later, so that you are able to draw a rect with the
-default state later.
+current state later.
 
 #### HTML
 
@@ -67,16 +72,16 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Save the default state
+// Save the current state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
-// Restore the default state
+// Restore to the state saved by the most recent call to save()
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);

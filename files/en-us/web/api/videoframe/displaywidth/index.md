@@ -1,19 +1,16 @@
 ---
-title: VideoFrame.displayWidth
+title: "VideoFrame: displayWidth property"
+short-title: displayWidth
 slug: Web/API/VideoFrame/displayWidth
-tags:
-  - API
-  - Property
-  - Reference
-  - displayWidth
-  - VideoFrame
+page-type: web-api-instance-property
 browser-compat: api.VideoFrame.displayWidth
 ---
-{{DefaultAPISidebar("Web Codecs API")}}
+
+{{APIRef("Web Codecs API")}}
 
 The **`displayWidth`** property of the {{domxref("VideoFrame")}} interface returns the width of the `VideoFrame` after applying aspect ratio adjustments.
 
-### Value
+## Value
 
 An integer.
 
@@ -32,5 +29,3 @@ console.log(VideoFrame.displayWidth);
 ## Browser compatibility
 
 {{Compat}}
-
-

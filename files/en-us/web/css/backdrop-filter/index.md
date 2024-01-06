@@ -1,22 +1,17 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - CSS Property
-  - Graphics
-  - Layout
-  - NeedsContent
-  - Reference
-  - SVG
-  - SVG Filter
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.backdrop-filter
 ---
+
 {{CSSRef}}
 
-The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect you must make the element or its background at least partially transparent.
+The **`backdrop-filter`** [CSS](/en-US/docs/Web/CSS) property lets you apply graphical effects such as blurring or color shifting to the area behind an element. Because it applies to everything _behind_ the element, to see the effect the element or its background needs to be transparent or partially transparent.
+
+{{EmbedInteractiveExample("pages/css/backdrop-filter.html")}}
+
+## Syntax
 
 ```css
 /* Keyword value */
@@ -44,17 +39,16 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: revert;
+backdrop-filter: revert-layer;
 backdrop-filter: unset;
 ```
-
-## Syntax
 
 ### Values
 
 - `none`
   - : No filter is applied to the backdrop.
 - `<filter-function-list>`
-  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Element/filter) that will be applied to the backdrop.
+  - : A space-separated list of {{cssxref("&lt;filter-function&gt;")}}s or an [SVG filter](/en-US/docs/Web/SVG/Element/filter) that will be applied to the backdrop. CSS `<filter-function>`s include {{CSSxRef("filter-function/blur", "blur()")}}, {{CSSxRef("filter-function/brightness", "brightness()")}}, {{CSSxRef("filter-function/contrast", "contrast()")}}, {{CSSxRef("filter-function/drop-shadow", "drop-shadow()")}}, {{CSSxRef("filter-function/grayscale", "grayscale()")}}, {{CSSxRef("filter-function/hue-rotate", "hue-rotate()")}}, {{CSSxRef("filter-function/invert", "invert()")}}, {{CSSxRef("filter-function/opacity", "opacity()")}}, {{CSSxRef("filter-function/saturate", "saturate()")}}, and {{CSSxRef("filter-function/sepia", "sepia()")}}.
 
 ## Formal definition
 
@@ -70,37 +64,37 @@ backdrop-filter: unset;
 
 ```css
 .box {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  font-family: sans-serif;
-  text-align: center;
-  line-height: 1;
- -webkit-backdrop-filter: blur(10px);
+  background-color: rgb(255 255 255 / 30%);
   backdrop-filter: blur(10px);
-  max-width: 50%;
-  max-height: 50%;
-  padding: 20px 40px;
 }
 
+body {
+  background-image: url("anemones.jpg");
+}
+```
+
+```css hidden
 html,
 body {
   height: 100%;
   width: 100%;
 }
 
-body {
-  background-image: url(https://picsum.photos/id/1080/6858/4574), linear-gradient(rgb(219, 166, 166), rgb(0, 0, 172));
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .container {
+  background-size: cover;
   align-items: center;
   display: flex;
   justify-content: center;
   height: 100%;
   width: 100%;
+}
+.box {
+  border-radius: 5px;
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 50%;
+  max-height: 50%;
+  padding: 20px 40px;
 }
 ```
 
@@ -129,3 +123,7 @@ body {
 ## See also
 
 - {{cssxref("filter")}}
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
+- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects)
+- [CSS compositing and blending](/en-US/docs/Web/CSS/CSS_compositing_and_blending)

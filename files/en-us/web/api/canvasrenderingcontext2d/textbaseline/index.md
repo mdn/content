@@ -1,14 +1,11 @@
 ---
-title: CanvasRenderingContext2D.textBaseline
+title: "CanvasRenderingContext2D: textBaseline property"
+short-title: textBaseline
 slug: Web/API/CanvasRenderingContext2D/textBaseline
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.textBaseline
 ---
+
 {{APIRef}}
 
 The
@@ -16,13 +13,7 @@ The
 property of the Canvas 2D API specifies the current text baseline used when drawing
 text.
 
-## Syntax
-
-```js
-ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
-```
-
-### Options
+## Value
 
 Possible values:
 
@@ -60,27 +51,81 @@ This example demonstrates the various `textBaseline` property values.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "36px serif";
+ctx.strokeStyle = "red";
 
-baselines.forEach(function (baseline, index) {
+baselines.forEach((baseline, index) => {
   ctx.textBaseline = baseline;
   const y = 75 + index * 75;
   ctx.beginPath();
   ctx.moveTo(0, y + 0.5);
   ctx.lineTo(550, y + 0.5);
   ctx.stroke();
-  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y);
 });
 ```
 
 #### Result
 
 {{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}
+
+### Comparison of property values on the same line
+
+As with the previous example, this example demonstrates the various `textBaseline` property values, but in this case with all of them lined up horizontally along the same line — to make it easier to see how they differ from each other.
+
+#### HTML
+
+```html
+<canvas id="canvas" width="724" height="160"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+const baselines = [
+  "top",
+  "hanging",
+  "middle",
+  "alphabetic",
+  "ideographic",
+  "bottom",
+];
+ctx.font = "20px serif";
+ctx.strokeStyle = "red";
+
+ctx.beginPath();
+ctx.moveTo(0, 100);
+ctx.lineTo(840, 100);
+ctx.moveTo(0, 55);
+ctx.stroke();
+
+baselines.forEach((baseline, index) => {
+  ctx.save();
+  ctx.textBaseline = baseline;
+  let x = index * 120 + 10;
+  ctx.fillText("Abcdefghijk", x, 100);
+  ctx.restore();
+  ctx.fillText(baseline, x + 5, 50);
+});
+```
+
+#### Result
+
+{{ EmbedLiveSample('Comparison of property values on the same line', 900, 200) }}
 
 ## Specifications
 

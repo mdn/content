@@ -1,34 +1,35 @@
 ---
-title: Element.replaceChildren()
+title: "Element: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Element/replaceChildren
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Element
-  - Reference
-  - replaceChildren
+page-type: web-api-instance-method
 browser-compat: api.Element.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.replaceChildren()`** method replaces the
 existing children of a {{domxref("Node")}} with a specified new set of children. These
-can be {{domxref("DOMString")}} or {{domxref("Node")}} objects.
+can be string or {{domxref("Node")}} objects.
 
 ## Syntax
 
-```js
-replaceChildren(...nodesOrDOMStrings)
+```js-nolint
+replaceChildren(param1)
+replaceChildren(param1, param2)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
-- `nodesOrDOMStrings`
-  - : A set of {{domxref("Node")}} or {{domxref("DOMString")}} objects to replace the
+- `param1`, …, `paramN`
+  - : A set of {{domxref("Node")}} or string objects to replace the
     `Element`'s existing children with. If no replacement objects are
     specified, then the `Element` is emptied of all child nodes.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -74,7 +75,7 @@ look something like this:
       <option>Falafel sandwiches</option>
       <option>Ice cream</option>
       <option>Jelly</option>
-      <option>Carrot sticks and houmous</option>
+      <option>Carrot sticks and hummus</option>
       <option>Margherita pizza</option>
       <option>Pepperoni pizza</option>
       <option>Vegan veggie pizza</option>
@@ -89,9 +90,7 @@ look something like this:
   <div>
     <label for="yes">Yes please!</label>
 
-    <select id="yes" multiple size="10">
-
-    </select>
+    <select id="yes" multiple size="10"></select>
   </div>
 </main>
 ```
@@ -108,7 +107,8 @@ div {
   margin-right: 20px;
 }
 
-label, button {
+label,
+button {
   display: block;
 }
 
@@ -134,20 +134,23 @@ the list you are transferring to in another constant. It then calls
 operator to pass in all the options contained in both constants.
 
 ```js
-const noSelect = document.getElementById('no');
-const yesSelect = document.getElementById('yes');
-const noBtn = document.getElementById('to-no');
-const yesBtn = document.getElementById('to-yes');
+const noSelect = document.getElementById("no");
+const yesSelect = document.getElementById("yes");
+const noBtn = document.getElementById("to-no");
+const yesBtn = document.getElementById("to-yes");
 
-yesBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#no option:checked');
-  const existingYesOptions = document.querySelectorAll('#yes option');
+yesBtn.addEventListener("click", () => {
+  const selectedTransferOptions =
+    document.querySelectorAll("#no option:checked");
+  const existingYesOptions = document.querySelectorAll("#yes option");
   yesSelect.replaceChildren(...selectedTransferOptions, ...existingYesOptions);
 });
 
-noBtn.addEventListener('click', () => {
-  const selectedTransferOptions = document.querySelectorAll('#yes option:checked');
-  const existingNoOptions = document.querySelectorAll('#no option');
+noBtn.addEventListener("click", () => {
+  const selectedTransferOptions = document.querySelectorAll(
+    "#yes option:checked",
+  );
+  const existingNoOptions = document.querySelectorAll("#no option");
   noSelect.replaceChildren(...selectedTransferOptions, ...existingNoOptions);
 });
 ```

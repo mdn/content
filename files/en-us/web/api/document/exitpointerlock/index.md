@@ -1,27 +1,32 @@
 ---
-title: Document.exitPointerLock()
+title: "Document: exitPointerLock() method"
+short-title: exitPointerLock()
 slug: Web/API/Document/exitPointerLock
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - mouse lock
+page-type: web-api-instance-method
 browser-compat: api.Document.exitPointerLock
 ---
-{{APIRef("DOM")}} {{SeeCompatTable}}
 
-The **`exitPointerLock()`** method asynchronously releases a
-pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.
+{{APIRef("Pointer Lock API")}}
 
-To track the success or failure of the request, it is necessary to listen for the
-{{event("pointerlockchange")}} and {{event("pointerlockerror")}} events.
+The **`exitPointerLock()`** method of the {{domxref("Document")}} interface asynchronously releases a pointer lock previously requested through {{domxref("Element.requestPointerLock")}}.
+
+> **Note:** While the **`exitPointerLock()`** method is called on the document, the **`requestPointerLock()`** method is called on an element.
+
+To track the success or failure of the request, it is necessary to listen for the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events.
 
 ## Syntax
 
-```js
-document.exitPointerLock();
+```js-nolint
+exitPointerLock()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

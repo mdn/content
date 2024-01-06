@@ -1,19 +1,18 @@
 ---
 title: <xsl:include>
 slug: Web/XSLT/Element/include
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - include
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:include>` element merges the contents of one stylesheet with another. Unlike the case of `<xsl:import>`, the contents of an included stylesheet have exactly the same precedence as the contents of the including stylesheet.
 
 ### Syntax
 
-    <xsl:include href=URI />
+```xml
+<xsl:include href=URI />
+```
 
 ### Required Attributes
 

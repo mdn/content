@@ -1,13 +1,13 @@
 ---
 title: categories
 slug: Web/Manifest/categories
-tags:
-  - Manifest
-  - Web
-  - categories
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.categories
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
@@ -15,14 +15,10 @@ browser-compat: html.manifest.categories
       <th scope="row">Type</th>
       <td><code>Array</code> of <code>String</code>s</td>
     </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
-The _`categories`_ member is an array of strings defining the names of categories that the application supposedly belongs to. There is no standard list of possible values, but the W3C maintains [a list of known categories](https://github.com/w3c/manifest/wiki/Categories).
+The `categories` member is an array of strings defining the names of categories that the application supposedly belongs to. There is no standard list of possible values, but the W3C maintains [a list of known categories](https://github.com/w3c/manifest/wiki/Categories).
 
 > **Note:** `categories` are used only as hints for catalogs or stores listing web applications. Like search engines and meta keywords, catalogs and stores are free to ignore them.
 

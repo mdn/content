@@ -1,24 +1,15 @@
 ---
-title: MediaTrackConstraints.groupId
+title: "MediaTrackConstraints: groupId property"
+short-title: groupId
 slug: Web/API/MediaTrackConstraints/groupId
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackConstraints
-  - Property
-  - Reference
-  - WebRTC
-  - getusermedia
-  - groupId
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackConstraints.groupId
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
-**`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString)
+**`groupId`** property is a [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring)
 describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.
 
@@ -27,17 +18,9 @@ the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned b
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
-## Syntax
+## Value
 
-```js
-var constraintsObject = { groupId: constraint };
-
-constraintsObject.groupId = constraint;
-```
-
-### Value
-
-An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#ConstrainDOMString) specifying one or more acceptable,
+An object based on [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) specifying one or more acceptable,
 ideal, and/or exact (mandatory) group IDs which are acceptable as the source of media
 content.
 
@@ -60,10 +43,9 @@ Because of this, there's no use for the group ID when calling
 value, and you can't use it to ensure the same group is used across multiple browsing
 sessions when calling `getUserMedia()`.
 
-## Example
+## Examples
 
-See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Example:
-  Constraint exerciser")}} for an example.
+See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#example_constraint_exerciser) example.
 
 ## Specifications
 
@@ -75,9 +57,8 @@ See {{SectionOnPage("/en-US/docs/Web/API/Media_Streams_API/Constraints", "Exampl
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

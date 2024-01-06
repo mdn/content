@@ -1,15 +1,11 @@
 ---
-title: RTCPeerConnection.localDescription
+title: "RTCPeerConnection: localDescription property"
+short-title: localDescription
 slug: Web/API/RTCPeerConnection/localDescription
-tags:
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - WebRTC
-  - localDescription
+page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.localDescription
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only property **`RTCPeerConnection.localDescription`** returns an {{domxref("RTCSessionDescription")}} describing the session for the local end of the connection.
@@ -17,28 +13,25 @@ If it has not yet been set, this is `null`.
 
 ## Syntax
 
-```js
- var sessionDescription = peerConnection.localDescription;
+```js-nolint
+const sessionDescription = peerConnection.localDescription
 ```
 
 On a more fundamental level, the returned value is the value of {{domxref("RTCPeerConnection.pendingLocalDescription")}} if that property isn't `null`;
 otherwise, the value of {{domxref("RTCPeerConnection.currentLocalDescription")}} is returned.
-See {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}} for details on this algorithm and why it's used.
+See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
 ## Example
 
 This example looks at the `localDescription` and displays an alert containing the {{domxref("RTCSessionDescription")}} object's `type` and `sdp` fields.
 
 ```js
-var pc = new RTCPeerConnection();
-…
-var sd = pc.localDescription;
+const pc = new RTCPeerConnection();
+// ...
+const sd = pc.localDescription;
 if (sd) {
-  alert("Local session: type='" +
-        sd.type + "'; sdp description='" +
-        sd.sdp + "'");
-}
-else {
+  alert(`Local session: type='${sd.type}'; sdp description='${sd.sdp}'`);
+} else {
   alert("No local session yet.");
 }
 ```

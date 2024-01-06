@@ -1,142 +1,77 @@
 ---
 title: FileList
 slug: Web/API/FileList
-tags:
-  - API
-  - File API
-  - Files
+page-type: web-api-interface
 browser-compat: api.FileList
 ---
-{{APIRef("File API")}}
 
-An object of this type is returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object for details on this usage.
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-> **Note:** Prior to {{Gecko("1.9.2")}}, the input element only supported a single file being selected at a time, meaning that the FileList would contain only one file. Starting with {{Gecko("1.9.2")}}, if the input element's multiple attribute is true, the FileList may contain multiple files.
-
-## Using the file list
+The **`FileList`** interface represents an object of this type returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the {{domxref("DataTransfer")}} object for details on this usage.
 
 All `<input>` element nodes have a `files` attribute of type `FileList` on them which allows access to the items in this list. For example, if the HTML includes the following file input:
 
-    <input id="fileItem" type="file">
-
-The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
-
-```js
-var file = document.getElementById('fileItem').files[0];
+```html
+<input id="fileItem" type="file" />
 ```
 
-## Method overview
+The following line of code fetches the first file in the node's file list as a {{domxref("File")}} object:
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code>File <a href="#item()">item</a>(index);</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+```js
+const file = document.getElementById("fileItem").files[0];
+```
 
-## Properties
+> **Note:** This interface was an [attempt to create an unmodifiable list](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156) and only continues to be supported to not break code that's already using it. Modern APIs use types that wrap around ECMAScript array types instead, so you can treat them like ECMAScript arrays, and at the same time impose additional semantics on their usage (such as making their items read-only).
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header">Attribute</td>
-      <td class="header">Type</td>
-      <td class="header">Description</td>
-    </tr>
-    <tr>
-      <td><code>length</code></td>
-      <td><code>integer</code></td>
-      <td>A read-only value indicating the number of files in the list.</td>
-    </tr>
-  </tbody>
-</table>
+## Instance properties
 
-## Methods
+- {{DOMxRef("FileList.length", "length")}} {{ReadOnlyInline}}
+  - : A read-only value indicating the number of files in the list.
 
-### item()
+## Instance methods
 
-Returns a [`File`](/en-US/docs/Web/API/File) object representing the file at the specified index in the file list.
-
-     File item(
-       index
-     );
-
-#### Parameters
-
-- `index`
-  - : The zero-based index of the file to retrieve from the list.
-
-#### Return value
-
-The [`File`](/en-US/docs/Web/API/File) representing the requested file.
+- {{DOMxRef("FileList.item()", "item()")}}
+  - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Example
 
-This example iterates over all the files selected by the user using an `input` element:
+### Logging filenames
 
-```js
-// fileInput is an HTML input element: <input type="file" id="myfileinput" multiple>
-var fileInput = document.getElementById("myfileinput");
+In this example, we log the names of all the files selected by the user.
 
-// files is a FileList object (similar to NodeList)
-var files = fileInput.files;
-var file;
-
-// loop through files
-for (var i = 0; i < files.length; i++) {
-
-    // get item
-    file = files.item(i);
-    //or
-    file = files[i];
-
-    alert(file.name);
-}
-```
-
-Here is a complete example.
+#### HTML
 
 ```html
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
-<!--multiple is set to allow multiple files to be selected-->
-
-<input id="myfiles" multiple type="file">
-
-</body>
-
-<script>
-
-var pullfiles=function(){
-    // love the query selector
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // cache files.length
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
-        // localize file var in the loop
-        var file = files[i];
-        alert(file.name);
-        i++;
-    }
-}
-
-// set the input element onchange to call pullfiles
-document.querySelector("#myfiles").onchange=pullfiles;
-
-//a.t
-</script>
-
-</html>
+<input id="myfiles" multiple type="file" />
+<pre class="output">Selected files:</pre>
 ```
+
+#### CSS
+
+```css
+.output {
+  overflow: scroll;
+  margin: 1rem 0;
+  height: 200px;
+}
+```
+
+#### JavaScript
+
+```js
+const output = document.querySelector(".output");
+const fileInput = document.querySelector("#myfiles");
+
+fileInput.addEventListener("change", () => {
+  for (const file of fileInput.files) {
+    output.innerText += `\n${file.name}`;
+  }
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Logging filenames")}}
 
 ## Specifications
 
@@ -148,6 +83,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## See also
 
-- [Using files from web applications](/en-US/docs/Web/API/File/Using_files_from_web_applications "Using files from web applications")
-- [`File`](/en-US/docs/Web/API/File)
-- [`FileReader`](/en-US/docs/Web/API/FileReader)
+- [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

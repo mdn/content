@@ -1,13 +1,11 @@
 ---
-title: WEBGL_draw_buffers.drawBuffersWEBGL()
+title: "WEBGL_draw_buffers: drawBuffersWEBGL() method"
+short-title: drawBuffersWEBGL()
 slug: Web/API/WEBGL_draw_buffers/drawBuffersWEBGL
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
+page-type: webgl-extension-method
 browser-compat: api.WEBGL_draw_buffers.drawBuffersWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_draw_buffers.drawBuffersWEBGL()`** method is part
@@ -17,19 +15,18 @@ the draw buffers to which all fragment colors are written.
 This method is part of the {{domxref("WEBGL_draw_buffers")}} extension.
 
 > **Note:** When using {{domxref("WebGL2RenderingContext", "WebGL2")}},
-> this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()",
-    "gl.drawBuffers()")}} by default and the constants are named
-> `gl.COLOR_ATTACHMENT1` etc. without the "WEBGL" suffix.
+> this method is available as {{domxref("WebGL2RenderingContext.drawBuffers()", "gl.drawBuffers()")}}
+> by default and the constants are named `gl.COLOR_ATTACHMENT1` etc. without the "WEBGL" suffix.
 
 ## Syntax
 
-```js
-void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
+```js-nolint
+drawBuffersWEBGL(buffers)
 ```
 
 ### Parameters
 
-- buffers
+- `buffers`
 
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} constants defining drawing buffers.
     Possible values:
@@ -37,7 +34,7 @@ void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
     - `gl.NONE`: The fragment shader is not written to any color buffer.
     - `gl.BACK`: The fragment shader is written to the back color buffer.
     - `ext.COLOR_ATTACHMENT0_WEBGL` The fragment shader is written the
-      *n*th color attachment of the framebuffer.
+      n-th color attachment of the framebuffer.
     - `ext.COLOR_ATTACHMENT1_WEBGL`
     - `ext.COLOR_ATTACHMENT2_WEBGL`
     - `ext.COLOR_ATTACHMENT3_WEBGL`
@@ -56,7 +53,7 @@ void gl.getExtension('WEBGL_draw_buffers').drawBuffersWEBGL(buffers);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -67,7 +64,7 @@ ext.drawBuffersWEBGL([
   ext.COLOR_ATTACHMENT0_WEBGL, // gl_FragData[0]
   ext.COLOR_ATTACHMENT1_WEBGL, // gl_FragData[1]
   ext.COLOR_ATTACHMENT2_WEBGL, // gl_FragData[2]
-  ext.COLOR_ATTACHMENT3_WEBGL  // gl_FragData[3]
+  ext.COLOR_ATTACHMENT3_WEBGL, // gl_FragData[3]
 ]);
 ```
 
@@ -87,5 +84,4 @@ ext.drawBuffersWEBGL([
 - {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 - {{domxref("WebGLRenderingContext.getFramebufferAttachmentParameter()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}
-- [WebGL deferred
-  shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)
+- [WebGL deferred shading - Mozilla Hacks blog](https://hacks.mozilla.org/2014/01/webgl-deferred-shading/)

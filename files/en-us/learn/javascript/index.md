@@ -1,19 +1,12 @@
 ---
 title: JavaScript — Dynamic client-side scripting
 slug: Learn/JavaScript
-tags:
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - JavaScripting beginner
-  - Landing
-  - Module
-  - Topic
-  - l10n:priority
+page-type: learn-topic
 ---
+
 {{LearnSidebar}}
 
-{{Glossary("JavaScript")}} is a programming language that allows you to implement complex things on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
+{{Glossary("JavaScript")}} is a programming language that allows you to implement complex functionalities on web pages. Every time a web page does more than just sit there and display static information for you to look at—displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, or more—you can bet that JavaScript is probably involved.
 
 > **Callout:**
 >
@@ -29,7 +22,7 @@ tags:
 JavaScript is arguably more difficult to learn than related technologies such as [HTML](/en-US/docs/Learn/HTML) and [CSS](/en-US/docs/Learn/CSS). Before attempting to learn JavaScript, you are strongly advised to get familiar with at least these two technologies first, and perhaps others as well. Start by working through the following modules:
 
 - [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web)
-- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
+- [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML)
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps)
 
 Having previous experience with other programming languages might also help.
@@ -40,6 +33,16 @@ After getting familiar with the basics of JavaScript, you should be in a positio
 - [Web APIs](/en-US/docs/Web/API)
 
 ## Modules
+
+> **Callout:**
+>
+> **Our policy on modern JavaScript**
+>
+> JavaScript is an actively evolving language and has changed greatly over the years. In particular, the 6th edition of the language (sometimes known as ECMAScript 2015 or ES6), introduced in 2015, added many new features. At the same time, to maintain backwards compatibility with older websites, old features of the language have been retained, even when they are no longer considered good practice.
+>
+> We think that the features added to JavaScript in ECMAScript 2015 and subsequent versions enable developers to write more readable, reliable, and expressive code, and that it's important to learn about them.
+>
+> The features we teach in this course are stable and have been supported by all major browsers for several years.
 
 This topic contains the following modules, in a suggested order for working through them.
 
@@ -52,19 +55,17 @@ This topic contains the following modules, in a suggested order for working thro
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - : In this module we take a look at asynchronous JavaScript, why it is important, and how it can be used to effectively handle potential blocking operations such as fetching resources from a server.
 - [Client-side web APIs](/en-US/docs/Learn/JavaScript/Client-side_web_APIs)
-  - : When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
+  - : When writing client-side JavaScript for websites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other websites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
 
 ## Solving common JavaScript problems
 
-[Use JavaScript to solve common problems](/en-US/docs/Learn/JavaScript/Howto) provides links to sections of content explaining how to use JavaScript to solve very common problems when creating a webpage.
+[Solve common problems in your JavaScript code](/en-US/docs/Learn/JavaScript/Howto) provides a little advice on how to avoid common beginner JavaScript programming mistakes, along with many helpful links to topics that show how to solve common JavaScript programming problems.
 
 ## See also
 
 - [JavaScript on MDN](/en-US/docs/Web/JavaScript)
   - : The main entry point for core JavaScript documentation on MDN — this is where you'll find extensive reference docs on all aspects of the JavaScript language, and some advanced tutorials aimed at experienced JavaScripters.
 - [Learn JavaScript](https://learnjavascript.online/)
-  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
-- [JavaScript Fundamentals on EXLskills](https://exlskills.com/learn-en/courses/javascript-fundamentals-basics_javascript)
-  - : Learn JavaScript for free with the EXLskills open-source course that introduces all you need to get started building applications in JS.
+  - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.
 - [Coding math](https://www.youtube.com/user/codingmath)
-  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://twitter.com/bit101).
+  - : An excellent series of video tutorials to teach the math you need to understand to be an effective programmer, by [Keith Peters](https://www.bit-101.com/blog/about-me/).

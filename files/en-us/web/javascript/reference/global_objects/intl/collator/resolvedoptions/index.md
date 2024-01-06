@@ -1,32 +1,26 @@
 ---
 title: Intl.Collator.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
-tags:
-  - Collator
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
 ---
+
 {{JSRef}}
 
-The **`Intl.Collator.prototype.resolvedOptions()`** method
-returns a new object with properties reflecting the locale and collation options
-computed during initialization of this {{jsxref("Intl.Collator")}} object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the locale and collation options
+computed during initialization of this collator object.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
+```js-nolint
 resolvedOptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -46,11 +40,11 @@ The resulting object has the following properties:
   - : The values provided for these properties in the `options` argument or
     filled in as defaults.
 - `collation`
-  - : The value requested using the Unicode extension key "`co`", if it is
-    supported for `locale`, or "`default`".
+  - : The value requested using the Unicode extension key `"co"`, if it is
+    supported for `locale`, or `"default"`.
 - `numeric`, `caseFirst`
   - : The values requested for these properties in the `options` argument or
-    using the Unicode extension keys "`kn`" and "`kf`" or filled
+    using the Unicode extension keys `"kn"` and `"kf"` or filled
     in as defaults. If the implementation does not support these properties, they are
     omitted.
 
@@ -59,15 +53,15 @@ The resulting object has the following properties:
 ### Using the resolvedOptions method
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
-var usedOptions = de.resolvedOptions();
+const de = new Intl.Collator("de", { sensitivity: "base" });
+const usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;       // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Specifications

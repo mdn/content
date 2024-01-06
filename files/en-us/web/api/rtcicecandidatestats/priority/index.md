@@ -1,8 +1,11 @@
 ---
-title: RTCIceCandidateStats.priority
+title: "RTCIceCandidateStats: priority property"
+short-title: priority
 slug: Web/API/RTCIceCandidateStats/priority
-browser-compat: api.RTCIceCandidateStats.priority
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_local-candidate.priority
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's
@@ -16,8 +19,8 @@ the more desirable the candidate is.
 
 ## Syntax
 
-```js
-priority = rtcIceCandidateStats.priority;
+```js-nolint
+priority = rtcIceCandidateStats.priority
 ```
 
 ### Value
@@ -64,7 +67,7 @@ the IP address):
 type }\quad +\quad { 2 }^{ 8 }\times { p }_{ local }\quad +\quad (256\quad
 -\quad componentID)</annotation></semantics></math>
 
-This is equivalent to mapping the priorities of teh candidate type, the local IP, and
+This is equivalent to mapping the priorities of the candidate type, the local IP, and
 the component ID into various bit ranges within the 32-bit `priority`
 value.
 
@@ -78,4 +81,4 @@ value.
 
 ## See also
 
-- {{RFC(5245, "4.1.2.1")}}: Recommended Formula section in the ICE specification
+- {{RFC(5245, "", "4.1.2.1")}}: Recommended Formula section in the ICE specification

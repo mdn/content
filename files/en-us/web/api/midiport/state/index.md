@@ -1,27 +1,18 @@
 ---
-title: MIDIPort.state
+title: "MIDIPort: state property"
+short-title: state
 slug: Web/API/MIDIPort/state
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - MIDIPort
+page-type: web-api-instance-property
 browser-compat: api.MIDIPort.state
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
 
 The **`state`** read-only property of the {{domxref("MIDIPort")}} interface returns the state of the port.
 
-## Syntax
+## Value
 
-```js
-let state = MIDIPort.state;
-```
-
-### Value
-
-A {{domxref("DOMString","string")}} containing the state of the port, one of:
+A string containing the state of the port, one of:
 
 - `"disconnected"`
   - : The device that this `MIDIPort` represents is disconnected from the system.
@@ -33,8 +24,8 @@ A {{domxref("DOMString","string")}} containing the state of the port, one of:
 The following example loops through all input ports and prints the state of each to the console.
 
 ```js
-for (let entry of midiAccess.inputs) {
-  let input = entry[1];
+for (const entry of midiAccess.inputs) {
+  const input = entry[1];
   console.log(input.state);
 }
 ```

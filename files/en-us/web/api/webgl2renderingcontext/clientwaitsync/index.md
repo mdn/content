@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.clientWaitSync()
+title: "WebGL2RenderingContext: clientWaitSync() method"
+short-title: clientWaitSync()
 slug: Web/API/WebGL2RenderingContext/clientWaitSync
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.clientWaitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.clientWaitSync()`** method of the
@@ -17,18 +14,18 @@ The **`WebGL2RenderingContext.clientWaitSync()`** method of the
 
 ## Syntax
 
-```js
-GLenum gl.clientWaitSync(sync, flags, timeout);
+```js-nolint
+clientWaitSync(sync, flags, timeout)
 ```
 
 ### Parameters
 
 - `sync`
   - : A {{domxref("WebGLSync")}} object on which to wait on.
-- flags
+- `flags`
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
     the flushing behavior. May be `gl.SYNC_FLUSH_COMMANDS_BIT`.
-- timeout
+- `timeout`
   - : A {{domxref("WebGL_API/Types", "GLint64")}} specifying a timeout (in nanoseconds) for which to wait for
     the sync object to become signaled. Must not be larger than
     `gl.MAX_CLIENT_WAIT_TIMEOUT_WEBGL`.
@@ -48,8 +45,8 @@ A {{domxref("WebGL_API/Types", "GLenum")}} indicating the sync object's status.
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
-var status = gl.clientWaitSync(sync, 0, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const status = gl.clientWaitSync(sync, 0, 0);
 ```
 
 ## Specifications

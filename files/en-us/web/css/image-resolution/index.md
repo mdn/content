@@ -1,15 +1,12 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Experimental
-  - Reference
-  - image-resolution
-browser-compat: css.properties.image-resolution
+page-type: css-property
+status:
+  - experimental
+spec-urls: https://drafts.csswg.org/css-images-4/#the-image-resolution
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 The **`image-resolution`** [CSS](/en-US/docs/Web/CSS) property specifies the intrinsic resolution of all raster images used in or on the element. It affects content images such as replaced elements and generated content, and decorative images such as `background-image` images.
@@ -28,6 +25,7 @@ image-resolution: 300dpi snap;
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
+image-resolution: revert-layer;
 image-resolution: unset;
 ```
 
@@ -80,9 +78,9 @@ Uses the resolution from the image. If the image does not have a resolution, use
 
 ## Browser compatibility
 
-{{Compat}}
+No browser currently supports this property.
 
 ## See also
 
 - Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}.
-- [Chromium bug: 1086473](https://bugs.chromium.org/p/chromium/issues/detail?id=1086473).
+- [Chromium bug: 1086473](https://crbug.com/1086473).

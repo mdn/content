@@ -1,48 +1,55 @@
 ---
-title: File()
+title: "File: File() constructor"
+short-title: File()
 slug: Web/API/File/File
-tags:
-  - API
-  - Constructor
-  - File API
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.File.File
 ---
-{{APIRef("File")}}
+
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
 The **`File()`** constructor creates a new {{domxref("File")}}
 object instance.
 
 ## Syntax
 
-```js
-new File(bits, name[, options]);
+```js-nolint
+new File(fileBits, fileName)
+new File(fileBits, fileName, options)
 ```
 
 ### Parameters
 
-- `bits`
-  - : An {{jsxref("Array")}} of {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}},
-    {{domxref("Blob")}}, {{domxref("USVString")}} objects, or a mix of any of such
-    objects, that will be put inside the {{domxref("File")}}. `USVString`
-    objects are encoded as UTF-8.
-- `name`
-  - : A {{domxref("USVString")}} representing the file name or the path to the file.
+- `fileBits`
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)
+    object such as an {{jsxref("Array")}}, having {{jsxref("ArrayBuffer")}}s,
+    {{jsxref("TypedArray")}}s, {{jsxref("DataView")}}s, {{domxref("Blob")}}s, strings,
+    or a mix of any of such elements, that will be put inside the {{domxref("File")}}.
+    Note that strings here are encoded as UTF-8, unlike the usual JavaScript UTF-16 strings.
+- `fileName`
+  - : A string representing the file name or the path to the file.
 - `options` {{optional_inline}}
 
   - : An options object containing optional attributes for the file. Available options are
     as follows:
 
-    - `type`: A {{domxref("DOMString")}} representing the MIME type of the
-      content that will be put into the file. Defaults to a value of `"".`
-    - `lastModified`: A number representing the number of milliseconds
-      between the Unix time epoch and when the file was last modified. Defaults to a
-      value of {{jsxref("Date.now()")}}.
+    - `type` {{optional_inline}}
+      - : A string representing the MIME type of the
+        content that will be put into the file. Defaults to a value of `""`.
+    - `endings` {{optional_inline}}
+      - : How to interpret newline characters (`\n`) within the contents, if
+        the data is text. The default value, `transparent`, copies newline
+        characters into the blob without changing them. To convert newlines to the host
+        system's native convention, specify the value `native`.
+    - `lastModified` {{optional_inline}}
+      - : A number representing the number of milliseconds
+        between the Unix time epoch and when the file was last modified. Defaults to a
+        value of {{jsxref("Date.now()")}}.
 
-## Example
+## Examples
 
 ```js
-var file = new File(["foo"], "foo.txt", {
+const file = new File(["foo"], "foo.txt", {
   type: "text/plain",
 });
 ```

@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.blendFuncSeparate()
+title: "WebGLRenderingContext: blendFuncSeparate() method"
+short-title: blendFuncSeparate()
 slug: Web/API/WebGLRenderingContext/blendFuncSeparate
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.blendFuncSeparate
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.blendFuncSeparate()`** method of
@@ -17,8 +14,8 @@ for blending pixel arithmetic for RGB and alpha components separately.
 
 ## Syntax
 
-```js
-void gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
+```js-nolint
+blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha)
 ```
 
 ### Parameters
@@ -40,7 +37,7 @@ void gl.blendFuncSeparate(srcRGB, dstRGB, srcAlpha, dstAlpha);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -197,7 +194,7 @@ To get the current blend function, query the `BLEND_SRC_RGB`,
 ```js
 gl.enable(gl.BLEND);
 gl.blendFuncSeparate(gl.SRC_COLOR, gl.DST_COLOR, gl.ONE, gl.ZERO);
-gl.getParameter(gl.BLEND_SRC_RGB) == gl.SRC_COLOR;
+gl.getParameter(gl.BLEND_SRC_RGB) === gl.SRC_COLOR;
 // true
 ```
 

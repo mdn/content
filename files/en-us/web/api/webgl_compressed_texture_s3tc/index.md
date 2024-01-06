@@ -1,13 +1,11 @@
 ---
-title: WEBGL_compressed_texture_s3tc
+title: WEBGL_compressed_texture_s3tc extension
+short-title: WEBGL_compressed_texture_s3tc
 slug: Web/API/WEBGL_compressed_texture_s3tc
-tags:
-  - API
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_s3tc
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_compressed_texture_s3tc`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and exposes four [S3TC compressed texture formats](https://en.wikipedia.org/wiki/S3_Texture_Compression).
@@ -34,16 +32,23 @@ The compressed texture formats are exposed by four constants and can be used in 
 ## Examples
 
 ```js
-var ext = (
-  gl.getExtension('WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('MOZ_WEBGL_compressed_texture_s3tc') ||
-  gl.getExtension('WEBKIT_WEBGL_compressed_texture_s3tc')
-);
+const ext =
+  gl.getExtension("WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("MOZ_WEBGL_compressed_texture_s3tc") ||
+  gl.getExtension("WEBKIT_WEBGL_compressed_texture_s3tc");
 
-var texture = gl.createTexture();
+const texture = gl.createTexture();
 gl.bindTexture(gl.TEXTURE_2D, texture);
 
-gl.compressedTexImage2D(gl.TEXTURE_2D, 0, ext.COMPRESSED_RGBA_S3TC_DXT5_EXT, 512, 512, 0, textureData);
+gl.compressedTexImage2D(
+  gl.TEXTURE_2D,
+  0,
+  ext.COMPRESSED_RGBA_S3TC_DXT5_EXT,
+  512,
+  512,
+  0,
+  textureData,
+);
 
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -59,7 +64,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
 ## See also
 
-- [S3 Texture Compression – OpenGL wiki](https://www.opengl.org/wiki/S3_Texture_Compression)
+- [S3 Texture Compression – OpenGL wiki](https://www.khronos.org/opengl/wiki/S3_Texture_Compression)
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.compressedTexImage2D()")}}
 - {{domxref("WebGLRenderingContext.compressedTexSubImage2D()")}}

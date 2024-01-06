@@ -1,16 +1,15 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - Reference
-  - media feature
-browser-compat: css.at-rules.media.shape
+page-type: css-media-feature
+status:
+  - experimental
+spec-urls: https://drafts.csswg.org/css-round-display/#shape-media-feature
 ---
-{{CSSRef}}
 
-The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
+{{CSSRef}}{{SeeCompatTable}}
+
+The `shape` [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the shape of the device to distinguish rectangular and round displays.
 
 ## Syntax
 
@@ -57,9 +56,12 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+  <link rel="stylesheet" href="default.css" />
+  <link
+    media="screen and (shape: rect)"
+    rel="stylesheet"
+    href="rectangle.css" />
+  <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 
@@ -69,9 +71,9 @@ This HTML will apply a special stylesheet for devices that have round screens.
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.
 
 ## See also
 
-- [Using Media Queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)

@@ -1,21 +1,22 @@
 ---
-title: SerialPort.getInfo()
+title: "SerialPort: getInfo() method"
+short-title: getInfo()
 slug: Web/API/SerialPort/getInfo
-tags:
-  - API
-  - Method
-  - Reference
-  - getInfo()
-  - SerialPort
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.SerialPort.getInfo
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
 
-The **`SerialPort.getInfo()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves with an object containing properties of the port.
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
+
+The **`getInfo()`** method of the {{domxref("SerialPort")}} interface returns an object whose properties are the vendor ID and product ID of the device.
 
 ## Syntax
 
-    var promise = SerialPort.getInfo();
+```js-nolint
+getInfo()
+```
 
 ### Parameters
 
@@ -28,7 +29,7 @@ An object containing the following values.
 - `usbVendorId`
   - : If the port is part of a USB device, an unsigned short integer that identifies a USB device vendor, otherwise `undefined`.
 - `usbProductId`
-  - : If the port is part of a USB device, an unsigned short integer that identiffies a USB device, otherwise `undefined`.
+  - : If the port is part of a USB device, an unsigned short integer that identifies a USB device, otherwise `undefined`.
 
 ## Specifications
 

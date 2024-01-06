@@ -1,19 +1,15 @@
 ---
-title: VRFrameData.timestamp
+title: "VRFrameData: timestamp property"
+short-title: timestamp
 slug: Web/API/VRFrameData/timestamp
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - VRFrameData
-  - Virtual Reality
-  - WebVR
-  - timeStamp
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFrameData.timestamp
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`timestamp`** read-only property of the {{domxref("VRFrameData")}} interface returns a constantly increasing timestamp value representing the time a frame update occurred.
 
@@ -23,28 +19,22 @@ Timestamps are useful for determining if position state data has been updated fr
 
 The timestamp starts at 0 the first time {{domxref("VRDisplay.getFrameData()")}} is invoked for a given {{domxref("VRDisplay")}}.
 
-## Syntax
-
-```js
-var myTimestamp = vrFrameDataInstance.timestamp;
-```
-
-### Value
+## Value
 
 A {{domxref("DOMHighResTimeStamp")}} object.
 
 ## Examples
 
 ```js
-var frameData = new VRFrameData();
-var vrDisplay;
+const frameData = new VRFrameData();
+let vrDisplay;
 
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   vrDisplay = displays[0];
-  console.log('Display found');
+  console.log("Display found");
   // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-  btn.addEventListener('click', function() {
-    vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+  btn.addEventListener("click", () => {
+    vrDisplay.requestPresent([{ source: canvas }]).then(() => {
       drawVRScene();
     });
   });
@@ -60,9 +50,9 @@ function drawVRScene() {
 
   // grab the current timestamp on each run of the rendering loop
   // and do something with it
-  framedata.timestamp
+  framedata.timestamp;
 
-    ...
+  // …
 
   // WebVR: Indicates that we are ready to present the rendered frame to the VR display
   vrDisplay.submitFrame();
@@ -73,7 +63,7 @@ function drawVRScene() {
 
 This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) that has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/). It is no longer on track to becoming a standard.
 
-Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/oculus-browser/browser-vr-xr/).
+Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals), it is recommended to rely on frameworks, like [A-Frame](https://aframe.io/), [Babylon.js](https://www.babylonjs.com/), or [Three.js](https://threejs.org/), or a [polyfill](https://github.com/immersive-web/webxr-polyfill), to develop WebXR applications that will work across all browsers [\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/).
 
 ## Browser compatibility
 
@@ -81,5 +71,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

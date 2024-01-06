@@ -1,29 +1,26 @@
 ---
-title: Navigator.buildID
+title: "Navigator: buildID property"
+short-title: buildID
 slug: Web/API/Navigator/buildID
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Navigator
-  - Property
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Navigator.buildID
 ---
-{{ ApiRef("HTML DOM") }}
+
+{{ApiRef("HTML DOM")}}{{Non-standard_Header}}
 
 Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 
-## Syntax
-
-    buildID = navigator.buildID;
-
-### Value
+## Value
 
 A string representing the build identifier of the application. The build ID is in the form `YYYYMMDDHHMMSS`.
 
-## Example
+## Examples
 
-    console.log(navigator.buildID);
+```js
+console.log(navigator.buildID);
+```
 
 ## Specifications
 

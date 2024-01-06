@@ -1,17 +1,16 @@
 ---
 title: Updating extensions for Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
-tags:
-  - Add-ons
-  - Extensions
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 This article provides information that will be useful to developers that wish to update their extensions to work properly under Firefox 2.
 
 ## Step 1: Update the install manifest
 
-The first step -- and, for most extensions, the only one that will be needed -- is to update the [install manifest](/en-US/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
+The first step — and, for most extensions, the only one that will be needed — is to update the [install manifest](/en-US/Install_Manifests) file, install.rdf, to indicate compatibility with Firefox 2.
 
 Find the line indicating the maximum compatible version of Firefox (which, for Firefox 1.5, might look like this):
 
@@ -41,4 +40,4 @@ Be sure to test your extension carefully on Firefox 2 before you release it to t
 
 Update your extension's entry on [http://addons.mozilla.org](https://addons.mozilla.org). This will ensure that users can find it.
 
-In addition, if your extension provides an [`updateURL`](/en-US/Install_Manifests#updateURL) in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.
+In addition, if your extension provides an [`updateURL`](/en-US/Install_Manifests#updateurl) in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.

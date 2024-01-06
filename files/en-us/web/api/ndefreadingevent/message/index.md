@@ -1,25 +1,18 @@
 ---
-title: NDEFReadingEvent.message
+title: "NDEFReadingEvent: message property"
+short-title: message
 slug: Web/API/NDEFReadingEvent/message
-tags:
-  - API
-  - Property
-  - Reference
-  - message
-  - NDEFReadingEvent
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NDEFReadingEvent.message
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+
+{{securecontext_header}}{{APIRef()}}{{SeeCompatTable}}
 
 The **`message`** property of the {{domxref("NDEFReadingEvent")}} interface returns an {{DOMxRef("NDEFMessage")}} object containing the received message.
 
-## Syntax
-
-```js
-let aMessage = NDEFReadingEvent.message;
-```
-
-### Value
+## Value
 
 An {{domxref("NDEFMessage")}} object.
 
@@ -30,21 +23,25 @@ This example shows how to create a convenience function that reads a single tag 
 ```js
 const ndefReader = new NDEFReader();
 
-  function read() {
-    return new Promise((resolve, reject) => {
-      const ctlr = new AbortController();
-      ctlr.signal.onabort = reject;
-      ndefReader.addEventListener("reading", event => {
+function read() {
+  return new Promise((resolve, reject) => {
+    const ctlr = new AbortController();
+    ctlr.signal.onabort = reject;
+    ndefReader.addEventListener(
+      "reading",
+      (event) => {
         ctlr.abort();
         resolve(event);
-      }, { once: true });
-      ndefReader.scan({ signal: ctlr.signal }).catch(err => reject(err));
-    });
-  }
-
-  read().then(({ serialNumber }) => {
-    console.log(serialNumber);
+      },
+      { once: true },
+    );
+    ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });
+}
+
+read().then(({ serialNumber }) => {
+  console.log(serialNumber);
+});
 ```
 
 ## Specifications

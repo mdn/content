@@ -1,32 +1,18 @@
 ---
-title: Navigator.serviceWorker
+title: "Navigator: serviceWorker property"
+short-title: serviceWorker
 slug: Web/API/Navigator/serviceWorker
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
+page-type: web-api-instance-property
 browser-compat: api.Navigator.serviceWorker
 ---
-{{APIRef("Service Workers API")}}
 
-The **`Navigator.serviceWorker`**
-read-only property returns the {{domxref("ServiceWorkerContainer")}} object for the [associated
-document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window), which provides access to registration, removal, upgrade, and
-communication with the {{domxref("ServiceWorker")}}.
+{{securecontext_header}}{{APIRef("Service Workers API")}}
+
+The **`serviceWorker`** read-only property of the {{domxref("Navigator")}} interface returns the {{domxref("ServiceWorkerContainer")}} object for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window), which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}}.
 
 The feature may not be available in private mode.
 
-## Syntax
-
-```js
-const workerContainerInstance = navigator.serviceWorker;
-```
-
-### Value
+## Value
 
 {{domxref("ServiceWorkerContainer")}}.
 
@@ -35,7 +21,7 @@ const workerContainerInstance = navigator.serviceWorker;
 This code checks if the browser supports service workers.
 
 ```js
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
   // Supported!
 }
 ```
@@ -50,6 +36,5 @@ if ('serviceWorker' in navigator) {
 
 ## See also
 
-- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- {{domxref("Service Worker API", "", "", "nocode")}}
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)

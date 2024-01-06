@@ -1,54 +1,57 @@
 ---
-title: MessageEvent()
+title: "MessageEvent: MessageEvent() constructor"
+short-title: MessageEvent()
 slug: Web/API/MessageEvent/MessageEvent
-tags:
-  - API
-  - Constructor
-  - DOM
-  - MessageEvent
-  - Reference
-  - messaging
+page-type: web-api-constructor
 browser-compat: api.MessageEvent.MessageEvent
 ---
-{{APIRef("HTML DOM")}}{{draft}}
 
-The **`MessageEvent()`** constructor creates a new
-{{domxref("MessageEvent")}} object instance.
+{{APIRef("HTML DOM")}}
+
+The **`MessageEvent()`** constructor creates a new {{domxref("MessageEvent")}} object.
 
 ## Syntax
 
-```js
-var messageEvent = new MessageEvent(type, init);
+```js-nolint
+new MessageEvent(type)
+new MessageEvent(type, options)
 ```
 
 ### Parameters
 
-- **`type`**
-  - : The type of `MessageEvent` that will be created. This can be one of XXX
-- **`init`** {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `message`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+    - `data` {{optional_inline}}
+      - : The data you want contained in the MessageEvent.
+        This can be of any data type, and will default to `null` if not specified.
+    - `origin` {{optional_inline}}
+      - : A string representing the origin of the message emitter.
+        This defaults to an empty string (`''`) if not specified.
+    - `lastEventId` {{optional_inline}}
+      - : A string representing a unique ID for the event.
+        This defaults to an empty string ("") if not specified.
+    - `source` {{optional_inline}}
+      - : A `MessageEventSource` (which can be a {{domxref("Window")}}, a {{domxref("MessagePort")}},
+        or a {{domxref("ServiceWorker")}} object) representing the message emitter.
+        This defaults to `null` if not set.
+    - `ports` {{optional_inline}}
+      - : An array of {{domxref("MessagePort")}} objects representing
+        the ports associated with the channel the message is being sent through where appropriate
+        (E.g. in channel messaging or when sending a message to a shared worker).
+        This defaults to an empty array (`[]`) if not specified.
 
-  - : A dictionary object that can contain the following properties:
+## Return value
 
-    - `data`: The data you want contained in the MessageEvent. This can be
-      of any data type, and will default to `null` if not specified.
-    - `origin`: A {{domxref("USVString")}} representing the origin of the
-      message emitter. This defaults to an empty string ("") if not specified.
-    - `lastEventId`: A {{domxref("DOMString")}} representing a unique ID
-      for the event. This defaults to an empty string ("") if not specified.
-    - `source`: An `MessageEventSource` (which can be a
-      {{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, or
-      {{domxref("ServiceWorker")}} object) representing the message emitter. This
-      defaults to `null` if not set.
-    - `ports`: An array of {{domxref("MessagePort")}} objects representing
-      the ports associated with the channel the message is being sent through (where
-      appropriate, e.g. in channel messaging or when sending a message to a shared
-      worker). This defaults to an empty array (`[]`) if not specified.
+A new {{domxref("MessageEvent")}} object.
 
-## Example
+## Examples
 
 ```js
-var myMessage = new MessageEvent('worker', {
-  data : 'hello'
+const myMessage = new MessageEvent("message", {
+  data: "hello",
 });
 ```
 
@@ -62,5 +65,4 @@ var myMessage = new MessageEvent('worker', {
 
 ## See also
 
-- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-  interfaces that needs to give more flexibility to authors.
+- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in interfaces that needs to give more flexibility to authors.

@@ -1,41 +1,43 @@
 ---
 title: PermissionStatus
 slug: Web/API/PermissionStatus
-tags:
-  - API
-  - Experimental
-  - Interface
-  - PermissionStatus
-  - Permissions
-  - Permissions API
-  - Reference
+page-type: web-api-interface
 browser-compat: api.PermissionStatus
 ---
-{{APIRef("Permissions API")}}{{SeeCompatTable}}
 
-The **`PermissionStatus`** interface of the [Permissions API](Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
+{{APIRef("Permissions API")}} {{AvailableInWorkers}}
 
-## Properties
+The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the state of an object and an event handler for monitoring changes to said state.
 
-- {{domxref("PermissionStatus.state")}} {{readonlyinline}}
+{{InheritanceDiagram}}
+
+## Instance properties
+
+- {{domxref("PermissionStatus.name")}} {{ReadOnlyInline}}
+  - : Returns the name of a requested permission, identical to the `name` passed to {{domxref("Permissions.query")}}.
+- {{domxref("PermissionStatus.state")}} {{ReadOnlyInline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`.
-- `PermissionStatus.status`{{readonlyinline}} {{deprecated_inline}}
+- `PermissionStatus.status` {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns the state of a requested permission; one of `'granted'`, `'denied'`, or `'prompt'`. Later versions of the specification replace this with {{domxref("PermissionStatus.state")}}.
 
-### Event Handler
+### Events
 
-- {{domxref("PermissionStatus.onchange")}}
-  - : An event called whenever `PermissionStatus.status` changes.
+- {{domxref("PermissionStatus.change_event", "change")}}
+  - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
 
 ## Example
 
 ```js
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus) {
-  console.log('geolocation permission status is ', permissionStatus.state);
-  permissionStatus.onchange = function() {
-    console.log('geolocation permission status has changed to ', this.state);
-  };
-});
+navigator.permissions
+  .query({ name: "geolocation" })
+  .then((permissionStatus) => {
+    console.log(`geolocation permission status is ${permissionStatus.state}`);
+    permissionStatus.onchange = () => {
+      console.log(
+        `geolocation permission status has changed to ${permissionStatus.state}`,
+      );
+    };
+  });
 ```
 
 ## Specifications

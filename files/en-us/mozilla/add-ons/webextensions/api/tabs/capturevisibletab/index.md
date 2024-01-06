@@ -1,28 +1,20 @@
 ---
 title: tabs.captureVisibleTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captureVisibleTab
-  - tabs
+page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.captureVisibleTab
 ---
+
 {{AddonSidebar()}}
 
-Creates a data URI encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).
+Creates a data URL encoding the image of an area of the currently active tab in the specified window. You must have the `<all_urls>` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) to use this method. (Alternately, Chrome allows use of this method with the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and a qualifying user gesture).
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntax
 
-```js
-var capturing = browser.tabs.captureVisibleTab(
+```js-nolint
+let capturing = browser.tabs.captureVisibleTab(
   windowId,               // optional integer
   options                 // optional extensionTypes.ImageDetails
 )
@@ -30,9 +22,9 @@ var capturing = browser.tabs.captureVisibleTab(
 
 ### Parameters
 
-- `windowId`{{optional_inline}}
+- `windowId` {{optional_inline}}
   - : `integer`. The target window. Defaults to the current window.
-- `options`{{optional_inline}}
+- `options` {{optional_inline}}
   - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
 
 ### Return value
@@ -52,8 +44,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-  var capturing = browser.tabs.captureVisibleTab();
+browser.browserAction.onClicked.addListener(() => {
+  let capturing = browser.tabs.captureVisibleTab();
   capturing.then(onCaptured, onError);
 });
 ```
@@ -64,11 +56,10 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -95,4 +86,4 @@ browser.browserAction.onClicked.addListener(function() {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

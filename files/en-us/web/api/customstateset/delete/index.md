@@ -1,30 +1,29 @@
 ---
-title: CustomStateSet.delete()
+title: "CustomStateSet: delete() method"
+short-title: delete()
 slug: Web/API/CustomStateSet/delete
-tags:
-  - API
-  - Method
-  - Reference
-  - delete
-  - CustomStateSet
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CustomStateSet.delete
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`delete()`** method of the {{domxref("CustomStateSet")}} interface deletes a single value from the `CustomStateSet`.
 
 ## Syntax
 
-```js
-CustomStateSet.delete(value)
+```js-nolint
+delete(value)
 ```
 
 ### Parameters
 
-: `value`
-  : - The value to remove from the `CustomStateSet`.
+- `value`
+  - : value to remove from the `CustomStateSet`.
 
-### Return Value
+### Return value
 
 Returns `true` if `value` was in the `CustomStateSet`; otherwise `false`.
 
@@ -35,4 +34,3 @@ Returns `true` if `value` was in the `CustomStateSet`; otherwise `false`.
 ## Browser compatibility
 
 {{Compat}}
-

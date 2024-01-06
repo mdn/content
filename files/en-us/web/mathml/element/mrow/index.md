@@ -1,61 +1,54 @@
 ---
 title: <mrow>
 slug: Web/MathML/Element/mrow
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:General Layout Schemata
+page-type: mathml-element
 browser-compat: mathml.elements.mrow
 ---
+
 {{MathMLRef}}
 
-The MathML `<mrow>` element is used to group sub-expressions, which usually contain one or more [operators](/en-US/docs/Web/MathML/Element/mo) with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.
+The **`<mrow>`** [MathML](/en-US/docs/Web/MathML) element is used to group sub-expressions, which usually contain one or more [operators](/en-US/docs/Web/MathML/Element/mo) with their respective operands (such as {{ MathMLElement("mi") }} and {{ MathMLElement("mn") }}). This element renders as a horizontal row containing its arguments.
 
 When writing a MathML expression, you should group elements within an `<mrow>` in the same way as they are grouped in the mathematical interpretation of the expression. Proper grouping helps the rendering of the expression in several ways:
 
-- It can improve the display by possibly affecting spacing.
-- It allows for more intelligent line-breaking and indentation.
+- It can improve the display by possibly affecting spacing and preventing line breaks.
 - It simplifies the interpretation of the expression by automated systems such as computer algebra systems and audio renderers.
 
 ## Attributes
 
-- class, id, style
-  - : Provided for use with [stylesheets](/en-US/docs/Web/CSS).
-- `displaystyle`
-  - : A Boolean value specifying whether more vertical space is used for displayed equations or, if set to `false`, a more compact layout is used to display formulas. The main effect is that larger versions of operators are displayed, when `displaystyle` is set to `true`. See also `movablelimits` on {{ MathMLElement("mo") }}.
-- dir
-  - : Overall directionality of formulas. Possible values are either `ltr` (left to right) or `rtl` (right to left).
-- href
-  - : Used to set a hyperlink to a specified URI.
-- mathbackground
-  - : The background color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
-- mathcolor
-  - : The text color. You can use `#rgb`, `#rrggbb` and [HTML color names](/en-US/docs/Web/CSS/color_value#color_keywords).
+This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes).
 
 ## Examples
 
 ```html
-<math>
-
-  <mrow>
-    <mn> 1 </mn>
-    <mo> + </mo>
-    <mn> 1 </mn>
-  </mrow>
-
-  <mrow>
-    <mo> ( </mo>
+<math display="block">
+  <mfrac>
     <mrow>
-      <mi> x </mi>
-      <mo> , </mo>
-      <mi> y </mi>
+      <!-- numerator content grouped in one mrow -->
+      <mn>1</mn>
+      <mo>+</mo>
+      <mi>K</mi>
     </mrow>
-    <mo> ) </mo>
-  </mrow>
-
+    <mrow>
+      <!-- denominator content grouped in one mrow -->
+      <mn>3</mn>
+      <mrow>
+        <!-- fenced expression grouped in one mrow -->
+        <mo>(</mo>
+        <mrow>
+          <!-- fenced content grouped in one mrow -->
+          <mi>x</mi>
+          <mo>+</mo>
+          <mi>y</mi>
+        </mrow>
+        <mo>)</mo>
+      </mrow>
+    </mrow>
+  </mfrac>
 </math>
 ```
+
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

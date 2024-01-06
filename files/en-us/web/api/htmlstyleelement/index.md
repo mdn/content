@@ -1,40 +1,34 @@
 ---
 title: HTMLStyleElement
 slug: Web/API/HTMLStyleElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLStyleElement
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLStyleElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement`** interface represents a {{HTMLElement("style")}} element. It inherits properties and methods from its parent, {{domxref("HTMLElement")}}.
 
 This interface doesn't allow to manipulate the CSS it contains (in most case). To manipulate CSS, see [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) for an overview of the objects used to manipulate specified CSS properties using the DOM.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLStyleElement.media")}}
-  - : Is a {{domxref("DOMString")}} representing the intended destination medium for style information.
+  - : A string reflecting the HTML attribute representing the intended destination medium for style information.
 - {{domxref("HTMLStyleElement.type")}} {{deprecated_inline}}
-  - : Is a {{domxref("DOMString")}} representing the type of style being applied by this statement.
+  - : A string reflecting the HTML attribute representing the type of style being applied by this statement.
 - {{domxref("HTMLStyleElement.disabled")}}
-  - : Is a boolean value representing whether or not the stylesheet is disabled (true) or not (false).
-- {{domxref("HTMLStyleElement.sheet")}} {{readonlyInline}}
-  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none
-- {{domxref("HTMLStyleElement.scoped")}} {{non-standard_inline}} {{deprecated_inline}}
-  - : Is a boolean value indicating if the element applies to the whole document (`false`) or only to the parent's sub-tree (`true`).
+  - : A boolean value indicating whether or not the associated stylesheet is disabled.
+- {{domxref("HTMLStyleElement.sheet")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 
-## Methods
+## Instance methods
 
-_No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}._
+_No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Specifications
 
@@ -47,4 +41,4 @@ _No specific method; inherits properties from its parent, {{domxref("HTMLElement
 ## See also
 
 - The HTML element implementing this interface: {{HTMLElement("style")}}.
-- [Using dynamic styling information](/en-US/docs/DOM/Using_dynamic_styling_information) to see how to manipulate CSS.
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information) to see how to manipulate CSS.

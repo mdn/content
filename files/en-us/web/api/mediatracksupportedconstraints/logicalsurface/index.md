@@ -1,45 +1,26 @@
 ---
-title: MediaTrackSupportedConstraints.logicalSurface
+title: "MediaTrackSupportedConstraints: logicalSurface property"
+short-title: logicalSurface
 slug: Web/API/MediaTrackSupportedConstraints/logicalSurface
-tags:
-  - API
-  - Capture
-  - Logical
-  - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
-  - Reference
-  - Screen Capture
-  - Screen Capture API
-  - Sharing
-  - Surface
-  - Video
-  - display
-  - screen
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.logicalSurface
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
-**`logicalSurface`** property indicates whether or not the
-{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is
-supported by the user agent and the device on which the content is being used.
+The {{domxref("MediaTrackSupportedConstraints")}} dictionary's **`logicalSurface`** property indicates whether or not the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the user agent and the device on which the content is being used.
 
-The supported constraints list is obtained by calling
-{{domxref("MediaDevices.getSupportedConstraints",
-  "navigator.mediaDevices.getSupportedConstraints()")}}.
+The supported constraints list is obtained by calling {{domxref("MediaDevices.getSupportedConstraints","navigator.mediaDevices.getSupportedConstraints()")}}.
 
 ## Syntax
 
-```js
-isLogicalSurfaceSupported = supportedConstraints.logicalSurface;
+```js-nolint
+isLogicalSurfaceSupported = supportedConstraints.logicalSurface
 ```
 
 ### Value
 
-A Boolean value which is `true` if the
-{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is
-supported by the device and user agent.
+A boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the device and user agent.
 
 ## Example
 
@@ -53,11 +34,10 @@ to the video element referenced by the variable `videoElem`.
 
 ```js
 async function capture() {
-  let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
-  let displayMediaOptions = {
-    video: {
-    },
-    audio: false;
+  const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+  const displayMediaOptions = {
+    video: {},
+    audio: false,
   };
 
   if (supportedConstraints.logicalSurface) {
@@ -65,8 +45,9 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-  } catch(err) {
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+  } catch (err) {
     /* handle the error */
   }
 }
@@ -83,10 +64,8 @@ async function capture() {
 ## See also
 
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
-- [Using the
-  screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
-- [Capabilities,
-  constraints, and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints)
+- [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaStreamTrack.getConstraints()")}}
 - {{domxref("MediaStreamTrack.applyConstraints()")}}

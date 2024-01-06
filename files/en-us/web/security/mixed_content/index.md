@@ -1,13 +1,11 @@
 ---
 title: Mixed content
 slug: Web/Security/Mixed_content
-tags:
-  - HTTP
-  - HTTPS
-  - Security
-  - Web
-  - console
+page-type: guide
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+
 When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
 
 ## Types of mixed content
@@ -42,36 +40,36 @@ This section lists some types of HTTP requests which are considered active conte
 - {{HTMLElement("script")}} (`src` attribute)
 - {{HTMLElement("link")}} (`href` attribute) (this includes CSS stylesheets)
 - {{HTMLElement("iframe")}} (`src` attribute)
-- {{domxref("XMLHttpRequest")}} requests
 - {{domxref("fetch()")}} requests
-- All cases in CSS where a {{cssxref("url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
+- {{domxref("XMLHttpRequest")}} requests
+- All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
-- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
+- {{domxref("Navigator.sendBeacon")}} (`url` attribute)
 
 Other resource types like web fonts and workers may be considered active mixed content, as they are in Chrome.
 
 ## Loading mixed-content resources
 
-Most browsers prevent *mixed active content* from loading, and some also block *mixed display content*.
+Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
 
 ### Loading locally delivered mixed-resources
 
-Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
+Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
 
-- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see {{bug(903966)}}),
-- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see {{bug(1220810)}}).
+- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see [Firefox bug 903966](https://bugzil.la/903966)),
+- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see [Firefox bug 1220810](https://bugzil.la/1220810)).
 - Chrome also allows mixed content on `http://127.0.0.1/` and `http://localhost/`.
 - Safari does not allow any mixed content.
 
 ### Upgrading mixed-display resources
 
-Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).
+Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).
 
-Firefox supports this functionality as an experimental feature. It can be enabled using the preference `security.mixed_content.upgrade_display_content`).
+Firefox supports this functionality as an experimental feature. It can be enabled using the preference `security.mixed_content.upgrade_display_content`).
 
 - If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.
 - Console warnings indicate when content has been successfully upgraded.
-- For more information see [Experimental features in Firefox > Upgrading mixed display content](/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content).
+- For more information see [Experimental features in Firefox > Upgrading mixed display content](/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content).
 
 ## Warnings in Firefox Web Console
 
@@ -79,7 +77,7 @@ The Firefox Web Console displays a mixed content warning message in the Net pane
 
 ![Screen shot of the web console displaying a mixed content warning.](mixed_content_-_net_pane.png)
 
-As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](http://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
+As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](https://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
 
 Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:
 
@@ -87,11 +85,9 @@ Starting in Firefox 23, mixed active content is blocked by default (and mixed di
 
 To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.
 
-> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources)  (instead of a warning about "Loading mixed (insecure) display content").
+> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources) (instead of a warning about "Loading mixed (insecure) display content").
 
 ## See also
 
 - [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
 - [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

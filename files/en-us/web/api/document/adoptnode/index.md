@@ -1,29 +1,23 @@
 ---
-title: Document.adoptNode()
+title: "Document: adoptNode() method"
+short-title: adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - NeedsExample
-  - NeedsSpecTable
-  - NeedsUpdate
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.adoptNode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.adoptNode()`** transfers a {{Glossary("node/dom",
   "node")}} from another {{domxref("Document", "document", "", "1")}} into the method's
-document. The adopted node and its subtree is removed from its original document (if
-any), and its {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
+document. The adopted node and its subtree are removed from their original document (if
+any), and their {{domxref("Node.ownerDocument", "ownerDocument")}} is changed to the
 current document. The node can then be inserted into the current document.
 
 ## Syntax
 
-```js
-const importedNode = document.adoptNode(externalNode);
+```js-nolint
+adoptNode(externalNode)
 ```
 
 ### Parameters
@@ -42,14 +36,14 @@ After calling this method, `importedNode` and
 > {{domxref("Node.parentNode")}} is `null`, since it has not yet been
 > inserted into the document tree!
 
-## Example
+## Examples
 
 ```js
-const iframe = document.querySelector('iframe');
-const iframeImages = iframe.contentDocument.querySelectorAll('img');
-const newParent = document.getElementById('images');
+const iframe = document.querySelector("iframe");
+const iframeImages = iframe.contentDocument.querySelectorAll("img");
+const newParent = document.getElementById("images");
 
-iframeImages.forEach(function(imgEl) {
+iframeImages.forEach((imgEl) => {
   newParent.appendChild(document.adoptNode(imgEl));
 });
 ```

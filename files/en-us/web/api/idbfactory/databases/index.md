@@ -1,19 +1,14 @@
 ---
-title: IDBFactory.databases
+title: "IDBFactory: databases() method"
+short-title: databases()
 slug: Web/API/IDBFactory/databases
-tags:
-  - API
-  - Database
-  - IDBFactory
-  - Method
-  - Reference
-  - Storage
-  - databases
+page-type: web-api-instance-method
 browser-compat: api.IDBFactory.databases
 ---
+
 {{ APIRef("IndexedDB") }}
 
-The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
+The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a list representing all the available databases, including their names and versions.
 
 {{AvailableInWorkers}}
 
@@ -21,7 +16,9 @@ The **`databases`** method of the {{domxref("IDBFactory")}} interface returns a
 
 ## Syntax
 
-    const promise = indexedDB.databases()
+```js-nolint
+databases()
+```
 
 ### Parameters
 
@@ -29,7 +26,7 @@ The method does not take in any parameters.
 
 ### Return value
 
-A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
+A promise that resolves either to an error or a list of dictionaries, each with two elements, `name` and `version`:
 
 - `name`
   - : The database name.
@@ -38,19 +35,17 @@ A promise that resolves either to an error or a list of dictionaries, each with
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following types:
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the method is called from an [opaque origin](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802#42242802).
 
-| Attribute                                | Description                                          |
-| ---------------------------------------- | ---------------------------------------------------- |
-| {{exception("SecurityError")}} | The method is called from an opaque origin.          |
-| Other error                              | Specification does not describe all possible errors. |
+## Examples
 
-## Example
-
-    const promise = indexedDB.databases()
-    promise.then(databases => {
-      console.log(databases)
-    })
+```js
+const promise = indexedDB.databases();
+promise.then((databases) => {
+  console.log(databases);
+});
+```
 
 ## Specifications
 
@@ -68,4 +63,4 @@ This method may raise a {{domxref("DOMException")}} of the following types:
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,55 +1,44 @@
 ---
-title: BatteryManager.dischargingTime
+title: "BatteryManager: dischargingTime property"
+short-title: dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-tags:
-  - API
-  - Battery API
-  - NeedsMarkupWork
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.BatteryManager.dischargingTime
 ---
-{{deprecated_header}}{{APIRef("Battery API")}}
 
-Indicates the amount of time, in seconds, that remains until the battery is fully
-discharged.
+{{ApiRef("Battery API")}}{{securecontext_header}}
+
+The **`BatteryManager.dischargingTime`** property indicates the amount of time, in seconds, that remains until the battery is fully discharged,
+or {{jsxref("Infinity")}} if the battery is currently charging rather than discharging or the user agent is unable to report the battery status information.
+When its value changes, the {{domxref("BatteryManager/dischargingtimechange_event", "dischargingtimechange")}} event is fired.
 
 > **Note:** Even if the time returned is precise to the second, browsers round them to a higher
 > interval (typically to the closest 15 minutes) for privacy reasons.
 
-## Syntax
+## Value
 
-```js
-var time = battery.dischargingTime
-```
+A number.
 
-On return, `time` is the remaining time in seconds until the
-`battery`, which is a {{domxref("BatteryManager")}} object, is fully
-discharged and the system will suspend. This value is
-[`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
-if the battery is currently charging rather than discharging, or if the system is unable
-to report the remaining discharging time.
+## Examples
 
-## Example
-
-### HTML Content
+### HTML
 
 ```html
 <div id="dischargingTime">(discharging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then((battery) => {
+  const time = battery.dischargingTime;
 
-    var time = battery.dischargingTime;
-
-    document.querySelector('#dischargingTime').textContent = battery.dischargingTime;
+  document.querySelector("#dischargingTime").textContent =
+    `Remaining time to fully discharge the battery: ${time}`;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 
@@ -62,4 +51,4 @@ navigator.getBattery().then(function(battery) {
 ## See also
 
 - {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxref("Navigator.getBattery()")}}

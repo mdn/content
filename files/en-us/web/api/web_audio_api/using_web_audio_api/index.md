@@ -1,18 +1,9 @@
 ---
 title: Using the Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
-tags:
-  - API
-  - Audio
-  - Guide
-  - Playback
-  - Using
-  - Web
-  - Web Audio
-  - Web Audio API
-  - basics
-  - sound
+page-type: guide
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Let's take a look at getting started with the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API). We'll briefly look at some concepts, then study a simple boombox example that allows us to load an audio track, play and pause it, and change its volume and stereo panning.
@@ -29,7 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics).
+[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Browser support
 
@@ -72,7 +63,7 @@ To use all the nice things we get with the Web Audio API, we need to grab the so
 
 ```js
 // get the audio element
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 
 // pass it into the audio context
 const track = audioContext.createMediaElementSource(audioElement);
@@ -84,7 +75,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 When playing sound on the web, it's important to allow the user to control it. Depending on the use case, there's a myriad of options, but we'll provide functionality to play/pause the sound, alter the track's volume, and pan it from left to right.
 
-Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or a allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.
+Controlling sound programmatically from JavaScript code is covered by browsers' autoplay support policies, as such is likely to be blocked without permission being granted by the user (or an allowlist). Autoplay policies typically require either explicit permission or a user engagement with the page before scripts can trigger audio to play.
 
 These special requirements are in place essentially because unexpected sounds can be annoying and intrusive, and can cause accessibility problems. You can learn more about this in our article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
@@ -92,7 +83,7 @@ Since our scripts are playing audio in response to a user input event (a click o
 
 ```html
 <button data-playing="false" role="switch" aria-checked="false">
-    <span>Play/Pause</span>
+  <span>Play/Pause</span>
 </button>
 ```
 
@@ -104,41 +95,47 @@ We've already created an input node by passing our audio element into the API. F
 track.connect(audioContext.destination);
 ```
 
-A good way to visualise these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
+A good way to visualize these nodes is by drawing an audio graph so you can visualize it. This is what our current audio graph looks like:
 
 ![an audio graph with an audio element source connected to the default destination](graph1.jpg)
 
 Now we can add the play and pause functionality.
 
 ```js
-// select our play button
-const playButton = document.querySelector('button');
+// Select our play button
+const playButton = document.querySelector("button");
 
-playButton.addEventListener('click', function() {
-
-    // check if context is in suspended state (autoplay policy)
-    if (audioContext.state === 'suspended') {
-        audioContext.resume();
+playButton.addEventListener(
+  "click",
+  () => {
+    // Check if context is in suspended state (autoplay policy)
+    if (audioContext.state === "suspended") {
+      audioContext.resume();
     }
 
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        audioElement.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        audioElement.pause();
-        this.dataset.playing = 'false';
+    // Play or pause track depending on state
+    if (playButton.dataset.playing === "false") {
+      audioElement.play();
+      playButton.dataset.playing = "true";
+    } else if (playButton.dataset.playing === "true") {
+      audioElement.pause();
+      playButton.dataset.playing = "false";
     }
-
-}, false);
+  },
+  false,
+);
 ```
 
 We also need to take into account what to do when the track finishes playing. Our `HTMLMediaElement` fires an `ended` event once it's finished playing, so we can listen for that and run code accordingly:
 
 ```js
-audioElement.addEventListener('ended', () => {
-    playButton.dataset.playing = 'false';
-}, false);
+audioElement.addEventListener(
+  "ended",
+  () => {
+    playButton.dataset.playing = "false";
+  },
+  false,
+);
 ```
 
 ## Modifying sound
@@ -161,12 +158,12 @@ This will make our audio graph look like this:
 
 ![an audio graph with an audio element source, connected to a gain node that modifies the audio source, and then going to the default destination](graph2.jpg)
 
-The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in Javascript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
+The default value for gain is 1; this keeps the current volume the same. Gain can be set to a minimum of about -3.4028235E38 and a max of about 3.4028235E38 (float number range in JavaScript). Here we'll allow the boombox to move the gain up to 2 (double the original volume) and down to 0 (this will effectively mute our sound).
 
 Let's give the user control to do this — we'll use a [range input](/en-US/docs/Web/HTML/Element/input/range):
 
 ```html
-<input type="range" id="volume" min="0" max="2" value="1" step="0.01">
+<input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
 > **Note:** Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
@@ -174,11 +171,15 @@ Let's give the user control to do this — we'll use a [range input](/en-US/docs
 So let's grab this input's value and update the gain value when the input node has its value changed by the user:
 
 ```js
-const volumeControl = document.querySelector('#volume');
+const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener('input', function() {
-    gainNode.gain.value = this.value;
-}, false);
+volumeControl.addEventListener(
+  "input",
+  () => {
+    gainNode.gain.value = volumeControl.value;
+  },
+  false,
+);
 ```
 
 > **Note:** The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
@@ -191,9 +192,11 @@ Let's add another modification node to practice what we've just learnt.
 
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
-**Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right. There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialisation_, for creating more complex effects. This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
+> **Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
+> There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialization_, for creating more complex effects.
+> This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
 
-To visualise it, we will be making our audio graph look like this:
+To visualize it, we will be making our audio graph look like this:
 
 ![An image showing the audio graph showing an input node, two modification nodes (a gain node and a stereo panner node) and a destination node.](graphpan.jpg)
 
@@ -209,17 +212,21 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:
 
 ```html
-<input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
+<input type="range" id="panner" min="-1" max="1" value="0" step="0.01" />
 ```
 
 We use the values from that input to adjust our panner values in the same way as we did before:
 
 ```js
-const pannerControl = document.querySelector('#panner');
+const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener('input', function() {
-    panner.pan.value = this.value;
-}, false);
+pannerControl.addEventListener(
+  "input",
+  () => {
+    panner.pan.value = pannerControl.value;
+  },
+  false,
+);
 ```
 
 Let's adjust our audio graph again, to connect all the nodes together:
@@ -240,11 +247,11 @@ This makes up quite a few basics that you would need to start to add audio to yo
 
 There are other examples available to learn more about the Web Audio API.
 
-The [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic) is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. ([run the Voice-change-O-matic live](https://mdn.github.io/voice-change-o-matic/)).
+The [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) is a fun voice manipulator and sound visualization web app that allows you to choose different effects and visualizations. The application is fairly rudimentary, but it demonstrates the simultaneous use of multiple Web Audio API features. ([run the Voice-change-O-matic live](https://mdn.github.io/webaudio-examples/voice-change-o-matic/)).
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

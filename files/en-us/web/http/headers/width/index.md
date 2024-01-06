@@ -1,20 +1,16 @@
 ---
 title: Width
 slug: Web/HTTP/Headers/Width
-tags:
-  - Width
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Experimental
-  - Deprecated
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Width
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`Width`** {{Glossary("Client hints","device client hint")}} request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_header}}{{Non-standard_Header}}
+
+The **`Width`** [device client hint](/en-US/docs/Web/HTTP/Client_hints#device_client_hints) request header field indicates the desired resource width in physical pixels — the intrinsic size of an image. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
 
 <table class="properties">
   <tbody>
@@ -22,7 +18,7 @@ The **`Width`** {{Glossary("Client hints","device client hint")}} request header
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -47,7 +43,7 @@ If the `Width` header appears more than once in a message the last occurrence is
 
 ## Syntax
 
-```
+```http
 Width: <number>
 ```
 
@@ -60,13 +56,13 @@ Width: <number>
 
 The server first needs to opt in to receive the `Width` header by sending the response headers {{HTTPHeader("Accept-CH")}} containing `Width`.
 
-```
+```http
 Accept-CH: Width
 ```
 
 Then on subsequent requests the client might send `Width` header back:
 
-```
+```http
 Width: 1920
 ```
 
@@ -76,7 +72,7 @@ Width: 1920
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
@@ -85,4 +81,4 @@ Width: 1920
   - {{HTTPHeader("Viewport-Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

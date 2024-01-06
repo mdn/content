@@ -1,25 +1,21 @@
 ---
 title: SVGTSpanElement
 slug: Web/API/SVGTSpanElement
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
+page-type: web-api-interface
 browser-compat: api.SVGTSpanElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGTSpanElement`** interface represents a {{SVGElement("tspan")}} element.
 
-{{InheritanceDiagram(600, 120)}}
+{{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface doesn't provide any specific properties, but inherits the properties from its parent, {{domxref("SVGTextPositioningElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface doesn't provide any specific methods._
 

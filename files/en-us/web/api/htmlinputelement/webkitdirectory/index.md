@@ -1,38 +1,23 @@
 ---
-title: HTMLInputElement.webkitdirectory
+title: "HTMLInputElement: webkitdirectory property"
+short-title: webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
-tags:
-  - API
-  - File System API
-  - File and Directory Entries API
-  - Files
-  - HTML DOM
-  - HTMLInputElement
-  - Non-standard
-  - Property
-  - Reference
-  - Web
-  - webkitdirectory
+page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.webkitdirectory
 ---
-{{APIRef("HTML DOM")}}{{non-standard_header}}
 
-The
-**`HTMLInputElement.webkitdirectory`** is a property that
-reflects the {{htmlattrxref("webkitdirectory", "input")}} HTML attribute and indicates
-that the {{HTMLElement("input")}} element should let the user select directories
-instead of files. When a directory is selected, the directory and its entire hierarchy
-of contents are included in the set of selected items. The selected file system
-entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries",
-    "webkitEntries")}} property.
+{{APIRef("File and Directory Entries API")}}
 
-## Syntax
+The **`HTMLInputElement.webkitdirectory`** is a property
+that reflects the [`webkitdirectory`](/en-US/docs/Web/HTML/Element/input/file#webkitdirectory) HTML attribute
+and indicates that the {{HTMLElement("input")}} element should let the user select directories instead of files.
+When a directory is selected, the directory and its entire hierarchy of contents are included in the set of selected items.
+The selected file system entries can be obtained using the {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} property.
 
-```js
- HTMLInputElement.webkitdirectory = boolValue
-```
+> **Note:** This property is called `webkitEntries` in the specification due to its
+> origins as a Google Chrome-specific API. It's likely to be renamed someday.
 
-### Value
+## Value
 
 A Boolean; `true` if the {{HTMLElement("input")}} element should allow
 picking only directories or `false` if only files should be selectable.
@@ -78,46 +63,46 @@ The entry for `PIC2343.jpg` will have a `webkitRelativePath` of
 possible to know the hierarchy even though the {{domxref("FileList")}} is flat.
 
 > **Note:** The behavior of `webkitRelativePath` is different
-> in _Chromium < 72_. See [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=124187) for
+> in _Chromium < 72_. See [this bug](https://crbug.com/124187) for
 > further details.
 
-## Example
+## Examples
 
 In this example, a directory picker is presented which lets the user choose one or more
-directories. When the {{event("change")}} event occurs, a list of all files contained
+directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained
 within the selected directory hierarchies is generated and displayed.
 
-### HTML content
+### HTML
 
 ```html
 <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 <ul id="listing"></ul>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
-document.getElementById("filepicker").addEventListener("change", function(event) {
-  let output = document.getElementById("listing");
-  let files = event.target.files;
-
-  for (let i=0; i<files.length; i++) {
-    let item = document.createElement("li");
-    item.innerHTML = files[i].webkitRelativePath;
-    output.appendChild(item);
-  };
-}, false);
+document.getElementById("filepicker").addEventListener(
+  "change",
+  (event) => {
+    let output = document.getElementById("listing");
+    for (const file of event.target.files) {
+      let item = document.createElement("li");
+      item.textContent = file.webkitRelativePath;
+      output.appendChild(item);
+    }
+  },
+  false,
+);
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('Examples') }}
 
 ## Specifications
 
 {{Specifications}}
-
-This API has no official W3C or WHATWG specification.
 
 ## Browser compatibility
 
@@ -125,7 +110,6 @@ This API has no official W3C or WHATWG specification.
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
 - {{domxref("HTMLInputElement.webkitEntries")}}
 - {{domxref("File.webkitRelativePath")}}

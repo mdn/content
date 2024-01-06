@@ -1,15 +1,9 @@
 ---
 title: Mouse controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-tags:
-  - Beginner
-  - Canvas
-  - Controls
-  - Games
-  - JavaScript
-  - Tutorial
-  - mouse
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}
@@ -20,7 +14,7 @@ The game itself is actually finished, so let's work on polishing it up. We have 
 
 ## Listening for mouse movement
 
-Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{event("mousemove")}} event. Add the following line in the same place as the other event listeners, just below the `keyup event`:
+Listening for mouse movement is even easier than listening for key presses: all we need is the listener for the {{domxref("Element/mousemove_event", "mousemove")}} event. Add the following line in the same place as the other event listeners, just below the `keyup event`:
 
 ```js
 document.addEventListener("mousemove", mouseMoveHandler, false);
@@ -28,14 +22,14 @@ document.addEventListener("mousemove", mouseMoveHandler, false);
 
 ## Anchoring the paddle movement to the mouse movement
 
-We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:
+We can update the paddle position based on the pointer coordinates — the following handler function will do exactly that. Add the following function to your code, below the previous line you added:
 
 ```js
 function mouseMoveHandler(e) {
-    var relativeX = e.clientX - canvas.offsetLeft;
-    if(relativeX > 0 && relativeX < canvas.width) {
-        paddleX = relativeX - paddleWidth/2;
-    }
+  const relativeX = e.clientX - canvas.offsetLeft;
+  if (relativeX > 0 && relativeX < canvas.width) {
+    paddleX = relativeX - paddleWidth / 2;
+  }
 }
 ```
 

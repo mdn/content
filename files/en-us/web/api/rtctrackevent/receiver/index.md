@@ -1,22 +1,11 @@
 ---
-title: RTCTrackEvent.receiver
+title: "RTCTrackEvent: receiver property"
+short-title: receiver
 slug: Web/API/RTCTrackEvent/receiver
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpReceiver
-  - RTCTrackEvent
-  - RTP
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - receiver
-  - track
+page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.receiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`receiver`** property
@@ -24,13 +13,7 @@ of the {{domxref("RTCTrackEvent")}} interface indicates the
 {{domxref("RTCRtpReceiver")}} which is used to receive data containing media for the
 {{domxref("RTCTrackEvent.track", "track")}} to which the event refers.
 
-## Syntax
-
-```js
-var rtpReceiver = trackEvent.receiver;
-```
-
-### Value
+## Value
 
 The {{domxref("RTCRtpTransceiver")}} which pairs the `receiver` with a
 sender and other properties which establish a single bidirectional {{Glossary("RTP", "SRTP")}}

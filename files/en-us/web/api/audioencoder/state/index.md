@@ -1,15 +1,14 @@
 ---
-title: AudioEncoder.state
+title: "AudioEncoder: state property"
+short-title: state
 slug: Web/API/AudioEncoder/state
-tags:
-  - API
-  - Property
-  - Reference
-  - state
-  - AudioEncoder
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioEncoder.state
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`state`** read-only property of the {{domxref("AudioEncoder")}} interface returns the current state of the underlying codec.
 

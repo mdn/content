@@ -1,18 +1,11 @@
 ---
-title: HTMLMediaElement.play()
+title: "HTMLMediaElement: play() method"
+short-title: play()
 slug: Web/API/HTMLMediaElement/play
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Method
-  - Reference
-  - Video
-  - play
+page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.play
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLMediaElement")}}
@@ -25,8 +18,8 @@ permission issues, result in the promise being rejected.
 
 ## Syntax
 
-```js
-var promise = HTMLMediaElement.play();
+```js-nolint
+play()
 ```
 
 ### Parameters
@@ -43,14 +36,14 @@ rejected if for any reason playback cannot be started.
 
 ### Exceptions
 
-The promise's **rejection handler** is called with an exception name
+The promise's **rejection handler** is called with a {{domxref("DOMException")}} object
 passed in as its sole input parameter (as opposed to a traditional exception being
 thrown). Possible errors include:
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Provided if the user agent (browser) or operating system doesn't allow playback of media in the
-    current context or situation. This may happen, for example, if the browser requires
-    the user to explicitly start media playback by clicking a "play" button.
+    current context or situation. The browser may require the user to explicitly start
+    media playback by clicking a "play" button, for example because of a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Provided if the media source (which may be specified as a {{domxref("MediaStream")}},
     {{domxref("MediaSource")}}, {{domxref("Blob")}}, or {{domxref("File")}}, for example)
@@ -67,11 +60,11 @@ apply to any script-initiated playback of media, including calls to `play()`.
 
 If the {{Glossary("user agent")}} is configured not to allow automatic or
 script-initiated playback of media, calling `play()` will cause the returned
-promise to be immediately rejected with a `NotAllowedError`. Web sites should
+promise to be immediately rejected with a `NotAllowedError`. Websites should
 be prepared to handle this situation. For example, a site should not present a user
 interface that assumes playback has begun automatically, but should instead update their
 UI based on whether the returned promise is fulfilled or rejected. See the
-{{anch("Example", "example")}} below for more information.
+[example](#examples) below for more information.
 
 > **Note:** The `play()` method may cause the user to be asked
 > to grant permission to play the media, resulting in a possible delay before the
@@ -80,7 +73,7 @@ UI based on whether the returned promise is fulfilled or rejected. See the
 For even more in-depth information about autoplay and autoplay blocking, see our
 article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
-## Example
+## Examples
 
 This example demonstrates how to confirm that playback has begun and how to gracefully
 handle blocked automatic playback:
@@ -96,7 +89,7 @@ async function playVideo() {
   try {
     await videoElem.play();
     playButton.classList.add("playing");
-  } catch(err) {
+  } catch (err) {
     playButton.classList.remove("playing");
   }
 }
@@ -122,7 +115,7 @@ state of playback by watching for the resolution or rejection of the
 
 When this example is executed, it begins by collecting references to the
 {{HTMLElement("video")}} element as well as the {{HTMLElement("button")}} used to toggle
-playback on and off. It then sets up an event handler for the {{event("click")}} event
+playback on and off. It then sets up an event handler for the {{domxref("Element/click_event", "click")}} event
 on the play toggle button and attempts to automatically begin playback by calling
 `playVideo()`.
 

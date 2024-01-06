@@ -1,15 +1,12 @@
 ---
-title: EncodedVideoChunk.byteLength
+title: "EncodedVideoChunk: byteLength property"
+short-title: byteLength
 slug: Web/API/EncodedVideoChunk/byteLength
-tags:
-  - API
-  - Property
-  - Reference
-  - byteLength
-  - EncodedVideoChunk
+page-type: web-api-instance-property
 browser-compat: api.EncodedVideoChunk.byteLength
 ---
-{{DefaultAPISidebar("WebCodecs API")}}
+
+{{APIRef("WebCodecs API")}}
 
 The **`byteLength`** read-only property of the {{domxref("EncodedVideoChunk")}} interface returns the length in bytes of the encoded video data.
 
@@ -23,10 +20,10 @@ In the following example the `byteLength` is printed to the console.
 
 ```js
 const init = {
-  type: 'key',
+  type: "key",
   data: videoBuffer,
   timestamp: 23000000,
-  duration: 2000000
+  duration: 2000000,
 };
 chunk = EncodedVideoChunk(init);
 

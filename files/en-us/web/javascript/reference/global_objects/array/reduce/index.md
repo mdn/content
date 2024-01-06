@@ -1,556 +1,384 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - Array method
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Prototype
-  - Reduce
-  - Reference
-  - Polyfill
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduce
 ---
+
 {{JSRef}}
 
-The **`reduce()`** method executes a user-supplied “reducer” callback function on each element of the array, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
+The **`reduce()`** method of {{jsxref("Array")}} instances executes a user-supplied "reducer" callback function on each element of the array, in order, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements of the array is a single value.
 
-Perhaps the easiest-to-understand case for `reduce()` is to return the sum of all the elements in an array.
-
-The reducer walks through the array element-by-element, at each step adding the current array value to the result from the previous step (this result is the running sum of all the previous steps) — until there are no more elements to add.
-
-This is shown in the following interactive example:
+The first time that the callback is run there is no "return value of the previous calculation". If supplied, an initial value may be used in its place. Otherwise the array element at index 0 is used as the initial value and iteration starts from the next element (index 1 instead of index 0).
 
 {{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
 ## Syntax
 
-```js
-// Arrow function
-reduce((previousValue, currentValue) => { ... } )
-reduce((previousValue, currentValue, currentIndex) => { ... } )
-reduce((previousValue, currentValue, currentIndex, array) => { ... } )
-reduce((previousValue, currentValue, currentIndex, array) => { ... }, initialValue)
-
-// Callback function
+```js-nolint
 reduce(callbackFn)
 reduce(callbackFn, initialValue)
-
-// Inline callback function
-reduce(function(previousValue, currentValue) { ... })
-reduce(function(previousValue, currentValue, currentIndex) { ... })
-reduce(function(previousValue, currentValue, currentIndex, array) { ... })
-reduce(function(previousValue, currentValue, currentIndex, array) { ... }, initialValue)
 ```
 
 ### Parameters
 
 - `callbackFn`
-  - : A “reducer” function that takes four arguments:
-    - *previousValue* (the value resulting from the previous call to `callbackfn`)
-    - *currentValue* (the value of the current element)
-    - *currentIndex* {{optional_inline}}
-    - *array* (the array to traverse) {{optional_inline}}
-
+  - : A function to execute for each element in the array. Its return value becomes the value of the `accumulator` parameter on the next invocation of `callbackFn`. For the last invocation, the return value becomes the return value of `reduce()`. The function is called with the following arguments:
+    - `accumulator`
+      - : The value resulting from the previous call to `callbackFn`. On the first call, its value is `initialValue` if the latter is specified; otherwise its value is `array[0]`.
+    - `currentValue`
+      - : The value of the current element. On the first call, its value is `array[0]` if `initialValue` is specified; otherwise its value is `array[1]`.
+    - `currentIndex`
+      - : The index position of `currentValue` in the array. On the first call, its value is `0` if `initialValue` is specified, otherwise `1`.
+    - `array`
+      - : The array `reduce()` was called upon.
 - `initialValue` {{optional_inline}}
-  - : A value to which *previousValue* is initialized the first time the callback is called. If `initialValue` is specified, that also causes *currentValue* to be initialized to the first value in the array. If `initialValue` is *not* specified, *previousValue* is initialized to the first value in the array, and *currentValue* is initialized to the second value in the array.
+  - : A value to which `accumulator` is initialized the first time the callback is called.
+    If `initialValue` is specified, `callbackFn` starts executing with the first value in the array as `currentValue`.
+    If `initialValue` is _not_ specified, `accumulator` is initialized to the first value in the array, and `callbackFn` starts executing with the second value in the array as `currentValue`. In this case, if the array is empty (so that there's no first value to return as `accumulator`), an error is thrown.
 
 ### Return value
 
-The value that results from running the “reducer” callback function to completion over the entire array.
+The value that results from running the "reducer" callback function to completion over the entire array.
 
 ### Exceptions
 
-Throws a {{jsxref("TypeError")}} if the array contains no elements and `initialValue` is not provided.
+- {{jsxref("TypeError")}}
+  - : Thrown if the array contains no elements and `initialValue` is not provided.
 
 ## Description
 
-The ECMAScript spec describes the behavior of `reduce()` as follows:
+The `reduce()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It runs a "reducer" callback function over all elements in the array, in ascending-index order, and accumulates them into a single value. Every time, the return value of `callbackFn` is passed into `callbackFn` again on next invocation as `accumulator`. The final value of `accumulator` (which is the value returned from `callbackFn` on the final iteration of the array) becomes the return value of `reduce()`. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
-> *callbackfn* should be a function that takes four arguments. `reduce` calls the callback, as a function, once for each element after the first element present in the array, in ascending order.
->
-> *callbackfn* is called with four arguments:
->
-> - the *previousValue* (value from the previous call to *callbackfn*)
-> - the *currentValue* (value of the current element)
-> - the *currentIndex*, and
-> - the object being traversed
-> The first time that callback is called, the *previousValue* and *currentValue* can be one of two values:
-> - If an *initialValue* was supplied in the call to `reduce`, then *previousValue* will be equal to *initialValue* and *currentValue* will be equal to the first value in the array.
-> - If no *initialValue* was supplied, then *previousValue* will be equal to the first value in the array and *currentValue* will be equal to the second.
-> It is a {{jsxref("TypeError")}} if the array contains no elements and *initialValue* is not provided.
->
-> `reduce` does not directly mutate the object on which it is called but the object may be mutated by the calls to *callbackfn*.
->
-> The range of elements processed by `reduce` is set before the first call to *callbackfn*. Elements that are appended to the array after the call to `reduce` begins will not be visited by *callbackfn*. If existing elements of the array are changed, their value as passed to *callbackfn* will be the value at the time `reduce` visits them; elements that are deleted after the call to `reduce` begins and before being visited are not visited.
+`callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-If the array only has one element (regardless of position) and no
-*initialValue* is provided, or if
-*initialValue* is provided but the array is empty, the solo value
-will be returned _without_ calling _`callbackFn`._
+Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods), `reduce()` does not accept a `thisArg` argument. `callbackFn` is always called with `undefined` as `this`, which gets substituted with `globalThis` if `callbackFn` is non-strict.
 
-If *initialValue* is provided and the array is not empty, then the
-reduce method will always invoke the callback function starting at index 0.
+`reduce()` is a central concept in [functional programming](https://en.wikipedia.org/wiki/Functional_programming), where it's not possible to mutate any value, so in order to accumulate all values in an array, one must return a new accumulator value on every iteration. This convention propagates to JavaScript's `reduce()`: you should use [spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) or other copying methods where possible to create new arrays and objects as the accumulator, rather than mutating the existing one. If you decided to mutate the accumulator instead of copying it, remember to still return the modified object in the callback, or the next iteration will receive undefined. However, note that copying the accumulator may in turn lead to increased memory usage and degraded performance — see [When to not use reduce()](#when_to_not_use_reduce) for more details. In such cases, to avoid bad performance and unreadable code, it's better to use a simple `for` loop instead.
 
-If *initialValue* is not provided then the reduce method will act
-differently for arrays with length larger than 1, equal to 1 and 0, as shown in the
-following example:
+The `reduce()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
+
+### Edge cases
+
+If the array only has one element (regardless of position) and no `initialValue` is provided, or if `initialValue` is provided but the array is empty, the solo value will be returned _without_ calling `callbackFn`.
+
+If `initialValue` is provided and the array is not empty, then the reduce method will always invoke the callback function starting at index 0.
+
+If `initialValue` is not provided then the reduce method will act differently for arrays with length larger than 1, equal to 1 and 0, as shown in the following example:
 
 ```js
 const getMax = (a, b) => Math.max(a, b);
 
 // callback is invoked for each element in the array starting at index 0
 [1, 100].reduce(getMax, 50); // 100
-[    50].reduce(getMax, 10); // 50
+[50].reduce(getMax, 10); // 50
 
 // callback is invoked once for element at index 1
-[1, 100].reduce(getMax);     // 100
+[1, 100].reduce(getMax); // 100
 
 // callback is not invoked
-[    50].reduce(getMax);     // 50
-[      ].reduce(getMax, 1);  // 1
+[50].reduce(getMax); // 50
+[].reduce(getMax, 1); // 1
 
-[      ].reduce(getMax);     // TypeError
+[].reduce(getMax); // TypeError
 ```
-
-### How reduce() works
-
-Suppose the following use of `reduce()` occurred:
-
-```js
-[0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, currentIndex, array) {
-  return previousValue + currentValue
-})
-```
-
-The callback would be invoked four times, with the arguments and return values in each
-call being as follows:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>0</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>1</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>3</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>6</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>6</code></td>
-      <td><code>4</code></td>
-      <td><code>4</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-  </tbody>
-</table>
-
-The value returned by `reduce()` would be that of the last callback
-invocation (`10`).
-
-You can also provide an {{jsxref("Functions/Arrow_functions", "Arrow Function","",1)}}
-instead of a full function. The code below will produce the same output as the code in
-the block above:
-
-```js
-[0, 1, 2, 3, 4].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue )
-```
-
-If you were to provide an *initialValue* as the second argument
-to `reduce()`, the result would look like this:
-
-```js
-[0, 1, 2, 3, 4].reduce((previousValue, currentValue, currentIndex, array) => {
-    return previousValue + currentValue
-}, 10)
-```
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">
-        <code><var>callback</var></code> iteration
-      </th>
-      <th scope="col">
-        <code><var>previousValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentValue</var></code>
-      </th>
-      <th scope="col">
-        <code><var>currentIndex</var></code>
-      </th>
-      <th scope="col">
-        <code><var>array</var></code>
-      </th>
-      <th scope="col">return value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">first call</th>
-      <td><code>10</code></td>
-      <td><code>0</code></td>
-      <td><code>0</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>10</code></td>
-    </tr>
-    <tr>
-      <th scope="row">second call</th>
-      <td><code>10</code></td>
-      <td><code>1</code></td>
-      <td><code>1</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>11</code></td>
-    </tr>
-    <tr>
-      <th scope="row">third call</th>
-      <td><code>11</code></td>
-      <td><code>2</code></td>
-      <td><code>2</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>13</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fourth call</th>
-      <td><code>13</code></td>
-      <td><code>3</code></td>
-      <td><code>3</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>16</code></td>
-    </tr>
-    <tr>
-      <th scope="row">fifth call</th>
-      <td><code>16</code></td>
-      <td><code>4</code></td>
-      <td><code>4</code></td>
-      <td><code>[0, 1, 2, 3, 4]</code></td>
-      <td><code>20</code></td>
-    </tr>
-  </tbody>
-</table>
-
-The value returned by `reduce()` in this case would be `20`.
 
 ## Examples
 
-### Sum all the values of an array
+### How reduce() works without an initial value
+
+The code below shows what happens if we call `reduce()` with an array and no initial value.
 
 ```js
-let sum = [0, 1, 2, 3].reduce(function (previousValue, currentValue) {
-  return previousValue + currentValue
-}, 0)
-// sum is 6
+const array = [15, 16, 17, 18, 19];
+
+function reducer(accumulator, currentValue, index) {
+  const returns = accumulator + currentValue;
+  console.log(
+    `accumulator: ${accumulator}, currentValue: ${currentValue}, index: ${index}, returns: ${returns}`,
+  );
+  return returns;
+}
+
+array.reduce(reducer);
 ```
 
-Alternatively written with an arrow function:
+The callback would be invoked four times, with the arguments and return values in each call being as follows:
+
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `15`          | `16`           | `1`     | `31`         |
+| Second call | `31`          | `17`           | `2`     | `48`         |
+| Third call  | `48`          | `18`           | `3`     | `66`         |
+| Fourth call | `66`          | `19`           | `4`     | `85`         |
+
+The `array` parameter never changes through the process — it's always `[15, 16, 17, 18, 19]`. The value returned by `reduce()` would be that of the last callback invocation (`85`).
+
+### How reduce() works with an initial value
+
+Here we reduce the same array using the same algorithm, but with an `initialValue` of `10` passed as the second argument to `reduce()`:
 
 ```js
-let total = [ 0, 1, 2, 3 ].reduce(
-  ( previousValue, currentValue ) => previousValue + currentValue,
-  0
-)
+[15, 16, 17, 18, 19].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  10,
+);
 ```
+
+The callback would be invoked five times, with the arguments and return values in each call being as follows:
+
+|             | `accumulator` | `currentValue` | `index` | Return value |
+| ----------- | ------------- | -------------- | ------- | ------------ |
+| First call  | `10`          | `15`           | `0`     | `25`         |
+| Second call | `25`          | `16`           | `1`     | `41`         |
+| Third call  | `41`          | `17`           | `2`     | `58`         |
+| Fourth call | `58`          | `18`           | `3`     | `76`         |
+| Fifth call  | `76`          | `19`           | `4`     | `95`         |
+
+The value returned by `reduce()` in this case would be `95`.
 
 ### Sum of values in an object array
 
 To sum up the values contained in an array of objects, you **must** supply
-an *initialValue*, so that each item passes through your function.
+an `initialValue`, so that each item passes through your function.
 
 ```js
-let initialValue = 0
-let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (previousValue, currentValue) {
-    return previousValue + currentValue.x
-}, initialValue)
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+const sum = objects.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  0,
+);
 
-console.log(sum) // logs 6
+console.log(sum); // 6
 ```
 
-Alternatively written with an arrow function:
+### Function sequential piping
+
+The `pipe` function takes a sequence of functions and returns a new function. When the new function is called with an argument, the sequence of functions are called in order, which each one receiving the return value of the previous function.
 
 ```js
-let initialValue = 0
-let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
-    (previousValue, currentValue) => previousValue + currentValue.x
-    , initialValue
-)
+const pipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => fn(acc), initialValue);
 
-console.log(sum) // logs 6
-```
-
-### Flatten an array of arrays
-
-```js
-let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  function(previousValue, currentValue) {
-    return previousValue.concat(currentValue)
-  },
-  []
-)
-// flattened is [0, 1, 2, 3, 4, 5]
-```
-
-Alternatively written with an arrow function:
-
-```js
-let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  ( previousValue, currentValue ) => previousValue.concat(currentValue),
-  []
-)
-```
-
-### Counting instances of values in an object
-
-```js
-let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
-
-let countedNames = names.reduce(function (allNames, name) {
-  if (name in allNames) {
-    allNames[name]++
-  }
-  else {
-    allNames[name] = 1
-  }
-  return allNames
-}, {})
-// countedNames is:
-// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
-```
-
-### Grouping objects by a property
-
-```js
-let people = [
-  { name: 'Alice', age: 21 },
-  { name: 'Max', age: 20 },
-  { name: 'Jane', age: 20 }
-];
-
-function groupBy(objectArray, property) {
-  return objectArray.reduce(function (acc, obj) {
-    let key = obj[property]
-    if (!acc[key]) {
-      acc[key] = []
-    }
-    acc[key].push(obj)
-    return acc
-  }, {})
-}
-
-let groupedPeople = groupBy(people, 'age')
-// groupedPeople is:
-// {
-//   20: [
-//     { name: 'Max', age: 20 },
-//     { name: 'Jane', age: 20 }
-//   ],
-//   21: [{ name: 'Alice', age: 21 }]
-// }
-```
-
-### Bonding arrays contained in an array of objects using the spread operator and initialValue
-
-```js
-// friends - an array of objects
-// where object field "books" is a list of favorite books
-let friends = [{
-  name: 'Anna',
-  books: ['Bible', 'Harry Potter'],
-  age: 21
-}, {
-  name: 'Bob',
-  books: ['War and peace', 'Romeo and Juliet'],
-  age: 26
-}, {
-  name: 'Alice',
-  books: ['The Lord of the Rings', 'The Shining'],
-  age: 18
-}]
-
-// allbooks - list which will contain all friends' books +
-// additional list contained in initialValue
-let allbooks = friends.reduce(function(previousValue, currentValue) {
-  return [...previousValue, ...currentValue.books]
-}, ['Alphabet'])
-
-// allbooks = [
-//   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
-//   'Romeo and Juliet', 'The Lord of the Rings',
-//   'The Shining'
-// ]
-```
-
-### Remove duplicate items in an array
-
-> **Note:** If you are using an environment compatible with
-> {{jsxref("Set")}} and {{jsxref("Array.from()")}}, you could use
-> `let arrayWithNoDuplicates = Array.from(new Set(myArray))` to get an array where
-> duplicate items have been removed.
-
-```js
-let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
-let myArrayWithNoDuplicates = myArray.reduce(function (previousValue, currentValue) {
-  if (previousValue.indexOf(currentValue) === -1) {
-    previousValue.push(currentValue)
-  }
-  return previousValue
-}, [])
-
-console.log(myArrayWithNoDuplicates)
-```
-
-### Replace .filter().map() with .reduce()
-
-Using {{jsxref("Array.filter()")}} then {{jsxref("Array.map()")}} traverses the array
-twice, but you can achieve the same effect while traversing only once with
-{{jsxref("Array.reduce()")}}, thereby being more efficient. (If you like `for` loops, you
-can filter and map while traversing once with {{jsxref("Array.forEach()")}}).
-
-```js
-const numbers = [-5, 6, 2, 0,];
-
-const doubledPositiveNumbers = numbers.reduce((previousValue, currentValue) => {
-  if (currentValue > 0) {
-    const doubled = currentValue * 2;
-    previousValue.push(doubled);
-  }
-  return previousValue;
-}, []);
-
-console.log(doubledPositiveNumbers); // [12, 4]
-```
-
-### Running Promises in Sequence
-
-```js
-/**
- * Runs promises from array of functions that can return promises
- * in chained manner
- *
- * @param {array} arr - promise arr
- * @return {Object} promise object
- */
-function runPromiseInSequence(arr, input) {
-  return arr.reduce(
-    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
-    Promise.resolve(input)
-  )
-}
-
-// promise function 1
-function p1(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 5)
-  })
-}
-
-// promise function 2
-function p2(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 2)
-  })
-}
-
-// function 3  - will be wrapped in a resolved promise by .then()
-function f3(a) {
- return a * 3
-}
-
-// promise function 4
-function p4(a) {
-  return new Promise((resolve, reject) => {
-    resolve(a * 4)
-  })
-}
-
-const promiseArr = [p1, p2, f3, p4]
-runPromiseInSequence(promiseArr, 10)
-  .then(console.log)   // 1200
-```
-
-### Function composition enabling piping
-
-```js
-// Building-blocks to use for composition
-const double = x => x + x
-const triple = x => 3 * x
-const quadruple = x => 4 * x
-
-// Function composition enabling pipe functionality
-const pipe = (...functions) => input => functions.reduce(
-    (acc, fn) => fn(acc),
-    input
-)
+// Building blocks to use for composition
+const double = (x) => 2 * x;
+const triple = (x) => 3 * x;
+const quadruple = (x) => 4 * x;
 
 // Composed functions for multiplication of specific values
-const multiply6 = pipe(double, triple)
-const multiply9 = pipe(triple, triple)
-const multiply16 = pipe(quadruple, quadruple)
-const multiply24 = pipe(double, triple, quadruple)
+const multiply6 = pipe(double, triple);
+const multiply9 = pipe(triple, triple);
+const multiply16 = pipe(quadruple, quadruple);
+const multiply24 = pipe(double, triple, quadruple);
 
 // Usage
-multiply6(6)   // 36
-multiply9(9)   // 81
-multiply16(16) // 256
-multiply24(10) // 240
+multiply6(6); // 36
+multiply9(9); // 81
+multiply16(16); // 256
+multiply24(10); // 240
 ```
 
-### Write map using reduce
+### Running promises in sequence
+
+[Promise sequencing](/en-US/docs/Web/JavaScript/Guide/Using_promises#composition) is essentially function piping demonstrated in the previous section, except done asynchronously.
 
 ```js
-if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function(callback, initialValue) {
-    return this.reduce(function(mappedArray, currentValue, currentIndex, array) {
-      mappedArray[currentIndex] = callback.call(initialValue, currentValue, currentIndex, array)
-      return mappedArray
-    }, [])
-  }
-}
+// Compare this with pipe: fn(acc) is changed to acc.then(fn),
+// and initialValue is ensured to be a promise
+const asyncPipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce((acc, fn) => acc.then(fn), Promise.resolve(initialValue));
 
-[1, 2, , 3].mapUsingReduce(
-  (currentValue, currentIndex, array) => currentValue + currentIndex + array.length
-) // [5, 7, , 10]
+// Building blocks to use for composition
+const p1 = async (a) => a * 5;
+const p2 = async (a) => a * 2;
+// The composed functions can also return non-promises, because the values are
+// all eventually wrapped in promises
+const f3 = (a) => a * 3;
+const p4 = async (a) => a * 4;
+
+asyncPipe(p1, p2, f3, p4)(10).then(console.log); // 1200
 ```
+
+`asyncPipe` can also be implemented using `async`/`await`, which better demonstrates its similarity with `pipe`:
+
+```js
+const asyncPipe =
+  (...functions) =>
+  (initialValue) =>
+    functions.reduce(async (acc, fn) => fn(await acc), initialValue);
+```
+
+### Using reduce() with sparse arrays
+
+`reduce()` skips missing elements in sparse arrays, but it does not skip `undefined` values.
+
+```js
+console.log([1, 2, , 4].reduce((a, b) => a + b)); // 7
+console.log([1, 2, undefined, 4].reduce((a, b) => a + b)); // NaN
+```
+
+### Calling reduce() on non-array objects
+
+The `reduce()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
+
+```js
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 99, // ignored by reduce() since length is 3
+};
+console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+// 9
+```
+
+### When to not use reduce()
+
+Multipurpose higher-order functions like `reduce()` can be powerful but sometimes difficult to understand, especially for less-experienced JavaScript developers. If code becomes clearer when using other array methods, developers must weigh the readability tradeoff against the other benefits of using `reduce()`.
+
+Note that `reduce()` is always equivalent to a `for...of` loop, except that instead of mutating a variable in the upper scope, we now return the new value for each iteration:
+
+```js
+const val = array.reduce((acc, cur) => update(acc, cur), initialValue);
+
+// Is equivalent to:
+let val = initialValue;
+for (const cur of array) {
+  val = update(val, cur);
+}
+```
+
+As previously stated, the reason why people may want to use `reduce()` is to mimic functional programming practices of immutable data. Therefore, developers who uphold the immutability of the accumulator often copy the entire accumulator for each iteration, like this:
+
+```js example-bad
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = names.reduce((allNames, name) => {
+  const currCount = Object.hasOwn(allNames, name) ? allNames[name] : 0;
+  return {
+    ...allNames,
+    [name]: currCount + 1,
+  };
+}, {});
+```
+
+This code is ill-performing, because each iteration has to copy the entire `allNames` object, which could be big, depending how many unique names there are. This code has worst-case `O(N^2)` performance, where `N` is the length of `names`.
+
+A better alternative is to _mutate_ the `allNames` object on each iteration. However, if `allNames` gets mutated anyway, you may want to convert the `reduce()` to a simple `for` loop instead, which is much clearer:
+
+```js example-bad
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = names.reduce((allNames, name) => {
+  const currCount = allNames[name] ?? 0;
+  allNames[name] = currCount + 1;
+  // return allNames, otherwise the next iteration receives undefined
+  return allNames;
+}, Object.create(null));
+```
+
+```js example-good
+const names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"];
+const countedNames = Object.create(null);
+for (const name of names) {
+  const currCount = countedNames[name] ?? 0;
+  countedNames[name] = currCount + 1;
+}
+```
+
+Therefore, if your accumulator is an array or an object and you are copying the array or object on each iteration, you may accidentally introduce quadratic complexity into your code, causing performance to quickly degrade on large data. This has happened in real-world code — see for example [Making Tanstack Table 1000x faster with a 1 line change](https://jpcamara.com/2023/03/07/making-tanstack-table.html).
+
+Some of the acceptable use cases of `reduce()` are given above (most notably, summing an array, promise sequencing, and function piping). There are other cases where better alternatives than `reduce()` exist.
+
+- Flattening an array of arrays. Use {{jsxref("Array/flat", "flat()")}} instead.
+
+  ```js example-bad
+  const flattened = array.reduce((acc, cur) => acc.concat(cur), []);
+  ```
+
+  ```js example-good
+  const flattened = array.flat();
+  ```
+
+- Grouping objects by a property. Use {{jsxref("Object.groupBy()")}} instead.
+
+  ```js example-bad
+  const groups = array.reduce((acc, obj) => {
+    const key = obj.name;
+    const curGroup = acc[key] ?? [];
+    return { ...acc, [key]: [...curGroup, obj] };
+  }, {});
+  ```
+
+  ```js example-good
+  const groups = Object.groupBy(array, (obj) => obj.name);
+  ```
+
+- Concatenating arrays contained in an array of objects. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
+
+  ```js example-bad
+  const friends = [
+    { name: "Anna", books: ["Bible", "Harry Potter"] },
+    { name: "Bob", books: ["War and peace", "Romeo and Juliet"] },
+    { name: "Alice", books: ["The Lord of the Rings", "The Shining"] },
+  ];
+  const allBooks = friends.reduce((acc, cur) => [...acc, ...cur.books], []);
+  ```
+
+  ```js example-good
+  const allBooks = friends.flatMap((person) => person.books);
+  ```
+
+- Removing duplicate items in an array. Use {{jsxref("Set")}} and {{jsxref("Array.from()")}} instead.
+
+  ```js example-bad
+  const uniqArray = array.reduce(
+    (acc, cur) => (acc.includes(cur) ? acc : [...acc, cur]),
+    [],
+  );
+  ```
+
+  ```js example-good
+  const uniqArray = Array.from(new Set(array));
+  ```
+
+- Eliminating or adding elements in an array. Use {{jsxref("Array/flatMap", "flatMap()")}} instead.
+
+  ```js example-bad
+  // Takes an array of numbers and splits perfect squares into its square roots
+  const roots = array.reduce((acc, cur) => {
+    if (cur < 0) return acc;
+    const root = Math.sqrt(cur);
+    if (Number.isInteger(root)) return [...acc, root, root];
+    return [...acc, cur];
+  }, []);
+  ```
+
+  ```js example-good
+  const roots = array.flatMap((val) => {
+    if (val < 0) return [];
+    const root = Math.sqrt(val);
+    if (Number.isInteger(root)) return [root, root];
+    return [val];
+  });
+  ```
+
+  If you are only eliminating elements from an array, you also can use {{jsxref("Array/filter", "filter()")}}.
+
+- Searching for elements or testing if elements satisfy a condition. Use {{jsxref("Array/find", "find()")}} and {{jsxref("Array/find", "findIndex()")}}, or {{jsxref("Array/some", "some()")}} and {{jsxref("Array/every", "every()")}} instead. These methods have the additional benefit that they return as soon as the result is certain, without iterating the entire array.
+
+  ```js example-bad
+  const allEven = array.reduce((acc, cur) => acc && cur % 2 === 0, true);
+  ```
+
+  ```js example-good
+  const allEven = array.every((val) => val % 2 === 0);
+  ```
+
+In cases where `reduce()` is the best choice, documentation and semantic variable naming can help mitigate readability drawbacks.
 
 ## Specifications
 
@@ -562,5 +390,13 @@ if (!Array.prototype.mapUsingReduce) {
 
 ## See also
 
-- A polyfill of `Array.prototype.reduce` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.map()")}}
+- {{jsxref("Array.prototype.flat()")}}
+- {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.reduceRight()")}}
+- {{jsxref("TypedArray.prototype.reduce()")}}
+- {{jsxref("Object.groupBy()")}}
+- {{jsxref("Map.groupBy()")}}

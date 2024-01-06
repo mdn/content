@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.depthMask()
+title: "WebGLRenderingContext: depthMask() method"
+short-title: depthMask()
 slug: Web/API/WebGLRenderingContext/depthMask
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.depthMask
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.depthMask()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets whether writing into the depth
@@ -16,8 +13,8 @@ buffer is enabled or disabled.
 
 ## Syntax
 
-```js
-void gl.depthMask(flag);
+```js-nolint
+depthMask(flag)
 ```
 
 ### Parameters
@@ -28,7 +25,7 @@ void gl.depthMask(flag);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

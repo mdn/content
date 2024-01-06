@@ -1,29 +1,24 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Draft
-  - HTTP
-  - HTTP Header
-  - Link
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsSyntax
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Link
 ---
+
 {{HTTPSidebar}}
 
-The HTTP **`Link`** entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+
+> **Note:** Some browsers do not support the "icon" relation via HTTP ([FF#1185705](https://bugzilla.mozilla.org/show_bug.cgi?id=1185705)). Use HTML `<link rel="icon">` instead.
 
 ## Syntax
 
-```
+```http
 Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>`.
+  - : The URI reference, must be enclosed between `<` and `>` and [URL encoded](https://en.wikipedia.org/wiki/URL_encoding).
 
 ### Parameters
 
@@ -33,19 +28,31 @@ The link header contains parameters, which are separated with `;` and are equiva
 
 The URI (absolute or relative) must be enclosed between `<` and `>`:
 
-```example-good
+```http example-good
 Link: <https://example.com>; rel="preconnect"
 ```
 
-```example-bad
+```http example-bad
 Link: https://bad.example; rel="preconnect"
+```
+
+### Encoding URLs
+
+The URI (absolute or relative) must encode char codes greater than 255:
+
+```http example-good
+Link: <https://example.com/%E8%8B%97%E6%9D%A1>; rel="preconnect"
+```
+
+```http example-bad
+Link: <https://example.com/苗条>; rel="preconnect"
 ```
 
 ### Specifying multiple links
 
 You can specify multiple links separated by commas, for example:
 
-```
+```http
 Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
 ```
 
@@ -60,3 +67,4 @@ Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; re
 ## See also
 
 - {{HTTPStatus(103, "103 Early Hints")}}
+- {{HTMLElement("link")}}

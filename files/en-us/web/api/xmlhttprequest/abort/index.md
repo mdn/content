@@ -1,35 +1,23 @@
 ---
-title: XMLHttpRequest.abort()
+title: "XMLHttpRequest: abort() method"
+short-title: abort()
 slug: Web/API/XMLHttpRequest/abort
-tags:
-  - AJAX
-  - API
-  - Abort XHR
-  - Cancel XHR
-  - HTTP
-  - HttpRequest
-  - Method
-  - Reference
-  - Stop XHR
-  - XHR
-  - XMLHttpRequest
-  - abort
-  - cancel
-  - stop
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.abort
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}}
 
 The **`XMLHttpRequest.abort()`** method aborts the request if
 it has already been sent. When a request is aborted, its
 {{domxref("XMLHttpRequest.readyState", "readyState")}} is changed to
-{{domxref("XMLHttpRequest.UNSENT")}} (0) and the request's
+`XMLHttpRequest.UNSENT` (0) and the request's
 {{domxref("XMLHttpRequest.status", "status")}} code is set to 0.
 
 ## Syntax
 
-```js
-XMLHttpRequest.abort()
+```js-nolint
+abort()
 ```
 
 ### Parameters
@@ -38,17 +26,17 @@ None.
 
 ### Return value
 
-`undefined`
+None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 This example begins loading content from the MDN home page, then due to some condition,
 aborts the transfer by calling `abort()`.
 
 ```js
-var xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+const xhr = new XMLHttpRequest();
+const method = "GET";
+const url = "https://developer.mozilla.org/";
 xhr.open(method, url, true);
 
 xhr.send();
@@ -68,5 +56,4 @@ if (OH_NOES_WE_NEED_TO_CANCEL_RIGHT_NOW_OR_ELSE) {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)

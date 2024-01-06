@@ -1,12 +1,10 @@
 ---
 title: Vibration API
 slug: Web/API/Vibration_API
-tags:
-  - API
-  - Beginner
-  - Mobile
-  - Vibration
+page-type: web-api-overview
+browser-compat: api.Navigator.vibrate
 ---
+
 {{DefaultAPISidebar("Vibration API")}}
 
 Most modern mobile devices include vibration hardware, which lets software code provide physical feedback to the user by causing the device to shake. The **Vibration API** offers Web apps the ability to access this hardware, if it exists, and does nothing if the device doesn't support it.
@@ -20,8 +18,8 @@ Vibration is described as a pattern of on-off pulses, which may be of varying le
 You may pulse the vibration hardware one time by specifying either a single value or an array consisting of only one value:
 
 ```js
-window.navigator.vibrate(200);
-window.navigator.vibrate([200]);
+navigator.vibrate(200);
+navigator.vibrate([200]);
 ```
 
 Both of these examples vibrate the device for 200 ms.
@@ -31,7 +29,7 @@ Both of these examples vibrate the device for 200 ms.
 An array of values describes alternating periods in which the device is vibrating and not vibrating. Each value in the array is converted to an integer, then interpreted alternately as the number of milliseconds the device should vibrate and the number of milliseconds it should not be vibrating. For example:
 
 ```js
-window.navigator.vibrate([200, 100, 200]);
+navigator.vibrate([200, 100, 200]);
 ```
 
 This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.
@@ -47,26 +45,26 @@ Calling {{DOMxRef("Navigator.vibrate()")}} with a value of `0`, an empty array, 
 Some basic `setInterval` and `clearInterval` action will allow you to create persistent vibration:
 
 ```js
-var vibrateInterval;
+let vibrateInterval;
 
 // Starts vibration at passed in level
 function startVibrate(duration) {
-    navigator.vibrate(duration);
+  navigator.vibrate(duration);
 }
 
 // Stops vibration
 function stopVibrate() {
-    // Clear interval and stop persistent vibrating
-    if(vibrateInterval) clearInterval(vibrateInterval);
-    navigator.vibrate(0);
+  // Clear interval and stop persistent vibrating
+  if (vibrateInterval) clearInterval(vibrateInterval);
+  navigator.vibrate(0);
 }
 
 // Start persistent vibration at given duration and interval
 // Assumes a number value is given
 function startPersistentVibrate(duration, interval) {
-    vibrateInterval = setInterval(function() {
-        startVibrate(duration);
-    }, interval);
+  vibrateInterval = setInterval(() => {
+    startVibrate(duration);
+  }, interval);
 }
 ```
 
@@ -74,13 +72,11 @@ Of course, the snippet above doesn't take into account the array method of vibra
 
 ## Specifications
 
-| Specification                                     |
-| ------------------------------------------------- |
-| [Vibration API](https://w3c.github.io/vibration/) |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.vibrate")}}
+{{Compat}}
 
 ## See also
 

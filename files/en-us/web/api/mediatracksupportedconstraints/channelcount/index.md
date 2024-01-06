@@ -1,20 +1,11 @@
 ---
-title: MediaTrackSupportedConstraints.channelCount
+title: "MediaTrackSupportedConstraints: channelCount property"
+short-title: channelCount
 slug: Web/API/MediaTrackSupportedConstraints/channelCount
-tags:
-  - API
-  - Constraints
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaTrackSupportedConstraints
-  - Property
-  - Reference
-  - Web
-  - WebRTC
-  - channelCount
+page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.channelCount
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
@@ -28,45 +19,36 @@ constraint isn't supported, it's not included in the list, so this value will ne
 You can access the supported constraints dictionary by calling
 `navigator.mediaDevices.getSupportedConstraints()`.
 
-## Syntax
-
-```js
-channelCountConstraintSupported = supportedConstraintsDictionary.channelCount;
-```
-
-### Value
+## Value
 
 This property is present in the dictionary (and its value is always `true`)
 if the user agent supports the `channelCount` constraint. If the property
 isn't present, this property is missing from the supported constraints dictionary, and
 you'll get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
-<div id="result">
-</div>
+<div id="result"></div>
 ```
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 
 ```js
-let result = document.getElementById("result");
-
-if (navigator.mediaDevices.getSupportedConstraints().channelCount) {
-  result.textContent = "Supported!";
-} else {
-  result.textContent = "Not supported!";
-}
+const result = document.getElementById("result");
+const supported = navigator.mediaDevices.getSupportedConstraints().channelCount;
+result.textContent = supported ? "Supported!" : "Not supported!";
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Example', 600, 80) }}
+{{ EmbedLiveSample('Examples', 600, 80) }}
 
 ## Specifications
 
@@ -78,7 +60,7 @@ if (navigator.mediaDevices.getSupportedConstraints().channelCount) {
 
 ## See also
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

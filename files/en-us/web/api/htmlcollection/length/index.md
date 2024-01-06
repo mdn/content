@@ -1,29 +1,21 @@
 ---
-title: HTMLCollection.length
+title: "HTMLCollection: length property"
+short-title: length
 slug: Web/API/HTMLCollection/length
-tags:
-  - API
-  - HTML DOM
-  - HTMLCollection
-  - Reference
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.HTMLCollection.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLCollection.length`** property returns the number of
 items in a {{domxref("HTMLCollection")}}.
 
-## Syntax
+## Value
 
-```js
-numItems = htmlCollection.length
-```
+An integer value representing the number of items in a `HTMLCollection`.
 
-- `numItems` is an integer value representing the number of items in a
-  `HTMLCollection`.
-
-## Example
+## Examples
 
 The `length` property is often useful in DOM programming. It's often used to
 test the length of a list, to see if it exists at all. It's also commonly used as the
@@ -31,12 +23,12 @@ iterator in a `for` loop, as in this example.
 
 ```js
 // All the elements with the class ".test" in the document
-var items = document.getElementsByClassName("test");
+const items = document.getElementsByClassName("test");
 
 // For each test item in the list,
 // append the entire element as a string of HTML
-var gross = "";
-for (var i = 0; i < items.length; i++) {
+let gross = "";
+for (let i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 

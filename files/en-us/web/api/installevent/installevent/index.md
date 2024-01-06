@@ -1,35 +1,39 @@
 ---
-title: InstallEvent()
+title: "InstallEvent: InstallEvent() constructor"
+short-title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - InstallEvent
-  - Reference
-  - Service Workers
-  - ServiceWorker
+page-type: web-api-constructor
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent.InstallEvent
 ---
-{{non-standard_header}}{{deprecated_header}}
+
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.
 
 ## Syntax
 
-```js
-var myInstallEvent = new InstallEvent(type, init);
+```js-nolint
+new InstallEvent(type, options)
 ```
 
 ### Parameters
 
-- _type_
-  - : The type of the event.
-- _init_ {{optional_inline}}
+- `type`
+  - : A string with the name of the event.
+    It is case-sensitive and browsers always set it to `install`.
+- `options` {{optional_inline}}
+  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can contain any custom settings that you want to apply to the event object. Currently no possible options are mandatory, but this has been defined for forward compatibility.
 
-  - : An options object containing any custom settings that you want to apply to the event object. Available options are as follows:
+## Return value
 
-    - `activeWorker`: The {{domxref("ServiceWorker")}} that is currently actively controlling the page.
+A new {{domxref("InstallEvent")}} object.
+
+## Specifications
+
+_This feature is no more on the standard track._
 
 ## Browser compatibility
 

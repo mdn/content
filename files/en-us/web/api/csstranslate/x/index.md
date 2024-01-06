@@ -1,30 +1,18 @@
 ---
-title: CSSTranslate.x
+title: "CSSTranslate: x property"
+short-title: x
 slug: Web/API/CSSTranslate/x
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - CSSTransformValue
-  - CSSTranslate
-  - Experimental
-  - Houdini
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.CSSTranslate.x
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}{{draft}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`x`** property of the
 {{domxref("CSSTranslate")}} interface gets and sets the abscissa or x-axis of the
 translating vector.
 
-## Syntax
-
-```js
-var translateX = CSSTranslate.x;
-```
-
-### Value
+## Value
 
 A {{cssxref('length-percentage')}}
 

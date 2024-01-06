@@ -1,14 +1,10 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.font-family
 ---
+
 {{CSSRef}}
 
 The **`font-family`** CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
@@ -49,6 +45,7 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: revert;
+font-family: revert-layer;
 font-family: unset;
 ```
 
@@ -88,7 +85,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
     - `cursive`
 
-      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letterwork.
+      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
         For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
 
@@ -129,7 +126,7 @@ font-family: "Goudy Bookletter 1911", sans-serif;
 
 The following declarations are **invalid**:
 
-```css example-bad
+```css-nolint example-bad
 font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
@@ -142,7 +139,9 @@ font-family: Hawaii 5-0, sans-serif;
 The following example is technically **valid** but is not recommended:
 
 ```css
-font-family: Gill Sans Extrabold, sans-serif;
+font-family:
+  Gill Sans Extrabold,
+  sans-serif;
 ```
 
 ## Formal definition
@@ -192,37 +191,21 @@ font-family: Gill Sans Extrabold, sans-serif;
 ```
 
 ```html hidden
-<div class="serif">
-  This is an example of a serif font.
-</div>
+<div class="serif">This is an example of a serif font.</div>
 
-<div class="sansserif">
-  This is an example of a sans-serif font.
-</div>
+<div class="sansserif">This is an example of a sans-serif font.</div>
 
-<div class="monospace">
-  This is an example of a monospace font.
-</div>
+<div class="monospace">This is an example of a monospace font.</div>
 
-<div class="cursive">
-  This is an example of a cursive font.
-</div>
+<div class="cursive">This is an example of a cursive font.</div>
 
-<div class="fantasy">
-  This is an example of a fantasy font.
-</div>
+<div class="fantasy">This is an example of a fantasy font.</div>
 
-<div class="math">
-  This is an example of a math font.
-</div>
+<div class="math">This is an example of a math font.</div>
 
-<div class="emoji">
-  This is an example of an emoji font.
-</div>
+<div class="emoji">This is an example of an emoji font.</div>
 
-<div class="fangsong">
-  This is an example of a fangsong font.
-</div>
+<div class="fangsong">This is an example of a fangsong font.</div>
 ```
 
 {{EmbedLiveSample("Some_common_font_families", 600, 220)}}

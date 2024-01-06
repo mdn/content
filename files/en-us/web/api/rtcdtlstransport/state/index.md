@@ -1,29 +1,18 @@
 ---
-title: RTCDtlsTransport.state
+title: "RTCDtlsTransport: state property"
+short-title: state
 slug: Web/API/RTCDtlsTransport/state
-tags:
-  - API
-  - Property
-  - RTCDtlsTransport
-  - Read-only
-  - Reference
-  - WebRTC
-  - state
+page-type: web-api-instance-property
 browser-compat: api.RTCDtlsTransport.state
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`state`** read-only property of the
 {{DOMxRef("RTCDtlsTransport")}} interface provides information which describes a
 Datagram Transport Layer Security (**{{Glossary("DTLS")}}**) transport state.
 
-## Syntax
-
-```js
-let myState = dtlsTransport.state;
-```
-
-### Value
+## Value
 
 A string. Its value is one of the following:
 

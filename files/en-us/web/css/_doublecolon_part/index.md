@@ -1,21 +1,13 @@
 ---
-title: '::part()'
+title: "::part()"
 slug: Web/CSS/::part
-tags:
-  - '::part'
-  - CSS
-  - Draft
-  - Experimental
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
 browser-compat: css.selectors.part
 ---
+
 {{CSSRef}}
 
-The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/Web_Components/Using_shadow_DOM) that has a matching {{HTMLAttrxRef("part")}} attribute.
+The **`::part`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents any element within a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) that has a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 ```css
 custom-element::part(foo) {
@@ -25,7 +17,11 @@ custom-element::part(foo) {
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+::part(<ident>+) {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -33,18 +29,20 @@ custom-element::part(foo) {
 
 ```html
 <template id="tabbed-custom-element">
-<style type="text/css">
-*, ::before, ::after {
-  box-sizing: border-box;
-  padding: 1rem;
-}
-:host {
-  display: flex;
-}
-</style>
-<div part="tab active">Tab 1</div>
-<div part="tab">Tab 2</div>
-<div part="tab">Tab 3</div>
+  <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+      padding: 1rem;
+    }
+    :host {
+      display: flex;
+    }
+  </style>
+  <div part="tab active">Tab 1</div>
+  <div part="tab">Tab 2</div>
+  <div part="tab">Tab 3</div>
 </template>
 
 <tabbed-custom-element></tabbed-custom-element>
@@ -60,18 +58,20 @@ tabbed-custom-element::part(tab) {
 
 tabbed-custom-element::part(tab):hover {
   background-color: #0c0d19;
+  color: #ffffff;
   border-color: #0c0d33;
 }
 
 tabbed-custom-element::part(tab):hover:active {
   background-color: #0c0d33;
+  color: #ffffff;
 }
 
 tabbed-custom-element::part(tab):focus {
   box-shadow:
     0 0 0 1px #0a84ff inset,
     0 0 0 1px #0a84ff,
-    0 0 0 4px rgba(10, 132, 255, 0.3);
+    0 0 0 4px rgb(10 132 255 / 30%);
 }
 
 tabbed-custom-element::part(active) {
@@ -84,13 +84,14 @@ tabbed-custom-element::part(active) {
 
 ```js
 let template = document.querySelector("#tabbed-custom-element");
-globalThis.customElements.define(template.id, class extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content);
-  }
-});
+globalThis.customElements.define(
+  template.id,
+  class extends HTMLElement {
+    constructor() {
+      super().attachShadow({ mode: "open" }).append(template.content);
+    }
+  },
+);
 ```
 
 ### Result
@@ -107,6 +108,6 @@ globalThis.customElements.define(template.id, class extends HTMLElement {
 
 ## See also
 
-- The {{HTMLAttrxRef("part")}} attribute - Used to define parts which can be selected by the `::part()` selector
-- The {{HTMLAttrxRef("exportparts")}} attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
-- [Explainer: CSS Shadow ::part and ::theme](https://github.com/fergald/docs/blob/master/explainers/css-shadow-parts-1.md)
+- The [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute - Used to define parts which can be selected by the `::part()` selector
+- The [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) attribute - Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module

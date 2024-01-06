@@ -1,16 +1,14 @@
 ---
-title: ContactsManager.select()
+title: "ContactsManager: select() method"
+short-title: select()
 slug: Web/API/ContactsManager/select
-tags:
-  - Contact Picker API
-  - Contacts
-  - ContactsPicker
-  - Method
-  - PWA
-  - contact picker
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ContactsManager.select
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Contact Picker API")}}
+
+{{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
 The **`select()`** method of the
 {{domxref("ContactsManager")}} interface returns a {{jsxref('Promise')}} which, when
@@ -20,13 +18,14 @@ resolve.
 
 ## Syntax
 
-```js
-var ContactInfo = ContactsManager.select(properties, options);
+```js-nolint
+select(properties)
+select(properties, options)
 ```
 
 ### Parameters
 
-- _properties_
+- `properties`
 
   - : An array of {{jsxref('String', 'strings')}} defining what information to retrieve
     from a contact. Allowed values are as follows:
@@ -41,8 +40,8 @@ var ContactInfo = ContactsManager.select(properties, options);
 
   - : Options are as follows:
 
-    - `multiple`: A Boolean that allows multiple contacts to be selected.
-      The default is `false`.
+    - `multiple`
+      - : A Boolean that allows multiple contacts to be selected. The default is `false`.
 
 ### Return value
 
@@ -55,19 +54,23 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 - `icon`
   - : An array of {{domxref("Blob")}} objects containing images of an individual.
 - `name`
-  - : An array strings, each a unique name of an individual.
+  - : An array strings, each containing a unique name of an individual.
 - `tel`
-  - : An array strings, each a unique phone number of an individual.
+  - : An array strings, each containing a unique phone number of an individual.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker; only one picker can exist at any time.
+  - : Returned if the browsing context is not top-level, if the contact picker shows a flag that denotes an already existing contact picker since only one picker can exist at any time, or if launching a contact picker failed.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Returned if the method is not triggered by user interaction.
-- `TypeError` {{domxref("DOMException")}}
+  - : Returned if the method is not triggered by [user activation](/en-US/docs/Web/Security/User_activation).
+- {{jsxref("TypeError")}}
   - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
+
+## Security
+
+{{Glossary("Transient activation")}} is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 
@@ -81,32 +84,32 @@ present the user with a contact picker interface and handle the chosen results.
 `handleResults()` is a developer defined function.
 
 ```js
-const props = ['name', 'email', 'tel', 'address', 'icon'];
-const opts = {multiple: true};
+const props = ["name", "email", "tel", "address", "icon"];
+const opts = { multiple: true };
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(props, opts);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(props, opts);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```
 
 ### Select Using Only Supported Properties
 
-The following example uses {{jsxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
+The following example uses {{domxref("ContactsManager.getProperties", "getProperties()")}} to ensure that only supported properties are passed. Otherwise, `select()` might throw a {{jsxref("TypeError")}}. `handleResults()` is a developer defined function.
 
 ```js
 const supportedProperties = await navigator.contacts.getProperties();
 
 async function getContacts() {
   try {
-      const contacts = await navigator.contacts.select(supportedProperties);
-      handleResults(contacts);
+    const contacts = await navigator.contacts.select(supportedProperties);
+    handleResults(contacts);
   } catch (ex) {
-      // Handle any errors here.
+    // Handle any errors here.
   }
 }
 ```

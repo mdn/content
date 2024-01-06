@@ -1,27 +1,17 @@
 ---
-title: Document.images
+title: "Document: images property"
+short-title: images
 slug: Web/API/Document/images
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Images
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.images
 ---
+
 {{APIRef("DOM")}}
 
 The **`images`** read-only property of
 the {{domxref("Document")}} interface returns a [collection](/en-US/docs/Web/API/HTMLCollection) of the [images](/en-US/docs/Web/API/HTMLImageElement/Image) in the current HTML document.
 
-## Syntax
-
-```js
-var imageCollection = document.images;
-```
-
-### Value
+## Value
 
 An {{domxref("HTMLCollection")}} providing a live list of all of the images contained
 in the current document. Each entry in the collection is an
@@ -39,18 +29,16 @@ firstImage = imageCollection.item(0);
 firstImage = imageCollection[0];
 ```
 
-## Example
+## Examples
 
 This example looks through the list of images and finds one whose name is
 `"banner.gif"`.
 
 ```js
-var ilist = document.images;
-
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == 'banner.gif') {
-        // found the banner
-    }
+for (const image of document.images) {
+  if (image.src === "banner.gif") {
+    console.log("Found the banner");
+  }
 }
 ```
 

@@ -1,17 +1,12 @@
 ---
-title: CountQueuingStrategy.size()
+title: "CountQueuingStrategy: size() method"
+short-title: size()
 slug: Web/API/CountQueuingStrategy/size
-tags:
-  - API
-  - CountQueuingStrategy
-  - Experimental
-  - Method
-  - Reference
-  - Streams
-  - size
+page-type: web-api-instance-method
 browser-compat: api.CountQueuingStrategy.size
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`size()`** method of the
 {{domxref("CountQueuingStrategy")}} interface always returns `1`, so that the
@@ -19,8 +14,8 @@ total queue size is a count of the number of chunks in the queue.
 
 ## Syntax
 
-```js
-var size = countQueuingStrategy.size();
+```js-nolint
+size()
 ```
 
 ### Parameters
@@ -36,20 +31,23 @@ None.
 ```js
 const queuingStrategy = new CountQueuingStrategy({ highWaterMark: 1 });
 
-const writableStream = new WritableStream({
-  // Implement the sink
-  write(chunk) {
-    ...
+const writableStream = new WritableStream(
+  {
+    // Implement the sink
+    write(chunk) {
+      // …
+    },
+    close() {
+      // …
+    },
+    abort(err) {
+      console.log("Sink error:", err);
+    },
   },
-  close() {
-    ...
-  },
-  abort(err) {
-    console.log("Sink error:", err);
-  }
-}, queuingStrategy);
+  queuingStrategy,
+);
 
-var size = queuingStrategy.size();
+const size = queuingStrategy.size();
 ```
 
 ## Specifications
@@ -59,3 +57,7 @@ var size = queuingStrategy.size();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("CountQueuingStrategy.CountQueuingStrategy", "CountQueuingStrategy()")}} constructor

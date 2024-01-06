@@ -1,15 +1,11 @@
 ---
 title: X-Forwarded-Proto
 slug: Web/HTTP/Headers/X-Forwarded-Proto
-tags:
-  - HTTP
-  - HTTP Header
-  - Non-standard
-  - Reference
-  - Request header
-  - header
-browser-compat: http.headers.X-Forwarded-Proto
+page-type: http-header
+status:
+  - non-standard
 ---
+
 {{HTTPSidebar}}
 
 The **`X-Forwarded-Proto`** (XFP) header is a de-facto standard
@@ -36,7 +32,7 @@ A standardized version of this header is the HTTP {{HTTPHeader("Forwarded")}} he
 
 ## Syntax
 
-```
+```http
 X-Forwarded-Proto: <protocol>
 ```
 
@@ -47,13 +43,13 @@ X-Forwarded-Proto: <protocol>
 
 ## Examples
 
-```
+```http
 X-Forwarded-Proto: https
 ```
 
 Other non-standard forms:
 
-```
+```http
 # Microsoft
 Front-End-Https: on
 
@@ -66,10 +62,6 @@ X-Url-Scheme: https
 
 Not part of any current specification. The standardized version of this header is
 {{HTTPHeader("Forwarded")}}.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -1,17 +1,12 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY property"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.clientY
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`clientY`** read-only property of the {{domxref("MouseEvent")}} interface provides the vertical coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
 
@@ -21,9 +16,9 @@ For example, clicking on the top edge of the viewport will always result in a mo
 
 A `double` floating point value.
 
-## Example
+## Examples
 
-This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
@@ -35,8 +30,8 @@ This example displays your mouse's coordinates whenever you trigger the {{Event(
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -47,7 +42,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -61,5 +56,5 @@ function logKey(e) {
 
 - {{ domxref("MouseEvent") }}
 - {{domxref("MouseEvent.clientX","clientX")}}
-- {{domxref("MouseEvent.screenX","screenX")}} /
-  {{domxref("MouseEvent.screenY","screenY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

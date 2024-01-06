@@ -1,32 +1,20 @@
 ---
-title: ElementInternals.ariaSort
+title: "ElementInternals: ariaSort property"
+short-title: ariaSort
 slug: Web/API/ElementInternals/ariaSort
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSort
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaSort
 ---
-{{DefaultAPISidebar("DOM")}}
 
-The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the `aria-sort` attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
+{{APIRef("Web Components")}}
+
+The **`ariaSort`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute, which indicates if items in a table or grid are sorted in ascending or descending order.
 
 > **Note:** Setting aria attributes on `ElementInternals` allows default semantics to be defined on a custom element. These may be overwritten by author-defined attributes, but ensure that default semantics are retained should the author delete those attributes, or fail to add them at all. For more information see the [Accessibility Object Model explainer](https://wicg.github.io/aom/explainer.html#default-semantics-for-custom-elements-via-the-elementinternals-object).
 
-## Syntax
+## Value
 
-```js
-let ariaSort = ElementInternals.ariaSort;
-ElementInternals.ariaSort = ariaSort;
-```
-
-### Value
-
-A {{domxref("DOMString")}} with one of the following values:
+A string with one of the following values:
 
 - `"ascending"`
   - : Items are sorted in ascending order by this column.
@@ -55,4 +43,4 @@ this.internals_.ariaSort = "ascending";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

@@ -1,40 +1,37 @@
 ---
-title: crossOriginIsolated
+title: crossOriginIsolated global property
+short-title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - crossOriginIsolated
+page-type: web-api-global-property
 browser-compat: api.crossOriginIsolated
 ---
-{{APIRef()}}{{SeeCompatTable}}
+
+{{APIRef}}{{AvailableInWorkers}}
 
 The global **`crossOriginIsolated`** read-only property returns a boolean value that
-indicates whether a {{JSxRef("SharedArrayBuffer")}} can be sent via a
-{{DOMxRef("Window.postMessage()")}} call.
+indicates whether the website is in a cross-origin isolation state. That state mitigates the risk of side-channel attacks and unlocks a few capabilities:
 
-This value is dependent on any {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
-{{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers present in the response.
+- {{JSxRef("SharedArrayBuffer")}} can be created and sent via a {{DOMxRef("Window.postMessage()")}} call.
+- {{DOMxRef("Performance.now()")}} offers better precision.
+- {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}} can be accessed.
 
-## Syntax
+A website is in a cross-origin isolated state, when the response header {{HTTPHeader("Cross-Origin-Opener-Policy")}} has the value `same-origin` and the {{HTTPHeader("Cross-Origin-Embedder-Policy")}} header has the value `require-corp` or `credentialless`.
 
-```js
-var myCrossOriginIsolated = self.crossOriginIsolated; // or just crossOriginIsolated
-```
+## Value
 
-### Value
-
-A boolean value
+A boolean value.
 
 ## Examples
 
 ```js
-if(crossOriginIsolated) {
-  // Post SharedArrayBuffer
+const myWorker = new Worker("worker.js");
+
+if (crossOriginIsolated) {
+  const buffer = new SharedArrayBuffer(16);
+  myWorker.postMessage(buffer);
 } else {
-  // Do something else
+  const buffer = new ArrayBuffer(16);
+  myWorker.postMessage(buffer);
 }
 ```
 
@@ -48,5 +45,5 @@ if(crossOriginIsolated) {
 
 ## See also
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API)
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)

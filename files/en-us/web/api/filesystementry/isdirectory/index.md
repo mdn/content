@@ -1,17 +1,11 @@
 ---
-title: FileSystemEntry.isDirectory
+title: "FileSystemEntry: isDirectory property"
+short-title: isDirectory
 slug: Web/API/FileSystemEntry/isDirectory
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - isDirectory
+page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.isDirectory
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isDirectory`**
@@ -22,22 +16,16 @@ and `false` if it's not.
 You can also use {{domxref("FileSystemEntry.isFile", "isFile")}} to determine if the
 entry is a file.
 
-> **Warning:** You should not assume that any entry which isn't a directory is a file or vice-versa.
+> **Warning:** You should not assume that any entry which isn't a directory is a file or vice versa.
 > There are other types of file descriptors on many operating systems. Be sure to use
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.
 
-## Syntax
-
-```js
-var isDirectory = FileSystemEntry.isDirectory;
-```
-
-### Value
+## Value
 
 A Boolean indicating whether or not the {{domxref("FileSystemEntry")}} is a directory.
 
-## Example
+## Examples
 
 This example shows how this property might be used to determine whether to process the
 entry as a directory or file. If the entry is neither, an error handler is called with
@@ -63,10 +51,8 @@ if (entry.isDirectory) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}
 - {{domxref("FileSystemEntry.isFile")}}
 - {{domxref("FileSystemDirectoryEntry")}}

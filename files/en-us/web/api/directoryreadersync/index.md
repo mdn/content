@@ -1,65 +1,64 @@
 ---
 title: DirectoryReaderSync
 slug: Web/API/DirectoryReaderSync
-tags:
-  - API
-  - Reference
+page-type: web-api-interface
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.DirectoryReaderSync
 ---
-{{APIRef("File System API")}}{{Non-standard_header}}
 
-The `DirectoryReaderSync` interface of the [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction) lets you read the entries in a directory.
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **Note:** This interface has been abandoned: it was on a standard track and it proves not a good idea. Do not use it anymore.
+The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
-## About this document
-
-This document was last updated on March 2, 2012 and follows the [W3C Specifications (Working Draft)](https://www.w3.org/TR/file-system-api/) drafted on April 19, 2011.
-
-This specification is pretty much abandoned, having failed to reach any substantial traction.
+> **Warning:** This interface is deprecated and is no more on the standard track.
+> _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
 
-Before you call the only method in this interface, [`readEntries()`](</#readEntries()> "#readEntries()"), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [FileEntrySync](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of  `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with [`resolveLocalFileSystemURL()`](</en-US/docs/Web/API/LocalFileSystem#resolvelocalfilesystemurl()>). That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
+Before you call the only method in this interface, [`readEntries()`](#readentries), create the [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync) object. But DirectoryEntrySync (as well as [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)) is not a data type that you can pass between a calling app and Web Worker thread. It's not a big deal, because you don't really need to have the main app and the worker thread see the same JavaScript object; you just need them to access the same files. You can do that by passing a list of `filesystem:` URLs—which are just strings—instead of a list of entries. You can also use the `filesystem:` URL to look up the entry with `resolveLocalFileSystemURL()`. That gets you back to a DirectoryEntrySync (as well as FileEntrySync) object.
 
-#### Example
+### Example
 
-In the following code snippet from [HTML5Rocks](http://www.html5rocks.com/en/tutorials/file/filesystem/), we create Web Workers and pass data from it to the main app.
+In the following code snippet from [HTML5Rocks (web.dev)](https://web.dev/articles/filesystem-sync), we create Web Workers and pass data from it to the main app.
 
 ```js
 // Taking care of the browser-specific prefixes.
-  window.resolveLocalFileSystemURL = window.resolveLocalFileSystemURL ||
-                                     window.webkitResolveLocalFileSystemURL;
+window.resolveLocalFileSystemURL =
+  window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;
 
 // Create web workers
-  var worker = new Worker('worker.js');
-  worker.onmessage = function(e) {
-    var urls = e.data.entries;
-    urls.forEach(function(url, i) {
-      window.resolveLocalFileSystemURL(url, function(fileEntry) {
-        // Print out file's name.
-        console.log(fileEntry.name);
-      });
+const worker = new Worker("worker.js");
+worker.onmessage = (e) => {
+  const urls = e.data.entries;
+  urls.forEach((url) => {
+    window.resolveLocalFileSystemURL(url, (fileEntry) => {
+      // Print out file's name.
+      console.log(fileEntry.name);
     });
-  };
+  });
+};
 
-  worker.postMessage({'cmd': 'list'});
+worker.postMessage({ cmd: "list" });
 ```
 
-The following is Worker.js code that gets the contents of the directory.
+The following is `worker.js` code that gets the contents of the directory.
 
 ```js
+// worker.js
+
 // Taking care of the browser-specific prefixes.
-self.requestFileSystemSync = self.webkitRequestFileSystemSync ||
-                             self.requestFileSystemSync;
+self.requestFileSystemSync =
+  self.webkitRequestFileSystemSync || self.requestFileSystemSync;
 
 // Global for holding the list of entry file system URLs.
-var paths = [];
+const paths = [];
 
 function getAllEntries(dirReader) {
-  var entries = dirReader.readEntries();
+  const entries = dirReader.readEntries();
 
-  for (var i = 0, entry; entry = entries[i]; ++i) {
+  for (const entry of entries) {
     // Stash this entry's filesystem in URL
     paths.push(entry.toURL());
 
@@ -72,55 +71,44 @@ function getAllEntries(dirReader) {
 
 // Forward the error to main app.
 function onError(e) {
-  postMessage('ERROR: ' + e.toString());
+  postMessage(`ERROR: ${e.toString()}`);
 }
 
-self.onmessage = function(e) {
-  var data = e.data;
+self.onmessage = (e) => {
+  const cmd = e.data.cmd;
 
   // Ignore everything else except our 'list' command.
-  if (!data.cmd || data.cmd != 'list') {
+  if (!cmd || cmd !== "list") {
     return;
   }
 
   try {
-    var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);
+    const fs = requestFileSystemSync(TEMPORARY, 1024 * 1024 /*1MB*/);
 
     getAllEntries(fs.root.createReader());
 
-    self.postMessage({entries: paths});
+    self.postMessage({ entries: paths });
   } catch (e) {
     onError(e);
   }
 };
 ```
 
-## Method overview
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code
-          >EntrySync
-          <a href="#createreader" title="#readEntries">readEntries</a> () raises
-          (<a href="/en-US/docs/Web/API/FileException">FileException</a>);</code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## Method
 
 ### readEntries()
 
-Returns a lost of entries from a specific directory. Call this method until an empty array is returned.
+Returns a list of entries from a specific directory. Call this method until an empty array is returned.
 
-    EntrySync readEntries (
-    ) raises (FileException);
+#### Syntax
 
-##### Returns
+```js-nolint
+readEntries()
+```
+
+##### Return value
+
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync)
 
 ##### Parameter
 
@@ -128,7 +116,7 @@ None
 
 ##### Exceptions
 
-This method can raise a [FileException](/en-US/docs/Web/API/FileException) with the following codes:
+This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with the following codes:
 
 | Exception           | Description                                                                        |
 | ------------------- | ---------------------------------------------------------------------------------- |
@@ -136,14 +124,15 @@ This method can raise a [FileException](/en-US/docs/Web/API/FileException) with 
 | `INVALID_STATE_ERR` | The directory has been modified since the first call to readEntries was processed. |
 | `SECURITY_ERR`      | The browser determined that it was not safe to look up the metadata.               |
 
+## Specifications
+
+This feature is not part of any specification anymore. It is no longer on track to become a standard.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-Specification: {{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}
-
-Reference: [File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
-
-Introduction: [Basic Concepts About the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

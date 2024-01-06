@@ -1,48 +1,51 @@
 ---
-title: CookieStoreManager.unsubscribe()
+title: "CookieStoreManager: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
-tags:
-  - API
-  - Method
-  - Reference
-  - unsubscribe
-  - CookieStoreManager
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
-    let promise = registration.cookies.unsubscribe(subscriptions);
+```js-nolint
+unsubscribe(subscriptions)
+```
 
 ### Parameters
 
-- subscriptions
+- `subscriptions`
 
   - : An object containing:
 
     - `name`
-      - : A {{domxref("USVString")}} with the name of a cookie.
+      - : A string with the name of a cookie.
     - `url`
-      - : A {{domxref("USVString")}} with the url of the scope used to subscribe to this cookie.
+      - : A string with the url of the scope used to subscribe to this cookie.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subscription completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the service worker has been unsubscribed.
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the url passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
+  - : Thrown if the URL passed in `subscriptions` does not match the service worker registration's {{domxref("ServiceWorkerRegistration.scope","scope")}}.
 
 ## Examples
 
-In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
+In this example, the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.unsubscribe(subscriptions);
 ```
 

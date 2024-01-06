@@ -1,25 +1,16 @@
 ---
-title: MIDIAccess.inputs
+title: "MIDIAccess: inputs property"
+short-title: inputs
 slug: Web/API/MIDIAccess/inputs
-tags:
-  - API
-  - Property
-  - Reference
-  - inputs
-  - MIDIAccess
+page-type: web-api-instance-property
 browser-compat: api.MIDIAccess.inputs
 ---
+
 {{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`inputs`** read-only property of the {{domxref("MIDIAccess")}} interface provides access to any available MIDI input ports.
 
-## Syntax
-
-```js
-let inputs = MIDIAccess.inputs;
-```
-
-### Value
+## Value
 
 A {{domxref("MIDIInputMap")}} instance.
 
@@ -28,12 +19,9 @@ A {{domxref("MIDIInputMap")}} instance.
 The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. Printing the value of `inputs` to the console returns a {{domxref("MIDIInputMap")}}.
 
 ```js
-navigator.requestMIDIAccess()
-  .then(function(access) {
-
-     console.log(access.inputs);
-
-  });
+navigator.requestMIDIAccess().then((access) => {
+  console.log(access.inputs);
+});
 ```
 
 ## Specifications

@@ -1,11 +1,9 @@
 ---
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
-tags:
-  - DOM
-  - Gecko
-  - Guide
+page-type: guide
 ---
+
 {{ ApiRef() }}
 
 It's easy to get confused about which event target to examine when writing an event handler. This article should clarify the use of the target properties.
@@ -31,7 +29,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        The DOM element on the left hand side of the call that triggered this
+        The DOM element on the left-hand side of the call that triggered this
         event.
       </td>
     </tr>
@@ -87,15 +85,14 @@ There are five targets to consider:
           ></code
         >
       </td>
-      <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+      <td><a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} If the event was retargeted for
         some reason other than an anonymous boundary crossing, this will be set
         to the target before the retargeting occurs. For example, mouse events
         are retargeted to their parent node when they happen over text nodes
-        ({{ Bug("185889") }}), and in that case <code>.target</code> will
+        ([Firefox bug 185889](https://bugzil.la/185889)), and in that case <code>.target</code> will
         show the parent and <code>.explicitOriginalTarget</code> will show the
         text node.<br />Unlike <code>.originalTarget</code>,
         <code>.explicitOriginalTarget</code> will never contain anonymous
@@ -111,7 +108,7 @@ There are five targets to consider:
         >
       </td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original target of the event,
@@ -126,7 +123,7 @@ There are five targets to consider:
     <tr>
       <td>event.composedTarget</td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} The original non-native target of
@@ -143,70 +140,90 @@ There are five targets to consider:
 ### Examples
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Comparison of Event Targets</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      height: 150px;
-      width: 100%;
-    }
-    td {
-      border: 1px solid #ccc;
-      font-weight: bold;
-      padding: 5px;
-      min-height: 30px;
-    }
-    .standard {
-      background-color: #99ff99;
-    }
-    .non-standard {
-      background-color: #902D37;
-    }
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Comparison of Event Targets</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        height: 150px;
+        width: 100%;
+      }
+      td {
+        border: 1px solid #ccc;
+        font-weight: bold;
+        padding: 5px;
+        min-height: 30px;
+      }
+      .standard {
+        background-color: #99ff99;
+      }
+      .non-standard {
+        background-color: #902d37;
+      }
     </style>
-</head>
-<body>
-  <table>
-    <thead>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td class="standard">
+            Original target dispatching the event <small>event.target</small>
+          </td>
+          <td class="standard">
+            Target who's event listener is being processed
+            <small>event.currentTarget</small>
+          </td>
+          <td class="standard">
+            Identify other element (if any) involved in the event
+            <small>event.relatedTarget</small>
+          </td>
+          <td class="non-standard">
+            If there was a retargeting of the event for some reason
+            <small> event.explicitOriginalTarget</small> contains the target
+            before retargeting (never contains anonymous targets)
+          </td>
+          <td class="non-standard">
+            If there was a retargeting of the event for some reason
+            <small> event.originalTarget</small> contains the target before
+            retargeting (may contain anonymous targets)
+          </td>
+        </tr>
+      </thead>
       <tr>
-        <td class="standard">Original target dispatching the event <small>event.target</small></td>
-        <td class="standard">Target who's event listener is being processed <small>event.currentTarget</small></td>
-        <td class="standard">Identify other element (if any) involved in the event <small>event.relatedTarget</small></td>
-        <td class="non-standard">If there was a retargeting of the event for some reason <small> event.explicitOriginalTarget</small> contains the target before retargeting (never contains anonymous targets)</td>
-        <td class="non-standard">If there was a retargeting of the event for some reason <small> event.originalTarget</small> contains the target before retargeting (may contain anonymous targets)</td>
+        <td id="target"></td>
+        <td id="currentTarget"></td>
+        <td id="relatedTarget"></td>
+        <td id="explicitOriginalTarget"></td>
+        <td id="originalTarget"></td>
       </tr>
-    </thead>
-    <tr>
-      <td id="target"></td>
-      <td id="currentTarget"></td>
-      <td id="relatedTarget"></td>
-      <td id="explicitOriginalTarget"></td>
-      <td id="originalTarget"></td>
-    </tr>
-  </table>
-  <p>Clicking on the text will show the difference between explicitOriginalTarget, originalTarget, and target</p>
-  <script>
-    function handleClicks(e) {
-      document.getElementById('target').innerHTML = e.target;
-      document.getElementById('currentTarget').innerHTML = e.currentTarget;
-      document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-      document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
-      document.getElementById('originalTarget').innerHTML = e.originalTarget;
-    }
+    </table>
+    <p>
+      Clicking on the text will show the difference between
+      explicitOriginalTarget, originalTarget, and target
+    </p>
+    <script>
+      function handleClicks(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("currentTarget").innerHTML = e.currentTarget;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+        document.getElementById("explicitOriginalTarget").innerHTML =
+          e.explicitOriginalTarget;
+        document.getElementById("originalTarget").innerHTML = e.originalTarget;
+      }
 
-    function handleMouseover(e) {
-      document.getElementById('target').innerHTML = e.target;
-      document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-    }
+      function handleMouseover(e) {
+        document.getElementById("target").innerHTML = e.target;
+        document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+      }
 
-    document.addEventListener('click', handleClicks, false);
-    document.addEventListener('mouseover', handleMouseover, false);
-</script>
-</body>
+      document.addEventListener("click", handleClicks, false);
+      document.addEventListener("mouseover", handleMouseover, false);
+    </script>
+  </body>
 </html>
 ```
 

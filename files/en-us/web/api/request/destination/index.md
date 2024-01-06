@@ -1,23 +1,12 @@
 ---
-title: Request.destination
+title: "Request: destination property"
+short-title: destination
 slug: Web/API/Request/destination
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Files
-  - Loading
-  - Networking
-  - Property
-  - Read-only
-  - Reference
-  - data
-  - destination
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.destination
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`destination`** read-only
 property of the **{{domxref("Request")}}** interface returns a string
@@ -39,24 +28,28 @@ where the received data is stored for processing later. Others are script-based,
 which case the received data is delivered to a script by calling it and passing the data
 along. Script-based destinations include {{HTMLElement("script")}} elements, as well as
 any of the {{domxref("Worklet")}}-based destinations
-(including {{domxref("AudioWorklet")}} and {{domxref("PaintWorklet")}}), and the
-{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
-and {{domxref("SharedWorker")}}.
+(including subclasses like {{domxref("AudioWorklet")}}), and the
+{{domxref("Worker")}}-based destinations, including {{domxref("ServiceWorker")}}
+and {{domxref("SharedWorker")}}.
 
-## Syntax
-
-```js
-var destination = request.destination;
-```
-
-### Value
+## Value
 
 A string which indicates the type of content the request is asking for. This type is much broader than the usual document type values (such as `"document"` or `"manifest"`), and may include contextual cues such as `"image"` or `"worker"` or `"audioworklet"`.
 
 Possible values are:
 
 - `""`
-  - : The default value of `destination` is used for destinations that do not have their own value. [navigator.sendBeacon()](/en-US/docs/Web/API/Navigator/sendBeacon), [EventSource](/en-US/docs/Web/API/EventSource), [\<a ping>](/en-US/docs/Web/HTML/Element/a#attr-ping), [\<area ping>](/en-US/docs/Web/HTML/Element/area#attr-ping), [fetch()](/en-US/docs/Web/API/fetch), [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest), [WebSocket](/en-US/docs/Web/API/WebSocket), [Cache](/en-US/docs/Web/API/Cache) and more.
+
+  - : The empty string is the default value, and is used for destinations that do not have their own value. This is the value when requests are made using the following APIs (among others):
+    - [`<a ping>`](/en-US/docs/Web/HTML/Element/a#ping)
+    - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
+    - {{domxref("Cache")}}
+    - {{domxref("EventSource")}}
+    - {{domxref("fetch()")}}
+    - {{domxref("navigator.sendBeacon()")}}
+    - {{domxref("WebSocket")}}
+    - {{domxref("XMLHttpRequest")}}
+
 - `"audio"`
   - : The target is audio data.
 - `"audioworklet"`
@@ -86,23 +79,23 @@ Possible values are:
 - `"style"`
   - : The target is a style
 - `"track"`
-  - : The target is an HTML {{HTMLELement("track")}}.
+  - : The target is an HTML {{HTMLElement("track")}}.
 - `"video"`
   - : The target is video data.
 - `"worker"`
   - : The target is a worker.
 - `"xslt"`
-  - : The target is an XLST transform.
+  - : The target is an XSLT transform.
 
-## Example
+## Examples
 
 In the following snippet, we create a new request using the
 {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same
 directory as the script), then save the request's destination:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myDestination = myRequest.destination; // returns the empty string by default
+const myRequest = new Request("flowers.jpg");
+const myDestination = myRequest.destination; // returns the empty string by default
 ```
 
 ## Specifications

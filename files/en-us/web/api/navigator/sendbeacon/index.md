@@ -1,34 +1,28 @@
 ---
-title: Navigator.sendBeacon()
+title: "Navigator: sendBeacon() method"
+short-title: sendBeacon()
 slug: Web/API/Navigator/sendBeacon
-tags:
-  - API
-  - Beacon
-  - Method
-  - Navigator
-  - NeedsExample
-  - Networking
-  - Reference
-  - Web Performance
-  - sendBeacon
+page-type: web-api-instance-method
 browser-compat: api.Navigator.sendBeacon
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`navigator.sendBeacon()`**
-method {{glossary("Asynchronous", "asynchronously")}} sends a small amount of data
-over {{Glossary("HTTP")}} to a web server.
+method {{glossary("Asynchronous", "asynchronously")}} sends an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request containing a small amount of data to a web server.
 
-It’s intended to be used for
+It's intended to be used for
 sending analytics data to a web server, and avoids some of the problems with
 legacy techniques for sending analytics, such as the use of
 {{domxref("XMLHttpRequest","XMLHttpRequest")}}.
 
+> **Note:** For use cases that need the ability to send requests with methods other than `POST`, or to change any request properties, or that need access to the server response, instead use the [`fetch()`](/en-US/docs/Web/API/fetch) method with [`keepalive`](/en-US/docs/Web/API/fetch#keepalive) set to true.
+
 ## Syntax
 
-```js
-navigator.sendBeacon(url);
-navigator.sendBeacon(url, data);
+```js-nolint
+sendBeacon(url)
+sendBeacon(url, data)
 ```
 
 ### Parameters
@@ -36,8 +30,8 @@ navigator.sendBeacon(url, data);
 - `url`
   - : The URL that will receive the _data_. Can be relative or absolute.
 - `data` {{Optional_inline}}
-  - : A {{jsxref("ArrayBuffer")}}, {{domxref("ArrayBufferView")}}, {{domxref("Blob")}},
-    {{domxref("DOMString")}}, {{domxref("FormData")}}, or {{domxref("URLSearchParams")}}
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}},
+    a string literal or object, a {{domxref("FormData")}} or a {{domxref("URLSearchParams")}}
     object containing the data to send.
 
 ### Return values
@@ -75,15 +69,17 @@ This means:
 - It's sent asynchronously
 - It doesn't impact the loading of the next page
 
+The data is sent as an [HTTP POST](/en-US/docs/Web/HTTP/Methods/POST) request.
+
 ### Sending analytics at the end of a session
 
-Web sites often want to send analytics or diagnostics to the server when the user has finished with the page.
+Websites often want to send analytics or diagnostics to the server when the user has finished with the page.
 The most reliable way to do this is to send the data on the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event:
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
@@ -95,11 +91,11 @@ or [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) events to sen
 However, this is extremely unreliable. In many situations, especially on mobile, the browser will not fire the
 `unload`, `beforeunload`, or `pagehide` events. For example, these events will not fire in the following situation:
 
-1.  The user loads the page and interacts with it.
-2.  When they are finished, they switch to a different app, instead of closing the tab.
-3.  Later, they close the browser app using the phone's app manager.
+1. The user loads the page and interacts with it.
+2. When they are finished, they switch to a different app, instead of closing the tab.
+3. Later, they close the browser app using the phone's app manager.
 
-Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/bfcache/))
+Additionally, the `unload` event is incompatible with the back/forward cache ([bfcache](https://web.dev/articles/bfcache))
 implemented in modern browsers. Some browsers, such as Firefox, handle this incompatibility by excluding pages from the bfcache if they contain unload handlers,
 thus hurting performance. Others, such as Safari and Chrome on Android, handle it by not firing the `unload` event when the user navigates to another page in the same tab.
 
@@ -112,12 +108,12 @@ Like `beforeunload` and `unload`, this event is not reliably fired, especially o
 
 ## Examples
 
-The following example specifies a handler for the {{event("visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
+The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
 
 ```js
-document.addEventListener('visibilitychange', function logData() {
-  if (document.visibilityState === 'hidden') {
-    navigator.sendBeacon('/log', analyticsData);
+document.addEventListener("visibilitychange", function logData() {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
   }
 });
 ```
@@ -133,13 +129,11 @@ document.addEventListener('visibilitychange', function logData() {
 ## See also
 
 - The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event.
-- {{domxref("Beacon_API","Beacon API", "" , "true")}} overview page.
-- [Don't
-  lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
+- {{domxref("Beacon_API","Beacon API", "", "true")}} overview page.
+- [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.
-- [Page
-  Lifecycle API](https://developers.google.com/web/updates/2018/07/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling
-  page lifecyle behavior in your web applications.
-- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecyle behavior.
-- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.
+- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
+  page lifecycle behavior in your web applications.
+- [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
+- [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.

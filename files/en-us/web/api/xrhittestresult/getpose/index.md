@@ -1,23 +1,20 @@
 ---
-title: XRHitTestResult.getPose()
+title: "XRHitTestResult: getPose() method"
+short-title: getPose()
 slug: Web/API/XRHitTestResult/getPose
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - VR
-  - XR
-  - WebXR
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRHitTestResult.getPose
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getPose()`** method of the {{domxref("XRHitTestResult")}} interface returns the {{domxref("XRPose")}} of the hit test result relative to the given base space.
 
 ## Syntax
 
-```js
+```js-nolint
 getPose(baseSpace)
 ```
 

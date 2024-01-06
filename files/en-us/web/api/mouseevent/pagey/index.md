@@ -1,15 +1,12 @@
 ---
-title: MouseEvent.pageY
+title: "MouseEvent: pageY property"
+short-title: pageY
 slug: Web/API/MouseEvent/pageY
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.pageY
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 The **`pageY`** read-only property of the {{domxref("MouseEvent")}} interface returns the Y (vertical) coordinate in pixels of the event relative to the whole document.
 This property takes into account any vertical scrolling of the page.
@@ -17,7 +14,6 @@ This property takes into account any vertical scrolling of the page.
 ## Value
 
 A `double` floating point value.
-
 
 ## Examples
 
@@ -36,3 +32,4 @@ let pageY = event.pageY;
 ## See also
 
 - {{domxref("MouseEvent.pageX")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

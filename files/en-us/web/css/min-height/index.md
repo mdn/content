@@ -1,19 +1,10 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Minimum
-  - Reference
-  - dimensions
-  - height
-  - min-height
-  - recipe:css-property
-  - size
+page-type: css-property
 browser-compat: css.properties.min-height
 ---
+
 {{CSSRef}}
 
 The **`min-height`** [CSS](/en-US/docs/Web/CSS) property sets the minimum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/used_value) of the {{cssxref("height")}} property from becoming smaller than the value specified for `min-height`.
@@ -34,12 +25,14 @@ min-height: 10%;
 /* Keyword values */
 min-height: max-content;
 min-height: min-content;
+min-height: fit-content;
 min-height: fit-content(20em);
 
 /* Global values */
 min-height: inherit;
 min-height: initial;
 min-height: revert;
+min-height: revert-layer;
 min-height: unset;
 ```
 
@@ -55,7 +48,9 @@ min-height: unset;
   - : The intrinsic preferred `min-height`.
 - `min-content`
   - : The intrinsic minimum `min-height`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
 ## Formal definition
@@ -71,9 +66,13 @@ min-height: unset;
 ### Setting min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Specifications
@@ -86,5 +85,5 @@ form { min-height: 0; }
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model), {{cssxref("box-sizing")}}
 - {{cssxref("height")}}, {{cssxref("max-height")}}

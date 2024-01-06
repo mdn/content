@@ -1,20 +1,16 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - DPR
-  - Client hints
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Deprecated
-  - Non-standard
-  - Exerimental
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.DPR
 ---
-{{HTTPSidebar}} {{deprecated_header}}{{securecontext_header}}
 
-The **`DPR`** [device client hint](/en-US/docs/Glossary/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
+{{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+
+The **`DPR`** [device client hint](/en-US/docs/Web/HTTP/Client_hints) request header provides the client device pixel ratio. This ratio is the number of physical device pixels corresponding to every {{Glossary("CSS pixel")}}.
 
 <table class="properties">
   <tbody>
@@ -22,7 +18,7 @@ The **`DPR`** [device client hint](/en-US/docs/Glossary/Client_hints) request he
       <th scope="row">Header type</th>
       <td>
         {{Glossary("Request header")}},
-        {{Glossary("Client hints","Client hint")}}
+        <a href="/en-US/docs/Web/HTTP/Client_hints">Client hint</a>
       </td>
     </tr>
     <tr>
@@ -32,7 +28,7 @@ The **`DPR`** [device client hint](/en-US/docs/Glossary/Client_hints) request he
   </tbody>
 </table>
 
-The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#attr-srcset) attribute to allow user agents to select a preferred image.
+The hint is useful when selecting image sources that best correspond to a screen's pixel density. This is similar to the role played by `x` descriptors in the `<img>` [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute to allow user agents to select a preferred image.
 
 If a server uses the `DPR` hint to choose which resource is sent in a response, the response must include the {{HTTPHeader("Content-DPR")}} header. The client must use the value in `Content-DPR` for layout if it differs from the value in the request's `DPR` header.
 
@@ -47,7 +43,7 @@ If the `DPR` header appears more than once in a message the last occurrence is u
 
 ## Syntax
 
-```
+```http
 DPR: <number>
 ```
 
@@ -60,19 +56,19 @@ DPR: <number>
 
 A server must first opt in to receive the `DPR` header by sending the response header {{HTTPHeader("Accept-CH")}} containing the directive `DPR`.
 
-```
+```http
 Accept-CH: DPR
 ```
 
 Then on subsequent requests the client might send `DPR` header to the server:
 
-```
+```http
 DPR: 2.0
 ```
 
 If a request with the `DPR` header (as shown above) is for an image resource, then the server response must include the {{HTTPHeader("Content-DPR")}} header:
 
-```
+```http
 Content-DPR: 2.0
 ```
 
@@ -82,7 +78,7 @@ Content-DPR: 2.0
 
 ## See also
 
-- [Adapting to Users with Client Hints](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/client-hints) (developer.google.com)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
@@ -91,4 +87,4 @@ Content-DPR: 2.0
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

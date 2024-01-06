@@ -1,39 +1,22 @@
 ---
-title: RTCOutboundRtpStreamStats.remoteId
+title: "RTCOutboundRtpStreamStats: remoteId property"
+short-title: remoteId
 slug: Web/API/RTCOutboundRtpStreamStats/remoteId
-tags:
-  - API
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTCRtpReceiver
-  - RTCRtpSender
-  - Reference
-  - Remote
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - remoteId
-browser-compat: api.RTCOutboundRtpStreamStats.remoteId
+page-type: web-api-instance-property
+browser-compat: api.RTCStatsReport.type_outbound-rtp.remoteId
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`remoteId`** property of the
 {{domxref("RTCOutboundRtpStreamStats")}} dictionary specifies the
-{{domxref("RTCStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
+{{domxref("RTCOutboundRtpStreamStats.id", "id")}} of the {{domxref("RTCRemoteInboundRtpStreamStats")}}
 object representing the remote peer's {{domxref("RTCRtpReceiver")}} which is sending
 the media to the local peer for this SSRC.
 
-## Syntax
+## Value
 
-```js
-var remoteStatsId = RTCOutboundRtpStreamStats.remoteId;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the ID of the
+A string containing the ID of the
 {{domxref("RTCRemoteInboundRtpStreamStats")}} object that represents the remote peer's
 {{domxref("RTCRtpReceiver")}} for the synchronization source represented by this stats
 object.

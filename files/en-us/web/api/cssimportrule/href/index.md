@@ -1,33 +1,23 @@
 ---
-title: CSSImportRule.href
+title: "CSSImportRule: href property"
+short-title: href
 slug: Web/API/CSSImportRule/href
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.href
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only **`href`** property of the
 {{domxref("CSSImportRule")}} interface returns the URL specified by the
 {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
-The resolved URL will be the {{HTMLAttrxRef("href","link")}} attribute of the
+The resolved URL will be the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of the
 associated stylesheet.
 
-## Syntax
+## Value
 
-```js
-var href = CSSImportRule.href;
-```
-
-### Value
-
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

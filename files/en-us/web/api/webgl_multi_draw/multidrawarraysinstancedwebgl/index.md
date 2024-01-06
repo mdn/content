@@ -1,13 +1,11 @@
 ---
-title: WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()
+title: "WEBGL_multi_draw: multiDrawArraysInstancedWEBGL() method"
+short-title: multiDrawArraysInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysInstancedWEBGL
-tags:
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
+page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysInstancedWEBGL
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw.multiDrawArraysInstancedWEBGL()`**
@@ -20,8 +18,8 @@ method.
 
 ## Syntax
 
-```js
-void ext.multiDrawArraysWEBGL(mode,
+```js-nolint
+multiDrawArraysInstancedWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
     instanceCountsList, instanceCountsOffset,
@@ -65,7 +63,7 @@ void ext.multiDrawArraysWEBGL(mode,
   - : An [`Int32Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)
     or [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
     (of [`GLsizei`](/en-US/docs/Web/API/WebGL_API/Types))
-    specifying a list of number sof instances of the range of elements to execute.
+    specifying a list of numbers of instances of the range of elements to execute.
 - `instanceCountsOffset`
   - : A [`GLuint`](/en-US/docs/Web/API/WebGL_API/Types)
     defining the starting point into the `instanceCountsList` array.
@@ -85,17 +83,25 @@ None.
   `countsList`, or `instanceCountsList` are negative,
   a `gl.INVALID_VALUE` error is thrown.
 - if `gl.CURRENT_PROGRAM` is
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/null),
+  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
   a `gl.INVALID_OPERATION` error is thrown.
 
 ## Examples
 
 ```js
-// let firsts = new Int32Array(...);
-// let counts = new Int32Array(...);
-// let instanceCounts = new Int32Array(...);
+const firsts = new Int32Array(/* … */);
+const counts = new Int32Array(/* … */);
+const instanceCounts = new Int32Array(/* … */);
 ext.multiDrawArraysInstancedWEBGL(
-   gl.TRIANGLES, firsts, 0, counts, 0, instanceCounts, 0, firsts.length);
+  gl.TRIANGLES,
+  firsts,
+  0,
+  counts,
+  0,
+  instanceCounts,
+  0,
+  firsts.length,
+);
 ```
 
 ## Specifications

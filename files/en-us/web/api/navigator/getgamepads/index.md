@@ -1,17 +1,12 @@
 ---
-title: Navigator.getGamepads()
+title: "Navigator: getGamepads() method"
+short-title: getGamepads()
 slug: Web/API/Navigator/getGamepads
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - Games
-  - Method
-  - Navigator
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Navigator.getGamepads
 ---
-{{APIRef("Gamepad API")}}{{SeeCompatTable}}{{securecontext_header}}
+
+{{APIRef("Gamepad API")}}{{securecontext_header}}
 
 The **`Navigator.getGamepads()`** method returns an array of
 {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.
@@ -19,22 +14,32 @@ The **`Navigator.getGamepads()`** method returns an array of
 Elements in the array may be `null` if a gamepad disconnects during a
 session, so that the remaining gamepads retain the same index.
 
-Calls to this method will throw a `SecurityError` {{domxref('DOMException')}} if disallowed by the {{httpheader('Feature-Policy/gamepad','gamepad')}} [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy).
-
 ## Syntax
 
-```js
- var gamepads = navigator.getGamepads();
+```js-nolint
+getGamepads()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+An {{jsxref("Array")}} of {{domxref("Gamepad")}} objects, eventually empty.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
+## Examples
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
-  var gp = navigator.getGamepads()[e.gamepad.index];
+window.addEventListener("gamepadconnected", (e) => {
+  const gp = navigator.getGamepads()[e.gamepad.index];
   console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    gp.index, gp.id, gp.buttons.length, gp.axes.length
+    `Gamepad connected at index ${gp.index}: ${gp.id} with ${gp.buttons.length} buttons, ${gp.axes.length} axes.`,
   );
 });
 ```
@@ -49,5 +54,5 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## See also
 
-- [Using the Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
+- [Using the Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API)

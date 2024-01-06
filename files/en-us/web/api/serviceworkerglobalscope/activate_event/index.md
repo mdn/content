@@ -1,64 +1,60 @@
 ---
-title: 'ServiceWorkerGlobalScope: activate event'
+title: "ServiceWorkerGlobalScope: activate event"
+short-title: activate
 slug: Web/API/ServiceWorkerGlobalScope/activate_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
+page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.activate_event
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`activate`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("ExtendableEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>
-        {{domxref("ServiceWorkerGlobalScope.onactivate")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+This event is not cancelable and does not bubble.
+
+## Syntax
+
+Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+
+```js
+addEventListener("activate", (event) => {});
+
+onactivate = (event) => {};
+```
+
+## Event type
+
+An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ExtendableEvent")}}
+
+## Event properties
+
+_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
 
 ## Examples
 
 The following snippet shows how you could use an `activate` event handler to upgrade a cache.
 
 ```js
-globalScope.addEventListener('activate', function(event) {
-  var cacheAllowlist = ['v2'];
+self.addEventListener("activate", (event) => {
+  const cacheAllowlist = ["v2"];
 
   event.waitUntil(
-    caches.forEach(function(cache, cacheName) {
-      if (cacheAllowlist.indexOf(cacheName) == -1) {
+    caches.forEach((cache, cacheName) => {
+      if (!cacheAllowlist.includes(cacheName)) {
         return caches.delete(cacheName);
       }
-    })
+    }),
   );
 });
 ```
 
-You can also set up the event handler using the {{domxref("ServiceWorkerGlobalScope.onactivate")}} property:
+You can also set up the event handler using the `onactivate` property:
 
 ```js
-globalScope.onactivate = function(event) {
-  ...
+self.onactivate = (event) => {
+  // ...
 };
 ```
 

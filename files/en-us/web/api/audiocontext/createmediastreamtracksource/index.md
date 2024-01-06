@@ -1,23 +1,12 @@
 ---
-title: AudioContext.createMediaStreamTrackSource()
+title: "AudioContext: createMediaStreamTrackSource() method"
+short-title: createMediaStreamTrackSource()
 slug: Web/API/AudioContext/createMediaStreamTrackSource
-tags:
-  - API
-  - Audio
-  - AudioContext
-  - MediaStreamTrack
-  - MediaStreamTrackAudioSource
-  - Method
-  - Node
-  - Reference
-  - Web Audio API
-  - createMediaStreamTrackSource
-  - sound
-  - source
-  - track
+page-type: web-api-instance-method
 browser-compat: api.AudioContext.createMediaStreamTrackSource
 ---
-{{draft}}{{ APIRef("Web Audio API") }}
+
+{{ APIRef("Web Audio API") }}
 
 The **`createMediaStreamTrackSource()`** method of the {{
   domxref("AudioContext") }} interface creates and returns a
@@ -32,9 +21,8 @@ first, lexicographically (alphabetically).
 
 ## Syntax
 
-```js
-var audioCtx = new AudioContext();
-var track = audioCtx.createMediaStreamTrackSource(track);
+```js-nolint
+createMediaStreamTrackSource(track)
 ```
 
 ### Parameters
@@ -48,7 +36,7 @@ var track = audioCtx.createMediaStreamTrackSource(track);
 A {{domxref("MediaStreamTrackAudioSourceNode")}} object which acts as a source for
 audio data found in the specified audio track.
 
-## Example
+## Examples
 
 In this example, {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} is used to
 request access to the user's microphone. Once that access is attained, an audio context
@@ -64,28 +52,30 @@ filter's output is in turn routed to the audio context's
 {{domxref("BaseAudioContext/destination", "destination")}}.
 
 ```js
-navigator.mediaDevices.getUserMedia ({audio: true, video: false})
-.then(function(stream) {
-  audio.srcObject = stream;
-  audio.onloadedmetadata = function(e) {
-    audio.play();
-    audio.muted = true;
-  };
+navigator.mediaDevices
+  .getUserMedia({ audio: true, video: false })
+  .then((stream) => {
+    audio.srcObject = stream;
+    audio.onloadedmetadata = (e) => {
+      audio.play();
+      audio.muted = true;
+    };
 
-  let audioCtx = new AudioContext();
-  let source = audioCtx.createMediaStreamSource(stream);
+    const audioCtx = new AudioContext();
+    const audioTracks = stream.getAudioTracks();
+    const source = audioCtx.createMediaStreamTrackSource(audioTracks[0]);
 
-  let biquadFilter = audioCtx.createBiquadFilter();
-  biquadFilter.type = "lowshelf";
-  biquadFilter.frequency.value = 3000;
-  biquadFilter.gain.value = 20;
+    const biquadFilter = audioCtx.createBiquadFilter();
+    biquadFilter.type = "lowshelf";
+    biquadFilter.frequency.value = 3000;
+    biquadFilter.gain.value = 20;
 
-  source.connect(biquadFilter);
-  biquadFilter.connect(audioCtx.destination);
-})
-.catch(function(err) {
-  // Handle getUserMedia() error
-});
+    source.connect(biquadFilter);
+    biquadFilter.connect(audioCtx.destination);
+  })
+  .catch((err) => {
+    // Handle getUserMedia() error
+  });
 ```
 
 ## Specifications
@@ -100,4 +90,4 @@ navigator.mediaDevices.getUserMedia ({audio: true, video: false})
 
 - Web Audio API
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("MediaStreamTrackAudioSource")}}
+- {{domxref("MediaStreamTrackAudioSourceNode")}}

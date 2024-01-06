@@ -1,26 +1,19 @@
 ---
 title: WebXR Device API
 slug: Web/API/WebXR_Device_API
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Graphics
-  - Overview
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat: api.Navigator.xr
 ---
-{{DefaultAPISidebar("WebXR Device API")}} {{SecureContext_Header}}
 
-**WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
+{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.
+**WebXR** is a group of standards which are used together to support rendering 3D scenes to hardware designed for presenting virtual worlds (**virtual reality**, or **VR**), or for adding graphical imagery to the real world, (**augmented reality**, or **AR**). The **WebXR Device API** implements the core of the WebXR feature set, managing the selection of output devices, render the 3D scene to the chosen device at the appropriate frame rate, and manage motion vectors created using input controllers.
 
-To accomplish these things, the WebXR Device API provides the following key capabilities:
+WebXR-compatible devices include fully-immersive 3D headsets with motion and orientation tracking, eyeglasses which overlay graphics atop the real-world scene passing through the frames, and handheld mobile phones which augment reality by capturing the world with a camera and augment that scene with computer-generated imagery.
+
+To accomplish these things, the WebXR Device API provides the following key capabilities:
 
 - Find compatible VR or AR output devices
 - Render a 3D scene to the device at an appropriate frame rate
@@ -29,7 +22,7 @@ To accomplish these things, the WebXR Device API provides the following key cap
 
 At the most basic level, a scene is presented in 3D by computing the perspective to apply to the scene in order to render it from the viewpoint of each of the user's eyes by computing the position of each eye and rendering the scene from that position, looking in the direction the user is currently facing. Each of these two images is rendered into a single framebuffer, with the left eye's rendered image on the left and the right eye's viewpoint rendered into the right half of the buffer. Once both eyes' perspectives on the scene have been rendered, the resulting framebuffer is delivered to the WebXR device to be presented to the user through their headset or other appropriate display device.
 
-While the older [WebVR API](/en-US/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
+While the older [WebVR API](/en-US/docs/Web/API/WebVR_API) was designed solely to support Virtual Reality (VR), WebXR provides support for both VR and Augmented Reality (AR) on the web. Support for AR functionality is added by the WebXR Augmented Reality Module.
 
 A typical XR device can have either 3 or 6 degrees of freedom and might or might not have an external positional sensor.
 
@@ -44,7 +37,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{domxref("navigator.xr")}}
 - {{domxref("XRSystem")}}
 - {{domxref("XRPermissionStatus")}}
-- `Feature-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking)
+- `Permissions-Policy`: [`xr-spatial-tracking`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking)
 
 ### Session
 
@@ -80,6 +73,7 @@ The equipment may also include an accelerometer, barometer, or other sensors whi
 - {{DOMxRef("XRViewerPose")}}
 
 ### Input
+
 - {{DOMxRef("XRHand")}}
 - {{DOMxRef("XRInputSource")}}
 - {{DOMxRef("XRInputSourceArray")}}
@@ -242,12 +236,12 @@ The following guides and tutorials are a great resource to learn how to comprehe
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.xr")}}
+{{Compat}}
 
 ## See also
 
-- [Graphics on the web](/en-US/docs/Web/Guide/Graphics)
+- [Graphics on the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#other_graphics_on_the_web)
 - [Drawing graphics](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
+- [WebGL API](/en-US/docs/Web/API/WebGL_API): Accelerated 2D and 3D graphics on the web
 - [Canvas API](/en-US/docs/Web/API/Canvas_API): 2D drawing for the web
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial)

@@ -1,17 +1,10 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - Experimental
-  - NeedsCompatTable
-  - NeedsExample
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.mask-border-source
 ---
+
 {{CSSRef}}
 
 The **`mask-border-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [mask border](/en-US/docs/Web/CSS/mask-border).
@@ -32,6 +25,7 @@ mask-border-source: linear-gradient(to top, red, yellow);
 mask-border-source: inherit;
 mask-border-source: initial;
 mask-border-source: revert;
+mask-border-source: revert-layer;
 mask-border-source: unset;
 ```
 

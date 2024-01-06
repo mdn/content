@@ -1,35 +1,24 @@
 ---
-title: ReadableStreamBYOBRequest.view
+title: "ReadableStreamBYOBRequest: view property"
+short-title: view
 slug: Web/API/ReadableStreamBYOBRequest/view
-tags:
-  - API
-  - Experimental
-  - Property
-  - ReadableStreamBYOBRequest
-  - Reference
-  - Streams
-  - View
+page-type: web-api-instance-property
 browser-compat: api.ReadableStreamBYOBRequest.view
 ---
-{{draft}}{{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`view`** getter property of the
-{{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
+{{APIRef("Streams")}}
 
-## Syntax
+The **`view`** getter property of the {{domxref("ReadableStreamBYOBRequest")}} interface returns the current view.
 
-```js
-var view = readableStreamBYOBRequestInstance.view;
-```
+## Value
 
-### Value
+A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) representing the destination region to which the controller can write generated data.
 
-A [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) representing the
-destination region to which the controller can write generated data.
+`null` if the request has already been responded to, by calling {{domxref("ReadableStreamBYOBRequest.respond()")}} or {{domxref("ReadableStreamBYOBRequest.respondWithNewView()")}}.
 
 ## Examples
 
-TBD.
+See the examples in {{domxref("ReadableStreamBYOBRequest")}}.
 
 ## Specifications
 
@@ -38,3 +27,7 @@ TBD.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

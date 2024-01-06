@@ -1,28 +1,19 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Prototype
-  - TypedArray
-  - TypedArrays
-  - Polyfill
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.fill
 ---
+
 {{JSRef}}
 
-The **`fill()`** method fills all the elements of a typed array
-from a start index to an end index with a static value. This method has the same
-algorithm as {{jsxref("Array.prototype.fill()")}}. _TypedArray_ is one of the [typed
-array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) here.
+The **`fill()`** method of {{jsxref("TypedArray")}} instances changes all elements within a range of indices in a typed array to a static value. It returns the modified typed array. This method has the same algorithm as {{jsxref("Array.prototype.fill()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-fill.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-fill.html", "shorter")}}
 
 ## Syntax
 
-```js
+```js-nolint
 fill(value)
 fill(value, start)
 fill(value, start, end)
@@ -33,53 +24,28 @@ fill(value, start, end)
 - `value`
   - : Value to fill the typed array with.
 - `start` {{optional_inline}}
-  - : Start index. Defaults to 0.
+  - : Zero-based index at which to start filling, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
 - `end` {{optional_inline}}
-  - : End index (not included). Defaults to `this.length`.
+  - : Zero-based index at which to end filling, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `fill()` fills up to but not including `end`.
 
 ### Return value
 
-The modified array.
+The modified typed array, filled with `value`.
 
 ## Description
 
-The elements interval to fill is \[`start`,
-`end`).
-
-The **`fill()`** method takes up to three arguments
-`value`,
-` start``start ` and
-`end`. The `start` and
-`end` arguments are optional with default values of `0`
-and the `length` of the `this` object.
-
-If `start` is negative, it is treated as
-`length+start` where `length` is the length of the array. If
-`end` is negative, it is treated as `length+end`.
+See {{jsxref("Array.prototype.fill()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
 ### Using fill()
 
 ```js
-new Uint8Array([1, 2, 3]).fill(4);         // Uint8Array [4, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1);      // Uint8Array [1, 4, 4]
-new Uint8Array([1, 2, 3]).fill(4, 1, 2);   // Uint8Array [1, 4, 3]
-new Uint8Array([1, 2, 3]).fill(4, 1, 1);   // Uint8Array [1, 2, 3]
+new Uint8Array([1, 2, 3]).fill(4); // Uint8Array [4, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1); // Uint8Array [1, 4, 4]
+new Uint8Array([1, 2, 3]).fill(4, 1, 2); // Uint8Array [1, 4, 3]
+new Uint8Array([1, 2, 3]).fill(4, 1, 1); // Uint8Array [1, 2, 3]
 new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
-```
-
-## Polyfill
-
-Since there is no global object with the name _TypedArray_, polyfilling must be
-done on an "as needed" basis. Use the following "polyfill" along with the
-{{jsxref("Array.prototype.fill()")}} polyfill.
-
-```js
-// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill
-if (!Uint8Array.prototype.fill) {
-  Uint8Array.prototype.fill = Array.prototype.fill;
-}
 ```
 
 ## Specifications
@@ -92,5 +58,7 @@ if (!Uint8Array.prototype.fill) {
 
 ## See also
 
-- A polyfill of `TypedArray.prototype.fill` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Polyfill of `TypedArray.prototype.fill` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("Array.prototype.fill()")}}

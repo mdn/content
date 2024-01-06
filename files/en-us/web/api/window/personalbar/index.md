@@ -1,65 +1,25 @@
 ---
-title: Window.personalbar
+title: "Window: personalbar property"
+short-title: personalbar
 slug: Web/API/Window/personalbar
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.personalbar
 ---
+
 {{APIRef}}
 
-Returns the `personalbar` object, whose visibility can be toggled in the
-window.
+Returns the `personalbar` object.
 
-## Syntax
+This is one of a group of `Window` properties that contain a boolean `visible` property, that used to represent whether or not a particular part of a web browser's user interface was visible.
 
-```js
-objRef =window.personalbar
-```
+For privacy and interoperability reasons, the value of the `visible` property is now `false` if this `Window` is a popup, and `true` otherwise.
 
-## Example
+## Value
 
-{{todo('https://bugzilla.mozilla.org/show_bug.cgi?id=790023')}}
+An object containing a single property:
 
-{{deprecated_inline}} The following complete HTML example shows the way that the
-visible property of the various "bar" objects is used, and also the change to the
-privileges necessary to write to the visible property of any of the bars on an existing
-window. Due to [deprecation of
-enablePrivilege](/en-US/docs/Bypassing_Security_Restrictions_and_Signing_Code) this functionality can not be used in web pages. EnablePrivilege
-is disabled in Firefox 15 and will be removed in Firefox 17.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Various DOM Tests</title>
-
-<script>
-// changing bar states on the existing window
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.personalbar.visible = !window.personalbar.visible;
-</script>
-
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
-</html>
-```
-
-## Notes
-
-When you load the example page above, the browser displays the following dialog: ![](modify_any_open_window_dialog.png)
-
-To toggle the visibility of these bars, you must either sign your scripts or enable the
-appropriate privileges, as in the example above. Also be aware that dynamically updating
-the visibilty of the various toolbars can change the size of the window rather
-dramatically, and may affect the layout of your page.
+- `visible` {{ReadOnlyInline}}
+  - : A boolean property, `false` if this `Window` is a popup, and `true` otherwise.
 
 ## Specifications
 
@@ -71,6 +31,8 @@ dramatically, and may affect the layout of your page.
 
 ## See also
 
-- {{domxref("window.locationbar")}}, {{domxref("window.menubar")}},
-  {{domxref("window.scrollbars")}}, {{domxref("window.statusbar")}},
-  {{domxref("window.toolbar")}}
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}
+- {{domxref("window.toolbar")}}

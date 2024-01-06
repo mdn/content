@@ -1,27 +1,10 @@
 ---
 title: Digital video concepts
 slug: Web/Media/Formats/Video_concepts
-tags:
-  - Beginner
-  - Chroma
-  - Digital
-  - Eye
-  - Guide
-  - Image
-  - Light
-  - Luma
-  - Sampling
-  - Subsampling
-  - Video
-  - Vision
-  - Y'CbCr
-  - Y'UV
-  - YCbCr
-  - YUV
-  - color
-  - rgb
+page-type: guide
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}{{draft}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 In this article, we explore important concepts that are useful to understand in order to fully grasp how to work with video on the web.
 
@@ -41,9 +24,9 @@ The name "YUV" is generally used today to describe this color system, even thoug
 
 #### Contemplating human vision
 
-We're able to represent an image this way because the human eye sees far more detail in greyscale than in color, thanks to biology. The human eye contains two kinds of {{interwiki("wikipedia", "Photoreceptor cell", "photoreceptor")}} (light-sensing) cells. The **rods** are highly-sensitive light intensity sensors. The **cones** are less sensitive but are able to detect color.
+We're able to represent an image this way because the human eye sees far more detail in greyscale than in color, thanks to biology. The human eye contains two kinds of [photoreceptor](https://en.wikipedia.org/wiki/Photoreceptor_cell) (light-sensing) cells. The **rods** are highly-sensitive light intensity sensors. The **cones** are less sensitive but are able to detect color.
 
-Because the eye has vastly more rods than cones (about 120 million rods to around 6 or 7 million cones), we see detail in greyscale, with color being far less detailed. In essence, our eyes are like a camera with two image sensor chips: one greyscale and one color. The greyscale sensor is 120 megapixels, while the color sensor is only about 7 megapixels. These sensors physically occupy the same surface, called the **{{interwiki("wikipedia", "Visual system#Retina", "retina")}}**, at the back of the eye.
+Because the eye has vastly more rods than cones (about 120 million rods to around 6 or 7 million cones), we see detail in greyscale, with color being far less detailed. In essence, our eyes are like a camera with two image sensor chips: one greyscale and one color. The greyscale sensor is 120 megapixels, while the color sensor is only about 7 megapixels. These sensors physically occupy the same surface, called the **[retina](https://en.wikipedia.org/wiki/Visual_system#Retina)**, at the back of the eye.
 
 There are three types of cones, each of which responds to a particular wavelength band of incoming light, but also to the intensity of the light at that wavelength. Each type of cone, then, captures the relative response peaks at various wavelengths, and the brain uses this data to figure out the intensity and hue of the color of the light arriving at that part of the retina.
 
@@ -106,25 +89,25 @@ The table below shows examples of three chroma subsampling models.
     <tr>
       <th scope="col" style="width: 144px">Chroma (U and V)</th>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-420.svg" />
+        <img alt="A matrix of U and V values for a 4:2:0 decoding operation. The first row contains 2 chroma samples for U: a blue and a green. The first row's samples are duplicated in the second row for V." src="yuv-chroma-420.svg" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-422.svg" />
+        <img alt="A matrix of U and V values for a 4:2:2 decoding operation. The first row contains 2 chroma samples for U: a blue and a green. The second row contains 2 chroma samples for V: a pink and a yellow." src="yuv-chroma-422.svg" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-chroma-444.svg" />
+        <img alt="A matrix of U and V values for a 4:4:4 decoding operation. The first row contains 4 chroma samples for U: a light blue, a yellow, a green and a deep blue. The second row contains 4 chroma samples for V: a pink, a white, a red and a gray." src="yuv-chroma-444.svg" />
       </td>
     </tr>
     <tr>
       <th scope="col" style="width: 144px">Decoded pixels</th>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-420.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:0 decoding operation that applies the 2 samples of the chroma matrix to each row in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black, and remain unchanged when applied to white." src="yuv-decoded-420.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-422.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:2:2 decoding operation that applies the 2 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-422.png" />
       </td>
       <td style="width: 144px; text-align: right">
-        <img alt="" src="yuv-decoded-444.png" />
+        <img alt="A 4:2 block of decoded pixels after a 4:4:4 decoding operation that applies the 4 samples contained in each row of the chroma matrix to the corresponding rows in the block of luminance data. The colors of the samples become darker when applied to gray shades, black when applied to solid black and remain unchanged when applied to white." src="yuv-decoded-444.png" />
       </td>
     </tr>
   </tbody>

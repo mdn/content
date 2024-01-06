@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.copyTexImage2D()
+title: "WebGLRenderingContext: copyTexImage2D() method"
+short-title: copyTexImage2D()
 slug: Web/API/WebGLRenderingContext/copyTexImage2D
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.copyTexImage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.copyTexImage2D()`** method of the
@@ -18,8 +14,8 @@ The **`WebGLRenderingContext.copyTexImage2D()`** method of the
 
 ## Syntax
 
-```js
-void gl.copyTexImage2D(target, level, internalformat, x, y, width, height, border);
+```js-nolint
+copyTexImage2D(target, level, internalformat, x, y, width, height, border)
 ```
 
 ### Parameters
@@ -45,7 +41,7 @@ void gl.copyTexImage2D(target, level, internalformat, x, y, width, height, borde
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the color components in the texture. Possible
@@ -76,7 +72,7 @@ void gl.copyTexImage2D(target, level, internalformat, x, y, width, height, borde
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

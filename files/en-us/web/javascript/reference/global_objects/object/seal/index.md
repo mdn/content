@@ -1,27 +1,19 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Method
-  - Object
-  - Reference
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.seal
 ---
+
 {{JSRef}}
 
-The **`Object.seal()`** method seals an object, preventing new
-properties from being added to it and marking all existing properties as
-non-configurable. Values of present properties can still be changed as long as they are
-writable.
+The **`Object.seal()`** static method _seals_ an object. Sealing an object [prevents extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and makes existing properties non-configurable. A sealed object has a fixed set of properties: new properties cannot be added, existing properties cannot be removed, their enumerability and configurability cannot be changed, and its prototype cannot be re-assigned. Values of existing properties can still be changed as long as they are writable. `seal()` returns the same object that was passed in.
 
 {{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.seal(obj)
 ```
 
@@ -36,10 +28,7 @@ The object being sealed.
 
 ## Description
 
-By default, objects are {{jsxref("Object.isExtensible()", "extensible", "", 1)}} (new
-properties can be added to them). Sealing an object prevents new properties from being
-added and marks all existing properties as non-configurable. This has the effect of
-making the set of properties on the object fixed. Making all properties non-configurable
+Sealing an object is equivalent to [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions) and then changing all existing [properties' descriptors](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description) to `configurable: false`. This has the effect of making the set of properties on the object fixed. Making all properties non-configurable
 also prevents them from being converted from data properties to accessor properties and
 vice versa, but it does not prevent the values of data properties from being changed.
 Attempting to delete or add properties to a sealed object, or to convert a data property
@@ -47,49 +36,47 @@ to accessor or vice versa, will fail, either silently or by throwing a
 {{jsxref("TypeError")}} (most commonly, although not exclusively, when in
 {{jsxref("Strict_mode", "strict mode", "", 1)}} code).
 
-The prototype chain remains untouched. However, the {{jsxref("Object.proto",
-  "__proto__")}} property is sealed as well.
+The prototype chain remains untouched. However, due to the effect of [preventing extensions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions), the `[[Prototype]]` cannot be reassigned.
 
-### Comparison to Object.freeze()
-
-Existing properties in objects frozen with {{jsxref("Object.freeze()")}} are made
-immutable. Objects sealed with `Object.seal()` can have their existing
-properties changed.
+Unlike {{jsxref("Object.freeze()")}}, objects sealed with `Object.seal()` may have their existing
+properties changed, as long as they are writable.
 
 ## Examples
 
 ### Using Object.seal
 
 ```js
-var obj = {
-  prop: function() {},
-  foo: 'bar'
+const obj = {
+  prop() {},
+  foo: "bar",
 };
 
 // New properties may be added, existing properties
 // may be changed or removed.
-obj.foo = 'baz';
-obj.lumpy = 'woof';
+obj.foo = "baz";
+obj.lumpy = "woof";
 delete obj.prop;
 
-var o = Object.seal(obj);
+const o = Object.seal(obj);
 
 o === obj; // true
-Object.isSealed(obj); // === true
+Object.isSealed(obj); // true
 
 // Changing property values on a sealed object
 // still works.
-obj.foo = 'quux';
+obj.foo = "quux";
 
 // But you can't convert data properties to accessors,
 // or vice versa.
-Object.defineProperty(obj, 'foo', {
-  get: function() { return 'g'; }
+Object.defineProperty(obj, "foo", {
+  get() {
+    return "g";
+  },
 }); // throws a TypeError
 
 // Now any changes, other than to property values,
 // will fail.
-obj.quaxxor = 'the friendly duck';
+obj.quaxxor = "the friendly duck";
 // silently doesn't add the property
 delete obj.foo;
 // silently doesn't delete the property
@@ -97,27 +84,25 @@ delete obj.foo;
 // ...and in strict mode such attempts
 // will throw TypeErrors.
 function fail() {
-  'use strict';
+  "use strict";
   delete obj.foo; // throws a TypeError
-  obj.sparky = 'arf'; // throws a TypeError
+  obj.sparky = "arf"; // throws a TypeError
 }
 fail();
 
 // Attempted additions through
 // Object.defineProperty will also throw.
-Object.defineProperty(obj, 'ohai', {
-  value: 17
+Object.defineProperty(obj, "ohai", {
+  value: 17,
 }); // throws a TypeError
-Object.defineProperty(obj, 'foo', {
-  value: 'eit'
+Object.defineProperty(obj, "foo", {
+  value: "eit",
 }); // changes existing property value
 ```
 
-### Non-object coercion
+### Non-object argument
 
-In ES5, if the argument to this method is not an object (a primitive), then it will
-cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be treated as if
-it was a sealed ordinary object by returning it.
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a {{jsxref("TypeError")}}. In ES2015, a non-object argument will be returned as-is without any errors, since primitives are already, by definition, immutable.
 
 ```js
 Object.seal(1);

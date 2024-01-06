@@ -1,20 +1,15 @@
 ---
-title: FileSystemEntry.moveTo()
+title: "FileSystemEntry: moveTo() method"
+short-title: moveTo()
 slug: Web/API/FileSystemEntry/moveTo
-tags:
-  - API
-  - File System API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - moveTo
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.moveTo
 ---
-{{APIRef("File System API")}}{{SeeCompatTable}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`moveTo()`** moves the file
@@ -36,8 +31,10 @@ restrictions on what you can do:
 
 ## Syntax
 
-```js
-FileSystemEntry.moveTo(newParent[, newName][, successCallback][, errorCallback]);
+```js-nolint
+moveTo(newParent, newName)
+moveTo(newParent, newName, successCallback)
+moveTo(newParent, newName, successCallback, errorCallback)
 ```
 
 ### Parameters
@@ -58,7 +55,7 @@ FileSystemEntry.moveTo(newParent[, newName][, successCallback][, errorCallback])
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Errors
 
@@ -70,21 +67,31 @@ FileSystemEntry.moveTo(newParent[, newName][, successCallback][, errorCallback])
   - : The operation exceeded the user's storage quota, or there isn't enough storage space
     left to complete the operation.
 
-## Example
+## Examples
 
 This example shows how a temporary log file might be moved into a more permanent "log"
 directory when it exceeds a megabyte in size.
 
 ```js
-workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
-  fileEntry.getMetadata(function(metadata) {
-    if (metadata.size > 1048576) {
-      workingDirectory.getDirectory("log", {}, function(dirEntry) {
-        fileEntry.moveTo(dirEntry);
-      }, handleError);
-    }
-  });
-}, handleError);
+workingDirectory.getFile(
+  "tmp/log.txt",
+  {},
+  (fileEntry) => {
+    fileEntry.getMetadata((metadata) => {
+      if (metadata.size > 1048576) {
+        workingDirectory.getDirectory(
+          "log",
+          {},
+          (dirEntry) => {
+            fileEntry.moveTo(dirEntry);
+          },
+          handleError,
+        );
+      }
+    });
+  },
+  handleError,
+);
 ```
 
 ## Browser compatibility
@@ -93,8 +100,6 @@ workingDirectory.getFile("tmp/log.txt", {}, function(fileEntry) {
 
 ## See also
 
-- [File and Directory
-  Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction
-  to the File System API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
+- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry.copyTo()")}}

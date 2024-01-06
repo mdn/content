@@ -1,22 +1,9 @@
 ---
 title: Digital audio concepts
 slug: Web/Media/Formats/Audio_concepts
-tags:
-  - AAC
-  - Audio
-  - Codecs
-  - Coding
-  - Compressed
-  - Guide
-  - MPEG
-  - Media
-  - Music
-  - compression
-  - formats
-  - mp3
-  - mp4
-  - sound
+page-type: guide
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Representing audio in digital form involves a number of steps and processes, with multiple formats available both for the raw audio and the encoded or compressed audio which is actually used on the web. This guide is an overview examining how audio is represented digitally, and how codecs are used to encode and decode audio for use on the web.
@@ -53,7 +40,7 @@ At the most basic level, audio is represented by a stream of samples, each speci
 
 The position of each audio source within the audio signal is called a **channel**. Each channel contains a sample indicating the amplitude of the audio being produced by that source at a given moment in time. For instance, in stereo sound, there are two audio sources: one speaker on the left, and one on the right. Each of these is represented by one channel, and the number of channels contained in the audio signal is called the **channel count**.
 
-While recording or generating multi-channel audio files, the channels are assembled into a series of **audio frames**, each consisting of one sample for each of the audio's channels. An individual sample is a numeric value representing the amplitude of the sound {{interwiki("wikipedia", "waveform")}} at a single moment in time, and may be represented in various formats.
+While recording or generating multi-channel audio files, the channels are assembled into a series of **audio frames**, each consisting of one sample for each of the audio's channels. An individual sample is a numeric value representing the amplitude of the sound [waveform](https://en.wikipedia.org/wiki/Waveform) at a single moment in time, and may be represented in various formats.
 
 Stereo audio is probably the most commonly used channel arrangement in web audio, and 16-bit samples are used for the majority of day-to-day audio in use today. For 16-bit stereo audio, each sample taken from the analog signal is recorded as two 16-bit integers, one for the left channel and one for the right. That means each sample requires 32 bits of memory. At the common sample rate of 48 kHz (48,000 samples per second), this means each second of audio occupies 192 kB of memory. Therefore, a typical three-minute song requires about 34.5 MB of memory. That's a lot of storage, but worse, it's an insane amount of network bandwidth to use for a relatively short piece of audio. That's why most digital audio is compressed.
 
@@ -67,12 +54,12 @@ Monophonic audio has one channel, stereo sound has two channels, 5.1 surround so
 
 > **Note:** Some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels.
 
-The number of frames that comprise a single second of audio varies depending on the sample rate used when recording the sound. Since the sample rate corresponds to the number of "slices" a sound wave is divided into for each second of time, it's sometimes thought of as a frequency (in the sense that it's a description of something that repeats periodically, not in terms of actual audio frequency), and the samples per second measurement therefore uses the {{interwiki("wikipedia", "Hertz")}} as its unit.
+The number of frames that comprise a single second of audio varies depending on the sample rate used when recording the sound. Since the sample rate corresponds to the number of "slices" a sound wave is divided into for each second of time, it's sometimes thought of as a frequency (in the sense that it's a description of something that repeats periodically, not in terms of actual audio frequency), and the samples per second measurement therefore uses the [Hertz](https://en.wikipedia.org/wiki/Hertz) as its unit.
 
 The most common sample rates are:
 
 - 8000 Hz
-  - : The international {{interwiki("wikipedia", "G.711")}} standard for audio used in telephony uses a sample rate of 8000 Hz (8 kHz). This is enough for human speech to be comprehensible.
+  - : The international [G.711](https://en.wikipedia.org/wiki/G.711) standard for audio used in telephony uses a sample rate of 8000 Hz (8 kHz). This is enough for human speech to be comprehensible.
 - 44100 Hz
   - : The 44.1 kHz sample rate is used for compact disc (CD) audio. CDs provide uncompressed 16-bit stereo sound at 44.1 kHz. Computer audio also frequently uses this frequency by default.
 - 48000 Hz
@@ -82,11 +69,11 @@ The most common sample rates are:
 - 192000 Hz
   - : Ultra-high resolution audio. Not commonly used yet, but this will change over time.
 
-There is a reason why 44.1 kHz is considered the minimum "high fidelity" sampling rate. The {{interwiki("wikipedia", "Nyquist-Shannon sampling theorem")}} dictates that to reproduce a sound accurately, it must be sampled at twice the rate of the sound's frequency. Since the range of human hearing is from around 20 Hz to 20,000 Hz, reproducing the highest-pitched sounds people can generally hear requires a sample rate of more than 40,000 Hz.
+There is a reason why 44.1 kHz is considered the minimum "high fidelity" sampling rate. The [Nyquist-Shannon sampling theorem](https://en.wikipedia.org/wiki/Nyquist-Shannon_sampling_theorem) dictates that to reproduce a sound accurately, it must be sampled at twice the rate of the sound's frequency. Since the range of human hearing is from around 20 Hz to 20,000 Hz, reproducing the highest-pitched sounds people can generally hear requires a sample rate of more than 40,000 Hz.
 
-To provide additional room for a {{interwiki("wikipedia", "low-pass filter")}} in order to avoid distortion caused by {{interwiki("wikipedia", "aliasing")}}, an additional 2.05 kHz {{interwiki("wikipedia", "transition band")}} is added to the pre-sampling frequency (resulting in 22,050 Hz). Doubling that per the Nyquist theorem results in a final minimum frequency of (you guessed it) 44.1 kHz.
+To provide additional room for a [low-pass filter](https://en.wikipedia.org/wiki/Low-pass_filter) in order to avoid distortion caused by [aliasing](https://en.wikipedia.org/wiki/Aliasing), an additional 2.05 kHz [transition band](https://en.wikipedia.org/wiki/Transition_band) is added to the pre-sampling frequency (resulting in 22,050 Hz). Doubling that per the Nyquist theorem results in a final minimum frequency of (you guessed it) 44.1 kHz.
 
-High-resolution (96 kHz) audio is used in some high-end audio systems, and it and ultra-high resolution (192 kHz) audio are useful for audio mastering, where you need as much quality as possible while manipulating and editing the sound before downsampling to the sample rate you will use for the final product. This is similar to how photographers will use high resolution images for editing and compositing before presenting the customer with a JPEG suitable for use on a web site.
+High-resolution (96 kHz) audio is used in some high-end audio systems, and it and ultra-high resolution (192 kHz) audio are useful for audio mastering, where you need as much quality as possible while manipulating and editing the sound before downsampling to the sample rate you will use for the final product. This is similar to how photographers will use high resolution images for editing and compositing before presenting the customer with a JPEG suitable for use on a website.
 
 ### Audio file size and network bandwidth
 
@@ -100,11 +87,11 @@ At 192 kBps, lower-end networks are already going to be strained just by a singl
 
 To solve this problem, the audio must be made smaller using compression.
 
-> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in {{anch("Sampling audio")}}, above.
+> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in [Sampling audio](#sampling_audio), above.
 
 ## Audio compression basics
 
-Unlike text and many other kinds of data, audio data tends to be **noisy**, meaning the data rarely consists of a series of exactly repeated bytes or byte sequences. As a result, audio data is difficult to compress using traditional algorithms such as those used by generral-purpose tools like `zip`, which usually work by replacing repeating sequences of data with a shorthand representation.
+Unlike text and many other kinds of data, audio data tends to be **noisy**, meaning the data rarely consists of a series of exactly repeated bytes or byte sequences. As a result, audio data is difficult to compress using traditional algorithms such as those used by general-purpose tools like `zip`, which usually work by replacing repeating sequences of data with a shorthand representation.
 
 There are several techniques which can be applied when compressing audio. Most codecs use a combination of these, and may use other techniques as well.
 
@@ -116,13 +103,13 @@ You can apply a filter that narrows the audio bandwidth, removing any audio freq
 
 If you know what kind of audio you're most likely to handle, you can potentially find special filtering techniques applicable specifically to that kind of sound, that will optimize the encoding.
 
-The most commonly-used compression methods for audio apply the science of **{{interwiki("wikipedia", "psychoacoustics")}}**. This is the science that studies how humans percieve sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing versus the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
+The most commonly-used compression methods for audio apply the science of **[psychoacoustics](https://en.wikipedia.org/wiki/Psychoacoustics)**. This is the science that studies how humans perceive sound, and what parts of the audio frequencies we hear are most important to how we respond to those sounds, given the context and content of the sound. Factors such as the ability to sense the change in frequency of a sound, the overall range of human hearing vs. the frequencies of the audio signal, audio localization, and so forth all can be considered by a codec.
 
 By using a sound (no pun intended) understanding of psychoacoustics, it's possible to design a compression method that will minimize the compressed size of the audio while maximizing the perceived fidelity of the sound. An algorithm employing psychoacoustics may use any of the techniques mentioned here, and will almost certainly apply others as well.
 
 All of this means there is a fundamental question that has to be asked and answered before choosing a codec: Given the content of the sound, the usage context, and the target audience, is it acceptable to lose some degree of audio fidelity, and if so, how much; or is it necessary that, upon decoding the data, the result be identical to the source audio?
 
-### Lossy vs lossless compression
+### Lossy vs. lossless compression
 
 If loss of detail and potentially fidelity is unacceptable or undesirable, a **lossless** codec is preferred. On the other hand, if some degree of reduction of audio fidelity is okay, a **lossy** codec can be used. Generally, lossy compression results in significantly smaller output than lossless compression methods; also, many lossy codecs are excellent, with the loss in quality and detail being difficult or even impossible for the average listener to discern.
 
@@ -152,13 +139,13 @@ Lossy compression algorithms generally use psychoacoustics to determine which co
 
 The type of content being encoded can affect the choice of codec. In particular, the waveform for music is almost always more complex than that of an audio sample that contains only human voices. In addition, the human voice uses a small portion of the range of audio frequencies the human ear can detect.
 
-> **Note:** Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrainted to so narrow an audio bandwidth.
+> **Note:** Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrained to so narrow an audio bandwidth.
 
 Human speech uses a relatively narrow frequency band (around 300 Hz to 18,000 Hz, though the exact range varies from person to person due to factors including gender). In addition, the vast majority of human speech sounds tend to lie between 500 Hz and 3,000 Hz or so, making it possible to drop substantial portions of the overall waveform without compromising the listener's ability to understand the words being said. You can even adjust the audio bandwidth to factor in the pitch of the individual speaker's voice.
 
 Because of all these factors, and because speech waveforms are typically less complex than music, high (and more specifically "high enough") fidelity reproduction of speech can be achieved at a relatively low bit rate.
 
-When a compression algorithm designed to compress general audio analyzes an audio waveform, it can discard anything outside the range of human hearing (or possibly even more, depending on how willing the algorithm is willing to risk losing detail at the high and/or low end of the frequency band. That means that the codec can discard audio whose frequency is lower than about 20 Hz or higher than about 20,000 Hz (20 kHz). This narrows the audio bandwidth of the sound, thereby reducing the amoung of data required to represent the signal in its compressed form. The audio bandwidth can't be reduced nearly as much as for a speech-only codec, but it is still a helpful start.
+When a compression algorithm designed to compress general audio analyzes an audio waveform, it can discard anything outside the range of human hearing (or possibly even more, depending on how willing the algorithm is willing to risk losing detail at the high and/or low end of the frequency band). That means that the codec can discard audio whose frequency is lower than about 20 Hz or higher than about 20,000 Hz (20 kHz). This narrows the audio bandwidth of the sound, thereby reducing the amount of data required to represent the signal in its compressed form. The audio bandwidth can't be reduced nearly as much as for a speech-only codec, but it is still a helpful start.
 
 Some people can hear outside this range to some extent. More often, people's ability to hear higher frequencies is rather lower than this; in particular, it's worth noting that by middle age, the high end of that frequency range usually falls from 20 kHz down to around 12 kHz to 14 kHz. This suggests that the higher frequencies can often be discarded without overly affecting comprehensibility of the sound, so you can substantially reduce how much of the audio space you need to retain, thereby making your sound simpler and easier to compress.
 
@@ -168,11 +155,11 @@ This is portrayed in the diagram below. The diagram compares the frequency range
 
 The large differences among these ranges gives us room to lose details in audio data without significantly impacting the ability of the human ear to notice any real change in audio quality. These facts can be taken advantage of when compressing audio.
 
-On top of simplifying the sound through psychoacoustic analysis, codecs use other algorithms and transforms to further simplify and reduce the size of the audio. If you'd like to learn more about the way compression works on audio, take a look at {{interwiki("wikipedia", "Data compression#Audio", "Audio data compression")}} on Wikipedia.
+On top of simplifying the sound through psychoacoustic analysis, codecs use other algorithms and transforms to further simplify and reduce the size of the audio. If you'd like to learn more about the way compression works on audio, take a look at [Audio data compression](https://en.wikipedia.org/wiki/Data_compression#Audio) on Wikipedia.
 
 Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.
 
-> **Note:** For a more detailed guide to choosing audio codecs, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_codecs", "Choosing a codec")}}.
+> **Note:** For a more detailed guide to choosing audio codecs, see [Choosing an audio codec](/en-US/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec).
 
 ## Lossless encoder parameters
 
@@ -214,7 +201,7 @@ Some codecs offer special profiles which are specifically intended for particula
 
 ### Joint stereo
 
-Normally, stereo sound is represented by audio frames which contain one sample per channel. This results in audio frames which require 2⨉*sampleSize* bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2⨉16 or 32 bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
+Stereo sound is typically represented by audio frames containing one sample per channel. This results in audio frames that require 2 times _sampleSize_ bits each, where _sampleSize_ is the number of bits each audio sample takes. Therefore, for a 16-bit stereo audio recording, each sample uses 2 times 16, or 32, bits of space. This is standard left/right (L/R) stereo or **simple stereo**.
 
 **Joint stereo** is a method of storing stereo audio samples in a more space-efficient manner by taking into account that usually the sound entering each ear is similar. Thus, rather than storing every bit of each channel's sample, a base amplitude and a per-channel amplitude deviation value are stored, wherein the deviation value may use fewer bits than a complete sample.
 
@@ -242,9 +229,9 @@ On its own, mid-side stereo coding is lossless, and is commonly used by both los
 
 #### Intensity stereo coding
 
-**Intensity stereo coding** reduces the encoded audio bit rate by taking advantage of the way humans determine the location of sounds in space; this is called {{interwiki("wikipedia", "sound localization")}}. We hear in stereo because our ears detect a sound at different times depending on where the sound is coming from.
+**Intensity stereo coding** reduces the encoded audio bit rate by taking advantage of the way humans determine the location of sounds in space; this is called [sound localization](https://en.wikipedia.org/wiki/Sound_localization). We hear in stereo because our ears detect a sound at different times depending on where the sound is coming from.
 
-This is because our ears are separated by several inches, thanks to being on opposite sides of our heads. A sound coming from our right will arrive at our right ear before it arrives at our left ear. Our brains determine where the sound is in the space around us by using that time difference to figure out the angle from which the sound is coming. However, as the frequency of the audio signal goes up, the wavelength goes up as well. Eventually, the wavelength approaches then exceeds the distance between the ears, and it becomes difficult or impossible to unambiguously localize the sound.
+This is because our ears are separated by several inches, thanks to being on opposite sides of our heads. A sound coming from our right will arrive at our right ear before it arrives at our left ear. Our brains determine where the sound is in the space around us by using that time difference to figure out the angle from which the sound is coming. However, as the frequency of the audio signal drops, the wavelength goes up. Eventually, the wavelength approaches then exceeds the distance between the ears, and it becomes difficult or impossible to unambiguously localize the sound.
 
 Armed with this information, we can approximately represent a stereo audio signal by merging the frequencies that aren't used to determine directionality into a single channel, then include information that indicates the directionality of the sound. This requires fewer bits to represent, but is inherently somewhat lossy.
 

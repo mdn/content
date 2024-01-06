@@ -1,26 +1,19 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - JavaScript
-  - Method
-  - Number
-  - Reference
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Number.isFinite
 ---
+
 {{JSRef}}
 
-The **`Number.isFinite()`** method
-determines whether the passed value is a finite number — that is, it checks that the
-type of a given value is {{jsxref("Number")}}, and the number is neither positive
-{{jsxref("Infinity")}}, negative `Infinity`, nor {{jsxref("NaN")}}.
+The **`Number.isFinite()`** static method determines whether the passed value is a finite number — that is, it checks that a given value is a number, and the number is neither positive {{jsxref("Infinity")}}, negative `Infinity`, nor {{jsxref("NaN")}}.
 
 {{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Number.isFinite(value)
 ```
 
@@ -31,38 +24,30 @@ Number.isFinite(value)
 
 ### Return value
 
-A {{jsxref("Boolean")}} indicating whether or not the given value is a finite number.
-
-## Description
-
-In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this method
-doesn't first convert the parameter to a number. This means only values of the type
-number _and_ are finite return `true`.
+The boolean value `true` if the given value is a finite number. Otherwise `false`.
 
 ## Examples
 
-### Using isFinite
+### Using isFinite()
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
-
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 ```
 
-## Polyfill
+### Difference between Number.isFinite() and global isFinite()
+
+In comparison to the global {{jsxref("isFinite()")}} function, this method doesn't first convert the parameter to a number. This means only values of the type number _and_ are finite return `true`, and non-numbers always return `false`.
 
 ```js
-if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+isFinite("0"); // true; coerced to number 0
+Number.isFinite("0"); // false
+isFinite(null); // true; coerced to number 0
+Number.isFinite(null); // false
 ```
 
 ## Specifications
@@ -75,6 +60,6 @@ if (Number.isFinite === undefined) Number.isFinite = function(value) {
 
 ## See also
 
-- A polyfill of `Number.isFinite` is available in [`core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
-- The global function {{jsxref("isFinite")}}.
+- [Polyfill of `Number.isFinite` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
+- {{jsxref("Number")}}
+- {{jsxref("isFinite()")}}

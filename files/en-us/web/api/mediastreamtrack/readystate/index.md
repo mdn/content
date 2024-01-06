@@ -1,28 +1,16 @@
 ---
-title: MediaStreamTrack.readyState
+title: "MediaStreamTrack: readyState property"
+short-title: readyState
 slug: Web/API/MediaStreamTrack/readyState
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - NeedsExample
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MediaStreamTrack.readyState
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack.readyState`** read-only property
-returns an enumerated value giving the status of the track.
+The **`readyState`** read-only property of the {{domxref("MediaStreamTrack")}} interface returns an enumerated value giving the status of the track.
 
-## Syntax
-
-```js
-const state = track.readyState
-```
-
-### Value
+## Value
 
 It takes one of the following values:
 
@@ -42,6 +30,6 @@ It takes one of the following values:
 
 ## See also
 
-- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
-- {{domxref("MediaStreamTrack.onended")}}
+- The {{domxref("MediaStreamTrack.ended_event", "ended")}} event

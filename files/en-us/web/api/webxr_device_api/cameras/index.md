@@ -1,31 +1,9 @@
 ---
-title: 'Viewpoints and viewers: Simulating cameras in WebXR'
+title: "Viewpoints and viewers: Simulating cameras in WebXR"
 slug: Web/API/WebXR_Device_API/Cameras
-tags:
-  - 3D
-  - API
-  - AR
-  - Advanced
-  - Cameras
-  - Coordinates
-  - Guide
-  - Location
-  - Motion
-  - Position
-  - VR
-  - Viewers
-  - Viewpoints
-  - WebGL
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRPose
-  - XRView
-  - XRViewerPose
-  - rotation
-  - transform
+page-type: guide
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 The first and most important thing to understand when considering the code to manage point-of-view and cameras in your application is this: _WebXR does not have cameras_. There's no magic object provided by either the [WebGL](/en-US/docs/Web/API/WebGL_API) or the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) API that represents the viewer that you can rotate and move around to automatically change what's seen on the screen. In this guide we show how use [WebGL](/en-US/docs/Web/API/WebGL_API) to simulate camera movements without having a camera to move. These techniques can be used in any WebGL (or WebXR) project.
@@ -39,7 +17,7 @@ There are a few articles about the fundamental math, geometry, and other concept
 - [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection)
 - [Geometry and reference spaces in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Geometry)
 
-_Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from [an article on the FilmmakerIQ web site](https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/); namely, from [this image](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png) which is found all over the web. We assume due to their frequent reuse that they're available under a permissive license, ownership is not certain. We hope that it's freely usable; if not, and you're the owner, please let us know and we'll find or produce new diagrams. Or, if you're happy to let us continue to use the images, please let us know so we can credit you properly!_
+_Ed. note: Most diagrams used in this article to show how the camera moves while performing standard movements were taken from [an article on the FilmmakerIQ website](https://web.archive.org/web/20170525025459/https://filmmakeriq.com/2016/09/the-importance-and-not-so-importance-of-film-terminology/); namely, from [this image](https://filmmakeriq.com/wp-content/uploads/2016/09/Pan-Tilt.png) which is found all over the web. We assume due to their frequent reuse that they're available under a permissive license, ownership is not certain. We hope that it's freely usable; if not, and you're the owner, please let us know and we'll find or produce new diagrams. Or, if you're happy to let us continue to use the images, please let us know so we can credit you properly!_
 
 ## Cameras and relative movement
 
@@ -47,7 +25,7 @@ When a classic live-action movie is filmed, the actors are on a set and move abo
 
 ### Virtual cameras
 
-In WebGL (and by extension, in WebXR), there is no camera object we can move and rotate, so we have to find a way to fake these movements. Since there is no camera, we have to find a way to fake it. Fortunately, physicists like Galileo, Newton, Lorentz, and Einstein have given us the **{{interwiki("wikipedia", "principle of relativity")}}**, which states that the laws of physics have the same form in every frame of reference. That is, no matter where you're standing, the laws of physics work in the same way.
+In WebGL (and by extension, in WebXR), there is no camera object we can move and rotate, so we have to find a way to fake these movements. Since there is no camera, we have to find a way to fake it. Fortunately, physicists like Galileo, Newton, Lorentz, and Einstein have given us the **[principle of relativity](https://en.wikipedia.org/wiki/Principle_of_relativity)**, which states that the laws of physics have the same form in every frame of reference. That is, no matter where you're standing, the laws of physics work in the same way.
 
 By extension, if you and another person are standing in an empty field of solid stone with nothing else visible as far as the eye can see, if you move three meters toward the other person, the result _looks the same_ as if the other person had moved three meters toward you. There is no way for either of you to see the difference. A third party can tell the difference, but the two of you cannot. If you are a camera, you can achieve the same visual result both by moving the camera _or by moving everything around the camera_.
 
@@ -65,7 +43,7 @@ In general, virtual cameras may or may not be incorporated into physical objects
 - In business applications, the 3D camera is used to set the apparent size and perspective when rendering things such as graphs and charts.
 - In mapping applications, the camera may either be placed directly over the scene, or might use various angles to show perspective. For 3D GPS solutions, the camera is positioned to show the area around the user, with the majority of the display showing the area ahead of the user's path of motion.
 - When using WebGL to accelerate 2D graphics drawing, the camera is typically placed directly above the center of the scene with the distance and field of view set to allow the entire scene to be presented.
-- When accelerating bitmapped graphics, the renderer would draw the 2D image into a WebGL texture's buffer, then redraw the texture to refresh the screen. This essentially uses the texture as a backbuffer for performing {{interwiki("wikipedia", "multiple buffering")}} in your 2D graphics application.
+- When accelerating bitmapped graphics, the renderer would draw the 2D image into a WebGL texture's buffer, then redraw the texture to refresh the screen. This essentially uses the texture as a backbuffer for performing [multiple buffering](https://en.wikipedia.org/wiki/Multiple_buffering) in your 2D graphics application.
 
 #### Cameras in gaming
 
@@ -139,12 +117,16 @@ Thus a matrix that looks like this:
 
 Is represented in array form like this:
 
-```js
-let matrixArray = [a1, a2, a3, a4, a5, a6, a7, a8,
-                   a9, a10, a11, a12, a13, a14, a15, a16];
+```js-nolint
+let matrixArray = [
+  a1, a2, a3, a4,
+  a5, a6, a7, a8,
+  a9, a10, a11, a12,
+  a13, a14, a15, a16,
+];
 ```
 
-In this array, the leftmost column contains the entries *a*₁, *a*₂, *a*₃, and *a*₄. The topmost row contains the entries *a*₁, *a*₅, *a*₉, and *a*₁₃.
+In this array, the leftmost column contains the entries `a1`, `a2`, `a3`, and `a4`. The topmost row contains the entries `a1`, `a5`, `a9`, and `a13`.
 
 Keep in mind that most WebGL and WebXR programming is done using third-party libraries which expand upon the basic functionality of WebGL by adding routines that make it much easier to perform not only core matrix and other operations, but often also to simulate these standard cinematography techniques. You should strongly consider using one instead of directly using WebGL. This guide uses WebGL directly since it's useful to understand to some extent what goes on under the hood, and to aide in the development of libraries or to help you optimize code.
 
@@ -174,8 +156,7 @@ function createPerspectiveMatrix(viewport, fovDegrees, nearClip, farClip) {
   const aspectRatio = viewport.width / viewport.height;
 
   const transform = mat4.create();
-  mat4.perspective(transform, fovRadians, aspectRatio,
-                   nearClip, farClip);
+  mat4.perspective(transform, fovRadians, aspectRatio, nearClip, farClip);
   return transform;
 }
 ```
@@ -188,11 +169,15 @@ The near clipping plane is the distance in meters to a plane parallel to the dis
 
 To zoom using a scaling factor or percentage, you can map 1x (100% of normal size) to the largest value of FOV you allow (which leads to the most content being visible), then map your maximum magnification to the maximum value of FOV you support and map corresponding values in between.
 
-If you start each frame's rendering pass by computing the perspective matrix, you can then multply into that matrix all the other transforms you need to apply in order to result in the frame's desired geometry. For example:
+If you start each frame's rendering pass by computing the perspective matrix, you can then multiply into that matrix all the other transforms you need to apply in order to result in the frame's desired geometry. For example:
 
 ```js
 const transform = createPerspectiveMatrix(viewport, 130, 1, 100);
-const translateVec = vec3.fromValues(-trackDistance, -craneDistance, pushDistance);
+const translateVec = vec3.fromValues(
+  -trackDistance,
+  -craneDistance,
+  pushDistance,
+);
 mat4.translate(transform, transform, translateVec);
 ```
 
@@ -204,12 +189,12 @@ Unlike a true "zoom", **scaling** involves multiplying each of the `x`, `y`, and
 
 If you want to scale up by a factor of 2, you need to multiply each component by 2.0. To scale down by the same amount, multiply them by -2.0. In matrix terms, this is performed using a transform matrix with scaling factored into it, like this:
 
-```js
+```js-nolint
 let scaleTransform = [
-  Sx,  0,  0,  0,
-   0, Sy,  0,  0,
-   0,  0, Sz,  0,
-   0,  0,  0,  1
+  Sx, 0, 0, 0,
+  0, Sy, 0, 0,
+  0, 0, Sz, 0,
+  0, 0, 0, 1
 ];
 ```
 
@@ -217,27 +202,17 @@ This matrix represents a transform that scales up or down by a factor indicated 
 
 If the same scaling factor is to be applied in every direction, you can create a simple function to generate the scaling transform matrix for you:
 
-```js
+```js-nolint
 function createScalingMatrix(f) {
-  return [
-    f, 0, 0, 0,
-    0, f, 0, 0,
-    0, 0, f, 0,
-    0, 0, 0, 1
-  ];
+  return [f, 0, 0, 0, 0, f, 0, 0, 0, 0, f, 0, 0, 0, 0, 1];
 }
 ```
 
 With the transform matrix in hand, we apply the transform `scaleTransform` to the vector (or vertex) `myVector`:
 
-```js
+```js-nolint
 let myVector = [2, 1, -3];
-let scaleTransform = [
-  2, 0, 0, 0,
-  0, 2, 0, 0,
-  0, 0, 2, 0,
-  0, 0, 0, 1
-];
+let scaleTransform = [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1];
 vec4.transformMat4(myVector, myVector, scaleTransform);
 ```
 
@@ -264,7 +239,7 @@ If `panAngle` is positive, this transform will pan the camera to the right; a ne
 
 ### Tilting (Pitching up or down)
 
-When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. it's also of course useful for implementing support for a player looking up and down.
+When you **tilt** or **pitch** the camera, you keep it fixed in space at the same coordinates while changing the direction in which it's facing vertically without altering the horizontal portion of its facing at all. It adjusts the direction it's pointing up and down. Tilting is good for capturing the scope of a tall object or scene, such as a forest or a mountain, but is also a popular way to introduce a character or locale of importance or which inspires awe. It's also of course useful for implementing support for a player looking up and down.
 
 ![A diagram showing a camera tilting up and down](camera-tilt.png)
 
@@ -294,7 +269,7 @@ Here, `[0, 0, dollyDistance]` is a vector wherein `dollyDistance` is the distanc
 
 ### Trucking (Moving left or right)
 
-**Trucking** using a physical camera uses the same kind of rigging as dollying, but instead of moving the camera forward and backward, it moves from left to right or vice-versa. The camera doesn't rotate at all, so the focus of the shot slowly glides off the screen. This can suggest concentration, time passing, or contemplation when attempting to establish emotion in a scene. It's also used frequently in "walk-and-talk" scenes, wherein the camera glides alongside the characters and they walk through the scene.
+**Trucking** using a physical camera uses the same kind of rigging as dollying, but instead of moving the camera forward and backward, it moves from left to right or vice versa. The camera doesn't rotate at all, so the focus of the shot slowly glides off the screen. This can suggest concentration, time passing, or contemplation when attempting to establish emotion in a scene. It's also used frequently in "walk-and-talk" scenes, wherein the camera glides alongside the characters and they walk through the scene.
 
 ![A diagram showing how a camera trucks left and right](camera-truck.png)
 
@@ -351,8 +326,11 @@ mat4.translate(viewMatrix, viewMatrix, [0, 0, dollyDistance]);
 The solution here is obvious. SInce the translation is expressed as a vector providing the distance to move along each axis, we can combine them like this:
 
 ```js
-mat4.translate(viewMatrix, viewMatrix,
-     [-truckDistance, -pedestalDistance, dollyDistance]);
+mat4.translate(viewMatrix, viewMatrix, [
+  -truckDistance,
+  -pedestalDistance,
+  dollyDistance,
+]);
 ```
 
 This will shift the origin of the matrix `viewMatrix` by the specified amount along each axis.
@@ -407,13 +385,15 @@ A fairly basic (but typical) callback for rendering frames might look like this:
 
 ```js
 function myAnimationFrameCallback(time, frame) {
-  let adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
-  let pose = frame.getViewerPose(adjustedRefSpace);
+  const adjustedRefSpace = applyPositionOffsets(xrReferenceSpace);
+  const pose = frame.getViewerPose(adjustedRefSpace);
 
-  animationFrameRequestID = frame.session.requestAnimationFrame(myAnimationFrameCallback);
+  animationFrameRequestID = frame.session.requestAnimationFrame(
+    myAnimationFrameCallback,
+  );
 
   if (pose) {
-    let glLayer = frame.session.renderState.baseLayer;
+    const glLayer = frame.session.renderState.baseLayer;
     gl.bindFramebuffer(gl.FRAMEBUFFER, glLayer.framebuffer);
     CheckGLError("Binding the framebuffer");
 
@@ -425,8 +405,8 @@ function myAnimationFrameCallback(time, frame) {
     const deltaTime = (time - lastFrameTime) * 0.001;
     lastFrameTime = time;
 
-    for (let view of pose.views) {
-      let viewport = glLayer.getViewport(view);
+    for (const view of pose.views) {
+      const viewport = glLayer.getViewport(view);
       gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
       CheckGLError(`Setting viewport for eye: ${view.eye}`);
 
