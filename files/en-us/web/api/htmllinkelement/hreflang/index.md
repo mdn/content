@@ -18,6 +18,21 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 
 ## Example
 
+```html
+<link rel="alternate" href="www.example.com/fr/html" hreflang="fr" type="text/html" title="French HTML">
+<p></p>
+```
+
+```JavaScript
+const myLink = document.querySelector("link");
+const pTag = document.querySelector("p");
+pTag.textContent = myLink.hreflang
+```
+
+## Results
+
+{{EmbedLiveSample("Example",100,100)}}
+
 ## Specifications
 
 {{Specifications}}
