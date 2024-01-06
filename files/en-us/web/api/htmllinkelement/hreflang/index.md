@@ -28,7 +28,7 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 <p class="tag"></p>
 ```
 
-```javascript
+```js
 const myLink = document.querySelector("link");
 const pTag = document.querySelector("tag");
 pTag.textContent = myLink.hreflang;
