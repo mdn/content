@@ -19,7 +19,12 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 ## Example
 
 ```html
-<link rel="alternate" href="www.example.com/fr/html" hreflang="fr" type="text/html" title="French HTML">
+<link
+  rel="alternate"
+  href="www.example.com/fr/html"
+  hreflang="fr"
+  type="text/html"
+  title="French HTML" />
 <p></p>
 ```
 
