@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if:
     - The {{domxref("CustomElementRegistry")}} already contains an entry with the same name or the same constructor (or is otherwise already defined).
-    - The <code>extends</code> option is specified and it is a [valid custom element name](#valid_custom_element_names)
+    - The <code>extends</code> option is specified and it is not a [valid custom element name](#valid_custom_element_names)
     - The <code>extends</code> option is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided name is not a [valid custom element name](#valid_custom_element_names).
