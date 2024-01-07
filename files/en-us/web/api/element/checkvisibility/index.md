@@ -95,11 +95,11 @@ The first (default selected) values should result in `checkVisibility()` returni
 </select>
 ```
 
-Next we have a `<div>` that is used to output the result of the `checkVisibility()` check when no options are passed in the parameter, and for each separate option value.
+Next we have a `<pre>` that is used to output the result of the `checkVisibility()` check when no options are passed in the parameter, and for each separate option value.
 At the end we have the element that will be tested (to which we will apply the selected CSS property values).
 
 ```html
-<div id="visibility_check"></div>
+<pre id="output_result"></pre>
 <div id="test_element">The element to be checked for visibility.</div>
 ```
 
@@ -127,7 +127,7 @@ const contentVisibilityCssSelect = document.getElementById(
 const displayCssOpacity = document.getElementById("css_opacity");
 const displayCssVisibility = document.getElementById("css_visibility");
 
-const visibility_check = document.getElementById("visibility_check");
+const outputResult = document.getElementById("output_result");
 const elementToCheck = document.getElementById("test_element");
 
 updateCSS();
@@ -159,13 +159,11 @@ function updateCSS() {
   });
 
   // Output the results of the tests
-  visibility_check.innerHTML = `<p>Checks on element below (may be hidden):</p>
-    <ul>
-      <li>Result of <code>checkVisibility()</code>: ${defaultVisibilityCheck}</li>
-      <li>Result of <code>checkVisibility({opacityProperty: true})</code>: ${opacityVisibilityCheck}</li>
-      <li>Result of <code>checkVisibility({visibilityProperty: true})</code>: ${cssVisibilityCheck}</li>
-      <li>Result of <code>checkVisibility({contentVisibilityAuto: true})</code>: ${contentVisibilityAutoCheck}</li>
-    </ul>`;
+  outputResult.innerText = `Checks on element below (may be hidden):
+- Result of checkVisibility(): ${defaultVisibilityCheck}
+- Result of checkVisibility({opacityProperty: true}): ${opacityVisibilityCheck}
+- Result of checkVisibility({visibilityProperty: true}): ${cssVisibilityCheck}
+- Result of checkVisibility({contentVisibilityAuto: true}): ${contentVisibilityAutoCheck}`;
 }
 ```
 
