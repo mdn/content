@@ -13,7 +13,7 @@ The most obvious use of this is to put a class name only on certain custom eleme
 
 > **Note:** This has no effect when used outside a shadow DOM.
 
-> **Note:** Unlike similar  pseudo-classes, like [:is()](/en-US/docs/Web/CSS/:is) or [:not()](/en-US/docs/Web/CSS/:not), the specificity of **`:host()`** is that of a pseudo-class, plus the specificity of its argument.
+> **Note:** Unlike similar pseudo-classes, like [:is()](/en-US/docs/Web/CSS/:is) or [:not()](/en-US/docs/Web/CSS/:not), the specificity of **`:host()`** is that of a pseudo-class, plus the specificity of its argument.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host_function.html", "tabbed-shorter")}}
 
