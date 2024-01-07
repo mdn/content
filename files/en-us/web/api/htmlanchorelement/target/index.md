@@ -23,7 +23,7 @@ A string that indicates where to display the linked resource, or the empty strin
 ```
 
 ```js
-const link = document.querySelector('.link');
+const link = document.querySelector(".link");
 console.log(link); // output:- "_blank"
 ```
 
