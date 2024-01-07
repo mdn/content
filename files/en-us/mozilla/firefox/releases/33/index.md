@@ -99,7 +99,7 @@ _No change._
 
 ## Changes for add-on and Mozilla developers
 
-- The JavaScript Debugger Service (JSD)) has been removed in favor of the new [Debugger API](https://firefox-source-docs.mozilla.org/devtools-user/debugger-api/index.html) ([Firefox bug 800200](https://bugzil.la/800200)).
+- The JavaScript Debugger Service (JSD) has been removed in favor of the new [Debugger API](https://firefox-source-docs.mozilla.org/devtools-user/debugger-api/index.html) ([Firefox bug 800200](https://bugzil.la/800200)).
 - The interface nsIX509CertDB2 has been removed and the methods from that interface have been moved to the nsIX509CertDB interface.
 
 ### Add-on SDK
