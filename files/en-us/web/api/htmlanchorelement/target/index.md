@@ -37,4 +37,6 @@ console.log(link); // output:- "_blank"
 
 ## See also
 
-- {{HTMLElement("a")}} element
+- {{domxref("HTMLBaseElement.target")}} property
+- {{domxref("HTMLFormElement.target")}} property
+- {{domxref("HTMLAreaElement.target")}} property
