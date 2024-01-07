@@ -68,7 +68,7 @@ window.addEventListener(
 );
 ```
 
-An even better solution, of course, is to follow performance best practices) and to not instantiate services until you need to use them.
+An even better solution, of course, is to follow performance best practices and to not instantiate services until you need to use them.
 
 ## See also
 
