@@ -10,11 +10,11 @@ browser-compat: api.HTMLLinkElement.hreflang
 
 The **`hreflang`** property of the {{domxref("HTMLLinkElement")}} is used to indicate the language and the geographical targeting of a page. This improves SEO(Search Engine Optimization).
 
-It reflects the `hreflang` attribute of the {{HTMLElement("link")}} element and is the empty string (`""`) if there is no `hreflang` element.
+It reflects the `hreflang` attribute of the {{HTMLElement("link")}} element and is the empty string (`""`) if there is no `hreflang` attribute.
 
 ## Value
 
-A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` element.
+A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` attribute.
 
 ## Example
 
