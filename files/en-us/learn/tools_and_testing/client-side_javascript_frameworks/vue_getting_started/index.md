@@ -105,6 +105,8 @@ The Vue CLI will default to this package manager from now on. If you need to use
 
 > **Note:** We've not gone over all of the options here, but you can [find more information on the CLI](https://cli.vuejs.org) in the Vue docs.
 
+> **Note:** there is other way to start vue project. The recommended way is with [create-vue](https://cli.vuejs.org)
+
 ## Project structure
 
 If everything went successfully, the CLI should have created a series of files and directories for your project. The most significant ones are as follows:
