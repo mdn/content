@@ -37,4 +37,4 @@ console.log(link); // output:- "_blank"
 
 ## See also
 
-- {{domxref("a")}} property
+- {{HTMLElement("a")}} element
