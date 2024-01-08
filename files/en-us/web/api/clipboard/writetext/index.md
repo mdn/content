@@ -41,14 +41,15 @@ Additional security requirements are covered in the [Security consideration](/en
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(
-  () => {
-    /* clipboard successfully set */
-  },
-  () => {
-    /* clipboard write failed */
-  },
-);
+button.addEventListener("click", writeClipboardText("<empty clipboard>"));
+
+async function writeClipboardText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 ```
 
 ## Specifications
