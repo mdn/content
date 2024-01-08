@@ -7,7 +7,7 @@ browser-compat: api.ClipboardItem
 
 {{APIRef("Clipboard API")}}{{SecureContext_Header}}
 
-The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents a single item format, used when reading or writing data via the {{domxref('Clipboard API')}}. That is {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
+The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents a single item format, used when reading or writing clipboard data using {{domxref("clipboard.read()")}} and {{domxref("clipboard.write()")}} respectively.
 
 The benefit of having the **`ClipboardItem`** interface to represent data, is that it enables developers to cope with the varying scope of file types and data.
 
@@ -38,7 +38,7 @@ _This interface defines the following methods._
 
 ## Examples
 
-### Writing to Clipboard
+### Writing to the clipboard
 
 Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.
 
@@ -61,7 +61,7 @@ async function writeClipImg() {
 }
 ```
 
-### Reading from Clipboard
+### Reading from the clipboard
 
 Here we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method.
 Then utilizing the {{domxref("ClipboardItem.types")}} property to set the {{domxref("ClipboardItem.getType", "getType()")}} argument and return the corresponding blob object.

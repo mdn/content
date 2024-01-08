@@ -25,7 +25,7 @@ The Clipboard API allows users to programmatically read and write text and other
 Browsers may place additional restrictions over use of the methods to access the clipboard, such as requiring user approval to read or write cross-origin content, or at all!
 
 Chromium browsers require the `clipboard-read` and `clipboard-write` permissions from the [Permissions API](/en-US/docs/Web/API/Permissions_API) to read from, and write to, the clipboard.
-The also do not require transient activation.
+They also do not require transient activation.
 
 > **Note:** The `clipboard-read` and `clipboard-write` permissions are not supported by Firefox or Safari.
 > They have been removed from the [Permissions API](/en-US/docs/Web/API/Permissions_API) specification, but are still referenced in the Clipboard API specification.

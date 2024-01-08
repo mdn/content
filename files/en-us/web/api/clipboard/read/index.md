@@ -84,7 +84,7 @@ function log(text) {
 ```
 
 Chromium browsers gate access to the clipboard using the [Permissions API](/en-US/docs/Web/API/Permissions_API) permission `clipboard-read`, while other browsers use transient activation.
-On chromium browsers we can check the permission using {{domxref("Permissions.query()")}}, but this will raise a `TypeError` exception on browsers where the permission is not supported.
+On Chromium browsers we can check the permission using {{domxref("Permissions.query()")}}, but this will raise a `TypeError` exception on browsers where the permission is not supported.
 To cope with the different implementations, we define the following `checkPermission()` function that returns the permission value if the permission exists, `undefined` if it does not (or cannot be retrieved), and re-throws the exception if there is any other error.
 
 ```js

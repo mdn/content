@@ -10,7 +10,7 @@ browser-compat: api.ClipboardItem.presentationStyle
 
 The read-only **`presentationStyle`** property of the {{domxref("ClipboardItem")}} interface returns a string indicating how an item should be presented.
 
-For example, in some contexts an image might displayed inline, while in others it might be represented as an attachment.
+For example, in some contexts an image might be displayed inline, while in others it might be represented as an attachment.
 
 ## Value
 
