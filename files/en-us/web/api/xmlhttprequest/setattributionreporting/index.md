@@ -8,7 +8,7 @@ status:
 browser-compat: api.XMLHttpRequest.setAttributionReporting
 ---
 
-{{APIRef("Attribution Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The **`setAttributionReporting()`** method of the
 {{domxref("XMLHttpRequest")}} interface indicates that you want the request to trigger the browser to set off an attribution source or trigger event.
