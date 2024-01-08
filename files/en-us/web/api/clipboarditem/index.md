@@ -13,8 +13,6 @@ The benefit of having the **`ClipboardItem`** interface to represent data, is th
 
 > **Note:** To work with text see the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
 
-> **Note:** You can only pass in one clipboard item at a time.
-
 ## Constructor
 
 - {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}}
