@@ -90,7 +90,7 @@ For example, let's start with an originating color of `rgb(255 0 0)` (equivalent
 
 ```css
 hsl(from rgb(255 0 0) h s l)
-```
+````
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the originating color:
 
