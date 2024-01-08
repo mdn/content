@@ -49,7 +49,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("WakeLockSentinel")}} obj
 ## Examples
 
 The following asynchronous function requests a {{domxref("WakeLockSentinel")}} object.
-The `request()` method is wrapped in a `try...catch` statement to account for if the browser refuses the request for any reason.
+The `request()` method is wrapped in a `try...catch` statement to handle cases where the browser refuses the request for any reason.
 
 ```js
 const requestWakeLock = async () => {
@@ -65,7 +65,7 @@ const requestWakeLock = async () => {
 requestWakeLock();
 ```
 
-Note that the screen wake lock may be revoked by the device after it has been granted.
+The screen wake lock may be revoked by the device after it has been granted.
 The returned {{domxref("WakeLockSentinel")}} can be used to check the status of the lock, and/or to manually cancel a held screen wake lock.
 
 ## Specifications

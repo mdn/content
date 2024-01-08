@@ -13,7 +13,7 @@ The **`type`** read-only property of the {{domxref("WakeLockSentinel")}} interfa
 ## Value
 
 A string representation of the currently acquired wake lock type.
-The type `screen` is a screen wake lock.
+Currently, the value is always `screen`, which represents a screen wake lock.
 It prevents devices from dimming or locking the screen.
 
 ## Examples
