@@ -266,9 +266,13 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   </tbody>
 </table>
 
-Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-(See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+Note:
+
+- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
+  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
+  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### Single numbers as aspect ratio in media queries
 
