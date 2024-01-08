@@ -645,6 +645,7 @@
         "HTMLLinkElement",
         "HTMLMapElement",
         "HTMLMediaElement",
+        "HTMLMenuElement",
         "HTMLMetaElement",
         "HTMLMeterElement",
         "HTMLModElement",
@@ -897,18 +898,17 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints"
+        "MediaTrackSupportedConstraints",
+        "InputDeviceInfo"
       ],
-      "methods": [
-        "HTMLCanvasElement.captureStream()",
-        "MediaDevices.getUserMedia()"
-      ],
+      "methods": ["HTMLCanvasElement.captureStream()"],
       "properties": ["Navigator.mediaDevices"],
       "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
     },
@@ -1448,8 +1448,6 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFilterPrimitiveStandardAttributes",
-        "SVGFitToViewBox",
         "SVGFontElement",
         "SVGFontFaceElement",
         "SVGFontFaceFormatElement",
@@ -1492,14 +1490,12 @@
         "SVGSVGElement",
         "SVGSwitchElement",
         "SVGSymbolElement",
-        "SVGTests",
         "SVGTextContentElement",
         "SVGTextElement",
         "SVGTextPathElement",
         "SVGTextPositioningElement",
         "SVGTitleElement",
         "SVGTransform",
-        "SVGTransformable",
         "SVGTransformList",
         "SVGTRefElement",
         "SVGTSpanElement",
@@ -1507,8 +1503,6 @@
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
-        "SVGZoomAndPan",
-        "SVGZoomEvent",
         "TimeEvent"
       ],
       "methods": [],
@@ -1645,7 +1639,10 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": ["Navigator.virtualKeyboard"],
+      "properties": [
+        "HTMLElement.virtualkeyboardpolicy",
+        "Navigator.virtualKeyboard"
+      ],
       "events": []
     },
     "Visual Viewport": {
