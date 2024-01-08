@@ -257,7 +257,7 @@ Like in all cases, these strings may change in the future, one should use them o
 The most common reason to perform user agent sniffing is to determine which type of device the browser runs on. The goal is to serve different HTML to different device types.
 
 - Never assume that a browser or a rendering engine only runs on one type of device. Especially don't make different defaults for different browsers or rendering engines.
-- Never use the OS token to define if a browser is on mobile, tablet or desktop. The OS may run on more than one type of (for example, Android runs on tablets as well as phones).
+- Never use the OS token to define if a browser is on mobile, tablet or desktop. The OS may run on more than one type of device (for example, Android runs on tablets as well as phones).
 
 The following table summarizes the way common browser vendors indicate that their browsers are running on a mobile device:
 
