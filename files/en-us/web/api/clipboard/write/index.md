@@ -48,7 +48,7 @@ Additional security requirements are covered in the [Security consideration](/en
 ### Write text to the clipboard
 
 This example function replaces the current contents of the clipboard with a specified string when a button is pressed.
-Note that for this particular case, you could just as readily use `Clipboard.read()`.
+Note that for this particular case, you could just as readily use `Clipboard.writeText()`.
 
 ```js
 button.addEventListener("click", setClipboard("<empty clipboard>"));
@@ -84,7 +84,7 @@ async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob
   const blob = await canvas.toBlob();
   // Create ClipboardItem with blob and it's type, and add to an array
-  let data = [new ClipboardItem({ [blob.type]: blob })];
+  const data = [new ClipboardItem({ [blob.type]: blob })];
   // Write the data to the clipboard
   await navigator.clipboard.write(data);
 }

@@ -126,7 +126,7 @@ The example will fetch the image data from the clipboard and display the image i
 
 This example uses the `read()` method to read data from the clipboard and log whatever data is stored in the clipboard.
 
-This differs from the previous version that it will display text, HTML, and image {{domxref("ClipboardItem")}} objects (rather than just images).
+This differs from the previous version in that it will display text, HTML, and image {{domxref("ClipboardItem")}} objects (rather than just images).
 
 #### HTML
 
@@ -237,7 +237,7 @@ Select the indicted frame below to paste this information from the clipboard int
 
 Notes:
 
-- Even though the butterfly image is a PNG file, it is copied into the clipboard as a PNG.
+- Even though the butterfly image is a JPG file, when read from the clipboard it is a PNG.
 - If prompted, you will need to grant permission in order to paste the image.
 
 ## Specifications

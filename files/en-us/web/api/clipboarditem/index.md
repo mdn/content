@@ -38,7 +38,7 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new {{domxref("ClipboardItem")}}.
+Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new `ClipboardItem`.
 
 ```js
 async function writeClipImg() {
