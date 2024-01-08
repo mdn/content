@@ -22,7 +22,7 @@ The value of `aria-rowspan` is an integer greater than or equal to 0 and less th
 - `<integer>`
   - : An integer greater than or equal to `0` and less than would cause a cell to overlap the next cell in the same column.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRowSpan")}}
   - : The [`ariaRowSpan`](/en-US/docs/Web/API/Element/ariaRowSpan) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-rowspan` attribute.

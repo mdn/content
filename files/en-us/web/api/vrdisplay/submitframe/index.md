@@ -15,7 +15,7 @@ The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface capture
 
 > **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
-The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("getFrameData()")}}.
+The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("VRDisplay.getFrameData()", "getFrameData()")}}.
 
 ## Syntax
 
@@ -119,5 +119,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

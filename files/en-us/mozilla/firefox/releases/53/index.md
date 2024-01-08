@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+Firefox 53 was released on April 19, 2017. This article lists key changes that are useful not only for web developers but also for Firefox and Gecko developers, as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -36,7 +36,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - \[css-grid] Fixed: `align-self`/`justify-self:stretch`/`normal` doesn't work on `<table>` grid items ([Firefox bug 1316051](https://bugzil.la/1316051)).
 - Fixed: `clip-path: circle()` with large reference box and percentage radius does not render correctly ([Firefox bug 1324713](https://bugzil.la/1324713).
 - When applying a {{cssxref("text-transform")}} value of `uppercase` to Greek text, the accent on the disjunctive eta (ή) is no longer removed (see [Firefox bug 1322989](https://bugzil.la/1322989)).
-- The availability of the `contents` value of {{cssxref("display")}} was controlled through the `layout.css.display-contents.enabled` pref. In Firefox 53 this pref has been removed altogether, so the value will always be available and can no longer be disabled ([Firefox bug 1295788](https://bugzil.la/1295788)).
+- The availability of the `contents` value of {{cssxref("display")}} was controlled through the `layout.css.display-contents.enabled` pref. In Firefox 53, this pref has been removed altogether, so the value will always be available and can no longer be disabled ([Firefox bug 1295788](https://bugzil.la/1295788)).
 
 ### JavaScript
 
@@ -45,7 +45,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 - The [Template Literal Revision proposal](https://tc39.es/proposal-template-literal-revision/) that [lifts escape sequence restrictions on tagged template literals](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates_and_escape_sequences) has been implemented ([Firefox bug 1317375](https://bugzil.la/1317375)).
 - The static `length` property of {{jsxref("TypedArray")}} objects was changed from 3 to 0 as per ES2016 ([Firefox bug 1317306](https://bugzil.la/1317306)).
 - {{jsxref("SharedArrayBuffer")}} can now be used in {{jsxref("DataView")}} objects ([Firefox bug 1246597](https://bugzil.la/1246597)).
-- In earlier versions of the specification, {{jsxref("SharedArrayBuffer")}} objects needed to be explicitly transferred during [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). In the new specification they aren't [transferable objects](/en-US/docs/Web/API/Transferable) anymore and thus must not be in the transfer list. The new behavior used to present a console warning only, but will now throw an error ([Firefox bug 1302037](https://bugzil.la/1302037)).
+- In earlier versions of the specification, {{jsxref("SharedArrayBuffer")}} objects needed to be explicitly transferred during [structured cloning](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm). In the new specification, they aren't [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) anymore and thus must not be in the transfer list. The new behavior used to present a console warning only, but will now throw an error ([Firefox bug 1302037](https://bugzil.la/1302037)).
 - The {{jsxref("ArrayBuffer")}} length is now limited to {{jsxref("Number.MAX_SAFE_INTEGER")}} (>= 2 \*\* 53) ([Firefox bug 1255128](https://bugzil.la/1255128)).
 - {{jsxref("Error")}} and other native error object prototypes like {{jsxref("RangeError")}} etc. are now ordinary objects instead of proper Error objects. (In particular, `Object.prototype.toString.call(Error.prototype)` is now `"[object Object]"` instead of `"[object Error]"`.) ([Firefox bug 1213341](https://bugzil.la/1213341)).
 
@@ -59,7 +59,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### DOM
 
-- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} {{domxref("HTMLHyperLinkElementUtils")}} properties previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
+- The {{domxref("HTMLAnchorElement/pathname", "pathname")}} and {{domxref("HTMLAnchorElement/search", "search")}} properties of links (like for {{HTMLElement("a")}} and {{HTMLELement("link")}} elements' interfaces previously returned the wrong parts of the URL. For example, for a URL of `http://z.com/x?a=true&b=false`, `pathname` would return "`/x?a=true&b=false"` and `search` would return "", rather than "`/x`" and "`?a=true&b=false"` respectively. This has now been fixed ([Firefox bug 1310483](https://bugzil.la/1310483)).
 - The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor now accepts a string or sequence of strings as an init object ([Firefox bug 1330678](https://bugzil.la/1330678)).
 - The {{domxref("Selection.setBaseAndExtent()")}} method of the [Selection API](/en-US/docs/Web/API/Selection) is now implemented (see [Firefox bug 1321623](https://bugzil.la/1321623)).
 - The ["fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) addition to `file` type {{htmlelement("input")}} `values` has been implemented in Gecko, giving it parity with other browsers (see [Firefox bug 1274596](https://bugzil.la/1274596)).
@@ -72,7 +72,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 ### Workers and service workers
 
 - The [Network Information API](/en-US/docs/Web/API/Network_Information_API) is now available in workers (see [Firefox bug 1323172](https://bugzil.la/1323172)).
-- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) can now be used from workers (see [Firefox bug 1267903](https://bugzil.la/1267903)).
+- [Server-sent events](/en-US/docs/Web/API/Server-sent_events) can now be used in workers (see [Firefox bug 1267903](https://bugzil.la/1267903)).
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}} can now be called asynchronously (see [Firefox bug 1263304](https://bugzil.la/1263304)).
 
 ### WebGL
@@ -97,8 +97,8 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 #### WebRTC
 
-- The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}} instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.
-- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary {{domxref("RTCSessionDescriptionInit")}}. Existing code continues to work, but [can be simplified](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter).
+- The {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.createOffer", "createOffer()")}} and {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} now return a {{jsxref("Promise")}} that returns an object conforming to the `RTCSessionDescriptionInit` dictionary instead of returning an {{domxref("RTCSessionDescription")}} directly. Existing code will continue to work, but new code can be written more simply.
+- Similarly, the {{domxref("RTCPeerConnection")}} methods {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} and {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}} now accept as input an object conforming to the dictionary `RTCSessionDescriptionInit` dictionary. Existing code continues to work, but [can be simplified](/en-US/docs/Web/API/RTCPeerConnection/setLocalDescription#about_the_session_description_parameter).
 - {{domxref("RTCPeerConnection.addIceCandidate()")}} now accepts as input an initialization object. This is compatible with existing code but allows new code to be written slightly more simply when used in tandem with the changes listed above ([Firefox bug 1263312](https://bugzil.la/1263312)).
 - {{Glossary("DTMF")}} support is now enabled by default using {{domxref("RTCDTMFSender")}}. See [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for more information on how this works.
 
@@ -122,9 +122,9 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### HTML/XML
 
-- The `dom.details_element.enabled` pref — which controlled enabling/disabling {{htmlelement("details")}} and {{htmlelement("summary")}} element support in Firefox — has now been removed from `about:config`. These elements (which were first enabled by default in Firefox 49) can no longer be disabled. See [Firefox bug 1271549](https://bugzil.la/1271549).
-- The `mozapp` attribute of the {{htmlelement("iframe")}} element /{{domxref("HTMLIFrameElement")}} interface has been removed — this was used to enable a Firefox OS app to be embedded in a moz [Browser API](/en-US/docs/Mozilla/Gecko/Chrome/API/Browser_API) `<iframe>` ([Firefox bug 1310845](https://bugzil.la/1310845)).
-- The {{domxref("HTMLIFrameElement.setInputMethodActive()")}} method and `InputMethod` interface (used to set and manage IMEs on Firefox OS apps) has been removed ([Firefox bug 1313169](https://bugzil.la/1313169)).
+- The `dom.details_element.enabled` pref — which controlled enabling/disabling {{htmlelement("details")}} and {{htmlelement("summary")}} element support in Firefox — has now been removed from `about:config`. These elements (first enabled by default in Firefox 49) can no longer be disabled. See [Firefox bug 1271549](https://bugzil.la/1271549).
+- The `mozapp` attribute of the {{htmlelement("iframe")}} element /{{domxref("HTMLIFrameElement")}} interface has been removed — this was used to enable a Firefox OS app to be embedded in a mozilla-prefixed Browser API `<iframe>` ([Firefox bug 1310845](https://bugzil.la/1310845)).
+- The `HTMLIFrameElement.setInputMethodActive()` method and `InputMethod` interface (used to set and manage IMEs on Firefox OS apps) has been removed ([Firefox bug 1313169](https://bugzil.la/1313169)).
 
 ### CSS
 
@@ -139,7 +139,7 @@ Firefox 53 was released on April 19, 2017. This article lists key changes that a
 
 ### APIs
 
-- The [Wi-Fi information API](/en-US/docs/Archive/B2G_OS/API/WiFi_Information_API), Speaker Manager API, and Tethering API, and [Settings API](/en-US/docs/Archive/B2G_OS/API/Settings_API) have been removed from the platform (see [Firefox bug 1313788](https://bugzil.la/1313788), [Firefox bug 1317853](https://bugzil.la/1317853), [Firefox bug 1313789](https://bugzil.la/1313789), and [Firefox bug 1313155](https://bugzil.la/1313155) respectively).
+- The Wi-Fi information API, Speaker Manager API, and Tethering API, and Settings API] have been removed from the platform (see [Firefox bug 1313788](https://bugzil.la/1313788), [Firefox bug 1317853](https://bugzil.la/1317853), [Firefox bug 1313789](https://bugzil.la/1313789), and [Firefox bug 1313155](https://bugzil.la/1313155) respectively).
 
 ### Other
 
