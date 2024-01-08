@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLAnchorElement.attributionSrc
 ---
 
-{{ APIRef("Attribution Reporting API") }}{{seecompattable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
 The
 **`attributionSrc`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the `attributionsrc` attribute on an {{htmlelement("a")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source.
