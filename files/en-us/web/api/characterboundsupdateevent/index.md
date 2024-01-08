@@ -1,38 +1,19 @@
 ---
-title: "EditContext: characterboundsupdate event"
-short-title: characterboundsupdate
-slug: Web/API/EditContext/characterboundsupdate_event
-page-type: web-api-event
-browser-compat: api.EditContext.characterboundsupdate_event
+title: CharacterBoundsUpdateEvent
+slug: Web/API/CharacterBoundsUpdateEvent
+page-type: web-api-interface
+browser-compat: api.CharacterBoundsUpdateEvent
 ---
 
 {{APIRef("EditContext API")}}
 
-The `characterboundsupdate` event fires when the operating system needs to know the bounds of certain characters within editable text region of the `EditContext` object.
+The **`CharacterBoundsUpdateEvent`** interface is a {{domxref("Event", "DOM event")}} that represents a request from the operating system to know the bounds of certain characters within an editable region that's attached to an {{domxref("EditContext")}} instance.
 
-This happens when the operating system needs to display a platform-specific editing-related UI surface such as an {{glossary("IME")}} (Input Method Editor) window.
+This interface inherits properties from {{domxref("Event")}}.
 
-When the `characterboundsupdate` event fires, you should calculate the character bounds for the text, and then call the {{domxref("EditContext.updateCharacterBounds()")}} method to give the operating system the information it needs.
+{{InheritanceDiagram}}
 
-See the documentation of the {{domxref("EditContext.updateCharacterBounds()", "updateCharacterBounds")}} method for more information about when and how to use the `characterboundsupdate` event.
-
-## Syntax
-
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
-
-```js
-addEventListener("characterboundsupdate", (event) => {});
-
-oncharacterboundsupdate = (event) => {};
-```
-
-## Event type
-
-A {{domxref("CharacterBoundsUpdateEvent")}}. Inherits from {{domxref("Event")}}.
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
+## Instance properties
 
 - {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}}
   - : The offset of the first character within the editable region text for which the operating system needs the bounds.

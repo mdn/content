@@ -426,7 +426,8 @@
         "EditContext",
         "TextFormat",
         "TextUpdateEvent",
-        "TextFormatUpdateEvent"
+        "TextFormatUpdateEvent",
+        "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
       "properties": [],
