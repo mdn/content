@@ -229,7 +229,6 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 - In the interface, by adding the \\{{ReadOnlyInline}} macro next to its definition term.
 - In the first sentence of its own page, by starting the description with: _The read-only **`HTMLMediaElement.error`** property…_
-- By adding the `Read-only` tag to its own page.
 - By starting its description in the interface page with _Returns…_
 
 > **Note:** Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
