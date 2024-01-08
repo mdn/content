@@ -125,3 +125,4 @@ output {
 
 - {{domxref("HTMLLinkElement.crossOrigin")}}
 - {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}

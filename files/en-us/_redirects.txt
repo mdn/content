@@ -5655,7 +5655,7 @@
 /en-US/docs/Media_Streams_API	/en-US/docs/Web/API/Media_Capture_and_Streams_API
 /en-US/docs/Media_formats_supported_by_the_audio_and_video_elements	/en-US/docs/Web/Media/Formats
 /en-US/docs/Memory_Sanitizer	https://firefox-source-docs.mozilla.org/tools/sanitizer/memory_sanitizer.html#memory-sanitizer
-/en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Web/Guide/Mobile
+/en-US/docs/Mobile/Mobile_Web_Development	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/MouseEvent.initMouseEvent	/en-US/docs/Web/API/MouseEvent/initMouseEvent
 /en-US/docs/Mozilla's_Quirks_Mode	/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /en-US/docs/Mozilla/Add-ons/AMO/Policy	https://extensionworkshop.com/documentation/publish/add-on-policies/
@@ -12157,6 +12157,9 @@
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
+/en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web/Guide/Mobile/A_hybrid_approach	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web/Guide/Mobile/Mobile-friendliness	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web/Guide/Mobile/Separate_sites	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web/Guide/Needs_categorization/Functions_available_to_workers	/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /en-US/docs/Web/Guide/Parsing_and_serializing_XML	/en-US/docs/Web/XML/Parsing_and_serializing_XML
@@ -13178,9 +13181,9 @@
 /en-US/docs/Web_Development	/en-US/docs/Web/Guide
 /en-US/docs/Web_Development/HTTP_cookies	/en-US/docs/Web/HTTP/Cookies
 /en-US/docs/Web_Development/Introduction_to_Web_development	/en-US/docs/Learn
-/en-US/docs/Web_Development/Mobile	/en-US/docs/Web/Guide/Mobile
-/en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Web/Guide/Mobile/A_hybrid_approach
-/en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Web/Guide/Mobile/Mobile-friendliness
+/en-US/docs/Web_Development/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web_Development/Mobile/A_hybrid_approach	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+/en-US/docs/Web_Development/Mobile/Mobile-friendliness	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
 /en-US/docs/Web_Development/Mobile/Responsive_design	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Responsive_design/Responsive_design_references	/en-US/docs/Web/Progressive_web_apps
 /en-US/docs/Web_Development/Mobile/Separate_sites	/en-US/docs/Glossary/Responsive_web_design

@@ -6,15 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.kind
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`kind`** readonly property of
+The **`kind`** read-only property of
 the {{domxref("MediaDeviceInfo")}} interface returns an enumerated value, that is
-either "videoinput", "audioinput" or "audiooutput".
+either `"videoinput"`, `"audioinput"` or `"audiooutput"`.
 
 ## Value
 
-A string.
+One of `"videoinput"`, `"audioinput"` or `"audiooutput"`.
 
 ## Specifications
 
