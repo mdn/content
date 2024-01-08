@@ -32,8 +32,9 @@ A {{jsxref("Promise")}} that is resolved once the clipboard's contents have been
 
 ## Security considerations
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
-The user has to interact with the page or a UI element in order for this feature to work.
+Writing to the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
+Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Examples
 

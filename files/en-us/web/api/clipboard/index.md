@@ -17,9 +17,8 @@ The system clipboard is exposed through the global {{domxref("Navigator.clipboar
 All of the Clipboard API methods operate asynchronously; they return a {{jsxref("Promise")}} which is resolved once the clipboard access has been completed.
 The promise is rejected if clipboard access is denied.
 
-All the methods require [transient user activation](/en-US/docs/Web/Security/Secure_Contexts) and browsers may additionally require user confirmation for some operations (such as copying cross-origin content).
-
-> **Note:** Browser extensions access the system clipboard using the [WebExtension `clipboard` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/clipboard).
+All the methods require a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Additional requirements for using the API are discussed in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Instance methods
 
