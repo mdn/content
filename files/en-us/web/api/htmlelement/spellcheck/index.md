@@ -29,9 +29,9 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
 ```
 
 ```js
-const label = document.getElementById("spellcheck-label");
-const element = document.getElementById("spellcheck-element");
-const controller = document.getElementById("spellcheck-controller");
+const label = document.getElementById("sc-label");
+const element = document.getElementById("sc-element");
+const controller = document.getElementById("sc-controller");
 
 controller.addEventListener("change", (e) => {
   if (controller.checked) {
