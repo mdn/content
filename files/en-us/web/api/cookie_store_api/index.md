@@ -12,7 +12,7 @@ spec-urls: https://wicg.github.io/cookie-store/
 
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}{{SeeCompatTable}}
 
-The _**Cookie Store API**_ provides an asynchronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "", "", "nocode")}}.
+The **Cookie Store API** provides an asynchronous API for managing cookies, while also exposing cookies to {{domxref("Service Worker API", "", "", "nocode")}}.
 
 {{AvailableInWorkers}}
 
