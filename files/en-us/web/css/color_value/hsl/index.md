@@ -17,7 +17,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 
 ## Syntax
 
-````css
+```css
 /* Absolute values */
 
 hsl(120deg 75% 25%)
@@ -32,9 +32,9 @@ hsl(from red 240deg s l)
 /* Add a semi-transparent alpha channel to green */
 hsl(from green h s l / 0.5)
 /* Create a lighter blue variant by setting the output lightness */
-/* to the originating color's lightness channel value plus 0.6 */
-hsl(from blue h s calc(l + 0.2)) /* Chromiums */
-hsl(from blue h s calc(l + 20%)) /* Safari */
+/* to the origin color's lightness channel value plus 0.2 */
+hsl(from blue h s calc(l + 0.2))
+```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
 
@@ -64,7 +64,7 @@ Functional notation of relative values: `hsl(from color hue saturation lightness
 - `from`
   - : The keyword `from` is always included when defining a relative color.
 - `color`
-  - : A {{cssxref("&lt;color&gt;")}} value representing the **originating color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+  - : A {{cssxref("&lt;color&gt;")}} value representing the **origin color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `hue`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle of the output color.
 - `saturation`
@@ -82,63 +82,33 @@ In color syntax, setting `none` is equivalent to setting a value of `0` with an 
 
 ### Defining relative color output channel components
 
-When defining a relative color, the diffferent channels of the output color can be expressed in several different ways.
+The browser destructures the origin color into `hsl()` component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired:
 
-The browser destructures the originating color into its component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired.
+- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the color's {{cssxref("&lt;hue&gt;")}}.
+- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the color's saturation and lightness.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 that represents the color's alpha value.
 
-For example, let's start with an originating color of `rgb(255 0 0)` (equivalent to `red`). The following function outputs the same color as the originating color — it uses exactly the same channel values:
+When defining a relative color, the different channels of the output color can be expressed in several different ways.
+
+For example, let's start with an origin color of `rgb(255 0 0)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses exactly the same channel values:
 
 ```css
 hsl(from rgb(255 0 0) h s l)
-````
+```
 
-This function uses absolute values for the output color's channel values, outputting a completely different color not based on the originating color:
+This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
 ```css
 hsl(from rgb(255 0 0) 240 60 70)
 ```
 
-The following function use some of the originating color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
 
 ```css
-hsl(from rgb(255 0 0) calc(h + 60) calc(s - 0.2) calc(l - 0.1)) /* Chrome */
-hsl(from rgb(255 0 0) calc(h + 60deg) calc(s - 20%) calc(l - 10%)) /* Safari */
+hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 0.2) calc(l - 0.1) / calc(alpha - 0.1))
 ```
 
-> **Note:** When expressing absolute percentage values, e.g. for the `s` and `l` channels, you can express them as whole numbers or percentages (e.g. `60` or `60%` will represent "sixty percent"). However,
-
-> **Note:** See [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) for a detailed guide to relative colors and their use cases, with more detailed examples than the ones available on this page.
-
-### Browser support differences
-
-There are currently some syntax differences between browsers for `hsl()`, which warrant some explanation. Chrome supports unitless values for percentages, and other browsers don't. It is therefore advised to specify the units:
-
-```css
-hsl(60deg 40% 70%) /* Works in all browsers */
-hsl(60deg 40 70) /* Only works in Chromiums */
-
-hsl(from rgb(255 0 0) 60deg 40% 70%) /* Works in Chromiums and Safari */
-hsl(from rgb(255 0 0) 60 40 70) /* Works only in Chromiums */
-```
-
-In relative color syntax, there are additional quirks to be aware of when performing calculations using mathematical expressions:
-
-- Chrome requires you explicitly to not include units on any values, i.e. `deg` or `%`.
-- When expressing relative percentage values based on the originating color's channel values, you need to express the modifiers as percentages in Safari, but decimal equivalents in Chrome.
-
-Therefore, at the time of writing, cross-browser support for relative colors involving math functions requires a different property per rendering engine:
-
-```css
-/* Chromiums */
-background-color: hsl(
-  from rgb(255 0 0) calc(h + 60) calc(s - 0.2) calc(l - 0.1)
-);
-
-/* Safari */
-background-color: hsl(
-  from rgb(255 0 0) calc(h + 60deg) calc(s - 20%) calc(l - 10%)
-);
-```
+This includes an alpha channel value so that you8 can see what that looks like.
 
 ### Formal syntax
 
@@ -215,11 +185,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #one {
-  /* Chromiums */
   background-color: hsl(from var(--base-color) h s calc(l + 0.2));
-
-  /* Safari */
-  background-color: hsl(from var(--base-color) h s calc(l + 20%));
 }
 
 #two {
@@ -227,11 +193,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  /* Chromiums */
   background-color: hsl(from var(--base-color) h s calc(l - 0.2));
-
-  /* Safari */
-  background-color: hsl(from var(--base-color) h s calc(l - 20%));
 }
 ```
 
@@ -319,5 +281,6 @@ div.hsla {
 
 - [List of all color notations](/en-US/docs/Web/CSS/color)
 - {{CSSXref("&lt;hue&gt;")}} data type
+- [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
 - [Color picker](https://colorjs.io/apps/picker/) by Lea Verou
