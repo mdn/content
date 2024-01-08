@@ -8,9 +8,9 @@ browser-compat: api.EditContext.characterboundsupdate_event
 
 {{APIRef("EditContext API")}}
 
-The `characterboundsupdate` event fires when the operating system needs to know the size and position of certain characters within editable text region of the `EditContext` object.
+The `characterboundsupdate` event fires when the operating system needs to know the bounds of certain characters within editable text region of the `EditContext` object.
 
-This happens when the operating system needs to display a {{glossary("IME")}} (Input Method Editor) window, and can't automatically detect the position and size of the characters involved in the current IME composition.
+This happens when the operating system needs to display a platform-specific editing-related UI surface such as an {{glossary("IME")}} (Input Method Editor) window.
 
 When the `characterboundsupdate` event fires, you should calculate the character bounds for the text, and then call the {{domxref("EditContext.updateCharacterBounds()")}} method to give the operating system the information it needs.
 

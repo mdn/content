@@ -8,9 +8,9 @@ browser-compat: api.EditContext.updateSelectionBounds
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext.updateSelectionBounds()`** method of the {{domxref("EditContext")}} interface is used to inform the operating system about the position and size of the text selection within the editable region that's associated with the `EditContext` object.
+The **`EditContext.updateSelectionBounds()`** method of the {{domxref("EditContext")}} interface is used to inform the operating system about the bounds of the text selection within the editable region that's associated with the `EditContext` object.
 
-TODO: WHAT DOES CALLING THIS METHOD DO? WHY AND WHEN DOES EDITCONTEXT NEED IT?
+Call this method to tell the operating system the bounds of the user's current selection. You should call the method whenever the user's selection changes in the editable region. The selection bounds are used by the operating system to help position the IME window or any other platform-specific editing-related UI surfaces.
 
 ## Syntax
 
@@ -27,10 +27,6 @@ updateSelectionBounds(selectionBounds)
 
 - If no argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
 - If the provided argument is not a {{jsxref("DOMRect")}} a `TypeError` {{domxref("DOMException")}} is thrown.
-
-## Example
-
-...
 
 ## Specifications
 

@@ -7,7 +7,9 @@ browser-compat: api.EditContext
 
 {{DefaultAPISidebar("EditContext API")}}
 
-The **EditContext API** can be used to build rich text editors on the web that support a variety of input methods and text rendering options.
+The **EditContext API** can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("IME")}} (Input Method Editor) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
+
+With the EditContext API, you get the flexibility to render your own editable text region using any technology you want.
 
 ## Concept
 

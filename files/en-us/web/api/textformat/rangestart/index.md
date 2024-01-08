@@ -33,3 +33,7 @@ editContext.addEventListener("textformatupdate", (event) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The {{DOMxRef("TextFormat")}} interface it belongs to.
