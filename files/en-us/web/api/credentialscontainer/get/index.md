@@ -128,16 +128,14 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters.
+A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters. If a single credential cannot be unambiguously obtained, the Promise will fulfill with `null`.
 
-There are conditions under which a FedCM request is not sucessful, but an exception is not thrown:
-
-- If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently. See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
-- If a single credential cannot be unambiguously obtained, the Promise will resolve to `null`.
-- If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response containing information about the nature of the error. This is exposed in the promise rejection as shown in the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below.
+If the browser's login status for the IdP is `"logged-out"`, the FedCM request rejects silently. See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
 
 ### Exceptions
 
+- `IdentityCredentialError` {{domxref("DOMException")}}
+  - : The request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about why. See the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below for more information on how it can be used.
 - `NetworkError` {{domxref("DOMException")}}
   - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
 - `NotAllowedError` {{domxref("DOMException")}}
@@ -189,11 +187,11 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
 
 #### Example including Error API information
 
-If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed in the promise rejection. For example:
+If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed like this:
 
 ```js
 async function signIn() {
@@ -210,7 +208,8 @@ async function signIn() {
       },
     });
   } catch (e) {
-    // Report the error to the user in some way
+    // Handle the error in some way, for example provide information
+    // to help the user succeed in a future sign-in attempt
     const code = e.code;
     const url = e.url;
   }

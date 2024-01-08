@@ -12,7 +12,7 @@ browser-compat: api.IdentityCredential.isAutoSelected
 
 The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in was carried out using automatic reauthentication (i.e. without user mediation) or not.
 
-Automatic reauthentication can occur when a {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for a relying party (RP) to know whether auto reauthentication occurred for performance evaluation and for UX purposes — automatic sign-in may warrant a different UI flow to non-automatic sign-in.
+Automatic reauthentication can occur when a {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for a relying party (RP) to know whether auto reauthentication occurred for analytics/performance evaluation and for UX purposes — automatic sign-in may warrant a different UI flow to non-automatic sign-in.
 
 ## Value
 
@@ -36,11 +36,8 @@ async function signIn() {
     },
   });
 
-  if (identityCredential.isAutoSelected) {
-    // Build UI related to successful automatic sign-in
-  } else {
-    // Build UI related to successful non-automatic sign-in
-  }
+  const autoSelected = identityCredential.isAutoSelected;
+  // Record analytics related to auto selection
 }
 ```
 

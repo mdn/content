@@ -470,7 +470,7 @@
         "NavigatorLogin"
       ],
       "methods": ["CredentialsContainer.get()"],
-      "properties": [],
+      "properties": ["Navigator.login"],
       "events": []
     },
     "Fetch API": {

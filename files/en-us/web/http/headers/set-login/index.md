@@ -21,10 +21,6 @@ See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_A
       <th scope="row">{{Glossary("Forbidden header name")}}</th>
       <td>no</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden response header name")}}</th>
-      <td>yes</td>
-    </tr>
   </tbody>
 </table>
 
@@ -34,12 +30,10 @@ See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_A
 Set-Login: status
 ```
 
-Servers should ignore this header if it contains any other value.
-
 ## Directives
 
 - `status`
-  - : A string representing the login status to set for the IdP. Possible values are `logged-in` and `logged-out`.
+  - : A string representing the login status to set for the IdP. Possible values are `logged-in` and `logged-out`. Servers should ignore this header if it contains any other value.
 
 ## Examples
 

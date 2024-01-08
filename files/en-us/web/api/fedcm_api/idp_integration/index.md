@@ -32,9 +32,22 @@ For example, if the IdP endpoints are served under `https://accounts.idp.example
 
 The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to interact with the IdP. The array length is currently limited to one.
 
+The well-known file should be requested via a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't have cookies and doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+
+## The `Sec-Fetch-Dest` HTTP header
+
+All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included. For example, the well-known file request would look like so:
+
+```http
+GET /.well-known/web-identity HTTP/1.1
+Host: accounts.idp.example
+Accept: application/json
+Sec-Fetch-Dest: webidentity
+```
+
 ## Provide a config file and endpoints
 
-The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. IdPs will host both this config file and the required endpoints.
+The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. The endpoints need to be same-origin with the config.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -70,9 +83,11 @@ The properties are as follows:
 - `branding` {{optional_inline}}
   - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP.
 
+The config file should be sent requests via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method. The request shouldn't have cookies or follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+
 ### The accounts list endpoint
 
-This endpoint returns a list of all the IdP accounts that the user is currently signed in with, with a JSON structure that matches the following:
+Requests to this endpoint must be credentialed. The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with, with a JSON structure that matches the following:
 
 ```json
 {
@@ -118,9 +133,11 @@ This includes the following information:
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
+The accounts list endpoint should be sent requests via the `GET` method. The request should have cookies, but should not have a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+
 ### The client metadata endpoint
 
-Provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
+Requests to this endpoint are uncredentialed. The response to a successful request includes URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
 
 ```json
 {
@@ -129,14 +146,37 @@ Provides URLs pointing to the RP's metadata and terms of service pages, to be us
 }
 ```
 
+The client metadata endpoint should be sent requests via the `GET` method, with the `clientId` passed into the `get()` call as a parameter, without cookies.
+
 ### The ID assertion endpoint
 
-When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the authentication:
+A request to this endpoint must be credentialed. When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the authentication:
 
 ```json
 {
   "token": "***********"
 }
+```
+
+The ID assertion endpoint sould be sent requests via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with cookies and a content type of `application/x-www-form-urlencoded`. The request should include a payload contaning the following params:
+
+- `client_id`
+  - : The RP's client identifier.
+- `account_id`
+  - : The unique ID of the user account to be signed in.
+- `nonce` {{optional_inline}}
+  - : The request nonce, provided by the RP.
+- `disclosure_text_shown`
+  - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
+- `is_auto_selected`
+  - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of automatic reauthentication, i.e. without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
+
+> **Note:** If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
+
+An example payload might look like this:
+
+```http
+account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
 ```
 
 If the IdP cannot issue a token — for example if the client is unauthorized — the ID assertion endpoint will respond with an error response containing information about the nature of the error. For example:
@@ -152,19 +192,19 @@ If the IdP cannot issue a token — for example if the client is unauthorized �
 
 The error response fields are as follows:
 
-- `code`
+- `code` {{optional_inline}}
   - : A string. This can be either a known error from the [OAuth 2.0 specified error list](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1) or an arbitrary string.
-- `url`
+- `url` {{optional_inline}}
   - : A URL. This should be a web page containing human-readable information about the error to display to users, such as how to fix the error or contact customer. The URL must be same-site with the IdP's config URL.
 
 This information can be used in a couple of different ways:
 
-- The browser can use the information to display a custom UI to the user informing them what went wrong (see the [Chrome documentation](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#error-api) for an example). Bear in mind that if the request failed because the IdP server is unavailable, it obviously can't return any information. In such cases, the browser will report this via a generic message.
-- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will return the above information when the promise rejects. The [`get()` Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) shows what this looks like.
+- The browser can display a custom UI to the user informing them of what went wrong (see the [Chrome documentation](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#error-api) for an example). Bear in mind that if the request failed because the IdP server is unavailable, it obviously can't return any information. In such cases, the browser will report this via a generic message.
+- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will return the above information when the promise rejects, which can be used to handle the error. For example, an RP may wish to follow-up the browser's custom UI with some information to help the user succeed in a future sign-in attempt. The [`get()` Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) shows what this looks like in code.
 
 ## Update login status using the Login Status API
 
-The **Login Status API** allows an IdP to inform a browser of the current user's login (sign-in) status with that IdP. This allows the browser to reduce the number of requests it makes to the IdP and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447). It also means that an IdP no longer needs to rely on third-party cookies to keep track of its login status on different browsers, which helps to improve user privacy.
+The **Login Status API** allows an IdP to inform a browser of the current user's login (sign-in) status with that IdP. This allows the browser to reduce the number of requests it makes to the IdP and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
@@ -208,7 +248,7 @@ Later on, when an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/
 
 Despite the Login Status API informing the browser of the user's login status with an IdP, it is possible for the browser and IdP to become out of sync. For example, the IdP session might expire, meaning that the user ends up signed out without the application having a chance to set the login status to `"logged-out"`. When federated sign-in is attempted, a request will then be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-In such a case, the browser can dynamically let the user sign in to the IdP via a specific flow, involving redirecting the user to the IdP's sign-in page (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints)). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+In such a case, the browser can dynamically let the user sign in to the IdP, providing an option for the user to open the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints)). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 
