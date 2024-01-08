@@ -24,11 +24,11 @@ setAttributionReporting(options)
 ### Parameters
 
 - `options`
-  - : An object providing attribution reporting options, which can include the following properties:
-    - `eventSourceEligible` {{optional_inline}}
-      - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If not set, the default value, `false`, is used.
-    - `triggerEligible` {{optional_inline}}
-      - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If not set, the default value, `false`, is used.
+  - : An object providing attribution reporting options, which includes the following properties:
+    - `eventSourceEligible`
+      - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If set to `false`, it won't.
+    - `triggerEligible`
+      - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
 
 ### Return value
 

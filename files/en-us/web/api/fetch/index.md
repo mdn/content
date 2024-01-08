@@ -45,10 +45,10 @@ fetch(resource, options)
 
       - : Indicates that you want the request to trigger the browser to set off an attribution source or trigger event. `attributionReporting` is an object containing the following properties:
 
-        - `eventSourceEligible` {{optional_inline}}
-          - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If not set, the default value, `false`, is used.
-        - `triggerEligible` {{optional_inline}}
-          - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If not set, the default value, `false`, is used.
+        - `eventSourceEligible`
+          - : A boolean. If set to `true`, a successful request will trigger an attribution source event. If set to `false`, it won't.
+        - `triggerEligible`
+          - : A boolean. If set to `true`, a successful request will trigger an attribution trigger event. If set to `false`, it won't.
 
         > **Note:** See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
