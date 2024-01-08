@@ -39,7 +39,7 @@ new Request(input, options)
   - : An object containing any custom settings that you want to apply to the
     request. The possible options are:
 
-    - `attributionReporting`
+    - `attributionReporting` {{experimental_inline}}
 
       - : Indicates that you want the request to trigger the browser to set off an attribution source or trigger event. `attributionReporting` is an object containing the following properties:
 
