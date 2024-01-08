@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.get
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
@@ -23,12 +25,12 @@ get(options)
 
 This method requires one of the following:
 
-- `name`
+- `name` {{optional_inline}}
   - : A string with the name of a cookie.
 
 Or
 
-- `options`
+- `options` {{optional_inline}}
 
   - : An object containing:
 

@@ -39,6 +39,18 @@
       "properties": [],
       "events": []
     },
+    "Badging API": {
+      "overview": ["Badging API"],
+      "interfaces": [],
+      "methods": [
+        "Navigator.clearAppBadge()",
+        "Navigator.setAppBadge()",
+        "WorkerNavigator.clearAppBadge()",
+        "WorkerNavigator.setAppBadge()"
+      ],
+      "properties": [],
+      "events": []
+    },
     "Battery API": {
       "overview": ["Battery Status API"],
       "guides": [],
@@ -633,6 +645,7 @@
         "HTMLLinkElement",
         "HTMLMapElement",
         "HTMLMediaElement",
+        "HTMLMenuElement",
         "HTMLMetaElement",
         "HTMLMeterElement",
         "HTMLModElement",
@@ -1288,6 +1301,7 @@
         "ExtendableMessageEvent",
         "FetchEvent",
         "InstallEvent",
+        "NavigationPreloadManager",
         "ServiceWorker",
         "ServiceWorkerContainer",
         "ServiceWorkerGlobalScope",
@@ -1296,6 +1310,7 @@
       ],
       "methods": [],
       "properties": [
+        "caches",
         "Navigator.serviceWorker",
         "WorkerNavigator.serviceWorker"
       ],
@@ -1340,11 +1355,15 @@
     },
     "Storage Access API": {
       "overview": ["Storage Access API"],
-      "guides": ["/docs/Web/API/Storage_Access_API/Using"],
+      "guides": [
+        "/docs/Web/API/Storage_Access_API/Using",
+        "/docs/Web/API/Storage_Access_API/Related_website_sets"
+      ],
       "interfaces": [],
       "methods": [
         "Document.hasStorageAccess()",
-        "Document.requestStorageAccess()"
+        "Document.requestStorageAccess()",
+        "Document.requestStorageAccessFor()"
       ],
       "properties": [],
       "events": []
@@ -1433,8 +1452,6 @@
         "SVGFETileElement",
         "SVGFETurbulenceElement",
         "SVGFilterElement",
-        "SVGFilterPrimitiveStandardAttributes",
-        "SVGFitToViewBox",
         "SVGFontElement",
         "SVGFontFaceElement",
         "SVGFontFaceFormatElement",
@@ -1477,14 +1494,12 @@
         "SVGSVGElement",
         "SVGSwitchElement",
         "SVGSymbolElement",
-        "SVGTests",
         "SVGTextContentElement",
         "SVGTextElement",
         "SVGTextPathElement",
         "SVGTextPositioningElement",
         "SVGTitleElement",
         "SVGTransform",
-        "SVGTransformable",
         "SVGTransformList",
         "SVGTRefElement",
         "SVGTSpanElement",
@@ -1492,8 +1507,6 @@
         "SVGUseElement",
         "SVGViewElement",
         "SVGVKernElement",
-        "SVGZoomAndPan",
-        "SVGZoomEvent",
         "TimeEvent"
       ],
       "methods": [],
@@ -1630,7 +1643,10 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": ["Navigator.virtualKeyboard"],
+      "properties": [
+        "HTMLElement.virtualkeyboardpolicy",
+        "Navigator.virtualKeyboard"
+      ],
       "events": []
     },
     "Visual Viewport": {
@@ -1962,7 +1978,7 @@
       "overview": ["Web Locks API"],
       "interfaces": ["Lock", "LockManager"],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.locks", "WorkerNavigator.locks"],
       "events": []
     },
     "Web MIDI API": {
