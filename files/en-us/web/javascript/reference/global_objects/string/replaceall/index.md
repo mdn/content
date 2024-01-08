@@ -54,7 +54,7 @@ function safeRedactName(text, name) {
 const report =
   "A hacker called ha.*er used special characters in their name to breach the system.";
 
-console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name to breach the system."
+console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED] in their name to breach the system."
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
 ```
 
