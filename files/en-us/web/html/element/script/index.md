@@ -69,7 +69,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [Browser compatibility](#browser_compatibility) for notes on browser support. See also [Async scripts for asm.js](/en-US/docs/Games/Techniques/Async_scripts).
 
-- `attributionsrc`
+- `attributionsrc` {{experimental_inline}}
 
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to complete the registration of a script-based attribution source or attribution trigger, respectively.
 
