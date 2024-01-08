@@ -22,21 +22,10 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
 
 ```html
 <div>
-  <span id="spellcheck-label">The spelling and grammar may be checked:</span>
+  <span id="sc-label">The spelling and grammar may be checked: </span>
+  <span id="sc-element" contenteditable="true" spellcheck="true">test</span>
 </div>
-<div>
-  <span id="spellcheck-element" contenteditable="true" spellcheck="true"
-    >testt</span
-  >
-</div>
-<div>
-  <span
-    >Change the checkbox to enable or disable spelling and grammar check</span
-  >
-</div>
-<div>
-  <input id="spellcheck-controller" type="checkbox" checked />
-</div>
+<input id="spellcheck-controller" type="checkbox" checked />Enable spelling and grammar check
 ```
 
 ```js
