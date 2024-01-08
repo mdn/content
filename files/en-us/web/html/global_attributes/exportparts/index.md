@@ -9,14 +9,13 @@ browser-compat: html.global_attributes.exportparts
 
 The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
 
-The shadow tree is an isolated structure where identifiers, classes, and styles cannot be reached by selectors or queries belonging to a regular DOM.
-To apply a style to an element living in a shadow tree, by CSS rule created outside of it, [`part`](/en-US/docs/Web/HTML/Global_attributes#part) global attribute has to be used. It has to be assigned to an element present in Shadow Tree, and its value should be some identifier.
-Rules present outside of the shadow tree, must use the {{CSSxRef("::part")}} pseudo-element, containing the same identifier as the argument.
+The shadow tree is an isolated structure where identifiers, classes, and styles cannot be reached by selectors or queries belonging to a regular DOM. There are two HTML attributes that can be applied to shadow tree elements that enable targeting CSS styles from outside to shadow tree: [`part`](/en-US/docs/Web/HTML/Global_attributes#part)  and `exportparts`.
 
-The global attribute [`part`](/en-US/docs/Web/HTML/Global_attributes#part) makes the element visible on just a single level of depth. When the shadow tree is nested, parts will be visible only to the parent of the shadow tree but not to its ancestor. Exporting parts further down is exactly what `exportparts` attribute is for.
+The global attribute [`part`](/en-US/docs/Web/HTML/Global_attributes#part) makes a shadow tree element visible to its parent DOM. The `part` attribute is assigned to an element in the shadow tree with an identifier as its value. The {{CSSxRef("::part")}} pseudo-element containing that identifier can then be used to apply CSS styles to elements in the shadow tree from outside of the shadow tree. 
 
-Attribute `exportparts` must be placed on a _shadow Host_, which is the element to which the _shadow tree_ is attached. The value of the attribute should be a comma-separated list of part names present in the shadow tree and which should be made available via a DOM outside of the current structure.
+Because the `::part()` is only visible to the parent DOM, when a shadow tree is nested, parts are not visible to ancestors other than the direct parent's. Enabling visibility into nested shadow trees is exactly what the `exportparts` attribute is for.
 
+The `exportparts` attribute is placed on the element's _shadow host_, which is the element to which the _shadow tree_ is attached. The attribute's value should be a comma-separated list of each `part` name present in the shadow tree which should be made available via a DOM outside of the current structure.
 ## Specifications
 
 {{Specifications}}
