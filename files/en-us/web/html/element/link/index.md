@@ -230,12 +230,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
-    > **Note:**
-    >
-    > - In HTML 4, this can only be a simple white-space-separated list of media description literals, i.e., [media types and groups](/en-US/docs/Web/CSS/@media), where defined and allowed as values for this attribute, such as `print`, `screen`, `aural`, `braille`.
-    >   HTML5 extended this to any kind of [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which are a superset of the allowed values of HTML 4.
-    > - Browsers not supporting [CSS Media Queries](/en-US/docs/Web/CSS/CSS_media_queries) won't necessarily recognize the adequate link; do not forget to set fallback links, the restricted set of media queries defined in HTML 4.
-
 - `referrerpolicy`
 
   - : A string indicating which referrer to use when fetching the resource:

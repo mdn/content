@@ -111,7 +111,7 @@ Next, pass `addTask()` into `<Form />` as a prop. The prop can have whatever nam
 <Form addTask={addTask} />
 ```
 
-To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it acccepts `props` as a parameter:
+To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it accepts `props` as a parameter:
 
 ```jsx
 function Form(props) {

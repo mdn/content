@@ -266,9 +266,13 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   </tbody>
 </table>
 
-Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-(See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+Note:
+
+- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
+  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
+  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### Single numbers as aspect ratio in media queries
 
@@ -1169,51 +1173,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 </table>
 
 ## JavaScript
-
-### Array transfer
-
-The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
-The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
-After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
-(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
-    </tr>
-    </tr>
-  </tbody>
-</table>
 
 ## APIs
 
