@@ -44,12 +44,15 @@ Additional security requirements are covered in the [Security consideration](/en
 
 ## Examples
 
-This example retrieves the textual contents of the clipboard and inserts the returned text into an element's contents.
+This example retrieves the textual contents of the clipboard and inserts the returned text into a selected element's contents.
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+const destination = document.getElementById("outbox");
+destinationImage.addEventListener("click", () => {
+  navigator.clipboard
+    .readText()
+    .then((clipText) => (destination.innerText = clipText));
+});
 ```
 
 ## Specifications

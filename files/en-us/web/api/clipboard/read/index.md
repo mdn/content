@@ -120,8 +120,7 @@ The example will fetch the image data from the clipboard and display the image i
 
 {{EmbedLiveSample("Reading image data from clipboard", "100%", "200")}}
 
-> **Note:** Chromium browsers gate access to the `read()` method using the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission API.
-> If prompted, you will need to grant permission in order to paste the image.
+> **Note:** If prompted, grant permission in order to paste the image.
 
 ### Reading data from the clipboard
 
