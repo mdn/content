@@ -17,7 +17,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 
 ## Syntax
 
-```css
+````css
 /* Absolute values */
 
 hsl(120deg 75% 25%)
