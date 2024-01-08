@@ -17,7 +17,7 @@ Content within each `<a>` _should_ indicate the link's destination. If the `href
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `attributionsrc`
+- `attributionsrc` {{experimental_inline}}
 
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response, to complete the registration of a click-based attribution source.
 
