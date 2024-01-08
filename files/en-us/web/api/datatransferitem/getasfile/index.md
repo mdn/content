@@ -34,7 +34,7 @@ This example shows the use of the `getAsFile()` method in a
 {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   const data = ev.dataTransfer.items;
@@ -56,7 +56,7 @@ function drop_handler(ev) {
     } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
       // Drag data item is an image file
       const f = data[i].getAsFile();
-      console.log("… Drop: File ");
+      console.log("… Drop: File");
     }
   }
 }
