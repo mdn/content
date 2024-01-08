@@ -90,7 +90,7 @@ reload.addEventListener("click", () => {
 ```
 
 The remaining code reads the clipboard when the destination element is clicked and copies the image data into the `destinationImage` element.
-It logs an error it is unable to use the `read()` method, or if the clipboard does not contain data in PNG format.
+It logs an error if it is unable to use the `read()` method, or if the clipboard does not contain data in PNG format.
 
 ```js
 const destinationImage = document.querySelector("#destination");
