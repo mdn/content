@@ -231,7 +231,7 @@ async function pasteData() {
 #### Result
 
 Copy some text, or the butterfly (JPG) or clock (PNG) images below (to copy images right-click on them and then select "Copy image" from the context menu).
-Select the indicted frame below to paste this information from the clipboard into the frame.
+Select the indicated frame below to paste this information from the clipboard into the frame.
 
 {{EmbedLiveSample("Reading data from the clipboard", "100%", "450")}}
 
