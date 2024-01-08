@@ -43,21 +43,12 @@ The user has to interact with the page or a UI element in order for this feature
 
 This example uses the `read()` method to read image data from the clipboard.
 
-Copy the butterfly image on the left using the "Copy image" context menu item, then click in the empty frame on the right.
-The example will fetch the image data and display the image data in the empty frame.
-
-> **Note:** Chromium browsers gate access to the `read()` method using the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission (now removed from specification) and do not require transient activation.
-> If prompted, you will need to grant permission in order to paste the image.
-
 #### HTML
 
 ```html
-<p>
-  Right-click on the butterfly image and then select "Copy Image". Click on the
-  right-side placeholder to paste.
-</p>
 <img id="source" src="butterfly.jpg" alt="A butterfly" />
 <img id="destination" />
+<button id="reload" type="button">Reload</button>
 <p id="log"></p>
 ```
 
@@ -69,6 +60,10 @@ img {
   width: 100px;
   margin: 0 1rem;
   border: 1px solid black;
+}
+#reload {
+  display: block;
+  margin: 0 1rem;
 }
 ```
 
@@ -83,36 +78,18 @@ function log(text) {
 }
 ```
 
-Chromium browsers gate access to the clipboard using the [Permissions API](/en-US/docs/Web/API/Permissions_API) permission `clipboard-read`, while other browsers use transient activation.
-On Chromium browsers we can check the permission using {{domxref("Permissions.query()")}}, but this will raise a `TypeError` exception on browsers where the permission is not supported.
-To cope with the different implementations, we define the following `checkPermission()` function that returns the permission value if the permission exists, `undefined` if it does not (or cannot be retrieved), and re-throws the exception if there is any other error.
+We also add code to reload and clear the example when the "Reload" button is pressed.
 
 ```js
-async function checkPermission() {
-  // Check the clipboard-read permission.
-  // Catch and log exception if permission is not defined (TypeError)
-  // On Firefox and Safari returns `undefined`
-  try {
-    const permission = await navigator.permissions.query({
-      name: "clipboard-read",
-    });
-    return permission.state;
-  } catch (error) {
-    if (error instanceof TypeError) {
-      // Permission not defined or unavailable.
-      console.error(error.message);
-      //returns undefined
-    } else {
-      // Rethrow other errors, such as invalid state.
-      throw error;
-    }
-  }
-}
+const reload = document.querySelector("#reload");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
 ```
 
-The remaining code reads the clipboard when the destination element is clicked and copies the image data into the element.
-It checks the result of the `checkPermission()` method defined above, and throws an error if permission is explicitly denied.
-Otherwise it attempts to read the clipboard and will paste PNG image data if found.
+The remaining code reads the clipboard when the destination element is clicked and copies the image data into the `destinationImage` element.
+It logs an error it is unable to use the `read()` method, or if the clipboard does not contain data in PNG format.
 
 ```js
 const destinationImage = document.querySelector("#destination");
@@ -120,12 +97,6 @@ destinationImage.addEventListener("click", pasteImage);
 
 async function pasteImage() {
   try {
-    const permission = await checkPermission();
-    if (permission === "denied") {
-      throw new Error("Not allowed to read clipboard.");
-    }
-
-    // Read clipboard if not defined (or permission not supported).
     const clipboardContents = await navigator.clipboard.read();
     for (const item of clipboardContents) {
       if (!item.types.includes("image/png")) {
@@ -142,7 +113,14 @@ async function pasteImage() {
 
 #### Result
 
+Copy the butterfly image on the left by right-clicking the image and selecting "Copy image" from the context menu.
+Then click on the empty frame on the right.
+The example will fetch the image data from the clipboard and display the image in the empty frame.
+
 {{EmbedLiveSample("Reading image data", "100%", "200")}}
+
+> **Note:** Chromium browsers gate access to the `read()` method using the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-read` permission API.
+> If prompted, you will need to grant permission in order to paste the image.
 
 ## Specifications
 
