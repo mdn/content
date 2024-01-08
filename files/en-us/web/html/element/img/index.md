@@ -73,7 +73,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This attribute is also used when copying and pasting the image to text, or saving a linked image to a bookmark.
 
-- `attributionsrc`
+- `attributionsrc` {{experimental_inline}}
 
   - : specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request.
 
