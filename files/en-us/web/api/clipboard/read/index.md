@@ -131,8 +131,8 @@ This differs from the previous version in that it will display text, HTML, and i
 #### HTML
 
 ```html
-<img id="source" src="butterfly.jpg" alt="JPG butterfly image" />
-<img id="source" src="clock.png" alt="PNG clock image" />
+<img id="source_jpg" src="butterfly.jpg" alt="JPG butterfly image" />
+<img id="source_png" src="clock.png" alt="PNG clock image" />
 <div id="destination">Click here to copy clipboard data.</div>
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
