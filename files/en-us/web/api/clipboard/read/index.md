@@ -131,13 +131,17 @@ This differs from the previous version in that it will display text, HTML, and i
 #### HTML
 
 ```html
-<img id="source_jpg" src="butterfly.jpg" alt="JPG butterfly image" />
 <img id="source_png" src="clock_demo.png" alt="PNG clock image" />
+<img id="source_jpg" src="butterfly.jpg" alt="JPG butterfly image" />
 <img id="source_png2" src="firefox.png" alt="PNG firefox logo image" />
 <img
   id="source_jpg2"
   src="butterfly2copy.jpg"
   alt="JPG duplicate butterfly but wiht new name image" />
+<img
+  id="source_jpg4"
+  src="butterfly.jpg"
+  alt="JPG butterfly image - same image new element" />
 <div id="destination">Click here to copy clipboard data.</div>
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
