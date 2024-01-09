@@ -137,7 +137,7 @@ Where a distance unit, also known as a length, is allowed as a value for a prope
 
 Relative length units specify a length in relation to something else.
 
-Local font-relative lengths specify a length in relation to an [element](/en-US/docs/Web/HTML/Element).
+Local font-relative lengths specify a length in relation to an [element](/en-US/docs/Web/HTML/Element)'s styles.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
 
 | Unit   | Relative to                                                                                                                            |
