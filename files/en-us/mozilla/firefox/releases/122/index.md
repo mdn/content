@@ -44,6 +44,10 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### DOM
 
+### showPicker() method for HTML select elements
+
+- The {{domxref("HTMLSelectElement.showPicker()")}} method is now supported, allowing the browser picker for a {{HTMLElement("select")}} element to be programmatically launched when triggered by user interaction ([Firefox bug 1865207](https://bugzil.la/1865207)).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals

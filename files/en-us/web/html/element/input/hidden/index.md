@@ -9,7 +9,7 @@ browser-compat: html.elements.input.type_hidden
 
 {{HTMLElement("input")}} elements of type **`hidden`** let web developers include data that cannot be seen or modified by users when a form is submitted. For example, the ID of the content that is currently being ordered or edited, or a unique security token. Hidden inputs are completely invisible in the rendered page, and there is no way to make it visible in the page's content.
 
-> **Note:** The {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g. `hiddenInput.focus()`).
+> **Note:** The {{domxref("Element/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}} events do not apply to this input type. Hidden inputs cannot be focused even using JavaScript (e.g. `hiddenInput.focus()`).
 
 ## Value
 
