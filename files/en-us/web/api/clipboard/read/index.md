@@ -232,14 +232,13 @@ async function pasteData() {
 Copy some text or the butterfly (JPG) image below (to copy images right-click on them and then select "Copy image" from the context menu).
 Select the indicated frame below to paste this information from the clipboard into the frame.
 
-> **Note:** On Chromium browsers you will need to {{LiveSampleLink("Reading data from the clipboard","run this example in its own tab")}} (the inline example below is run in a frame, which is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions [required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
-
 {{EmbedLiveSample("Reading data from the clipboard", "100%", "450")}}
 
 Notes:
 
 - Even though the butterfly image is a JPG file, when read from the clipboard it is a PNG.
 - If prompted, you will need to grant permission in order to paste the image.
+- This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
 ## Specifications
 
