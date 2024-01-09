@@ -597,7 +597,7 @@
       "events": ["Window: popstate"]
     },
     "Houdini API": {
-      "overview": ["Houdini API"],
+      "overview": ["Houdini APIs"],
       "guides": [
         "/docs/Web/API/CSS_Properties_and_Values_API/guide",
         "/docs/Web/API/CSS_Typed_OM_API/Guide",
