@@ -49,42 +49,15 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
    These are both [`GET`](/en-US/docs/Web/HTTP/Methods/GET) requests, which don't have cookies and don't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
-   All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included.For example, the well-known file request would look like so:
-
-   ```http
-   GET /.well-known/web-identity HTTP/1.1
-   Host: accounts.idp.example
-   Accept: application/json
-   Sec-Fetch-Dest: webidentity
-   ```
+   All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included.
 
 3. The IdP responds with the requested files. The config file URL is validated against the list of valid config URLs inside the well-known file.
 
 4. If the browser has the [IdP's login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) set to `"logged-in"`, it makes a credentialed request to the [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) inside the IdP config file for the list of accounts that the user is currently signed in to (if the login status is `"logged-out"`, the `get()` call silently fails). This is a `GET` request with cookies, but without a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
-   For example:
-
-   ```http
-   GET /accounts.php HTTP/1.1
-   Host: accounts.idp.example
-   Accept: application/json
-   Cookie: 0x23223
-   Sec-Fetch-Dest: webidentity
-   ```
-
 5. The IdP responds with the account information.
 
 6. {{optional_inline}} If included in the IdP config file, the browser makes an uncredentialed request to the [`client_metadata_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_client_metadata_endpoint) for the location of the IdP terms of service and privacy policy pages. This is a `GET` request sent with the `clientId` passed into the `get()` call as a parameter, without cookies.
-
-   For example:
-
-   ```http
-   GET /client_metadata.php?client_id=1234 HTTP/1.1
-   Host: accounts.idp.example
-   Origin: https://rp.example/
-   Accept: application/json
-   Sec-Fetch-Dest: webidentity
-   ```
 
 7. {{optional_inline}} The IdP responds with the requested URLs.
 
@@ -92,17 +65,7 @@ The browser requests the IdP config file and carries out the sign-in flow detail
 
 9. If the user grants permission to do so, the browser makes a credentialed request to the [`id_assertion_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) to request a validation token from the IdP.
 
-   The credentials are sent in an HTTP [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with cookies and a content type of `application/x-www-form-urlencoded`. It should look something like this:
-
-   ```http
-   POST /assertion.php HTTP/1.1
-   Host: accounts.idp.example
-   Origin: https://rp.example/
-   Content-Type: application/x-www-form-urlencoded
-   Cookie: 0x23223
-   Sec-Fetch-Dest: webidentity
-   account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
-   ```
+   The credentials are sent in an HTTP [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request with cookies and a content type of `application/x-www-form-urlencoded`.
 
    If the call fails, an error payload is returned as explained in [The ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint).
 

@@ -20,9 +20,9 @@ To integrate with FedCM, an IdP needs to do the following:
 
 There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/fedidcg/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`.
+The well-known file is requested via a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't have cookies and doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
-For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
+The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
 ```json
 {
@@ -32,15 +32,13 @@ For example, if the IdP endpoints are served under `https://accounts.idp.example
 
 The `provider_urls` member should contain an array of URLs pointing to valid IdP config files that can be used by RPs to interact with the IdP. The array length is currently limited to one.
 
-The well-known file should be requested via a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't have cookies and doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
-
 ## The `Sec-Fetch-Dest` HTTP header
 
 All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included. For example, the well-known file request would look like so:
 
 ```http
 GET /.well-known/web-identity HTTP/1.1
-Host: accounts.idp.example
+Host: idp.example
 Accept: application/json
 Sec-Fetch-Dest: webidentity
 ```
@@ -48,6 +46,8 @@ Sec-Fetch-Dest: webidentity
 ## Provide a config file and endpoints
 
 The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. The endpoints need to be same-origin with the config.
+
+The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method. The request doesn't have cookies or follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -83,11 +83,32 @@ The properties are as follows:
 - `branding` {{optional_inline}}
   - : Contains branding information that will be used in the browser-supplied FedCM UI to customize its appearance as desired by the IdP.
 
-The config file should be sent requests via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method. The request shouldn't have cookies or follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The following table summarizes the different requests made by the FedCM API:
+
+| Endpoint                 | Method | Credentialed | Cookies | Redirects |
+| ------------------------ | ------ | ------------ | ------- | --------- |
+| config                   | `GET`  | No           | No      | No        |
+| accounts_endpoint        | `GET`  | No           | Yes     | No        |
+| client_metadata_endpoint | `GET`  | Yes          | No      | Yes       |
+| id_assertion_endpoint    | `POST` | Yes          | Yes     | Yes       |
+
+> **Note:** For a description of the FedCM flow in which these endpoints are accessed, see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
 ### The accounts list endpoint
 
-Requests to this endpoint must be credentialed. The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with, with a JSON structure that matches the following:
+The browser sends credentialed requests to this endpoint via the `GET` method. The request has cookies, but no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+
+For example:
+
+```http
+GET /accounts.php HTTP/1.1
+Host: idp.example
+Accept: application/json
+Cookie: 0x23223
+Sec-Fetch-Dest: webidentity
+```
+
+The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with, with a JSON structure that matches the following:
 
 ```json
 {
@@ -133,11 +154,21 @@ This includes the following information:
 
 > **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
-The accounts list endpoint should be sent requests via the `GET` method. The request should have cookies, but should not have a `client_id` parameter or the {{httpheader("Origin")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
-
 ### The client metadata endpoint
 
-Requests to this endpoint are uncredentialed. The response to a successful request includes URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
+The browser sends uncredentialed requests to this endpoint via the `GET` method, with the `clientId` passed into the `get()` call as a parameter, without cookies.
+
+For example:
+
+```http
+GET /client_metadata.php?client_id=1234 HTTP/1.1
+Host: idp.example
+Origin: https://rp.example/
+Accept: application/json
+Sec-Fetch-Dest: webidentity
+```
+
+The response to a successful request includes URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
 
 ```json
 {
@@ -146,11 +177,23 @@ Requests to this endpoint are uncredentialed. The response to a successful reque
 }
 ```
 
-The client metadata endpoint should be sent requests via the `GET` method, with the `clientId` passed into the `get()` call as a parameter, without cookies.
-
 ### The ID assertion endpoint
 
-A request to this endpoint must be credentialed. When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the authentication:
+The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with cookies and a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
+
+It should look something like this:
+
+```http
+POST /assertion.php HTTP/1.1
+Host: idp.example
+Origin: https://rp.example/
+Content-Type: application/x-www-form-urlencoded
+Cookie: 0x23223
+Sec-Fetch-Dest: webidentity
+account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
+```
+
+When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the authentication:
 
 ```json
 {
@@ -158,7 +201,7 @@ A request to this endpoint must be credentialed. When sent valid user credential
 }
 ```
 
-The ID assertion endpoint sould be sent requests via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with cookies and a content type of `application/x-www-form-urlencoded`. The request should include a payload contaning the following params:
+The request payload contains the following params:
 
 - `client_id`
   - : The RP's client identifier.
@@ -172,12 +215,6 @@ The ID assertion endpoint sould be sent requests via the [`POST`](/en-US/docs/We
   - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of automatic reauthentication, i.e. without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
 
 > **Note:** If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
-
-An example payload might look like this:
-
-```http
-account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
-```
 
 If the IdP cannot issue a token — for example if the client is unauthorized — the ID assertion endpoint will respond with an error response containing information about the nature of the error. For example:
 
@@ -239,7 +276,7 @@ The IdP should update the user's login status when they sign in to or out of the
 Later on, when an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
 - If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
-- If the login status is `"logged-out"`, no HTTP request is made, and the FedCM request fails silently. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
+- If the login status is `"logged-out"`, the FedCM request fails silently without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
 - If the login status is `"unknown"`, a request is made to the IdP's accounts list endpoint and the login status is updated depending on the response:
   - If the endpoint returns a list of available accounts for sign-in, update the status to `"logged-in"` and display the sign-in options to the user in the browser-provided FedCM dialog.
   - If the endpoint returns no accounts, update the status to `"logged-out"`; the FedCM request then fails silently.
