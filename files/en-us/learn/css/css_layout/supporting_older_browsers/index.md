@@ -42,17 +42,17 @@ You should also consider the type of devices and the way people use your site. F
 
 ## What is the support for the features you want to use?
 
-Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available.
-
-We try to help you at MDN, by providing browser compatibility information on every CSS property page. For example, take a look at the page for {{cssxref("grid-template-columns")}}, with special attention to the `subgrid` value. The following table is included at the bottom of that page. It lists the major browsers along with the version they began supporting this property.
-
 {{Compat}}
+
+The above table is included at the bottom of every feature page. Once you know the browsers that come to your site, you can assess any technology that you want to use against how well it is supported and how easily you can provide an alternative for visitors who do not have that technology available.
+
+We try to help you at MDN, by providing browser compatibility information on every CSS property page. It lists the major browsers along with the version they began supporting this property. For example, take a look at the above table or the page for {{cssxref("grid-template-columns")}}, with special attention to the `subgrid` (most recently supported) and `masonry` (experimental and not supported) values.
 
 These browser compatibility tables provide information on which browsers are compatible with the technology that you are looking for and the version from which the browser started supporting that functionality. Browser and mobile phone browser compatibility information are displayed separately. The browser names take up the column headers.
 
 Another popular way to find out about how well a feature is supported is the [Can I Use](https://caniuse.com/) website. This site lists the majority of Web Platform features with information about their browser support status. You can view usage statistics by location — useful if you work on a site that has users mostly for a specific area of the world. You can even link your Google Analytics account to get analysis based on your user data.
 
-Understanding the technology your users have, and the support for things you might want to use puts you in a good place to make all of your decisions and to know how best to support all of your users.
+Understanding the technology your users have, and the support for things you might want to use, puts you in a good place to make all of your decisions and to know how best to support all of your users.
 
 ## Support doesn't mean "looks the same"
 
@@ -66,22 +66,44 @@ It doesn't make commercial sense to pour time into trying to give everyon identi
 
 Browsers ignore CSS that they don't understand. When a browser doesn't recognize a new feature, it [discards the declaration as invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors) without throwing an error. This allows both old and new values to coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value.
 
-CSS specifications contain information that explains what the browser does when two similar features, such as layout methods, are applied to the same item. For example, there is a definition for what happens if a floated item is also a grid item using CSS grid container. There is also a definition for what happens when an element has both a `margin-top` and a `margin-block-start` set.
+For example, most browsers support the two-value {{cssxref("display")}} syntax. If a browser doesn't, it will heed the legacy single value syntax.
 
-These techniques were demonstrated in the [legacy techniques layout tutorial](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Back when grid wasn't fully supported, the browser ignored the grid styles. This tutorial is now a good demonstration of how newer features, in this case grid layout, are designed and defined to take precedence over older features, floats in this case, when their effects would otherwise conflict.
+```css
+.container {
+  display: inline-flex;
+  display: inline flex;
+}
+```
+
+CSS specifications contain information that explains what the browser does when two similar features, such as layout methods, are applied to the same item. For example, there is a definition for what happens if a floated item is also a grid item using CSS grid container. There is also a definition for what happens when an element has both a {{cssxref("margin-top")}} and a {{cssxref("margin-block-start")}} set.
+
+These techniques were demonstrated in the [legacy techniques layout tutorial](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Back when grid wasn't fully supported, the browser ignored the grid styles. This tutorial is now a good demonstration of how newer features, in this case grid layout, are designed and defined to take precedence over older features, floats in this case, when their effects would have otherwise conflicted.
 
 ### Fallback methods
 
-As noted above, a browser will discard any CSS it doesn't understand. Check out the [CSS error handling guide](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). This enables using new CSS properties and new property values before they are universally supported. New CSS features that aren't understood are discarded as invalid. This enabled the use of [vendor-prefixing](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes)
+As noted above, a browser will discard any CSS it doesn't understand. Check out the [CSS error handling guide](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). This enables using new CSS properties and new property values before they are universally supported. New CSS features that aren't understood are discarded as invalid. This enabled the use of [vendor-prefixing](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes), and enables legacy CSS to continue to work in spite of legacy vendor-prefixes that are no longer supported.
 
-Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value.
-To deal with this issue we need to have a way to detect if Grid is supported and therefore if it will override the width. CSS has a solution for us here.
+While vendor prefixing is no longer commonly used, if you must include a vendor prefixed property or value, make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value. If using vendor prefixed [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) or [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), include the prefixed values within a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list), using {{cssxref(":is", ":is()")}} or {{cssxref(":where", ":where()")}} so the entire selector block doesn't get [invalidated and ignored](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list).
+
+```css
+:is(:-prefix-mistake, :invalid-error),
+.valid {
+  font-family: sans-serif;
+}
+:-prefix-mistake,
+:invalid-error,
+.valid {
+  color: red;
+}
+```
+
+In the above example, the `.valid` content will be sans-serif but not red.
 
 ## Feature queries
 
-Feature queries allow you to test whether a browser supports any particular CSS feature. This means that you can write some CSS for browsers that don't support a certain feature, then check to see if the browser has support and if so throw in your fancy layout.
+Feature queries allow you to test whether a browser supports any particular CSS feature. This means that you can write some CSS for browsers that don't support a certain feature, then check to see if the browser has support and if so throw in your fancy new features.
 
-If we add a feature query to the above example, we can use it to set the widths of our items back to `auto` if we know that we have grid support.
+We can add a feature query to test for `subgrid` support, and provide styles based on that support:
 
 ```css
 * {
@@ -89,24 +111,24 @@ If we add a feature query to the above example, we can use it to set the widths 
 }
 
 .wrapper {
-  background-color: rgb(79 185 227);
+  background-color: palegoldenrod;
   padding: 10px;
   max-width: 400px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .item {
-  float: left;
   border-radius: 5px;
   background-color: rgb(207 232 220);
-  padding: 1em;
-  width: 33.333%;
 }
 
-@supports (display: grid) {
-  .item {
-    width: auto;
+@supports (grid-template-rows: subgrid) {
+  .wrapper {
+    grid-template-rows: subgrid;
+    gap: 10px;
+    background-color: lightblue;
+    text-align: center;
   }
 }
 ```
@@ -116,22 +138,23 @@ If we add a feature query to the above example, we can use it to set the widths 
   <div class="item">Item One</div>
   <div class="item">Item Two</div>
   <div class="item">Item Three</div>
+  <div class="item">Item Four</div>
+  <div class="item">Item Five</div>
+  <div class="item">Item Six</div>
 </div>
 ```
 
 {{ EmbedLiveSample('Feature_queries', '100%', '200') }}
 
-Support for feature queries is very good across modern browsers. However, you should note that browsers that do not support CSS Grid also tend not to support feature queries. This means that an approach as detailed above will work for those browsers. What we are doing is writing our old CSS first, outside of any feature query. Browsers that do not support Grid, and do not support the feature query will use that layout information they can understand and completely ignore everything else. The browsers that support the feature query also support CSS Grid and so will run the grid code and the code inside the feature query.
-
-The specification for feature queries also contains the ability to test if a browser does not support a feature — this is only helpful if the browser does support feature queries. In the future, an approach of checking for lack of support will work, as the browsers that don't have feature query support go away. For now, however, use the approach of doing the older CSS, then overwriting it, for the best support.
+Feature queries are supported in all modern browsers. Write your CSS for fully supported features first, outside of any feature queries. Once your site is usable and accessible to all users, add new features within feature query blocks. Browsers that support the feature queried can then render the newer CSS inside the feature query block. Use the approach of writing well supported CSS first, then enhancing features based on support.
 
 ## Testing older browsers
 
-With the majority of browsers supporting Flexbox and Grid, it can be reasonably hard to test older browsers. One way is to use an online testing tool such as Sauce Labs, as detailed in the [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
+One way is to use an online testing tool such as Sauce Labs, as detailed in the [Cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
 ## Summary
 
-You now have the knowledge to confidently use techniques such as Grid, create fallbacks for older browsers, and make use of any new techniques that might come along in the future.
+You now have the knowledge to provide fallback CSS for older browsers and confidently test for new features. You should now feel confident making use of any new techniques that might come along.
 
 Now that you have worked through our articles on CSS layout, it's time to test your comprehension with our assessment for the module: [Fundamental layout comprehension](/en-US/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension).
 
