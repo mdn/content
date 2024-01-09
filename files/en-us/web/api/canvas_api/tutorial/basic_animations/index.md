@@ -460,7 +460,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgb(0 0 0 5%)";
+  context.fillStyle = "rgb(0 0 0 / 5%)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());
