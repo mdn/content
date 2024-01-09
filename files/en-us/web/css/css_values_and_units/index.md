@@ -152,7 +152,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 Root font-relative lengths specify a length in relation to a [root element](/en-US/docs/Web/HTML/Element/html)
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
-| Unit   | Relative to                                                                                                                  | |
+| Unit   | Relative to                                                                                                                  |         |
 | ------ | ---------------------------------------------------------------------------------------------------------------------------- | ------- |
 | `rem`  | Font size of the root element.                                                                                               | |
 | `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                               | |
