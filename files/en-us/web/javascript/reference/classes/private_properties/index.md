@@ -22,6 +22,8 @@ class ClassWithPrivate {
   #privateFieldWithInitializer = 42;
 
   #privateMethod() {
+    this.#privateField = "private string";
+    this.#privateFieldWithInitializer++;
     // …
   }
 
@@ -29,6 +31,8 @@ class ClassWithPrivate {
   static #privateStaticFieldWithInitializer = 42;
 
   static #privateStaticMethod() {
+    ClassWithPrivate.#privateStaticField = "private string";
+    ClassWithPrivate.#privateStaticFieldWithInitializer++;
     // …
   }
 }
