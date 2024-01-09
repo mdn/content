@@ -41,7 +41,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 #### New WebAPIs
 
-- Network Information API: Experimental support for {{domxref("Navigation.connection", "window.navigator.connection")}} has been added (prefixed).
+- Network Information API: Experimental support for {{domxref("Navigator.connection", "window.navigator.connection")}} has been added (prefixed).
 - WebTelephony API: `window.navigator.mozTelephony` has been implemented and provides support for dialing, answering, and managing phone calls on a device.
 - WebSMS API: `window.navigator.mozSms` is now available for mobile devices to send SMS text messages.
 - Screen brightness API: `window.screen.mozEnabled` and `window.screen.mozBrightness` have been added to control the device's screen.
