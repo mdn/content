@@ -64,8 +64,6 @@ Check the source code for each macro to understand the various parameters; while
 
 To learn which parameters each macro supports along with the order of parameters for each macro, the macro's source file, linked above, includes documentation. There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
-There are around 100 [available macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Here are a few standard macros for generating quicklinks and an example of a hardcoded Yari macro list.
-
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
