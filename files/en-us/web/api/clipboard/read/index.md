@@ -132,7 +132,6 @@ This differs from the previous version in that it will display text, HTML, and i
 
 ```html
 <img id="source_jpg" src="butterfly.jpg" alt="JPG butterfly image" />
-<img id="source_png" src="clock.png" alt="PNG clock image" />
 <div id="destination">Click here to copy clipboard data.</div>
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
@@ -230,8 +229,10 @@ async function pasteData() {
 
 #### Result
 
-Copy some text, or the butterfly (JPG) or clock (PNG) images below (to copy images right-click on them and then select "Copy image" from the context menu).
+Copy some text or the butterfly (JPG) image below (to copy images right-click on them and then select "Copy image" from the context menu).
 Select the indicated frame below to paste this information from the clipboard into the frame.
+
+> **Note:** On Chromium browsers you will need to {{LiveSampleLink("Reading data from the clipboard","run this example in its own tab")}} (the inline example below is run in a frame, which is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions [required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
 {{EmbedLiveSample("Reading data from the clipboard", "100%", "450")}}
 
