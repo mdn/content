@@ -21,7 +21,7 @@ The pattern's regular expression is compiled with the [`'v'` flag](/en-US/docs/W
 
 The pattern's regular expression must match the entire input's `value`, rather than matching a substring - as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
-No forward slashes should be specified around the pattern text. If the attribute value is not present, the empty string, or invalid, no regular expression is applied.
+No forward slashes should be specified around the pattern text. No regular expression is applied if the attribute value is absent, an empty string, or invalid.
 
 Some of the input types supporting the pattern attribute, notably the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} input types, have expected value syntaxes that must be matched. If the pattern attribute isn't present, and the value doesn't match the expected syntax for that value type, the {{domxref('ValidityState')}} object's read-only {{domxref('ValidityState.typeMismatch','typeMismatch')}} property will be true.
 
