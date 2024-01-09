@@ -164,14 +164,14 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
 
-| Unit   | Relative to                                             |
-| -------| --------------------------------------------------------|
-| `vw`   | 1% of viewport's width.                                 |                                             
-| `vh`   | 1% of viewport's height.                                |
-| `vi`   | 1% of viewport's size in the root element's inline axis.|
-| `vb`   | 1% of viewport's size in the root element's block axis. | 
-| `vmin` | 1% of viewport's smaller dimension.                     |
-| `vmax` | 1% of viewport's larger dimension.                      |
+| Unit   | Relative to                                              |
+| ------ | -------------------------------------------------------- |
+| `vw`   | 1% of viewport's width.                                  |
+| `vh`   | 1% of viewport's height.                                 |
+| `vi`   | 1% of viewport's size in the root element's inline axis. |
+| `vb`   | 1% of viewport's size in the root element's block axis.  |
+| `vmin` | 1% of viewport's smaller dimension.                      |
+| `vmax` | 1% of viewport's larger dimension.                       |
 
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
