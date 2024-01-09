@@ -117,8 +117,11 @@ Below you can find relative color syntax examples for each color function. Each 
 
 ```css
 /* color() with and without alpha channel */
-color(from red a98-rgb x y z)
-color(from red a98-rgb x y z / alpha)
+color(from red a98-rgb r g b)
+color(from red a98-rgb r g b / alpha)
+
+color(from red xyz-d50 x y z)
+color(from red xyz-d50 x y z / alpha)
 
 /* hsl() with and without alpha channel */
 hsl(from red h s l)
