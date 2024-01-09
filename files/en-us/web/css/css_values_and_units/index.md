@@ -165,6 +165,8 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 | `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
 | `rlh`  | Line height of the root element.                                                                                                        |
 
+##### Viewport and container relative units
+
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
 
