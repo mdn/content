@@ -20,7 +20,7 @@ MDN provides macros that create a list of links:
 
   - : When included without parameters, inserts an ordered list of links to the current page's subpages. This macro is most often used within [sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars#sidebars_adding_additional_content) (hence the macro name), where the bullets are not rendered. The first parameter is a slug of the link tree's parent page. The link text is displayed as code. Setting a second parameter to `true` or `1` converts the links to plain text. Setting a third parameter to `true` or `1` adds a link the slug (parent) page at the top of the list with "Overview" as the link text.
 
-  - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
+  - [`\{{QuickLinksWithSubpages`()}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
 
   - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations. This creates hierarchical lists up to two levels deep. The pages' titles are used as the link text and their summaries as tooltips.
 
