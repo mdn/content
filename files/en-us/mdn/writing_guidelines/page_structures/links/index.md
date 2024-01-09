@@ -52,15 +52,19 @@ Some of these macros include (see [all the macros on Github](https://github.com/
 - [`\{{HTTPMethod("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPMethod.ejs)
 - [`\{{HTTPStatus("")}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPStatus.ejs)
 
-The first parameter of each of these macros is the last section of the slug of the document being referenced. For `\{{HTMLElement("")}}`, it is the part of the slug that comes after `Web/HTML/Element/` in the slug. For `\{{CSSxRef("")}}`, it is the part of the slug that comes after `Web/CSS/` in the slug.
+The first parameter of each of these macros is the last section of the slug of the document being referenced. For example, for HTML Elements include `\{{HTMLElement("")}}` with the part of the slug that comes after `Web/HTML/Element/` in the slug being the first parameter. With `\{{CSSxRef("")}}`, it is the part of the slug that comes after `Web/CSS/` in the slug. The link will go to this page.
 
-All the macros accept additional parameters. By default, the text displayed is the linked resource as written in the first parameter, in angle brackets for the case of `\{{HTMLElement()}}`. This may not be what you want. For example, the slug for the range input type is `Web/HTML/Element/input/range`. Including `\{{HTMLElement("input/range")}}` produces "{{HTMLElement("input/range")}}". That is not what you want. The second parameter, if present, provides the link text. You can include the text for the link as the second parameter. In this case we write `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` which produces "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". When including link text for the second parameter that includes a space, this particular macro removes the {{htmlelement("code")}} and angle brackets. So we added them back in.
+By default, the text displayed is the linked resource as written in the first parameter, in angle brackets for the case of `\{{HTMLElement()}}`. This may not be what you want. For example, the slug for the range input type is `Web/HTML/Element/input/range`. Including `\{{HTMLElement("input/range")}}` produces "{{HTMLElement("input/range")}}". That is not what you want. Fortunately, all the macros accept additional parameters, so you can provide the text you want to display.
+
+The second parameter, if present, provides the link text. In the input range case, we would write `\{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}` which produces "{{HTMLElement("input/range", "<code>&lt;input type=&quot;range&quot;&gt;</code>")}}". This particular macro removes the {{htmlelement("code")}} and angle brackets when the second parameter includes a space, so we added the brackets and code back in.
+
+Each macro is different!
 
 To prevent HTML code semantics and CSS code styling, some of the cross-reference macros include a parameter with the value of `"nocode"` to disable this styling.
 
 For example, `\{{CSSxRef("background-color")}}` creates the code link "{{CSSxRef("background-color")}}" and `{{domxref("CSS.supports_static", "check support", "nocode")}}` creates the plain text link "{{domxref("CSS.supports_static", "check support", "nocode")}}".
 
-Check the source code for each macro to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
+Make sure to look at the source code to understand how the macro you are using works and to understand the various parameters; while the parameters are generally well documented, exceptions like "don't render as code if the second parameter includes a space" that we saw in the `\{{HTMLElement("")}}` macro is in the code but not otherwise documented.
 
 To learn which parameters each macro supports along with the order of parameters for each macro, the macro's source file, linked above, includes documentation. There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
