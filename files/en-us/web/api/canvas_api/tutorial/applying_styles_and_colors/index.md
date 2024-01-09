@@ -194,7 +194,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgb", "180", "180", "canvas_rgb.png")}}
+{{EmbedLiveSample("An_example_using_rgb_with_alpha_transparency", "180", "180", "canvas_rgb.png")}}
 
 ## Line styles
 
