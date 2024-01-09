@@ -1,14 +1,14 @@
 ---
-title: "HTMLElement: beforeinput event"
+title: "Element: beforeinput event"
 short-title: beforeinput
-slug: Web/API/HTMLElement/beforeinput_event
+slug: Web/API/Element/beforeinput_event
 page-type: web-api-event
-browser-compat: api.HTMLElement.beforeinput_event
+browser-compat: api.Element.beforeinput_event
 ---
 
 {{APIRef}}
 
-The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the {{domxref("HTMLElement/input_event", "input")}} event, it does not fire on the {{HTMLElement("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
+The DOM **`beforeinput`** event fires when the value of an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element is about to be modified. But in contrast to the {{domxref("Element/input_event", "input")}} event, it does not fire on the {{HTMLElement("select")}} element. The event also applies to elements with {{domxref("HTMLElement.contentEditable", "contenteditable")}} enabled, and to any element when {{domxref("Document.designMode", "designMode")}} is turned on.
 
 This allows web apps to override text edit behavior before the browser modifies the DOM tree, and provides more control over input events to improve performance.
 
@@ -98,4 +98,4 @@ function updateValue(e) {
 
 ## See also
 
-- Related event: [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- Related event: {{domxref("Element/input_event", "input")}}
