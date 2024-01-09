@@ -33,7 +33,6 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API): `clipboard-read`, `clipboard-write`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
@@ -41,15 +40,14 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
-- [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`
+- [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`
 - [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
-- [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): `speaker-selection`
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
 - [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 
 ## Examples
 
-We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have created a simple example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
 Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 

@@ -30,7 +30,7 @@ A new instance of the {{domxref("EventTarget")}} object.
 
 ### Implementing a counter
 
-This example implements a `Counter` class, with `increment()` and `decrement()` methods. If fires a custom `"valuechange"` event when either of these methods is called.
+This example implements a `Counter` class, with `increment()` and `decrement()` methods. It fires a custom `"valuechange"` event when either of these methods is called.
 
 #### HTML
 
