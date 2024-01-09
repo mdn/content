@@ -116,7 +116,7 @@ ctx.strokeStyle = "rgb(255 0 0 / 50%)";
 ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ```
 
-The `rgb()` function has an optional extra parameter. The last parameter sets the transparency value of this particular color. The valid range is specified as a percentage between 0% (fully transparent) and 100% (fully opaque), or a number between 0.0 (equivalent to 0%) and 1.0 (equivalent to 100%).
+The `rgb()` function has an optional extra parameter. The last parameter sets the transparency value of this particular color. The valid range is specified as a percentage between `0%` (fully transparent) and 100% (fully opaque) or as a number between `0.0` (equivalent to `0%`) and `1.0` (equivalent to 100%).
 
 ### A `globalAlpha` example
 
