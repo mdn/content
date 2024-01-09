@@ -106,11 +106,11 @@ function pick(event, destination) {
   const pixel = ctx.getImageData(x, y, 1, 1);
   const data = pixel.data;
 
-  const rgba = `rgb(${data[0]} ${data[1]} ${data[2]} / ${data[3] / 255})`;
-  destination.style.background = rgba;
-  destination.textContent = rgba;
+  const rgbColor = `rgb(${data[0]} ${data[1]} ${data[2]} / ${data[3] / 255})`;
+  destination.style.background = rgbColor;
+  destination.textContent = rgbColor;
 
-  return rgba;
+  return rgbColor;
 }
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
