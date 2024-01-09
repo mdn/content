@@ -20,7 +20,7 @@ page-type: firefox-release-notes
   - : Media features have been added for Mozilla-specific system metrics, so that [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) can be used to more safely check on the availability of features such as touch support.
 - [Scaling background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : The `background-size` property from the [CSS 3 Backgrounds and Borders draft](https://drafts.csswg.org/css-backgrounds-3/) is now supported under the name `-moz-background-size`.
-- [WOFF font support](/en-US/docs/Web/Guide/WOFF)
+- [WOFF font support](/en-US/docs/Web/CSS/CSS_fonts/WOFF)
   - : {{cssxref("@font-face")}} now supports the WOFF downloadable font file format.
 - [Pointer events](/en-US/docs/Web/CSS/pointer-events)
   - : The {{cssxref("pointer-events")}} property lets content specify whether or not an element may be the target of mouse pointer events.
@@ -31,7 +31,7 @@ page-type: firefox-release-notes
 - {{Cssxref("image-rendering")}} is supported for images, background images, videos and canvases. [Firefox bug 423756](https://bugzil.la/423756)
 - {{Cssxref("text-align")}}:end is now supported. [Firefox bug 299837](https://bugzil.la/299837)
 - DOM changes to elements using the table {{Cssxref("display")}} types now work much better.
-- Added {{cssxref(":-moz-locale-dir(ltr)")}} and {{cssxref(":-moz-locale-dir(rtl)")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. [Firefox bug 478416](https://bugzil.la/478416)
+- Added {{cssxref(":-moz-locale-dir_ltr")}} and {{cssxref(":-moz-locale-dir_rtl")}} to make it easier to customize layouts based on whether the user interface is being displayed using a left-to-right or a right-to-left locale. [Firefox bug 478416](https://bugzil.la/478416)
 - Added support for the {{cssxref(":indeterminate")}} pseudo-class, which matches `checkbox` [`input`](/en-US/docs/Web/HTML/Element/input) elements whose `indeterminate` attribute is `true`.
 - Windowed plugins are no longer displayed in CSS transforms, because they can't be transformed properly by the compositor.
 

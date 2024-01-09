@@ -19,21 +19,21 @@ Runtime errors result in new `Error` objects being created and thrown.
 
 Besides the generic `Error` constructor, there are other core error constructors in JavaScript. For client-side exceptions, see [Exception handling statements](/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements).
 
-- {{JSxRef("EvalError")}}
-  - : Creates an instance representing an error that occurs regarding the global function {{JSxRef("Global_Objects/eval", "eval()")}}.
-- {{JSxRef("RangeError")}}
+- {{jsxref("EvalError")}}
+  - : Creates an instance representing an error that occurs regarding the global function {{jsxref("Global_Objects/eval", "eval()")}}.
+- {{jsxref("RangeError")}}
   - : Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.
-- {{JSxRef("ReferenceError")}}
+- {{jsxref("ReferenceError")}}
   - : Creates an instance representing an error that occurs when de-referencing an invalid reference.
-- {{JSxRef("SyntaxError")}}
+- {{jsxref("SyntaxError")}}
   - : Creates an instance representing a syntax error.
-- {{JSxRef("TypeError")}}
+- {{jsxref("TypeError")}}
   - : Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.
-- {{JSxRef("URIError")}}
-  - : Creates an instance representing an error that occurs when {{JSxRef("encodeURI", "encodeURI()")}} or {{JSxRef("decodeURI", "decodeURI()")}} are passed invalid parameters.
-- {{JSxRef("AggregateError")}}
-  - : Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by {{JSxRef("Promise.any()")}}.
-- {{JSxRef("InternalError")}} {{Non-standard_Inline}}
+- {{jsxref("URIError")}}
+  - : Creates an instance representing an error that occurs when {{jsxref("encodeURI()")}} or {{jsxref("decodeURI()")}} are passed invalid parameters.
+- {{jsxref("AggregateError")}}
+  - : Creates an instance representing several errors wrapped in a single error when multiple errors need to be reported by an operation, for example by {{jsxref("Promise.any()")}}.
+- {{jsxref("InternalError")}} {{non-standard_inline}}
   - : Creates an instance representing an error that occurs when an internal error in the JavaScript engine is thrown. E.g. "too much recursion".
 
 ## Constructor
@@ -43,11 +43,11 @@ Besides the generic `Error` constructor, there are other core error constructors
 
 ## Static methods
 
-- `Error.captureStackTrace()` {{Non-standard_Inline}}
-  - : A non-standard V8 function that creates the {{JSxRef("Error.prototype.stack", "stack")}} property on an Error instance.
-- `Error.stackTraceLimit` {{Non-standard_Inline}}
+- `Error.captureStackTrace()` {{non-standard_inline}}
+  - : A non-standard V8 function that creates the {{jsxref("Error/stack", "stack")}} property on an Error instance.
+- `Error.stackTraceLimit` {{non-standard_inline}}
   - : A non-standard V8 numerical property that limits how many stack frames to include in an error stacktrace.
-- `Error.prepareStackTrace()` {{Non-standard_Inline}} {{Optional_Inline}}
+- `Error.prepareStackTrace()` {{non-standard_inline}} {{optional_inline}}
   - : A non-standard V8 function that, if provided by usercode, is called by the V8 JavaScript engine for thrown exceptions, allowing the user to provide custom formatting for stacktraces.
 
 ## Instance properties
@@ -58,18 +58,18 @@ These properties are defined on `Error.prototype` and shared by all `Error` inst
   - : The constructor function that created the instance object. For `Error` instances, the initial value is the {{jsxref("Error/Error", "Error")}} constructor.
 - {{jsxref("Error.prototype.name")}}
   - : Represents the name for the type of error. For `Error.prototype.name`, the initial value is `"Error"`. Subclasses like {{jsxref("TypeError")}} and {{jsxref("SyntaxError")}} provide their own `name` properties.
-- {{jsxref("Error.prototype.stack")}} {{Non-standard_Inline}}
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
   - : A non-standard property for a stack trace.
 
 These properties are own properties of each `Error` instance.
 
 - {{jsxref("Error/cause", "cause")}}
   - : Error cause indicating the reason why the current error is thrown — usually another caught error. For user-created `Error` objects, this is the value provided as the `cause` property of the constructor's second argument.
-- {{jsxref("Error/columnNumber", "columnNumber")}} {{Non-standard_Inline}}
+- {{jsxref("Error/columnNumber", "columnNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the column number in the line that raised this error.
-- {{jsxref("Error/fileName", "fileName")}} {{Non-standard_Inline}}
+- {{jsxref("Error/fileName", "fileName")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the path to the file that raised this error.
-- {{jsxref("Error/lineNumber", "lineNumber")}} {{Non-standard_Inline}}
+- {{jsxref("Error/lineNumber", "lineNumber")}} {{non-standard_inline}}
   - : A non-standard Mozilla property for the line number in the file that raised this error.
 - {{jsxref("Error/message", "message")}}
   - : Error message. For user-created `Error` objects, this is the string provided as the constructor's first argument.
@@ -83,8 +83,8 @@ These properties are own properties of each `Error` instance.
 
 ### Throwing a generic error
 
-Usually you create an `Error` object with the intention of raising it using the {{JSxRef("Statements/throw", "throw")}} keyword.
-You can handle the error using the {{JSxRef("Statements/try...catch", "try...catch")}} construct:
+Usually you create an `Error` object with the intention of raising it using the {{jsxref("Statements/throw", "throw")}} keyword.
+You can handle the error using the {{jsxref("Statements/try...catch", "try...catch")}} construct:
 
 ```js
 try {
@@ -96,7 +96,7 @@ try {
 
 ### Handling a specific error type
 
-You can choose to handle only specific error types by testing the error type with the error's {{JSxRef("Object.prototype.constructor", "constructor")}} property or, if you're writing for modern JavaScript engines, {{JSxRef("Operators/instanceof", "instanceof")}} keyword:
+You can choose to handle only specific error types by testing the error type with the {{jsxref("Operators/instanceof", "instanceof")}} keyword:
 
 ```js
 try {
@@ -216,7 +216,7 @@ try {
 
 ## See also
 
-- [A polyfill of `Error`](https://github.com/zloirock/core-js#ecmascript-error) with modern behavior like support `cause` is available in [`core-js`](https://github.com/zloirock/core-js)
-- {{JSxRef("Statements/throw", "throw")}}
-- {{JSxRef("Statements/try...catch", "try...catch")}}
-- The [V8 documentation](https://v8.dev/docs/stack-trace-api) for `Error.captureStackTrace()`, `Error.stackTraceLimit`, and `Error.prepareStackTrace()`.
+- [Polyfill of `Error` with `cause` support in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)
+- {{jsxref("Statements/throw", "throw")}}
+- {{jsxref("Statements/try...catch", "try...catch")}}
+- [Stack trace API](https://v8.dev/docs/stack-trace-api) in the V8 docs

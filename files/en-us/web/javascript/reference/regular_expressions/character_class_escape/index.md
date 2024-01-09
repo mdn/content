@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_class_escape
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **character class escape** is an escape sequence that represents a set of characters.
 
@@ -62,8 +62,8 @@ Look  how they\tshine for you`);
 
 ## See also
 
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - [Unicode character class escape: `\p{...}`, `\P{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
 - [Character escape: `\n`, `\u{...}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)

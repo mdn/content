@@ -117,7 +117,7 @@ To call a message string like this, you need to specify it like this:
 4. The name of the message you want to call as defined in `messages.json`, followed by
 5. Two underscores
 
-```
+```plain
 __MSG_ + messageName + __
 ```
 
@@ -177,13 +177,13 @@ The `"placeholders"` member defines all the placeholders, and where they are ret
 
 Let's run through an example: the original `notificationContent` message string in the `en/messages.json` file is
 
-```
+```plain
 You clicked $URL$.
 ```
 
 Let's say the link clicked on points to `https://developer.mozilla.org`. After the {{WebExtAPIRef("i18n.getMessage()")}} call, the contents of the second parameter are made available in messages.json as `$1`, which replaces the `$URL$` placeholder as defined in the `"url"` placeholder. So the final message string is
 
-```
+```plain
 You clicked https://developer.mozilla.org.
 ```
 
@@ -262,13 +262,13 @@ Suppose the `default_locale` is set to `fr`, and the browser's current locale is
 
 The i18n module provides us with some predefined messages, which we can call in the same way as we saw earlier in [Retrieving localized strings in manifests](#retrieving_localized_strings_in_manifests) and [Locale-dependent CSS](#locale-dependent_css). For example:
 
-```
+```plain
 __MSG_extensionName__
 ```
 
 Predefined messages use exactly the same syntax, except with `@@` before the message name, for example
 
-```
+```plain
 __MSG_@@ui_locale__
 ```
 

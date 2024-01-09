@@ -1,5 +1,5 @@
 ---
-title: Guidelines for styling HTML code examples
+title: Guidelines for writing HTML code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
 page-type: mdn-writing-guide
 ---
@@ -78,16 +78,16 @@ Omitting quotes can also cause problems. In the above example, the `alt` attribu
 
 ## Boolean attributes
 
-Don't write out boolean attributes in full; you can just write the attribute name to set it. For example, you can write:
+Don't include values for boolean attributes (but do include values for {{glossary("enumerated")}} attributes); you can just write the attribute name to set it. For example, you can write:
 
 ```html example-good
-required
+<input required />
 ```
 
-This is perfectly understandable and works fine; the longer version with the value is supported but not necessary:
+This is perfectly understandable and works fine. If a boolean HTML attribute is present, the value is true. While including a value will work, it is not necessary and incorrect:
 
-```html-nolint example-bad
-required="required"
+```html example-bad
+<input required="required" />
 ```
 
 ## Case
@@ -104,7 +104,7 @@ Use lowercase for all element names and attribute names/values because it looks 
 
 ## Class and ID names
 
-Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase. For example:
+Use semantic class/ID names, and separate multiple words with hyphens ({{Glossary("kebab_case", "kebab case")}}). Don't use {{Glossary("camel_case", "camel case")}}. For example:
 
 ```html example-good
 <p class="editorial-summary">Blah blah blah</p>
@@ -112,18 +112,6 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 
 ```html example-bad
 <p class="bigRedBox">Blah blah blah</p>
-```
-
-## Double quotes
-
-Use double quotes for HTML, not single quotes, like so:
-
-```html example-good
-<p class="important">Yes</p>
-```
-
-```html-nolint example-bad
-<p class='important'>Nope</p>
 ```
 
 ## Entity references
@@ -141,8 +129,6 @@ Instead of:
 ```html example-bad
 <p>&copy; 2018 Me</p>
 ```
-
-This is fine as long as you declare a UTF-8 character set.
 
 ## HTML elements
 

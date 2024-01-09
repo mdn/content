@@ -63,7 +63,8 @@ browser-compat: css.properties.NameOfTheProperty
 >
 > **Other macros in the page**
 >
-> - Formal definition and Formal syntax sections: The content for the _Formal definition_ and _Formal syntax_ sections is generated using the `\{{CSSInfo}}` and `\{{CSSSyntax}}` macros, respectively. For these sections to have data, you must ensure an appropriate entry has been filled in for the corresponding property in the [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) data file in the `mdn/data` repository. See the [Properties](https://github.com/mdn/data/blob/main/css/properties.md) page for more information.
+> - Formal syntax section: The content for the _Formal syntax_ section is generated using the `\{{CSSSyntax}}` macro. This macro fetches data from the specifications using the [@webref/css npm package](https://www.npmjs.com/package/@webref/css).
+> - Formal definition section: The content for the _Formal definition_ section is generated using the `\{{CSSInfo}}` macro. For this section to have data, you must ensure an appropriate entry has been filled in for the corresponding property in the [properties.json](https://github.com/mdn/data/blob/main/css/properties.json) data file in the `mdn/data` repository. See the [Properties](https://github.com/mdn/data/blob/main/css/properties.md) page for more information.
 > - Specifications and Browser compatibility sections: The build tool automatically uses the `browser-compat` key-value pair from the page front matter to insert data into the _Specifications_ and _Browser compatibility_ sections (replacing the `\{{Specifications}}` and `\{{Compat}}` macros in those sections, respectively).
 >
 >   Note that you may first need to create/update an entry for the property and its specification in our <a href="https://github.com/mdn/browser-compat-data">Browser compat data repo</a>.

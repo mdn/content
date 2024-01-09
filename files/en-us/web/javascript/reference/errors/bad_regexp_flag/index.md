@@ -81,4 +81,4 @@ const obj = {
 
 ## See also
 
-- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide

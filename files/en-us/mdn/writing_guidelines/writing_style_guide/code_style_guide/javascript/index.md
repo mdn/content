@@ -1,5 +1,5 @@
 ---
-title: Guidelines for styling JavaScript code examples
+title: Guidelines for writing JavaScript code examples
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 page-type: mdn-writing-guide
 ---
@@ -23,10 +23,6 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 ### Using modern JavaScript features
 
 You can use new features once every major browser — Chrome, Edge, Firefox, and Safari — supports them.
-
-### Spacing and indentation
-
-Mark indentation with _2 spaces_. Don't use the tab character. The end-of-line character is `\n`, the Unix convention. To help you, we have included an [`.editorconfig`](https://editorconfig.org/) file in the repository. Many editors read its content and use it to configure their behavior.
 
 ## Arrays
 
@@ -229,7 +225,7 @@ array.forEach((value /* , index, array */) => {
 
 ### Function names
 
-For function names, use camelCase, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
+For function names, use {{Glossary("camel_case", "camel case")}}, starting with a lowercase character. Use concise, human-readable, and semantic names where appropriate.
 
 The following is a correct example of a function name:
 
@@ -305,7 +301,7 @@ function doIt() {
   };
   ```
 
-- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _concise body_) when possible:
+- When using arrow functions, use [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body) (also known as _expression body_) when possible:
 
   ```js example-good
   arr.map((e) => e.id);

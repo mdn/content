@@ -113,7 +113,8 @@ Age: 100
 
 #### `s-maxage`
 
-The `s-maxage` response directive also indicates how long the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) for (similar to `max-age`) — but it is specific to shared caches, and they will ignore `max-age` when it is present.
+The `s-maxage` response directive indicates how long the response remains [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) in a shared cache.
+The `s-maxage` directive is ignored by private caches, and overrides the value specified by the `max-age` directive or the `Expires` header for shared caches, if they are present.
 
 ```http
 Cache-Control: s-maxage=604800
@@ -207,8 +208,6 @@ Some intermediaries transform content for various reasons. For example, some con
 
 `no-transform` indicates that any intermediary (regardless of whether it implements a cache) shouldn't transform the response contents.
 
-Note: [Google's Web Light](https://developers.google.com/search/docs/advanced/mobile/web-light?visit_id=637855965115455923-776951611&rd=1) is one kind of such an intermediary. It converts images to minimize data for a cache store or slow connection and supports `no-transform` as an opt-out option.
-
 #### `immutable`
 
 The `immutable` response directive indicates that the response will not be updated while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
@@ -277,17 +276,15 @@ The `no-store` request directive allows a client to request that caches refrain 
 Cache-Control: no-store
 ```
 
-Note that the major browsers do not support requests with `no-store`.
-
 #### `max-age`
 
 The `max-age=N` request directive indicates that the client allows a stored response that is generated on the origin server within _N_ seconds — where _N_ may be any non-negative integer (including `0`).
 
 ```http
-Cache-Control: max-age=3600
+Cache-Control: max-age=10800
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+In the case above, if the response with `Cache-Control: max-age=10800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
 
 Many browsers use this directive for **reloading**, as explained below.
 

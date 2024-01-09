@@ -9,13 +9,15 @@ browser-compat: javascript.builtins.Iterator.@@iterator
 
 The **`[@@iterator]()`** method of {{jsxref("Iterator")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows built-in iterators to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns the value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the iterator object itself.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
-
 ## Syntax
 
 ```js-nolint
 iterator[Symbol.iterator]()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -25,7 +27,7 @@ The value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), whic
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes all built-in iterators [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically calls this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes built-in iterators [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const arrIterator = [1, 2, 3].values();
@@ -45,4 +47,6 @@ for (const value of arrIterator) {
 
 ## See also
 
-- {{jsxref("Statements/for...of", "for...of")}}
+- {{jsxref("Iterator")}}
+- {{jsxref("Symbol.iterator")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

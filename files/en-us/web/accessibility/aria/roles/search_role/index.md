@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/search_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#search
-  - https://w3c.github.io/aria-practices/#aria_lh_search
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/search.html
 ---
 
 The `search` role is used to identify the search functionality; the section of the page used to search the page, site, or collection of sites.
@@ -17,7 +17,7 @@ The `search` role is used to identify the search functionality; the section of t
 
 ## Description
 
-The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. While there is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), there is no HTML element that defines a search landmark.
+The `search` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) role that can be added to the container element that encompasses all of the elements that combined to form the search feature of the document or application, including a descendant [(`<input type="search">`)](/en-US/docs/Web/HTML/Element/input/search). If a document includes more than one search, each should have a unique label, unless they are the same search repeated, then use the same name. There is a [`input` of type `search`)](/en-US/docs/Web/HTML/Element/input/search), though this does not define a search landmark by itself. Using {{HTMLElement('search')}} is an alternative way to define a search landmark.
 
 ## Examples
 
@@ -91,6 +91,7 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 - The {{HTMLElement('form')}} element
 - The {{HTMLElement('input')}} element
+- The {{HTMLElement('search')}} element
 - [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements)
 
@@ -98,6 +99,6 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

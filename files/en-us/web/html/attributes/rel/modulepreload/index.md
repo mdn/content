@@ -18,7 +18,7 @@ Links with `rel="modulepreload"` are similar to those with [`rel="preload"`](/en
 The main difference is that `preload` just downloads the file and stores it in the cache, while `modulepreload` gets the module, parses and compiles it, and puts the results into the module map so that it is ready to execute.
 
 When using `modulepreload` the fetch request mode is always [`cors`](/en-US/docs/Web/API/Request/mode#cors), and the [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin) property is used to determine the request [credential mode](/en-US/docs/Web/API/Request/credentials).
-If `crossorigin` is set to `anonymous` or `""` (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
+If `crossorigin` is set to [`anonymous`](/en-US/docs/Web/HTML/Attributes/crossorigin#anonymous) or [`""`](/en-US/docs/Web/HTML/Attributes/crossorigin#sect1) (default), then the credentials mode is [`same-origin`](/en-US/docs/Web/API/Request/credentials#same-origin), and user credentials such as cookies and authentication are only sent for requests with the `same-origin`.
 If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
 
 The [`as`](/en-US/docs/Web/HTML/Element/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
@@ -32,7 +32,7 @@ If dependencies are automatically fetched, no additional events are fired in the
 
 ## Examples
 
-Consider the [basic-modules](https://github.com/mdn/js-examples/tree/master/module-examples/basic-modules) example ([live version](https://mdn.github.io/js-examples/module-examples/basic-modules/)), introduced in the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#basic_example_structure) guide.
+Consider the [basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules) example ([live version](https://mdn.github.io/js-examples/module-examples/basic-modules/)), introduced in the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#basic_example_structure) guide.
 
 This has a file structure as shown below, consisting of the top level module `main.js`, which statically imports two dependency modules `modules/canvas.js` and `modules/square.js` using the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
@@ -99,4 +99,5 @@ By the time `main.js` has been parsed and its dependencies are known, they have 
 
 ## See also
 
+- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="modulepreload">` and other similar performance improvement features.
 - [Preloading modules](https://developer.chrome.com/blog/modulepreload) (developer.chrome.com)

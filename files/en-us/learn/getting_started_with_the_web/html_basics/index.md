@@ -12,7 +12,7 @@ HTML (**H**yper**T**ext **M**arkup **L**anguage) is the code that is used to str
 
 HTML is a _markup language_ that defines the structure of your content. HTML consists of a series of **{{Glossary("element", "elements")}}**, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing {{Glossary("tag", "tags")}} can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on. For example, take the following line of content:
 
-```
+```plain
 My cat is very grumpy
 ```
 
@@ -48,7 +48,7 @@ Attributes that set a value always have:
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
-> **Note:** Simple attribute values that don't contain ASCII whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+> **Note:** Simple attribute values that don't contain {{Glossary("ASCII")}} whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
 
 ### Nesting elements
 

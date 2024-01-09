@@ -40,7 +40,7 @@ changed later).
 Unlike `var` or `let`, you must specify a value for a
 `const` declaration. This throws:
 
-```js example-bad
+```js-nolint example-bad
 const COLUMNS;
 // SyntaxError: missing = in const declaration
 ```

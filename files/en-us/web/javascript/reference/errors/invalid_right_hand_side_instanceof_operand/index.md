@@ -66,5 +66,5 @@ x instanceof Foo; // true
 
 ## See also
 
-- [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

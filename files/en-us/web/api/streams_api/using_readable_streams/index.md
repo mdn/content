@@ -64,7 +64,7 @@ fetch("./tortoise.png")
 
 ### Reading the stream
 
-Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
+Now you've got your reader attached, you can read data chunks out of the stream using the {{domxref("ReadableStreamDefaultReader.read()")}} method. This reads one chunk out of the stream, which you can then do anything you like with. For example, our Simple stream pump example goes on to enqueue each chunk in a new, custom `ReadableStream` (we will find more about this in the next section), then create a new {{domxref("Response")}} out of it, consume it as a {{domxref("Blob")}}, create an object URL out of that blob using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and then display it on screen in an {{htmlelement("img")}} element, effectively creating a copy of the image we originally fetched.
 
 ```js
 // Fetch the original image
@@ -207,7 +207,7 @@ button.addEventListener("click", () => aborter.abort());
 logChunks("http://example.com/somefile.txt", { signal: aborter.signal });
 
 async function logChunks(url, { signal }) {
-  const response = await fetch(url, signal);
+  const response = await fetch(url, { signal });
   for await (const chunk of response.body) {
     // Do something with the chunk
   }

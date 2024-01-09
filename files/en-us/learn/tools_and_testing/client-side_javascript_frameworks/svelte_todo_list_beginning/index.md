@@ -298,11 +298,11 @@ Further down, you can find the following `<ul>` element:
 ```svelte
 <ul
   role="list"
-  className="todo-list stack-large"
+  class="todo-list stack-large"
   aria-labelledby="list-heading">
 ```
 
-The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article "Fixing Lists".
+The `role` attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A `<ul>` is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the `<ul>` element. If you want to learn more about why this is necessary, you can check out Scott O'Hara's article ["Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) (2019).
 
 The `aria-labelledby` attribute tells assistive technologies that we're treating our `<h2>` with an `id` of `list-heading` as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.
 
@@ -340,7 +340,7 @@ Moreover, our editor can display this warning even before calling the compiler:
 
 ![A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute](04-svelte-accessibility-support.png)
 
-You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs#Comments) beginning with `svelte-ignore`, like this:
+You can tell Svelte to ignore this warning for the next block of markup with a [comment](https://svelte.dev/docs/basic-markup#comments) beginning with `svelte-ignore`, like this:
 
 ```svelte
 <!-- svelte-ignore a11y-missing-attribute -->
@@ -548,8 +548,8 @@ body {
   padding: 1rem;
   position: relative;
   box-shadow:
-    0 2px 4px 0 rgba(0, 0, 0, 0.2),
-    0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    0 2px 4px 0 rgb(0 0 0 / 20%),
+    0 2.5rem 5rem 0 rgb(0 0 0 / 10%);
 }
 @media screen and (min-width: 550px) {
   .todoapp {

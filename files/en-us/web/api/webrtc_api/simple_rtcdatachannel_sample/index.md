@@ -93,7 +93,7 @@ function startup() {
 }
 ```
 
-This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set {{domxref("EventListener", "event listeners")}} on the three buttons.
+This is quite straightforward. We declare variables and grab references to all the page elements we'll need to access, then set {{domxref("EventTarget/addEventListener", "event listeners")}} on the three buttons.
 
 ### Establishing a connection
 

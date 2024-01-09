@@ -11,7 +11,7 @@ The **Sensor APIs** are a set of interfaces built to a common design that expose
 
 ## Sensor APIs concepts and usage
 
-Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
+Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('Accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
 
 Sensors may or may not correspond exactly to a physical device sensor. For example, the {{domxref('Gyroscope')}} interface corresponds exactly to a physical device interface. Alternatively, the {{domxref('AbsoluteOrientationSensor')}} interface provides information that is algorithmically aggregated from two or more device sensors. These sensor types are referred to as _low-level_ and _high-level_ respectively. The latter type of sensor is also called a fusion sensor (alternatively, virtual or synthetic sensors).
 

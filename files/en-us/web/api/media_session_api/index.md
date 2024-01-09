@@ -7,7 +7,7 @@ browser-compat: api.MediaSession
 
 {{DefaultAPISidebar("Media Session API")}}
 
-The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
+The **Media Session API** provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
 
 It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices. So you can seamlessly control web-provided media via your device, even when not looking at the web page.
 
@@ -33,11 +33,6 @@ navigator.mediaSession.playbackState = "playing";
   - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}
   - : Allows a web page to provide custom behaviors for standard media playback interactions.
-
-## Dictionaries
-
-- {{domxref("MediaImage")}}
-  - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
 
 ## Examples
 
@@ -110,6 +105,15 @@ if ("mediaSession" in navigator) {
     /* Code excerpted. */
   });
   navigator.mediaSession.setActionHandler("skipad", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglecamera", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglemicrophone", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("hangup", () => {
     /* Code excerpted. */
   });
 }

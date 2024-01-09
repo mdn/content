@@ -21,6 +21,11 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.locked")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether or not the readable stream is locked to a reader.
 
+## Static methods
+
+- {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} {{Experimental_Inline}}
+  - : Returns `ReadableStream` from a provided iterable or async iterable object, such as an array, a set, an async generator, and so on.
+
 ## Instance methods
 
 - {{domxref("ReadableStream.cancel()")}}
@@ -32,7 +37,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 - {{domxref("ReadableStream.pipeTo()")}}
   - : Pipes the current ReadableStream to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
 - {{domxref("ReadableStream.tee()")}}
-  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new {{domxref("ReadableStream")}} instances. Each of those streams receives the same incoming data.
+  - : The `tee` method [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) this readable stream, returning a two-element array containing the two resulting branches as new `ReadableStream` instances. Each of those streams receives the same incoming data.
 
 ## Async iteration
 
@@ -70,7 +75,7 @@ for await (const chunk of stream.values({ preventCancel: true })) {
 
 In the following example, an artificial {{domxref("Response")}} is created to stream HTML fragments fetched from another resource to the browser.
 
-It demonstrates the usage of a {{domxref("ReadableStream")}} in combination with a {{jsxref("Uint8Array")}}.
+It demonstrates the usage of a `ReadableStream` in combination with a {{jsxref("Uint8Array")}}.
 
 ```js
 fetch("https://www.example.org")
@@ -112,9 +117,15 @@ fetch("https://www.example.org")
   });
 ```
 
-### Convert async iterator to stream
+### Convert an iterator or async iterator to a stream
 
-Converting an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
+The {{domxref("ReadableStream/from_static", "from()")}} static method can convert an iterator, such as an {{jsxref("Array")}} or {{jsxref("Map")}}, or an [(async) iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) to a readable stream:
+
+```js
+const myReadableStream = ReadableStream.from(iteratorOrAsyncIterator);
+```
+
+On browsers that don't support the `from()` method you can instead create your own [custom readable stream](/en-US/docs/Web/API/Streams_API/Using_readable_streams#creating_your_own_custom_readable_stream) to achieve the same result:
 
 ```js
 function iteratorToStream(iterator) {
@@ -131,8 +142,6 @@ function iteratorToStream(iterator) {
   });
 }
 ```
-
-This works with both async and non-async iterators.
 
 ### Async iteration of a stream using for await...of
 

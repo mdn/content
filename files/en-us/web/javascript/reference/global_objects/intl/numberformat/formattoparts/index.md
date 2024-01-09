@@ -157,5 +157,5 @@ console.log(numberString);
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+- {{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}

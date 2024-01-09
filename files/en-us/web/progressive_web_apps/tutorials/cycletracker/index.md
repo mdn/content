@@ -8,11 +8,11 @@ page-type: tutorial
 
 {{PWASidebar}}
 
-This intro-level tutorial walks thru all the steps of building a basic progressive web app, or PWA. We will be using web technologies — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
+This intro-level tutorial walks through all the steps of building a basic progressive web app, or PWA. We will be using web technologies — HTML, CSS, and JavaScript — to build a period tracking web app called "CycleTracker". Like all web apps, CycleTracker is designed to work in all browsers on all devices.
 
-We will walk thru the steps of building a fully functional web app, then progressively enhance CycleTracker to make it installable and to work even when the user is offline.
+We will walk through the steps of building a fully functional web app, then progressively enhance CycleTracker to make it installable and to work even when the user is offline.
 
-By default, PWAs are regular websites, built with the same technologies. Just like a regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file and service worker, and serving the website over SSL, any website can become a PWA.
+By default, PWAs are regular websites, built with the same technologies. Just like a regular websites, PWAs are linkable, discoverable via search engines, and visible in a browser. By including a manifest file and service worker, and serving the website over TLS, any website can become a PWA.
 
 ## PWA benefits
 
@@ -62,7 +62,7 @@ The steps include:
 
 - [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)
 
-  - : While all websites should be served over https, with PWAs, https is a requirement. Service workers, and therefore PWAs, are restricted to secure contexts including SSL contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress through the tutorial steps. We also look at serving your PWA with GitHub pages.
+  - : While all websites should be served over https, with PWAs, https is a requirement. Service workers, and therefore PWAs, are restricted to secure contexts including TLS contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress through the tutorial steps. We also look at serving your PWA with GitHub pages.
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
 
@@ -90,6 +90,6 @@ To complete this tutorial, it is helpful to have a basic level of understanding 
 
 While a secure connection is a requirement, there are no software requirements for creating a PWA other than any text editor to code the PWA and a browser to view it.
 
-You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker) on GitHub.
+You can try the [live period tracker](https://mdn.github.io/pwa-examples/cycletracker/) and view the [period tracker source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker) on GitHub.
 
 {{NextMenu("Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS")}}

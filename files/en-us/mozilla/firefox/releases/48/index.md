@@ -13,7 +13,7 @@ page-type: firefox-release-notes
 ### Developer Tools
 
 - The position of elements can now be changed within the content ([Firefox bug 1139187](https://bugzil.la/1139187)).
-- Implemented {{domxref("console.clear()")}} to clear the console output ([Firefox bug 659625](https://bugzil.la/659625)).
+- Implemented {{domxref("console/clear_static", "console.clear()")}} to clear the console output ([Firefox bug 659625](https://bugzil.la/659625)).
 - Added [HTTP log inspection to the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#viewing-network-request-details) ([Firefox bug 1211525](https://bugzil.la/1211525)).
 - Added a [Firebug theme](https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html#choose-devtools-theme) ([Firefox bug 1244054](https://bugzil.la/1244054)).
 - Added the [DOM Inspector](https://firefox-source-docs.mozilla.org/devtools-user/dom_property_viewer/index.html) ([Firefox bug 1201475](https://bugzil.la/1201475)).
@@ -46,7 +46,7 @@ page-type: firefox-release-notes
 - The `luminance` value for {{cssxref("mask-mode")}} has been added; the `auto` value has been renamed to `match-source`, to match the spec ([Firefox bug 1228354](https://bugzil.la/1228354)).
 - Interpolation of {{cssxref("clip-path")}} basic shapes in CSS animations and transitions is now supported ([Firefox bug 1110460](https://bugzil.la/1110460)).
 - Support for horizontal-in-vertical (_tate-chu-yoko_) text has been added via the `all` value of the {{cssxref("text-combine-upright")}} property ([Firefox bug 1097499](https://bugzil.la/1097499)).
-- Support for the experimental {{cssxref("color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ([Firefox bug 1209273](https://bugzil.la/1209273)).
+- Support for the experimental {{cssxref("print-color-adjust", "color-adjust")}} property has been added, allowing pages to specify that background colors and images should be printed ([Firefox bug 1209273](https://bugzil.la/1209273)).
 - The {{cssxref("::first-letter")}} pseudo-element now also matches punctuation characters of type Pd that precede or immediately follow the actual first letter; this is a new requirement of CSS Pseudo-element module level 4 ([Firefox bug 1260366](https://bugzil.la/1260366)).
 - Several `-webkit` prefixed properties and values have been added for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false`:
 
@@ -85,7 +85,7 @@ page-type: firefox-release-notes
 #### DOM & HTML DOM
 
 - Dropped the "Moz" prefix from the {{domxref("CSSKeyframeRule")}} and {{domxref("CSSKeyframesRule")}} interfaces ([Firefox bug 1256178](https://bugzil.la/1256178)).
-- The {{domxref("NavigatorConcurrentHardware")}} {{Glossary("mixin")}} has been implemented, which adds the {{domxref("NavigatorConcurrentHardware.hardwareConcurrency", "window.navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
+- The `NavigatorConcurrentHardware` {{Glossary("mixin")}} has been implemented, which adds the {{domxref("Navigator.hardwareConcurrency")}} property to the {{domxref("Navigator")}} interface. This lets websites and apps get at least an approximation of how many processing cores are available to run {{domxref("Worker")}}s in ([Firefox bug 1008453](https://bugzil.la/1008453)).
 - The {{domxref("Node.isSameNode()")}} method, which was removed in Firefox 10, has returned after being added back into the specification after a lengthy absence ([Firefox bug 1256299](https://bugzil.la/1256299)).
 - Firefox now returns proper exceptions instead of numbers when things go wrong during a call to {{domxref("Navigator.registerProtocolHandler()")}}.
 - {{domxref("Element.animate()")}} is now activated by default ([Firefox bug 1245000](https://bugzil.la/1245000)).

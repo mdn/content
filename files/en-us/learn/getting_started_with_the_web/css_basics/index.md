@@ -169,7 +169,7 @@ Now that we've explored some CSS fundamentals, let's improve the appearance of t
 
    > **Note:** Anything in CSS between `/*` and `*/` is a **CSS comment**. The browser ignores comments as it renders the code. CSS comments are a way for you to write helpful notes about your code or logic.
 
-4. Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
+4. Now let's set font sizes for elements that will have text inside the HTML body ({{htmlelement("Heading_Elements", "&lt;h1&gt;")}}, {{htmlelement("li")}}, and {{htmlelement("p")}}). We'll also center the heading. Finally, let's expand the second ruleset (below) with settings for line height and letter spacing to make body content more readable.
 
    ```css
    h1 {

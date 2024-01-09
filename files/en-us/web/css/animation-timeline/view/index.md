@@ -63,7 +63,12 @@ animation-timeline: view(x 200px auto);
 
 - inset
 
-  - : The inset value can be one or two values, which can be either `auto` or a {{cssxref("length-percentage")}}.
+  - : The inset value can be one or two values, which can be either `auto` or a {{cssxref("length-percentage")}}. It specifies an inset (positive) or outset (negative) adjustment of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). The inset is used to determine whether the element is in view which determines the length of the animation timeline. In other words, the animation lasts as long as the element is in the inset-adjusted view.
+
+    - start
+      - : Inward offset from beginning of the scrollport.
+    - end
+      - : Inward offset from end of the scrollport.
 
 > **Note:** The scroller and inset values can be specified in any order.
 
@@ -84,7 +89,6 @@ The HTML for the example is shown below.
 ```html
 <div class="content">
   <h1>Content</h1>
-
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Risus quis varius quam
@@ -101,7 +105,9 @@ The HTML for the example is shown below.
     arcu vitae elementum curabitur vitae nunc sed velit.
   </p>
 
-  <div class="subject animation"></div>
+  <div class="subject-container">
+    <div class="subject animation"></div>
+  </div>
 
   <p>
     Adipiscing enim eu turpis egestas pretium aenean pharetra magna ac. Arcu
@@ -114,17 +120,18 @@ The HTML for the example is shown below.
     scelerisque. Netus et malesuada fames ac.
   </p>
 </div>
+<div class="overlay top">inset start 50%</div>
+<div class="overlay bottom">inset end 10%</div>
 ```
 
 #### CSS
 
-The `subject` element and its containing `content` element are styled minimally, and the text content is given some basic font settings:
+The `subject` element and `content` elements are minimally styled and the text content is given some basic font settings:
 
 ```css
 .subject {
   width: 300px;
   height: 200px;
-  margin: 0 auto;
   background-color: deeppink;
 }
 
@@ -134,43 +141,66 @@ The `subject` element and its containing `content` element are styled minimally,
   margin: 0 auto;
 }
 
-p,
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
 p {
   font-size: 1.5rem;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 ```
 
-The `<div>` with the class of `subject` is also given a class of `animation` — this is where `animation-timeline: view(block 25% 25%)` is set to declare that it will be animated as it progresses through the view progress timeline provided by its scrolling ancestor (in this case the document's root element). Note how the inset value of `25% 25%` causes the animation to start 25% of the way up the viewport, and finish 25% from the top.
+To aid the understanding of the result, extra elements `subject-container`, `top`, and `bottom` have been used. The `subject-container` shows the bounds of the animation. And semi-transparent `top` and `bottom` overlays mark inset offsetted scrollport.
 
-Last, an animation is specified on the element that animates its opacity and scale, causing it to fade in and size up as it moves up the scroller.
+```css
+.subject-container {
+  border: 2px dashed black;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  background-color: #f5deb3aa;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  justify-content: flex-end;
+}
+
+.top {
+  top: 0;
+  height: 244px;
+  align-items: end;
+}
+
+.bottom {
+  top: 432px;
+  height: 48px;
+}
+```
+
+In the following code, the `<div>` with the class of `subject` is also given a class of `animation`. The `grow` animation causes the `subject` element to grow or shrink. The `animation-timeline: view(block 55% 10%)` is set to declare that it will be animated as it progresses through the view progress timeline provided by its scrolling ancestor (in this case the document's root element).
+
+While scrolling down, note how the inset value of `50% 10%` causes the animation to start at 10% from the bottom and finish at 50% from the top. As animation moves forward along the timeline the `subject` grows. Conversely, when scrolling up the animation proceeds in the reverse direction, starting at 50% from the top, moving backward through the animation, and ending at 10% from the bottom. So, as the animation happens backwards the `subject` shrinks.
+
+An important point to remember is that the animation lasts as long as the `subject` element is in the view which has been set and to be offset using `50% 10%` inset values.
 
 ```css
 .animation {
-  animation-timeline: view(block 25% 25%);
+  animation-timeline: view(block 50% 10%);
 
-  animation-name: appear;
+  animation-name: grow;
   animation-fill-mode: both;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
-
+  animation-timing-function: linear;
 }
 
-@keyframes appear {
+@keyframes grow {
   from {
-    opacity: 0;
     transform: scaleX(0);
   }
 
   to {
-    opacity: 1,
     transform: scaleX(1);
   }
 }

@@ -11,7 +11,7 @@ The **`list-style`** CSS [shorthand property](/en-US/docs/Web/CSS/Shorthand_prop
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note:** This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;`. [By default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the items inside.
+The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
 
 ## Constituent properties
 
@@ -33,11 +33,12 @@ list-style: url("../img/shape.png");
 /* position */
 list-style: inside;
 
-/* type | position */
-list-style: georgian inside;
+/* two values */
+list-style: georgian outside;
+list-style: url("img/pip.svg") inside;
 
-/* type | image | position */
-list-style: lower-roman url("../img/shape.png") outside;
+/* three values */
+list-style: lower-roman url("img/shape.png") outside;
 
 /* Keyword value */
 list-style: none;
@@ -50,85 +51,18 @@ list-style: revert-layer;
 list-style: unset;
 ```
 
-The `list-style` property is specified as one, two, or three keywords in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, then `list-style-type` is used as a fallback if the image is unavailable.
+The `list-style` property is specified as one, two, or three values in any order. If {{cssxref("list-style-type")}} and {{cssxref("list-style-image")}} are both set, the `list-style-type` is used as a fallback if the image is unavailable.
 
 ### Values
 
 - {{cssxref("list-style-type")}}
-  - : See {{cssxref("list-style-type")}}.
+  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
 - {{cssxref("list-style-image")}}
-  - : See {{cssxref("list-style-image")}}.
+  - : An {{cssxref("image")}} or `none`. If omitted, the default `none` value is used. See {{cssxref("list-style-image")}}.
 - {{cssxref("list-style-position")}}
-  - : See {{cssxref("list-style-position")}}.
+  - : Either `inside` or `outside`. If omitted, the default `outside` value is used. See {{cssxref("list-style-position")}}.
 - `none`
   - : No list style is used.
-
-## Accessibility concerns
-
-In a notable exception, Safari will not recognize an ordered or unordered list as a list in the accessibility tree if it has a `list-style` value of `none`. This [behavior is intentional](https://webkit.org/b/170179#c1) and not considered a bug.
-
-The most straightforward way to address this is to add an explicit `role="list"` to the `<ol>` or `<ul>` element in the markup. This will restore the list semantics without affecting the design:
-
-```html
-<ul role="list">
-  <li>An item</li>
-  <li>Another item</li>
-</ul>
-```
-
-A CSS-only workaround is also available for those who do not have access to the markup: Adding [pseudo-content](/en-US/docs/Web/CSS/content) before each list item can restore list semantics:
-
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "+ ";
-}
-```
-
-The added pseudo-content is tested by Safari to determine if it should be accessible or ignored. Accessible pseudo-content restores list semantics, while ignored pseudo-content does not.
-
-Generally, text or images are determined to be things that should be accessible, which is why the `content: "+ ";` declaration in the previous example works.
-
-A declaration of `content: "";` (an empty string) is ignored, as are `content` values that contain only spaces, such as `content: " ";`, so these do not work.
-
-If the intent is to keep list item markers visually hidden, this can often be managed with a [zero-width space](https://en.wikipedia.org/wiki/Zero-width_space), `&#8203;`, which is `\200B` in CSS and `\u200B` in JavaScript:
-
-```css
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "\200B";
-}
-```
-
-Another visually hidden approach is to apply an {{cssxref("&lt;image&gt;")}} to the `list-style` property:
-
-```css
-nav ol,
-nav ul {
-  list-style: none;
-}
-
-/* becomes */
-
-nav ol,
-nav ul {
-  list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
-}
-```
-
-These CSS workarounds should be used only when the HTML solution is not available, and only after testing to ensure that they don't result in unexpected behaviors that may negatively impact users' experiences.
-
-- [Bug #170179 | WebKit Bugzilla](https://webkit.org/b/170179)
-- ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)
-- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [Understanding Success Criterion 1.3.1: Info and Relationships | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Formal definition
 
@@ -173,7 +107,41 @@ List 2
 
 #### Result
 
-{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 220)}}
+{{EmbedLiveSample('Setting_list_style_type_and_position', 'auto', 240)}}
+
+## Accessibility concerns
+
+Safari does not recognize ordered or unordered lists as lists in the accessibility tree if they have a `list-style` value of `none`, unless the list is nested within the {{HTMLElement("nav")}} navigation element. This [behavior is intentional](https://webkit.org/b/170179#c1) and is not considered a bug.
+
+To ensure lists are announced as lists, include [`role="list"`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) to {{HTMLElement("ol")}} and {{HTMLElement("ul")}} elements, especially if the list is not nested in a `<nav>`. This restores list semantics without affecting the design:
+
+```html
+<ul role="list">
+  <li>An item</li>
+  <li>Another item</li>
+</ul>
+```
+
+If an ARIA `role` is not an option for your code, CSS can be used instead. Adding non-empty [pseudo-content](/en-US/docs/Web/CSS/content) such as text or images before each list item can restore list semantics, but impacts the visual appearance. Safari determines if the added pseudo-content suffices as accessible content, restoring list semantics if so. Generally, Safari considers text and images as sufficient, which is why the `content: "+ ";` shown below works (but requires additional styling to not affect the design).
+
+```css
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "+ ";
+}
+```
+
+A declaration of `content: "";` (an empty string) is ignored, as are `content` values that contain only spaces, such as `content: " ";`.
+
+These CSS workarounds should only be used when an HTML solution is unavailable, and only after testing to ensure that they don't result in unexpected behaviors that may negatively impact user experience.
+
+- ['Fixing' Lists](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html) (2023)
+- [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
+- [Understanding WCAG: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding success criterion 1.3.1: Info and relationships | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
 ## Specifications
 
@@ -185,4 +153,7 @@ List 2
 
 ## See also
 
-- {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- Component properties: {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, and {{Cssxref("list-style-position")}}
+- {{Cssxref("::marker")}} pseudo-element
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

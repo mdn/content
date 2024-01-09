@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Set.add
 
 {{JSRef}}
 
-The **`add()`** method inserts a new element with a specified value in to a `Set` object, if there isn't an element with the same value already in the `Set`.
+The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with a specified value in to this set, if there isn't an element with the same value already in this set
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 

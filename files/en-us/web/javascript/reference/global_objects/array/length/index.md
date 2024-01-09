@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Array.length
 
 The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-length.html", "shorter")}}
 
 ## Value
 
@@ -126,8 +126,8 @@ numbers.push(5); // // TypeError: Cannot assign to read only property 'length' o
 
 ## See also
 
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
-- [`TypedArray`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
+- [`TypedArray.prototype.length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
 - [`String`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

@@ -27,7 +27,7 @@ By default the value(s) in the `browser-compat` key are used.
 Each value references a particular feature and its associated compatibility and specification information in the [browser-compat-data](https://github.com/mdn/browser-compat-data) repository.
 For example, the {{cssxref("text-align")}} page has the following key, which it uses to fetch the associated specification information.
 
-```md
+```yaml
 browser-compat: css.property.text-align
 ```
 
@@ -35,7 +35,7 @@ Some features are not maintained in the above repository.
 In these cases, specification information can be added to the page front matter using the `spec-urls` key.
 For example, the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute has the front matter key:
 
-```
+```yaml
 spec-urls: https://w3c.github.io/aria/#aria-atomic
 ```
 
