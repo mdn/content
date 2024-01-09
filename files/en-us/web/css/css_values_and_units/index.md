@@ -145,7 +145,8 @@ For example, `em` is relative to the font size on the element and `vh` is relati
 | `cap`  | Cap height (the nominal height of capital letters) of the element's font.                                                              |
 | `ch`   | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
 | `ic`   | Average character advance of a full width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
-| `lh`   | Line height of the element.       
+| `lh`   | Line height of the element.  
+      |    
 | `rem`  | Font size of the root element.                                                                                                         |                                                                                                     |
 | `rcap` | Cap height (the nominal height of capital letters) of the root element's font.  
       |
@@ -153,8 +154,7 @@ For example, `em` is relative to the font size on the element and `vh` is relati
       |
 | `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph. 
       |
-| `ric`  | Average character advance of a full width glyph in the root element's font, as represented by the "水" (CJK water ideograph, U+6C34)
-      |
+| `ric`  | Average character advance of a full width glyph in the root element's font, as represented by the "水" (CJK water ideograph, U+6C34) |
 | `rlh`  | Line height of the root element.                                                                                                       |
 | `vw`   | 1% of viewport's width.                                                                                                                |
 | `vh`   | 1% of viewport's height.                                                                                                               |
