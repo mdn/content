@@ -8,9 +8,8 @@ browser-compat: api.DataTransferItem.getAsFile
 
 {{APIRef("HTML Drag and Drop API")}}
 
-If the item is a file, the **`DataTransferItem.getAsFile()`**
-method returns the drag data item's {{domxref("File")}} object. If the item is not a
-file, this method returns `null`.
+If the item is a file, the **`DataTransferItem.getAsFile()`** method returns the drag data item's {{domxref("File")}} object.
+If the item is not a file, this method returns `null`.
 
 ## Syntax
 
@@ -25,13 +24,11 @@ None.
 ### Return value
 
 - {{domxref("File")}}
-  - : If the drag data item is a file, a {{domxref("File")}} object is returned; otherwise
-    `null` is returned.
+  - : If the drag data item is a file, a {{domxref("File")}} object is returned; otherwise `null` is returned.
 
 ## Examples
 
-This example shows the use of the `getAsFile()` method in a
-{{domxref("HTMLElement/drop_event", "drop")}} event handler.
+This example shows the use of the `getAsFile()` method in a {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function dropHandler(ev) {
