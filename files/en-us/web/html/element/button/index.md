@@ -19,7 +19,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-
 - `disabled`
 
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
