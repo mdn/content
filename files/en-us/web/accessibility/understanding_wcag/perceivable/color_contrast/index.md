@@ -73,7 +73,7 @@ div {
 }
 
 .good {
-  background-color: #5A80A9;
+  background-color: #5a80a9;
 }
 ```
 
