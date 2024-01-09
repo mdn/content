@@ -74,7 +74,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Good_Contrast', '100%', '200')}}
+{{EmbedLiveSample('Good_Contrast', '100%', '100')}}
 
 ### Bad Contrast
 
