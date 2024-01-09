@@ -92,7 +92,7 @@ You should prepare for the removal of cross-site cookies by limiting the amount 
 For example:
 
 - Use an alternative client-side storage mechanism such as the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API) to persist data. Web storage does have the downside that the data is stored per-origin, so it can't be shared. Note that web storage has two variants — `sessionStorage` and `localStorage`. We would recommend using `sessionStorage` for extra security, as data only persists for the lifetime of the window or tab it exists in. `localStorage` data persists even after the window or tab is closed and reopened. This means that there is a higher chance of it falling into the wrong hands, for example on a shared workstation.
-- Use a technology such as [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless), [First-party sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) and/or the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way or block them altogether. These technologies currently have limited browser support.
+- Use a technology such as the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) to allow your sites to opt-in to using cross-site cookies in a safe and controlled way.
 - Use a server-side solution for data persistence.
 
 See our [privacy guide](/en-US/docs/Web/Privacy) and particularly [Cut down on tracking cookies](/en-US/docs/Web/Privacy#cut_down_on_tracking_cookies) for more context around this.

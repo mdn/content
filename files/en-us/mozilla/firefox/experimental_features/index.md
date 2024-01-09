@@ -59,47 +59,6 @@ Layout for `input type="search"` has been updated. This causes a search field to
   </tbody>
 </table>
 
-### showPicker() method for HTML select elements
-
-The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction.
-(See [Firefox bug 1854112](https://bugzil.la/1854112) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>121</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.select.showPicker.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Toggle password display
 
 HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
@@ -266,9 +225,13 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   </tbody>
 </table>
 
-Note that the related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-(See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+Note:
+
+- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
+  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
+  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
+- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
+  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### Single numbers as aspect ratio in media queries
 
@@ -1170,51 +1133,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### Array transfer
-
-The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods are used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another.
-The `transferToFixedLength()` method always creates a fixed length buffer, while `transfer()` may create a variable buffer, but only if the original buffer had a variable length.
-After transfer, the original buffer is detached from the original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}.
-(See [Firefox bug 1841113](https://bugzil.la/1841113) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version removed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>NA</td>
-      <td>No</td>
-    </tr>
-    <tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_transfer</code></td>
-    </tr>
-    </tr>
-  </tbody>
-</table>
-
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
@@ -1686,8 +1604,8 @@ See [Firefox bug 1823757](https://bugzil.la/1823757) for more details.
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>114</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1793,7 +1711,8 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
 
 #### ClipboardItem
 
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported and {{domxref('Clipboard.write()')}} accepts a sequence of {{domxref('ClipboardItem','clipboard items')}} instead of the previously implemented {{domxref('DataTransfer','dataTransfer object')}}. It is available behind the pref `dom.events.asyncClipboard.clipboardItem` which was previously `dom.events.asyncClipboard.dataTransfer`. See [Firefox bug 1619947](https://bugzil.la/1619947) for more details.
+The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1806,8 +1725,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1816,8 +1735,8 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
     </tr>
     <tr>
       <th>Beta</th>
-      <td>87</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Release</th>
@@ -1831,9 +1750,10 @@ The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} i
   </tbody>
 </table>
 
-#### ClipboardRead
+#### Clipboard read and write
 
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxref('Clipboard')}} interface is also now available under the `dom.events.asyncClipboard.read` preference, when previously it was under `dom.events.asyncClipboard.clipboardItem`. (See [Firefox bug 1701512](https://bugzil.la/1701512) for more details.)
+The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
+(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
 
 <table>
   <thead>
@@ -1846,8 +1766,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>90</td>
-      <td>No</td>
+      <td>122</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
@@ -1856,7 +1776,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Beta</th>
-      <td>90</td>
+      <td>Yes</td>
       <td>No</td>
     </tr>
     <tr>
@@ -1866,7 +1786,7 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read) method of the {{domxr
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.read</code></td>
+      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
     </tr>
   </tbody>
 </table>
@@ -2159,6 +2079,50 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Screen Wake Lock API
+
+The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) allows a web application to request that the screen not be dimmed or locked while it is active.
+This is useful for navigation and reading applications, and any application where the screen doesn't get regular tactile input while the application is in use (the default way to keep a screen awake).
+The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}.
+This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
+See [Firefox bug 1589554](https://bugzil.la/1589554) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>122</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenwakelock.enabled</code></td>
     </tr>
   </tbody>
 </table>

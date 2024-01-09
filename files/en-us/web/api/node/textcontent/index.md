@@ -8,7 +8,7 @@ browser-compat: api.Node.textContent
 
 {{APIRef("DOM")}}
 
-The **`textContent`** property of the {{domxref ("Node")}}
+The **`textContent`** property of the {{domxref("Node")}}
 interface represents the text content of the node and its descendants.
 
 > **Note:** `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,

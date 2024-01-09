@@ -31,7 +31,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 
 - The {{domxref("Element.getElementsByTagName")}}, {{domxref("Element.getElementsByTagNameNS")}} and {{domxref("Element.getElementsByClassName")}} methods now return a live {{domxref("HTMLCollection")}} ([Firefox bug 799464](https://bugzil.la/799464)).
 - The {{domxref("File")}} `mozLastModifiedDate` property has been implemented. ([Firefox bug 793955](https://bugzil.la/793955))
-- The {{domxref("File")}} lastModifiedDate property returns the current date, when the date of the last modification is unknown. ([Firefox bug 793459](https://bugzil.la/793459)
+- The {{domxref("File")}} lastModifiedDate property returns the current date, when the date of the last modification is unknown. ([Firefox bug 793459](https://bugzil.la/793459))
 - The {{domxref("CanvasRenderingContext2D")}} `isPointInStroke` method has been implemented ([Firefox bug 803124](https://bugzil.la/803124)).
 - The {{domxref("HTMLCanvasElement")}} `toBlob` method has been implemented ([Firefox bug 648610](https://bugzil.la/648610)).
 - The `Node.isSupported` and the {{domxref("document.implementation", "document.implementation.hasFeature()")}} methods have been changed to always return `true` ([Firefox bug 801425](https://bugzil.la/801425)).
@@ -40,7 +40,7 @@ Firefox 19 was released on February 19, 2013. This article lists key changes tha
 
 ### XForms
 
-Support for [XForms](/en-US/docs/XForms) has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms) in Firefox 19.
+Support for XForms has been [**removed**](https://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms) in Firefox 19.
 
 ## Changes for add-on and Mozilla developers
 
