@@ -123,7 +123,7 @@ for await (const filePath of walkSync(getRootDir())) {
         if (locations.length) {
           for (const location of locations) {
             console.error(
-              `ERROR:${relativePath}:${location.line}:${location.column}:URL fragment '${fragment}' is broken`,
+              `ERROR:${relativePath}:${location.line}:${location.column}:URL fragment in URL '${fragment}' is broken`,
             );
           }
         }
