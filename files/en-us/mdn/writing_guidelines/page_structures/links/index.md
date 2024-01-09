@@ -1,6 +1,6 @@
 ---
 title: Link macros
-slug: MDN/Writing_guidelines/Page_structures/Macros/Links
+slug: MDN/Writing_guidelines/Page_structures/Links
 page-type: mdn-writing-guide
 ---
 

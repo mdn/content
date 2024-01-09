@@ -112,7 +112,7 @@ The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros)
 ## See also
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
-- [Content link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Links)
+- [Content link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [Page section macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)
 - [Banners and notices macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)
 - [All macro](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
