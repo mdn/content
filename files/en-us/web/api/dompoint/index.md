@@ -40,11 +40,11 @@ _`DOMPoint` inherits instance methods from its parent, {{domxref("DOMPointReadOn
 _`DOMPoint` may also inherit static methods from its parent, {{domxref("DOMPointReadOnly")}}._
 
 - {{domxref("DOMPoint/fromPoint_static", "DOMPoint.fromPoint()")}}
-  - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties) which provides the values for its properties.
+  - : Creates a new mutable `DOMPoint` object given an existing point (or an object containing matching properties), which provides the values for its properties.
 
 ## Examples
 
-In the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), `DOMPointReadOnly` values are used to represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two `DOMPointReadOnly` attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRViewerPose.orientation","orientation")}} as a quaternion.
+In the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), `DOMPointReadOnly` values represent positions and orientations. In the following snippet, the pose of the XR device (such as a VR headset or phone with AR capabilities) can be retrieved by calling using {{domxref("XRFrame.getViewerPose()")}} during an {{domxref("XRSession")}} animation frame, then accessing the resulting {{domxref("XRPose")}}'s {{domxref("XRPose.transform","transform")}} property, which contains two `DOMPointReadOnly` attributes: {{domxref("XRRigidTransform.position","position")}} as a vector and {{domxref("XRRigidTransform.orientation.orientation","orientation")}} as a quaternion.
 
 ```js
 function onXRFrame(time, xrFrame) {
