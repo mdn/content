@@ -826,9 +826,9 @@ div {
       transparent 5px,
       rgb(143 77 63 / 25%) 5px,
       rgb(143 77 63 / 25%) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgb(
-          143 77 63 / 25%
-        ) 5px, rgb(143 77 63 / 25%) 10px);
+    ), repeating-linear-gradient(45deg, transparent, transparent 5px
+      rgb(143 77 63 / 25%) 5px,
+      rgb(143 77 63 / 25%) 10px);
 
   background: repeating-linear-gradient(
       90deg,
