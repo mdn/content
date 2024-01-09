@@ -141,13 +141,13 @@ Local font-relative lengths specify a length in relation to an [element](/en-US/
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
 
 | Unit   | Relative to                                                                                                                            |
-| ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| ------ | ------------ |
 | `em`   | Font size of the element.                                                                                                              |
 | `ex`   | x-height of the element's font.                                                                                                        |
 | `cap`  | Cap height (the nominal height of capital letters) of the element's font.                                                              |
 | `ch`   | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
 | `ic`   | Average character advance of a full width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
-| `lh`   | Line height of the element.  
+| `lh`   | Line height of the element.                                                                                                            |
 
 Root font-relative lengths specify a length in relation to a [root element](/en-US/docs/Web/HTML/Element/html)
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
