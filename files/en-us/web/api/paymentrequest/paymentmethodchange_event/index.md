@@ -43,17 +43,12 @@ _In addition to the properties below, this interface includes properties inherit
 
 Let's take a look at an example. This code creates a new {{domxref("PaymentRequest")}}, adds a handler for the `paymentmethodchange` event by calling the request's {{domxref("EventTarget.addEventListener", "addEventListener()")}}, then calls {{domxref("PaymentRequest.show", "show()")}} to present the payment interface to the user.
 
-The code assumes the existence of a method `detailsForShipping()`, which returns an object containing the shipping options for the `ground` shipping method, in the form found in the `PaymentShippingOption` dictionary. By doing so, the payment form defaults to the ground shipping method.
+The code assumes the existence of a method `detailsForShipping()`, which will return an object provides information about the requested transaction.
 
 ```js
-const options = {
-  requestShipping: true,
-};
-
 const paymentRequest = new PaymentRequest(
   paymentMethods,
   detailsForShipping("ground"),
-  options,
 );
 
 paymentRequest.addEventListener(
