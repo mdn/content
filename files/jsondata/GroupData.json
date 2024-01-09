@@ -142,18 +142,10 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
-      "guides": [
-        "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
-      ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
       "methods": [],
       "properties": ["Navigator.clipboard"],
-      "events": [
-        "Window: clipboardchange",
-        "Element: copy",
-        "Element: cut",
-        "Element: paste"
-      ]
+      "events": ["Element: copy", "Element: cut", "Element: paste"]
     },
     "Compression Streams API": {
       "overview": ["Compression Streams API"],
