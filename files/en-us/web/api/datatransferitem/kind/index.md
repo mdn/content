@@ -8,7 +8,7 @@ browser-compat: api.DataTransferItem.kind
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only **`DataTransferItem.kind`** property returns a {{domxref("DataTransferItem")}} representing the _drag data item_ kind: some text or some file.
+The read-only **`DataTransferItem.kind`** property returns the kind of the {{domxref("DataTransferItem")}} object representing the _drag data item_: a plain Unicode string or file.
 
 ## Value
 
