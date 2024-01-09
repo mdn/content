@@ -1,6 +1,6 @@
 ---
-title: CSS Houdini
-slug: Web/Guide/Houdini
+title: Houdini
+slug: Web/API/Houdini
 page-type: guide
 ---
 
