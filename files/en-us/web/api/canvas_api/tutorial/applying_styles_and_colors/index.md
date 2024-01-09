@@ -158,7 +158,7 @@ draw();
 
 {{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
-### An example using `rgb()`
+### An example using `rgb()` with alpha transparency
 
 In this second example, we do something similar to the one above, but instead of drawing circles on top of each other, I've drawn small rectangles with increasing opacity. Using `rgb()` gives you a little more control and flexibility because we can set the fill and stroke style individually.
 
