@@ -96,7 +96,6 @@ There are plans to further extend possible queries by adding the generalized con
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
   - {{domxref("MediaQueryList")}} API
-  - {{domxref("CSSOMString")}} API
   - {{domxref("CSSRule")}} API
   - {{domxref("MediaList")}} interface
     - {{domxref("MediaList.mediaText")}} property
