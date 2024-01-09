@@ -7,10 +7,11 @@ page-type: mdn-writing-guide
 {{MDNSidebar}}
 
 MDN supports displaying code blocks within the articles as _live samples_, enabling readers to see both the code and its output as it would look on a web page. This feature allows readers to understand exactly what the executed code would produce, making the documentation dynamic and instructive.
+It also allows authors to be absolutely sure that the code blocks in documentation have the expected output, and work appropriately when used with different browsers.
 
 The live sample system can process code blocks written in HTML, CSS, and JavaScript, regardless of the order in which they are written in the page. This ensures that the output corresponds to the combined source code because the system runs the code directly within the page.
 
-> **Note:** "Live samples" are _not interactive_.
+> **Note:** "Live samples" are _not inherently interactive_, but you can [add some interactivity yourself if needed](#interactive_live_samples).
 
 ## How does the live sample system work?
 
@@ -330,3 +331,92 @@ We get this output by running the code blocks above using the string identifier 
   - : When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
 - Using a "Result" block
   - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).
+
+## Interactive live samples
+
+Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples), live samples don't provide mechanisms for outputting the result of `console.log()` calls, or resetting the example values or code to their default state.
+If you want those features then you have to implement them yourself.
+
+In most cases emulating a basic console log is sufficient for demonstrating the features of an API.
+If you're allowing users to enter values or modify the UI, it also makes sense to provide a "Reset" button to restore the example to it's original state.
+
+### Example live sample with reload and logging
+
+This example shows how to implement a simple interactive example.
+When the user enters a value into either of two numeric inputs the example logs the calculation and result.
+
+#### HTML
+
+The first part of the HTML creates two numeric inputs and their labels, restricting their values between 0 and 9.
+
+```html
+<label for="num1">Number 1:</label>
+<input type="number" id="num1" name="num1" value="0" min="0" max="9" />
+<label for="num2">Number 2:</label>
+<input type="number" id="num2" name="num2" value="0" min="0" max="9" />
+```
+
+We then create a {{HTMLElement("pre")}} element that will be used for logging.
+
+```html
+<pre id="log"></pre>
+```
+
+Last of all, we define a "Reset" button for resetting the example.
+
+```html
+<button id="reset" type="button">Reset</button>
+```
+
+#### JavaScript
+
+The code for logging is kept deliberately simple and safe.
+The logging function `log()` provides a compact mechanism to write log text into a new line of the log element each time it is called.
+The method sets the content of the log element using the `innerText` property, which is safer than using `innerHTML` because the logged text is not parsed to HTML (which might potentially inject malicious code).
+
+```js
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText += `\n${text}`;
+}
+```
+
+The code to reload and clear the example adds an event listener on the "reset" button that calls [`window.location.reload`](/en-US/docs/Web/API/Location/reload) with argument of `true`.
+This forces the {{HTMLElement("iframe")}} containing the example to reload itself, bypassing the cache.
+
+```js
+const reload = document.querySelector("#reset");
+
+reload.addEventListener("click", () => {
+  window.location.reload(true);
+});
+```
+
+Next the code adds a listener on both of the {{HTMLElement("input")}} elements, which calls the `multiplyAndLog()` method whenever the value in either element is changed.
+The `multiplyAndLog()` method formats a string for the calculation and then calls `log()` to record the result.
+
+```js
+const inputs = document.querySelectorAll("input");
+inputs.forEach((input) => {
+  input.addEventListener("change", () => {
+    multiplyAndLog();
+  });
+});
+
+const input1 = document.querySelector("#num1");
+const input2 = document.querySelector("#num2");
+
+function multiplyAndLog() {
+  const logText = `${input1.value} x ${input2.value} = ${
+    input1.value * input2.value
+  }`;
+  log(logText);
+}
+```
+
+#### Result
+
+Enter a value in either number input to log the multiplication of the values in both inputs.
+Click "Reset" to reset the example.
+
+{{EmbedLiveSample("Example live sample with reload and logging", "100%", "300px")}}
