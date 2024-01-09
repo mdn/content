@@ -112,15 +112,9 @@ table td {
 
 At the beginning of the markup, we have a hidden support warning that we will show later via JavaScript if the browser doesn't support the `shadowrootmode` attribute. After that, there are two {{HTMLElement("article")}} elements with nested {{HTMLElement("style")}} elements that behave differently. The first is global to the whole document, while the second is scoped to the shadow root generated in place of the `<template>` element because the `shadowrootmode` attribute is present.
 
-```css hidden
-body {
-  font-family: sans-serif;
-}
-```
-
 ```html
 <p hidden>
-  ⚠️ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
+  ⛔ Your browser doesn't support <code>shadowrootmode</code> attribute yet.
 </p>
 <article>
   <style>
@@ -153,7 +147,7 @@ document
   .toggleAttribute("hidden", isShadowRootModeSupported);
 ```
 
-{{EmbedLiveSample("Declarative shadow DOM", 500, 120)}}
+{{EmbedGHLiveSample("interactive-examples/live-examples/html-examples/template-shadowrootmode/scoping.html", "", "120")}}
 
 ## Avoiding DocumentFragment pitfalls
 
@@ -280,3 +274,4 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [Introduction to declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom)
