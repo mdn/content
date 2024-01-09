@@ -20,6 +20,10 @@ MDN provides macros that create a list of links:
 
   - : When included without parameters, inserts an ordered list of links to the current page's subpages. This macro is most often used within [sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars#sidebars_adding_additional_content) (hence the macro name), where the bullets are not rendered. The first parameter is a slug of the link tree's parent page. The link text is displayed as code. Setting a second parameter to `true` or `1` converts the links to plain text. Setting a third parameter to `true` or `1` adds a link the slug (parent) page at the top of the list with "Overview" as the link text.
 
+  - [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
+
+  - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations. This creates hierarchical lists up to two levels deep. The pages' titles are used as the link text and their summaries as tooltips.
+
 ### Example link list
 
 To include an ordered list of links which includes this page and its siblings, you write the following:
@@ -60,18 +64,7 @@ Check the source code for each macro to understand the various parameters; while
 
 To learn which parameters each macro supports along with the order of parameters for each macro, the macro's source file, linked above, includes documentation. There is a [list of commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), each of which outputs links in the main content area of the page.
 
-## Underlying code for MDN macros
-
 There are around 100 [available macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Here are a few standard macros for generating quicklinks and an example of a hardcoded Yari macro list.
-
-- [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs)
-  - : Builds the standard quicklinks for CSS Reference pages.
-- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs)
-  - : Builds the standard quicklinks for HTML Reference pages.
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs)
-  - : Creates a set of quicklinks using the current page's (or the specified page's) children as the destinations.
-    This creates hierarchical lists up to two levels deep.
-    The pages' titles are used as the link text and their summaries as tooltips.
 
 ## See also
 
