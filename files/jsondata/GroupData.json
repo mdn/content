@@ -142,18 +142,10 @@
     },
     "Clipboard API": {
       "overview": ["Clipboard API"],
-      "guides": [
-        "/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard"
-      ],
       "interfaces": ["Clipboard", "ClipboardEvent", "ClipboardItem"],
       "methods": [],
       "properties": ["Navigator.clipboard"],
-      "events": [
-        "Window: clipboardchange",
-        "Element: copy",
-        "Element: cut",
-        "Element: paste"
-      ]
+      "events": ["Element: copy", "Element: cut", "Element: paste"]
     },
     "Compression Streams API": {
       "overview": ["Compression Streams API"],
@@ -604,6 +596,31 @@
       "properties": [],
       "events": ["Window: popstate"]
     },
+    "Houdini API": {
+      "overview": ["Houdini APIs"],
+      "guides": [
+        "/docs/Web/API/CSS_Properties_and_Values_API/guide",
+        "/docs/Web/API/CSS_Typed_OM_API/Guide",
+        "/docs/Web/API/CSS_Painting_API/Guide"
+      ],
+      "interfaces": [
+        "CSSImageValue",
+        "CSSKeywordValue",
+        "CSSMathValue",
+        "CSSNumericValue",
+        "CSSPositionValue",
+        "CSSStyleValue",
+        "CSSTransformValue",
+        "CSSUnitValue",
+        "CSSUnparsedValue",
+        "PaintWorkletGlobalScope",
+        "StylePropertyMap",
+        "Worklet"
+      ],
+      "methods": ["CSS.registerProperty", "Worklet.addModule"],
+      "properties": [],
+      "events": []
+    },
     "HTML DOM": {
       "overview": ["HTML DOM API"],
       "interfaces": [
@@ -898,13 +915,15 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
         "MediaStreamTrack",
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints"
+        "MediaTrackSupportedConstraints",
+        "InputDeviceInfo"
       ],
       "methods": ["HTMLCanvasElement.captureStream()"],
       "properties": ["Navigator.mediaDevices"],
@@ -1246,7 +1265,7 @@
       "overview": ["Screen Wake Lock API"],
       "interfaces": ["WakeLock", "WakeLockSentinel"],
       "methods": [],
-      "properties": ["Navigator.wakelock"],
+      "properties": ["Navigator.wakeLock"],
       "events": []
     },
     "Selection API": {
@@ -1566,12 +1585,14 @@
       "methods": [],
       "properties": [],
       "events": [
+        "Element: auxclick",
         "Element: beforeinput",
         "Element: blur",
         "Element: click",
         "Element: compositionstart",
         "Element: compositionupdate",
         "Element: compositionend",
+        "Element: contextmenu",
         "Element: dblclick",
         "Element: focus",
         "Element: focusin",
@@ -1637,7 +1658,10 @@
       "overview": ["VirtualKeyboard API"],
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
-      "properties": ["Navigator.virtualKeyboard"],
+      "properties": [
+        "HTMLElement.virtualkeyboardpolicy",
+        "Navigator.virtualKeyboard"
+      ],
       "events": []
     },
     "Visual Viewport": {
