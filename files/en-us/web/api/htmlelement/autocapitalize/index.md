@@ -35,9 +35,7 @@ A string that represents the element's capitalization behavior for user input. V
 The following example shows how to control capitalization behavior for user input via script:
 
 ```html
-<div>
-  Current capitalization behavior is: <span id="ac-label"></span>
-</div>
+<div>Current capitalization behavior is: <span id="ac-label"></span></div>
 <div id="ac-element" contenteditable="true" autocapitalize="default">
   input here
 </div>
@@ -46,8 +44,8 @@ The following example shows how to control capitalization behavior for user inpu
   <option value="none">none</option>
   <option value="sentences">sentences</option>
   <option value="words">words</option>
-  <option value="characters">characters</option>
-</select>Select the capitalization behavior
+  <option value="characters">characters</option></select
+>Select the capitalization behavior
 ```
 
 ```js
