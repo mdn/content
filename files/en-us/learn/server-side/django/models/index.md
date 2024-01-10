@@ -321,7 +321,7 @@ Copy the `Book` model below and again paste it into the bottom of your file. The
 
 The model uses a `CharField` to represent the book's `title` and `isbn`.
 For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise, it would default to "Isbn"). We also set the parameter `unique` as `true` to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table).
-Unlike for the `isbn` (and the genre name), the `title` is is not set to be unique, because it is possible for different books to have the same name.
+Unlike for the `isbn` (and the genre name), the `title` is not set to be unique, because it is possible for different books to have the same name.
 The model uses `TextField` for the `summary`, because this text may need to be quite long.
 
 ```python

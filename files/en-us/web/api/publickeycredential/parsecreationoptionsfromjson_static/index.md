@@ -71,7 +71,7 @@ const createCredentialOptionsJSON = {
 };
 ```
 
-Because this object only uses JSON data types, it can be be serialized to JSON using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and sent to the web app.
+Because this object only uses JSON data types, it can be serialized to JSON using [`JSON.stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) and sent to the web app.
 
 ```js
 JSON.stringify(createCredentialOptionsJSON);
