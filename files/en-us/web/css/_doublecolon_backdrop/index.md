@@ -32,7 +32,7 @@ When multiple elements have been placed into the top layer, each one has its own
 ```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
-  background: rgba(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 25%);
 }
 ```
 

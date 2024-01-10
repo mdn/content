@@ -88,7 +88,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 ### Instance properties included from ARIA
 
-_The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
+_The `Element` interface also includes the following properties._
 
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
@@ -185,6 +185,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : Returns whether an element is expected to be visible or not based on configurable checks.
 - {{DOMxRef("Element.closest()")}}
   - : Returns the `Element` which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.computedStyleMap()")}}

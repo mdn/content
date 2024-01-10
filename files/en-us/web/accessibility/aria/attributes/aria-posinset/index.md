@@ -38,7 +38,7 @@ In a [`feed`](/en-US/docs/Web/Accessibility/ARIA/Roles/feed_role), each {{HTMLEl
 - `<integer>`
   - : Integer greater than or equal to 1, and less than or equal to the value of `aria-setsize`.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaPosInSet")}}
   - : The [`ariaPosInSet`](/en-US/docs/Web/API/Element/ariaPosInSet) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-posinset` attribute.

@@ -46,5 +46,4 @@ Firefox 3 offers improved [Scalable Vector Graphics](/en-US/docs/Web/SVG) (SVG) 
 ## See also
 
 - [SVG](/en-US/docs/Web/SVG)
-- [SVG in Firefox](/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox)
 - [Firefox 3 for developers](/en-US/docs/Mozilla/Firefox/Releases/3)

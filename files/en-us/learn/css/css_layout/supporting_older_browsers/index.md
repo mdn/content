@@ -161,7 +161,6 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 ## See also
 
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [Backwards Compatibility of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [Cascading Web Design with Feature Queries](https://24ways.org/2017/cascading-web-design/)
