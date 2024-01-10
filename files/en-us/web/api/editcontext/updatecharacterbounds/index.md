@@ -10,17 +10,9 @@ browser-compat: api.EditContext.updateCharacterBounds
 
 The **`EditContext.updateCharacterBounds()`** method of the {{domxref("EditContext")}} interface should be called as response to a {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event to inform the operating system about the position and size of the characters in the `EditContext` object.
 
+The `characterboundsupdate` event is the only time you need to call the `updateCharacterBounds()` method.
+
 The character bounds information is then used by the operating system to correctly position the {{glossary("IME")}} (Input Method Editor) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a `<canvas>` element.
-
-### When to use the `updateCharacterBounds` method
-
-The following steps describe when to use the `updateCharacterBounds()` method:
-
-1. The user interacts with the text in the editable text region.
-2. The `EditContext` object automatically updates its internal text content, and fires {{domxref("EditContext.textupdate_event", "textupdate")}} events as needed.
-3. Depending on the input method used by the user, the operating system may need to know the position and size of the characters. If needed, the operating system indicates that it requires this information.
-4. The `EditContext` object fires a {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event.
-5. The event handler for the `characterboundsupdate` event calculates the character bounds for the text, and then calls the `updateCharacterBounds()` method to give the operating system the information it needs.
 
 ### Avoid sudden jumps in the IME window position
 

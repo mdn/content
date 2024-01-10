@@ -21,12 +21,12 @@ updateSelectionBounds(selectionBounds)
 ### Parameters
 
 - `selectionBounds`
-  - : A {{jsxref("DOMRect")}} object representing the new selection bounds.
+  - : A {{domxref("DOMRect")}} object representing the new selection bounds.
 
 ### Exceptions
 
 - If no argument is provided, a `TypeError` {{domxref("DOMException")}} is thrown.
-- If the provided argument is not a {{jsxref("DOMRect")}} a `TypeError` {{domxref("DOMException")}} is thrown.
+- If the provided argument is not a {{domxref("DOMRect")}} a `TypeError` {{domxref("DOMException")}} is thrown.
 
 ## Specifications
 

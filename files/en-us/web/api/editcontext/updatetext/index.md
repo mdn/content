@@ -12,7 +12,7 @@ The **`updateText()`** method of the {{domxref("EditContext")}} interface update
 
 This method doesn't need to be used when the user types text in the associated element. The `EditContext` object will automatically update its internal text content, and will fire {{domxref("EditContext.textupdate_event", "textupdate")}} events as needed.
 
-This method can, however, be used when the user interacts with the text content in other ways, such as when deleting text using the backspace or Delete keys, or when pasting text from the clipboard.
+This method can, however, be used when the user interacts with the text content in other ways, such as when pasting text from the clipboard.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ updateText(rangeStart, rangeEnd, text)
 
 ## Example
 
-This example shows how to use the `updateText` method to update the text content in the `EditContext` of a `canvas` element when the user presses the Delete key.
+This example shows how to use the `updateText` method to update the text content in the `EditContext` of a `canvas` element when the user presses the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd> shortcut to paste some text.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -49,29 +49,20 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-canvas.addEventListener("keydown", e => {
-  if (e.key == "Backspace" && editContext.selectionStart > 0) {
-    if (editContext.selectionStart === editContext.selectionEnd) {
-      editContext.updateText(
-        editContext.selectionStart - 1,
-        editContext.selectionStart,
-        ""
-      );
-      editContext.updateSelection(
-        editContext.selectionStart - 1,
-        editContext.selectionStart - 1
-      );
-    } else {
-      editContext.updateText(
-        editContext.selectionStart,
-        editContext.selectionEnd,
-        ""
-      );
-      editContext.updateSelection(
-        editContext.selectionStart,
-        editContext.selectionStart
-      );
-    }
+canvas.addEventListener("keydown", async (e) => {
+  if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
+    const pastedText = await navigator.clipboard.readText();
+
+    editContext.updateText(
+      editContext.selectionStart,
+      editContext.selectionEnd,
+      pastedText
+    );
+
+    editContext.updateSelection(
+      editContext.selectionStart + pastedText.length,
+      editContext.selectionStart + pastedText.length
+    );
   }
 });
 ```

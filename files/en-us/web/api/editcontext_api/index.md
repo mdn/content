@@ -39,7 +39,7 @@ Web authors can also create custom editable regions using the EditContext API. F
 If you decide to implement your own editable region, whether it draws text into a `<canvas>` or renders it into a series of DOM elements, you are responsible for providing the things that the browser would normally provide for you if you were using a `<textarea>` instead. This includes:
 
 - Rendering the text.
-- Rendering the selection.
+- Rendering the selection (if you build your editable region with DOM elements instead of a `<canvas>`, the browser does render the selection for you).
 - Letting the OS text input service know when the selection changes.
 - Letting the OS text input service know where the text is located in the UI, so the input method software can display the IME composition window in the correct location.
 - Applying certain text formats when the user is composing text within the IME composition window.

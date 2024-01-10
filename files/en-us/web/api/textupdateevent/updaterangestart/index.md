@@ -8,7 +8,7 @@ browser-compat: api.TextUpdateEvent.updateRangeStart
 
 {{APIRef("EditContext API")}}
 
-The **`TextUpdateEvent.updateRangeStart`** read-only property indicates the end position of the text range that is being replaced in the {{domxref("EditContext")}} object.
+The **`TextUpdateEvent.updateRangeStart`** read-only property indicates the start position of the text range that is being replaced in the {{domxref("EditContext")}} object.
 
 ## Value
 

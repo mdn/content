@@ -14,7 +14,7 @@ The position and size of the characters in an `EditContext` object is used by th
 
 Web developers will most likely be interested in using the {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event together with the {{domxref("EditContext.updateCharacterBounds()")}} method to update the character bounds when the operating system indicates that it requires information about the position and size of the characters.
 
-The `characterBounds()` method simply returns the list of character bounds that was last updated with `updateCharacterBounds()`.
+The `characterBounds()` method returns the list of character bounds that were last updated with `updateCharacterBounds()`. The list doesn't contain an item for every character in the `EditContext` object, only for the characters that were updated with `updateCharacterBounds()`. To know where the characters are located in the `EditContext` object, use the {{domxref("EditContext.characterBoundsRangeStart")}} property.
 
 ## Syntax
 

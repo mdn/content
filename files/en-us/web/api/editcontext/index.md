@@ -7,7 +7,7 @@ browser-compat: api.EditContext
 
 {{APIRef("EditContext API")}}
 
-The **`EditContext`** interface represents the text edition context of an element that was made editable by using the {{domxref("EditContext API", "", "", "nocode")}}.
+The **`EditContext`** interface represents the text edit context of an element that was made editable by using the {{domxref("EditContext API", "", "", "nocode")}}.
 
 The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("IME")}} (Input Method Editor) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
@@ -40,9 +40,9 @@ _`EditContext` is based on the {{domxref("EventTarget")}} interface, and include
 - {{domxref("EditContext.updateSelection()")}}
   - : Updates the internal state of the selection within the editable text context.
 - {{domxref("EditContext.updateControlBounds()")}}
-  - : TODO???
+  - : Informs the operating system about the position and size of the editable text region.
 - {{domxref("EditContext.updateSelectionBounds()")}}
-  - : TODO???
+  - : Informs the operating system about the position and size of the selection within the editable text region.
 - {{domxref("EditContext.updateCharacterBounds()")}}
   - : Informs the operating system about the position and size of the characters in the `EditContext` object.
 
@@ -58,10 +58,6 @@ _`EditContext` is based on the {{domxref("EventTarget")}} interface, and include
   - : Fired when composition using an IME window is starting.
 - {{domxref("EditContext.compositionend_event", "compositionend")}}
   - : Fired when composition using an IME window is ending.
-
-## Example
-
-TODO???
 
 ## Specifications
 

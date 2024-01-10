@@ -8,7 +8,9 @@ browser-compat: api.EditContext.characterBoundsRangeStart
 
 {{APIRef("EditContext API")}}
 
-The **`characterBoundsRangeStart`** read-only property of the {{domxref("EditContext")}} interface represents the offset, within the editable text content, where the last {{glossary("IME")}} (Input Method Editor) composition started.
+The **`characterBoundsRangeStart`** read-only property of the {{domxref("EditContext")}} interface indicates the index of the character, within the editable text content, that corresponds to the first item in the {{domxref("EditContext.characterBounds()", "characterBounds")}} array.
+
+So, if the `EditContent` contains the characters `abc`, and if `characterBoundRangeStart` is `1`, then that means the first item in the `characterBounds` array contains the bounds for the character `b`.
 
 ## Value
 
