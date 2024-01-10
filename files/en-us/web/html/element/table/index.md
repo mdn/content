@@ -156,15 +156,15 @@ Following elements are part of the table structure:
 - {{HTMLElement("td")}}
 - {{HTMLElement("tfoot")}}
 
-Table box establishes table formatting context. Elements inside table generate rectangular boxes. Each box occupies a number of table cells according to following rules:
+The `<table>` box establishes a table formatting context. Elements inside the `<table>` generate rectangular boxes. Each box occupies a number of table cells according to the following rules:
 
-1. The row boxes fill the table from top to bottom in the order they occur in source code. Each row box occupies one row of cells.
+1. The row boxes fill the table in the source code order from top to bottom. Each row box occupies one row of cells.
 2. A row group box occupies one or more row boxes.
-3. Column boxes are placed next to each other in the order they occur in source code. Depending on the value of [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute, the columns are laid in left to right or right to left direction. A column box occupies one or more columns of table cells.
+3. Column boxes are placed next to each other in source code order. Depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute, the columns are laid in left-to-right or right-to-left direction. A column box occupies one or more columns of table cells.
 4. A column group box occupies one or more column boxes.
-5. A cell box may span over multiple rows and columns. User agents trim cells to fit in available number of rows and columns. Table cells do have padding.
+5. A cell box may span over multiple rows and columns. User agents trim cells to fit in the available number of rows and columns. 
 
-These boxes inside a table do not have margins.
+Table cells do have padding. Boxes that make up a table do not have margins.
 
 ### Table layers and transparency
 
