@@ -218,7 +218,7 @@ function openRequestedSingleTab(url) {
 }
 
 const links = document.querySelectorAll(
-  "a[target='SingleSecondaryWindowName']"
+  "a[target='SingleSecondaryWindowName']",
 );
 for (const link of links) {
   link.addEventListener(
