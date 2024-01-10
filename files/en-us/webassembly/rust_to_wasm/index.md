@@ -286,7 +286,7 @@ npm i ../pkg
 Install the `webpack` dev dependencies:
 
 ```bash
-npm i -D webpack webpack-cli webpack-dev-server copy-webpack-plugin
+npm i -D webpack@5 webpack-cli@5 webpack-dev-server@4 copy-webpack-plugin@11
 ```
 
 Next, we need to configure Webpack. Create `webpack.config.js` and put the following in it:
