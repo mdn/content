@@ -45,7 +45,7 @@ createPattern(image, repetition)
     - `"repeat-y"` (vertical only)
     - `"no-repeat"` (neither direction)
 
-    A ["null"](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`): both are synonymous of `"repeat"`.
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`): both are synonyms of `"repeat"`.
 
 ### Return value
 
