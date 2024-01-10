@@ -51,10 +51,17 @@ The following code snippet demonstrates how the values obtained using the elemen
 ```js
 const element = document.getElementById("elt");
 const out = document.getElementById("out");
+const elementStyle = element.style;
 
 // We loop through all styles
-for (const prop in element.style) {
-  out.textContent += `${prop} = '${element.style.getPropertyValue(prop)}'\n`;
+for (const prop in elementStyle) {
+  if (Object.hasOwn(elementStyle, prop)) {
+    if (Number.isNaN(Number.parseInt(prop))) {
+      console.log(`${prop} = '${elementStyle.getPropertyValue(prop)}'\n`)
+    } else {
+      console.log(`${elementStyle[prop]} = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`)
+    }
+  }
 }
 ```
 
