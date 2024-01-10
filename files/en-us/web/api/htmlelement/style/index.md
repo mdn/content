@@ -59,7 +59,9 @@ for (const prop in elementStyle) {
     if (Number.isNaN(Number.parseInt(prop))) {
       out.textContent += `${prop} = '${elementStyle.getPropertyValue(prop)}'\n`;
     } else {
-      out.textContent += `${elementStyle[prop]} = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
+      out.textContent += `${
+        elementStyle[prop]
+      } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
     }
   }
 }
