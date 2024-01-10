@@ -57,13 +57,9 @@ const elementStyle = element.style;
 for (const prop in elementStyle) {
   if (Object.hasOwn(elementStyle, prop)) {
     if (Number.isNaN(Number.parseInt(prop))) {
-      console.log(`${prop} = '${elementStyle.getPropertyValue(prop)}'\n`);
+      out.textContent += `${prop} = '${elementStyle.getPropertyValue(prop)}'\n`;
     } else {
-      console.log(
-        `${elementStyle[prop]} = '${elementStyle.getPropertyValue(
-          elementStyle[prop],
-        )}'\n`,
-      );
+      out.textContent += `${elementStyle[prop]} = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
     }
   }
 }
