@@ -160,10 +160,9 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 
 ## See also
 
-- [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Using CSS Grid: Supporting Browsers Without Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
-- [Cascading Web Design with Feature Queries](https://24ways.org/2017/cascading-web-design/)
-- [Using Feature Queries (Video)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
+- [`@supports`](/en-US/docs/Web/CSS/@supports) at-rule
+- [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_Conditional_Rules/) module
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
