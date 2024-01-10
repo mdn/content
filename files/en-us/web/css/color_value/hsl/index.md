@@ -36,7 +36,7 @@ hsl(from green h s l / 0.5)
 hsl(from blue h s calc(l + 20))
 ```
 
-The function also accepts a legacy syntax in which all values are separated with commas.
+The absolute syntax can also be written in a legacy form in which all values are separated with commas.
 
 ## Values
 
@@ -82,19 +82,21 @@ In color syntax, setting `none` is equivalent to setting a value of `0` with an 
 
 ### Defining relative color output channel components
 
-The browser destructures the origin color into `hsl()` component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+The browser destructures the origin color into `hsl()` component values that are made available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
-- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
-- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness percentage.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 that represents the origin color's alpha value.
+- The `h` value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
+- The `s` and `l` values are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness percentage.
+- The `alpha` value is resolved to a `<number>` between 0 and 1.0 that represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
 
-For example, let's start with an origin color of `rgb(255 0 0)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses exactly the same channel values:
+For example, let's start with an origin color of `rgb(255 0 0)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `h`, `s`, and `l` channel values as the output channel values:
 
 ```css
 hsl(from rgb(255 0 0) h s l)
 ```
+
+> **Note:** If the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -107,8 +109,6 @@ The following function uses the origin color's channel values inside {{cssxref("
 ```css
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
 ```
-
-This includes an alpha channel value so that you can see what that looks like.
 
 ### Formal syntax
 
