@@ -1,12 +1,10 @@
 ---
-title: CSS Houdini
-slug: Web/Guide/Houdini
+title: Houdini
+slug: Web/API/Houdini
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
-</section>
+{{DefaultAPISidebar("Houdini API")}}
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
 giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
