@@ -25,12 +25,18 @@ A live {{domxref("StylePropertyMap")}} object.
 The following code snippet shows the relationship between HTML `style` attribute and `attributeStyleMap` property:
 
 ```html
-<div style="font-weight: bold;">
+<div style="white-space: pre-line;">
   <div id="el" style="border-top: 1px solid blue; color: red;">
     An example element
   </div>
   <div id="output"></div>
 </div>
+```
+
+```css
+#el {
+  font-size: 16px;
+}
 ```
 
 ```js
