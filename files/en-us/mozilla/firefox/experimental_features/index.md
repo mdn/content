@@ -59,47 +59,6 @@ Layout for `input type="search"` has been updated. This causes a search field to
   </tbody>
 </table>
 
-### showPicker() method for HTML select elements
-
-The {{domxref("HTMLSelectElement.showPicker()")}} method programmatically launches the browser picker for a {{HTMLElement("select")}} element, triggered by user interaction.
-(See [Firefox bug 1854112](https://bugzil.la/1854112) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>121</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>121</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.select.showPicker.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
 ### Toggle password display
 
 HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/Element/input/password)) include an "eye" icon that can be toggled to display or obscure the password text ([Firefox bug 502258](https://bugzil.la/502258)).
@@ -2120,6 +2079,50 @@ See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.screenorientation.allow-lock</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Screen Wake Lock API
+
+The [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) allows a web application to request that the screen not be dimmed or locked while it is active.
+This is useful for navigation and reading applications, and any application where the screen doesn't get regular tactile input while the application is in use (the default way to keep a screen awake).
+The API is accessed through {{domxref("Navigator.wakeLock")}} in secure contexts, which returns a {{domxref("WakeLock")}}.
+This can be used to request a {{domxref("WakeLockSentinel")}} that can be used to monitor the status of the wake lock, and release it manually.
+See [Firefox bug 1589554](https://bugzil.la/1589554) for more details.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version changed</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>122</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.screenwakelock.enabled</code></td>
     </tr>
   </tbody>
 </table>
