@@ -132,7 +132,7 @@ Clicking on the "Add" button in your browser will prove that the `addTask()` cal
 
 ### Aside: a note on naming conventions
 
-We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
+We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
 
 ```diff
 - <Form addTask={addTask} />
