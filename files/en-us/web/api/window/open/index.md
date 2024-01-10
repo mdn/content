@@ -227,7 +227,7 @@ for (const link of links) {
       openRequestedSingleTab(link.href);
       event.preventDefault();
     },
-    false
+    false,
   );
 }
 ```
