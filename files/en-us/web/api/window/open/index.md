@@ -162,7 +162,7 @@ link.addEventListener(
     openRequestedTab(link.href);
     event.preventDefault();
   },
-  false
+  false,
 );
 ```
 
