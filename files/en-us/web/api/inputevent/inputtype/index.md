@@ -21,7 +21,7 @@ available input types, see the [Attributes section of the Input Events Level 2 s
 
 ## Examples
 
-This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLElement/input_event) on an editable
+This example logs the `inputType` for [input events](/en-US/docs/Web/API/Element/input_event) on an editable
 {{htmlElement("div")}}.
 
 ### HTML
