@@ -60,7 +60,7 @@ for (const prop in element.style) {
 }
 ```
 
-{{EmbedLiveSample("Getting_style_information", "100", "130")}}
+{{EmbedLiveSample("Getting_style_information", "100", "200")}}
 
 ## Specifications
 
