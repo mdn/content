@@ -137,7 +137,6 @@ Where a distance unit, also known as a length, is allowed as a value for a prope
 
 There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_Containment), relative to a [container](/en-US/docs/Web/CSS/CSS_container_queries#container_query_length_units).
 
-
 ##### Font-relative lengths
 
 Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
