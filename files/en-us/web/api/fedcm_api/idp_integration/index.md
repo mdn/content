@@ -85,12 +85,12 @@ The properties are as follows:
 
 The following table summarizes the different requests made by the FedCM API:
 
-| Endpoint/resource          | Method | Credentialed | Cookies | Origin |
-| -------------------------- | ------ | ------------ | ------- | ------ |
-| `well-known`/`config.json` | `GET`  | No           | No      | No     |
-| `accounts_endpoint`        | `GET`  | No           | Yes     | No     |
-| `client_metadata_endpoint` | `GET`  | Yes          | No      | Yes    |
-| `id_assertion_endpoint`    | `POST` | Yes          | Yes     | Yes    |
+| Endpoint/resource          | Method | Credentialed | Includes cookies | Includes {{httpheader("Origin")}} |
+| -------------------------- | ------ | ------------ | ---------------- | --------------------------------- |
+| `well-known`/`config.json` | `GET`  | No           | No               | No                                |
+| `accounts_endpoint`        | `GET`  | No           | Yes              | No                                |
+| `client_metadata_endpoint` | `GET`  | Yes          | No               | Yes                               |
+| `id_assertion_endpoint`    | `POST` | Yes          | Yes              | Yes                               |
 
 > **Note:** For a description of the FedCM flow in which these endpoints are accessed, see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
