@@ -371,7 +371,7 @@ input[type="range"][orient="vertical"] {
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#valueAsNumber"><code>valueAsNumber</code></a>
+        <a href="/en-US/docs/Web/HTML/Element/input#valueasnumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>
