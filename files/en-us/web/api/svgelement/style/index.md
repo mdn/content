@@ -55,17 +55,12 @@ The following code snippet demonstrates how the `style` attribute is translated 
 ```
 
 ```js
-const element = document.querySelector("circle");
+const element = document.getElementById("elt");
 const out = document.getElementById("out");
-const elementStyle = element.style;
 
-// We loop through all styles (for…of doesn't work with CSStyleDeclaration)
-for (const prop in elementStyle) {
-  if (Object.hasOwn(elementStyle, prop)) {
-    out.textContent += `${
-      elementStyle[prop]
-    } = '${elementStyle.getPropertyValue(elementStyle[prop])}'\n`;
-  }
+// We loop through all styles
+for (const prop in element.style) {
+  out.textContent += `${prop} = '${element.style.getPropertyValue(prop)}'\n`;
 }
 ```
 
