@@ -25,7 +25,7 @@ The following example shows how to control the [spell-checking](/en-US/docs/Web/
   <span id="sc-label">The spelling and grammar may be checked: </span>
   <span id="sc-element" contenteditable="true" spellcheck="true">test</span>
 </div>
-<input id="spellcheck-controller" type="checkbox" checked />Enable spelling and
+<input id="sc-controller" type="checkbox" checked />Enable spelling and
 grammar check
 ```
 
