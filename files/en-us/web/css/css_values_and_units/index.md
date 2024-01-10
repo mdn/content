@@ -146,10 +146,10 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `cap` | Cap height (the nominal height of capital letters) of the element's font.                                                              |
 | `ch`  | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
-| `em`  | Font size of the element.                                                                                                              |
+| `em`  | [`font size`](en-US/docs/Web/CSS/font-size) of the element.                                                                             |
 | `ex`  | x-height of the element's font.                                                                                                        |
 | `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
-| `lh`  | Line height of the element.                                                                                                            |
+| `lh`  | [`line height`](en-US/docs/Web/CSS/line-height) of the element.                                          |
 
 Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{HTMLElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
@@ -158,10 +158,10 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                                          |
 | `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph.                 |
-| `rem`  | Font size of the root element.                                                                                                          |
+| `rem`  | [`font size`](en-US/docs/Web/CSS/font-size) of the root element.                                                                                                          |
 | `rex`  | x-height of the root element's font.                                                                                                    |
 | `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
-| `rlh`  | Line height of the root element.                                                                                                        |
+| `rlh`  | [`line height`](en-US/docs/Web/CSS/line-height)  of the root element.                                                                   |
 
 ##### Viewport and container relative units
 
@@ -170,15 +170,15 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 
 | Unit   | Relative to                                              |
 | ------ | -------------------------------------------------------- |
-| `vb`   | 1% of viewport's size in the root element's block axis.  |
+| `vb`   | 1% of viewport's size in the root element's [block axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
 | `vh`   | 1% of viewport's height.                                 |
-| `dvh`  | 1% of the dynamic viewport's height. |
-| `dvw`  | 1% of the dynamic viewport's width. |
-| `lvh`  | 1% of the large viewport's height. |
-| `lvw`, | 1% of the large viewport's width. |
-| `svh`  | 1% of the small viewport's height. |
-| `svw`  | 1% of the small viewport's width. |
-| `vi`   | 1% of viewport's size in the root element's inline axis. |
+| `dvh`  | 1% of the [dynamic viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) height. |
+| `dvw`  | 1% of the [dynamic viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) width. |
+| `lvh`  | 1% of the [large viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) height. |
+| `lvw`, | 1% of the [large viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) width. |
+| `svh`  | 1% of the [small viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) height. |
+| `svw`  | 1% of the [small viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) width. |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
 | `vmin` | 1% of viewport's smaller dimension.                      |
 | `vmax` | 1% of viewport's larger dimension.                       |
 | `vw`   | 1% of viewport's width.                                  |
