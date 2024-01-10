@@ -84,9 +84,9 @@ In color syntax, setting `none` is equivalent to setting a value of `0` with an 
 
 The browser destructures the origin color into `hsl()` component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired:
 
-- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the color's {{cssxref("&lt;hue&gt;")}}.
-- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the color's saturation and lightness.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 that represents the color's alpha value.
+- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}}.
+- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 that represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
 
@@ -108,7 +108,7 @@ The following function uses the origin color's channel values inside {{cssxref("
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 0.2) calc(l - 0.1) / calc(alpha - 0.1))
 ```
 
-This includes an alpha channel value so that you8 can see what that looks like.
+This includes an alpha channel value so that you can see what that looks like.
 
 ### Formal syntax
 
