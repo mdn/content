@@ -618,11 +618,11 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `valueAsNumber`
 
-- : The input control's valueAsNumber. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsNumber` property.
+  - : The input control's valueAsNumber. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsNumber` property.
 
 - `valueAsDate`
 
-- : The input control's valueAsDate. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsDate` property.
+  - : The input control's valueAsDate. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsDate` property.
 
 - `width`
 
