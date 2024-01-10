@@ -10,11 +10,11 @@ browser-compat: api.HTMLElement.attributeStyleMap
 
 The **`attributeStyleMap`** read-only property of the {{domxref("HTMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, or assigned using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLElement")}} interface via script.
 
-Shorthand properties are expanded. If you set `style="border-top: 1px solid black"`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
+Shorthand properties are expanded. If you set `border-top: 1px solid black`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
-The difference between {{domxref("HTMLElement.style", "style")}} property and `attributeStyleMap` property is that, the `style` property will list all style properties, no matter it is specificed by `style` attribute or not; but the `attributeStyleMap` property will only list style properties that is specificed by `style` attribute.
+The main difference between {{domxref("HTMLElement.style", "style")}} property and `attributeStyleMap` property is that, the `style` property will return a {{domxref("CSSStyleDeclaration")}} object, while the `attributeStyleMap` property will return a {{domxref("StylePropertyMap")}} object.
 
-Though the property itself is not writable, you could read and write inline styles through the {{domxref("StylePropertyMap")}} object that it expose, just like through the {{domxref("CSSStyleDeclaration")}} object that expose via the `style` property.
+Though the property itself is not writable, you could read and write inline styles through the {{domxref("StylePropertyMap")}} object that it returns, just like through the {{domxref("CSSStyleDeclaration")}} object that returns via the `style` property.
 
 ## Value
 
@@ -38,7 +38,7 @@ const element = document.getElementById("el");
 const output = document.getElementById("output");
 
 for (const property of element.attributeStyleMap) {
-  output.textContent += ``
+  output.textContent += `${property[0]} = ${property[1][0].toString()}`
 }
 ```
 
