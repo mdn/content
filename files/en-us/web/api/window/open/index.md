@@ -117,7 +117,7 @@ const windowFeatures = "left=100,top=100,width=320,height=320";
 const handle = window.open(
   "https://www.mozilla.org/",
   "mozillaWindow",
-  windowFeatures
+  windowFeatures,
 );
 if (!handle) {
   // The window wasn't allowed to open
