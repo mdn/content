@@ -84,7 +84,7 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Value
 
-Include a description of the property's value, including data type and what it represents.
+Include a description of the property's value, including data type and what it represents. Note that some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them, consult [Ìnformation contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information.
 
 ## Examples
 
