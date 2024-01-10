@@ -230,14 +230,17 @@ The valid range included all times between the `min` and `max` values; the time 
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, <code>valueAsNumber</code>.
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#valueAsDate"><code>valueAsDate</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#valueAsNumber"><code>valueAsNumber</code></a>
       </td>
     </tr>
     <tr>

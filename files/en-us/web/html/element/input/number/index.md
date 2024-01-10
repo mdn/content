@@ -422,7 +422,11 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><code>list</code>, <code>value</code>, <code>valueAsNumber</code></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#valueAsNumber"><code>valueAsNumber</code></a>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>
