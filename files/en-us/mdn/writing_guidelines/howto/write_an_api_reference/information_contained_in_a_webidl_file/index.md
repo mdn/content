@@ -227,7 +227,7 @@ The type of the property may be prefixed with an _extended attribute_, a string 
 
     Add the following sentence to the end of the _Value_ section of the article:
 
-    _When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
+    _When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
 
     The small inline example has to be adapted for each property.
 
