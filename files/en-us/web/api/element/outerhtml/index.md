@@ -25,7 +25,7 @@ Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
 
-When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.outerHTML = null` is equivalent to `elt.innerHTML = ""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.innerHTML = ""`.
 
 ### Exceptions
 

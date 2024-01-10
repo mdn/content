@@ -17,7 +17,7 @@ during the time between `mousedown` and `mouseup` events.
 
 A string containing the name of the color (e.g., `blue`, `darkblue`, etc.) or the hexadecimal value of the color (e.g., `#0000FF`).
 
-When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `document.alinkColor = null` is equivalent to `document.alinkColor = ""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `document.alinkColor = null` is equivalent to `document.alinkColor = ""`.
 
 ## Notes
 

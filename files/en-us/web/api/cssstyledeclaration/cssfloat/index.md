@@ -16,7 +16,7 @@ When setting, it invokes {{DOMxRef("CSSStyleDeclaration.setProperty()")}} with `
 
 A string.
 
-When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `csd.cssFloat = null` is equivalent to `csd.cssFloat = ""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `csd.cssFloat = null` is equivalent to `csd.cssFloat = ""`.
 
 ## Example
 

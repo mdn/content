@@ -14,7 +14,7 @@ The **`data`** property of the {{domxref("CharacterData")}} interface represent 
 
 A string with the character information contained in the {{domxref("CharacterData")}} node.
 
-When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `cd.data = null` is equivalent to `cd.data = ""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `cd.data = null` is equivalent to `cd.data = ""`.
 
 ## Example
 

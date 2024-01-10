@@ -36,7 +36,7 @@ border that should surround the image, in CSS pixels. A value of `0`, or an
 empty string, indicates that there should be no border drawn. The default value of
 `border` is `0`.
 
-When set to the `null` value, that `null` value is converted to the empty string (`""`), unlike the common behavior with strings (that would have converted it to the `"null"` string): `elt.border = null` is equivalent to `elt.border = ""`.
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.border = null` is equivalent to `elt.border = ""`.
 
 ## Usage notes
 
