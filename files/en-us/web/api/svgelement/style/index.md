@@ -55,7 +55,7 @@ The following code snippet demonstrates how the `style` attribute is translated 
 ```
 
 ```js
-const element = document.getElementById("elt");
+const element = document.querySelector("circle");
 const out = document.getElementById("out");
 
 // We loop through all styles
