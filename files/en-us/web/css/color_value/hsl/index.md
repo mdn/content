@@ -32,8 +32,8 @@ hsl(from red 240deg s l)
 /* Add a semi-transparent alpha channel to green */
 hsl(from green h s l / 0.5)
 /* Create a lighter blue variant by setting the output lightness */
-/* to the origin color's lightness channel value plus 0.2 */
-hsl(from blue h s calc(l + 0.2))
+/* to the origin color's lightness channel value plus 20% */
+hsl(from blue h s calc(l + 20))
 ```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
@@ -55,7 +55,7 @@ Functional notation of absolute values: `hsl(H S L[ / A])`
 - `L`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). If the `alpha` channel value is not explicitly specified, it defaults to 100%.
 
 ### Relative values
 
@@ -72,7 +72,7 @@ Functional notation of relative values: `hsl(from color hue saturation lightness
 - `lightness`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 ### `none` values
 
@@ -82,10 +82,10 @@ In color syntax, setting `none` is equivalent to setting a value of `0` with an 
 
 ### Defining relative color output channel components
 
-The browser destructures the origin color into `hsl()` component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired:
+The browser destructures the origin color into `hsl()` component channels and makes these values available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
-- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}}.
-- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness.
+- The `h` channel value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
+- The `s` and `l` channels are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness percentage.
 - The `alpha` channel is resolved to a `<number>` between 0 and 1.0 that represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
@@ -105,7 +105,7 @@ hsl(from rgb(255 0 0) 240 60 70)
 The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
 
 ```css
-hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 0.2) calc(l - 0.1) / calc(alpha - 0.1))
+hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
 ```
 
 This includes an alpha channel value so that you can see what that looks like.
@@ -185,6 +185,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #one {
+  /* As per the spec, l + 20% should be specified like this
+  background-color: hsl(from var(--base-color) h s calc(l + 20)); */
+
+  /* In Chrome 121+, s and l channel values incorrectly resolve to numbers between 0-1
+     rather than 0-100, hence l + 20% currently being specified like this */
   background-color: hsl(from var(--base-color) h s calc(l + 0.2));
 }
 
@@ -193,7 +198,24 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
+  /* As per the spec, l - 20% should be specified like this
+  background-color: hsl(from var(--base-color) h s calc(l - 20)); */
+
+  /* In Chrome 121+, s and l channel values incorrectly resolve to numbers between 0-1
+     rather than 0-100, hence l - 20% currently being specified like this */
   background-color: hsl(from var(--base-color) h s calc(l - 0.2));
+}
+
+/* Use @supports to add in support for Safari 16.4+, which supports old
+   syntax that requires % units to be specified in lightness calculations */
+@supports (color: hsl(from red h s calc(l - 20%))) {
+  #one {
+    background-color: hsl(from var(--base-color) h s calc(l + 20%));
+  }
+
+  #three {
+    background-color: hsl(from var(--base-color) h s calc(l - 20%));
+  }
 }
 ```
 

@@ -22,9 +22,9 @@ color-function(from origin-color channel1 channel2 channel3 / alpha)
 1. You create a relative color using the same basic color functions (represented by _`color-function`_ above) as non-relative (absolute) colors — [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
 2. The syntax inside the color function is a bit different for relative colors. First of all, you pass in an **origin color** (represented above by _`origin-color`_) to base your relative color on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model, including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 3. The individual channels of the output color are then defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders. The channels defined here depend on the color function you are using for your relative color. If you are using `hsl()` for example, you would need to define hue, saturation, and lightness values. These could be static values, or values based on the channel values of the origin color.
-4. Optionally, an _`alpha`_ channel value for the output color is defined, preceded by a slash (`/`).
+4. Optionally, an `alpha` channel value for the output color is defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case with absolute color values).
 
-Supporting browsers destructure the origin color into its component color channels (plus the alpha channel if the origin color has one) as represented in the color system you are passing the color in to. These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function — and can be used to calculate new output channel values. See the [Syntax flexibility](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#syntax_flexibility) section for more detail on this.
+Supporting browsers destructure the origin color into its component color channels (plus the `alpha` channel if the origin color has one) as represented in the color system you are passing the color in to. These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function — and can be used to calculate new output channel values. See the [Syntax flexibility](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#syntax_flexibility) section for more detail on this.
 
 Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
@@ -268,7 +268,7 @@ The output is as follows:
 
 To make channel value calculations work in relative colors, all origin color channel values resolve to appropriate {{cssxref("&lt;number&gt;")}} values. For example, in the `lch()` examples above, we are calculating new lightness values by adding or subtracting numbers from the origin color's `l` channel value. If we tried to do `calc(l + 20%)`, that would result in an invalid color — `l` is a `<number>` and cannot be added to a {{cssxref("&lt;percentage&gt;")}}.
 
-- Channel values originally specified as a `<percentage>` resolve to a number appropriate for the output color function.
+- Channel values originally specified as a `<percentage>` resolve to a `<number>` appropriate for the output color function.
 - Channel values originally specified as a {{cssxref("&lt;hue&gt;")}} angle resolve to a number of degrees in the range 0–360.
 
 Check the different color function pages for the specifics of what their origin channel values resolve to.
@@ -435,6 +435,14 @@ fieldset {
   background-color: lch(from var(--base-color) l c calc(h + 180));
 }
 
+/* Use @supports to add in support for Safari 16.4+, which supports old
+   syntax that requires deg units to be specified in hue calculations */
+@supports (color: lch(from red l c calc(h + 180deg))) {
+  .comp :nth-child(2) {
+    background-color: lch(from var(--base-color) l c calc(h + 180deg));
+  }
+}
+
 /* triadic colors */
 /* base color, base color with hue channel - 120 degrees, and base color */
 /* with hue channel + 120 degrees */
@@ -449,6 +457,18 @@ fieldset {
 
 .triadic :nth-child(3) {
   background-color: lch(from var(--base-color) l c calc(h + 120));
+}
+
+/* Use @supports to add in support for Safari 16.4+, which supports old
+   syntax that requires deg units to be specified in hue calculations */
+@supports (color: lch(from red l c calc(h + 120deg))) {
+  .triadic :nth-child(2) {
+    background-color: lch(from var(--base-color) l c calc(h - 120deg));
+  }
+
+  .triadic :nth-child(3) {
+    background-color: lch(from var(--base-color) l c calc(h + 120deg));
+  }
 }
 
 /* tetradic colors */
@@ -468,6 +488,22 @@ fieldset {
 
 .tetradic :nth-child(4) {
   background-color: lch(from var(--base-color) l c calc(h + 270));
+}
+
+/* Use @supports to add in support for Safari 16.4+, which supports old
+   syntax that requires deg units to be specified in hue calculations */
+@supports (color: lch(from red l c calc(h + 90deg))) {
+  .tetradic :nth-child(2) {
+    background-color: lch(from var(--base-color) l c calc(h + 90deg));
+  }
+
+  .tetradic :nth-child(3) {
+    background-color: lch(from var(--base-color) l c calc(h + 180deg));
+  }
+
+  .tetradic :nth-child(4) {
+    background-color: lch(from var(--base-color) l c calc(h + 270deg));
+  }
 }
 
 /* monochrome colors */
@@ -493,6 +529,16 @@ fieldset {
   background-color: lch(from var(--base-color) calc(l + 20) c h);
 }
 ```
+
+#### An aside on `@supports` testing
+
+In the example CSS you'll notice {{cssxref("@supports")}} blocks being used to provide different {{cssxref("background-color")}} values to browsers that support a different variant of the relative color syntax. These are required because Safari's initial implementation was based on an older version of the spec in which origin color channel values resolved to {{cssxref("&lt;number&gt;")}}s or other unit types depending on the context. This meant that values sometimes required units when performing additions and subtractions, which created confusion. In newer implementations, origin color channel values always resolve to an equivalent {{cssxref("&lt;number&gt;")}} value, which means calculations are always done with unitless values.
+
+Also note how the support test in each case is done using a simple declaration — `color: lch(from red l c calc(h + 90deg))` for example — rather than the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
+
+In the cases above, testing for a custom property with a specific value didn't work — the test came back as positive regardless of what value the custom property was given. A custom property value only becomes invalid when that custom property is then assigned to be the value (or part of the value) of a regular CSS property.
+
+The support test also didn't seem to work when the value of the declaration being tested contained custom properties, hence `var(--base-color)` being replaced by the `red` keyword in each support test.
 
 #### JavaScript
 
@@ -630,8 +676,8 @@ body {
 main {
   /* Relative color definitions */
   --base-color: lch(from red l c var(--hue));
-  --complementary-color: lch(from var(--base-color) l c calc(h + 180));
   --bg-color: lch(from var(--base-color) calc(l + 40) c h);
+  --complementary-color: lch(from var(--base-color) l c calc(h + 180));
 
   width: 100vw;
   height: 100vh;
@@ -639,6 +685,15 @@ main {
   align-items: center;
   justify-content: center;
   background: radial-gradient(white, var(--base-color));
+}
+
+/* Use @supports to add in support for --complementary-color
+   in Safari 16.4+, which supports old syntax that requires
+   deg units to be specified in hue calculations */
+@supports (color: lch(from red l c calc(h + 180deg))) {
+  main {
+    --complementary-color: lch(from var(--base-color) l c calc(h + 180deg));
+  }
 }
 
 /* box styling */
