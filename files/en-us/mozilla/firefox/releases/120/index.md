@@ -70,6 +70,7 @@ No notable changes
 - The [Minimum PIN Length Extension (`minPinLength`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing a relying party server to request the authenticator's minimum PIN length during creation/registration ([Firefox bug 1844450](https://bugzil.la/1844450)).
 - The {{domxref("Navigator.userActivation")}} property and {{domxref("UserActivation")}} interface are now supported.
   These can be used to check whether the user is interacting with the page, or has interacted with it since page load (see [Firefox bug 1791079](https://bugzil.la/1791079)).
+- The {{domxref("PointerEvent.getCoalescedEvents()")}} method is restricted to use in secure contexts only ([Firefox bug 1858434](https://bugzil.la/1858434)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
