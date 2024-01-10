@@ -40,6 +40,7 @@ updateWith(details)
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
     - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+
       - : A string specifying an error message to present to the user*.* When calling `updateWith()`, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
 
     - `modifiers` {{optional_inline}}
