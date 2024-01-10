@@ -77228,17 +77228,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox": {
-    "modified": "2020-07-07T12:06:44.348Z",
-    "contributors": [
-      "wbamberg",
-      "ExE-Boss",
-      "mattbrundageMDN",
-      "roryokane",
-      "chrisdavidmills",
-      "rachelandrew"
-    ]
-  },
   "Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox": {
     "modified": "2020-12-11T09:00:07.056Z",
     "contributors": [
