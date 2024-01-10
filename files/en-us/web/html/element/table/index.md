@@ -162,7 +162,7 @@ The `<table>` box establishes a table formatting context. Elements inside the `<
 2. A row group box occupies one or more row boxes.
 3. Column boxes are placed next to each other in source code order. Depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute, the columns are laid in left-to-right or right-to-left direction. A column box occupies one or more columns of table cells.
 4. A column group box occupies one or more column boxes.
-5. A cell box may span over multiple rows and columns. User agents trim cells to fit in the available number of rows and columns. 
+5. A cell box may span over multiple rows and columns. User agents trim cells to fit in the available number of rows and columns.
 
 Table cells do have padding. Boxes that make up a table do not have margins.
 
