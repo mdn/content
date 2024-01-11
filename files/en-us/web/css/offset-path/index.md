@@ -33,6 +33,8 @@ offset-path: ellipse(50% 50% at 25% 25%);
 offset-path: inset(50% 50% 50% 50%);
 offset-path: polygon(30% 0%, 70% 0%, 100% 50%, 30% 100%, 0% 70%, 0% 30%);
 offset-path: path("M 0,200 Q 200,200 260,80 Q 290,20 400,0 Q 300,100 400,200");
+offset-path: rect(5px 5px 160px 145px round 20%);
+offset-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Coordinate box */
 offset-path: content-box;
