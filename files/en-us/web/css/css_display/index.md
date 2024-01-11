@@ -26,7 +26,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 
 ## Guides
 
-- [Adapting to the multi-keyword syntax of display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [Using the multi-keyword syntax with CSS display](/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+  - : Describes the multi-keyword syntax and compares this syntax with legacy single-keyword values.
 
 ### Flow layout (display: block, display: inline)
 
@@ -44,7 +45,6 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 - [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 - [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [Backwards compatibility of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
 - [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### Grid layout
@@ -68,3 +68,8 @@ The **CSS display** module defines how the CSS formatting box tree is generated 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS grid layout](Web/CSS/CSS_grid_layout) module

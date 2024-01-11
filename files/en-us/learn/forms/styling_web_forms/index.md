@@ -13,7 +13,7 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
       </td>
@@ -309,7 +309,7 @@ When one of these fields gains focus, we highlight them with a light grey, trans
 ```css
 input:focus,
 textarea:focus {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   border-radius: 5px;
 }
 ```

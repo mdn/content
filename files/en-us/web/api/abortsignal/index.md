@@ -7,13 +7,13 @@ browser-compat: api.AbortSignal
 
 {{APIRef("DOM")}}
 
-The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
+The **`AbortSignal`** interface represents a signal object that allows you to communicate with an asynchronous operation (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
@@ -22,26 +22,30 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 ## Static methods
 
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
+
 - {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
-  - : Returns an **`AbortSignal`** instance that is already set as aborted.
+  - : Returns an `AbortSignal` instance that is already set as aborted.
 - {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}
-  - : Returns an **`AbortSignal`** that aborts when any of the given abort signals abort.
+  - : Returns an `AbortSignal` that aborts when any of the given abort signals abort.
 - {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
-  - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
+  - : Returns an `AbortSignal` instance that will automatically abort after a specified time.
 
 ## Instance methods
 
-_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.throwIfAborted()")}}
   - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Events
 
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Also inherits events from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
-  - : Invoked when the DOM requests the signal is communicating with is/are aborted.
+Listen to this event using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{domxref("AbortSignal/abort_event", "abort")}}
+  - : Invoked when the asynchronous operations the signal is communicating with is/are aborted.
     Also available via the `onabort` property.
 
 ## Examples
@@ -119,7 +123,7 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-If you want to abort from multiple signals, you can use {{domxref("AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
 
 ```js
 try {

@@ -10,7 +10,7 @@ page-type: guide
 
 {{EmbedInteractiveExample("pages/js/expressions-operatorprecedence.html")}}
 
-## Precedence And Associativity
+## Precedence and associativity
 
 Consider an expression describable by the representation below, where both `OP1` and `OP2` are fill-in-the-blanks for OPerators.
 

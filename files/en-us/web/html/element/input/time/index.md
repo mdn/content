@@ -82,7 +82,7 @@ First, a look at the HTML. This is simple enough, with the label and input as we
 </form>
 ```
 
-The JavaScript code adds code to the time input to watch for the {{domxref("HTMLElement/input_event", "input")}} event, which is triggered every time the contents of an input element change. When this happens, the contents of the `<span>` are replaced with the new value of the input element.
+The JavaScript code adds code to the time input to watch for the {{domxref("Element/input_event", "input")}} event, which is triggered every time the contents of an input element change. When this happens, the contents of the `<span>` are replaced with the new value of the input element.
 
 ```js
 const startTime = document.getElementById("startTime");
@@ -509,7 +509,7 @@ minuteSelect.onchange = setMinutesToZero;
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSScopeRule.end
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`end`** property of the {{domxref("CSSScopeRule")}} interface returns a string containing the value of the `@scope` at-rule's scope limit.
 

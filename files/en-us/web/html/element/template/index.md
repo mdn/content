@@ -15,7 +15,7 @@ Think of a template as a content fragment that is being stored for subsequent us
 
 The only standard attributes that the `<template>` element supports are the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-In Chromium-based browsers, the `<template>` element also supports a non-standard [`shadowrootmode` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://developer.chrome.com/articles/declarative-shadow-dom/) proposal. In supporting browsers, a `<template>` element with the `shadowrootmode` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element. `shadowrootmode` can take a value of `open` or `closed`; these are equivalent to the `open` and `closed` values of the {{domxref("Element.attachShadow()")}} `mode` option.
+In Chromium-based browsers, the `<template>` element also supports a non-standard [`shadowrootmode` attribute](https://github.com/mfreed7/declarative-shadow-dom/blob/master/README.md#syntax), as part of an experimental ["Declarative Shadow DOM"](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) proposal. In supporting browsers, a `<template>` element with the `shadowrootmode` attribute is detected by the HTML parser and immediately applied as the shadow root of its parent element. `shadowrootmode` can take a value of `open` or `closed`; these are equivalent to the `open` and `closed` values of the {{domxref("Element.attachShadow()")}} `mode` option.
 
 Also, the corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
@@ -213,6 +213,10 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ## See also
 
-- Web components: {{HTMLElement("slot")}} (and historical: `<shadow>`)
+- [`part`](/en-US/docs/Web/HTML/Global_attributes#part) and [`exportparts`](/en-US/docs/Web/HTML/Global_attributes#exportparts) HTML attributes
+- {{HTMLElement("slot")}} HTML element
+- {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
+- {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
+- [`ShadowRoot`]("/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

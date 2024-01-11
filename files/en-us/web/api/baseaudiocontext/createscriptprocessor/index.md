@@ -63,7 +63,7 @@ The following example shows how to use a `ScriptProcessorNode` to take a track l
 
 For each channel and each sample frame, the script node's {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} event handler uses the associated `audioProcessingEvent` to loop through each channel of the input buffer, and each sample in each channel, and add a small amount of white noise, before setting that result to be the output sample in each case.
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/script-processor-node/), or [view the source](https://github.com/mdn/webaudio-examples/blob/master/script-processor-node/).
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/script-processor-node/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/script-processor-node/).
 
 ```js
 const myScript = document.querySelector("script");

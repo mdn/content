@@ -44,7 +44,7 @@ Always remember that ARIA only modifies how assistive technology presents conten
 - `vertical`
   - : The element is oriented vertically.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaOrientation")}}
   - : The [`ariaOrientation`](/en-US/docs/Web/API/Element/ariaOrientation) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-orientation` attribute.

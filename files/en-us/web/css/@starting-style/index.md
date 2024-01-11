@@ -262,7 +262,7 @@ html {
 
 /* Transition for the popover's backdrop */
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0);
+  background-color: rgb(0 0 0 / 0%);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -272,14 +272,14 @@ html {
 }
 
 [popover]:popover-open::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 
 /* Nesting (&) is not supported for pseudo-elements
 so specify a standalone starting-style block. */
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
@@ -359,7 +359,7 @@ When the "Create new column" button is clicked, the `createColumn()` function is
 We then add an event listener to the close button via {{domxref("EventTarget.addEventListener", "addEventListener")}}. Clicking the close button does two things:
 
 - Adds the `fade-out` class to the `<div>`. Adding the class triggers the exit animation set on that class.
-- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
+- Removes the `<div>` after a 1000ms delay. The {{domxref("setTimeout()")}} delays removal of the `<div>` from the DOM (via {{domxref("Element.remove()")}}) until after the animation ends.
 
 #### CSS
 
@@ -398,8 +398,8 @@ div {
   position: relative;
   background: linear-gradient(
     to right,
-    rgb(255 255 255 / 0),
-    rgb(255 255 255 / 0.5)
+    rgb(255 255 255 / 0%),
+    rgb(255 255 255 / 50%)
   );
   opacity: 1;
   scale: 1 1;

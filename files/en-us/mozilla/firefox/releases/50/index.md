@@ -19,7 +19,7 @@ page-type: firefox-release-notes
 ### CSS
 
 - Border-radiused corners with dashed and dotted styles are now rendered with the specified style instead of a solid style ([Firefox bug 382721](https://bugzil.la/382721)).
-- The non-standard {{cssxref(":-moz-full-screen-ancestor")}} pseudo-class selector has been removed ([Firefox bug 1199529](https://bugzil.la/1199529)).
+- The non-standard `:-moz-full-screen-ancestor` pseudo-class selector has been removed ([Firefox bug 1199529](https://bugzil.la/1199529)).
 - The {{cssxref("box-sizing")}}`: padding-box` has been removed, since it's no longer a part of the spec and Firefox was the only major browser implementing it ([Firefox bug 1166728](https://bugzil.la/1166728)).
 - The three values `isolate`, `isolate-override`, and `plaintext` of the {{cssxref("unicode-bidi")}} property have been unprefixed ([Firefox bug 1141895](https://bugzil.la/1141895)).
 - In quirks mode, the bullet of a list item now inherits the size of the list, like in standards mode ([Firefox bug 648331](https://bugzil.la/648331)).

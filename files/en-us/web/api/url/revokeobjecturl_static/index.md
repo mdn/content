@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.revokeObjectURL_static
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("File API")}}
 
 The **`URL.revokeObjectURL()`** static
 method releases an existing object URL which was previously created by calling
@@ -16,11 +16,10 @@ Call this method when you've finished
 using an object URL to let the browser know not to keep the reference to the file any
 longer.
 
-{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}
 
-> **Note:** This method is not available from service workers, due to
-> issues with the {{domxref("Blob")}} interface's life cycle and the potential for
-> leaks.
+> **Note:** This method is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API), due to
+> issues with the {{domxref("Blob")}} interface's life cycle and the potential for leaks.
 
 ## Syntax
 

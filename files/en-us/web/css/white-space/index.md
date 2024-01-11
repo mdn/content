@@ -202,7 +202,7 @@ pre {
 }
 
 #css-code {
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(220 220 220);
   font-size: 16px;
   font-family: monospace;
 }
@@ -212,7 +212,7 @@ pre {
 }
 
 #results {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(230 230 230);
   overflow-x: scroll;
   white-space: normal;
   font-size: 14px;

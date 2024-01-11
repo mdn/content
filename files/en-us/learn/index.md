@@ -68,13 +68,13 @@ There are two main types of tasks you'll encounter:
 - "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
 - more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
 
-For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/master/learn).
+For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
 
 Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
 There are patterns that make it easier to find these resources, for example:
 
-- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals>.
-- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/gallery>.
+- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
 
 ## Getting our code examples
 

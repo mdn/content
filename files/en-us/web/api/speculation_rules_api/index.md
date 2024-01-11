@@ -303,7 +303,7 @@ The following asynchronous features' results are deferred in prerendered documen
 - {{domxref("HTMLMediaElement")}} API: The playback position will not advance while the containing document is prerendering
 - [Idle Detection API](/en-US/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector.start()")}}
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): {{domxref("MediaDevices.getUserMedia()")}} (and the legacy {{domxref("Navigator.getUserMedia()")}} version), {{domxref("MediaDevices.enumerateDevices()")}}
-- [Notifications API](/en-US/docs/Web/API/Notifications_API): {{domxref("Notification.Notification", "Notification()")}} constructor, {{domxref("Notification.requestPermission()")}}
+- [Notifications API](/en-US/docs/Web/API/Notifications_API): {{domxref("Notification.Notification", "Notification()")}} constructor, {{domxref("Notification/requestPermission_static", "Notification.requestPermission()")}}
 - [Push API](/en-US/docs/Web/API/Push_API): {{domxref("PushManager.subscribe()")}}
 - [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API): {{domxref("ScreenOrientation.lock()")}}, {{domxref("ScreenOrientation.unlock()")}}
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): {{domxref("Sensor.start()")}}
@@ -330,7 +330,7 @@ APIs that require [transient activation](/en-US/docs/Glossary/Transient_activati
 - The firing of any events in the [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
 - [File System API](/en-US/docs/Web/API/File_System_API): {{domxref("Window.showDirectoryPicker()")}}, {{domxref("Window.showOpenFilePicker()")}}, {{domxref("Window.showSaveFilePicker()")}}
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API): {{domxref("Element.requestFullscreen()")}}
-- [Idle Detection API](/en-US/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector.requestPermission()")}}
+- [Idle Detection API](/en-US/docs/Web/API/Idle_Detection_API): {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - [Keyboard API](/en-US/docs/Web/API/Keyboard_API): {{domxref("Keyboard.lock()")}} (which requires fullscreen)
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API): {{domxref("PaymentRequest.show()")}}
 - [Presentation API](/en-US/docs/Web/API/Presentation_API): {{domxref("PresentationRequest.start()")}}
