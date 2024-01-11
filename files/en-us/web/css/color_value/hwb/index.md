@@ -79,7 +79,7 @@ The browser destructures the origin color into `hwb()` component values that are
 
 - The `h` channel value is resolved to a `<number>` between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}}.
 - The `w` and `b` channels are resolved to a `<number>` between 0 and 100 which represents the origin color's whiteness and blackness.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 which represents the origin color's alpha value.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
 

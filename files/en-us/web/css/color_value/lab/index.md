@@ -62,7 +62,7 @@ Functional notation of relative values: `lab(from color lightness a b[ / alpha])
 - `color`
   - : A {{cssxref("&lt;color&gt;")}} value representing the **origin color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `lightness`
-  - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `a`
   - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. This represents the output color's distance along the `a` axis in the CIELAB colorspace, that is how green/red the color is.
 - `b`
@@ -74,9 +74,9 @@ Functional notation of relative values: `lab(from color lightness a b[ / alpha])
 
 The browser destructures the origin color into `lab()` component values that are made available inside the function as `l` (lightness), `a` (green/red axis), `b` (blue/yellow axis), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
-- The `l` channel value is resolved to a `<number>` between 0 and 360 that represents the origin color's lightness.
+- The `l` channel value is resolved to a `<number>` between 0 and 100 that represents the origin color's lightness.
 - The `a` and `b` channels are resolved to a `<number>` between -125 and 125 which represents the origin color's a and b axis positions.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1.0 which represents the origin color's alpha value.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
 

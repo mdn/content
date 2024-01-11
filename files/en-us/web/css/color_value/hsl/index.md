@@ -86,7 +86,7 @@ The browser destructures the origin color into `hsl()` component values that are
 
 - The `h` value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
 - The `s` and `l` values are resolved to a `<number>` between 0 and 100 that represents the origin color's saturation and lightness percentage.
-- The `alpha` value is resolved to a `<number>` between 0 and 1.0 that represents the origin color's alpha value.
+- The `alpha` value is resolved to a `<number>` between 0 and 1 that represents the origin color's alpha value.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways.
 
