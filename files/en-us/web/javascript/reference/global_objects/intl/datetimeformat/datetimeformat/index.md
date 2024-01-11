@@ -42,6 +42,8 @@ Intl.DateTimeFormat(locales, options)
 
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
+    Passing `undefined` will use the current user’s locale.
+
 - `options` {{optional_inline}}
 
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [date-time component options](#date-time_component_options), and [style shortcuts](#style_shortcuts).
