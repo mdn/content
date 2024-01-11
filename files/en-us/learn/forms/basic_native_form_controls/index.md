@@ -13,7 +13,7 @@ In the [previous article](/en-US/docs/Learn/Forms/How_to_structure_a_web_form), 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
+        A basic
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >.

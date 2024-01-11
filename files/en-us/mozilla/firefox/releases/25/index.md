@@ -31,7 +31,7 @@ page-type: firefox-release-notes
 
 ### JavaScript
 
-[ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+ECMAScript 2015 implementation continues!
 
 - The method {{jsxref("Array.of()")}} is now implemented on [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) ([Firefox bug 866849](https://bugzil.la/866849)).
 - Support for the methods {{jsxref("Array.prototype.find()")}} and {{jsxref("Array.prototype.findIndex()")}} has been added ([Firefox bug 885553](https://bugzil.la/885553)).
@@ -51,9 +51,9 @@ page-type: firefox-release-notes
 - Renamed the `Future` interface to `Promise` ([Firefox bug 884279](https://bugzil.la/884279)).
 - The `srcDoc` property on the {{domxref("HTMLIFrameElement")}} interface, allowing the inline specification of the content of an {{HTMLElement("iframe")}}, is now supported ([Firefox bug 802895](https://bugzil.la/802895)).
 - The `createTBody()` method on the {{domxref("HTMLTableElement")}} interface, allowing to get its {{HTMLElement("tbody")}}, is now supported ([Firefox bug 813034](https://bugzil.la/813034)).
-- The {{domxref("Range.collapse()")}} method `toStart` parameter is now optional and default to `false`, like defined in the spec ([Firefox bug 891340](https://bugzil.la/891340)).
-- Support of {{domxref("ParentNode")}} interface on {{domxref("Document")}} and {{domxref("DocumentFragment")}} has been added ([Firefox bug 895974](https://bugzil.la/895974)).
-- The `previousElementSibling` and `nextElementSibling` have been moved to {{domxref("ChildNode")}} allowing them to be called not only on a {{domxref("Element")}} object but also on a {{domxref("CharacterData")}} or {{domxref("DocumentType")}} object ([Firefox bug 895974](https://bugzil.la/895974)).
+- The {{domxref("Range.collapse()")}} method `toStart` parameter is now optional and default to `false`, as defined in the spec ([Firefox bug 891340](https://bugzil.la/891340)).
+- Support of the `ParentNode` mixin on {{domxref("Document")}} and {{domxref("DocumentFragment")}} has been added ([Firefox bug 895974](https://bugzil.la/895974)).
+- The `previousElementSibling` and `nextElementSibling` have been moved to the `ChildNode` mixin allowing them to be called not only on a {{domxref("Element")}} object but also on a {{domxref("CharacterData")}} or {{domxref("DocumentType")}} object ([Firefox bug 895974](https://bugzil.la/895974)).
 - The `navigator.geolocation` property has been updated to match the spec. It never returns `null`. When the preference `geo.enabled` is set to `false`, it now returns `undefined` ([Firefox bug 884921](https://bugzil.la/884921)).
 - The `videoPlaybackQuality` attribute on the {{ domxref("HTMLVideoElement") }} interface has been changed to the `getVideoPlaybackQuality` method. ([Firefox bug 889205](https://bugzil.la/889205))
 - The non-standard `GlobalObjectConstructor` interface has been removed ([Firefox bug 898136](https://bugzil.la/898136)). This interface was used to add arguments to the constructors of APIs that Firefox [add-ons](/en-US/docs/Mozilla/Add-ons) were exposing on the global object. This capability has been removed; note that at this time there's no replacement for this functionality.
