@@ -31,6 +31,11 @@ const link = document.querySelector(".link1");
 console.log(link); // output:- "_blank"
 ```
 
+## Result
+
+{{EmbedLiveSample("Example",100,100)}}
+
+
 ## Specifications
 
 {{Specifications}}
