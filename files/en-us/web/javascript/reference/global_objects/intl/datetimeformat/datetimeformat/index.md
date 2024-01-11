@@ -42,7 +42,7 @@ Intl.DateTimeFormat(locales, options)
 
     These keys can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
-    Passing `undefined` will use the current user’s locale.
+    Passing `undefined` will use the current user's locale.
 
 - `options` {{optional_inline}}
 
