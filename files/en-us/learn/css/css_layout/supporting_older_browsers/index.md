@@ -9,7 +9,7 @@ browser-compat: css.properties.grid-template-columns
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
 
-There will be visitors to your site who use older browsers, or browsers which may not support the features you have used. This will always be the case on the web — new features are continuously being added to CSS and therefore to browsers. Different browsers will prioritize different things. This article explains how to use modern web techniques without locking out users of older technology.
+Visitors to your website may include users who either use older browsers or use browsers that do not support the CSS features you've implemented. This is a common scenario on the web, where new features are continuously being added to CSS. Browsers differ in their support for these features because different browsers tend to prioritize implementing different features. This article explains how you as a web developer can use modern web techniques to ensure that your website remains accessible to users with older technology.
 
 <table>
   <tbody>
