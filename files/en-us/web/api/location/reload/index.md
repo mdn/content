@@ -1,5 +1,5 @@
 ---
-title: "location: reload() method"
+title: "Location: reload() method"
 short-title: reload()
 slug: Web/API/Location/reload
 page-type: web-api-instance-method

@@ -268,7 +268,7 @@ document
 
 Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
-## Accessibility
+## Accessibility concerns
 
 ### Strong link text
 
@@ -465,9 +465,6 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, or any element that accepts
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >, but not other <code>&#x3C;a></code> elements.

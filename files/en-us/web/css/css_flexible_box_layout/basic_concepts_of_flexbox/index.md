@@ -25,21 +25,21 @@ The main axis is defined by `flex-direction`, which has four possible values:
 
 Should you choose `row` or `row-reverse`, your main axis will run along the row in the **inline direction**.
 
-![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.png)
+![If flex-direction is set to row the main axis runs along the row in the inline direction.](basics1.svg)
 
 Choose `column` or `column-reverse` and your main axis will run from the top of the page to the bottom — in the **block direction**.
 
-![If flex-direction is set to column the main axis runs in the block direction.](basics2.png)
+![If flex-direction is set to column the main axis runs in the block direction.](basics2.svg)
 
 ### The cross axis
 
 The cross axis runs perpendicular to the main axis, therefore if your `flex-direction` (main axis) is set to `row` or `row-reverse` the cross axis runs down the columns.
 
-![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.png)
+![If flex-direction is set to row then the cross axis runs in the block direction.](basics3.svg)
 
 If your main axis is `column` or `column-reverse` then the cross axis runs along the rows.
 
-![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.png)
+![If flex-direction is set to column then the cross axis runs in the inline direction.](basics4.svg)
 
 ## Start and end lines
 
@@ -49,11 +49,11 @@ You can [read more about the relationship between flexbox and the Writing Modes 
 
 If the `flex-direction` is `row` and I am working in English, then the start edge of the main axis will be on the left, the end edge on the right.
 
-![Working in English the start edge is on the left.](basics5.png)
+![Working in English the start edge is on the left.](basics5.svg)
 
 If I were to work in Arabic, then the start edge of my main axis would be on the right and the end edge on the left.
 
-![The start edge in a RTL language is on the right.](basics6.png)
+![The start edge in a RTL language is on the right.](basics6.svg)
 
 In both cases the start edge of the cross-axis is at the top of the flex container and the end edge at the bottom, as both languages have a horizontal writing mode.
 
@@ -61,7 +61,9 @@ After a while, thinking about start and end rather than left and right becomes n
 
 ## The flex container
 
-An area of a document laid out using flexbox is called a **flex container**. To create a flex container, we set the value of the area's container's {{cssxref("display")}} property to `flex` or `inline-flex`. As soon as we do this the direct children of that container become **flex items**. As with all properties in CSS, some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+An area of a document that is laid out using flexbox is called a **flex container**. To create a flex container, set the area's {{cssxref("display")}} property to `flex`. When we do this, the direct children of that container become **flex items**. You can explicitly control whether the container itself is displayed inline or in block formatting context using `inline flex` or `inline-flex` for inline flex containers or `block flex` or `flex` for block level flex containers.
+
+As with all properties in CSS, some initial values are defined, so the contents of a new flex container will behave in the following way:
 
 - Items display in a row (the `flex-direction` property's default is `row`).
 - The items start from the start edge of the main axis.
@@ -118,7 +120,7 @@ Before we can make sense of these properties we need to consider the concept of 
 
 If we have three 100 pixel-wide items in a container which is 500 pixels wide, then the space we need to lay out our items is 300 pixels. This leaves 200 pixels of available space. If we don't change the initial values then flexbox will put that space after the last item.
 
-![This flex container has available space after laying out the items.](basics7.png)
+![This flex container has available space after laying out the items.](basics7.svg)
 
 If we instead would like the items to grow and fill the space, then we need to have a method of distributing the leftover space between the items. This is what the `flex` properties that we apply to the items themselves, will do.
 

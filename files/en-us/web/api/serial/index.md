@@ -7,7 +7,7 @@ status:
 browser-compat: api.Serial
 ---
 
-{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
 
 The `Serial` interface of the {{domxref("Web_Serial_API", "Web Serial API")}} provides attributes and methods for finding and connecting to serial ports from a web page.
 

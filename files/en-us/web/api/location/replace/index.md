@@ -1,5 +1,5 @@
 ---
-title: "location: replace() method"
+title: "Location: replace() method"
 short-title: replace()
 slug: Web/API/Location/replace
 page-type: web-api-instance-method

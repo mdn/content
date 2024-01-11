@@ -83,7 +83,7 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 
 ### Data types
 
-- {{cssxref("line-type")}} enumerated type
+- {{cssxref("line-style")}} enumerated type
 
 ## Guides
 
