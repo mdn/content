@@ -20,7 +20,7 @@ To integrate with FedCM, an IdP needs to do the following:
 
 There is a potential privacy issue whereby an [IdP is able to discern whether a user visited an RP without explicit consent](https://github.com/fedidcg/FedCM/issues/230). This has tracking implications, so an IdP is required to provide a well-known file to verify its identity and mitigate this issue.
 
-The well-known file is requested via a [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't have cookies and doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The well-known file is requested via an uncredentialed [`GET`](/en-US/docs/Web/HTTP/Methods/GET) request, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The well-known file must be served from the [eTLD+1](https://web.dev/articles/same-site-same-origin#site) of the IdP at `/.well-known/web-identity`. For example, if the IdP endpoints are served under `https://accounts.idp.example/`, they must serve a well-known file at `https://idp.example/.well-known/web-identity`. The well-known file's content should have the following JSON structure:
 
@@ -34,20 +34,13 @@ The `provider_urls` member should contain an array of URLs pointing to valid IdP
 
 ## The `Sec-Fetch-Dest` HTTP header
 
-All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included. For example, the well-known file request would look like so:
-
-```http
-GET /.well-known/web-identity HTTP/1.1
-Host: idp.example
-Accept: application/json
-Sec-Fetch-Dest: webidentity
-```
+Credentialed requests sent from the browser via FedCM (i.e. to the `accounts_endpoint` and `id_assertion_endpoint`) include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included.
 
 ## Provide a config file and endpoints
 
 The IdP config file provides a list of the endpoints the browser needs to process the identity federation flow and manage the sign-ins. The endpoints need to be same-origin with the config.
 
-The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method. The request doesn't have cookies or follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
+The browser makes an uncredentialed request for the config file via the [`GET`](/en-US/docs/Web/HTTP/Methods/GET) method, which doesn't follow redirects. This effectively prevents the IdP from learning who made the request and which RP is attempting to connect.
 
 The config file (hosted at `https://accounts.idp.example/config.json` in our example) should have the following JSON structure:
 
@@ -85,12 +78,12 @@ The properties are as follows:
 
 The following table summarizes the different requests made by the FedCM API:
 
-| Endpoint/resource          | Method | Credentialed | Includes cookies | Includes {{httpheader("Origin")}} |
-| -------------------------- | ------ | ------------ | ---------------- | --------------------------------- |
-| `well-known`/`config.json` | `GET`  | No           | No               | No                                |
-| `accounts_endpoint`        | `GET`  | No           | Yes              | No                                |
-| `client_metadata_endpoint` | `GET`  | Yes          | No               | Yes                               |
-| `id_assertion_endpoint`    | `POST` | Yes          | Yes              | Yes                               |
+| Endpoint/resource          | Method | Credentialed (with cookies) | Includes {{httpheader("Origin")}} |
+| -------------------------- | ------ | --------------------------- | --------------------------------- |
+| `well-known`/`config.json` | `GET`  | No                          | No                                |
+| `accounts_endpoint`        | `GET`  | Yes                         | No                                |
+| `client_metadata_endpoint` | `GET`  | No                          | Yes                               |
+| `id_assertion_endpoint`    | `POST` | Yes                         | Yes                               |
 
 > **Note:** For a description of the FedCM flow in which these endpoints are accessed, see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow).
 
@@ -98,7 +91,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests to this endpoint via the `GET` method. The request has cookies, but no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+The browser sends credentialed requests to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
 
 For example:
 
@@ -158,7 +151,7 @@ This includes the following information:
 
 ### The client metadata endpoint
 
-The browser sends uncredentialed requests to this endpoint via the `GET` method, with the `clientId` passed into the `get()` call as a parameter, without cookies.
+The browser sends uncredentialed requests to this endpoint via the `GET` method, with the `clientId` passed into the `get()` call as a parameter.
 
 For example:
 
@@ -181,7 +174,7 @@ The response to a successful request includes URLs pointing to the RP's metadata
 
 ### The ID assertion endpoint
 
-The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with cookies and a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
+The browser sends credentialed requests to this endpoint via the [`POST`](/en-US/docs/Web/HTTP/Methods/POST) method, with a content type of `application/x-www-form-urlencoded`. The request also includes a payload including details about the attempted sign-in and the account to be validated.
 
 It should look something like this:
 
