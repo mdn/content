@@ -65,8 +65,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when media recording starts.
 - {{domxref("MediaRecorder/stop_event", "stop")}}
   - : Fired when media recording ends, either when the {{domxref("MediaStream")}} ends, or after the {{domxref("MediaRecorder.stop()")}} method is called.
-- {{domxref("MediaRecorder/warning_event", "warning")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Fired when media recording has a non-fatal error.
 
 ## Example
 

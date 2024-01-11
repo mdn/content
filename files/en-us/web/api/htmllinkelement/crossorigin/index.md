@@ -30,3 +30,9 @@ If the `crossOrigin` property is not specified, the resource is fetched without 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLImageElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}

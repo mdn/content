@@ -38,7 +38,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 - `<integer>`
   - : An integer greater than or equal to 1
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLevel")}}
   - : The [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.

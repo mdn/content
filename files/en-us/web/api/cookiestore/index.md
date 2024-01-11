@@ -9,11 +9,13 @@ browser-compat: api.CookieStore
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`CookieStore`** interface of the ['Cookie Store API'](/en-US/docs/Web/API/Cookie_Store_API) provides methods for getting and setting cookies asynchronously from either a page or a service worker.
+The **`CookieStore`** interface of the {{domxref("Cookie Store API", "", "", "nocode")}} provides methods for getting and setting cookies asynchronously from either a page or a service worker.
 
 The `CookieStore` is accessed via attributes in the global scope in a {{domxref("Window")}} or {{domxref("ServiceWorkerGlobalScope")}} context. Therefore there is no constructor.
 
 {{InheritanceDiagram}}
+
+{{AvailableInWorkers}}
 
 ## Instance methods
 
@@ -37,6 +39,7 @@ In this example, we set a cookie and write to the console feedback as to whether
 
 ```js
 const day = 24 * 60 * 60 * 1000;
+
 cookieStore
   .set({
     name: "cookie1",
