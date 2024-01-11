@@ -35,7 +35,6 @@ console.log(link); // output:- "_blank"
 
 {{EmbedLiveSample("Example",100,100)}}
 
-
 ## Specifications
 
 {{Specifications}}
