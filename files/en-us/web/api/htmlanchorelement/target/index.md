@@ -19,11 +19,15 @@ A string that indicates where to display the linked resource, or the empty strin
 ## Example
 
 ```html
-<a href="www.example.com" class="link" target="_blank">example</a>
+<a href="www.example1.com" class="link1" target="_blank">example1</a>
+```
+
+```html
+<a href="www.example2.com" class="link2" target="_parent">example2</a>
 ```
 
 ```js
-const link = document.querySelector(".link");
+const link = document.querySelector(".link1");
 console.log(link); // output:- "_blank"
 ```
 
