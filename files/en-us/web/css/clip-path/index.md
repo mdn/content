@@ -37,6 +37,8 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
+clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Box and shape values combined */
 clip-path: padding-box circle(50px at 0 100px);
@@ -588,6 +590,8 @@ svg text.em {
   <option value="circle(100px at 110px 100px)">circle</option>
   <option value="url(#cross)" selected>cross</option>
   <option value="inset(20px round 20px)">inset</option>
+  <option value="rect(10px 10px 180px 220px round 20px)">rect</option>
+  <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
   <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
     path
   </option>
