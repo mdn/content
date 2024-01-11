@@ -21,6 +21,7 @@ Knowing the value of the `target` attribute through the `target` property can be
 ## Example
 
 ```html
+
 ```
 
 ## Specifications
