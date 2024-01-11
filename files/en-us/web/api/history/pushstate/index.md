@@ -8,8 +8,7 @@ browser-compat: api.History.pushState
 
 {{APIRef("History API")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the
-**`history.pushState()`** method adds an entry to the browser's
+The **`pushState()`** method of the {{domxref("History")}} interface adds an entry to the browser's
 session history stack.
 
 ## Syntax

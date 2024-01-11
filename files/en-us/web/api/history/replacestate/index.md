@@ -8,7 +8,7 @@ browser-compat: api.History.replaceState
 
 {{APIRef("History API")}}
 
-The **`History.replaceState()`** method modifies the current
+The **`replaceState()`** method of the {{domxref("History")}} interface modifies the current
 history entry, replacing it with the state object and
 URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
