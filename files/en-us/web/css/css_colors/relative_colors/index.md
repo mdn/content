@@ -12,7 +12,7 @@ This article explains the syntax, shows what the different options are, and look
 
 ## General syntax
 
-A relative CSS color value has the following syntax structure:
+A relative CSS color value has the following general syntax structure:
 
 ```text
 color-function(from origin-color channel1 channel2 channel3)
