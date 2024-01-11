@@ -26,7 +26,7 @@ hwb(from rgb(255 0 0) 240 w b)
 /* Add a semi-transparent alpha channel to green */
 hwb(from green h w b / 0.5)
 /* Create lighter and darker blue variants by setting the output
-   color's w or b channel values equal to the origin color's w or b
+   colors' w or b channel values equal to the origin colors' w or b
    channel values plus 30% */
 hwb(from blue h calc(w + 30) b)
 hwb(from blue h w calc(b + 30))
