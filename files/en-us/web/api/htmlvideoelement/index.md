@@ -17,6 +17,8 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 
 _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
+- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
+  - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically.
 - {{domxref("HTMLVideoElement.height")}}
   - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
@@ -27,8 +29,6 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
   - : Returns an unsigned integer value indicating the intrinsic width of the resource in CSS pixels, or 0 if no media is available yet.
 - {{domxref("HTMLVideoElement.width")}}
   - : A string that reflects the [`width`](/en-US/docs/Web/HTML/Element/video#width) HTML attribute, which specifies the width of the display area, in CSS pixels.
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically
 
 ### Gecko-specific properties
 
