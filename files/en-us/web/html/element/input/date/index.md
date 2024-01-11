@@ -460,8 +460,8 @@ daySelect.onchange = () => {
       <td><strong>IDL attributes</strong></td>
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#valueasdate"><code>valueAsDate</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#valueasnumber"><code>valueAsNumber</code></a>
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
