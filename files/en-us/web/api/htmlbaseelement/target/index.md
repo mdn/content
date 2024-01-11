@@ -15,6 +15,7 @@ The `target` property of the {{domxref("HTMLBaseElement")}} interface is a strin
 A string that represents target values `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
 
 ## Use Case
+
 Knowing the value of the `target` attribute through the `target` property can be useful when we need to dynamically check or modify the default behaviour of hyperlinks and forms based on the `<base>` elements.
 
 ## Example
