@@ -51,7 +51,6 @@ That being said, you can also use Vue to write entire Single Page Applications (
 In addition to allowing you to progressively integrate Vue into your applications, Vue also provides a progressive approach to writing markup. Like most frameworks, Vue lets you create reusable blocks of markup via components. Most of the time, Vue components are written using a special HTML template syntax. When you need more control than the HTML syntax allows, you can write JSX or plain JavaScript functions to define your components.
 
 As you work through this tutorial, you might want to keep the [Vue guide](https://vuejs.org/guide/introduction.html) and [API documentation](https://vuejs.org/api/) open in other tabs, so you can refer to them if you want more information on any sub topic.
-For a good (but potentially biased) comparison between Vue and many of the other frameworks, see [Vue Docs: Comparison with Other Frameworks](https://v2.vuejs.org/v2/guide/comparison.html).
 
 ## Installation
 
@@ -69,7 +68,7 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   ```
 
-However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
+However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and use tools like Vite or WebPack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
 
 1. Node.js 20 installed.
 2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [yarn](https://yarnpkg.com/).
@@ -112,7 +111,7 @@ For this project, we'll use the following configuration:
 ```
 
 After choosing these options, your project structure is now configured and dependencies are defined in a `package.json` file.
-The next steps are to install the required packages and start the server, and the tool will conveniently print out the commands you need to get started:
+The next steps are to install the dependencies and start the server, and the tool conveniently prints out the commands you need to do this:
 
 ```plain
 Scaffolding project in /path/to/todo-vue...
@@ -136,7 +135,7 @@ If everything went successfully, the CLI should have created a series of files a
   The Vite server watches source files for changes and can hot-reload the project while you make changes.
 - `public`: This directory contains static assets that are published during build.
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
-- `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
+- `index.html`: Your Vue app is run from this HTML page.
 - `src`: This directory contains the core of your Vue app.
 
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the `index.html` file your app should be attached to. This file is often where you register global components or additional Vue libraries.
@@ -150,11 +149,9 @@ If everything went successfully, the CLI should have created a series of files a
 
 Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.
 
-While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components (SFC)](https://vuejs.org/guide/scaling-up/sfc.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
+While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using [Single File Components (SFC)](https://vuejs.org/guide/scaling-up/sfc.html), Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in `.vue`. These files are processed by a JS build tool (such as Vite or Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.
 
-As a bonus, projects created with the Vue CLI are configured to use `.vue` files with Webpack out of the box. In fact, if you look inside the `src` folder in the project we created with the CLI, you'll see your first `.vue` file: `App.vue`.
-
-Let's explore this now.
+Let's look inside the `src` folder in the project we created with the CLI and inspect your first `.vue` file: `App.vue`.
 
 ### App.vue
 
@@ -179,11 +176,11 @@ import TheWelcome from "./components/TheWelcome.vue";
 
 `<style>` is where you write your CSS for the component. If you add a `scoped` attribute — `<style scoped>` — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.
 
-> **Note:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed by Webpack at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
+> **Note:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
 
 ## Running the app locally
 
-The `create-vue` tool comes with Vite as a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a `serve` command to the project's `package.json` file as an npm script, so you can easily run it.
+The `create-vue` tool comes with Vite as a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server from scratch. The CLI adds commands to the project's `package.json` file as npm scripts so you can easily run them.
 
 In your terminal, try running `npm run dev` (or `yarn dev` if you prefer yarn). Your terminal should output something like the following:
 
@@ -195,7 +192,7 @@ In your terminal, try running `npm run dev` (or `yarn dev` if you prefer yarn). 
   ➜  press h + enter to show help
 ```
 
-If you navigate to the "local" address in a new browser tab (this should be `http://localhost:5173/` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
+If you navigate to the "Local" address in a new browser tab (this should be `http://localhost:5173/` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
 ## Making a couple of changes
 
@@ -230,7 +227,7 @@ If you remove everything inside the `<template>` tag, you'll see an error saying
 You can fix this by adding some content inside the `<template>` tag and we can start with a new `<h1>` element inside a `<div>`.
 Since we're going to be creating a todo list app below, let's set our heading to "To-Do List" like so:
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>To-Do List</h1>
@@ -242,7 +239,7 @@ Since we're going to be creating a todo list app below, let's set our heading to
 
 ## Summary
 
-Let's leave this here for now. We've learnt about some of the ideas behind Vue, created some scaffolding for our example app to live inside, inspected it, and made a few preliminary changes.
+Let's leave this here for now. We've learned about some of the ideas behind Vue, created some scaffolding for our example app to live inside, inspected it, and made a few preliminary changes.
 
 With a basic introduction out of the way, we'll now go further and build up our sample app, a basic Todo list application that allows us to store a list of items, check them off when done, and filter the list by all, complete, and incomplete tasks.
 
