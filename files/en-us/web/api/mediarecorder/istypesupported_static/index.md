@@ -8,10 +8,7 @@ browser-compat: api.MediaRecorder.isTypeSupported_static
 
 {{APIRef("MediaStream Recording")}}
 
-The
-**`MediaRecorder.isTypeSupported()`** static method returns a
-Boolean which is `true` if the MIME type specified is one the user agent
-should be able to successfully record.
+The **`isTypeSupported()`** static method of the {{domxref("MediaRecorder")}} interface returns a {{jsxref("Boolean")}} which is `true` if the MIME media type specified is one the user agent should be able to successfully record.
 
 ## Syntax
 
@@ -26,11 +23,9 @@ MediaRecorder.isTypeSupported(mimeType)
 
 ### Return value
 
-`true` if the {{domxref("MediaRecorder")}} implementation is capable of
-recording {{domxref("Blob")}} objects for the specified MIME type. Recording may still
-fail if there are insufficient resources to support the recording and encoding process.
-If the value is `false`, the user agent is incapable of recording the
-specified format.
+A {{jsxref("Boolean")}}, `true` if the {{domxref("MediaRecorder")}} implementation is capable of recording {{domxref("Blob")}} objects for the specified MIME type.
+Recording may still fail if there are insufficient resources to support the recording and encoding process.
+If the value is `false`, the user agent is incapable of recording the specified format.
 
 ## Examples
 

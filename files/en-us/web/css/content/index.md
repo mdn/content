@@ -304,7 +304,7 @@ This example inserts an image before all links. Two `content` values are provide
 
 The CSS to show the image and set the alternative text is shown below.
 This also sets the font and color for the content.
-This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the the fallback `content` value.
+This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the fallback `content` value.
 
 ```css
 a::before {

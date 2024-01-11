@@ -16,7 +16,7 @@ To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard
 
 Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
 
-> **Note:** Modifications performed by `execCommand()` may or may not trigger [`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event) and [`input`](/en-US/docs/Web/API/HTMLElement/input_event) events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
+> **Note:** Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
 
 ## Syntax
 
