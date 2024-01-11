@@ -31,7 +31,7 @@ replaceState(state, unused, url)
   - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is traditional, and safe against future changes to the method.
 - `url` {{optional_inline}}
   - : The URL of the history entry. The new URL must be of the same origin as the current
-    URL; otherwise replaceState throws an exception.
+    URL; otherwise the `replaceState()` method throws an exception.
 
 ### Return value
 
