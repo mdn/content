@@ -98,46 +98,6 @@ div {
 
 {{EmbedLiveSample('Radial_gradient_example', 240, 120)}}
 
-### Repeating gradient examples
-
-Simple repeating linear and radial gradient examples.
-
-```html hidden
-<div class="linear-repeat">Repeating linear gradient</div>
-<br />
-<div class="radial-repeat">Repeating radial gradient</div>
-```
-
-```css hidden
-div {
-  width: 240px;
-  height: 80px;
-}
-```
-
-```css
-.linear-repeat {
-  background: repeating-linear-gradient(
-    to top left,
-    lightpink,
-    lightpink 5px,
-    white 5px,
-    white 10px
-  );
-}
-
-.radial-repeat {
-  background: repeating-radial-gradient(
-    powderblue,
-    powderblue 8px,
-    white 8px,
-    white 16px
-  );
-}
-```
-
-{{EmbedLiveSample('Repeating_gradient_examples', 240, 220)}}
-
 ### Conic gradient example
 
 A simple conic gradient example. Note that this isn't supported widely across browser as of yet.
@@ -155,11 +115,66 @@ div {
 
 ```css
 .conic-gradient {
-  background: conic-gradient(lightpink, white, powderblue);
+  background: conic-gradient(pink, coral, lime);
 }
 ```
 
 {{EmbedLiveSample('Conic_gradient_example', 240, 240)}}
+
+### Repeating gradient examples
+
+Simple repeating linear and radial gradient examples.
+
+```html hidden
+<div class="linear-repeat"></div>
+<span>Repeating linear gradient</span>
+<hr />
+<div class="radial-repeat"></div>
+<span>Repeating radial gradient</span>
+<hr />
+<div class="conic-repeat"></div>
+<span>Repeating conic gradient</span>
+```
+
+```css hidden
+div {
+  display: inline-block;
+  width: 240px;
+  height: 80px;
+}
+
+span {
+  font-weight: bold;
+  vertical-align: top;
+}
+```
+
+```css
+.linear-repeat {
+  background: repeating-linear-gradient(
+    to top left,
+    pink,
+    pink 5px,
+    white 5px,
+    white 10px
+  );
+}
+
+.radial-repeat {
+  background: repeating-radial-gradient(
+    lime,
+    lime 15px,
+    white 15px,
+    white 30px
+  );
+}
+
+.conic-repeat {
+  background: repeating-conic-gradient(lime, pink 30deg);
+}
+```
+
+{{EmbedLiveSample('Repeating_gradient_examples', 240, 300)}}
 
 ## Specifications
 
