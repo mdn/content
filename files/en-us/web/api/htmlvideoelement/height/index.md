@@ -8,16 +8,11 @@ browser-compat: api.HTMLVideoElement.height
 
 {{APIRef("HTML DOM")}}
 
-The **`height`** property of the {{domxref("HTMLVideoElement")}} interface indicates the width at which a video is drawn in {{Glossary("CSS pixel", "CSS pixels")}} if it's being drawn or rendered to any visual medium such as a screen or printer. Otherwise, it's the natural, pixel density-corrected width of the video.
+The **`height`** property of the {{domxref("HTMLVideoElement")}} interface returns an integer that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, specifying the displayed height of the resource in CSS pixels.
 
 ## Value
 
-An integer value indicating the height of the video. The terms in which the height is defined depends on whether the video is being rendered to a visual medium or not.
-
-- If the video is being rendered to a visual medium such as a screen or printer, the
-  height is expressed in {{Glossary("CSS pixels")}}.
-- Otherwise, the video's height is represented using its natural (intrinsic) height,
-  adjusted for the display density as indicated by the {{domxref("HTMLVideoElement.naturalHeight", "naturalHeight")}} property.
+A positive integer or 0.
 
 ## Specifications
 
