@@ -55,7 +55,7 @@ These MDN Web Docs guidelines for formatting code examples are also good practic
 
 To ensure proper formatting and syntax highlighting of code blocks, writers must specify the language of the code block they are writing in. See [Example code blocks in MDN Markdown](/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#example_code_blocks) for a list of languages supported by MDN, as well as details on how to request a new language.
 
-If the code block is pseudo-code, the output of a command, or otherwise not a programming language, explicitly set the language to `plain`.
+If the code block is pseudocode, the output of a command, or otherwise not a programming language, explicitly set the language to `plain`.
 
 > **Warning:** if the desired language is not yet supported by MDN, do **not** set the language of a code block to a similar language, as doing so may have unintended side effects with Prettier formatting and syntax highlighting.
 

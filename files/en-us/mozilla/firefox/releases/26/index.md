@@ -13,7 +13,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 ### CSS
 
 - The {{cssxref("text-decoration-line")}} property, still prefixed, now considers `'blink'` as a valid value, though it doesn't blink the content at all ([Firefox bug 812995](https://bugzil.la/812995)).
-- The non-standard {{cssxref("-moz-text-blink")}} property has been removed ([Firefox bug 812995](https://bugzil.la/812995)).
+- The non-standard `-moz-text-blink` property has been removed ([Firefox bug 812995](https://bugzil.la/812995)).
 - Support for the {{cssxref("image-orientation")}} property, in its CSS Images & Values Level 4 version, that is with the `from-image` keyword and EXIF support, has been added ([Firefox bug 825771](https://bugzil.la/825771)).
 - Experimental support for `position: sticky` has been implemented and can be enabled by pref `layout.css.sticky.enabled` ([Firefox bug 886646](https://bugzil.la/886646)).
 - The {{cssxref("text-align")}} property now applies to the `::-moz-placeholder` pseudo-element ([Firefox bug 915551](https://bugzil.la/915551)).
@@ -27,7 +27,7 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 
 ### JavaScript
 
-[ECMAScript 2015](/en-US/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) implementation continues!
+ECMAScript 2015 implementation continues!
 
 - The ECMAScript 2015 compliant syntax for [Generators (yield)](https://web.archive.org/web/20170126155949/http://wiki.ecmascript.org/doku.php?id=harmony:generators) has been implemented ([Firefox bug 666399](https://bugzil.la/666399)).
 - Generator/Iterator results are now boxed like `{ value: foo, done: bool }` ([Firefox bug 907744](https://bugzil.la/907744)).
@@ -41,9 +41,9 @@ Firefox 26 was released on December 10, 2013. This article lists key changes tha
 - Make the last argument (doctype) to {{domxref("DOMImplementation.createDocument")}} optional ([Firefox bug 909859](https://bugzil.la/909859)).
 - Implement the new {{domxref("element.classList")}} specification which permits adding/removing several classes with one call ([Firefox bug 814014](https://bugzil.la/814014)).
 - The {{domxref("URL.URL", "URL()")}} constructor has been implemented on the {{domxref("URL")}} interface ([Firefox bug 887364](https://bugzil.la/887364)).
-- The properties {{domxref("HTMLAnchorElement/origin", "URLUtils.origin")}}, {{domxref("HTMLAnchorElement/password", "URLUtils.password")}}, and {{domxref("HTMLAnchorElement/username", "URLUtils.username")}} are now available to all interfaces implementing {{domxref("HTMLHyperlinkElementUtils", "URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ([Firefox bug 887364](https://bugzil.la/887364)).
+- The properties {{domxref("HTMLAnchorElement/origin", "URLUtils.origin")}}, {{domxref("HTMLAnchorElement/password", "URLUtils.password")}}, and {{domxref("HTMLAnchorElement/username", "URLUtils.username")}} are now available to all interfaces implementing the `URLUtils` mixin: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, and {{domxref("HTMLAreaElement")}} ([Firefox bug 887364](https://bugzil.la/887364)).
 - The {{domxref("URL")}} interface is now accessible from Web Workers ([Firefox bug 887364](https://bugzil.la/887364)).
-- IndexedDB can now be used as a "optimistic" storage area so it doesn't require any prompts and data is stored in a pool with LRU eviction policy, in short temporary storage ([Firefox bug 785884](https://bugzil.la/785884)).
+- IndexedDB can now be used as an "optimistic" storage area so it doesn't require any prompts and data is stored in a pool with LRU eviction policy, in short temporary storage ([Firefox bug 785884](https://bugzil.la/785884)).
 - Support for {{domxref("WaveShaperNode.oversample")}} has been added ([Firefox bug 875277](https://bugzil.la/875277)).
 - Path of the persistent storage has been changed from `<profile>/indexedDB` to `<profile>/storage/persistent` (on b2g from `/data/local/indexedDB` to `/data/local/storage/persistent`).
 - The {{domxref("Screen.orientation")}} property and {{domxref("Screen.lockOrientation()")}} method now support the `default` value, mapping to `portrait-primary` or `landscape-primary`, depending of the device ([Firefox bug 908058](https://bugzil.la/908058)) This works only for Firefox OS and Firefox for Android. Firefox Desktop is not supported.

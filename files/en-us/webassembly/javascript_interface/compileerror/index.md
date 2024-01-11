@@ -2,7 +2,7 @@
 title: WebAssembly.CompileError
 slug: WebAssembly/JavaScript_interface/CompileError
 page-type: webassembly-interface
-browser-compat: javascript.builtins.WebAssembly.CompileError
+browser-compat: webassembly.api.CompileError
 ---
 
 {{WebAssemblySidebar}}

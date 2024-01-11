@@ -49,11 +49,11 @@ One or more of the keyword values listed below, separated by commas.
   - : The position is relative to the padding box. For single boxes `0 0` is the upper left corner of the padding edge, `100% 100%` is the lower right corner.
 - `border-box`
   - : The position is relative to the border box.
-- `fill-box` {{Experimental_Inline}}
+- `fill-box`
   - : The position is relative to the object bounding box.
-- `stroke-box` {{Experimental_Inline}}
+- `stroke-box`
   - : The position is relative to the stroke bounding box.
-- `view-box` {{Experimental_Inline}}
+- `view-box`
   - : Uses the nearest SVG viewport as reference box. If a {{svgattr("viewBox")}} attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the `viewBox` attribute and the dimension of the reference box is set to the width and height values of the `viewBox` attribute.
 - `content` {{non-standard_inline}}
   - : Same as `content-box`.

@@ -2,7 +2,7 @@
 title: WebAssembly.Global() constructor
 slug: WebAssembly/JavaScript_interface/Global/Global
 page-type: webassembly-constructor
-browser-compat: javascript.builtins.WebAssembly.Global.Global
+browser-compat: webassembly.api.Global.Global
 ---
 
 {{WebAssemblySidebar}}

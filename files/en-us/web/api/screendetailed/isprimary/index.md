@@ -13,7 +13,7 @@ browser-compat: api.ScreenDetailed.isPrimary
 The **`isPrimary`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a boolean indicating whether the screen is set as the operating system (OS) primary screen or not.
 
-The OS hosting the browser will have one primary screen, and one or more secondary screens. The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock. The primary screen may change for a number of resons, such as a screen being unplugged.
+The OS hosting the browser will have one primary screen, and one or more secondary screens. The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock. The primary screen may change for a number of reasons, such as a screen being unplugged.
 
 ## Value
 

@@ -32,7 +32,7 @@ _No changes._
 #### Removals
 
 - The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ([Firefox bug 1694129](https://bugzil.la/1694129)).
-- Default styling for the non-standard `:-moz-ui-invalid` and {{cssxref(":-moz-ui-valid")}} has been removed ([Firefox bug 1693969](https://bugzil.la/1693969)).
+- Default styling for the non-standard `:-moz-ui-invalid` and `:-moz-ui-valid` has been removed ([Firefox bug 1693969](https://bugzil.la/1693969)).
 
 ### JavaScript
 

@@ -13,8 +13,6 @@ For certain XUL elements and pseudo-elements that use an image from the {{CSSxRe
 
 The syntax is similar to the {{CSSxRef("clip")}} property. All four values are relative to the upper left corner of the image.
 
-> **Note:** For a system that works on any background, see {{CSSxRef("-moz-image-rect")}}.
-
 ## Syntax
 
 ```css

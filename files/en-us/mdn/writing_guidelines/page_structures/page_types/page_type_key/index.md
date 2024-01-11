@@ -157,7 +157,7 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-interface`: a WebAssembly interface, like [`WebAssembly.LinkError`](WebAssembly/JavaScript_interface/LinkError).
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](WebAssembly/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](WebAssembly/JavaScript_interface/Exception/getArg).
-- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](WebAssembly/JavaScript_interface/Module/exports).
+- `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](WebAssembly/JavaScript_interface/Module/exports_static).
 - `webassembly-instruction`: an instruction, or a set of instructions, like [`Wrap`](WebAssembly/Reference/Numeric/Wrap).
 
 ### WebDriver page types
@@ -195,7 +195,7 @@ This section lists `page-type` values for pages under [Web/XPath](/en-US/docs/We
 
 This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web/XSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/WWeb/XSLT/Element/message).
+- `xslt-element`: an element of XSLT, like [`<xsl:message>`](/en-US/docs/Web/XSLT/Element/message).
 - `xslt-axis`: an axis of XSLT, like [`ancestor`](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference/Axes/ancestor).
 
 ### EXSLT page types

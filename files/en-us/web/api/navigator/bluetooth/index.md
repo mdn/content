@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.bluetooth
 ---
 
-{{APIRef("Web Bluetooth API")}}{{SeeCompatTable}}{{secureContext_header}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{secureContext_header}}
 
 The **`bluetooth`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
 

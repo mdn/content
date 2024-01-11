@@ -50,11 +50,6 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
 - [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://go.dev/) implementation of the WebSocket protocol.
 
-## Related Topics
-
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
-- [JavaScript](/en-US/docs/Web/JavaScript)
-
 ## Specifications
 
 {{Specifications}}

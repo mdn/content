@@ -258,7 +258,7 @@ li::marker {
 
 {{EmbedLiveSample('Adding_text_to_list_item_counters', '100%', 200)}}
 
-The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
+The generated content on each list item's marker adds the text "item " as a prefix, including a space to separate the prefix from the counter, which is followed by ": ", a colon and an additional space. The {{cssxref("counters", "counters()")}} function defines a numeric `items` counter, in which the numbers of nested ordered lists have their numbers separated with a period (`.`) in most browsers.
 
 ### Strings with attribute values
 
@@ -304,7 +304,7 @@ This example inserts an image before all links. Two `content` values are provide
 
 The CSS to show the image and set the alternative text is shown below.
 This also sets the font and color for the content.
-This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the the fallback `content` value.
+This will be used on browsers that _display_ the alternative text and in browsers that don't support alternative text and show the fallback `content` value.
 
 ```css
 a::before {
@@ -451,13 +451,14 @@ If inserted content is not decorative, check that the information is provided to
 
 ## See also
 
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
-- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
-- {{cssxref("image/image-set", "image-set()")}} function
-- {{cssxref("url", "url()")}} function
+- {{cssxref("image/image-set", "image-set()")}}
+- {{cssxref("url", "url()")}}
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

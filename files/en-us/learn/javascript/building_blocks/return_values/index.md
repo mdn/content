@@ -14,7 +14,7 @@ There's one last essential concept about functions for us to discuss — return 
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Basic computer literacy, a basic understanding of HTML and CSS,
+          A basic understanding of HTML and CSS,
           <a href="/en-US/docs/Learn/JavaScript/First_steps"
             >JavaScript first steps</a
           >,
@@ -70,7 +70,7 @@ function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }

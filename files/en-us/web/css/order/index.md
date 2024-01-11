@@ -11,6 +11,10 @@ The **`order`** [CSS](/en-US/docs/Web/CSS) property sets the order to lay out an
 
 {{EmbedInteractiveExample("pages/css/order.html")}}
 
+In the above demo, select the options on the left-hand side to change the value of the purple box's `order` property. The blue boxes have been given fixed `order` values.
+
+Bear in mind the effect of source order. When `order: 2;` is selected for example, the purple box is placed before the two blue boxes with `order: 2;`. This is because the purple box appears before the blue boxes in the source code.
+
 ## Syntax
 
 ```css

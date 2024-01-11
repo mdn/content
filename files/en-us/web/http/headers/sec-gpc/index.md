@@ -6,6 +6,7 @@ status:
   - experimental
   - non-standard
 browser-compat: http.headers.Sec-GPC
+spec-urls: https://privacycg.github.io/gpc-spec/
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
@@ -47,7 +48,7 @@ Otherwise, the header is not sent, which indicates that either the user has not 
 The user's GPC preference can also be read from JavaScript using the {{domxref("Navigator.globalPrivacyControl")}} or {{domxref("WorkerNavigator.globalPrivacyControl")}} property:
 
 ```js
-navigator.globalPrivacyControl; // "0" or "1"
+navigator.globalPrivacyControl; // "false" or "true"
 ```
 
 ## Specifications
