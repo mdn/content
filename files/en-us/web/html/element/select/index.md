@@ -17,7 +17,7 @@ Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/opt
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
-You can further nest `<option>` elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.
+You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
 For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
 
@@ -152,6 +152,48 @@ The following example creates a very simple dropdown menu, the second option of 
 #### Result
 
 {{EmbedLiveSample("Basic_select", "", "100")}}
+
+### Select with grouping options
+
+The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
+
+```html
+<label for="hr-select">Your favorite food</label> <br />
+
+<select name="foods" id="hr-select">
+  <option value="">Choose a food</option>
+  <hr />
+  <optgroup label="Fruit">
+    <option value="apple">Apples</option>
+    <option value="banana">Bananas</option>
+    <option value="cherry">Cherries</option>
+    <option value="damson">Damsons</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Vegetables">
+    <option value="artichoke">Artichokes</option>
+    <option value="broccoli">Broccoli</option>
+    <option value="cabbage">Cabbages</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Meat">
+    <option value="beef">Beef</option>
+    <option value="chicken">Chicken</option>
+    <option value="pork">Pork</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Fish">
+    <option value="cod">Cod</option>
+    <option value="haddock">Haddock</option>
+    <option value="salmon">Salmon</option>
+    <option value="turbot">Turbot</option>
+  </optgroup>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
 
 ### Advanced select with multiple features
 
@@ -539,6 +581,10 @@ document.forms[0].onsubmit = (e) => {
 
 {{EmbedGHLiveSample("html-examples/custom-select", '100%', 300)}}
 
+## Accessibility concerns
+
+The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
+
 ## Technical summary
 
 <table class="properties">
@@ -580,8 +626,8 @@ document.forms[0].onsubmit = (e) => {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}} or
-        {{HTMLElement("optgroup")}} elements.
+        Zero or more {{HTMLElement("option")}},
+        {{HTMLElement("optgroup")}} or {{HTMLElement("hr")}} elements.
       </td>
     </tr>
     <tr>
@@ -632,6 +678,6 @@ document.forms[0].onsubmit = (e) => {
 
 ## See also
 
-- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("HTMLElement/input_event", "input")}}
+- Events fired by `<select>`: {{domxref("HTMLElement/change_event", "change")}}, {{domxref("Element/input_event", "input")}}
 - The {{HTMLElement("option")}} element
 - The {{HTMLElement("optgroup")}} element

@@ -72,7 +72,7 @@ page-type: guide
 
 ### Other
 
-- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
+- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
   - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>

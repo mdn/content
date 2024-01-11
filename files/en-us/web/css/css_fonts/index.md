@@ -57,8 +57,6 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
     - {{cssxref("@font-face/font-display", "font-display")}}
     - {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
-    - {{cssxref("@font-face/font-language-override", "font-language-override")}}
-    - {{cssxref("@font-face/font-named-instance", "font-named-instance")}}
     - {{cssxref("@font-face/font-stretch", "font-stretch")}}
     - {{cssxref("@font-face/font-style", "font-style")}}
     - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}

@@ -290,6 +290,8 @@ Copy the `Genre` model code shown below and paste it into the bottom of your `mo
 As mentioned above, we've created the genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.
 
 ```python
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+
 class Genre(models.Model):
     """Model representing a book genre."""
     name = models.CharField(
@@ -319,12 +321,10 @@ Copy the `Book` model below and again paste it into the bottom of your file. The
 
 The model uses a `CharField` to represent the book's `title` and `isbn`.
 For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise, it would default to "Isbn"). We also set the parameter `unique` as `true` to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table).
-Unlike for the `isbn` (and the genre name), the `title` is is not set to be unique, because it is possible for different books to have the same name.
+Unlike for the `isbn` (and the genre name), the `title` is not set to be unique, because it is possible for different books to have the same name.
 The model uses `TextField` for the `summary`, because this text may need to be quite long.
 
 ```python
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
-
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
     title = models.CharField(max_length=200)

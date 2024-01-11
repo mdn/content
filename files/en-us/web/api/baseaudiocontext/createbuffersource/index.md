@@ -41,7 +41,7 @@ it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly ex
 what is going on.
 
 > **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
-> or [view the source](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
+> or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
