@@ -21,3 +21,9 @@ A positive integer or 0.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLCanvasElement.height")}}
+- {{domxref("HTMLImageElement.height")}}
+- {{domxref("HTMLObjectElement.height")}}
