@@ -3998,7 +3998,7 @@
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Inbox/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -5151,7 +5151,7 @@
 /en-US/docs/JavaScript_typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/JavaScript_typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn/CSS/First_steps
@@ -11399,10 +11399,10 @@
 /en-US/docs/Web/CSS/CSS_Columns/Using_multicol_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -11476,6 +11476,7 @@
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
+/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_named_grid_lines	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /en-US/docs/Web/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
