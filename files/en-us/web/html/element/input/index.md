@@ -352,8 +352,6 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                      |
 | [`type`](#type)                               | all                                                                     | Type of form control                                                                   |
 | [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value |
-| [`valueAsNumber`](#valueasnumber)             | much                                                                    | Value of type `Number` which can differ in behavior between input elements             |
-| [`valueAsDate`](#valueasdate)                 | `date`, `datetime-local`, `month`, `time`, `week`                       | Value of type `Date` which can differ in behavior between date-related input elements  |
 | [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                   |
 
 A few additional non-standard attributes are listed following the descriptions of the standard attributes.
@@ -615,14 +613,6 @@ A few additional non-standard attributes are listed following the descriptions o
 - `value`
 
   - : The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `value` property. The `value` attribute is always optional, though should be considered mandatory for `checkbox`, `radio`, and `hidden`.
-
-- `valueAsNumber`
-
-  - : The input control's valueAsNumber. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsNumber` property.
-
-- `valueAsDate`
-
-  - : The input control's valueAsDate. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `valueAsDate` property.
 
 - `width`
 
