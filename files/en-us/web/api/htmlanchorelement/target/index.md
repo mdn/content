@@ -15,6 +15,7 @@ It reflects the `target` attribute of the {{HTMLElement("a")}} element.
 ## Value
 
 A string that indicates where to display the linked resource, or the empty string (`""`) if there is no `target` attribute.
+Target values are `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
 
 ## Example
 
