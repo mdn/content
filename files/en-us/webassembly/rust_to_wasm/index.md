@@ -258,10 +258,10 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions.
-This tutorial targets node 20, if you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
+This tutorial targets node 20. If you need to switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
 
 If you want to use the WebAssembly module with npm, we'll need to make a few changes.
-Let's start by recompiling our Rust with the target bundler option:
+Let's start by recompiling our Rust with `bundler` option as the target:
 
 ```bash
 wasm-pack build --target bundler
@@ -406,4 +406,4 @@ wasm-pack publish
 
 This is the end of our tutorial; we hope you've found it useful.
 
-There's lots of exciting work going on in this space; if you'd like to help make it even better, check out [the Rust WebAssembly Working Group](https://rustwasm.github.io/).
+There's lots of exciting work going on in this space; if you'd like to help make it even better, check out the [Rust and WebAssembly Working Group](https://github.com/rustwasm/team/blob/master/README.md#get-involved).
