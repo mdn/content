@@ -8,7 +8,7 @@ status:
 browser-compat: api.IdentityCredential.isAutoSelected
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
 The **`isAutoSelected`** read-only property of the {{domxref("IdentityCredential")}} interface indicates whether the federated sign-in was carried out using automatic reauthentication (i.e. without user mediation) or not.
 
