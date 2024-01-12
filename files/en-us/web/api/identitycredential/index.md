@@ -19,9 +19,9 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
-- {{domxref("IdentityCredential.isAutoSelected")}} {{experimental_inline}}
+- {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A boolean value that indicates whether the federated sign-in was carried out using automatic reauthentication (i.e. without user mediation) or not.
-- {{domxref("IdentityCredential.token")}} {{experimental_inline}}
+- {{domxref("IdentityCredential.token")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.
 
 ## Examples
