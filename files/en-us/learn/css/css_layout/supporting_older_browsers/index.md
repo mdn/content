@@ -60,13 +60,13 @@ A website can't possibly look the same in all browsers. Some of your users will 
 
 A basic level of support comes from structuring your content well so that the normal flow of your page makes sense. For users on a limited data plan, their browsers might not load images, fonts, or even your CSS. However, the content should be presented in a way such that it is accessible and readable even when these elements are not fully loaded. A well-structured HTML document should always be your starting point. Ask yourself: _if you remove your stylesheet, does your content still make sense?_
 
-It doesn't make commercial sense to spend time trying to give everyone an identical experience of your website. This is because user environments can vary widely and are beyond your control. It is helpful to test a plain, CSS-less view of your site to ensure that the fallback experience of your site is accessible. This fallback may never be viewed by people using very old or limited browsers, but may be viewed by your main target audience — users of modern browsers — when their browser or Internet connection fails temporarily. It is better to focus on what you can control: it is better to spend the time to make the site [accessible](/en-US/docs/Web/Accessibility), thus serving more users. There is a balance between a plain HTML page and a fully featured website. CSS simplifies creating these fallbacks.
+It doesn't make commercial sense to spend time trying to give everyone an identical experience of your website. This is because user environments can vary widely and are beyond your control. There is a balance you need to strike between a plain HTML page and a fully featured website. It is helpful to test a plain, CSS-less view of your site to ensure that the fallback experience of your site is accessible. This fallback may never be viewed by people using very old or limited browsers, but may be viewed by your main target audience — users of modern browsers — when their browser or Internet connection fails temporarily. CSS simplifies creating these fallbacks. Therefore, it is better to focus on what you can control, that is, spend the time to make your site [accessible](/en-US/docs/Web/Accessibility), thereby serving more users.
 
 ## Creating fallbacks in CSS
 
 CSS specifications contain information that explain what the browser does when two similar features, such as layout methods, are applied to the same item. For example, they define what happens if an item is floated and is also a grid item and part of a CSS grid container. There is also a definition for what happens when an element has both {{cssxref("margin-top")}} and {{cssxref("margin-block-start")}} properties set.
 
-When a browser doesn't recognize a new feature, it [discards the declaration as invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors) without throwing an error. Because browsers discard CSS properties and values they don't support, both old and new values can coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
+When a browser doesn't recognize a new feature, it discards the declaration as invalid [without throwing an error](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors). Because browsers discard CSS properties and values they don't support, both old and new values can coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
 
 For example, most browsers support the two-value syntax of the {{cssxref("display")}} property. If a browser doesn't, it will use the older, single-value syntax.
 
@@ -77,7 +77,7 @@ For example, most browsers support the two-value syntax of the {{cssxref("displa
 }
 ```
 
-Similarly, this [error-handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes) ensures old CSS code bases continue to work even if legacy {{glossary("vendor-prefix", "vendor-prefixed")}} features are no longer supported. While vendor prefixing is no longer commonly used, if you must include a vendor-prefixed property or value, make sure to declare the prefixed value before the standard value so that, when supported, the new value overwrites the fallback value.
+Similarly, this [error-handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes) ensures old CSS code bases continue to work even if legacy {{glossary("Vendor_Prefix", "vendor-prefixed")}} features are no longer supported. While vendor prefixing is no longer commonly used, if you must include a vendor-prefixed property or value, make sure to declare the prefixed value before the standard value so that, when supported, the new value overwrites the fallback value.
 
 ### Using new selectors
 
@@ -162,7 +162,7 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 
 - [`@supports`](/en-US/docs/Web/CSS/@supports) at-rule
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
-- [Using feature queries](/en-US/docs/Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_Conditional_Rules/) module
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules/) module
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
