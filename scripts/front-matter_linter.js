@@ -89,7 +89,7 @@ function tryOrExit(f) {
       await f({ options, ...args });
     } catch (error) {
       if (options.verbose || options.v) {
-        console.error(chalk.red(error.stack));
+        console.error(error.stack);
       }
       throw error;
     }

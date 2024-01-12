@@ -34,9 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-| Exception          | Explanation                                          |
-| ------------------ | ---------------------------------------------------- |
-| `InvalidPointerId` | pointerId does not match any of the active pointers. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `pointerId` does not match any active pointer.
 
 ## Examples
 
@@ -100,5 +99,6 @@ slider.onpointerup = stopSliding;
 
 ## See also
 
+- {{ domxref("Element.hasPointerCapture","Element.hasPointerCapture()") }}
 - {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
 - {{ domxref("Pointer_events","Pointer Events") }}

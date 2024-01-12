@@ -25,7 +25,7 @@ navigate(url)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
+A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}} if the URL is from the same origin as the service worker, or {{jsxref("Operators/null", "null")}} otherwise.
 
 ## Specifications
 

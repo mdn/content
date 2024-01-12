@@ -29,7 +29,7 @@ The textual content for a {{SVGElement("text")}} [SVG](/en-US/docs/Web/SVG) elem
 
 ### Specific attributes
 
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

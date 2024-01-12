@@ -27,7 +27,7 @@ This article provides information about the changes in Firefox 66 that will affe
 ### CSS
 
 - [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) has been implemented in Firefox Desktop (but not mobile yet), which includes the {{cssxref("overflow-anchor")}} property ([Firefox bug 1305957](https://bugzil.la/1305957)).
-- We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ([Webkit bug 1512386](https://bugzil.la/1512386)).
+- We've implemented the case-sensitive [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) modifier, `s` ([Firefox bug 1512386](https://bugzil.la/1512386)).
 - Several [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) shorthands have landed, along with the flow-relative border radius properties:
 
   - {{cssxref("padding-block")}} and {{cssxref("padding-inline")}} ([Firefox bug 1519847](https://bugzil.la/1519847)).
@@ -37,7 +37,7 @@ This article provides information about the changes in Firefox 66 that will affe
   - {{cssxref("border-block")}} and {{cssxref("border-inline")}} ([Firefox bug 1520396](https://bugzil.la/1520396)).
   - {{cssxref("border-start-start-radius")}}, {{cssxref("border-start-end-radius")}}, {{cssxref("border-end-start-radius")}}, and {{cssxref("border-end-end-radius")}} ([Firefox bug 1520684](https://bugzil.la/1520684)).
 
-- We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ([Webkit bug 1422235](https://bugzil.la/1422235)).
+- We implemented the {{cssxref("@media/overflow-inline", "overflow-inline")}} and {{cssxref("@media/overflow-block", "overflow-block")}} media queries ([Firefox bug 1422235](https://bugzil.la/1422235)).
 - {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} are now animatable, as per the rules set out in their specs ([Firefox bug 1348519](https://bugzil.la/1348519)).
 - We now support {{cssxref("calc", "calc()")}} with percentages for table cells and column widths ([Firefox bug 957915](https://bugzil.la/957915)).
 - The `min-content` and `max-content` keywords are now available unprefixed ([Firefox bug 1322780](https://bugzil.la/1322780)). These can be set on:
@@ -62,7 +62,7 @@ _No additions._
 
 #### Removals
 
-- We removed support for the `xml:base` attribute ([Webkit bug 903372](https://bugzil.la/903372)).
+- We removed support for the `xml:base` attribute ([Firefox bug 903372](https://bugzil.la/903372)).
 
 ### JavaScript
 
@@ -95,7 +95,7 @@ No changes.
 
 #### Removals
 
-- The legacy WebRTC {{domxref("PeerConnection.getStats()")}} method has been removed, along with associated types ([Firefox bug 1328194](https://bugzil.la/1328194)).
+- The legacy WebRTC `PeerConnection.getStats()` method has been removed, along with associated types ([Firefox bug 1328194](https://bugzil.la/1328194)).
 
 ### Networking
 

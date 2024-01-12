@@ -7,26 +7,30 @@ browser-compat: css.at-rules.counter-style.negative
 
 {{CSSRef}}
 
-When defining custom counter styles, the **`negative`** descriptor lets you alter the representations of negative counter values, by providing a way to specify symbols to be appended or prepended to the counter representation when the value is negative.
+The **`negative`** descriptor of the {{cssxref("@counter-style")}} at-rule lets you define how negative counter values are represented when defining custom counter styles. The value of the `negative` descriptor defines the symbols to be added before and after the counter representation when the counter's value is negative.
 
 ## Syntax
 
 ```css
-/* <symbol> values */
-negative: "-"; /* Prepends '-' if value is negative */
-negative: "(" ")"; /* Surrounds value by '(' and ')' if it is negative */
+/* One <symbol> value */
+negative: "--"; /* Adds '--' before if counter value is negative */
+
+/* Two <symbol> values */
+negative: "(" ")"; /* Adds '(- before and ')' after if counter value is negative */
 ```
 
 ### Values
 
-- first `<symbol>`
-  - : This symbol will be prepended to the representation when the counter is negative.
-- second `<symbol>`
-  - : If present, this symbol will be appended to the representation when the counter is negative.
+The `negative` descriptor accepts up to two [`<symbol>`](/en-US/docs/Web/CSS/@counter-style/symbols#values) values.
+
+- `<symbol>`
+  - : If only one value is specified, it is added before the counter representation when the counter is negative. If two values are specified, the first one is added before and the second one is added after the counter representation when the counter is negative.
 
 ## Description
 
-If the counter value is negative, the symbol provided as value for the descriptor is prepended to the counter representation; and a second symbol if specified, will be appended to the representation. The negative descriptor has effect only if the `system` value is `symbolic`, `alphabetic`, `numeric`, `additive`, or `extends`, if the extended counter style itself uses a negative sign. If the negative descriptor is specified for other systems that don't support negative counter values, then the descriptor is ignored.
+If the counter value is negative, the specified `<symbol>` for the `negative` descriptor is added before the counter representation, replacing the default `-` for negative values. The second `<symbol>`, if specified, is added after the counter representation.
+
+The `negative` descriptor is relevant in two cases: if counter styles have the `system` value of `symbolic`, `alphabetic`, `numeric`, and `additive` and the count is negative; and if `system` value is `extends` and the extended counter style itself uses a negative sign. For systems that don't support negative counter values, specifying the `negative` descriptor has no effect and is ignored.
 
 ## Formal definition
 
@@ -40,15 +44,17 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ### Rendering negative counters
 
+This example [extends](/en-US/docs/Web/CSS/@counter-style/system#extends) the [`decimal`](/en-US/docs/Web/CSS/list-style-type#decimal) list style. The `negative` descriptor is used to add `(-` and `)` before and after negative counter values.
+
 #### HTML
 
 ```html
-<ol class="list" start="-3">
+<ol start="-3">
+  <li>Negative three</li>
+  <li>Negative two</li>
+  <li>Negative one</li>
+  <li>Zero</li>
   <li>One</li>
-  <li>Two</li>
-  <li>Three</li>
-  <li>Four</li>
-  <li>Five</li>
 </ol>
 ```
 
@@ -56,12 +62,12 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ```css
 @counter-style neg {
-  system: numeric;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  system: extends decimal;
   negative: "(-" ")";
+  suffix: ": ";
 }
 
-.list {
+ol {
   list-style: neg;
 }
 ```
@@ -69,6 +75,8 @@ If the counter value is negative, the symbol provided as value for the descripto
 #### Result
 
 {{ EmbedLiveSample('Rendering negative counters') }}
+
+The prefix and suffix listed as the value of the `negative` descriptor are only added to the marker when the counter value is less than zero.
 
 ## Specifications
 
@@ -80,5 +88,8 @@ If the counter value is negative, the symbol provided as value for the descripto
 
 ## See also
 
-- {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
+- List style properties: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
+- {{cssxref("symbols", "symbols()")}} function to create anonymous counter styles
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

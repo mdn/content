@@ -18,9 +18,7 @@ The **`<body>`** [HTML](/en-US/docs/Web/HTML) element represents the content of 
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Element/Heading_Elements#sectioning_roots"
-          >Sectioning root</a
-        >.
+        None.
       </td>
     </tr>
     <tr>

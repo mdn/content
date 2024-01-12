@@ -17,7 +17,7 @@ The **`rgb()`** functional notation expresses a color according to its red, gree
 
 ```css
 rgb(255 255 255)
-rgb(255 255 255 / .5)
+rgb(255 255 255 / 50%)
 ```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
@@ -30,6 +30,8 @@ Functional notation: `rgb(R G B[ / A])`
   - : Each as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represent the red, green, and blue channels, respectively.
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** This functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
@@ -60,7 +62,7 @@ div {
 }
 
 div.space-separated {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.comma-separated {
@@ -93,7 +95,7 @@ div {
 }
 
 div.rgb {
-  background-color: rgb(255 0 0 / 0.5);
+  background-color: rgb(255 0 0 / 50%);
 }
 
 div.rgba {

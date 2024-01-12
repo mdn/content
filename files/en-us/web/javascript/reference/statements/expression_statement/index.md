@@ -46,7 +46,7 @@ In order for an expression to be used as a statement, it must not be ambiguous w
 
 Therefore, all of the following are invalid:
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('

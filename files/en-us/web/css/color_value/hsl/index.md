@@ -19,7 +19,7 @@ Defining _complementary colors_ with `hsl()` can be done with a single formula, 
 
 ```css
 hsl(120deg 75% 25%)
-hsl(120deg 75% 25% / 0.6)
+hsl(120deg 75% 25% / 60%)
 ```
 
 The function also accepts a legacy syntax in which all values are separated with commas.
@@ -36,6 +36,8 @@ Functional notation: `hsl(H S L[ / A])`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`, which represents lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+
+> **Note:** This functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
@@ -103,7 +105,7 @@ div.space-separated {
 }
 
 div.comma-separated {
-  background-color: hsl(0, 100%, 50%, 50%);
+  background-color: hsl(0, 100%, 50%, 0.5);
 }
 ```
 
@@ -136,7 +138,7 @@ div.hsl {
 }
 
 div.hsla {
-  background-color: hsla(0, 100%, 50%, 50%);
+  background-color: hsla(0, 100%, 50%, 0.5);
 }
 ```
 
@@ -154,5 +156,7 @@ div.hsla {
 
 ## See also
 
-- {{CSSXref("&lt;color&gt;")}}: the data type that represents any color
-- [HSL Color Picker](https://hslpicker.com/)
+- [List of all color notations](/en-US/docs/Web/CSS/color)
+- {{CSSXref("&lt;hue&gt;")}} data type
+- [Color picker tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool) on MDN
+- [Color picker](https://colorjs.io/apps/picker/) by Lea Verou

@@ -37,9 +37,10 @@ Save the HTML document and stylesheet into a directory on your computer, and add
 
 This starting point has all of the content of your layout as displayed by the browser in normal flow.
 
-Alternatively, you could use a site like [Glitch](https://glitch.com/) to do your assessment, pasting in the HTML and CSS. Note that if you use an online editor you will need to upload the images and replace the values in the `src` attributes to point to the new image locations. If the online editor you are using doesn't have a separate CSS panel, feel free to put it in a `<style>` element in the head of the document.
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+If you use an online editor, you will need to upload the images and replace the values in the `src` attributes to point to the new image locations.
 
-> **Note:** If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
+> **Note:** If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief
 
@@ -71,17 +72,5 @@ There are a few ways in which you could achieve some of these tasks, and there o
 The following screenshot shows an example of what the finished layout for the design should look like:
 
 ![Finished layout task website. The elements are laid out neatly. There is a website title, above a black nav bar containing 5 equally spaced links. Below the nav bar, there are two sections. On the left there is a blog post: A blog post title followed by the post content. The blog content wraps around a photo that is flush left. On the right side there is a 'photography' title about a group of images laid out in a two-image wide grid.](layout-task-complete.png)
-
-## Assessment or further help
-
-If you would like your work assessed or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for Fundamental layout comprehension".
-   - Details of what you have already tried and what you would like us to do; for example, tell us if you're stuck and need help or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor (as mentioned in step 1 above). This is a good practice to get into — it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.
 
 {{PreviousMenu("Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

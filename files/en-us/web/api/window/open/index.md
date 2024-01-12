@@ -76,13 +76,21 @@ open(url, target, windowFeatures)
 
 ### Return value
 
-A [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object. The returned reference can be used to access properties and methods of the new window as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned. The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+
+`null` is returned if the browser fails to open the new browsing context, for example because it was blocked by a browser popup blocker.
 
 ## Description
 
 The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
 
-Note that remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+Remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+
+Modern browsers have strict popup blocker policies. Popup windows must be opened in direct response to user input, and a separate user gesture event is required for each `Window.open()` call. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
+
+- Open no more than one new window at once.
+- Reuse existing windows to display different pages.
+- Advise users on how to update their browser settings to allow multiple windows.
 
 ## Examples
 
@@ -95,8 +103,6 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 ### Opening a popup
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
-
-> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct response to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them.
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -248,7 +254,7 @@ console.log(sameOriginContext.origin);
 
 For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
-## Accessibility
+## Accessibility concerns
 
 ### Avoid resorting to window.open()
 

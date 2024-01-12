@@ -64,7 +64,7 @@ The extra privileges include:
 
 In Firefox extensions get host permissions for their origin, which is of the form:
 
-```
+```url
 moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
@@ -87,7 +87,7 @@ Request privileged access to pages under `developer.mozilla.org`.
 
 <!-- Ideally we'd use the WebExtExamples template, but examples are not categorized by manifest keys yet - https://github.com/mdn/webextensions-examples/issues/524 -->
 
-- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/master/dnr-redirect-url)
+- [dnr-redirect-url](https://github.com/mdn/webextensions-examples/tree/main/dnr-redirect-url)
 
 ## Browser compatibility
 

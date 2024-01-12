@@ -34,7 +34,7 @@ createElementNS(namespaceURI, qualifiedName, options)
   - : An optional `ElementCreationOptions` object containing a single property named `is`, whose value is the tag name for a custom element previously defined using `customElements.define()`.
     For backwards compatibility with previous versions of the [Custom Elements specification](https://www.w3.org/TR/custom-elements/),
     some browsers will allow you to pass a string here instead of an object, where the string's value is the custom element's tag name.
-    See [Extending native HTML elements](https://web.dev/web-components/) for more information on how to use this parameter.
+    See [Extending native HTML elements](https://web.dev/articles/web-components) for more information on how to use this parameter.
 
     The new element will be given an `is` attribute whose value is the custom element's tag name. Custom elements are an experimental feature only available in some browsers.
 
@@ -61,7 +61,7 @@ The new {{DOMxRef("Element")}}.
 ## Examples
 
 This creates a new `<div>` element in the {{Glossary("XHTML")}} namespace and
-appends it to the vbox element. Although this is not an extremely useful [XUL](/en-US/docs/Mozilla/Tech/XUL) document, it does demonstrate the use of
+appends it to the vbox element. Although this is not an extremely useful XUL document, it does demonstrate the use of
 elements from two different namespaces within a single document:
 
 ```xml

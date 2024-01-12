@@ -8,7 +8,7 @@ browser-compat:
   - css.selectors.target-text
 ---
 
-**Text fragments** allow you linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
+**Text fragments** allow linking directly to a specific portion of text in a web document, without requiring the author to annotate it with an ID, using particular syntax in the URL fragment. Supporting browsers are free to choose how to draw attention to the linked text, e.g. with a color highlight and/or scrolling to the content on the page. This is useful because it allows web content authors to deep-link to other content they don't control, without relying on the presence of IDs to make that possible. Building on top of that, it could be used to generate more effective content-sharing links for users to pass to one another.
 
 ## Concepts and usage
 
@@ -118,45 +118,26 @@ For example, in our [scroll-to-text demo](https://mdn.github.io/css-examples/tar
 
 Try following the above link in a supporting browser to see the effect this has.
 
-### Programmatic access to text fragments
+### Feature Detectability
 
-In supporting browsers, information on the text fragments matched in the current document can be found in the {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property.
+The {{domxref("FragmentDirective")}} object, which is accessed via the {{domxref("Document.fragmentDirective")}} property, can be used to test whether or not text fragments are supported in a browser.
 
 Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
 
 ```js
 document.fragmentDirective;
+// returns an empty FragmentDirective object, if supported
+// undefined otherwise
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
-```
-
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+This functionality is mainly intended for feature detection at present. In the future, the `FragmentDirective` object could include additional information.
 
 ## Reference
 
 ### API
 
 - {{domxref("FragmentDirective")}}
-  - : An object representing the text fragments highlighted in the current document.
+  - : An object representing the text fragments. Currently empty and mainly intended for feature detection.
 - {{domxref("Document.fragmentDirective")}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 
@@ -175,4 +156,4 @@ This functionality is mainly intended for feature detection at present, but in f
 
 ## See also
 
-- [Boldly link where no one has linked before: Text Fragments](https://web.dev/text-fragments/)
+- [Boldly link where no one has linked before: Text Fragments](https://web.dev/articles/text-fragments)

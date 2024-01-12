@@ -48,7 +48,7 @@ Allowed values for `timeline-scope` are:
 
 In this example, a scroll timeline named `--myScroller` is defined using the `scroll-timeline-name` property on the element with the `scroller` class (the scrolling element). This is then applied to the animation on the element with the `box` and `animation` classes (the animated element) using `animation-timeline: --myScroller`. The key point to note here is that the animated element is not a descendant of the scrolling element — to make this work, we increase the scope of the `--myScroller` timeline by setting `timeline-scope: --myScroller` on the {{htmlelement("body")}}.
 
-#### HTML
+### HTML
 
 The HTML for the example is shown below.
 
@@ -62,7 +62,7 @@ The HTML for the example is shown below.
 </div>
 ```
 
-#### CSS
+### CSS
 
 The CSS is as follows.
 
@@ -130,7 +130,7 @@ Next, we give the animated element some rudimentary styling, and apply an animat
 }
 ```
 
-#### Result
+### Result
 
 Scroll the vertical bar on the pink area to see the square animate.
 

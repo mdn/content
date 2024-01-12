@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.toUTCString
 
 The **`toUTCString()`** method of {{jsxref("Date")}} instances returns a string representing this date in the [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) format, with negative years allowed. The timezone is always UTC. `toGMTString()` is an alias of this method.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-toutcstring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toUTCString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

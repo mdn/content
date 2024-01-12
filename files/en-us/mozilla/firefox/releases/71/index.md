@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 71 that will affe
 [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html):
 
 - The [Web sockets inspector](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/inspecting_web_sockets/index.html) is now enabled by default ([Firefox bug 1573805](https://bugzil.la/1573805)).
-- You can now do a [full text search](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#search-in-requests) of request/response bodies, headers, and cookies.
+- You can now do a [full-text search](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#search-in-requests) of request/response bodies, headers, and cookies.
 - You can now enter patterns to [block specific URLs](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#blocking-specific-urls) from loading.
 - The [Timings tab](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#timings) now exposes timing data sent in the {{httpheader("Server-Timing")}} header ([Firefox bug 1403051](https://bugzil.la/1403051)).
 
@@ -55,7 +55,7 @@ This article provides information about the changes in Firefox 71 that will affe
 
 #### Removals
 
-- The non-standard Array generic methods have been removed in Firefox 71 ([Firefox bug 1222547](https://bugzil.la/1222547)). They were first introduced in Firefox 1.5 ([JavaScript 1.6](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.6)) and deprecated from Firefox 68 onwards. If your use case is to use array generics on array-like objects, you can convert your object to a proper array using [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) and then use standard array methods.
+- The non-standard Array generic methods have been removed in Firefox 71 ([Firefox bug 1222547](https://bugzil.la/1222547)). They were first introduced in Firefox 1.5 and deprecated from Firefox 68 onwards. If your use case is to use array generics on array-like objects, you can convert your object to a proper array using [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from) and then use standard array methods.
 
 ### MathML
 
@@ -86,11 +86,11 @@ The API also provides a way to receive notifications when the device's media con
 
 The following non-standard {{domxref("DataTransfer")}} members have been removed ([Firefox bug 1345192](https://bugzil.la/1345192)):
 
-- {{domxref("DataTransfer.mozItemCount")}}
-- {{domxref("DataTransfer.mozClearDataAt()")}}
-- {{domxref("DataTransfer.mozGetDataAt()")}}
-- {{domxref("DataTransfer.mozSetDataAt()")}}
-- {{domxref("DataTransfer.mozTypesAt()")}}
+- `DataTransfer.mozItemCount`
+- `DataTransfer.mozClearDataAt()`
+- `DataTransfer.mozGetDataAt()`
+- `DataTransfer.mozSetDataAt()`
+- `DataTransfer.mozTypesAt()`
 
 ### WebDriver conformance (Marionette)
 
@@ -113,7 +113,7 @@ The following non-standard {{domxref("DataTransfer")}} members have been removed
 
 #### Removals
 
-- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
+- The [`proxy.register()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) and [`proxy.unregister()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy) functions have been removed ([Firefox bug 1443259](https://bugzil.la/1443259)). {{WebExtAPIRef("proxy.onRequest")}} should now be used to handle the proxying of requests.
 
 ## See also
 

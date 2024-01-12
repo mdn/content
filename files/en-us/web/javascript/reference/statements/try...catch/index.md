@@ -42,7 +42,7 @@ The `try` statement always starts with a `try` block. Then, a `catch` block or a
 
 Unlike other constructs such as [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for), the `try`, `catch`, and `finally` blocks must be _blocks_, instead of single statements.
 
-```js example-bad
+```js-nolint example-bad
 try doSomething(); // SyntaxError
 catch (e) console.log(e);
 ```
@@ -57,7 +57,7 @@ You can also use the `try` statement to handle JavaScript exceptions. See the [J
 
 ### Catch binding
 
-When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{glossary("binding")}} to get information about the exception that was thrown. This {{glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
+When an exception is thrown in the `try` block, `exceptionVar` (i.e., the `e` in `catch (e)`) holds the exception value. You can use this {{Glossary("binding")}} to get information about the exception that was thrown. This {{Glossary("binding")}} is only available in the `catch` block's {{Glossary("Scope", "scope")}}.
 
 It needs not be a single identifier. You can use a [destructuring pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to assign multiple identifiers at once.
 
@@ -72,12 +72,12 @@ try {
 
 The bindings created by the `catch` clause live in the same scope as the `catch` block, so any variables declared in the `catch` block cannot have the same name as the bindings created by the `catch` clause. (There's [one exception to this rule](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements), but it's a deprecated syntax.)
 
-```js example-bad
+```js-nolint example-bad
 try {
   throw new TypeError("oops");
 } catch ({ name, message }) {
   var name; // SyntaxError: Identifier 'name' has already been declared
-  let message; // SyntaxError: Identifier 'name' has already been declared
+  let message; // SyntaxError: Identifier 'message' has already been declared
 }
 ```
 
@@ -111,8 +111,8 @@ function isValidJSON(text) {
 
 The `finally` block contains statements to execute after the `try` block and `catch` block(s) execute, but before the statements following the `try...catch...finally` block. Control flow will always enter the `finally` block, which can proceed in one of the following ways:
 
-- Immediately before the `try` block finishes execution normally (and no exceptions were thrown);
-- Immediately before the `catch` block finishes execution normally;
+- Immediately after the `try` block finishes execution normally (and no exceptions were thrown);
+- Immediately after the `catch` block finishes execution normally;
 - Immediately before a control-flow statement (`return`, `throw`, `break`, `continue`) is executed in the `try` block or `catch` block.
 
 If an exception is thrown from the `try` block, even when there's no `catch` block to handle the exception, the `finally` block still executes, in which case the exception is still thrown immediately after the `finally` block finishes executing.

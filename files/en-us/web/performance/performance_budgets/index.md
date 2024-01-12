@@ -65,5 +65,5 @@ A performance budget helps you protect optimal behavior for your current users w
 ## See also
 
 - [Start Performance Budgeting](https://addyosmani.com/blog/performance-budgets/) by Addy Osmani
-- [Performance Budgets 101](https://web.dev/performance-budgets-101/) by Milica Mihajlija
+- [Performance Budgets 101](https://web.dev/articles/performance-budgets-101) by Milica Mihajlija
 - [Performance Budgets That Stick](https://timkadlec.com/remembers/2019-03-07-performance-budgets-that-stick/) by Tim Kadlec

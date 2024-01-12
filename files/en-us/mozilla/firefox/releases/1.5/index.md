@@ -43,7 +43,7 @@ Some of the new features in Firefox 1.5:
 - [Preferences System](/en-US/docs/Preferences_System)
   - : Learn about the new widgets that allow you to create Options windows easier using less JavaScript code.
 - [International characters in XUL JavaScript](/en-US/docs/International_characters_in_XUL_JavaScript)
-  - : XUL JavaScript files can now contain non-ASCII characters.
+  - : XUL JavaScript files can now contain non-{{Glossary("ASCII")}} characters.
 - [Tree API changes](/en-US/docs/Tree_Widget_Changes)
   - : The interfaces for accessing XUL `<tree>` elements have changed.
 - [XUL Changes for Firefox 1.5](/en-US/docs/XUL_Changes_for_Firefox_1.5)
@@ -51,7 +51,7 @@ Some of the new features in Firefox 1.5:
 
 #### Networking-related changes
 
-- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requestor as an `nsIChannel`'s notificationCallbacks and giving out an interface for `nsIBadCertListener`.
+- Certificate prompts can now be overridden on a per-channel basis. This works by setting an interface requester as an `nsIChannel`'s notificationCallbacks and giving out an interface for `nsIBadCertListener`.
 - nsIWebBrowserPersist's listeners can now implement `nsIInterfaceRequestor::GetInterface` and will get an opportunity to provide all interfaces that channels might ask for, including `nsIProgressEventSink` (not too useful, redundant with `nsIWebProgressListener`). Useful interfaces here include `nsIChannelEventSink` and `nsIBadCertListener`.
 - Extensions or other necko consumers, including XMLHttpRequest, can set a Cookie header explicitly, and necko will not replace it. Stored cookies will be merged with the explicitly set header, in a way that the explicit header will override the stored cookies.
 

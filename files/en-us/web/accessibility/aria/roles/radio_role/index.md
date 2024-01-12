@@ -253,7 +253,7 @@ let handleKeydown = function (event) {
 
 setChecked = function () {
   // uncheck all the radios in group
-  // iterated thru all the radios in radio group
+  // iterated through all the radios in radio group
   // eachRadio.tabIndex = -1;
   // eachRadio.setAttribute('aria-checked', 'false');
   // set the selected radio to checked
@@ -304,6 +304,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

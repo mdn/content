@@ -1,6 +1,7 @@
 ---
 title: Negate
 slug: WebAssembly/Reference/Numeric/Negate
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

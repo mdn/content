@@ -56,7 +56,7 @@ You can also write data to streams using {{domxref("WritableStream")}}.
 ### Transform Streams
 
 - {{domxref("TransformStream")}}
-  - : Represents a set of transformable data.
+  - : Represents an abstraction for a stream object that transforms data as it passes through a [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) of stream objects.
 - {{domxref("TransformStreamDefaultController")}}
   - : Provides methods to manipulate the {{domxref("ReadableStream")}} and {{domxref("WritableStream")}} associated with a transform stream.
 

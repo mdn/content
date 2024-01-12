@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/tabpanel_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tabpanel
-  - https://w3c.github.io/aria-practices/#tabpanel
+  - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
 ---
 
 The ARIA `tabpanel` is a container for the resources of layered content associated with a `tab`.
@@ -65,7 +65,7 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 ## See Also
 
 - [ARIA `tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
-- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles)
+- [ARIA `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
 - [Example: Tabs with Automatic Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-automatic.html) - W3C
 - [Example: Tabs with Manual Activation](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html) -W3C
 
@@ -73,6 +73,6 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

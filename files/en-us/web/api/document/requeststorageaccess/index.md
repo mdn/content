@@ -6,15 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Document.requestStorageAccess
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Storage Access API")}}
 
-The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies.
+The **`requestStorageAccess()`** method of the {{domxref("Document")}} interface allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies. This is relevant to user agents that, by default, block access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies to improve privacy (e.g., to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-This is relevant to user agents that by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy (e.g. to prevent tracking), and is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+To check whether permission to access third-party cookies has already been granted, you can call {{domxref("Permissions.query()")}}, specifying the feature name `"storage-access"`.
 
 > **Note:** Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server. In addition, the document must pass additional browser-specific checks such as allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
-
-> **Note:** The [browser compatibility section](#browser_compatibility) provides an overview about the support status of the Storage Access API.
 
 ## Syntax
 
@@ -28,7 +26,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `undefined` if the access to unpartitioned cookies was granted, and rejects if access was denied.
+A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-party cookies was granted, and rejects if access was denied.
 
 `requestStorageAccess()` requests are automatically denied unless the embedded content is currently processing a user gesture such as a tap or click ({{Glossary("transient activation")}}), or unless permission was already granted previously. If permission was not previously granted, they need to be run inside a user gesture-based event handler. The user gesture behavior depends on the state of the promise:
 
@@ -45,6 +43,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to unpartit
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
     - The document or the top-level document has a `null` origin.
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
+    - Usage is denied by the user agent's permission request to use the API.
 
 ## Examples
 
@@ -71,5 +70,6 @@ document.requestStorageAccess().then(
 
 ## See also
 
+- {{domxref("Document.hasStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

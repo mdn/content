@@ -22,14 +22,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
-
-  - : Controls whether and how text input is automatically capitalized as it is entered/edited by the user. It can have the following values:
-
-    - `off` or `none`, no autocapitalization is applied (all letters default to lowercase)
-    - `on` or `sentences`, the first letter of each sentence defaults to a capital letter; all other letters default to lowercase
-    - `words`, the first letter of each word defaults to a capital letter; all other letters default to lowercase
-    - `characters`, all letters should default to uppercase
-
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
   - : Indicates that an element is to be focused on page load, or as soon as the {{HTMLElement("dialog")}} it is part of is displayed. This attribute is a boolean, initially false.
 - [`class`](/en-US/docs/Web/HTML/Global_attributes/class)
@@ -41,7 +34,7 @@ In addition to the basic HTML global attributes, the following global attributes
     - `true` or the _empty string_, which indicates that the element must be editable;
     - `false`, which indicates that the element must not be editable.
 
-- [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}}
+- [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}} {{non-standard_inline}}
   - : The [**`id`**](#id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
@@ -62,7 +55,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes/enterkeyhint)
   - : Hints what action label (or icon) to present for the enter key on virtual keyboards.
-- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts) {{Experimental_Inline}}
+- [`exportparts`](/en-US/docs/Web/HTML/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden)
   - : An enumerated attribute indicating that the element is not yet, or is no longer, _relevant_. For example, it can be used to hide elements of the page that can't be used until the login process has been completed. The browser won't render such elements. This attribute must not be used to hide content that could legitimately be shown.
@@ -88,7 +81,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtype)
   - : Specifies the URL of the vocabulary that will be used to define `itemprop`s (item properties) in the data structure. [`itemscope`](/en-US/docs/Web/HTML/Global_attributes/itemscope) is used to set the scope of where in the data structure the vocabulary set by `itemtype` will be active.
 - [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang)
-  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. [**xml:lang**](#xml:lang) has priority over it.
+  - : Helps define the language of an element: the language that non-editable elements are in, or the language that editable elements should be written in by the user. The attribute contains one "language tag" (made of hyphen-separated "language subtags") in the format defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. `xml:lang` has priority over it.
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
   - : A cryptographic nonce ("number used once") which can be used by [Content Security Policy](/en-US/docs/Web/HTTP/CSP) to determine whether or not a given fetch will be allowed to proceed.
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part)
@@ -125,9 +118,9 @@ In addition to the basic HTML global attributes, the following global attributes
     - empty string or `yes`, which indicates that the element will be translated.
     - `no`, which indicates that the element will not be translated.
 
-- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy)
+- [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.

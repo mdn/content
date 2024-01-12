@@ -61,4 +61,4 @@ rtf.formatToParts(100, "day");
 
 ## See also
 
-- {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+- {{jsxref("Intl.RelativeTimeFormat")}}

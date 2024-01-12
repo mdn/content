@@ -30,7 +30,7 @@ In JavaScript, [labels](/en-US/docs/Web/JavaScript/Reference/Statements/label) a
 
 You cannot use labels as if they are `goto`.
 
-```js example-bad
+```js-nolint example-bad
 start: console.log("Hello, world!");
 console.log("Do it again");
 break start;
@@ -50,4 +50,4 @@ start: {
 
 ## See also
 
-- [Label](/en-US/docs/Web/JavaScript/Reference/Statements/label)
+- [Labeled statement](/en-US/docs/Web/JavaScript/Reference/Statements/label)

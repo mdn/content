@@ -1,5 +1,5 @@
 ---
-title: Function expression
+title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
@@ -22,7 +22,7 @@ function (param0) {
 function (param0, param1) {
   statements
 }
-function (param0, param1, /* … ,*/ paramN) {
+function (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -32,19 +32,19 @@ function name(param0) {
 function name(param0, param1) {
   statements
 }
-function name(param0, param1, /* … ,*/ paramN) {
+function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
 
-> **Note:** An expression statement cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
+> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keyword `function` to avoid ambiguity with a [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). The `function` keyword only begins an expression when it appears in a context that cannot accept statements.
 
 ### Parameters
 
 - `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -102,7 +102,7 @@ console.log(foo); // 1
 
 ## Examples
 
-### Creating an unnamed function
+### Using function expression
 
 The following example defines an unnamed function and assigns it to `x`. The function returns the square of its argument:
 
@@ -148,12 +148,8 @@ An anonymous function is created and called:
 
 ## See also
 
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- {{jsxref("Statements/function", "function")}}
+- {{jsxref("Function")}}
 - {{jsxref("Functions/Arrow_functions", "Arrow functions", "", 1)}}
-- {{jsxref("Functions", "Functions", "", 1)}}
-- {{jsxref("Function")}} object
-- {{jsxref("Statements/function", "function")}} statement
-- {{jsxref("Statements/function*", "function*")}} statement
-- {{jsxref("Operators/function*", "function*")}} expression
-- {{jsxref("GeneratorFunction")}} object
-- {{jsxref("Statements/async_function", "async function")}} declaration
-- {{jsxref("Operators/async_function", "async function")}} expression

@@ -13,7 +13,7 @@ In this final article in our "Asynchronous JavaScript" module, we'll introduce _
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including event handling.
       </td>
     </tr>
@@ -28,9 +28,11 @@ In the first article of this module, we saw what happens when you have a long-ru
 
 Workers give you the ability to run some tasks in a different thread, so you can start the task, then continue with other processing (such as handling user actions).
 
-But there's a price to pay for this. With multithreaded code, you never know when your thread will be suspended and the other thread will get a chance to run. So if both threads have access to the same variables, it's possible for a variable to change unexpectedly at any time, and this causes bugs that are hard to find.
+One concern from all this is that if multiple threads can have access to the same shared data, it's possible for them to change it independently and unexpectedly (with respect to each other).
+This can cause bugs that are hard to find.
 
-To avoid these problems on the web, your main code and your worker code never get direct access to each other's variables. Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
+To avoid these problems on the web, your main code and your worker code never get direct access to each other's variables, and can only truly "share" data in very specific cases.
+Workers and the main code run in completely separate worlds, and only interact by sending each other messages. In particular, this means that workers can't access the DOM (the window, document, page elements, and so on).
 
 There are three different sorts of workers:
 
@@ -75,9 +77,8 @@ function generatePrimes(quota) {
 document.querySelector("#generate").addEventListener("click", () => {
   const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${quota} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${quota} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {
@@ -159,9 +160,8 @@ document.querySelector("#generate").addEventListener("click", () => {
 // update the output box with a message for the user, including the number of
 // primes that were generated, taken from the message data.
 worker.addEventListener("message", (message) => {
-  document.querySelector(
-    "#output",
-  ).textContent = `Finished generating ${message.data} primes!`;
+  document.querySelector("#output").textContent =
+    `Finished generating ${message.data} primes!`;
 });
 
 document.querySelector("#reload").addEventListener("click", () => {

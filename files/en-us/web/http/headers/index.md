@@ -12,23 +12,16 @@ Custom proprietary headers have historically been used with an `X-` prefix, but 
 
 Headers can be grouped according to their contexts:
 
-- {{Glossary("Request header", "Request headers")}} contain more information about the resource to be fetched, or about the client requesting the resource.
-- {{Glossary("Response header", "Response headers")}} hold additional information about the response, like its location or about the server providing it.
-- {{Glossary("Representation header", "Representation headers")}} contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
-- {{Glossary("Payload header","Payload headers")}} contain representation-independent information about payload data, including content length and the encoding used for transport.
+- {{Glossary("Request header", "Request headers")}}
+  - : Contain more information about the resource to be fetched, or about the client requesting the resource.
+- {{Glossary("Response header", "Response headers")}}
+  - : Hold additional information about the response, like its location or about the server providing it.
+- {{Glossary("Representation header", "Representation headers")}}
+  - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
+- {{Glossary("Payload header","Payload headers")}}
+  - : Contain representation-independent information about payload data, including content length and the encoding used for transport.
 
 Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:
-
-- {{ httpheader("Connection") }}
-- {{ httpheader("Keep-Alive") }}
-- {{ httpheader("Proxy-Authenticate") }}
-- {{ httpheader("Proxy-Authorization") }}
-- {{ httpheader("TE") }}
-- {{ httpheader("Trailer") }}
-- {{ httpheader("Transfer-Encoding") }}
-- {{ httpheader("Upgrade") }} (see also [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)).
-
-<!---->
 
 - End-to-end headers
   - : These headers _must_ be transmitted to the final recipient of the message: the server for a request, or the client for a response. Intermediate proxies must retransmit these headers unmodified and caches must store them.
@@ -56,76 +49,6 @@ Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies
   - : Clears browsing data (e.g. cookies, storage, cache) associated with the requesting website.
 - {{HTTPHeader("Expires")}}
   - : The date/time after which the response is considered stale.
-- {{HTTPHeader("Pragma")}}
-  - : Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` header is not yet present.
-- {{HTTPHeader("Warning")}} {{deprecated_inline}}
-  - : General warning information about possible problems.
-
-## Client hints
-
-HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
-
-Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
-
-- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
-- {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
-  - : Servers can ask the client to remember the set of Client Hints that the server supports for a specified period of time, to enable delivery of Client Hints on subsequent requests to the server's origin.
-- {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
-  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
-
-The different categories of client hints are listed below.
-
-### User agent client hints
-
-The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
-
-- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
-  - : User agent's reduced motion preference setting.
-- {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
-  - : User agent's branding and version.
-- {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
-  - : User agent's underlying platform architecture.
-- {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
-  - : User agent's underlying CPU architecture bitness (for example "64" bit).
-- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
-  - : User agent's full semantic version string.
-- {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}<!-- chrome intent to ship Nov 2021 -->
-  - : Full version for each brand in the user agent's brand list.
-- {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
-  - : User agent is running on a mobile device or, more generally, prefers a "mobile" user experience.
-- {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
-  - : User agent's device model.
-- {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
-  - : User agent's underlying operation system/platform.
-- {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
-  - : User agent's underlying operation system version.
-
-### Device client hints
-
-- {{HTTPHeader("Content-DPR")}} {{deprecated_inline}} {{experimental_inline}}
-  - : _Response header_ used to confirm the image device to pixel ratio in requests where the {{HTTPHeader("DPR")}} client hint was used to select an image resource.
-- {{HTTPHeader("Device-Memory")}} {{deprecated_inline}} {{experimental_inline}}
-  - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
-- {{HTTPHeader("DPR")}} {{deprecated_inline}} {{experimental_inline}}
-  - : Client device pixel ratio (DPR), which is the number of physical device pixels corresponding to every CSS pixel.
-- {{HTTPHeader("Viewport-Width")}} {{deprecated_inline}} {{experimental_inline}}
-  - : A number that indicates the layout viewport width in CSS pixels. The provided pixel value is a number rounded to the smallest following integer (i.e. ceiling value).
-- {{HTTPHeader("Width")}} {{deprecated_inline}} {{experimental_inline}}
-  - : A number that indicates the desired resource width in physical pixels (i.e. intrinsic size of an image).
-
-### Network client hints
-
-Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency.
-
-- {{HTTPHeader("Downlink")}}
-  - : Approximate bandwidth of the client's connection to the server, in Mbps. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
-- {{HTTPHeader("ECT")}}
-  - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
-- {{HTTPHeader("RTT")}}
-  - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
-- {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-  - : A boolean that indicates the user agent's preference for reduced data usage.
 
 ## Conditionals
 
@@ -153,7 +76,7 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## Content negotiation
 
-[Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers.
+For more details, refer to the [Content negotiation article](/en-US/docs/Web/HTTP/Content_negotiation).
 
 - {{HTTPHeader("Accept")}}
   - : Informs the server about the {{Glossary("MIME_type", "types")}} of data that can be sent back.
@@ -178,16 +101,16 @@ Network client hints allow a server to choose what information is sent based on 
 
 ## CORS
 
-_Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
+For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/CORS).
 
-- {{HTTPHeader("Access-Control-Allow-Origin")}}
-  - : Indicates whether the response can be shared.
 - {{HTTPHeader("Access-Control-Allow-Credentials")}}
   - : Indicates whether the response to the request can be exposed when the credentials flag is true.
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : Used in response to a {{Glossary("Preflight_request", "preflight request")}} to indicate which HTTP headers can be used when making the actual request.
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
   - : Specifies the methods allowed when accessing the resource in response to a preflight request.
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+  - : Indicates whether the response can be shared.
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
   - : Indicates which headers can be exposed as part of the response by listing their names.
 - {{HTTPHeader("Access-Control-Max-Age")}}
@@ -223,12 +146,6 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 - {{HTTPHeader("Forwarded")}}
   - : Contains information from the client-facing side of proxy servers that is altered or lost when a proxy is involved in the path of the request.
-- {{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}
-  - : Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.
-- {{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}
-  - : Identifies the original host requested that a client used to connect to your proxy or load balancer.
-- {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
-  - : Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
 - {{HTTPHeader("Via")}}
   - : Added by proxies, both forward and reverse proxies, and can appear in the request headers and the response headers.
 
@@ -250,7 +167,7 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Referrer-Policy")}}
   - : Governs which referrer information sent in the {{HTTPHeader("Referer")}} header should be included with requests made.
 - {{HTTPHeader("User-Agent")}}
-  - : Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent. See also the [Firefox user agent string reference](/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox).
+  - : Contains a characteristic string that allows the network protocol peers to identify the application type, operating system, software vendor or software version of the requesting software user agent.
 
 ## Response context
 
@@ -277,15 +194,11 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 - {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP)
   - : Prevents other domains from opening/controlling a window.
 - {{HTTPHeader("Cross-Origin-Resource-Policy")}} (CORP)
-  - : Prevents other domains from reading the response of the resources to which this header is applied.
+  - : Prevents other domains from reading the response of the resources to which this header is applied. See also [CORP explainer article](/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Controls resources the user agent is allowed to load for a given page.
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
-- {{HTTPHeader("Expect-CT")}}
-  - : Allows sites to opt in to reporting and/or enforcement of Certificate Transparency requirements, which prevents the use of misissued certificates for that site from going unnoticed. When a site enables the Expect-CT header, they are requesting that Chrome check that any certificate for that site appears in public CT logs.
-- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
-  - : Provides a mechanism to allow web applications to isolate their origins.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
@@ -305,42 +218,26 @@ _Learn more about CORS [here](/en-US/docs/Glossary/CORS)._
 
 ### Fetch metadata request headers
 
-{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provide information about the context from which the request originated.
-A server can use them to make decisions about whether a request should be allowed, based on where the request came from and how the resource will be used.
+{{Glossary("Fetch metadata request header", "Fetch metadata request headers")}} provide information about the context from which the request originated. A server can use them to make decisions about whether a request should be allowed, based on where the request came from and how the resource will be used.
 
 - {{HTTPHeader("Sec-Fetch-Site")}}
-  - : Indicates the relationship between a request initiator's origin and its target's origin.
-    It is a Structured Header whose value is a token with possible values `cross-site`, `same-origin`, `same-site`, and `none`.
+  - : Indicates the relationship between a request initiator's origin and its target's origin. It is a Structured Header whose value is a token with possible values `cross-site`, `same-origin`, `same-site`, and `none`.
 - {{HTTPHeader("Sec-Fetch-Mode")}}
-  - : Indicates the request's mode to a server.
-    It is a Structured Header whose value is a token with possible values `cors`, `navigate`, `no-cors`, `same-origin`, and `websocket`.
+  - : Indicates the request's mode to a server. It is a Structured Header whose value is a token with possible values `cors`, `navigate`, `no-cors`, `same-origin`, and `websocket`.
 - {{HTTPHeader("Sec-Fetch-User")}}
-  - : Indicates whether or not a navigation request was triggered by user activation.
-    It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
+  - : Indicates whether or not a navigation request was triggered by user activation. It is a Structured Header whose value is a boolean so possible values are `?0` for false and `?1` for true.
 - {{HTTPHeader("Sec-Fetch-Dest")}}
-  - : Indicates the request's destination.
-    It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
+  - : Indicates the request's destination. It is a Structured Header whose value is a token with possible values `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, and `xslt`.
 
-The following request headers are not _strictly_ "fetch metadata request headers", but similarly provide information about the context of how a resource will be used.
-A server might use them to modify its caching behavior, or the information that is returned:
+The following request headers are not _strictly_ "fetch metadata request headers", but similarly provide information about the context of how a resource will be used. A server might use them to modify its caching behavior, or the information that is returned:
 
-- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
-  - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent.
-    The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
+- {{HTTPHeader("Sec-Purpose")}}
+  - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent. The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
-  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot.
-    The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
+  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
 ## Server-sent events
 
-- {{HTTPHeader("Last-Event-ID")}}
-  - : TBD
-- {{HTTPHeader("NEL")}} {{experimental_inline}}
-  - : Defines a mechanism that enables developers to declare a network error reporting policy.
-- {{HTTPHeader("Ping-From")}}
-  - : TBD
-- {{HTTPHeader("Ping-To")}}
-  - : TBD
 - {{HTTPHeader("Report-To")}}
   - : Used to specify a server endpoint for the browser to send warning and error reports to.
 
@@ -353,67 +250,142 @@ A server might use them to modify its caching behavior, or the information that 
 - {{HTTPHeader("Trailer")}}
   - : Allows the sender to include additional fields at the end of chunked message.
 
-## WebSockets
-
-- {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : TBD
-- {{HTTPHeader("Sec-WebSocket-Extensions")}}
-  - : TBD
-- {{HTTPHeader("Sec-WebSocket-Accept")}}
-  - : TBD
-- {{HTTPHeader("Sec-WebSocket-Protocol")}}
-  - : TBD
-- {{HTTPHeader("Sec-WebSocket-Version")}}
-  - : TBD
-
 ## Other
 
-- {{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}
-  - : A client can express the desired push policy for a request by sending an [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1) header field in the request.
-- {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
-  - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.7) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Alt-Svc")}}
   - : Used to list alternate ways to reach this service.
 - {{HTTPHeader("Alt-Used")}}
   - : Used to identify the alternative service in use.
 - {{HTTPHeader("Date")}}
   - : Contains the date and time at which the message was originated.
-- {{HTTPHeader("Early-Data")}} {{experimental_inline}}
-  - : Indicates that the request has been conveyed in TLS early data.
-- {{HTTPHeader("Large-Allocation")}} {{deprecated_inline}}
-  - : Tells the browser that the page being loaded is going to want to perform a large allocation.
 - {{HTTPHeader("Link")}}
-  - : The [`Link`](https://datatracker.ietf.org/doc/html/rfc5988#section-5) entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
-- {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
-  - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
+  - : This entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 - {{HTTPHeader("Retry-After")}}
   - : Indicates how long the user agent should wait before making a follow-up request.
+- {{HTTPHeader("Server-Timing")}}
+  - : Communicates one or more metrics and descriptions for the given request-response cycle.
+- {{HTTPHeader("Service-Worker-Allowed")}}
+  - : Used to remove the [path restriction](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#why_is_my_service_worker_failing_to_register) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
+- {{HTTPHeader("SourceMap")}}
+  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
+- {{HTTPHeader("Upgrade")}}
+  - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
+
+## Experimental headers
+
+### Client hints
+
+HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request headers that provide useful information about the client such as device type and network conditions, and allow servers to optimize what is served for those conditions.
+
+Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
+
+- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
+  - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
+- {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
+  - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
+
+The different categories of client hints are listed below.
+
+#### User agent client hints
+
+The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) are request headers that provide information about the user agent, the platform/architecture it is running on, and user preferences set on the user agent or platform:
+
+- {{HTTPHeader("Sec-CH-UA")}} {{experimental_inline}}
+  - : User agent's branding and version.
+- {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
+  - : User agent's underlying platform architecture.
+- {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
+  - : User agent's underlying CPU architecture bitness (for example "64" bit).
+- {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}
+  - : Full version for each brand in the user agent's brand list.
+- {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
+  - : User agent is running on a mobile device or, more generally, prefers a "mobile" user experience.
+- {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
+  - : User agent's device model.
+- {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
+  - : User agent's underlying operation system/platform.
+- {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
+  - : User agent's underlying operation system version.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Color-Scheme")}} {{experimental_inline}}
+  - : User's preference of dark or light color scheme.
+- {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
+  - : User's preference to see fewer animations and content layout shifts.
+
+#### Device client hints
+
+- {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
+  - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
+
+#### Network client hints
+
+Network client hints allow a server to choose what information is sent based on the user choice and network bandwidth and latency.
+
+- {{HTTPHeader("Downlink")}} {{experimental_inline}}
+  - : Approximate bandwidth of the client's connection to the server, in Mbps. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+- {{HTTPHeader("ECT")}} {{experimental_inline}}
+  - : The {{Glossary("effective connection type")}} ("network profile") that best matches the connection's latency and bandwidth. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+- {{HTTPHeader("RTT")}} {{experimental_inline}}
+  - : Application layer round trip time (RTT) in milliseconds, which includes the server processing time. This is part of the [Network Information API](/en-US/docs/Web/API/Network_Information_API).
+- {{HTTPHeader("Save-Data")}} {{experimental_inline}}
+  - : A string `on` that indicates the user agent's preference for reduced data usage.
+
+### Privacy
+
+- {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}}{{experimental_inline}}
+  - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+
+### Security
+
+- {{HTTPHeader("Origin-Isolation")}} {{experimental_inline}}
+  - : Provides a mechanism to allow web applications to isolate their origins.
+
+### Server-sent events
+
+- {{HTTPHeader("NEL")}} {{experimental_inline}}
+  - : Defines a mechanism that enables developers to declare a network error reporting policy.
+
+### Other
+
+- {{HTTPHeader("Accept-Push-Policy")}} {{experimental_inline}}
+  - : A client can express the desired push policy for a request by sending an [`Accept-Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.1) header field in the request.
+- {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
+  - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.7) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
+- {{HTTPHeader("Early-Data")}} {{experimental_inline}}
+  - : Indicates that the request has been conveyed in TLS early data.
+- {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
+  - : A [`Push-Policy`](https://datatracker.ietf.org/doc/html/draft-ruellan-http-accept-push-policy-00#section-3.2) defines the server behavior regarding push when processing a request.
 - {{HTTPHeader("Signature")}} {{experimental_inline}}
   - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.3.1) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
 - {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
   - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#rfc.section.5.1.2) header field identifies an ordered list of response header fields to include in a signature.
-- {{HTTPHeader("Server-Timing")}}
-  - : Communicates one or more metrics and descriptions for the given request-response cycle.
-- {{HTTPHeader("Service-Worker-Allowed")}}
-  - : Used to remove the [path restriction](https://w3c.github.io/ServiceWorker/#path-restriction) by including this header [in the response of the Service Worker script](https://w3c.github.io/ServiceWorker/#service-worker-script-response).
-- {{HTTPHeader("SourceMap")}}
-  - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
-- {{HTTPHeader("Upgrade")}}
-  - : The relevant RFC document for the [Upgrade header field is RFC 9110, section 7.8](https://httpwg.org/specs/rfc9110.html#field.upgrade). The standard establishes rules for upgrading or changing to a different protocol on the current client, server, transport protocol connection. For example, this header standard allows a client to change from HTTP 1.1 to [WebSocket](/en-US/docs/Glossary/WebSockets), assuming the server decides to acknowledge and implement the Upgrade header field. Neither party is required to accept the terms specified in the Upgrade header field. It can be used in both client and server headers. If the Upgrade header field is specified, then the sender MUST also send the Connection header field with the upgrade option specified. For details on the Connection header field [please see section 7.6.1 of the aforementioned RFC](https://httpwg.org/specs/rfc9110.html#field.connection).
-- {{HTTPHeader("X-DNS-Prefetch-Control")}}
+- {{HTTPHeader("Supports-Loading-Mode")}} {{experimental_inline}}
+  - : Set by a navigation target to opt-in to using various higher-risk loading modes. For example, cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering) requires a `Supports-Loading-Mode` value of `credentialed-prerender`.
+
+## Non-standard headers
+
+- {{HTTPHeader("X-Forwarded-For")}} {{non-standard_inline}}
+  - : Identifies the originating IP addresses of a client connecting to a web server through an HTTP proxy or a load balancer.
+- {{HTTPHeader("X-Forwarded-Host")}} {{non-standard_inline}}
+  - : Identifies the original host requested that a client used to connect to your proxy or load balancer.
+- {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
+  - : Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
+- {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
-- {{HTTPHeader("X-Firefox-Spdy")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : TBD
-- {{HTTPHeader("X-Pingback")}} {{non-standard_inline}}
-  - : TBD
-- {{HTTPHeader("X-Requested-With")}}
-  - : TBD
-- {{HTTPHeader("X-Robots-Tag")}}{{non-standard_inline}}
+- {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
   - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+
+## Deprecated headers
+
+- {{HTTPHeader("Pragma")}} {{deprecated_inline}}
+  - : Implementation-specific header that may have various effects anywhere along the request-response chain. Used for backwards compatibility with HTTP/1.0 caches where the `Cache-Control` header is not yet present.
+- {{HTTPHeader("Warning")}} {{deprecated_inline}}
+  - : General warning information about possible problems.
 
 ## Contributing
 
 You can help by [writing new entries](/en-US/docs/MDN/Writing_guidelines/Howto/Document_an_HTTP_header) or improving the existing ones.
+
+<!-- Check https://github.com/mdn/content/issues/1458 for known missing pages -->
 
 ## See also
 

@@ -6,7 +6,7 @@ page-type: web-api-global-property
 browser-compat: api.caches
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers}}
 
 The global **`caches`** read-only property returns the {{domxref("CacheStorage")}} object associated with the current context.
 This object enables functionality such as storing assets for offline use, and generating custom responses to requests.

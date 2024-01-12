@@ -39,7 +39,8 @@ border-image-slice: 30 30% 45;
 border-image-slice: 7 12 14 5;
 
 /* Using the `fill` keyword */
-border-image-slice: 10% fill 7 12;
+border-image-slice: 10% fill;
+border-image-slice: fill 10%;
 
 /* Global values */
 border-image-slice: inherit;
@@ -178,3 +179,4 @@ sliceSlider.addEventListener("input", () => {
 ## See also
 
 - [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

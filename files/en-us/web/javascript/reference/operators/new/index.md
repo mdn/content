@@ -1,5 +1,5 @@
 ---
-title: new operator
+title: new
 slug: Web/JavaScript/Reference/Operators/new
 page-type: javascript-operator
 browser-compat: javascript.operators.new

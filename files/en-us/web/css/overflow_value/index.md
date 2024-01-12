@@ -11,7 +11,7 @@ The **`<overflow>`** {{glossary("enumerated")}} value type represents the keywor
 
 ## Syntax
 
-```css
+```plain
 <overflow> = visible | hidden | clip | scroll | auto
 ```
 

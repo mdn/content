@@ -45,7 +45,7 @@ the ECMAScript specification.
 In this case, the function `sum` has default parameters `a=1` and
 `b=2`:
 
-```js example-bad
+```js-nolint example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
@@ -68,7 +68,7 @@ function sum(a = 1, b = 2) {
 
 A function expression can use yet another workaround:
 
-```js example-bad
+```js-nolint example-bad
 const sum = function sum([a, b]) {
   // SyntaxError: "use strict" not allowed in function with destructuring parameter
   "use strict";
@@ -92,7 +92,7 @@ const sum = (function () {
 If an arrow function needs to access the `this` variable, you can use the
 arrow function as the enclosing function:
 
-```js example-bad
+```js-nolint example-bad
 const callback = (...args) => {
   // SyntaxError: "use strict" not allowed in function with rest parameter
   "use strict";

@@ -8,7 +8,7 @@ browser-compat: api.Navigator.pdfViewerEnabled
 
 {{APIRef("HTML DOM")}}
 
-The **`pdfViewerEnabled`** property of the {{domxref("Navigator")}} interface indicates whether the browser supports inline display of PDF files when navigating to them.
+The **`pdfViewerEnabled`** read-only property of the {{domxref("Navigator")}} interface indicates whether the browser supports inline display of PDF files when navigating to them.
 
 If inline viewing is not supported the PDF is downloaded and may then be handled by some external application.
 

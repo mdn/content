@@ -8,7 +8,7 @@ page-type: mdn-writing-guide
 
 ## Adding images
 
-To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using an `<img>` element or [the equivalent Markdown syntax](https://github.github.com/gfm/#images).
+To add an image to a document, add your image file to the document's folder, and then reference the image from within the document's `index.md` file using [Markdown image syntax](https://github.github.com/gfm/#images) or the equivalent HTML `<img>` element.
 
 Let's walk through an example:
 
@@ -39,9 +39,10 @@ Let's walk through an example:
    yarn filecheck files/en-us/web/css/my-cool-image.png
    ```
 
-4. Reference your image in the document with an `<img>` element and `alt` attribute inside `files/en-us/web/css/index.md`:
+4. Reference your image in the document using the Markdown syntax for images, providing [descriptive text for the `alt` attribute](/en-US/docs/Learn/Accessibility/HTML#text_alternatives) between the brackets that describe the image, or include an {{htmlelement("img")}} element with `alt` attribute inside `files/en-us/web/css/index.md`:
 
-   ```html
+   ```md
+   ![My cool image](my-cool-image.png)
    <img src="my-cool-image.png" alt="My cool image" />
    ```
 
@@ -77,14 +78,14 @@ Don't include "screenshot" or "Bing" as the user doesn't need to know it's a scr
 
 The syntax in markdown and HTML:
 
-```html-nolint
+```md-nolint
 ![<alt-text>](<url-of-image>)
 <img alt="<alt-text>" src="<url-of-image>">
 ```
 
 Examples:
 
-```html
+```md
 ![OpenWebDocs Logo: Carle the book worm](carle.png)
 <img alt="OpenWebDocs Logo: Carle the book worm" src="carle.png" />
 ```
@@ -262,13 +263,13 @@ Ask a member of MDN Web Docs team to upload the video if you don't have somewher
 Once uploaded, you can embed the video in the page using the [`EmbedYouTube`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedYouTube.ejs) macro.
 This is used by inserting the following in your page at the position you want the video to appear:
 
-```
+```plain
 \{{EmbedYouTube("you-tube-url-slug")}}
 ```
 
 The single property taken by the macro call is the string of characters at the end of the video URL, not the whole URL.
 For example, if the video URL is `https://www.youtube.com/watch?v=ELS2OOUvxIw`, the required macro call will be:
 
-```
+```plain
 \{{EmbedYouTube("ELS2OOUvxIw")}}
 ```

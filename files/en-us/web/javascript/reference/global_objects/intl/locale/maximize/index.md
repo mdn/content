@@ -19,9 +19,13 @@ existing values.
 maximize()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A {{jsxref("Intl/Locale", "Locale")}} instance whose `baseName` property returns
+A {{jsxref("Intl.Locale")}} instance whose `baseName` property returns
 the result of the [Add Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) algorithm executed against _{{jsxref("Intl/Locale/baseName", "locale.baseName")}}_.
 
 ## Description
@@ -37,8 +41,7 @@ affects the main subtags that comprise the [language identifier](https://www.uni
 Other subtags after the "-u" in the locale identifier are called extension subtags and
 are not affected by the `maximize()` method. Examples of these subtags
 include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
-{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric",
-  "numeric")}}.
+{{jsxref("Intl/Locale/calendar", "calendar")}}, and {{jsxref("Intl/Locale/numeric", "numeric")}}.
 
 ## Examples
 
@@ -46,18 +49,18 @@ include {{jsxref("Intl/Locale/hourCycle", "hourCycle")}},
 
 ```js
 const myLocale = new Intl.Locale("fr", {
-  hourCycle: "h24",
+  hourCycle: "h12",
   calendar: "gregory",
 });
 console.log(myLocale.baseName); // Prints "fr"
-console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h24"
+console.log(myLocale.toString()); // Prints "fr-u-ca-gregory-hc-h12"
 const myLocMaximized = myLocale.maximize();
 
 // Prints "fr-Latn-FR". The "Latn" and "FR" tags are added,
 // since French is only written in the Latin script and is most likely to be spoken in France.
 console.log(myLocMaximized.baseName);
 
-// Prints "fr-Latn-FR-u-ca-gregory-hc-h24".
+// Prints "fr-Latn-FR-u-ca-gregory-hc-h12".
 // Note that the extension tags (after "-u") remain unchanged.
 console.log(myLocMaximized.toString());
 ```
@@ -74,4 +77,4 @@ console.log(myLocMaximized.toString());
 
 - {{jsxref("Intl.Locale")}}
 - {{jsxref("Intl/Locale/baseName", "baseName")}}
-- [Unicode's Likely Subtags spec](https://www.unicode.org/reports/tr35/#Likely_Subtags)
+- [Likely Subtags](https://www.unicode.org/reports/tr35/#Likely_Subtags) in the Unicode locale data markup language spec

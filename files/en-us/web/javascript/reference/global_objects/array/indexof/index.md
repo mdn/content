@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.indexOf
 
 {{JSRef}}
 
-The **`indexOf()`** method returns the first index at which a
+The **`indexOf()`** method of {{jsxref("Array")}} instances returns the first index at which a
 given element can be found in the array, or -1 if it is not present.
 
 {{EmbedInteractiveExample("pages/js/array-indexof.html")}}
@@ -31,7 +31,7 @@ indexOf(searchElement, fromIndex)
 
 ### Return value
 
-The first index of the element in the array; **-1** if not found.
+The first index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
@@ -135,7 +135,7 @@ console.log(Array.prototype.indexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.indexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

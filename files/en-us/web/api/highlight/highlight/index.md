@@ -3,12 +3,10 @@ title: "Highlight: Highlight() constructor"
 short-title: Highlight()
 slug: Web/API/Highlight/Highlight
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.Highlight.Highlight
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`Highlight()`** constructor returns a newly created
 {{domxref("Highlight")}} object which can hold a collection of {{domxref("Range")}} objects to be styled using the {{domxref("css_custom_highlight_api", "CSS Custom Highlight API", "", "nocode")}}.
@@ -18,12 +16,12 @@ The **`Highlight()`** constructor returns a newly created
 ```js-nolint
 new Highlight()
 new Highlight(range)
-new Highlight(range1, range2, /* … ,*/ rangeN)
+new Highlight(range1, range2, /* …, */ rangeN)
 ```
 
 ### Parameters
 
-- `range1, /* … ,*/ rangeN` {{optional_inline}}
+- `range1, /* …, */ rangeN` {{optional_inline}}
   - : One ore more initial {{domxref("Range")}} objects to add in the new highlight.
 
 ### Return value

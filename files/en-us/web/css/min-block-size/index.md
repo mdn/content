@@ -26,6 +26,7 @@ min-block-size: 10%;
 /* Keyword values */
 min-block-size: max-content;
 min-block-size: min-content;
+min-block-size: fit-content;
 min-block-size: fit-content(20em);
 
 /* Global values */

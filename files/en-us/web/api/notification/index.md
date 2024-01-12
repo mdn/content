@@ -7,7 +7,7 @@ browser-compat: api.Notification
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The `Notification` interface of the [Notifications API](/en-US/docs/Web/API/Notifications_API) is used to configure and display desktop notifications to the user.
+The **`Notification`** interface of the {{domxref("Notifications API", "", "", "nocode")}} is used to configure and display desktop notifications to the user.
 
 These notifications' appearance and specific functionality vary across platforms but generally they provide a way to asynchronously provide information to the user.
 
@@ -20,9 +20,9 @@ These notifications' appearance and specific functionality vary across platforms
 
 ## Static properties
 
-These properties are available only on the `Notification` object itself.
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
-- {{domxref("Notification.permission")}} {{ReadOnlyInline}}
+- {{domxref("Notification.permission_static", "Notification.permission")}} {{ReadOnlyInline}}
 
   - : A string representing the current permission to display notifications. Possible values are:
 
@@ -30,17 +30,17 @@ These properties are available only on the `Notification` object itself.
     - `granted` — The user accepts having notifications displayed.
     - `default` — The user choice is unknown and therefore the browser will act as if the value were denied.
 
-- {{domxref("Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.maxActions_static", "Notification.maxActions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The maximum number of actions supported by the device and the User Agent.
 
 ## Instance properties
 
-These properties are available only on instances of the `Notification` object.
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.actions")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The actions array of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.badge")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The URL of the image used to represent the notification when there is not enough space to display the notification itself.
+- {{domxref("Notification.badge")}} {{ReadOnlyInline}}
+  - : A string containing the URL of an image to represent the notification when there is not enough space to display the notification itself such as for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96 by 96 px, and the image will be automatically masked.
 - {{domxref("Notification.body")}} {{ReadOnlyInline}}
   - : The body string of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.data")}} {{ReadOnlyInline}}
@@ -57,7 +57,7 @@ These properties are available only on instances of the `Notification` object.
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
-- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
@@ -70,14 +70,14 @@ These properties are available only on instances of the `Notification` object.
 
 ## Static methods
 
-These methods are available only on the `Notification` object itself.
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
 
-- {{domxref("Notification.requestPermission()")}}
+- {{domxref("Notification.requestPermission_static", "Notification.requestPermission()")}}
   - : Requests permission from the user to display notifications.
 
 ## Instance methods
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.close()")}}
   - : Programmatically closes a notification instance.

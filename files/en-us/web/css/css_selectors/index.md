@@ -17,10 +17,10 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ### Combinators and separators
 
-- `+` ([Adjacent or next sibling combinator](/en-US/docs/Web/CSS/Adjacent_sibling_combinator))
+- `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
 - `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
-- `~` ([General or subsequent sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator))
+- `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
 
@@ -63,11 +63,9 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":muted")}}
 - {{CSSXref(":not", ":not()")}}
 - {{CSSXref(":nth-child", ":nth-child()")}}
-- {{CSSXref(":nth-col", ":nth-col()")}}
-- {{CSSXref(":nth-last-child", ":nth-last-child()")}}
-- {{CSSXref(":nth-last-col", ":nth-last-col()")}}
-- {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":nth-of-type", ":nth-of-type()")}}
+- {{CSSXref(":nth-last-child", ":nth-last-child()")}}
+- {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
 - {{CSSXref(":optional")}}
@@ -144,15 +142,18 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 ## Related concepts
 
 - {{CSSXref(":popover-open")}} pseudo-class
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 
-- CSS scoping module
+  - : [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
+
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}} pseudo-class
   - {{CSSXref(":host_function", ":host()")}} pseudo-class
   - {{cssxref(":host-context", ":host-context()")}} pseudo-class
   - {{CSSXref("::slotted")}} pseudo-element
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo) (representing entities not included in HTML)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements) (representing entities not included in HTML)
 
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
@@ -195,6 +196,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 ## See also
 
-- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo)
+- [CSS pseudo-element module](/en-US/docs/Web/CSS/CSS_pseudo-elements)
 - [CSS cascade and inheritance module](/en-US/docs/Web/CSS/CSS_cascade)
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
