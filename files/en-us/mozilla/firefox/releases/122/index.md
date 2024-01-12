@@ -38,6 +38,9 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### Removals
 
+- Removed support for `data:` URLs in SVG `<use>` elements and via the [`SVGUseElement`](/en-US/docs/Web/API/SVGUseElement) interface to prevent [XSS](/en-US/docs/Glossary/Cross-site_scripting) attacks.
+  The legacy functionality may be re-enabled by setting the `svg.use-element.data-url-href.allowed` preference to `true`, although this is not recommended for security reasons ([Firefox bug 1806964](https://bugzil.la/1806964)).
+
 ### HTTP
 
 #### Removals
