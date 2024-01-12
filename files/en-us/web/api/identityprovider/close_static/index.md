@@ -8,7 +8,7 @@ status:
 browser-compat: api.IdentityProvider.close_static
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
 The **`close()`** static method of the {{domxref("IdentityProvider")}} interface Provides a manual signal to the browser that an IdP sign-in flow is finished.
 
