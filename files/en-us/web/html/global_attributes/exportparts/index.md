@@ -21,7 +21,7 @@ The `exportparts` attribute enables shadow tree parts to be visible to the outsi
 </template>
 ```
 
-When exporting a `part`, you have the option to assign a different name to the part, as shown in the snippet below. The value of the `exportparts` attribute is really a comma-separated list of part-name mappings. So the `exportparts` attribute in the above code snippet is the equivalent of `exportparts="part1:part1, part2:part2, part5:part5`, indicating that each `part` is exported with its same name. In each mapping, the first string specifies the name of the part within the shadow tree, and the second string specifies the name with which the part will be exposed externally.
+When exporting a `part`, you have the option to assign a different name to the part, as shown in the snippet below. The value of the `exportparts` attribute is really a comma-separated list of part-name mappings. So the `exportparts` attribute in the above code snippet is the equivalent of `exportparts="part1:part1, part2:part2, part5:part5`, indicating that each `part` is exported with the same name. In each mapping, the first string specifies the name of the part within the shadow tree, and the second string specifies the name with which the part will be exposed externally.
 
 ```html
 <template id="ancestor-component">
