@@ -329,7 +329,7 @@ The basic steps to create the table in sample1.html are:
 
 This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of myCell. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like `getElementsByTagName()`, it returns a list of nodes.
 
-The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `childNode()` returns descendants at any level, not just immediate children.
+The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `childNodes` includes all descendants at any level, not just immediate children.
 
 Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
 
@@ -375,7 +375,7 @@ Once you have the object in your JavaScript variable, you can set `style` proper
 
       for (let row = 0; row < 2; row++) {
         const myCurrentRow = document.createElement("tr");
-        for (let i = 0; col < 2; col++) {
+        for (let col = 0; col < 2; col++) {
           const myCurrentCell = document.createElement("td");
           const currentText = document.createTextNode(`cell is: ${row}${col}`);
           myCurrentCell.appendChild(currentText);
