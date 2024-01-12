@@ -28,9 +28,10 @@ const link = document.querySelector(".link1");
 console.log(link.target); // output:- "_blank"
 ```
 
-## Result
+## Try it
 
-{{EmbedLiveSample("Example",100,100)}}
+{{EmbedInteractiveExample("pages/webapi-tabbed/HTMLAnchorElement-target.html", "tabbed-shorter")}}
+
 
 ## Specifications
 
