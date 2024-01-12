@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.login
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
 The **`Navigator.login`** read-only property provides access to the browser's {{domxref("NavigatorLogin")}} object, which defines login functionality for federated identity providers (IdPs). See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more details of how this is used.
 
