@@ -25,7 +25,7 @@ Target values are `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
 
 ```js
 const link = document.querySelector(".link1");
-console.log(link.target); // output:- "_blank"
+console.log(link.target); // output: "_blank"
 ```
 
 ## Try it
