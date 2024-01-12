@@ -36,7 +36,7 @@ page-type: firefox-release-notes
 - The ability to add a sidebar panel (`window.sidebar.addPanel`) has been dropped ([Firefox bug 691647](https://bugzil.la/691647)).
 - The unprefixed {{domxref("Window.requestAnimationFrame")}} and {{domxref("Window.cancelAnimationFrame")}} methods has been added ([Firefox bug 704063](https://bugzil.la/704063)). The unprefixed {{domxref("Window.requestAnimationFrame")}} receives a {{domxref("DOMHighResTimeStamp")}} as argument; the prefixed version receives a timestamp in milliseconds ([Firefox bug 753453](https://bugzil.la/753453)).
 - The text argument for {{domxref("window.alert")}} and {{domxref("window.confirm")}} is now optional ([Firefox bug 861605](https://bugzil.la/861605)).
-- The {{domxref("HTMLMediaElement.initialTime")}} property, removed from the spec, is no more supported ([Firefox bug 742537](https://bugzil.la/742537)).
+- The `HTMLMediaElement.initialTime` property, removed from the spec, is no longer supported ([Firefox bug 742537](https://bugzil.la/742537)).
 - The {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} constructor has been added ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("AnimationEvent.pseudoElement")}} property has been implemented ([Firefox bug 848293](https://bugzil.la/848293)).
 - The {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} constructor has been added ([Firefox bug 848291](https://bugzil.la/848291)).
@@ -45,7 +45,7 @@ page-type: firefox-release-notes
 
 ### WebRTC
 
-- Instead of including usernames in the {{domxref("RTCIceServer.url")}} property (such as stun:username\@stunserver.example.com), you now need to use the new {{domxref("RTCIceServer.username")}} property.
+- Instead of including usernames in the `RTCIceServer.url` property (such as stun:username\@stunserver.example.com), you now need to use the new `RTCIceServer.username` property.
 
 ### CSS
 

@@ -1,6 +1,7 @@
 ---
 title: Understanding WebAssembly text format
 slug: WebAssembly/Understanding_the_text_format
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -178,7 +179,7 @@ WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
 });
 ```
 
-> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) for more details about the instantiate function.
+> **Note:** You can find this example in GitHub as [add.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/add.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). Also see [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) for more details about the instantiate function.
 
 ## Exploring fundamentals
 
@@ -232,7 +233,7 @@ WebAssembly has a two-level namespace so the import statement here is saying tha
 
 Imported functions are just like normal functions: they have a signature that WebAssembly validation checks statically, and they are given an index and can be named and called.
 
-JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) must pass in an import object that has the corresponding properties.
+JavaScript functions have no notion of signature, so any JavaScript function can be passed, regardless of the import's declared signature. Once a module declares an import, the caller of [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) must pass in an import object that has the corresponding properties.
 
 For the above, we need an object (let's call it `importObject`) such that `importObject.console.log` is a JavaScript function.
 
@@ -480,7 +481,7 @@ Because JavaScript has full access to function references, the Table object can 
 
 Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
-To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate) calls.
+To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) calls.
 
 Our `.wat` examples look like so:
 

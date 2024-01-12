@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/radiogroup_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#radiogroup
-  - https://w3c.github.io/aria-practices/#radiobutton
+  - https://www.w3.org/WAI/ARIA/apg/patterns/radio/examples/radio/
 ---
 
 The `radiogroup` role is a group of `radio` buttons.
@@ -155,6 +155,6 @@ In this {{HTMLElement('fieldset')}} example, while `role="radiogroup"` is not ne
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,6 +1,7 @@
 ---
 title: Absolute
 slug: WebAssembly/Reference/Numeric/Absolute
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

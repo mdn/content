@@ -6,12 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Clipboard.writeText
 ---
 
-{{APIRef("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The {{domxref("Clipboard")}} interface's **`writeText()`**
-property writes the specified text string to the system clipboard. Text may be read back
-using either {{domxref("Clipboard.read", "read()")}} or {{domxref("Clipboard.readText",
-  "readText()")}}.
+The **`writeText()`** method of the {{domxref("Clipboard")}} interface writes the specified text to the system clipboard, returning a {{jsxref("Promise")}} that is resolved once the system clipboard has been updated.
 
 ## Syntax
 
@@ -26,29 +23,33 @@ writeText(newClipText)
 
 ### Return value
 
-A {{jsxref("Promise")}} which is resolved once the clipboard's contents have been
-updated. The promise is rejected if the caller does not have permission to write to the
-clipboard.
+A {{jsxref("Promise")}} that is resolved once the clipboard's contents have been updated.
 
-## Security
+### Exceptions
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if writing to the clipboard is not allowed.
 
-The `"clipboard-write"` permission of the [Permissions API](/en-US/docs/Web/API/Permissions_API) is granted automatically to pages when they are in the active tab.
+## Security considerations
+
+Writing to the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
+Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Examples
 
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(
-  () => {
-    /* clipboard successfully set */
-  },
-  () => {
-    /* clipboard write failed */
-  },
-);
+button.addEventListener("click", writeClipboardText("<empty clipboard>"));
+
+async function writeClipboardText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
 ```
 
 ## Specifications
@@ -62,5 +63,7 @@ navigator.clipboard.writeText("<empty clipboard>").then(
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{domxref("Clipboard.write()")}}
+- {{domxref("Clipboard.read()")}}
+- {{domxref("Clipboard.readText()")}}

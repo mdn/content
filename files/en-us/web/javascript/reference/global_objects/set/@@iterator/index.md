@@ -58,7 +58,7 @@ const setIter = mySet[Symbol.iterator]();
 
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
-console.log(setIter.next().value); // Object
+console.log(setIter.next().value); // {}
 ```
 
 ## Specifications

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.JSON.stringify
 
 The **`JSON.stringify()`** static method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
+{{EmbedInteractiveExample("pages/js/json-stringify.html", "taller")}}
 
 ## Syntax
 

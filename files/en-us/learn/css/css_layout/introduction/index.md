@@ -77,7 +77,7 @@ The methods that can change how elements are laid out in CSS are:
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## The display property
 
@@ -103,7 +103,7 @@ However, if we add `display: flex` to the parent, the three items now arrange th
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -136,7 +136,7 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 }
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -178,7 +178,7 @@ Similar to flexbox, we enable Grid Layout with its specific display value — `d
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -216,7 +216,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 .wrapper > div {
   border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  background-color: rgb(207 232 220);
   padding: 1em;
 }
 ```
@@ -285,8 +285,8 @@ p {
 }
 
 .box {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   border-radius: 5px;
 }
@@ -358,18 +358,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -408,21 +406,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  position: relative;
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
-  top: 30px;
-  left: 30px;
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -459,18 +452,16 @@ body {
 }
 
 p {
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
 }
-```
 
-```css hidden
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
 }
 ```
 
@@ -517,8 +508,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -586,8 +577,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;

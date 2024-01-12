@@ -67,7 +67,7 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
 
 ### Transforming text to uppercase
 
-The following example transforms text to uppercase chunk by chunk. This example is from [Streams—The Definitive Guide](https://web.dev/streams/), which has a number of examples of different types of streams.
+The following example transforms text to uppercase chunk by chunk. This example is from [Streams—The Definitive Guide](https://web.dev/articles/streams), which has a number of examples of different types of streams.
 
 ```js
 function upperCaseStream() {

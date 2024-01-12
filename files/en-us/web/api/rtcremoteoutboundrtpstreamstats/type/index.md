@@ -16,7 +16,7 @@ A value of `"remote-outbound-rtp"` indicates that the statistics available in th
 
 ## Value
 
-A string with the value `"remote-outbound-rtpp"`.
+A string with the value `"remote-outbound-rtp"`.
 
 ## Specifications
 

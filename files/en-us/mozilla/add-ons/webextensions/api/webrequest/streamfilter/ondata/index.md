@@ -7,7 +7,7 @@ browser-compat: webextensions.api.webRequest.StreamFilter.ondata
 
 {{AddonSidebar()}}
 
-An event handler that is called repeatedly when response data is available. The handler is passed an `event` object containing a `data` property, which includes a chunk of the response data as an {{jsxref("ArrayBuffer")}}.
+An event handler called repeatedly when response data is available. The handler is passed an [`Event` object](/en-US/docs/Web/API/Event) with a `data` property. The `data` property includes a chunk of the response data as an {{jsxref("ArrayBuffer")}}.
 
 To decode the data, use either {{domxref("TextDecoder")}} or {{domxref("Blob")}}.
 

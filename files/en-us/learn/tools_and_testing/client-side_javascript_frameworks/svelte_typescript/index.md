@@ -445,8 +445,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -519,8 +519,8 @@ We will also use the `Filter` enum in the `Todos.svelte` component.
      filter === Filter.ACTIVE
        ? todos.filter((t) => !t.completed)
        : filter === Filter.COMPLETED
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
 
    $: {
      if (filter === Filter.ALL) {
@@ -776,7 +776,7 @@ Now if we try to create a `localStore` with something that cannot be converted t
 
 ![VS Code showing an error with using our store — it fails when trying to set a local storage value to something incompatible with JSON stringify](11-vscode-invalid-store.png)
 
-And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs#4_Prefix_stores_with_%24_to_access_their_values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
+And best of all, it will even work with the [`$store` auto-subscription syntax](https://svelte.dev/docs/svelte-components#script-4-prefix-stores-with-$-to-access-their-values). If we try to save an invalid value to our `todos` store using the `$store` syntax, like this:
 
 ```svelte
 <!-- App.svelte -->

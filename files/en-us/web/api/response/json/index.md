@@ -49,9 +49,8 @@ fetch(myRequest)
       listItem.appendChild(document.createElement("strong")).textContent =
         product.Name;
       listItem.append(` can be found in ${product.Location}. Cost: `);
-      listItem.appendChild(
-        document.createElement("strong"),
-      ).textContent = `£${product.Price}`;
+      listItem.appendChild(document.createElement("strong")).textContent =
+        `£${product.Price}`;
       myList.appendChild(listItem);
     }
   })

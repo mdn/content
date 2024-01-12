@@ -667,7 +667,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
           </tbody>
         </table>
         <p>
-          While the Chrome browser does not support AMR, Chrome OS supports
+          While the Chrome browser does not support AMR, ChromeOS supports
           AMR-NB (narrowband) and AMR-WB (wideband).
         </p>
       </td>

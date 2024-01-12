@@ -8,13 +8,11 @@ browser-compat: api.History.replaceState
 
 {{APIRef("History API")}}
 
-The **`History.replaceState()`** method modifies the current
+The **`replaceState()`** method of the {{domxref("History")}} interface modifies the current
 history entry, replacing it with the state object and
 URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
 to some user action.
-
-This method is {{glossary("asynchronous")}}. Add a listener for the {{domxref("Window/popstate_event", "popstate")}} event in order to determine when the navigation has completed. The `state` parameter will be available in it.
 
 ## Syntax
 
@@ -33,11 +31,18 @@ replaceState(state, unused, url)
   - : This parameter exists for historical reasons, and cannot be omitted; passing the empty string is traditional, and safe against future changes to the method.
 - `url` {{optional_inline}}
   - : The URL of the history entry. The new URL must be of the same origin as the current
-    URL; otherwise replaceState throws an exception.
+    URL; otherwise the `replaceState()` method throws an exception.
 
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the provided `state` parameter is not serializable.
 
 ## Examples
 

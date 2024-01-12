@@ -52,7 +52,7 @@ This element implements the {{domxref("SVGTRefElement")}} interface.
   </text>
 
   <text x="100" y="200" font-size="45" fill="red" >
-    <tref href="#ReferencedText"/>
+    <tref xlink:href="#ReferencedText"/>
   </text>
 
   <!-- Show outline of canvas using 'rect' element -->

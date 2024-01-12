@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.append
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`append()`** method of the {{domxref("FormData")}} interface appends a new value onto an existing key inside a `FormData` object, or adds the key if it does not already exist.
 
@@ -73,5 +73,5 @@ formData.getAll("name"); // ["true", "72"]
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

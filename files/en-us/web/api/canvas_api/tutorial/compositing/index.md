@@ -15,8 +15,6 @@ We can not only draw new shapes behind existing shapes but we can also use it to
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation = type")}}
   - : This sets the type of compositing operation to apply when drawing new shapes, where type is a string identifying which of the twelve compositing operations to use.
 
-For examples, see the [compositing example](/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) page.
-
 ## Clipping paths
 
 A clipping path is like a normal canvas shape but it acts as a mask to hide unwanted parts of shapes. This is visualized in the image below. The red star shape is our clipping path. Everything that falls outside of this path won't get drawn on the canvas.
@@ -49,7 +47,7 @@ function draw() {
   ctx.arc(0, 0, 60, 0, Math.PI * 2, true);
   ctx.clip();
 
-  // draw background
+  // Draw background
   const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
   lingrad.addColorStop(0, "#232256");
   lingrad.addColorStop(1, "#143778");
@@ -57,7 +55,10 @@ function draw() {
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
 
-  // draw stars
+  generateStars(ctx);
+}
+
+function generateStars(ctx) {
   for (let j = 1; j < 50; j++) {
     ctx.save();
     ctx.fillStyle = "#fff";
@@ -101,5 +102,81 @@ In the first few lines of code, we draw a black rectangle the size of the canvas
 Everything that's drawn after creating the clipping path will only appear inside that path. You can see this clearly in the linear gradient that's drawn next. After this a set of 50 randomly positioned and scaled stars is drawn, using the custom `drawStar()` function. Again the stars only appear inside the defined clipping path.
 
 {{EmbedLiveSample("A_clip_example", "180", "190", "canvas_clip.png")}}
+
+### Inverse clipping path
+
+There is no such thing as an inverse clipping mask. However, we can define a mask that fills the entire canvas with a rectangle and has a hole in it for the parts that you want to skip. When [drawing a shape with a hole](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#shapes_with_holes), we need to draw the hole in the opposite direction as the outer shape. In the example below we punch a hole into the sky.
+
+A rectangle does not have a drawing direction, but it behaves as if we drew it clockwise. By default, the arc command also goes clockwise, but we can change its direction with the last argument.
+
+```html hidden
+<html lang="en">
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
+</html>
+```
+
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+    ctx.translate(75, 75);
+
+    // Clipping path
+    ctx.beginPath();
+    ctx.rect(-75, -75, 150, 150); // Outer rectangle
+    ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // Hole anticlockwise
+    ctx.clip();
+
+    // Draw background
+    const lingrad = ctx.createLinearGradient(0, -75, 0, 75);
+    lingrad.addColorStop(0, "#232256");
+    lingrad.addColorStop(1, "#143778");
+
+    ctx.fillStyle = lingrad;
+    ctx.fillRect(-75, -75, 150, 150);
+
+    generateStars(ctx);
+  }
+}
+```
+
+```js hidden
+function generateStars(ctx) {
+  for (let j = 1; j < 50; j++) {
+    ctx.save();
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
+    drawStar(ctx, Math.floor(Math.random() * 4) + 2);
+    ctx.restore();
+  }
+}
+
+function drawStar(ctx, r) {
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  for (let i = 0; i < 9; i++) {
+    ctx.rotate(Math.PI / 5);
+    if (i % 2 === 0) {
+      ctx.lineTo((r / 0.525731) * 0.200811, 0);
+    } else {
+      ctx.lineTo(r, 0);
+    }
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
+
+draw();
+```
+
+{{EmbedLiveSample("Hole_in_rectangle", 160, 160, "inverse_clipping_path.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

@@ -17,7 +17,7 @@ This won't be an exhaustive study; just what you need to know at this stage.
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
@@ -782,7 +782,7 @@ As mentioned, events are not really part of the core JavaScript — they are def
 Also, it is important to understand that the different contexts in which JavaScript is used have different event models — from Web APIs to other areas such as browser WebExtensions and Node.js (server-side JavaScript).
 We are not expecting you to understand all of these areas now, but it certainly helps to understand the basics of events as you forge ahead with learning web development.
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](https://discourse.mozilla.org/c/mdn/learn/250) to ask for help.
+> **Note:** If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## See also
 

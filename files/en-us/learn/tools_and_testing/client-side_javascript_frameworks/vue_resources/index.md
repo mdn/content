@@ -68,8 +68,8 @@ This will create a new `dist` directory containing all of your production ready 
 
 ## Vue 2
 
-Vue 2 support will end on December 31st, 2023 and the default Vue version for all CLI tools is version 3 and above.
-The [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html) works as an alternative to the property-based API where you use a `setup()` function is used on the component. Only what you return from this function is available in your `<template>`s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the [Options API](https://vuejs.org/guide/extras/composition-api-faq.html#trade-offs). This makes the new API typically considered a more advanced use case.
+Vue 2 support will end on December 31st, 2023 and the default Vue version for all CLI tools will be version 3 and above.
+The [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html) works as an alternative to the property-based API where a `setup()` function is used on the component. Only what you return from this function is available in your `<template>`s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the [Options API](https://vuejs.org/guide/extras/composition-api-faq.html#trade-offs). This makes the new API typically considered a more advanced use case.
 
 If you're upgrading from Vue 2, it's recommended you take a look at the [Vue 3 migration guide](https://v3-migration.vuejs.org/).
 

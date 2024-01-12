@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setSinkId
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
-The **`HTMLMediaElement.setSinkId()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) sets the ID of the audio device to use for output and returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+The **`HTMLMediaElement.setSinkId()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}.
 
 This only works when the application is permitted to use the specified device.
 For more information see the [security requirements](#security_requirements) below.
@@ -44,12 +44,12 @@ Access to the API is subject to the following constraints:
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 - Access may be gated by the [`speaker-selection`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - User permission is required to access a non-default device.
-  The user grants permission by selecting the device associated with the ID in the prompt displayed by [`MediaDevices.selectAudioOutput()`](/en-US/docs/Web/API/MediaDevices/selectAudioOutput).
+  The user grants permission by selecting the device associated with the ID in the prompt displayed by {{domxref("MediaDevices.selectAudioOutput()")}}.
 
 ## Examples
 
-This example shows how to select an audio output device from the array returned by [`MediaDevices.enumerateDevices()`](/en-US/docs/Web/API/MediaDevices/enumerateDevices), and set it as the sink for audio.
-Note that the result of `enumerateDevices()` only includes devices for which user permission is not required or has already been been granted.
+This example shows how to select an audio output device from the array returned by {{domxref("MediaDevices.enumerateDevices()")}}, and set it as the sink for audio.
+Note that the result of `enumerateDevices()` only includes devices for which user permission is not required or has already been granted.
 
 ```js
 const devices = await navigator.mediaDevices.enumerateDevices();
@@ -69,4 +69,5 @@ console.log(`Audio is being output on ${audio.sinkId}`);
 
 ## See also
 
-[`HTMLMediaElement.sinkId`](/en-US/docs/Web/API/HTMLMediaElement/sinkId)
+- {{domxref("MediaDevices.selectAudioOutput()")}}
+- {{domxref("HTMLMediaElement.sinkId")}}

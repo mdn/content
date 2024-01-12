@@ -130,4 +130,4 @@ if ( isset ( $_GET["value"] ) ) {
 
 - `nsIProtocolHandler` (XUL only)
 - [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) at Mozilla Webdev
-- [Register a custom protocolHandler](https://web.dev/registering-a-custom-protocol-handler/) at web.dev.
+- [Register a custom protocolHandler](https://web.dev/articles/registering-a-custom-protocol-handler) at web.dev.

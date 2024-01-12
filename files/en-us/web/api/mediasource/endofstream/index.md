@@ -29,8 +29,8 @@ endOfStream(endOfStreamError)
       - : Terminates playback and signals that a network error has
         occurred. This can be used create a custom error handler related to media streams.
         For example, you might have a function that handles media chunk requests, separate
-        from other network requests. When you make an [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) call for a media
-        chunk, and `onabort` or `onerror` triggers, you might want
+        from other network requests. When you make a {{domxref("fetch()")}} request for a media
+        chunk and receive a network error, you might want
         to call `endOfStream('network')`, display a descriptive message in the
         UI, and maybe retry the network request immediately or wait until the network is
         back up (via some kind of polling.)
