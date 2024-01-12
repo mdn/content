@@ -16,7 +16,7 @@ Web developers, or webmasters, rarely craft these textual HTTP messages themselv
 
 HTTP requests, and responses, share similar structure and are composed of:
 
-1. A _request-line_ describing the requests to be implemented, or its status of whether successful or a failure. This is always a single line.
+1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This is always a single line.
 2. An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
 3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the request-line and HTTP headers.
