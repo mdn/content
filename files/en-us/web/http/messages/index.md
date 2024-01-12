@@ -21,7 +21,7 @@ HTTP requests, and responses, share similar structure and are composed of:
 3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 
-The request-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
+The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
 
 ![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
