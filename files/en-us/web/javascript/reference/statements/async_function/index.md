@@ -43,7 +43,7 @@ async function name(param0, param1, /* …, */ paramN) {
 
 An `async function` declaration creates an {{jsxref("AsyncFunction")}} object. Each time when an async function is called, it returns a new {{jsxref("Promise")}} which will be resolved with the value returned by the async function, or rejected with an exception uncaught within the async function.
 
-Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of `async` and `await` enables the use of ordinary `try` / `catch` blocks around asynchronous code.
+Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're asynchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of `async` and `await` enables the use of ordinary `try` / `catch` blocks around asynchronous code.
 
 > **Note:** The `await` keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.
 >
