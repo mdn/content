@@ -17,11 +17,14 @@ A relative CSS color value has the following general syntax structure:
 ```text
 color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
+
+// colorspace included in the case of color() functions
+color-function(from origin-color colorspace channel1 channel2 channel3)
 ```
 
 1. You create a relative color using the same basic color functions (represented by _`color-function`_ above) as non-relative (absolute) colors — [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
 2. The syntax inside the color function is a bit different for relative colors. First of all, you pass in an **origin color** (represented above by _`origin-color`_) to base your relative color on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model, including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
-3. The individual channels of the output color are then defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders. The channels defined here depend on the color function you are using for your relative color. If you are using `hsl()` for example, you would need to define hue, saturation, and lightness values. These could be static values, or values based on the channel values of the origin color.
+3. The individual channels of the output color are then defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders (preceded by a _`colorspace`_ in the case of [`color()`](/en-US/docs/Web/CSS/color_value/color) functions). The channels defined here depend on the color function you are using for your relative color. If you are using `hsl()` for example, you would need to define hue, saturation, and lightness values. These could be static values, or values based on the channel values of the origin color.
 4. Optionally, an `alpha` channel value for the output color is defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case with absolute color values).
 
 Supporting browsers destructure the origin color into its component color channels (plus the `alpha` channel if the origin color has one) as represented in the color system you are passing the color in to. These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function — and can be used to calculate new output channel values. See the [Syntax flexibility](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#syntax_flexibility) section for more detail on this.
@@ -113,10 +116,12 @@ rgb(from rgb(200 170 0) b g r)
 
 In the section above we only saw relative colors defined via the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function. However, relative colors can be defined using any modern CSS function — [`color()`](/en-US/docs/Web/CSS/color_value/color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), or [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb). The general syntax structure is the same in each case.
 
-Below you can find relative color syntax examples for each color function. Each case is the simplest possible, with the output channels exactly matching the origin color channels:
+Below you can find relative color syntax examples for each color function. Each case is the simplest possible, with the output color channel values exactly matching the origin color channel values:
 
 ```css
 /* color() with and without alpha channel */
+/* Note that Chrome supports r g b and x y z for all colorspaces */
+/* Whereas Safari supports r g b or x y z depending on the colorspace */
 color(from red a98-rgb r g b)
 color(from red a98-rgb r g b / alpha)
 

@@ -69,7 +69,7 @@ Functional notation of relative values: `hwb(from color hue white black[ / alpha
 - `hue`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle of the output color.
 - `white`, `black`
-  - : Each value value can be written as a {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`. These values represent the whiteness and blackness channel values of the output color, respectively. They specify the amount of white and black to mix in, from `0%` (no whiteness or blackness) to `100%` (full whiteness or blackness). If `white + black = 100%`, it defines some shade of gray. If `white + black > 100%`, `white` and `black` are effectively normalized as `white / (white + black)` and `black / (white + black)`, respectively.
+  - : Each value can be written as a {{CSSXref("&lt;percentage&gt;")}} or the keyword `none`. These values represent the whiteness and blackness channel values of the output color, respectively. They specify the amount of white and black to mix in, from `0%` (no whiteness or blackness) to `100%` (full whiteness or blackness). If `white + black = 100%`, it defines some shade of gray. If `white + black > 100%`, `white` and `black` are effectively normalized as `white / (white + black)` and `black / (white + black)`, respectively.
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
