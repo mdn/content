@@ -163,6 +163,6 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 - [`@supports`](/en-US/docs/Web/CSS/@supports) at-rule
 - [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules/) module
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
