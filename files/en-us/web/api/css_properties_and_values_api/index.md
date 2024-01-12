@@ -54,4 +54,4 @@ The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{c
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

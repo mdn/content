@@ -157,4 +157,4 @@ While you can't play with the worklet's script, you can alter the custom propert
 
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)
