@@ -64,7 +64,9 @@ It doesn't make commercial sense to spend time trying to give everyone an identi
 
 ## Creating fallbacks in CSS
 
-Browsers ignore the CSS properties and values they don't support. When a browser doesn't recognize a new feature, it [discards the declaration as invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors) without throwing an error. This allows both old and new values to coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
+CSS specifications contain information that explain what the browser does when two similar features, such as layout methods, are applied to the same item. For example, they define what happens if an item is floated and is also a grid item and part of a CSS grid container. There is also a definition for what happens when an element has both {{cssxref("margin-top")}} and {{cssxref("margin-block-start")}} properties set.
+
+When a browser doesn't recognize a new feature, it [discards the declaration as invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#css_parser_errors) without throwing an error. Because browsers discard CSS properties and values they don't support, both old and new values can coexist in the same ruleset. Just make sure to declare the old value before the new value so that, when supported, the new value overwrites the old value (the fallback).
 
 For example, most browsers support the two-value syntax of the {{cssxref("display")}} property. If a browser doesn't, it will use the older, single-value syntax.
 
@@ -75,23 +77,21 @@ For example, most browsers support the two-value syntax of the {{cssxref("displa
 }
 ```
 
-CSS specifications contain information that explain what the browser does when two similar features, such as layout methods, are applied to the same item. For example, they define what happens if an item is floated and is also a grid item and part of a CSS grid container. There is also a definition for what happens when an element has both {{cssxref("margin-top")}} and {{cssxref("margin-block-start")}} properties set.
+Similarly, this [error-handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes) ensures old CSS code bases continue to work even if legacy {{glossary("vendor-prefix", "vendor-prefixed")}} features are no longer supported. While vendor prefixing is no longer commonly used, if you must include a vendor-prefixed property or value, make sure to declare the prefixed value before the standard value so that, when supported, the new value overwrites the fallback value.
 
-These techniques are demonstrated in the [legacy techniques layout tutorial](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods). Back when grid wasn't fully supported, the browser ignored the grid styles. This tutorial is now a good demonstration of how newer features, in this case grid layout, are designed and defined to take precedence over older features, floats in this case, when their effects would have otherwise conflicted.
+### Using new selectors
 
-### Fallback methods
+Including new selectors that aren't supported in all browsers needs to be handled more carefully. If a selector in a comma-separated list of [selectors is invalid](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#selector_support), the entire style block is ignored.
 
-As noted above, a browser will discard any CSS it doesn't support. Check out the [CSS error handling guide](/en-US/docs/Web/CSS/CSS_syntax/Error_handling). This browser feature enables using new CSS properties and new property values before they are universally supported. New CSS features that aren't supported are discarded as invalid. This enabled the use of [vendor-prefixing](/en-US/docs/Web/CSS/CSS_syntax/Error_handling#vendor_prefixes), and also enables legacy CSS to continue to work in spite of legacy vendor-prefixes that are no longer supported.
-
-While vendor prefixing is no longer commonly used, if you must include a vendor prefixed property or value, make sure to declare the old value before the new value so that, when supported, the new value overwrites the fallback value. If using vendor-prefixed [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) or [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes), include the prefixed values within a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) by using {{cssxref(":is", ":is()")}} or {{cssxref(":where", ":where()")}} so the entire selector block doesn't get [invalidated and ignored](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list).
+If using vendor-prefixed [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) or new[pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) a browser may not yet support, include the prefixed values within a [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) by using {{cssxref(":is", ":is()")}} or {{cssxref(":where", ":where()")}} so the entire selector block doesn't get [invalidated and ignored](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list).
 
 ```css
-:is(:-prefix-mistake, :invalid-error),
+:is(:-prefix-mistake, :unsupported-pseudo),
 .valid {
   font-family: sans-serif;
 }
 :-prefix-mistake,
-:invalid-error,
+:unsupported-pseudo,
 .valid {
   color: red;
 }
