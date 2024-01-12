@@ -19,7 +19,8 @@ color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
 
 // colorspace included in the case of color() functions
-color-function(from origin-color colorspace channel1 channel2 channel3)
+color(from origin-color colorspace channel1 channel2 channel3)
+color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
 
 1. You create a relative color using the same basic color functions (represented by _`color-function`_ above) as non-relative (absolute) colors — [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
@@ -66,7 +67,7 @@ The output is as follows:
 
 {{ EmbedLiveSample("General syntax", "100%", "200") }}
 
-The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, takes `red` as an input (equivalent to `rgb(255 0 0)`), and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser). This results in a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value.
+The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as an input (equivalent to `rgb(255 0 0)`), and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser). This results in a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value.
 
 These four lines all produce an equivalent output color:
 
@@ -77,7 +78,7 @@ rgb(from red r g b)
 rgb(from red 255 g b)
 ```
 
-> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color (as in the third and fourth examples above), you are not really creating a relative color.
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color (as in the third and fourth examples above) or a color not based on the origin color at all, you are not really creating a relative color.
 
 ## Syntax flexibility
 
@@ -89,7 +90,7 @@ When a relative color is defined via an `rgb()` function, the red, green, and bl
 rgb(from red r g b)
 ```
 
-However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the ouput channel values in the right order, but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
+However, when specifying the output values, you don't need to use the origin color channel values at all. You need to provide the output channel values in the right order, but they can be any values you wish provided they are valid values for those channels. This gives relative CSS colors a high degree of flexibility.
 
 For example, if you wanted to, you could specify absolute values like those shown below, transforming `red` into `blue`:
 
@@ -159,7 +160,7 @@ rgb(from red r g b / alpha)
 
 As you can see from the above example, the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility — generally you won't be interested in (and might not even know) the system a color is defined in. You'll just want to grab the color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
 
-> **Note:** Relative color outputs cannot be defined via the legacy color syntax, for example `rgba()` and `hsla()` functions. However, you can pass in legacy origin colors.
+> **Note:** Relative colors cannot be defined via legacy color syntax, for example `rgba()` and `hsla()` functions. However, you can pass in legacy origin colors.
 
 ## Using custom properties
 
@@ -170,7 +171,7 @@ In the below CSS we define two custom properties:
 - `--base-color` contains our base brand color, a nice purple.
 - `--standard-opacity` contains the standard opacity value that we want to apply to semi-transparent boxes.
 
-We then give two {{htmlelement("div")}} elements a background color. One is given an absolute color — our brand purple. The other one is given a relative color equal to our brand purple, transformed to have an alpha channel equal to our standard opacity value.
+We then give two {{htmlelement("div")}} elements a background color. One is given an absolute color — our `--base-color` brand purple. The other one is given a relative color equal to our brand purple, transformed to have an alpha channel equal to our standard opacity value.
 
 ```html hidden
 <div id="container">
@@ -298,10 +299,10 @@ For example:
 
 This example creates a basic color palette generator, which allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palettes are as follows:
 
-- Complementary: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). To put it technically, the two colors would be base color, and base color with hue channel + 180 degrees.
-- Triadic: Includes three colors equal distances apart around the color wheel. To put it technically, the three colors would be base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
-- Tetradic: Includes four colors equal distances apart around the color wheel. To put it technically, the four colors would be base color, and base color with hue channel +90, +180, and +270 degrees.
-- Monochrome: Includes multiple colors with the same hue, but varying lightness values. In our example we've defined five colors in a monochrome palette — base color, and base color with lightness channel -20, -10, +10, and +20.
+- **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). To put it technically, the two colors would be base color, and base color with hue channel + 180 degrees.
+- **Triadic**: Includes three colors equal distances apart around the color wheel. To put it technically, the three colors would be base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
+- **Tetradic**: Includes four colors equal distances apart around the color wheel. To put it technically, the four colors would be base color, and base color with hue channel +90, +180, and +270 degrees.
+- **Monochrome**: Includes multiple colors with the same hue but varying lightness values. In our example we've defined five colors in a monochrome palette — base color, and base color with lightness channel -20, -10, +10, and +20.
 
 #### HTML
 

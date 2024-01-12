@@ -74,7 +74,7 @@ A `<color>` value can be specified using one of the methods listed below:
   - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
-- By using relative color syntax to output a new color based on an existing color. Any of the above color space functions can take an **origin color** preceded by the `from` keyword, and followed by definitions of the channel values for the new output color. See [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) for a detailed usage guide with examples, and see the above color space function pages for details of the allowable syntax in each case.
+- By using relative color syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword, and followed by definitions of the channel values for the new output color. See [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) for a detailed usage guide with examples, and see the above color function pages for details of the allowable syntax in each case.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
 - By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
