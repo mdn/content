@@ -146,7 +146,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 | ----- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `cap` | Cap height (the nominal height of capital letters) of the element's font.                                                              |
 | `ch`  | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
-| `em`  | [`font size`](/en-US/docs/Web/CSS/font-size) of the element.                                                                           |
+| `em`  | Font size of the element's font.                                                                           |
 | `ex`  | x-height of the element's font.                                                                                                        |
 | `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
 | `lh`  | Line height of the element.                                                                       |
