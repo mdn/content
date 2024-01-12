@@ -38,13 +38,13 @@ hsl(from blue h s calc(l + 20))
 
 The absolute syntax can also be written in a legacy form in which all values are separated with commas.
 
-## Values
+### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
 > **Note:** Absolute and relative functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
-### Absolute values
+#### Absolute values
 
 Functional notation of absolute values: `hsl(H S L[ / A])`
 
@@ -57,7 +57,7 @@ Functional notation of absolute values: `hsl(H S L[ / A])`
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). If the `alpha` channel value is not explicitly specified, it defaults to 100%.
 
-### Relative values
+#### Relative values
 
 Functional notation of relative values: `hsl(from color hue saturation lightness[ / alpha])`
 
@@ -74,13 +74,13 @@ Functional notation of relative values: `hsl(from color hue saturation lightness
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
-### `none` values
+#### `none` values
 
 In color syntax, setting `none` is equivalent to setting a value of `0` with an appropriate unit for the channel — it is equivalent to `0deg` for hue, `0%` for saturation, and `0%` for lightness. The alpha channel works slightly differently — setting `none` for the alpha value equates to a value of `none`, meaning no alpha channel.
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more details on the effect of `none`.
 
-### Defining relative color output channel components
+#### Defining relative color output channel components
 
 The browser destructures the origin color into `hsl()` component values that are made available inside the function as `h` (hue), `s` (saturation), `l` (lightness), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 

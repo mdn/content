@@ -31,13 +31,13 @@ color(from green xyz-d50 x y z / 0.5)
 color(from blue display-p3 calc(r + 0.75) g calc(b - 0.35))
 ```
 
-## Values
+### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
-### Absolute values
+#### Absolute values
 
 Functional notation of absolute values: `color(colorspace c1 c2 c3[ / A])`
 
@@ -53,7 +53,7 @@ Functional notation of absolute values: `color(colorspace c1 c2 c3[ / A])`
 
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-### Relative values
+#### Relative values
 
 Functional notation of relative values: `color(from color colorspace c1 c2 c3[ / alpha])`
 
@@ -68,7 +68,7 @@ Functional notation of relative values: `color(from color colorspace c1 c2 c3[ /
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
-### Defining relative color output channel components
+#### Defining relative color output channel components
 
 The browser destructures the origin color into `color()` component values for the specified colorspace that are made available inside the function as three color channel values, and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
@@ -103,7 +103,7 @@ color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6))
 color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3))
 ```
 
-## Formal syntax
+### Formal syntax
 
 {{csssyntax}}
 

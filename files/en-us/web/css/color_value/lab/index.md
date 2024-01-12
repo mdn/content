@@ -31,7 +31,7 @@ lab(from blue calc(l + 10) a b)
 lab(from blue calc(l - 10) a b)
 ```
 
-## Values
+### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
@@ -40,7 +40,7 @@ Below we have provided descriptions of the allowed values for both absolute and 
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
-### Absolute values
+#### Absolute values
 
 Functional notation of absolute values: `lab(L a b[ / A])`
 
@@ -53,7 +53,7 @@ Functional notation of absolute values: `lab(L a b[ / A])`
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-### Relative values
+#### Relative values
 
 Functional notation of relative values: `lab(from color lightness a b[ / alpha])`
 
@@ -70,7 +70,7 @@ Functional notation of relative values: `lab(from color lightness a b[ / alpha])
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
-### Defining relative color output channel components
+#### Defining relative color output channel components
 
 The browser destructures the origin color into `lab()` component values that are made available inside the function as `l` (lightness), `a` (green/red axis), `b` (blue/yellow axis), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
@@ -100,7 +100,7 @@ The following function uses the origin color's channel values inside {{cssxref("
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))
 ```
 
-## Formal syntax
+### Formal syntax
 
 {{csssyntax}}
 

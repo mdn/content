@@ -34,7 +34,7 @@ rgb(from blue calc(r + 40) calc(g + 40) b)
 
 The absolute syntax can also be written in a legacy form in which all values are separated with commas.
 
-## Values
+### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
@@ -42,7 +42,7 @@ Below we have provided descriptions of the allowed values for both absolute and 
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
-### Absolute values
+#### Absolute values
 
 Functional notation of absolute values: `rgb(R G B[ / A])`
 
@@ -51,7 +51,7 @@ Functional notation of absolute values: `rgb(R G B[ / A])`
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-### Relative values
+#### Relative values
 
 Functional notation of relative values: `rgb(from color red green blue[ / alpha])`
 
@@ -64,7 +64,7 @@ Functional notation of relative values: `rgb(from color red green blue[ / alpha]
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
-### Defining relative color output channel components
+#### Defining relative color output channel components
 
 The browser destructures the origin color into `rgb()` component values that are made available inside the function as `r` (red), `g` (green), `b` (blue), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
@@ -93,7 +93,7 @@ The following function uses the origin color's channel values inside {{cssxref("
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
 ```
 
-## Formal syntax
+### Formal syntax
 
 {{csssyntax}}
 

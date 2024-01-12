@@ -31,7 +31,7 @@ lch(from blue calc(l + 10) c h)
 lch(from blue calc(l - 10) c h)
 ```
 
-## Values
+### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
@@ -40,7 +40,7 @@ Below we have provided descriptions of the allowed values for both absolute and 
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
-### Absolute values
+#### Absolute values
 
 Functional notation of absolute values: `lch(L C H[ / A])`
 
@@ -53,7 +53,7 @@ Functional notation of absolute values: `lch(L C H[ / A])`
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
-### Relative values
+#### Relative values
 
 Functional notation of relative values: `lch(from color lightness chroma hue[ / alpha])`
 
@@ -70,7 +70,7 @@ Functional notation of relative values: `lch(from color lightness chroma hue[ / 
 - `alpha` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
-### Defining relative color output channel components
+#### Defining relative color output channel components
 
 The browser destructures the origin color into `lch()` component values that are made available inside the function as `l` (lightness), `c` (chroma), `h` (hue), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
@@ -101,7 +101,7 @@ The following function uses the origin color's channel values inside {{cssxref("
 lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0.1))
 ```
 
-## Formal syntax
+### Formal syntax
 
 {{csssyntax}}
 
