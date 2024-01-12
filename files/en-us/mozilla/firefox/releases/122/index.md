@@ -80,7 +80,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 - Declarative shadow DOM: `dom.webcomponents.shadowdom.declarative.enabled`
 
-  The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
+  The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
 
 - Popover API: `dom.element.popover.enabled`
 
