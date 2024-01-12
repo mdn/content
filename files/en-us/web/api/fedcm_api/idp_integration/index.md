@@ -34,7 +34,7 @@ The `provider_urls` member should contain an array of URLs pointing to valid IdP
 
 ## The `Sec-Fetch-Dest` HTTP header
 
-Credentialed requests sent from the browser via FedCM (i.e. to the `accounts_endpoint` and `id_assertion_endpoint`) include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header to prevent {{glossary("CSRF")}} attacks. All IdP endpoints must confirm this header is included.
+All requests sent from the browser via FedCM include a `{{httpheader("Sec-Fetch-Dest")}}: webidentity` header. All IdP endpoints that receive credentialed requests (i.e. `accounts_endpoint` and `id_assertion_endpoint`) must confirm this header is included to protect against {{glossary("CSRF")}} attacks.
 
 ## Provide a config file and endpoints
 
