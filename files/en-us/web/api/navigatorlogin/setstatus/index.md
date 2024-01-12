@@ -28,7 +28,7 @@ setStatus(status)
 
 ### Return value
 
-A promise that fulfills with `undefined`.
+A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
