@@ -52,7 +52,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - `disablepictureinpicture` {{experimental_inline}}
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
-- `disableremoteplayback` {{experimental_inline}}
+- `disableremoteplayback`
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.).
 

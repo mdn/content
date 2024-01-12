@@ -71,7 +71,7 @@ Servers should ignore this header if it contains any other value.
 - `embed`
   - : The destination is embedded content. This might originate from an HTML {{HTMLElement("embed")}} tag.
 - `empty`
-  - : The destination is the empty string. This is used for destinations that do not have their own value. For example `fetch()`, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
+  - : The destination is the empty string. This is used for destinations that do not have their own value. For example: {{domxref("fetch()")}}, {{domxref("navigator.sendBeacon()")}}, {{domxref("EventSource")}}, {{domxref("XMLHttpRequest")}}, {{domxref("WebSocket")}}, etc.
 - `font`
   - : The destination is a font. This might originate from CSS {{cssxref("@font-face")}}.
 - `frame`
@@ -79,7 +79,7 @@ Servers should ignore this header if it contains any other value.
 - `iframe`
   - : The destination is an iframe. This might originate from an HTML {{HTMLElement("iframe")}} tag.
 - `image`
-  - : The destination is an image. This might originate from an HTML {{HTMLElement("image")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
+  - : The destination is an image. This might originate from an HTML {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
 - `manifest`
   - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Attributes/rel/manifest).
 - `object`

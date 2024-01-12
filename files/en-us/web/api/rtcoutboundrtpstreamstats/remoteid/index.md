@@ -3,7 +3,7 @@ title: "RTCOutboundRtpStreamStats: remoteId property"
 short-title: remoteId
 slug: Web/API/RTCOutboundRtpStreamStats/remoteId
 page-type: web-api-instance-property
-browser-compat: api.RTCOutboundRtpStreamStats.remoteId
+browser-compat: api.RTCStatsReport.type_outbound-rtp.remoteId
 ---
 
 {{APIRef("WebRTC")}}

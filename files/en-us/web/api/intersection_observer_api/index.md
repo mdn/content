@@ -72,7 +72,7 @@ Once you have created the observer, you need to give it a target element to watc
 let target = document.querySelector("#listItem");
 observer.observe(target);
 
-// the callback we setup for the observer will be executed now for the first time
+// the callback we set up for the observer will be executed now for the first time
 // it waits until we assign a target to our observer (even if the target is currently not visible)
 ```
 

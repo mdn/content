@@ -3,7 +3,7 @@ title: "RTCIceCandidatePairStats: currentRoundTripTime property"
 short-title: currentRoundTripTime
 slug: Web/API/RTCIceCandidatePairStats/currentRoundTripTime
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.currentRoundTripTime
+browser-compat: api.RTCStatsReport.type_candidate-pair.currentRoundTripTime
 ---
 
 {{APIRef("WebRTC")}}

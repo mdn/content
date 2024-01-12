@@ -32,7 +32,7 @@ When multiple elements have been placed into the top layer, each one has its own
 ```css
 /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
 dialog::backdrop {
-  background: rgba(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 25%);
 }
 ```
 
@@ -71,4 +71,5 @@ The resulting screen looks like this:
 - {{cssxref(":fullscreen")}} pseudo-class
 - {{HTMLElement("dialog")}} HTML element
 - [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API)
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)
