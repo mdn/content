@@ -28,9 +28,9 @@ const link = document.querySelector(".link1");
 console.log(link.target); // output: "_blank"
 ```
 
-## Try it
+Check different values of a target attribute for `<a>` tag.
 
-Check different values of a target attribute in `<a>` tag.
+## Try it
 
 {{EmbedInteractiveExample("pages/webapi-tabbed/HTMLAnchorElement-target.html", "tabbed-shorter")}}
 
@@ -41,8 +41,7 @@ Check different values of a target attribute in `<a>` tag.
 
 ## Browser compatibility
 
-{{Compat}}
-
+{{C
 ## See also
 
 - {{domxref("HTMLBaseElement.target")}} property
