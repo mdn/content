@@ -94,7 +94,7 @@ This function uses absolute values for the output color's channel values, output
 lab(from hsl(0 100% 50%) 29.692% 44.89% -29.034%)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
 
 ```css
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))

@@ -87,7 +87,7 @@ This function uses absolute values for the output color's channel values, output
 rgb(from hsl(0 100% 50%) 132 132 224)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))

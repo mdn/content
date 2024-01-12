@@ -96,7 +96,7 @@ color(from hsl(0 100% 50%) srgb 0.749938 0 0.609579)
 color(from hsl(0 100% 50%) xyz 0.75 0.6554 0.1)
 ```
 
-The following functions use the origin color channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output colors:
+The following functions use the origin color channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output colors:
 
 ```css
 color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6))

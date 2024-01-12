@@ -28,7 +28,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 3. The individual channels of the output color are then defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders (preceded by a _`colorspace`_ in the case of [`color()`](/en-US/docs/Web/CSS/color_value/color) functions). The channels defined here depend on the color function you are using for your relative color. If you are using `hsl()` for example, you would need to define hue, saturation, and lightness values. These could be static values, or values based on the channel values of the origin color.
 4. Optionally, an `alpha` channel value for the output color is defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case with absolute color values).
 
-Supporting browsers destructure the origin color into its component color channels (plus the `alpha` channel if the origin color has one) as represented in the color system you are passing the color in to. These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function — and can be used to calculate new output channel values. See the [Syntax flexibility](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#syntax_flexibility) section for more detail on this.
+Supporting browsers destructure the origin color into its component color channels (plus the `alpha` channel if the origin color has one) as represented in the color system you are passing the color in to. These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function — and can be used to calculate new output channel values. See the [Syntax flexibility](#syntax_flexibility) section for more detail on this.
 
 Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
@@ -222,7 +222,7 @@ The output is as follows:
 
 ## Using math functions
 
-You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) such as {{cssxref("calc()")}} to calculate values for the output color channels. Let's look at an example.
+You can use CSS [math functions](/en-US/docs/Web/CSS/CSS_Functions#math_functions) such as {{cssxref("calc")}} to calculate values for the output color channels. Let's look at an example.
 
 The below CSS is used to style three {{htmlelement("div")}} elements with different background colors. The middle one is given an unmodified `--base-color`, while the left and right ones are given lightened and darkened variants of that `--base-color`. These variants are defined using relative colors — the `--base-color` is passed into an `lch()` function, and the output color has its lightness channel modified to achieve the desired effect via a `calc()` function. The lightened color has 20% added to the lightness channel, and the darkened color has 20% subtracted from it.
 
@@ -373,7 +373,7 @@ The full HTML is included below for reference. The most interesting parts are:
 
 #### CSS
 
-Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child()")}} to target them.
+Below we are only showing the CSS that sets the palette colors. Note how, in each case, descendent selectors are used to apply the correct {{cssxref("background-color")}} to each child `<div>` for the chosen palette. We care more about the position of the `<div>`s in the source order than the type of element, so we have used {{cssxref(":nth-child")}} to target them.
 
 The colors themselves include the `--base-color`, plus relative colors derived from that `--base-color`. The relative colors use the [`lch()`](/en-US/docs/Web/CSS/color_value/lch) function — passing in the origin `--base-color` and defining an output color with an adjusted lightness or hue channel as appropriate.
 
@@ -554,7 +554,7 @@ In the JavaScript, we:
   1. Updates the `class` value of the `<div>` with `id="container"` with the value of the selected radio button so that the correct background colors will be applied to the child `<div>`s for the chosen palette type.
   2. Removes the existing child `<div>`s from the `container` `<div>`.
   3. Adds the correct number of child `<div>`s back into the `container` `<div>` for the chosen palette type.
-- Add an [`input`](/en-US/docs/Web/API/HTMLElement/input_event) event listener to the color picker control so that when a new color is selected, the `setBaseColor()` function runs. This function sets the `--base-color` custom property's value to the new color.
+- Add an [`input`](/en-US/docs/Web/API/Element/input_event) event listener to the color picker control so that when a new color is selected, the `setBaseColor()` function runs. This function sets the `--base-color` custom property's value to the new color.
 
 ```js
 const form = document.forms[0];
@@ -619,7 +619,7 @@ The HTML for the example is shown below.
 
 - The {{htmlelement("main")}} element acts as an outer wrapper to contain the `--hue` value. It also has a radial gradient set on it that fills the whole body.
 - The {{htmlelement("div")}} element with an ID of `container` acts as an inner container. It keeps the card and form together, allowing them to be centered vertically and horizontally inside `<main>` as one unit.
-- The {{htmlelement("section")}} element contains the {{htmlelement("h1")}} and {{htmlelement("p")}} elements that define the card's content.
+- The {{htmlelement("section")}} element contains the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) and {{htmlelement("p")}} elements that define the card's content.
 - The {{htmlelement("form")}} element contains the ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control and its {{htmlelement("label")}}.
 
 ```html
@@ -752,7 +752,7 @@ input {
 
 #### JavaScript
 
-The JavaScript adds an [`input`](/en-US/docs/Web/API/HTMLElement/input_event) event listener to the slider control so that when a new value is set, the `setHue()` function runs. This function sets the `--hue` custom property's value to the new value.
+The JavaScript adds an [`input`](/en-US/docs/Web/API/Element/input_event) event listener to the slider control so that when a new value is set, the `setHue()` function runs. This function sets the `--hue` custom property's value to the new value.
 
 ```js
 const mainElem = document.querySelector("main");

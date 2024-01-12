@@ -91,7 +91,7 @@ This function uses absolute values for the output color's channel values, output
 oklch(from hsl(0 100% 50%) 42.1 48.25 328.363)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
 
 ```css
 oklch(from hsl(0 100% 50%) calc(l + 0.2) calc(c + 0.1) calc(h - 20) / calc(alpha - 0.1))

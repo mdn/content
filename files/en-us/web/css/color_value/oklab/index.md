@@ -99,7 +99,7 @@ This function uses absolute values for the output color's channel values, output
 oklab(from hsl(0 100% 50%) 42.1% 41.25% -25.25%)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
 
 ```css
 oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alpha - 0.1))

@@ -97,7 +97,7 @@ This function uses absolute values for the output color's channel values, output
 hwb(from hsl(0 100% 50%) 240 52% 12%)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc()")}} functions to calculate new channel values for the output color:
+The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
 
 ```css
 hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 0.1))
