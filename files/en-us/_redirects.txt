@@ -8612,6 +8612,7 @@
 /en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/History_API/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
+/en-US/docs/Web/API/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
 /en-US/docs/Web/API/IDBCursor.delete	/en-US/docs/Web/API/IDBCursor/delete
@@ -12157,7 +12158,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
-/en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini
+/en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
 /en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
@@ -12337,7 +12338,7 @@
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-/en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini
+/en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
