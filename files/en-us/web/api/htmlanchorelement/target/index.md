@@ -30,6 +30,8 @@ console.log(link.target); // output:- "_blank"
 
 ## Try it
 
+Check different values of a target attribute in `<a>` tag.
+
 {{EmbedInteractiveExample("pages/webapi-tabbed/HTMLAnchorElement-target.html", "tabbed-shorter")}}
 
 
