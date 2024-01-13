@@ -147,6 +147,33 @@ const removed = myFish.splice(2);
 // removed is ["mandarin", "sturgeon"]
 ```
 
+### Add elements to the array
+
+```js
+// add to the start of the array ( like: unshift() )
+const myFish = ["clown", "mandarin"];
+let removed = myFish.splice(0, 0, "angel");
+
+// myFish is  ["angel", "clown", "mandarin"]
+// no items removed removed
+
+// add to the end of the array ( like: push() )
+removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
+
+// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed removed
+```
+
+### Insert elements into an array
+
+```js
+const myFish = ["angel", "sturgeon"];
+const removed = myFish.splice(1, 0, "clown", "mandarin");
+
+// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed removed
+```
+
 ### Using splice() on sparse arrays
 
 The `splice()` method preserves the array's sparseness.
