@@ -23,6 +23,18 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-autocomplete.html", "tabbed-shorter")}}
 
+## Usage
+
+The value is an ordered set of space-separated token(s). The value contains either a single token (either "off" or "on") or multiple autofill detail tokens.
+
+```html
+<input autocomplete="off" />
+<input autocomplete="on" />
+<input autocomplete="section-blue shipping postal-code" />
+```
+
+Multiple tokens are used to avoid confusing browsers when a form has inputs with similar values, e.g. billing vs shipping address.
+
 ## Values
 
 - "`off`"
