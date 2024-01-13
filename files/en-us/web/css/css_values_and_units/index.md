@@ -158,7 +158,7 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
 | `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                                          |
 | `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph.                 |
-| `rem`  | Font size of the root element's font.                                                                       |
+| `rem`  | Font size of the root element's font.                                                                                                   |
 | `rex`  | x-height of the root element's font.                                                                                                    |
 | `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
 | `rlh`  | [`line height`](/en-US/docs/Web/CSS/line-height) of the root element.                                                                   |
