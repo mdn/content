@@ -155,13 +155,13 @@ const myFish = ["clown", "mandarin"];
 let removed = myFish.splice(0, 0, "angel");
 
 // myFish is  ["angel", "clown", "mandarin"]
-// no items removed removed
+// no items removed
 
 // add to the end of the array ( like: push() )
 removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
 
 // myFish is  ["angel", "clown", "mandarin", "sturgeon"]
-// no items removed removed
+// no items removed
 ```
 
 ### Using splice() on sparse arrays
