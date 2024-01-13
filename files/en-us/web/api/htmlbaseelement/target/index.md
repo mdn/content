@@ -29,8 +29,8 @@ Knowing the value of the `target` attribute through the `target` property can be
 ```
 
 ```js
-const baseElement = document.getElementsByTagName('base')[0];
-console.log(baseElement.target) // output: '_top'
+const baseElement = document.getElementsByTagName("base")[0];
+console.log(baseElement.target); // output: '_top'
 ```
 
 ## Specifications
