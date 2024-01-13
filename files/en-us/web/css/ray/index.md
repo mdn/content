@@ -2,12 +2,10 @@
 title: ray()
 slug: Web/CSS/ray
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.ray
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines the [`offset-path`](/en-US/docs/Web/CSS/offset-path) line segment that an animated element can follow. The line segment is referred to as "ray". The ray begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. The length of a ray can be constrained by specifying a size and using the `contain` keyword.
 
