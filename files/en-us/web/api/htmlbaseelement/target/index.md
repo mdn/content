@@ -14,6 +14,8 @@ The `target` property of the {{domxref("HTMLBaseElement")}} interface is a strin
 
 A string that represents target values `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
 
+Watchout for **Try it** section from {{domxref("HTMLAnchorElement.target")}} property to know more about `taget` values.
+
 ## Use Case
 
 Knowing the value of the `target` attribute through the `target` property can be useful when we need to dynamically check or modify the default behaviour of hyperlinks and forms based on the `<base>` elements.
@@ -21,7 +23,14 @@ Knowing the value of the `target` attribute through the `target` property can be
 ## Example
 
 ```html
+<head>
+    <base target='_top' />
+</head>
+```
 
+```js
+const baseElement = document.getElementsByTagName('base')[0];
+console.log(baseElement.target) // output: '_top'
 ```
 
 ## Specifications
