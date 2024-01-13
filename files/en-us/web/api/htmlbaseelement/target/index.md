@@ -24,13 +24,13 @@ Knowing the value of the `target` attribute through the `target` property can be
 
 ```html
 <head>
-    <base target='_top' />
+  <base target="_top" />
 </head>
 ```
 
 ```js
-const baseElement = document.getElementsByTagName('base')[0];
-console.log(baseElement.target) // output: '_top'
+const baseElement = document.getElementsByTagName("base")[0];
+console.log(baseElement.target); // output: '_top'
 ```
 
 ## Specifications
