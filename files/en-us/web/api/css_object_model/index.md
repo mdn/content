@@ -28,6 +28,7 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSImportRule")}}
 - {{DOMxRef("CSSKeyframeRule")}}
 - {{DOMxRef("CSSKeyframesRule")}}
+- {{DOMxRef("CSSMarginRule")}}
 - {{DOMxRef("CSSMediaRule")}}
 - {{DOMxRef("CSSNamespaceRule")}}
 - {{DOMxRef("CSSPageRule")}}
