@@ -34,7 +34,7 @@ There are some additional syntax restrictions:
 
 ## Description
 
-In JavaScript, a setter can be used to execute a function whenever a specified property is attempted to be changed. Setters are most often used in conjunction with getters.
+In JavaScript, a setter can be used to execute a function whenever an attempt is made to change a property's value. Setters are most often used in conjunction with getters.
 
 An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The setter syntax allows you to specify the setter function in an object initializer.
 
