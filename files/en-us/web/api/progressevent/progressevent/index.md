@@ -59,7 +59,7 @@ function updateProgress(loaded, total) {
   document.dispatchEvent(progressEvent);
 }
 
-document.addEventListener("progress", function (event) {
+document.addEventListener("progress", (event) => {
   console.log(`Progress: ${event.loaded}/${event.total}`);
 });
 
