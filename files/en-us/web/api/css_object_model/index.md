@@ -22,6 +22,7 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
 - {{DOMxRef("CSSFontFaceRule")}}
+- {{DOMxRef("CSSFontFeatureValuesMap")}}
 - {{DOMxRef("CSSFontFeatureValuesRule")}}
 - {{DOMxRef("CSSGroupingRule")}}
 - {{DOMxRef("CSSImportRule")}}
