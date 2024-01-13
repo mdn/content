@@ -20,6 +20,12 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### CSS
 
+- The CSS {{cssxref("offset-position")}} property is now available by default. It defines the initial position of an element on a path. ([Firefox bug 1598152](https://bugzil.la/1598152))
+
+- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
+
+- The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
+
 #### Removals
 
 ### JavaScript
@@ -31,6 +37,9 @@ This article provides information about the changes in Firefox 122 that affect d
 ### SVG
 
 #### Removals
+
+- Removed support for `data:` URLs in SVG `<use>` elements and via the [`SVGUseElement`](/en-US/docs/Web/API/SVGUseElement) interface to prevent [XSS](/en-US/docs/Glossary/Cross-site_scripting) attacks.
+  The legacy functionality may be re-enabled by setting the `svg.use-element.data-url-href.allowed` preference to `true`, although this is not recommended for security reasons ([Firefox bug 1806964](https://bugzil.la/1806964)).
 
 ### HTTP
 
