@@ -161,7 +161,7 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 | `rem`  | Font size of the root element's font.                                                                                                   |
 | `rex`  | x-height of the root element's font.                                                                                                    |
 | `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
-| `rlh`  | [`line height`](/en-US/docs/Web/CSS/line-height) of the root element.                                                                   |
+| `rlh`  | Line height of the root element.                      |
 
 ##### Viewport and container relative units
 
@@ -170,14 +170,14 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 
 | Unit   | Relative to                                              |
 | ------ | -------------------------------------------------------- |
-| `vb`   | 1% of viewport's size in the root element's [block axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
-| `vh`   | 1% of viewport's height.                                 |
 | `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height. |
 | `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width. |
 | `lvh`  | 1% of the [large viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) height. |
 | `lvw`, | 1% of the [large viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) width. |
 | `svh`  | 1% of the [small viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) height. |
 | `svw`  | 1% of the [small viewport's](en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) width. |
+| `vb`   | 1% of viewport's size in the root element's [block axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
+| `vh`   | 1% of viewport's height.                                 |
 | `vi`   | 1% of viewport's size in the root element's [inline axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
 | `vmin` | 1% of viewport's smaller dimension.                      |
 | `vmax` | 1% of viewport's larger dimension.                       |
