@@ -114,7 +114,6 @@
 /en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-/en-US/docs/Accessibility/Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
@@ -123,7 +122,6 @@
 /en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility:Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
