@@ -97,7 +97,6 @@ An instance of the {{domxref("Notification")}} object.
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - The constructor is called within the {{domxref("ServiceWorkerGlobalScope")}}.
-    - The constructor is not called within the {{domxref("ServiceWorkerGlobalScope")}} and the `actions` option is not empty.
     - The `silent` option is `true` and the `vibrate` option is specified.
     - The `renotify` option is `true` but the `tag` option is empty.
 - `DataCloneError` {{domxref("DOMException")}}
