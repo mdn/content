@@ -87,10 +87,10 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
   - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
-    - The passing `options` is an empty object.
-    - The `url` in `options` is present and is not equal with the creation URL if in main thread.
-    - The `url` in `options` is present and its origin is not the same as the origin of the creation URL.
-    - Getting the cookie or cookies represented by the given `name` or `options` fails.
+    - The `options` parameter is an empty object.
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
