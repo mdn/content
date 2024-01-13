@@ -101,7 +101,7 @@ An instance of the {{domxref("Notification")}} object.
     - The `silent` option is `true` and the `vibrate` option is specified.
     - The `renotify` option is `true` but the `tag` option is empty.
 - `DataCloneError` {{domxref("DOMException")}}
-  - : Thrown if serialize the `data` option failed for some reason.
+  - : Thrown if serializing the `data` option failed for some reason.
 
 ## Examples
 
