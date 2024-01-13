@@ -71,7 +71,7 @@ new Notification(title, options)
         The default value is `false`.
     - `actions` {{optional_inline}}
 
-      - : An array of actions to display in the notification which the default is an empty list. Each element in the array is an object with the following members:
+      - : An array of actions to display in the notification, for which the default is an empty array. Each element in the array can be an object with the following members:
 
         - `action`
           - : A string identifying a user action to be displayed on the notification.
