@@ -71,7 +71,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
->**Note:** A `base` element must have either an `href` attribute, a `target` attribute, or both.
+> **Note:** A `base` element must have either an `href` attribute, a `target` attribute, or both.
 
 ### Multiple \<base> elements
 
