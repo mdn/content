@@ -8,7 +8,7 @@ browser-compat: api.HTMLEmbedElement.width
 
 {{APIRef("HTML DOM")}}
 
-The **`width`** property of the {{domxref("HTMLEmbedElement")}} interface returns Aa string that reflects the [`width`](/en-US/docs/Web/HTML/Element/iframe#width) HTML attribute, indicating the displayed width of the resource.
+The **`width`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that reflects the [`width`](/en-US/docs/Web/HTML/Element/embed#width) HTML attribute, indicating the displayed width of the resource.
 
 ## Value
 

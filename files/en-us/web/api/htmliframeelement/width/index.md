@@ -8,7 +8,7 @@ browser-compat: api.HTMLIFrameElement.width
 
 {{APIRef("HTML DOM")}}
 
-The **`width`** property of the {{domxref("HTMLIFrameElement")}} interface returns Aa string that reflects the [`width`](/en-US/docs/Web/HTML/Element/iframe#width) HTML attribute, indicating the width of the frame.
+The **`width`** property of the {{domxref("HTMLIFrameElement")}} interface returns a string that reflects the [`width`](/en-US/docs/Web/HTML/Element/iframe#width) HTML attribute, indicating the width of the frame.
 
 ## Value
 
