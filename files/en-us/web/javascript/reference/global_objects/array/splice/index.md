@@ -164,16 +164,6 @@ removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
 // no items removed removed
 ```
 
-### Insert elements into an array
-
-```js
-const myFish = ["angel", "sturgeon"];
-const removed = myFish.splice(1, 0, "clown", "mandarin");
-
-// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
-// no items removed removed
-```
-
 ### Using splice() on sparse arrays
 
 The `splice()` method preserves the array's sparseness.
