@@ -1,4 +1,4 @@
----
+Golam Rabbany website---
 title: Vary
 slug: Web/HTTP/Headers/Vary
 page-type: http-header
