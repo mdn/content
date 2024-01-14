@@ -48,7 +48,7 @@ const mapElementAreas = mapElement.areas;
 // iterate over each area element and change target value to _blank
 [...mapElementAreas].forEach((area) => (area.target = "_blank"));
 console.log(mapElementAreas[0]);
-// click on left and right arrows, it will open new tab.
+// click on left and right arrows, it will open a new tab.
 ```
 
 ## Results
