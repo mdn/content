@@ -1,15 +1,15 @@
 ---
-title: "HTMLLinkElement: hreflang property"
-short-title: hreflang
-slug: Web/API/HTMLLinkElement/hreflang
+title: "HTMLMapElement: name property"
+short-title: name
+slug: Web/API/HTMLMapElement/name
 page-type: web-api-instance-property
-browser-compat: api.HTMLLinkElement.hreflang
+browser-compat: api.HTMLMapElement.name
 ---
 
 {{ApiRef("HTML DOM")}}
 
 The **`name`** property of the {{domxref("HTMLMapElement")}} is a string gives the map unique name. 
-This property is used for referencing `useMap` attribute of the {{HTMLElement("image")}} element. We
+This property is used for referencing `useMap` attribute of the {{HTMLElement("img")}} element. We
 can not set this property empty or with whitespaces. If `id` is given to a {{HTMLElement("map")}} element 
 then `name` property should be same as `id`.
 
@@ -18,6 +18,23 @@ A non-empty string without whitespaces.
 
 ## Example
 
+```html
+<map name="image-map">
+    <area
+        shape="circle"
+        coords="15,15,5"/>
+</map> 
+```
+
+```js
+const mapElement = document.getElementsByName("image-map")[0];
+console.log(mapElement.name); //output: "image-map"
+```
+
+
+## Results
+
+{{EmbedLiveSample("Example",100,100)}}
 
 ## Specifications
 
