@@ -161,7 +161,7 @@ For example, `rem` is relative to the font size on the root element and `rex` is
 | `rem`  | Font size of the root element's font.                                                                                                   |
 | `rex`  | x-height of the root element's font.                                                                                                    |
 | `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
-| `rlh`  | Line height of the root element.                      |
+| `rlh`  | Line height of the root element.                                                                                                        |
 
 ##### Viewport and container relative units
 
