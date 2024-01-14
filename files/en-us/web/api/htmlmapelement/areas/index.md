@@ -24,10 +24,9 @@ An array-like object ({{domxref("HTMLCollection")}}) of elements.
     shape="circle"
     coords="50,50,35"
     href="www.left_example.com"
-    target="_top"
-    />
-    <a href="www.link2_example.com">link 2</a>
-    <area
+    target="_top" />
+  <a href="www.link2_example.com">link 2</a>
+  <area
     alt="right arrow"
     shape="circle"
     coords="150,50,35"
