@@ -95,7 +95,7 @@ const log = document.getElementById("log");
 input.addEventListener("keydown", logKey);
 
 function logKey(e) {
-  log.textContent += ` ${e.code}`;
+  log.textContent += " " + e.code;
 }
 ```
 
