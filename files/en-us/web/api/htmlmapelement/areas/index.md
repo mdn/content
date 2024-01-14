@@ -31,8 +31,7 @@ An array-like object ({{domxref("HTMLCollection")}}) of elements.
     shape="circle"
     coords="150,50,35"
     href="www.right_example.com"
-    target="_top"
-    />
+    target="_top" />
 </map>
 <img
     usemap="#image-map"
