@@ -34,10 +34,9 @@ An array-like object ({{domxref("HTMLCollection")}}) of elements.
     target="_top" />
 </map>
 <img
-    usemap="#image-map"
-    src="left-right-arrow.png"
-    alt="left right arrow image"
-/>
+  usemap="#image-map"
+  src="left-right-arrow.png"
+  alt="left right arrow image" />
 ```
 
 ```js
