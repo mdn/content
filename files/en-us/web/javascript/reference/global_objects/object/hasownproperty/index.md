@@ -117,8 +117,7 @@ for (const name in buz) {
 Note that the {{jsxref("Statements/for...in", "for...in")}} loop
 only iterates enumerable items: the absence of non-enumerable properties emitted
 from the loop does not imply that `hasOwnProperty` itself is confined strictly
-to enumerable items (as with
-{{jsxref("Object.getOwnPropertyNames()")}}).
+to enumerable items.
 
 ### Using hasOwnProperty as a property name
 
