@@ -18,8 +18,8 @@ An array-like object ({{domxref("HTMLCollection")}}) of elements.
 
 ```html
 <map name="image-map">
-    <a href="www.link1_example.com">link 1</a>
-    <area
+  <a href="www.link1_example.com">link 1</a>
+  <area
     alt="left arrow"
     shape="circle"
     coords="50,50,35"
