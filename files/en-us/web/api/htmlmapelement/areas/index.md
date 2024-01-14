@@ -8,7 +8,7 @@ browser-compat: api.HTMLMapElement.areas
 
 {{ApiRef("HTML DOM")}}
 
-The **`areas`** property of the {{domxref("HTMLMapElement")}} return {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements present in the {{HTMLElement("map")}} element. This property only apply filter for `area` elements.  The `areas` is readonly property so we can not assign a new collection to `areas` property, we can only access or iterate over existing areas collections.
+The **`areas`** property of the {{domxref("HTMLMapElement")}} return {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements present in the {{HTMLElement("map")}} element. This property only apply filter for `area` elements. The `areas` is readonly property so we can not assign a new collection to `areas` property, we can only access or iterate over existing areas collections.
 
 ## Value
 
