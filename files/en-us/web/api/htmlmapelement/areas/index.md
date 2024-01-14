@@ -52,7 +52,6 @@ console.log(mapElementAreas[0]);
 // click on left and right arrows, it will open new tab.
 ```
 
-
 ## Results
 
 {{EmbedLiveSample("Example",100,100)}}
