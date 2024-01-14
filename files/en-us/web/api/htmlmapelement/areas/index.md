@@ -66,5 +66,5 @@ console.log(mapElementAreas[0]);
 
 ## See also
 
-- {{domxref("HTMLAreaElement")}} 
+- {{domxref("HTMLAreaElement")}}
 - {{domxref("HTMLImageElement.useMap")}}
