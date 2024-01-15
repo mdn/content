@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageChannel.port2
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`port2`** read-only property of the
 {{domxref("MessageChannel")}} interface returns the second port of the message channel —

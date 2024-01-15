@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MessageChannel.MessageChannel
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
 interface returns a new {{domxref("MessageChannel")}} object with two new
