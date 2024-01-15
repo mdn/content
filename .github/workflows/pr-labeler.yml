@@ -1,7 +1,10 @@
 name: Pull request labeler
 
 on:
-  - pull_request_target
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - "main"
 
 jobs:
   # Docs: https://github.com/actions/labeler
@@ -18,6 +21,7 @@ jobs:
   label-by-size:
     # do not run on forks
     if: github.repository == 'mdn/content'
+    needs: label-by-path
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
