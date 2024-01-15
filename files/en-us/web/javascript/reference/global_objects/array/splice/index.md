@@ -87,7 +87,7 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 // removed is [], no elements removed
 ```
 
-### Remove 0 (zero) elements at 0 index, and insert "angel"
+### Remove 0 (zero) elements at index 0, and insert "angel"
 
 ```js
 // add to the start of the array ( like: unshift() )
