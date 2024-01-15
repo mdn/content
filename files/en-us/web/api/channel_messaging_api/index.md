@@ -5,6 +5,7 @@ page-type: web-api-overview
 browser-compat:
   - api.MessageChannel
   - api.MessagePort
+spec-urls: https://html.spec.whatwg.org/multipage/web-messaging.html#channel-messaging
 ---
 
 {{DefaultAPISidebar("Channel Messaging API")}}
