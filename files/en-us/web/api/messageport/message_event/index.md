@@ -8,7 +8,7 @@ browser-compat: api.MessagePort.message_event
 
 {{APIRef("Channel Messaging API")}}
 
-The `message` event is fired on a {{domxref('MessagePort')}} object when a message arrives on that channel.
+The **`message`** event is fired on a {{domxref('MessagePort')}} object when a message arrives on that channel.
 
 This event is not cancellable and does not bubble.
 

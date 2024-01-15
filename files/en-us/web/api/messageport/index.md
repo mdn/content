@@ -28,6 +28,8 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
 
 ## Events
 
+_Inherits events from its parent, {{domxref("EventTarget")}}_.
+
 - {{domxref("MessagePort.message_event","message")}}
   - : Fired when a `MessagePort` object receives a message.
 - {{domxref("MessagePort.messageerror_event","messageerror")}}
