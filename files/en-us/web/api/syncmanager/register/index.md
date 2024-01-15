@@ -21,7 +21,6 @@ register(tag)
 ### Parameters
 
 - `tag`
-
   - : An identifier for this synchronization event. This will be the value of the `tag` property of the {{domxref("SyncEvent")}} that gets passed into the service worker's {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event handler.
 
 ### Return value
