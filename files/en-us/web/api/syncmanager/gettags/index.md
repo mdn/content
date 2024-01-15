@@ -10,7 +10,7 @@ browser-compat: api.SyncManager.getTags
 
 {{APIRef("Background Sync")}}{{SeeCompatTable}}
 
-The **`SyncManager.getTags`** method of the
+The **`getTags()`** method of the
 {{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for
 `SyncManager` registrations.
 

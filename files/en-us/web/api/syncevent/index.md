@@ -9,7 +9,7 @@ browser-compat: api.SyncEvent
 
 {{APIRef("Background Sync")}}{{SeeCompatTable}}
 
-The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
+The **`SyncEvent`** interface of the {{domxref("Background Synchronization API", "", "", "nocode")}} represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
