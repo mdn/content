@@ -76,6 +76,8 @@ console.log(bigint64FromIterable);
 // BigInt64Array [1n, 2n, 3n]
 ```
 
+{{EmbedInteractiveExample("pages/js/typedarray-bigint64.html")}}
+
 ## Specifications
 
 {{Specifications}}
