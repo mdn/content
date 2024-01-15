@@ -101,11 +101,11 @@ const removed = myFish.splice(0, 0, "angel");
 
 ### Remove 0 (zero) elements at last index, and insert "sturgeon"
 
-`splice(-1, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
+`splice(array.length, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
 
 ```js
 const myFish = ["angel", "clown", "mandarin"];
-const removed = myFish.splice(-1, 0, "sturgeon");
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
 
 // myFish is ["angel", "clown", "mandarin", "sturgeon"]
 // no items removed
