@@ -11,6 +11,8 @@ The **`BigInt64Array`** typed array represents an array of 64-bit signed integer
 
 `BigInt64Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
+{{EmbedInteractiveExample("pages/js/typedarray-bigint64.html")}}
+
 ## Constructor
 
 - {{jsxref("BigInt64Array/BigInt64Array", "BigInt64Array()")}}
@@ -75,8 +77,6 @@ const bigint64FromIterable = new BigInt64Array(iterable);
 console.log(bigint64FromIterable);
 // BigInt64Array [1n, 2n, 3n]
 ```
-
-{{EmbedInteractiveExample("pages/js/typedarray-bigint64.html")}}
 
 ## Specifications
 
