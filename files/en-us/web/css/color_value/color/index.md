@@ -308,7 +308,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 /* Use @supports to add in support for Safari 16.4+, which supports old
    syntax that requires r g b values to be specified as percentages (with
    units) in calculations */
-@supports (color: color(from red r g calc(b + 30%))) {
+@supports (color: color(from red display-p3 r g calc(b + 30%))) {
   #one {
     background-color: color(
       from var(--base-color) display-p3 r calc(g + 15%) calc(b + 15%)
