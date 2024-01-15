@@ -35,7 +35,7 @@ You can update the simple example above to set a default value, so that the colo
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
 
-If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `rgba()`), you'll have to convert them to hexadecimal before setting the `value`.
+If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `hsl()` ), you'll have to convert them to hexadecimal before setting the `value`.
 
 ### Tracking color changes
 
