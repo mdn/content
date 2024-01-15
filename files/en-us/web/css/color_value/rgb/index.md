@@ -139,8 +139,8 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #two {
-  /* As per the spec, - and + 30% should be specified roughly like this
-  background-color: rgb(from var(--base-color) calc(r - 75) g calc(b + 75));
+  /* As per the spec, - and + 30% should be specified like this
+  background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
 
   /* In Chrome 121+, r, g, and b channel values incorrectly resolve to numbers
      between 0-1 rather than 0-255, hence + and - 30% currently being specified
@@ -149,8 +149,8 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  /* As per the spec, - and + 60% should be specified roughly like this
-  background-color: rgb(from var(--base-color) calc(r - 150) g calc(b + 150));
+  /* As per the spec, - and + 60% should be specified like this
+  background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
 
   /* In Chrome 121+, r, g, and b channel values incorrectly resolve to numbers
      between 0-1 rather than 0-255, hence + and - 60% currently being specified

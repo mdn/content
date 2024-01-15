@@ -159,7 +159,7 @@ These variants are defined using relative colors — the `--base-color` [custom 
 
 #three {
   /* As per the spec, b + 30% should be specified like this
-  background-color: hwb(from var(--base-color) h w calc(b + 0.3)); */
+  background-color: hwb(from var(--base-color) h w calc(b + 30)); */
 
   /* In Chrome 121+, w and b channel values incorrectly resolve to numbers between 0-1
      rather than 0-100, hence b + 30% currently being specified like this */
