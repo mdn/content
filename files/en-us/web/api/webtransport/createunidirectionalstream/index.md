@@ -102,7 +102,7 @@ await writer.abort();
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/articles/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebTransport.createBidirectionalStream()")}}
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}

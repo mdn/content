@@ -140,7 +140,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - `None`
 
-      - : means that the browser sends the cookie with both cross-site and same-site requests.
+      - : Means that the browser sends the cookie with both cross-site and same-site requests.
         The `Secure` attribute must also be set when setting this value, like so `SameSite=None; Secure`. If `Secure` is missing an error will be logged:
 
         ```plain
@@ -228,7 +228,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; Domain=example.com
 Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 ```
 
-> **Note:** Partitioned cookies must be set with `Secure` and `Path=/`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+> **Note:** Partitioned cookies must be set with `Secure`. In addition, it is recommended to use the `__Host` prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
 
 ## Specifications
 

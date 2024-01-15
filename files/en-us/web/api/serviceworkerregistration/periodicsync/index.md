@@ -15,6 +15,8 @@ the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to th
 {{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
 run at specific intervals.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref('PeriodicSyncManager')}} object.
@@ -55,5 +57,5 @@ const periodicSync = self.registration.periodicSync;
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/articles/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

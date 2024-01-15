@@ -17,7 +17,7 @@
   },
   "line-length": false,
   "no-duplicate-heading": {
-    "allow_different_nesting": true
+    "siblings_only": true
   },
   "single-title": {
     "front_matter_title": "^\\s*title\\s*[:=]"
@@ -208,7 +208,7 @@
       },
       {
         "name": "un-closed-md-link",
-        "message": "Missng closing bracket ')'",
+        "message": "Missing closing bracket ')'",
         "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
         "searchScope": "text"
       }

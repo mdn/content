@@ -37,9 +37,15 @@ With our component plan worked out, it's now time to start updating our app from
 
 ## Handling events
 
-If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file, where you query for some DOM nodes and attach listeners to them. For example:
+If you've only written vanilla JavaScript before now, you might be used to having a separate JavaScript file in which you query for some DOM nodes and attach listeners to them. For example, an HTML file might have a button in it, like this:
 
-```jsx
+```html
+<button type="button">Say hi!</button>
+```
+
+And a JavaScript file might have some code like this:
+
+```js
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
@@ -47,7 +53,7 @@ btn.addEventListener("click", () => {
 });
 ```
 
-In React, we write event handlers directly on the elements in our JSX, like this:
+In JSX, the code that describes the UI lives right alongside our event listeners:
 
 ```jsx
 <button type="button" onClick={() => alert("hi!")}>
@@ -55,24 +61,22 @@ In React, we write event handlers directly on the elements in our JSX, like this
 </button>
 ```
 
-> **Note:** This may seem counter-intuitive regarding best-practice advice that tends to advise against use of inline event handlers on HTML, but remember that JSX is actually part of your JavaScript.
-
-In the above example, we're adding an `onClick` attribute to the `<button>` element. The value of that attribute is a function that triggers a simple alert.
+In this example, we're adding an `onClick` attribute to the {{htmlelement("button")}} element. The value of that attribute is a function that triggers a simple alert. This may seem counter to best practice advice about not writing event listeners in HTML, but remember: JSX is not HTML.
 
 The `onClick` attribute has special meaning here: it tells React to run a given function when the user clicks on the button. There are a couple of other things to note:
 
 - The {{Glossary("camel_case", "camel-cased")}} nature of `onClick` is important — JSX will not recognize `onclick` (again, it is already used in JavaScript for a specific purpose, which is related but different — standard [`onclick`](/en-US/docs/Web/API/Element/click_event) handler properties).
 - All browser events follow this format in JSX – `on`, followed by the name of the event.
 
-Let's apply this to our app, starting in the `Form.js` component.
+Let's apply this to our app, starting in the `Form.jsx` component.
 
 ### Handling form submission
 
-At the top of the `Form()` component function, create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
+At the top of the `Form()` component function (i.e., just below the `function Form() {` line), create a function named `handleSubmit()`. This function should [prevent the default behavior of the `submit` event](/en-US/docs/Learn/JavaScript/Building_blocks/Events#preventing_default_behavior). After that, it should trigger an `alert()`, which can say whatever you'd like. It should end up looking something like this:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
   alert("Hello, world!");
 }
 ```
@@ -89,11 +93,11 @@ Now if you head back to your browser and click on the "Add" button, your browser
 
 In React applications, interactivity is rarely confined to just one component: events that happen in one component will affect other parts of the app. When we start giving ourselves the power to make new tasks, things that happen in the `<Form />` component will affect the list rendered in `<App />`.
 
-We want our `handleSubmit()` function to ultimately help us create a new task, so we need a way to pass information from `<Form />` to `<App />`. We can't pass data from child to parent in the same way as we pass data from parent to child using standard props. Instead, we can write a function in `<App />` that will expect some data from our form as an input, then pass that function to `<Form />` as a prop. This function-as-a-prop is called a callback prop. Once we have our callback prop, we can call it inside `<Form />` to send the right data to `<App />`.
+We want our `handleSubmit()` function to ultimately help us create a new task, so we need a way to pass information from `<Form />` to `<App />`. We can't pass data from child to parent in the same way as we pass data from parent to child using standard props. Instead, we can write a function in `<App />` that will expect some data from our form as an input, then pass that function to `<Form />` as a prop. This function-as-a-prop is called a **callback prop**. Once we have our callback prop, we can call it inside `<Form />` to send the right data to `<App />`.
 
 ### Handling form submission via callbacks
 
-Inside the top of our `App()` component function, create a function named `addTask()` which has a single parameter of `name`:
+Inside the `App()` function in `App.jsx`, create a function named `addTask()` which has a single parameter of `name`:
 
 ```jsx
 function addTask(name) {
@@ -101,60 +105,93 @@ function addTask(name) {
 }
 ```
 
-Next, we'll pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
+Next, pass `addTask()` into `<Form />` as a prop. The prop can have whatever name you want, but pick a name you'll understand later. Something like `addTask` works, because it matches the name of the function as well as what the function will do. Your `<Form />` component call should be updated as follows:
 
 ```jsx
 <Form addTask={addTask} />
 ```
 
-Finally, you can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
+To use this prop, we must change the signature of the `Form()` function in `Form.jsx` so that it accepts `props` as a parameter:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function Form(props) {
+  // ...
+}
+```
+
+Finally, we can use this prop inside the `handleSubmit()` function in your `<Form />` component! Update it as follows:
+
+```jsx
+function handleSubmit(event) {
+  event.preventDefault();
   props.addTask("Say hello!");
 }
 ```
 
 Clicking on the "Add" button in your browser will prove that the `addTask()` callback function works, but it'd be nice if we could get the alert to show us what we're typing in our input field! This is what we'll do next.
 
-> **Note:** We decided to name our callback prop `addTask` to make it easy to understand what the prop will do. Another common convention you may well come across in React code is to prefix callback prop names with the word `on`, followed by the name of the event that will cause them to be run. For instance, we could have given our form a prop of `onSubmit` with the value of `addTask`.
+### Aside: a note on naming conventions
 
-## State and the `useState` hook
+We passed the `addTask()` function into the `<Form />` component as the prop `addTask` so that the relationship between the `addTask()` _function_ and the `addTask` _prop_ would remain as clear as possible. Keep in mind, though, that prop names do not _need_ to be anything in particular. We could have passed `addTask()` into `<Form />` under any other name, such as this:
 
-So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with user input and data updates, however, we need something more.
-
-For one thing, props come from the parent of a component. Our `<Form />` will not be inheriting a new name for our task; our `<input />` element lives directly inside of `<Form />`, so `<Form/>` will be directly responsible for creating that new name. We can't ask `<Form />` to spontaneously create its own props, but we _can_ ask it to track some of its own data for us. Data such as this, which a component itself owns, is called **state**. State is another powerful tool for React because components not only _own_ state, but can _update_ it later. It's not possible to update the props a component receives; only to read them.
-
-React provides a variety of special functions that allow us to provide new capabilities to components, like state. These functions are called **hooks**, and the `useState` hook, as its name implies, is precisely the one we need in order to give our component some state.
-
-To use a React hook, we need to import it from the React module. In `Form.js`, change your very first line so that it reads like this:
-
-```jsx
-import React, { useState } from "react";
+```diff
+- <Form addTask={addTask} />
++ <Form onSubmit={addTask} />
 ```
 
-This allows us to import the `useState()` function by itself, and utilize it anywhere in this file.
+This would make the `addTask()` function available to the `<Form />` component as the prop `onSubmit`. That prop could be used in `App.jsx` like this:
 
-`useState()` creates a piece of state for a component, and its only parameter determines the _initial value_ of that state. It returns two things: the state, and a function that can be used to update the state later.
-
-This is a lot to take in at once, so let's try it out. We're going to make ourselves a `name` state, and a function for updating the `name` state.
-
-Write the following above your `handleSubmit()` function, inside `Form()`:
-
-```jsx
-const [name, setName] = useState("Use hooks!");
+```diff
+function handleSubmit(event) {
+  event.preventDefault();
+- props.addTask("Say hello!");
++ props.onSubmit("Say hello!");
+}
 ```
 
-What's going on in this line of code?
+Here, the `on` prefix tells us that the prop is a callback function; `Submit` is our clue that a submit event will trigger this function.
 
-- We are setting the initial `name` value as "Use hooks!".
-- We are defining a function whose job is to modify `name`, called `setName()`.
-- `useState()` returns these two things, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
+While callback props often match the names of familiar event handlers, like `onSubmit` or `onClick`, they can be named just about anything that helps make their meaning clear. A hypothetical `<Menu />` component might include a callback function that runs when the menu is opened, as well as a separate callback function that runs when it's closed:
+
+```jsx
+<Menu onOpen={() => console.log("Hi!")} onClose={() => console.log("Bye!")} />
+```
+
+This `on*` naming convention is very common in the React ecosystem, so keep it in mind as you continue your learning. For the sake of clarity, we're going to stick with `addTask` and similar prop names for the rest of this tutorial. If you changed any prop names while reading this section, be sure to change them back before continuing!
+
+## Persisting and changing data with state
+
+So far, we've used props to pass data through our components and this has served us just fine. Now that we're dealing with interactivity, however, we need the ability to create new data, retain it, and update it later. Props are not the right tool for this job because they are immutable — a component cannot change or create its own props.
+
+This is where **state** comes in. If we think of props as a way to communicate between components, we can think of state as a way to give components "memory" – information they can hold onto and update as needed.
+
+React provides a special function for introducing state to a component, aptly named `useState()`.
+
+> **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
+
+To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
+
+```jsx
+import { useState } from "react";
+```
+
+`useState()` takes a single argument that determines the initial value of the state. This argument can be a string, a number, an array, an object, or any other JavaScript data type. `useState()` returns an array containing two items. The first item is the current value of the state; the second item is a function that can be used to update the state.
+
+Let's create a `name` state. Write the following above your `handleSubmit()` function, inside `Form()`:
+
+```jsx
+const [name, setName] = useState("Learn React");
+```
+
+Several things are happening in this line of code:
+
+- We are defining a `name` constant with the value `"Learn React"`.
+- We are defining a function whose job it is to modify `name`, called `setName()`.
+- `useState()` returns these two things in an array, so we are using [array destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to capture them both in separate variables.
 
 ### Reading state
 
-You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Use hooks!" inside the input.
+You can see the `name` state in action right away. Add a `value` attribute to the form's input, and set its value to `name`. Your browser will render "Learn React" inside the input.
 
 ```jsx
 <input
@@ -167,7 +204,7 @@ You can see the `name` state in action right away. Add a `value` attribute to th
 />
 ```
 
-Change "Use hooks!" to an empty string once you're done; this is what we want for our initial state.
+Change "Learn React" to an empty string once you're done; this is what we want for our initial state:
 
 ```jsx
 const [name, setName] = useState("");
@@ -175,13 +212,15 @@ const [name, setName] = useState("");
 
 ### Reading user input
 
-Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` tag.
+Before we can change the value of `name`, we need to capture a user's input as they type. For this, we can listen to the `onChange` event. Let's write a `handleChange()` function, and listen for it on the `<input />` element.
 
 ```jsx
 // near the top of the `Form` component
-function handleChange(e) {
+function handleChange() {
   console.log("Typing!");
 }
+
+...
 
 // Down in the return statement
 <input
@@ -195,33 +234,35 @@ function handleChange(e) {
 />;
 ```
 
-Currently, your input's value will not change as you type, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input. In order to change the input's value, we have to use our `handleChange()` function to update our `name` state.
+Currently, our input's value will not change when you try to enter text into it, but your browser will log the word "Typing!" to the JavaScript console, so we know our event listener is attached to the input.
 
-To read the contents of the input field as they change, you can access the input's `value` property. We can do this inside `handleChange()` by reading `e.target.value`. `e.target` represents the element that fired the `change` event — that's our input. So, `value` is the text inside it.
+To read the user's keystrokes, we must access the input's `value` property. We can do this by reading the `event` object that `handleChange()` receives when it's called. `event`, in turn, has [a `target` property](/en-US/docs/Web/API/Event/target), which represents the element that fired the `change` event. That's our input. So, `event.target.value` is the text inside the input.
 
-You can `console.log()` this value to see it in your browser's console.
+You can `console.log()` this value to see it in your browser's console. Try updating the `handleChange()` function as follows, and typing in the input to see the result in your console:
 
 ```jsx
-function handleChange(e) {
-  console.log(e.target.value);
+function handleChange(event) {
+  console.log(event.target.value);
 }
 ```
 
 ### Updating state
 
-Logging isn't enough — we want to actually store the updated state of the name as the input value changes! Change the `console.log()` to `setName()`, as shown below:
+Logging isn't enough — we want to actually store what the user types and render it in the input! Change your `console.log()` call to `setName()`, as shown below:
 
 ```jsx
-function handleChange(e) {
-  setName(e.target.value);
+function handleChange(event) {
+  setName(event.target.value);
 }
 ```
 
-Now we need to change our `handleSubmit()` function so that it calls `props.addTask` with name as an argument — remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form submits, so we'll call `setName()` again with an empty string to do so:
+Now when you type in the input, your keystrokes will fill out the input, as you might expect.
+
+We have one more step: we need to change our `handleSubmit()` function so that it calls `props.addTask` with `name` as an argument. Remember our callback prop? This will serve to send the task back to the `App` component, so we can add it to our list of tasks at some later date. As a matter of good practice, you should clear the input after your form is submitted, so we'll call `setName()` again with an empty string to do so:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
+function handleSubmit(event) {
+  event.preventDefault();
   props.addTask(name);
   setName("");
 }
@@ -229,23 +270,24 @@ function handleSubmit(e) {
 
 At last, you can type something into the input field in your browser and click _Add_ — whatever you typed will appear in an alert dialog.
 
-Your `Form.js` file should now read like this:
+Your `Form.jsx` file should now read like this:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Form(props) {
   const [name, setName] = useState("");
 
-  function handleChange(e) {
-    setName(e.target.value);
+  function handleChange(event) {
+    setName(event.target.value);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     props.addTask(name);
     setName("");
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
@@ -272,18 +314,18 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note:** One thing you'll notice is that you are able to submit empty tasks by just pressing the Add button without entering a task name. Can you think of a way to disallow empty tasks from being added? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
+> **Note:** You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
 
 ## Putting it all together: Adding a task
 
-Now that we've practiced with events, callback props, and hooks we're ready to write functionality that will allow a user to add a new task from their browser.
+Now that we've practiced with events, callback props, and hooks, we're ready to write functionality that will allow a user to add a new task from their browser.
 
 ### Tasks as state
 
-Import `useState` into `App.js`, so that we can store our tasks in state — update your `React` import line to the following:
+We need to import `useState` into `App.jsx` so that we can store our tasks in state. Add the following to the top of your `App.jsx` file:
 
 ```jsx
-import React, { useState } from "react";
+import { useState } from "react";
 ```
 
 We want to pass `props.tasks` into the `useState()` hook – this will preserve its initial state. Add the following right at the top of your `App()` function definition:
@@ -295,7 +337,7 @@ const [tasks, setTasks] = useState(props.tasks);
 Now, we can change our `taskList` mapping so that it is the result of mapping `tasks`, instead of `props.tasks`. Your `taskList` constant declaration should now look like so:
 
 ```jsx
-const taskList = tasks.map((task) => (
+const taskList = tasks?.map((task) => (
   <Todo
     id={task.id}
     name={task.name}
@@ -336,7 +378,7 @@ npm install nanoid
 
 > **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
-Now we can import `nanoid` into the top of `App.js` so we can use it to create unique IDs for our new tasks. First of all, include the following import line at the top of `App.js`:
+Now we can use `nanoid` to create unique IDs for our new tasks. First of all, import it by including the following line at the top of `App.jsx`:
 
 ```jsx
 import { nanoid } from "nanoid";
@@ -352,7 +394,7 @@ Save everything, and try your app again — now you can add tasks without gettin
 
 ## Detour: counting tasks
 
-Now that we can add new tasks, you may notice a problem: our heading reads 3 tasks remaining, no matter how many tasks we have! We can fix this by counting the length of `taskList` and changing the text of our heading accordingly.
+Now that we can add new tasks, you may notice a problem: our heading reads "3 tasks remaining" no matter how many tasks we have! We can fix this by counting the length of `taskList` and changing the text of our heading accordingly.
 
 Add this inside your `App()` definition, before the return statement:
 
@@ -372,6 +414,8 @@ Now you can replace the list heading's text content with the `headingText` varia
 ```jsx
 <h2 id="list-heading">{headingText}</h2>
 ```
+
+Save the file, go back to your browser, and try adding some tasks: the count should now update as expected.
 
 ## Completing a task
 
@@ -405,7 +449,7 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-Next, go over to your `Todo.js` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
+Next, go over to your `Todo.jsx` component and add an `onChange` handler to your `<input />` element, which should use an anonymous function to call `props.toggleTaskCompleted()` with a parameter of `props.id`. The `<input />` should now look like this:
 
 ```jsx
 <input
@@ -426,7 +470,7 @@ The checkbox unchecks in the browser, but our console tells us that Eat is still
 
 ### Synchronizing the browser with our data
 
-Let's revisit our `toggleTaskCompleted()` function in `App.js`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
+Let's revisit our `toggleTaskCompleted()` function in `App.jsx`. We want it to change the `completed` property of only the task that was toggled, and leave all the others alone. To do this, we'll `map()` over the task list and just change the one we completed.
 
 Update your `toggleTaskCompleted()` function to the following:
 
@@ -478,9 +522,9 @@ const taskList = tasks.map((task) => (
 ));
 ```
 
-In `Todo.js`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
+In `Todo.jsx`, we want to call `props.deleteTask()` when the "Delete" button is pressed. `deleteTask()` needs to know the ID of the task that called it, so it can delete the correct task from the state.
 
-Update the "Delete" button inside `Todo.js`, like so:
+Update the "Delete" button inside `Todo.jsx`, like so:
 
 ```jsx
 <button
@@ -493,13 +537,48 @@ Update the "Delete" button inside `Todo.js`, like so:
 
 Now when you click on any of the "Delete" buttons in the app, your browser console should log the ID of the related task.
 
+At this point, your `Todo.jsx` file should look like this:
+
+```jsx
+function Todo(props) {
+  return (
+    <li className="todo stack-small">
+      <div className="c-cb">
+        <input
+          id={props.id}
+          type="checkbox"
+          defaultChecked={props.completed}
+          onChange={() => props.toggleTaskCompleted(props.id)}
+        />
+        <label className="todo-label" htmlFor={props.id}>
+          {props.name}
+        </label>
+      </div>
+      <div className="btn-group">
+        <button type="button" className="btn">
+          Edit <span className="visually-hidden">{props.name}</span>
+        </button>
+        <button
+          type="button"
+          className="btn btn__danger"
+          onClick={() => props.deleteTask(props.id)}>
+          Delete <span className="visually-hidden">{props.name}</span>
+        </button>
+      </div>
+    </li>
+  );
+}
+
+export default Todo;
+```
+
 ## Deleting tasks from state and UI
 
 Now that we know `deleteTask()` is invoked correctly, we can call our `setTasks()` hook in `deleteTask()` to actually delete that task from the app's state as well as visually in the app UI. Since `setTasks()` expects an array as an argument, we should provide it with a new array that copies the existing tasks, _excluding_ the task whose ID matches the one passed into `deleteTask()`.
 
 This is a perfect opportunity to use [`Array.prototype.filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). We can test each task, and exclude a task from the new array if its `id` prop matches the `id` argument passed into `deleteTask()`.
 
-Update the `deleteTask()` function inside your `App.js` file as follows:
+Update the `deleteTask()` function inside your `App.jsx` file as follows:
 
 ```jsx
 function deleteTask(id) {
@@ -509,6 +588,77 @@ function deleteTask(id) {
 ```
 
 Try your app out again. Now you should be able to delete a task from your app!
+
+At this point, your `App.jsx` file should look like this:
+
+```jsx
+import { useState } from "react";
+import { nanoid } from "nanoid";
+import Todo from "./components/Todo";
+import Form from "./components/Form";
+import FilterButton from "./components/FilterButton";
+
+function App(props) {
+  function addTask(name) {
+    const newTask = { id: `todo-${nanoid}`, name, completed: false };
+    setTasks([...tasks, newTask]);
+  }
+
+  function toggleTaskCompleted(id) {
+    const updatedTasks = tasks.map((task) => {
+      // if this task has the same ID as the edited task
+      if (id === task.id) {
+        // use object spread to make a new object
+        // whose `completed` prop has been inverted
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  }
+
+  function deleteTask(id) {
+    const remainingTasks = tasks.filter((task) => id !== task.id);
+    setTasks(remainingTasks);
+  }
+
+  const [tasks, setTasks] = useState(props.tasks);
+  const taskList = tasks?.map((task) => (
+    <Todo
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+      toggleTaskCompleted={toggleTaskCompleted}
+      deleteTask={deleteTask}
+    />
+  ));
+
+  const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
+  const headingText = `${taskList.length} ${tasksNoun} remaining`;
+
+  return (
+    <div className="todoapp stack-large">
+      <h1>TodoMatic</h1>
+      <Form addTask={addTask} />
+      <div className="filters btn-group stack-exception">
+        <FilterButton />
+        <FilterButton />
+        <FilterButton />
+      </div>
+      <h2 id="list-heading">{headingText}</h2>
+      <ul
+        role="list"
+        className="todo-list stack-large stack-exception"
+        aria-labelledby="list-heading">
+        {taskList}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
 
 ## Summary
 

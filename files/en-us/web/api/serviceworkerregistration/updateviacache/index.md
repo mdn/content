@@ -10,6 +10,8 @@ browser-compat: api.ServiceWorkerRegistration.updateViaCache
 
 The **`updateViaCache`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns the update via cache mode associated with the current service worker registration using the `updateViaCache` parameter specified when register the service worker by calling {{domxref('ServiceWorkerContainer.register()')}}. Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers control over this behavior.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 Returns the update via cache mode associated with the current service worker registration, can be one of the following values:
@@ -53,6 +55,4 @@ if ("serviceWorker" in navigator) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
