@@ -12,6 +12,8 @@ The **`message`** event is fired on a {{domxref('MessagePort')}} object when a m
 
 This event is not cancellable and does not bubble.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

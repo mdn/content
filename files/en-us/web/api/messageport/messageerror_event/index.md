@@ -12,6 +12,8 @@ The **`messageerror`** event is fired on a {{domxref('MessagePort')}} object whe
 
 This event is not cancellable and does not bubble.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
