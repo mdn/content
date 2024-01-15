@@ -11,6 +11,8 @@ browser-compat: api.ServiceWorkerRegistration.updatefound_event
 The **`updatefound`** event of the
 {{domxref("ServiceWorkerRegistration")}} interface is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
