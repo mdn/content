@@ -92,7 +92,7 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 
 - {{jsxref("Intl.Segmenter")}}: enabled by default only in Firefox Nightly.
 
-  It allows acurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
+  The **`Intl.Segmenter`** object allows accurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
 
 ## Older versions
 
