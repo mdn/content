@@ -27,7 +27,14 @@ register(tag)
 
 A {{jsxref("Promise")}} that resolves to {{jsxref("undefined")}}.
 
-### Examples
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if current service worker is not active.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if background sync has been disabled by the user.
+
+## Examples
 
 The following asynchronous function registers a background sync from a browsing context:
 
