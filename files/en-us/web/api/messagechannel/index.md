@@ -25,7 +25,7 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 
 ## Example
 
-In the following example, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
+In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor.
 
 When the IFrame has loaded, we register an `onmessage` handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 

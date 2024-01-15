@@ -23,7 +23,7 @@ port attached to the context at the other end of the channel.
 ## Examples
 
 In the following code block, you can see a new channel being created using the
-{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor. When the
+{{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
 IFrame has loaded, we pass `port2` to the IFrame using
 {{domxref("MessagePort.postMessage")}} along with a message. The
 `handleMessage` handler then responds to a message being sent back from the

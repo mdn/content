@@ -31,7 +31,7 @@ A new {{domxref("MessageChannel")}} object.
 ## Examples
 
 In the following code block, you can see a new channel being created using the
-{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
+`MessageChannel()` constructor.
 When the {{HTMLElement("iframe")}} has loaded,
 we pass `port2` to the `<iframe>` using {{domxref("MessagePort.postMessage")}} along with a message.
 The `handleMessage` handler then responds to a message being sent back from the
