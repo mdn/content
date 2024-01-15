@@ -47,7 +47,7 @@ const mapElement = document.getElementsByName("image-map")[0];
 console.log(mapElement.areas); // output: HTMLCollection(2) [area, area]
 
 const mapElementAreas = mapElement.areas;
-// iterate over each area element and change target value to _blank
+// Iterate over each area element and change target value to _blank
 [...mapElementAreas].forEach((area) => (area.target = "_blank"));
 console.log(mapElementAreas[0]);
 // click on left and right arrows, it will open a new tab.
