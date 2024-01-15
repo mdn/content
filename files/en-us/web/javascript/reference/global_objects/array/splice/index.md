@@ -87,6 +87,29 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 // removed is [], no elements removed
 ```
 
+
+### Remove 0 (zero) elements at 0 index, and insert "angel"
+
+```js
+// add to the start of the array ( like: unshift() )
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
+### Remove 0 (zero) elements at last index, and insert "sturgeon"
+
+```js
+// add to the end of the array ( like: push() )
+const myFish = ["angel", "clown", "mandarin"]
+const removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
+
+// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
 ### Remove 1 element at index 3
 
 ```js
@@ -145,23 +168,6 @@ const removed = myFish.splice(2);
 
 // myFish is ["angel", "clown"]
 // removed is ["mandarin", "sturgeon"]
-```
-
-### Add elements to the array
-
-```js
-// add to the start of the array ( like: unshift() )
-const myFish = ["clown", "mandarin"];
-let removed = myFish.splice(0, 0, "angel");
-
-// myFish is  ["angel", "clown", "mandarin"]
-// no items removed
-
-// add to the end of the array ( like: push() )
-removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
-
-// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
-// no items removed
 ```
 
 ### Using splice() on sparse arrays
