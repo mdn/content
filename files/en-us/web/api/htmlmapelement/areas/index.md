@@ -44,7 +44,7 @@ An array-like {{domxref("HTMLCollection")}} object of `area` elements.
 ```js
 const mapElement = document.getElementsByName("image-map")[0];
 // Anchor elements are filtered out from HTMLCollection
-console.log(mapElement.areas); // output: HTMLCollection(2) [area, area]
+console.log(mapElement.areas); // Output: HTMLCollection(2) [area, area]
 
 const mapElementAreas = mapElement.areas;
 // Iterate over each area element and change target value to _blank
