@@ -95,7 +95,7 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 const myFish = ["clown", "mandarin", "sturgeon"];
 const removed = myFish.splice(0, 0, "angel");
 
-// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
 // no items removed
 ```
 
@@ -107,7 +107,7 @@ const removed = myFish.splice(0, 0, "angel");
 const myFish = ["angel", "clown", "mandarin"];
 const removed = myFish.splice(-1, 0, "sturgeon");
 
-// myFish is  ["angel", "clown", "mandarin", "sturgeon"]
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
 // no items removed
 ```
 
