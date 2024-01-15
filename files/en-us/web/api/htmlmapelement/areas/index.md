@@ -8,7 +8,7 @@ browser-compat: api.HTMLMapElement.areas
 
 {{ApiRef("HTML DOM")}}
 
-The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} elements returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element. 
+The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} elements returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element.
 
 Two successive calls to this property will return the same object.
 
