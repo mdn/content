@@ -92,7 +92,7 @@ lch(from hsl(0 100% 50%) l c h)
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
 ```css
-lch(from hsl(0 100% 50%) 29.6871 66.83 327.109)
+lch(from hsl(0 100% 50%) 29.6871% 66.83 327.109)
 ```
 
 The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
