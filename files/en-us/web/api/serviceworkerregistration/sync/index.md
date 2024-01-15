@@ -15,6 +15,8 @@ The **`sync`** property of the
 {{domxref("SyncManager")}} interface, which manages background synchronization
 processes.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref("SyncManager")}} object.

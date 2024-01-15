@@ -12,7 +12,7 @@ The **`Headers.keys()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
 in this object. The keys are {{jsxref("String")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 

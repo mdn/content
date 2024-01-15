@@ -61,9 +61,9 @@ _Inherits events from its parent interface, {{domxref("HTMLMediaElement")}}, and
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{DOMxRef("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it enters Picture-in-Picture mode.
+  - : Fired when the `HTMLVideoElement` enters picture-in-picture mode successfully.
 - {{DOMxRef("HTMLVideoElement.leavepictureinpicture_event", "leavepictureinpicture")}}
-  - : Sent to a {{DOMxRef("HTMLVideoElement")}} when it leaves Picture-in-Picture mode.
+  - : Fired when the `HTMLVideoElement` leaves picture-in-picture mode successfully.
 
 ## Specifications
 
