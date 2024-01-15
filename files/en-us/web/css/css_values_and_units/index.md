@@ -151,7 +151,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 | `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
 | `lh`  | Line height of the element.                                                                                                            |
 
-Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{HTMLElement("SVG")}}.
+Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
 | Unit   | Relative to                                                                                                                             |

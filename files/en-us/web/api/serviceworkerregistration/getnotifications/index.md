@@ -16,6 +16,8 @@ differently-scoped service worker registrations. Notifications created by one se
 worker on the same origin will not be available to other active service workers on
 that same origin.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

@@ -51,7 +51,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 - `expires`
 
-  - : A timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, containing the expiration date of the cookie.
+  - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 
 - `name`
 
@@ -85,8 +85,14 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `options` parameter is an empty object.
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 

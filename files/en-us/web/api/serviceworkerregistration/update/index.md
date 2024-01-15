@@ -14,7 +14,7 @@ worker. It fetches the worker's script URL, and if the new worker is not byte-by
 identical to the current worker, it installs the new worker. The fetch of the worker
 bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
