@@ -595,7 +595,7 @@ textarea.onkeyup = () => {
 
 ### Description
 
-Description list encloses list of groups of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs). Let's consider some fishes with their interesting characteristics:
+Description lists enclose groups of terms and descriptions. Common uses for this element are implementing a glossary or displaying metadata (a list of key-value pairs). Let's consider some fishes with their interesting characteristics:
 
 ```plain
 Albacore Tuna
@@ -608,7 +608,7 @@ Barracuda
 Can grow to nearly 2 meters long!
 ```
 
-Whole list is wrapped in `<dl>` element. Terms are enclosed in `<dt>` elements and descriptions are enclosed in `<dd>` elements:
+The list is enclosed in a `<dl>` element, terms are enclosed in `<dt>` elements, and descriptions are enclosed in `<dd>` elements:
 
 ```html
 <dl>
