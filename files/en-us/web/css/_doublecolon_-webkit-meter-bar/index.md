@@ -48,7 +48,7 @@ body {
 
 #styled::-webkit-meter-bar {
   background: #eee;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 20%) inset;
   border-radius: 3px;
 }
 ```

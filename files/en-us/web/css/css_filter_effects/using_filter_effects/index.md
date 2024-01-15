@@ -122,7 +122,7 @@ This example applies two filters — [`hue-rotate()`](/en-US/docs/Web/CSS/filter
 }
 p {
   backdrop-filter: hue-rotate(240deg) blur(5px);
-  background-color: rgb(255 255 255 / 0.1);
+  background-color: rgb(255 255 255 / 10%);
   text-shadow: 2px 2px black;
 }
 ```

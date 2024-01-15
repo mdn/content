@@ -393,7 +393,7 @@ Try to be consistent, though.
 
 ## Page components
 
-This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
+This section lists the guidelines to follow for different parts of each page, such as headings, notes, links, and examples.
 
 - [Code examples](#code_examples)
 - [Cross-references (linking)](#cross-references_linking)
@@ -511,6 +511,7 @@ If you include images or other media on a page, follow these guidelines:
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
+- Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
 
 ### Lists
 

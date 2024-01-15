@@ -10,6 +10,8 @@ browser-compat: api.Headers.forEach
 
 The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

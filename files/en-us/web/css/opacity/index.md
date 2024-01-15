@@ -48,7 +48,7 @@ When `opacity` value is set to `0`, the element and all of its children are not 
 To change the opacity of a background only, use the {{cssxref("background")}} property with a {{cssxref("color_value", "color value")}} that allows for an alpha channel. For example:
 
 ```css
-background: rgba(0, 0, 0, 0.4);
+background: rgb(0 0 0 / 40%);
 ```
 
 ## Accessibility concerns
@@ -143,7 +143,7 @@ img.opacity:hover {
   background-image: linear-gradient(
     90deg,
     transparent 50%,
-    rgba(255, 255, 255, 0.5) 50%
+    rgb(255 255 255 / 50%) 50%
   );
   background-size: 20px 20px;
 }

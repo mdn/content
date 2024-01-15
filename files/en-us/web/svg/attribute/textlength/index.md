@@ -152,7 +152,7 @@ widthSlider.addEventListener(
 widthSlider.dispatchEvent(new Event("input"));
 ```
 
-After fetching the element references, an {{domxref("EventTarget.addEventListener", "event listener", "", 1)}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{domxref("HTMLElement/input_event", "input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
+After fetching the element references, an {{domxref("EventTarget.addEventListener", "event listener", "", 1)}} is established by calling {{domxref("EventTarget.addEventListener", "addEventListener()")}} on the slider control, to receive any {{domxref("Element/input_event", "input")}} events which occur. These events will be sent any time the slider's value changes, even if the user hasn't stopped moving it, so we can responsively adjust the text width.
 
 When an `"input"` event occurs, we call `newValueSpecifiedUnits()` to set the value of `textLength` to the slider's new value, using the `SVGLength` interface's `SVG_LENGTHTYPE_PX` unit type to indicate that the value represents pixels. Note that we have to dive into `textLength` to get its `baseVal` property; `textLength` is stored as an {{domxref("SVGLength")}} object, so we can't treat it like a plain number.
 

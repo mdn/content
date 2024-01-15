@@ -59,10 +59,10 @@ style.textContent =
   ':host-context(h1):after { content: " - no links in headers!" }' +
   ":host-context(article, aside) { color: gray; }" +
   ":host(.footer) { color : red; }" +
-  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
+  ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
 ```
 
-The `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document.
+The `:host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }` rule styles all instances of the `<context-span>` element (the shadow host in this instance) in the document.
 
 ## Specifications
 
