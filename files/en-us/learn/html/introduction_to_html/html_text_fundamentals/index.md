@@ -53,7 +53,7 @@ There are six heading elements: {{htmlelement("Heading_Elements", "h1")}}, {{htm
 
 ### Implementing structural hierarchy
 
-For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent sub-sections of each chapter:
+For example, in this story, the `<h1>` element represents the title of the story, the `<h2>` elements represent the title of each chapter, and the `<h3>` elements represent subsections of each chapter:
 
 ```html
 <h1>The Crushing Bore</h1>
@@ -593,6 +593,173 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('Active_learning_Marking_up_an_ordered_list', 700, 500, "", "") }}
 
+### Description
+
+Description lists enclose groups of terms and descriptions. Common uses for this element are implementing a glossary or displaying metadata (a list of key-value pairs). Let's consider some fishes with their interesting characteristics:
+
+```plain
+Albacore Tuna
+The albacore is a very fast swimmer.
+
+Asian Carp
+Asian carp can consume 40% of their body weight in food a day!
+
+Barracuda
+Can grow to nearly 2 meters long!
+```
+
+The list is enclosed in a `<dl>` element, terms are enclosed in `<dt>` elements, and descriptions are enclosed in `<dd>` elements:
+
+```html
+<dl>
+  <dt>Albacore Tuna</dt>
+  <dd>The albacore is a very fast swimmer.</dd>
+  <dt>Asian Carp</dt>
+  <dd>Asian carp can consume 40% of their body weight in food a day!</dd>
+  <dt>Barracuda</dt>
+  <dd>Can grow to nearly 2 meters long!</dd>
+</dl>
+```
+
+#### Active learning: Marking up a description list
+
+Try editing the live sample below to create your very own HTML description list.
+
+```html hidden
+<h2>Live output</h2>
+
+<div class="output" style="min-height: 50px;"></div>
+
+<h2>Editable code</h2>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
+
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Albacore Tuna
+The albacore is a very fast swimmer.
+
+Asian Carp
+Asian carp can consume 40% of their body weight in food a day!
+
+Barracuda
+Can grow to nearly 2 meters long!
+</textarea>
+
+<div class="playable-buttons">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
+</div>
+```
+
+```css hidden
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.a11y-label {
+  margin: 0;
+  text-align: right;
+  font-size: 0.7rem;
+  width: 98%;
+}
+
+body {
+  margin: 10px;
+  background: #f5f9fa;
+}
+```
+
+```js hidden
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
+const code = textarea.value;
+let userEntry = textarea.value;
+
+function updateCode() {
+  output.innerHTML = textarea.value;
+}
+
+const htmlSolution =
+  "<dl>\n  <dt>Albacore Tuna</dt>\n  <dd>The albacore is a very fast swimmer.</dd>\n  <dt>Asian Carp</dt>\n  <dd>Asian carp can consume 40% of their body weight in food a day!</dd>\n  <dt>Barracuda</dt>\n  <dd>Can grow to nearly 2 meters long!</dd>\n</dl>";
+
+let solutionEntry = htmlSolution;
+
+reset.addEventListener("click", () => {
+  textarea.value = code;
+  userEntry = textarea.value;
+  solutionEntry = htmlSolution;
+  solution.value = "Show solution";
+  updateCode();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
+    textarea.value = solutionEntry;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userEntry;
+    solution.value = "Show solution";
+  }
+  updateCode();
+});
+
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
+
+// stop tab key tabbing out of textarea and
+// make it write a tab at the caret position instead
+
+textarea.onkeydown = (e) => {
+  if (e.keyCode === 9) {
+    e.preventDefault();
+    insertAtCaret("\t");
+  }
+
+  if (e.keyCode === 27) {
+    textarea.blur();
+  }
+};
+
+function insertAtCaret(text) {
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+
+  const front = textarea.value.substring(0, caretPos);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
+  textarea.value = front + text + back;
+  caretPos += text.length;
+  textarea.selectionStart = caretPos;
+  textarea.selectionEnd = caretPos;
+  textarea.focus();
+  textarea.scrollTop = scrollPos;
+}
+
+// Update the saved userCode every time the user updates the text area code
+textarea.onkeyup = () => {
+  // We only want to save the state when the user code is being shown,
+  // not the solution, so that solution is not saved over the user code
+  if (solution.value === "Show solution") {
+    userEntry = textarea.value;
+  } else {
+    solutionEntry = textarea.value;
+  }
+
+  updateCode();
+};
+```
+
+{{ EmbedLiveSample('Active_learning_Marking_up_a_description_list', 700, 500, "", "") }}
+
 ### Active learning: Marking up our recipe page
 
 So at this point in the article, you have all the information you need to mark up our recipe page example. You can choose to either save a local copy of our [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) starting file and do the work there or do it in the editable example below. Doing it locally will probably be better, as then you'll get to save the work you are doing, whereas if you fill it in to the editable example, it will be lost the next time you open the page. Both have pros and cons.
@@ -976,7 +1143,7 @@ textarea.onkeyup = () => {
 
 ### Italic, bold, underline…
 
-The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
+The elements we've discussed so far have clear-cut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used because, as we've seen before, semantics is so important to accessibility, SEO, etc.
 
 HTML5 redefined `<b>`, `<i>`, and `<u>` with new, somewhat confusing, semantic roles.
 
