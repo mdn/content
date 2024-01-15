@@ -11,17 +11,17 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 
 {{AvailableInWorkers}}
 
+## Constructor
+
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : Returns a new `MessageChannel` object with two new {{domxref("MessagePort")}} objects.
+
 ## Instance properties
 
 - {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
   - : Returns port1 of the channel.
 - {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
   - : Returns port2 of the channel.
-
-## Constructor
-
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : Returns a new `MessageChannel` object with two new {{domxref("MessagePort")}} objects.
 
 ## Example
 
