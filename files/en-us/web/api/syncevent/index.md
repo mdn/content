@@ -22,7 +22,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
@@ -31,7 +31,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
+_Inherits methods from its parent, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 None.
 

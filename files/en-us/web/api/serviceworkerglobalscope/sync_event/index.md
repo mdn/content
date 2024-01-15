@@ -24,13 +24,13 @@ onsync = (event) => {};
 
 ## Event type
 
-A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 
 ## Event properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.
