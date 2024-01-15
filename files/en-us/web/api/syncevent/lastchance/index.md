@@ -8,7 +8,7 @@ status:
 browser-compat: api.SyncEvent.lastChance
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncEvent.lastChance`** read-only property of the
 {{domxref("SyncEvent")}} interface returns `true` if the user agent will not

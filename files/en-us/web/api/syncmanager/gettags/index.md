@@ -8,7 +8,7 @@ status:
 browser-compat: api.SyncManager.getTags
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncManager.getTags`** method of the
 {{domxref("SyncManager")}} interface returns a list of developer-defined identifiers for

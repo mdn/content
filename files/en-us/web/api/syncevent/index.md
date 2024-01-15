@@ -7,7 +7,7 @@ status:
 browser-compat: api.SyncEvent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncEvent`** interface represents a sync action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a ServiceWorker.
 

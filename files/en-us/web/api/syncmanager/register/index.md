@@ -8,7 +8,7 @@ status:
 browser-compat: api.SyncManager.register
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncManager.register`** method of the {{domxref("SyncManager")}} interface registers a synchronization event, triggering a {{domxref("ServiceWorkerGlobalScope.sync_event", "sync")}} event inside the associated service worker as soon as network connectivity is available.
 

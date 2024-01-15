@@ -8,7 +8,7 @@ status:
 browser-compat: api.SyncEvent.tag
 ---
 
-{{SeeCompatTable}}{{APIRef("")}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`SyncEvent.tag`** read-only property of the
 {{domxref("SyncEvent")}} interface returns the developer-defined identifier for

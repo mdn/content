@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerRegistration.sync
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Background Sync")}}{{SeeCompatTable}}
 
 The **`sync`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
