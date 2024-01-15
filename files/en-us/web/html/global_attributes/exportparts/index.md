@@ -9,7 +9,7 @@ browser-compat: html.global_attributes.exportparts
 
 The **`exportparts`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows you to select and style elements existing in nested {{Glossary("shadow tree", "shadow trees")}}, by exporting their `part` names.
 
-The shadow tree is an isolated structure where identifiers, classes, and styles cannot be reached by selectors or queries belonging to a regular DOM.There are two HTML attributes that can be applied to shadow tree elements that enable targeting CSS styles from outside to shadow tree: `part` and `exportparts`.
+The shadow tree is an isolated structure where identifiers, classes, and styles cannot be reached by selectors or queries belonging to a regular DOM. There are two HTML attributes that can be applied to shadow tree elements that enable targeting CSS styles from outside to shadow tree: `part` and `exportparts`.
 
 The global [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute makes a shadow tree element visible to its parent DOM. The {{CSSxRef("::part", "::part()")}} pseudo-element, with the part name as the parameter, can then be used to apply CSS styles to elements in the shadow tree from outside the shadow tree. As the `::part()` pseudo-element is only visible to the parent DOM, when a shadow tree is nested, the parts are not visible to any ancestors other than the direct parent. The `exportparts` attribute solves this limitation as it enables visibility into nested shadow trees, .
 
