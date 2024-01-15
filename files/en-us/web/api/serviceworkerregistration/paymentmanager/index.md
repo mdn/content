@@ -13,6 +13,8 @@ browser-compat: api.ServiceWorkerRegistration.paymentManager
 The **`paymentManager`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a payment app's {{domxref("PaymentManager")}} instance, which is used to manage various payment app functionality.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref("PaymentManager")}} object instance.
