@@ -87,7 +87,6 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 // removed is [], no elements removed
 ```
 
-
 ### Remove 0 (zero) elements at 0 index, and insert "angel"
 
 ```js
@@ -103,7 +102,7 @@ const removed = myFish.splice(0, 0, "angel");
 
 ```js
 // add to the end of the array ( like: push() )
-const myFish = ["angel", "clown", "mandarin"]
+const myFish = ["angel", "clown", "mandarin"];
 const removed = myFish.splice(myFish.length - 1, 0, "sturgeon");
 
 // myFish is  ["angel", "clown", "mandarin", "sturgeon"]
