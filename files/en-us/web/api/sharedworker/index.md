@@ -54,6 +54,8 @@ myWorker.port.start();
 
 When the port is started, both scripts post messages to the worker and handle messages sent from it using `port.postMessage()` and `port.onmessage`, respectively:
 
+> **Note:** In order to debug your SharedWorker you need to navigate to the correct inspector. For example in Chrome web worker inspection can be opened from `chrome://inspect/#workers` and in FireFox the location is `about:debugging#workers`
+
 ```js
 first.onchange = () => {
   myWorker.port.postMessage([first.value, second.value]);
