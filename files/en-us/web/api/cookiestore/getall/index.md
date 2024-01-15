@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.getAll
 
 The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
@@ -83,8 +85,13 @@ Each object contains the following properties:
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie or cookies represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 

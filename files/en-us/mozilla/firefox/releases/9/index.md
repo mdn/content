@@ -83,22 +83,22 @@ _No change._
 
 ## Changes for Mozilla and add-on developers
 
-See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_9) for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
+See [Updating add-ons for Firefox 9](/en-US/docs/Mozilla/Firefox/Releases/9/Updating_add-ons) for an overview of the changes you may need to make to get your add-ons working in Firefox 9.
 
 ### XUL
 
-- The [`<xul:tab>`](/en-US/docs/Mozilla/Tech/XUL/tab) element now has a [`pending`](/en-US/docs/Mozilla/Tech/XUL/Attribute/pending) attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
-- The [`<xul:tab>`](/en-US/docs/Mozilla/Tech/XUL/tab) element now has an [`unread`](/en-US/docs/Mozilla/Tech/XUL/Attribute/unread) attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
-- You can now use a [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
-- The [`<xul:notificationbox>`](/en-US/docs/Mozilla/Tech/XUL/notificationbox) element's [`appendNotification`](/en-US/docs/Mozilla/Tech/XUL/Method/appendNotification) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
+- The `<xul:tab>` element now has a `pending` attribute, whose value is `true`, when the tab is in the process of being restored by the session store service. This can be used for styling the tab in themes. The attribute isn't present on tabs that aren't pending.
+- The `<xul:tab>` element now has an `unread` attribute, whose value is `true`, when the tab has changed since the last time it was the active tab or if it hasn't been selected since the current session began. The attribute isn't present on tabs that are not unread.
+- You can now use a `<xul:panel>` as a drag image for DOM drag and drop operations. This lets you use the standard drag & drop API for [drag and drop of XUL content](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#using_xul_panels_as_drag_images).
+- The `<xul:notificationbox>` element's `appendNotification`) method now lets you specify a callback that gets called for interesting events related to the notification box. Currently, the only event is "removed", which tells you the box has been removed from its window.
 
 ### JavaScript code module changes
 
-- [`FileUtils.jsm`](/en-US/docs/JavaScript_code_modules/FileUtils.jsm) now has a `File` constructor that returns an `nsIFile` object representing a file specified by its pathname.
+- `FileUtils.jsm` now has a `File` constructor that returns an `nsIFile` object representing a file specified by its pathname.
 
 ### Service changes
 
-- The content preference service now [handles private mode browsing](/en-US/docs/Using_content_preferences#private-browsing) (see [Firefox bug 679784](https://bugzil.la/679784)).
+- The content preference service now handles private mode browsing (see [Firefox bug 679784](https://bugzil.la/679784)).
 
 ### NSPR
 
@@ -131,12 +131,12 @@ The IDL parser no longer includes support for the never fully-implemented notion
 - The `--enable-application=standalone` option for building standalone XPConnect has been removed; it hasn't worked since 2007 anyway.
 - Support for building Necko and Transformiix XSLT standalone has been removed; you can no longer use `--enable-application=network` or `--enable-application=content/xslt`.
 - The build system now looks for `.mozconfig` at `$topsrcdir/.mozconfig` or `$topsrcdir/mozconfig`, and nowhere else, unless you override the `.mozconfig` path using the `MOZCONFIG` environment variable.
-- The `xpidl` utility has been replaced in the SDK with [pyxpidl](/en-US/docs/XPIDL/pyxpidl).
+- The `xpidl` utility has been replaced in the SDK with `pyxpidl`.
 
 ### Other changes
 
 - The spell checker no longer has an arbitrary 130-character word-length limit on the length of words it will attempt to spell check. This limit was previously in place to prevent crashes that were occurring in the spell checker, but the underlying bugs have since been fixed.
-- You can now register components to add features to the {{ domxref("window.navigator") }} object by using the "JavaScript-navigator-property" category. See [Adding APIs to the navigator object](/en-US/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object) for details and examples.
+- You can now register components to add features to the {{ domxref("window.navigator") }} object by using the "JavaScript-navigator-property" category.
 
 ## See also
 
