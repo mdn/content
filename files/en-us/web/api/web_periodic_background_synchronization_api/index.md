@@ -11,7 +11,7 @@ browser-compat: api.PeriodicSyncManager
 
 The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 
-## Web Periodic Background Synchronization Concepts and Usage
+## Concepts and Usage
 
 The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to Wi-Fi, or allowing background updates to an application.
 
@@ -23,14 +23,14 @@ As this API relies on service workers, functionality provided by this API is onl
 
 > **Note:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps)
 
-## Web Periodic Background Synchronization Interfaces
+## Interfaces
 
 - {{domxref('PeriodicSyncManager')}}
   - : Registers tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 - {{domxref('PeriodicSyncEvent')}}
   - : Represents a synchronization event, sent to the {{domxref("ServiceWorkerGlobalScope", "global scope", "", "nocode")}} of a {{domxref("Service Worker API", "ServiceWorker", "", "nocode")}}. It provides a way to run tasks in the service worker with network connectivity.
 
-## Service Worker Additions
+### Extensions to other interfaces
 
 The following additions to the {{domxref("Service Worker API", "", "", "nocode")}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
 
