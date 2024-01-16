@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-MDN provides numerous macros to create links to MDN content that are always-up-to-date. In this guide, you will learn about MDN cross-reference macros that can be included in your content to include a single link to another page or a list of links to all of a document's subpages.
+MDN provides numerous macros to create always up-to-date links to MDN content. In this guide, you will learn about MDN cross-reference macros that you can use to include a single link to another page or a list of links to all of a document's subpages.
 
 ## Lists of links
 
