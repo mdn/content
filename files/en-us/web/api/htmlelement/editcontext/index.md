@@ -31,6 +31,10 @@ The association is one-to-one:
 - An element can only be associated to one `EditContext` instance.
 - An `EditContext` instance can only be associated to one element.
 
+If you try to associate an already associated `EditContext` instance to a different element, a {{domxref("DOMException")}} is thrown.
+
+If you try to associate an other `EditContext` instance to an element that's already associated, a {{domxref("DOMException")}} is also thrown.
+
 To check whether an element is associated with an `EditContext` instance already, use the {{domxref("EditContext.attachedElements()")}} method.
 
 ### Garbage collection
