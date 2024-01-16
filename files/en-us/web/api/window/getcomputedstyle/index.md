@@ -143,7 +143,7 @@ Java.
 
 - The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
   CSS property **_longhand_** names. For example,
-  {{cssxref("border-bottom-width")}} instead of the {{cssxref("border-width")}}  and
+  {{cssxref("border-bottom-width")}} instead of the {{cssxref("border-width")}} and
   {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
   {{cssxref("font-size")}}. Shorthand names like {{cssxref("font")}} will not work with most
   browsers.
