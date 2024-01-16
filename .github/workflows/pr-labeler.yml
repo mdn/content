@@ -1,4 +1,4 @@
-name: Pull request labeler
+name: Label PRs by path
 
 on:
   - pull_request_target
@@ -16,24 +16,5 @@ jobs:
     steps:
       - uses: actions/labeler@v4
         with:
+          configuration-path: ".github/pr-labels-by-path.yml" # Path to pr-path-labeler config
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
-
-  # Docs: https://github.com/cbrgm/pr-size-labeler-action
-  label-by-size:
-    # do not run on forks
-    if: github.repository == 'mdn/content'
-    needs: label-by-path
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-
-      - name: Label PR based on size
-        uses: cbrgm/pr-size-labeler-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_repository: ${{ github.repository }} # Repository name
-          github_pr_number: ${{ github.event.number }} # Pull request number
-          config_file_path: ".github/pull-request-size.yml" # Path to pr-size-labeler config
