@@ -17,11 +17,11 @@ None.
 
 ## Instance methods
 
-- {{domxref('PeriodicSyncManager.register')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.register()')}} {{Experimental_Inline}}
   - : Registers a periodic sync request with the browser with the specified tag and options. Returns a {{jsxref('Promise')}} that resolves when the registration completes.
-- {{domxref('PeriodicSyncManager.getTags')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.getTags()')}} {{Experimental_Inline}}
   - : Returns a {{jsxref('Promise')}} that resolves with a list of {{jsxref('String','strings')}} representing the tags that are currently registered for periodic syncing.
-- {{domxref('PeriodicSyncManager.unregister')}} {{Experimental_Inline}}
+- {{domxref('PeriodicSyncManager.unregister()')}} {{Experimental_Inline}}
   - : Unregisters the periodic sync request corresponding to the specified tag and returns a {{jsxref('Promise')}} that resolves when unregistration completes.
 
 ## Examples
