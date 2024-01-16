@@ -142,70 +142,73 @@ There are two types of relative lengths: font-relative lengths and viewport-perc
 Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
 
-| Unit  | Relative to                                                                                                                            |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `cap` | Cap height (the nominal height of capital letters) of the element's font.                                                              |
-| `ch`  | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
-| `em`  | Font size of the element's font.                                                                                                       |
-| `ex`  | x-height of the element's font.                                                                                                        |
-| `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
-| `lh`  | Line height of the element.                                                                                                            |
+| Unit  | Relative to                                                                                         |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `cap` | Cap height (the nominal height of capital letters) of the element's font.                                                               |
+| `ch`  | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                      |
+| `em`  | Font size of the element's font.                                                                                                        |
+| `ex`  | x-height of the element's font.                                                                                                         |
+| `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph.   |
+| `lh`  | Line height of the element.                                                                                                             |
 
 Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{HTMLElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
-
-| Unit   | Relative to                                                                                                                             |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                                          |
-| `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph.                 |
-| `rem`  | Font size of the root element's font.                                                                                                   |
-| `rex`  | x-height of the root element's font.                                                                                                    |
-| `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, (U+6C34)). |
-| `rlh`  | Line height of the root element.                                                                                                        |
 
 ##### Viewport and container relative units
 
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
 
-| Unit   | Relative to                                              |
-| ------ | -------------------------------------------------------- |
-| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height. |
-| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width. |
-| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height. |
-| `lvw` | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width. |
-| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height. |
-| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width. |
-| `vb`   | 1% of viewport's size in the root element's [block axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
-| `vh`   | 1% of viewport's height.                                 |
-| `vi`   | 1% of viewport's size in the root element's [inline axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline). |
-| `vmax` | 1% of viewport's larger dimension.                       |
-| `vmin` | 1% of viewport's smaller dimension.                      |
-| `vw`   | 1% of viewport's width.                                  |
+| Unit   | Relative to                                                                                                                                                                                                                     |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height. 
+                                                    |
+| `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width. 
+                                                    |
+| `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.     
+                                                    |
+| `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.      
+                                                    |
+| `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.     
+                                                    |
+| `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.      
+                                                    |
+| `vb`   | 1% of viewport's size in the root element's [block axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).
+                                                    |
+| `vh`   | 1% of viewport's height.                                                    
+                                                    |
+| `vi`   | 1% of viewport's size in the root element's [inline axis](en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).                                  
+                                                    |
+| `vmax` | 1% of viewport's larger dimension.                                         
+                                                    |
+| `vmin` | 1% of viewport's smaller dimension.                                        
+                                                    |
+| `vw`   | 1% of viewport's width.                                                    
+                                                    |
 
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
-| Unit    | Relative to                           |
-| ------- | ------------------------------------- |
-| `cqb`   | 1% of a query container's block size  |
-| `cqh`   | 1% of a query container's height      |
-| `cqi`   | 1% of a query container's inline size |
-| `cqmax` | The larger value of `cqi` or `cqb`    |
-| `cqmin` | The smaller value of `cqi` or `cqb`   |
-| `cqw`   | 1% of a query container's width       |
+| Unit    | Relative to                             |
+| ------- | -------------------------------------   |
+| `cqb`   | 1% of a query container's block size    |
+| `cqh`   | 1% of a query container's height        |
+| `cqi`   | 1% of a query container's inline size   |
+| `cqmax` | The larger value of `cqi` or `cqb`      |
+| `cqmin` | The smaller value of `cqi` or `cqb`     |
+| `cqw`   | 1% of a query container's width         |
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
-| Unit | Name                | Equivalent to       |
-| ---- | ------------------- | ------------------- |
-| `cm` | Centimeters         | 1cm = 96px/2.54     |
-| `in` | Inches              | 1in = 2.54cm = 96px |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
-| `pc` | Picas               | 1pc = 1/6th of 1in  |
-| `pt` | Points              | 1pt = 1/72th of 1in |
-| `px` | Pixels              | 1px = 1/96th of 1in |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
+| Unit | Name                | Equivalent to        |
+| ---- | ------------------- | -------------------- |
+| `cm` | Centimeters         | 1cm = 96px/2.54      |
+| `in` | Inches              | 1in = 2.54cm = 96px  |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
+| `pc` | Picas               | 1pc = 1/6th of 1in   |
+| `pt` | Points              | 1pt = 1/72th of 1in  |
+| `px` | Pixels              | 1px = 1/96th of 1in  |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
 
 When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
 
