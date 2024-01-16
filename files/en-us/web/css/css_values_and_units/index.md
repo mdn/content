@@ -164,7 +164,7 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `dvh`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's height.                                                         |
 |        |
 | `dvw`  | 1% of the [dynamic](/en-US/docs/Web/CSS/length#dynamic) viewport's width.                                                          |
-|  |
+|        |
 | `lvh`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's height.                                                             |
 |  |
 | `lvw`  | 1% of the [large](/en-US/docs/Web/CSS/length#large) viewport's width.                                                              |
