@@ -8,9 +8,7 @@ browser-compat: api.HTMLMapElement.areas
 
 {{ApiRef("HTML DOM")}}
 
-The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} elements returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element.
-
-Two successive calls to this property will return the same object.
+The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element.
 
 ## Value
 
@@ -22,14 +20,14 @@ A {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
 <map name="image-map">
   <a href="www.link1_example.com">link 1</a>
   <area
-    alt="left arrow"
+    alt="left"
     shape="circle"
     coords="50,50,35"
     href="www.left_example.com"
     target="_top" />
   <a href="www.link2_example.com">link 2</a>
   <area
-    alt="right arrow"
+    alt="right"
     shape="circle"
     coords="150,50,35"
     href="www.right_example.com"
@@ -47,8 +45,8 @@ const mapElement = document.getElementsByName("image-map")[0];
 console.log(mapElement.areas); // Output: HTMLCollection(2) [area, area]
 
 const mapElementAreas = mapElement.areas;
-// Iterate over each area element and change target value to _blank
-[...mapElementAreas].forEach((area) => (area.target = "_blank"));
+// Iterate over each area element and update alt for area elements.
+[...mapElementAreas].forEach((area) => (area.alt = area.alt + " " + "arrow"));
 console.log(mapElementAreas[0]);
 // click on left and right arrows, it will open a new tab.
 ```
