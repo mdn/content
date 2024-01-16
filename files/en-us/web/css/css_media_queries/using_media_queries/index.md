@@ -222,11 +222,11 @@ This means that the above query is evaluated like this:
 > **Note:** The `only` keyword prevented older browsers that did not support media features from applying the given styles.
 _It has no effect on modern browsers._
 >
->```css
->@media only screen and (color) {
->  /* … */
->}
->```
+> ```css
+> @media only screen and (color) {
+>   /* … */
+> }
+> ```
 
 ## Syntax improvements in Level 4
 
