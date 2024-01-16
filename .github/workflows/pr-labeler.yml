@@ -3,6 +3,10 @@ name: Pull request labeler
 on:
   - pull_request_target
 
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   # Docs: https://github.com/actions/labeler
   label-by-path:
@@ -23,6 +27,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Label PR based on size
         uses: cbrgm/pr-size-labeler-action@main
