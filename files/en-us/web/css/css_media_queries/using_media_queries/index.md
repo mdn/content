@@ -223,7 +223,8 @@ This means that the above query is evaluated like this:
 _It has no effect on modern browsers._
 >
 > ```css
-> @media only screen and (color) { }
+> @media only screen and (color) {
+> }
 > ```
 
 ## Syntax improvements in Level 4
