@@ -13,7 +13,7 @@ In this article, we will see what can be done with CSS to style the types of for
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>.
       </td>

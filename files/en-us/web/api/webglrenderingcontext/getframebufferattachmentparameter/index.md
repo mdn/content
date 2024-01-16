@@ -278,7 +278,7 @@ Depends on the requested information (as specified with `pname`). Either a
 gl.getFramebufferAttachmentParameter(
   gl.FRAMEBUFFER,
   gl.COLOR_ATTACHMENT0,
-  gl.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE
+  gl.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE,
 );
 ```
 

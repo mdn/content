@@ -105,7 +105,7 @@ Generally you will need to check the relevant specifications for these (keys for
     - `"auth"`: Authentication
     - `"auth-int"`: Authentication with integrity protection
 - `cnonce`
-  - : An quoted ASCII-only string value provided by the client.
+  - : An quoted {{Glossary("ASCII")}}-only string value provided by the client.
     This is used by both the client and server to provide mutual authentication, provide some message integrity protection, and avoid "chosen plaintext
     attacks".
     See the specification for additional information.

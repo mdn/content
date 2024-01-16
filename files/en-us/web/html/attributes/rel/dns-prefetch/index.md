@@ -18,3 +18,7 @@ See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more deta
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="dns-prefetch">` and other similar performance improvement features.

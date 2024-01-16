@@ -46,7 +46,7 @@ const allCSS = [...document.styleSheets]
     } catch (e) {
       console.log(
         "Access to stylesheet %s is denied. Ignoring…",
-        styleSheet.href
+        styleSheet.href,
       );
     }
   })

@@ -67,7 +67,7 @@ workingDirectory.getFile(
       /* the file was removed successfully */
     });
   },
-  handleError
+  handleError,
 );
 ```
 

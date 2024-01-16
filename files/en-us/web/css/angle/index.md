@@ -35,7 +35,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img class="default internal" src="angle90.png" /></td>
+      <td><img class="default internal" src="angle90.png" alt="A diagram showing a clockwise 90-degree rotation along a circle by moving from the topmost point to the rightmost point." /></td>
       <td><code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code></td>
     </tr>
   </tbody>
@@ -46,7 +46,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img class="default internal" src="angle180.png" /></td>
+      <td><img class="default internal" src="angle180.png" alt="A diagram showing a clockwise 180-degree rotation along a circle by moving from the topmost point to the bottommost point." /></td>
       <td><code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code></td>
     </tr>
   </tbody>
@@ -57,7 +57,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img class="default internal" src="angleminus90.png" /></td>
+      <td><img class="default internal" src="angleminus90.png" alt="A diagram showing a counterclockwise 90-degree rotation along a circle by moving from the topmost point to the leftmost point." /></td>
       <td><code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code></td>
     </tr>
   </tbody>
@@ -68,7 +68,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 <table class="standard-table">
   <tbody>
     <tr>
-      <td><img class="default internal" src="angle0.png" /></td>
+      <td><img class="default internal" src="angle0.png" alt="A diagram showing a 0-degree rotation. There is no movement." /></td>
       <td><code>0 = 0deg = 0grad = 0turn = 0rad</code></td>
     </tr>
   </tbody>
@@ -87,6 +87,6 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 - [CSS data types](/en-US/docs/Web/CSS/CSS_Types)
 - The [`<gradient>`](/en-US/docs/Web/CSS/gradient) type
 - CSS rotation transforms: [`rotate()`](/en-US/docs/Web/CSS/transform-function/rotate), [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d), [`rotateX()`](/en-US/docs/Web/CSS/transform-function/rotateX), [`rotateY()`](/en-US/docs/Web/CSS/transform-function/rotateY), and [`rotateZ()`](/en-US/docs/Web/CSS/transform-function/rotateZ)
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms)
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)

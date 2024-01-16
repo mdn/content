@@ -58,7 +58,7 @@ In this next live example the child elements have been floated, and then their c
 
 ## Flexbox and Grid Layout
 
-[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) and Flexbox generally act in the same way with regards to overwriting other methods. You might however want to use flexbox as a fallback for grid layout, as there is better support for flexbox in older browsers. This approach works very well. If a flex item becomes a grid item, then the `flex` properties that may have been assigned to the child elements will be ignored.
+[CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and Flexbox generally act in the same way with regards to overwriting other methods. You might however want to use flexbox as a fallback for grid layout, as there is better support for flexbox in older browsers. This approach works very well. If a flex item becomes a grid item, then the `flex` properties that may have been assigned to the child elements will be ignored.
 
 You can use the Box Alignment properties across both layout methods, so using flexbox as a fallback for grid layout can work very well.
 
@@ -80,7 +80,7 @@ In some cases you could happily use either layout method, but as you become conf
 
 As a ground rule, if you are adding widths to flex items in order to make items in one row of a wrapped flex container line up with the items above them you really want two-dimensional layout. In this case it is likely that the component would be better laid out using CSS Grid Layout. It isn't the case that you should use flexbox for small components and grid layout for larger ones; a tiny component can be two dimensional, and a large layout can be represented better with layout in one dimension. Try things out — we have a choice in layout method for the first time, so take advantage of it.
 
-For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
+For more comparisons of grid and flexbox see the article [Relationship of Grid Layout to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods). This article details many of the ways that Grid Layout differs from flex layout, and demonstrates some of the extra functionality you get when using Grid Layout such as layering of items on the grid. This may also help in your decision as to which layout method to use.
 
 ## Flexbox and display: contents
 

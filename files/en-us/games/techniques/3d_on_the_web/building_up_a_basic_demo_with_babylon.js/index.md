@@ -24,7 +24,7 @@ To start developing with Babylon.js, you don't need much. You should start off b
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -98,7 +98,7 @@ Now the setup code is in place we need to think about implementing the standard 
 const camera = new BABYLON.FreeCamera(
   "camera",
   new BABYLON.Vector3(0, 0, -10),
-  scene
+  scene,
 );
 ```
 
@@ -114,7 +114,7 @@ There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/
 const light = new BABYLON.PointLight(
   "light",
   new BABYLON.Vector3(10, 10, 0),
-  scene
+  scene,
 );
 ```
 
@@ -261,7 +261,3 @@ Here's the final code listing, along with a viewable live example:
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}
 
 You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Babylon.js engine; happy experimentation!
-
-## See also
-
-- [Learning Babylon.js book](http://learningbabylonjs.com/)

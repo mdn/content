@@ -37,9 +37,9 @@ No matter what style is selected, the rules from the reset.css stylesheet will a
 
 Any stylesheet in a document falls into one of the following categories:
 
-- **Persistent** (no `rel="stylesheet"`, no `title=""`): always applies to the document.
-- **Preferred** (no `rel="stylesheet"`, with `title="…"` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored.
-- **Alternate** (`rel="alternate stylesheet"`, `title="…"` must be specified): disabled by default, can be selected.
+- **Persistent** (has `rel="stylesheet"`, no `title=""`): always applies to the document.
+- **Preferred** (has `rel="stylesheet"`, with `title="…"` specified): applied by default, but {{domxref("StyleSheet.disabled", "disabled", "", 1)}} if an alternate stylesheet is selected. **There can only be one preferred stylesheet**, so providing stylesheets with different title attributes will cause some of them to be ignored.
+- **Alternate** (`rel="alternate stylesheet"`, with `title="…"` specified): disabled by default, can be selected.
 
 When style sheets are referenced with a `title` attribute on the {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} or {{HTMLElement("style")}} element, the title becomes one of the choices offered to the user. Style sheets linked with the same `title` are part of the same choice. Style sheets linked without a `title` attribute are always applied.
 

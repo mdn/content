@@ -87,5 +87,5 @@ p {
 ## See also
 
 - [@media](/en-US/docs/Web/CSS/@media)
-- [CSS media queries](/en-US/docs/Web/CSS/Media_Queries) module
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)

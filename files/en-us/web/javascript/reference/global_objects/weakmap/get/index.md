@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakMap.get
 
 {{JSRef}}
 
-The **`get()`** method returns a specified element from a
-`WeakMap` object.
+The **`get()`** method of {{jsxref("WeakMap")}} instances returns a specified element from this `WeakMap`.
 
 {{EmbedInteractiveExample("pages/js/weakmap-prototype-get.html")}}
 

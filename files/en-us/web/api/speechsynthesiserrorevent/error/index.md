@@ -83,7 +83,7 @@ inputForm.onsubmit = (event) => {
 
   utterThis.onerror = (event) => {
     console.error(
-      `An error has occurred with the speech synthesis: ${event.error}`
+      `An error has occurred with the speech synthesis: ${event.error}`,
     );
   };
 

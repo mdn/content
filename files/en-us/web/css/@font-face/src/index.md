@@ -33,11 +33,14 @@ src: url(path/to/font.woff) format("woff");
 src: url(path/to/font.otf) format("opentype");
 
 /* Multiple resources */
-src: url(path/to/font.woff) format("woff"), url(path/to/font.otf) format("opentype");
+src:
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.otf) format("opentype");
 
 /* Multiple resources with font format and technologies */
-src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-    format(opentype);
+src:
+  url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+  url("trickster-outline.otf") format(opentype);
 ```
 
 ### Values
@@ -61,6 +64,12 @@ src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trick
     Enclosing the font name in quotes is optional.
 
     > **Note:** For OpenType and TrueType fonts, `<font-face-name>` is used to match either the Postscript name or the full font name in the name table of locally available fonts. Which type of name is used varies by platform and font, so you should include both of these names to assure proper matching across platforms. Platform substitutions for a given font name must not be used.
+
+    > **Note:** Locally available fonts may have been preinstalled on the user's device, or may have been actively installed by the user.
+    >
+    > While the set of preinstalled fonts is likely to be the same for all users of a particular device, the set of user-installed fonts is not. By discovering the set of user-installed fonts, a site can therefore build a {{glossary("fingerprinting", "fingerprint")}} for the device, helping the site to track users across the web.
+    >
+    > To prevent this, user agents may ignore user-installed fonts when using `local()`.
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.
@@ -207,8 +216,9 @@ A color font will be activated if the user agent supports it, and an `opentype` 
 ```css
 @font-face {
   font-family: "Trickster";
-  src: url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1), url("trickster-outline.otf")
-      format(opentype);
+  src:
+    url("trickster-COLRv1.otf") format(opentype) tech(color-COLRv1),
+    url("trickster-outline.otf") format(opentype);
 }
 
 /* Using the font face */
@@ -228,8 +238,9 @@ For example:
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 
@@ -244,8 +255,9 @@ Note that multiple `src` descriptors are attempted in reverse-order, so at the e
   font-family: "MgOpenModernaBold";
   src: url("MgOpenModernaBold.otf") format(opentype);
   src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf")
-      format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 

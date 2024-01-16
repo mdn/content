@@ -54,19 +54,23 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 - `icon`
   - : An array of {{domxref("Blob")}} objects containing images of an individual.
 - `name`
-  - : An array strings, each a unique name of an individual.
+  - : An array strings, each containing a unique name of an individual.
 - `tel`
-  - : An array strings, each a unique phone number of an individual.
+  - : An array strings, each containing a unique phone number of an individual.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if the browsing context is not top-level or the contact picker is showing a flag. A flag denotes an already existing contact picker; only one picker can exist at any time.
+  - : Returned if the browsing context is not top-level, if the contact picker shows a flag that denotes an already existing contact picker since only one picker can exist at any time, or if launching a contact picker failed.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Returned if the method is not triggered by user interaction.
+  - : Returned if the method is not triggered by [user activation](/en-US/docs/Web/Security/User_activation).
 - {{jsxref("TypeError")}}
   - : Returned if `properties` is empty, or if any of the specified properties are not
     supported.
+
+## Security
+
+{{Glossary("Transient activation")}} is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

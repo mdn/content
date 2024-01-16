@@ -51,7 +51,9 @@ function onGetRejected(e) {
 }
 
 browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getTabValue(tab.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 

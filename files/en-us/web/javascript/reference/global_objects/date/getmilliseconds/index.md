@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.getMilliseconds
 
 The **`getMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getmilliseconds.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 getMilliseconds()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

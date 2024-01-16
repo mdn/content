@@ -35,12 +35,12 @@ An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there
 
 ## Examples
 
-The `<em>` element is often used to indicate an implicit or explicit contrast.
+In this example, the `<em>` element is used to highlight an implicit or explicit contrast between two ingredient lists:
 
 ```html
 <p>
-  In HTML 5, what was previously called
-  <em>block-level</em> content is now called <em>flow</em> content.
+  Ice cream is made with milk, sweetener, and cream. Frozen custard, on the
+  other hand, is made of milk, cream, sweetener, and <em>egg yolks</em>.
 </p>
 ```
 
@@ -91,8 +91,9 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ></code
         >
       </td>
     </tr>

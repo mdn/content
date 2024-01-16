@@ -27,7 +27,7 @@ So for example, you could create a new `PaymentRequest` instance like so:
 ```js
 const request = new PaymentRequest(
   buildSupportedPaymentMethodData(),
-  buildShoppingCartDetails()
+  buildShoppingCartDetails(),
 );
 ```
 
@@ -91,7 +91,7 @@ new PaymentRequest(buildSupportedPaymentMethodData(), {
       // Real payment request
       const request = new PaymentRequest(
         buildSupportedPaymentMethodData(),
-        checkoutObject
+        checkoutObject,
       );
       request.show().then((paymentResponse) => {
         // Here we would process the payment.
@@ -116,7 +116,7 @@ const checkoutButton = document.getElementById("checkout-button");
 if (window.PaymentRequest) {
   let request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   checkoutButton.addEventListener("click", () => {
     request
@@ -135,7 +135,7 @@ if (window.PaymentRequest) {
     // called only once per instance.
     request = new PaymentRequest(
       buildSupportedPaymentMethodNames(),
-      buildShoppingCartDetails()
+      buildShoppingCartDetails(),
     );
   });
 }
@@ -159,7 +159,7 @@ checkoutButton.innerText = "Loading…";
 if (window.PaymentRequest) {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodNames(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .canMakePayment()
@@ -244,7 +244,7 @@ function onServerCheckoutDetailsRetrieved(checkoutObject) {
 
 ## Recommending a payment app when user has no apps
 
-If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NOTSUPPORTEDERR` exception. If this payment method is not supported, it redirects to the signup page for BobPay.
+If you select to pay with the BobPay demo payment provider on this merchant page, it tries to call `PaymentRequest.show()`, while intercepting the `NotSupportedError` {{domxref("DOMException")}}. If this payment method is not supported, it redirects to the signup page for BobPay.
 
 The code looks something like this:
 
@@ -252,7 +252,7 @@ The code looks something like this:
 checkoutButton.addEventListener("click", () => {
   const request = new PaymentRequest(
     buildSupportedPaymentMethodData(),
-    buildShoppingCartDetails()
+    buildShoppingCartDetails(),
   );
   request
     .show()
@@ -303,14 +303,14 @@ request
 
 ## Pre-authorizing transactions
 
-Some use cases (e.g., paying for fuel at a service station) involve pre-authorization of payment. One way to do this is through a Payment Handler (see the [Payment Handler API](https://w3c.github.io/payment-handler/)). At time of writing, that specification includes a `CanMakePayment` event that a Payment Handler could make use of to return authorization status.
+Some use cases (e.g., paying for fuel at a service station) involve pre-authorizing payment. One way to do this is through a Payment Handler (see the {{domxref("Payment Handler API", "", "", "nocode")}}). At the time of writing, that specification includes a `canmakepayment` event that a Payment Handler could make use of to return authorization status.
 
 The merchant code would look like this:
 
 ```js
 const paymentRequest = new PaymentRequest(
   [{ supportedMethods: "https://example.com/preauth" }],
-  details
+  details,
 );
 
 // Send `CanMakePayment` event to the payment handler.

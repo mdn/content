@@ -38,7 +38,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.timing.duration / 2,
-    }
+    },
   );
 
 // Pause the cake's animation so it doesn't play immediately.

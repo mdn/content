@@ -27,7 +27,7 @@ All conditional headers try to check if the resource stored on the server matche
 Comparing versions of the same resource is a bit tricky: depending on the context, there are two kinds of _equality checks_:
 
 - _Strong validation_ is used when byte to byte identity is expected, for example when resuming a download.
-- _Weak validation_ is used when the user-agent only needs to determine if the two resources have the same content. This is even if they are minor differences; like different ads, or a footer with a different date.
+- _Weak validation_ is used when the user-agent only needs to determine if two resources have the same content. The resources may be considered the same even if minor differences exist, such as different ads or a footer with a different date.
 
 The kind of validation is independent of the validator used. Both {{HTTPHeader("Last-Modified")}} and {{HTTPHeader("ETag")}} allow both types of validation, though the complexity to implement it on the server side may vary. HTTP uses strong validation by default, and it specifies when weak validation can be used.
 
@@ -46,9 +46,9 @@ Weak validation differs from strong validation, as it considers two versions of 
 Several HTTP headers, called conditional headers, lead to conditional requests. These are:
 
 - {{HTTPHeader("If-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is equal to one listed in this header. It performs a strong validation.
 - {{HTTPHeader("If-None-Match")}}
-  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. By default, unless the etag is prefixed with `'W/'`, it performs a strong validation.
+  - : Succeeds if the {{HTTPHeader("ETag")}} of the distant resource is different to each listed in this header. It performs a weak validation.
 - {{HTTPHeader("If-Modified-Since")}}
   - : Succeeds if the {{HTTPHeader("Last-Modified")}} date of the distant resource is more recent than the one given in this header.
 - {{HTTPHeader("If-Unmodified-Since")}}

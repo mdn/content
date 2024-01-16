@@ -1,6 +1,7 @@
 ---
 title: <xsl:value-of>
 slug: Web/XSLT/Element/value-of
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

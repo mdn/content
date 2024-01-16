@@ -1,6 +1,7 @@
 ---
 title: name
 slug: Web/XPath/Functions/name
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `name` function returns a string representing the QName of the first node in
 
 ### Syntax
 
-```
+```plain
 name( [node-set] )
 ```
 

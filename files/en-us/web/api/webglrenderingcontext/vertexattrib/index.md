@@ -57,9 +57,8 @@ This value will be used if a bound array buffer has not been enabled with
 Attributes may be matrices, in which case columns of the matrix must be loaded into
 successive vertex attribute slots.
 
-The values set with {{domxref("WebGLRenderingContext.vertexAttribPointer()",
-  "vertexAttribPointer")}} are context-global, i.e. they aren't part of the shader state
-(like generix vertex attribute indexes to shader variable bindings) and aren't part of
+The values set with `vertexAttrib` are context-global; that is, they aren't part of the shader state
+(like generic vertex attribute indexes to shader variable bindings) and aren't part of
 the vertex array object state (like enabled vertex attribute arrays). The only way to
 change the values is by calling this function again.
 

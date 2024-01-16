@@ -8,7 +8,7 @@ status:
 browser-compat: api.VirtualKeyboard.overlaysContent
 ---
 
-{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}
+{{APIRef("VirtualKeyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`overlaysContent`** property of the VirtualKeyboard interface can be used to opt out of the automatic way in which browsers handle on-screen virtual keyboards by reducing the size of the viewport to make space for them.
 

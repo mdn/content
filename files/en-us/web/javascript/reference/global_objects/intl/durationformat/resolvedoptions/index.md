@@ -17,6 +17,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instance
 resolvedOptions()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A new object with properties reflecting the locale and date and time formatting options computed during the initialization of the given {{jsxref("Intl.DateTimeFormat")}} object.

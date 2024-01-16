@@ -9,12 +9,12 @@ browser-compat: api.HTMLCollection.item
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLCollection")}} method `item()`
-returns the node located at the specified offset into the collection.
+returns the element located at the specified offset into the collection.
 
 > **Note:** Because the contents of an `HTMLCollection` are
 > live, changes to the underlying DOM can and will cause the position of individual
-> nodes in the collection to change, so the index value will not necessarily remain
-> constant for a given node.
+> elements in the collection to change, so the index value will not necessarily remain
+> constant for a given element.
 
 ## Syntax
 
@@ -25,13 +25,13 @@ item(index)
 ### Parameters
 
 - `index`
-  - : The position of the {{domxref("Node")}} to be returned. Elements appear in an
+  - : The position of the {{domxref("Element")}} to be returned. Elements appear in an
     `HTMLCollection` in the same order in which they appear in the document's
     source.
 
 ### Return value
 
-The {{domxref("Node")}} at the specified index, or `null` if
+The {{domxref("Element")}} at the specified index, or `null` if
 `index` is less than zero or greater than or equal to the length property.
 
 ## Usage notes

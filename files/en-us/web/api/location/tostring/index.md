@@ -1,5 +1,5 @@
 ---
-title: "location: toString() method"
+title: "Location: toString() method"
 short-title: toString()
 slug: Web/API/Location/toString
 page-type: web-api-instance-method

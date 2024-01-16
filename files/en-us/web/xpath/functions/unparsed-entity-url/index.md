@@ -1,6 +1,7 @@
 ---
 title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `unparsed-entity-url()` function returns the URI of the unparsed entity with
 
 ### Syntax
 
-```
+```plain
 string unparsed-entity-url(string)
 ```
 

@@ -10,8 +10,7 @@ browser-compat: api.WindowControlsOverlayGeometryChangeEvent.WindowControlsOverl
 
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
-The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a newly created
-{{domxref("WindowControlsOverlayGeometryChangeEvent")}}, representing the current geometry of a desktop Progressive Web App's title bar area.
+The **`WindowControlsOverlayGeometryChangeEvent()`** constructor returns a new {{domxref("WindowControlsOverlayGeometryChangeEvent")}} object, representing the current geometry of a desktop Progressive Web App's title bar area.
 
 ## Syntax
 
@@ -25,12 +24,12 @@ _The `WindowControlsOverlayGeometryChangeEvent()` constructor also inherits argu
 {{domxref("Event.Event", "Event()")}}._
 
 - `type`
-  - : A string indicating the event type. Its value must be `geometrychange` and is case-sensitive.
+  - : A string indicating the event type. It is case-sensitive and browsers set it to `geometrychange`.
 - `options`
   - : An object with the following properties:
-    - `visible`
-      - : A boolean flag that's true when the `titleBarAreaRect` object's values are not 0.
-    - `titleBarAreaRect`
+    - `visible` {{optional_inline}}
+      - : A boolean flag that's true when the `titlebarAreaRect` object's values are not 0. Its default value is `false`.
+    - `titlebarAreaRect`
       - : A {{domxref("DOMRect")}} representing the position and size of the title bar area.
 
 ## Specifications

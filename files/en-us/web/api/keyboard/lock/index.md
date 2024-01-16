@@ -8,13 +8,16 @@ status:
 browser-compat: api.Keyboard.lock
 ---
 
-{{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Keyboard API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
 {{domxref("Keyboard")}} interface returns a {{jsxref('Promise')}} after enabling the
 capture of keypresses for any or all of the keys on the physical keyboard. This method
 can only capture keys that are granted access by the underlying operating
 system.
+
+If `lock()` is called multiple times then only the key codes specified in the most recent call will be locked.
+Any keys locked by a previous call to `lock()` are unlocked.
 
 ## Syntax
 
@@ -27,11 +30,20 @@ lock(keyCodes)
 
 - `keyCodes` {{optional_inline}}
   - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://w3c.github.io/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ### Return value
 
-A {{jsxref('Promise')}}.
+A {{jsxref('Promise')}} that resolves with {{jsxref('undefined')}} when the lock was successful.
+
+### Exceptions
+
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if a new call to `lock()` is made before the current one has finished.
+- `InvalidAccessError` {{domxref("DOMException")}}
+  - : Thrown if any key in `keyCodes` is not a valid [key code attribute value](https://www.w3.org/TR/uievents-code/#key-code-attribute-value).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `lock()` is not called in an active top-level browsing context.
 
 ## Security
 

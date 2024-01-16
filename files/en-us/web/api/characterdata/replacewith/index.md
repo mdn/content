@@ -17,7 +17,7 @@ Strings are inserted as {{domxref("Text")}} nodes; the string is being passed as
 ## Syntax
 
 ```js-nolint
-replaceWith(nodes)
+replaceWith(...nodes)
 ```
 
 ### Parameters

@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.getUTCMilliseconds
 
 The **`getUTCMilliseconds()`** method of {{jsxref("Date")}} instances returns the milliseconds for this date according to universal time.
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 getUTCMilliseconds()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

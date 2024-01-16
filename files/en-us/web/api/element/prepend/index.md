@@ -18,7 +18,7 @@ equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

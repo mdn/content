@@ -161,7 +161,7 @@ app.get("/users/:userId/books/:bookId", (req, res) => {
 
 The names of route parameters must be made up of "word characters" (A-Z, a-z, 0-9, and \_).
 
-> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (which will extract a "bookId" value of '`create`'). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs separately, their route handler must be defined before your `/book/:bookId` route.
+> **Note:** The URL _/book/create_ will be matched by a route like `/book/:bookId` (because `:bookId` is a placeholder for _any_ string, therefore `create` matches). The first route that matches an incoming URL will be used, so if you want to process `/book/create` URLs specifically, their route handler must be defined before your `/book/:bookId` route.
 
 That's all you need to get started with routes - if needed you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
@@ -203,11 +203,10 @@ exports.get("/about", async function (req, res, next) {
   try {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
-  }
-  catch (error) {
+  } catch (error) {
     return next(error);
   }
-};
+});
 ```
 
 That's quite a lot of boilerplate code to add to every function.
@@ -224,7 +223,7 @@ exports.get(
   asyncHandler(async (req, res, next) => {
     const successfulResult = await About.find({}).exec();
     res.render("about_view", { title: "About", list: successfulResult });
-  })
+  }),
 );
 ```
 
@@ -593,37 +592,37 @@ router.get("/genres", genre_controller.genre_list);
 // GET request for creating a BookInstance. NOTE This must come before route that displays BookInstance (uses id).
 router.get(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_get
+  book_instance_controller.bookinstance_create_get,
 );
 
 // POST request for creating BookInstance.
 router.post(
   "/bookinstance/create",
-  book_instance_controller.bookinstance_create_post
+  book_instance_controller.bookinstance_create_post,
 );
 
 // GET request to delete BookInstance.
 router.get(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_get
+  book_instance_controller.bookinstance_delete_get,
 );
 
 // POST request to delete BookInstance.
 router.post(
   "/bookinstance/:id/delete",
-  book_instance_controller.bookinstance_delete_post
+  book_instance_controller.bookinstance_delete_post,
 );
 
 // GET request to update BookInstance.
 router.get(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_get
+  book_instance_controller.bookinstance_update_get,
 );
 
 // POST request to update BookInstance.
 router.post(
   "/bookinstance/:id/update",
-  book_instance_controller.bookinstance_update_post
+  book_instance_controller.bookinstance_update_post,
 );
 
 // GET request for one BookInstance.

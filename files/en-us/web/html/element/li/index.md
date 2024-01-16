@@ -159,5 +159,5 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
 - CSS properties that may be specially useful to style the `<li>` element:
 
   - the {{cssxref("list-style")}} property, to choose the way the ordinal is displayed,
-  - [CSS counters](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), to handle complex nested lists,
+  - [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), to handle complex nested lists,
   - the {{cssxref("margin")}} property, to control the indent of the list item.

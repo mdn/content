@@ -1,6 +1,7 @@
 ---
 title: Store
 slug: WebAssembly/Reference/Memory/Store
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

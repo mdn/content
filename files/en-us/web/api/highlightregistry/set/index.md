@@ -3,13 +3,11 @@ title: "HighlightRegistry: set() method"
 short-title: set()
 slug: Web/API/HighlightRegistry/set
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.set
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.set
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`set()`** method of the {{domxref("HighlightRegistry")}} interface adds or updates a {{domxref("Highlight")}} object in the registry with the specified name.
 

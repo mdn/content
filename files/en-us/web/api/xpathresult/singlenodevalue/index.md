@@ -50,7 +50,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.FIRST_ORDERED_NODE_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent = result.singleNodeValue.localName;
 ```

@@ -6,11 +6,10 @@ page-type: web-api-instance-property
 browser-compat: api.Document.pictureInPictureElement
 ---
 
-{{ApiRef("Fullscreen API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-The
-**`Document.pictureInPictureElement`** read-only
-property returns the {{ domxref("Element") }} that is currently being
+The read-only **`pictureInPictureElement`** property of the {{domxref("Document")}}
+interface returns the {{ domxref("Element") }} that is currently being
 presented in picture-in-picture mode in this document, or `null` if
 picture-in-picture mode is not currently in use.
 

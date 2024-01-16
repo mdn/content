@@ -132,51 +132,51 @@ class RenewBookForm(forms.Form):
 
 #### Form fields
 
-In this case, we have a single [`DateField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3 weeks)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), and will be rendered using the default [widget](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/4.0/ref/forms/widgets/#django.forms.DateInput).
+In this case, we have a single [`DateField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#datefield) for entering the renewal date that will render in HTML with a blank value, the default label "_Renewal date:_", and some helpful usage text: "_Enter a date between now and 4 weeks (default 3 weeks)._" As none of the other optional arguments are specified the field will accept dates using the [input_formats](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#django.forms.DateField.input_formats): YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), and will be rendered using the default [widget](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#widget): [DateInput](https://docs.djangoproject.com/en/4.2/ref/forms/widgets/#django.forms.DateInput).
 
 There are many other types of form fields, which you will largely recognize from their similarity to the equivalent model field classes:
 
-- [`BooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#booleanfield)
-- [`CharField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#charfield)
-- [`ChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#choicefield)
-- [`TypedChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedchoicefield)
-- [`DateField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datefield)
-- [`DateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#datetimefield)
-- [`DecimalField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#decimalfield)
-- [`DurationField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#durationfield)
-- [`EmailField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#emailfield)
-- [`FileField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filefield)
-- [`FilePathField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#filepathfield)
-- [`FloatField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#floatfield)
-- [`ImageField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#imagefield)
-- [`IntegerField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#integerfield)
-- [`GenericIPAddressField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#genericipaddressfield)
-- [`MultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multiplechoicefield)
-- [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#typedmultiplechoicefield)
-- [`NullBooleanField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#nullbooleanfield)
-- [`RegexField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#regexfield)
-- [`SlugField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#slugfield)
-- [`TimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#timefield)
-- [`URLField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#urlfield)
-- [`UUIDField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#uuidfield)
-- [`ComboField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#combofield)
-- [`MultiValueField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#multivaluefield)
-- [`SplitDateTimeField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#splitdatetimefield)
-- [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelmultiplechoicefield)
-- [`ModelChoiceField`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#modelchoicefield)
+- [`BooleanField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#booleanfield)
+- [`CharField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#charfield)
+- [`ChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#choicefield)
+- [`TypedChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#typedchoicefield)
+- [`DateField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#datefield)
+- [`DateTimeField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#datetimefield)
+- [`DecimalField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#decimalfield)
+- [`DurationField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#durationfield)
+- [`EmailField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#emailfield)
+- [`FileField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#filefield)
+- [`FilePathField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#filepathfield)
+- [`FloatField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#floatfield)
+- [`ImageField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#imagefield)
+- [`IntegerField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#integerfield)
+- [`GenericIPAddressField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#genericipaddressfield)
+- [`MultipleChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#multiplechoicefield)
+- [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#typedmultiplechoicefield)
+- [`NullBooleanField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#nullbooleanfield)
+- [`RegexField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#regexfield)
+- [`SlugField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#slugfield)
+- [`TimeField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#timefield)
+- [`URLField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#urlfield)
+- [`UUIDField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#uuidfield)
+- [`ComboField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#combofield)
+- [`MultiValueField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#multivaluefield)
+- [`SplitDateTimeField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#splitdatetimefield)
+- [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#modelmultiplechoicefield)
+- [`ModelChoiceField`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#modelchoicefield)
 
 The arguments that are common to most fields are listed below (these have sensible default values):
 
-- [`required`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#required): If `True`, the field may not be left blank or given a `None` value. Fields are required by default, so you would set `required=False` to allow blank values in the form.
-- [`label`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g. _Renewal date_).
-- [`label_suffix`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g. Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
-- [`initial`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#initial): The initial value for the field when the form is displayed.
-- [`widget`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#widget): The display widget to use.
-- [`help_text`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#help-text) (as seen in the example above): Additional text that can be displayed in forms to explain how to use the field.
-- [`error_messages`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#error-messages): A list of error messages for the field. You can override these with your own messages if needed.
-- [`validators`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#validators): A list of functions that will be called on the field when it is validated.
-- [`localize`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#localize): Enables the localization of form data input (see link for more information).
-- [`disabled`](https://docs.djangoproject.com/en/4.0/ref/forms/fields/#disabled): The field is displayed but its value cannot be edited if this is `True`. The default is `False`.
+- [`required`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#required): If `True`, the field may not be left blank or given a `None` value. Fields are required by default, so you would set `required=False` to allow blank values in the form.
+- [`label`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#label): The label to use when rendering the field in HTML. If a [label](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#label) is not specified, Django will create one from the field name by capitalizing the first letter and replacing underscores with spaces (e.g. _Renewal date_).
+- [`label_suffix`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#label-suffix): By default, a colon is displayed after the label (e.g. Renewal date&ZeroWidthSpace;**:**). This argument allows you to specify a different suffix containing other character(s).
+- [`initial`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#initial): The initial value for the field when the form is displayed.
+- [`widget`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#widget): The display widget to use.
+- [`help_text`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#help-text) (as seen in the example above): Additional text that can be displayed in forms to explain how to use the field.
+- [`error_messages`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#error-messages): A list of error messages for the field. You can override these with your own messages if needed.
+- [`validators`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#validators): A list of functions that will be called on the field when it is validated.
+- [`localize`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#localize): Enables the localization of form data input (see link for more information).
+- [`disabled`](https://docs.djangoproject.com/en/4.2/ref/forms/fields/#disabled): The field is displayed but its value cannot be edited if this is `True`. The default is `False`.
 
 #### Validation
 
@@ -214,9 +214,9 @@ There are two important things to note. The first is that we get our data using 
 This step gets us the data "cleaned" and sanitized of potentially unsafe input using the default validators, and converted into the correct standard type for the data (in this case a Python `datetime.datetime` object).
 
 The second point is that if a value falls outside our range we raise a `ValidationError`, specifying the error text that we want to display in the form if an invalid value is entered.
-The example above also wraps this text in one of Django's [translation functions](https://docs.djangoproject.com/en/4.0/topics/i18n/translation/), `gettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
+The example above also wraps this text in one of Django's [translation functions](https://docs.djangoproject.com/en/4.2/topics/i18n/translation/), `gettext_lazy()` (imported as `_()`), which is good practice if you want to translate your site later.
 
-> **Note:** There are numerous other methods and examples for validating forms in [Form and field validation](https://docs.djangoproject.com/en/4.0/ref/forms/validation/) (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the [Form.clean()](https://docs.djangoproject.com/en/4.0/ref/forms/api/#django.forms.Form.clean) function and again raise a `ValidationError`.
+> **Note:** There are numerous other methods and examples for validating forms in [Form and field validation](https://docs.djangoproject.com/en/4.2/ref/forms/validation/) (Django docs). For example, in cases where you have multiple fields that depend on each other, you can override the [Form.clean()](https://docs.djangoproject.com/en/4.2/ref/forms/api/#django.forms.Form.clean) function and again raise a `ValidationError`.
 
 That's all we need for the form in this example!
 
@@ -285,9 +285,9 @@ def renew_book_librarian(request, pk):
 
 First, we import our form (`RenewBookForm`) and a number of other useful objects/methods used in the body of the view function:
 
-- [`get_object_or_404()`](https://docs.djangoproject.com/en/4.0/topics/http/shortcuts/#get-object-or-404): Returns a specified object from a model based on its primary key value, and raises an `Http404` exception (not found) if the record does not exist.
-- [`HttpResponseRedirect`](https://docs.djangoproject.com/en/4.0/ref/request-response/#django.http.HttpResponseRedirect): This creates a redirect to a specified URL (HTTP status code 302).
-- [`reverse()`](https://docs.djangoproject.com/en/4.0/ref/urlresolvers/#django.urls.reverse): This generates a URL from a URL configuration name and a set of arguments. It is the Python equivalent of the `url` tag that we've been using in our templates.
+- [`get_object_or_404()`](https://docs.djangoproject.com/en/4.2/topics/http/shortcuts/#get-object-or-404): Returns a specified object from a model based on its primary key value, and raises an `Http404` exception (not found) if the record does not exist.
+- [`HttpResponseRedirect`](https://docs.djangoproject.com/en/4.2/ref/request-response/#django.http.HttpResponseRedirect): This creates a redirect to a specified URL (HTTP status code 302).
+- [`reverse()`](https://docs.djangoproject.com/en/4.2/ref/urlresolvers/#django.urls.reverse): This generates a URL from a URL configuration name and a set of arguments. It is the Python equivalent of the `url` tag that we've been using in our templates.
 - [`datetime`](https://docs.python.org/3/library/datetime.html): A Python library for manipulating dates and times.
 
 In the view, we first use the `pk` argument in `get_object_or_404()` to get the current `BookInstance` (if this does not exist, the view will immediately exit and the page will display a "not found" error).
@@ -438,7 +438,7 @@ Perhaps unsurprisingly, when used as shown this provides the default rendering o
       id="id_renewal_date"
       name="renewal_date"
       type="text"
-      value="2016-11-08"
+      value="2023-11-08"
       required />
     <br />
     <span class="helptext">
@@ -463,7 +463,7 @@ If you were to enter an invalid date, you'd additionally get a list of the error
       id="id_renewal_date"
       name="renewal_date"
       type="text"
-      value="2015-11-08"
+      value="2023-11-08"
       required />
     <br />
     <span class="helptext">
@@ -484,7 +484,7 @@ It is also possible to have complete control over the rendering of each part of 
 - `\{{ form.renewal_date.id_for_label }}`: The id of the label.
 - `\{{ form.renewal_date.help_text }}`: The field help text.
 
-For more examples of how to manually render forms in templates and dynamically loop over template fields, see [Working with forms > Rendering fields manually](https://docs.djangoproject.com/en/4.0/topics/forms/#rendering-fields-manually) (Django docs).
+For more examples of how to manually render forms in templates and dynamically loop over template fields, see [Working with forms > Rendering fields manually](https://docs.djangoproject.com/en/4.2/topics/forms/#rendering-fields-manually) (Django docs).
 
 ### Testing the page
 
@@ -542,7 +542,7 @@ The list of all books with renew links will look like this:
 
 Creating a `Form` class using the approach described above is very flexible, allowing you to create whatever sort of form page you like and associate it with any model or models.
 
-However, if you just need a form to map the fields of a _single_ model then your model will already define most of the information that you need in your form: fields, labels, help text and so on. Rather than recreating the model definitions in your form, it is easier to use the [ModelForm](https://docs.djangoproject.com/en/4.0/topics/forms/modelforms/) helper class to create the form from your model. This `ModelForm` can then be used within your views in exactly the same way as an ordinary `Form`.
+However, if you just need a form to map the fields of a _single_ model then your model will already define most of the information that you need in your form: fields, labels, help text and so on. Rather than recreating the model definitions in your form, it is easier to use the [ModelForm](https://docs.djangoproject.com/en/4.2/topics/forms/modelforms/) helper class to create the form from your model. This `ModelForm` can then be used within your views in exactly the same way as an ordinary `Form`.
 
 A basic `ModelForm` containing the same field as our original `RenewBookForm` is shown below. All you need to do to create the form is add `class Meta` with the associated `model` (`BookInstance`) and a list of the model `fields` to include in the form.
 
@@ -609,9 +609,9 @@ The class `RenewBookModelForm` above is now functionally equivalent to our origi
 
 ## Generic editing views
 
-The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating [generic editing views](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/) for creating, editing, and deleting views based on models. Not only do these handle the "view" behavior, but they automatically create the form class (a `ModelForm`) for you from the model.
+The form handling algorithm we used in our function view example above represents an extremely common pattern in form editing views. Django abstracts much of this "boilerplate" for you, by creating [generic editing views](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) for creating, editing, and deleting views based on models. Not only do these handle the "view" behavior, but they automatically create the form class (a `ModelForm`) for you from the model.
 
-> **Note:** In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs. "coding effort". Using `FormView`, you still need to create your `Form`, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.
+> **Note:** In addition to the editing views described here, there is also a [FormView](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/#formview) class, which lies somewhere between our function view and the other generic views in terms of "flexibility" vs. "coding effort". Using `FormView`, you still need to create your `Form`, but you don't have to implement all of the standard form-handling patterns. Instead, you just have to provide an implementation of the function that will be called once the submission is known to be valid.
 
 In this section, we're going to use generic editing views to create pages to add functionality to create, edit, and delete `Author` records from our library — effectively providing a basic reimplementation of parts of the Admin site (this could be useful if you need to offer admin functionality in a more flexible way than can be provided by the admin site).
 
@@ -622,28 +622,61 @@ Open the views file (**locallibrary/catalog/views.py**) and append the following
 ```python
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from .models import Author
 
-from catalog.models import Author
-
-class AuthorCreate(CreateView):
+class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
-    initial = {'date_of_death': '11/06/2020'}
+    initial = {'date_of_death': '11/11/2023'}
+    permission_required = 'catalog.add_author'
 
-class AuthorUpdate(UpdateView):
+class AuthorUpdate(PermissionRequiredMixin, UpdateView):
     model = Author
-    fields = '__all__' # Not recommended (potential security issue if more fields added)
+    # Not recommended (potential security issue if more fields added)
+    fields = '__all__'
+    permission_required = 'catalog.change_author'
 
-class AuthorDelete(DeleteView):
+class AuthorDelete(PermissionRequiredMixin, DeleteView):
     model = Author
     success_url = reverse_lazy('authors')
+    permission_required = 'catalog.delete_author'
+
+    def form_valid(self, form):
+        try:
+            self.object.delete()
+            return HttpResponseRedirect(self.success_url)
+        except Exception as e:
+            return HttpResponseRedirect(
+                reverse("author-delete", kwargs={"pk": self.object.pk})
+            )
 ```
 
 As you can see, to create, update, or delete the views you need to derive from `CreateView`, `UpdateView`, and `DeleteView` (respectively) and then define the associated model.
+We also restrict calling these views to only logged in users with the `add_author`, `change_author`, and `delete_author` permissions, respectively.
 
-For the "create" and "update" cases you also need to specify the fields to display in the form (using the same syntax as for `ModelForm`). In this case, we show how to list them individually and the syntax to list "all" fields. You can also specify initial values for each of the fields using a dictionary of _field_name_/_value_ pairs (here we arbitrarily set the date of death for demonstration purposes — you might want to remove that). By default, these views will redirect on success to a page displaying the newly created/edited model item, which in our case will be the author detail view we created in a previous tutorial. You can specify an alternative redirect location by explicitly declaring parameter `success_url` (as done for the `AuthorDelete` class).
+For the "create" and "update" cases you also need to specify the fields to display in the form (using the same syntax as for `ModelForm`). In this case, we show how to list them individually and the syntax to list "all" fields. You can also specify initial values for each of the fields using a dictionary of _field_name_/_value_ pairs (here we arbitrarily set the date of death for demonstration purposes — you might want to remove that). By default, these views will redirect on success to a page displaying the newly created/edited model item, which in our case will be the author detail view we created in a previous tutorial. You can specify an alternative redirect location by explicitly declaring parameter `success_url`.
 
-The `AuthorDelete` class doesn't need to display any of the fields, so these don't need to be specified. You do however need to specify the `success_url`, because there is no obvious default value for Django to use. In this case, we use the [`reverse_lazy()`](https://docs.djangoproject.com/en/4.0/ref/urlresolvers/#reverse-lazy) function to redirect to our author list after an author has been deleted — `reverse_lazy()` is a lazily executed version of `reverse()`, used here because we're providing a URL to a class-based view attribute.
+The `AuthorDelete` class doesn't need to display any of the fields, so these don't need to be specified.
+We so set a `success_url` (as shown above), because there is no obvious default URL for Django to navigate to after successfully deleting the `Author`. Above we use the [`reverse_lazy()`](https://docs.djangoproject.com/en/4.2/ref/urlresolvers/#reverse-lazy) function to redirect to our author list after an author has been deleted — `reverse_lazy()` is a lazily executed version of `reverse()`, used here because we're providing a URL to a class-based view attribute.
+
+If deletion of authors should always succeed that would be it.
+Unfortunately deleting an `Author` will cause an exception if the author has an associated book, because our [`Book` model](/en-US/docs/Learn/Server-side/Django/Models#book_model) specifies `on_delete=models.RESTRICT` for the author `ForeignKey` field.
+To handle this case the view overrides the [`form_valid()`](https://docs.djangoproject.com/en/4.2/ref/class-based-views/mixins-editing/#django.views.generic.edit.FormMixin.form_valid) method so that if deleting the `Author` succeeds it redirects to the `success_url`, but if not, it just redirects back to the same form.
+We'll update the template below to make clear that you can't delete an `Author` instance that is used in any `Book`.
+
+### URL configurations
+
+Open your URL configuration file (**locallibrary/catalog/urls.py**) and add the following configuration to the bottom of the file:
+
+```python
+urlpatterns += [
+    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
+    path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author-update'),
+    path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author-delete'),
+]
+```
+
+There is nothing particularly new here! You can see that the views are classes, and must hence be called via `.as_view()`, and you should be able to recognize the URL patterns in each case. We must use `pk` as the name for our captured primary key value, as this is the parameter name expected by the view classes.
 
 ### Templates
 
@@ -667,62 +700,112 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view). Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
+The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view).
+Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```django
 {% extends "base_generic.html" %}
 
 {% block content %}
 
-<h1>Delete Author</h1>
+<h1>Delete Author: \{{ author }}</h1>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
+{% if author.book_set.all %}
+
+<p>You can't delete this author until all their books have been deleted:</p>
+<ul>
+  {% for book in author.book_set.all %}
+    <li><a href="{% url 'book-detail' book.pk %}">\{{book}}</a> (\{{book.bookinstance_set.all.count}})</li>
+  {% endfor %}
+</ul>
+
+{% else %}
+<p>Are you sure you want to delete the author?</p>
 
 <form action="" method="POST">
   {% csrf_token %}
-  <input type="submit" value="Yes, delete." />
+  <input type="submit" action="" value="Yes, delete.">
 </form>
+{% endif %}
 
 {% endblock %}
 ```
 
-### URL configurations
+The template should be familiar.
+It first checks if the author is used in any books, and if so displays the list of books that must be deleted before the author record can be deleted.
+If not, it displays a form asking the user to confirm they want to delete the author record.
 
-Open your URL configuration file (**locallibrary/catalog/urls.py**) and add the following configuration to the bottom of the file:
+The final step is to hook the pages into the sidebar.
+First we'll add a link for creating the author into the _base template_, so that it is visible in all pages for logged in users who are considered "staff" and who have permission to create authors (`catalog.add_author`).
+Open **/locallibrary/catalog/templates/base_generic.html** and add the lines that allow users with the permission to create the author (in the same block as the link that shows "All Borrowed" books).
+Remember to reference the URL using it's name `'author-create'` as shown below.
 
-```python
-urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
-    path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author-update'),
-    path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author-delete'),
-]
+```django
+{% if user.is_staff %}
+<hr>
+<ul class="sidebar-nav">
+<li>Staff</li>
+   <li><a href="{% url 'all-borrowed' %}">All borrowed</a></li>
+{% if perms.catalog.add_author %}
+   <li><a href="{% url 'author-create' %}">Create author</a></li>
+{% endif %}
+</ul>
+{% endif %}
 ```
 
-There is nothing particularly new here! You can see that the views are classes, and must hence be called via `.as_view()`, and you should be able to recognize the URL patterns in each case. We must use `pk` as the name for our captured primary key value, as this is the parameter name expected by the view classes.
+We'll add the links to update and delete authors to the author detail page.
+Open **catalog/templates/catalog/author_detail.html** and append the following code:
 
-The author create, update, and delete pages are now ready to test (we won't bother hooking them into the site sidebar in this case, although you can do so if you wish).
+```django
+{% block sidebar %}
+  \{{ block.super }}
 
-> **Note:** Observant users will have noticed that we didn't do anything to prevent unauthorized users from accessing the pages! We leave that as an exercise for you (hint: you could use the `PermissionRequiredMixin` and either create a new permission or reuse our `can_mark_returned` permission).
+  {% if perms.catalog.change_author or perms.catalog.delete_author %}
+  <hr>
+  <ul class="sidebar-nav">
+    {% if perms.catalog.change_author %}
+      <li><a href="{% url 'author-update' author.id %}">Update author</a></li>
+    {% endif %}
+    {% if not author.book_set.all and perms.catalog.delete_author %}
+      <li><a href="{% url 'author-delete' author.id %}">Delete author</a></li>
+    {% endif %}
+    </ul>
+  {% endif %}
+
+{% endblock %}
+```
+
+This block overrides the `sidebar` block in the base template and then pulls in the original content using `\{{ block.super }}`.
+It then appends links to update or delete the author, but when the user has the correct permissions and the author record isn't associated with any books.
+
+The pages are now ready to test!
 
 ### Testing the page
 
-First, log in to the site with an account that has whatever permissions you decided are needed to access the author editing pages.
+First, log in to the site with an account that has author add, change and delete permissions.
 
-Then navigate to the author create page, `http://127.0.0.1:8000/catalog/author/create/`, which should look like the screenshot below.
+Navigate to any page, and select "Create author" in the sidebar (with URL `http://127.0.0.1:8000/catalog/author/create/`).
+The page should look like the screenshot below.
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
+Enter values for the fields and then press **Submit** to save the author record.
+You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot because it looks just like the "create" page!
+![Form Example: Author Detail showing Update and Delete links](forms_example_detail_author_update.png)
 
-Finally, we can delete the page by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
+You can test editing the record by selecting the "Update author" link (with URL something like `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot because it looks just like the "create" page!
+
+Finally, we can delete the page by selecting "Delete author" from the sidebar on the detail page.
+Django should display the delete page shown below if the author record isn't used in any books.
+Press "**Yes, delete.**" to remove the record and be taken to the list of all authors.
 
 ![Form with option to delete author](forms_example_delete_author.png)
 
 ## Challenge yourself
 
-Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors`. If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
+Create some forms to create, edit, and delete `Book` records. You can use exactly the same structure as for `Authors` (for the deletion, remember that you can't delete a `Book` until all its associated `BookInstance` records are deleted) and you must use the correct permissions.
+If your **book_form.html** template is just a copy-renamed version of the **author_form.html** template, then the new "create book" page will look like the screenshot below:
 
 ![Screenshot displaying various fields in the form like title, author, summary, ISBN, genre and language](forms_example_create_book.png)
 
@@ -734,13 +817,13 @@ There is a lot more that can be done with forms (check out our [See also](#see_a
 
 ## See also
 
-- [Working with forms](https://docs.djangoproject.com/en/4.0/topics/forms/) (Django docs)
-- [Writing your first Django app, part 4 > Writing a simple form](https://docs.djangoproject.com/en/4.0/intro/tutorial04/#write-a-simple-form) (Django docs)
-- [The Forms API](https://docs.djangoproject.com/en/4.0/ref/forms/api/) (Django docs)
-- [Form fields](https://docs.djangoproject.com/en/4.0/ref/forms/fields/) (Django docs)
-- [Form and field validation](https://docs.djangoproject.com/en/4.0/ref/forms/validation/) (Django docs)
-- [Form handling with class-based views](https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/) (Django docs)
-- [Creating forms from models](https://docs.djangoproject.com/en/4.0/topics/forms/modelforms/) (Django docs)
-- [Generic editing views](https://docs.djangoproject.com/en/4.0/ref/class-based-views/generic-editing/) (Django docs)
+- [Working with forms](https://docs.djangoproject.com/en/4.2/topics/forms/) (Django docs)
+- [Writing your first Django app, part 4 > Writing a simple form](https://docs.djangoproject.com/en/4.2/intro/tutorial04/#write-a-simple-form) (Django docs)
+- [The Forms API](https://docs.djangoproject.com/en/4.2/ref/forms/api/) (Django docs)
+- [Form fields](https://docs.djangoproject.com/en/4.2/ref/forms/fields/) (Django docs)
+- [Form and field validation](https://docs.djangoproject.com/en/4.2/ref/forms/validation/) (Django docs)
+- [Form handling with class-based views](https://docs.djangoproject.com/en/4.2/topics/class-based-views/generic-editing/) (Django docs)
+- [Creating forms from models](https://docs.djangoproject.com/en/4.2/topics/forms/modelforms/) (Django docs)
+- [Generic editing views](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}

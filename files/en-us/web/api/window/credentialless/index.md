@@ -5,11 +5,10 @@ slug: Web/API/Window/credentialless
 page-type: web-api-instance-property
 status:
   - experimental
-  - non-standard
 browser-compat: api.Window.credentialless
 ---
 
-{{APIRef}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef}}{{SeeCompatTable}}
 
 The **`window.credentialless`** read-only property returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}, meaning that it is loaded in a new, ephemeral context.
 

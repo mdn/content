@@ -21,7 +21,7 @@ A {{domxref("Headers")}} object.
 In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/))
 we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
 We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}},
-create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
+create an object URL out of it using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and display this in an {{htmlelement("img")}}.
 
 Note that at the top of the `fetch()` block, we log the response headers to the console.
 
@@ -30,14 +30,15 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then((response) => {
-  // for each response header, log an array with header name as key
-  console.log(...response.headers);
-  response.blob().then((myBlob) => {
+fetch(myRequest)
+  .then((response) => {
+    console.log("response.headers =", response.headers);
+    return response.blob();
+  })
+  .then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
-});
 ```
 
 ## Specifications

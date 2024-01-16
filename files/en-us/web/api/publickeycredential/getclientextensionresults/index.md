@@ -38,14 +38,14 @@ A {{jsxref("Map", "map")}}, with each entry being an extensions' identifier stri
 const publicKey = {
   // Here are the extension "inputs"
   extensions: {
-    appid: "https://accounts.example.com"
+    appid: "https://accounts.example.com",
   },
   allowCredentials: {
     id: "fgrt46jfgd...",
-    transports: ["usb", "nfc"]
-    type: "public-key"
+    transports: ["usb", "nfc"],
+    type: "public-key",
   },
-  challenge: new Uint8Array(16) /* from the server */
+  challenge: new Uint8Array(16) /* from the server */,
 };
 
 navigator.credentials

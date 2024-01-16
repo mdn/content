@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.URL.createObjectURL_static
 ---
 
-{{APIRef("URL API")}}
+{{APIRef("File API")}}
 
 The **`URL.createObjectURL()`** static
 method creates a string containing a URL representing the object
@@ -16,9 +16,9 @@ The URL lifetime is tied to the {{domxref("document")}}
 in the window on which it was created. The new object URL represents the specified
 {{domxref("File")}} object or {{domxref("Blob")}} object.
 
-To release an object URL, call {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}.
+To release an object URL, call {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
 
-{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}
 
 > **Note:** This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
 > potential to create memory leaks.
@@ -50,7 +50,7 @@ See [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_fil
 
 Each time you call `createObjectURL()`, a new object URL is created, even if
 you've already created one for the same object. Each of these must be released by
-calling {{domxref("URL.revokeObjectURL()")}} when you no longer need them.
+calling {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} when you no longer need them.
 
 Browsers will release object URLs automatically when the document is unloaded; however,
 for optimal performance and memory usage, if there are safe times when you can
@@ -64,7 +64,7 @@ In older versions of the Media Source specification, attaching a stream to a
 support for doing this.
 
 > **Warning:** If you still have code that relies on
-> {{domxref("URL.createObjectURL", "createObjectURL()")}} to attach streams to media
+> {{domxref("URL.createObjectURL_static", "createObjectURL()")}} to attach streams to media
 > elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
 ## Specifications
@@ -79,6 +79,6 @@ support for doing this.
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [Using object URLs to display images](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#example_using_object_urls_to_display_images)
-- {{domxref("URL.revokeObjectURL()")}}
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

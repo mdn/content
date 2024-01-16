@@ -1,6 +1,7 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `contains` function determines whether the first argument string contains th
 
 ### Syntax
 
-```
+```plain
 contains(haystack, needle)
 ```
 

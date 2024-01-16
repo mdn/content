@@ -7,7 +7,7 @@ browser-compat: css.selectors.first-line
 
 {{CSSRef}}
 
-The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block-level element](/en-US/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes).
+The **`::first-line`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) applies styles to the first line of a [block container](/en-US/docs/Web/CSS/Visual_formatting_model#block_containers).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-first-line.html", "tabbed-shorter")}}
 

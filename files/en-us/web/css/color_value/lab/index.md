@@ -22,23 +22,18 @@ lab(52.2345% 40.1645 59.9971 / .5);
 Functional notation: `lab(L a b[ / A])`
 
 - `L`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100` or a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which specifies the CIE Lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
 - `a`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `a` axis in the Lab colorspace, that is how green/red the color is.
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`, which specifies the distance along the `a` axis in the CIELAB colorspace, that is how green/red the color is.
 - `b`
-
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125` or a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, specifying the distance along the `b` axis in the Lab colorspace, that is how blue/yellow the color is.
-
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`, which specifies the distance along the `b` axis in the CIELAB colorspace, that is how blue/yellow the color is.
 - `A` {{optional_inline}}
-
-  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
 > This case is notable where `100%` is equal to the number `100` for the `L` value and `125` for the `a` and `b` values.
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 

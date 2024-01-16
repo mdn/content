@@ -48,67 +48,64 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ## Examples
 
-In this simple example, we declare both an {{domxref("AudioContext")}} and an `OfflineAudioContext` object. We use the `AudioContext` to load an audio track via XHR ({{domxref("BaseAudioContext.decodeAudioData")}}), then the `OfflineAudioContext` to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, you need to render it to an {{domxref("AudioBuffer")}} using {{domxref("OfflineAudioContext.startRendering")}}.
+### Playing audio with an offline audio context
+
+In this example, we declare both an {{domxref("AudioContext")}} and an `OfflineAudioContext` object. We use the `AudioContext` to load an audio track {{domxref("fetch()")}}, then the `OfflineAudioContext` to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, we render it to an {{domxref("AudioBuffer")}} using `OfflineAudioContext.startRendering()`.
 
 When the `startRendering()` promise resolves, rendering has completed and the output `AudioBuffer` is returned out of the promise.
 
 At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise `AudioBuffer`. This is then played as part of a simple standard audio graph.
 
-> **Note:** For a working example, see our [offline-audio-context-promise](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/) GitHub repo (see the [source code](https://github.com/mdn/webaudio-examples/tree/master/offline-audio-context-promise) too.)
+> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/).
 
 ```js
-// define online and offline audio context
-
-const audioCtx = new AudioContext();
+// Define both online and offline audio contexts
+let audioCtx; // Must be initialized after a user interaction
 const offlineCtx = new OfflineAudioContext(2, 44100 * 40, 44100);
 
-source = offlineCtx.createBufferSource();
-
-// use XHR to load an audio track, and
-// decodeAudioData to decode it and OfflineAudioContext to render it
+// Define constants for dom nodes
+const play = document.querySelector("#play");
 
 function getData() {
-  request = new XMLHttpRequest();
-
-  request.open("GET", "viper.ogg", true);
-
-  request.responseType = "arraybuffer";
-
-  request.onload = () => {
-    const audioData = request.response;
-
-    audioCtx.decodeAudioData(audioData, (buffer) => {
-      myBuffer = buffer;
-      source.buffer = myBuffer;
+  // Fetch an audio track, decode it and stick it in a buffer.
+  // Then we put the buffer into the source and can play it.
+  fetch("viper.ogg")
+    .then((response) => response.arrayBuffer())
+    .then((downloadedBuffer) => audioCtx.decodeAudioData(downloadedBuffer))
+    .then((decodedBuffer) => {
+      console.log("File downloaded successfully.");
+      const source = new AudioBufferSourceNode(offlineCtx, {
+        buffer: decodedBuffer,
+      });
       source.connect(offlineCtx.destination);
-      source.start();
-      //source.loop = true;
-      offlineCtx
-        .startRendering()
-        .then((renderedBuffer) => {
-          console.log("Rendering completed successfully");
-          const song = audioCtx.createBufferSource();
-          song.buffer = renderedBuffer;
+      return source.start();
+    })
+    .then(() => offlineCtx.startRendering())
+    .then((renderedBuffer) => {
+      console.log("Rendering completed successfully.");
+      play.disabled = false;
+      const song = new AudioBufferSourceNode(audioCtx, {
+        buffer: renderedBuffer,
+      });
+      song.connect(audioCtx.destination);
 
-          song.connect(audioCtx.destination);
-
-          play.onclick = () => {
-            song.start();
-          };
-        })
-        .catch((err) => {
-          console.error(`Rendering failed: ${err}`);
-          // Note: The promise should reject when startRendering is called a second time on an OfflineAudioContext
-        });
+      // Start the song
+      song.start();
+    })
+    .catch((err) => {
+      console.error(`Error encountered: ${err}`);
     });
-  };
-
-  request.send();
 }
 
-// Run getData to start the process off
+// Activate the play button
+play.onclick = () => {
+  play.disabled = true;
+  // We can initialize the context as the user clicked.
+  audioCtx = new AudioContext();
 
-getData();
+  // Fetch the data and start the song
+  getData();
+};
 ```
 
 ## Specifications

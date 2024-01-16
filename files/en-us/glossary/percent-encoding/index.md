@@ -39,3 +39,4 @@ Depending on the context, the character `' '` is translated to a `'+'` (like in 
 
 - Definition of [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) in Wikipedia.
 - {{RFC(3986)}}, section 2.1, where this encoding is defined.
+- [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) and [`encodeURIComponent()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) — functions to percent-encode URLs

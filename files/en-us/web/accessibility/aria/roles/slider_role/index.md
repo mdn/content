@@ -36,7 +36,7 @@ The [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valueno
 
 For `slider`, unless using the [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) element, the `aria-valuenow` value must be updated programmatically when the user updates the value.
 
-The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small thru to XX-large as the `aria-valuenow` increases.
+The optional [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) attribute is included when the `aria-valuenow` numeric value doesn't reflect the intended value of the slider. As the minimum, maximum, and current values are all numeric, when the values those numbers represent are not numeric, the `aria-valuetext` attribute should be included with a string value defining the numeric value. For example, if using a slider for t-shirt sizes, the `aria-valuetext` attribute should shift from xx-small through to XX-large as the `aria-valuenow` increases.
 
 The `aria-valuetext` value must be updated as the `value` or `aria-valuenow` is updated. While there is no equivalent HTML attribute for `<input type="range">`, you can include `aria-valuetext` on any {{htmlelement('input')}} type. ARIA attributes are supported on semantic HTML elements.
 
@@ -214,6 +214,6 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

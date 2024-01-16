@@ -1,6 +1,7 @@
 ---
 title: Firefox 95 for developers
 slug: Mozilla/Firefox/Releases/95
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}

@@ -33,12 +33,12 @@ For example, all the following are eTLD+1 domains:
 
 This means that all domains under each of these domains belong to the same organization. For example:
 
-```
+```plain
  film.theguardian.com
 music.theguardian.com
 ```
 
-```
+```plain
       news.sussex.ac.uk
       blog.sussex.ac.uk
 admissions.sussex.ac.uk

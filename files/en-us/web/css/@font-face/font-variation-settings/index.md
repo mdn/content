@@ -26,7 +26,7 @@ font-variation-settings: "xhgt" 0.7;
 - `normal`
   - : Text is laid out using default settings.
 - `<string> <number>`
-  - : When rendering text, the list of OpenType axis names is passed to the text layout engine to enable or disable font features. Each setting is always a {{cssxref("&lt;string&gt;")}} of 4 ASCII characters, followed by a {{cssxref("number")}} indicating the axis value. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E code point range, the whole property is invalid. The `<number>` can be fractional or negative.
+  - : When rendering text, the list of OpenType axis names is passed to the text layout engine to enable or disable font features. Each setting is always a {{cssxref("&lt;string&gt;")}} of 4 {{Glossary("ASCII")}} characters, followed by a {{cssxref("number")}} indicating the axis value. If the `<string>` has more or fewer characters or contains characters outside the U+20 - U+7E code point range, the whole property is invalid. The `<number>` can be fractional or negative.
 
 ## Formal definition
 
@@ -46,7 +46,9 @@ font-variation-settings: "xhgt" 0.7;
   src: url("open_type_font.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-  font-variation-settings: "wght" 400, "wdth" 300;
+  font-variation-settings:
+    "wght" 400,
+    "wdth" 300;
 }
 ```
 

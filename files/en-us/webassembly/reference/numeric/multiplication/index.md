@@ -1,6 +1,7 @@
 ---
 title: Multiplication
 slug: WebAssembly/Reference/Numeric/Multiplication
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

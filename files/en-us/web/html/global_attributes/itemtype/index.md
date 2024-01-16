@@ -32,7 +32,7 @@ This example uses microdata attributes to represent structured data for a produc
     <tr>
       <td rowspan="7">itemscope</td>
       <td>itemtype</td>
-      <td colspan="2">Product (http://schema.org/Product)</td>
+      <td colspan="2">Product (https://schema.org/Product)</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -88,7 +88,7 @@ This example uses microdata attributes to represent structured data for a produc
     <tr>
       <td>itemprop</td>
       <td>offers [Offer]</td>
-      <td>http://schema.org/Offer</td>
+      <td>https://schema.org/Offer</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -108,18 +108,18 @@ This example uses microdata attributes to represent structured data for a produc
     <tr>
       <td>itemprop</td>
       <td>itemCondition</td>
-      <td>http://schema.org/UsedCondition</td>
+      <td>https://schema.org/UsedCondition</td>
     </tr>
     <tr>
       <td>itemprop</td>
       <td>availability</td>
-      <td>http://schema.org/InStock</td>
+      <td>https://schema.org/InStock</td>
     </tr>
     <tr>
       <td rowspan="2">itemscope</td>
       <td>itemprop[itemtype]</td>
       <td>seller [Organization]</td>
-      <td>http://schema.org/Organization</td>
+      <td>https://schema.org/Organization</td>
     </tr>
     <tr>
       <td>itemprop</td>
@@ -134,7 +134,7 @@ This example uses microdata attributes to represent structured data for a produc
 #### HTML
 
 ```html
-<div itemscope itemtype="http://schema.org/Product">
+<div itemscope itemtype="https://schema.org/Product">
   <span itemprop="brand">ACME<br /></span>
   <span itemprop="name">Executive Anvil<br /></span>
   <img
@@ -154,12 +154,12 @@ This example uses microdata attributes to represent structured data for a produc
   <span
     itemprop="aggregateRating"
     itemscope
-    itemtype="http://schema.org/AggregateRating">
+    itemtype="https://schema.org/AggregateRating">
     Rating: <span itemprop="ratingValue">4.4</span> stars, based on
     <span itemprop="reviewCount">89 </span> reviews
   </span>
   <p>
-    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
       Regular price: $179.99<br />
       <meta itemprop="priceCurrency" content="USD" />
       <span itemprop="price">Sale price: $119.99<br /></span>
@@ -170,16 +170,16 @@ This example uses microdata attributes to represent structured data for a produc
       <span
         itemprop="seller"
         itemscope
-        itemtype="http://schema.org/Organization">
+        itemtype="https://schema.org/Organization">
         <span itemprop="name">Executive Objects<br /></span>
       </span>
       Condition:
       <link
         itemprop="itemCondition"
-        href="http://schema.org/UsedCondition" />Previously owned, in excellent
+        href="https://schema.org/UsedCondition" />Previously owned, in excellent
       condition<br />
-      <link itemprop="availability" href="http://schema.org/InStock" />In stock!
-      Order now!
+      <link itemprop="availability" href="https://schema.org/InStock" />In
+      stock! Order now!
     </span>
   </p>
 </div>

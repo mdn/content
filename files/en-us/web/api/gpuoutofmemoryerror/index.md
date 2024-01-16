@@ -27,7 +27,7 @@ Out-of-memory errors should be relatively rare in a well-behaved app but are les
 The `message` property is inherited from its parent, {{domxref("GPUError")}}:
 
 - {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : A string providing a human-readable message that explains why the error ocurred.
+  - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: <xsl:include>
 slug: Web/XSLT/Element/include
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

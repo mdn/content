@@ -36,7 +36,7 @@ None.
 ### Return the number of entries in the history
 
 ```js
-let numOfEntries = Navigation.entries().length - 1;
+let numOfEntries = navigation.entries().length - 1;
 ```
 
 ### A smart back button

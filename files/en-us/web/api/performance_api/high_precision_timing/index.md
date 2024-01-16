@@ -26,7 +26,7 @@ The `performance.now()` method (and all other `DOMHighResTimeStamp` values) prov
 
 ```js
 Date.now(); // 1678889977578
-Performance.now(); // 233936
+performance.now(); // 233936
 ```
 
 For measuring performance, calculating precise frame rates (FPS), animation loops, etc., use monotonically increasing high resolution time available with {{domxref("Performance.now()")}} instead of JavaScript's {{jsxref("Date.now()")}}.

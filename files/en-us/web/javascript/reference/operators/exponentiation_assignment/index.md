@@ -7,7 +7,7 @@ browser-compat: javascript.operators.exponentiation_assignment
 
 {{jsSidebar("Operators")}}
 
-The **exponentiation assignment (`**=`)** operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
+The **exponentiation assignment (`**=`)\*\* operator performs [exponentiation](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation) on the two operands and assigns the result to the left operand.
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
@@ -19,7 +19,7 @@ x **= y
 
 ## Description
 
-`x **= y` is equivalent to `x = x ** y`.
+`x **= y` is equivalent to `x = x ** y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -46,4 +46,4 @@ foo **= 2n; // 9n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

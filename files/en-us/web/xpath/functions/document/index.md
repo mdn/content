@@ -1,6 +1,7 @@
 ---
 title: document
 slug: Web/XPath/Functions/document
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `document` finds a node-set in an external document, or multiple external do
 
 ### Syntax
 
-```
+```plain
 document( URI [,node-set] )
 ```
 

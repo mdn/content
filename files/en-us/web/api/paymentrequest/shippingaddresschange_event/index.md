@@ -52,7 +52,7 @@ paymentRequest.addEventListener(
     let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
     event.updateWith(detailsUpdate);
   },
-  false
+  false,
 );
 
 const checkAddress = (theAddress) => {

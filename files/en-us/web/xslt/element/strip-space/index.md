@@ -1,6 +1,7 @@
 ---
 title: <xsl:strip-space>
 slug: Web/XSLT/Element/strip-space
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

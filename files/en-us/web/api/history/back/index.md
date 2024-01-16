@@ -8,7 +8,7 @@ browser-compat: api.History.back
 
 {{APIRef("History API")}}
 
-The **`History.back()`** method causes
+The **`back()`** method of the {{domxref("History")}} interface causes
 the browser to move back one page in the session history.
 
 It has the same
@@ -31,6 +31,11 @@ None.
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
 
 ## Examples
 

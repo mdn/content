@@ -61,7 +61,7 @@ const ndefReader = new NDEFReader();
 await ndefReader.scan();
 ndefReader.onreading = (event) => {
   const externalRecord = event.message.records.find(
-    (record) => record.type === "example.com:smart-poster"
+    (record) => record.type === "example.com:smart-poster",
   );
 
   let action, text;

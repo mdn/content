@@ -52,7 +52,7 @@ if ("PasswordCredential" in window) {
     },
     (err) => {
       console.error("Error while storing the credential: ", err);
-    }
+    },
   );
 }
 ```

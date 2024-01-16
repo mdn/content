@@ -99,7 +99,7 @@ ext.multiDrawElementsWEBGL(
   gl.UNSIGNED_SHORT,
   offsets,
   0,
-  counts.length
+  counts.length,
 );
 ```
 

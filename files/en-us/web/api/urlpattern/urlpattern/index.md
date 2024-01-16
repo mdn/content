@@ -45,8 +45,8 @@ new URLPattern(input, baseURL, options)
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
 - `options` {{Optional_Inline}}
   - : An object providing options for matching the given pattern. The possible object members are as follows:
-    - `ignoreCase`
-      - Enables case-insensitive matching if set to `true`. If omitted or set to `false`, matching will be case-sensitive.
+    - `ignoreCase` {{Optional_Inline}}
+      - : Enables case-insensitive matching if set to `true`. If omitted or set to `false`, matching will be case-sensitive.
 
 ### Exceptions
 

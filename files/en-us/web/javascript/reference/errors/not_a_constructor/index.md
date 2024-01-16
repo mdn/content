@@ -1,5 +1,5 @@
 ---
-title: "TypeError: \"x\" is not a constructor"
+title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
 page-type: javascript-error
 ---
@@ -12,7 +12,7 @@ constructor.
 
 ## Message
 
-```
+```plain
 TypeError: x is not a constructor (V8-based & Firefox & Safari)
 ```
 
@@ -112,4 +112,4 @@ const rejectAlways = () => {
 ## See also
 
 - [constructor](/en-US/docs/Glossary/Constructor)
-- [`new` operator](/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)

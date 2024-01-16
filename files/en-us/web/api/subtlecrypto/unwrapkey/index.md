@@ -155,7 +155,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -180,7 +180,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-KW", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -202,7 +202,7 @@ async function unwrapSecretKey(wrappedKey) {
     "AES-KW", // algorithm identifier for key encryption key
     "AES-GCM", // algorithm identifier for key to unwrap
     true, // extractability of key to unwrap
-    ["encrypt", "decrypt"] // key usages for key to unwrap
+    ["encrypt", "decrypt"], // key usages for key to unwrap
   );
 }
 ```
@@ -347,7 +347,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -372,7 +372,7 @@ async function getUnwrappingKey() {
     keyMaterial,
     { name: "AES-GCM", length: 256 },
     true,
-    ["wrapKey", "unwrapKey"]
+    ["wrapKey", "unwrapKey"],
   );
 }
 
@@ -405,7 +405,7 @@ async function unwrapPrivateKey(wrappedKey) {
       hash: "SHA-256",
     },
     true, // extractability of key to unwrap
-    ["sign"] // key usages for key to unwrap
+    ["sign"], // key usages for key to unwrap
   );
 }
 ```

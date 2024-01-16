@@ -6,10 +6,10 @@ page-type: web-api-global-function
 browser-compat: api.btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`btoa()`** method creates a
-{{glossary("Base64")}}-encoded ASCII string from a _binary string_ (i.e., a
+{{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
 string in which each character in the string is treated as a byte
 of binary data).
 

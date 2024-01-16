@@ -25,19 +25,36 @@ When creating an instance of a `TypedArray` subclass (e.g. `Int8Array`), an arra
 
 ### TypedArray objects
 
-| Type                            | Value Range                                                     | Size in bytes | Description                                                                        | Web IDL type          | Equivalent C type               |
-| ------------------------------- | --------------------------------------------------------------- | ------------- | ---------------------------------------------------------------------------------- | --------------------- | ------------------------------- |
-| {{jsxref("Int8Array")}}         | -128 to 127                                                     | 1             | 8-bit two's complement signed integer                                              | `byte`                | `int8_t`                        |
-| {{jsxref("Uint8Array")}}        | 0 to 255                                                        | 1             | 8-bit unsigned integer                                                             | `octet`               | `uint8_t`                       |
-| {{jsxref("Uint8ClampedArray")}} | 0 to 255                                                        | 1             | 8-bit unsigned integer (clamped)                                                   | `octet`               | `uint8_t`                       |
-| {{jsxref("Int16Array")}}        | -32768 to 32767                                                 | 2             | 16-bit two's complement signed integer                                             | `short`               | `int16_t`                       |
-| {{jsxref("Uint16Array")}}       | 0 to 65535                                                      | 2             | 16-bit unsigned integer                                                            | `unsigned short`      | `uint16_t`                      |
-| {{jsxref("Int32Array")}}        | -2147483648 to 2147483647                                       | 4             | 32-bit two's complement signed integer                                             | `long`                | `int32_t`                       |
-| {{jsxref("Uint32Array")}}       | 0 to 4294967295                                                 | 4             | 32-bit unsigned integer                                                            | `unsigned long`       | `uint32_t`                      |
-| {{jsxref("Float32Array")}}      | `-3.4E38` to `3.4E38` and `1.2E-38` is the min positive number  | 4             | 32-bit IEEE floating point number (7 significant digits e.g., `1.234567`)          | `unrestricted float`  | `float`                         |
-| {{jsxref("Float64Array")}}      | `-1.8E308` to `1.8E308` and `5E-324` is the min positive number | 8             | 64-bit IEEE floating point number (16 significant digits e.g., `1.23456789012345`) | `unrestricted double` | `double`                        |
-| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1                           | 8             | 64-bit two's complement signed integer                                             | `bigint`              | `int64_t (signed long long)`    |
-| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1                                         | 8             | 64-bit unsigned integer                                                            | `bigint`              | `uint64_t (unsigned long long)` |
+| Type                            | Value Range                           | Size in bytes | Web IDL type          |
+| ------------------------------- | ------------------------------------- | ------------- | --------------------- |
+| {{jsxref("Int8Array")}}         | -128 to 127                           | 1             | `byte`                |
+| {{jsxref("Uint8Array")}}        | 0 to 255                              | 1             | `octet`               |
+| {{jsxref("Uint8ClampedArray")}} | 0 to 255                              | 1             | `octet`               |
+| {{jsxref("Int16Array")}}        | -32768 to 32767                       | 2             | `short`               |
+| {{jsxref("Uint16Array")}}       | 0 to 65535                            | 2             | `unsigned short`      |
+| {{jsxref("Int32Array")}}        | -2147483648 to 2147483647             | 4             | `long`                |
+| {{jsxref("Uint32Array")}}       | 0 to 4294967295                       | 4             | `unsigned long`       |
+| {{jsxref("Float32Array")}}      | `-3.4e38` to `3.4e38`                 | 4             | `unrestricted float`  |
+| {{jsxref("Float64Array")}}      | `-1.8e308` to `1.8e308`               | 8             | `unrestricted double` |
+| {{jsxref("BigInt64Array")}}     | -2<sup>63</sup> to 2<sup>63</sup> - 1 | 8             | `bigint`              |
+| {{jsxref("BigUint64Array")}}    | 0 to 2<sup>64</sup> - 1               | 8             | `bigint`              |
+
+### Value encoding and normalization
+
+All typed arrays operate on `ArrayBuffer`s, where you can observe the exact byte representation of each element, so how the numbers are encoded in binary format is significant.
+
+- Unsigned integer arrays (`Uint8Array`, `Uint16Array`, `Uint32Array`, and `BigUint64Array`) store the number directly in binary.
+- Signed integer arrays (`Int8Array`, `Int16Array`, `Int32Array`, and `BigInt64Array`) store the number using [two's complement](https://en.wikipedia.org/wiki/Two's_complement).
+- Floating-point arrays (`Float32Array` and `Float64Array`) store the number using [IEEE 754](https://en.wikipedia.org/wiki/IEEE_754) floating-point format. The [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding) reference has more information about the exact format. JavaScript numbers use double precision floating point format by default, which is the same as `Float64Array`. `Float32Array` uses 23 (instead of 52) bits for the mantissa and 8 (instead of 11) bits for the exponent. Note that the spec requires all {{jsxref("NaN")}} values to use the same bit encoding, but the exact bit pattern is implementation-dependent.
+- `Uint8ClampedArray` is a special case. It stores the number in binary like `Uint8Array` does, but when you store a number outside the range, it _clamps_ the number to the range 0 to 255 by mathematical value, instead of truncating the most significant bits.
+
+All typed arrays except `Int8Array`, `Uint8Array`, and `Uint8ClampedArray` store each element using multiple bytes. These bytes can either be ordered from most significant to least significant (big-endian) or from least significant to most significant (little-endian). See [Endianness](/en-US/docs/Glossary/Endianness) for more explanation. Typed arrays always use the platform's native byte order. If you want to specify the endianness when writing and reading from buffers, you should use a {{jsxref("DataView")}} instead.
+
+When writing to these typed arrays, values that are outside the representable range are normalized.
+
+- All integer arrays (except `Uint8ClampedArray`) use [fixed-width number conversion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#fixed-width_number_conversion), which first truncates the decimal part of the number and then takes the lowest bits.
+- `Uint8ClampedArray` first clamps the number to the range 0 to 255 (values greater than 255 become 255 and values less than 0 become 0). It then _rounds_ (instead of flooring) the result to the nearest integer, with half-to-even; meaning if the number is exactly between two integers, it rounds to the nearest even integer. For example, `0.5` becomes `0`, `1.5` becomes `2`, and `2.5` becomes `2`.
+- `Float32Array` performs a "round to even" to convert 64-bit floating point numbers to 32-bit. This is the same algorithm as provided by {{jsxref("Math.fround()")}}.
 
 ### Behavior when viewing a resizable buffer
 
@@ -139,7 +156,7 @@ Where `TypedArray` is a constructor for one of the concrete types.
 ### Parameters
 
 - `typedArray`
-  - : When called with an instance of a `TypedArray` subclass, the `typedArray` gets copied into a new typed array. For a non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor, the `typedArray` parameter can only be of one of the non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types (such as {{JSxRef("Int32Array")}}). Similarly, for a [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor ({{JSxRef("BigInt64Array")}} or {{JSxRef("BigUint64Array")}}), the `typedArray` parameter can only be of one of the [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types. Each value in `typedArray` is converted to the corresponding type of the constructor before being copied into the new array. The length of the new typed array will be same as the length of the `typedArray` argument.
+  - : When called with an instance of a `TypedArray` subclass, the `typedArray` gets copied into a new typed array. For a non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor, the `typedArray` parameter can only be of one of the non-[bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types (such as {{jsxref("Int32Array")}}). Similarly, for a [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) `TypedArray` constructor ({{jsxref("BigInt64Array")}} or {{jsxref("BigUint64Array")}}), the `typedArray` parameter can only be of one of the [bigint](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) types. Each value in `typedArray` is converted to the corresponding type of the constructor before being copied into the new array. The length of the new typed array will be same as the length of the `typedArray` argument.
 - `object`
   - : When called with an object that's not a `TypedArray` instance, a new typed array is created in the same way as the [`TypedArray.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/from) method.
 - `length` {{optional_inline}}
@@ -361,8 +378,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## See also
 
 - [Polyfill of typed arrays in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}
-- [TextDecoder](/en-US/docs/Web/API/TextDecoder) — Helper that decode
-  strings from numerical data
+- {{domxref("TextDecoder")}}

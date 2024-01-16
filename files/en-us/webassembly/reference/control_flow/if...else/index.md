@@ -1,6 +1,7 @@
 ---
 title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

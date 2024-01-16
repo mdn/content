@@ -62,7 +62,7 @@ navigator.getUserMedia({ video: true }, (stream) => {
       () => {
         // send the offer to a server to be forwarded to the friend you're calling.
       },
-      error
+      error,
     );
   }, error);
 });

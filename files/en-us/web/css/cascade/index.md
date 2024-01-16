@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 
 {{CSSRef}}
 
-The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types) or [cascade layer](/en-US/docs/Web/CSS/@layer) set a value for a property on an element.
+The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
 
-The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_Selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).
+The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).
 
 This article explains what the cascade is and the order in which {{Glossary("CSS")}} [declarations](/en-US/docs/Web/API/CSSStyleDeclaration) cascade, covering cascade layers and origin type. Understanding origin precedence is key to understanding the cascade.
 
@@ -17,11 +17,11 @@ This article explains what the cascade is and the order in which {{Glossary("CSS
 
 The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**, **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
-Though style sheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, let's define some terms:
+Though style sheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
 
 ### User-agent stylesheets
 
-User-agent, or browsers, have basic style sheets that give default styles to any document. These style sheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
+User-agents, or browsers, have basic style sheets that give default styles to any document. These style sheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
 
 Some browsers let users modify the user-agent stylesheet, but this is rare and not something that can be controlled.
 
@@ -62,8 +62,9 @@ The cascading algorithm determines how to find the value to apply for each prope
    | 7                   | user-agent (browser)     | `!important` |
    | 8                   | CSS transitions          |              |
 
-3. **Specificity:** In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
-4. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity, the last declaration in the style order is applied.
+3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+5. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity and scoping proximity, the last declaration in the style order is applied.
 
 The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.
 
@@ -138,12 +139,13 @@ li {
 
 In this case, declarations inside `li` and `.specific` rules should apply.
 
-Once again, there are four steps in the cascade algorithm, in order:
+Once again, there are five steps in the cascade algorithm, in order:
 
 1. Relevance
 2. Origin and importance
 3. Specificity
-4. Order of appearance
+4. Scoping proximity
+5. Order of appearance
 
 The `1px` is for print media. Due to lack of _relevance_ based on its media type, it is removed from consideration.
 
@@ -177,7 +179,7 @@ li {
 
 The last one, the `5px` is part of a cascade layer. Normal declarations in layers have lower precedence than normal styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
 
-This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_.
+This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_. Neither of them are inside a `@scope` block, so scoping proximity does not come into play in this example either.
 
 We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins.
 
@@ -335,7 +337,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 ## CSS animations and the cascade
 
-[CSS animations](/en-US/docs/Web/CSS/CSS_Animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
+[CSS animations](/en-US/docs/Web/CSS/CSS_animations), using {{ cssxref("@keyframes")}} at-rules, define animations between states. Keyframes don't cascade, meaning that at any given time CSS takes values from only one single {{cssxref("@keyframes")}}, and never mixes multiple ones together.
 
 If the several keyframe animations are defined with the same animation name, the last defined `@keyframes` in the origin and layer with the greatest precedence. Only one `@keyframes` definition is used, even if the `@keyframes` animate different property. `@keyframes` with the same name are never combined.
 
@@ -397,10 +399,10 @@ After your content has finished altering styles, it may find itself in a situati
   - [Comments](/en-US/docs/Web/CSS/Comments)
   - [Specificity](/en-US/docs/Web/CSS/Specificity)
   - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
   - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Computed values](/en-US/docs/Web/CSS/computed_value)

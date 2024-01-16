@@ -9,6 +9,8 @@ browser-compat: css.selectors.modal
 
 The **`:modal`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches an element that is in a state in which it excludes all interaction with elements outside it until the interaction has been dismissed. Multiple elements can be selected by the `:modal` pseudo-class at the same time, but only one of them will be active and able to receive input.
 
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-modal.html", "tabbed-shorter")}}
+
 ## Syntax
 
 ```css
@@ -63,7 +65,7 @@ This example styles a modal dialog that opens when the "Update details" button i
 :modal {
   border: 5px solid red;
   background-color: yellow;
-  box-shadow: 3px 3px 10px rgba(0 0 0 / 0.5);
+  box-shadow: 3px 3px 10px rgb(0 0 0 / 50%);
 }
 ```
 

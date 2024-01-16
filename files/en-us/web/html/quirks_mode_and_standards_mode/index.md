@@ -17,7 +17,7 @@ The limited-quirks and no-quirks modes used to be called "almost-standards" mode
 For [HTML](/en-US/docs/Web/HTML) documents, browsers use a DOCTYPE in the beginning of the document to decide whether to handle it in quirks mode or standards mode. To ensure that your page uses full standards mode, make sure that your page has a DOCTYPE like in this example:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

@@ -1,6 +1,7 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
@@ -46,7 +47,7 @@ The point of a table is that it is rigid. Information is easily interpreted by m
 ```html hidden
 <table>
   <caption>
-    Data about the planets of our solar system (Planetary facts taken from
+    Data about the planets of our solar system (Source:
     <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/"
       >Nasa's Planetary Fact Sheet - Metric</a
     >).

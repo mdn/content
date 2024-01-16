@@ -48,11 +48,11 @@ This extension exposes seven new constants.
 This extension exposes eight new methods.
 
 - {{domxref("EXT_disjoint_timer_query.createQueryEXT()", "ext.createQueryEXT()")}}
-  - : Creates a new {{domxref("WebGLTimerQueryEXT")}}.
+  - : Creates a new {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.deleteQueryEXT()", "ext.deleteQueryEXT()")}}
-  - : Deletes a given {{domxref("WebGLTimerQueryEXT")}}.
+  - : Deletes a given {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.isQueryEXT()", "ext.isQueryEXT()")}}
-  - : Returns `true` if a given object is a valid {{domxref("WebGLTimerQueryEXT")}}.
+  - : Returns `true` if a given object is a valid {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.beginQueryEXT()", "ext.beginQueryEXT()")}}
   - : The timer starts when all commands prior to `beginQueryEXT` have been fully executed.
 - {{domxref("EXT_disjoint_timer_query.endQueryEXT()", "ext.endQueryEXT()")}}

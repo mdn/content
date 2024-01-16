@@ -41,7 +41,7 @@ async function getCompressedTextureIfAvailable(gl) {
   if (ext) {
     // the file is already in the correct compressed format
     const dataArrayBuffer = await fetch(
-      "/textures/foobar512x512.RGBA_S3TC_DXT1"
+      "/textures/foobar512x512.RGBA_S3TC_DXT1",
     ).then((response) => response.arrayBuffer());
     gl.compressedTexImage2D(
       gl.TEXTURE_2D,
@@ -50,7 +50,7 @@ async function getCompressedTextureIfAvailable(gl) {
       512,
       512, // width, height of the image
       0, // border, always 0
-      new DataView(dataArrayBuffer)
+      new DataView(dataArrayBuffer),
     );
     gl.generateMipMap(); // create mipmap levels, like we would for a standard image
     return texture;

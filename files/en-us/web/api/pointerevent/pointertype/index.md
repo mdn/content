@@ -52,7 +52,7 @@ targetElement.addEventListener(
         console.log(`pointerType ${event.pointerType} is not supported`);
     }
   },
-  false
+  false,
 );
 ```
 

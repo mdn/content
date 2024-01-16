@@ -83,7 +83,7 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 
 ### Data types
 
-- {{cssxref("line-type")}} enumerated type
+- {{cssxref("line-style")}} enumerated type
 
 ## Guides
 
@@ -95,7 +95,7 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
   - : Describes how to change the size and repeating behavior of background images.
 - [Learn CSS: the box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Explains how borders, along with other box model properties, impact the CSS box model.
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : Explains how to create CSS gradient background images.
 
 ## Related concepts

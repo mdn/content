@@ -13,10 +13,9 @@ As we learned in the previous section, media, namely images and video, account f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -82,7 +81,7 @@ To ensure that a looping background video autoplays, you must add several attrib
 <video
   autoplay=""
   loop=""
-  muted="true"
+  muted
   playsinline=""
   src="backgroundvideo.mp4"></video>
 ```
@@ -96,7 +95,7 @@ While the `loop` and `autoplay` make sense for a looping and autoplaying video, 
 For hero-video or other video without audio, removing audio is smart.
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
+<video autoplay="" loop="" muted playsinline="" id="hero-video">
   <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
   <source src="web_banner.mp4" type="video/mp4" />
 </video>

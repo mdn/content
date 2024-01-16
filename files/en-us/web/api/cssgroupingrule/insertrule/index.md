@@ -45,7 +45,7 @@ The index of the new rule.
 let myRules = document.styleSheets[0].cssRules;
 myRules[0].insertRule(
   "html {background-color: blue;}",
-  0
+  0,
 ); /* inserts a rule for the HTML element at position 0 */
 ```
 

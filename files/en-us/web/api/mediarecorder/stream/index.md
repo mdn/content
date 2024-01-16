@@ -8,14 +8,11 @@ browser-compat: api.MediaRecorder.stream
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.stream`** read-only property returns the
-stream that was passed into the `MediaRecorder()` constructor when the
-`MediaRecorder` was created.
+The **`stream`** read-only property of the {{domxref("MediaRecorder")}} interface returns the stream that was passed into the {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} constructor when the `MediaRecorder` was created.
 
 ## Value
 
-The MediaStream passed into the `MediaRecorder()` constructor when the
-`MediaRecorder` was originally created.
+The {{domxref("MediaStream")}} passed into the `MediaRecorder()` constructor when the `MediaRecorder` was originally created.
 
 ## Examples
 
@@ -34,7 +31,7 @@ if (navigator.getUserMedia) {
 
       const myStream = mediaRecorder.stream;
       console.log(myStream);
-    }
+    },
   );
 }
 ```

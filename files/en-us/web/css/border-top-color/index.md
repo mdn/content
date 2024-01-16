@@ -18,7 +18,7 @@ The **`border-top-color`** CSS property sets the color of an element's top [bord
 border-top-color: red;
 border-top-color: #ffbb00;
 border-top-color: rgb(255 0 0);
-border-top-color: hsl(100deg 50% 25% / 0.75);
+border-top-color: hsl(100deg 50% 25% / 75%);
 border-top-color: currentcolor;
 border-top-color: transparent;
 

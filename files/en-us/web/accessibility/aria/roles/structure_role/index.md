@@ -36,8 +36,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 <!-- these shouldn't be used so we shouldn't link to them
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/
-"Roles/document_role)
+- [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [ARIA: `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 -->
@@ -46,6 +45,6 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

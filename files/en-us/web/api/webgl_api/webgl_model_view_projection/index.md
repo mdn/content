@@ -52,7 +52,7 @@ function WebGLBox() {
   this.webglProgram = MDN.createWebGLProgramFromIds(
     gl,
     "vertex-shader",
-    "fragment-shader"
+    "fragment-shader",
   );
   gl.useProgram(this.webglProgram);
 
@@ -400,7 +400,7 @@ And finally the uniform is set to that location. This hands off the matrix to th
 gl.uniformMatrix4fv(
   this.locations.model,
   false,
-  new Float32Array(this.transforms.model)
+  new Float32Array(this.transforms.model),
 );
 ```
 
@@ -614,7 +614,7 @@ MDN.perspectiveMatrix = function (
   fieldOfViewInRadians,
   aspectRatio,
   near,
-  far
+  far,
 ) {
   const f = 1.0 / Math.tan(fieldOfViewInRadians / 2);
   const rangeInv = 1 / (near - far);
@@ -664,7 +664,7 @@ CubeDemo.prototype.computePerspectiveMatrix = function () {
     fieldOfViewInRadians,
     aspectRatio,
     nearClippingPlaneDistance,
-    farClippingPlaneDistance
+    farClippingPlaneDistance,
   );
 };
 ```

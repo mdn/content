@@ -236,7 +236,7 @@ function sessionStarted(session) {
     uniformLocations: {
       projectionMatrix: gl.getUniformLocation(
         shaderProgram,
-        "uProjectionMatrix"
+        "uProjectionMatrix",
       ),
       modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
       normalMatrix: gl.getUniformLocation(shaderProgram, "uNormalMatrix"),
@@ -247,7 +247,7 @@ function sessionStarted(session) {
   buffers = initBuffers(gl);
   texture = loadTexture(
     gl,
-    "https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244"
+    "https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244",
   );
 
   xrSession.updateRenderState({
@@ -263,7 +263,7 @@ function sessionStarted(session) {
 
   xrSession.requestReferenceSpace(refSpaceType).then((refSpace) => {
     xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-      new XRRigidTransform(viewerStartPosition, cubeOrientation)
+      new XRRigidTransform(viewerStartPosition, cubeOrientation),
     );
     animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
   });
@@ -508,7 +508,7 @@ function applyViewerControls(refSpace) {
       y: inverseOrientation[1],
       z: inverseOrientation[2],
       w: inverseOrientation[3],
-    }
+    },
   );
   mat4.copy(mouseMatrix, newTransform.matrix);
 
@@ -548,19 +548,19 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
       cubeMatrix, // destination matrix
       cubeMatrix, // matrix to rotate
       zRotationForTime, // amount to rotate in radians
-      [0, 0, 1]
+      [0, 0, 1],
     ); // axis to rotate around (Z)
     mat4.rotate(
       cubeMatrix, // destination matrix
       cubeMatrix, // matrix to rotate
       yRotationForTime, // amount to rotate in radians
-      [0, 1, 0]
+      [0, 1, 0],
     ); // axis to rotate around (Y)
     mat4.rotate(
       cubeMatrix, // destination matrix
       cubeMatrix, // matrix to rotate
       xRotationForTime, // amount to rotate in radians
-      [1, 0, 0]
+      [1, 0, 0],
     ); // axis to rotate around (X)
   }
 
@@ -586,7 +586,7 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
       type,
       normalize,
       stride,
-      offset
+      offset,
     );
     gl.enableVertexAttribArray(programInfo.attribLocations.vertexPosition);
   }
@@ -604,7 +604,7 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
       type,
       normalize,
       stride,
-      offset
+      offset,
     );
     gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
   }
@@ -622,7 +622,7 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
       type,
       normalize,
       stride,
-      offset
+      offset,
     );
     gl.enableVertexAttribArray(programInfo.attribLocations.vertexNormal);
   }
@@ -633,17 +633,17 @@ function renderScene(gl, view, programInfo, buffers, texture, deltaTime) {
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.projectionMatrix,
     false,
-    view.projectionMatrix
+    view.projectionMatrix,
   );
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.modelViewMatrix,
     false,
-    modelViewMatrix
+    modelViewMatrix,
   );
   gl.uniformMatrix4fv(
     programInfo.uniformLocations.normalMatrix,
     false,
-    normalMatrix
+    normalMatrix,
   );
   gl.activeTexture(gl.TEXTURE0);
   gl.bindTexture(gl.TEXTURE_2D, texture);

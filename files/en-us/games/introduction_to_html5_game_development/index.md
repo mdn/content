@@ -78,13 +78,14 @@ page-type: guide
       <td>
         <a href="/en-US/docs/Web/HTML">HTML</a>,
         <a href="/en-US/docs/Web/CSS">CSS</a>,
-        <a href="/en-US/docs/Web/SVG">SVG</a>,
-        <a href="/en-US/docs/Social_API">Social API</a> (and much more!)
+        <a href="/en-US/docs/Web/SVG">SVG</a> (and much more!)
       </td>
     </tr>
   </tbody>
 </table>
 
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+  - : Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.
 - [Full Screen API](/en-US/docs/Web/API/Fullscreen_API)
   - : Full screen gameplay.
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
@@ -102,7 +103,7 @@ page-type: guide
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Access raw binary data from within JavaScript; Manipulate GL textures, game data, or anything else.
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : Control the playback, synthesis, and manipulation of audio in real time.
@@ -114,5 +115,3 @@ page-type: guide
   - : Connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Spawn background threads running their own JavaScript code for multicore processors.
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [File API](/en-US/docs/DOM/File_API)
-  - : Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.

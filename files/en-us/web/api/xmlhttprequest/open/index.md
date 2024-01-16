@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.open
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method **`open()`**
 initializes a newly-created request, or re-initializes an existing one.
@@ -31,7 +31,7 @@ open(method, url, async, user, password)
     `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
     etc. Ignored for non-HTTP(S) URLs.
 - `url`
-  - : A string representing the URL to send the request to.
+  - : A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource to send the request to.
 - `async` {{optional_inline}}
 
   - : An optional Boolean parameter, defaulting to `true`, indicating whether
@@ -67,7 +67,7 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Related {{domxref("XMLHttpRequest")}} methods:
   {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, and

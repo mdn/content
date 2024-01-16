@@ -27,7 +27,11 @@ html,
 body,
 svg {
   height: 100%;
-  font: 36px Verdana, Helvetica, Arial, sans-serif;
+  font:
+    36px Verdana,
+    Helvetica,
+    Arial,
+    sans-serif;
 }
 ```
 

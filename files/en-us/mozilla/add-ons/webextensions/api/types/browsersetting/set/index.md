@@ -63,12 +63,10 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-    let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-      value: false
-    });
-    setting.then(onSet);
-
+  let setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    value: false,
+  });
+  setting.then(onSet);
 });
 ```
 

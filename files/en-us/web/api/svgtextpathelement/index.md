@@ -80,7 +80,7 @@ The **`SVGTextPathElement`** interface corresponds to the {{SVGElement("textPath
 _This interface also inherits properties from its parent interface, {{domxref("SVGTextContentElement")}}._
 
 - {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
+  - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given element.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the X component of the {{SVGAttr("startOffset")}} attribute of the given element.
 - {{domxref("SVGTextPathElement.method")}} {{ReadOnlyInline}}

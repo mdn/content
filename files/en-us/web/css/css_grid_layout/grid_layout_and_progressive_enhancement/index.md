@@ -170,7 +170,7 @@ If I reset the width to `auto`, then this will stop the float behavior happening
 
 #### A solution using feature queries
 
-_Feature queries_ will look very familiar if you have ever used a [media query](/en-US/docs/Web/CSS/Media_Queries) to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.
+_Feature queries_ will look very familiar if you have ever used a [media query](/en-US/docs/Web/CSS/CSS_media_queries) to create a responsive layout. Rather than checking a {{glossary("viewport")}} width, or some feature of the browser or device, we check for support of a CSS property and value pair using an {{cssxref("@supports")}} rule. Inside the feature query, we can then write any CSS we need to apply our modern layout, and remove anything required for the older layout.
 
 ```css
 @supports (display: grid) {
@@ -268,7 +268,7 @@ I use an `@supports` rule to check for support of `display: grid`. I then do my 
 
 ## Overwriting other values of `display`
 
-Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to layout a set of cards. Using `display: inline-block` is an alternate method.
+Due to the problems of creating grids of items using floats, many of us would use a different method to the floated method shown above to lay out a set of cards. Using `display: inline-block` is an alternate method.
 
 Once again I can use feature queries to overwrite a layout that uses `display: inline-block`, and again I don't need to overwrite everything. An item that is set to `inline-block` becomes a grid item, and so the behavior of `inline-block` no longer applies. I have used the {{cssxref("vertical-align")}} property on my item when in the `inline-block` display mode, but this property does not apply to grid items and, therefore, is ignored once the item becomes a grid item:
 

@@ -24,7 +24,7 @@ When both the `aria-valuetext` and `aria-valuenow` are included, the `aria-value
 - `<string>`
   - : A human-readable text alternative of the `aria-valuenow` value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueText")}}
   - : The [`ariaValueText`](/en-US/docs/Web/API/Element/ariaValueText) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuetext` attribute.

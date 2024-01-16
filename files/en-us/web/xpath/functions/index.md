@@ -1,6 +1,7 @@
 ---
 title: Functions
 slug: Web/XPath/Functions
+page-type: guide
 ---
 
 {{XsltSidebar}}

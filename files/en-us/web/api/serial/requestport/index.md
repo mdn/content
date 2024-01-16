@@ -8,7 +8,7 @@ status:
 browser-compat: api.Serial.requestPort
 ---
 
-{{APIRef("Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`Serial.requestPort()`** method of the {{domxref("Serial")}} interface returns a {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort")}} representing the device chosen by the user or rejects if no device was selected.
 
@@ -44,6 +44,10 @@ A {{jsxref("Promise")}} that resolves with an instance of {{domxref("SerialPort"
   - : The returned `Promise` rejects with this error if a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) blocks the use of this feature or a user permission prompt was denied.
 - `NotFoundError` {{domxref("DOMException")}}
   - : The returned `Promise` rejects with this if the user does not select a port when prompted.
+
+## Security
+
+{{Glossary("Transient activation")}} is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

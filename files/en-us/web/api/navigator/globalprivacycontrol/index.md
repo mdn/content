@@ -9,25 +9,23 @@ status:
 browser-compat: api.Navigator.globalPrivacyControl
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{SeeCompatTable}}{{non-standard_header}}
 
-The **`Navigator.globalPrivacyControl`** property returns the user's Global Privacy Control setting. This setting indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
+The **`Navigator.globalPrivacyControl`** read-only property returns the user's [Global Privacy Control](https://globalprivacycontrol.org/) setting for the current website.
+This setting indicates whether the user consents to the website or service selling or sharing their personal information with third parties.
 
 The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP header.
 
-| Sec-GPC Value | Meaning                                                      |
-| ------------- | ------------------------------------------------------------ |
-| 1             | User _does not_ provide consent to sell or share their data. |
-| 0             | User _does_ provide consent to sell or share their data.     |
-| unspecified   | User has not yet provided consent with regard to their data. |
+## Value
+
+`true` if the user explicitly _does not_ provide consent to sell or share their data.
+`false` if the user either grants consent, or has not indicated a preference.
 
 ## Example
 
 ```js
 console.log(navigator.globalPrivacyControl);
-// prints "1" indicating user does not want their data shared or sold.
-// prints "0" if the user consents to their data being shared or sold.
-// prints "unspecified" if Sec-GPC header is not present.
+// "true" if the user has specifically indicated they do not want their data shared or sold, otherwise "false".
 ```
 
 ## Specifications
@@ -42,5 +40,5 @@ console.log(navigator.globalPrivacyControl);
 
 - {{HTTPHeader("Sec-GPC")}} header
 - [globalprivacycontrol.org](https://globalprivacycontrol.org/)
-- [Global Privacy Control Spec](https://globalprivacycontrol.github.io/gpc-spec/)
+- [Global Privacy Control Spec](https://privacycg.github.io/gpc-spec/)
 - [Do Not Track on Wikipedia](https://en.wikipedia.org/wiki/Do_Not_Track)

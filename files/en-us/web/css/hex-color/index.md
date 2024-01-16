@@ -13,7 +13,7 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 
 ## Syntax
 
-```
+```plain
 #RGB        // The three-value syntax
 #RGBA       // The four-value syntax
 #RRGGBB     // The six-value syntax
@@ -102,3 +102,4 @@ div {
 
 - [`<color>`](/en-US/docs/Web/CSS/color_value): the color data type
 - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb): the function allowing to set the three components of the color, as well as its transparency, using decimal values
+- [CSS color](/en-US/docs/Web/CSS/CSS_colors) module

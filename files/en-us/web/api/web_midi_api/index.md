@@ -91,14 +91,14 @@ function listInputsAndOutputs(midiAccess) {
         ` id:'${input.id}'` +
         ` manufacturer:'${input.manufacturer}'` +
         ` name:'${input.name}'` +
-        ` version:'${input.version}'`
+        ` version:'${input.version}'`,
     );
   }
 
   for (const entry of midiAccess.outputs) {
     const output = entry[1];
     console.log(
-      `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`
+      `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`,
     );
   }
 }
@@ -106,7 +106,7 @@ function listInputsAndOutputs(midiAccess) {
 
 ### Handling MIDI Input
 
-This example prints incoming MIDI messages on a single port to the console.
+This example prints all MIDI input messages to the console.
 
 ```js
 function onMIDIMessage(event) {
@@ -117,7 +117,7 @@ function onMIDIMessage(event) {
   console.log(str);
 }
 
-function startLoggingMIDIInput(midiAccess, indexOfPort) {
+function startLoggingMIDIInput(midiAccess) {
   midiAccess.inputs.forEach((entry) => {
     entry.onmidimessage = onMIDIMessage;
   });

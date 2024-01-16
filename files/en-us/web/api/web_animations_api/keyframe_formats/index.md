@@ -28,7 +28,7 @@ There are two different ways to format keyframes:
          color: "#000",
        },
      ],
-     2000
+     2000,
    );
    ```
 
@@ -37,7 +37,7 @@ There are two different ways to format keyframes:
    ```js
    element.animate(
      [{ opacity: 1 }, { opacity: 0.1, offset: 0.7 }, { opacity: 0 }],
-     2000
+     2000,
    );
    ```
 
@@ -54,7 +54,7 @@ There are two different ways to format keyframes:
        { opacity: 0.1, easing: "ease-in" },
        { opacity: 0 },
      ],
-     2000
+     2000,
    );
    ```
 
@@ -68,7 +68,7 @@ There are two different ways to format keyframes:
        opacity: [0, 1], // [ from, to ]
        color: ["#fff", "#000"], // [ from, to ]
      },
-     2000
+     2000,
    );
    ```
 
@@ -80,7 +80,7 @@ There are two different ways to format keyframes:
        opacity: [0, 1], // offset: 0, 1
        backgroundColor: ["red", "yellow", "green"], // offset: 0, 0.5, 1
      },
-     2000
+     2000,
    );
    ```
 
@@ -93,7 +93,7 @@ There are two different ways to format keyframes:
        offset: [0, 0.8], // Shorthand for [ 0, 0.8, 1 ]
        easing: ["ease-in", "ease-out"],
      },
-     2000
+     2000,
    );
    ```
 
@@ -113,7 +113,7 @@ We have only specified the end state of the animation, and the beginning state i
 
 ## Attributes
 
-Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using camel-case so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
+Keyframes may specify property-value pairs for any of the {{cssxref("CSS_animated_properties", "animatable CSS properties")}}. The property names are specified using {{Glossary("camel_case", "camel case")}} so for example {{cssxref("background-color")}} becomes `backgroundColor` and {{cssxref("background-position-x")}} becomes `backgroundPositionX`. Shorthand values such as {{cssxref("margin")}} are also permitted.
 
 Two exceptional CSS properties are:
 
@@ -125,7 +125,7 @@ The following special attributes may also be specified:
 - offset
   - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. If this value is `null` or missing, the keyframe will be evenly spaced between adjacent keyframes.
 - easing
-  - : The [timing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
+  - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - composite
   - : The {{domxref("KeyframeEffect.composite")}} operation used to combine the values specified in this keyframe with the underlying value. This will be `auto` if the composite operation specified on the effect is being used.
 

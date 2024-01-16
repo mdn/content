@@ -16,7 +16,7 @@ The **`SVGMPathElement`** interface corresponds to the {{SVGElement("mpath")}} e
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGMPathElement.href")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given {{SVGElement("mpath")}} element.
+  - : An {{domxref("SVGAnimatedString")}} that corresponds to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} {{deprecated_inline}} attribute of the given {{SVGElement("mpath")}} element.
 
 ## Instance methods
 

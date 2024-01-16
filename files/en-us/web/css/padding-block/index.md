@@ -15,8 +15,8 @@ The **`padding-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/d
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("padding-block-end")}}
 - {{cssxref("padding-block-start")}}
+- {{cssxref("padding-block-end")}}
 
 ## Syntax
 
@@ -97,6 +97,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, and {{cssxref("padding-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

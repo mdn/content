@@ -1,6 +1,7 @@
 ---
 title: Max
 slug: WebAssembly/Reference/Numeric/Max
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

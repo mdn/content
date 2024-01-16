@@ -22,10 +22,11 @@ Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/W
 
 ## Value
 
-The value is an array of {{domxref("CSSStyleSheet()")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
+The value is an array of {{domxref("CSSStyleSheet")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the shadow root's parent {{domxref("Document")}}.
 
-If the array needs to be modified, then a new array must be assigned (in-place mutations like `push()` will throw an exception).
-Note, however, that the {{domxref("CSSStyleSheet()")}} instances themselves can be modified, and these changes will apply wherever the stylesheet is adopted.
+If the array needs to be modified, use in-place mutations like `push()`. The {{domxref("CSSStyleSheet")}} instances themselves can also be modified, and these changes will apply wherever the stylesheet is adopted.
+
+In an earlier version of the specification, the array was not modifiable, so the only way to add new stylesheets was to assign a new array to `adoptedStyleSheets`.
 
 ## Examples
 
@@ -47,7 +48,7 @@ We then create a {{domxref("ShadowRoot")}} and pass the sheet object to `adopted
 const node = document.createElement("div");
 const shadow = node.attachShadow({ mode: "open" });
 
-//Adopt the sheet into the shadow DOM
+// Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
 ```
 
@@ -61,15 +62,14 @@ sheet.insertRule("* { background-color: blue; }");
 
 ### Append a new stylesheet
 
-To _append_ a stylesheet to the `adoptedStyleSheets` property we have to create and assign a new array that contains both the original stylesheets in the property and the new style sheet.
-This is demonstrated for our shadow root object below using spread-syntax:
+New stylesheets can be _appended_ to the document or shadow root by using `adoptedStyleSheets.push()`:
 
 ```js
 const extraSheet = new CSSStyleSheet();
 extraSheet.replaceSync("p { color: green; }");
 
-// Combine the existing sheets and new one
-shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
+// Concat the new sheet.
+shadow.adoptedStyleSheets.push(extraSheet);
 ```
 
 ## Specifications
@@ -82,7 +82,7 @@ shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
 
 ## See also
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
 - [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}

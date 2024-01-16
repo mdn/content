@@ -61,7 +61,7 @@ gl.blitFramebuffer(
   canvas.width,
   canvas.height,
   gl.COLOR_BUFFER_BIT,
-  gl.NEAREST
+  gl.NEAREST,
 );
 ```
 

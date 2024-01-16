@@ -41,6 +41,7 @@ const responses = await downloadVideoChunksFromServer(timestamp);
 for (const response of responses) {
   const chunk = new EncodedVideoChunk({
     timestamp: response.timestamp,
+    type: response.key ? "key" : "delta",
     data: new Uint8Array(response.body),
   });
   decoder.decode(chunk);

@@ -82,16 +82,6 @@ Or what about some kind of button bar for controlling your app? This might not n
 </section>
 ```
 
-Make sure to use some assistive technology and screen-reader-friendly CSS to hide it, like so:
-
-```css
-.hidden {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-```
-
 #### Result
 
 {{EmbedLiveSample('Using a section without a heading')}}
@@ -153,8 +143,10 @@ Depending on the content, including a heading could also be good for SEO, so it 
           href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
           >accessible name</a
         >, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

@@ -61,7 +61,7 @@ When the extension is installed, log the install reason and open <https://exampl
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "https://example.com"
+    url: "https://example.com",
   });
 }
 

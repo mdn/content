@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.InputDeviceInfo.getCapabilities
 ---
 
-{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
 The **`getCapabilities()`** method of the {{domxref("InputDeviceInfo")}} interface returns a `MediaTrackCapabilities` object describing the primary audio or video track of the device's {{domxref("MediaStream")}}.
 
@@ -22,13 +22,13 @@ None.
 
 ### Return value
 
-A `MediaTrackCapabilities` object containing the following members:
+A `MediaTrackCapabilities` object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties, containing the following members:
 
 - `deviceId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the device ID.
 - `groupId`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing a group ID.
-- `autoGainControl`>
+- `autoGainControl`
   - : A [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) object reporting if the source can do auto gain control.
     If the feature can be controlled by a script the source will report both true and false as possible values.
 - `channelCount`
@@ -84,3 +84,7 @@ navigator.mediaDevices.enumerateDevices().then((devices) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("MediaStreamTrack.getCapabilities()")}}, which also return a `MediaTrackCapabilities` object.

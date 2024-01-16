@@ -42,19 +42,23 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
         {{HTMLElement("p")}} element is immediately followed by an
         {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
-        {{HTMLElement("blockquote")}}, {{HTMLElement("div")}},
+        {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},
         {{HTMLElement("dl")}}, {{HTMLElement("fieldset")}},
+        {{HTMLElement("figcaption")}}, {{HTMLElement("figure")}},
         {{HTMLElement("footer")}}, {{HTMLElement("form")}},
         {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}},
         {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}},
         {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}},
-        {{HTMLElement("header")}}, {{HTMLElement("hr")}},
-        {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
-        {{HTMLElement("ol")}}, {{HTMLElement("pre")}},
+        {{HTMLElement("header")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("hr")}},
+        {{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
+        {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
         {{HTMLElement("ul")}} or another {{HTMLElement("p")}}
         element, or if there is no more content in the parent element and the
-        parent element is not an {{HTMLElement("a")}} element.
+        parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}},
+        {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},
+        {{HTMLElement("noscript")}} or {{HTMLElement("video")}} element,
+        or an autonomous custom element.
       </td>
     </tr>
     <tr>

@@ -43,7 +43,7 @@ With {{Glossary("Hypertext")}} and {{Glossary("HTTP")}}, **_URL_** is one of the
 
 Here are some examples of URLs:
 
-```
+```plain
 https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL

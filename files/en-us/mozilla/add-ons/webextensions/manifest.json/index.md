@@ -92,7 +92,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "my-background.js"]
   },
 
   "browser_action": {
@@ -151,7 +151,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/my-image.png"]

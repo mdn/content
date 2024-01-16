@@ -26,6 +26,7 @@ inline-size: 75%;
 /* Keyword values */
 inline-size: max-content;
 inline-size: min-content;
+inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 

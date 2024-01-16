@@ -7,6 +7,6 @@ status:
   - non-standard
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 **`XMLHttpRequest.mozAnon`** is a boolean. If true, the request will be sent without cookies or authentication headers.

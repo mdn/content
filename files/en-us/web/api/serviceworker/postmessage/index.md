@@ -58,7 +58,7 @@ navigator.serviceWorker.register("service-worker.js");
 
 navigator.serviceWorker.ready.then((registration) => {
   registration.active.postMessage(
-    "Test message sent immediately after creation"
+    "Test message sent immediately after creation",
   );
 });
 ```

@@ -8,61 +8,40 @@ browser-compat: api.RTCRtpTransceiver.currentDirection
 
 {{APIRef("WebRTC")}}
 
-The read-only {{domxref("RTCRtpTransceiver")}} property
-**`currentDirection`** is a string which indicates the current
-directionality of the transceiver.
+The read-only {{domxref("RTCRtpTransceiver")}} property **`currentDirection`** is a string which indicates the current negotiated directionality of the transceiver.
 
-Its value is one of the strings defined in the table below.
+The directionality indicates whether the transceiver will offer to send and/or receive {{Glossary("RTP")}} data, or whether it is inactive or stopped and won't send or receive data.
 
-You can examine and set the transceiver's preferred directionality using
-{{domxref("RTCRtpTransceiver.direction", "direction")}} property.
+The transceiver's preferred directionality can be set and read using the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
+Changing the `direction` triggers a renegotiation, which may eventually result in the `currentDirection` also changing.
 
 ## Value
 
-A string whose value is one of the strings which are a member of the following values.
+The value is initially `null`, prior to negotiation using an offer/answer.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row">Value</th>
-      <th scope="col"><code>RTCRtpSender</code> behavior</th>
-      <th scope="col"><code>RTCRtpReceiver</code> behavior</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><code>"sendrecv"</code></th>
-      <td>
-        Offers to send {{Glossary("RTP")}} data, and will do so if the
-        other peer accepts the connection and at least one of the sender's
-        encodings is active.
-      </td>
-      <td>
-        Offers to receive RTP data, and does so if the other peer accepts.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"sendonly"</code></th>
-      <td>
-        Offers to send RTP data, and will do so if the other peer accepts the
-        connection and at least one of the sender's encodings is active.
-      </td>
-      <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"recvonly"</code></th>
-      <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
-      <td>
-        Offers to receive RTP data, and will do so if the other peer offers.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row"><code>"inactive"</code></th>
-      <td>Does <em>not</em> offer to send RTP data, and will not do so.</td>
-      <td>Does <em>not</em> offer to receive RTP data and will not do so.</td>
-    </tr>
-  </tbody>
-</table>
+After negotiation the value is a string with one of the following values:
+
+- `"sendrecv"`
+  - : Transceiver offers to send and receive RTP data:
+    - `RTCRtpSender`: Offers to send RTP data, and will do so if the remote peer accepts the connection and at least one of the sender's encodings is active.
+    - `RTCRtpReceiver`: Offers to receive RTP data, and does so if the remote peer accepts.
+- `"sendonly"`
+  - : Transceiver offers to send but not receive RTP data:
+    - `RTCRtpSender`: Offers to send RTP data, and will do so if the remote peer accepts the connection and at least one of the sender's encodings is active.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
+- `"recvonly"`
+  - : Transceiver offers to receive but not set RTP data:
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Offers to receive RTP data, and will do so if the remote peer offers.
+- `"inactive"`
+  - : Transceiver is inactive:
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
+- `"stopped"`
+  - : This is the terminal state of the transceiver.
+    The transceiver is stopped and will not send or receive RTP data or offer to do so.
+    - `RTCRtpSender`: Does _not_ offer to send RTP data, and will not do so.
+    - `RTCRtpReceiver`: Does _not_ offer to receive RTP data and will not do so.
 
 ## Specifications
 

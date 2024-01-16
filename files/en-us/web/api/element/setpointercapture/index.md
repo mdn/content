@@ -109,5 +109,6 @@ slider.onpointerup = stopSliding;
 
 ## See also
 
-- {{domxref("Element.releasePointerCapture")}}
+- {{domxref("Element.hasPointerCapture","Element.hasPointerCapture()")}}
+- {{domxref("Element.releasePointerCapture","Element.releasePointerCapture()")}}
 - {{domxref("Pointer_events","Pointer Events")}}

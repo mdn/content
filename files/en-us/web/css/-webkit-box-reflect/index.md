@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-box-reflect
 
 The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you reflect the content of an element in one specific direction.
 
+## Syntax
+
 ```css
 /* Direction values */
 -webkit-box-reflect: above;
@@ -31,8 +33,6 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 -webkit-box-reflect: revert-layer;
 -webkit-box-reflect: unset;
 ```
-
-## Syntax
 
 ### Values
 

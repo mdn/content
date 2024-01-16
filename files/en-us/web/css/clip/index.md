@@ -53,8 +53,6 @@ clip: unset;
 
 ### Clipping an image
 
-#### HTML
-
 ```html
 <p class="dotted-border">
   <img src="macarons.png" alt="Original graphic" />
@@ -66,8 +64,6 @@ clip: unset;
     alt="Graphic clipped to bottom right" />
 </p>
 ```
-
-#### CSS
 
 ```css
 .dotted-border {
@@ -100,9 +96,7 @@ clip: unset;
 }
 ```
 
-#### Result
-
-{{EmbedLiveSample('', '', '450px')}}
+{{EmbedLiveSample('clipping_an_image', '', '450px')}}
 
 ## Specifications
 

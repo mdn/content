@@ -126,13 +126,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
-            >button</a
-          ></code
-        >
-      </td>
+      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

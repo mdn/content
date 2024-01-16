@@ -42,7 +42,7 @@ gl.framebufferTexture2D(
   gl.COLOR_ATTACHMENT0,
   gl.TEXTURE_2D,
   tex,
-  0
+  0,
 );
 
 // enable blending

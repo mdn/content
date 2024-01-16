@@ -73,7 +73,7 @@ gl.invalidateSubFramebuffer(
   0,
   0,
   256,
-  256
+  256,
 );
 ```
 

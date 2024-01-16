@@ -26,7 +26,7 @@ cursor to iterate through all the records in the object store. Within each itera
 log the primary key of the cursor to the console, something like this (its the album
 title in each case, which is our primarykey):
 
-```
+```plain
 Hemispheres
 ```
 

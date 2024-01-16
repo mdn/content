@@ -1,6 +1,7 @@
 ---
 title: Less than
 slug: WebAssembly/Reference/Numeric/Less_than
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

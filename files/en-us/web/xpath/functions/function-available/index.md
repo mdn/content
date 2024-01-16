@@ -1,6 +1,7 @@
 ---
 title: function-available
 slug: Web/XPath/Functions/function-available
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `function-available` function determines if a given function is available an
 
 ### Syntax
 
-```
+```plain
 function-available( name )
 ```
 

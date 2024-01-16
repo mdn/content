@@ -1,6 +1,7 @@
 ---
 title: Demote
 slug: WebAssembly/Reference/Numeric/Demote
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

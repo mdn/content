@@ -9,6 +9,8 @@ browser-compat: css.properties.mask-composite
 
 The **`mask-composite`** [CSS](/en-US/docs/Web/CSS) property represents a compositing operation used on the current mask layer with the mask layers below it.
 
+## Syntax
+
 ```css
 /* Keyword values */
 mask-composite: add;
@@ -23,8 +25,6 @@ mask-composite: revert;
 mask-composite: revert-layer;
 mask-composite: unset;
 ```
-
-## Syntax
 
 One or more of the keyword values listed below, separated by commas.
 

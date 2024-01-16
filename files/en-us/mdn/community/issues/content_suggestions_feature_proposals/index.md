@@ -24,7 +24,7 @@ Once you have completed the form and submitted the issue, a core team member wil
 
 ## Participate in the discussion and wait for approval
 
-If we feel the proposal might be a good fit, we will [start a discussion](https://github.com/mdn/mdn-community/dicsussions) on our MDN community discussions repository. This is to get input from our partners and the wider community. We encourage you to monitor the discussion and join in as appropriate.
+If we feel the proposal might be a good fit, we will [start a discussion](https://github.com/orgs/mdn/discussions) on our MDN community discussions repository. This is to get input from our partners and the wider community. We encourage you to monitor the discussion and join in as appropriate.
 
 ## Opening an issue
 

@@ -46,6 +46,7 @@ browser.find.find(
       - : `boolean`. If `true`, the search distinguishes between accented letters and their base letters. For example, when set to `true`, searching for "résumé" does not find a match for "resume". Defaults to `false`.
     - `tabId`
       - : `integer`. ID of the tab to search. Defaults to the active tab.
+
 - `queryphrase`
   - : `string`. The text to search for.
 
@@ -183,7 +184,7 @@ function getNodes() {
     document,
     window.NodeFilter.SHOW_TEXT,
     null,
-    false
+    false,
   );
   const nodes = [];
   while ((node = walker.nextNode())) {

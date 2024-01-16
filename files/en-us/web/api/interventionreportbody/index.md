@@ -75,4 +75,4 @@ const observer = new ReportingObserver((reports, observer) => {
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)

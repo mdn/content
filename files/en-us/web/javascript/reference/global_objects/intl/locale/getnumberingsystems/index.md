@@ -17,6 +17,10 @@ The **`getNumberingSystems()`** method of {{jsxref("Intl.Locale")}} instances re
 getNumberingSystems()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of strings representing all numbering systems commonly used for the `Locale`, sorted in descending preference. If the `Locale` already has a [`numberingSystem`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem), then the returned array contains that single value.

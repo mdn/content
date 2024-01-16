@@ -31,15 +31,22 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
       <stop offset="50%" stop-color="black" stop-opacity="0" />
       <stop offset="100%" stop-color="blue" />
     </linearGradient>
-    <style>
-      <![CDATA[
-              #rect1 { fill: url(#Gradient1); }
-              .stop1 { stop-color: red; }
-              .stop2 { stop-color: black; stop-opacity: 0; }
-              .stop3 { stop-color: blue; }
-            ]]>
-    </style>
   </defs>
+  <style>
+    #rect1 {
+      fill: url(#Gradient1);
+    }
+    .stop1 {
+      stop-color: red;
+    }
+    .stop2 {
+      stop-color: black;
+      stop-opacity: 0;
+    }
+    .stop3 {
+      stop-color: blue;
+    }
+  </style>
 
   <rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100" />
   <rect
@@ -65,9 +72,7 @@ To use a gradient, you have to reference it from an object's `fill` or `stroke` 
 
 ```svg
 <style>
-  <![CDATA[
-          #rect1 { fill: url(#Gradient1); }
-        ]]>
+  #rect1 { fill: url(#Gradient1); }
 </style>
 ```
 
@@ -77,7 +82,7 @@ The `<linearGradient>` element also takes several other attributes, which specif
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
-> **Note:** You can also use the `xlink:href` attribute on gradients too. When it is used, attributes and stops from one gradient can be included on another. In the above example, you wouldn't have to recreate all the stops in Gradient2.
+> **Note:** You can also use the `href` attribute on gradients too. When it is used, attributes and stops from one gradient can be included on another. In the above example, you wouldn't have to recreate all the stops in Gradient2.
 >
 > ```html
 > <linearGradient id="Gradient1">
@@ -92,7 +97,7 @@ The `<linearGradient>` element also takes several other attributes, which specif
 >   y1="0"
 >   y2="1"
 >   xmlns:xlink="http://www.w3.org/1999/xlink"
->   xlink:href="#Gradient1" />
+>   href="#Gradient1" />
 > ```
 >
 > I've included the xlink namespace here directly on the node, although usually you would define it at the top of your document. More on that when we [talk about images](/en-US/docs/Web/SVG/Tutorial/Other_content_in_SVG).

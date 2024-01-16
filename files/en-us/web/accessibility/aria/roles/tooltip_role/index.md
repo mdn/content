@@ -2,9 +2,7 @@
 title: "ARIA: tooltip role"
 slug: Web/Accessibility/ARIA/Roles/tooltip_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#tooltip
-  - https://w3c.github.io/aria-practices/#tooltip
+spec-urls: https://w3c.github.io/aria/#tooltip
 ---
 
 A `tooltip` is a contextual text bubble that displays a description for an element that appears on pointer hover or keyboard focus.
@@ -97,7 +95,7 @@ The tooltip can be instantiated with CSS. Change the class name with JavaScript 
 
 The above hides the tooltip with CSS in the default state or if the hidetooltip class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible.
 
-## Accessibility Concerns
+## Accessibility concerns
 
 If the information is important enough for a tooltip, isn't it important enough to always be visible?
 
@@ -122,6 +120,6 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

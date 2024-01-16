@@ -6,9 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
 
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
+{{APIRef("Media Capture and Streams")}}
 
-The **`OverconstrainedError`** constructor
+The **`OverconstrainedError()`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
 desired capabilities for the current {{domxref("MediaStreamTrack")}} cannot currently be
 met. When this event is thrown on a `MediaStreamTrack`, it is muted until
@@ -25,8 +25,8 @@ new OverconstrainedError()
 
 - `constraint`
   - : The constraint that was not satisfied.
-- `message`
-  - : Text for the error's `message` property.
+- `message` {{optional_inline}}
+  - : Text for the error's `message` property. Defaults to an empty string.
 
 ## Specifications
 

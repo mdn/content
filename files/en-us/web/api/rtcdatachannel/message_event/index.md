@@ -59,7 +59,7 @@ dc.addEventListener(
 
     document.body.appendChild(newParagraph);
   },
-  false
+  false,
 );
 ```
 

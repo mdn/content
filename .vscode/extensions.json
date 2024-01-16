@@ -1,6 +1,7 @@
 {
   "recommendations": [
-    "DavidAnson.vscode-markdownlint",
-    "esbenp.prettier-vscode"
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

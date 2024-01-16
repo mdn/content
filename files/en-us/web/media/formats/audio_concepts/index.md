@@ -1,6 +1,7 @@
 ---
 title: Digital audio concepts
 slug: Web/Media/Formats/Audio_concepts
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}

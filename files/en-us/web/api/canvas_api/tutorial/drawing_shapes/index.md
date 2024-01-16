@@ -312,7 +312,7 @@ The next type of paths available are [Bézier curves](/en-US/docs/Glossary/Bezie
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Draws a quadratic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control point specified by `cp1x` and `cp1y`.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
-  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (cp2x, cp2y).
+  - : Draws a cubic Bézier curve from the current pen position to the end point specified by `x` and `y`, using the control points specified by (`cp1x`, `cp1y`) and (`cp2x`, `cp2y`).
 
 The difference between these is that a quadratic Bézier curve has a start and an end point (blue dots) and just one **control point** (indicated by the red dot) while a cubic Bézier curve uses two control points.
 ![Quadratic and Bezier curve comparison.](canvas_curves.png)
@@ -513,6 +513,49 @@ The resulting image looks like this:
 We won't go over this in detail, since it's actually surprisingly simple. The most important things to note are the use of the `fillStyle` property on the drawing context, and the use of a utility function (in this case `roundedRect()`). Using utility functions for bits of drawing you do often can be very helpful and reduce the amount of code you need, as well as its complexity.
 
 We'll take another look at `fillStyle`, in more detail, later in this tutorial. Here, all we're doing is using it to change the fill color for paths from the default color of black to white, and then back again.
+
+### Shapes with holes
+
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape clockwise and the inner shape anticlockwise.
+
+```html hidden
+<html lang="en">
+  <body>
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
+</html>
+```
+
+```js
+function draw() {
+  const canvas = document.getElementById("canvas");
+  if (canvas.getContext) {
+    const ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+
+    // Outter shape clockwise ⟳
+    ctx.moveTo(0, 0);
+    ctx.lineTo(150, 0);
+    ctx.lineTo(75, 129.9);
+
+    // Inner shape anticlockwise ↺
+    ctx.moveTo(75, 20);
+    ctx.lineTo(50, 60);
+    ctx.lineTo(100, 60);
+
+    ctx.fill();
+  }
+}
+```
+
+```js hidden
+draw();
+```
+
+{{EmbedLiveSample("Shapes_with_holes", 160, 160, "shape_with_hole.png")}}
+
+In the example above the outer triangle goes clockwise (move to the top-left corner, then draw a line to the right-left corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 

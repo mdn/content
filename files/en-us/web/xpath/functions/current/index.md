@@ -1,6 +1,7 @@
 ---
 title: current
 slug: Web/XPath/Functions/current
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `current` function can be used to get the context node in an XSLT instructio
 
 ### Syntax
 
-```
+```plain
 current()
 ```
 

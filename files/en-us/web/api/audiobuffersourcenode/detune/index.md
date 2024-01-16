@@ -34,7 +34,7 @@ const frameCount = audioCtx.sampleRate * 2.0; // 2 seconds
 const myArrayBuffer = audioCtx.createBuffer(
   channelCount,
   frameCount,
-  audioCtx.sampleRate
+  audioCtx.sampleRate,
 );
 
 for (let channel = 0; channel < channelCount; channel++) {

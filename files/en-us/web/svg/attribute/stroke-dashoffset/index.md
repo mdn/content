@@ -87,7 +87,7 @@ svg {
   the following red lines highlight the
   offset of the dash array for each line
   -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgb(255 0 0 / 50%)" />
 </svg>
 ```
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
 
-{{ APIRef("Mountain View APIRef Project") }}
+{{ APIRef("Web Audio API") }}
 
 The **`getByteTimeDomainData()`** method of the {{ domxref("AnalyserNode") }} Interface copies the current waveform, or time-domain, data into a {{jsxref("Uint8Array")}} (unsigned byte array) passed into it.
 
@@ -49,11 +49,11 @@ function draw() {
   drawVisual = requestAnimationFrame(draw);
   analyser.getByteTimeDomainData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillStyle = "rgb(200 200 200)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
   canvasCtx.lineWidth = 2;
-  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+  canvasCtx.strokeStyle = "rgb(0 0 0)";
 
   const sliceWidth = (WIDTH * 1.0) / bufferLength;
   let x = 0;

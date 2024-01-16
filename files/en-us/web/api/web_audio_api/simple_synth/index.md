@@ -96,7 +96,11 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .key {
   cursor: pointer;
-  font: 16px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    16px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   border: 1px solid black;
   border-radius: 5px;
   width: 20px;
@@ -142,7 +146,11 @@ On the right side of the settings bar, we place a label and a {{HTMLElement("sel
 
 .settingsBar {
   padding-top: 8px;
-  font: 14px "Open Sans", "Lucida Grande", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Lucida Grande",
+    "Arial",
+    sans-serif;
   position: relative;
   vertical-align: middle;
   width: 100%;
@@ -397,9 +405,9 @@ if (!Object.entries) {
       (e, k) =>
         concat(
           e,
-          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : []
+          typeof k === "string" && isEnumerable(O, k) ? [[k, O[k]]] : [],
         ),
-      []
+      [],
     );
   };
 }
@@ -532,7 +540,7 @@ function notePressed(event) {
   if (event.buttons & 1) {
     const dataset = event.target.dataset;
 
-    if (!dataset["pressed"]) {
+    if (!dataset["pressed"] && dataset["octave"]) {
       const octave = Number(dataset["octave"]);
       oscList[octave][dataset["note"]] = playTone(dataset["frequency"]);
       dataset["pressed"] = "yes";
@@ -555,9 +563,12 @@ function noteReleased(event) {
 
   if (dataset && dataset["pressed"]) {
     const octave = Number(dataset["octave"]);
-    oscList[octave][dataset["note"]].stop();
-    delete oscList[octave][dataset["note"]];
-    delete dataset["pressed"];
+
+    if (oscList[octave] && oscList[octave][dataset["note"]]) {
+      oscList[octave][dataset["note"]].stop();
+      delete oscList[octave][dataset["note"]];
+      delete dataset["pressed"];
+    }
   }
 }
 ```

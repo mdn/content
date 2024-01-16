@@ -65,7 +65,7 @@ To move or rotate the user's view of the world, you need to change the `XRRefere
 ```js
 let offsetTransform = new XRRigidTransform(
   { x: 2, y: 0, z: 1 },
-  { x: 0, y: 0, z: 0, w: 1 }
+  { x: 0, y: 0, z: 0, w: 1 },
 );
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```

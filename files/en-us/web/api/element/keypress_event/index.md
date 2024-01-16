@@ -14,7 +14,7 @@ The **`keypress`** event is fired when a key that produces a character value is 
 
 Examples of keys that produce a character value are alphabetic, numeric, and punctuation keys. Examples of keys that don't produce a character value are modifier keys such as <kbd>Alt</kbd>, <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>Meta</kbd>.
 
-> **Warning:** Since this event has been deprecated, you should use [`beforeinput`](/en-US/docs/Web/API/HTMLElement/beforeinput_event) or [`keydown`](/en-US/docs/Web/API/Element/keydown_event) instead.
+> **Warning:** Since this event has been deprecated, you should use [`beforeinput`](/en-US/docs/Web/API/Element/beforeinput_event) or [`keydown`](/en-US/docs/Web/API/Element/keydown_event) instead.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ onkeypress = (event) => {};
 
 ## Event type
 
-A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("KeyboardEvent")}}
 
@@ -54,12 +54,6 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
   - : Returns a boolean value that is `true` if the event is fired between after `compositionstart` and before `compositionend`.
 - {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : Returns a string representing the key value of the key represented by the event.
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
-
-  - : Returns a string representing a locale string indicating the locale the keyboard is configured for. This may be the empty string if the browser or device doesn't know the keyboard's locale.
-
-    > **Note:** This does not describe the locale of the data being entered. A user may be using one keyboard layout while typing text in a different language.
-
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Returns a number representing the location of the key on the keyboard or other input device. A list of the constants identifying the locations is shown in [Keyboard locations](/en-US/docs/Web/API/KeyboardEvent#keyboard_locations).
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
@@ -118,6 +112,6 @@ input.onkeypress = logKey;
 - The {{domxref("Document")}} interface, which the event also targets.
 - Related events:
 
-  - [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+  - [`input`](/en-US/docs/Web/API/Element/input_event)
   - [`keydown`](/en-US/docs/Web/API/Element/keydown_event)
   - [`keyup`](/en-US/docs/Web/API/Element/keyup_event)

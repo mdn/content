@@ -61,6 +61,7 @@ Values of this type are objects. They contain the following properties:
     - "unknown" (if the version is not valid)
 
 - `secretKeyLength` {{optional_inline}}
+
   - : `Number`. The length of the secret key in bits.
 
 - `signatureSchemeName` {{optional_inline}}
@@ -77,15 +78,19 @@ Values of this type are objects. They contain the following properties:
     Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set to "broke".
 
 - `usedDelegatedCredentials` {{optional_inline}}
+
   - : `Boolean`. `true` if the connection used Delegated Credentials, `false` otherwise.
 
 - `usedEch` {{optional_inline}}
+
   - : `Boolean`. `true` if the connection used ECH (Encrypted Client Hello), `false` otherwise.
 
 - `usedOcsp` {{optional_inline}}
+
   - : `Boolean`. `true` if the connection made an OCSP (Online Certificate Status Protocol) request, `false` otherwise.
 
 - `usedPrivateDns` {{optional_inline}}
+
   - : `Boolean`. `true` if the connection made a private DNS lookup, such as with DoH (DNS over HTTPS), `false` otherwise.
 
 - `weaknessReasons` {{optional_inline}}

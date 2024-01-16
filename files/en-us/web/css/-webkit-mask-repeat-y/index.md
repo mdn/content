@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-mask-repeat-y
 
 The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeated (tiled) vertically.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-mask-repeat-y: repeat;
@@ -28,8 +30,6 @@ The `-webkit-mask-repeat-y` property sets whether and how a mask image is repeat
 -webkit-mask-repeat-y: revert-layer;
 -webkit-mask-repeat-y: unset;
 ```
-
-## Syntax
 
 ### Values
 

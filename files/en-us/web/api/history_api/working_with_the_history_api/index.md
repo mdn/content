@@ -6,104 +6,188 @@ page-type: guide
 
 {{DefaultAPISidebar("History API")}}
 
-The {{DOMxRef("History.pushState","pushState()")}} and {{DOMxRef("History.replaceState","replaceState()")}} methods add and modify history entries, respectively. These methods work in conjunction with the {{domxref("Window/popstate_event", "popstate")}} event.
+The History API enables a website to interact with the browser's session history: that is, the list of pages that the user has visited in a given window. As the user visits new pages, for example by clicking links, those new pages are added to the session history. The user can also move back and forth through the history using the browser's "Back" and "Forward" buttons.
 
-## Adding and modifying history entries
+The main interface defined in the History API is the {{domxref("History")}} interface, and this defines two quite distinct sets of methods:
 
-Using {{DOMxRef("History.pushState","pushState()")}} changes the referrer that gets used in the HTTP header for {{domxref("XMLHttpRequest")}} objects created after you change the state. The referrer will be the URL of the document whose window is `this` at the time of creation of the {{domxref("XMLHttpRequest")}} object.
+1. Methods to navigate to a page in the session history:
 
-### Example of pushState() method
+   - {{domxref("History.back()")}}
+   - {{domxref("History.forward()")}}
+   - {{domxref("History.go()")}}
 
-Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
+2. Methods to modify the session history:
+
+   - {{domxref("History.pushState()")}}
+   - {{domxref("History.replaceState()")}}
+
+In this guide we'll be concerned only with the second set of methods, as these have more complex behavior.
+
+The `pushState()` method adds a new entry to the session history, while the `replaceState()` method updates the session history entry for the current page. Both these methods take a `state` parameter which can contain any {{Glossary("Serializable_object", "serializable object")}} . When the browser navigates to this history entry, the browser fires a {{domxref("Window.popstate_event", "popstate")}} event, which contains the state object associated with that entry.
+
+The main purpose of these APIs is to support websites like {{Glossary("SPA", "Single-page applications")}}, that use JavaScript APIs such as {{domxref("fetch()")}} to update the page with new content, instead of loading a whole new page.
+
+## Single-page applications and session history
+
+Traditionally, websites are implemented as a collection of pages. When users navigate to different parts of the site by clicking links, the browser loads a whole new page each time.
+
+While this is great for many sites, it can have some disadvantages:
+
+- It can be inefficient to load a whole page every time, when only part of the page needs to be updated.
+- It is hard to maintain application state when navigating across pages
+
+For these reasons, a popular pattern for web apps is the {{Glossary("SPA", "single-page application")}} (SPA), in which the site consists of a single page, and when the user clicks links, the page:
+
+1. Prevents the default behavior of loading a new page
+2. {{domxref("fetch()", "Fetches", "", "nocode")}} new content to display
+3. Updates the page with the new content
+
+For example:
 
 ```js
-const stateObj = {
-  foo: "bar",
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    // Prevent a new page from loading
+    event.preventDefault();
+    try {
+      // Fetch new content
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      // Update the page with the new content
+      displayContent(json);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+```
+
+In this click handler, if the link contains a data attribute `"data-creature"`, then we use the value of that attribute to fetch a JSON file containing the new content for the page.
+
+The JSON file might look like this:
+
+```json
+{
+  "description": "Bald eagles are not actually bald.",
+  "image": {
+    "src": "images/eagle.jpg",
+    "alt": "A bald eagle"
+  },
+  "name": "Eagle"
+}
+```
+
+Our `displayContent()` function updates the page with the JSON:
+
+```js
+// Update the page with the new content
+function displayContent(content) {
+  document.title = `Creatures: ${content.name}`;
+
+  const description = document.querySelector("#description");
+  description.textContent = content.description;
+
+  const photo = document.querySelector("#photo");
+  photo.setAttribute("src", content.image.src);
+  photo.setAttribute("alt", content.image.alt);
+}
+```
+
+The problem is that it breaks the expected behavior of the browser's "Back" and "Forward" buttons.
+
+From the user's point of view, they clicked a link and the page updated, so it looks like a new page. If they then press the browser's "Back" button, they expect to go to the state before they clicked the link.
+
+But as far as the browser is concerned, the last link didn't load a new page, so "Back" will take the browser to whichever page was loaded before the user opened the SPA.
+
+This is essentially the problem that `pushState()`, `replaceState()`, and the `popstate` event solve. They enable us to synthesize history entries, and to be notified when the current session history entry changes to one of these entries (for example, because the user pressed the "Back" or "Forward" buttons).
+
+## Using `pushState()`
+
+We can add a history entry to the click handler above as follows:
+
+```js
+document.addEventListener("click", async (event) => {
+  const creature = event.target.getAttribute("data-creature");
+  if (creature) {
+    event.preventDefault();
+    try {
+      const response = await fetch(`creatures/${creature}.json`);
+      const json = await response.json();
+      displayContent(json);
+      // Add a new entry to the history.
+      // This simulates loading a new page.
+      history.pushState(json, "", creature);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+});
+```
+
+Here, we're calling `pushState()` with three arguments:
+
+- `json`: this is the content we just fetched. It will be stored with the history entry, and later included as the {{domxref("PopStateEvent.state", "state")}} property of the argument passed to the `popstate` event handler.
+- `""`: this is needed for backward compatibility with legacy sites, and should always be an empty string
+- `creature`: this will be used as the URL for the entry. It will be shown in the browser's URL bar, and will be used as the value of the {{httpheader("Referer")}} header in any HTTP requests that the page makes. Note that this must be {{Glossary("Same-origin policy", "same-origin")}} with the page.
+
+## Using the `popstate` event
+
+Suppose the user:
+
+1. Clicks a link in our SPA, so we update the page and add history entry A using `pushState()`
+2. Clicks another link in our SPA, so we update the page and add history entry B using `pushState()`
+3. Presses the "Back" button
+
+Now the new current history entry is A, so the browser fires the `popstate` event, and the event handler argument includes the JSON that we passed to `pushState()` when we handled the navigation to A. This means we can restore the correct content with an event handler like this:
+
+```js
+// Handle forward/back buttons
+window.addEventListener("popstate", (event) => {
+  // If a state has been provided, we have a "simulated" page
+  // and we update the current page.
+  if (event.state) {
+    // Simulate the loading of the previous page
+    displayContent(event.state);
+  }
+});
+```
+
+## Using `replaceState()`
+
+There's one more piece we need to add. When the user loads the SPA, the browser adds a history entry. Because this was an actual page load, the entry has no state associated with it. So suppose the user:
+
+1. Loads the SPA: the browser adds a history entry
+2. Clicks a link inside the SPA: the click handler updates the page and adds a history entry with `pushState()`
+3. Presses the "Back" button
+
+Now we want to go back to the SPA's initial state, but since this is a navigation in the same document, the page will not be reloaded, and since the history entry for the initial page has no state, we can't use `popstate` to restore it.
+
+The solution here is to use `replaceState()` to set the state object for the initial page. For example:
+
+```js
+// Create state on page load and replace the current history with it
+const image = document.querySelector("#photo");
+const initialState = {
+  description: document.querySelector("#description").textContent,
+  image: {
+    src: image.getAttribute("src"),
+    alt: image.getAttribute("alt"),
+  },
+  name: "Home",
 };
-
-history.pushState(stateObj, "page 2", "bar.html");
+history.replaceState(initialState, "", document.location.href);
 ```
 
-This will cause the URL bar to display `https://mozilla.org/bar.html`, but won't cause the browser to load `bar.html` or even check that `bar.html` exists.
+On page load, we collect all the parts of the page that we need to restore when the user returns to the starting point for the SPA. This has the same structure as the JSON we fetch when handling other navigations. We pass this `initialState` object into `replaceState()`, which effectively adds the state object to the current history entry.
 
-Suppose now that the user navigates to `https://google.com`, then clicks the **Back** button. At this point, the URL bar will display `https://mozilla.org/bar.html` and `history.state` will contain the `stateObj`. The `popstate` event won't be fired because the page has been reloaded. The page itself will look like `bar.html`.
+When the user returns to our starting point, the `popstate` event will contain this initial state, and we can use our `displayContent()` function to update the page.
 
-If the user clicks **Back** once again, the URL will change to `https://mozilla.org/foo.html`, and the document will get a `popstate` event, this time with a `null` state object. Here too, going back doesn't change the document's contents from what they were in the previous step, although the document might update its contents manually upon receiving the `popstate` event.
+## A complete example
 
-### The pushState() method
-
-`pushState()` takes three parameters: a **state object**; a **title** (currently ignored); and (optionally), a **URL**.
-
-Let's examine each of these three parameters in more detail.
-
-- **state object**
-  - : The state object is a JavaScript object which is associated with the new history entry created by `pushState()`. Whenever the user navigates to the new state, a `popstate` event is fired, and the `state` property of the event contains a copy of the history entry's state object.
-    The state object can be anything that can be serialized. Because Firefox saves state objects to the user's disk so they can be restored after the user restarts the browser, we impose a size limit of 640k characters on the serialized representation of a state object. If you pass a state object whose serialized representation is larger than this to `pushState()`, the method will throw an exception. If you need more space than this, you're encouraged to use `sessionStorage` and/or `localStorage`.
-- **title**
-  - : [All browsers but Safari currently ignore this parameter](https://github.com/whatwg/html/issues/2174), although they may use it in the future. Passing the empty string here should be safe against future changes to the method. Alternatively, you could pass a short title for the state to which you're moving.
-- **URL**
-  - : The new history entry's URL is given by this parameter. Note that the browser won't attempt to load this URL after a call to `pushState()`, but it might attempt to load the URL later, for instance after the user restarts the browser. The new URL does not need to be absolute; if it's relative, it's resolved relative to the current URL. The new URL must be of the same origin as the current URL; otherwise, `pushState()` will throw an exception. This parameter is optional; if it isn't specified, it's set to the document's current URL.
-
-In a sense, calling `pushState()` is similar to setting `window.location = "#foo"`, in that both will also create and activate another history entry associated with the current document.
-
-But `pushState()` has a few advantages:
-
-- The new URL can be any URL in the same origin as the current URL. In contrast, setting `window.location` keeps you at the same {{ domxref("document") }} only if you modify only the hash.
-- You don't have to change the URL if you don't want to. In contrast, setting `window.location = "#foo";` creates a new history entry only if the current hash isn't `#foo`.
-- You can associate arbitrary data with your new history entry. With the hash-based approach, you need to encode all of the relevant data into a short string.
-- If `title` is subsequently used by browsers, this data can be utilized (independent of, say, the hash).
-
-Note that `pushState()` never causes a `hashchange` event to be fired, even if the new URL differs from the old URL only in its hash.
-
-In other documents, it creates an element with a `null` namespace URI.
-
-### The replaceState() method
-
-`history.replaceState()` operates exactly like `history.pushState()`, except that `replaceState()` modifies the current history entry instead of creating a new one. Note that this doesn't prevent the creation of a new entry in the global browser history.
-
-`replaceState()` is particularly useful when you want to update the state object or URL of the current history entry in response to some user action.
-
-### Example of replaceState() method
-
-Suppose `https://mozilla.org/foo.html` executes the following JavaScript:
-
-```js
-const stateObj = {
-  foo: "bar",
-};
-history.pushState(stateObj, "page 2", "bar.html");
-```
-
-The explanation of these two lines above can be found at the above section _[Example of pushState() method](#example_of_pushstate_method)_ section.
-
-Next, suppose `https://mozilla.org/bar.html` executes the following JavaScript:
-
-```js
-history.replaceState(stateObj, "page 3", "bar2.html");
-```
-
-This will cause the URL bar to display `https://mozilla.org/bar2.html`, but won't cause the browser to load `bar2.html` or even check that `bar2.html` exists.
-
-Suppose now that the user navigates to `https://www.microsoft.com`, then clicks the **Back** button. At this point, the URL bar will display `https://mozilla.org/bar2.html`. If the user now clicks **Back** again, the URL bar will display `https://mozilla.org/foo.html`, and totally bypass `bar.html`.
-
-### The popstate event
-
-A `popstate` event is dispatched to the window every time the active history entry changes. If the history entry being activated was created by a call to {{DOMxRef("History.pushState","pushState")}} or affected by a call to {{DOMxRef("History.replaceState","replaceState")}}, the `popstate` event's `state` property contains a copy of the history entry's state object.
-
-See {{domxref("Window/popstate_event", "popstate")}} for sample usage.
-
-### Reading the current state
-
-When your page loads, it might have a non-null state object. This can happen, for example, if the page sets a state object (using {{DOMxRef("History.pushState","pushState()")}} or {{DOMxRef("History.replaceState","replaceState()")}}) and then the user restarts their browser. When the page reloads, the page will receive an `onload` event, but no `popstate` event. However, if you read the {{DOMxRef("History.state","history.state")}} property, you'll get back the state object you would have gotten if a `popstate` had fired.
-
-You can read the state of the current history entry without waiting for a `popstate` event using the {{DOMxRef("History.state","history.state")}} property like this:
-
-```js
-const currentState = history.state;
-```
+You can find this complete example at <https://github.com/mdn/dom-examples/tree/main/history-api>, and see the demo live at <https://mdn.github.io/dom-examples/history-api/>.
 
 ## See also
 
 - [History API](/en-US/docs/Web/API/History_API)
-- [History navigation example](/en-US/docs/Web/API/History_API/Example)
 - {{domxref("window.history", "history")}} global object

@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("AudioDecoder.isConfigSupported()")}} {{Experimental_Inline}}
+- {{domxref("AudioDecoder/isConfigSupported_static", "AudioDecoder.isConfigSupported()")}} {{Experimental_Inline}}
   - : Returns a promise indicating whether the provided `AudioDecoderConfig` is supported.
 
 ## Instance methods

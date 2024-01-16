@@ -118,7 +118,7 @@ None ({{jsxref("undefined")}}).
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 const pixels = new Uint8Array(
-  gl.drawingBufferWidth * gl.drawingBufferHeight * 4
+  gl.drawingBufferWidth * gl.drawingBufferHeight * 4,
 );
 gl.readPixels(
   0,
@@ -127,7 +127,7 @@ gl.readPixels(
   gl.drawingBufferHeight,
   gl.RGBA,
   gl.UNSIGNED_BYTE,
-  pixels
+  pixels,
 );
 console.log(pixels); // Uint8Array
 ```
@@ -142,4 +142,4 @@ console.log(pixels); // Uint8Array
 
 ## See also
 
-- [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)

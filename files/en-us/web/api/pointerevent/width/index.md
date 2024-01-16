@@ -34,7 +34,7 @@ target.addEventListener(
     // Calculate the contact area
     const area = ev.width * ev.height;
   },
-  false
+  false,
 );
 ```
 

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/heading_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#heading
-  - https://w3c.github.io/aria-practices/#heading
+  - https://www.w3.org/WAI/ARIA/apg/practices/structural-roles/#when_to_use_structural_roles
 ---
 
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
@@ -17,7 +17,7 @@ The heading role indicates to assistive technologies that this element should be
 <div role="heading" aria-level="1">This is a main page heading</div>
 ```
 
-This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement("Heading_Elements", "h1")}} (thru {{HTMLElement("Heading_Elements", "h6")}}) element instead.
+This defines the text in the `<div>` to be the main heading of the page, indicated by being level 1 via the `aria-level` attribute. Opt for using the {{HTMLElement("Heading_Elements", "h1")}} (through {{HTMLElement("Heading_Elements", "h6")}}) element instead.
 
 ```html
 <h1>This is a main page heading</h1>
@@ -108,12 +108,12 @@ The heading role overrides the native semantic meaning of the element it is bein
 
 ## See also
 
-- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

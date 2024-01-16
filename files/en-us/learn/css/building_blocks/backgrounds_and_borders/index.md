@@ -13,10 +13,9 @@ In this lesson, we will take a look at some of the creative things you can do wi
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -41,12 +40,14 @@ The CSS {{cssxref("background")}} property is a shorthand for a number of backgr
 
 ```css
 .box {
-  background: linear-gradient(
+  background:
+    linear-gradient(
         105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
-      ) center center / 400px 200px no-repeat, url(big-star.png) center
-      no-repeat, rebeccapurple;
+        rgb(255 255 255 / 20%) 39%,
+        rgb(51 56 57 / 100%) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -182,7 +183,9 @@ The other `background-*` properties can also have comma-separated values in the 
 background-image: url(image1.png), url(image2.png), url(image3.png),
   url(image4.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px, top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 Each value of the different properties will match up to the values in the same position in the other properties. Above, for example, `image1`'s `background-repeat` value will be `no-repeat`. However, what happens when different properties have different numbers of values? The answer is that the smaller numbers of values will cycle — in the above example there are four background images but only two `background-position` values. The first two position values will be applied to the first two images, then they will cycle back around again — `image3` will be given the first position value, and `image4` will be given the second position value.

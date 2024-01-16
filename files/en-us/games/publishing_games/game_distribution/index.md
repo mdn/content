@@ -70,7 +70,7 @@ Let's see what the available options are regarding the marketplaces/stores avail
 
 ### Web stores
 
-The best platforms for HTML games are the Web-based stores. It's easy to [prepare a game for them](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515) as such an action involves little to no modification of the game itself — usually adding a manifest file containing necessary information in a zipped package containing all the resources is enough.
+The best platforms for HTML games are Web-based stores. You can prepare games for web stores by adding a manifest file and other data, such as resources, in a zipped package. Not many modifications of the game itself are required.
 
 - [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
 

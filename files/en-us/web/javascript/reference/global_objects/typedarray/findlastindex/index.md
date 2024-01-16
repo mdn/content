@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.TypedArray.findLastIndex
 
 {{JSRef}}
 
-The **`findLastIndex()`** method iterates a [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) in reverse order and returns the index of the first element that satisfies the provided testing function.
-If no values satisfy the testing function, -1 is returned.
-
-See also the {{jsxref("TypedArray.findLast()", "findLast()")}} method, which returns the value of the found element rather than its index.
+The **`findLastIndex()`** method of {{jsxref("TypedArray")}} instances iterates the typed array in reverse order and returns the index of the first element that satisfies the provided testing function. If no elements satisfy the testing function, -1 is returned. This method has the same algorithm as {{jsxref("Array.prototype.findLastIndex()")}}.
 
 {{EmbedInteractiveExample("pages/js/typedarray-findlastindex.html")}}
 
@@ -36,33 +33,18 @@ findLastIndex(callbackFn, thisArg)
 
 ### Return value
 
-The index of the last (highest-index) element in the array that passes the test.
-Otherwise -1 if no matching element is found.
+The index of the last (highest-index) element in the typed array that passes the test.
+Otherwise `-1` if no matching element is found.
 
 ## Description
 
-The `findLastIndex()` method executes the `callbackFn` function once for each index of the typed array in descending-index order until the `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value.
-`findLastIndex()` then returns the index of that element and stops iterating through the typed array.
-If `callbackFn` never returns a truthy value, `findLastIndex()` returns `-1`.
-
-`callbackFn` is invoked with three arguments: the value of the element, the index of the element, and the typed array object being traversed.
-
-If a `thisArg` parameter is provided to `findLastIndex()`, it will be used as the `this` for each invocation of the `callbackFn`.
-If it is not provided, then {{jsxref("undefined")}} is used.
-
-The `findLastIndex()` method does not mutate the typed array on which it is called, but the function provided to `callbackFn` can.
-
-The range of elements processed by `findLastIndex()` is set before the first invocation of `callbackFn`.
-Elements that are appended to the typed array after the call to `findLastIndex()` begins will not be visited by `callbackFn`.
-If an existing, unvisited element of the typed array is changed by `callbackFn`, its value passed to the visiting `callbackFn` will be the value at the time that `findLastIndex()` visits that element's index.
-
-> **Warning:** Concurrent modification of the kind described in the previous paragraph frequently leads to hard-to-understand code and is generally to be avoided (except in special cases).
+See {{jsxref("Array.prototype.findLastIndex()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
-### Find the index of a prime number in a typed array
+### Find the index of the last prime number in a typed array
 
-The following example finds the index of the last element in the typed array that is a prime number (or returns `-1` if there is no prime number).
+The following example returns the index of the last element in the typed array that is a prime number, or `-1` if there is no prime number.
 
 ```js
 function isPrime(element) {
@@ -95,7 +77,12 @@ console.log(uint8.findLastIndex(isPrime));
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- {{jsxref("TypedArray.prototype.findLast()")}}
+- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}
+- {{jsxref("TypedArray.prototype.findLast()")}}
 - {{jsxref("TypedArray.prototype.indexOf()")}}
+- {{jsxref("TypedArray.prototype.lastIndexOf()")}}
+- {{jsxref("Array.prototype.findLastIndex()")}}

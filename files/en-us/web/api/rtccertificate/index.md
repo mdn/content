@@ -32,4 +32,4 @@ The **`RTCCertificate`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 ## See also
 
 - [`RTCPeerConnection.RTCPeerConnection()` argument `configuration.certificates`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#certificates)
-- {{domxref("RTCPeerConnection.generateCertificate()")}}
+- {{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}

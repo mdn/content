@@ -63,7 +63,7 @@ container.insertAdjacentElement("afterend", output);
 
 {{EmbedLiveSample("Example")}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

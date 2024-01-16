@@ -14,6 +14,8 @@ The **`pushManager`** property of the
 support for subscribing, getting an active subscription, and accessing push permission
 status.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref("PushManager")}} object.
@@ -36,7 +38,7 @@ navigator.serviceWorker
         console.log(pushSubscription.endpoint);
         // The push subscription details needed by the application
         // server are now available, and can be sent to it using,
-        // for example, an XMLHttpRequest.
+        // for example, the fetch() API.
       },
       (error) => {
         // During development it often helps to log errors to the
@@ -44,7 +46,7 @@ navigator.serviceWorker
         // also report information about errors back to the
         // application server.
         console.error(error);
-      }
+      },
     );
   });
 ```

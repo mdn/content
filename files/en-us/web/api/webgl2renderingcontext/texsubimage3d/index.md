@@ -149,7 +149,7 @@ gl.texSubImage3D(
   1,
   gl.RGBA,
   gl.UNSIGNED_BYTE,
-  image
+  image,
 );
 ```
 

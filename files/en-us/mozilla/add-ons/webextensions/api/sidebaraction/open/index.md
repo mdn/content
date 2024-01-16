@@ -39,7 +39,7 @@ Open the sidebar when the user selects a context menu item:
 browser.menus.create({
   id: "open-sidebar",
   title: "open sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

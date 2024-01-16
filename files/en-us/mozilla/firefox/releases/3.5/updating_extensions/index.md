@@ -1,6 +1,7 @@
 ---
 title: Updating extensions for Firefox 3.5
 slug: Mozilla/Firefox/Releases/3.5/Updating_extensions
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -134,7 +135,7 @@ try {
 } catch (ex) {
   try {
     loadContext = aRequest.loadGroup.notificationCallbacks.getInterface(
-      Components.interfaces.nsILoadContext
+      Components.interfaces.nsILoadContext,
     );
   } catch (ex) {
     loadContext = null;
@@ -153,14 +154,14 @@ function getWindowForRequest(request) {
     try {
       if (request.notificationCallbacks) {
         return request.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
     try {
       if (request.loadGroup && request.loadGroup.notificationCallbacks) {
         return request.loadGroup.notificationCallbacks.getInterface(
-          Components.interfaces.nsILoadContext
+          Components.interfaces.nsILoadContext,
         ).associatedWindow;
       }
     } catch (e) {}
@@ -179,7 +180,7 @@ NS_QueryNotificationCallbacks(channel, loadContext);
 
 ## Customizable toolbars
 
-In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Webkit bug 407725](https://bugzil.la/407725) and [Webkit bug 467045](https://bugzil.la/467045).
+In Firefox 3.5, customizable toolbar behavior has changed such that the `<xul:toolbar/>` binding now removes toolbar items from its associated `<xul:toolbarpalette/>` and adds them to the toolbar, rather than cloning them and copying them to the toolbar. This means that the palette will now only contain items not present on the toolbar, as opposed to the previous behavior of containing all customizable elements whether or not they were displayed on the toolbar. This might cause trouble for addons that depend on being able to retrieve all customizable toolbar items from the `<xul:toolbarpalette/>`, or which attempt to dynamically insert items into the palette to make them available during toolbar customization. More information is available in [Firefox bug 407725](https://bugzil.la/407725) and [Webkit bug 467045](https://bugzil.la/467045).
 
 ## XPCNativeWrapper
 

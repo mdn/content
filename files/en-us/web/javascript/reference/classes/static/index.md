@@ -36,7 +36,7 @@ There are some additional syntax restrictions:
 
 This page introduces public static properties of classes, which include static methods, static accessors, and static fields.
 
-- For private static features, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+- For private static features, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 - For instance features, see [methods definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get), [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set), and [public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields).
 
 Public static features are declared using the `static` keyword. They are added to the class constructor at the time of [class evaluation](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order) using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}). They are accessed again from the class constructor.
@@ -88,7 +88,7 @@ The expression is evaluated synchronously. You cannot use {{jsxref("Operators/aw
 
 Static field initializers and [static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) are evaluated one-by-one. Field initializers can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the one being initialized.
 
-> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 ## Examples
 
@@ -155,7 +155,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Calling static members from a class constructor and other methods
 
-Static members are not directly accessible using the {{JSxRef("Operators/this", "this")}} keyword from
+Static members are not directly accessible using the {{jsxref("Operators/this", "this")}} keyword from
 non-static methods. You need to call them using the class name:
 `CLASSNAME.STATIC_METHOD_NAME()` /
 `CLASSNAME.STATIC_PROPERTY_NAME` or by calling the method as a property of
@@ -188,7 +188,7 @@ class StaticMethodCall {
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}

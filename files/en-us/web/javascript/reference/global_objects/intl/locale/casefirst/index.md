@@ -11,7 +11,7 @@ The **`caseFirst`** accessor property of {{jsxref("Intl.Locale")}} instances ret
 
 ## Description
 
-A locale's collation rules are used to determine how strings are ordered in that locale. Certain locales use a character's case (UPPERCASE or lowercase) in the collation process. This additional rule can be expressed in a {{jsxref("Intl/Locale", "Locale's")}} `caseFirst` property.
+A locale's collation rules are used to determine how strings are ordered in that locale. Certain locales use a character's case (UPPERCASE or lowercase) in the collation process. This additional rule can be expressed in a {{jsxref("Intl.Locale")}} object's `caseFirst` property.
 
 There are 3 values that the `caseFirst` property can have, outlined in the table below.
 

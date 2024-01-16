@@ -36,7 +36,7 @@ For historical reasons, the `onerror` event handler property, on `Window` object
 
 Note that this only applies to handlers assigned to `onerror`, not to handlers added using `addEventListener()`.
 
-#### Cancelation
+#### Cancellation
 
 Most event handlers assigned to event handler properties can cancel the event's default behavior by returning `false` from the handler:
 
@@ -81,7 +81,7 @@ window.onerror = (a, b, c, d, e) => {
 
 > **Note:** These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
 
-This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/Element/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
+This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/HTMLElement/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
 
 ## Examples
 
@@ -174,4 +174,4 @@ scriptError.addEventListener("click", () => {
 
 ## See also
 
-- This event on `Element` targets: {{domxref("Element/error_event", "error")}} event
+- This event on `Element` targets: {{domxref("HTMLElement/error_event", "error")}} event

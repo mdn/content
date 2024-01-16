@@ -20,7 +20,7 @@ In client-server protocols, it is the client which establishes the connection. O
 
 With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more details.
 
-> **Note:** The client-server model does not allow the server to send data to the client without an explicit request for it. To work around this problem, web developers use several techniques: ping the server periodically via the {{domxref("XMLHTTPRequest")}}, {{domxref("fetch()")}} APIs, using the [WebSockets API](/en-US/docs/Web/API/WebSockets_API), or similar protocols.
+> **Note:** The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
 
 ## Sending a client request
 

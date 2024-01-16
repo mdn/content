@@ -61,8 +61,8 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Input events</th>
       <td>
-        {{domxref("HTMLElement/beforeinput_event", "beforeinput")}},
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/beforeinput_event", "beforeinput")}},
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -87,15 +87,15 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Pointer events</th>
       <td>
-        {{domxref("HTMLElement/pointerover_event", "pointerover")}},
-        {{domxref("HTMLElement/pointerenter_event", "pointerenter")}},
-        {{domxref("HTMLElement/pointerdown_event", "pointerdown")}},
-        {{domxref("HTMLElement/pointerup_event", "pointerup")}},
-        {{domxref("HTMLElement/pointercancel_event", "pointercancel")}},
-        {{domxref("HTMLElement/pointerout_event", "pointerout")}},
-        {{domxref("HTMLElement/pointerleave_event", "pointerleave")}},
-        {{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}},
-        {{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}
+        {{domxref("Element/pointerover_event", "pointerover")}},
+        {{domxref("Element/pointerenter_event", "pointerenter")}},
+        {{domxref("Element/pointerdown_event", "pointerdown")}},
+        {{domxref("Element/pointerup_event", "pointerup")}},
+        {{domxref("Element/pointercancel_event", "pointercancel")}},
+        {{domxref("Element/pointerout_event", "pointerout")}},
+        {{domxref("Element/pointerleave_event", "pointerleave")}},
+        {{domxref("Element/gotpointercapture_event", "gotpointercapture")}},
+        {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
       </td>
     </tr>
     <tr>
@@ -110,7 +110,7 @@ The following event types are exposed by the Event Timing API:
 </table>
 
 Note that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
-{{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
+{{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
 
@@ -133,7 +133,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the associated event's type.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timestamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
 
 This interface also supports the following properties:
 
@@ -202,7 +202,7 @@ document.addEventListener(
   (event) => {
     firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
   },
-  { once: true }
+  { once: true },
 );
 
 // Sends the passed data to an analytics endpoint. This code

@@ -28,6 +28,7 @@ Values of this type are objects. They contain these properties:
 - `queryTransform` {{optional_inline}}
 
   - : An object describing how to add, remove, or replace query key-value pairs. Cannot be specified if 'query' is specified.
+
     - `addOrReplaceParams` {{optional_inline}}
 
       - : An array of objects describing the list of query key-value pairs to be added or replaced.

@@ -91,5 +91,5 @@ Not part of any standard.
 
 ## See also
 
-- {{jsxref("Functions/arguments", "arguments")}} object
-- {{jsxref("Functions", "Functions and function scope", "", 1)}}
+- {{jsxref("Functions/arguments", "arguments")}}
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)

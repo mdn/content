@@ -11,7 +11,7 @@ browser-compat: api.GPUError.message
 {{APIRef("WebGPU API")}}{{SeeCompatTable}}
 
 The **`message`** read-only property of the
-{{domxref("GPUError")}} interface provides a human-readable message that explains why the error ocurred.
+{{domxref("GPUError")}} interface provides a human-readable message that explains why the error occurred.
 
 ## Value
 

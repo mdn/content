@@ -50,7 +50,7 @@ if (characteristic.properties.notify) {
     "characteristicvaluechanged",
     async (event) => {
       console.log(`Received heart rate measurement: ${event.target.value}`);
-    }
+    },
   );
   await characteristic.startNotifications();
 }

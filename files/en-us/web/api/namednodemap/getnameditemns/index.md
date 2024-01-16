@@ -45,7 +45,7 @@ const warning = doc.querySelector("warning");
 
 const value = warning.attributes.getNamedItemNS(
   "http://www.example.com/ob",
-  "one"
+  "one",
 ).value;
 
 pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
@@ -53,7 +53,7 @@ pre.textContent = `The 'ob:one' attribute contains: ${value}.`;
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

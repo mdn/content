@@ -1,6 +1,7 @@
 ---
 title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -20,9 +21,9 @@ No notable changes
 
 ### CSS
 
-- The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_Containment#size_containment).
+- The [`contain-intrinsic-size`](/en-US/docs/Web/CSS/contain-intrinsic-size) shorthand CSS property can now be applied to specify the size of a UI element that is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
   This allows a user agent to determine the size of an element without needing to render its child elements.
-  The shorthand properties [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width) and [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height) are also supported, along with the [logical properties](/en-US/docs/Web/CSS/CSS_Logical_Properties) [`contain-intrinsic-block-size`](/en-US/docs/Web/CSS/contain-intrinsic-block-size) and [`contain-intrinsic-inline-size`](/en-US/docs/Web/CSS/contain-intrinsic-inline-size).
+  The shorthand properties [`contain-intrinsic-width`](/en-US/docs/Web/CSS/contain-intrinsic-width) and [`contain-intrinsic-height`](/en-US/docs/Web/CSS/contain-intrinsic-height) are also supported, along with the [logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) [`contain-intrinsic-block-size`](/en-US/docs/Web/CSS/contain-intrinsic-block-size) and [`contain-intrinsic-inline-size`](/en-US/docs/Web/CSS/contain-intrinsic-inline-size).
   ([Firefox bug 1597529](https://bugzil.la/1597529)).
 - Color font is now supported via the [font-palette](/en-US/docs/Web/CSS/font-palette) property ([Firefox bug 1791558](https://bugzil.la/1791558)). Support has also been added for the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) CSS at-rule and its descriptors [font-family](/en-US/docs/Web/CSS/@font-palette-values/font-family), [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette), and [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors). Together they help to define the color palette ([Firefox bug 1791558](https://bugzil.la/1791558)).
 

@@ -39,7 +39,7 @@ object.$1 = "foo";
 console.log(object.$1); // 'foo'
 ```
 
-```js example-bad
+```js-nolint example-bad
 const object = {};
 object.1 = 'bar'; // SyntaxError
 console.log(object.1); // SyntaxError
@@ -158,4 +158,4 @@ const x = document.forms.form_name.elements[strFormControl].value;
 
 - {{jsxref("Object")}}
 - {{jsxref("Object.defineProperty()")}}
-- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

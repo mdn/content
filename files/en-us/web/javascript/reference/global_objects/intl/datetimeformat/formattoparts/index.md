@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.formatToParts
 
 The **`formatToParts()`** method of {{jsxref("Intl.DateTimeFormat")}} instances allows locale-aware formatting of strings produced by this `Intl.DateTimeFormat` object.
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html")}}
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formattoparts.html", "taller")}}
 
 ## Syntax
 
@@ -248,4 +248,3 @@ df.formatToParts(date);
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
-- [A polyfill of `Intl.DateTimeFormat.prototype.formatToParts` in the proposal repository](https://github.com/tc39/proposal-intl-formatToParts)

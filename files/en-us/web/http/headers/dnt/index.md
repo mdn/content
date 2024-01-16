@@ -4,10 +4,11 @@ slug: Web/HTTP/Headers/DNT
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.DNT
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets

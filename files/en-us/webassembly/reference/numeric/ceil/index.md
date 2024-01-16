@@ -1,6 +1,7 @@
 ---
 title: Ceil
 slug: WebAssembly/Reference/Numeric/Ceil
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

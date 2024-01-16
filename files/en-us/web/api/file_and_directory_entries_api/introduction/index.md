@@ -113,7 +113,7 @@ When using the asynchronous API, always use the error callbacks. Although the er
 
 The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
 
-- XMLHttpRequest (such as the `send()` method for file and blob objects)
+- {{domxref("fetch()")}}
 - Drag and Drop API
 - Web Workers (for the synchronous version of the File and Directory Entries API)
 - The `input` element (to programmatically obtain a list of files from the element)
@@ -170,4 +170,4 @@ This section defines and explains terms used in the File and Directory Entries A
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Read files in JavaScript](https://web.dev/read-files/) (web.dev)
+- [Read files in JavaScript](https://web.dev/articles/read-files) (web.dev)

@@ -35,7 +35,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("loadedmetadata", (event) => {
   console.log(
-    "The duration and dimensions of the media and tracks are now known."
+    "The duration and dimensions of the media and tracks are now known.",
   );
 });
 ```
@@ -47,7 +47,7 @@ const video = document.querySelector("video");
 
 video.onloadedmetadata = (event) => {
   console.log(
-    "The duration and dimensions of the media and tracks are now known."
+    "The duration and dimensions of the media and tracks are now known.",
   );
 };
 ```

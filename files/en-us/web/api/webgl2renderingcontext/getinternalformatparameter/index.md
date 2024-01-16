@@ -52,7 +52,7 @@ Depends on the requested information (as specified with `pname`). It is an
 const samples = gl.getInternalformatParameter(
   gl.RENDERBUFFER,
   gl.RGBA8,
-  gl.SAMPLES
+  gl.SAMPLES,
 );
 ```
 

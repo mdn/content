@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.FileList
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-An object of this type is returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the [`DataTransfer`](/en-US/docs/Web/API/DataTransfer) object for details on this usage.
+The **`FileList`** interface represents an object of this type returned by the `files` property of the HTML {{HTMLElement("input")}} element; this lets you access the list of files selected with the `<input type="file">` element. It's also used for a list of files dropped into web content when using the drag and drop API; see the {{domxref("DataTransfer")}} object for details on this usage.
 
 All `<input>` element nodes have a `files` attribute of type `FileList` on them which allows access to the items in this list. For example, if the HTML includes the following file input:
 
@@ -15,7 +15,7 @@ All `<input>` element nodes have a `files` attribute of type `FileList` on them 
 <input id="fileItem" type="file" />
 ```
 
-The following line of code fetches the first file in the node's file list as a [`File`](/en-US/docs/Web/API/File) object:
+The following line of code fetches the first file in the node's file list as a {{domxref("File")}} object:
 
 ```js
 const file = document.getElementById("fileItem").files[0];
@@ -25,12 +25,12 @@ const file = document.getElementById("fileItem").files[0];
 
 ## Instance properties
 
-- {{DOMxRef("FileList/length", "length")}} {{ReadOnlyInline}}
+- {{DOMxRef("FileList.length", "length")}} {{ReadOnlyInline}}
   - : A read-only value indicating the number of files in the list.
 
 ## Instance methods
 
-- {{DOMxRef("FileList/item", "item()")}} {{ReadOnlyInline}}
+- {{DOMxRef("FileList.item()", "item()")}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
 ## Example
@@ -84,5 +84,5 @@ fileInput.addEventListener("change", () => {
 ## See also
 
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
-- [`File`](/en-US/docs/Web/API/File)
-- [`FileReader`](/en-US/docs/Web/API/FileReader)
+- {{domxref("File")}}
+- {{domxref("FileReader")}}

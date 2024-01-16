@@ -1,6 +1,7 @@
 ---
 title: Compiling a New C/C++ Module to WebAssembly
 slug: WebAssembly/C_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -152,7 +153,7 @@ If you have a function defined in your C code that you want to call as needed fr
        "myFunction", // name of C function
        null, // return type
        null, // argument types
-       null // arguments
+       null, // arguments
      );
    });
    ```

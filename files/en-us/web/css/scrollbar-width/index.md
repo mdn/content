@@ -27,7 +27,7 @@ scrollbar-width: unset;
 
 ### Values
 
-- _\<scrollbar-width>_
+- `<scrollbar-width>`
 
   - : Defines the width of the scrollbar as a keyword. It must be one of the following values:
 
@@ -51,7 +51,7 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-    > **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
+> **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
 ## Accessibility concerns
 
@@ -113,4 +113,8 @@ WCAG criterion 2.1.1 (Keyboard) has been in place for a long time to advise on b
 
 ## See also
 
-- {{CSSxRef("::-webkit-scrollbar")}}
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-color")}}

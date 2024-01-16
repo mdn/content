@@ -33,7 +33,7 @@ The `glyphRef` element provides a single possible glyph to the referencing `<alt
 - {{SVGAttr("dy")}} {{Deprecated_Inline}}
 - {{SVGAttr("glyphRef")}} {{Deprecated_Inline}}
 - {{SVGAttr("format")}} {{Deprecated_Inline}}
-- {{SVGAttr("xlink:href")}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface
 

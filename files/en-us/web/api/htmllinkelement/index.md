@@ -21,7 +21,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string that corresponds to the CORS setting for this link element. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for details.
 - {{domxref("HTMLLinkElement.disabled")}}
   - : A boolean value which represents whether the link is disabled; currently only used with style sheet links.
-- {{domxref("HTMLLinkElement.fetchPriority")}} {{experimental_inline}}
+- {{domxref("HTMLLinkElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of a preload relative to other resources of the same type. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a higher priority, `low` to fetch at a lower priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLLinkElement.href")}}
   - : A string representing the URI for the target resource.

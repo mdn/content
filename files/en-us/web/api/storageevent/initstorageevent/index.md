@@ -8,10 +8,9 @@ status:
 browser-compat: api.StorageEvent.initStorageEvent
 ---
 
-{{ ApiRef("Web Storage API") }}{{deprecated_header}}
+{{ApiRef("Web Storage API")}}{{deprecated_header}}
 
-The **`StorageEvent.initStorageEvent()`** method is used to initialize the
-value of a {{ domxref("StorageEvent") }}.
+The **`StorageEvent.initStorageEvent()`** method is used to initialize the value of a {{ domxref("StorageEvent") }}.
 
 ## Syntax
 
@@ -43,8 +42,7 @@ initStorageEvent(type, canBubble, cancelable, key, oldValue, newValue, url, stor
 - `url` {{optional_inline}}
   - : The URL of the document initiating the change.
 - `storageArea` {{optional_inline}}
-  - : The {{DOMxRef("Storage")}} object representing the storage area on which this event
-    occurred.
+  - : The {{DOMxRef("Storage")}} object representing the storage area on which this event occurred.
 
 ### Return value
 
@@ -60,5 +58,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
+- {{domxref("Web Storage API", "", "", "nocode")}}
 - The constructor to use instead of this deprecated method: {{domxref("StorageEvent.StorageEvent",
     "StorageEvent()")}}.

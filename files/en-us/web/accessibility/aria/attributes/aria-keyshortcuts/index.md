@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Attributes/aria-keyshortcuts
 page-type: aria-attribute
 spec-urls:
   - https://w3c.github.io/aria/#aria-keyshortcuts
-  - https://w3c.github.io/aria-practices/#kbd_shortcuts
+  - https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 ---
 
 The global `aria-keyshortcuts` attribute indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.
@@ -64,7 +64,7 @@ The key combination listed must be the keys the user needs to press, not the out
 
 ### Best practices
 
-In trying to improve the accessibility of your sites and applications, there are so best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
+In trying to improve the accessibility of your sites and applications, there are some best practices to follow to ensure your "enhancements" don't negatively impact user experience. Remember, no ARIA is better than bad ARIA.
 
 #### Don't override browser, assistive technology, or operating system shortcuts
 
@@ -89,7 +89,7 @@ The `aria-keyshortcuts` attribute is very similar to the [problematic](https://w
 <button accesskey="s">Stress reliever</button>
 ```
 
-In this example, we ensured the presence of the shortcut was known to sited users a well by highlighting the non-modifier character.
+In this example, we ensured the presence of the shortcut was known to sighted users a well by highlighting the non-modifier character.
 
 While the goal of the `accesskey` attribute matches the intention of `aria-keyshortcuts` and to do so natively, `accesskey` is rife with issues. Because of these issues, it is generally advised not to use accesskeys for most general-purpose websites and web apps.
 
@@ -113,7 +113,7 @@ In this example, the `aria-keyshortcuts` attribute on the element is set to "Alt
 <a href="#content" aria-keyshortcuts="Alt+Shift+A">Skip to content</a>
 ```
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaKeyShortcuts")}}
   - : The [`ariaKeyShortcuts`](/en-US/docs/Web/API/Element/ariaKeyShortcuts) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-keyshortcuts` attribute.

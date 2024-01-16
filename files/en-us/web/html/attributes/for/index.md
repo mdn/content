@@ -11,6 +11,8 @@ browser-compat:
 
 The **`for`** attribute is an allowed attribute for {{htmlelement("label")}} and {{htmlelement("output")}}. When used on a `<label>` element it indicates the form element that this label describes. When used on an `<output>` element it allows for an explicit relationship between the elements that represent values which are used in the output.
 
+{{EmbedInteractiveExample("pages/tabbed/attribute-for.html", "tabbed-shorter")}}
+
 ## Usage
 
 When used as an attribute of `<label>`, the `for` attribute has a value which is the `id` of the form element it relates to.

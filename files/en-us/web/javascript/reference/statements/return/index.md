@@ -43,7 +43,7 @@ a + b;
 
 The code above is transformed by [automatic semicolon insertion (ASI)](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion) into:
 
-```js
+```js-nolint
 return;
 a + b;
 ```

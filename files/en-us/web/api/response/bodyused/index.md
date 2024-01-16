@@ -45,7 +45,7 @@ const myImage = document.querySelector("#my-image");
 const log = document.querySelector("#log");
 
 const responsePromise = fetch(
-  "https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg"
+  "https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg",
 );
 
 useResponse.addEventListener("click", async () => {

@@ -76,6 +76,7 @@ console.log(biguint64FromIterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("BigInt64Array")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

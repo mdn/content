@@ -8,7 +8,7 @@ browser-compat: api.Element.copy_event
 
 {{APIRef}}
 
-The **`copy`** event fires when the user initiates a copy action through the browser's user interface.
+The **`copy`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) fires when the user initiates a copy action through the browser's user interface.
 
 The event's default action is to copy the selection (if any) to the clipboard.
 
@@ -17,6 +17,8 @@ A handler for this event can _modify_ the clipboard contents by calling {{domxre
 However, the handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `copy` event, but this will not affect the system clipboard.
+
+This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 

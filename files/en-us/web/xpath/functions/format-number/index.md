@@ -1,6 +1,7 @@
 ---
 title: format-number
 slug: Web/XPath/Functions/format-number
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `format-number` function evaluates a number and returns a string representin
 
 ### Syntax
 
-```
+```plain
 format-number(number, pattern)
 format-number(number, pattern, decimalFormat)
 ```

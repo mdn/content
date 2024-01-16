@@ -122,10 +122,6 @@ for example.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
 
 ### Reporting directives
 
@@ -195,17 +191,20 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ### Unsafe keyword values
 
 - `'unsafe-inline'`
   - : Allow use of inline resources.
 - `'unsafe-eval'`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `'unsafe-allow-redirects'` {{experimental_inline}}
-  - : TBD
+- `'wasm-unsafe-eval'`
+  - : Allows the loading and execution of WebAssembly modules without the need to also allow unsafe JavaScript execution via `'unsafe-eval'`.
+    The single quotes are required.
 
 ### Hosts values
 

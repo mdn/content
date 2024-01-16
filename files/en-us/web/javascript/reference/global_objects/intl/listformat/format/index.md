@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.ListFormat.format
 
 {{JSRef}}
 
-The **`format()`** method returns a string with a
+The **`format()`** method of {{jsxref("Intl.ListFormat")}} instances returns a string with a
 language-specific representation of the list.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}

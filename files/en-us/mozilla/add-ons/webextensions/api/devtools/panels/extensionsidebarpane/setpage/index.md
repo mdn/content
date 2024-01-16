@@ -36,7 +36,7 @@ Create a new pane, and populate it with an HTML page. You could run this code in
 
 ```js
 function onCreated(sidebarPane) {
-  sidebarPane.setPage('sidebar/sidebar.html');
+  sidebarPane.setPage("sidebar/sidebar.html");
 }
 ```
 

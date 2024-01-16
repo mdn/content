@@ -1,6 +1,7 @@
 ---
 title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

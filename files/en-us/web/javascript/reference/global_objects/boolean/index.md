@@ -151,4 +151,4 @@ const bObjProto = new Boolean({});
 
 - [Boolean](/en-US/docs/Glossary/Boolean)
 - [Boolean primitives](/en-US/docs/Web/JavaScript/Data_structures#boolean_type)
-- [Boolean data type (Wikipedia)](https://en.wikipedia.org/wiki/Boolean_data_type)
+- [Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type) on Wikipedia

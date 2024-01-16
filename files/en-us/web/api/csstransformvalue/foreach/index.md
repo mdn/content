@@ -1,5 +1,5 @@
 ---
-title: "cssTransformValue: forEach() method"
+title: "CSSTransformValue: forEach() method"
 short-title: forEach()
 slug: Web/API/CSSTransformValue/forEach
 page-type: web-api-instance-method

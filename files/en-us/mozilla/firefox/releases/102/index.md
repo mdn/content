@@ -1,6 +1,7 @@
 ---
 title: Firefox 102 for developers
 slug: Mozilla/Firefox/Releases/102
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -38,7 +39,7 @@ No notable changes.
 
 #### DOM
 
-- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference and is planned for removal ([Firefox bug 1768486](https://bugzil.la/1768486)).
+- The Firefox-only property {{domxref("Window.sidebar")}} has been moved behind a preference (and permanently removed in version 119) ([Firefox bug 1768486](https://bugzil.la/1768486)).
 
 ### WebDriver conformance
 

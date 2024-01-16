@@ -56,7 +56,7 @@ register(scriptURL, options)
           - : The loaded service worker is in an
             [ES module](/en-US/docs/Web/JavaScript/Guide/Modules)
             and the import statement is available on
-            worker contexts.
+            worker contexts. For ES module compatibility info, see the [browser compatibility data table for the `ServiceWorker` interface](/en-US/docs/Web/API/ServiceWorker#browser_compatibility).
 
     - `updateViaCache`
 
@@ -95,7 +95,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -120,7 +120,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");
@@ -143,7 +143,7 @@ if ("serviceWorker" in navigator) {
     },
     (error) => {
       console.error(`Service worker registration failed: ${error}`);
-    }
+    },
   );
 } else {
   console.error("Service workers are not supported.");

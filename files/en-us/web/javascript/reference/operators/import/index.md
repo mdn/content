@@ -34,8 +34,7 @@ The evaluation of `import()` never synchronously throws an error. `moduleName` i
 
 The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
-- When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
-- When importing statically significantly increases your program's memory usage and there is a low likelihood that you will need the code you are importing.
+- When importing statically significantly slows the loading of your code or increases your program's memory usage, and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When the module you are importing does not exist at load time.
 - When the import specifier string needs to be constructed dynamically. (Static import only supports static specifiers.)
 - When the module being imported has side effects, and you do not want those side effects unless some condition is true. (It is recommended not to have any side effects in a module, but you sometimes cannot control this in your module dependencies.)
@@ -66,7 +65,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) process.
+Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) process.
 
 ```js
 // my-module.js
@@ -164,8 +163,8 @@ Here, we load 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc., 
 
 ```js
 Promise.all(
-  Array.from({ length: 10 }).map((_, index) =>
-    import(`/modules/module-${index}.js`),
+  Array.from({ length: 10 }).map(
+    (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
 ```
@@ -180,4 +179,4 @@ Promise.all(
 
 ## See also
 
-- [`import` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)

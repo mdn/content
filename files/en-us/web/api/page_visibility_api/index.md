@@ -56,7 +56,7 @@ Some processes are exempt from this throttling behavior. In these cases, you can
 
 The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
 
-- {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("Document.hidden")}} {{ReadOnlyInline}}
   - : Returns `true` if the page is in a state considered to be hidden to the user, and `false` otherwise.
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
 
@@ -94,8 +94,8 @@ This example pauses audio when the user switches to a different tab, and plays w
 const audio = document.querySelector("audio");
 
 // Handle page visibility change:
-// - If the page is hidden, pause the video
-// - If the page is shown, play the video
+// - If the page is hidden, pause the audio
+// - If the page is shown, play the audio
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
     audio.pause();

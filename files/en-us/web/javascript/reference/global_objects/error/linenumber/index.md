@@ -7,7 +7,7 @@ status:
 browser-compat: javascript.builtins.Error.lineNumber
 ---
 
-{{JSRef}} {{non-standard_header}}
+{{JSRef}} {{Non-standard_Header}}
 
 The **`lineNumber`** data property of an {{jsxref("Error")}} instance contains the line number in the file that raised this error.
 

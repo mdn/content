@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns `true` if the value of the element has no validity problems; otherwise returns `false`.
 
 ## Specifications
 

@@ -40,7 +40,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 const ctx = canvas.getContext("2d");
 let presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
-let style = { color: "rgba(0, 0, 255, 1)", diameter: 10 };
+let style = { color: "rgb(0 0 255 / 100%)", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -56,10 +56,13 @@ canvas.addEventListener("pointermove", (evt) => {
     let r = getRandomInt(0, 255);
     let g = getRandomInt(0, 255);
     let b = getRandomInt(0, 255);
-    style = { color: "rgba(" + r + ", " + g + ", " + b + ", 1)", diameter: 10 };
+    style = {
+      color: "rgb(" + r + " " + g + " " + b + " / 100%)",
+      diameter: 10,
+    };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
-      "rgba(" + r + ", " + g + ", " + b + ", 1)";
+      "rgb(" + r + " " + g + " " + b + " / 100%)";
   }
   move_cnt += 1;
   presenter.then(function (v) {

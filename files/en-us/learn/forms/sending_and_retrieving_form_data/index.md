@@ -13,7 +13,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, an
+        An
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >, and basic knowledge of

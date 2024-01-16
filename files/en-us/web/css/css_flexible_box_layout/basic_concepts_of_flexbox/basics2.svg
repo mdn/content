@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="500.2mm" height="612.185" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 1418.07 459.196">
+  <defs>
+    <path id="a" d="M359.762 39.974h899.408v379.748H359.762z" />
+  </defs>
+  <path fill="#fff" d="M0 0h1418.07v459.196H0z" />
+  <path fill="#4f79eb" d="M379.748 59.96h859.432v99.934H379.748z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(773.914 59.96)">
+    <tspan x="23.289" y="58" textLength="33.369">a</tspan>
+  </text>
+  <path fill="#4f79eb" d="M379.748 179.881h859.432v99.934H379.748z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(793.901 179.881)">
+    <tspan x="6.087" y="58" textLength="33.369">b</tspan>
+  </text>
+  <path fill="#4f79eb" d="M379.748 299.801h859.432v99.934H379.748z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(773.914 299.801)">
+    <tspan x="27.758" y="58" textLength="30">c</tspan>
+  </text>
+  <mask id="b" width="905.404" height="385.748" x="356.762" y="36.974" maskUnits="userSpaceOnUse">
+    <path fill="#fff" d="M356.762 36.974h905.404v385.748H356.762z" />
+    <use xlink:href="#a" fill-rule="evenodd" />
+  </mask>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m319.757 48.982-.388 110.911" />
+  <path d="m326.746 52.006-6.958-12.024-7.042 11.975z" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m319.795 410.712.44-110.911" />
+  <path d="m312.807 407.684 6.952 12.028 7.048-11.972z" /><text font-family="Helvetica" font-size="30" transform="translate(19.987 199.868)">
+    <tspan x="159.738" y="29" textLength="126.709">Main axis
+    </tspan>
+    <tspan x="3" y="65" textLength="300.132">flex-direction: column</tspan>
+  </text>
+</svg>

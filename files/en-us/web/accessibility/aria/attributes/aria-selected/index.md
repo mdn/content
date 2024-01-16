@@ -37,7 +37,7 @@ If the grid supports column selection and a column is selected, all cells in the
 
 In a tablist, `aria-selected` is used on a tab to indicate the currently-displayed [`tabpanel`](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role).
 
-The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have has its `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
+The selected [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role) should have the attribute `aria-selected="true"` set. All inactive tabs in the tablist should have `aria-selected="false"` set. Setting the state only impacts the accessibility tree: make sure to style the active tab in a way that visual indicates it's selected state. The default value for `aria-selected` on a `tab` role is `false`.
 
 If more than one tab is selectable at a time, include `aria-multiselectable` on the `tablist`.
 
@@ -96,7 +96,7 @@ In this `tablist` example, the first `tab` is selected:
 - `undefined` (default)
   - : The element is not selectable.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSelected")}}
   - : The [`ariaSelected`](/en-US/docs/Web/API/Element/ariaSelected) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-selected` attribute.

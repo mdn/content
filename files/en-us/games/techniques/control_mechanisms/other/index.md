@@ -36,7 +36,7 @@ window.addEventListener(
   (event) => {
     console.log(event.keyCode);
   },
-  true
+  true,
 );
 ```
 
@@ -62,7 +62,7 @@ window.addEventListener(
       // …
     }
   },
-  true
+  true,
 );
 ```
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.exec
 
 {{JSRef}}
 
-The **`exec()`** method executes a search for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
 
@@ -82,7 +82,7 @@ In addition, `re.lastIndex` will be set to `25`, due to this regex being global.
 
 ### Finding successive matches
 
-If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp/lastIndex", "lastIndex")}} property ({{jsxref("RegExp.prototype.test()", "test()")}} will also advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp/lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp/lastIndex", "lastIndex")}}.
+If your regular expression uses the [`g`](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) flag, you can use the `exec()` method multiple times to find successive matches in the same string. When you do so, the search starts at the substring of `str` specified by the regular expression's {{jsxref("RegExp/lastIndex", "lastIndex")}} property ({{jsxref("RegExp/test", "test()")}} will also advance the {{jsxref("RegExp/lastIndex", "lastIndex")}} property). Note that the {{jsxref("RegExp/lastIndex", "lastIndex")}} property will not be reset when searching a different string, it will start its search at its existing {{jsxref("RegExp/lastIndex", "lastIndex")}}.
 
 For example, assume you have this script:
 
@@ -99,7 +99,7 @@ while ((myArray = myRe.exec(str)) !== null) {
 
 This script displays the following text:
 
-```
+```plain
 Found abb. Next match starts at 3
 Found ab. Next match starts at 9
 ```
@@ -134,5 +134,5 @@ This will log a message containing `'hello world!'`.
 
 ## See also
 
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("RegExp")}}

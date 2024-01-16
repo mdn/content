@@ -4,7 +4,7 @@ slug: Web/JavaScript/Memory_management
 page-type: guide
 ---
 
-{{JsSidebar("Advanced")}}
+{{jsSidebar("Advanced")}}
 
 Low-level languages like C, have manual memory management primitives such as [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) and [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (_garbage collection_). This automaticity is a potential source of confusion: it can give developers the false impression that they don't need to worry about memory management.
 
@@ -101,7 +101,7 @@ In this context, the notion of an "object" is extended to something broader than
 
 ### Reference-counting garbage collection
 
-> **Note:** no modern browser uses reference-counting for garbage collection anymore.
+> **Note:** no modern JavaScript engine uses reference-counting for garbage collection anymore.
 
 This is the most naïve garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 

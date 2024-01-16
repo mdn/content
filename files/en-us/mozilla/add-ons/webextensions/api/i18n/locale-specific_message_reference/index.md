@@ -12,7 +12,7 @@ Each internationalized extension has at least one file named `messages.json` tha
 
 ## messages.json example
 
-The following code shows an example `messages.json file`, taken from our [notify-link-clicks-i18n example](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Only the "_name_" and "message" fields are required.
+The following code shows an example `messages.json file`, taken from our [notify-link-clicks-i18n example](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Only the "_name_" and "message" fields are required.
 
 ```json
 {
@@ -35,9 +35,9 @@ The following code shows an example `messages.json file`, taken from our [notify
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

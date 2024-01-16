@@ -38,6 +38,8 @@ requestAdapter(options)
 
         This hint's primary purpose is to influence which GPU is used in a multi-GPU system. For instance, some laptops have a low-power integrated GPU and a high-performance discrete GPU. Different factors may affect which adapter is returned including battery status, attached displays, or removable GPUs.
 
+        > **Note:** On Chrome running on dual-GPU macOS devices, if `requestAdapter()` is called without a `powerPreference` option, the high-performance discrete GPU is returned when the user's device is on AC power. Otherwise, the low-power integrated GPU is returned.
+
 ### Fallback adapters
 
 The adapter provided by the user agent may be a **fallback adapter**, if it determines it to be the most appropriate option available. A fallback adapter generally has significant performance caveats in exchange for some combination of wider compatibility, more predictable behavior, or improved privacy. For example, some browsers may offer a software-based implementation of the API via a fallback adapter. A fallback adapter will not be available on every system.

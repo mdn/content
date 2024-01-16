@@ -54,7 +54,7 @@ This method may raise a {{domxref("DOMException")}} of the following types:
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
 A {{jsxref("TypeError")}} exception is thrown if the `count` parameter is
-not between `0` and `2^32> - 1` included.
+not between `0` and `2^32 - 1` included.
 
 ## Examples
 

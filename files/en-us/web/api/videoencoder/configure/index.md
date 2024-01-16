@@ -47,14 +47,20 @@ configure(config)
         - `"keep"`
     - `scalabilityMode`
       - : A string containing an encoding scalability mode identifier as defined in [WebRTC](https://w3c.github.io/webrtc-svc/#scalabilitymodes*).
-    - `bitrateMode`
+    - `bitrateMode` {{optional_inline}}
       - : A string containing a bitrate mode. One of:
         - `"constant"`
+          - : The encoder will target constant bitrate.
         - `"variable"` (default)
-    - `latencyMode`
+          - : The encoder will target a variable bitrate, allowing more space to be used for complex signals and less space for less complex signals.
+        - `"quantizer"`
+          - : The encoder will disregard the `bitrate` option and instead it will use codec-specific quantizer values specified for each frame in the `options` parameter to {{domxref("VideoEncoder.encode()")}}.
+    - `latencyMode` {{optional_inline}}
       - : A string containing a value that configures the latency behavior of this codec. One of:
         - `"quality"` (default)
+          - : The encoder should optimize for encoding quality.
         - `"realtime"`
+          - : The encoder should optimize for low latency and may even drop frames to honor `framerate`.
 
 ### Return value
 

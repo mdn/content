@@ -33,4 +33,4 @@ This class was specified in [the defunct 20 March 2009 Working Draft of CSS 2D T
 
 - {{domxref("Window.webkitConvertPointFromNodeToPage()")}}
 - {{domxref("Window.webkitConvertPointFromPageToNode()")}}
-- [`WebKitPoint` documentation at the IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760730(v=vs.85).aspx>)
+- [`WebKitPoint` documentation at the IE Dev Center](<https://msdn.microsoft.com/library/ie/dn760730(v=vs.85).aspx>) {{deprecated_inline}} {{non-standard_inline}}

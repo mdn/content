@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/treegrid_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#treegrid
-  - https://w3c.github.io/aria-practices/#treegrid
+  - https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/
 ---
 
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
@@ -129,7 +129,7 @@ If a treegrid supports selection of cells, rows, or columns, the following keys 
 
 If navigation functions can dynamically add more rows or columns to the DOM, key events that move focus to the beginning or end of the grid, such as <kbd>control + End</kbd>, may move focus to the last row in the DOM rather than the last available row in the back-end data.
 
-While navigation keys, such as arrow keys, are moving focus from cell to cell, they are not available to do something like operate a combobox or move an editing caret inside of a cell. If this functionality is needed, see [Editing and Navigating Inside a Cell](https://www.w3.org/TR/wai-aria-practices-1.1/#gridNav_inside).
+While navigation keys, such as arrow keys, are moving focus from cell to cell, they are not available to do something like operate a combobox or move an editing caret inside of a cell. If this functionality is needed, see [Editing and Navigating Inside a Cell](https://www.w3.org/WAI/ARIA/apg/patterns/grid/#gridNav_inside).
 
 <!--
 ### Required JavaScript features
@@ -137,7 +137,7 @@ While navigation keys, such as arrow keys, are moving focus from cell to cell, t
 ## Examples
 -->
 
-## Accessibility Concerns
+## Accessibility concerns
 
 It is important for all cells to be able to receive or contain keyboard focus because screen readers are generally in application reading mode, rather than their document reading mode, when users are interacting with the grid. While in application mode, a screen reader user hears only focusable elements and content that labels focusable elements. If content can't receive focus, screen reader users may unknowingly overlook elements contained in the treegrid.
 
@@ -157,6 +157,6 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -48,15 +48,15 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      let opening = browser.downloads.open(downloadItems[0].id);
-      opening.then(onOpened, onError);
-    }
+  if (downloadItems.length > 0) {
+    let opening = browser.downloads.open(downloadItems[0].id);
+    opening.then(onOpened, onError);
   }
+}
 
 let searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

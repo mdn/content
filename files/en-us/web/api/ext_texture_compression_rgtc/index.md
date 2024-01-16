@@ -44,7 +44,7 @@ gl.compressedTexImage2D(
   128,
   128,
   0,
-  textureData
+  textureData,
 );
 ```
 

@@ -95,7 +95,7 @@ the time progresses.
 
 ## Examples
 
-In this example, we have a media source with two control buttons (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
+In this example, we have a media source with two control buttons (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When these buttons are pressed, `setTargetAtTime()` is used to
 fade the gain value up to 1.0, and down to 0, respectively, with the effect starting
 after 1 second, and the length of time the effect lasts being controlled by the
 timeConstant.

@@ -2,14 +2,17 @@
 title: Visual Viewport API
 slug: Web/API/Visual_Viewport_API
 page-type: web-api-overview
-browser-compat: api.VisualViewport
+browser-compat:
+  - api.VisualViewport
+  - api.Window.visualViewport
+spec-urls: https://drafts.csswg.org/cssom-view/#visualViewport
 ---
 
 {{DefaultAPISidebar("Visual Viewport")}}
 
 The **Visual Viewport API** provides an explicit mechanism for querying and modifying the properties of the window's {{Glossary("visual viewport")}}. The visual viewport is the visual portion of a screen excluding on-screen keyboards, areas outside of a pinch-zoom area, or any other on-screen artifact that doesn't scale with the dimensions of a page.
 
-## Visual Viewport concepts and usage
+## Concepts and usage
 
 The mobile web contains two viewports, the layout viewport and the visual viewport. The layout viewport covers all the elements on a page and the visual viewport is what is actually visible on the screen. When the user pinch-zooms into the page, the visual viewport shrinks but the layout viewport is unchanged. User-interface features like the on-screen keyboard (OSK) can shrink the visual viewport without affecting the layout viewport.
 
@@ -17,17 +20,17 @@ What happens when a web page element needs to be visible on screen regardless of
 
 To access a window's visual viewport, you can obtain a {{domxref("VisualViewport")}} object from the {{domxref("window.visualViewport")}} property. The object includes a set of properties describing the viewport. It also adds two events, `onresize` and `onscroll`, that fire whenever the visual viewport changes. These events allow you to position elements relative to the visual viewport that would normally be anchored to the layout viewport.
 
-## Accessing the API
-
-- {{domxref("window.visualViewport")}} {{ReadOnlyInline}}
-  - : A read-only reference to the window's {{domxref("VisualViewport")}} object. If this property doesn't exist, the API is unsupported.
-
 ## Interfaces
 
 - {{DOMxRef("VisualViewport")}}
   - : Represents the visual viewport for a given window. A window's `VisualViewport` object provides information about the viewport's position and size, and receives the {{domxref("VisualViewport.resize_event", "resize")}} and {{domxref("VisualViewport.scroll_event", "scroll")}} events you can monitor to know when changes occur to the window's viewport.
 
-## Example
+### Extensions to other interfaces
+
+- {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
+  - : A read-only reference to the window's {{domxref("VisualViewport")}} object. If this property doesn't exist, the API is unsupported.
+
+## Examples
 
 The code below is based on [the sample in the specification](https://github.com/WICG/visual-viewport/blob/gh-pages/examples/fixed-to-viewport.html), though it adds a few things that make it function better. It shows a function called `viewportHandler()`. When called it queries the `offsetLeft` and `height` properties for values it uses in a CSS `translate()` method. You invoke this function by passing it to _both_ event calls.
 

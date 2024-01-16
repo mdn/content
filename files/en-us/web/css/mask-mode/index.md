@@ -9,6 +9,8 @@ browser-compat: css.properties.mask-mode
 
 The **`mask-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether the mask reference defined by {{cssxref("mask-image")}} is treated as a luminance or alpha mask.
 
+## Syntax
+
 ```css
 /* Keyword values */
 mask-mode: alpha;
@@ -25,8 +27,6 @@ mask-mode: revert;
 mask-mode: revert-layer;
 mask-mode: unset;
 ```
-
-## Syntax
 
 The `mask-mode` property is specified as one or more of the keyword values listed below, separated by commas.
 

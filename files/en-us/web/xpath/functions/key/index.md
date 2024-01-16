@@ -1,6 +1,7 @@
 ---
 title: key
 slug: Web/XPath/Functions/key
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `key` function returns a node-set of nodes that have the given value for the
 
 ### Syntax
 
-```
+```plain
 key( keyname, value )
 ```
 

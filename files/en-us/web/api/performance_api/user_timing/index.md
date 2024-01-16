@@ -55,7 +55,7 @@ The object then has a `duration` property which calculates the end mark timestam
 const loginMeasure = performance.measure(
   "login-duration",
   "login-started",
-  "login-finished"
+  "login-finished",
 );
 
 console.log(loginMeasure.duration);

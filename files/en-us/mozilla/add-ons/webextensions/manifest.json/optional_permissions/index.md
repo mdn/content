@@ -27,8 +27,7 @@ browser-compat: webextensions.manifest.optional_permissions
         <pre class="brush: json">
 "optional_permissions": [
   "webRequest"
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>
@@ -61,13 +60,17 @@ You can include any of the following here, but not in all browsers: check the co
 - `background`
 - `bookmarks`
 - `browserSettings`
+- `browsingData`
 - `clipboardRead`
 - `clipboardWrite`
 - `contentSettings`
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
 - `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
+- `devtools`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -78,8 +81,11 @@ You can include any of the following here, but not in all browsers: check the co
 - `nativeMessaging`
 - `notifications`
 - `pageCapture`
+- `pkcs11`
 - `privacy`
+- `proxy`
 - `scripting`
+- `sessions`
 - `tabHide`
 - `tabs`
 - `topSites`

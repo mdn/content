@@ -30,7 +30,7 @@ The sanitized value can then be used with {{domxref("Element.innerHTML")}} to en
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<"),
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 let el = document.getElementById("myDiv");
@@ -49,4 +49,4 @@ el.innerHTML = escaped;
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)

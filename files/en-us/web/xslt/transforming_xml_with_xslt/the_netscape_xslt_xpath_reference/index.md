@@ -1,6 +1,7 @@
 ---
 title: The Netscape XSLT/XPath Reference
 slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
+page-type: landing-page
 ---
 
 {{XsltSidebar}}

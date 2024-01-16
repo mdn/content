@@ -7,8 +7,7 @@ browser-compat: javascript.builtins.WeakSet.add
 
 {{JSRef}}
 
-The **`add()`** method appends a new object to the end of a
-`WeakSet` object.
+The **`add()`** method of {{jsxref("WeakSet")}} instances appends a new object to the end of this `WeakSet`.
 
 {{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
 

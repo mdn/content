@@ -1,6 +1,7 @@
 ---
 title: Redirect tracking protection
 slug: Web/Privacy/Redirect_tracking_protection
+page-type: guide
 ---
 
 {{QuicklinksWithSubPages("Web/Privacy")}}

@@ -1,6 +1,7 @@
 ---
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
+page-type: guide
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}

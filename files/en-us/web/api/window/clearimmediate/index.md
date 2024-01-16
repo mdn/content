@@ -3,15 +3,15 @@ title: "Window: clearImmediate() method"
 short-title: clearImmediate()
 slug: Web/API/Window/clearImmediate
 page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Window.clearImmediate
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
-
-> **Note:** This method is not expected to become standard, and is nowadays only implemented
-> by Node.js 0.10+. It meets resistance both from [Gecko](https://bugzil.la/686201) (Firefox) and [Chromium/WebKit](https://crbug.com/146172) (Chrome/Safari).
 
 ## Syntax
 
@@ -43,8 +43,8 @@ document.getElementById("button").addEventListener(() => {
 
 ## Specifications
 
-Not part of any current specifications. The
-[Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmediate)
+Not part of any current specifications.
+The [Efficient Script Yielding](https://w3c.github.io/setImmediate/#si-setImmediate)
 specification is no longer being worked on.
 
 ## Browser compatibility

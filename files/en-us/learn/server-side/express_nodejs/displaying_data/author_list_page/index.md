@@ -39,14 +39,14 @@ extends layout
 block content
   h1= title
 
-  ul
-    each author in author_list
-      li
-        a(href=author.url) #{author.name}
-        |  (#{author.date_of_birth} - #{author.date_of_death})
-
-    else
-      li There are no authors.
+  if author_list.length
+    ul
+      each author in author_list
+        li
+          a(href=author.url) #{author.name}
+          |  (#{author.date_of_birth} - #{author.date_of_death})
+  else
+    p There are no authors.
 ```
 
 Run the application and open your browser to `http://localhost:3000/`. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.

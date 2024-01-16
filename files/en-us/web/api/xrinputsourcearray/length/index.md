@@ -34,7 +34,7 @@ if (sources.length === 0) {
     [
       { label: "Shop Now", url: "https://www.example.com/shop/controllers" },
       { label: "Quit", handler: quitGame },
-    ]
+    ],
   );
 }
 ```

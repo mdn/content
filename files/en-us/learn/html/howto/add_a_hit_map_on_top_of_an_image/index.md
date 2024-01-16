@@ -126,4 +126,4 @@ If you must use image maps, you may want to look into [Matt Stow's jQuery plugin
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](http://maschek.hu/imagemap/imgmap/)
+- [Online image map editor](https://maschek.hu/imagemap/imgmap/)

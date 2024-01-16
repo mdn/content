@@ -12,7 +12,7 @@ isn't used with a constructor object, i.e. an object which has a `prototype` pro
 
 ## Message
 
-```
+```plain
 TypeError: Right-hand side of 'instanceof' is not an object (V8-based)
 TypeError: Right-hand side of 'instanceof' is not callable (V8-based)
 TypeError: invalid 'instanceof' operand "x" (Firefox)
@@ -66,5 +66,5 @@ x instanceof Foo; // true
 
 ## See also
 
-- [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`typeof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+- [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)
+- [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof)

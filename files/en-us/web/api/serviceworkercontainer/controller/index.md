@@ -27,7 +27,7 @@ if ("serviceWorker" in navigator) {
   // Do a one-off check to see if a service worker's in control.
   if (navigator.serviceWorker.controller) {
     console.log(
-      `This page is currently controlled by: ${navigator.serviceWorker.controller}`
+      `This page is currently controlled by: ${navigator.serviceWorker.controller}`,
     );
   } else {
     console.log("This page is not currently controlled by a service worker.");

@@ -11,7 +11,11 @@ The `svg` element is a container that defines a new coordinate system and [viewp
 
 > **Note:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_, or inside HTML documents with XML serialization. It is unnecessary for inner `svg` elements or inside HTML documents with HTML serialization.
 
-## Example
+## Examples
+
+### Nested `svg` element
+
+This example shows that nested `svg` elements do not need the `xmlns` attribute.
 
 ```css hidden
 html,
@@ -36,19 +40,60 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 300, 100)}}
+{{EmbedLiveSample('nested_svg-elements', 300, 100)}}
+
+### Using dynamic viewport units
+
+In this example, the `height` and `width` attributes on the `svg` element are set using the dynamic viewport value `60vmin`, equivalent to 60% of the viewport's width or height, whichever is smaller.
+
+```html hidden
+<div class="resizer">
+  <iframe
+    class="resized"
+    srcdoc="
+```
+
+```html-nolint
+<svg viewbox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='60vmin' width='60vmin'>
+  <rect x='0' y='0' width='50%' height='50%' fill='tomato' opacity='0.75' />
+  <rect x='25%' y='25%' width='50%' height='50%' fill='slategrey' opacity='0.75' />
+  <rect x='50%' y='50%' width='50%' height='50%' fill='olive' opacity='0.75' />
+  <rect x='0' y='0' width='100%' height='100%' stroke='cadetblue' stroke-width='0.5%' fill='none' />
+</svg>
+```
+
+```html hidden
+  "></iframe>
+</div>
+```
+
+```css hidden
+.resizer {
+  display: flex;
+  margin: 1rem;
+  padding: 0;
+  resize: both;
+  overflow: hidden;
+  border: 5px dotted red;
+  height: 400px;
+}
+.resizer > .resized {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+```
+
+{{EmbedLiveSample('using_dynamic_viewport_lengths', '100%', 500)}}
+
+To change the iframe's dimensions try resizing the dotted red border from bottom right corner.
 
 ## Attributes
 
 - {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
     _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
-  - : The default scripting language used by the SVG fragment.
-    _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
-  - : The default style sheet language used by the SVG fragment.
-    _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
   - : The displayed height of the rectangular viewport. (Not the height of its coordinate system.)
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `auto`; _Animatable_: **yes**

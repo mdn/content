@@ -11,14 +11,11 @@ browser-compat: api.Document.hidden
 The **`Document.hidden`** read-only property returns a Boolean
 value indicating if the page is considered hidden or not.
 
-> **Note:** This property is described as "historical" in the [Page Visibility Level 2 specification](https://www.w3.org/TR/page-visibility-2/). Consider using the {{domxref("Document.visibilityState")}}
-> property instead.
+The {{domxref("Document.visibilityState")}} property provides an alternative way to determine whether the page is hidden.
 
-## Syntax
+## Value
 
-```js-nolint
-document.hidden
-```
+A Boolean value, `true` if the page is hidden, and `false` otherwise.
 
 ## Examples
 
@@ -29,16 +26,6 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-## Usage notes
-
-> **Warning:** Due to prerendering, it may happen that `document.hidden` is
-> `true`, even if the page is actually visible to the user. In such scenario
-> the page load starts with
-> `document.visibilityState = "prerender"`
-> and transitions to `document.visibilityState = "visible"` after some delay.
-> This scenario can be reproduced by opening a new browser tab in Safari, pasting a URL
-> in the URL bar, and navigating to that URL.
-
 ## Specifications
 
 {{Specifications}}
@@ -46,3 +33,7 @@ document.addEventListener("visibilitychange", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.visibilityState")}}

@@ -1,6 +1,7 @@
 ---
 title: substring-before
 slug: Web/XPath/Functions/substring-before
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `substring-before` function returns a string that is the part of a given str
 
 ### Syntax
 
-```
+```plain
 substring-before( haystack, needle )
 ```
 

@@ -42,6 +42,6 @@ values.
 
 ## See also
 
-- [`CSSStyleValue.parse()`](/en-us/docs/Web/API/CSSStyleValue/parse_static)
+- [`CSSStyleValue.parse()`](/en-US/docs/Web/API/CSSStyleValue/parse_static)
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

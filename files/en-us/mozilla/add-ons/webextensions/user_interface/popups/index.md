@@ -6,7 +6,7 @@ page-type: guide
 
 {{AddonSidebar}}
 
-A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.
+A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.
 
 ![Page action pop-up example with three options: kittens, puppies, and reset.](page_action_popup.png)
 
@@ -48,8 +48,8 @@ In Firefox Android 57, the popup is shown as a normal page in a new tab.
 
 ## Popup design
 
-For details on how to design your popup's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/acorn.html).
+For details on how to design your popup's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
 
 ## Examples
 
-The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) example, which implements a browser action with a popup.
+The [webextensions-examples](https://github.com/mdn/webextensions-examples) repository on GitHub includes the [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify) example, which implements a browser action with a popup.

@@ -117,13 +117,13 @@ The CSS defining the appearance of the table:
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(100, 100, 100);
+  border: 2px solid rgb(100 100 100);
   font-family: sans-serif;
 }
 
 td,
 th {
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(100 100 100);
   padding: 10px 14px;
 }
 

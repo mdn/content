@@ -39,7 +39,7 @@ The `aria-placeholder` is used in addition to, not instead of, a label. They hav
 - `<string>`
   - : The word or short phrase to display in a control when the control has no value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaPlaceholder")}}
   - : The [`ariaPlaceholder`](/en-US/docs/Web/API/Element/ariaPlaceholder) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-placeholder` attribute.

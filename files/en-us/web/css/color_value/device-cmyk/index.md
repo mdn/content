@@ -3,6 +3,7 @@ title: device-cmyk()
 slug: Web/CSS/color_value/device-cmyk
 page-type: css-function
 browser-compat: css.types.color.device-cmyk
+spec-urls: https://drafts.csswg.org/css-color-5/#device-cmyk
 ---
 
 {{CSSRef}}
@@ -45,4 +46,4 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.

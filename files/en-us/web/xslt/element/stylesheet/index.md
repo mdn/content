@@ -1,6 +1,7 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
+page-type: xslt-element
 spec-urls: https://www.w3.org/TR/xslt-30/#stylesheet-element
 ---
 

@@ -10,7 +10,7 @@ browser-compat: api.URLPattern.pathname
 
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
-The **`pathname`** property of the {{domxref("URLPattern")}} interface is a
+The **`pathname`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the pathname part
 of a URL. This value may differ from the input to the constructor due to
 normalization.

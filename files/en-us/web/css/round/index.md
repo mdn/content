@@ -2,12 +2,10 @@
 title: round()
 slug: Web/CSS/round
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.round
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 
@@ -85,7 +83,7 @@ The height of the boxes is therefore either rounded up to 125 px or down to 100 
 #### HTML
 
 The HTML defines 5 `div` elements that will be rendered as boxes by the CSS.
-The elements contain text indicating the rounding strategy, initial value, and expected final height of the box (in brackets).
+The elements contain text indicating the rounding strategy, initial value, and expected final height of the box (in parentheses).
 
 ```html
 <div class="box box-1">height: 100px</div>

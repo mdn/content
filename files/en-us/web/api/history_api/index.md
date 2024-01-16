@@ -79,7 +79,7 @@ The following example assigns a listener for the {{domxref("Window.popstate_even
 ```js
 window.addEventListener("popstate", (event) => {
   alert(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
   );
 });
 

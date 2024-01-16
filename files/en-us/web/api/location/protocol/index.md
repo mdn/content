@@ -1,5 +1,5 @@
 ---
-title: "location: protocol property"
+title: "Location: protocol property"
 short-title: protocol
 slug: Web/API/Location/protocol
 page-type: web-api-instance-property

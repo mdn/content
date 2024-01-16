@@ -61,7 +61,7 @@ const stylesList = document.querySelector("#regurgitation");
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
   // properties
   const cssProperty = document.createElement("dt");

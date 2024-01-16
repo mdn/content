@@ -46,24 +46,22 @@ The following methods are available to all read-only [setlike](/en-US/docs/Web/J
 ## Examples
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
-
-  // Return the size of the set
-  console.log(wgslFeatures.size);
-
-  // Iterate through all the set values using values()
-  const valueIterator = wgslFeatures.values();
-  for (const value of valueIterator) {
-    console.log(value);
-  }
-
-  // ...
+if (!navigator.gpu) {
+  throw Error("WebGPU not supported.");
 }
+
+const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
+
+// Return the size of the set
+console.log(wgslFeatures.size);
+
+// Iterate through all the set values using values()
+const valueIterator = wgslFeatures.values();
+for (const value of valueIterator) {
+  console.log(value);
+}
+
+// ...
 ```
 
 ## Specifications

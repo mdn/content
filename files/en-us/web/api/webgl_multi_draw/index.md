@@ -101,7 +101,7 @@ ext.multiDrawArraysInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  firsts.length
+  firsts.length,
 );
 ```
 
@@ -124,7 +124,7 @@ ext.multiDrawElementsWEBGL(
   gl.UNSIGNED_SHORT,
   offsets,
   0,
-  counts.length
+  counts.length,
 );
 ```
 
@@ -142,7 +142,7 @@ ext.multiDrawElementsInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  counts.length
+  counts.length,
 );
 ```
 

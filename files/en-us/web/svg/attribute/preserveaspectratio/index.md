@@ -443,7 +443,7 @@ rect:active {
 
 ## Syntax
 
-```
+```plain
 preserveAspectRatio="<align> [<meetOrSlice>]"
 ```
 

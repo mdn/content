@@ -65,5 +65,5 @@ Object.getPrototypeOf("foo");
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}
+- [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) by John Resig (2008)

@@ -58,7 +58,7 @@ function fullscreenchanged(event) {
   // of the property is null.
   if (document.fullscreenElement) {
     console.log(
-      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`
+      `Element: ${document.fullscreenElement.id} entered fullscreen mode.`,
     );
   } else {
     console.log("Leaving fullscreen mode.");

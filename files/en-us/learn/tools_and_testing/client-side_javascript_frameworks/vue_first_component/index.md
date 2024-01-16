@@ -68,10 +68,10 @@ Let's create our first component, which will display a single todo item. We'll u
 
 Your file should now look like this:
 
-```html
-<template> </template>
+```vue
+<template></template>
 <script>
-  export default {};
+export default {};
 </script>
 ```
 
@@ -80,7 +80,7 @@ We can now begin to add actual content to our `ToDoItem`. Vue templates are curr
 1. Add an empty `<div>` inside your component template now.
 2. Inside that `<div>`, let's add a checkbox and a corresponding label. Add an `id` to the checkbox, and a `for` attribute mapping the checkbox to the label, as shown below.
 
-   ```html
+   ```vue
    <template>
      <div>
        <input type="checkbox" id="todo-item" />
@@ -117,7 +117,7 @@ export default {
 
 This is the same way that the `HelloWorld` component was registered by the Vue CLI earlier.
 
-To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in kebab-case (e.g. `<to-do-list>`).
+To actually render the `ToDoItem` component in the app, you need to go up into your `<template>` element and call it as a `<to-do-item></to-do-item>` element. Note that the component file name and its representation in JavaScript is in PascalCase (e.g. `ToDoList`), and the equivalent custom element is in {{Glossary("kebab_case", "kebab-case")}} (e.g. `<to-do-list>`).
 It's necessary to use this casing style if you're writing Vue templates [in the DOM directly](https://vuejs.org/guide/essentials/component-basics.html#dom-template-parsing-caveats)
 
 1. Underneath the [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements), create an unordered list ([`<ul>`](/en-US/docs/Web/HTML/Element/ul)) containing a single list item ([`<li>`](/en-US/docs/Web/HTML/Element/li)).
@@ -125,7 +125,7 @@ It's necessary to use this casing style if you're writing Vue templates [in the 
 
 The `<template>` section of your `App.vue` file should now look something like this:
 
-```html
+```vue
 <div id="app">
   <h1>To-Do List</h1>
   <ul>
@@ -191,18 +191,18 @@ In your `<template>`, replace the contents of the `<label>` element with `\{{lab
 
 Your component's template section should now look like this:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" id="todo-item" />
-    <label for="todo-item">\{{label}}</label>
+    <label for="todo-item">\{{ label }}</label>
   </div>
 </template>
 ```
 
 Go back to your browser and you'll see the todo item rendered as before, but without a label (oh no!). Go to your browser's DevTools and you'll see a warning along these lines in the console:
 
-```
+```plain
 [Vue warn]: Missing required prop: "label"
 
 found in
@@ -216,7 +216,7 @@ This is because we marked the `label` as a required prop, but we never gave the 
 
 Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
-```html
+```vue
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
@@ -268,7 +268,7 @@ Vue does a little magic here — it binds all of your props directly to the comp
 
 So now we need to attach the `isDone` property to our component. In a similar fashion to how Vue uses `\{{}}` expressions to display JavaScript expressions inside templates, Vue has a special syntax to bind JavaScript expressions to HTML elements and components: **`v-bind`**. The `v-bind` expression looks like this:
 
-```
+```plain
 v-bind:attribute="expression"
 ```
 
@@ -276,7 +276,7 @@ In other words, you prefix whatever attribute/prop you want to bind to with `v-b
 
 So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` to map the `isDone` property to the `checked` attribute on the `<input>` element. Both of the following are equivalent:
 
-```html
+```vue
 <input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
 <input type="checkbox" id="todo-item" :checked="isDone" />
@@ -288,7 +288,7 @@ So let's do this. Update your `<input>` element now to include `:checked="isDone
 
 Test out your component by passing `:done="true"` to the `ToDoItem` call in `App.vue`. Note that you need to use the `v-bind` syntax, because otherwise `true` is passed as a string. The displayed checkbox should be checked.
 
-```html
+```vue
 <template>
   <div id="app">
     <h1>My To-Do List</h1>
@@ -344,11 +344,11 @@ export default {
 
 Next, bind the `id` to both our checkbox's `id` attribute and the label's `for` attribute, updating the existing `id` and `for` attributes as shown:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" :id="id" :checked="isDone" />
-    <label :for="id">\{{label}}</label>
+    <label :for="id">\{{ label }}</label>
   </div>
 </template>
 ```

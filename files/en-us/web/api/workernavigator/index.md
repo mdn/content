@@ -21,6 +21,10 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Returns the version of the browser as a string. Do not rely on this property to return the correct value.
 - {{DOMxRef("WorkerNavigator.connection")}} {{ReadOnlyInline}}
   - : Provides a {{DOMxRef("NetworkInformation")}} object containing information about the network connection of a device.
+- {{domxref("WorkerNavigator.deviceMemory")}} {{ReadOnlyInline}}
+  - : Returns the amount of device memory in gigabytes. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024.
+- {{domxref("WorkerNavigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
+  - : Returns a boolean indicating a user's consent to their information being shared or sold.
 - {{domxref("WorkerNavigator.gpu")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("GPU")}} object for the current worker context. The entry point for the {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}.
 - {{DOMxRef("WorkerNavigator.hardwareConcurrency")}} {{ReadOnlyInline}}
@@ -30,7 +34,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.languages")}} {{ReadOnlyInline}}
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{DOMxRef("WorkerNavigator.locks")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing `Lock` object.
+  - : Returns a {{DOMxRef("LockManager")}} object which provides methods for requesting a new {{DOMxRef('Lock')}} object and querying for an existing {{DOMxRef('Lock')}} object.
 - {{DOMxRef("WorkerNavigator.mediaCapabilities")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities.
 - {{DOMxRef("WorkerNavigator.onLine")}} {{ReadOnlyInline}}
@@ -43,8 +47,12 @@ _The `WorkerNavigator` interface doesn't inherit any property._
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serviceWorker")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef('StorageManager')}} interface for managing persistence permissions and estimating available storage.
+- {{domxref("WorkerNavigator.usb")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("USB")}} object for the current document, providing access to [WebUSB API](/en-US/docs/Web/API/WebUSB_API) functionality.
 - {{DOMxRef("WorkerNavigator.userAgent")}} {{ReadOnlyInline}}
   - : Returns the user agent string for the current browser.
 - {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -52,7 +60,12 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 ## Instance methods
 
-_The `WorkerNavigator` interface neither inherits nor implements any method._
+_The `WorkerNavigator` interface doesn't inherit any method._
+
+- {{domxref("Navigator.clearAppBadge()")}}
+  - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
+- {{domxref("Navigator.setAppBadge()")}}
+  - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications
 

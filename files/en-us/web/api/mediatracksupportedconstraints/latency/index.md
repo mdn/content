@@ -26,7 +26,9 @@ If the property isn't present, this property is missing from the supported const
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

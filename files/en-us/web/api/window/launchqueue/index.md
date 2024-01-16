@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.launchQueue
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Launch Handler API")}}{{SeeCompatTable}}
 
 The `launchQueue` read-only property of the {{domxref("Window")}} interface provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented in a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA), with the handling context signified by the [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) manifest field `client_mode` value.
 
@@ -30,7 +30,7 @@ if ("launchQueue" in window) {
       const track = params.get("track");
       if (track) {
         audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
+        title.textContent = new URL(track).pathname.substring(1);
         audio.play();
       }
     }

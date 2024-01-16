@@ -57,6 +57,23 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 This second promise (`promise2`) represents the completion not just of `doSomething()`, but also of the `successCallback` or `failureCallback` you passed in — which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to `promise2` get queued behind the promise returned by either `successCallback` or `failureCallback`.
 
+> **Note:** If you want a working example to play with, you can use the following template to create any function returning a promise:
+>
+> ```js
+> function doSomething() {
+>   return new Promise((resolve) => {
+>     setTimeout(() => {
+>       // Other things to do before completion of the promise
+>       console.log("Did something");
+>       // The fulfillment value of the promise
+>       resolve("https://example.com/");
+>     }, 200);
+>   });
+> }
+> ```
+>
+> The implementation is discussed in the [Creating a Promise around an old callback API](#creating_a_promise_around_an_old_callback_api) section below.
+
 With this pattern, you can create longer chains of processing, where each promise represents the completion of one asynchronous step in the chain. In addition, the arguments to `then` are optional, and `catch(failureCallback)` is short for `then(null, failureCallback)` — so if your error handling code is the same for all steps, you can attach it to the end of the chain:
 
 ```js
@@ -85,30 +102,44 @@ doSomething()
   .catch(failureCallback);
 ```
 
-**Important:** Always return results, otherwise callbacks won't catch the result of a previous promise (with arrow functions, `() => x` is short for `() => { return x; }`). If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
+> **Note:** Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`.
+
+`doSomethingElse` and `doThirdThing` can return any value — if they return promises, that promise is first waited until it settles, and the next callback receives the fulfillment value, not the promise itself. It is important to always return promises from `then` callbacks, even if the promise always resolves to `undefined`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
 ```js example-bad
 doSomething()
   .then((url) => {
-    // I forgot to return this
+    // Missing `return` keyword in front of fetch(url).
     fetch(url);
   })
   .then((result) => {
-    // result is undefined, because nothing is returned from
-    // the previous handler.
-    // There's no way to know the return value of the fetch()
+    // result is undefined, because nothing is returned from the previous
+    // handler. There's no way to know the return value of the fetch()
     // call anymore, or whether it succeeded at all.
   });
 ```
 
-This may be worse if you have race conditions — if the promise from the last handler is not returned, the next `then` handler will be called early, and any value it reads may be incomplete.
+By returning the result of the `fetch` call (which is a promise), we can both track its completion and receive its value when it completes.
+
+```js example-good
+doSomething()
+  .then((url) => {
+    // `return` keyword added
+    return fetch(url);
+  })
+  .then((result) => {
+    // result is a Response object
+  });
+```
+
+Floating promises could be worse if you have race conditions — if the promise from the last handler is not returned, the next `then` handler will be called early, and any value it reads may be incomplete.
 
 ```js example-bad
 const listOfIngredients = [];
 
 doSomething()
   .then((url) => {
-    // I forgot to return this
+    // Missing `return` keyword in front of fetch(url).
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -117,7 +148,7 @@ doSomething()
   })
   .then(() => {
     console.log(listOfIngredients);
-    // Always [], because the fetch request hasn't completed yet.
+    // listOfIngredients will always be [], because the fetch request hasn't completed yet.
   });
 ```
 
@@ -127,19 +158,23 @@ Therefore, as a rule of thumb, whenever your operation encounters a promise, ret
 const listOfIngredients = [];
 
 doSomething()
-  .then((url) =>
-    fetch(url)
+  .then((url) => {
+    // `return` keyword now included in front of fetch call.
+    return fetch(url)
       .then((res) => res.json())
       .then((data) => {
         listOfIngredients.push(data);
-      }),
-  )
+      });
+  })
   .then(() => {
     console.log(listOfIngredients);
+    // listOfIngredients will now contain data from fetch call.
   });
+```
 
-// OR
+Even better, you can flatten the nested chain into a single chain, which is simpler and makes error handling easier. The details are discussed in the [Nesting](#nesting) section below.
 
+```js
 doSomething()
   .then((url) => fetch(url))
   .then((res) => res.json())
@@ -151,106 +186,23 @@ doSomething()
   });
 ```
 
-### Nesting
-
-In the two examples above, the first one has one promise chain nested in the return value of another `then()` handler, while the second one uses an entirely flat chain. Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition. See [common mistakes](#common_mistakes).
-
-Nesting is a control structure to limit the scope of `catch` statements. Specifically, a nested `catch` only catches failures in its scope and below, not errors higher up in the chain outside the nested scope. When used correctly, this gives greater precision in error recovery:
+Using [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) can help you write code that's more intuitive and resembles synchronous code. Below is the same example using `async`/`await`:
 
 ```js
-doSomethingCritical()
-  .then((result) =>
-    doSomethingOptional(result)
-      .then((optionalResult) => doSomethingExtraNice(optionalResult))
-      .catch((e) => {}),
-  ) // Ignore if optional stuff fails; proceed.
-  .then(() => moreCriticalStuff())
-  .catch((e) => console.error(`Critical failure: ${e.message}`));
+async function logIngredients() {
+  const url = await doSomething();
+  const res = await fetch(url);
+  const data = await res.json();
+  listOfIngredients.push(data);
+  console.log(listOfIngredients);
+}
 ```
 
-Note that the optional steps here are nested — with the nesting caused not by the indentation, but by the placement of the outer `(` and `)` parentheses around the steps.
+Note how the code looks exactly like synchronous code, except for the `await` keywords in front of promises. One of the only tradeoffs is that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword, which can only be fixed when there's a type mismatch (e.g. trying to use a promise as a value).
 
-The inner error-silencing `catch` handler only catches failures from `doSomethingOptional()` and `doSomethingExtraNice()`, after which the code resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()` fails, its error is caught by the final (outer) `catch` only, and does not get swallowed by the inner `catch` handler.
+`async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
-### Chaining after a catch
-
-It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
-
-```js
-new Promise((resolve, reject) => {
-  console.log("Initial");
-
-  resolve();
-})
-  .then(() => {
-    throw new Error("Something failed");
-
-    console.log("Do this");
-  })
-  .catch(() => {
-    console.error("Do that");
-  })
-  .then(() => {
-    console.log("Do this, no matter what happened before");
-  });
-```
-
-This will output the following text:
-
-```plain
-Initial
-Do that
-Do this, no matter what happened before
-```
-
-> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
-
-### Common mistakes
-
-Here are some common mistakes to watch out for when composing promise chains. Several of these mistakes manifest in the following example:
-
-```js example-bad
-// Bad example! Spot 3 mistakes!
-
-doSomething()
-  .then(function (result) {
-    // Forgot to return promise from inner chain + unnecessary nesting
-    doSomethingElse(result).then((newResult) => doThirdThing(newResult));
-  })
-  .then(() => doFourthThing());
-// Forgot to terminate chain with a catch!
-```
-
-The first mistake is to not chain things together properly. This happens when we create a new promise but forget to return it. As a consequence, the chain is broken — or rather, we have two independent chains racing. This means `doFourthThing()` won't wait for `doSomethingElse()` or `doThirdThing()` to finish, and will run concurrently with them — which is likely unintended. Separate chains also have separate error handling, leading to uncaught errors.
-
-The second mistake is to nest unnecessarily, enabling the first mistake. Nesting also limits the scope of inner error handlers, which—if unintended—can lead to uncaught errors. A variant of this is the [promise constructor anti-pattern](https://stackoverflow.com/questions/23803743/what-is-the-explicit-promise-construction-antipattern-and-how-do-i-avoid-it), which combines nesting with redundant use of the promise constructor to wrap code that already uses promises.
-
-The third mistake is forgetting to terminate chains with `catch`. Unterminated promise chains lead to uncaught promise rejections in most browsers. See [error handling](#error_handling) below.
-
-A good rule of thumb is to always either return or terminate promise chains, and as soon as you get a new promise, return it immediately, to flatten things:
-
-```js example-good
-doSomething()
-  .then(function (result) {
-    // If using a full function expression: return the promise
-    return doSomethingElse(result);
-  })
-  // If using arrow functions: omit the braces and implicitly return the result
-  .then((newResult) => doThirdThing(newResult))
-  // Even if the previous chained promise returns a result, the next one
-  // doesn't necessarily have to use it. You can pass a handler that doesn't
-  // consume any result.
-  .then((/* result ignored */) => doFourthThing())
-  // Always end the promise chain with a catch handler to avoid any
-  // unhandled rejections!
-  .catch((error) => console.error(error));
-```
-
-Note that `() => x` is short for `() => { return x; }`.
-
-Now we have a single deterministic chain with proper error handling.
-
-Using [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) addresses most, if not all of these problems — the tradeoff being that it may be easy to forget the [`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) keyword.
+> **Note:** async/await has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
 
 ## Error handling
 
@@ -277,7 +229,7 @@ try {
 }
 ```
 
-This symmetry with asynchronous code culminates in the [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) syntax:
+This symmetry with asynchronous code culminates in the `async`/`await` syntax:
 
 ```js
 async function foo() {
@@ -292,9 +244,93 @@ async function foo() {
 }
 ```
 
-It builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
+Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations. All errors are now handled by the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method at the end of the chain, and you should almost never need to use `try`/`catch` without using `async`/`await`.
 
-Promises solve a fundamental flaw with the callback pyramid of doom, by catching all errors, even thrown exceptions and programming errors. This is essential for functional composition of asynchronous operations.
+### Nesting
+
+In the examples above involving `listOfIngredients`, the first one has one promise chain nested in the return value of another `then()` handler, while the second one uses an entirely flat chain. Simple promise chains are best kept flat without nesting, as nesting can be a result of careless composition.
+
+Nesting is a control structure to limit the scope of `catch` statements. Specifically, a nested `catch` only catches failures in its scope and below, not errors higher up in the chain outside the nested scope. When used correctly, this gives greater precision in error recovery:
+
+```js
+doSomethingCritical()
+  .then((result) =>
+    doSomethingOptional(result)
+      .then((optionalResult) => doSomethingExtraNice(optionalResult))
+      .catch((e) => {}),
+  ) // Ignore if optional stuff fails; proceed.
+  .then(() => moreCriticalStuff())
+  .catch((e) => console.error(`Critical failure: ${e.message}`));
+```
+
+Note that the optional steps here are nested — with the nesting caused not by the indentation, but by the placement of the outer `(` and `)` parentheses around the steps.
+
+The inner error-silencing `catch` handler only catches failures from `doSomethingOptional()` and `doSomethingExtraNice()`, after which the code resumes with `moreCriticalStuff()`. Importantly, if `doSomethingCritical()` fails, its error is caught by the final (outer) `catch` only, and does not get swallowed by the inner `catch` handler.
+
+In `async`/`await`, this code looks like:
+
+```js
+async function main() {
+  try {
+    const result = await doSomethingCritical();
+    try {
+      const optionalResult = await doSomethingOptional(result);
+      await doSomethingExtraNice(optionalResult);
+    } catch (e) {
+      // Ignore failures in optional steps and proceed.
+    }
+    await moreCriticalStuff();
+  } catch (e) {
+    console.error(`Critical failure: ${e.message}`);
+  }
+}
+```
+
+> **Note:** If you don't have sophisticated error handling, you very likely don't need nested `then` handlers. Instead, use a flat chain and put the error handling logic at the end.
+
+### Chaining after a catch
+
+It's possible to chain _after_ a failure, i.e. a `catch`, which is useful to accomplish new actions even after an action failed in the chain. Read the following example:
+
+```js
+doSomething()
+  .then(() => {
+    throw new Error("Something failed");
+
+    console.log("Do this");
+  })
+  .catch(() => {
+    console.error("Do that");
+  })
+  .then(() => {
+    console.log("Do this, no matter what happened before");
+  });
+```
+
+This will output the following text:
+
+```plain
+Initial
+Do that
+Do this, no matter what happened before
+```
+
+> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
+
+In `async`/`await`, this code looks like:
+
+```js
+async function main() {
+  try {
+    await doSomething();
+    throw new Error("Something failed");
+    console.log("Do this");
+  } catch (e) {
+    console.error("Do that");
+  }
+  console.log("Do this, no matter what happened before");
+}
+```
 
 ### Promise rejection events
 
@@ -502,12 +538,10 @@ If you think microtasks may help solve this problem, see the [microtask guide](/
 
 ## See also
 
-- {{jsxref("Promise.prototype.then()")}}
-- [`async`/`await`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- {{jsxref("Promise")}}
+- {{jsxref("Statements/async_function", "async function")}}
+- {{jsxref("Operators/await", "await")}}
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Nolan Lawson: We have a problem with promises — Common mistakes with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) on pouchdb.com (2015)
 
 {{PreviousNext("Web/JavaScript/Guide/Using_classes", "Web/JavaScript/Guide/Typed_arrays")}}

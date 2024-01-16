@@ -1,5 +1,5 @@
 ---
-title: "document: writeln() method"
+title: "Document: writeln() method"
 short-title: writeln()
 slug: Web/API/Document/writeln
 page-type: web-api-instance-method

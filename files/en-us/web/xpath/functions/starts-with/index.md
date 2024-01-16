@@ -1,6 +1,7 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
+page-type: xpath-function
 ---
 
 {{XsltSidebar}}
@@ -9,7 +10,7 @@ The `starts-with` checks whether the first string starts with the second string 
 
 ### Syntax
 
-```
+```plain
 starts-with(haystack, needle)
 ```
 

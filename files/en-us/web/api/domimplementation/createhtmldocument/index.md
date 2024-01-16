@@ -87,7 +87,7 @@ replaces the contents of the frame with the new document's contents.
 The returned document is pre-constructed with the following HTML:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

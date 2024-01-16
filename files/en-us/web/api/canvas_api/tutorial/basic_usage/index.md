@@ -83,7 +83,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
 > **Note:** it is not good practice to embed a script inside HTML. We do it here to keep the example concise.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -103,7 +103,7 @@ Here is a minimalistic template, which we'll be using as a starting point for la
           const ctx = canvas.getContext("2d");
         }
       }
-      draw();
+      window.addEventListener("load", draw);
     </script>
   </body>
 </html>
@@ -120,7 +120,7 @@ Here is how a template would look in action. As shown here, it is initially blan
 To begin, let's take a look at a simple example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -134,10 +134,10 @@ To begin, let's take a look at a simple example that draws two intersecting rect
         if (canvas.getContext) {
           const ctx = canvas.getContext("2d");
 
-          ctx.fillStyle = "rgb(200, 0, 0)";
+          ctx.fillStyle = "rgb(200 0 0)";
           ctx.fillRect(10, 10, 50, 50);
 
-          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillStyle = "rgb(0 0 200 / 50%)";
           ctx.fillRect(30, 30, 50, 50);
         }
       }

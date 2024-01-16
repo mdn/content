@@ -50,7 +50,7 @@ The mantissa (also called _significand_) is the part of the number representing 
 
 The mantissa is stored with 52 bits, interpreted as digits after `1.…` in a binary fractional number. Therefore, the mantissa's precision is 2<sup>-52</sup> (obtainable via {{jsxref("Number.EPSILON")}}), or about 15 to 17 decimal places; arithmetic above that level of precision is subject to [rounding](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding).
 
-The largest value a number can hold is 2<sup>1024</sup> - 1 (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
+The largest value a number can hold is 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) (with the exponent being 1023 and the mantissa being 0.1111… in base 2), which is obtainable via {{jsxref("Number.MAX_VALUE")}}. Values higher than that are replaced with the special number constant {{jsxref("Infinity")}}.
 
 Integers can only be represented without loss of precision in the range -2<sup>53</sup> + 1 to 2<sup>53</sup> - 1, inclusive (obtainable via {{jsxref("Number.MIN_SAFE_INTEGER")}} and {{jsxref("Number.MAX_SAFE_INTEGER")}}), because the mantissa can only hold 53 bits (including the leading 1).
 
@@ -148,9 +148,9 @@ When `Number` is called as a constructor (with `new`), it creates a {{jsxref("Nu
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine whether the passed value is a safe integer (number between -(2<sup>53</sup> - 1) and 2<sup>53</sup> - 1).
 - {{jsxref("Number.parseFloat()")}}
-  - : This is the same as the global {{jsxref("parseFloat", "parseFloat()")}} function.
+  - : This is the same as the global {{jsxref("parseFloat()")}} function.
 - {{jsxref("Number.parseInt()")}}
-  - : This is the same as the global {{jsxref("parseInt", "parseInt()")}} function.
+  - : This is the same as the global {{jsxref("parseInt()")}} function.
 
 ## Instance properties
 
@@ -245,5 +245,5 @@ Number("-Infinity"); // -Infinity
 - [Polyfill of modern `Number` behavior (with support binary and octal literals) in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
 - {{jsxref("NaN")}}
 - [Arithmetic operators](/en-US/docs/Web/JavaScript/Reference/Operators#arithmetic_operators)
-- The {{jsxref("Math")}} global object
-- Integers with arbitrary precision: {{jsxref("BigInt")}}
+- {{jsxref("Math")}}
+- {{jsxref("BigInt")}}

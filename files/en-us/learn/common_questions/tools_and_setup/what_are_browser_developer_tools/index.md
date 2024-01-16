@@ -44,7 +44,7 @@ The developer tools usually open by default to the inspector, which looks someth
 If you _don't_ see the inspector,
 
 - Tap/click the _Inspector_ tab.
-- In Microsoft Edge, or Opera, tap/click Elements.
+- In Chrome, Microsoft Edge, or Opera, tap/click Elements.
 - In Safari, the controls are not so clearly presented, but you should see the HTML if you haven't selected something else to appear in the window. Press the _Style_ button to see the CSS.
 
 ### Exploring the DOM inspector
@@ -175,7 +175,7 @@ document.querySelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 loginImage.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```
@@ -194,7 +194,7 @@ document.cheeseSelector("html").style.backgroundColor = "purple";
 const loginImage = document.createElement("img");
 banana.setAttribute(
   "src",
-  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+  "https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png",
 );
 document.querySelector("h1").appendChild(loginImage);
 ```

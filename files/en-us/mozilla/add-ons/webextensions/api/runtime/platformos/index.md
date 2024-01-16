@@ -15,12 +15,14 @@ Values of this type are strings. Possible values are:
 
 - `"mac"`
   - : The underlying operating system is macOS.
+- `"ios"`
+  - : The underlying operating system is iOS/iPadOS.
 - `"win"`
   - : The underlying operating system is Windows.
 - `"android"`
   - : The underlying operating system is Android.
 - `"cros"`
-  - : The underlying operating system is Chrome OS.
+  - : The underlying operating system is ChromeOS.
 - `"linux"`
   - : The underlying operating system is Linux.
 - `"openbsd"`

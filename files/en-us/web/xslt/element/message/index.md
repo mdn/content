@@ -1,6 +1,7 @@
 ---
 title: <xsl:message>
 slug: Web/XSLT/Element/message
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

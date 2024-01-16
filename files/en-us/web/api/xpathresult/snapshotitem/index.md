@@ -58,7 +58,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 let node = null;
 const tagNames = [];

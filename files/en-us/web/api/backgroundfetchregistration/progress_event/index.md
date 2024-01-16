@@ -40,7 +40,7 @@ The following example demonstrates how to log the progress of a download. The co
 bgFetch.addEventListener("progress", () => {
   if (!bgFetch.downloadTotal) return;
   const percent = Math.round(
-    (bgFetch.downloaded / bgFetch.downloadTotal) * 100
+    (bgFetch.downloaded / bgFetch.downloadTotal) * 100,
   );
   console.log(`Download progress: ${percent}%`);
 });

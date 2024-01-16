@@ -101,26 +101,25 @@ In the future, service workers will be able to do a number of other useful thing
   - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}. As a child of {{DOMxRef("ExtendableEvent")}}, it ensures that functional events such as {{DOMxRef("FetchEvent")}} are not dispatched during installation.
 - {{DOMxRef("NavigationPreloadManager")}}
   - : Provides methods for managing the preloading of resources with a service worker.
-- {{DOMxRef("Navigator.serviceWorker")}}
-  - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
-- {{DOMxRef("NotificationEvent")}}
-  - : The parameter passed into the {{DOMxRef("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a {{DOMxRef("ServiceWorker")}}.
 - {{DOMxRef("ServiceWorker")}}
   - : Represents a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same `ServiceWorker` object.
 - {{DOMxRef("ServiceWorkerContainer")}}
   - : Provides an object representing the service worker as an overall unit in the network ecosystem, including facilities to register, unregister, and update service workers, and access the state of service workers and their registrations.
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
   - : Represents the global execution context of a service worker.
-- {{DOMxRef("MessageEvent")}}
-  - : Represents a message sent to a {{DOMxRef("ServiceWorkerGlobalScope")}}.
 - {{DOMxRef("ServiceWorkerRegistration")}}
   - : Represents a service worker registration.
-- {{DOMxRef("SyncEvent")}} {{Experimental_Inline}}
-  - : The SyncEvent interface represents a sync action that is dispatched on the {{DOMxRef("ServiceWorkerGlobalScope")}} of a ServiceWorker.
-- {{DOMxRef("SyncManager")}} {{Experimental_Inline}}
-  - : Provides an interface for registering and listing sync registrations.
 - {{DOMxRef("WindowClient")}}
   - : Represents the scope of a service worker client that is a document in a browser context, controlled by an active worker. This is a special type of {{DOMxRef("Client")}} object, with some additional methods and properties available.
+
+### Extensions to other interfaces
+
+- {{DOMxRef("caches")}}
+  - : Returns the {{domxref("CacheStorage")}} object associated with the current context.
+- {{DOMxRef("Navigator.serviceWorker")}}
+  - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
+- {{DOMxRef("WorkerNavigator.serviceWorker")}}
+  - : Returns a {{DOMxRef("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{DOMxRef("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 
 ## Specifications
 
@@ -131,5 +130,12 @@ In the future, service workers will be able to do a number of other useful thing
 - [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- Web APIs that are related to the Service Worker API:
+  - {{domxref("Background Fetch API", "", "", "nocode")}}
+  - {{domxref("Background Synchronization API", "", "", "nocode")}}
+  - {{domxref("Content Index API", "", "", "nocode")}}
+  - {{domxref("Cookie Store API", "", "", "nocode")}}
+  - {{domxref("Notifications API", "", "", "nocode")}}
+  - {{domxref("Payment Handler API", "", "", "nocode")}}
+  - {{domxref("Push API", "", "", "nocode")}}
+  - {{domxref("Web Periodic Background Synchronization API", "", "", "nocode")}}

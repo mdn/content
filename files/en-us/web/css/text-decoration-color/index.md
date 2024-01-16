@@ -22,7 +22,7 @@ CSS does not provide a direct mechanism for specifying a unique color for each l
 text-decoration-color: currentcolor;
 text-decoration-color: red;
 text-decoration-color: #00ff00;
-text-decoration-color: rgba(255, 128, 128, 0.5);
+text-decoration-color: rgb(255 128 128 / 50%);
 text-decoration-color: transparent;
 
 /* Global values */
@@ -95,4 +95,4 @@ s {
 - When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

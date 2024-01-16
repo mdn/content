@@ -1,5 +1,5 @@
 ---
-title: "location: hash property"
+title: "Location: hash property"
 short-title: hash
 slug: Web/API/Location/hash
 page-type: web-api-instance-property

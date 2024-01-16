@@ -32,7 +32,7 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 ## Description
 
 If you do not specify the `dateValue` parameter, the value returned from the
-{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} method is used.
+{{jsxref("Date/getUTCDate", "getUTCDate()")}} method is used.
 
 If a parameter you specify is outside of the expected range, `setUTCMonth()`
 attempts to update the date information in the {{jsxref("Date")}} object accordingly.

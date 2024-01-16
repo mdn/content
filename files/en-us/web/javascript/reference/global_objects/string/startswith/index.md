@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.String.startsWith
 
 {{JSRef}}
 
-The **`startsWith()`** method determines whether a string begins with the characters of a specified string, returning `true` or `false` as appropriate.
+The **`startsWith()`** method of {{jsxref("String")}} values determines whether this string begins with the characters of a specified string, returning `true` or `false` as appropriate.
 
 {{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 

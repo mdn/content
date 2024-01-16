@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.String.padEnd
 
 {{JSRef}}
 
-The **`padEnd()`** method pads the current string with a given
+The **`padEnd()`** method of {{jsxref("String")}} values pads this string with a given
 string (repeated, if needed) so that the resulting string reaches a given length. The
-padding is applied from the end of the current string.
+padding is applied from the end of this string.
 
 {{EmbedInteractiveExample("pages/js/string-padend.html")}}
 

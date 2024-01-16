@@ -1,6 +1,7 @@
 ---
 title: Customize your app's theme and background colors
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
+page-type: how-to
 ---
 
 {{PWASidebar}}
@@ -93,4 +94,4 @@ Note that on some browsers, like Safari on macOS and Chrome on Android, the `the
 
 - [Web App Manifests](/en-US/docs/Web/Manifest).
 - [Meta Theme Color and Trickery on css-tricks.com](https://css-tricks.com/meta-theme-color-and-trickery/) (2021)
-- [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest/#recommended-fields)
+- [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest#recommended_fields)

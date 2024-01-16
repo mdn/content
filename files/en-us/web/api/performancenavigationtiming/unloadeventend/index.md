@@ -40,7 +40,7 @@ const observer = new PerformanceObserver((list) => {
     const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
     if (unloadEventTime > 0) {
       console.log(
-        `${entry.name}: unload event handler time: ${unloadEventTime}ms`
+        `${entry.name}: unload event handler time: ${unloadEventTime}ms`,
       );
     }
   });

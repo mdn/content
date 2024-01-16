@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.TypedArray.byteLength
 
 The **`byteLength`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in bytes) of this typed array.
 
-{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html", "shorter")}}
 
 ## Description
 
@@ -42,5 +42,5 @@ uint8offSet.byteLength; // 6 (due to the offset of the constructed Uint8Array)
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

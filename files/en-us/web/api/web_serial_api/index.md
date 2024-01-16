@@ -19,10 +19,17 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 
 ## Interfaces
 
-- {{domxref("Serial")}}
+- {{domxref("Serial")}} {{Experimental_Inline}}
   - : Provides attributes and methods for finding and connecting to serial ports from a web page.
-- {{domxref("SerialPort")}}
+- {{domxref("SerialPort")}} {{Experimental_Inline}}
   - : Provides access to a serial port on the host device.
+
+## Extensions to other interfaces
+
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
 
 ## Examples
 
@@ -97,5 +104,5 @@ while (port.readable) {
 
 ## See also
 
-- [Read from and write to a serial port](https://web.dev/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/docs/capabilities/serial)
 - [Getting started with the Web Serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

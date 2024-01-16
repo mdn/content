@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/banner_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#banner
-  - https://w3c.github.io/aria-practices/#aria_lh_banner
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html
 ---
 
 The `banner` role is for defining a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
@@ -70,12 +70,12 @@ While it is best to use the `header` element and ensure it is not a descendant o
 ## See also
 
 - [HTML `header` element](/en-US/docs/Web/HTML/Element/header)
-- [WC3 Landmarks Example](https://w3c.github.io/aria-practices/examples/landmarks/banner.html)
+- [WC3 Landmarks Example](https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/banner.html)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

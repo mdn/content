@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/tab_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#tab
-  - https://w3c.github.io/aria-practices/#tabpanel
+  - https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/
 ---
 
 The ARIA `tab` role indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.
@@ -244,6 +244,6 @@ What are the related properties, and in what order will this attribute or proper
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

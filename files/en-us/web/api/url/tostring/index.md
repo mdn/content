@@ -8,7 +8,7 @@ browser-compat: api.URL.toString
 
 {{ApiRef("URL API")}}
 
-The **`URL.toString()`** {{Glossary("stringifier")}} method returns a
+The **`toString()`** method of the {{domxref("URL")}} interface returns a
 string containing the whole URL. It is effectively a read-only version
 of {{domxref("URL.href")}}.
 
@@ -32,7 +32,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
 );
 url.toString(); // should return the URL as a string
 ```

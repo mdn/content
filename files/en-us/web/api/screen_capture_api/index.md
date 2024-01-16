@@ -16,9 +16,8 @@ The Screen Capture API is relatively simple to use. Its sole method is {{domxref
 To start capturing video from the screen, you call `getDisplayMedia()` on `navigator.mediaDevices`:
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(
-  displayMediaOptions
-);
+captureStream =
+  await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 ```
 
 The {{jsxref("Promise")}} returned by `getDisplayMedia()` resolves to a {{domxref("MediaStream")}} which streams the captured media.
@@ -41,8 +40,6 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ### MediaTrackConstraints
 
-- {{domxref("MediaTrackConstraints.cursor")}}
-  - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) indicating whether or not the cursor should be included in the captured display surface's stream, and if it should always be visible or if it should only be visible while the mouse is in motion.
 - {{domxref("MediaTrackConstraints.displaySurface")}}
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) indicating what type of display surface is to be captured. The value is one of `browser`, `monitor`, or `window`.
 - {{domxref("MediaTrackConstraints.logicalSurface")}}
@@ -63,8 +60,6 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 
 ### MediaTrackSupportedConstraints
 
-- {{domxref("MediaTrackSupportedConstraints.cursor")}}
-  - : A boolean, which is `true` if the user agent and device support the {{domxref("MediaTrackConstraints.cursor")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
   - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}

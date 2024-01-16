@@ -63,7 +63,7 @@ resolveFunc(value); // call on resolved
 rejectFunc(reason); // call on rejected
 ```
 
-The `value` parameter passed to `resolveFunc` can be another promise object, in which case the newly constructed promise's state will be "locked in" to the promise passed (as part of the [resolution](#resolver_function) promise). The `rejectFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
+The `value` parameter passed to `resolveFunc` can be another promise object, in which case the newly constructed promise's state will be "locked in" to the promise passed (as part of the [resolution](#the_resolve_function) promise). The `rejectFunc` has semantics close to the [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statement, so `reason` is typically an [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) instance. If either `value` or `reason` is omitted, the promise is fulfilled/rejected with `undefined`.
 
 The `executor`'s completion state has limited effect on the promise's state:
 
@@ -78,7 +78,7 @@ Here's a summary of the typical flow:
 2. `executor` typically wraps some asynchronous operation which provides a callback-based API. The callback (the one passed to the original callback-based API) is defined within the `executor` code, so it has access to the `resolveFunc` and `rejectFunc`.
 3. The `executor` is called synchronously (as soon as the `Promise` is constructed) with the `resolveFunc` and `rejectFunc` functions as arguments.
 4. The code within the `executor` has the opportunity to perform some operation. The eventual completion of the asynchronous task is communicated with the promise instance via the side effect caused by `resolveFunc` or `rejectFunc`. The side effect is that the `Promise` object becomes "resolved".
-   - If `resolveFunc` is called first, the value passed will be [resolved](#resolver_function). The promise may stay pending (in case another [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) is passed), become fulfilled (in most cases where a non-thenable value is passed), or become rejected (in case of an invalid resolution value).
+   - If `resolveFunc` is called first, the value passed will be [resolved](#the_resolve_function). The promise may stay pending (in case another [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) is passed), become fulfilled (in most cases where a non-thenable value is passed), or become rejected (in case of an invalid resolution value).
    - If `rejectFunc` is called first, the promise instantly becomes rejected.
    - Once one of the resolving functions (`resolveFunc` or `rejectFunc`) is called, the promise stays resolved. Only the first call to `resolveFunc` or `rejectFunc` affects the promise's eventual state, and subsequent calls to either function can neither change the fulfillment value/rejection reason nor toggle its eventual state from "fulfilled" to "rejected" or opposite.
    - If `executor` exits by throwing an error, then the promise is rejected. However, the error is ignored if one of the resolving functions has already been called (so that the promise is already resolved).
@@ -104,9 +104,11 @@ readFilePromise("./data.txt")
   .catch((error) => console.error("Failed to read data"));
 ```
 
-### Resolver function
+The `resolve` and `reject` callbacks are only available within the scope of the executor function, which means you can't access them after the promise is constructed. If you want to construct the promise before deciding how to resolve it, you can use the {{jsxref("Promise.withResolvers()")}} method instead, which exposes the `resolve` and `reject` functions.
 
-The resolver function `resolveFunc` has the following behaviors:
+### The resolve function
+
+The `resolve` function has the following behaviors:
 
 - If it's called with the same value as the newly created promise (the promise it's "tethered to"), the promise is rejected with a {{jsxref("TypeError")}}.
 - If it's called with a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value (a primitive, or an object whose `then` property is not callable, including when the property is not present), the promise is immediately fulfilled with that value.
@@ -219,4 +221,5 @@ const rejectedResolved2 = new Promise((resolve) => {
 ## See also
 
 - [Polyfill of `Promise` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) guide
+- {{jsxref("Promise.withResolvers()")}}

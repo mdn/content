@@ -44,7 +44,7 @@ toggleBox.addEventListener(
   (event) => {
     checkBox.disabled = !event.target.checked;
   },
-  false
+  false,
 );
 ```
 

@@ -26,6 +26,7 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [Writing WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers)
 - [Writing a WebSocket server in C#](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_server)
 - [Writing a WebSocket server in Java](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java)
+- [Writing a WebSocket server in JavaScript (Deno)](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)
 
 ## Tools
 
@@ -48,11 +49,6 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
 - [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://go.dev/) implementation of the WebSocket protocol.
-
-## Related Topics
-
-- [AJAX](/en-US/docs/Web/Guide/AJAX)
-- [JavaScript](/en-US/docs/Web/JavaScript)
 
 ## Specifications
 

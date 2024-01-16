@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.cancelWatchAvailability
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`cancelWatchAvailability()`** method of the {{domxref("RemotePlayback")}} interface cancels the request to watch for one or all available devices.
 

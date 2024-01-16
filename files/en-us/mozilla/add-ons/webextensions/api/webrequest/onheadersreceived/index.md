@@ -67,7 +67,7 @@ Events have three functions:
 ### details
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
 - `frameAncestors`
@@ -168,14 +168,15 @@ Events have three functions:
 This code sets an extra cookie when requesting a resource from the target URL:
 
 ```js
-let targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+let targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
   const setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
   return { responseHeaders: e.responseHeaders };
@@ -186,14 +187,15 @@ function setCookie(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 
 This code does the same thing the previous example, except that the listener is asynchronous, returning a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which is resolved with the new headers:
 
 ```js
-const targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+const targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
@@ -203,7 +205,7 @@ function setCookieAsync(e) {
     setTimeout(() => {
       const setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
       resolve({ responseHeaders: e.responseHeaders });
@@ -218,7 +220,7 @@ function setCookieAsync(e) {
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
   { urls: [targetPage] },
-  ["blocking", "responseHeaders"]
+  ["blocking", "responseHeaders"],
 );
 ```
 

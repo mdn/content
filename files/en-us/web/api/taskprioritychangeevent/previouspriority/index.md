@@ -29,7 +29,7 @@ controller.signal.addEventListener("prioritychange", (event) => {
   const previousPriority = event.previousPriority;
   const newPriority = event.target.priority;
   console.log(
-    `The priority changed from ${previousPriority} to ${newPriority}.`
+    `The priority changed from ${previousPriority} to ${newPriority}.`,
   );
 });
 ```

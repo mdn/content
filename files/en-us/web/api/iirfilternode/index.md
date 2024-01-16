@@ -66,7 +66,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}. It also has the fol
 
 ## Examples
 
-You can find a simple IIR filter demo live [on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
+You can find a simple IIR filter demo live [on Codepen](https://codepen.io/Rumyra/pen/oPxvYB/). Also see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/iirfilter-node). It includes some different coefficient values for different lowpass frequencies — you can change the value of the `filterNumber` constant to a value between 0 and 3 to check out the different available effects.
 
 Also see our [Using IIR filters](/en-US/docs/Web/API/Web_Audio_API/Using_IIR_filters) guide for a full explanation.
 

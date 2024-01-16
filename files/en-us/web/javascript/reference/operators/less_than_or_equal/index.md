@@ -100,6 +100,6 @@ NaN <= 3; // false
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Greater than (`>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal (`>=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than (`<`)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)

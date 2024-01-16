@@ -7,7 +7,7 @@ browser-compat: css.types.global_keywords.revert
 
 {{CSSRef}}
 
-The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property to its inherited value if it inherits from its parent or to the default value established by the user agent's stylesheet (or by user styles, if any exist). It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
+The **`revert`** CSS keyword reverts the cascaded value of the property from its current value to the value the property would have had if no changes had been made by the current **{{Glossary("style origin")}}** to the current element. Thus, it resets the property either to user agent set value, to user set value, to its inherited value (if it is inheritable), or to initial value. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}.
 
 This keyword removes from the cascade all of the styles that have been overridden until the style being rolled back to is reached.
 
@@ -93,21 +93,37 @@ Reverting effectively removes the value for the element you select with some rul
 #### HTML
 
 ```html
-<section>
-  <h3>This will be dark green</h3>
-  <p>Text in paragraph will be red.</p>
-  This will also be dark green.
-</section>
-<section class="with-revert">
-  <h3>This will be black</h3>
-  <p>Text in paragraph will be red.</p>
-  This will also be black.
-</section>
+<main>
+  <section>
+    <h3>This h3 will be dark green</h3>
+    <p>Text in paragraph will be red.</p>
+    This stray text will also be dark green.
+  </section>
+  <section class="with-revert">
+    <h3>This h3 will be steelblue</h3>
+    <p>Text in paragraph will be red.</p>
+    This stray text will also be steelblue.
+  </section>
+</main>
 ```
 
 #### CSS
 
+```css hidden
+main {
+  border: 3px solid steelblue;
+}
+
+section {
+  margin: 0.5rem;
+  border: 2px dashed darkgreen;
+}
+```
+
 ```css
+main {
+  color: steelblue;
+}
 section {
   color: darkgreen;
 }
@@ -119,11 +135,13 @@ section.with-revert {
 }
 ```
 
-Notice how paragraph still has a red color even though a color property for the section was reverted. Also note that both the header and plain text node are black. This is exactly the same as if `section { color: darkgreen }` would not exist for the second section.
-
 #### Result
 
-{{EmbedLiveSample('Revert_on_a_parent')}}
+{{EmbedLiveSample('Revert_on_a_parent', '100%', '300px')}}
+
+Notice how the paragraph is still red even though a `color` property for the section was reverted. Also, note that both the header and plain text node are `steelblue`. The result of reverting makes it as if `section { color: darkgreen; }` did not exist for the section with `color: revert` applied.
+
+Also, if neither the user agent nor the user override the `<h3>` or `<section>` color values, then the `steelblue` color is inherited from `<main>`, as the {{cssxref("color")}} property is an inherited property.
 
 ## Specifications
 

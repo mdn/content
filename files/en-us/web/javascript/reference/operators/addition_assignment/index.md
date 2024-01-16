@@ -19,7 +19,7 @@ x += y
 
 ## Description
 
-`x += y` is equivalent to `x = x + y`.
+`x += y` is equivalent to `x = x + y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -76,4 +76,4 @@ x += 1; // TypeError: Cannot mix BigInt and other types, use explicit conversion
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

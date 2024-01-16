@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.DeviceMotionEventRotationRate.beta
 ---
 
-{{ ApiRef("Device Orientation Events") }}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`DeviceMotionEventRotationRate.alpha`** read-only property indicates the rate of rotation around the X axis, in degrees per second.
+The **`beta`** read-only property of the {{domxref("DeviceMotionEventRotationRate")}} interface indicates the rate of rotation around the X axis, in degrees per second.
 
 ## Value
 

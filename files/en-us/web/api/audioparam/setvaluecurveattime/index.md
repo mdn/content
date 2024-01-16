@@ -67,7 +67,7 @@ parameter.
 
 ## Examples
 
-In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/master/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
+In this example, we have a media source with a single button (see the [webaudio-examples repo](https://github.com/mdn/webaudio-examples/blob/main/audio-param/index.html) for the source code, or [view the example live](https://mdn.github.io/webaudio-examples/audio-param/).) When this button is pressed, `setValueCurveAtTime()` is used to
 change the gain value between the values contained in the waveArray array:
 
 ```js

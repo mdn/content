@@ -37,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.previousSibling(); // returns null as there is no previous sibling
 ```

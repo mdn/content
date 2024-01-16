@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Tag() constructor
 slug: WebAssembly/JavaScript_interface/Tag/Tag
-browser-compat: javascript.builtins.WebAssembly.Tag.Tag
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Tag.Tag
 ---
 
 {{WebAssemblySidebar}}

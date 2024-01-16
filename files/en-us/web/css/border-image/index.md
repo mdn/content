@@ -106,8 +106,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   margin: 30px;
   padding: 10px;
 
-  border-image: url("border.png") /* source */ 27 / /* slice */ 36px 28px 18px
-    8px / /* width */ 18px 14px 9px 4px /* outset */ round; /* repeat */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 
@@ -156,3 +156,4 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("background-image")}}
 - {{cssxref("url", "url()")}} function
 - Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

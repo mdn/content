@@ -8,9 +8,10 @@ page-type: learn-module-assessment
 
 The aim of the tests on this page is to assess whether you've understood the [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn/JavaScript/First_steps/Math) article.
 
-> **Note:** If there is an error in your code, it will be logged into the results panel on this page (or in the browser's JavaScript console for the downloadable version) to help you.
-> It might be helpful to copy the code into an online tool like [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to test your work.
-> If you get stuck, you can [ask us for help](#assessment_or_further_help).
+> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> If there is an error in your code, it will be logged into the results panel on this page or in the JavaScript console.
+>
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Math 1
 
@@ -44,9 +45,8 @@ Try updating the live code below to recreate the finished example by following t
 1. Multiply `result` and `result2` and assign the result back to `result` (use assignment shorthand).
 2. Format `result` so that it has two decimal places and store it in a variable called `finalResult`.
 3. Check the data type of `finalResult` using `typeof`. If it's a `string`, convert it to a `number` type and store the result in a variable called `finalNumber`.
-4. Update the original calculation so that they give you a value of `10.42`. Don't change the numbers or the operators.
 
-To pass this test, `finalNumber` should have a result of `10.42`.
+To pass this test, `finalNumber` should have a result of `4633.33`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
@@ -66,17 +66,3 @@ Store the results of those tests in variables called `weightComparison`, `height
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math3-download.html) to work in your own editor or in an online editor.
-
-## Assessment or further help
-
-You can practice these examples in the interactive editors above.
-If you would like your work assessed, or are stuck and want to ask for help:
-
-1. Put your work into an online shareable editor such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-
-2. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for Math 1 skill test".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - A link to the example you want assessed or need help with, in an online shareable editor. This is a good practice to get into because it's very hard to help someone with a coding problem if you can't see their code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.

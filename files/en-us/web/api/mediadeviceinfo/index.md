@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.MediaDeviceInfo
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`MediaDeviceInfo`** interface contains information that describes a single media input or output device.
+The **`MediaDeviceInfo`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} contains information that describes a single media input or output device.
 
 The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}} is an array of `MediaDeviceInfo` objects, one per media device.
 

@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 - Document [readyState](/en-US/docs/Web/API/Document/readyState) API
 - Related events:
-  - {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}
+  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
   - {{domxref("Document/readystatechange_event", "readystatechange")}}
   - {{domxref("Window/beforeunload_event", "beforeunload")}}
   - {{domxref("Window/unload_event", "unload")}}

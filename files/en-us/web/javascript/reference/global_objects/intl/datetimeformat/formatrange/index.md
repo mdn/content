@@ -20,13 +20,24 @@ options provided when instantiating this
 formatRange(startDate, endDate)
 ```
 
+### Parameters
+
+- `startDate`
+  - : A {{jsxref("Date")}} object representing the start of the date range.
+- `endDate`
+  - : A {{jsxref("Date")}} object representing the end of the date range.
+
+### Return value
+
+A string representing the given date range formatted according to the locale and formatting options of this {{jsxref("Intl.DateTimeFormat")}} object.
+
 ## Examples
 
 ### Basic formatRange usage
 
 This method receives two {{jsxref("Date")}}s and formats the date range in the most
 concise way based on the `locale` and `options` provided when
-instantiating {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}.
+instantiating {{jsxref("Intl.DateTimeFormat")}}.
 
 ```js
 const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT

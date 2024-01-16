@@ -5,14 +5,14 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#section
 ---
 
-The **`section` role**, an abstract role, is superclass role for renderable structural containment components.
+The **`section` role**, an abstract role, is a superclass role for renderable structural containment components.
 
 > **Note:** The `section` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It **should not be used** by web authors.
 
 ## Description
 
 The structural `section` role is an abstract role for categorizing all the section subclass roles. The role must not be used. Some subclasses, like [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role),
-[`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role), and [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role), are useful, and can be used to add semantics when no semantic HTML elements quite fits the purpose of a component. Others, like [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role), and [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), aren't necessary, as there are HTML element equivalents. In this case, {{HTMLElement('code')}} {{HTMLElement('figure')}} and {{HTMLElement('subscript')}}, respectively.
+[`note`](/en-US/docs/Web/Accessibility/ARIA/Roles/note_role), and [`tooltip`](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role) are useful, and can be used to add semantics when no semantic HTML elements quite fit the purpose of a component. Others, like [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), [`figure`](/en-US/docs/Web/Accessibility/ARIA/Roles/figure_role), and [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles), aren't necessary, as there are HTML element equivalents. In this case, {{HTMLElement('code')}} {{HTMLElement('figure')}} and {{HTMLElement('sub')}}, respectively.
 
 ## Best Practices
 
@@ -64,6 +64,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

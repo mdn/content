@@ -22,24 +22,22 @@ A {{domxref("WGSLLanguageFeatures")}} object instance. This is a [setlike](/en-U
 ## Examples
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
-  }
-
-  const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
-
-  // Return the size of the set
-  console.log(wgslFeatures.size);
-
-  // Iterate through all the set values using values()
-  const valueIterator = wgslFeatures.values();
-  for (const value of valueIterator) {
-    console.log(value);
-  }
-
-  // ...
+if (!navigator.gpu) {
+  throw Error("WebGPU not supported.");
 }
+
+const wgslFeatures = navigator.gpu.wgslLanguageFeatures;
+
+// Return the size of the set
+console.log(wgslFeatures.size);
+
+// Iterate through all the set values using values()
+const valueIterator = wgslFeatures.values();
+for (const value of valueIterator) {
+  console.log(value);
+}
+
+// ...
 ```
 
 ## Specifications

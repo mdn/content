@@ -32,3 +32,4 @@ let pageY = event.pageY;
 ## See also
 
 - {{domxref("MouseEvent.pageX")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

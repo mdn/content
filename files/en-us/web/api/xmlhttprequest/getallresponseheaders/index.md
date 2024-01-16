@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method
 **`getAllResponseHeaders()`** returns all the response
@@ -109,6 +109,6 @@ This obtains the value of the {{httpheader("Content-Type")}} header into the var
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}}

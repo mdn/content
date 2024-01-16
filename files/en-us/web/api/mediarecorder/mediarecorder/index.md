@@ -34,25 +34,36 @@ new MediaRecorder(stream, options)
 
   - : A dictionary object that can contain the following properties:
 
-    - `mimeType`
+    - `mimeType` {{optional_inline}}
       - : A MIME type specifying the format for the resulting
         media; you may specify the container format (the browser will select its preferred
         codecs for audio and/or video), or you may [use the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_parameter) and/or the `profiles` parameter to
         provide detailed information about which codecs to use and how to configure them.
         Applications can check in advance if a `mimeType` is supported by the
         {{Glossary("user agent")}} by calling
-        {{domxref("MediaRecorder.isTypeSupported()")}}.
-    - `audioBitsPerSecond`
+        {{domxref("MediaRecorder.isTypeSupported_static", "MediaRecorder.isTypeSupported()")}}.
+        Defaults to an empty string.
+    - `audioBitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the audio component of
         the media.
-    - `videoBitsPerSecond`
+    - `videoBitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the video component of
         the media.
-    - `bitsPerSecond`
+    - `bitsPerSecond` {{optional_inline}}
       - : The chosen bitrate for the audio and video
         components of the media. This can be specified instead of the above two
         properties. If this is specified along with one or the other of the above
         properties, this will be used for the one that isn't specified.
+    - `audioBitrateMode` {{optional_inline}}
+      - : The bitrate mode that should be used to encode the audio.
+        Can be `constant`, which indicates that the recorder should encode at a constant bitrate,
+        or `variable`, which indicates that the recorder should encode using a variable bitrate,
+        thus allowing more space to be used for complex signals and less space for less-complex signals.
+        Defaults to `variable`.
+    - `videoKeyFrameIntervalDuration` {{optional_inline}}
+      - : The nominal interval in time between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation based on this option and the `videoKeyFrameIntervalCount` option.
+    - `videoKeyFrameIntervalCount` {{optional_inline}}
+      - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
     > **Note:** If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon

@@ -61,17 +61,17 @@ This works because only one fingerprint value can exist for each algorithm.
 
 ```js
 let clientFingerprintDict = Object.fromEntries(
-  fingerprintsFromClient.map((x) => [x.algorithm, x.value])
+  fingerprintsFromClient.map((x) => [x.algorithm, x.value]),
 );
 let serverFingerprintDict = Object.fromEntries(
-  fingerprintsFromServer.map((x) => [x.algorithm, x.value])
+  fingerprintsFromServer.map((x) => [x.algorithm, x.value]),
 );
 
 // Function to compare two objects and return true if there are common properties
 // and all common properties match.
 function compareObjects(obj1, obj2) {
   const commonProperties = Object.keys(obj1).filter((prop) =>
-    obj2.hasOwnProperty(prop)
+    obj2.hasOwnProperty(prop),
   );
   // Return false if there are no common properties
   if (Object.keys(commonProperties).length === 0) return false;
@@ -88,7 +88,7 @@ function compareObjects(obj1, obj2) {
 
 const matchingFingerprints = compareObjects(
   clientFingerprintDict,
-  serverFingerprintDict
+  serverFingerprintDict,
 );
 console.log(matchingFingerprints);
 ```

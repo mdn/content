@@ -61,7 +61,7 @@ let animationFrameRequestID = 0;
 
 xrSession.requestReferenceSpace("local-floor").then((refSpace) => {
   xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-    new XRRigidTransform(viewerPosition, viewerOrientation)
+    new XRRigidTransform(viewerPosition, viewerOrientation),
   );
   animationFrameRequestID = xrSession.requestAnimationFrame(drawFrame);
 });

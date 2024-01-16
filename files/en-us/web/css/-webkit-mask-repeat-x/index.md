@@ -11,6 +11,8 @@ browser-compat: css.properties.-webkit-mask-repeat-x
 
 The `-webkit-mask-repeat-x` property specifies whether and how a mask image is repeated (tiled) horizontally.
 
+## Syntax
+
 ```css
 /* Keyword values */
 -webkit-mask-repeat-x: repeat;
@@ -28,8 +30,6 @@ The `-webkit-mask-repeat-x` property specifies whether and how a mask image is r
 -webkit-mask-repeat-x: revert-layer;
 -webkit-mask-repeat-x: unset;
 ```
-
-## Syntax
 
 ### Values
 

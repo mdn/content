@@ -29,12 +29,12 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Examples
 
-The following example finds the element with the highest layout shift score, and returns the element in that entry with the largest size prior to the shift (`previousRect`). For more detail on this see [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/).
+The following example finds the element with the highest layout shift score, and returns the element in that entry with the largest size prior to the shift (`previousRect`). For more detail on this see [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field).
 
 ```js
 function getCLSDebugTarget(entries) {
   const largestEntry = entries.reduce((a, b) =>
-    a && a.value > b.value ? a : b
+    a && a.value > b.value ? a : b,
   );
   if (largestEntry?.sources?.length) {
     const largestSource = largestEntry.sources.reduce((a, b) => {
@@ -58,5 +58,5 @@ function getCLSDebugTarget(entries) {
 
 ## See also
 
-- [Debug layout shifts](https://web.dev/debug-layout-shifts/)
-- [Debug Web Vitals in the field](https://web.dev/debug-web-vitals-in-the-field/)
+- [Debug layout shifts](https://web.dev/articles/debug-layout-shifts)
+- [Debug Web Vitals in the field](https://web.dev/articles/debug-performance-in-the-field)

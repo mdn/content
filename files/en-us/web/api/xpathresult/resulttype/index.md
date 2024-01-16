@@ -135,7 +135,7 @@ const result = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 document.querySelector("output").textContent =
   result.resultType >= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &&

@@ -63,7 +63,11 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role"><code>definition</code></a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+        </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

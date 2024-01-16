@@ -52,7 +52,7 @@ function listVisits(historyItems) {
   if (historyItems.length) {
     console.log(`URL ${historyItems[0].url}`);
     const gettingVisits = browser.history.getVisits({
-      url: historyItems[0].url
+      url: historyItems[0].url,
     });
     gettingVisits.then(gotVisits);
   }
@@ -61,7 +61,7 @@ function listVisits(historyItems) {
 let searching = browser.history.search({
   text: "",
   startTime: 0,
-  maxResults: 1
+  maxResults: 1,
 });
 
 searching.then(listVisits);

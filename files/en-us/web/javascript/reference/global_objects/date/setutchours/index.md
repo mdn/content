@@ -39,9 +39,8 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 
 If you do not specify the `minutesValue`,
 `secondsValue`, and `msValue` parameters,
-the values returned from the {{jsxref("Date.prototype.getUTCMinutes()",
-  "getUTCMinutes()")}}, {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}},
-and {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}} methods
+the values returned from the {{jsxref("Date/getUTCMinutes", "getUTCMinutes()")}}, {{jsxref("Date/getUTCSeconds", "getUTCSeconds()")}},
+and {{jsxref("Date/getUTCMilliseconds", "getUTCMilliseconds()")}} methods
 are used.
 
 If a parameter you specify is outside of the expected range, `setUTCHours()`

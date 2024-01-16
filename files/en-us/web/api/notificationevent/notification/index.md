@@ -8,7 +8,7 @@ browser-compat: api.NotificationEvent.notification
 
 {{APIRef("Web Notifications")}}
 
-The `notification` read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as `tag` and `data` attributes that allow you to store information for deferred use in the `notificationclick` event.
+The **`notification`** read-only property of the {{domxref("NotificationEvent")}} interface returns the instance of the {{domxref("Notification")}} that was clicked to fire the event. The {{domxref("Notification")}} provides read-only access to many properties that were set at the instantiation time of the Notification such as `tag` and `data` attributes that allow you to store information for deferred use in the `notificationclick` event.
 
 ## Value
 
@@ -38,7 +38,7 @@ self.addEventListener("notificationclick", (event) => {
           if (client.url === "/" && "focus" in client) return client.focus();
         }
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 });
 ```

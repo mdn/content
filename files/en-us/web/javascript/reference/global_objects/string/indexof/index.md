@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.indexOf
 
 The **`indexOf()`** method of {{jsxref("String")}} values searches this string and returns the index of the first occurrence of the specified substring. It takes an optional starting position and returns the first occurrence of the specified substring at an index greater than or equal to the specified number.
 
-{{EmbedInteractiveExample("pages/js/string-indexof.html")}}
+{{EmbedInteractiveExample("pages/js/string-indexof.html", "taller")}}
 
 ## Syntax
 
@@ -110,7 +110,7 @@ console.log(str.indexOf("new")); // 6
 The following example defines two string variables.
 
 The variables contain the same string, except that the second string contains uppercase
-letters. The first {{domxref("console.log()")}} method displays `19`. But
+letters. The first {{domxref("console/log_static", "console.log()")}} method displays `19`. But
 because the `indexOf()` method is case sensitive, the string
 `"cheddar"` is not found in `myCapString`, so the second
 `console.log()` method displays `-1`.

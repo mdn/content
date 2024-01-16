@@ -19,7 +19,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("closing", (event) => {});
 
-onbufferedamountlow = (event) => {};
+onclosing = (event) => {};
 ```
 
 ## Event type

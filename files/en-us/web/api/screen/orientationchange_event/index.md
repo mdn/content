@@ -31,7 +31,7 @@ A generic {{domxref("Event")}}.
 
 This feature is not part of any specification. It is no longer on track to becoming a standard.
 
-Use {{domxref("ScreenOrientation.onchange")}} instead.
+Use the {{domxref("ScreenOrientation.change_event", "ScreenOrientation change event")}} instead.
 
 ## Browser compatibility
 

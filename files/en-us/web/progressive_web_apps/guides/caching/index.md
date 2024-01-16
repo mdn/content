@@ -1,6 +1,7 @@
 ---
 title: Caching
 slug: Web/Progressive_web_apps/Guides/Caching
+page-type: guide
 ---
 
 {{PWASidebar}}
@@ -73,7 +74,7 @@ In this strategy we will precache some resources, and then implement a "cache fi
   - Otherwise, go to the network. If the network request succeeds, cache the resource for next time.
 - For all other resources, we will always go to the network.
 
-Precaching is an appropriate stategy for resources that the PWA is certain to need, that will not change for this version of the app, and that need to be fetched as quickly as possible. That includes, for example, the basic user interface of the app. If this is precached, then the app's UI can be rendered on launch without needing any network requests.
+Precaching is an appropriate strategy for resources that the PWA is certain to need, that will not change for this version of the app, and that need to be fetched as quickly as possible. That includes, for example, the basic user interface of the app. If this is precached, then the app's UI can be rendered on launch without needing any network requests.
 
 First, the service worker precaches static resources in its `install` event handler:
 
@@ -137,7 +138,7 @@ This is a good choice when responsiveness is important, and freshness is somewha
 In this version we implement "cache first with cache refresh" for all resources except JSON.
 
 ```js
-function isCachable(request) {
+function isCacheable(request) {
   const url = new URL(request.url);
   return !url.pathname.endsWith(".json");
 }
@@ -155,7 +156,7 @@ async function cacheFirstWithRefresh(request) {
 }
 
 self.addEventListener("fetch", (event) => {
-  if (isCachable(event.request)) {
+  if (isCacheable(event.request)) {
     event.respondWith(cacheFirstWithRefresh(event.request));
   }
 });
@@ -208,4 +209,4 @@ A PWA should clean up any old versions of its cache in the service worker's {{do
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [Storage quotas and eviction criteria](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)
 - [Strategies for service worker caching](https://developer.chrome.com/docs/workbox/caching-strategies-overview) on developer.chrome.com (2021)
-- [The Offline Cookbook](https://web.dev/offline-cookbook/) on web.dev (2020)
+- [The Offline Cookbook](https://web.dev/articles/offline-cookbook) on web.dev (2020)

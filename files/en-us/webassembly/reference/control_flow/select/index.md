@@ -1,6 +1,7 @@
 ---
 title: Select
 slug: WebAssembly/Reference/Control_flow/Select
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

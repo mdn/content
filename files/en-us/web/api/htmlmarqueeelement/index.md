@@ -73,7 +73,7 @@ _Inherits methods from its parent, {{DOMxRef("HTMLElement")}}._
   height="200"
   behavior="alternate"
   style="border:solid">
-  <marquee behavior="alternate"> This text will bounce </marquee>
+  <marquee behavior="alternate">This text will bounce</marquee>
 </marquee>
 ```
 

@@ -46,7 +46,10 @@ new ReadableStream(underlyingSource, queuingStrategy)
         {{domxref("ReadableStreamDefaultController")}} or a
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
         `type` property. This can be used by the developer to control the
-        stream as more chunks are fetched.
+        stream as more chunks are fetched. This function will not be called until `start()`
+        successfully completes. Additionally, it will only be called repeatedly if it
+        enqueues at least one chunk or fulfills a BYOB request; a no-op `pull()`
+        implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
         that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}

@@ -37,7 +37,10 @@ The number of rules in the list is printed to the console using {{domxref("CSSRu
 
 ```css
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   margin: 2em;
 }
 

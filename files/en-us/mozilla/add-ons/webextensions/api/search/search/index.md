@@ -49,7 +49,7 @@ A search using the default search engine with the results shown in the current t
 ```js
 function search() {
   browser.search.search({
-    query: "styracosaurus"
+    query: "styracosaurus",
   });
 }
 
@@ -62,8 +62,8 @@ A search using Wikipedia with the results shown in a new window:
 function search() {
   browser.search.search({
     query: "styracosaurus",
-    engine: "Wikipedia (en)"
-    disposition: "NEW_WINDOW"
+    engine: "Wikipedia (en)",
+    disposition: "NEW_WINDOW",
   });
 }
 
@@ -77,7 +77,7 @@ function search(tab) {
   browser.search.search({
     query: "styracosaurus",
     engine: "Wikipedia (en)",
-    tabId: tab.id
+    tabId: tab.id,
   });
 }
 

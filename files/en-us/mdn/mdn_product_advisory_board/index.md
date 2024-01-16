@@ -1,6 +1,7 @@
 ---
 title: MDN Product Advisory Board
 slug: MDN/MDN_Product_Advisory_Board
+page-type: guide
 ---
 
 {{MDNSidebar}}

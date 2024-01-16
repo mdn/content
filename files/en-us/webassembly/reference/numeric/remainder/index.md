@@ -1,6 +1,7 @@
 ---
 title: Remainder
 slug: WebAssembly/Reference/Numeric/Remainder
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

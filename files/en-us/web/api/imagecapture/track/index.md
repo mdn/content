@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.track
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`track`** read-only property of the
 {{domxref("ImageCapture")}} interface returns a reference to the

@@ -244,7 +244,7 @@ ball.draw();
 Until now we have made use of the {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} method when clearing prior frames. If you replace this method with a semi-transparent {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}}, you can easily create a trailing effect.
 
 ```js
-ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+ctx.fillStyle = "rgb(255 255 255 / 30%)";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
@@ -280,7 +280,7 @@ const ball = {
 };
 
 function draw() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   ball.draw();
   ball.x += ball.vx;
@@ -350,7 +350,7 @@ const ball = {
 };
 
 function clear() {
-  ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.fillStyle = "rgb(255 255 255 / 30%)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 

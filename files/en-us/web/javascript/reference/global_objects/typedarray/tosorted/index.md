@@ -7,32 +7,33 @@ browser-compat: javascript.builtins.TypedArray.toSorted
 
 {{JSRef}}
 
-The **`toSorted()`** method is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("TypedArray/sort", "sort()")}} method. It returns a new array with the elements sorted in ascending order. This method has the same algorithm as {{jsxref("Array.prototype.toSorted()")}}, except that it sorts the values numerically instead of as strings by default. _TypedArray_ is one of the [typed array types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) here.
+The **`toSorted()`** method of {{jsxref("TypedArray")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) version of the {{jsxref("TypedArray/sort", "sort()")}} method. It returns a new typed array with the elements sorted in ascending order. This method has the same algorithm as {{jsxref("Array.prototype.toSorted()")}}, except that it sorts the values numerically instead of as strings by default.
 
 ## Syntax
 
 ```js-nolint
-// Functionless
 toSorted()
-
-// Arrow function
-toSorted((a, b) => { /* … */ })
-
-// Compare function
 toSorted(compareFn)
-
-// Inline compare function
-toSorted(function compareFn(a, b) { /* … */ })
 ```
 
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-  - : Specifies a function that defines the sort order.
+
+  - : Specifies a function that defines the sort order. If omitted, the typed array elements are sorted according to numeric value.
+
+    - `a`
+      - : The first element for comparison.
+    - `b`
+      - : The second element for comparison.
 
 ### Return value
 
 A new typed array with the elements sorted in ascending order.
+
+## Description
+
+See {{jsxref("Array.prototype.toSorted()")}} for more details. This method is not generic and can only be called on typed array instances.
 
 ## Examples
 
@@ -60,7 +61,8 @@ console.log(numbers); // Uint8Array [ 40, 1, 5, 200 ]
 ## See also
 
 - [Polyfill of `TypedArray.prototype.toSorted` in `core-js`](https://github.com/zloirock/core-js#change-array-by-copy)
-- {{jsxref("Array.prototype.toSorted()")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray.prototype.sort()")}}
 - {{jsxref("TypedArray.prototype.toReversed()")}}
 - {{jsxref("TypedArray.prototype.with()")}}
+- {{jsxref("Array.prototype.toSorted()")}}

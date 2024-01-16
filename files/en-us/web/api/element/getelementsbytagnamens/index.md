@@ -40,7 +40,7 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 const table = document.getElementById("forecast-table");
 const cells = table.getElementsByTagNameNS(
   "http://www.w3.org/1999/xhtml",
-  "td"
+  "td",
 );
 
 for (const cell of cells) {

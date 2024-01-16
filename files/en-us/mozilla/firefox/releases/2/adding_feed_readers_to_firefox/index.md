@@ -1,6 +1,7 @@
 ---
 title: Adding feed readers to Firefox
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+page-type: guide
 ---
 
 {{FirefoxSidebar}}
@@ -13,13 +14,13 @@ Starting with Firefox 2, Firefox has support for selecting different RSS or Atom
 
 Support for adding feed readers from the web was removed from the HTML5 spec, and Firefox support is scheduled for removal in Firefox 62. {{Deprecated_Inline}}
 
-In older versions, JavaScript code on the web can add a feed reader easily, using the {{domxref("window.navigator.registerContentHandler", "navigator.registerContentHandler()")}} function, like this:
+In older versions, JavaScript code on the web can add a feed reader using the `navigator.registerContentHandler()` function, like this:
 
 ```js
 navigator.registerContentHandler(
   "application/vnd.mozilla.maybe.feed",
   "https://www.example.com/?feed-feed=%s",
-  "My Feed Reader"
+  "My Feed Reader",
 );
 ```
 
@@ -49,7 +50,3 @@ You can add these preferences by hand, by visiting `about:config`.
 ### Adding a new feed reader application
 
 The easiest way to do this is to use the provided user interface, by using the Feeds panel in the Preferences (or Options, depending on your platform) window.
-
-### See also
-
-- {{ domxref("window.navigator.registerContentHandler()") }}

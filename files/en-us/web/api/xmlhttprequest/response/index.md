@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.response
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}}
 **`response`** property returns the response's body content as
@@ -67,6 +67,6 @@ function load(url, callback) {
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Getting text and HTML/XML data: {{domxref("XMLHttpRequest.responseText")}} and
   {{domxref("XMLHttpRequest.responseXML")}}

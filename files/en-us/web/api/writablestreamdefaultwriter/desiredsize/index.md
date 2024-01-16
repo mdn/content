@@ -40,7 +40,7 @@ const writableStream = new WritableStream(
       // ...
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 // ...

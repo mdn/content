@@ -140,6 +140,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
+> **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
+
 ## Examples
 
 ### Simple table
@@ -644,14 +646,14 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsl(180 90% 64% / 1)</code></td>
-      <td><code>rgb(81 246 246 / 1)</code></td>
+      <td><code>hsl(180 90% 64% / 100%)</code></td>
+      <td><code>rgb(81 246 246 / 100%)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsl(38 90% 65% / 1)</code></td>
-      <td><code>rgba(246 188 87 / 1)</code></td>
+      <td><code>hsl(38 90% 65% / 100%)</code></td>
+      <td><code>rgb(246 188 87 / 100%)</code></td>
     </tr>
   </tbody>
 </table>

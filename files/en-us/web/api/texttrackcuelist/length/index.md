@@ -18,7 +18,7 @@ An `unsigned long` which is the number of cues in the list.
 
 The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.length` returns the number of cues in the list. Using the WebVTT track below, the value of `length` is 5.
 
-```
+```plain
 WEBVTT
 
 first

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#contentinfo
-  - https://w3c.github.io/aria-practices/#aria_lh_contentinfo
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/contentinfo.html
 ---
 
 The `contentinfo` role defines a footer, containing identifying information such as copyright information, navigation links, and privacy statements, found on every document within a site. This section is commonly called a footer.
@@ -133,6 +133,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,6 +1,7 @@
 ---
 title: <xsl:for-each>
 slug: Web/XSLT/Element/for-each
+page-type: xslt-element
 ---
 
 {{XsltSidebar}}

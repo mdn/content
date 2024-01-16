@@ -54,7 +54,7 @@ default.** To make the window resizable, you must open it with the
 myExternalWindow = window.open(
   "https://example.com",
   "myWindowName",
-  "resizable"
+  "resizable",
 );
 
 // Resize window to 500x500

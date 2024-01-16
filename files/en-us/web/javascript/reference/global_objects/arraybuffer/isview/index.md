@@ -12,7 +12,7 @@ passed value is one of the `ArrayBuffer` views,
 such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 or a {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html", "shorter")}}
 
 ## Syntax
 
@@ -61,4 +61,4 @@ ArrayBuffer.isView(dv); // true
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide

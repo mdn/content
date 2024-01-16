@@ -8,10 +8,7 @@ browser-compat: api.ClipboardEvent.ClipboardEvent
 
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},
-representing an event providing information related to modification of the clipboard,
-that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and
-{{domxref("Element/paste_event", "paste")}} events.
+The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}}, representing an event providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
 
 ## Syntax
 

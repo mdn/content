@@ -1,6 +1,7 @@
 ---
 title: Namespaces in IMSC
 slug: Related/IMSC/Namespaces
+page-type: guide
 ---
 
 This article covers the subject of XML namespaces, giving you enough information to recognize their usage in IMSC, and be able to use it effectively.

@@ -46,14 +46,14 @@ function onXRFrame(time, xrFrame) {
       gl.COLOR_ATTACHMENT0,
       subImage.colorTexture,
       0,
-      subImage.imageIndex
+      subImage.imageIndex,
     );
     gl.framebufferTextureLayer(
       gl.FRAMEBUFFER,
       gl.DEPTH_ATTACHMENT,
       subImage.depthStencilTexture,
       0,
-      subImage.imageIndex
+      subImage.imageIndex,
     );
 
     // Render from the viewpoint of xrView

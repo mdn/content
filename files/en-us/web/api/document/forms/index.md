@@ -28,7 +28,7 @@ If the document has no forms, the returned collection is empty, with a length of
 ### Getting form information
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>document.forms example</title>
@@ -69,7 +69,7 @@ const selectFormElement = document.forms[index].elements[index];
 ### Named form access
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>document.forms example</title>

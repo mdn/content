@@ -11,7 +11,7 @@ browser-compat: api.URLSearchParams.URLSearchParams
 The **`URLSearchParams()`** constructor creates and returns a
 new {{domxref("URLSearchParams")}} object.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -94,7 +94,7 @@ const addSearchParams = (url, params = {}) =>
     `${url.origin}${url.pathname}?${new URLSearchParams([
       ...Array.from(url.searchParams.entries()),
       ...Object.entries(params),
-    ])}`
+    ])}`,
   );
 ```
 

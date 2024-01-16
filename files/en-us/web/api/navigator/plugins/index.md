@@ -11,10 +11,10 @@ browser-compat: api.Navigator.plugins
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects describing the plugins installed in the application.
-Named properties of returned object are not enumerable (except in very old browser versions).
+Named properties of the returned object are not enumerable (except in very old browser versions).
 
 Recent versions of the specification hard-code the returned list.
-If inline viewing of PDF files is supported the property lists five standard plugins
+If inline viewing of PDF files is supported the property lists five standard plugins.
 If inline PDF viewing is not supported then an empty list is returned.
 
 > **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
@@ -38,7 +38,8 @@ If PDF inline viewing is supported this will contain entries for the following p
 - "Chromium PDF Viewer"
 - "Microsoft Edge PDF Viewer"
 - "WebKit built-in PDF"
-  If inline viewing of PDFs is not supported then an empty object is returned.
+
+If inline viewing of PDFs is not supported then an empty object is returned.
 
 ## Examples
 

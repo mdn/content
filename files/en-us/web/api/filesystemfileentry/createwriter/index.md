@@ -52,7 +52,7 @@ function writeToFileEntry(entry, text) {
     },
     (fileError) => {
       /* do whatever to handle the error */
-    }
+    },
   );
 }
 ```

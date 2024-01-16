@@ -13,21 +13,17 @@ Now that you are beginning to understand the purpose and use of CSS, let's exami
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
-        >, HTML basics (study
+        > and HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
-        >), and an idea of
-        <a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works"
-          >How CSS works</a
-        >.
+        >).
       </td>
     </tr>
     <tr>
@@ -48,7 +44,7 @@ An external stylesheet contains CSS in a separate file with a `.css` extension. 
 You reference an external CSS stylesheet from an HTML `<link>` element:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -96,7 +92,7 @@ An internal stylesheet resides within an HTML document. To create an internal st
 The HTML for an internal stylesheet might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -129,7 +125,7 @@ But for sites with more than one page, an internal stylesheet becomes a less eff
 Inline styles are CSS declarations that affect a single HTML element, contained within a `style` attribute. The implementation of an inline style in an HTML document might look like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="utf-8" />
@@ -155,7 +151,7 @@ For the exercise that follows, create a folder on your computer. You can name th
 **index.html:**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -350,7 +346,7 @@ CSS [@rules](/en-US/docs/Web/CSS/At-rule) (pronounced "at-rules") provide instru
 @import "styles2.css";
 ```
 
-One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/Media_Queries). Media queries use conditional logic for applying CSS styling.
+One common @rule that you are likely to encounter is `@media`, which is used to create [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Media queries use conditional logic for applying CSS styling.
 
 In the example below, the stylesheet defines a default pink background for the `<body>` element. However, a media query follows that defines a blue background if the browser viewport is wider than 30em.
 
@@ -425,7 +421,10 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 /* Handle basic element styling */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -482,7 +481,10 @@ In the example below, each declaration (and rule start/end) has its own line. Th
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;

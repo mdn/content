@@ -36,7 +36,7 @@ gl.texImage2D(
   gl.RGBA,
   gl.RGBA,
   halfFloat.HALF_FLOAT_OES,
-  image
+  image,
 );
 ```
 

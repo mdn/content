@@ -7,9 +7,9 @@ browser-compat: webextensions.api.storage.sync
 
 {{AddonSidebar()}}
 
-Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using Firefox account on desktop versions of Firefox or a Google account on Chrome) across different devices.
+Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using a Mozilla account on desktop versions of Firefox or a Google account on Chrome) across different devices.
 
-For Firefox, a user must have `Add-ons` checked under the "Sync Settings" options in `"about:preferences"`.
+For Firefox, a user must have `Add-ons` selected in the "Sync" section in `"about:preferences"`.
 
 Note that the implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key.
 
@@ -61,7 +61,7 @@ If an extension attempts to store items that exceed these limits, calls to {{Web
 
 ## Synchronization process
 
-In Firefox, extension data is synced every 10 minutes or whenever the user selects **Sync Now** in **Settings** > **Sync** or Firefox account. When the browser performs a sync, for each key stored, it:
+In Firefox, extension data is synced every 10 minutes or whenever the user selects **Sync Now** (in **Settings** > **Sync** or from the Mozilla account icon). When the browser performs a sync, for each key stored, it:
 
 - compares the value on the server with the value at the last sync; if they are different, the value from the server is written to the key in the browser's sync storage.
 - compares the browser's sync storage values with the value on the server; if they are different, writes the browser's key value to the server.

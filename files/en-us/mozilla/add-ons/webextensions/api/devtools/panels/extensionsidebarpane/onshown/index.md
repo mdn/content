@@ -31,6 +31,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
+
   - : The function called when this event occurs. The function is passed this argument:
 
     - `window`
@@ -46,7 +47,6 @@ Create a sidebar pane, and log show and hide events.
 
 ```js
 function onCreated(sidebarPane) {
-
   sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
@@ -54,7 +54,6 @@ function onCreated(sidebarPane) {
   sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

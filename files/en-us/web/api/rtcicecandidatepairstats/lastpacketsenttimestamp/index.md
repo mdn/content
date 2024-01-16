@@ -3,7 +3,7 @@ title: "RTCIceCandidateStats: lastPacketSentTimestamp property"
 short-title: lastPacketSentTimestamp
 slug: Web/API/RTCIceCandidatePairStats/lastPacketSentTimestamp
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.lastPacketSentTimestamp
+browser-compat: api.RTCStatsReport.type_candidate-pair.lastPacketSentTimestamp
 ---
 
 {{APIRef("WebRTC")}}

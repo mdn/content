@@ -42,7 +42,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

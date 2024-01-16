@@ -89,7 +89,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:189px;margin-left:158px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Pages in the service worker scope</xhtml:div>
         </xhtml:div>
@@ -116,7 +116,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:198px;height:1px;padding-top:189px;margin-left:526px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">Service worker installed and activated</xhtml:div>
         </xhtml:div>
@@ -143,7 +143,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:64px;margin-left:52px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:24px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:nowrap">1.</xhtml:div>
         </xhtml:div>
@@ -171,7 +171,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:844px;margin-left:52px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:24px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:nowrap">4.</xhtml:div>
         </xhtml:div>
@@ -203,7 +203,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:198px;height:1px;padding-top:949px;margin-left:526px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">The service worker sends back the custom response.</xhtml:div>
         </xhtml:div>
@@ -251,7 +251,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:794px;margin-left:422px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+           data-drawio-colors="color: rgb(0 0 0); background-color: rgb(255 255 255);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Courier New;color:#000;line-height:1.2;pointer-events:none;background-color:#fff;white-space:nowrap">
             <xhtml:b>event.respondWith()</xhtml:b>
@@ -280,7 +280,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:336px;margin-left:52px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:24px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:nowrap">2.</xhtml:div>
         </xhtml:div>
@@ -317,7 +317,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:407px;margin-left:67px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">The page requests a resource (possibly located at another origin)</xhtml:div>
         </xhtml:div>
@@ -368,7 +368,7 @@
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:282px;margin-left:422px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+           data-drawio-colors="color: rgb(0 0 0); background-color: rgb(255 255 255);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;background-color:#fff;white-space:nowrap">
             <xhtml:b><xhtml:font
@@ -401,7 +401,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:414px;margin-left:481px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">The service worker intercepts the request</xhtml:div>
         </xhtml:div>
@@ -428,7 +428,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:1px;height:1px;padding-top:584px;margin-left:51px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:24px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;font-weight:700;white-space:nowrap">3.</xhtml:div>
         </xhtml:div>
@@ -460,7 +460,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:288px;height:1px;padding-top:703px;margin-left:480px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:normal;overflow-wrap:normal">The service worker fetches a custom response from possibly different sources</xhtml:div>
         </xhtml:div>
@@ -509,7 +509,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:551px;margin-left:861px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap">
             <xhtml:div>Internet</xhtml:div>
@@ -554,7 +554,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:661px;margin-left:815px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0); background-color: #ffffff;">
+           data-drawio-colors="color: rgb(0 0 0); background-color: #ffffff;">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;background-color:#fff;white-space:nowrap">
             <xhtml:div>Storage</xhtml:div>
@@ -590,7 +590,7 @@ event</xhtml:b>
          style="display:flex;align-items:unsafe flex-start;justify-content:unsafe center;width:1px;height:1px;padding-top:661px;margin-left:911px">
         <xhtml:div
            style="box-sizing:border-box;font-size:0;text-align:center"
-           data-drawio-colors="color: rgb(0, 0, 0);">
+           data-drawio-colors="color: rgb(0 0 0);">
           <xhtml:div
              style="display:inline-block;font-size:18px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:none;white-space:nowrap">
             <xhtml:div>Logic</xhtml:div>

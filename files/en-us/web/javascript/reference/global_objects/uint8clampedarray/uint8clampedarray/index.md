@@ -38,13 +38,13 @@ See [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArra
 
 ```js
 // From a length
-const uintc8 = new Uint8ClampedArray(2);
-uintc8[0] = 42;
-uintc8[1] = 1337;
-console.log(uintc8[0]); // 42
-console.log(uintc8[1]); // 255 (clamped)
-console.log(uintc8.length); // 2
-console.log(uintc8.BYTES_PER_ELEMENT); // 1
+const uint8c = new Uint8ClampedArray(2);
+uint8c[0] = 42;
+uint8c[1] = 1337;
+console.log(uint8c[0]); // 42
+console.log(uint8c[1]); // 255 (clamped)
+console.log(uint8c.length); // 2
+console.log(uint8c.BYTES_PER_ELEMENT); // 1
 
 // From an array
 const x = new Uint8ClampedArray([21, 31]);
@@ -63,8 +63,8 @@ console.log(z.byteOffset); // 1
 const iterable = (function* () {
   yield* [1, 2, 3];
 })();
-const uintc8FromIterable = new Uint8ClampedArray(iterable);
-console.log(uintc8FromIterable);
+const uint8cFromIterable = new Uint8ClampedArray(iterable);
+console.log(uint8cFromIterable);
 // Uint8ClampedArray [1, 2, 3]
 ```
 
@@ -79,6 +79,7 @@ console.log(uintc8FromIterable);
 ## See also
 
 - [Polyfill of `Uint8ClampedArray` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

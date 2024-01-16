@@ -13,36 +13,38 @@ The SVG `script` element allows to add scripts to an SVG document.
 
 ## Example
 
-```html-nolint
+```html
 Click the circle to change colors.
-<svg viewBox="0 0 10 10" height="120px" width="120px" xmlns="http://www.w3.org/2000/svg">
+<svg
+  viewBox="0 0 10 10"
+  height="120px"
+  width="120px"
+  xmlns="http://www.w3.org/2000/svg">
+  <circle cx="5" cy="5" r="4" />
+
   <script>
     // <![CDATA[
-    window.addEventListener("DOMContentLoaded", () => {
-      function getColor() {
-        const R = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+    function getColor() {
+      const R = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        const G = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+      const G = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        const B = Math.round(Math.random() * 255)
-          .toString(16)
-          .padStart(2, "0");
+      const B = Math.round(Math.random() * 255)
+        .toString(16)
+        .padStart(2, "0");
 
-        return `#${R}${G}${B}`;
-      }
+      return `#${R}${G}${B}`;
+    }
 
-      document.querySelector("circle").addEventListener("click", (e) => {
-        e.target.style.fill = getColor();
-      });
+    document.querySelector("circle").addEventListener("click", (e) => {
+      e.target.style.fill = getColor();
     });
     // ]]>
   </script>
-
-  <circle cx="5" cy="5" r="4" />
 </svg>
 ```
 

@@ -46,7 +46,10 @@ Set a value on the active tab when the user selects a menu item. Note that you'l
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
@@ -54,7 +57,7 @@ async function setOnActiveTab() {
 browser.menus.create({
   id: "my-item",
   title: "my item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(setOnActiveTab);

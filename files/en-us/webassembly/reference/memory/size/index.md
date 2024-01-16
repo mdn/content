@@ -1,6 +1,7 @@
 ---
 title: Size
 slug: WebAssembly/Reference/Memory/Size
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

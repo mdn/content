@@ -6,17 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.define
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
-The **`define()`** method of the
-{{domxref("CustomElementRegistry")}} interface defines a new custom element.
-
-There are two types of custom elements you can create:
-
-- **Autonomous custom element**: Standalone elements; they don't inherit
-  from built-in HTML elements.
-- **Customized built-in element**: These elements inherit from — and
-  extend — built-in HTML elements.
+The **`define()`** method of the {{domxref("CustomElementRegistry")}} interface adds a definition for a custom element to the custom element registry, mapping its name to the constructor which will be used to create it.
 
 ## Syntax
 
@@ -28,8 +20,7 @@ define(name, constructor, options)
 ### Parameters
 
 - `name`
-  - : Name for the new custom element. Note that custom element names must contain a
-    hyphen.
+  - : Name for the new custom element. Must be a [valid custom element name](#valid_custom_element_names).
 - `constructor`
   - : Constructor for the new custom element.
 - `options` {{optional_inline}}
@@ -38,7 +29,7 @@ define(name, constructor, options)
 
     - `extends`
       - : String specifying the name of a built-in element to
-        extend. Used to create a _customized built-in element_.
+        extend. Used to create a customized built-in element.
 
 ### Return value
 
@@ -47,180 +38,104 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the {{domxref("CustomElementRegistry")}} already contains an
-    entry with the same name or the same constructor (or is otherwise
-    already defined), or <code>extends</code> is specified and it is a
-    [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name),
-    or <code>extends</code> is specified but the element it is trying to extend is an unknown element.
+  - : Thrown if:
+    - The {{domxref("CustomElementRegistry")}} already contains an entry with the same name or the same constructor (or is otherwise already defined).
+    - The <code>extends</code> option is specified and it is a [valid custom element name](#valid_custom_element_names)
+    - The <code>extends</code> option is specified but the element it is trying to extend is an unknown element.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the provided name is not a [valid custom element name](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name).
+  - : Thrown if the provided name is not a [valid custom element name](#valid_custom_element_names).
 - {{jsxref("TypeError")}}
   - : Thrown if the referenced constructor is not a constructor.
 
-> **Note:** You'll often get `NotSupportedError`s thrown that
-> seem like `define()` is failing, but instead it is likely a problem with
-> {{domxref("Element.attachShadow()")}}.
+## Description
+
+The `define()` method adds a definition for a custom element to the custom element registry, mapping its name to the constructor which will be used to create it.
+
+There are two types of custom element you can create:
+
+- _Autonomous custom elements_ are standalone elements, that don't inherit from built-in HTML elements.
+- _Customized built-in elements_ are elements that inherit from, and extend, built-in HTML elements.
+
+To define an autonomous custom element, you should omit the `options` parameter.
+
+To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
+
+### Valid custom element names
+
+Custom element names must:
+
+- start with an ASCII lowercase letter (a-z)
+- contain a hyphen
+- not contain any ASCII uppercase letters
+- not contain certain other characters, as documented in the [valid custom element names](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name) section of the Web Components specification
+- not be any of:
+  - "annotation-xml"
+  - "color-profile"
+  - "font-face"
+  - "font-face-src"
+  - "font-face-uri"
+  - "font-face-format"
+  - "font-face-name"
+  - "missing-glyph"
 
 ## Examples
 
-### Autonomous custom element
+### Defining an autonomous custom element
 
-The following code is taken from our [popup-info-box-web-component](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
-example ([see it live also](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)).
+The following class implements a minimal autonomous custom element:
 
 ```js
-// Create a class for the element
-class PopUpInfo extends HTMLElement {
+class MyAutonomousElement extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
     super();
-
-    // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" });
-
-    // Create spans
-    const wrapper = document.createElement("span");
-    wrapper.setAttribute("class", "wrapper");
-
-    const icon = document.createElement("span");
-    icon.setAttribute("class", "icon");
-    icon.setAttribute("tabindex", 0);
-
-    const info = document.createElement("span");
-    info.setAttribute("class", "info");
-
-    // Take attribute content and put it inside the info span
-    const text = this.getAttribute("data-text");
-    info.textContent = text;
-
-    // Insert icon
-    const img = document.createElement("img");
-    img.src = this.hasAttribute("img")
-      ? this.getAttribute("img")
-      : "img/default.png";
-    icon.appendChild(img);
-
-    // Create some CSS to apply to the shadow dom
-    const style = document.createElement("style");
-    console.log(style.isConnected);
-
-    style.textContent = `
-      .wrapper {
-        position: relative;
-      }
-      .info {
-        font-size: 0.8rem;
-        width: 200px;
-        display: inline-block;
-        border: 1px solid black;
-        padding: 10px;
-        background: white;
-        border-radius: 10px;
-        opacity: 0;
-        transition: 0.6s all;
-        position: absolute;
-        bottom: 20px;
-        left: 10px;
-        z-index: 3;
-      }
-      img {
-        width: 1.2rem;
-      }
-      .icon:hover + .info, .icon:focus + .info {
-        opacity: 1;
-      }
-    `;
-
-    // Attach the created elements to the shadow dom
-    shadow.appendChild(style);
-    console.log(style.isConnected);
-    shadow.appendChild(wrapper);
-    wrapper.appendChild(icon);
-    wrapper.appendChild(info);
   }
 }
-
-// Define the new element
-customElements.define("popup-info", PopUpInfo);
 ```
+
+This element doesn't do anything: a real autonomous element would implement its functionality in its constructor and in the lifecycle callbacks provided by the standard. See [Implementing a custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) in our guide to working with custom elements.
+
+However, the above class definition satisfies the requirements of the `define()` method, so we can define it with the following code:
+
+```js
+customElements.define("my-autonomous-element", MyAutonomousElement);
+```
+
+We could then use it in an HTML page like this:
 
 ```html
-<popup-info
-  img="img/alt.png"
-  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
+<my-autonomous-element>Element contents</my-autonomous-element>
 ```
 
-> **Note:** Constructors for autonomous custom elements must extend
-> {{domxref("HTMLElement")}}.
+### Defining a customized built-in element
 
-### Customized built-in element
-
-The following code is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component)
-example ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+The following class implements a customized built-in element:
 
 ```js
-// Create a class for the element
-class WordCount extends HTMLParagraphElement {
+class MyCustomizedBuiltInElement extends HTMLParagraphElement {
   constructor() {
-    // Always call super first in constructor
     super();
-
-    // count words in element's parent element
-    const wcParent = this.parentNode;
-
-    function countWords(node) {
-      const text = node.innerText || node.textContent;
-      return text
-        .trim()
-        .split(/\s+/g)
-        .filter((a) => a.trim().length > 0).length;
-    }
-
-    const count = `Words: ${countWords(wcParent)}`;
-
-    // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" });
-
-    // Create text node and add word count to it
-    const text = document.createElement("span");
-    text.textContent = count;
-
-    // Append it to the shadow root
-    shadow.appendChild(text);
-
-    // Update count when element content changes
-    setInterval(() => {
-      const count = `Words: ${countWords(wcParent)}`;
-      text.textContent = count;
-    }, 200);
   }
 }
-
-// Define the new element
-customElements.define("word-count", WordCount, { extends: "p" });
 ```
+
+This element extends the built-in {{htmlelement("p")}} element.
+
+In this minimal example the element doesn't implement any customization, so it will behave just like a normal `<p>` element. However, it does satisfy the requirements of `define()`, so we can define it like this:
+
+```js
+customElements.define(
+  "my-customized-built-in-element",
+  MyCustomizedBuiltInElement,
+  {
+    extends: "p",
+  },
+);
+```
+
+We could then use it in an HTML page like this:
 
 ```html
-<p is="word-count"></p>
-```
-
-### Creating an element which disables the ability to attach a shadow root
-
-If the class used for the element contains the static property `disabledFeatures` returning the string \`shadow\` this will cause {{domxref("Element.attachShadow()")}} to return a `NotSupportedError` {{domxref("DOMException")}}.
-
-```js
-class PopUpInfo extends HTMLElement {
-  static get disabledFeatures() {
-    return ["shadow"];
-  }
-
-  constructor() {
-    super();
-
-    const shadow = this.attachShadow({ mode: "open" });
-    // this will cause an error to be thrown when the element is defined.
-  }
-}
+<p is="my-customized-built-in-element"></p>
 ```
 
 ## Specifications
@@ -230,3 +145,7 @@ class PopUpInfo extends HTMLElement {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)

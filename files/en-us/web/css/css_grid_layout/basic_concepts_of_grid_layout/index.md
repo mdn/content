@@ -643,9 +643,9 @@ In this case the nested grid has no relationship to the parent. As you can see i
 
 ### Subgrid
 
-In addition to regular grids, _subgrid_ let us create nested grids that use the track definition of the parent grid.
+In addition to regular grids, _subgrid_ lets us create nested grids that use the track definition of the parent grid.
 
-To use them, we edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid then use the parent grid tracks to layout items.
+To use them, we edit the above nested grid example to change the track definition of `grid-template-columns: repeat(3, 1fr)`, to `grid-template-columns: subgrid`. The nested grid then use the parent grid tracks to lay out items.
 
 ```css
 .box1 {

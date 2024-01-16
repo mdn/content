@@ -6,30 +6,20 @@ page-type: web-api-instance-property
 browser-compat: api.WakeLockSentinel.released
 ---
 
-{{APIRef("Screen Wake Lock API")}}
+{{APIRef("Screen Wake Lock API")}}{{SecureContext_Header}}
 
-The read-only **`released`** property of the
-{{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether
-a {{domxref("WakeLockSentinel")}} has been released yet.
+The **`released`** read-only property of the {{domxref("WakeLockSentinel")}} interface returns a boolean that indicates whether a {{domxref("WakeLockSentinel")}} has been released.
 
-## Syntax
+The `WakeLockSentinel` is released when the associated platform screen wake lock is revoked; afterwards `released` will always return `true`.
+If a subsequent screen wake lock is required, the application will need to request a new screen wake lock (the current `WakeLockSentinel` cannot be reused).
 
-```js-nolint
-const released = sentinel.released
-```
+## Value
 
-### Value
-
-A boolean value, that is `false` until the
-{{domxref("WakeLockSentinel")}} has been released (either through a call to
-{{domxref("WakeLockSentinel.release()")}} or because the lock has been released
-automatically) and the {{domxref("WakeLockSentinel/release_event", "release")}} event has been
-emitted, after which it becomes `true` and no longer changes.
+A boolean value that is `false` until the {{domxref("WakeLockSentinel")}} has been released (either through a call to {{domxref("WakeLockSentinel.release()")}} or because the lock has been released automatically) and the {{domxref("WakeLockSentinel/release_event", "release")}} event has been emitted, after which it becomes `true` and no longer changes.
 
 ## Examples
 
-This example shows how **`released`**'s value changes within a
-{{domxref("WakeLockSentinel")}}'s life cycle.
+This example shows how the value of the `released` property changes within a {{domxref("WakeLockSentinel")}}'s life cycle.
 
 ```js
 const sentinel = await navigator.wakeLock.request("screen");
@@ -49,3 +39,7 @@ await sentinel.release();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)

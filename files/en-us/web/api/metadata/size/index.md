@@ -37,7 +37,7 @@ workingDirectory.getFile(
       }
     });
   },
-  handleError
+  handleError,
 );
 ```
 

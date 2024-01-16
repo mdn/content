@@ -42,7 +42,7 @@ request.onshippingaddresschange = (ev) => {
 // Sync update to the total
 request.onshippingoptionchange = (ev) => {
   const shippingOption = shippingOptions.find(
-    (option) => option.id === request.id
+    (option) => option.id === request.id,
   );
   const newTotal = {
     currency: "USD",

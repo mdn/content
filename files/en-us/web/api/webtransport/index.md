@@ -34,7 +34,6 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a promise that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string that indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
-  <!-- {{domxref("WebTransport.draining", "draining")}} {{ReadOnlyInline}} {{Experimental_Inline}} : Returns a promise that resolves if a server wants the client to gracefully close the connection. -->
 
 ## Instance methods
 
@@ -112,7 +111,7 @@ For other example code, see the individual property and method pages.
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

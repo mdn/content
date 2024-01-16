@@ -49,7 +49,7 @@ _Inherits instance methods from its parent {{jsxref("Function")}}_.
 
 ## See also
 
-- [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+- [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [`async function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/async_function)
 - {{jsxref("Function")}}
 - {{jsxref("AsyncGeneratorFunction")}}

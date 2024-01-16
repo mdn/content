@@ -68,7 +68,7 @@ The following CSS sets the cue style so that the text is white and the backgroun
 ```css
 ::cue {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgb(0 0 0 / 60%);
 }
 ```
 

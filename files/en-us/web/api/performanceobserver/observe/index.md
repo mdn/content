@@ -10,7 +10,7 @@ browser-compat: api.PerformanceObserver.observe
 
 The **`observe()`** method of the **{{domxref("PerformanceObserver")}}** interface is used to specify the set of performance entry types to observe.
 
-See {{domxref("PerformanceEntry.entryType")}} for a list of entry types and {{domxref("PerformanceObserver.supportedEntryTypes")}} for a list of entry types the user agent supports.
+See {{domxref("PerformanceEntry.entryType")}} for a list of entry types and {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} for a list of entry types the user agent supports.
 
 When a matching performance entry is recorded, the performance observer's callback function—set when creating the {{domxref("PerformanceObserver")}}—is invoked.
 

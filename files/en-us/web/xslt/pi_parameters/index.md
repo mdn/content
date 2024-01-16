@@ -1,6 +1,7 @@
 ---
 title: PI Parameters
 slug: Web/XSLT/PI_Parameters
+page-type: guide
 ---
 
 {{XsltSidebar}}

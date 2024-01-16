@@ -1,6 +1,7 @@
 ---
 title: Updating add-ons for Firefox 10
 slug: Mozilla/Firefox/Releases/10/Updating_add-ons
+page-type: guide
 ---
 
 {{FirefoxSidebar}}

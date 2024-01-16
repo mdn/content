@@ -68,7 +68,7 @@ function displayReports(reports) {
   reports.forEach((report, i) => {
     let listItem = document.createElement("li");
     let textNode = document.createTextNode(
-      `Report ${i + 1}, type: ${report.type}`
+      `Report ${i + 1}, type: ${report.type}`,
     );
     listItem.appendChild(textNode);
     let innerList = document.createElement("ul");

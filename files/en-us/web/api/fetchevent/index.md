@@ -69,7 +69,7 @@ self.addEventListener("fetch", (event) => {
 
       // If we didn't find a match in the cache, use the network.
       return fetch(event.request);
-    })()
+    })(),
   );
 });
 ```

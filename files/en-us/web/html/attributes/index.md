@@ -120,20 +120,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/autofocus">autofocus</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("button") }},
-        {{ HTMLElement("input") }},
-        {{ HTMLElement("select") }},
-        {{ HTMLElement("textarea") }}
-      </td>
-      <td>
-        The element should be automatically focused after the page loaded.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
       </td>
       <td>

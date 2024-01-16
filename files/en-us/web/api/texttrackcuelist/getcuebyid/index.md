@@ -29,7 +29,7 @@ A {{domxref("VTTCue")}} object.
 
 The {{domxref("TextTrack.cues")}} property returns a {{domxref("TextTrackCueList")}} containing the current cues for that particular track. Calling `cues.getCueById("second")` returns the {{domxref("VTTCue")}} with an ID of "second".
 
-```
+```plain
 WEBVTT
 
 first

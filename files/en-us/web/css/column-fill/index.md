@@ -46,7 +46,7 @@ The `column-fill` property is specified as one of the keyword values listed belo
 
 {{csssyntax}}
 
-## Example
+## Examples
 
 ### Balancing column content
 

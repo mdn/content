@@ -41,13 +41,13 @@ _The {{domxref("SpeechSynthesisEvent")}} interface also inherits methods from it
 utterThis.onpause = (event) => {
   const char = event.utterance.text.charAt(event.charIndex);
   console.log(
-    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`
+    `Speech paused at character ${event.charIndex} of "${event.utterance.text}", which is "${char}".`,
   );
 };
 
 utterThis.onboundary = (event) => {
   console.log(
-    `${event.name} boundary reached after ${event.elapsedTime} seconds.`
+    `${event.name} boundary reached after ${event.elapsedTime} seconds.`,
   );
 };
 ```

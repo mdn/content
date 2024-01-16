@@ -1,6 +1,7 @@
 ---
 title: Firefox 92 for developers
 slug: Mozilla/Firefox/Releases/92
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -41,7 +42,7 @@ No changes
 
 #### DOM
 
-- The [Imperative Slotting API](/en-US/docs/Web/API/HTMLSlotElement) (part of the [Shadow Dom API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)) Has been implemented. ([Firefox bug 1705141](https://bugzil.la/1705141))
+- The [Imperative Slotting API](/en-US/docs/Web/API/HTMLSlotElement) (part of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)) Has been implemented. ([Firefox bug 1705141](https://bugzil.la/1705141))
 - You can now monitor for changes to text selections in {{HTMLElement("input")}} or {{HTMLElement("textarea")}} by listening for `selectionchange` events in {{domxref("HTMLInputElement.selectionchange_event", "HTMLInputElement")}} and {{domxref("HTMLTextAreaElement/selectionchange_event", "HTMLTextAreaElement")}}, respectively ([Firefox bug 1648944](https://bugzil.la/1648944)).
 
 #### Media, WebRTC, and Web Audio

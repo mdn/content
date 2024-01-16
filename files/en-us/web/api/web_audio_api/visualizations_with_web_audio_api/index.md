@@ -93,7 +93,7 @@ analyser.getByteTimeDomainData(dataArray);
 Next, fill the canvas with a solid color to start
 
 ```js
-canvasCtx.fillStyle = "rgb(200, 200, 200)";
+canvasCtx.fillStyle = "rgb(200 200 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -101,7 +101,7 @@ Set a line width and stroke color for the wave we will draw, then begin drawing 
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+canvasCtx.strokeStyle = "rgb(0 0 0)";
 canvasCtx.beginPath();
 ```
 
@@ -169,7 +169,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillStyle = "rgb(0 0 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -188,14 +188,13 @@ As before, we now start a for loop and cycle through each value in the `dataArra
 The one value that needs explaining is the vertical offset position we are drawing each bar at: `HEIGHT - barHeight / 2`. I am doing this because I want each bar to stick up from the bottom of the canvas, not down from the top, as it would if we set the vertical position to 0. Therefore, we instead set the vertical position each time to the height of the canvas minus `barHeight / 2`, so therefore each bar will be drawn from partway down the canvas, down to the bottom.
 
 ```js
-  for (let i = 0; i < bufferLength; i++) {
-    barHeight = dataArray[i] / 2;
+for (let i = 0; i < bufferLength; i++) {
+  barHeight = dataArray[i] / 2;
 
-    canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
-    canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
+  canvasCtx.fillStyle = `rgb(${barHeight + 100} 50 50)`;
+  canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
 
-    x += barWidth + 1;
-  }
+  x += barWidth + 1;
 }
 ```
 

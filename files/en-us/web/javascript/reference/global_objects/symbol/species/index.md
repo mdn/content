@@ -55,10 +55,10 @@ console.log(mapped instanceof Array); // true
 
 ## See also
 
-- {{jsxref("Array.@@species", "Array[@@species]")}}
-- {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}}
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Promise.@@species", "Promise[@@species]")}}
-- {{jsxref("RegExp.@@species", "RegExp[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
-- {{jsxref("TypedArray.@@species", "TypedArray[@@species]")}}
+- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- {{jsxref("Map/@@species", "Map[@@species]")}}
+- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+- {{jsxref("Set/@@species", "Set[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}

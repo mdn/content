@@ -6,7 +6,7 @@ page-type: web-api-global-property
 browser-compat: api.isSecureContext
 ---
 
-{{APIRef}}
+{{APIRef}}{{AvailableInWorkers}}
 
 The global **`isSecureContext`** read-only property returns a boolean indicating whether
 the current [context is secure](/en-US/docs/Web/Security/Secure_Contexts)

@@ -36,7 +36,7 @@ someElement.addEventListener(
       process_twist(event);
     }
   },
-  false
+  false,
 );
 ```
 
