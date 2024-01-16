@@ -12,7 +12,7 @@ spec-urls: https://wicg.github.io/periodic-background-sync/
 
 {{DefaultAPISidebar("Periodic Background Sync")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The Web Periodic Background Synchronization API provides a way to register tasks to be run in a {{domxref('Service Worker API','service worker')}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
+The **Web Periodic Background Synchronization API** provides a way to register tasks to be run in a {{domxref("Service Worker API", "service worker", "", "nocode")}} at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 
 ## Concepts and Usage
 
