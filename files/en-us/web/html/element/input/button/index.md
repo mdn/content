@@ -233,7 +233,7 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight - 85);
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
@@ -272,7 +272,7 @@ canvas.onmouseup = () => {
 };
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 };
 

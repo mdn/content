@@ -14,6 +14,8 @@ The **`pushManager`** property of the
 support for subscribing, getting an active subscription, and accessing push permission
 status.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref("PushManager")}} object.

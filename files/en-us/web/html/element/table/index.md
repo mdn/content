@@ -646,14 +646,14 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
     <tr>
       <th scope="row">Teal</th>
       <td><code>#51F6F6</code></td>
-      <td><code>hsl(180 90% 64% / 1)</code></td>
-      <td><code>rgb(81 246 246 / 1)</code></td>
+      <td><code>hsl(180 90% 64% / 100%)</code></td>
+      <td><code>rgb(81 246 246 / 100%)</code></td>
     </tr>
     <tr>
       <th scope="row">Goldenrod</th>
       <td><code>#F6BC57</code></td>
-      <td><code>hsl(38 90% 65% / 1)</code></td>
-      <td><code>rgba(246 188 87 / 1)</code></td>
+      <td><code>hsl(38 90% 65% / 100%)</code></td>
+      <td><code>rgb(246 188 87 / 100%)</code></td>
     </tr>
   </tbody>
 </table>

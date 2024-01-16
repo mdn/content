@@ -85,8 +85,13 @@ Each object contains the following properties:
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie or cookies represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
