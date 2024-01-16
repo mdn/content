@@ -172,7 +172,7 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `svh`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's height.                                                             |
 |        |
 | `svw`  | 1% of the [small](/en-US/docs/Web/CSS/length#small) viewport's width.                                                              |
-|  |
+|        |
 | `vb`   | 1% of viewport's size in the root element's [block axis](/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline).  |
 |  |
 | `vh`   | 1% of viewport's height.                                                                                                           |
