@@ -606,7 +606,7 @@
       "guides": ["/docs/Web/API/History_API/Working_with_the_History_API"],
       "interfaces": ["History", "PopStateEvent"],
       "methods": [],
-      "properties": [],
+      "properties": ["Window.history"],
       "events": ["Window: popstate"]
     },
     "Houdini API": {
@@ -928,6 +928,7 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "InputDeviceInfo",
         "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
@@ -936,11 +937,14 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "InputDeviceInfo"
+        "OverconstrainedError"
       ],
-      "methods": ["HTMLCanvasElement.captureStream()"],
+      "methods": [
+        "HTMLCanvasElement.captureStream()",
+        "HTMLMediaElement.captureStream()"
+      ],
       "properties": ["Navigator.mediaDevices"],
-      "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+      "events": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],

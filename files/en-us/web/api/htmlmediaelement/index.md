@@ -119,7 +119,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}
   - : Begins playback of the media.
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}}
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
 - {{domxref("HTMLMediaElement.setMediaKeys()")}}
   - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.

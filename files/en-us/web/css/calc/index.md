@@ -29,7 +29,7 @@ The `calc()` function takes a single expression as its parameter, and the expres
 - `/`
   - : Divides the left-side operand (dividend) by the right-side operand (divisor).
 
-All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffixed with an appropriate unit string, such as `px`, `em`, or `%`. You can use a different unit with each each operand in your expression. You may also use parentheses to establish computation order when needed.
+All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffixed with an appropriate unit string, such as `px`, `em`, or `%`. You can use a different unit with each operand in your expression. You may also use parentheses to establish computation order when needed.
 
 ### Notes
 
