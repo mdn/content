@@ -182,7 +182,7 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `vmax` | 1% of viewport's larger dimension.                                                                                                 |
 |        |
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                |
-|  |
+|        |
 | `vw`   | 1% of viewport's width.                                                                                                            |
 |        |
 
