@@ -4,7 +4,10 @@ slug: Web/API/Web_Periodic_Background_Synchronization_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.PeriodicSyncManager
+browser-compat:
+  - api.PeriodicSyncManager
+  - api.ServiceWorkerGlobalScope.periodicsync_event
+spec-urls: https://wicg.github.io/periodic-background-sync/
 ---
 
 {{DefaultAPISidebar("Periodic Background Sync")}}{{SecureContext_Header}}{{SeeCompatTable}}
