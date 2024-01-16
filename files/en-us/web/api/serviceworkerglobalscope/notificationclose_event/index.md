@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}
 
 The **`notificationclose`** event fires when a user closes a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 

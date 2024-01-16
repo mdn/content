@@ -47,20 +47,20 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}_
   - : Returns a structured clone of the notification's data.
 - {{domxref("Notification.dir")}} {{ReadOnlyInline}}
   - : The text direction of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
-  - : The language code of the notification as specified in the constructor's `options` parameter.
-- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
-  - : The ID of the notification (if any) as specified in the constructor's `options` parameter.
 - {{domxref("Notification.icon")}} {{ReadOnlyInline}}
   - : The URL of the image used as an icon of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.image")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The URL of an image to be displayed as part of the notification, as specified in the constructor's `options` parameter.
+- {{domxref("Notification.lang")}} {{ReadOnlyInline}}
+  - : The language code of the notification as specified in the constructor's `options` parameter.
 - {{domxref("Notification.renotify")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies whether the user should be notified after a new notification replaces an old one.
 - {{domxref("Notification.requireInteraction")}} {{ReadOnlyInline}}
   - : A boolean value indicating that a notification should remain active until the user clicks or dismisses it, rather than closing automatically.
 - {{domxref("Notification.silent")}} {{ReadOnlyInline}}
   - : Specifies whether the notification should be silent — i.e., no sounds or vibrations should be issued, regardless of the device settings.
+- {{domxref("Notification.tag")}} {{ReadOnlyInline}}
+  - : The ID of the notification (if any) as specified in the constructor's `options` parameter.
 - {{domxref("Notification.timestamp")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Specifies the time at which a notification is created or applicable (past, present, or future).
 - {{domxref("Notification.title")}} {{ReadOnlyInline}}
@@ -83,6 +83,8 @@ _Also inherits methods from its parent interface, {{domxref("EventTarget")}}_.
   - : Programmatically closes a notification instance.
 
 ## Events
+
+_Also inherits events from its parent interface, {{domxref("EventTarget")}}_.
 
 - {{domxref("Notification.click_event", "click")}}
   - : Fires when the user clicks the notification.

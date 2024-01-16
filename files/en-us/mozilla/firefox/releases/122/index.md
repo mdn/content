@@ -20,6 +20,12 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### CSS
 
+- The CSS {{cssxref("offset-position")}} property is now available by default. It defines the initial position of an element on a path. ([Firefox bug 1598152](https://bugzil.la/1598152))
+
+- The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
+
+- The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
+
 #### Removals
 
 ### JavaScript
@@ -32,6 +38,9 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### Removals
 
+- Removed support for `data:` URLs in SVG `<use>` elements and via the [`SVGUseElement`](/en-US/docs/Web/API/SVGUseElement) interface to prevent [XSS](/en-US/docs/Glossary/Cross-site_scripting) attacks.
+  The legacy functionality may be re-enabled by setting the `svg.use-element.data-url-href.allowed` preference to `true`, although this is not recommended for security reasons ([Firefox bug 1806964](https://bugzil.la/1806964)).
+
 ### HTTP
 
 #### Removals
@@ -43,6 +52,10 @@ This article provides information about the changes in Firefox 122 that affect d
 ### APIs
 
 #### DOM
+
+### showPicker() method for HTML select elements
+
+- The {{domxref("HTMLSelectElement.showPicker()")}} method is now supported, allowing the browser picker for a {{HTMLElement("select")}} element to be programmatically launched when triggered by user interaction ([Firefox bug 1865207](https://bugzil.la/1865207)).
 
 #### Media, WebRTC, and Web Audio
 
@@ -67,6 +80,22 @@ This article provides information about the changes in Firefox 122 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 122 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Declarative shadow DOM:** `dom.webcomponents.shadowdom.declarative.enabled`.
+
+  The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
+
+- **Popover API:** `dom.element.popover.enabled`.
+
+  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
+
+- **Clipboard read and write:** `dom.events.asyncClipboard.clipboardItem`, `dom.events.asyncClipboard.readText` and `dom.events.asyncClipboard.writeText`.
+
+  The async {{domxref('Clipboard API')}} is now fully supported, including [`read()`](/en-US/docs/Web/API/Clipboard/read), [`readText()`](/en-US/docs/Web/API/Clipboard/readText), and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods and the {{domxref('ClipboardItem')}} interface. A paste context menu will appear for the user to confirm when reading clipboard data not provided by the same-origin page. ([Firefox bug 1809106](https://bugzil.la/1809106))
+
+- **`Intl.Segmenter`:** enabled by default only in Firefox Nightly.
+
+  The {{jsxref("Intl.Segmenter")}} object allows accurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
 
 ## Older versions
 
