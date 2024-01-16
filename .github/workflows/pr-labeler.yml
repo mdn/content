@@ -1,15 +1,7 @@
 name: Pull request labeler
 
 on:
-  pull_request:
-    types: [opened, synchronize]
-    branches:
-      - "main"
-
-permissions:
-  issues: write
-  pull-requests: write
-  contents: read
+  - pull_request_target
 
 jobs:
   # Docs: https://github.com/actions/labeler
