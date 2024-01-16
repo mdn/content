@@ -1,0 +1,42 @@
+# Configuration for PR Size Labeler
+
+# List of files to exclude from size calculation
+# Files matching these patterns will not be considered when calculating PR size
+exclude_files:
+  - "files/en-us/_redirects.txt"
+  - "files/en-us/_wikihistory.json"
+
+# Configuration for labeling based on the size of the Pull Request
+# Each entry defines a size label, along with thresholds for diff and file count
+label_configs:
+  # Configuration for 'extra small' PRs
+  - size: xs
+    diff: 10 # Threshold for the total lines of code changed (additions + deletions)
+    files: 1 # Threshold for the total number of files changed
+    labels: ["size/xs"] # Labels to be applied for this size
+
+  # Configuration for 'small' PRs
+  - size: s
+    diff: 25
+    files: 5
+    labels: ["size/s"]
+
+  # Configuration for 'medium' PRs
+  - size: m
+    diff: 100
+    files: 10
+    # Additional labels can be added, e.g.;
+    # labels: ["size/m", "pairing-wanted"]
+    labels: ["size/m"]
+
+  # Configuration for 'large' PRs
+  - size: l
+    diff: 250
+    files: 25
+    labels: ["size/l"]
+
+  # Configuration for 'extra large' PRs
+  - size: xl
+    diff: 500
+    files: 50
+    labels: ["size/xl"]
