@@ -12,6 +12,8 @@ The **`navigationPreload`** read-only property of the {{domxref("ServiceWorkerRe
 
 The returned object allows resources managed by a service worker to be preemptively downloaded in parallel with service worker boot up.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 An instance of {{domxref("NavigationPreloadManager")}}.
