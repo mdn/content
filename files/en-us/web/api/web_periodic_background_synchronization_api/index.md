@@ -28,16 +28,16 @@ As this API relies on service workers, functionality provided by this API is onl
 - {{domxref('PeriodicSyncManager')}}
   - : Registers tasks to be run in a service worker at periodic intervals with network connectivity. These tasks are referred to as periodic background sync requests.
 - {{domxref('PeriodicSyncEvent')}}
-  - : Represents a synchronization event, sent to the {{domxref('ServiceWorkerGlobalScope', 'global scope')}} of a {{domxref('ServiceWorker')}}. It provides a way to run tasks in the service worker with network connectivity.
+  - : Represents a synchronization event, sent to the {{domxref("ServiceWorkerGlobalScope", "global scope", "", "nocode")}} of a {{domxref("Service Worker API", "ServiceWorker", "", "nocode")}}. It provides a way to run tasks in the service worker with network connectivity.
 
 ## Service Worker Additions
 
-The following additions to the {{domxref('Service Worker API')}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
+The following additions to the {{domxref("Service Worker API", "", "", "nocode")}} are specified in the Periodic Background Sync specification to provide an entry point for using Periodic Background Sync.
 
 - {{domxref("ServiceWorkerRegistration.periodicSync")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
-- {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "onperiodicsync")}}
-  - : An event handler fired whenever a {{domxref("ServiceWorkerGlobalScope.periodicsync_event", "periodicsync")}} event occurs. This happens at timed intervals, that are specified when registering a {{domxref('PeriodicSyncManager')}}.
+- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} event
+  - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
 
 ## Examples
 
