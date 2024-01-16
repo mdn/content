@@ -22,12 +22,14 @@ An instance of this event is passed to the {{domxref('ServiceWorkerGlobalScope.p
 
 ## Instance properties
 
+_Inherits properties from its parent, {{domxref('ExtendableEvent')}}._
+
 - {{domxref('PeriodicSyncEvent.tag')}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the developer-defined identifier for this `PeriodicSyncEvent`. Multiple tags can be used by the web app to run different periodic tasks at different frequencies.
 
 ## Instance methods
 
-Inherits methods from its parent {{domxref('ExtendableEvent')}}.
+_Inherits methods from its parent, {{domxref('ExtendableEvent')}}._
 
 ## Examples
 
