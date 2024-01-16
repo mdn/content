@@ -184,7 +184,7 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                |
 |  |
 | `vw`   | 1% of viewport's width.                                                                                                            |
-|  |
+|        |
 
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
