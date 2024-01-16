@@ -14,7 +14,7 @@ Two successive calls to this property will return the same object.
 
 ## Value
 
-An array-like {{domxref("HTMLCollection")}} object of `area` elements.
+A  {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
 
 ## Example
 
