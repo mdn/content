@@ -200,15 +200,15 @@ For example, `cqw` is relative to the width of the query container and `cqh` is 
 
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
-| Unit | Name                | Equivalent to        |
-| ---- | ------------------- | -------------------- |
-| `cm` | Centimeters         | 1cm = 96px/2.54      |
-| `in` | Inches              | 1in = 2.54cm = 96px  |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm  |
-| `pc` | Picas               | 1pc = 1/6th of 1in   |
-| `pt` | Points              | 1pt = 1/72th of 1in  |
-| `px` | Pixels              | 1px = 1/96th of 1in  |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm   |
+| Unit | Name                | Equivalent to       |
+| ---- | ------------------- | ------------------- |
+| `cm` | Centimeters         | 1cm = 96px/2.54     |
+| `in` | Inches              | 1in = 2.54cm = 96px |
+| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
+| `pc` | Picas               | 1pc = 1/6th of 1in  |
+| `pt` | Points              | 1pt = 1/72th of 1in |
+| `px` | Pixels              | 1px = 1/96th of 1in |
+| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
 
 When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
 
