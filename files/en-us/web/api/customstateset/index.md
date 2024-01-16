@@ -64,7 +64,7 @@ The states can be used within the custom element but are not directly accessible
 ### Interaction with CSS
 
 Developers can select a custom element with a specific state using its state _custom state pseudo-class_.
-The format of this pseudo-class is `:state(mystatename)`, where -mystatename` is the state as defined in the element.
+The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is the state as defined in the element.
 
 > **Warning:** Chrome supports the legacy syntax which uses a CSS `<dashed-ident>` rather than the `:state()` function. For these browsers `:state(mystatename)` would be invalid, and `:--mystatename` must be used instead.
 
@@ -202,9 +202,9 @@ class ManyStateElement extends HTMLElement {
           font-family: monospace;
         }
        :host::before { content: '[ unknown ]'; white-space: pre; }
-       :host(:loading)::before { content: '[ loading ]' }
-       :host(:interactive)::before { content: '[ interactive ]' }
-       :host(:complete)::before { content: '[ complete ]' }
+       :host(:state(loading))::before { content: '[ loading ]' }
+       :host(:state(interactive))::before { content: '[ interactive ]' }
+       :host(:state(complete))::before { content: '[ complete ]' }
        </style>
        <slot>Click me</slot>`;
   }
@@ -260,7 +260,7 @@ This is similar to the example that demonstrates a single boolean state, except 
 
 #### CSS
 
-In the CSS we use the three custom state pseudo classes to select CSS for each of the internal state values: `:loading`, `:interactive`, `:complete`.
+In the CSS we use the three custom state pseudo classes to select CSS for each of the internal state values: `:state(loading)`, `:state(interactive)`, `:state(complete)`.
 Note that the custom element code ensures that only one of these custom states can be defined at a time.
 
 ```css
