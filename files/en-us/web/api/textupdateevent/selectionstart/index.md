@@ -16,13 +16,15 @@ A {{jsxref("Number")}}.
 
 ## Examples
 
+### Using `textupdate` to render the edited text and user selection
+
 This example shows how to use the `selectionStart` property to render the selected text within a {{domxref("EditContext/textupdate_event", "textupdate")}} event handler.
 
-```js-nolint
+```js
 const editContext = new EditContext();
 editorElement.editContext = editContext;
 
-editContext.addEventListener("textupdate", e => {
+editContext.addEventListener("textupdate", (e) => {
   // Clear the current content.
   editorElement.innerHTML = "";
 

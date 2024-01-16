@@ -20,7 +20,9 @@ This interface inherits properties from {{domxref("Event")}}.
 - {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}}
   - : The offset of the last character within the editable region text for which the operating system needs the bounds.
 
-## Example
+## Examples
+
+### Updating the character bounds when needed
 
 This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information.
 
@@ -28,7 +30,7 @@ This example shows how to use the `updateCharacterBounds` method to update the c
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const FONT_SIZE = 40;
 const FONT = `${FONT_SIZE}px Arial`;
 
@@ -41,7 +43,9 @@ canvas.editContext = editContext;
 
 function computeCharacterBound(offset) {
   // Measure the width from the start of the text to the character.
-  const widthBeforeChar = canvasCtx.measureText(editContext.text.substring(0, offset)).width;
+  const widthBeforeChar = canvasCtx.measureText(
+    editContext.text.substring(0, offset),
+  ).width;
 
   // Measure the character width.
   const charWidth = canvasCtx.measureText(editContext.text[offset]).width;
@@ -54,11 +58,11 @@ function computeCharacterBound(offset) {
     x: charX,
     y: charY - FONT_SIZE,
     width: charWidth,
-    height: FONT_SIZE
+    height: FONT_SIZE,
   });
 }
 
-editContext.addEventListener("characterboundsupdate", e => {
+editContext.addEventListener("characterboundsupdate", (e) => {
   const charBounds = [];
   for (let offset = e.rangeStart; offset < e.rangeEnd; offset++) {
     charBounds.push(computeCharacterBound(offset));

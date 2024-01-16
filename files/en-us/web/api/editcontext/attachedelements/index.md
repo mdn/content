@@ -22,13 +22,17 @@ An {{jsxref("Array")}} containing one {{domxref("HTMLElement")}} object.
 
 There can only be one element associated to an `EditContext` instance, so the returned array will always contain one element. If the API is extended in the future to support multiple associated elements, the return value will be an array containing multiple elements.
 
-## Example
+## Examples
+
+### Getting the element associated with an `EditContext` instance
+
+This example shows how to use the `attachedElements` method to get the element that's associated with an `EditContext` instance.
 
 ```html
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const canvas = document.getElementById("editor-canvas");
 const editContext = new EditContext();
 canvas.editContext = editContext;

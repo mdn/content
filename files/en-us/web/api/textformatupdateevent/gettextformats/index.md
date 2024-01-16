@@ -8,7 +8,7 @@ browser-compat: api.TextFormatUpdateEvent.getTextFormats
 
 {{APIRef("EditContext API")}}
 
-The **`getTextFormats()`** method of the {{domxref("TextFormatUpdateEvent")}} interface returns an {{jsxref("Array")}} of {{domxref("TextFormat")}} objects that represent the formats that an {{glossary("IME")}} (Input Method Editor) window wants to apply to the text being composed.
+The **`getTextFormats()`** method of the {{domxref("TextFormatUpdateEvent")}} interface returns an {{jsxref("Array")}} of {{domxref("TextFormat")}} objects that represent the formats that an {{glossary("Input Method Editor")}} (IME) window wants to apply to the text being composed.
 
 ## Syntax
 
@@ -20,7 +20,9 @@ getTextFormats()
 
 An {{jsxref("Array")}} containing {{domxref("TextFormat")}} objects.
 
-## Example
+## Examples
+
+### Styling IME-composed text
 
 In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region.
 
@@ -28,7 +30,7 @@ In the following example, the `textformatupdate` event is used to update the for
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const TEXT_X = 10;
 const TEXT_Y = 10;
 
@@ -52,12 +54,16 @@ editContext.addEventListener("textformatupdate", (event) => {
   for (const format of formats) {
     const { rangeStart, rangeEnd, underlineStyle, underlineThickness } = format;
 
-    const underlineXStart = ctx.measureText(editContext.text.substring(0, rangeStart)).width;
-    const underlineXEnd = ctx.measureText(editContext.text.substring(0, rangeEnd)).width;
+    const underlineXStart = ctx.measureText(
+      editContext.text.substring(0, rangeStart),
+    ).width;
+    const underlineXEnd = ctx.measureText(
+      editContext.text.substring(0, rangeEnd),
+    ).width;
     const underlineY = TEXT_Y + 3;
 
     // For brevity, this example only draws a simple underline.
-    // You should use the underlineStyle and underlineThickness values to draw the underline.
+    // Use underlineStyle and underlineThickness to draw the correct underline.
 
     ctx.beginPath();
     ctx.moveTo(TEXT_X + underlineXStart, underlineY);

@@ -16,12 +16,16 @@ A {{jsxref("String")}} that contains the text that replaces the text contained b
 
 ## Examples
 
-```js-nolint
+### Using `textupdate` to display the inserted text and location
+
+```js
 const editContext = new EditContext();
 editorElement.editContext = editContext;
 
-editContext.addEventListener("textupdate", e => {
-  console.log(`The user inserted the text "${e.text}" at index ${e.updateRangeStart}.`);
+editContext.addEventListener("textupdate", (e) => {
+  console.log(
+    `The user inserted the text "${e.text}" at index ${e.updateRangeStart}.`,
+  );
 });
 ```
 

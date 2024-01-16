@@ -21,14 +21,18 @@ A {{jsxref("String")}} that is one of the following values:
 - `"dashed"`: A dashed underline.
 - `"wavy"`: A wavy underline.
 
-## Example
+## Examples
 
-```js-nolint
+### Reading the underline style that needs to be applied
+
+```js
 editContext.addEventListener("textformatupdate", (event) => {
   const formats = e.getTextFormats();
 
   for (const format of formats) {
-    console.log(`IME wants to apply a ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`);
+    console.log(
+      `IME wants to apply a ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`,
+    );
   }
 });
 ```

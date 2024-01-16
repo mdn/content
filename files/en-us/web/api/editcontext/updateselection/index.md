@@ -31,7 +31,9 @@ If the `start` and `end` values are the same, the selection is equivalent to a c
 - If either either argument is not a positive number, a {{domxref("DOMException")}} is thrown.
 - If `start` is greater than `end`, a {{domxref("DOMException")}} is thrown.
 
-## Example
+## Examples
+
+### Updating the selection when the user interacts with the text
 
 This example shows how to use the `updateSelection` method to update the selection in the `EditContext` of a `canvas` element when the arrow keys are used to move the caret or select text in the editable region.
 
@@ -39,14 +41,12 @@ This example shows how to use the `updateSelection` method to update the selecti
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const canvas = document.getElementById("editor-canvas");
-const ctx = canvas.getContext("2d");
-
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-canvas.addEventListener("keydown", e => {
+canvas.addEventListener("keydown", (e) => {
   if (e.key == "ArrowLeft") {
     const newPosition = Math.max(editContext.selectionStart - 1, 0);
 
@@ -56,7 +56,10 @@ canvas.addEventListener("keydown", e => {
       editContext.updateSelection(newPosition, newPosition);
     }
   } else if (e.key == "ArrowRight") {
-    const newPosition = Math.min(editContext.selectionEnd + 1, editContext.text.length);
+    const newPosition = Math.min(
+      editContext.selectionEnd + 1,
+      editContext.text.length,
+    );
 
     if (e.shiftKey) {
       editContext.updateSelection(editContext.selectionStart, newPosition);

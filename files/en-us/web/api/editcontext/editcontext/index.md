@@ -28,17 +28,19 @@ new EditContext(options)
     - `selectionEnd`
       - : A number to set the initial selection end of the `EditContext`.
 
-## Example
+## Examples
+
+### Instantiating an `EditContext` object
 
 The following example creates a new `EditContext` object with the initial text "Hello world!" and the initial selection covering the entire text.
 
-```js-nolint
+```js
 const initialText = "Hello world!";
 
 const editContext = new EditContext({
   text: initialText,
   selectionStart: 0,
-  selectionEnd: initialText.length
+  selectionEnd: initialText.length,
 });
 
 const editorElement = document.getElementById("editor");

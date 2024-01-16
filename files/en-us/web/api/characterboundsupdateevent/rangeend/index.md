@@ -16,12 +16,18 @@ A {{jsxref("Number")}}.
 
 ## Examples
 
-```js-nolint
+### Reading the `rangeEnd` value
+
+This example shows how to use the `characterboundsupdate` event and read the value of the `rangeStart` and `rangeEnd` properties.
+
+```js
 const editContext = new EditContext();
 editorElement.editContext = editContext;
 
-editContext.addEventListener("characterboundsupdate", e => {
-  console.log(`The OS needs the bounds of the chars at ${e.rangeStart} - ${e.rangeEnd}.`);
+editContext.addEventListener("characterboundsupdate", (e) => {
+  console.log(
+    `The OS needs the bounds of the chars at ${e.rangeStart} - ${e.rangeEnd}.`,
+  );
 });
 ```
 

@@ -8,7 +8,7 @@ browser-compat: api.EditContext.compositionstart_event
 
 {{APIRef("EditContext API")}}
 
-The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("IME")}} (Input Method Editor) window starts.
+The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window starts.
 
 ## Syntax
 
@@ -20,7 +20,9 @@ addEventListener("compositionstart", (event) => {});
 oncompositionstart = (event) => {};
 ```
 
-## Example
+## Examples
+
+### Using `compositionstart` to change the editable region's border
 
 In the following example, the editable region's border is set to red when the `compositionstart` event fires, and back to black when the `compositionend` event fires.
 
@@ -37,7 +39,7 @@ In the following example, the editable region's border is set to red when the `c
 <div id="text-editor"></div>
 ```
 
-```js-nolint
+```js
 const editorElement = document.getElementById("text-editor");
 const editContext = new EditContext();
 editorElement.editContext = editContext;

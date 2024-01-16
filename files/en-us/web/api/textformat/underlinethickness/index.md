@@ -18,14 +18,18 @@ A {{jsxref("String")}} that is one of the following values:
 - `"thin"`: A thin underline.
 - `"thick"`: A thick underline.
 
-## Example
+## Examples
 
-```js-nolint
+### Reading the underline thickness that needs to be applied
+
+```js
 editContext.addEventListener("textformatupdate", (event) => {
   const formats = e.getTextFormats();
 
   for (const format of formats) {
-    console.log(`IME wants to apply a ${format.underlineThickness} underline between ${format.rangeStart} and ${format.rangeEnd}.`);
+    console.log(
+      `IME wants to apply a ${format.underlineThickness} underline between ${format.rangeStart} and ${format.rangeEnd}.`,
+    );
   }
 });
 ```

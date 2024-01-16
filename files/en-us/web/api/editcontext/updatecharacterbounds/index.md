@@ -12,7 +12,7 @@ The **`EditContext.updateCharacterBounds()`** method of the {{domxref("EditConte
 
 The `characterboundsupdate` event is the only time you need to call the `updateCharacterBounds()` method.
 
-The character bounds information is then used by the operating system to correctly position the {{glossary("IME")}} (Input Method Editor) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a `<canvas>` element.
+The character bounds information is then used by the operating system to correctly position the {{glossary("Input Method Editor")}} (IME) window when needed. This is especially important in situations where the operating system can't automatically detect the position and size of the characters, such as when rendering text in a `<canvas>` element.
 
 ### Avoid sudden jumps in the IME window position
 
@@ -42,7 +42,9 @@ updateCharacterBounds(rangeStart, characterBounds)
 - If less than two arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
 - if `rangeStart` is not a number or `characterBounds` is not iterable, a `TypeError` {{domxref("DOMException")}} is thrown.
 
-## Example
+## Examples
+
+### Updating the character bounds when needed
 
 This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information.
 
@@ -50,7 +52,7 @@ This example shows how to use the `updateCharacterBounds` method to update the c
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const FONT_SIZE = 40;
 const FONT = `${FONT_SIZE}px Arial`;
 
@@ -63,7 +65,9 @@ canvas.editContext = editContext;
 
 function computeCharacterBound(offset) {
   // Measure the width from the start of the text to the character.
-  const widthBeforeChar = canvasCtx.measureText(editContext.text.substring(0, offset)).width;
+  const widthBeforeChar = canvasCtx.measureText(
+    editContext.text.substring(0, offset),
+  ).width;
 
   // Measure the character width.
   const charWidth = canvasCtx.measureText(editContext.text[offset]).width;
@@ -76,11 +80,11 @@ function computeCharacterBound(offset) {
     x: charX,
     y: charY - FONT_SIZE,
     width: charWidth,
-    height: FONT_SIZE
+    height: FONT_SIZE,
   });
 }
 
-editContext.addEventListener("characterboundsupdate", e => {
+editContext.addEventListener("characterboundsupdate", (e) => {
   const charBounds = [];
   for (let offset = e.rangeStart; offset < e.rangeEnd; offset++) {
     charBounds.push(computeCharacterBound(offset));

@@ -9,7 +9,7 @@ browser-compat: api.EditContext
 
 The **`EditContext`** interface represents the text edit context of an element that was made editable by using the {{domxref("EditContext API", "", "", "nocode")}}.
 
-The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("IME")}} (Input Method Editor) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
+The {{domxref("EditContext API", "", "", "nocode")}} can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
 ## Constructor
 
@@ -51,7 +51,7 @@ _`EditContext` is based on the {{domxref("EventTarget")}} interface, and include
 - {{domxref("EditContext.textupdate_event", "textupdate")}}
   - : Fired when the user has made changes to the text or selection.
 - {{domxref("EditContext.textformatupdate_event", "textformatupdate")}}
-  - : Fired when composition using an {{glossary("IME")}} (Input Method Editor) window is happening and the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
+  - : Fired when composition using an {{glossary("Input Method Editor")}} (IME) window is happening and the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 - {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}}
   - : Fired when the operating system needs to know the size and position of certain characters within the editable text region of the `EditContext` object, in order to display an IME window.
 - {{domxref("EditContext.compositionstart_event", "compositionstart")}}

@@ -7,7 +7,7 @@ browser-compat: api.EditContext
 
 {{DefaultAPISidebar("EditContext API")}}
 
-The **EditContext API** can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("IME")}} (Input Method Editor) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
+The **EditContext API** can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
 With the EditContext API, you get the flexibility to render your own editable text region using any technology you want.
 
@@ -18,7 +18,7 @@ Multiple actors are involved when entering text in an editable region of an appl
 - **User**
   - : The user provides the text by means of an input method: a keyboard, mouse, voice, or other input method.
 - **Input method software**
-  - : The input method software converts the user's input into text. For example, this could be an {{glossary("IME")}} (Input Method Editor) that converts keystrokes from a standard keyboard into Japanese, Chinese, or Korean characters.
+  - : The input method software converts the user's input into text. For example, this could be an {{glossary("Input Method Editor")}} (IME) that converts keystrokes from a standard keyboard into Japanese, Chinese, or Korean characters.
 - **OS text input service**
   - : The text input service of the operating system acts as a link between the input method software and the application.
 - **Application text edit context**

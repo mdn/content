@@ -8,7 +8,7 @@ browser-compat: api.EditContext.textformatupdate_event
 
 {{APIRef("EditContext API")}}
 
-The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("IME")}} (Input Method Editor) window is happening.
+The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
 
 The event is fired when the IME decides that certain parts of the text being composed should be formatted differently to indicate the composition state.
 
@@ -39,7 +39,9 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref('TextFormatUpdateEvent.getTextFormats')}}
   - : Returns the list of text formats that the IME window wants to apply to the text.
 
-## Example
+## Examples
+
+### Rendering IME composition text formatting
 
 In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region.
 
@@ -47,7 +49,7 @@ In the following example, the `textformatupdate` event is used to update the for
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const TEXT_X = 10;
 const TEXT_Y = 10;
 
@@ -71,8 +73,12 @@ editContext.addEventListener("textformatupdate", (event) => {
   for (const format of formats) {
     const { rangeStart, rangeEnd, underlineStyle, underlineThickness } = format;
 
-    const underlineXStart = ctx.measureText(editContext.text.substring(0, rangeStart)).width;
-    const underlineXEnd = ctx.measureText(editContext.text.substring(0, rangeEnd)).width;
+    const underlineXStart = ctx.measureText(
+      editContext.text.substring(0, rangeStart),
+    ).width;
+    const underlineXEnd = ctx.measureText(
+      editContext.text.substring(0, rangeEnd),
+    ).width;
     const underlineY = TEXT_Y + 3;
 
     // For brevity, this example only draws a simple underline.

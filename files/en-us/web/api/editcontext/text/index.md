@@ -18,7 +18,9 @@ This string may or may not be equal to the value of the {{domxref("Node.textCont
 
 The `text` property of the `EditContext` object can be used as the model for the editable text region. Other properties of the `EditContext` object, such as `selectionStart` and `selectionEnd` refer to offsets within the `text` string.
 
-## Example
+## Examples
+
+### Using `text` to render the text in an editable canvas
 
 In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `text` property is used to draw the text.
 
@@ -26,7 +28,7 @@ In the following example, the EditContext API is used to render editable text in
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const canvas = document.getElementById("editor-canvas");
 const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
@@ -40,7 +42,7 @@ function render() {
   ctx.fillText(editContext.text, 10, 10);
 }
 
-editContext.addEventListener("textupdate", e => {
+editContext.addEventListener("textupdate", (e) => {
   render();
 });
 ```

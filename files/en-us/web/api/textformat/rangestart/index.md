@@ -14,14 +14,20 @@ The **`rangeStart`** property of the {{domxref("TextFormat")}} interface indicat
 
 A {{jsxref("Number")}}.
 
-## Example
+## Examples
 
-```js-nolint
+### Reading the range of text that needs to be formatted
+
+The following example shows how to use the `textformatupdate` event's `rangeStart` and `rangeEnd` properties to determine the range of text that needs to be formatted.
+
+```js
 editContext.addEventListener("textformatupdate", (event) => {
   const formats = e.getTextFormats();
 
   for (const format of formats) {
-    console.log(`IME wants to apply formatting between ${format.rangeStart} and ${format.rangeEnd}.`);
+    console.log(
+      `IME wants to apply formatting between ${format.rangeStart} and ${format.rangeEnd}.`,
+    );
   }
 });
 ```

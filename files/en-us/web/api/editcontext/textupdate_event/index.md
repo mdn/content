@@ -41,7 +41,9 @@ _In addition to the properties listed below, properties from the parent interfac
 - {{domxref('TextUpdateEvent.selectionEnd')}} {{readonlyinline}}
   - : Returns the index of the last character in the new selection range, after the update.
 
-## Example
+## Examples
+
+### Rendering the updated text on `textupdate`
 
 In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `textupdate` event is used to render the text.
 
@@ -49,7 +51,7 @@ In the following example, the EditContext API is used to render editable text in
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const canvas = document.getElementById("editor-canvas");
 const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
@@ -63,7 +65,7 @@ function render() {
   ctx.fillText(editContext.text, 10, 10);
 }
 
-editContext.addEventListener("textupdate", e => {
+editContext.addEventListener("textupdate", (e) => {
   render();
 });
 ```

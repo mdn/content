@@ -16,12 +16,16 @@ A {{jsxref("Number")}}.
 
 ## Examples
 
-```js-nolint
+### Using `textupdate` to display the inserted text and location
+
+```js
 const editContext = new EditContext();
 editorElement.editContext = editContext;
 
-editContext.addEventListener("textupdate", e => {
-  console.log(`The user inserted the text "${e.text}" between index ${e.updateRangeStart} and index ${e.updateRangeEnd}.`);
+editContext.addEventListener("textupdate", (e) => {
+  console.log(
+    `The user inserted the text "${e.text}" between index ${e.updateRangeStart} and index ${e.updateRangeEnd}.`,
+  );
 });
 ```
 

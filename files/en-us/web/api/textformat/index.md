@@ -7,7 +7,7 @@ browser-compat: api.TextFormat
 
 {{APIRef("EditContext API")}}
 
-The **`TextFormat`** interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an {{domxref("EditContext")}} instance. The text formatting is requested by the {{glossary("IME")}} (Input Method Editor) window that the user is composing text with.
+The **`TextFormat`** interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an {{domxref("EditContext")}} instance. The text formatting is requested by the {{glossary("Input Method Editor")}} (IME) window that the user is composing text with.
 
 When using one of the default editable regions of the web, such as a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) element, IME composition is handled by the browser and operating system for you. For example, when using Japanese IME in a textarea, on Windows, the following text formats can be applied:
 
@@ -37,16 +37,20 @@ When creating your own custom editable region by using the {{domxref("EditContex
 - {{domxref("TextFormat.underlineThickness")}} {{readonlyinline}}
   - : The thickness of the underline that needs to be applied to the text range that is being formatted.
 
-## Example
+## Examples
 
-```js-nolint
+### Using the `textformatupdate` event
+
+```js
 editContext.addEventListener("textformatupdate", (event) => {
   // Get the TextFormat instances.
   const formats = e.getTextFormats();
 
   // Iterate over the TextFormat instances.
   for (const format of formats) {
-    console.log(`Applying a ${format.underlineThickness} ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`);
+    console.log(
+      `Applying a ${format.underlineThickness} ${format.underlineStyle} underline between ${format.rangeStart} and ${format.rangeEnd}.`,
+    );
   }
 });
 ```

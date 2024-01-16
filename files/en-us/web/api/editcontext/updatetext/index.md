@@ -34,7 +34,9 @@ updateText(rangeStart, rangeEnd, text)
 - If less than three arguments are provided, a `TypeError` {{domxref("DOMException")}} is thrown.
 - if `rangeStart` is greater than `rangeEnd`, a {{domxref("DOMException")}} is thrown.
 
-## Example
+## Examples
+
+### Updating the editor when the user pastes text in it
 
 This example shows how to use the `updateText` method to update the text content in the `EditContext` of a `canvas` element when the user presses the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd> shortcut to paste some text.
 
@@ -42,7 +44,7 @@ This example shows how to use the `updateText` method to update the text content
 <canvas id="editor-canvas"></canvas>
 ```
 
-```js-nolint
+```js
 const canvas = document.getElementById("editor-canvas");
 const ctx = canvas.getContext("2d");
 
@@ -56,12 +58,12 @@ canvas.addEventListener("keydown", async (e) => {
     editContext.updateText(
       editContext.selectionStart,
       editContext.selectionEnd,
-      pastedText
+      pastedText,
     );
 
     editContext.updateSelection(
       editContext.selectionStart + pastedText.length,
-      editContext.selectionStart + pastedText.length
+      editContext.selectionStart + pastedText.length,
     );
   }
 });
