@@ -7,9 +7,9 @@ browser-compat: api.InvokeEvent
 
 {{APIRef("UI Events")}}
 
-The **`InvokeEvent`** interface represents an event notifying the user when a [invoker control](/en-US/docs/Web/API/Invoker_API) is about to invoke an interactive element.
+The **`InvokeEvent`** interface represents an event notifying the user when a [invoker control](/en-US/docs/Web/API/Invokers_API) is about to invoke an interactive element.
 
-It is the event object for the `HTMLElement` {{domxref("HTMLElement.invoke_event", "invoke")}} event, which fires elements from an Invoker Control, when the Invoker Control is interacted with (for example when it is clicked).
+It is the event object for the `HTMLElement` {{domxref("HTMLElement.invoke_event", "invoke")}} event, which represents an action from an Invoker Control it is invoked (for example when it is clicked or pressed).
 
 {{InheritanceDiagram}}
 

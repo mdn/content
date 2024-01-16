@@ -7,18 +7,18 @@ browser-compat: api.HTMLElement.invokers
 
 {{DefaultAPISidebar("Invokers API")}}
 
-The **Invokers API** provides developers with a standard, consistent, flexible mechanism for controlling interactive HTML Elements on the page. Invokers allow for declaratively control using HTML attributes for equivalent JavaScript APIs.
+The **Invokers API** provides developers with a standard, consistent, flexible mechanism for controlling interactive HTML Elements on the page. Invokers allow for declarative control using HTML attributes for equivalent JavaScript APIs.
 
 ## Concepts and usage
 
-It is very common on the web to control interactive elements using {{htmlelement("button")}} elements, adding JavaScript event listeners to control what a button does when pressed. Invokers provide a declarative way to achieve the same effect for simple behaviors, such as toggling a popover, dialog, or details element.
+It is very common on the web to control interactive elements using {{htmlelement("button")}} elements, adding JavaScript event listeners to control what a button does when pressed. Invokers provide a declarative way to achieve the same effect for simple behaviors, such as toggling a popover or dialog element.
 
 Invokers also allow for custom actions that can control behaviors using JavaScript without adding event listeners to the buttons.
 
 ## HTML attributes
 
 - [`invoketarget`](/en-US/docs/Web/HTML/Element/button#invoketarget)
-  - : Turns a {{htmlelement("button")}} or {{htmlelement("input")}} element into a Invoker control button; takes the ID of the element to control as its value.
+  - : Turns a {{htmlelement("button")}} element or an {{htmlelement("input")}} element (with `type=button`) - into a Invoker control button; takes the ID of the element to control as its value.
 - [`invokeaction`](/en-US/docs/Web/HTML/Element/button#invokeaction)
   - : Specifies the action to be performed on the element being controlled by an Invoker {{htmlelement("button")}} or {{htmlelement("input")}}.
 
