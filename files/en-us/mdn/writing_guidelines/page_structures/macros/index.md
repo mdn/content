@@ -38,5 +38,6 @@ You can read up on our most commonly-used macros on the [Commonly-used macros](/
 
 ## See also
 
-- [Quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks)
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
 - [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
