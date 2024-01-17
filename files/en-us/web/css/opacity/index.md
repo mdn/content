@@ -47,7 +47,7 @@ To change the opacity of a background only, use the {{cssxref("background")}} pr
 background: rgb(0 0 0 / 40%);
 ```
 
-When `opacity` value is set to `0`, the element and all of its children appear invisible, but they are still part of the DOM. That means they still register [pointer events](/en-US/docs/Web/API/Pointer_events) and if the elements are in a tabbing order, they do get focus. For good usability make sure to make such elements visible when they receive user interactions or use the CSS [`pointer-events`](/en-US/docs/Web/CSS/pointer-events) property to disable pointer events and [`tab-index="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) to take element out of tab order.
+When `opacity` value is set to `0`, the element and all of its children appear invisible, but they are still part of the DOM. That means they still register [pointer events](/en-US/docs/Web/API/Pointer_events) and, if the elements are in a tabbing order, they do get focus. For good usability, make sure to make such elements visible when they receive user interactions or use the CSS [`pointer-events`](/en-US/docs/Web/CSS/pointer-events) property to disable pointer events and take the element out of the tab order by disabling with the `disabled` attribute or setting [`tab-index="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) for non-form-related interactive elements.
 
 In case of applying [transitions](/en-US/docs/Web/CSS/CSS_transitions) related to visibility on elements, the `opacity` property is required to be set in [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule as well:
 
