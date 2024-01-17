@@ -127,36 +127,6 @@ Images should be 200 pixels high to ensure they always fill the header space ver
   </thead>
   <tbody>
     <tr>
-      <td><code>headerURL </code>{{Deprecated_Inline}}</td>
-      <td><code>String</code></td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>headerURL</code> has been removed in
-            Firefox 70. You will begin to get warnings in Firefox 65 and later
-            if you load a theme that uses this property. Use
-            <code>theme_frame</code> instead.
-          </p>
-        </div>
-        <p>
-          The URL of a foreground image to be added to the header area and
-          anchored to the upper right corner of the header area.
-        </p>
-        <p>
-          Optional in desktop Firefox from Firefox 60 onwards. One of
-          <code>theme_frame</code> or <code>headerURL</code> had to be specified
-          before Firefox 60. Note also that in Firefox 60 onwards, any
-          {{cssxref("text-shadow")}} applied to the header text is
-          removed if no <code>headerURL</code> is specified (see
-          [Firefox bug 1404688](https://bugzil.la/1404688)).
-        </p>
-        <p>
-          In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
-        </p>
-      </td>
-    </tr>
-    <tr>
       <td><code>theme_frame</code></td>
       <td><code>String</code></td>
       <td>
@@ -172,13 +142,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          Optional in desktop Firefox 60 onwards. One of
-          <code>theme_frame</code> or <code>headerURL</code> had to be specified
-          before Firefox 60.
-        </p>
-        <p>
-          In Firefox for Android, <code>headerURL</code> or
-          <code>theme_frame</code>  must be specified.
+          Optional in desktop Firefox 60 onwards. Required in Firefox for Android.
         </p>
       </td>
     </tr>
@@ -213,7 +177,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
 
 ### colors
 
-These properties define the colors used for different parts of the browser. They are all optional (but note that `"accentcolor"` and `"textcolor"` were mandatory in Firefox before version 63). How these properties affect the Firefox UI is shown here:
+These properties define the colors used for different parts of the browser. They are all optional. How these properties affect the Firefox UI is shown here:
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -251,38 +215,6 @@ All these properties can be specified as either a string containing any valid [C
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>
-        <p><code>accentcolor</code> {{Deprecated_Inline}}</p>
-      </td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>accentcolor</code> has been removed
-            in Firefox 70. You will begin to get warnings in Firefox 65 and
-            later if you load a theme that uses this property. Use the
-            <code>frame</code> property instead.
-          </p>
-        </div>
-        <p>
-          The color of the header area background, displayed in the part of the
-          header not covered or visible through the images specified in
-          <code>"headerURL"</code> and <code>"additional_backgrounds"</code>.
-        </p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-     "accentcolor": "red",
-     "tab_background_text": "white"
-  }
-}</pre
-          >
-        </details>
-        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
-      </td>
-    </tr>
     <tr>
       <td><code>bookmark_text</code></td>
       <td>
@@ -441,7 +373,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-accentcolor.png" /></p>
+        <p><img alt="Browser firefox is red with white text. Browsers tabs are lighter red, also with white text. URL bar is very light red with black text" src="theme-frame.png" /></p>
       </td>
     </tr>
     <tr>
@@ -819,7 +751,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-textcolor.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are white with red icons and red text. The color of the text in the open tab is red. The text color contrasts well with the black background color of the tab." src="theme-tab_background_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -901,10 +833,6 @@ All these properties can be specified as either a string containing any valid [C
             <code>frame_inactive</code>.
           </p>
         </div>
-        <p>
-          From Firefox 55 to 58, it is incorrectly implemented as alias for
-          <code>"textcolor"</code>
-        </p>
         <details open>
           <summary>See example</summary>
           <pre class="brush: json">
@@ -922,33 +850,6 @@ All these properties can be specified as either a string containing any valid [C
           >
         </details>
         <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter grey with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
-      <td>
-        <div class="notecard warning">
-          <p>
-            <strong>Warning:</strong> <code>textcolor</code> has been removed in
-            Firefox 70. You will begin to get warnings in Firefox 65 and later
-            if you load a theme that uses this property. Use
-            <code>tab_background_text</code> instead.
-          </p>
-        </div>
-        <p>The color of the text displayed in the header area.</p>
-        <details open>
-          <summary>See example</summary>
-          <pre class="brush: json">
-"theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "textcolor": "red"
-  }
-}</pre
-          >
-        </details>
-        <p><img alt="Browser firefox is black. Browser's tab and URL bar are white with red text and red icons." src="theme-textcolor.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1342,8 +1243,6 @@ All these properties can be specified as either a string containing any valid [C
 
 Additionally, this key accepts various properties that are aliases for one of the properties above. These are provided for compatibility with Chrome. If an alias is given, and the non-alias version is also given, then the value will be taken from the non-alias version.
 
-> **Warning:** Beginning Firefox 70, the following properties are removed: `accentcolor` and `textcolor`. Use `frame` and `tab_background_text` instead. Using these values in themes loaded into Firefox 65 or later will raise warnings.
-
 <table class="fullwidth-table standard-table">
   <thead>
     <tr>
@@ -1355,18 +1254,6 @@ Additionally, this key accepts various properties that are aliases for one of th
     <tr>
       <td><code>bookmark_text</code></td>
       <td><code>toolbar_text</code></td>
-    </tr>
-    <tr>
-      <td><code>frame</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>frame_inactive</code></td>
-      <td><code>accentcolor</code> {{Deprecated_Inline}}</td>
-    </tr>
-    <tr>
-      <td><code>tab_background_text</code></td>
-      <td><code>textcolor</code> {{Deprecated_Inline}}</td>
     </tr>
   </tbody>
 </table>

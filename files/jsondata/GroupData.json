@@ -924,6 +924,7 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "InputDeviceInfo",
         "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
@@ -932,11 +933,14 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "InputDeviceInfo"
+        "OverconstrainedError"
       ],
-      "methods": ["HTMLCanvasElement.captureStream()"],
+      "methods": [
+        "HTMLCanvasElement.captureStream()",
+        "HTMLMediaElement.captureStream()"
+      ],
       "properties": ["Navigator.mediaDevices"],
-      "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+      "events": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],

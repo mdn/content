@@ -122,4 +122,4 @@ If you are interested in words _and_ code, you could try your hand at the follow
 
 ## Other useful pages
 
-{{LandingPageListSubPages()}}
+{{LandingPageListSubPages}}
