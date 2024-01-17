@@ -44,7 +44,7 @@ Some of these states are public and can be set or queried using properties/attri
 Whether external or internal, element states can generally be selected and styled using [CSS pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) as selectors.
 
 The `CustomStateSet` allows developers to add and delete states for autonomous custom elements (but not elements derived from built-in elements).
-These states can then be used as as custom state pseudo-class selectors in a similar way to the pseudo-classes for built-in elements.
+These states can then be used as custom state pseudo-class selectors in a similar way to the pseudo-classes for built-in elements.
 
 ### Setting custom element states
 
@@ -144,7 +144,7 @@ customElements.define("labeled-checkbox", LabeledCheckbox);
 
 #### HTML
 
-After registering the custom element we can use use the element in HTML as shown:
+After registering the custom element we can use the element in HTML as shown:
 
 ```html
 <labeled-checkbox>You need to check this</labeled-checkbox>
