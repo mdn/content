@@ -49,15 +49,22 @@ background: rgb(0 0 0 / 40%);
 
 When `opacity` value is set to `0`, the element and all of its children appear invisible, but they are still part of the DOM. That means they still register [pointer events](/en-US/docs/Web/API/Pointer_events) and, if the elements are in a tabbing order, they do get focus. For good usability, make sure to make such elements visible when they receive user interactions or use the CSS [`pointer-events`](/en-US/docs/Web/CSS/pointer-events) property to disable pointer events and take the element out of the tab order by disabling with the `disabled` attribute or setting [`tab-index="-1"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) for non-form-related interactive elements.
 
-In case of applying [transitions](/en-US/docs/Web/CSS/CSS_transitions) related to visibility on elements, the `opacity` property is required to be set in [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule as well:
+Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+
+Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, but if the element is hidden with opacity then hide it from screen readers too.
+
+### Transitioning opacity
+
+When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/CSS/visibility#hidden), [`display: none`](/en-US/docs/CSS/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden) you need to include both [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behaviour: allow-descrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete):
 
 ```css
 .card {
   transition:
-    background-color 1.5s,
-    opacity 1.5s;
+    opacity 5s,
+    display 5s;
   background-color: orange;
 
+  transition-behavior: allow-discrete;
   @starting-style {
     opacity: 0;
   }
@@ -69,11 +76,9 @@ In case of applying [transitions](/en-US/docs/Web/CSS/CSS_transitions) related t
 }
 ```
 
-To enable first-style transitions, `@starting-style` rules are needed. In above code, setting `opacity: 0` in `@starting-style` provides starting point for the transition when the element receives initial style update or when it's {{CSSxRef("display")}} type changes from `none` to another value.
+To enable first-style transitions, `@starting-style` rules are needed. In above code, setting `opacity: 0` in `@starting-style` provides starting point for the transition when the element receives initial style update. For more details refer [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) page.
 
-Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
-
-Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, but if the element is hidden with opacity then hide it from screen readers too.
+Setting `transition-behaviour: allow-descrete` is required to transition to `display: none`. For more details refer [`transition-behaviour`](/en-US/docs/Web/CSS/transition-behavior) page.
 
 ## Accessibility concerns
 
