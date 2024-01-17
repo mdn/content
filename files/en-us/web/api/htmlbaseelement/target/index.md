@@ -8,13 +8,11 @@ browser-compat: api.HTMLBaseElement.target
 
 {{ApiRef("HTML DOM")}}
 
-The `target` property of the {{domxref("HTMLBaseElement")}} interface is a string that represents default target tab to show resulting output for hyperlinks and form elements. It is a value of `target` attribute of the {{HTMLElement("base")}} element.
+The `target` property of the {{domxref("HTMLBaseElement")}} interface is a string that represents default target tab to show resulting output for hyperlinks and form elements. It is a value of [`target`](/en-US/docs/Web/HTML/Element/base#target) attribute of the {{HTMLElement("base")}} element.
 
 ## Value
 
 A string that represents target values `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
-
-Watchout for **Try it** section from {{domxref("HTMLAnchorElement.target")}} property to know more about `target` values.
 
 ## Use Case
 
