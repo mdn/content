@@ -69,7 +69,7 @@ Let's recap what's happening here. Adding a {{cssxref("display")}} value of `fle
 
 You can make the container inline using an [outside `display` value](/en-US/docs/Web/CSS/display#outside) (e.g., `display: inline flex`), which affects how the container itself is laid out in the page.
 The legacy `inline-flex` display value displays the container as inline as well.
-We'll focus on how the the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
+We'll focus on how the contents of the container behave in this tutorial, but if you want to see the effect of inline versus block layout, you can have a look at the [value comparison](/en-US/docs/Web/CSS/display#display_value_comparison) on the `display` property page.
 
 The next sections explain in more detail what flex items are and what happens inside an element when you make it a flex container.
 

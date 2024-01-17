@@ -114,7 +114,6 @@
 /en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-/en-US/docs/Accessibility/Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
@@ -123,7 +122,6 @@
 /en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility:Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
@@ -3998,7 +3996,7 @@
 /en-US/docs/IMAP	/en-US/docs/Glossary/IMAP
 /en-US/docs/IPv6	/en-US/docs/Glossary/IPv6
 /en-US/docs/Inbox/Advance_HTML_Tags	/en-US/docs/Learn/Common_questions/Design_and_accessibility/HTML_features_for_accessibility
-/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Inbox/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Inbox/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Inbox/Writing_a_WebSocket_server_in_Java	/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 /en-US/docs/Incorrect_MIME_Type_for_CSS_Files	/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
@@ -5151,7 +5149,7 @@
 /en-US/docs/JavaScript_typed_arrays/Uint16Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /en-US/docs/JavaScript_typed_arrays/Uint32Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array
 /en-US/docs/JavaScript_typed_arrays/Uint8Array	/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array
-/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Learn/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Learn/Anatomy_of_a_web_page	/en-US/docs/Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 /en-US/docs/Learn/CSS/Basic_text_styling_in_CSS	/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 /en-US/docs/Learn/CSS/Basics	/en-US/docs/Learn/CSS/First_steps
@@ -5412,7 +5410,7 @@
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -5445,7 +5443,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Guidelines/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Guidelines/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
@@ -5508,7 +5506,7 @@
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Writing_guidelines
@@ -5517,7 +5515,7 @@
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Style_guide/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
@@ -5585,7 +5583,7 @@
 /en-US/docs/MDN/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
@@ -5598,6 +5596,7 @@
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Writing_guidelines/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto
+/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
@@ -11399,10 +11398,10 @@
 /en-US/docs/Web/CSS/CSS_Columns/Using_multicol_layouts	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Device_Adaptation	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_Device_Adaptation/Viewport_Concepts	/en-US/docs/Web/CSS/Viewport_concepts
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Box_Alignment_in_Flexbox	/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox
+/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 /en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
@@ -11476,6 +11475,7 @@
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
+/en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_named_grid_lines	/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 /en-US/docs/Web/CSS/CSS_percentage_values	/en-US/docs/Web/CSS
