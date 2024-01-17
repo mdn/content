@@ -1,9 +1,10 @@
-name: Pull request labeler
+name: PR labeler
 
 on:
   - pull_request_target
 
 permissions:
+  issues: write
   pull-requests: write
   contents: read
 
@@ -12,28 +13,38 @@ jobs:
   label-by-path:
     # do not run on forks
     if: github.repository == 'mdn/content'
+    name: Label by path
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v4
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
 
-  # Docs: https://github.com/cbrgm/pr-size-labeler-action
+  # Docs: https://github.com/CodelyTV/pr-size-labeler
   label-by-size:
     # do not run on forks
     if: github.repository == 'mdn/content'
     needs: label-by-path
+    name: Label by size
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: codelytv/pr-size-labeler@v1
         with:
-          persist-credentials: false
-
-      - name: Label PR based on size
-        uses: cbrgm/pr-size-labeler-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_repository: ${{ github.repository }} # Repository name
-          github_pr_number: ${{ github.event.number }} # Pull request number
-          config_file_path: ".github/pull-request-size.yml" # Path to pr-size-labeler config
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_api_url: "https://api.github.com"
+          xs_label: "size/xs"
+          xs_max_size: "5"
+          s_label: "size/s"
+          s_max_size: "10"
+          m_label: "size/m"
+          m_max_size: "50"
+          l_label: "size/l"
+          l_max_size: "100"
+          xl_label: "size/xl"
+          fail_if_xl: "false"
+          # message_if_xl: >
+          #   This PR exceeds the recommended size of 1000 lines.
+          #   ...
+          files_to_ignore: |
+            "files/en-us/_redirects.txt"
+            "files/en-us/_wikihistory.json"
