@@ -20,25 +20,32 @@ A {{jsxref("Number")}}
 
 This example shows how to use the `selectionStart` and `selectionEnd` properties to draw the current selection in a `<canvas>` element that's associated to an `EditContext`.
 
-For brevity, the code snippet doesn't include the code that sets the selection when the user clicks and drag on the canvas, or uses the keyboard to move the selection.
-
 ```html
 <canvas id="editor-canvas"></canvas>
 ```
 
 ```js
+const ANCHOR_X = 10;
+const ANCHOR_Y = 30;
+const FONT_SIZE = 20;
+
 const canvas = document.getElementById("editor-canvas");
 const ctx = canvas.getContext("2d");
+ctx.font = `${FONT_SIZE}px Arial`;
 
-const editContext = new EditContext();
+const editContext = new EditContext({
+  text: "Hello world!",
+  selectionStart: 6,
+  selectionEnd: 11,
+});
 canvas.editContext = editContext;
 
-editContext.addEventListener("textupdate", (e) => {
+function render() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Render the text content.
+  // Render the entire text content first.
   ctx.fillStyle = "black";
-  ctx.fillText(editContext.text, 0, 50);
+  ctx.fillText(editContext.text, ANCHOR_X, ANCHOR_Y);
 
   // Get the width from the start of the text to the start of the selection.
   const selectionStartX = ctx.measureText(
@@ -53,20 +60,28 @@ editContext.addEventListener("textupdate", (e) => {
     ),
   );
 
-  // Draw a rectangle to represent the selection.
-  ctx.fillRect(selectionStartX, 50, selectionWidth, 20);
+  // Draw a rectangle on top of the text to represent the selection.
+  ctx.fillStyle = "blue";
+  ctx.fillRect(
+    selectionStartX.width + ANCHOR_X,
+    ANCHOR_Y - FONT_SIZE,
+    selectionWidth.width,
+    FONT_SIZE,
+  );
 
-  // Re-render just the selection text in white, over the rectangle.
+  // Re-render just the selected text in white, over the rectangle.
   ctx.fillStyle = "white";
   ctx.fillText(
     editContext.text.substring(
       editContext.selectionStart,
       editContext.selectionEnd,
     ),
-    selectionStartX,
-    50,
+    selectionStartX.width + ANCHOR_X,
+    ANCHOR_Y,
   );
-});
+}
+
+render();
 ```
 
 ## Specifications

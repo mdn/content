@@ -67,6 +67,10 @@ canvas.addEventListener("keydown", (e) => {
       editContext.updateSelection(newPosition, newPosition);
     }
   }
+
+  console.log(
+    `The new EditContext selection is ${editContext.selectionStart}, ${editContext.selectionEnd}`,
+  );
 });
 ```
 

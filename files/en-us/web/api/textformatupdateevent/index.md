@@ -38,12 +38,13 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-editContext.addEventListener("textformatupdate", (event) => {
+editContext.addEventListener("textformatupdate", (e) => {
   // Clear the canvas.
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Render the text.
   ctx.fillText(editContext.text, TEXT_X, TEXT_Y);
+  console.log(`Rendering text: ${editContext.text}`);
 
   // Get the text formats that the IME window wants to apply.
   const formats = e.getTextFormats();
@@ -51,6 +52,10 @@ editContext.addEventListener("textformatupdate", (event) => {
   // Iterate over the text formats
   for (const format of formats) {
     const { rangeStart, rangeEnd, underlineStyle, underlineThickness } = format;
+
+    console.log(
+      `Applying underline ${underlineThickness} ${underlineStyle} between ${rangeStart} and ${rangeEnd}.`,
+    );
 
     const underlineXStart = ctx.measureText(
       editContext.text.substring(0, rangeStart),

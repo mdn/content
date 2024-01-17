@@ -20,34 +20,59 @@ A {{jsxref("Number")}}.
 
 This example shows how to use the `selectionEnd` property to render the selected text within a {{domxref("EditContext/textupdate_event", "textupdate")}} event handler.
 
+```css
+#editor {
+  height: 200px;
+  background: #eee;
+  color: black;
+}
+
+.selection {
+  display: inline-block;
+  vertical-align: bottom;
+  background: blue;
+  color: white;
+  min-width: 2px;
+  height: 3ex;
+}
+```
+
+```html
+<div id="editor"></div>
+```
+
 ```js
+const editorEl = document.getElementById("editor");
 const editContext = new EditContext();
-editorElement.editContext = editContext;
+editorEl.editContext = editContext;
 
 editContext.addEventListener("textupdate", (e) => {
   // Clear the current content.
-  editorElement.innerHTML = "";
+  editorEl.innerHTML = "";
 
   const text = editContext.text;
   const { selectionStart, selectionEnd } = e;
 
-  if (selectionStart !== selectionEnd) {
-    // Render selected text.
-    const textBefore = document.createElement("span");
-    textBefore.textContent = text.substring(0, selectionStart);
+  // Render the text before the selection.
+  const textBefore = document.createElement("span");
+  textBefore.textContent = text.substring(0, selectionStart);
 
-    const textSelected = document.createElement("span");
-    textSelected.classList.add("selection");
-    textSelected.textContent = text.substring(selectionStart, selectionEnd);
+  // Render the selected text, or caret.
+  const textSelected = document.createElement("span");
+  textSelected.classList.add("selection");
+  textSelected.textContent = text.substring(selectionStart, selectionEnd);
 
-    const textAfter = document.createElement("span");
-    textAfter.textContent = text.substring(selectionEnd);
+  // Render the text after the selection.
+  const textAfter = document.createElement("span");
+  textAfter.textContent = text.substring(selectionEnd);
 
-    // Append the text nodes to the editor element.
-    editorElement.appendChild(textBefore);
-    editorElement.appendChild(textSelected);
-    editorElement.appendChild(textAfter);
-  }
+  editorEl.appendChild(textBefore);
+  editorEl.appendChild(textSelected);
+  editorEl.appendChild(textAfter);
+
+  console.log(`Text before selection: ${textBefore.textContent}`);
+  console.log(`Selected text: ${textSelected.textContent}`);
+  console.log(`Text after selection: ${textAfter.textContent}`);
 });
 ```
 

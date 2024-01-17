@@ -45,6 +45,10 @@ const editContext = new EditContext({
 
 const editorElement = document.getElementById("editor");
 editorElement.editContext = editContext;
+
+console.log(
+  `EditContext object ready. Text: ${editContext.text}. Selection: ${editContext.selectionStart} - ${editContext.selectionEnd}.`,
+);
 ```
 
 ## Specifications

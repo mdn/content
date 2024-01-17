@@ -14,7 +14,21 @@ The **`TextFormat()`** constructor returns a new {{DOMxRef("TextFormat")}} objec
 
 ```js-nolint
 new TextFormat()
+new TextFormat(options)
 ```
+
+### Parameters
+
+- `options` {{optional_inline}}
+  - : An optional object with the following properties:
+    - `rangeStart`
+      - : A number representing the start position of the text range that needs to be formatted.
+    - `rangeEnd`
+      - : A number representing the end position of the text range that needs to be formatted.
+    - `underlineStyle`
+      - : A string representing the underline style of the text range that needs to be formatted.
+    - `underlinerThickness`
+      - : A string representing the underline thickness of the text range that needs to be formatted.
 
 ## Specifications
 

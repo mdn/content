@@ -13,6 +13,7 @@ The **`TextUpdateEvent()`** constructor returns a new {{DOMxRef("TextUpdateEvent
 ## Syntax
 
 ```js-nolint
+new TextUpdateEvent()
 new TextUpdateEvent(options)
 ```
 

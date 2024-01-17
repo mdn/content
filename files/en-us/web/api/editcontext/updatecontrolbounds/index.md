@@ -32,18 +32,31 @@ updateControlBounds(controlBounds)
 
 ### Updating the control bounds when the editor is initialized and on window resize
 
+This example shows how to use the `updateControlBounds()` method to tell the platform where the editable region is at all times.
+
+```css
+#editor {
+  border: 1px solid black;
+  height: 50vw;
+  width: 50vh;
+}
+```
+
 ```html
 <div id="editor"></div>
 ```
 
 ```js
-const editorElement = document.getElementById("editor");
+const editorEl = document.getElementById("editor");
 const editContext = new EditContext();
-editorElement.editContext = editContext;
+editorEl.editContext = editContext;
 
 function updateControlBounds() {
   const editorBounds = editorEl.getBoundingClientRect();
   editContext.updateControlBounds(editorBounds);
+  console.log(
+    `Updated control bounds to ${editorBounds.x}, ${editorBounds.y}, ${editorBounds.width}, ${editorBounds.height}`,
+  );
 }
 
 // Update the control bounds now.

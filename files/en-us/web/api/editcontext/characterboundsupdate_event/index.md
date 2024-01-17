@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Updating the character bounds when needed
 
-This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information.
+This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information. Note that the event listener callback is only called when using an IME window, or another platform-specific editing UI surface, to compose text.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -62,12 +62,12 @@ canvas.editContext = editContext;
 
 function computeCharacterBound(offset) {
   // Measure the width from the start of the text to the character.
-  const widthBeforeChar = canvasCtx.measureText(
+  const widthBeforeChar = ctx.measureText(
     editContext.text.substring(0, offset),
   ).width;
 
   // Measure the character width.
-  const charWidth = canvasCtx.measureText(editContext.text[offset]).width;
+  const charWidth = ctx.measureText(editContext.text[offset]).width;
 
   const charX = canvas.offsetLeft + widthBeforeChar;
   const charY = canvas.offsetTop;
@@ -87,6 +87,7 @@ editContext.addEventListener("characterboundsupdate", (e) => {
     charBounds.push(computeCharacterBound(offset));
   }
 
+  console.log("The required character bounds are", charBounds);
   editContext.updateCharacterBounds(e.rangeStart, charBounds);
 });
 ```

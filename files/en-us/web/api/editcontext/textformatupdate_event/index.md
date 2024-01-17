@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Rendering IME composition text formatting
 
-In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region.
+In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region. Note that the event listener callback in this example is only called when using an IME window, or another platform-specific editing UI surface, to compose text.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -59,7 +59,7 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-editContext.addEventListener("textformatupdate", (event) => {
+editContext.addEventListener("textformatupdate", (e) => {
   // Clear the canvas.
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 

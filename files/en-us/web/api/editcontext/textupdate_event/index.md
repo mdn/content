@@ -45,7 +45,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Rendering the updated text on `textupdate`
 
-In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `textupdate` event is used to render the text.
+In the following example, the `textupdate` event of the EditContext API is used to render the text a user enters in an editable `<canvas>` element.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -57,16 +57,14 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-function render() {
-  // Clear the canvas.
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Render the text.
-  ctx.fillText(editContext.text, 10, 10);
-}
-
 editContext.addEventListener("textupdate", (e) => {
-  render();
+  // When the user has focus on the <canvas> and enters text,
+  // this event is fired, and we use it to re-render the text.
+  console.log(
+    `The user entered the text: ${e.text} at ${e.updateRangeStart}. Re-rendering the full EditContext text`,
+  );
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillText(editContext.text, 10, 10);
 });
 ```
 

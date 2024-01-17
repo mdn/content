@@ -18,9 +18,14 @@ A {{jsxref("Number")}}.
 
 ### Using `textupdate` to display the inserted text and location
 
+```html
+<div id="editor"></div>
+```
+
 ```js
+const editorEl = document.getElementById("editor");
 const editContext = new EditContext();
-editorElement.editContext = editContext;
+editorEl.editContext = editContext;
 
 editContext.addEventListener("textupdate", (e) => {
   console.log(

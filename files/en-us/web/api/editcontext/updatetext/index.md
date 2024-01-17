@@ -51,9 +51,21 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
+function render() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillText(editContext.text, 0, 40);
+}
+
+editContext.addEventListener("textupdate", (e) => {
+  render();
+});
+
 canvas.addEventListener("keydown", async (e) => {
   if (e.key == "v" && (e.ctrlKey || e.metaKey)) {
     const pastedText = await navigator.clipboard.readText();
+    console.log(
+      `The user pasted the text: ${pastedText}. Updating the EditContext text.`,
+    );
 
     editContext.updateText(
       editContext.selectionStart,
@@ -65,6 +77,8 @@ canvas.addEventListener("keydown", async (e) => {
       editContext.selectionStart + pastedText.length,
       editContext.selectionStart + pastedText.length,
     );
+
+    render();
   }
 });
 ```

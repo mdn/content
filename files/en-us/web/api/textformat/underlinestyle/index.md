@@ -25,8 +25,18 @@ A {{jsxref("String")}} that is one of the following values:
 
 ### Reading the underline style that needs to be applied
 
+The following example shows how to use the `textformatupdate` event's `underlineStyle` property to determine the underline style that needs to be applied to the text being formatted. Note that the event listener callback in this example is only called when using an IME window to compose text.
+
+```html
+<div id="editor" style="height:200px;background:#eee;"></div>
+```
+
 ```js
-editContext.addEventListener("textformatupdate", (event) => {
+const editorEl = document.getElementById("editor");
+const editContext = new EditContext(editorEl);
+editorEl.editContext = editContext;
+
+editContext.addEventListener("textformatupdate", (e) => {
   const formats = e.getTextFormats();
 
   for (const format of formats) {

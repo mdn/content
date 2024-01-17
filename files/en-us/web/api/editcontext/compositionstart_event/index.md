@@ -24,7 +24,7 @@ oncompositionstart = (event) => {};
 
 ### Using `compositionstart` to change the editable region's border
 
-In the following example, the editable region's border is set to red when the `compositionstart` event fires, and back to black when the `compositionend` event fires.
+In the following example, the editable region's border is set to red when the `compositionstart` event fires, and back to black when the `compositionend` event fires. Note that the event listener callbacks in this example are only called when using an IME window, or another platform-specific editing UI surface, to compose text.
 
 ```css
 #text-editor {

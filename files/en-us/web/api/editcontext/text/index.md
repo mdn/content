@@ -22,7 +22,7 @@ The `text` property of the `EditContext` object can be used as the model for the
 
 ### Using `text` to render the text in an editable canvas
 
-In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `text` property is used to draw the text.
+In the following example, the EditContext API is used to render the text a user enters in a `<canvas>` element.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -34,16 +34,14 @@ const ctx = canvas.getContext("2d");
 const editContext = new EditContext();
 canvas.editContext = editContext;
 
-function render() {
-  // Clear the canvas.
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Render the text.
-  ctx.fillText(editContext.text, 10, 10);
-}
-
 editContext.addEventListener("textupdate", (e) => {
-  render();
+  // When the user has focus on the <canvas> and enters text,
+  // this event is fired, and we use it to re-render the text.
+  console.log(
+    `The user entered the text: ${e.text}. Re-rendering the full EditContext text`,
+  );
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillText(editContext.text, 10, 10);
 });
 ```
 

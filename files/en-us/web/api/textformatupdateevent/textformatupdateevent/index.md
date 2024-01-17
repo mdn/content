@@ -13,6 +13,7 @@ The **`TextFormatUpdateEvent()`** constructor returns a new {{DOMxRef("TextForma
 ## Syntax
 
 ```js-nolint
+new TextFormatUpdateEvent()
 new TextFormatUpdateEvent(options)
 ```
 
@@ -21,7 +22,7 @@ new TextFormatUpdateEvent(options)
 - `options` {{optional_inline}}
   - : An optional object with the following properties:
     - `textFormats`
-      - : An {{jsxref("Array")}} of {{jsxref("TextFormat")}} objects representing the text formats that need to be applied with this event.
+      - : An {{jsxref("Array")}} of {{domxref("TextFormat")}} objects representing the text formats that need to be applied with this event.
 
 ## Specifications
 

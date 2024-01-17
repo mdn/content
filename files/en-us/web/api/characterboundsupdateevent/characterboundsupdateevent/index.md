@@ -13,6 +13,7 @@ The **`CharacterBoundsUpdateEvent()`** constructor returns a new {{DOMxRef("Char
 ## Syntax
 
 ```js-nolint
+new CharacterBoundsUpdateEvent()
 new CharacterBoundsUpdateEvent(options)
 ```
 

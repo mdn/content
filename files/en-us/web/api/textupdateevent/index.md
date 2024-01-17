@@ -30,7 +30,7 @@ This interface inherits properties from {{domxref("Event")}}.
 
 ### Rendering the updated text in an editable canvas
 
-In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `textupdate` event is used to render the text.
+In the following example, the EditContext API is used to render editable text in a `<canvas>` element, and the `textupdate` event is used to render the text when the user is typing.
 
 ```html
 <canvas id="editor-canvas"></canvas>
@@ -51,7 +51,12 @@ function render() {
 }
 
 editContext.addEventListener("textupdate", (e) => {
+  // Re-render the editor view when the user is entering text.
   render();
+
+  console.log(
+    `The user entered ${e.text}. Rendering the entire text: ${editContext.text}`,
+  );
 });
 ```
 
