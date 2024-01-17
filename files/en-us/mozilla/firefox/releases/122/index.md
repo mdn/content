@@ -51,6 +51,9 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### APIs
 
+- The [LargestContentfulPaint API](/en-US/docs/Web/API/LargestContentfulPaint) is now supported.
+  This API is part of the [Performance APIs](/en-US/docs/Web/API/Performance_API) and provides timing information about the largest image or text paint before users interact with a web page ([Firefox bug 1866266](https://bugzil.la/1866266)).
+
 #### DOM
 
 ### showPicker() method for HTML select elements
