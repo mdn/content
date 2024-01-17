@@ -10,12 +10,12 @@ browser-compat: api.HTMLAnchorElement.target
 
 The **`target`** property of the {{domxref("HTMLAnchorElement")}} interface is a string that indicates where to display the linked resource.
 
-It reflects the `target` attribute of the {{HTMLElement("a")}} element.
+It reflects the [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute of the {{HTMLElement("a")}} element.
 
 ## Value
 
 A string that indicates where to display the linked resource, or the empty string (`""`) if there is no `target` attribute.
-Target values are `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
+Valid target values are `_blank`, `_self` (default), `_parent`, `_top`.
 
 ## Example
 
