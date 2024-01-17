@@ -18,6 +18,17 @@ A string that indicates where to display the linked resource, or the empty strin
 
 ## Example
 
+```html
+<map name="image-map">
+    <area href="www.example.com" target="_top" alt="left" />
+</map>
+```
+
+```js
+const areaElement = document.getElementsByName("image-map")[0].areas[0];
+console.log(areaElement.target); // Output: "_top"
+```
+
 ## Specifications
 
 {{Specifications}}
