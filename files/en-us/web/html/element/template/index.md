@@ -147,7 +147,7 @@ document
   .toggleAttribute("hidden", isShadowRootModeSupported);
 ```
 
-{{EmbedGHLiveSample("interactive-examples/live-examples/html-examples/template-shadowrootmode/scoping.html", "", "120")}}
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/scoping.html", "", "120")}}
 
 ## Avoiding DocumentFragment pitfalls
 
