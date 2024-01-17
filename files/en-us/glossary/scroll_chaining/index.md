@@ -8,27 +8,7 @@ page-type: glossary-definition
 
 **Scroll chaining** refers to the behavior observed when scrolling within a scrollable element, such as a `<div>` or `<textarea>`, triggers scrolling in its parent element or the underlying page. This propagation results in a "chained effect", where there is a seamless transition of the scroll action to the parent element when the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) boundary (top, bottom, left or right) of the scrollable element is reached. This behavior creates a continuous scrolling experience, both vertically and horizontally.
 
-## Related terms
-
-There are a few important terms related to the concept of scroll chaining. These are explained below.
-
-### Boundary default action
-
-This refers to a browser's default behavior when the scroll boundary of the scrollport is reached. This can lead to a visual effect such as a bounce or a functional action like pull-to-refresh on mobile devices.
-
-For example, on mobile devices, dragging a page downward when already at the top causes a bounce effect and sometimes triggers a page refresh. This bounce or refresh is the boundary default action.
-
-Boundary default actions can be local or non-local.
-
-### Local and non-local boundary defaults
-
-A local boundary default is the action that occurs at the boundary of a specific scrollable area and is confined to the element. For example, the action could be to display a visual effect within the element to indicate the end of scrolling. This action does not affect the larger container or the rest of the webpage.
-
-On the other hand, a non-local boundary default action has effects beyond the specific element. An example of this is scroll chaining, where reaching the scroll boundary of one element triggers scrolling in a parent element or even initiate a page-wide action, such as navigation.
-
-### Scroll chain
-
-A scroll chain is the order of scrollable elements where the scrolling action passes from one element to another. This happens when an inner element is scrolled to its limit, and the scrolling continues to its parent element, creating a 'chain' of scrolling actions. Chaining typically recurses up the containing block.
+A **scroll chain** is the order of scrollable elements where the scrolling action passes from one element to another. This happens when an inner element is scrolled to its limit, and the scrolling continues to its parent element, creating a 'chain' of scrolling actions. Chaining typically recurses up the containing block.
 
 ## See also
 

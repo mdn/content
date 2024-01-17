@@ -20,9 +20,9 @@ Boundary default actions can be local or non-local.
 
 ### Local and non-local boundary defaults
 
-A local boundary default is the action that occurs at the boundary of a specific scrollable area and is confined to the element. For example, the action could be to display a visual effect within the element to indicate the end of scrolling. This action does not affect the larger container or the rest of the webpage.
+A **local boundary default** is the action that occurs at the boundary of a specific scrollable area and is confined to the element. For example, the action could be to display a visual effect within the element to indicate the end of scrolling. This action does not affect the larger container or the rest of the webpage.
 
-On the other hand, a non-local boundary default action has effects beyond the specific element. An example of this is scroll chaining, where reaching the scroll boundary of one element triggers scrolling in a parent element or even initiate a page-wide action, such as navigation.
+On the other hand, a **non-local boundary default action** has effects beyond the specific element. An example of this is scroll chaining, where reaching the scroll boundary of one element triggers scrolling in a parent element or even initiate a page-wide action, such as navigation.
 
 ## See also
 

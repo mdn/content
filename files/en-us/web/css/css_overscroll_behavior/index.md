@@ -21,11 +21,8 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 
 ### Glossary terms
 
-- {{Glossary("Scroll_chaining")}}
-  It also covers the following terms:
-  - [Scroll boundary](/en-US/docs/Glossary/Scroll_chaining#scroll_boundary)
-  - [Boundary default action](/en-US/docs/Glossary/Scroll_chaining#boundary_default_action)
-  - [Local and non-local boundary defaults](/en-US/docs/Glossary/Scroll_chaining#local_and_non-local_boundary_defaults)
+- {{Glossary("Scroll_boundary", "Scroll boundary")}}
+- {{Glossary("Scroll_chaining", "Scroll chaining")}}
 
 ## Guides
 
@@ -45,9 +42,7 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 - [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
 
   - {{cssxref("overflow")}} CSS property
-  - {{Glossary("Scroll_container")}} glossary term
-    It also covers the following term:
-    - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)
+  - {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms
 
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
 
@@ -60,3 +55,4 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
+- [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)
