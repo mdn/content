@@ -4,6 +4,7 @@ on:
   - pull_request_target
 
 permissions:
+  issues: write
   pull-requests: write
   contents: read
 
