@@ -338,7 +338,7 @@ dialog {
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0);
+  background-color: rgb(0 0 0 / 0%);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -348,7 +348,7 @@ dialog::backdrop {
 }
 
 dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
@@ -356,7 +356,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
   dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
@@ -462,11 +462,11 @@ dialog[open]::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 
   100% {
-    background-color: rgb(0 0 0 / 0.25);
+    background-color: rgb(0 0 0 / 25%);
   }
 }
 

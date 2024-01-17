@@ -344,7 +344,7 @@ table {
 }
 
 thead > tr {
-  background-color: rgb(228, 240, 245);
+  background-color: rgb(228 240 245);
 }
 
 th,
@@ -451,7 +451,7 @@ We're going to look at the top header in two pieces. First, the overall styling 
 
 ```css
 thead > tr {
-  background-color: rgb(228, 240, 245);
+  background-color: rgb(228 240 245);
 }
 
 thead > tr:nth-of-type(2) {
@@ -467,11 +467,11 @@ Let's style these two header cells with green and red hues to represent the "goo
 
 ```css
 thead > tr:last-of-type > th:nth-of-type(1) {
-  background-color: rgb(225, 255, 225);
+  background-color: rgb(225 255 225);
 }
 
 thead > tr:last-of-type > th:nth-of-type(2) {
-  background-color: rgb(255, 225, 225);
+  background-color: rgb(255 225 225);
 }
 ```
 
@@ -483,7 +483,7 @@ It's common to help improve readability of table data by alternating row colors.
 
 ```css
 tbody > tr:nth-of-type(even) {
-  background-color: rgb(237, 238, 242);
+  background-color: rgb(237 238 242);
 }
 ```
 
@@ -494,7 +494,7 @@ Since we want the first column to stand out as well, we'll add some custom styli
 ```css
 tbody > tr > th:first-of-type {
   text-align: left;
-  background-color: rgb(225, 229, 244);
+  background-color: rgb(225 229 244);
 }
 ```
 
