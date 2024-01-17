@@ -101,7 +101,7 @@ Creating a shadow DOM via JavaScript API might be a good option for client-side 
 </div>
 ```
 
-{{EmbedGHLiveSample("interactive-examples/live-examples/html-examples/template-shadowrootmode/simple.html", "", "")}}
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
 
 After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this:
 
