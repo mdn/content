@@ -21,7 +21,7 @@ Valid target values are `_blank`, `_self` (default), `_parent`, `_top`.
 
 ```html
 <map name="image-map">
-    <area href="www.example.com" target="_top" alt="left" />
+  <area href="www.example.com" target="_top" alt="left" />
 </map>
 ```
 
