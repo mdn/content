@@ -338,7 +338,7 @@ Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures
 If you want those features then you have to implement them yourself.
 
 In most cases emulating a basic console log is sufficient for demonstrating the features of an API.
-If you're allowing users to enter values or modify the UI, it also makes sense to provide a "Reset" button to restore the example to it's original state.
+If you're allowing users to enter values or modify the UI, it also makes sense to provide a "Reset" button to restore the example to its original state.
 
 ### Example live sample with reload and logging
 
