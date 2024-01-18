@@ -19,7 +19,6 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("AnimationEvent")}}
 - {{DOMxRef("CaretPosition")}}
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSCharsetRule")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
 - {{DOMxRef("CSSFontFaceRule")}}
@@ -39,12 +38,9 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSStyleSheet")}}
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("CSSVariablesMap")}}
-- {{DOMxRef("CSSViewportRule")}}
 - {{DOMxRef("FontFace")}}
 - {{DOMxRef("FontFaceSet")}}
 - {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("GetStyleUtils")}}
 - {{DOMxRef("MediaList")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}
@@ -112,4 +108,4 @@ All these features have been added little by little over the years to the differ
 ## See also
 
 - [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model)
-- [Houdini](/en-US/docs/Web/API/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

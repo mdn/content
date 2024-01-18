@@ -80,7 +80,7 @@ _Note: The start-line is called the "status line" in requests._
 The start line of an HTTP response, called the _status line_, contains the following information:
 
 1. The _protocol version_, usually `HTTP/1.1`, but can also be `HTTP/1.0`.
-2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}
+2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
 3. A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
 
 A typical status line looks like: `HTTP/1.1 404 Not Found`.

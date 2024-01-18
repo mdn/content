@@ -73,8 +73,8 @@ function draw() {
   ctx.globalCompositeOperation = "destination-over";
   ctx.clearRect(0, 0, 300, 300); // clear canvas
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-  ctx.strokeStyle = "rgba(0, 153, 255, 0.4)";
+  ctx.fillStyle = "rgb(0 0 0 / 40%)";
+  ctx.strokeStyle = "rgb(0 153 255 / 40%)";
   ctx.save();
   ctx.translate(150, 150);
 
@@ -217,7 +217,7 @@ function clock() {
   ctx.beginPath();
   ctx.arc(95, 0, 10, 0, Math.PI * 2, true);
   ctx.stroke();
-  ctx.fillStyle = "rgba(0, 0, 0, 0)";
+  ctx.fillStyle = "rgb(0 0 0 / 0%)";
   ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
   ctx.fill();
   ctx.restore();
@@ -366,7 +366,7 @@ function draw() {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgb(0 0 0 / 5%);
 }
 ```
 
@@ -460,7 +460,7 @@ function Particle(x, y, particleTrailWidth, strokeColor, rotateSpeed) {
 function anim() {
   requestAnimationFrame(anim);
 
-  context.fillStyle = "rgba(0,0,0,0.05)";
+  context.fillStyle = "rgb(0 0 0 / 5%)";
   context.fillRect(0, 0, canvas.width, canvas.height);
 
   particlesArray.forEach((particle) => particle.rotate());

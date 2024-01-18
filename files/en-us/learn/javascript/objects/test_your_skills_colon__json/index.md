@@ -8,7 +8,7 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you've understood our [Working with JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) article.
 
-> **Note:** You can try solutions by downloading the code and putting it in an online an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> **Note:** You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
