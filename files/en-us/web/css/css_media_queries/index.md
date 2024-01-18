@@ -26,6 +26,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 - [`<media-types>`](/en-US/docs/Web/CSS/@media#media_types)
 - [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features)
+- [`<resolution`]()
 
 ### Glossary terms
 
