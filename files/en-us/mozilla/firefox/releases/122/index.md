@@ -69,7 +69,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### General
 
-- Fixed a bug that prevented [Perform Actions](https://w3c.github.io/webdriver/#perform-actions) to correctly synthesize double and other multi-click events for the `mouse` input source ([Firefox bug 1864614](https://bugzil.la/1864614)). Additionally, these events will only be emitted when the actual mouse position has changed since the last click action ([Firefox bug 1681076](https://bugzil.la/1681076)).
+- Fixed a bug that prevented [Perform Actions](https://w3c.github.io/webdriver/#perform-actions) to correctly synthesize double and other multi-click events for the `mouse` input source ([Firefox bug 1864614](https://bugzil.la/1864614)). Additionally, these events will only be emitted when the actual mouse position has not changed since the last click action ([Firefox bug 1681076](https://bugzil.la/1681076)).
 - The definitions for the `Pause` and `Equal` (Numpad block) keys have been updated to align with the WebDriver specification ([Firefox bug 1863687](https://bugzil.la/1863687)).
 
 #### WebDriver BiDi
