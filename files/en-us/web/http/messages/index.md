@@ -57,7 +57,7 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 Many different headers can appear in requests. They can be divided in several groups:
 
 - {{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.
-- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).
+- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None-Match")}}).
 - {{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).
 
 ![Example of headers in an HTTP request](http_request_headers3.png)
@@ -78,7 +78,7 @@ Bodies can be broadly divided into two categories:
 The start line of an HTTP response, called the _status line_, contains the following information:
 
 1. The _protocol version_, usually `HTTP/1.1`.
-2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}
+2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
 3. A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
 
 A typical status line looks like: `HTTP/1.1 404 Not Found`.
