@@ -7,10 +7,10 @@ browser-compat: html.elements.template
 
 {{HTMLSidebar}}
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} fragments for two main use cases:
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} fragments to be used later via JavaScript or immediately generated into shadow DOM:
 
-1. To be later cloned and used via JavaScript to insert new content in the DOM. The element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment).
-2. To be immediately used by the HTML parser to generate Shadow DOM if the `shadowrootmode` attribute is present. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
+1. By default, the element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment). Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment could be cloned via {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+2. If the `shadowrootmode` attribute is present, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
 
 ## Attributes
 
