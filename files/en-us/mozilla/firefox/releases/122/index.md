@@ -79,7 +79,6 @@ This article provides information about the changes in Firefox 122 that affect d
 - Support for the `browsingContext.traverseHistory` command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
 - Fixed a bug in all supported network events where the `context` id consistently reported the top-level browsing context, even when the navigation occurred within an iframe ([Firefox bug 1869735](https://bugzil.la/1869735)).
 
-
 #### Marionette
 
 - Fixed a bug with [Get Element Text](https://w3c.github.io/webdriver/#dfn-get-element-text), where the command was incorrectly returning an empty text when the element was located within a ShadowRoot's slot ([Firefox bug 1824664](https://bugzil.la/1824664)).
