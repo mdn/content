@@ -12,7 +12,7 @@ A **cacheable** response is an HTTP response that can be cached, that is stored 
 - The status code of the response is _known_ by the application caching, and is _cacheable_. The following status codes are cacheable: {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, and {{HTTPStatus("501")}}.
 - There are not specific headers in the response, like {{HTTPHeader("Cache-Control")}}, with values that would prohibit caching.
 
-Note that some requests with non-cacheable responses to a specific URI may invalidate previously cached responses on the same URI. For example, a {{HTTPMethod("PUT")}} to `/pageX.html` will invalidate all cached responses to {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to `/pageX.html`.
+Note that some requests with non-cacheable responses to a specific URI may invalidate previously cached responses from the same URI. For example, a {{HTTPMethod("PUT")}} to `/pageX.html` will invalidate all cached responses to {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to `/pageX.html`.
 
 When both the method of the request and the status of the response are cacheable, the response to the request can be cached:
 
