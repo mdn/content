@@ -24,7 +24,7 @@ GET /pageX.html HTTP/1.1
 (…)
 ```
 
-A {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for request to the same URI done via {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}}:
+The response to a {{HTTPMethod("PUT")}} request cannot be cached. Moreover, it invalidates cached data for requests to the same URI using {{HTTPMethod("HEAD")}} or {{HTTPMethod("GET")}} methods:
 
 ```http
 PUT /pageX.html HTTP/1.1
@@ -34,7 +34,7 @@ PUT /pageX.html HTTP/1.1
 (…)
 ```
 
-A specific {{HTTPHeader("Cache-Control")}} header in the response can prevent caching:
+The presence of the {{HTTPHeader("Cache-Control")}} header with a particular value in the response can prevent caching:
 
 ```http
 GET /pageX.html HTTP/1.1
