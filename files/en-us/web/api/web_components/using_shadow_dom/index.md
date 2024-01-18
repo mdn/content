@@ -91,7 +91,7 @@ The result looks like this:
 
 ### Declaratively with HTML
 
-Creating a shadow DOM via JavaScript API might be a good option for client-side rendered applications. However, in many cases server-side rendered UI might improve the performance and user experience. In such cases, you can use the {{htmlelement("template")}} element to declaratively define the shadow DOM. The key to this behavior is the `shadowrootmode` attribute, which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method.
+Creating a shadow DOM via JavaScript API might be a good option for client-side rendered applications. For other applications, a server-side rendered UI might have better performance and, therefore, a better user experience. In such cases, you can use the {{htmlelement("template")}} element to declaratively define the shadow DOM. The key to this behavior is the {{glossary("enumerated")}} `shadowrootmode` attribute, which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method.
 
 ```html
 <div id="host">
@@ -102,6 +102,7 @@ Creating a shadow DOM via JavaScript API might be a good option for client-side 
 ```
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
+> **Note:** By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
 
 After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this:
 
