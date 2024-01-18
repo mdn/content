@@ -18,7 +18,7 @@ The list of [supported media formats](/en-US/docs/Web/Media/Formats) varies from
 _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-  - : The `disablePictureInPicture` property will hint the user agent to not suggest the picture-in-picture to users or to request it automatically.
+  - : Indicates if the user agent should suggest the picture-in-picture to users, or not.
 - {{domxref("HTMLVideoElement.height")}}
   - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, which specifies the height of the display area, in CSS pixels.
 - {{domxref("HTMLVideoElement.poster")}}
