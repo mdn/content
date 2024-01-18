@@ -12,7 +12,9 @@ The `target` property of the {{domxref("HTMLBaseElement")}} interface is a strin
 
 ## Value
 
-A string that represents target values `_blank`, `_self` (default), `_parent`, `_top`, `framename`.
+A string representing the target. Its value can be:
+- the name of a {{HTMLElement("frame")}}, 
+- One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/base#target):`_blank`, `_self`, `_parent`, or `_top`.
 
 ## Example
 
