@@ -14,8 +14,10 @@ It reflects the [`target`](/en-US/docs/Web/HTML/Element/area#target) attribute o
 
 ## Value
 
-A string that indicates where to display the linked resource, or the empty string (`""`) if there is no `target` attribute.
-Target values are `_blank`, `_self` (default), `_parent`, `_top`.
+A string representing the target. Its value can be:
+
+- the name of a {{HTMLElement("frame")}},
+- One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/area#target):`_blank`, `_self`, `_parent`, or `_top`.
 
 ## Example
 
