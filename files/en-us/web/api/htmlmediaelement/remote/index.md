@@ -16,8 +16,12 @@ A {{domxref("RemotePlayback")}} object that associated with the media element.
 
 ## Example
 
+```html
+<audio id="el" src="/example.mp3"></audio>
+```
+
 ```js
-const el = document.createElement("audio");
+const el = document.getElementById("el");
 const remotePlayback = el.remote;
 
 remotePlayback.watchAvailability((availability) => {
