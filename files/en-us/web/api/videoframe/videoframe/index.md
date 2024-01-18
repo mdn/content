@@ -145,7 +145,7 @@ for (let x = 0; x < init.codedWidth; x++) {
     data[offset + 3] = 0x0ff; // Alpha
   }
 }
-init.transfer = [data.buffer]
+init.transfer = [data.buffer];
 let frame = new VideoFrame(data, init);
 ```
 

@@ -46,7 +46,7 @@ const init = {
   data: videoBuffer,
   timestamp: 23000000,
   duration: 2000000,
-  transfer: [videoBuffer]
+  transfer: [videoBuffer],
 };
 chunk = new EncodedVideoChunk(init);
 ```

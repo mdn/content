@@ -48,7 +48,7 @@ const init = {
   data: audioBuffer,
   timestamp: 23000000,
   duration: 2000000,
-  transfer: [audioBuffer]
+  transfer: [audioBuffer],
 };
 chunk = new EncodedAudioChunk(init);
 ```
