@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.cancelVideoFrameCallback
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{APIRef("HTML DOM")}}
 
 The **`cancelVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement")}} interface cancels a previously-registered video frame request callback.
 
@@ -23,7 +23,7 @@ cancelVideoFrameCallback(id)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

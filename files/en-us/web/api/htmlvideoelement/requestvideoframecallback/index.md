@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.requestVideoFrameCallback
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{APIRef("HTML DOM")}}
 
 The **`requestVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement")}} interface registers a callback function that runs when a new video frame is sent to the compositor, allowing developers to perform efficient per-frame operations on video.
 
