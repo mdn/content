@@ -14,7 +14,7 @@ A **cacheable** response is an HTTP response that can be cached, that is stored 
 
 Note that some non-cacheable requests/responses to a specific URI may invalidate previously cached responses on the same URI. For example, a {{HTTPMethod("PUT")}} to pageX.html will invalidate all cached {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests to the same URI.
 
-When both, the method of the request and the status of the response, are cacheable, the response to the request can be cached:
+When both the method of the request and the status of the response are cacheable, the response to the request can be cached:
 
 ```http
 GET /pageX.html HTTP/1.1
