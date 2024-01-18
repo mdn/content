@@ -75,8 +75,8 @@ This article provides information about the changes in Firefox 122 that affect d
 #### WebDriver BiDi
 
 - The serialization of `WindowProxy` remote objects now also work correctly for out-of-process iframes ([Firefox bug 1867667](https://bugzil.la/1867667)).
-- The `browsingContext.setViewport` command now distinguishes between `undefined` and `null` as values for the `viewport` argument. If set to `undefined`, it signifies that the viewport should remain unchanged, while using `null` will reset it to its original dimensions ([Firefox bug 1865618](https://bugzil.la/1865618)).
-- Support for the `browsingContext.traverseHistory` command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
+- The [browsingContext.setViewport](https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport) command now distinguishes between `undefined` and `null` as values for the `viewport` argument. If set to `undefined`, it signifies that the viewport should remain unchanged, while using `null` will reset it to its original dimensions ([Firefox bug 1865618](https://bugzil.la/1865618)).
+- Support for the [browsingContext.traverseHistory](https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory) command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
 - Fixed a bug in all supported network events where the `context` id consistently reported the top-level browsing context, even when the navigation occurred within an iframe ([Firefox bug 1869735](https://bugzil.la/1869735)).
 
 #### Marionette
