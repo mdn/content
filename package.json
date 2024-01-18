@@ -43,7 +43,7 @@
     "@mdn/yari": "2.32.0",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
-    "async": "^3.2.4",
+    "async": "^3.2.5",
     "caporal": "^1.4.0",
     "cli-progress": "^3.12.0",
     "cross-env": "7.0.3",
