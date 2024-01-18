@@ -185,6 +185,6 @@ Java.
 
 ## See also
 
-- {{DOMxRef("window.getDefaultComputedStyle")}}
+- {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
 - {{CSSxRef("resolved_value", "Resolved Value")}}
