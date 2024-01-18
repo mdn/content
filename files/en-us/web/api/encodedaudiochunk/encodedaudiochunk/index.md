@@ -34,6 +34,9 @@ new EncodedAudioChunk(options)
       - : An integer representing the length of the audio in microseconds.
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the audio data.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `EncodedAudioChunk` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
+
 
 ## Examples
 
@@ -45,6 +48,7 @@ const init = {
   data: audioBuffer,
   timestamp: 23000000,
   duration: 2000000,
+  transfer: [audioBuffer]
 };
 chunk = new EncodedAudioChunk(init);
 ```

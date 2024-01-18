@@ -42,6 +42,8 @@ new AudioData(init)
       - : An integer indicating the data's time in microseconds .
     - `data`
       - : A typed array of the audio data for this sample.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `AudioData` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
 
 ## Exceptions
 

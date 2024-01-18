@@ -58,7 +58,7 @@ The first type of constructor (see above) creates a new {{domxref("VideoFrame")}
 The second type of constructor (see above) creates a new {{domxref("VideoFrame")}} from an {{jsxref("ArrayBuffer")}}. Its parameters are:
 
 - `data`
-  - : An {{jsxref("ArrayBuffer")}} containing the data for the new `VideoFrame`.
+  - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the data for the new `VideoFrame`.
 - `options`
   - : An object containing the following:
     - `format`
@@ -111,6 +111,8 @@ The second type of constructor (see above) creates a new {{domxref("VideoFrame")
           - : A string representing the video color matrix, described on the page for the {{domxref("VideoColorSpace.matrix")}} property.
         - `fullRange`
           - : A Boolean. If `true`, indicates that full-range color values are used.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `VideoFrame` rather than copied to the its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
 
 ## Examples
 
@@ -127,7 +129,7 @@ In the following example a `VideoFrame` is created from a {{jsxref("TypedArray")
 
 ```js
 const pixelSize = 4;
-const init = {
+let init = {
   timestamp: 0,
   codedWidth: 320,
   codedHeight: 200,
@@ -143,6 +145,7 @@ for (let x = 0; x < init.codedWidth; x++) {
     data[offset + 3] = 0x0ff; // Alpha
   }
 }
+init.transfer = [data.buffer]
 let frame = new VideoFrame(data, init);
 ```
 

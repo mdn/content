@@ -32,6 +32,9 @@ new EncodedVideoChunk(options)
       - : An integer representing the length of the video in microseconds.
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the video data.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `EncodedVideoChunk` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
+
 
 ## Examples
 
@@ -43,6 +46,7 @@ const init = {
   data: videoBuffer,
   timestamp: 23000000,
   duration: 2000000,
+  transfer: [videoBuffer]
 };
 chunk = new EncodedVideoChunk(init);
 ```
