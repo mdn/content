@@ -3,6 +3,7 @@ title: Sec-WebSocket-Accept
 slug: Web/HTTP/Headers/Sec-WebSocket-Accept
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Accept
+spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.3
 ---
 
 {{HTTPSidebar}}
