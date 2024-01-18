@@ -2,7 +2,7 @@
 title: name
 slug: Web/Manifest/name
 page-type: web-manifest-member
-browser-compat: html.manifest.name
+browser-compat: text.manifest.name
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
