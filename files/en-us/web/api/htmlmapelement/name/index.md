@@ -8,9 +8,9 @@ browser-compat: api.HTMLMapElement.name
 
 {{ApiRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLMapElement")}} represents the unique name `<map>` element. 
+The **`name`** property of the {{domxref("HTMLMapElement")}} represents the unique name `<map>` element.
 Its value can be used with the `useMap` attribute of the {{HTMLElement("img")}} element to reference a `<map>` element.
-  
+
 If an `id` attribute is set on the {{HTMLElement("map")}} element, then this `name` property should be the same as this `id`.
 
 ## Value
@@ -22,7 +22,7 @@ A non-empty string without whitespaces.
 ```html
 <map name="image-map">
   <area shape="circle" coords="15,15,5" />
-</map> 
+</map>
 ```
 
 ```js
