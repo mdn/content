@@ -34,3 +34,8 @@ el.disableRemotePlayback = true;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [The `disableremoteplayback` attribute of the `<audio>` element](/en-US/docs/Web/HTML/Element/audio#disableremoteplayback)
+- [The `disableremoteplayback` attribute of the `<video>` element](/en-US/docs/Web/HTML/Element/video#disableremoteplayback)
