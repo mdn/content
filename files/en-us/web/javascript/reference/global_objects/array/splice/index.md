@@ -87,6 +87,30 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 // removed is [], no elements removed
 ```
 
+### Remove 0 (zero) elements at index 0, and insert "angel"
+
+`splice(0, 0, ...elements)` inserts elements at the start of the array like {{jsxref("Array/unshift", "unshift()")}}.
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
+### Remove 0 (zero) elements at last index, and insert "sturgeon"
+
+`splice(array.length, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
 ### Remove 1 element at index 3
 
 ```js

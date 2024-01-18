@@ -34,15 +34,15 @@ formData.append("key2", "value2");
 
 // Display the key/value pairs
 for (const pair of formData.entries()) {
-  console.log(`${pair[0]}, ${pair[1]}`);
+  console.log(pair[0], pair[1]);
 }
 ```
 
 The result is:
 
 ```plain
-key1, value1
-key2, value2
+key1 value1
+key2 value2
 ```
 
 ## Specifications
