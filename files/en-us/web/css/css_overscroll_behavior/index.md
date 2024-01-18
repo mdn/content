@@ -31,22 +31,11 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 
 ## Related concepts
 
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module:
-
-  - [getBoundingClientRect](/en-US/docs/Web/API/Element/getBoundingClientRect) method
-
-- [CSS display](/en-US/docs/Web/CSS/CSS_display) module:
-
-  - [Containing block](/en-US/docs/Web/CSS/Containing_block)
-
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
-
-  - {{cssxref("overflow")}} CSS property
-  - {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms
-
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module:
-
-  - {{CSSxref("position")}} property
+- [Containing block](/en-US/docs/Web/CSS/Containing_block) concept ([CSS display](/en-US/docs/Web/CSS/CSS_display) module)
+- {{cssxref("overflow")}} CSS property ([CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module)
+- {{CSSxref("position")}} CSS property ([CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module)
+- [getBoundingClientRect](/en-US/docs/Web/API/Element/getBoundingClientRect) method ([CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module)
+- {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms ([CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module)
 
 ## Specifications
 
@@ -54,5 +43,7 @@ The **CSS overscroll behavior** module properties enable you to control the beha
 
 ## See also
 
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
 - [Take control of your scroll - customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)
