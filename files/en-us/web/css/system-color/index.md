@@ -54,7 +54,7 @@ Note that these keywords are _case insensitive_, but are listed here with mixed 
 - `MarkText`
   - : Text that has been specially marked (such as by the HTML `mark` element)
 - `SelectedItem`
-  - : Background of selected items, for example a selected checkbox
+  - : Background of selected items, for example, a selected checkbox
 - `SelectedItemText`
   - : Text of selected items
 - `VisitedText`
