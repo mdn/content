@@ -127,7 +127,7 @@ jobs:
           # Show the final disk usage size of the build.
           du -sh ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: ${{ env.GIT_DIFF_CONTENT }}
         with:
           name: build
