@@ -31,7 +31,7 @@ _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}.
 _Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("RemotePlayback.watchAvailability()")}}
-  - : A {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
+  - : Watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with a `callbackId` of an available remote playback device.
 - {{domxref("RemotePlayback.cancelWatchAvailability()")}}
   - : Cancels the request to monitor the availability of remote playback devices.
 - {{domxref("RemotePlayback.prompt()")}}
