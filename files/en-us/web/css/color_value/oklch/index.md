@@ -19,8 +19,6 @@ oklch(59.69% 0.156 49.77 / .5)
 
 /* Relative values */
 
-/* Change the l, c, and h channels to transform red to purple */
-oklch(from rgb(255 0 0) 42.1% 48.25% 328.363deg)
 /* Add a semi-transparent alpha channel to green */
 oklch(from green l c h / 0.5)
 /* Create lighter and darker blue variants by setting the output
@@ -89,6 +87,14 @@ This function uses absolute values for the output color's channel values, output
 
 ```css
 oklch(from hsl(0 100% 50%) 42.1% 0.25 328.363)
+```
+
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+
+The following function uses one of the origin color channel values for the output color channel value, but uses a new value for the other two output channel values, creating a relative color based on the origin color:
+
+```css
+oklch(from hsl(0 100% 50%) 0.8 0.4 h)
 ```
 
 The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:

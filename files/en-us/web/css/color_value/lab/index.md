@@ -20,8 +20,6 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 /* Relative values */
 
-/* Change the l, a, and b channels to transform red to purple */
-lab(from rgb(255 0 0) 29.692% 44.89% -29.034%)
 /* Add a semi-transparent alpha channel to green */
 lab(from green l a b / 0.5)
 /* Create lighter and darker blue variants by setting the output
@@ -92,6 +90,14 @@ This function uses absolute values for the output color's channel values, output
 
 ```css
 lab(from hsl(0 100% 50%) 29.692% 44.89% -29.034%)
+```
+
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+
+The following function uses two of the origin color channel values for the output color channel value, but uses a new value for the other output channel value, creating a relative color based on the origin color:
+
+```css
+lab(from hsl(0 100% 50%) l -100 b)
 ```
 
 The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:

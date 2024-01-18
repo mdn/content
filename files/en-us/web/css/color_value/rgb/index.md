@@ -23,8 +23,6 @@ rgb(255 255 255 / 50%)
 
 /* Relative values */
 
-/* Change the r g b channel values to absolute values to transform red to blue */
-rgb(from red 0 0 255)
 /* Add a semi-transparent alpha channel to green */
 rgb(from green r g b / 0.5)
 /* Create a lighter blue variant by setting the output r and g channel */
@@ -85,6 +83,14 @@ This function uses absolute values for the output color's channel values, output
 
 ```css
 rgb(from hsl(0 100% 50%) 132 132 224)
+```
+
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+
+The following function uses one of the origin color channel values for the output color channel value, but uses a new value for the other two output channel values, creating a relative color based on the origin color:
+
+```css
+rgb(from hsl(0 100% 50%) r 80 80)
 ```
 
 The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:

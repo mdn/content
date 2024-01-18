@@ -27,7 +27,8 @@ hsl(none 75% 25%)
 
 /* Relative values */
 
-/* Change the hue value to 240 degrees to transform red to blue */
+/* Change the hue value to 240 degrees to transform red to blue
+   but keep the same s and l values */
 hsl(from red 240deg s l)
 /* Add a semi-transparent alpha channel to green */
 hsl(from green h s l / 0.5)
@@ -102,6 +103,14 @@ This function uses absolute values for the output color's channel values, output
 
 ```css
 hsl(from rgb(255 0 0) 240 60% 70%)
+```
+
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+
+The following function uses one of the origin color channel values for the output color channel value, but uses a new value for the other two output channel values, creating a relative color based on the origin color:
+
+```css
+hsl(from rgb(255 0 0) h 30% 60%)
 ```
 
 The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:

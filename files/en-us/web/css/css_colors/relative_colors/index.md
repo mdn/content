@@ -78,8 +78,6 @@ rgb(from red r g b)
 rgb(from red 255 g b)
 ```
 
-> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color (as in the third and fourth examples above) or a color not based on the origin color at all, you are not really creating a relative color.
-
 ## Syntax flexibility
 
 There is an important distinction to be made between the destructured origin color channel values made available in the function, and the channel values of the output color set by the developer.
@@ -99,6 +97,8 @@ rgb(from red 0 0 255)
 /* output color is equivalent to rgb(0 0 255), full blue */
 ```
 
+> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
+
 You can even mix up or repeat the provided values. The following takes a slightly darker red as an input and outputs a light gray color with the output channels all set to the origin color's `r` channel value:
 
 ```css
@@ -115,7 +115,7 @@ rgb(from rgb(200 170 0) b g r)
 
 ## Color functions that support relative colors
 
-In the section above we only saw relative colors defined via the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function. However, relative colors can be defined using any modern CSS function — [`color()`](/en-US/docs/Web/CSS/color_value/color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), or [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb). The general syntax structure is the same in each case.
+In the section above we only saw relative colors defined via the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function. However, relative colors can be defined using any modern CSS color function — [`color()`](/en-US/docs/Web/CSS/color_value/color), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`lab()`](/en-US/docs/Web/CSS/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/color_value/lch), [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch), or [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb). The general syntax structure is the same in each case, although the origin color values have different names appropriate for the function being used.
 
 Below you can find relative color syntax examples for each color function. Each case is the simplest possible, with the output color channel values exactly matching the origin color channel values:
 
