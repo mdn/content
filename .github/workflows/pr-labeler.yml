@@ -42,9 +42,7 @@ jobs:
           l_max_size: "100"
           xl_label: "size/xl"
           fail_if_xl: "false"
-          # message_if_xl: >
-          #   This PR exceeds the recommended size of 1000 lines.
-          #   ...
+          message_if_xl: ""
           files_to_ignore: |
             "files/en-us/_redirects.txt"
             "files/en-us/_wikihistory.json"
