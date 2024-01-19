@@ -40,4 +40,4 @@ Elements that are made editable, and therefore interactive, by using the `conten
 - All [global attributes](/en-US/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}
 - The CSS {{cssxref("caret-color")}} property
-- [HTMLElement `input` event](/en-US/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` event](/en-US/docs/Web/API/Element/input_event)

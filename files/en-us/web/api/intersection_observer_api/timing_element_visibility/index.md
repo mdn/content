@@ -185,7 +185,7 @@ Finally, the ads have the following initial styling. Individual ads may customiz
   font-size: 14px;
   bottom: 30px;
   border: 1px solid black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
 }
 ```
 

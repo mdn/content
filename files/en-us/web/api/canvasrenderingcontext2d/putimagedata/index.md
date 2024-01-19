@@ -99,9 +99,8 @@ function putImageData(
   for (let y = dirtyY; y < limitBottom; y++) {
     for (let x = dirtyX; x < limitRight; x++) {
       const pos = y * width + x;
-      ctx.fillStyle = `rgba(${data[pos * 4 + 0]}, ${data[pos * 4 + 1]}, ${
-        data[pos * 4 + 2]
-      }, ${data[pos * 4 + 3] / 255})`;
+      ctx.fillStyle = `rgb(${data[pos * 4 + 0]} ${data[pos * 4 + 1]}
+      ${data[pos * 4 + 2]} / ${data[pos * 4 + 3] / 255})`;
       ctx.fillRect(x + dx, y + dy, 1, 1);
     }
   }

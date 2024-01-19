@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PaymentResponse.requestId
 ---
 
-{{APIRef("Payment Request API")}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`requestId`** read-only property of the
 {{domxref("PaymentResponse")}} interface returns the free-form identifier supplied by
