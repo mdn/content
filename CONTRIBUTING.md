@@ -223,7 +223,7 @@ To ensure that all MDN documents follow the same formatting, we use both [Pretti
 
 If you have a [local checkout](#forking-and-cloning-the-repository) of the repository and have [installed the dependencies](#preparing-the-project), or you are using [github.dev](https://github.dev), a pre-commit hook will be installed which automatically runs while making a commit. To save some headache and improve your work flow while authoring, you may wish to [configure your editor to automatically run Prettier](https://prettier.io/docs/en/editors.html). Alternatively, you may run `yarn fix:md` in the command line to manually format all Markdown files.
 
-> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us](/en-US/docs/MDN/Community/Communication_channels) for help.
+> **Note:** Automatically formatting changes does not work for pull requests opened using the GitHub Web UI as described in the ["Simple changes" section](#simple-changes). This may result in failed status checks on pull requests. If you're not sure about how to fix this, [get in touch with us][]! for help.
 
 ### Adding a new document
 
@@ -274,7 +274,13 @@ Let's say you want to move the entire `/en-US/Learn/Accessibility` tree to `/en-
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
-3. Commit all of the changes and push your branch to the remote:
+3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
+
+   ```bash
+   node scripts/update-moved-file-links.js
+   ```
+
+4. Commit all the changes and push your branch to the remote:
 
    ```bash
    git add .

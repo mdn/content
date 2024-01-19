@@ -32,24 +32,19 @@ The links in this section lead to detailed guides explaining how to do a particu
   <tbody>
     <tr>
       <td>
-        <a href="/en-US/docs/MDN/Contribute/Fixing_MDN_content_bugs"
-          >Fixing MDN content bugs</a
-        >
+        <a href="/en-US/docs/MDN/Community/MDN_content">Fixing MDN content bugs</a>
       </td>
       <td>
-        Our <a href="https://github.com/mdn/content/issues">content repo</a> is
-        where people submit issues to report problems found with MDN docs. We get a lot of content bugs, and any help
-        you can give in fixing them would be much appreciated.
+        Our <a href="https://github.com/mdn/content/issues">content repo</a> is where people submit issues to report problems found with MDN docs.
+        We get a lot of content bugs, and any help you can give in fixing them would be much appreciated.
       </td>
       <td>
         <ul>
           <li>
-            Knowledge of the web technologies you choose to help with (e.g.
-            JavaScript, CSS).
+            Knowledge of the web technologies you choose to help with (e.g. JavaScript, CSS).
           </li>
           <li>
-            A reasonable understanding of the English language (don't worry if
-            your English is not perfect; we can help you with it).
+            A reasonable understanding of the English language (don't worry if your English is not perfect; we can help you with it).
           </li>
         </ul>
       </td>
@@ -59,51 +54,40 @@ The links in this section lead to detailed guides explaining how to do a particu
         <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">Reviewing MDN edits</a>
       </td>
       <td>
-        People submit pull requests on our
-        <a href="https://github.com/mdn/content">content repo</a> all the time
-        to update MDN content, and we need help reviewing them. Head over to our
-        <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a>
-        page to find out how the reviewing process works, and how you can get
-        involved.
+        People submit pull requests on our <a href="https://github.com/mdn/content">content repo</a> all the time to update MDN content, and we need help reviewing them.
+        Head over to our <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a> page to find out how the reviewing process works, and how you can get involved.
       </td>
       <td>
         <ul>
           <li>
-            Knowledge of the web technologies you choose to help with (e.g.
-            JavaScript, CSS).
+            Knowledge of the web technologies you choose to help with (e.g. JavaScript, CSS).
           </li>
           <li>
-            A reasonable understanding of the English language (don't worry if
-            your English is not perfect; we can help you with it).
+            A reasonable understanding of the English language (don't worry if your English is not perfect; we can help you with it).
           </li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/MDN/Contribute/Help_beginners"
+        <a href="/en-US/docs/MDN/Community/Learn_forum"
           >Help beginners to learn on MDN</a
         >
       </td>
       <td>
-        Our <a href="/en-US/docs/Learn">Learn web development</a> pages get over
-        a million views per month and has an <a href="/en-US/docs/MDN/Community/Communication_channels">active community</a>
-        where people ask for guidance. We'd love some help with answering technical questions and
-        growing our learning community.
+        Our <a href="/en-US/docs/Learn">Learn web development</a> pages get over a million views per month and has an <a href="/en-US/docs/MDN/Community/Communication_channels">active community</a> where people ask for guidance.
+        We'd love some help with answering technical questions and growing our learning community.
       </td>
       <td>
         <ul>
           <li>
-            Knowledge of the web technologies you choose to help with (e.g.
-            JavaScript, CSS).
+            Knowledge of the web technologies you choose to help with (e.g. JavaScript, CSS).
           </li>
           <li>
-            Enthusiasm for explaining technical topics and helping beginners
-            learn to code.
+            Enthusiasm for explaining technical topics and helping beginners learn to code.
           </li>
           <li>
-            Reasonable proficiency with the English language; it really doesn't
-            need to be perfect.
+            Reasonable proficiency with the English language; it really doesn't need to be perfect.
           </li>
         </ul>
       </td>
@@ -138,4 +122,4 @@ If you are interested in words _and_ code, you could try your hand at the follow
 
 ## Other useful pages
 
-{{LandingPageListSubPages()}}
+{{LandingPageListSubPages}}

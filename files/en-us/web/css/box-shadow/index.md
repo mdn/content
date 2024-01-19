@@ -31,7 +31,7 @@ box-shadow: 10px 5px 5px black;
 
 /* Four length values and a color */
 /* <length> | <length> | <length> | <length> | <color> */
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 
 /* inset, length values, and a color */
 /* <inset> | <length> | <length> | <color> */
@@ -125,9 +125,9 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 blockquote {
   padding: 20px;
   box-shadow:
-    inset 0 -3em 3em rgba(0, 200, 0, 0.3),
+    inset 0 -3em 3em rgb(0 200 0 / 30%),
     0 0 0 2px white,
-    0.3em 0.3em 1em rgba(200, 0, 0, 0.6);
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
 }
 ```
 

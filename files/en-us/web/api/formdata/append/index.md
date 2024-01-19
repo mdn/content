@@ -12,7 +12,7 @@ The **`append()`** method of the {{domxref("FormData")}} interface appends a new
 
 The difference between {{domxref("FormData.set", "set()")}} and `append()` is that if the specified key already exists, `set()` will overwrite all existing values with the new one, whereas `append()` will append the new value onto the end of the existing set of values.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
