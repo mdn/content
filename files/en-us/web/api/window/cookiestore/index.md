@@ -10,7 +10,7 @@ browser-compat: api.Window.cookieStore
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
-The **`cookieStore`** read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CookieStore")}} object for the current document context. This is an entry point of the {{domxref("Cookie Store API", "", "", "nocode")}}.
+The **`cookieStore`** read-only property of the {{domxref("Window")}} interface returns a reference to the {{domxref("CookieStore")}} object for the current document context. This is an entry point for the [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API).
 
 ## Value
 
