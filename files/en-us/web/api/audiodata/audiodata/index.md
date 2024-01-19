@@ -43,7 +43,7 @@ new AudioData(init)
     - `data`
       - : A typed array of the audio data for this sample.
     - `transfer`
-      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `AudioData` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
+      - : An array of {{jsxref("ArrayBuffer")}}s that `AudioData` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `AudioData` will use that buffer directly instead of copying from it.
 
 ## Exceptions
 

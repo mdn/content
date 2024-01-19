@@ -35,7 +35,7 @@ new EncodedAudioChunk(options)
     - `data`
       - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing the audio data.
     - `transfer`
-      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `EncodedAudioChunk` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
+      - : An array of {{jsxref("ArrayBuffer")}}s that `EncodedAudioChunk` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `EncodedAudioChunk` will use that buffer directly instead of copying from it.
 
 
 ## Examples

@@ -42,7 +42,8 @@ new ImageDecoder(init)
     - `preferAnimation` {{optional_inline}}
       - : A {{jsxref("Boolean")}} indicating whether the initial track selection should prefer an animated track.
     - `transfer`
-      - : An array of {{jsxref("ArrayBuffer")}}s that will be moved to `ImageDecoder` rather than copied to its internal memory. (Usually this array only contains a single element equal to an array buffer backing `data`)
+      - : An array of {{jsxref("ArrayBuffer")}}s that `ImageDecoder` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `ImageDecoder` will use that buffer directly instead of copying from it.
+
 
 ## Examples
 
