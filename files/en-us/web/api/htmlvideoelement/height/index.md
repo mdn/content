@@ -22,7 +22,7 @@ A positive integer or 0.
 
 ```js
 const el = document.getElementById("media");
-console.log(el.height) // Output: 600
+console.log(el.height); // Output: 600
 ```
 
 ## Specifications
