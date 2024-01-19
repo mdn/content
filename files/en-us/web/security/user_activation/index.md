@@ -32,6 +32,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("Clients.openWindow()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
+- {{domxref("Clipboard.write()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("ContactsManager.select()")}}
 - {{domxref("Document.requestStorageAccess()")}}

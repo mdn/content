@@ -61,8 +61,8 @@ The following event types are exposed by the Event Timing API:
     <tr>
       <th scope="row">Input events</th>
       <td>
-        {{domxref("HTMLElement/beforeinput_event", "beforeinput")}},
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/beforeinput_event", "beforeinput")}},
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -110,7 +110,7 @@ The following event types are exposed by the Event Timing API:
 </table>
 
 Note that the following events are not included in the list because they are continuous events and no meaningful event counts or performance metrics can be obtained at this point: {{domxref("Element/mousemove_event", "mousemove")}}, {{domxref("Element/pointermove_event", "pointermove")}},
-{{domxref("HTMLElement/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
+{{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}}, {{domxref("Element/touchmove_event", "touchmove")}}, {{domxref("Element/wheel_event", "wheel")}}, {{domxref("HTMLElement/drag_event", "drag")}}.
 
 To get a list of all exposed events, you can also look up keys in the {{domxref("performance.eventCounts")}} map:
 

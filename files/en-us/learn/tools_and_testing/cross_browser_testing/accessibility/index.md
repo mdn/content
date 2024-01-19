@@ -288,7 +288,6 @@ There are a number of auditing tools available that you can feed your web pages 
 
 - [Wave](https://wave.webaim.org/): A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.
 - [Tenon](https://tenon.io): Another nice online tool that goes through the code at a provided URL and returns results on accessibility errors including metrics, specific errors along with the WCAG criteria they affect, and suggested fixes. It requires a free trial signup to view the results.
-- [tota11y](https://github.com/jdan/tota11y): An accessibility tool from the Khan Academy that takes the form of a JavaScript library that you attach to your page to provide a number of accessibility tools.
 
 Let's look at an example, using Wave.
 
