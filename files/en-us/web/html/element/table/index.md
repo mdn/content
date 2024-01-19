@@ -59,7 +59,7 @@ Use CSS {{cssxref("border")}} properties instead.
 
 - `rules` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute defines where rules, i.e. borders, are displayed in a table. The single keyword value can be set to `none`, `groups` for {{HTMLElement("thead")}},  {{HTMLElement("tbody")}}, and  {{HTMLElement("tfoot")}}, `rows` for horizontal lines, `cols` for vertical lines, or `all` to add a border around every cell. Use the CSS {{cssxref("border")}} properties to add border to  {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("colgroup")}}, or {{HTMLElement("col")}}, {{HTMLElement("th")}}, and {{HTMLElement("td")}} elements, as well as the {{HTMLElement("table")}} itself, instead.
+  - : This {{Glossary("enumerated", "enumerated")}} attribute defines where rules, i.e. borders, are displayed in a table. The single keyword value can be set to `none`, `groups` for {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}}, `rows` for horizontal lines, `cols` for vertical lines, or `all` to add a border around every cell. Use the CSS {{cssxref("border")}} properties to add border to {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("colgroup")}}, or {{HTMLElement("col")}}, {{HTMLElement("th")}}, and {{HTMLElement("td")}} elements, as well as the {{HTMLElement("table")}} itself, instead.
 
     - `none`, which indicates that no rules will be displayed (it's the default value);
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("colgroup")}} and {{HTMLElement("col")}} elements) only;
@@ -73,12 +73,11 @@ Use CSS {{cssxref("border")}} properties instead.
 
   - : This attribute defines an alternative text that summarizes the content of the table. This element is deprecated. Use the {{htmlelement("caption")}} element instead.
 
-
 - `width` {{deprecated_inline}}
 
   - : This attribute specifies the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
-    > **Note:**  While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the CSS {{cssxref("min-height")}} property instead.
+    > **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the CSS {{cssxref("min-height")}} property instead.
 
 ## Examples
 
