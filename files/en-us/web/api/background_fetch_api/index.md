@@ -4,7 +4,11 @@ slug: Web/API/Background_Fetch_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.BackgroundFetchManager
+browser-compat:
+  - api.BackgroundFetchManager
+  - api.BackgroundFetchRegistration
+  - api.BackgroundFetchRecord
+spec-urls: https://wicg.github.io/background-fetch/
 ---
 
 {{DefaultAPISidebar("Background Fetch API")}} {{SeeCompatTable}}
