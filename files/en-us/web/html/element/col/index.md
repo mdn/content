@@ -76,9 +76,10 @@ The following attributes are deprecated and should not be used. They are documen
 The `<col>` element is used within a {{HTMLElement("colgroup")}} element that doesn't have a `span` attribute. The `<col>` elements does not structurally group columns together. This is the role of the {{HTMLElement("colgroup")}} element.
 
 Only a limited number of CSS properties affect columns:
--   {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set. 
-- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column, but will only be visible if the cell and row backgrounds are transparent. 
-- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set. 
+
+- {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
+- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column, but will only be visible if the cell and row backgrounds are transparent.
+- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
 - {{cssxref("visibility")}}: The {{cssxref("visibility")}} property is also supported.
 
 - {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
