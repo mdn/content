@@ -38,12 +38,11 @@ The following attributes are deprecated and should not be used. They are documen
 
   - : This attribute defines the background color of the column's cells. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`' or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("&lt;color&gt")}} values are not supported.
 
-    > **Note:** Do not use this attribute as it is deprecated; use the CSS {{cssxref("background-color")}} property instead. As the column background color is painted on top of the table, but behind background colors applied to the row, the {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfood")}},  and the individual cells, backgrounds applied to table columns are only visible if every layer painted on top of them has a transparent background.
+    > **Note:** Do not use this attribute as it is deprecated; use the CSS {{cssxref("background-color")}} property instead. As the column background color is painted on top of the table, but behind background colors applied to the row, the {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfood")}}, and the individual cells, backgrounds applied to table columns are only visible if every layer painted on top of them has a transparent background.
 
 - `char` {{deprecated_inline}}
 
   - : This attribute specifies the alignment of the content to a character in column cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
 
 - `charoff` {{deprecated_inline}}
 
@@ -82,6 +81,10 @@ Only a limited number of CSS properties affect columns:
 - {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set. 
 - {{cssxref("visibility")}}: The {{cssxref("visibility")}} property is also supported.
 
+- {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
+- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column, but will only be visible if the cell and row backgrounds are transparent.
+- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
+- {{cssxref("visibility")}}: The {{cssxref("visibility")}} property is also supported.
 
 ## Example
 
@@ -137,6 +140,7 @@ A {{HTMLElement("colgroup")}} element provides structures to a basic table, crea
 ### CSS
 
 We use CSS instead of deprecated HTML attributes to provide a background color to the columns and align the cell content:
+
 ```css
 table {
   border-collapse: collapse;
@@ -144,7 +148,8 @@ table {
 caption {
   caption-side: bottom;
 }
-th, td {
+th,
+td {
   border: 1px solid rgb(140 140 140);
   text-align: center;
 }
