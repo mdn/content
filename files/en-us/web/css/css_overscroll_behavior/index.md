@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-overscroll/
 
 {{CSSRef}}
 
-The **CSS overscroll behavior** module provides properties to control the behavior of a scroll container when its scroll position reaches the scroll boundary. Controlling this aspect is particularly useful in scenarios where embedded scrollable areas should not trigger scrolling of the parent container.
+The **CSS overscroll behavior** module provides properties to control the behavior of a {{Glossary("Scroll_container", "scroll container")}} when its scroll position reaches the {{Glossary("Scroll_boundary", "scroll boundary")}}. Controlling this aspect is particularly useful in scenarios where embedded scrollable areas should not trigger scrolling of the parent container.
 
-When commenting on a blog, you might notice that if your comment exceeds the length of the provided {{htmlelement("textarea")}}, scrolling beyond the end of the text area causes the entire blog to scroll. This is because reaching the end of a scrollable area, known as the scroll boundary, can lead to scrolling other content or the entire page. This continuous scrolling experience is called {{Glossary("Scroll_chaining", "scroll chaining")}}.
+When commenting on a blog, you might notice that if your comment exceeds the length of the provided {{htmlelement("textarea")}}, scrolling beyond the end of the text area causes the entire blog to scroll. This is because reaching the end of a scrollable area, known as the {{Glossary("Scroll_boundary", "scroll boundary")}}, can lead to scrolling other content or the entire page. This continuous scrolling experience is called {{Glossary("Scroll_chaining", "scroll chaining")}}.
 
 In situations where the contents of an element are larger than its container and {{cssxref("overflow")}} allows or defaults to scrolling (like in `<textarea>`), continued scrolling past the element's scrollable area will initiate scrolling in the parent element or the underlying page.
 
