@@ -51,11 +51,11 @@ When `opacity` value is set to `0`, the element and all of its children appear i
 
 Using `opacity` with a value other than `1` places the element in a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
 
-Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, but if the element is hidden with opacity then hide it from screen readers too.
+Opacity alone should not be used to provide information to screen readers. Use the HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute, CSS [`visibility`](/en-US/docs/Web/CSS/visibility), or CSS [`display`](/en-US/docs/Web/CSS/display) style properties. It's best to avoid using [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) attribute, but if the element is hidden with opacity, then hide it from screen readers as well.
 
 ### Transitioning opacity
 
-When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden) you need to include both [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behaviour: allow-descrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete):
+When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of elements as you add them to the page when content was formerly hidden with [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), [`display: none`](/en-US/docs/Web/CSS/display#none), or [`content-visibility: hidden`](/en-US/docs/Web/CSS/content-visibility#hidden), you need to include both a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) and [`transition-behaviour: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete):
 
 ```css
 .card {
@@ -76,9 +76,9 @@ When [transitioning](/en-US/docs/Web/CSS/CSS_transitions) the opacity of element
 }
 ```
 
-To enable first-style transitions, `@starting-style` rules are needed. In above code, setting `opacity: 0` in `@starting-style` provides starting point for the transition when the element receives initial style update. For more details refer [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) page.
+To enable first-style transitions, `@starting-style` rules are needed. In the above code, setting `opacity: 0` in `@starting-style` provides a starting point for the transition when the element receives its initial style update. For more details, see [`@starting-style`](/en-US/docs/Web/CSS/@starting-style).
 
-Setting `transition-behaviour: allow-descrete` is required to transition to `display: none`. For more details refer [`transition-behaviour`](/en-US/docs/Web/CSS/transition-behavior) page.
+Setting `transition-behavior: allow-discrete` is required to transition to `display: none`. See the [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior) property for more details.
 
 ## Accessibility concerns
 
