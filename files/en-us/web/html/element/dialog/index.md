@@ -338,7 +338,7 @@ dialog {
 
 /* Transition the :backdrop when the dialog modal is promoted to the top layer */
 dialog::backdrop {
-  background-color: rgb(0 0 0 / 0);
+  background-color: rgb(0 0 0 / 0%);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -348,7 +348,7 @@ dialog::backdrop {
 }
 
 dialog[open]::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 
 /* This starting-style rule cannot be nested inside the above selector
@@ -356,7 +356,7 @@ because the nesting selector cannot represent pseudo-elements. */
 
 @starting-style {
   dialog[open]::backdrop {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
@@ -462,11 +462,11 @@ dialog[open]::backdrop {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 
   100% {
-    background-color: rgb(0 0 0 / 0.25);
+    background-color: rgb(0 0 0 / 25%);
   }
 }
 
@@ -547,7 +547,7 @@ The code renders as follows:
   </tbody>
 </table>
 
-## Accessibility considerations
+## Accessibility concerns
 
 When implementing a dialog, it is important to consider the most appropriate place to set user focus. When using {{domxref("HTMLDialogElement.showModal()")}} to open a `<dialog>`, focus is set on the first nested focusable element. Explicitly indicating the initial focus placement by using the [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus) attribute will help ensure initial focus is set on the element deemed the best initial focus placement for any particular dialog. When in doubt, as it may not always be known where initial focus could be set within a dialog, particularly for instances where a dialog's content is dynamically rendered when invoked, the `<dialog>` element itself may provide the best initial focus placement.
 

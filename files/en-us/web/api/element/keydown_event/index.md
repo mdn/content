@@ -39,7 +39,7 @@ onkeydown = (event) => {};
 
 ## Event type
 
-A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("KeyboardEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("KeyboardEvent")}}
 
@@ -117,6 +117,6 @@ input.onkeydown = logKey;
 
 ## See also
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
+- [`input`](/en-US/docs/Web/API/Element/input_event)
 - [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
 - [`keyup`](/en-US/docs/Web/API/Element/keyup_event)

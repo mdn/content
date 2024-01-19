@@ -88,7 +88,7 @@ section {
   height: 150px;
 }
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
 .box[style] {
@@ -99,7 +99,7 @@ section {
   float: left;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 50%);
   border: 1px solid black;
   padding: 10px;
 }
@@ -133,7 +133,7 @@ section {
   height: 150px;
 }
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
 }
 .box[style] {
@@ -147,7 +147,7 @@ section {
   margin-right: 25px;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(255 255 255 / 75%);
   border: 1px solid black;
   padding: 10px;
 }

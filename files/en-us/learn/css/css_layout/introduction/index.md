@@ -77,7 +77,7 @@ The methods that can change how elements are laid out in CSS are:
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
-- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to layout in columns, as you might see in a newspaper.
+- **Multi-column layout** — The [Multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) properties can cause the content of a block to lay out in columns, as you might see in a newspaper.
 
 ## The display property
 
