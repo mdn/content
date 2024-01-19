@@ -21,20 +21,16 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute indicates how the caption must be aligned with respect to the table. Possible values are:
+  - : This deprecated {{Glossary("enumerated", "enumerated")}} attribute accepts `left`, `top`, `right`, or `bottom` as a value to indicate which side of the table the caption should be displayed. Use the {{cssxref("caption-side")}} and {{cssxref("text-align")}} CSS properties instead.
 
-    - `left`: the caption is displayed to the left of the table;
-    - `top`: the caption is displayed above the table;
-    - `right`: the caption is displayed to the right of the table;
-    - `bottom`: the caption is displayed below the table.
 
     > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}} properties instead.
 
 ## Usage notes
 
-- If used, the `<caption>` element must be the first child of its parent {{htmlelement("table")}} element.
-- When the {{HTMLElement("table")}} element that contains the `<caption>` is the only descendant of a {{HTMLElement("figure")}} element, you should use the {{HTMLElement("figcaption")}} element instead of `<caption>`.
-- A {{cssxref("background-color")}} on the table will not include the caption. Add a `background-color` to the `<caption>` element as well if you want the same color to be behind both.
+- If included, the `<caption>` element must be the first child of its parent {{htmlelement("table")}} element.
+- When a `<table>` is nested within a {{HTMLElement("figure")}} as the figure's only content, it should be captioned via a {{HTMLElement("figcaption")}} for the `<figure>` instead of as a `<caption>` nested within the `<table>`.
+- Any {{cssxref("background-color")}} applied to a table will not be applied to its caption. Add a `background-color` to the `<caption>` element as well if you want the same color to be behind both.
 
 ## Example
 
@@ -76,7 +72,7 @@ caption {
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -84,12 +80,12 @@ table {
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
 th {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(230 230 230);
 }
 
 td {
@@ -164,9 +160,8 @@ td {
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties that may be specially useful to style the `<caption>` element:
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
 
-  - the {{cssxref("background-color")}} property to set the background color of the caption;
-  - the {{cssxref("caption-side")}} and {{cssxref("text-align")}} properties to align the caption content with respect to the table.
+  - {{cssxref("caption-side")}} CSS property
+  - {{cssxref("text-align")}} CSS property
