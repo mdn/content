@@ -73,8 +73,17 @@ editContext.addEventListener("characterboundsupdate", (e) => {
     charBounds.push(computeCharacterBound(offset));
   }
 
-  console.log("The required character bounds are", charBounds);
+  // Update the character bounds in the EditContext instance.
   editContext.updateCharacterBounds(e.rangeStart, charBounds);
+
+  console.log(
+    "The required character bounds are",
+    charBounds
+      .map((bound) => {
+        return `(x: ${bound.x}, y: ${bound.y}, width: ${bound.width}, height: ${bound.height})`;
+      })
+      .join(", "),
+  );
 });
 ```
 
