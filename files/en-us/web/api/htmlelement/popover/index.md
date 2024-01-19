@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLElement.popover
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Popover API")}}
 
 The **`popover`** property of the {{domxref("HTMLElement")}} interface gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection.
 
@@ -62,4 +62,5 @@ if (popoverSupported) {
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

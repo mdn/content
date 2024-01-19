@@ -8,7 +8,7 @@ browser-compat: api.History.go
 
 {{APIRef("History API")}}
 
-The **`History.go()`** method loads a specific page from the
+The **`go()`** method of the {{domxref("History")}} interface loads a specific page from the
 session history. You can use it to move forwards and backwards through the history
 depending on the value of a parameter.
 
@@ -34,6 +34,11 @@ go(delta)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active.
 
 ## Examples
 

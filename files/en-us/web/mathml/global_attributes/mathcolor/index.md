@@ -33,19 +33,13 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 <!-- <rgb()> values -->
 <math mathcolor="rgb(34, 12, 64, 0.6)">
-<math mathcolor="rgba(34, 12, 64, 0.6)">
 <math mathcolor="rgb(34 12 64 / 0.6)">
-<math mathcolor="rgba(34 12 64 / 0.3)">
-<math mathcolor="rgb(34.0 12 64 / 60%)">
-<math mathcolor="rgba(34.6 12 64 / 30%)">
+<math mathcolor="rgb(34.6 12 64 / 60%)">
 
 <!-- <hsl()> values -->
 <math mathcolor="hsl(30, 100%, 50%, 0.6)">
-<math mathcolor="hsla(30, 100%, 50%, 0.6)">
 <math mathcolor="hsl(30 100% 50% / 0.6)">
-<math mathcolor="hsla(30 100% 50% / 0.6)">
-<math mathcolor="hsl(30.0 100% 50% / 60%)">
-<math mathcolor="hsla(30.2 100% 50% / 60%)">
+<math mathcolor="hsl(30.2 100% 50% / 60%)">
 
 <!-- <hwb()> values -->
 <math mathcolor="hwb(90 10% 10%)">
