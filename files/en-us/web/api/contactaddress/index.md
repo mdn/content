@@ -9,7 +9,7 @@ browser-compat: api.ContactAddress
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The **`ContactAddress`** interface of the {{domxref("Contact Picker API")}} represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactsManager.getProperties()")}}.
+The **`ContactAddress`** interface of the [Contact Picker API](/en-US/docs/Web/API/Contact_Picker_API) represents a physical address. Instances of this interface are retrieved from the `address` property of the objects returned by {{domxref("ContactsManager.getProperties()")}}.
 
 It may be useful to refer to the Universal Postal Union website's [Addressing S42 standard](https://www.upu.int/en/Postal-Solutions/Programmes-Services/Addressing-Solutions#addressing-s42-standard) materials, which provide information about international standards for postal addresses.
 
