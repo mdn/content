@@ -14,6 +14,17 @@ The **`width`** property of the {{domxref("HTMLVideoElement")}} interface return
 
 A positive integer or 0.
 
+## Examples
+
+```html
+<video id="media" width="800" height="600"></video>
+```
+
+```js
+const el = document.getElementById("media");
+console.log(el.width) // Output: 800
+```
+
 ## Specifications
 
 {{Specifications}}

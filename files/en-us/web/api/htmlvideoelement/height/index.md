@@ -14,6 +14,17 @@ The **`height`** property of the {{domxref("HTMLVideoElement")}} interface retur
 
 A positive integer or 0.
 
+## Examples
+
+```html
+<video id="media" width="800" height="600"></video>
+```
+
+```js
+const el = document.getElementById("media");
+console.log(el.height) // Output: 600
+```
+
 ## Specifications
 
 {{Specifications}}
