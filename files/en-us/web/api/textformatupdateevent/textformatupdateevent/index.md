@@ -13,12 +13,14 @@ The **`TextFormatUpdateEvent()`** constructor returns a new {{DOMxRef("TextForma
 ## Syntax
 
 ```js-nolint
-new TextFormatUpdateEvent()
-new TextFormatUpdateEvent(options)
+new TextFormatUpdateEvent(type)
+new TextFormatUpdateEvent(type, options)
 ```
 
 ### Parameters
 
+- `type`
+  - : A string representing the type of the event. Possible values: `"textformatupdate"`.
 - `options` {{optional_inline}}
   - : An optional object with the following properties:
     - `textFormats`
