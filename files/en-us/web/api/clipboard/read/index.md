@@ -23,8 +23,11 @@ read(formats)
 ### Parameters
 
 - `formats` {{optional_inline}}
+
   - : An optional object with the following properties:
+
     - `unsanitized` {{optional_inline}}
+
       - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
 
         Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
@@ -250,14 +253,15 @@ Notes:
 
 This example uses the `formats` parameter to read HTML data from the clipboard and get the code in its original form, without the browser sanitizing it first.
 
-Note that, currently, only Chromium-based browsers support the `formats` parameter.
-
 #### HTML
 
 ```html
 <textarea id="source" rows="5">
-<style>h1 {color: red;} p {color: blue;}</style><h1>Hello world!</h1><p>This is a test.</p><script>alert('Hello world!');</script></textarea
->
+  <style>h1 {color: red;} p {color: blue;}</style>
+  <h1>Hello world!</h1>
+  <p>This is a test.</p>
+  <script>alert('Hello world!');</script>
+</textarea>
 <button id="copy">Copy HTML</button>
 <button id="paste_normal">Paste HTML</button>
 <button id="paste_unsanitized">Paste unsanitized HTML</button>
@@ -309,18 +313,15 @@ async function getHTMLFromClipboardContents(clipboardContents) {
     }
   }
 
-  destinationTextarea.value =
-    "Could not find HTML data in the clipboard. Please use the copy button first.";
-  return "";
+  return null;
 }
 
 pasteButton.addEventListener("click", async () => {
   try {
     const clipboardContents = await navigator.clipboard.read();
     const html = await getHTMLFromClipboardContents(clipboardContents);
-    if (html) {
-      destinationTextarea.value = html;
-    }
+    destinationTextarea.value =
+      html || "Could not find HTML data in the clipboard.";
   } catch (error) {
     destinationTextarea.value = `Clipboard read failed: ${error}`;
   }
@@ -332,9 +333,8 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
       unsanitized: ["text/html"],
     });
     const html = await getHTMLFromClipboardContents(clipboardContents);
-    if (html) {
-      destinationTextarea.value = html;
-    }
+    destinationTextarea.value =
+      html || "Could not find HTML data in the clipboard.";
   } catch (error) {
     destinationTextarea.value = `Clipboard read failed: ${error}`;
   }
