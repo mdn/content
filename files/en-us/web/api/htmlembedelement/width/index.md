@@ -14,6 +14,17 @@ The **`width`** property of the {{domxref("HTMLEmbedElement")}} interface return
 
 A string.
 
+## Examples
+
+```html
+<embed id="el" width="800" height="600" />
+```
+
+```js
+const el = document.getElementById("el");
+console.log(el.width); // Output: '800'
+```
+
 ## Specifications
 
 {{Specifications}}

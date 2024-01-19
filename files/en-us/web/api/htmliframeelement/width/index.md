@@ -14,6 +14,17 @@ The **`width`** property of the {{domxref("HTMLIFrameElement")}} interface retur
 
 A string.
 
+## Examples
+
+```html
+<iframe id="el" width="800" height="600"></iframe>
+```
+
+```js
+const el = document.getElementById("el");
+console.log(el.width); // Output: '800'
+```
+
 ## Specifications
 
 {{Specifications}}

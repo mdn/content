@@ -14,6 +14,17 @@ The **`height`** property of the {{domxref("HTMLIFrameElement")}} interface retu
 
 A string.
 
+## Examples
+
+```html
+<iframe id="el" width="800" height="600"></iframe>
+```
+
+```js
+const el = document.getElementById("el");
+console.log(el.height); // Output: '600'
+```
+
 ## Specifications
 
 {{Specifications}}
