@@ -21,29 +21,23 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute indicates how the table must be aligned inside the containing document. Possible values are:
+  - : This {{Glossary("enumerated", "enumerated")}} attribute indicates how the table must be aligned inside the containing document. Possible values include `left`, `center`, and `right`. Use the CSS {{cssxref("margin-inline-start")}} and {{cssxref("margin-inline-end")}} properties instead:
 
     - `left`: the table is displayed on the left side of the document;
     - `center`: the table is displayed in the center of the document;
     - `right`: the table is displayed on the right side of the document.
 
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("margin-right")}} and {{cssxref("margin-left")}} properties instead.
-    >
-    > - `left`: `margin-right: auto; margin-left: 0;`
-    > - `center`: `margin-right: auto; margin-left: auto;`
-    > - `right`: `margin-right: 0; margin-left: auto;`
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each table cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
+  - : Defines the background color of the table. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("&lt;color&gt")}} values are not supported. Use the CSS {{cssxref("background-color")}} property instead.
 
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
 
 - `border` {{deprecated_inline}}
 
   - : This integer attribute defines, in pixels, the size of the frame surrounding the table. If set to `0`, the [`frame`](#frame) attribute is set to void.
 
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("border")}} property instead.
+Use CSS {{cssxref("border")}} properties instead.
 
 - `cellpadding` {{deprecated_inline}}
 
@@ -65,7 +59,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `rules` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute defines where rules, i.e. lines, are displayed in a table. Possible values are:
+  - : This {{Glossary("enumerated", "enumerated")}} attribute defines where rules, i.e. borders, are displayed in a table. The single keyword value can be set to `none`, `groups` for {{HTMLElement("thead")}},  {{HTMLElement("tbody")}}, and  {{HTMLElement("tfoot")}}, `rows` for horizontal lines, `cols` for vertical lines, or `all` to add a border around every cell. Use the CSS {{cssxref("border")}} properties to add border to  {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("colgroup")}}, or {{HTMLElement("col")}}, {{HTMLElement("th")}}, and {{HTMLElement("td")}} elements, as well as the {{HTMLElement("table")}} itself, instead.
 
     - `none`, which indicates that no rules will be displayed (it's the default value);
     - `groups`, which will cause the rules to be displayed between row groups (defined by the {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} and {{HTMLElement("tfoot")}} elements) and between column groups (defined by the {{HTMLElement("colgroup")}} and {{HTMLElement("col")}} elements) only;
@@ -77,29 +71,32 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `summary` {{deprecated_inline}}
 
-  - : This attribute defines an alternative text that summarizes the content of the table.
+  - : This attribute defines an alternative text that summarizes the content of the table. This element is deprecated. Use the {{htmlelement("caption")}} element instead.
 
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the {{htmlelement("caption")}} element instead.
 
 - `width` {{deprecated_inline}}
 
-  - : This attribute specifies the width of the table.
+  - : This attribute specifies the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("width")}} property instead.
-    >
-    > While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
+    > **Note:**  While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the CSS {{cssxref("min-height")}} property instead.
 
 ## Examples
 
-You'll find some examples below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right structuring for your tabular data. Visit the [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables) guide in our [Learn web development](/en-US/docs/Learn) area to learn about table styling and some common and useful styling techniques.
+The examples below include tables of progressively increasing complexity. For additional examples, including an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in the [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to correctly structure your tabular data. A [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables) guide provides table styling information, including common, useful techniques.
 
 Since the structure of a `<table>` involves the use of several table-related HTML elements along with various associated attributes, the following examples are intended to provide a simplified explanation that covers the basics and common standards. Additional and more detailed information can be found on the corresponding linked pages.
 
-### Basic table rows and columns
+These table examples demonstrate how a complete and {{Glossary("accessibility", "accessible")}} table is structured with HTML and styled with [CSS](/en-US/docs/Web/CSS).
 
-This example introduces a _very_ basic table with three rows and two columns. The table rows are defined with {{HTMLElement("tr")}} elements, and the columns are defined with table header and data cells within them.
+Because of how HTML tables are structured, the {{Glossary("markup", "markup")}} can quickly grow. For this reason, it is important to clearly define the table's purpose and final appearance to create the appropriate structure. A logical structure developed with {{Glossary("semantics", "semantic")}} markup is not only easier to style, but enables useful and accessible tables that can be understood and navigated by everyone, including search engines and users of assistive technologies.
 
-The first row contains the header cells ({{HTMLElement("th")}} elements) that serve as column headers for the data cells ({{HTMLElement("td")}} elements). Each element ({{HTMLElement("th")}} or {{HTMLElement("td")}}) per row is in its respective column—that is, the first element of a row is in the first column, and the second element of that row is in the second column.
+The first examples are very basic. First, we will develop a very basic HTML table structure of the table. The first examples contain no table content groups such as a defined header, body, and foot, and involves no cell or row spanning or explicitly defined cell relationships. Not even a caption is provided. As we work through the examples, they will be progressively enhanced to include all the table features a complex data table should possess.
+
+### Basic table
+
+This example includes a _very_ basic table with three rows and two columns. To demonstrate default browser table styles, no CSS has been included in this example.
+
+The table rows are defined with {{HTMLElement("tr")}} elements, and the columns are defined with table header and data cells within them. The first row contains the header cells ({{HTMLElement("th")}} elements) that serve as column headers for the data cells ({{HTMLElement("td")}} elements). Each element ({{HTMLElement("th")}} or {{HTMLElement("td")}}) per row is in its respective column—that is, the first element of a row is in the first column, and the second element of that row is in the second column.
 
 ```html
 <table>
@@ -120,21 +117,17 @@ The first row contains the header cells ({{HTMLElement("th")}} elements) that se
 
 #### Result
 
-{{EmbedLiveSample('Basic_table_rows_and_columns', 650, 80)}}
+{{EmbedLiveSample('Basic_table', 650, 80)}}
 
 > **Note:** There is no custom [CSS](/en-US/docs/Web/CSS) or [user stylesheet](/en-US/docs/Web/CSS/Cascade#author_stylesheets) for the [table in this example](#basic_rows_and_columns). The styling results purely from the [user-agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets).
 
 ### Practical table structure, accessibility and styling
 
-This practical table example will guide you through the process of creating a complete and {{Glossary("accessibility", "accessible")}} table structure in HTML and styling it with [CSS](/en-US/docs/Web/CSS) using common practices.
+### Expanded table with header
 
-The goal of this more detailed example of a basic table is to create an accessible yet visually appealing table that displays a list of people's names along with information about their membership in a club.
+This example extends the [basic table](#basic_table), extending the content and adding basic CSS styles.
 
-#### Basic table setup
-
-Because of the way a `<table>` must be structured in HTML, the {{Glossary("markup", "markup")}} can quickly grow into numerous lines of code. For this reason, it's important to have a clear idea of what the table should look like in the end. If the HTML markup of the table is prepared in a good and logical way, it's not only {{Glossary("semantics", "semantically")}} correct and helpful for assistive technologies, but it also makes it easier to style the individual parts of the table later in the CSS.
-
-##### HTML
+#### HTML
 
 First, the very basic HTML structure of the table is created. There are no table content groups such as a head or foot, no cells span multiple rows or columns, no relationships between cells are explicitly defined, and no table caption is provided—for now. Basic styling is then added to create lines around the components of the table to make the data structure clearer.
 
@@ -171,7 +164,7 @@ The table comprises four rows ({{HTMLElement("tr")}} elements), including a head
 
 ##### CSS
 
-This CSS simply adds a solid border around the `<table>` and around each of the table's cells, including those specified with both {{HTMLElement("th")}} and {{HTMLElement("td")}} elements. That way, both header and data cells are demarcated.
+With CSS, we provide the basic styling to create lines around the components of the table to make the data structure clearer. The CSS adds a solid border around the `<table>` and around each of the table's cells, including those specified with both {{HTMLElement("th")}} and {{HTMLElement("td")}} elements, demarcating every header and data cells.
 
 ```css
 table {
