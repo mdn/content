@@ -6,17 +6,13 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [November 21, 2023](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
+This article provides information about the changes in Firefox 120 that affect developers. Firefox 120 was released on [November 21, 2023](https://whattrainisitnow.com/release/?version=120).
 
 ## Changes for web developers
-
-### Developer tools
 
 ### HTML
 
 - Support for the `media` attribute in the [`<source>`](/en-US/docs/Web/HTML/Element/source) element has been reintroduced and expanded to include `<audio>` and `<video>` elements. This attribute was first added in Firefox 15 but was removed in Firefox 53 when its use was limited to `<source>` element within `<picture>`. With this release, the `media` attribute will be available in `<source>` elements within `<audio>`, `<video>`, and `<picture>` ([Firefox bug 1836128](https://bugzil.la/1836128)).
-
-#### Removals
 
 ### CSS
 
@@ -42,17 +38,18 @@ This article provides information about the changes in Firefox 120 that affect d
     These dates will be parsed with behavior typical of other non-ISO dates, such as local time zone and month rollover (April 31 rolls over to May 1 since April 31 doesn't exist).
 
   - Requirements for characters directly following numbers have been loosened to accept new formats ([Firefox bug 449921](https://bugzil.la/449921)), including:
+
     - `"DDMonYYYY"`
     - `"Mon.DD.YYYY"`
     - `"DD.Mon.YYYY"`
     - `"YYYY.MM.DD"`
     - `"Mon DD YYYY hh:mmXm"` (`am`/`pm` directly following time)
 
-#### Removals
+  - Timezone `'Z'` is now accepted for non-ISO formats (e.g. `Jan 1 1970 10:00Z`) ([Firefox bug 1852422](https://bugzil.la/1852422))
 
 ### SVG
 
-#### Removals
+No notable changes
 
 ### HTTP
 
@@ -62,11 +59,9 @@ This article provides information about the changes in Firefox 120 that affect d
   Users can enable the header, in both normal and private browsing modes, by setting the preference `privacy.globalprivacycontrol.enabled` to `true` (in `about:config`).
   The {{domxref("Navigator.globalPrivacyControl")}} and {{domxref("WorkerNavigator.globalPrivacyControl")}} properties allow JavaScript to check the user consent preference ([Firefox bug 1856029](https://bugzil.la/1856029)).
 
-#### Removals
-
 ### Security
 
-#### Removals
+No notable changes
 
 ### APIs
 
@@ -76,29 +71,16 @@ This article provides information about the changes in Firefox 120 that affect d
 - The {{domxref("Navigator.userActivation")}} property and {{domxref("UserActivation")}} interface are now supported.
   These can be used to check whether the user is interacting with the page, or has interacted with it since page load (see [Firefox bug 1791079](https://bugzil.la/1791079)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
-
-#### General
 
 #### WebDriver BiDi
 
-#### Marionette
+- Added serialization support for `Proxy` and `Generator` objects ([Firefox bug 1841786](https://bugzil.la/1841786)).
+- Added `authChallenges` property (the list of authentication challenges present in the headers), to `responseStarted` and `responseCompleted` network events, which will be useful in order to handle the upcoming `network.authRequired` event ([Firefox bug 1855149](https://bugzil.la/1855149)).
 
 ## Changes for add-on developers
 
-### Removals
-
-### Other
+No notable changes
 
 ## Older versions
 

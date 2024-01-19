@@ -312,6 +312,10 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
+    "BufferedChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ByteLengthQueuingStrategy": {
       "inh": "",
       "impl": []
@@ -1932,6 +1936,10 @@
       "inh": "AnimationEffect",
       "impl": []
     },
+    "KeyFrameRequestEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "KHR_parallel_shader_compile": {
       "inh": "",
       "impl": []
@@ -1994,6 +2002,14 @@
     },
     "Magnetometer": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
       "impl": []
     },
     "MathMLElement": {
@@ -2228,6 +2244,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "NavigationActivation": {
+      "inh": "",
+      "impl": []
+    },
     "NavigationCurrentEntryChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -2452,6 +2472,10 @@
       "inh": "PerformanceEntry",
       "impl": []
     },
+    "PerformanceLongAnimationFrameTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceLongTaskTiming": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -2485,6 +2509,10 @@
       "impl": []
     },
     "PerformanceResourceTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
+    "PerformanceScriptTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },
@@ -2821,7 +2849,7 @@
       "impl": []
     },
     "RTCRtpScriptTransformer": {
-      "inh": "",
+      "inh": "EventTarget",
       "impl": []
     },
     "RTCRtpSender": {

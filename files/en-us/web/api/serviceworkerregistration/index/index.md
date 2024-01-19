@@ -14,6 +14,8 @@ The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref('ContentIndex')}} object.
@@ -55,5 +57,5 @@ const contentIndex = self.registration.index;
 ## See also
 
 - {{domxref("Content Index API")}}
-- [An introductory article on the Content Index API](https://developer.chrome.com/articles/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

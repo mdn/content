@@ -21,8 +21,6 @@ The {{domxref('PeriodicSyncManager')}} interface is available through {{domxref(
 
 As this API relies on service workers, functionality provided by this API is only available in a secure context.
 
-> **Note:** At the time of writing, the Web Periodic Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps)
-
 ## Web Periodic Background Synchronization Interfaces
 
 - {{domxref('PeriodicSyncManager')}}
@@ -104,5 +102,5 @@ self.addEventListener("periodicsync", (event) => {
 
 ## See also
 
-- [An article on using Periodic Background Sync](https://developer.chrome.com/articles/periodic-background-sync/)
+- [An article on using Periodic Background Sync](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

@@ -88,7 +88,7 @@ function isPowerOf2(value) {
 
 The `loadTexture()` routine starts by creating a WebGL texture object `texture` by calling the WebGL {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} function. It then uploads a single blue pixel using {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}. This makes the texture immediately usable as a solid blue color even though it may take a few moments for our image to download.
 
-To load the texture from the image file, it then creates an `Image` object and assigns the `src` to the URL for our image we wish to use as our texture. The function we assign to `image.onload` will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we setup filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.
+To load the texture from the image file, it then creates an `Image` object and assigns the `src` to the URL for our image we wish to use as our texture. The function we assign to `image.onload` will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we set up filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.
 
 WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it can not generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
 
@@ -105,7 +105,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 ```
 
-Again, with these parameters, compatible WebGL devices will automatically accept any resolution for that texture (up to their maximum dimensions). Without performing the above configuration, WebGL requires all samples of NPOT textures to fail by returning transparent black: `rgba(0,0,0,0)`.
+Again, with these parameters, compatible WebGL devices will automatically accept any resolution for that texture (up to their maximum dimensions). Without performing the above configuration, WebGL requires all samples of NPOT textures to fail by returning transparent black: `rgb(0 0 0 / 0%)`.
 
 To load the image, add a call to our `loadTexture()` function within our `main()` function. This can be added after the `initBuffers(gl)` call.
 
@@ -226,9 +226,10 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
+    out vec4 fragColor;
 
     void main(void) {
-      gl_FragColor = texture2D(uSampler, vTextureCoord);
+      fragColor = texture(uSampler, vTextureCoord);
     }
   `;
 ```

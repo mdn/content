@@ -67,4 +67,4 @@ document.getElementById("pitch").addEventListener("change", (e) => {
 ## See also
 
 - {{domxref("HTMLMediaElement.playbackRate")}}
-- [Web Audio playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [Web Audio playbackRate explained](/en-US/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)

@@ -17,8 +17,6 @@ The parsing process drops any elements in the HTML string that are invalid in th
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
-> **Note:** Use {{domxref("Sanitizer.sanitizeFor()")}} instead of this method if the string must be inserted into the DOM at a later point, for example if the target element is not yet available.
-
 ## Syntax
 
 ```js-nolint
@@ -71,8 +69,3 @@ document
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("Sanitizer.sanitizeFor()")}}
-- {{domxref('HTML Sanitizer API')}}

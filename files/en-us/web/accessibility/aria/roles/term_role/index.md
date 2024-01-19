@@ -68,7 +68,7 @@ or without any ARIA (but possibly not how you want it presented)
 </dl>
 ```
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Don't use the `role="term"` on interactive elements such as links as it can interfere with the assistive technology user's ability to interact with the element.
 
@@ -91,6 +91,6 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

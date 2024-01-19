@@ -20,6 +20,7 @@ The possible values are:
 
 - `eager`
   - : Load the iframe as soon as the element is processed.
+    This is the default.
 - `lazy`
   - : Load the iframe when the browser believes that it is likely to be need in the near future.
 

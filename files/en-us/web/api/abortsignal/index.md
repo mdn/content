@@ -7,13 +7,13 @@ browser-compat: api.AbortSignal
 
 {{APIRef("DOM")}}
 
-The **`AbortSignal`** interface represents a signal object that allows you to communicate with a DOM request (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
+The **`AbortSignal`** interface represents a signal object that allows you to communicate with an asynchronous operation (such as a fetch request) and abort it if required via an {{domxref("AbortController")}} object.
 
 {{InheritanceDiagram}}
 
 ## Instance properties
 
-_The AbortSignal interface may also inherit properties from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits properties from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.aborted")}} {{ReadOnlyInline}}
   - : A {{Glossary("Boolean")}} that indicates whether the request(s) the signal is communicating with is/are aborted (`true`) or not (`false`).
@@ -22,24 +22,30 @@ _The AbortSignal interface may also inherit properties from its parent interface
 
 ## Static methods
 
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
+
 - {{domxref("AbortSignal/abort_static", "AbortSignal.abort()")}}
-  - : Returns an **`AbortSignal`** instance that is already set as aborted.
+  - : Returns an `AbortSignal` instance that is already set as aborted.
+- {{domxref("AbortSignal/any_static", "AbortSignal.any()")}}
+  - : Returns an `AbortSignal` that aborts when any of the given abort signals abort.
 - {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}
-  - : Returns an **`AbortSignal`** instance that will automatically abort after a specified time.
+  - : Returns an `AbortSignal` instance that will automatically abort after a specified time.
 
 ## Instance methods
 
-_The **`AbortSignal`** interface may also inherit methods from its parent interface, {{domxref("EventTarget")}}._
+_Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("AbortSignal.throwIfAborted()")}}
   - : Throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
 ## Events
 
-Listen to this event using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Also inherits events from its parent interface, {{DOMxRef("EventTarget")}}._
 
-- [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event)
-  - : Invoked when the DOM requests the signal is communicating with is/are aborted.
+Listen to this event using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{domxref("AbortSignal/abort_event", "abort")}}
+  - : Invoked when the asynchronous operations the signal is communicating with is/are aborted.
     Also available via the `onabort` property.
 
 ## Examples
@@ -117,28 +123,26 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-`fetch()` isn't designed to combine multiple signals, so you can't abort a download "directly" due to either of {{domxref("AbortController.abort()")}} being called or an `AbortSignal` timeout (though as in the preceding example, a timeout signal will abort if triggered by _inbuilt_ browser mechanisms like a stop button).
-
-To trigger on multiple signals they must be daisy chained.
-The code snippet below shows how you might call {{domxref("AbortController.abort()")}} in the handler for a separate timer.
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
 
 ```js
-let timeoutId;
 try {
   const controller = new AbortController();
-  timeoutId = setTimeout(() => controller.abort(), 5000);
-  const res = await fetch(url, { signal: controller.signal });
+  const timeoutSignal = AbortSignal.timeout(5000);
+  const res = await fetch(url, {
+    // This will abort the fetch when either signal is aborted
+    signal: AbortSignal.any([controller.signal, timeoutSignal]),
+  });
   const body = await res.json();
 } catch (e) {
   if (e.name === "AbortError") {
     // Notify the user of abort.
-    // Note this will never be a timeout error!
+  } else if (e.name === "TimeoutError") {
+    // Notify the user of timeout
   } else {
     // A network error, or some other problem.
     console.log(`Type: ${e.name}, Message: ${e.message}`);
   }
-} finally {
-  clearTimeout(timeoutId);
 }
 ```
 

@@ -9,18 +9,18 @@ browser-compat:
 
 {{DefaultAPISidebar("CSS Properties and Values API")}}
 
-The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/Guide/Houdini) umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
+The **CSS Properties and Values API** — part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs — allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking, default values, and properties that do or do not inherit their value.
 
 ## Interfaces
 
 - {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
-  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
+  - : Defines how a browser should parse {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript).
 - {{cssxref('@property')}}
-  - : Defines how a browser should parse a {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule) in [CSS](/en-US/docs/Web/CSS).
+  - : Defines how a browser should parse {{cssxref('--*', 'CSS custom properties')}}. Access this interface through {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule) in [CSS](/en-US/docs/Web/CSS).
 
 ## Examples
 
-The following uses {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript) to type a {{cssxref('--*', 'CSS custom properties')}}, `--my-color`, as a color, give it a default value, and not allow it to inherit its value:
+The following will register a {{cssxref('--*', 'CSS custom property')}} named `--my-prop` using {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} in [JavaScript](/en-US/docs/Web/JavaScript). `--my-prop` will use the CSS color syntax, it will have a default value of `#c0ffee`, and it will not inherit its value:
 
 ```js
 window.CSS.registerProperty({
@@ -54,4 +54,4 @@ The same registration can take place in [CSS](/en-US/docs/Web/CSS) using the {{c
 - [Using the CSS properties and values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

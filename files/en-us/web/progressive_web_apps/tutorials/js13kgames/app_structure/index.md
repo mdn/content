@@ -10,7 +10,7 @@ page-type: guide
 
 In this article, we will analyze the [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) application, why it is built that way, and what benefits it brings.
 
-The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure is quite simple: it consists of a single HTML file ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) with basic CSS styling ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)), and a few images, scripts, and fonts. The folder structure looks like this:
+The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure is quite simple: it consists of a single HTML file ([index.html](https://github.com/mdn/pwa-examples/blob/main/js13kpwa/index.html)) with basic CSS styling ([style.css](https://github.com/mdn/pwa-examples/blob/main/js13kpwa/style.css)), and a few images, scripts, and fonts. The folder structure looks like this:
 
 ![Folder structure of js13kPWA.](js13kpwa-directory.png)
 
@@ -54,7 +54,7 @@ From the HTML point of view, the app shell is everything outside the content sec
         <a href="https://js13kgames.com/aframe">A-Frame category</a> in the
         <a href="https://2017.js13kgames.com">js13kGames 2017</a> competition.
         You can
-        <a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa"
+        <a href="https://github.com/mdn/pwa-examples/blob/main/js13kpwa"
           >fork js13kPWA on GitHub</a
         >
         to check its source code.
@@ -228,7 +228,7 @@ self.addEventListener("fetch", (e) => {
 
 ### The JavaScript data
 
-The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js)):
+The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/main/js13kpwa/data/games.js)):
 
 ```js
 const games = [
