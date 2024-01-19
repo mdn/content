@@ -301,7 +301,7 @@ A few identifiers have a special meaning in some contexts without being reserved
 
 ### Null literal
 
-See also [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) for more information.
+See also {{jsxref("null")}} for more information.
 
 ```js-nolint
 null

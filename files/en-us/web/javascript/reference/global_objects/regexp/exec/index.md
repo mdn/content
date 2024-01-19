@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.exec
 
 {{JSRef}}
 
-The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The **`exec()`** method of {{jsxref("RegExp")}} instances executes a search with this regular expression for a match in a specified string and returns a result array, or {{jsxref("null")}}.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
 
@@ -24,7 +24,7 @@ exec(str)
 
 ### Return value
 
-If the match fails, the `exec()` method returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), and sets the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to `0`.
+If the match fails, the `exec()` method returns {{jsxref("null")}}, and sets the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to `0`.
 
 If the match succeeds, the `exec()` method returns an array and updates the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) property of the regular expression object. The returned array has the matched text as the first item, and then one item for each capturing group of the matched text. The array also has the following additional properties:
 

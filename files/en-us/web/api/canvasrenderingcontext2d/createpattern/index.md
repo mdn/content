@@ -45,14 +45,14 @@ createPattern(image, repetition)
     - `"repeat-y"` (vertical only)
     - `"no-repeat"` (neither direction)
 
-    If `repetition` is specified as an empty string (`""`) or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"` will be used.
+    If `repetition` is specified as an empty string (`""`) or {{jsxref("null")}} (but not {{jsxref("undefined")}}), a value of `"repeat"` will be used.
 
 ### Return value
 
 - {{domxref("CanvasPattern")}}
   - : An opaque object describing a pattern.
 
-If the `image` is not fully loaded ({{domxref("HTMLImageElement.complete")}} is `false`), then [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) is returned.
+If the `image` is not fully loaded ({{domxref("HTMLImageElement.complete")}} is `false`), then {{jsxref("null")}} is returned.
 
 ## Examples
 

@@ -115,7 +115,7 @@ console.log(`I am ${age} years old.`); // Template literal
 
 ### Other types
 
-JavaScript distinguishes between [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), which indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which indicates absence of value. There are many ways to obtain `undefined`:
+JavaScript distinguishes between {{jsxref("null")}}, which indicates a deliberate non-value (and is only accessible through the `null` keyword), and {{jsxref("undefined")}}, which indicates absence of value. There are many ways to obtain `undefined`:
 
 - A [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement with no value (`return;`) implicitly returns `undefined`.
 - Accessing a nonexistent [object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) property (`obj.iDontExist`) returns `undefined`.

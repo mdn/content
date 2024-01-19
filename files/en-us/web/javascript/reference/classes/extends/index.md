@@ -42,7 +42,7 @@ class ModernClass {
 class AnotherChildClass extends ModernClass {}
 ```
 
-The `prototype` property of the `ParentClass` must be an {{jsxref("Object")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), but you would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway. (It's ignored by the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.)
+The `prototype` property of the `ParentClass` must be an {{jsxref("Object")}} or {{jsxref("null")}}, but you would rarely worry about this in practice, because a non-object `prototype` doesn't behave as it should anyway. (It's ignored by the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.)
 
 ```js
 function ParentClass() {}

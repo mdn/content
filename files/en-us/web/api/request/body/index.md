@@ -16,7 +16,7 @@ and `null` is returned in these cases.
 
 ## Value
 
-A {{domxref("ReadableStream")}} or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+A {{domxref("ReadableStream")}} or {{jsxref("null")}}.
 
 ## Examples
 

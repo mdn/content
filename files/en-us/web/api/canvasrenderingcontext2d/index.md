@@ -262,7 +262,7 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : Restores the drawing style state to the last element on the 'state stack' saved by `save()`.
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if it is not associated with a {{HTMLElement("canvas")}} element.
+  - : A read-only back-reference to the {{domxref("HTMLCanvasElement")}}. Might be {{jsxref("null")}} if it is not associated with a {{HTMLElement("canvas")}} element.
 - {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
   - : Returns an object containing the context attributes used by the browser. Context attributes can be requested when using {{domxref("HTMLCanvasElement.getContext()")}} to create the 2D context.
 - {{domxref("CanvasRenderingContext2D.reset()")}}

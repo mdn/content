@@ -34,9 +34,9 @@ Implicit coercions are very convenient, but can create subtle bugs when conversi
 
 All types except [Object](#objects) define [immutable](/en-US/docs/Glossary/Immutable) values represented directly at the lowest level of the language. We refer to values of these types as _primitive values_.
 
-All primitive types, except [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), can be tested by the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator. `typeof null` returns `"object"`, so one has to use `=== null` to test for `null`.
+All primitive types, except {{jsxref("null")}}, can be tested by the [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) operator. `typeof null` returns `"object"`, so one has to use `=== null` to test for `null`.
 
-All primitive types, except [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), have their corresponding object wrapper types, which provide useful methods for working with the primitive values. For example, the [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object provides methods like [`toExponential()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential). When a property is accessed on a primitive value, JavaScript automatically wraps the value into the corresponding wrapper object and accesses the property on the object instead. However, accessing a property on `null` or `undefined` throws a `TypeError` exception, which necessitates the introduction of the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator.
+All primitive types, except {{jsxref("null")}} and [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined), have their corresponding object wrapper types, which provide useful methods for working with the primitive values. For example, the [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object provides methods like [`toExponential()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential). When a property is accessed on a primitive value, JavaScript automatically wraps the value into the corresponding wrapper object and accesses the property on the object instead. However, accessing a property on `null` or `undefined` throws a `TypeError` exception, which necessitates the introduction of the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator.
 
 | Type                         | `typeof` return value | Object wrapper        |
 | ---------------------------- | --------------------- | --------------------- |
@@ -52,7 +52,7 @@ The object wrapper classes' reference pages contain more information about the m
 
 ### Null type
 
-The Null type is inhabited by exactly one value: [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The Null type is inhabited by exactly one value: {{jsxref("null")}}.
 
 ### Undefined type
 

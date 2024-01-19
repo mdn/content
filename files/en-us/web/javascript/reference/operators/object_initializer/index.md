@@ -233,7 +233,7 @@ const mergedObj = { ...obj1, ...obj2 };
 
 ### Prototype setter
 
-A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), it points the `[[Prototype]]` of the created object to that value. (If the value is not an object or `null`, the object is not changed.)
+A property definition of the form `__proto__: value` or `"__proto__": value` does not create a property with the name `__proto__`. Instead, if the provided value is an object or {{jsxref("null")}}, it points the `[[Prototype]]` of the created object to that value. (If the value is not an object or `null`, the object is not changed.)
 
 Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 

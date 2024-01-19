@@ -32,7 +32,7 @@ A new object with the specified prototype object and properties.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `proto` is neither [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) nor an {{jsxref("Object")}}.
+  - : Thrown if `proto` is neither {{jsxref("null")}} nor an {{jsxref("Object")}}.
 
 ## Examples
 

@@ -50,7 +50,7 @@ Instead you will need to use {{jsxref("String.prototype.includes()")}}, for exam
 
 ### The operand can't be null or undefined
 
-Make sure the object you are inspecting isn't actually [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
+Make sure the object you are inspecting isn't actually {{jsxref("null")}} or
 {{jsxref("undefined")}}.
 
 ```js example-bad

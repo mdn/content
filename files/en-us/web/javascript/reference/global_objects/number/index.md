@@ -62,7 +62,7 @@ Many built-in operations that expect numbers first coerce their arguments to num
 
 - Numbers are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN).
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `0`.
+- {{jsxref("null")}} turns into `0`.
 - `true` turns into `1`; `false` turns into `0`.
 - Strings are converted by parsing them as if they contain a [number literal](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals). Parsing failure results in `NaN`. There are some minor differences compared to an actual number literal:
   - Leading and trailing whitespace/line terminators are ignored.

@@ -222,7 +222,7 @@ console.log(parsed);
 Many built-in operations that expect BigInts first coerce their arguments to BigInts. [The operation](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-tobigint) can be summarized as follows:
 
 - BigInts are returned as-is.
-- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) throw a {{jsxref("TypeError")}}.
+- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) and {{jsxref("null")}} throw a {{jsxref("TypeError")}}.
 - `true` turns into `1n`; `false` turns into `0n`.
 - Strings are converted by parsing them as if they contain an integer literal. Any parsing failure results in a {{jsxref("SyntaxError")}}. The syntax is a subset of [string numeric literals](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), where decimal points or exponent indicators are not allowed.
 - [Numbers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) throw a {{jsxref("TypeError")}} to prevent unintended implicit coercion causing loss of precision.

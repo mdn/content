@@ -22,7 +22,7 @@ _Inherits properties from its parent, {{domxref("XRSubImage")}}._
 - {{domxref("XRWebGLSubImage.depthStencilTexture")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A depth/stencil {{domxref("WebGLTexture")}} object for the {{domxref("XRCompositionLayer")}} to render.
 - {{domxref("XRWebGLSubImage.imageIndex")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A number representing the offset into the texture array if the layer was requested with `texture-array`; [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
+  - : A number representing the offset into the texture array if the layer was requested with `texture-array`; {{jsxref("null")}} otherwise.
 - {{domxref("XRWebGLSubImage.colorTextureWidth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A number representing the width in pixels of the GL attachment.
 - {{domxref("XRWebGLSubImage.colorTextureHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}

@@ -29,7 +29,7 @@ match(regexp)
 
 ### Return value
 
-An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no matches are found.
+An {{jsxref("Array")}} whose contents depend on the presence or absence of the global (`g`) flag, or {{jsxref("null")}} if no matches are found.
 
 - If the `g` flag is used, all results matching the complete regular expression will be returned, but capturing groups are not included.
 - If the `g` flag is not used, only the first complete match and its related capturing groups are returned. In this case, `match()` will return the same result as {{jsxref("RegExp.prototype.exec()")}} (an array with some extra properties).

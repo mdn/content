@@ -49,7 +49,7 @@ Left values are the destination of an assignment.
 - {{jsxref("Operators/Property_accessors", "Property accessors", "", 1)}}
   - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
 - {{jsxref("Operators/Optional_chaining", "?.")}}
-  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
+  - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ({{jsxref("null")}} or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
 - {{jsxref("Operators/new", "new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{jsxref("Operators/new%2Etarget", "new.target")}}

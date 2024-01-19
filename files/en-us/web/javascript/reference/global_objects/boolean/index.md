@@ -58,7 +58,7 @@ Many built-in operations that expect booleans first coerce their arguments to bo
 
 - Booleans are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `false`.
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `false`.
+- {{jsxref("null")}} turns into `false`.
 - `0`, `-0`, and `NaN` turn into `false`; other numbers turn into `true`.
 - `0n` turns into `false`; other [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) turn into `true`.
 - The empty string `""` turns into `false`; other strings turn into `true`.

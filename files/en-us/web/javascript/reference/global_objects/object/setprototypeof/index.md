@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.setPrototypeOf
 
 {{JSRef}}
 
-The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or {{jsxref("null")}}.
 
 > **Warning:** Changing the `[[Prototype]]` of an object is, by the nature of how modern JavaScript engines optimize property accesses, currently a very slow operation in every browser and JavaScript engine. In addition, the effects of altering inheritance are subtle and far-flung, and are not limited to the time spent in the `Object.setPrototypeOf(...)` statement, but may extend to **_any_** code that has access to any object whose `[[Prototype]]` has been altered. You can read more in [JavaScript engine fundamentals: optimizing prototypes](https://mathiasbynens.be/notes/prototypes).
 >
@@ -26,7 +26,7 @@ Object.setPrototypeOf(obj, prototype)
 - `obj`
   - : The object which is to have its prototype set.
 - `prototype`
-  - : The object's new prototype (an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
+  - : The object's new prototype (an object or {{jsxref("null")}}).
 
 ### Return value
 
@@ -38,7 +38,7 @@ The specified object.
   - : Thrown in one of the following cases:
     - The `obj` parameter is `undefined` or `null`.
     - The `obj` parameter is [non-extensible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible), or it's an [immutable prototype exotic object](https://tc39.es/ecma262/multipage/ordinary-and-exotic-objects-behaviours.html#sec-immutable-prototype-exotic-objects), such as `Object.prototype` or [`window`](/en-US/docs/Web/API/Window). However, the error is not thrown if the new prototype is the same value as the original prototype of `obj`.
-    - The `prototype` parameter is not an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+    - The `prototype` parameter is not an object or {{jsxref("null")}}.
 
 ## Description
 

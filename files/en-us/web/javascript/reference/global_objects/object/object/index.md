@@ -30,7 +30,7 @@ Object(value)
 
 When the `Object()` constructor itself is called or constructed, its return value is an object:
 
-- If the value is [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, it creates and returns an empty object.
+- If the value is {{jsxref("null")}} or {{jsxref("undefined")}}, it creates and returns an empty object.
 - If the value is an object already, it returns the value.
 - Otherwise, it returns an object of a type that corresponds to the given value. For example, passing a {{jsxref("BigInt")}} primitive returns a `BigInt` wrapper object.
 

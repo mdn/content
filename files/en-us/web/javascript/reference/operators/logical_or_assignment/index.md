@@ -63,7 +63,7 @@ document.getElementById("lyrics").textContent ||= "No lyrics.";
 
 Here the short-circuit is especially beneficial, since the element will not be updated unnecessarily and won't cause unwanted side-effects such as additional parsing or rendering work, or loss of focus, etc.
 
-Note: Pay attention to the value returned by the API you're checking against. If an empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used, so that "No lyrics." is displayed instead of a blank space. However, if the API returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or
+Note: Pay attention to the value returned by the API you're checking against. If an empty string is returned (a {{Glossary("falsy")}} value), `||=` must be used, so that "No lyrics." is displayed instead of a blank space. However, if the API returns {{jsxref("null")}} or
 {{jsxref("undefined")}} in case of blank content, [`??=`](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment) should be used instead.
 
 ## Specifications

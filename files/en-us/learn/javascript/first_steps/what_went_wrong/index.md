@@ -117,7 +117,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
    This code will print the value of `lowOrHi` to the console after we tried to set it in line 49. See {{domxref("console/log_static", "console.log()")}} for more information.
 
-7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 49. The [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
+7. Save and refresh, and you should now see the `console.log()` result in your console. ![Screenshot of the same demo. One log statement is visible in the console, reading simply "null".](console-log-output.png) Sure enough, `lowOrHi`'s value is `null` at this point, and this matches up with the Firefox error message `lowOrHi is null`. So there is definitely a problem with line 49. The {{jsxref("null")}} value means "nothing", or "no value". So our code to set `lowOrHi` to an element is going wrong.
 
 8. Let's think about what the problem could be. Line 49 is using a [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) method to get a reference to an element by selecting it with a CSS selector. Looking further up our file, we can find the paragraph in question:
 

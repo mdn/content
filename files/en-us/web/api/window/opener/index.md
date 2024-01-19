@@ -20,7 +20,7 @@ In other words, if window `A` opens window `B`,
 
 A {{domxref("Window")}}-like object referring to the window that opened the current
 window (using {{domxref("window.open()")}}, or by a link with [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute set). If this window was not opened by being linked to or created by
-another, returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+another, returns {{jsxref("null")}}.
 
 If the opener is not on the same origin as the current page, functionality of the
 opener object is limited. For example, variables and functions on the window object are
@@ -30,7 +30,7 @@ phishing attacks possible, where a trusted page that is opened in the original w
 replaced by a phishing page by the newly opened page.
 
 In the following cases, the browser does not populate `window.opener`, but
-leaves it [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
+leaves it {{jsxref("null")}}:
 
 - The opener can be omitted by specifying
   [`rel=noopener`](/en-US/docs/Web/HTML/Attributes/rel#noopener) on a link, or passing

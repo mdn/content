@@ -255,7 +255,7 @@ console.log(myCar); // { make: 'Ford', model: 'Mustang' }
 
 However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
-Nonexistent properties of an object have value {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
+Nonexistent properties of an object have value {{jsxref("undefined")}} (and not {{jsxref("null")}}).
 
 ```js
 myCar.nonexistentProperty; // undefined

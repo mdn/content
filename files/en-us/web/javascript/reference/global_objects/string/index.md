@@ -165,7 +165,7 @@ Many built-in operations that expect strings first coerce their arguments to str
 
 - Strings are returned as-is.
 - [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) turns into `"undefined"`.
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) turns into `"null"`.
+- {{jsxref("null")}} turns into `"null"`.
 - `true` turns into `"true"`; `false` turns into `"false"`.
 - Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
@@ -402,7 +402,7 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 
 ### String conversion
 
-The `String()` function is a more reliable way of converting values to strings than calling the `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
+The `String()` function is a more reliable way of converting values to strings than calling the `toString()` method of the value, as the former works when used on {{jsxref("null")}} and {{jsxref("undefined")}}. For example:
 
 ```js
 // You cannot access properties on null or undefined

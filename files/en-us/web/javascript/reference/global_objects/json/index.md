@@ -15,7 +15,7 @@ Unlike most global objects, `JSON` is not a constructor. You cannot use it with 
 
 ### JavaScript and JSON differences
 
-JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). It is based upon JavaScript syntax, but is distinct from JavaScript: most of JavaScript is _not_ JSON. For example:
+JSON is a syntax for serializing objects, arrays, numbers, strings, booleans, and {{jsxref("null")}}. It is based upon JavaScript syntax, but is distinct from JavaScript: most of JavaScript is _not_ JSON. For example:
 
 - Objects and Arrays
   - : Property names must be double-quoted strings; [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are forbidden.

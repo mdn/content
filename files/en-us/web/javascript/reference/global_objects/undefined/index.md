@@ -138,4 +138,4 @@ if (y === void 0) {
 ## See also
 
 - [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+- {{jsxref("null")}}

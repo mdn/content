@@ -22,7 +22,7 @@ Reflect.setPrototypeOf(target, prototype)
 - `target`
   - : The target object of which to set the prototype.
 - `prototype`
-  - : The object's new prototype (an object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
+  - : The object's new prototype (an object or {{jsxref("null")}}).
 
 ### Return value
 
@@ -31,7 +31,7 @@ A {{jsxref("Boolean")}} indicating whether or not the prototype was successfully
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if `target` is not an object or if `prototype` is neither an object nor [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+  - : Thrown if `target` is not an object or if `prototype` is neither an object nor {{jsxref("null")}}.
 
 ## Description
 

@@ -435,7 +435,7 @@ Next, let's change the page title to a personalized welcome message when the use
 
 ### A user name of null?
 
-When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). _Null_ is a special value in JavaScript that refers to the absence of a value.
+When you run the example and get the dialog box that prompts you to enter your user name, try pressing the _Cancel_ button. You should end up with a title that reads _Mozilla is cool, null_. This happens because—when you cancel the prompt—the value is set as {{jsxref("null")}}. _Null_ is a special value in JavaScript that refers to the absence of a value.
 
 Also, try clicking _OK_ without entering a name. You should end up with a title that reads _Mozilla is cool,_ for fairly obvious reasons.
 
