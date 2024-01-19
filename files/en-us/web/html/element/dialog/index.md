@@ -17,7 +17,7 @@ JavaScript should be used to display the `<dialog>` element. Use the {{domxref("
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element.
+> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
 - `open`
 
