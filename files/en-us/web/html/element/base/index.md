@@ -70,8 +70,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_parent`: Show the result in the parent browsing context of the current one, if the current page is inside a frame. If there is no parent, acts the same as `_self`.
     - `_top`: Show the result in the topmost browsing context (the browsing context that is an ancestor of the current one and has no parent). If there is no parent, acts the same as `_self`.
 
-> **Note:** A `base` element must have either an `href` attribute, a `target` attribute, or both.
-
 ## Usage Notes
 
 ### Multiple \<base> elements
