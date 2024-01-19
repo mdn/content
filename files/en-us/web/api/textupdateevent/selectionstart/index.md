@@ -3,10 +3,12 @@ title: "TextUpdateEvent: selectionStart property"
 short-title: selectionStart
 slug: Web/API/TextUpdateEvent/selectionStart
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.selectionStart
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent.selectionStart`** read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
 

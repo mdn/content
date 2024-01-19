@@ -3,10 +3,12 @@ title: "EditContext: text property"
 short-title: text
 slug: Web/API/EditContext/text
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.EditContext.text
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`text`** read-only property of the {{domxref("EditContext")}} interface represents the editable content of the element.
 

@@ -3,10 +3,12 @@ title: "EditContext: characterBoundsRangeStart property"
 short-title: characterBoundsRangeStart
 slug: Web/API/EditContext/characterBoundsRangeStart
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.EditContext.characterBoundsRangeStart
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`characterBoundsRangeStart`** read-only property of the {{domxref("EditContext")}} interface indicates the index of the character, within the editable text content, that corresponds to the first item in the {{domxref("EditContext.characterBounds()", "characterBounds")}} array.
 

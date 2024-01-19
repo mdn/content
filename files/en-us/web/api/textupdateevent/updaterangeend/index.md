@@ -3,10 +3,12 @@ title: "TextUpdateEvent: updateRangeEnd property"
 short-title: updateRangeEnd
 slug: Web/API/TextUpdateEvent/updateRangeEnd
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.updateRangeEnd
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent.updateRangeEnd`** read-only property indicates the end position of the text range that is being replaced in the {{domxref("EditContext")}} object.
 

@@ -3,10 +3,12 @@ title: "TextUpdateEvent: text property"
 short-title: text
 slug: Web/API/TextUpdateEvent/text
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.text
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent.text`** read-only property contains the text that was inserted within the updated range of a {{domxref("EditContext")}}'s `textupdate` event.
 

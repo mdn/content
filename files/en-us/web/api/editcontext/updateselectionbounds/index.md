@@ -3,10 +3,12 @@ title: "EditContext: updateSelectionBounds() method"
 short-title: updateSelectionBounds()
 slug: Web/API/EditContext/updateSelectionBounds
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.updateSelectionBounds
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`EditContext.updateSelectionBounds()`** method of the {{domxref("EditContext")}} interface is used to inform the operating system about the bounds of the text selection within the editable region that's associated with the `EditContext` object.
 

@@ -2,10 +2,12 @@
 title: TextUpdateEvent
 slug: Web/API/TextUpdateEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent`** interface is a {{domxref("Event", "DOM event")}} that represents a text or selection update in an editable text region that's attached to an {{domxref("EditContext")}} instance.
 

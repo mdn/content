@@ -3,10 +3,12 @@ title: "HTMLElement: editContext property"
 short-title: editContext
 slug: Web/API/HTMLElement/editContext
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLElement.editContext
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`editContext`** property of the {{domxref("HTMLElement")}} interface gets and sets an element's associated {{domxref("EditContext")}} object.
 

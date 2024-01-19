@@ -3,10 +3,12 @@ title: "EditContext: characterBounds() method"
 short-title: characterBounds()
 slug: Web/API/EditContext/characterBounds
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.characterBounds
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`characterBounds()`** method of the {{domxref("EditContext")}} interface returns an {{jsxref("Array")}} containing the list of bounding rectangles for the characters in the `EditContext` object.
 

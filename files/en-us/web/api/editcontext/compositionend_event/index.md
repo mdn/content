@@ -3,10 +3,12 @@ title: "EditContext: compositionend event"
 short-title: compositionend
 slug: Web/API/EditContext/compositionend_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.EditContext.compositionend_event
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The `compositionend` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window ends.
 

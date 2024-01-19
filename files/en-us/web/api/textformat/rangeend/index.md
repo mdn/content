@@ -3,10 +3,12 @@ title: "TextFormat: rangeEnd property"
 short-title: rangeEnd
 slug: Web/API/TextFormat/rangeEnd
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextFormat.rangeEnd
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`rangeEnd`** property of the {{domxref("TextFormat")}} interface indicates the end position of the text range that needs to be formatted with the given text format.
 

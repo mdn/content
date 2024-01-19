@@ -3,10 +3,12 @@ title: "TextFormat: underlineThickness property"
 short-title: underlineThickness
 slug: Web/API/TextFormat/underlineThickness
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextFormat.underlineThickness
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`underlineThickness`** property of the {{domxref("TextFormat")}} interface indicates the thickness of the underline that needs to be applied to the text range that is being formatted.
 

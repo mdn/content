@@ -2,10 +2,12 @@
 title: TextFormat
 slug: Web/API/TextFormat
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.TextFormat
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextFormat`** interface represents specific formatting that should be applied to a range of text in an editable text region that's attached to an {{domxref("EditContext")}} instance. The text formatting is requested by the {{glossary("Input Method Editor")}} (IME) window that the user is composing text with.
 

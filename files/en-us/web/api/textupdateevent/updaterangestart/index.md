@@ -3,10 +3,12 @@ title: "TextUpdateEvent: updateRangeStart property"
 short-title: updateRangeStart
 slug: Web/API/TextUpdateEvent/updateRangeStart
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.updateRangeStart
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent.updateRangeStart`** read-only property indicates the start position of the text range that is being replaced in the {{domxref("EditContext")}} object.
 

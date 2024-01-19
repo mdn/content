@@ -3,10 +3,12 @@ title: "EditContext: selectionEnd property"
 short-title: selectionEnd
 slug: Web/API/EditContext/selectionEnd
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.EditContext.selectionEnd
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`selectionEnd`** read-only property of the {{domxref("EditContext")}} refers to the offset, within the editable text content, of the end of the current selection.
 

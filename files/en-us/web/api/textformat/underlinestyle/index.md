@@ -3,10 +3,12 @@ title: "TextFormat: underlineStyle property"
 short-title: underlineStyle
 slug: Web/API/TextFormat/underlineStyle
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextFormat.underlineStyle
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`underlineStyle`** property of the {{domxref("TextFormat")}} interface indicates the style of the underline that needs to be applied to the text range that is being formatted.
 

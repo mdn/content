@@ -3,10 +3,12 @@ title: "EditContext: updateText() method"
 short-title: updateText()
 slug: Web/API/EditContext/updateText
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.updateText
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`updateText()`** method of the {{domxref("EditContext")}} interface updates the internal text content of an `EditContext` object.
 

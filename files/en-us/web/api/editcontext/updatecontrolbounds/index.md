@@ -3,10 +3,12 @@ title: "EditContext: updateControlBounds() method"
 short-title: updateControlBounds()
 slug: Web/API/EditContext/updateControlBounds
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.updateControlBounds
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`EditContext.updateControlBounds()`** method of the {{domxref("EditContext")}} interface is used to inform the operating system about the position and size of the editable text region of the `EditContext` object.
 

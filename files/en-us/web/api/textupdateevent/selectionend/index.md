@@ -3,10 +3,12 @@ title: "TextUpdateEvent: selectionEnd property"
 short-title: selectionEnd
 slug: Web/API/TextUpdateEvent/selectionEnd
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.selectionEnd
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent.selectionEnd`** read-only property indicates the position of the end of the selection (or caret) within the text content of the editable region attached to the {{domxref("EditContext")}} object.
 

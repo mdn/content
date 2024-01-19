@@ -3,10 +3,12 @@ title: "EditContext: updateCharacterBounds() method"
 short-title: updateCharacterBounds()
 slug: Web/API/EditContext/updateCharacterBounds
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.updateCharacterBounds
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`EditContext.updateCharacterBounds()`** method of the {{domxref("EditContext")}} interface should be called as response to a {{domxref("EditContext.characterboundsupdate_event", "characterboundsupdate")}} event to inform the operating system about the position and size of the characters in the `EditContext` object.
 

@@ -3,10 +3,12 @@ title: "EditContext: updateSelection() method"
 short-title: updateSelection()
 slug: Web/API/EditContext/updateSelection
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.EditContext.updateSelection
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`updateSelection()`** method of the {{domxref("EditContext")}} interface updates the internal state of the selection within the editable text context. This method is used to update the selection state when the user interacts with the text rendering in the `EditContext`'s associated element, such as by clicking or dragging the mouse, or by using the keyboard.
 

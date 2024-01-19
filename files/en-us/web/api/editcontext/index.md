@@ -2,10 +2,12 @@
 title: EditContext
 slug: Web/API/EditContext
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.EditContext
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`EditContext`** interface represents the text edit context of an element that was made editable by using the {{domxref("EditContext API", "", "", "nocode")}}.
 

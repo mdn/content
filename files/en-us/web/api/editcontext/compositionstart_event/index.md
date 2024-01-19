@@ -3,10 +3,12 @@ title: "EditContext: compositionstart event"
 short-title: compositionstart
 slug: Web/API/EditContext/compositionstart_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.EditContext.compositionstart_event
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The `compositionstart` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window starts.
 

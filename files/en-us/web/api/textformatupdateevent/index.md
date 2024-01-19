@@ -2,10 +2,12 @@
 title: TextFormatUpdateEvent
 slug: Web/API/TextFormatUpdateEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.TextFormatUpdateEvent
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextFormatUpdateEvent`** interface is a {{domxref("Event","DOM event")}} that represents a list of text formats that an {{glossary("Input Method Editor")}} (IME) window wants to apply to the text being composed in an editable region that's attached to an {{domxref("EditContext")}} instance.
 

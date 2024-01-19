@@ -3,10 +3,12 @@ title: "EditContext: textformatupdate event"
 short-title: textformatupdate
 slug: Web/API/EditContext/textformatupdate_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.EditContext.textformatupdate_event
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The `textformatupdate` event of the {{domxref("EditContext")}} interface fires when composition using a {{glossary("Input Method Editor")}} (IME) window is happening.
 

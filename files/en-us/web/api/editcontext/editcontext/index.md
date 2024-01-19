@@ -3,10 +3,12 @@ title: "EditContext: EditContext() constructor"
 short-title: EditContext()
 slug: Web/API/EditContext/EditContext
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.EditContext.EditContext
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`EditContext()`** constructor returns a new {{DOMxRef("EditContext")}} object.
 

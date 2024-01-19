@@ -3,10 +3,12 @@ title: "TextFormat: TextFormat() constructor"
 short-title: TextFormat()
 slug: Web/API/TextFormat/TextFormat
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.TextFormat.TextFormat
 ---
 
-{{APIRef("EditContext API")}}
+{{APIRef("EditContext API")}}{{SeeCompatTable}}
 
 The **`TextFormat()`** constructor returns a new {{DOMxRef("TextFormat")}} object.
 
