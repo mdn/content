@@ -39,11 +39,34 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## Related concepts
 
-- [Containing block](/en-US/docs/Web/CSS/Containing_block) concept ([CSS display](/en-US/docs/Web/CSS/CSS_display) module)
-- {{cssxref("overflow")}} CSS property ([CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module)
-- {{CSSxref("position")}} CSS property ([CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module)
-- [getBoundingClientRect](/en-US/docs/Web/API/Element/getBoundingClientRect) method ([CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module)
-- {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms ([CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module)
+- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
+- [Containing block](/en-US/docs/Web/CSS/Containing_block) concept
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module:
+  - {{cssxref("overflow")}} shorthand property
+    - {{Cssxref("overflow-x")}}
+    - {{Cssxref("overflow-y")}}
+    - {{CSSxRef("overflow-block")}}
+    - {{CSSxRef("overflow-inline")}}
+  - {{CSSxRef("overflow-clip-margin")}} property
+  - {{CSSxRef("scroll-behavior")}} property
+  - {{CSSxRef("text-overflow")}} property
+- {{Glossary("Scroll_container", "Scroll container")}} and [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) glossary terms
+
+- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module:
+
+  - {{cssxref("scroll-padding")}} shorthand property
+  - {{cssxref("scroll-snap-type")}} property
+  - {{cssxref("scroll-margin")}} shorthand property
+  - {{cssxref("scroll-snap-stop")}} property
+  - {{cssxref("scroll-snap-align")}} property
+
+- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module:
+  - {{domxref("Element.getBoundingClientRect()")}} method
+  - {{domxref("Element.scroll()")}} method
+  - {{domxref("Element.scrollBy()")}} method
+  - {{domxref("Element.scrollIntoView()")}} method
+  - {{domxref("Element.scrollTo()")}} method
+  - {{domxref("Document.scroll_event", "scroll")}} Document event
 
 ## Specifications
 
@@ -51,7 +74,6 @@ This module defines the overscroll behavior, enabling you to specify the actions
 
 ## See also
 
-- [`scrollbar`](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA role
 - [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
