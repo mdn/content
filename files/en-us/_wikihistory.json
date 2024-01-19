@@ -12954,10 +12954,6 @@
       "aswan"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/downloads/drag": {
-    "modified": "2020-10-15T21:44:35.541Z",
-    "contributors": ["wbamberg", "Makyen", "chrisdavidmills"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/downloads/erase": {
     "modified": "2020-10-15T21:44:38.278Z",
     "contributors": ["wbamberg", "Makyen", "chrisdavidmills"]
@@ -42344,7 +42340,7 @@
     "modified": "2019-03-18T20:56:26.488Z",
     "contributors": ["wbamberg", "chrisdavidmills", "rugk"]
   },
-  "Web/API/Houdini": {
+  "Web/API/Houdini_APIs": {
     "modified": "2020-07-16T03:51:08.991Z",
     "contributors": [
       "Wind1808",
@@ -72659,19 +72655,6 @@
       "anastasia",
       "colinbdclark",
       "peterbraden"
-    ]
-  },
-  "Web/Accessibility/Architecture": {
-    "modified": "2019-03-24T00:11:44.656Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "badrfoot",
-      "Aaronlev",
-      "Joanmarie",
-      "Parente",
-      "Rd4Uix",
-      "Nickolay"
     ]
   },
   "Web/Accessibility/Cognitive_accessibility": {
