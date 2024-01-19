@@ -13,6 +13,11 @@ This interface inherits properties from {{domxref("Event")}}.
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("CharacterBoundsUpdateEvent.CharacterBoundsUpdateEvent", "CharacterBoundsUpdateEvent()")}}
+  - : Creates a new `CharacterBoundsUpdateEvent` object.
+
 ## Instance properties
 
 - {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}}

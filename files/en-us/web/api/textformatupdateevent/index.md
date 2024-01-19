@@ -13,6 +13,11 @@ This interface inherits properties from {{domxref("Event")}}.
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("TextFormatUpdateEvent.TextFormatUpdateEvent", "TextFormatUpdateEvent()")}}
+  - : Creates a new `TextFormatUpdateEvent` object.
+
 ## Instance methods
 
 - {{domxref('TextFormatUpdateEvent.getTextFormats')}}

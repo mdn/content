@@ -13,6 +13,11 @@ This interface inherits properties from {{domxref("Event")}}.
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("TextUpdateEvent.TextUpdateEvent", "TextUpdateEvent()")}}
+  - : Creates a new `TextUpdateEvent` object.
+
 ## Instance properties
 
 - {{domxref('TextUpdateEvent.updateRangeStart')}} {{readonlyinline}}

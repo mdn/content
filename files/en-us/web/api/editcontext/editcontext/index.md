@@ -34,6 +34,10 @@ new EditContext(options)
 
 The following example creates a new `EditContext` object with the initial text "Hello world!" and the initial selection covering the entire text.
 
+```html
+<div id="editor"></div>
+```
+
 ```js
 const initialText = "Hello world!";
 

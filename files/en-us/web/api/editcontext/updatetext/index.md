@@ -38,7 +38,9 @@ updateText(rangeStart, rangeEnd, text)
 
 ### Updating the editor when the user pastes text in it
 
-This example shows how to use the `updateText` method to update the text content in the `EditContext` of a `canvas` element when the user presses the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd> shortcut to paste some text.
+This example shows how to use the `updateText` method to update the text content in the `EditContext` of a `<canvas>` element when the user presses the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>V</kbd> shortcut to paste some text.
+
+The example also uses the {{domxref("Clipboard.readText()")}} method to read the text from the clipboard.
 
 ```html
 <canvas id="editor-canvas"></canvas>
