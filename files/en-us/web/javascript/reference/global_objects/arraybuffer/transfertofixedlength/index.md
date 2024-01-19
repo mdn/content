@@ -2,12 +2,10 @@
 title: ArrayBuffer.prototype.transferToFixedLength()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.transferToFixedLength
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`transferToFixedLength()`** method of {{jsxref("ArrayBuffer")}} instances creates a new non-resizable `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 
@@ -82,6 +80,7 @@ console.log(view2[7]); // 4
 
 ## See also
 
+- [Polyfill of `ArrayBuffer.prototype.transferToFixedLength()` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.detached")}}
 - {{jsxref("ArrayBuffer.prototype.transfer()")}}

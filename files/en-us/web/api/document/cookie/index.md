@@ -52,7 +52,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
   - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more details.
 
   - `;path=path`: Indicates the path that must exist in the requested URL for the browser to send the {{httpheader("Cookie")}} header (e.g., '`/`',
-    '`/mydir`'). If not specified, it defaults to the current path of the current document location.
+    '`/mydir`'). If not specified, it defaults to the "directory" of the current document URI's path component.
 
   - `;samesite`: [SameSite](/en-US/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site
     requests. Possible values are `lax`, `strict` or `none`.

@@ -46,7 +46,7 @@ This fragment produces the following DOM structure (excluding whitespace-only te
             - P
                 - #text: Here we will add a link to the
                 - A href="https://www.mozilla.org/"
-                - #text: Mozilla homepage
+                    - #text: Mozilla homepage
 ```
 
 _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.

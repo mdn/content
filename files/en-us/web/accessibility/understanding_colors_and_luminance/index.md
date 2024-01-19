@@ -78,7 +78,7 @@ color: #ff00ffff; /* #rrggbbaa */
 
 /* by HSL representation of the sRGB value */
 color: hsl(300 100% 50%);
-color: hsl(300deg 100% 50% / 1);
+color: hsl(300deg 100% 50% / 100%);
 
 /* by HWB representation of the sRGB value */
 color: hwb(300deg 0% 0%);
