@@ -24,8 +24,10 @@ read(formats)
 
 - `formats` {{optional_inline}}
   - : An optional object with the following properties:
-    - `unsanitized`
-      - : An {{jsxref("Array")}} of strings specifying the data formats that should not be sanitized when reading from the clipboard. Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
+    - `unsanitized` {{optional_inline}}
+      - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
+
+        Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
 
 ### Return value
 
@@ -246,7 +248,7 @@ Notes:
 
 ### Reading unsanitized HTML from the clipboard
 
-This example uses the `read(formats)` method to read HTML data from the clipboard and get the code in its original form, without the browser sanitizing it first.
+This example uses the `formats` parameter to read HTML data from the clipboard and get the code in its original form, without the browser sanitizing it first.
 
 Note that, currently, only Chromium-based browsers support the `formats` parameter.
 
@@ -293,8 +295,8 @@ copyButton.addEventListener("click", async () => {
 
   try {
     await navigator.clipboard.write(data);
-  } catch (e) {
-    destinationTextarea.value = `Clipboard write failed: ${e}`;
+  } catch (error) {
+    destinationTextarea.value = `Clipboard write failed: ${error}`;
   }
 });
 
@@ -320,7 +322,7 @@ pasteButton.addEventListener("click", async () => {
       destinationTextarea.value = html;
     }
   } catch (error) {
-    destinationTextarea.value = `Clipboard read failed: ${e}`;
+    destinationTextarea.value = `Clipboard read failed: ${error}`;
   }
 });
 
@@ -334,7 +336,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
       destinationTextarea.value = html;
     }
   } catch (error) {
-    destinationTextarea.value = `Clipboard read failed: ${e}`;
+    destinationTextarea.value = `Clipboard read failed: ${error}`;
   }
 });
 ```
