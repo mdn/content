@@ -91,9 +91,10 @@ The following attributes are deprecated and should not be used. They are documen
 The `<colgroup>` should appear within a {{HTMLElement("table")}}, after any {{HTMLElement("caption")}} element (if used), but before any {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, and {{HTMLElement("tr")}} elements.
 
 Only a limited number of CSS properties affect `<colgroup>`:
--   {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set. 
-- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column group, but will only be visible if the cell and row backgrounds are transparent. 
-- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set. 
+
+- {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
+- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column group, but will only be visible if the cell and row backgrounds are transparent.
+- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
 - {{cssxref("visibility")}}: If the 'visibility: collapse' is set, none of the cells in the columns are rendered, and cells that span into other columns are clipped. Depending on other styles, the width of the table may be reduced by the width the column group would have consumed. Other values for the 'visibility' property have no effect.
 
 - Specifying column groups provides useful {{Glossary("semantics", "semantic")}} information and can be used when rendering for either screen or print.
