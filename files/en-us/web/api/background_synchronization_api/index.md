@@ -22,8 +22,6 @@ The {{domxref('SyncManager')}} interface is available through {{domxref('Service
 
 As this API relies on service workers, functionality provided by this API is only available in a secure context.
 
-> **Note:** At the time of writing, the Background Synchronization API is only available through an installed [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
-
 ## Interfaces
 
 - {{domxref('SyncManager')}} {{Experimental_Inline}}

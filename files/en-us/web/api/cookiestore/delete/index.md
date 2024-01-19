@@ -12,6 +12,8 @@ browser-compat: api.CookieStore.delete
 
 The **`delete()`** method of the {{domxref("CookieStore")}} interface deletes a cookie with the given name or options object. The `delete()` method expires the cookie by changing the date to one in the past.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
@@ -49,6 +51,8 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when deletion
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if deleting the cookie represented by the given `name` or `options` fails.
 

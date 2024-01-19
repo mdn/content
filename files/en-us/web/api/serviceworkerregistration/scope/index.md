@@ -13,7 +13,7 @@ The **`scope`** read-only property of the
 service worker registration. The service worker must be on the same origin as the
 document that registers the {{domxref("ServiceWorker")}}.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Value
 

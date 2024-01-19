@@ -31,6 +31,20 @@ _Responsive web design_ (RWD) is a web design approach to make web pages render 
   </tbody>
 </table>
 
+## Precursor to responsive design: mobile web design
+
+Before responsive web design became the standard approach for making websites work across different device types, web developers used to talk about mobile web design, mobile web development, or sometimes, mobile-friendly design. These are basically the same as responsive web design — the goals are to make sure that websites work well across devices with different physical attributes (screen size, resolution) in terms of layout, content (text and media), and performance.
+
+The difference is mainly to do with the devices involved, and the technologies available to create solutions:
+
+- We used to talk about desktop or mobile, but now there are many different types of device available such as desktop, laptop, mobile, tablets, watches, etc. Instead of catering for a few different screen sizes, we now need to design sites defensively to cater for common screen sizes and resolutions, plus unknowns.
+- Mobile devices used to be low-powered in terms of CPU/GPU and available bandwidth. Some didn't support CSS or even HTML, and as a result, it was common to perform server-side browser sniffing to determine device/browser type before then serving a site that the device would be able to cope with. Mobile devices often had really simple, basic experiences served to them because it was all they could handle. These days, mobile devices are able to handle the same technologies as desktop computers, so such techniques are less common.
+  - You should still use the techniques discussed in this article to serve mobile users a suitable experience, as there are still constraints such as battery life and bandwidth to worry about.
+  - User experience is also a concern. A mobile user of a travel site might just want to check flight times and delay information, for example, and not be presented with a 3D animated globe showing flight paths and your company history. This can be handled using responsive design techniques, however.
+- Modern technologies are much better for creating responsive experiences. For example, [responsive images/media technologies](#responsive_imagesmedia) now allow appropriate media to be served to different devices without having to rely on techniques like server-side sniffing.
+
+## Introducing responsive web design
+
 HTML is fundamentally responsive, or _fluid_. If you create a web page containing only HTML, with no CSS, and resize the window, the browser will automatically reflow the text to fit the viewport.
 
 While the default responsive behavior may sound like no solution is needed, long lines of text displayed full screen on a wide monitor can be difficult to read. If wide screen line length is reduced with CSS, such as by creating columns or adding significant padding, the site may look squashed for the user who narrows their browser window or opens the site on a mobile device.
@@ -136,7 +150,7 @@ In CSS Grid Layout the `fr` unit allows the distribution of available space acro
 
 > **Note:** The grid layout version is even simpler as we can define the columns on the .wrapper: [example](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), [source code](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
 
-## Responsive images
+## Responsive images/media
 
 To ensure media is never larger than its responsive container, the following approach can be used:
 
@@ -157,6 +171,12 @@ The `<picture>` element enables providing multiple sizes along with "hints" (met
 You can also _art direct_ images used at different sizes, thus providing a different crop or completely different image to different screen sizes.
 
 You can find a detailed [guide to Responsive Images in the Learn HTML section](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) here on MDN.
+
+Other useful tips:
+
+- Always make sure to use an appropriate image format for your website images (such as PNG or JPG), and make sure to optimize the file size using a graphics editor before you put them on your website.
+- You can make use of CSS features like [gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) and [shadows](/en-US/docs/Web/CSS/box-shadow) to implement visual effects without using images.
+- You can use media queries inside the media attribute on {{htmlelement("source")}} elements nested inside {{htmlelement("video")}}/{{htmlelement("audio")}} elements to serve video/audio files as appropriate for different devices (responsive video/audio).
 
 ## Responsive typography
 
@@ -246,6 +266,9 @@ It has also become much easier to achieve responsive designs with the help of th
 
 ## See also
 
+- Working with touchscreen devices:
+  - [Touch events](/en-US/docs/Web/API/Touch_events) provide the ability to interpret finger (or stylus) activity on touch screens or trackpads, enabling quality support for complex touch-based user interfaces.
+  - Use the [pointer](/en-US/docs/Web/CSS/@media/pointer) or [any-pointer](/en-US/docs/Web/CSS/@media/any-pointer) media queries to load different CSS on touch-enabled devices.
 - [CSS-Tricks Guide to Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
