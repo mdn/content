@@ -7,10 +7,10 @@ browser-compat: html.elements.template
 
 {{HTMLSidebar}}
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element is a mechanism for holding {{Glossary("HTML")}} fragments to be used later via JavaScript or immediately generated into shadow DOM:
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
-1. By default, the element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment). Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment could be cloned via {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
-2. If the `shadowrootmode` attribute is present, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
+1. By default, the element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment). Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+2. If the element contains the `shadowrootmode` attribute, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
 
 ## Attributes
 
@@ -18,7 +18,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `shadowrootmode`
 
-  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element. A declarative version of the {{domxref("Element.attachShadow()")}} taking the same values:
+  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element. It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same values.
 
     - `open`
 
@@ -28,15 +28,15 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** This is a feature of the HTML parser that cannot be used after the parsing by setting the `shadowrootmode` attribute via JavaScript. Only allowed values will create the shadow root. Empty or any other value won't trigger this behavior.
+    > **Note:** This is a feature of the HTML parser that cannot be used post-parsing by setting the `shadowrootmode` attribute through JavaScript. Only allowed values will create the shadow root; any other values, including empty ones, won't trigger this behavior.
     >
-    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has been removed and replaced by the standard `shadowrootmode` attribute.
+    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
 
 The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
 ## Examples
 
-### Table row generation
+### Generating table rows
 
 First we start with the HTML portion of the example.
 
@@ -108,9 +108,9 @@ table td {
 
 {{EmbedLiveSample("Table row generation", 500, 120)}}
 
-### Declarative shadow DOM
+### Implementing a declarative shadow DOM
 
-At the beginning of the markup, we have a hidden support warning that we will show later via JavaScript if the browser doesn't support the `shadowrootmode` attribute. After that, there are two {{HTMLElement("article")}} elements with nested {{HTMLElement("style")}} elements that behave differently. The first is global to the whole document, while the second is scoped to the shadow root generated in place of the `<template>` element because the `shadowrootmode` attribute is present.
+In this example, a hidden support warning is included at the beginning of the markup. This warning is later set to be displayed via JavaScript if the browser doesn't support the `shadowrootmode` attribute. Next, there are two {{HTMLElement("article")}} elements, each containing nested {{HTMLElement("style")}} elements with different behaviors. The first `<style>` element is global to the whole document. The second one is scoped to the shadow root generated in place of the `<template>` element because of the presence of the `shadowrootmode` attribute.
 
 ```html
 <p hidden>
@@ -133,7 +133,7 @@ At the beginning of the markup, we have a hidden support warning that we will sh
         background-color: plum;
       }
     </style>
-    <p>I'm in the Shadow DOM.</p>
+    <p>I'm in the shadow DOM.</p>
   </template>
 </article>
 ```
@@ -278,4 +278,4 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - [`ShadowRoot`]("/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
-- [Introduction to declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom)
+- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
