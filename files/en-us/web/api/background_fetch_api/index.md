@@ -34,6 +34,19 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 - {{domxref("BackgroundFetchUpdateUIEvent")}}
   - : The event type passed to `onbackgroundfetchsuccess` and `onbackgroundfetchfail`.
 
+### Extensions to other interfaces
+
+- {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a reference to a {{domxref("BackgroundFetchManager")}} object, which manages background fetch operations.
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} event {{Experimental_Inline}}
+  - : Fired when a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has been canceled by the user or the app.
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} event {{Experimental_Inline}}
+  - : Fired when the user has clicked on the UI for a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} event {{Experimental_Inline}}
+  - : Fired when at least one of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has failed.
+- {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} event {{Experimental_Inline}}
+  - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
+
 ## Examples
 
 Before using Background Fetch, check for browser support.
