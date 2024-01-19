@@ -67,9 +67,21 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
+- Fixed a bug that prevented [Perform Actions](https://w3c.github.io/webdriver/#perform-actions) to correctly synthesize double and other multi-click events for the `mouse` input source ([Firefox bug 1864614](https://bugzil.la/1864614)). Additionally, these events will only be emitted when the actual mouse position has not changed since the last click action ([Firefox bug 1681076](https://bugzil.la/1681076)).
+- The definitions for the `Pause` and `Equal` (Numpad block) keys have been updated to align with the WebDriver specification ([Firefox bug 1863687](https://bugzil.la/1863687)).
+
 #### WebDriver BiDi
 
+- The serialization of `WindowProxy` remote objects now also works correctly for out-of-process iframes ([Firefox bug 1867667](https://bugzil.la/1867667)).
+- The [browsingContext.setViewport](https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport) command now distinguishes between `undefined` and `null` as values for the `viewport` argument. If set to `undefined`, it signifies that the viewport should remain unchanged, while using `null` will reset it to its original dimensions ([Firefox bug 1865618](https://bugzil.la/1865618)).
+- Support for the [browsingContext.traverseHistory](https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory) command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
+- Fixed a bug in all supported network events where the `context` id consistently reported the top-level browsing context, even when the navigation occurred within an iframe ([Firefox bug 1869735](https://bugzil.la/1869735)).
+
 #### Marionette
+
+- Fixed a bug with [Get Element Text](https://w3c.github.io/webdriver/#dfn-get-element-text), where the command was incorrectly returning an empty text when the element was located within a ShadowRoot's slot ([Firefox bug 1824664](https://bugzil.la/1824664)).
 
 ## Changes for add-on developers
 
