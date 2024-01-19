@@ -13,7 +13,7 @@ The **`HTMLAreaElement`** interface provides special properties and methods (bey
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("HTMLElement")}}._
+_Inherits properties from its parent {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLAreaElement.alt")}}
   - : A string that reflects the [`alt`](/en-US/docs/Web/HTML/Element/area#alt) HTML attribute, containing alternative text for the element.
