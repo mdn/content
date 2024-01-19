@@ -396,7 +396,7 @@ function set_background() {
 
   // get the second item of the list of p elements
   myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  myP.style.background = "rgb(255 0 0)";
 }
 ```
 

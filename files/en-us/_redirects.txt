@@ -114,7 +114,6 @@
 /en-US/docs/Accessibility/Accessible_dynamic_content	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /en-US/docs/Accessibility/Accessible_forms/alerts	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets	/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-/en-US/docs/Accessibility/Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility/Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/HTML_To_MSAA	/en-US/docs/Web/Accessibility
@@ -123,7 +122,6 @@
 /en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /en-US/docs/Accessibility/Web_Development	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Accessibility:Architecture	/en-US/docs/Web/Accessibility/Architecture
 /en-US/docs/Accessibility:Community	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_FAQ	/en-US/docs/Web/Accessibility
 /en-US/docs/Accessibility_Information_for_Web_Authors	/en-US/docs/Web/Accessibility/Information_for_Web_authors
@@ -5412,7 +5410,7 @@
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Content/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Content/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Content/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Content/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Creating_and_editing_pages	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
@@ -5445,7 +5443,7 @@
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_page	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Layout/Reference_subpage	/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference
 /en-US/docs/MDN/Contribute/Guidelines/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Guidelines/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Guidelines/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Guidelines/Style_guide	/en-US/docs/MDN/Writing_guidelines/Writing_style_guide
 /en-US/docs/MDN/Contribute/Guidelines/Video	/en-US/docs/MDN/Writing_guidelines/Howto/Images_media
@@ -5508,7 +5506,7 @@
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Contribute/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Contribute/Style_guide	/en-US/docs/MDN/Writing_guidelines
@@ -5517,7 +5515,7 @@
 /en-US/docs/MDN/Contribute/Style_guide/Custom_macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 /en-US/docs/MDN/Contribute/Style_guide/Live_samples	/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /en-US/docs/MDN/Contribute/Style_guide/Macros	/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros
-/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Contribute/Style_guide/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Contribute/Style_guide/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Contribute/Tagging	/en-US/docs/MDN/Writing_guidelines/Howto
 /en-US/docs/MDN/Contribute/Tasks	/en-US/docs/MDN/Community/Contributing/Getting_started
@@ -5585,7 +5583,7 @@
 /en-US/docs/MDN/Structures/Page_types/HTML_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 /en-US/docs/MDN/Structures/Page_types/HTTP_header_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/HTTP_header_page_template
 /en-US/docs/MDN/Structures/Page_types/SVG_element_page_template	/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
-/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
+/en-US/docs/MDN/Structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Structures/Specification_tables	/en-US/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /en-US/docs/MDN/Structures/Syntax_sections	/en-US/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /en-US/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
@@ -5598,6 +5596,7 @@
 /en-US/docs/MDN/User_guide/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /en-US/docs/MDN/Writing_guidelines/Creating_moving_deleting	/en-US/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /en-US/docs/MDN/Writing_guidelines/Howto/Tag	/en-US/docs/MDN/Writing_guidelines/Howto
+/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks	/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars
 /en-US/docs/MDN/Writing_guidelines/Research_technology	/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology
 /en-US/docs/MDN/Writing_guidelines/What_we_write/Inclusion_criteria	/en-US/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion
 /en-US/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs
@@ -8612,6 +8611,7 @@
 /en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
 /en-US/docs/Web/API/History_API/Example	/en-US/docs/Web/API/History_API/Working_with_the_History_API
+/en-US/docs/Web/API/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/API/IDBCursor.advance	/en-US/docs/Web/API/IDBCursor/advance
 /en-US/docs/Web/API/IDBCursor.continue	/en-US/docs/Web/API/IDBCursor/continue
 /en-US/docs/Web/API/IDBCursor.delete	/en-US/docs/Web/API/IDBCursor/delete
@@ -12157,7 +12157,7 @@
 /en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/en-US/docs/Web/HTML/Element/Heading_Elements
 /en-US/docs/Web/Guide/HTML/Using_data_attributes	/en-US/docs/Learn/HTML/Howto/Use_data_attributes
 /en-US/docs/Web/Guide/HTML/XHTML	/en-US/docs/Glossary/XHTML
-/en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini
+/en-US/docs/Web/Guide/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Guide/Index	/en-US/docs/Web/Guide
 /en-US/docs/Web/Guide/Introduction_to_Web_development	/en-US/docs/Learn
 /en-US/docs/Web/Guide/Mobile	/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
@@ -12337,7 +12337,7 @@
 /en-US/docs/Web/HTTP/X-Frame-Options	/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 /en-US/docs/Web/HTTP/data_URIs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /en-US/docs/Web/HTTP/www_and_non-www_URLs	/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-/en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini
+/en-US/docs/Web/Houdini	/en-US/docs/Web/API/Houdini_APIs
 /en-US/docs/Web/Houdini/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide
 /en-US/docs/Web/Houdini/CSS_Typed_OM	/en-US/docs/Web/API/CSS_Typed_OM_API
 /en-US/docs/Web/Houdini/Learn/CSS_Painting_API	/en-US/docs/Web/API/CSS_Painting_API/Guide

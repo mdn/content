@@ -9,9 +9,9 @@ browser-compat: webextensions.api.storage.sync
 
 Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using a Mozilla account on desktop versions of Firefox or a Google account on Chrome) across different devices.
 
-For Firefox, a user must have `Add-ons` selected in the "Sync" section in `"about:preferences"`.
+For desktop Firefox, a user must have `Add-ons` selected in the "Sync" section in `"about:preferences"`. Firefox for Android does not synchronize data with the user's account. See [Firefox bug 1316442](https://bugzil.la/1316442).
 
-Note that the implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key.
+The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) manifest.json key.
 
 The main use case of this API is to store preferences about your extension and allow the user to sync them to different profiles.
 
