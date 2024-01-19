@@ -29,7 +29,7 @@ This interface inherits properties from {{domxref("Event")}}.
 
 ### Updating the character bounds when needed
 
-This example shows how to use the `characterboundsupdate` event and the `updateCharacterBounds` method together to inform the operating system of the character bounds it requires. Note that the event listener callback is only called when using an IME window, or another platform-specific editing UI surface, to compose text.
+This example shows how to use the `characterboundsupdate` event and the `updateCharacterBounds` method to inform the operating system of the character bounds it requires. Note that the event listener callback is only called when using an IME window, or other platform-specific editing UI surfaces, to compose text.
 
 ```html
 <canvas id="editor-canvas"></canvas>

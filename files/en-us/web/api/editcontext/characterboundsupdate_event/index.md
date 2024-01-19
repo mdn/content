@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Updating the character bounds when needed
 
-This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information. Note that the event listener callback is only called when using an IME window, or another platform-specific editing UI surface, to compose text.
+This example shows how to use the `updateCharacterBounds` method to update the character bounds in the `EditContext` of a `canvas` element when the operating system indicates that it requires the information. Note that the event listener callback is only called when using an IME window, or other platform-specific editing UI surfaces, to compose text.
 
 ```html
 <canvas id="editor-canvas"></canvas>

@@ -13,12 +13,14 @@ The **`CharacterBoundsUpdateEvent()`** constructor returns a new {{DOMxRef("Char
 ## Syntax
 
 ```js-nolint
-new CharacterBoundsUpdateEvent()
-new CharacterBoundsUpdateEvent(options)
+new CharacterBoundsUpdateEvent(type)
+new CharacterBoundsUpdateEvent(type, options)
 ```
 
 ### Parameters
 
+- `type`
+  - : A string representing the type of the event. Possible values: `"characterboundsupdate"`.
 - `options` {{optional_inline}}
   - : An optional object with the following properties:
     - `rangeStart`

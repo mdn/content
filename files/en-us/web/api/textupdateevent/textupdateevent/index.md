@@ -13,12 +13,14 @@ The **`TextUpdateEvent()`** constructor returns a new {{DOMxRef("TextUpdateEvent
 ## Syntax
 
 ```js-nolint
-new TextUpdateEvent()
-new TextUpdateEvent(options)
+new TextUpdateEvent(type)
+new TextUpdateEvent(type, options)
 ```
 
 ### Parameters
 
+- `type`
+  - : A string representing the type of the event. Possible values: `"textupdate"`.
 - `options` {{optional_inline}}
   - : An optional object with the following properties:
     - `updateRangeStart`

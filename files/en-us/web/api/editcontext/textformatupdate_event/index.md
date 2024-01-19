@@ -43,7 +43,7 @@ _In addition to the properties listed below, properties from the parent interfac
 
 ### Rendering IME composition text formatting
 
-In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region. Note that the event listener callback in this example is only called when using an IME window, or another platform-specific editing UI surface, to compose text.
+In the following example, the `textformatupdate` event is used to update the formatting of the text in the editable region. Note that the event listener callback in this example is only called when using an IME window, or other platform-specific editing UI surfaces, to compose text.
 
 ```html
 <canvas id="editor-canvas"></canvas>
