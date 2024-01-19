@@ -99,6 +99,46 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
   </tbody>
 </table>
 
+### Declarative shadow DOM
+
+The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. (See [Firefox bug 1712140](https://bugzil.la/1712140) for more details.)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>122</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>122</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.webcomponents.shadowdom.declarative.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## CSS
 
 ### Hex boxes to display stray control characters

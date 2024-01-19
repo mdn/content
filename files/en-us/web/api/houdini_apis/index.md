@@ -1,6 +1,6 @@
 ---
-title: Houdini
-slug: Web/API/Houdini
+title: Houdini APIs
+slug: Web/API/Houdini_APIs
 page-type: guide
 ---
 

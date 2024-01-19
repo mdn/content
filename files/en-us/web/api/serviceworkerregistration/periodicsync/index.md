@@ -15,6 +15,8 @@ the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to th
 {{domxref('PeriodicSyncManager')}} interface, which allows for registering of tasks to
 run at specific intervals.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref('PeriodicSyncManager')}} object.
