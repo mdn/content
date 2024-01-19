@@ -31,20 +31,20 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 - {{domxref("CookieStoreManager")}} {{Experimental_Inline}}
   - : The `CookieStoreManager` interface provides a service worker registration to enable service workers to subscribe to cookie change events.
 - {{domxref("CookieChangeEvent")}} {{Experimental_Inline}}
-  - : A `CookieChangeEvent` named `change` is dispatched against `CookieStore` object in {{domxref("Window")}} contexts when any script-visible cookies changes occur.
+  - : A `CookieChangeEvent` named `change` is dispatched against `CookieStore` objects in {{domxref("Window")}} contexts when any script-visible cookies changes occur.
 - {{domxref("ExtendableCookieChangeEvent")}}
-  - : An `ExtendableCookieChangeEvent` named `cookiechange` is dispatched against {{domxref("ServiceWorkerGlobalScope")}} contexts when any script-visible cookie changes occur that match the service worker's cookie change subscription list.
+  - : An `ExtendableCookieChangeEvent` named `cookiechange` is dispatched in {{domxref("ServiceWorkerGlobalScope")}} contexts when any script-visible cookie changes occur that match the service worker's cookie change subscription list.
 
 ### Extensions to other interfaces
 
 - {{domxref("ServiceWorkerGlobalScope.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object associated with the service worker.
 - {{domxref("ServiceWorkerRegistration.cookies")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a reference to the {{domxref("CookieStoreManager")}} interface, which allows subscribe and unsubscribe to cookie change events.
+  - : Returns a reference to the {{domxref("CookieStoreManager")}} interface, which enables a web app to subscribe to and unsubscribe from cookie change events.
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} event {{Experimental_Inline}}
-  - : Fired when any cookie changes have occurred which match the Service Worker's cookie change subscription list.
+  - : Fired when any cookie changes have occurred which match the service worker's cookie change subscription list.
 
 ## Specifications
 
@@ -56,4 +56,4 @@ The _Cookie Store API_ provides an updated method of managing cookies. It is {{G
 
 ## See also
 
-- {{domxref("Service Worker API", "", "", "nocode")}}
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
