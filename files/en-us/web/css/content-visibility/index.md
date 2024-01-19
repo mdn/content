@@ -13,6 +13,8 @@ The **`content-visibility`** [CSS](/en-US/docs/Web/CSS) property controls whethe
 
 > **Note:** The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event fires on any element with `content-visibility: auto` set on it when its rendering work starts or stops being skipped. This provides a convenient way for an app's code to start or stop rendering processes (e.g. drawing on a {{htmlelement("canvas")}}) when they are not needed, thereby conserving processing power.
 
+{{EmbedInteractiveExample("pages/css/content-visibility.html")}}
+
 ## Syntax
 
 ```css

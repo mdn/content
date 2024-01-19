@@ -154,7 +154,7 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
 
-##### Viewport and container relative units
+##### Viewport units
 
 Viewport unit lengths specify a length relative to the dimensions of the [viewport](/en-US/docs/Glossary/Viewport).
 For example, `vw` is relative to the width of the viewport and `vh` is relative to the height of the viewport.
@@ -174,6 +174,8 @@ For example, `vw` is relative to the width of the viewport and `vh` is relative 
 | `vmin` | 1% of viewport's smaller dimension.                                                                                                |
 | `vw`   | 1% of viewport's width.                                                                                                            |
 
+##### Container units
+
 Container query length units specify a length relative to the dimensions of a [query container](/en-US/docs/Web/CSS/CSS_container_queries).
 For example, `cqw` is relative to the width of the query container and `cqh` is relative to the height of the query container.
 
@@ -186,6 +188,7 @@ For example, `cqw` is relative to the width of the query container and `cqh` is 
 | `cqmin` | The smaller value of `cqi` or `cqb`   |
 | `cqw`   | 1% of a query container's width       |
 
+#### Absolute length units
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
 | Unit | Name                | Equivalent to       |
@@ -200,7 +203,7 @@ Absolute length units are fixed to a physical length: either an inch or a centim
 
 When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
 
-#### Angle units
+##### Angle units
 
 Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:
 
@@ -211,7 +214,7 @@ Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept
 | `rad`  | Radians  | There are 2π radians in a full circle.   |
 | `turn` | Turns    | There is 1 turn in a full circle.        |
 
-#### Time units
+##### Time units
 
 Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
 
@@ -220,7 +223,7 @@ Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When includ
 | `ms` | Milliseconds | There are 1,000 milliseconds in a second. |
 | `s`  | Seconds      |                                           |
 
-#### Frequency units
+##### Frequency units
 
 Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. It accepts the following values.
 
@@ -231,7 +234,7 @@ Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. I
 
 `1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
 
-#### Flex units
+##### Flex units
 
 Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts the following value.
 
@@ -239,7 +242,7 @@ Flex units are represented by the type {{cssxref("&lt;flex&gt;")}}. It accepts t
 | ---- | ---- | ---------------------------------------------------- |
 | `fr` | Flex | Represents a flexible length within a grid container |
 
-#### Resolution units
+##### Resolution units
 
 Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
 
@@ -249,7 +252,7 @@ Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. 
 | `dpi`       | Dots per inch.       |
 | `dppx`, `x` | Dots per px unit.    |
 
-### Percentages
+#### Percentages
 
 A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.
 
