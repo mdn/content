@@ -8,11 +8,11 @@ browser-compat: api.HTMLIFrameElement.height
 
 {{APIRef("HTML DOM")}}
 
-The **`height`** property of the {{domxref("HTMLIFrameElement")}} interface returns a string that reflects the `height` attribute of the {{HTMLElement("iframe")}} element, indicating the height of the frame.
+The **`height`** property of the {{domxref("HTMLIFrameElement")}} interface returns a string that reflects the `height` attribute of the {{HTMLElement("iframe")}} element, indicating the height of the frame in CSS pixels.
 
 ## Value
 
-A string.
+A string indicating the height of the frame in CSS pixels.
 
 ## Examples
 

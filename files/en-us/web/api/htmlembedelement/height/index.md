@@ -12,7 +12,7 @@ The **`height`** property of the {{domxref("HTMLEmbedElement")}} interface retur
 
 ## Value
 
-A string.
+A string indicating the displayed height of the resource in CSS pixels.
 
 ## Examples
 

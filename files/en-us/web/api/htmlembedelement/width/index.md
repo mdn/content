@@ -12,7 +12,7 @@ The **`width`** property of the {{domxref("HTMLEmbedElement")}} interface return
 
 ## Value
 
-A string.
+A string indicating the displayed width of the resource in CSS pixels.
 
 ## Examples
 
