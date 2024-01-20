@@ -50,6 +50,8 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
 #### WebDriver BiDi
 
 #### Marionette
