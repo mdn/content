@@ -44,7 +44,6 @@ new ImageDecoder(init)
     - `transfer`
       - : An array of {{jsxref("ArrayBuffer")}}s that `ImageDecoder` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `ImageDecoder` will use that buffer directly instead of copying from it.
 
-
 ## Examples
 
 The following example creates a new `ImageDecoder` with the required options.

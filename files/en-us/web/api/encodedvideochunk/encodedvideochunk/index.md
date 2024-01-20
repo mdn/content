@@ -35,7 +35,6 @@ new EncodedVideoChunk(options)
     - `transfer`
       - : An array of {{jsxref("ArrayBuffer")}}s that `EncodedVideoChunk` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `EncodedVideoChunk` will use that buffer directly instead of copying from it.
 
-
 ## Examples
 
 In the following example a new `EncodedVideoChunk` is created.
