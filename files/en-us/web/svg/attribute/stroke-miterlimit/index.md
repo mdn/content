@@ -34,7 +34,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 38 30" xmlns="http://www.w3.org/2000/svg">
-  <!-- Impact of the default miter limit -->
+  <!-- Effect of the default miter limit -->
   <path
     stroke="black"
     fill="none"
@@ -46,7 +46,7 @@ svg {
        m2,0 l0.75,-3 l0.75,3
        m2,0 l0.5 ,-3 l0.5 ,3" />
 
-  <!-- Impact of the smallest miter limit (1) -->
+  <!-- Effect of the smallest miter limit (1) -->
   <path
     stroke="black"
     fill="none"
@@ -59,7 +59,7 @@ svg {
        m2, 0 l0.75,-3 l0.75,3
        m2, 0 l0.5 ,-3 l0.5 ,3" />
 
-  <!-- Impact of a large miter limit (8) -->
+  <!-- Effect of a large miter limit (8) -->
   <path
     stroke="black"
     fill="none"
