@@ -8,7 +8,7 @@ browser-compat: api.HTMLVideoElement.height
 
 {{APIRef("HTML DOM")}}
 
-The **`height`** property of the {{domxref("HTMLVideoElement")}} interface returns an integer that reflects the [`height`](/en-US/docs/Web/HTML/Element/video#height) HTML attribute, specifying the displayed height of the resource in CSS pixels.
+The **`height`** property of the {{domxref("HTMLVideoElement")}} interface returns an integer that reflects the `height` attribute of the {{HTMLElement("video")}} element, specifying the displayed height of the resource in CSS pixels.
 
 ## Value
 
