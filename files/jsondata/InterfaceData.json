@@ -312,6 +312,10 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
+    "BufferedChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ByteLengthQueuingStrategy": {
       "inh": "",
       "impl": []
@@ -2000,6 +2004,14 @@
       "inh": "Sensor",
       "impl": []
     },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
+      "impl": []
+    },
     "MathMLElement": {
       "inh": "Element",
       "impl": []
@@ -2497,6 +2509,10 @@
       "impl": []
     },
     "PerformanceResourceTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
+    "PerformanceScriptTiming": {
       "inh": "PerformanceEntry",
       "impl": []
     },

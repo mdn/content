@@ -17,7 +17,7 @@ unregister if someone else just called {{domxref("ServiceWorkerContainer.registe
 with the same scope.) The service worker will finish any ongoing operations before it is
 unregistered.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
