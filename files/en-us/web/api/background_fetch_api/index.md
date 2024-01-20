@@ -27,15 +27,15 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 
 ## Interfaces
 
-- {{domxref("BackgroundFetchManager")}}
+- {{domxref("BackgroundFetchManager")}} {{Experimental_Inline}}
   - : A map where the keys are background fetch IDs and the values are {{domxref("BackgroundFetchRegistration")}} objects.
-- {{domxref("BackgroundFetchRegistration")}}
+- {{domxref("BackgroundFetchRegistration")}} {{Experimental_Inline}}
   - : Represents a Background Fetch.
-- {{domxref("BackgroundFetchRecord")}}
+- {{domxref("BackgroundFetchRecord")}} {{Experimental_Inline}}
   - : Represents an individual fetch request and response.
-- {{domxref("BackgroundFetchEvent")}}
+- {{domxref("BackgroundFetchEvent")}} {{Experimental_Inline}}
   - : The event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchabort_event", "backgroundfetchabort")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchclick_event", "backgroundfetchclick")}} event
-- {{domxref("BackgroundFetchUpdateUIEvent")}}
+- {{domxref("BackgroundFetchUpdateUIEvent")}} {{Experimental_Inline}}
   - : The event type for the {{domxref("ServiceWorkerGlobalScope.backgroundfetchsuccess_event", "backgroundfetchsuccess")}} and {{domxref("ServiceWorkerGlobalScope.backgroundfetchfail_event", "backgroundfetchfail")}} event
 
 ### Extensions to other interfaces
@@ -43,13 +43,13 @@ The Background Fetch API will enable the fetch to happen if the user starts the 
 - {{domxref("ServiceWorkerRegistration.backgroundFetch")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a reference to a {{domxref("BackgroundFetchManager")}} object, which manages background fetch operations.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} event {{Experimental_Inline}}
-  - : Fired when a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has been canceled by the user or the app.
+  - : Fired when a background fetch operation has been canceled by the user or the app.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} event {{Experimental_Inline}}
-  - : Fired when the user has clicked on the UI for a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation.
+  - : Fired when the user has clicked on the UI for a background fetch operation.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchfail_event", "backgroundfetchfail")}} event {{Experimental_Inline}}
-  - : Fired when at least one of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation has failed.
+  - : Fired when at least one of the requests in a background fetch operation has failed.
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} event {{Experimental_Inline}}
-  - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
+  - : Fired when all of the requests in a background fetch operation have succeeded.
 
 ## Examples
 
