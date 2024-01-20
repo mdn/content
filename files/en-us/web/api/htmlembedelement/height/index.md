@@ -8,7 +8,7 @@ browser-compat: api.HTMLEmbedElement.height
 
 {{APIRef("HTML DOM")}}
 
-The **`height`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that reflects the [`height`](/en-US/docs/Web/HTML/Element/embed#height) HTML attribute, indicating the displayed height of the resource.
+The **`height`** property of the {{domxref("HTMLEmbedElement")}} interface returns a string that reflects the `height` attribute of the {{HTMLElement("embed")}} element, indicating the displayed height of the resource in CSS pixels.
 
 ## Value
 
