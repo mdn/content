@@ -16,6 +16,17 @@ This property is considered a legacy property and redefined as `allow="fullscree
 
 A boolean value.
 
+## Examples
+
+```html
+<iframe id="el" allowfullscreen></iframe>
+```
+
+```js
+const el = document.getElementById("el");
+console.log(el.allowFullscreen) // Output: true
+```
+
 ## Specifications
 
 {{Specifications}}
