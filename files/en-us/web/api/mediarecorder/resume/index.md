@@ -10,8 +10,6 @@ browser-compat: api.MediaRecorder.resume
 
 The **`resume()`** method of the {{domxref("MediaRecorder")}} interface is used to resume media recording when it has been previously paused.
 
-If {{domxref("MediaRecorder.state")}} is "inactive", an `InvalidStateError` exception will be raised.
-
 If {{domxref("MediaRecorder.state")}} is already "recording", calling `resume()` has no effect.
 
 When the `resume()` method is invoked, the browser queues a task that runs
