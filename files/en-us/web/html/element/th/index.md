@@ -7,7 +7,7 @@ browser-compat: html.elements.th
 
 {{HTMLSidebar}}
 
-The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header of a group of table cells. The exact nature of this group is defined by the [`scope`](#scope) and [`headers`](#headers) attributes.
+The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header of a group of table cells and may be used as a child of the {{HTMLElement("tr")}} element. The exact nature of this group is defined by the [`scope`](#scope) and [`headers`](#headers) attributes.
 
 {{EmbedInteractiveExample("pages/tabbed/th.html","tabbed-taller")}}
 
@@ -16,16 +16,16 @@ The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `abbr`
-  - : This attribute contains a short abbreviated description of the header cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
+  - : Contains a short abbreviated description of the header cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
 - `colspan`
-  - : This attribute contains a non-negative integer value that indicates for how many columns the header cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
+  - : Contains a non-negative integer value that indicates for how many columns the header cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (`1`).
 - `headers`
-  - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the `<th>` elements that apply to this element.
+  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the `<th>` elements that apply to this element.
 - `rowspan`
-  - : This attribute contains a non-negative integer value that indicates for how many rows the header cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
+  - : Contains a non-negative integer value that indicates for how many rows the header cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
 - `scope`
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute defines the cells that the header (defined in the `<th>`) element relates to. Possible values are:
+  - : Defines the cells that the header (defined in the `<th>`) element relates to. Possible {{Glossary("enumerated", "enumerated")}} values are:
 
     - `row`: the header relates to all cells of the row it belongs to;
     - `col`: the header relates to all cells of the column it belongs to;
@@ -40,64 +40,35 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute specifies how horizontal alignment of each header cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell;
-    - `center`, centering the content in the cell;
-    - `right`, aligning the content to the right of the cell;
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell;
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the horizontal alignment of the header cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `axis` {{deprecated_inline}}
 
-  - : This attribute contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that this header applies to.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the [`scope`](#scope) attribute instead.
+  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the header cell applies to. Use the [`scope`](#scope) attribute instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each header cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
+  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in header cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the header cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `height` {{deprecated_inline}}
 
-  - : This attribute is used to define a recommended header cell height.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("height")}} property instead.
+  - : Defines a recommended header cell height. Use the {{cssxref("height")}} CSS property instead, as this attribute is deprecated.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each header cell content will be handled. Possible values are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+  - : Specifies the vertical alignment of the header cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 - `width` {{deprecated_inline}}
 
-  - : This attribute is used to define a recommended header cell width.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("width")}} property instead.
+  - : Defines a recommended header cell width. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -117,11 +88,13 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 This example uses `<th>` elements to introduce column and row headers in a basic table structure.
 
+#### HTML
+
 The first row ({{HTMLElement("tr")}} element) contains the column headers (`<th>` elements), which act as "titles" for the columns to make it easier to understand the information in the columns and identify the data. To indicate that each column header relates to all cells in the corresponding column, the [`scope`](#scope) attribute is set to `col` (column).
 
 The remaining rows contain the main data of the table. Each of these rows has a row header (`<th>` element) introduced as the first cell. This creates a column with row headers as the first column of the table. Similar to the column headers, the [`scope`](#scope) attribute is set to `row` to specify which cells each row header relates to, which in the example below are all data cells ({{HTMLElement("td")}} elements) in each `row`.
 
-Some basic CSS is used to style the table and its cells. Using the [`scope`](#scope) attributes of the headers, CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) are used to highlight the column and row headers (`<th>` elements) so that they stand out from the data cells ({{HTMLElement("td")}} elements).
+> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in this example to focus on the headers and keep the example simple.
 
 ```html
 <table>
@@ -153,10 +126,14 @@ Some basic CSS is used to style the table and its cells. Using the [`scope`](#sc
 </table>
 ```
 
+#### CSS
+
+Some basic CSS is used to style the table and its cells. Using the [`scope`](#scope) attributes of the headers, CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) are used to highlight the column and row headers (`<th>` elements) so that they stand out from the data cells ({{HTMLElement("td")}} elements).
+
 ```css
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -177,7 +154,7 @@ tr:nth-of-type(odd) td {
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -188,15 +165,17 @@ table {
 
 {{EmbedLiveSample("Basic_column_and_row_headers", 650, 170)}}
 
-> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in the [example](#basic_column_and_row_headers) to focus on the headers and keep the example simple.
-
 ### Column and row spanning
 
-To markup the table from the [basic example](#basic_column_and_row_headers) in a slightly more advanced way, this example introduces an additional table row ({{HTMLElement("tr")}} element) as the second header row of the table with two additional column headers (`<th>` elements). In this way, the "Pronunciation" column is split into two columns, one for the IPA (International Phonetic Alphabet) notation and one for the respelling (the original pronunciation column). The corresponding data cells ({{HTMLElement("td")}} elements) are added to each subsequent row.
+This example extends and enhances the basic table from the [previous example](#basic_column_and_row_headers) by adding a second row for additional column headers.
+
+#### HTML
+
+An additional table row ({{HTMLElement("tr")}} element) is added as the second header row of the table with two additional column headers (`<th>` elements). In this way, the "Pronunciation" column is split into two columns, one for the IPA (International Phonetic Alphabet) notation and one for the respelling (the original pronunciation column). The corresponding data cells ({{HTMLElement("td")}} elements) are added to each subsequent row.
 
 As shown in the [usage notes](#usage_notes), the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes can be used for the `<th>` elements to allocate the header cells to the correct columns and rows. To achieve a "two-row" header in the table structure, the first two header cells within the first {{HTMLElement("tr")}} element are spanned across two rows. The third header cell is spanned two columns wide (remaining in the first row). This setup leaves two available areas in the third and fourth columns in the second row, where the two headers within the second {{HTMLElement("tr")}} element are automatically placed, with the default value being `1` for the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes.
 
-The CSS is unchanged from the [previous example](#basic_column_and_row_headers).
+> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in this example to focus on the headers and spanning and keep the example simple.
 
 ```html
 <table>
@@ -236,10 +215,14 @@ The CSS is unchanged from the [previous example](#basic_column_and_row_headers).
 </table>
 ```
 
+#### CSS
+
+The CSS is unchanged from the [previous example](#basic_column_and_row_headers).
+
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -247,7 +230,7 @@ table {
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -269,15 +252,15 @@ tr:nth-of-type(odd) td {
 
 {{EmbedLiveSample("Column_and_row_spanning", 650, 200)}}
 
-> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in the [example](#column_and_row_spanning) to focus on the headers and spanning and keep the example simple.
-
 ### Associate header cells with other header cells
 
 For more complex relationships between header cells, using `th` elements with the [`scope`](#scope) attribute alone may not be sufficient for assistive technologies, especially screen readers.
 
+#### HTML
+
 To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each header cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Because of the way the "Pronunciation" column is split into two columns in the example, introducing a "two row" header, assistive technologies such as screen readers may not be able to identify which additional header cells (`th` elements) the "Pronunciation" header cell is related to and vice versa. Therefore, the [`headers`](#headers) attribute is used on the "Pronunciation", "IPA", and "Respelling" header cells to associate the related header cells based on the values of the unique identifiers from the added [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes in the form of a space-separated list.
 
-The [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning).
+> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in this example to focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>
@@ -317,7 +300,9 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
 </table>
 ```
 
-> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in the [example](#associate_header_cells_with_other_header_cells) to focus on the concept of the [`headers`](#headers) attribute.
+#### Result
+
+The [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning).
 
 ## Technical summary
 
@@ -380,14 +365,12 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<th>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each header cell;
-  - the {{cssxref("border")}} property to control borders of header cells;
-  - the {{cssxref("height")}} property to control the recommended header cell height;
-  - the {{cssxref("text-align")}} property to horizontally align each header cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each header cell content;
-  - the {{cssxref("width")}} property to control the recommended header cell width;
-  - the {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes to select the desired header cells.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each header cell
+- {{cssxref("border")}}: CSS property to control borders of header cells
+- {{cssxref("height")}}: CSS property to control the recommended header cell height
+- {{cssxref("text-align")}}: CSS property to horizontally align each header cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each header cell content
+- {{cssxref("width")}}: CSS property to control the recommended header cell width
+- {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: CSS pseudo-classes to select the desired header cells

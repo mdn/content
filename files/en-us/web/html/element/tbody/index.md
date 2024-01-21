@@ -7,7 +7,7 @@ browser-compat: html.elements.tbody
 
 {{HTMLSidebar}}
 
-The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of a table with the table's (main) data.
+The **`<tbody>`** [HTML](/en-US/docs/Web/HTML) element encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of a table's (main) data.
 
 {{EmbedInteractiveExample("pages/tabbed/tbody.html","tabbed-taller")}}
 
@@ -21,46 +21,23 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute specifies how horizontal alignment of each body cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell;
-    - `center`, centering the content in the cell;
-    - `right`, aligning the content to the right of the cell;
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell;
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the horizontal alignment of each body cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each body cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
+  - : Defines the background color of each body cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in body cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the alignment of the content to a character of each body cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the body cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each body cell content will be handled. Possible values are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+  - : Specifies the vertical alignment of each body cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -77,11 +54,11 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 ### Not specifying a body
 
-This example shows a very basic table with some table rows ({{HTMLElement("tr")}} elements) containing data ({{HTMLElement("td")}} elements) about students.
+This example demonstrates that the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are outside existing `<tbody>` elements or, as in this example, if they're direct children of the {{HTMLElement("table")}} element.
 
-As stated in the [usage notes](#usage_notes), the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are outside existing `<tbody>` elements or, as in the example below, if they're direct children of the {{HTMLElement("table")}} element.
+#### HTML
 
-Note the CSS in the example, where a {{cssxref("background-color")}} is specified for the `<tbody>` element and the `tbody` is used as a part of an additional {{Glossary("css_selector", "CSS selector")}}. Alternatively, {{Glossary("developer_tools", "browser developer tools")}} can be used to check the presence of the `<tbody>` element in the {{Glossary("dom", "DOM")}}.
+Here, a very basic table with some table rows ({{HTMLElement("tr")}} elements) containing data ({{HTMLElement("td")}} elements) about students is created.
 
 ```html
 <table>
@@ -106,6 +83,10 @@ Note the CSS in the example, where a {{cssxref("background-color")}} is specifie
 </table>
 ```
 
+#### CSS
+
+Note the CSS in the example, where a {{cssxref("background-color")}} is specified for the `<tbody>` element and the `tbody` is used as a part of an additional {{Glossary("css_selector", "CSS selector")}}. Alternatively, {{Glossary("developer_tools", "browser developer tools")}} can be used to check the presence of the `<tbody>` element in the {{Glossary("dom", "DOM")}}.
+
 ```css
 tbody {
   background-color: #e4f0f5;
@@ -120,14 +101,14 @@ tbody > tr > td:last-of-type {
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
 }
 
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 ```
@@ -138,9 +119,11 @@ td {
 
 ### Basic body structure
 
-This example extends and enhances the basic table from the [previous example](#not_specifying_a_body) by introducing a table head ({{HTMLElement("thead")}} element) and explicitly using a `<tbody>` element to structure the table into {{Glossary("semantics", "semantic")}} sections. The table head contains the column headers ({{HTMLElement("th")}} elements). The `<tbody>` element represents the body section of the table, which contains a number of rows ({{HTMLElement("tr")}} elements) with the table's main data, which is the data of each student.
+This example extends and enhances the basic table from the [previous example](#not_specifying_a_body).
 
-The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headings of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `<tbody>` is used to style the body cells.
+#### HTML
+
+We introduce a table head ({{HTMLElement("thead")}} element) and explicitly use a `<tbody>` element to structure the table into {{Glossary("semantics", "semantic")}} sections. The table head contains the column headers ({{HTMLElement("th")}} elements). The `<tbody>` element represents the body section of the table, which contains a number of rows ({{HTMLElement("tr")}} elements) with the table's main data, which is the data of each student.
 
 The use of such table content groups and {{Glossary("semantics", "semantic")}} markup is not only useful for visual presentation (via CSS styling) and contextual information for assistive technologies; moreover, the explicit use of the `<tbody>` element helps the browser to create the intended table structure, avoiding unwanted results.
 
@@ -177,6 +160,10 @@ The use of such table content groups and {{Glossary("semantics", "semantic")}} m
 </table>
 ```
 
+#### CSS
+
+The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headers of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `<tbody>` is used to style the body cells.
+
 ```css
 tbody {
   background-color: #e4f0f5;
@@ -187,7 +174,7 @@ tbody > tr > td:last-of-type {
 }
 
 thead {
-  border-bottom: 2px solid rgb(160, 160, 160);
+  border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
   color: #fff;
 }
@@ -196,7 +183,7 @@ thead {
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -204,7 +191,7 @@ table {
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 ```
@@ -215,11 +202,13 @@ td {
 
 ### Multiple bodies
 
+This example extends and enhances the table from the [example above](#basic_body_structure) even more by introducing multiple body sections.
+
 Using multiple `<tbody>` elements allows creating row groupings within a table. Each table body can potentially have its own head row or rows; however, _there may only be one {{HTMLElement("thead")}} element per table_! Because of that, {{HTMLElement("tr")}} with {{HTMLElement("th")}} elements can be used to create headers within each `<tbody>`.
 
-Building on the table in the [previous basic example](#basic_body_structure), more students are added, and instead of listing each student's major on each row, the students are grouped by major. Note that each major is enclosed within its own `<tbody>` block, with the first row ({{HTMLElement("tr")}} element) serving as the head of the block, displaying the major title within a {{HTMLElement("th")}} element that uses the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute to span it across all three columns of the table. Each remaining row within each major's `<tbody>` represents each student.
+#### HTML
 
-Most of the CSS is unchanged. However, a slightly more subtle style is added for header cells contained directly within a `<tbody>` (as opposed to those that reside in a {{HTMLElement("thead")}}). This is used for the headers indicating each table section's corresponding major.
+Building on the table in the [previous basic example](#basic_body_structure), more students are added, and instead of listing each student's major on each row, the students are grouped by major. Note that each major is enclosed within its own `<tbody>` block, with the first row ({{HTMLElement("tr")}} element) serving as the head of the block, displaying the major title within a {{HTMLElement("th")}} element that uses the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute to span it across all three columns of the table. Each remaining row within each major's `<tbody>` represents each student.
 
 ```html
 <table>
@@ -278,10 +267,14 @@ Most of the CSS is unchanged. However, a slightly more subtle style is added for
 </table>
 ```
 
+#### CSS
+
+Most of the CSS is unchanged. However, a slightly more subtle style is added for header cells contained directly within a `<tbody>` (as opposed to those that reside in the {{HTMLElement("thead")}}). This is used for the headers indicating each table section's corresponding major.
+
 ```css
 tbody > tr > th {
-  border-top: 2px solid rgb(160, 160, 160);
-  border-bottom: 1px solid rgb(140, 140, 140);
+  border-top: 2px solid rgb(160 160 160);
+  border-bottom: 1px solid rgb(140 140 140);
   background-color: #e4f0f5;
   font-weight: normal;
 }
@@ -289,25 +282,25 @@ tbody > tr > th {
 tbody {
   background-color: whitesmoke;
 }
-```
-
-```css hidden
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
 
 thead {
   background-color: #2c5e77;
   color: #fff;
 }
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 6px 8px;
   text-align: left;
 }
@@ -384,11 +377,9 @@ tbody > tr > td:last-of-type {
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties that may be specially useful to style the `<tbody>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each body cell;
-  - the {{cssxref("border")}} property to control borders of body cells;
-  - the {{cssxref("text-align")}} property to horizontally align each body cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each body cell content.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each body cell
+- {{cssxref("border")}}: CSS property to control borders of body cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each body cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each body cell content

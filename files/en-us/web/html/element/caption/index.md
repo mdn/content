@@ -21,10 +21,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This deprecated {{Glossary("enumerated", "enumerated")}} attribute accepts `left`, `top`, `right`, or `bottom` as a value to indicate which side of the table the caption should be displayed. Use the {{cssxref("caption-side")}} and {{cssxref("text-align")}} CSS properties instead.
-
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("caption-side")}} and {{cssxref("text-align")}} properties instead.
+  - : Specifies on which side of the table the caption should be displayed. The possible {{Glossary("enumerated", "enumerated")}} values are `left`, `top`, `right`, or `bottom`. Use the {{cssxref("caption-side")}} and {{cssxref("text-align")}} CSS properties instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -36,9 +33,13 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
-This example shows a basic table that includes a caption describing the data presented. Some basic CSS is used to align and highlight the `<caption>`.
+This example demonstrates a basic table that includes a caption describing the data presented.
 
 Such a "title" is helpful for users who are quickly scanning the page, and it is especially beneficial for visually impaired users, allowing them to determine the table's relevance quickly without the need to have a screen reader read the contents of many cells just to find out what the table is about.
+
+#### HTML
+
+A `<caption>` element is used as the first child of the {{HTMLElement("table")}}, with text content similar to a title to describe the table data. Three rows, the first being a header row, with two columns are created using the {{HTMLElement("tr")}}, {{HTMLElement("th")}} and {{HTMLElement("td")}} elements after the `<caption>`.
 
 ```html
 <table>
@@ -59,6 +60,10 @@ Such a "title" is helpful for users who are quickly scanning the page, and it is
   </tr>
 </table>
 ```
+
+#### CSS
+
+Some basic CSS is used to align and highlight the `<caption>`.
 
 ```css
 caption {
@@ -162,6 +167,5 @@ td {
 
 - [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
 - {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
-
-  - {{cssxref("caption-side")}} CSS property
-  - {{cssxref("text-align")}} CSS property
+- {{cssxref("caption-side")}}: CSS property to position the `<caption>` relative to its parent {{HTMLElement("table")}}
+- {{cssxref("text-align")}}: CSS property to horizontally align the text content of the `<caption>`

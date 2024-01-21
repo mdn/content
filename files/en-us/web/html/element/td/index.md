@@ -7,7 +7,7 @@ browser-compat: html.elements.td
 
 {{HTMLSidebar}}
 
-The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table that contains data.
+The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table that contains data and may be used as a child of the {{HTMLElement("tr")}} element.
 
 {{EmbedInteractiveExample("pages/tabbed/td.html","tabbed-taller")}}
 
@@ -16,11 +16,11 @@ The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table th
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `colspan`
-  - : This attribute contains a non-negative integer value that indicates for how many columns the data cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
+  - : Contains a non-negative integer value that indicates for how many columns the data cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (`1`).
 - `headers`
-  - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the {{HTMLElement("th")}} elements that apply to this element.
+  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the {{HTMLElement("th")}} elements that apply to this element.
 - `rowspan`
-  - : This attribute contains a non-negative integer value that indicates for how many rows the data cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
+  - : Contains a non-negative integer value that indicates for how many rows the data cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
 
 ### Deprecated attributes
 
@@ -28,76 +28,43 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `abbr` {{deprecated_inline}}
 
-  - : This attribute contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: you can put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute.
+  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute, as this attribute is deprecated.
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute specifies how horizontal alignment of each data cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell;
-    - `center`, centering the content in the cell;
-    - `right`, aligning the content to the right of the cell;
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell;
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the horizontal alignment of the data cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `axis` {{deprecated_inline}}
 
-  - : This attribute contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that this header applies to.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the data cell applies to.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each data cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
+  - : Defines the background color of the data cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in data cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the alignment of the content to a character of the data cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the data cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `height` {{deprecated_inline}}
 
-  - : This attribute is used to define a recommended data cell height.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("height")}} property instead.
+  - : Defines a recommended data cell height. Use the {{cssxref("height")}} CSS property instead, as this attribute is deprecated.
 
 - `scope` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: only use this attribute with the {{HTMLElement("th")}} element to define the row or column for which it is a header.
+  - : Defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to. The possible {{Glossary("enumerated")}} values are `row`, `col`, `rowgroup`, and `colgroup`. Only use this attribute with the {{HTMLElement("th")}} element to define the row or column for which it is a header, as this attribute is deprecated for the `<td>` element.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each data cell content will be handled. Possible values are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+  - : Specifies the vertical alignment of the data cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 - `width` {{deprecated_inline}}
 
-  - : This attribute is used to define a recommended data cell width.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("width")}} property instead.
+  - : Defines a recommended data cell width. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -114,9 +81,13 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 ### Basic data cells
 
-This example uses some table rows ({{HTMLElement("tr")}} elements) with row headers ({{HTMLElement("th")}} elements) and `<td>` elements to introduce a basic table with data about the phonetic alphabet. The {{HTMLElement("th")}} elements in each row form the first column of the table, while each corresponding `<td>` element contains data aligned with its respective column.
+This example uses `<td>` elements along with other table-related elements to introduce a basic table with data about the phonetic alphabet.
 
-Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
+#### HTML
+
+Some table rows ({{HTMLElement("tr")}} elements) are used with row headers ({{HTMLElement("th")}} elements) and `<td>` elements. The {{HTMLElement("th")}} elements in each row form the first column of the table, while each corresponding `<td>` element contains data aligned with its respective column.
+
+> **Note:** Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in this example to focus on the data cells and keep the example simple.
 
 ```html
 <table>
@@ -143,10 +114,14 @@ Some basic CSS is used to style the table and its cells. CSS [attribute selector
 </table>
 ```
 
+#### CSS
+
+Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
+
 ```css
 td,
 th {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -162,7 +137,7 @@ tr th[scope="row"] {
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -173,15 +148,15 @@ table {
 
 {{EmbedLiveSample("Basic_data_cells", 650, 140)}}
 
-> **Note:** Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in the [example](#basic_data_cells) to focus on the data cells and keep the example simple.
-
 ### Column and row spanning
 
-Keeping the table structure of the [basic example](#basic_data_cells), an additional data cell (`<td>` element) is introduced within the first row ({{HTMLElement("tr")}} element). This creates a fourth column in the table.
+This example extends and enhances the basic table from the [previous example](#basic_data_cells) by adding an additional "ABC" cell.
+
+#### HTML
+
+An additional data cell (`<td>` element) is introduced within the first row ({{HTMLElement("tr")}} element). This creates a fourth column in the table.
 
 Using the [`rowspan`](#rowspan) attribute, the "ABC" cell is spanned across the first three rows of the table. The last data cells of the subsequent rows are spanned two columns wide using the [`colspan`](#colspan) attribute to align them correctly in the table structure and layout. Note that an additional row ({{HTMLElement("tr")}} element) is added to the table to illustrate this.
-
-The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes are used in the CSS to select and style the added "ABC" data cell.
 
 ```html
 <table>
@@ -214,6 +189,10 @@ The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classe
 </table>
 ```
 
+#### CSS
+
+The {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes are used in the CSS to select and style the added "ABC" data cell.
+
 ```css
 tr:first-of-type td:last-of-type {
   width: 60px;
@@ -222,20 +201,10 @@ tr:first-of-type td:last-of-type {
   font-weight: bold;
   text-align: center;
 }
-```
-
-```css hidden
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
 
 td,
 th {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -248,6 +217,16 @@ tr th[scope="row"] {
 }
 ```
 
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+```
+
 #### Result
 
 {{EmbedLiveSample("Column_and_row_spanning", 650, 170)}}
@@ -256,9 +235,11 @@ tr th[scope="row"] {
 
 For more complex relationships between data cells (`<td>` elements) and header cells ({{HTMLElement("th")}} elements), using {{HTMLElement("th")}} elements with the [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute alone may not be sufficient for assistive technologies, especially screen readers.
 
+#### HTML
+
 To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each data cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Each row header cell ({{HTMLElement("th")}} element) associated with the "ABC" data cell, i.e., the letters "A", "B", and "C", is given a unique identifier with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The "ABC" data cell (`<td>` element) then uses these `id` values in a space-separated list for the [`headers`](#headers) attribute.
 
-The [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning).
+> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in this example to focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>
@@ -291,7 +272,9 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
 </table>
 ```
 
-> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in the [example](#associate_data_cells_with_header_cells) to focus on the concept of the [`headers`](#headers) attribute.
+#### Result
+
+The [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning).
 
 ## Technical summary
 
@@ -358,14 +341,12 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<td>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each data cell;
-  - the {{cssxref("border")}} property to control borders of data cells;
-  - the {{cssxref("height")}} property to control the recommended data cell height;
-  - the {{cssxref("text-align")}} property to horizontally align each data cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each data cell content;
-  - the {{cssxref("width")}} property to control the recommended data cell width;
-  - the {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes to select the desired data cells.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each data cell
+- {{cssxref("border")}}: CSS property to control borders of data cells
+- {{cssxref("height")}}: CSS property to control the recommended data cell height
+- {{cssxref("text-align")}}: CSS property to horizontally align each data cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each data cell content
+- {{cssxref("width")}}: CSS property to control the recommended data cell width
+- {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: CSS pseudo-classes to select the desired data cells

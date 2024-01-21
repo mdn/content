@@ -21,46 +21,23 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute specifies how horizontal alignment of each head cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell;
-    - `center`, centering the content in the cell;
-    - `right`, aligning the content to the right of the cell;
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell;
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the horizontal alignment of each head cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each head cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
+  - : Defines the background color of each head cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in head cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the alignment of the content to a character of each head cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the head cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each head cell content will be handled. Possible values are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+  - : Specifies the vertical alignment of each head cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -74,9 +51,11 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 ### Basic head structure
 
-This example uses a `<thead>` and {{HTMLElement("tbody")}} element to structure a basic table into {{Glossary("semantics", "semantic")}} sections. The `<thead>` element represents the head section of the table, which contains a row ({{HTMLElement("tr")}} element) of column headers using {{HTMLElement("th")}} elements.
+This example demonstrates a table divided into a head section with column headers and a body section with the table's main data.
 
-Some basic CSS is used to style and highlight the table head so that the headings of the columns stand out from the data in the table body.
+#### HTML
+
+A `<thead>` and {{HTMLElement("tbody")}} element is used to structure a basic table into {{Glossary("semantics", "semantic")}} sections. The `<thead>` element represents the head section of the table, which contains a row ({{HTMLElement("tr")}} element) of column headers using {{HTMLElement("th")}} elements.
 
 ```html
 <table>
@@ -111,30 +90,35 @@ Some basic CSS is used to style and highlight the table head so that the heading
 </table>
 ```
 
+#### CSS
+
+Some basic CSS is used to style and highlight the table head so that the headings of the columns stand out from the data in the table body.
+
 ```css
 thead {
-  border-bottom: 2px solid rgb(160, 160, 160);
+  border-bottom: 2px solid rgb(160 160 160);
+  text-align: center;
   background-color: #2c5e77;
   color: #fff;
+}
+
+tbody {
+  background-color: #e4f0f5;
 }
 ```
 
 ```css hidden
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
 }
 
-tbody {
-  background-color: #e4f0f5;
-}
-
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -149,13 +133,11 @@ tbody > tr > td:last-of-type {
 
 ### Multiple head rows
 
+This example demonstrates a table head section with two rows.
+
+#### HTML
+
 To markup the table from the [basic example](#basic_head_structure) in a more advanced way, this example uses two table rows ({{HTMLElement("tr")}} elements) within the `<thead>` element to introduce a multi-row table head. An additional column is created to split the student names into first and last names.
-
-The CSS is unchanged from the [previous example](#basic_head_structure).
-
-In order to allocate the header cells to the correct columns and rows, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are used on the {{HTMLElement("th")}} elements. The values set in these attributes specify how many cells each header cell ({{HTMLElement("th")}} element) is to span. Due to the way these attributes are set in the following example, the two header cells in the second row are automatically placed in the correct location—fitting into the available areas in the table structure, with the default value being `1` for the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes. This is illustrated in the following figure, which corresponds to the example below:
-
-![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
 
 ```html
 <table>
@@ -197,16 +179,26 @@ In order to allocate the header cells to the correct columns and rows, the [`col
 </table>
 ```
 
+#### Cell spanning
+
+In order to allocate the header cells to the correct columns and rows, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are used on the {{HTMLElement("th")}} elements. The values set in these attributes specify how many cells each header cell ({{HTMLElement("th")}} element) is to span. Due to the way these attributes are set in this example, the two header cells in the second row are automatically placed in the correct location—fitting into the available areas in the table structure, with the default value being `1` for the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes. This is illustrated in the following figure, which corresponds to this example:
+
+![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+
+#### CSS
+
+The CSS is unchanged from the [previous example](#basic_head_structure).
+
 ```css hidden
 thead {
-  border-bottom: 2px solid rgb(160, 160, 160);
+  border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
   color: #fff;
 }
 
 table {
   border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
+  border: 2px solid rgb(140 140 140);
   font-family: sans-serif;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -218,7 +210,7 @@ tbody {
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -299,11 +291,9 @@ tbody > tr > td:last-of-type {
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}};
-- CSS properties that may be specially useful to style the `<thead>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each head cell;
-  - the {{cssxref("border")}} property to control borders of head cells;
-  - the {{cssxref("text-align")}} property to horizontally align each head cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each head cell content.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each head cell
+- {{cssxref("border")}}: CSS property to control borders of head cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each head cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each head cell content

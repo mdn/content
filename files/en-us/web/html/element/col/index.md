@@ -7,7 +7,7 @@ browser-compat: html.elements.col
 
 {{HTMLSidebar}}
 
-The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns within a table and is used for defining common semantics among table columns. The `<col>` element is only valid as a child of a {{HTMLElement("colgroup")}} element that has no [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute defined.
+The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns in a column group represented by its parent {{HTMLElement("colgroup")}} element. The `<col>` element is only valid as a child of a {{HTMLElement("colgroup")}} element that has no [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute defined.
 
 {{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
 
@@ -16,7 +16,7 @@ The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `span`
-  - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
+  - : Specifies the number of consecutive columns the `<col>` element spans. The value must be a positive integer greater than zero. If not present, its default value is `1`.
 
 ### Deprecated attributes
 
@@ -24,76 +24,59 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : Specifies the horizontal alignment of each cell within the column. The valid values of this {{Glossary("enumerated")}} attribute include the `left`, `center`, `right`, `justify`, and `char` keywords. When supported, the `char` value aligns the textual content on the character defined in the  [`char`](#char) attribute and on offset defined by the  [`charoff`](#charoff) attribute. The default value is the value of the  {{HTMLElement("colgroup")}}'s [`align`](/en-US/docs/Web/HTML/Element/colgroup#align) attribute, if present, otherwise `left`.
+  - : Specifies the horizontal alignment of each column cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Note that this attribute overrides the specified [`align`](/en-US/docs/Web/HTML/Element/colgroup#align) of its {{HTMLElement("colgroup")}} parent element. Use the {{cssxref("text-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
-
-
-    > **Note:** Do not use this attribute as it is deprecated; use the CSS {{cssxref("text-align")}} property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements (not the `<col>` element) instead. Setting `text-align` on the `<col>` element has no effect as `<col>` has no descendants, and therefore no elements inherit from it.
+    > **Note:** Setting `text-align` on the `<col>` element has no effect as `<col>` has no descendants, and therefore no elements inherit from it.
     >
-    > If the table doesn't use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-of-type(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-of-type(2) { text-align: right; }` to right-align the second column cells.
+    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-of-type(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-of-type(2) { text-align: right; }` to right-align the second column cells.
     >
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of the column's cells. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`' or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("&lt;color&gt")}} values are not supported.
-
-    > **Note:** Do not use this attribute as it is deprecated; use the CSS {{cssxref("background-color")}} property instead. As the column background color is painted on top of the table, but behind background colors applied to the row, the {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfood")}}, and the individual cells, backgrounds applied to table columns are only visible if every layer painted on top of them has a transparent background.
+  - : Defines the background color of each column cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in column cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+  - : Specifies the alignment of the content to a character of each column cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored, though it will still override the specified [`char`](/en-US/docs/Web/HTML/Element/colgroup#char) of its {{HTMLElement("colgroup")}} parent element.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
+  - : Specifies the number of characters to offset the column cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each column cell content will be handled. Possible values are:
+  - : Specifies the vertical alignment of each column cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Note that this attribute overrides the specified [`valign`](/en-US/docs/Web/HTML/Element/colgroup#valign) of its {{HTMLElement("colgroup")}} parent element. Use the {{cssxref("vertical-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+    > **Note:** Setting `vertical-align` on the `<col>` element has no effect as `<col>` has no descendants, and therefore no elements inherit from it.
     >
-    > Also, do not try to set the {{cssxref("vertical-align")}} property on a selector giving a `<col>` element. Because {{HTMLElement("td")}} elements are not descendant of the `<col>` element, they won't inherit it.
-    >
-    > If the table doesn't use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-of-type(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
+    > If the table does not use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-of-type(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-of-type(2) { vertical-align: middle; }` to center the second column cells vertically.
     >
     > If the table does use a [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - `width` {{deprecated_inline}}
 
-  - : This attribute specifies a default width for each column. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that this attribute overrides the specified `width` of its {{HTMLElement("colgroup")}} parent element.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("width")}} property instead.
+  - : Specifies a default width for each column. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that this attribute overrides the specified [`width`](/en-US/docs/Web/HTML/Element/colgroup#width) of its {{HTMLElement("colgroup")}} parent element. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
-The `<col>` element is used within a {{HTMLElement("colgroup")}} element that doesn't have a `span` attribute. The `<col>` elements does not structurally group columns together. This is the role of the {{HTMLElement("colgroup")}} element.
-
-Only a limited number of CSS properties affect columns:
-
-- {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
-- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column, but will only be visible if the cell and row backgrounds are transparent.
-- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
-- {{cssxref("visibility")}}: The {{cssxref("visibility")}} property is also supported.
-
-- {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
-- {{cssxref("background")}} : The various`background` properties will set the background for cells within the column, but will only be visible if the cell and row backgrounds are transparent.
-- {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
-- {{cssxref("visibility")}}: The {{cssxref("visibility")}} property is also supported.
+- The `<col>` element is used within a {{HTMLElement("colgroup")}} element that doesn't have a `span` attribute.
+- The `<col>` elements do not structurally group columns together. This is the role of the {{HTMLElement("colgroup")}} element.
+- Only a limited number of CSS properties affect `<col>`:
+  - {{cssxref("background")}} : The various `background` properties will set the background for cells within the column. As the column background color is painted on top of the table and column groups ({{HTMLElement("colgroup")}}), but behind background colors applied to the row groups ({{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}}), the rows ({{htmlelement("tr")}}), and the individual cells ({{htmlelement("th")}} and {{htmlelement("td")}}), backgrounds applied to table columns are only visible if every layer painted on top of them has a transparent background.
+  - {{cssxref("border")}}: The various `border` properties apply, but only if the `<table>` has {{cssxref("border-collapse", "border-collapse: collapse")}} set.
+  - {{cssxref("visibility")}}: The value `collapse` for a column results in all cells of that column not being rendered, and cells spanning into other columns being clipped. The space these columns would have occupied is removed. However, the size of other columns is still calculated as though the cells in the collapsed column(s) are present. Other values for `visibility` have no effect.
+  - {{cssxref("width")}}: The `width` property defines a minimum width for the column, as if {{cssxref("min-width")}} were set.
 
 ## Example
 
-This examples demonstrates an eight column table divided into three HTML `<col>` elements.
+See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
+
+This example demonstrates an eight column table divided into three `<col>` elements.
 
 ### HTML
 
-A {{HTMLElement("colgroup")}} element provides structures to a basic table, creating a single implicit column group. Three `<col>` elements are included within the `<colgroup>`, creating three stylable columns,. The [`span`](#span) attribute specifies the number of table columns each `<col>` should span (defaulting to `1` when omitted), enabling attributes to be shared across the columns in each `<col>`.
+A {{HTMLElement("colgroup")}} element provides structures to a basic table, creating a single implicit column group. Three `<col>` elements are included within the `<colgroup>`, creating three stylable columns. The [`span`](#span) attribute specifies the number of table columns each `<col>` should span (defaulting to `1` when omitted), enabling attributes to be shared across the columns in each `<col>`.
 
 ```html
 <table>
@@ -145,15 +128,21 @@ We use CSS instead of deprecated HTML attributes to provide a background color t
 ```css
 table {
   border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
 }
+
 caption {
   caption-side: bottom;
+  padding: 10px;
 }
+
 th,
 td {
-  border: 1px solid rgb(140 140 140);
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 6px;
   text-align: center;
 }
+
 .weekdays {
   background-color: #d7d9f2;
 }
@@ -173,9 +162,7 @@ table {
 
 #### Result
 
-{{EmbedLiveSample('Example', 650, 180)}}
-
-> **Note:** `<col>` allows styling columns using CSS, but only a few properties will have an effect on the column ([see the CSS 2.2 specification](https://www.w3.org/TR/CSS22/tables.html#columns) for a list).
+{{EmbedLiveSample('Example', 650, 170)}}
 
 ## Technical summary
 
@@ -235,13 +222,12 @@ table {
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties and pseudo-classes that may be specially useful to style the `<col>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each column cell;
-  - the {{cssxref("border")}} property to control borders of column cells;
-  - the {{cssxref("text-align")}} property to horizontally align each column cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each column cell content;
-  - the {{cssxref("width")}} property to control the default width for each column;
-  - the {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}} and {{cssxref(":last-of-type")}} pseudo-classes to select the desired column cells.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each column cell
+- {{cssxref("border")}}: CSS property to control borders of column cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each column cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each column cell content
+- {{cssxref("visibility")}}: CSS property to hide cells of a column
+- {{cssxref("width")}}: CSS property to control the default width for each column
+- {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: CSS pseudo-classes to select the desired column cells

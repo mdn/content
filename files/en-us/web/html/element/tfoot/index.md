@@ -21,46 +21,23 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : This {{Glossary("enumerated", "enumerated")}} attribute specifies how horizontal alignment of each foot cell content will be handled. Possible values are:
-
-    - `left`, aligning the content to the left of the cell;
-    - `center`, centering the content in the cell;
-    - `right`, aligning the content to the right of the cell;
-    - `justify`, inserting spaces into the textual content so that the content is justified in the cell;
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](#char) and [`charoff`](#charoff) attributes.
-
-    If this attribute is not set, the `left` value is assumed.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the horizontal alignment of each foot cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : This attribute defines the background color of each foot cell. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/named-color) can also be used.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("background-color")}} property instead.
+  - : Defines the background color of each foot cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : This attribute specifies the alignment of the content to a character in foot cells. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("text-align")}} property instead.
+  - : Specifies the alignment of the content to a character of each foot cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment character specified by the [`char`](#char) attribute.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard.
+  - : Specifies the number of characters to offset the foot cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : This attribute specifies how vertical alignment of each foot cell content will be handled. Possible values are:
-
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the {{Glossary("baseline/typography", "baseline")}} of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - `top`, which will put the text as close to the top of the cell as it is possible.
-
-    > **Note:** Do not use this attribute as it is deprecated (and not supported) in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
+  - : Specifies the vertical alignment of each foot cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -72,11 +49,13 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
-This example uses a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and `<tfoot>` element to structure a basic table into {{Glossary("semantics", "semantic")}} sections. The `<tfoot>` element represents the foot section of the table, which contains a row ({{HTMLElement("tr")}} element) representing the calculated average of the values in the "Credits" column.
+This example demonstrates a table divided into a head section with column headers, a body section with the table's main data, and a foot section summarizing data of one column.
+
+#### HTML
+
+A {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and `<tfoot>` element is used to structure a basic table into {{Glossary("semantics", "semantic")}} sections. The `<tfoot>` element represents the foot section of the table, which contains a row ({{HTMLElement("tr")}} element) representing the calculated average of the values in the "Credits" column.
 
 To allocate the cells in the foot to the correct columns, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute is used on the {{HTMLElement("th")}} element to span it across the first three table columns. The data cell ({{HTMLElement("td")}} element) in the foot is automatically placed in the correct location, i.e., the fourth column, with the default value being `1` for the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute. Additionally, the [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is set to `row` on the header ({{HTMLElement("th")}} element) in the foot to indicate to the browser which cells the foot header relates to, which in our example is the data cell in the foot row that contains the calculated average.
-
-Some basic CSS is used to style and highlight the table foot so that the foot cells stand out from the data in the table body.
 
 ```html
 <table>
@@ -117,9 +96,13 @@ Some basic CSS is used to style and highlight the table foot so that the foot ce
 </table>
 ```
 
+#### CSS
+
+Some basic CSS is used to style and highlight the table foot so that the foot cells stand out from the data in the table body.
+
 ```css
 tfoot {
-  border-top: 3px dotted rgb(160, 160, 160);
+  border-top: 3px dotted rgb(160 160 160);
   background-color: #2c5e77;
   color: #fff;
 }
@@ -131,19 +114,9 @@ tfoot th {
 tfoot td {
   font-weight: bold;
 }
-```
-
-```css hidden
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(140, 140, 140);
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-}
 
 thead {
-  border-bottom: 2px solid rgb(160, 160, 160);
+  border-bottom: 2px solid rgb(160 160 160);
   background-color: #2c5e77;
   color: #fff;
 }
@@ -151,10 +124,20 @@ thead {
 tbody {
   background-color: #e4f0f5;
 }
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
 
 th,
 td {
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(160 160 160);
   padding: 8px 10px;
 }
 
@@ -234,11 +217,9 @@ tr > td:last-of-type {
 
 ## See also
 
-- [HTML tables tutorial](/en-US/docs/Learn/HTML/Tables)
-- Other table-related HTML Elements: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
-- CSS properties that may be specially useful to style the `<tfoot>` element:
-
-  - the {{cssxref("background-color")}} property to set the background color of each foot cell;
-  - the {{cssxref("border")}} property to control borders of foot cells;
-  - the {{cssxref("text-align")}} property to horizontally align each foot cell content;
-  - the {{cssxref("vertical-align")}} property to vertically align each foot cell content.
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each foot cell
+- {{cssxref("border")}}: CSS property to control borders of foot cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each foot cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each foot cell content
