@@ -38,16 +38,7 @@ A {{jsxref("Promise")}} that resolves with a `PaymentRequestDetailsUpdate` objec
   - : An updated total based on the changed payment method. The total can change, for example, because the billing address of the payment method selected by the user changes the applicable sales tax.
 - `modifiers`
 
-  - : An {{jsxref("Array")}} of objects containing modifiers for payment details, each with the following properties:
-
-    - `supportedMethods`
-      - : A string that represents the payment method identifier. The members of the object only apply to the payment if the user selects this payment method.
-    - `total` {{optional_inline}}
-      - : An object that overrides the `total` property of the `detailsPromise` parameter if this payment method is selected by the user. The property takes the same input with the `total` property of the `detailsPromise` parameter.
-    - `additionalDisplayItems` {{optional_inline}}
-      - : An {{jsxref("Array")}} of objects provide additional display items that are appended to the `displayItems` property of the `detailsPromise` parameter if this payment method is selected by the user. This property is commonly used to add a discount or surcharge line item indicating the reason for the different total amount for the selected payment method that the user agent may display. The property takes the same input with the `displayItems` property of the `detailsPromise` parameter.
-    - `data` {{optional_inline}}
-      - : A serializable object that provides optional information that might be needed by the supported payment methods.
+  - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in the {{domxref("PaymentRequestEvent.modifiers")}}.
 
 - `paymentMethodErrors`
   - : An object containing validation errors for the payment method, if any.

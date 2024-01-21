@@ -11,7 +11,7 @@ browser-compat: api.PaymentRequestEvent.modifiers
 {{SeeCompatTable}}{{APIRef("Payment Handler API")}}
 
 The **`modifiers`** read-only property of the
-{{domxref("PaymentRequestEvent")}} interface returns an array of objects containing modifiers for payment details.
+{{domxref("PaymentRequestEvent")}} interface returns an {{jsxref("Array")}} of `PaymentDetailsModifier` objects containing modifiers for payment details.
 
 ## Value
 

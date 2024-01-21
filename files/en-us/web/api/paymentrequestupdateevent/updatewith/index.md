@@ -45,16 +45,7 @@ updateWith(details)
 
     - `modifiers` {{optional_inline}}
 
-      - : An array of objects, each describing a modifier for particular payment method identifiers, each with the following properties:
-
-        - `supportedMethods`
-          - : A string that represents the payment method identifier. The payment method identifier only applies if the user selects this payment method.
-        - `total` {{optional_inline}}
-          - : An object that overrides the `total` property of the `detailsPromise` parameter if this payment method is selected by the user. The property takes the same input with the `total` property of the `detailsPromise` parameter.
-        - `additionalDisplayItems` {{optional_inline}}
-          - : An {{jsxref("Array")}} of objects provide additional display items that are appended to the `displayItems` property of the `detailsPromise` parameter if this payment method is selected by the user. This property is commonly used to add a discount or surcharge line item indicating the reason for the different total amount for the selected payment method that the user agent may display. The property takes the same input with the `displayItems` property of the `detailsPromise` parameter.
-        - `data` {{optional_inline}}
-          - : A serializable object that provides optional information that might be needed by the supported payment methods.
+      - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in the {{domxref("PaymentRequestEvent.modifiers")}}.
 
         For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
 
