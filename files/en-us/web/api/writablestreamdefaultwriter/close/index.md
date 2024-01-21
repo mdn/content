@@ -43,7 +43,7 @@ The following example shows the creation of a `WritableStream` with a custom
 sink and an API-supplied queuing strategy. It then calls a function called
 `sendMessage()`, passing the newly created stream and a string. Inside this
 function it calls the stream's `getWriter()` method, which returns an
-instance of {{domxref("WritableStreamDefaultWriter")}}. Each chunk of the 
+instance of {{domxref("WritableStreamDefaultWriter")}}. Each chunk of the
 encoded string is written to the stream using the `write()` method, and the
 `forEach()` method of the encoded `Uint8Array` to process it byte-by-byte.
 Finally, `close()` is called and the Promise is returns is handled to deal
