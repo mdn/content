@@ -67,9 +67,21 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
+- Fixed a bug that prevented [Perform Actions](https://w3c.github.io/webdriver/#perform-actions) to correctly synthesize double and other multi-click events for the `mouse` input source ([Firefox bug 1864614](https://bugzil.la/1864614)). Additionally, these events will only be emitted when the actual mouse position has not changed since the last click action ([Firefox bug 1681076](https://bugzil.la/1681076)).
+- The definitions for the `Pause` and `Equal` (Numpad block) keys have been updated to align with the WebDriver specification ([Firefox bug 1863687](https://bugzil.la/1863687)).
+
 #### WebDriver BiDi
 
+- The serialization of `WindowProxy` remote objects now also works correctly for out-of-process iframes ([Firefox bug 1867667](https://bugzil.la/1867667)).
+- The [browsingContext.setViewport](https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport) command now distinguishes between `undefined` and `null` as values for the `viewport` argument. If set to `undefined`, it signifies that the viewport should remain unchanged, while using `null` will reset it to its original dimensions ([Firefox bug 1865618](https://bugzil.la/1865618)).
+- Support for the [browsingContext.traverseHistory](https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory) command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
+- Fixed a bug in all supported network events where the `context` id consistently reported the top-level browsing context, even when the navigation occurred within an iframe ([Firefox bug 1869735](https://bugzil.la/1869735)).
+
 #### Marionette
+
+- Fixed a bug with [Get Element Text](https://w3c.github.io/webdriver/#dfn-get-element-text), where the command was incorrectly returning an empty text when the element was located within a ShadowRoot's slot ([Firefox bug 1824664](https://bugzil.la/1824664)).
 
 ## Changes for add-on developers
 
@@ -80,6 +92,22 @@ This article provides information about the changes in Firefox 122 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 122 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Declarative shadow DOM:** `dom.webcomponents.shadowdom.declarative.enabled`.
+
+  The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
+
+- **Popover API:** `dom.element.popover.enabled`.
+
+  Displaying popovers on top of page content is now supported via HTML attributes or JavaScript API, including styling with the CSS [`:popover-open`](/en-US/docs/Web/CSS/:popover-open) pseudo-class and extended support for the [`::backdrop`](/en-US/docs/Web/CSS/::backdrop) pseudo-element. See the [Popover API](/en-US/docs/Web/API/Popover_API) reference for more details. ([Firefox bug 1823757](https://bugzil.la/1823757))
+
+- **Clipboard read and write:** `dom.events.asyncClipboard.clipboardItem`, `dom.events.asyncClipboard.readText` and `dom.events.asyncClipboard.writeText`.
+
+  The async {{domxref('Clipboard API')}} is now fully supported, including [`read()`](/en-US/docs/Web/API/Clipboard/read), [`readText()`](/en-US/docs/Web/API/Clipboard/readText), and [`write()`](/en-US/docs/Web/API/Clipboard/write) methods and the {{domxref('ClipboardItem')}} interface. A paste context menu will appear for the user to confirm when reading clipboard data not provided by the same-origin page. ([Firefox bug 1809106](https://bugzil.la/1809106))
+
+- **`Intl.Segmenter`:** enabled by default only in Firefox Nightly.
+
+  The {{jsxref("Intl.Segmenter")}} object allows accurate locale-sensitive text segmentation of a string. For example, to split a text into words in a language that doesn't use spaces to separate them: `Intl.Segmenter("ja-JP", { granularity: "word" })`. ([Firefox bug 1423593](https://bugzil.la/1423593))
 
 ## Older versions
 

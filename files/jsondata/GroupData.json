@@ -156,7 +156,8 @@
     },
     "Contact Picker API": {
       "overview": ["Contact Picker API"],
-      "interfaces": ["ContactsManager"],
+      "interfaces": ["ContactAddress", "ContactsManager"],
+      "methods": [],
       "properties": ["Navigator.contacts"],
       "events": []
     },
@@ -196,8 +197,12 @@
         "ExtendableCookieChangeEvent"
       ],
       "methods": [],
-      "properties": [],
-      "events": []
+      "properties": [
+        "Window.cookieStore",
+        "ServiceWorkerGlobalScope.cookieStore",
+        "ServiceWorkerRegistration.cookies"
+      ],
+      "events": ["ServiceWorkerGlobalScope: cookiechange"]
     },
     "Credential Management API": {
       "overview": ["Credential Management API"],
@@ -407,6 +412,19 @@
         "TimeRanges",
         "TreeWalker",
         "XMLDocument"
+      ],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
+    "EditContext API": {
+      "overview": ["EditContext API"],
+      "interfaces": [
+        "EditContext",
+        "TextFormat",
+        "TextUpdateEvent",
+        "TextFormatUpdateEvent",
+        "CharacterBoundsUpdateEvent"
       ],
       "methods": [],
       "properties": [],
@@ -915,6 +933,7 @@
       ],
       "interfaces": [
         "CanvasCaptureMediaStreamTrack",
+        "InputDeviceInfo",
         "MediaDeviceInfo",
         "MediaDevices",
         "MediaStream",
@@ -923,11 +942,14 @@
         "MediaTrackConstraints",
         "MediaTrackSettings",
         "MediaTrackSupportedConstraints",
-        "InputDeviceInfo"
+        "OverconstrainedError"
       ],
-      "methods": ["HTMLCanvasElement.captureStream()"],
+      "methods": [
+        "HTMLCanvasElement.captureStream()",
+        "HTMLMediaElement.captureStream()"
+      ],
       "properties": ["Navigator.mediaDevices"],
-      "events": ["HTMLMediaElement: ended", "HTMLMediaElement: ratechange"]
+      "events": []
     },
     "Media Session API": {
       "overview": ["Media Session API"],
