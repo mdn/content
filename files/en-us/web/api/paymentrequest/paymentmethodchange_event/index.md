@@ -43,12 +43,12 @@ _In addition to the properties below, this interface includes properties inherit
 
 Let's take a look at an example. This code creates a new {{domxref("PaymentRequest")}}, adds a handler for the `paymentmethodchange` event by calling the request's {{domxref("EventTarget.addEventListener", "addEventListener()")}}, then calls {{domxref("PaymentRequest.show", "show()")}} to present the payment interface to the user.
 
-The code assumes the existence of a method `detailsForShipping()`, which will return an object provides information about the requested transaction.
+The code assumes the existence of a method `detailsForTransaction()`, which will return an object that can be passed as the [`details`](/en-US/docs/Web/API/PaymentRequest/PaymentRequest#details) argument to the `PaymentRequest` constructor.
 
 ```js
 const paymentRequest = new PaymentRequest(
   paymentMethods,
-  detailsForShipping("ground"),
+  detailsForTransaction(),
 );
 
 paymentRequest.addEventListener(
