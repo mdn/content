@@ -76,7 +76,7 @@ attachShadow(options)
 
     - `clonable` {{Optional_Inline}}
 
-      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`.
+      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`, unless the shadow root is created via declarative shadow DOM.
 
     - `delegatesFocus` {{Optional_Inline}}
 
