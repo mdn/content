@@ -75,9 +75,8 @@ For example, a `data-abc-def` attribute corresponds to
 - The [`Object.hasOwn()` static method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) can also check if a given attribute exists: 
   `element.dataset.hasOwn('keyname')`.
 
-> **Note:** While either the `in` operator or the `Object.hasOwn()` method can be used, the latter mitigates against property pollution.  
-> This is due to the `in` operator having access to an object's inherited properties. The `Object.hasOwn()` method can only return properties that are the specified object's own properties. 
-
+> **Note:** While either the `in` operator or the `Object.hasOwn()` method can be used, the latter mitigates against property pollution.
+> This is due to the `in` operator having access to an object's inherited properties. The `Object.hasOwn()` method can only return properties that are the specified object's own properties.
 
 ### Setting values
 
