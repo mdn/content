@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.status
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A string that describes the current status of the request. It will be one of the following values:
 

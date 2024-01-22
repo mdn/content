@@ -38,7 +38,7 @@ The following example provides functionality to show a popover by pressing a par
 First, some HTML:
 
 ```html
-<div id="mypopover">
+<div id="mypopover" popover>
   <h2>Help!</h2>
 
   <p>You can use the following commands to control the app</p>

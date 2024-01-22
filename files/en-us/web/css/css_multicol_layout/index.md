@@ -5,7 +5,7 @@ page-type: css-module
 spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 
-{{CSSRef("CSS3 Multicol")}}
+{{CSSRef}}
 The **CSS multi-column layout** module lets you divide content across multiple columns. By using the properties in this module, you can define the preferred number and width of columns, the gap size between columns, and the visual appearance of the optional column dividing lines (known as column rules). You can also define how content should flow from column to column and how to break content between columns.
 
 ## Multi-column layout in action

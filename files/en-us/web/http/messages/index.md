@@ -64,7 +64,7 @@ Many different headers can appear in requests. They can be divided in several gr
 
 ### Body
 
-The final part of the request is its body. Not all requests have one: requests fetching resources, like `GET`, `HEAD`, `DELETE`, or `OPTIONS`, usually don't need one. Some requests send data to the server in order to update it: as often the case with `POST` requests (containing HTML form data).
+The final part of the request is its body. Not all requests have one: requests fetching resources like `GET` or `HEAD` usually don't need a body. Requests that send data to the server to create a resource, such as `PUT` or `POST` requests, typically require a body with the data used to fulfill the request (for instance, HTML form data).
 
 Bodies can be broadly divided into two categories:
 

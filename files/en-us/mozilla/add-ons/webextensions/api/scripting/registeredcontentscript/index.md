@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.RegisteredContentScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This object contains details of a script to be registered or that is registered.
 

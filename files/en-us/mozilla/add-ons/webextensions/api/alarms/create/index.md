@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates a new alarm for the current browser session. An alarm may fire once or multiple times. An alarm is cleared after it fires for the last time.
 
