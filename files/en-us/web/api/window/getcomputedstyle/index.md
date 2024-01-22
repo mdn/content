@@ -142,11 +142,10 @@ Java.
 ## Notes
 
 - The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
-  CSS property **_longhand_** names. For example,
-  {{cssxref("border-bottom-width")}} instead of the {{cssxref("border-width")}} and
-  {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
-  {{cssxref("font-size")}}. Shorthand names like {{cssxref("font")}} will not work with most
-  browsers.
+  CSS property **_longhand_** names as well as shorthand names. For example, the returned object contains entries for
+  {{cssxref("border-bottom-width")}} in addition to the {{cssxref("border-width")}} and
+  {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). You can query values with longhand names like
+  {{cssxref("font-size")}} as well as shorthand names like {{cssxref("font")}}.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
   using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
