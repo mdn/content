@@ -37,7 +37,7 @@ Cache directives have the following structure:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.
 - Multiple directives are permitted and must be comma-separated (e.g., `Cache-control: max-age=180, public`).
-- Some directives have an optional argument.  When an argument is supplied, it is separated from the directive name by a `=`.  Typically arguments for the directives are integers and so are not quoted strings, just single integers (e.g. `Cache-control: max-age=12`).
+- Some directives have an optional argument. When an argument is supplied, it is separated from the directive name by a `=`. Typically arguments for the directives are integers and so are not quoted strings, just single integers (e.g. `Cache-control: max-age=12`).
 
 ### Cache directives
 
