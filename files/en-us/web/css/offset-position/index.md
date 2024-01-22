@@ -48,9 +48,9 @@ offset-position: unset;
 ### Values
 
 - `normal`
-  - : Indicates that the element does not have an offset starting position and places the element at `(50%, 50%)` of the containing block
+  - : Indicates that the element does not have an offset starting position and places the element at `(50%, 50%)` of the containing block. This is the default value.
 - `auto`
-  - : Indicates that the offset starting position is the top-left corner of the element's box. This is the default value.
+  - : Indicates that the offset starting position is the top-left corner of the element's box.
 - {{cssxref("&lt;position&gt;")}}
   - : Specifies the position as an x/y coordinate to place an element relative to its box edges. The position can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the {{cssxref("length-percentage")}} values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
