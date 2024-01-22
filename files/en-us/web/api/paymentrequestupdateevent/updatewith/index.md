@@ -45,7 +45,7 @@ updateWith(details)
 
     - `modifiers` {{optional_inline}}
 
-      - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in the {{domxref("PaymentRequestEvent.modifiers")}}.
+      - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in {{domxref("PaymentRequestEvent.modifiers")}}.
 
         For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
 
