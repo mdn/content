@@ -25,7 +25,7 @@ Cookies are mainly used for three purposes:
 
 - **Session management**: User sign-in status, shopping cart contents, game scores, or any other user session-related details that the server needs to remember.
 - **Personalization**: User preferences such as display language and UI theme.
-- **Tracking**: Recording and analyzing user behavior
+- **Tracking**: Recording and analyzing user behavior.
 
 ### Data storage
 
@@ -140,7 +140,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means {{Glossary("MitM", "man-in-the-middle")}} attackers can't access it easily. Insecure sites (with `http:` in the URL) can't set cookies with the `Secure` attribute. However, don't assume that `Secure` prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the `HttpOnly` attribute isn't set) can read and modify the information.
 
-- A cookie with the `HttpOnly` attribute can't be modified by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be modified when it reaches the server. Cookies that persist in server-side sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](</en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>)) attacks.
+- A cookie with the `HttpOnly` attribute can't be modified by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be modified when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](</en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>)) attacks.
 
 > **Note:** Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).
 
@@ -198,7 +198,7 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 - `None` specifies that cookies are sent on both originating and cross-site requests. This is useful if you want to send cookies along with requests made from third-party content embedded in other sites, for example, ad-tech or analytics providers. Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_.
 
   ```http
-  Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure
+  Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
   ```
 
 If no `SameSite` attribute is set, the cookie is treated as `Lax` by default.
