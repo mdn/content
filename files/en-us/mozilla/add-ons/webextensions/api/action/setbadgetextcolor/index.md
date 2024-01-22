@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.action.setBadgeTextColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the text color for the browser action's badge. Tabs without a specific badge text color will inherit the global badge text color.
 

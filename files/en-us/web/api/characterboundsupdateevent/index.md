@@ -17,14 +17,14 @@ This interface inherits properties from {{domxref("Event")}}.
 
 ## Constructor
 
-- {{domxref("CharacterBoundsUpdateEvent.CharacterBoundsUpdateEvent", "CharacterBoundsUpdateEvent()")}}
+- {{domxref("CharacterBoundsUpdateEvent.CharacterBoundsUpdateEvent", "CharacterBoundsUpdateEvent()")}} {{experimental_inline}}
   - : Creates a new `CharacterBoundsUpdateEvent` object.
 
 ## Instance properties
 
-- {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}}
+- {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}} {{experimental_inline}}
   - : The offset of the first character within the editable region text for which the operating system needs the bounds.
-- {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}}
+- {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}} {{experimental_inline}}
   - : The offset of the last character within the editable region text for which the operating system needs the bounds.
 
 ## Examples

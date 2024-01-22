@@ -25,18 +25,18 @@ When creating your own custom editable region by using the {{domxref("EditContex
 
 ## Constructor
 
-- {{DOMxRef("TextFormat.TextFormat", "TextFormat()")}}
+- {{DOMxRef("TextFormat.TextFormat", "TextFormat()")}} {{experimental_inline}}
   - : Returns a new `TextFormat` instance.
 
 ## Instance properties
 
-- {{domxref("TextFormat.rangeStart")}} {{readonlyinline}}
+- {{domxref("TextFormat.rangeStart")}} {{readonlyinline}} {{experimental_inline}}
   - : The start position of the text range that needs to be formatted with the given text format.
-- {{domxref("TextFormat.rangeEnd")}} {{readonlyinline}}
+- {{domxref("TextFormat.rangeEnd")}} {{readonlyinline}} {{experimental_inline}}
   - : The end position of the text range that needs to be formatted with the given text format.
-- {{domxref("TextFormat.underlineStyle")}} {{readonlyinline}}
+- {{domxref("TextFormat.underlineStyle")}} {{readonlyinline}} {{experimental_inline}}
   - : The style of the underline that needs to be applied to the text range that is being formatted.
-- {{domxref("TextFormat.underlineThickness")}} {{readonlyinline}}
+- {{domxref("TextFormat.underlineThickness")}} {{readonlyinline}} {{experimental_inline}}
   - : The thickness of the underline that needs to be applied to the text range that is being formatted.
 
 ## Examples
