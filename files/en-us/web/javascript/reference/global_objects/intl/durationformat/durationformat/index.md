@@ -34,6 +34,8 @@ new Intl.DurationFormat(locales, options)
 
     This key can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
+    Passing `undefined` will use the current user's locale.
+
 - `options` {{optional_inline}}
 
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):

@@ -38,6 +38,8 @@ Intl.NumberFormat(locales, options)
 
     This key can also be set with `options` (as listed below). When both are set, the `options` property takes precedence.
 
+    Passing `undefined` will use the current user's locale.
+
 - `options` {{optional_inline}}
 
   - : An object. For ease of reading, the property list is broken into sections based on their purposes, including [locale options](#locale_options), [style options](#style_options), [digit options](#digit_options), and [other options](#other_options).

@@ -25,6 +25,9 @@ new Intl.Segmenter(locales, options)
 
 - `locales` {{optional_inline}}
   - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+
+  Passing `undefined` will use the current user's locale.
+
 - `options` {{optional_inline}}
   - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
