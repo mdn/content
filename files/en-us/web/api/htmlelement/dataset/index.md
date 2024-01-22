@@ -72,6 +72,12 @@ For example, a `data-abc-def` attribute corresponds to
   `element.dataset['keyname']`.
 - The [`in` operator](/en-US/docs/Web/JavaScript/Reference/Operators/in) can check if a given attribute exists:
   `'keyname' in element.dataset`.
+- The [`Object.hasOwn()` static method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn) can also check if a given attribute exists: 
+  `element.dataset.hasOwn('keyname')`.
+
+> **Note:** While either the `in` operator or the `Object.hasOwn()` method can be used, the latter mitigates against property pollution.  
+> This is due to the `in` operator having access to an object's inherited properties. The `Object.hasOwn()` method can only return properties that are the specified object's own properties. 
+
 
 ### Setting values
 
@@ -113,6 +119,12 @@ delete el.dataset.dateOfBirth;
 if (!("someDataAttr" in el.dataset)) {
   el.dataset.someDataAttr = "mydata";
   // Result on JS: 'someDataAttr' in el.dataset === true
+  // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-some-data-attr="mydata">Carina Anand</div>
+}
+
+if (!(el.dataset.hasOwn("someDataAttr"))) {
+  el.dataset.someDataAttr = "mydata";
+  // Result on JS: el.dataset.hasOwn('someDataAttr) === true
   // Result on HTML: <div id="user" data-id="1234567890" data-user="carinaanand" data-some-data-attr="mydata">Carina Anand</div>
 }
 ```
