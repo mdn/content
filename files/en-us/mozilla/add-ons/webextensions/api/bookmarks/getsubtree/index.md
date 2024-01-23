@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getSubTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`bookmarks.getSubTree()`** method asynchronously retrieves a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, given its ID.
 

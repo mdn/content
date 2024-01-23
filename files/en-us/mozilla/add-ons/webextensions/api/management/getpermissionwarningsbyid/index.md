@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.getPermissionWarningsById
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 When the user installs or upgrades an add-on, the browser may warn the user about any particularly powerful [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) that the add-on has requested. Not all permissions result in warnings, and this behavior is not standardized across browsers.
 

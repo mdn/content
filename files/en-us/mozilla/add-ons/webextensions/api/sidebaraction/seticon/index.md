@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the icon for the sidebar.
 

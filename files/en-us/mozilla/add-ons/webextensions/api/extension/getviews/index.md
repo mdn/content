@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.extension.getViews
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns an array of the [Window](/en-US/docs/Web/API/Window) objects for each of the pages running inside the current extension. This includes, for example:
 

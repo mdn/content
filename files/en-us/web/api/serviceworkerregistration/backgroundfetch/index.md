@@ -14,6 +14,8 @@ The **`backgroundFetch`** property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to a
 {{domxref("BackgroundFetchManager")}} object, which can be used to initiate background fetch operations.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref("BackgroundFetchManager")}} object.

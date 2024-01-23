@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeHistory
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears the record of web pages that the user has visited (browsing history).
 
