@@ -122,6 +122,16 @@ But these request paths don't:
 - `/docsets`
 - `/fr/docs`
 
+##### Path default value
+
+If the `Path` attribute is not set, its default value is computed from the [path](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource) of the URI that set the cookie, as follows:
+
+- If the path is empty, does not start with `"/"`, or contains no more than one `"/"` character, then the default value for `Path` is `"/"`.
+- Otherwise, the default value for `Path` is the path from the start up to but not including the final `"/"` character.
+
+For example, if the cookie was set from `"https://example.org/a/b/c`, then the default value of `Path`
+would be `"/a/b"`.
+
 #### SameSite attribute
 
 The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain and the _scheme_: http or https).

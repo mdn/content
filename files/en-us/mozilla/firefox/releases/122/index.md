@@ -15,6 +15,7 @@ This article provides information about the changes in Firefox 122 that affect d
 ### HTML
 
 - {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
+- The `type` HTML attribute no longer has an effect if set to `none`, `disc`, `circle` or `square` in {{HTMLElement("ol")}} and no longer has an effect if set to `1`, `a`, `A`, `i` or `I` in {{HTMLElement("ul")}}. As `type` is a deprecated attribute for `<ul>` and `<ol>` lists, these should be styled with {{CSSxref("list-style-type")}} CSS property instead. ([Firefox bug 1868087](https://bugzil.la/1868087)).
 
 #### Removals
 
@@ -51,6 +52,9 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### APIs
 
+- The [LargestContentfulPaint API](/en-US/docs/Web/API/LargestContentfulPaint) is now supported.
+  This API is part of the [Performance APIs](/en-US/docs/Web/API/Performance_API) and provides timing information about the largest image or text paint before users interact with a web page ([Firefox bug 1866266](https://bugzil.la/1866266)).
+
 #### DOM
 
 ### showPicker() method for HTML select elements
@@ -67,9 +71,21 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
+#### General
+
+- Fixed a bug that prevented [Perform Actions](https://w3c.github.io/webdriver/#perform-actions) to correctly synthesize double and other multi-click events for the `mouse` input source ([Firefox bug 1864614](https://bugzil.la/1864614)). Additionally, these events will only be emitted when the actual mouse position has not changed since the last click action ([Firefox bug 1681076](https://bugzil.la/1681076)).
+- The definitions for the `Pause` and `Equal` (Numpad block) keys have been updated to align with the WebDriver specification ([Firefox bug 1863687](https://bugzil.la/1863687)).
+
 #### WebDriver BiDi
 
+- The serialization of `WindowProxy` remote objects now also works correctly for out-of-process iframes ([Firefox bug 1867667](https://bugzil.la/1867667)).
+- The [browsingContext.setViewport](https://w3c.github.io/webdriver-bidi/#command-browsingContext-setViewport) command now distinguishes between `undefined` and `null` as values for the `viewport` argument. If set to `undefined`, it signifies that the viewport should remain unchanged, while using `null` will reset it to its original dimensions ([Firefox bug 1865618](https://bugzil.la/1865618)).
+- Support for the [browsingContext.traverseHistory](https://w3c.github.io/webdriver-bidi/#command-browsingContext-traverseHistory) command has been introduced, enabling navigations backward and forward in the browser history ([Firefox bug 1841018](https://bugzil.la/1841018)).
+- Fixed a bug in all supported network events where the `context` id consistently reported the top-level browsing context, even when the navigation occurred within an iframe ([Firefox bug 1869735](https://bugzil.la/1869735)).
+
 #### Marionette
+
+- Fixed a bug with [Get Element Text](https://w3c.github.io/webdriver/#dfn-get-element-text), where the command was incorrectly returning an empty text when the element was located within a ShadowRoot's slot ([Firefox bug 1824664](https://bugzil.la/1824664)).
 
 ## Changes for add-on developers
 
