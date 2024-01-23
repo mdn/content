@@ -132,6 +132,7 @@ evtSource.close();
 The event stream is a simple stream of text data which must be encoded using [UTF-8](/en-US/docs/Glossary/UTF-8). Messages in the event stream are separated by a pair of newline characters. A colon as the first character of a line is in essence a comment, and is ignored.
 
 > **Note:** It's mandatory to seperate messages with a pair of newline characters.
+
 > **Note:** The comment line can be used to prevent connections from timing out; a server can send a comment periodically to keep the connection alive.
 
 Each message consists of one or more lines of text listing the fields for that message. Each field is represented by the field name, followed by a colon, followed by the text data for that field's value.
