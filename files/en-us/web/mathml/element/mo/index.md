@@ -20,15 +20,15 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 - `largeop`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `normal`.
 - `lspace`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space before the operator.
+  - : A {{cssxref("length-percentage")}} indicating the amount of space before the operator.
 - `maxsize`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the maximum size of the operator when it is stretchy.
+  - : A {{cssxref("length-percentage")}} indicating the maximum size of the operator when it is stretchy.
 - `minsize`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum size of the operator when it is stretchy.
+  - : A {{cssxref("length-percentage")}} indicating the minimum size of the operator when it is stretchy.
 - `movablelimits`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `compact`.
 - `rspace`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space after the operator.
+  - : A {{cssxref("length-percentage")}} indicating the amount of space after the operator.
 - `separator`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator is a separator (such as commas). There is no visual effect for this attribute.
 - `stretchy`
