@@ -24,7 +24,7 @@ A boolean value.
 
 ```js
 const el = document.getElementById("el");
-console.log(el.allowFullscreen) // Output: true
+console.log(el.allowFullscreen); // Output: true
 ```
 
 ## Specifications
