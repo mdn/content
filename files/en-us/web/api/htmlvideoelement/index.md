@@ -50,7 +50,7 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 _Inherits methods from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
 - {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}}
-  - : Cancels a previously-registered video frame request callback (see {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}}).
+  - : Cancels a previously-registered video frame callback (see {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}}).
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
