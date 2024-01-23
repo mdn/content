@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.storage.sync
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using a Mozilla account on desktop versions of Firefox or a Google account on Chrome) across different devices.
 

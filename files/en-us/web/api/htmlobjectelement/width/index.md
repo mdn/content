@@ -24,3 +24,9 @@ A string.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLCanvasElement.width")}}
+- {{domxref("HTMLImageElement.width")}}
+- {{domxref("HTMLVideoElement.width")}}
