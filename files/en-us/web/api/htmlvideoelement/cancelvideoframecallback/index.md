@@ -32,23 +32,24 @@ None ({{jsxref("undefined")}}).
 This example shows how to use `cancelVideoFrameCallback()` to cancel a previously registered video frame callback.
 
 ```js
-let paintCount = 0;
-let startTime = 0.0;
-
 const updateCanvas = (now, metadata) => {
   // Do something with the frame.
 
   // ...
 
   // Re-register the callback to be notified about the next frame.
-  video.requestVideoFrameCallback(updateCanvas);
+  // It's important to update the videoCallbackId on each iteration
+  // so you can cancel the callback successfully
+  videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
 };
 
 // Initially register the callback to be notified about the first frame.
-const videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
+let videoCallbackId = video.requestVideoFrameCallback(updateCanvas);
 
-// Cancel video frame callback
-video.requestVideoFrameCallback(videoCallbackId);
+// ...
+
+// Cancel video frame callback using the latest videoCallbackId
+video.cancelVideoFrameCallback(videoCallbackId);
 ```
 
 ## Specifications
