@@ -33,7 +33,7 @@ The **`Cache-Control`** HTTP header field holds _directives_ (instructions) — 
 
 ## Syntax
 
-Cache directives have the following rules:
+Cache directives follow these rules:
 
 - Caching directives are case-insensitive. However, lowercase is recommended because some implementations do not recognize uppercase directives.
 - Multiple directives are permitted and must be comma-separated (e.g., `Cache-control: max-age=180, public`).
