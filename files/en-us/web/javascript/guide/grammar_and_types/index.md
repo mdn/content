@@ -189,7 +189,7 @@ Unlike `var` declarations, which only hoist the declaration but not its value, [
 
 Global variables are in fact properties of the _global object_.
 
-In web pages, the global object is {{domxref("window")}}, so you can set and access global variables using the `window.variable` syntax. In general, in all environments, the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable, which is a global object itself, may be used to set and access global variables. This is to provide a consistent interface within JavaScript runtimes.
+In web pages, the global object is {{domxref("window")}}, so you can set and access global variables using the `window.variable` syntax. In general, in all environments, the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable (which itself is a global variable) may be used to set and access global variables. This is to provide a consistent interface within various JavaScript runtimes.
 
 Consequently, you can access global variables declared in one window or frame from another window or frame by specifying the `window` or `frame` name. For example, if a variable called `phoneNumber` is declared in a document, you can refer to this variable from an `iframe` as `parent.phoneNumber`.
 
