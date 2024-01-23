@@ -8,7 +8,7 @@ browser-compat: api.HTMLVideoElement.cancelVideoFrameCallback
 
 {{APIRef("HTML DOM")}}
 
-The **`cancelVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement")}} interface cancels a previously-registered video frame request callback.
+The **`cancelVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement")}} interface cancels a previously-registered video frame callback.
 
 ## Syntax
 
