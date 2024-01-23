@@ -15,6 +15,7 @@ This article provides information about the changes in Firefox 122 that affect d
 ### HTML
 
 - {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
+- The `type` HTML attribute no longer has an effect if set to `none`, `disc`, `circle` or `square` in {{HTMLElement("ol")}} and no longer has an effect if set to `1`, `a`, `A`, `i` or `I` in {{HTMLElement("ul")}}. As `type` is a deprecated attribute for `<ul>` and `<ol>` lists, these should be styled with {{CSSxref("list-style-type")}} CSS property instead. ([Firefox bug 1868087](https://bugzil.la/1868087)).
 
 #### Removals
 
