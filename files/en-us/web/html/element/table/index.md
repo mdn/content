@@ -142,6 +142,38 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 > **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
 
+## Visual layout of table contents
+
+Following elements are part of the table structure:
+
+- {{HTMLElement("caption")}}
+- {{HTMLElement("thead")}}
+- {{HTMLElement("colgroup")}}
+- {{HTMLElement("col")}}
+- {{HTMLElement("th")}}
+- {{HTMLElement("tbody")}}
+- {{HTMLElement("tr")}}
+- {{HTMLElement("td")}}
+- {{HTMLElement("tfoot")}}
+
+The `<table>` box establishes a table formatting context. Elements inside the `<table>` generate rectangular boxes. Each box occupies a number of table cells according to the following rules:
+
+1. The row boxes fill the table in the source code order from top to bottom. Each row box occupies one row of cells.
+2. A row group box occupies one or more row boxes.
+3. Column boxes are placed next to each other in source code order. Depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute, the columns are laid in left-to-right or right-to-left direction. A column box occupies one or more columns of table cells.
+4. A column group box occupies one or more column boxes.
+5. A cell box may span over multiple rows and columns. User agents trim cells to fit in the available number of rows and columns.
+
+Table cells do have padding. Boxes that make up a table do not have margins.
+
+### Table layers and transparency
+
+For styling purpose the table elements may be thought of as being put on six superimposed layers:
+
+![Table element layers](table_element_layers.png)
+
+The background set on an element in one layer will be visible only if the layers above it have transparent background. A missing cell is rendered as if an anonymous table-cell box occupied that place.
+
 ## Examples
 
 ### Simple table

@@ -84,7 +84,7 @@ Element attributes are defined in parentheses after their associated element. In
 - `script(type='text/javascript')`, `link(rel='stylesheet', href='/stylesheets/style.css')`
 - `meta(name='viewport' content='width=device-width initial-scale=1')`
 
-The values of all attributes are _escaped_ (e.g. characters like "`>`" are converted to their HTML code equivalents like "`&gt;"`) to prevent JavaScript injection or cross-site scripting attacks.
+The values of all attributes are _escaped_ (e.g. characters like `>` are converted to their HTML code equivalents like `&gt;`) to prevent JavaScript injection or cross-site scripting attacks.
 
 If a tag is followed by the equals sign, the following text is treated as a JavaScript _expression_. So for example, in the first line below, the content of the `h1` tag will be _variable_ `title` (either defined in the file or passed into the template from Express). In the second line the paragraph content is a text string concatenated with the `title` variable. In both cases the default behavior is to _escape_ the line.
 

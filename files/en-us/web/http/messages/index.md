@@ -14,11 +14,9 @@ Web developers, or webmasters, rarely craft these textual HTTP messages themselv
 
 ![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
-The HTTP/2 binary framing mechanism has been designed to not require any alteration of the APIs or config files applied: it is broadly transparent to the user.
-
 HTTP requests, and responses, share similar structure and are composed of:
 
-1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This start-line is always a single line.
+1. A _start-line_ describing the requests to be implemented, or its status of whether successful or a failure. This is always a single line.
 2. An optional set of _HTTP headers_ specifying the request, or describing the body included in the message.
 3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
@@ -29,9 +27,11 @@ The start-line and HTTP headers of the HTTP message are collectively known as th
 
 ## HTTP Requests
 
-### Start line
+### Request line
 
-HTTP requests are messages sent by the client to initiate an action on the server. Their _start-line_ contain three elements:
+_Note: The start-line is called the "request-line" in requests._
+
+HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contain three elements:
 
 1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
 2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
@@ -57,14 +57,14 @@ HTTP requests are messages sent by the client to initiate an action on the serve
 Many different headers can appear in requests. They can be divided in several groups:
 
 - {{glossary("General header", "General headers")}}, like {{HTTPHeader("Via")}}, apply to the message as a whole.
-- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None")}}).
+- {{glossary("Request header", "Request headers")}}, like {{HTTPHeader("User-Agent")}} or {{HTTPHeader("Accept")}}, modify the request by specifying it further (like {{HTTPHeader("Accept-Language")}}), by giving context (like {{HTTPHeader("Referer")}}), or by conditionally restricting it (like {{HTTPHeader("If-None-Match")}}).
 - {{glossary("Representation header", "Representation headers")}} like {{HTTPHeader("Content-Type")}} that describe the original format of the message data and any encoding applied (only present if the message has a body).
 
 ![Example of headers in an HTTP request](http_request_headers3.png)
 
 ### Body
 
-The final part of the request is its body. Not all requests have one: requests fetching resources, like `GET`, `HEAD`, `DELETE`, or `OPTIONS`, usually don't need one. Some requests send data to the server in order to update it: as often the case with `POST` requests (containing HTML form data).
+The final part of the request is its body. Not all requests have one: requests fetching resources like `GET` or `HEAD` usually don't need a body. Requests that send data to the server to create a resource, such as `PUT` or `POST` requests, typically require a body with the data used to fulfill the request (for instance, HTML form data).
 
 Bodies can be broadly divided into two categories:
 
@@ -75,10 +75,12 @@ Bodies can be broadly divided into two categories:
 
 ### Status line
 
+_Note: The start-line is called the "status line" in requests._
+
 The start line of an HTTP response, called the _status line_, contains the following information:
 
-1. The _protocol version_, usually `HTTP/1.1`.
-2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}
+1. The _protocol version_, usually `HTTP/1.1`, but can also be `HTTP/1.0`.
+2. A _status code_, indicating success or failure of the request. Common status codes are {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, or {{HTTPStatus("302")}}.
 3. A _status text_. A brief, purely informational, textual description of the status code to help a human understand the HTTP message.
 
 A typical status line looks like: `HTTP/1.1 404 Not Found`.
@@ -111,11 +113,11 @@ HTTP/1.x messages have a few drawbacks for performance:
 
 - Headers, unlike bodies, are uncompressed.
 - Headers are often very similar from one message to the next one, yet still repeated across connections.
-- No multiplexing can be done. Several connections need opening on the same server: and warm TCP connections are more efficient than cold ones.
+- Although HTTP/1.1 has [pipelining](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x#http_pipelining), it's not activated by default in most browsers, and doesn't allow for multiplexing (i.e. sending requests concurrently). Several connections need opening on the same server to send requests concurrently; and warm TCP connections are more efficient than cold ones.
 
 HTTP/2 introduces an extra step: it divides HTTP/1.x messages into frames which are embedded in a stream. Data and header frames are separated, which allows header compression. Several streams can be combined together, a process called _multiplexing_, allowing more efficient use of underlying TCP connections.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
+![HTTP/2 modifies the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 HTTP frames are now transparent to Web developers. This is an additional step in HTTP/2, between HTTP/1.1 messages and the underlying transport protocol. No changes are needed in the APIs used by Web developers to utilize HTTP frames; when available in both the browser and the server, HTTP/2 is switched on and used.
 
