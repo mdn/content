@@ -20,7 +20,7 @@ Typical use cases for `requestVideoFrameCallback()` include video processing and
 - Whereas `requestAnimationFrame()` tries to match the display refresh rate (most commonly 60Hz), `requestVideoFrameCallback()` tries to match the video frame rate. Specifically, the callback will run at the lesser of the video frame rate and the browser paint refresh rate. For example, a 25fps video playing in a browser that paints at 60Hz would fire callbacks at 25Hz. A 120fps video in that same 60Hz browser would fire callbacks at 60Hz.
 - `requestVideoFrameCallback()` makes useful video metadata available in the callback function.
 
-One thing to bear in mind is that `requestVideoFrameCallback()` does not offer any strict guarantees that the output from your callback will remain in sync with the video frame rate. It may end up being a fired one v-sync late, relative to when the new video frame was presented (v-sync, or vertical synchronization, being a graphics technology that synchronizes the frame rate of a video and the refresh rate of a monitor).
+One thing to bear in mind is that `requestVideoFrameCallback()` does not offer any strict guarantees that the output from your callback will remain in sync with the video frame rate. It may end up being fired one vertical synchronization (v-sync) late, relative to when the new video frame was presented (v-sync being a graphics technology that synchronizes the frame rate of a video and the refresh rate of a monitor).
 
 The API runs on the main thread, video compositing likely happens on a separate compositing thread, and you've got to factor in the time taken for these operations to complete, and for the video itself and the result of your `requestVideoFrameCallback()` operation to display on the screen.
 
