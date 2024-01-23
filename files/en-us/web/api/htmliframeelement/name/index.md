@@ -22,7 +22,7 @@ A string.
 
 ```js
 const el = document.getElementById("el");
-console.log(el.name) // Output: "example"
+console.log(el.name); // Output: "example"
 ```
 
 ## Specifications
