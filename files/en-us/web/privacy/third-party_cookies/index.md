@@ -40,7 +40,7 @@ Other legitimate use cases for third-party cookies include:
 
 ## What is the problem with third-party cookies?
 
-The above use cases sound innocent enough individually, however third-party servers can combine information from multiple cookies to create a profile of a user's browsing history, interests, habits, and personal information. This can be used to create creepy, invasive user experiences. The classic example is when you when search for product information on one site and are then chased around the web by adverts for similar products wherever you go. Such information is also often sold on to other third parties.
+The above use cases sound innocent enough individually, however third-party servers can combine information from multiple third-party cookies set across different sites where the third-party content is embedded to create a profile of a user's browsing history, interests, habits, and personal information. This can be used to create creepy, invasive user experiences. The classic example is when you when search for product information on one site and are then chased around the web by adverts for similar products wherever you go. Such information is also often sold on to other third parties.
 
 In such cases, they are referred to as _tracking cookies_.
 
@@ -53,6 +53,7 @@ Browser vendors know that users don't like the behavior described above, and as 
 - Mozilla's [Anti-tracking policy](https://wiki.mozilla.org/Security/Anti_tracking_policy) has led to Firefox blocking third-party cookies from known trackers by default (see [Firefox tracking protection](/en-US/docs/Web/Privacy/Firefox_tracking_protection) and [Enhanced tracking protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop)). Firefox also gives third-party cookies a separate cookie jar per site, so they can't be used to track users across sites (see [Total Cookie Protection](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/)).
 - Apple also has a similar [Tracking prevention policy](https://webkit.org/tracking-prevention-policy/); following this has led to a similar set of third-party cookie protections that are enabled by default; see [Intelligent Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp) (ITP) for details.
 - At the time of writing, Google Chrome only blocks third-party cookies in Incognito mode by default, although users can set it to block third-party cookies all the time if they wish. Google has started to disable third-party cookies for a limited percentage of Chrome users to test the impact that will have, while at the same time developing technologies to recreate key use cases without using third-party cookies. See [Replacing third-party cookies](#replacing_third-party_cookies) for details.
+- Edge does not yet block third-party cookies by default, but it blocks trackers from unvisited sites; in addition, known harmful trackers are blocked by default. See [Tracking prevention](https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention) for more information.
 - The [Brave browser](https://brave.com/) blocks tracking cookies by default.
 
 It is possible to allow usage of third-party cookies on a case-by-case basis in Firefox via browser settings. In Safari however, control is more limited — you can turn off cross-site tracking prevention, but allowing access to third-party cookies per frame can only be done at the code level, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
@@ -79,27 +80,29 @@ Note that if `SameSite=None` is set then the `Secure` attribute must also be set
 
 ### Working around browsers that block third-party cookies
 
-There are a number of different stategies you can adopt if you can't (or are not sure if you can) remove third-party cookies from your application.
+There are a number of different stategies you can adopt to work around third-party cookie blocking:
 
 1. Audit your third-party cookie usage. Third party cookies have `SameSite=None` set on them; you should therefore be able to identify them by searching for this in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/) or the [Chrome Application panel](https://developer.chrome.com/docs/devtools/application/cookies/).
 2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some are no longer needed.
 3. Initially at least, you could make your code more resilient so that it provides a less personalized experience when third party cookie data is not available rather than breaking altogether. Follow the principles of [graceful degradation](/en-US/docs/Glossary/Graceful_degradation).
-4. You could choose to gather such data via alternative means, such as user surveys or quizzes, or looking at data you already have such as product order histories to infer trends.
+4. Gather data via alternative means, such as user surveys or quizzes, or looking at data you already have such as product order histories to infer trends.
+5. Use an alternative client-side storage mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API) to persist data, or consider a server-side solution.
+6. If your third-party cookies are only used across a small number of related, known websites, you could use the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) and/or [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) to allow cross-site cookie access only for those specific sites. Storage Access prompts the user to provide permission for a site to use third party cookies on a per-frame basis.
+   - If you've already implemented a solution using the Storage Access API for Firefox or Safari then this is a good time to check your implementation against Chrome's behavior, which was updated to provide full support in version 119.
+   - Related Website Sets can be considered a progressive enhancement of the Storage Access API: The API can be used in just the same way, but sites in the set will not prompt users for permission to access third party cookies.
+7. If your third-party cookies are being used on a 1:1 basis with the top-level sites they are generated on, you could use [Cookies Having Independent Partitioned State](/en-US/docs/Web/Privacy/Partitioned_cookies) (CHIPS, aka partitioned cookies), to opt your cookies into partitioned storage with a separate cookie jar per top-level site. This only requires adding the `partitioned` attribute to your existing cross-site cookies. They can then be used in an unrestricted fashion, but they can't be shared with other sites. Note that CHIPS is currently Chromium-only.
 
 ## Replacing third-party cookies
 
 There are some useful features available for developers who wish to remove third-party cookies but carry on implementing their use cases, respecting user privacy and minimizing third-party tracking in the process. Some of these are in an early experimental stage, but it is worth having a look as you begin to prepare for the future.
 
-- If your third-party cookies are only used across a small number of related, known websites, you could use the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) and/or [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) to allow cross-site cookie access only for those specific sites. Storage Access prompts the user to provide permission for a site to use third party cookies on a per-frame basis.
-  - If you've already implemented a solution using the Storage Access API for Firefox or Safari then this is a good time to check your implementation against Chrome's behavior, which was updated to provide full support in version 119.
-  - Related Website Sets can be considered a progressive enhancement of the Storage Access API: The API can be used in just the same way, but sites in the set will not prompt users for permission to access third party cookies.
-- If your third-party cookies are being used on a 1:1 basis with the top-level sites they are generated on, you could use [Cookies Having Independent Partitioned State](/en-US/docs/Web/Privacy/Partitioned_cookies) (CHIPS, aka partitioned cookies), to opt your cookies into partitioned storage with a separate cookie jar per top-level site. This only requires adding the `partitioned` attribute to your existing cross-site cookies. They can then be used in an unrestricted fashion, but they can't be shared with other sites. Note that CHIPS is currently Chromium-only.
-- You can start to explore the different features available in Google's [Privacy Sandbox](https://developers.google.com/privacy-sandbox/overview) project to see if they fit your use case (these are also currently Chromium-only):
-  - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
-  - [Private State Tokens](https://developer.chrome.com/docs/privacy-sandbox/private-state-tokens/): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
-  - [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/): Enables interest-based advertising and content personalization.
-  - [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Enables remarketing and custom audiences.
-  - [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/): Enables measurement of ad impressions and conversions.
+You can start to explore the different features available in Google's [Privacy Sandbox](https://developers.google.com/privacy-sandbox/overview) project to see if they fit your use case (these are currently experimental, and Chromium-only):
+
+- [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
+- [Private State Tokens](https://developer.chrome.com/docs/privacy-sandbox/private-state-tokens/): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
+- [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/): Enables interest-based advertising and content personalization.
+- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Enables remarketing and custom audiences.
+- [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/): Enables measurement of ad impressions and conversions.
 
 ## See also
 
