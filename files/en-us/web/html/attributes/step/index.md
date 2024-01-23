@@ -78,7 +78,7 @@ If `any` is not explicitly set, valid values for the `number`, date/time input t
 
 ### min impact on step
 
-The value of `min` and `step` define what are valid values, even if the `step` attribute is not included, as `step` defaults to `0`.
+The value of `min` and `step` define what are valid values, even if the `step` attribute is not included, as `step` defaults to `1`.
 
 We add a big red border around invalid inputs:
 
