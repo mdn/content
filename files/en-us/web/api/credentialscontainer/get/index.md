@@ -99,7 +99,7 @@ navigator.credentials
 
 ## Federated Credential Management API
 
-The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
+The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
@@ -177,7 +177,7 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method on the user's return to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in; however, `getUserInfo()` offers a way to achieve this without relying on [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 ## WebOTP API
 
