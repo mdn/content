@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getLastChecked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the time since the last request was completed.
 

@@ -50,17 +50,7 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -83,17 +73,7 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-        |
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Percentage"
-            >&#x3C;percentage></a
-          ></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -116,11 +96,7 @@ For {{SVGElement('radialGradient')}}, `cy` defines the y-axis coordinate of the 
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        >
-      </td>
+      <td>{{cssxref("length-percentage")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -194,3 +170,8 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- {{SVGAttr("cx")}}
+- {{SVGAttr("r")}}
