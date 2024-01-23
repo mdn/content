@@ -51,6 +51,7 @@ Following on from the above section, **personally identifiable information** (PI
 - Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
 - Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: https://example.com/article/?id=62yhgt1a&campaign=902.
+- Redirect tracking, which involves trackers momentarily (and imperceptibly) redirecting a user to their website for the purpose of using first-party storage to track that user across websites. This allows trackers to get round third-party cookies being blocked. For example, if you have read a product review and then want to click through to buy it, you might end up unwittingly navigating to the redirect tracker first, _then_ to the retailer. This means that the tracker is loaded as a first party, and can associate tracking data with the identifiers they have stored in their first-party cookies before forwarding you to the retailer.
 
 Tracking data can be used to build a profile of a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
 
@@ -95,10 +96,11 @@ So-called "powerful" web API features that provide access to potentially sensiti
 
 Browsers have implemented several anti-tracking features that automatically enhance their users' privacy protection. Many of these block or limit the ability of third-party sites embedded in {{htmlelement("iframe")}}s to access cookies set on the top-level domain, run tracking scripts, etc.
 
-- One change that was agreed upon and rolled out across all browsers was an update to the {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value to `Lax` to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite``](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) for more information.
+- The {{httpheader("Set-Cookie")}} header [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute's default value has been updated to `Lax`, in order to provide better protection against tracking and {{glossary("CSRF")}} attacks. See [Controlling third-party cookies with `SameSite``](/en-US/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite) for more information.
 - Browsers have all started to block third-party cookies by default. See [How do browsers handle third-party cookies?](/en-US/docs/Web/Privacy/Third-party_cookies#how_do_browsers_handle_third-party_cookies) for more details.
 - Browsers are implementing technologies to allow third-party cookies only in certain circumstances that do not damage privacy, or to implement common use cases that currently require third-party cookies in alternative ways. See [Working around browsers that block third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#working_around_browsers_that_block_third-party_cookies) and [Replacing third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies).
 - Several browsers strip out known tracking parameters from URLs — this includes Firefox, Safari, and Brave. There are also browser extensions that help to do this, for example [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/).
+- Browsers have implemented [redirect tracking protection](/en-US/docs/Web/Privacy/Redirect_tracking_protection).
 
 ## Privacy considerations for client-side developers
 
