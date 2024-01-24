@@ -41,14 +41,13 @@ A {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
 
 ```js
 const mapElement = document.getElementsByName("image-map")[0];
-// Anchor elements are filtered out from HTMLCollection
+// filter Area elements
 console.log(mapElement.areas); // Output: HTMLCollection(2) [area, area]
 
 const mapElementAreas = mapElement.areas;
 // Iterate over each area element and update alt for area elements.
 [...mapElementAreas].forEach((area) => (area.alt = area.alt + " " + "arrow"));
-console.log(mapElementAreas[0]);
-// click on left and right arrows, it will open a new tab.
+console.log(mapElementAreas[0].alt); // Output: "left arrow"
 ```
 
 ## Results
