@@ -21,7 +21,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
   - : Add an array of constructed stylesheets to be used by the shadow DOM subtree.
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
-  - : Returns a boolean that indicates whether the shadow root is clonable, which can be set via {{domxref("Element.attachShadow()")}} `clonable` option.
+  - : Returns a boolean that indicates whether the shadow root is clonable, which can be set via the {{domxref("Element.attachShadow()")}} `clonable` option.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether `delegatesFocus` was set when the shadow was attached (see {{domxref("Element.attachShadow()")}}).
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}

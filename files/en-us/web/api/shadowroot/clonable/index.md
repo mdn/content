@@ -8,7 +8,7 @@ browser-compat: api.ShadowRoot.clonable
 
 {{APIRef("Shadow DOM")}}
 
-The **`clonable`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root is clonable, and `false` otherwise. It's always returns `true` for shadow roots created via declarative shadow DOM or can be set via {{domxref("Element.attachShadow()")}} `clonable` option.
+The **`clonable`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root is clonable, and `false` otherwise. It always returns `true` for shadow roots created via declarative shadow DOM. It can be set to `true` using the `clonable` option of the {{domxref("Element.attachShadow()")}} method.
 
 ## Examples
 
