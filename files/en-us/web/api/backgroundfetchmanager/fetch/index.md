@@ -58,7 +58,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("BackgroundFetchRegistrat
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Raised if no request is provided, if the mode of a request is 'no-cors', if no service worker is present, a request already exists with the requested `id`, or the request fails.
+  - : Raised if no request is provided, if the mode of a request is `no-cors`, if no service worker is present, a request already exists with the requested `id`, or the request fails.
 - `AbortError` {{domxref("DOMException")}}
   - : Indicates that the fetch was aborted.
 - `NotAllowedError` {{domxref("DOMException")}}
