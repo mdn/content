@@ -10,6 +10,7 @@ browser-compat: html.elements.template
 The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
 
 By default, an element's content is not rendered, only parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment). You can use this fragment in the following ways:
+
 - If you use the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, you can clone this fragment via the {{domxref("Node.cloneNode", "cloneNode")}} method and insert it into the DOM.
 - If you add the `shadowrootmode` attribute to the element, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree).
 
