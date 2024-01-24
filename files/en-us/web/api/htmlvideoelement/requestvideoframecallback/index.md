@@ -12,7 +12,7 @@ The **`requestVideoFrameCallback()`** method of the {{domxref("HTMLVideoElement"
 
 ## Description
 
-Typical use cases for `requestVideoFrameCallback()` include video processing and painting to a canvas, video analysis, and synchronization with external audio sources. Per-frame processing was previously done in a less efficient and accurate fashion, by continually querying {{domxref("HTMLMediaElement.currentTime")}} and grabbing the current video display, without having access to the actual frames.
+Typical use cases for `requestVideoFrameCallback()` include video processing and painting to a canvas, video analysis, and synchronization with external audio sources. Per-frame processing was previously done in a less efficient or accurate fashion by running operations on the current video display whenever the {{domxref("HTMLMediaElement.timeupdate_event", "timeupdate")}} event fires, without having access to the actual frames.
 
 `requestVideoFrameCallback()` is used in the same way as {{domxref("Window.requestAnimationFrame()")}}. You use it to run a callback function that performs some operation when the next video frame is sent to the compositor. The callback finishes by calling `requestVideoFrameCallback()` again to run the callback when the next video frame is composited, and so on. However, `requestVideoFrameCallback()` is tailored for video operations in several ways:
 
