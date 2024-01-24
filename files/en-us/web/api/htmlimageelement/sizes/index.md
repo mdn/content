@@ -37,7 +37,7 @@ details on how to construct a media condition.
 
 ### Source size values
 
-The source size value is a [CSS length](/en-US/docs/Web/CSS/length). It may
+The source size value is a CSS {{cssxref("length")}}. It may
 be specified using font-relative units (such as `em` or `ex`),
 absolute units (such as `px` or `cm`), or the `vw`
 unit, which lets you specify the width as a percentage of the viewport width
