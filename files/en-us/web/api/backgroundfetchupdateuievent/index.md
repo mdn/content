@@ -20,9 +20,11 @@ The **`BackgroundFetchUpdateUIEvent`** interface of the {{domxref('Background Fe
 
 ## Instance properties
 
-_This interface doesn't implement any specific properties, but inherits properties from {{domxref("Event")}}, and {{domxref("BackgroundFetchEvent")}}._
+_Also inherits properties from its parent, {{domxref("BackgroundFetchEvent")}}._
 
 ## Instance methods
+
+_Also inherits methods from its parent, {{domxref("BackgroundFetchEvent")}}._
 
 - {{domxref("BackgroundFetchUpdateUIEvent.updateUI()")}} {{Experimental_Inline}}
   - : Updates the title and icon in the user interface to show the status of a background fetch. Resolves with a {{jsxref("Promise")}}.

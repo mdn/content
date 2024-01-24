@@ -22,12 +22,14 @@ It is the event type passed to `backgroundfetchabort` and `backgroundfetchclick`
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Also inherits properties from its parent, {{domxref("ExtendableEvent")}}._
 
 - {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
 ## Instance methods
+
+_Also inherits methods from its parent, {{domxref("ExtendableEvent")}}._
 
 None.
 
