@@ -20,18 +20,18 @@ A {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
 <map name="image-map">
   <a href="www.link1_example.com">link 1</a>
   <area
-    alt="left"
     shape="circle"
     coords="50,50,35"
     href="www.left_example.com"
-    target="_top" />
+    target="_self"
+    alt="left" />
   <a href="www.link2_example.com">link 2</a>
   <area
-    alt="right"
     shape="circle"
     coords="150,50,35"
     href="www.right_example.com"
-    target="_top" />
+    target="_self"
+    alt="right" />
 </map>
 <img
   usemap="#image-map"
@@ -41,7 +41,7 @@ A {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
 
 ```js
 const mapElement = document.getElementsByName("image-map")[0];
-// filter Area elements
+// filter area elements
 console.log(mapElement.areas); // Output: HTMLCollection(2) [area, area]
 
 const mapElementAreas = mapElement.areas;
