@@ -6,13 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
+The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
 CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
 
 This guide shows different ways to arrange nesting in CSS.
-
-> **Note:** Early versions of the specification did not allow nesting of [type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has been updated so the `&` nesting selector is no longer needed. At the time of writing (Aug. 2023) Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector for type selector nesting.
 
 ## Child selectors
 
@@ -436,7 +434,7 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 }
 ```
 
-## See Also
+## See also
 
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
