@@ -30,8 +30,8 @@ A string.
 
 ```js
 const anchorElement = document.getElementById("exampleLink");
-const pTag = document.querySelector(".text);
-pTag.text = anchorElement.text + " " + "text property";
+const pTag = document.querySelector(".text");
+pTag.textContent = anchorElement.text + " " + "text property";
 ```
 
 ## Result
