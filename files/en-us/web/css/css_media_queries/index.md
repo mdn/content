@@ -2,7 +2,10 @@
 title: CSS media queries
 slug: Web/CSS/CSS_media_queries
 page-type: css-module
-spec-urls: https://drafts.csswg.org/mediaqueries/
+spec-urls:
+  - https://drafts.csswg.org/mediaqueries-3/
+  - https://drafts.csswg.org/mediaqueries/
+  - https://drafts.csswg.org/mediaqueries-5/
 ---
 
 {{CSSRef}}
@@ -25,12 +28,36 @@ When designing reusable HTML components, you may also use [container queries](/e
 ### Data types
 
 - [`<media-types>`](/en-US/docs/Web/CSS/@media#media_types)
-- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features)
-- [`<resolution`]()
+- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features), including:
+
+  - {{cssxref("@media/width", "width")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scan", "scan")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/update", "update")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/any-hover", "any-hover")}}
+
+- [`<resolution>`](/en-US/docs/Web/CSS/resolution)
 
 ### Glossary terms
 
 - [media](/en-US/docs/Glossary/Media/CSS)
+- [media query](/en-US/docs/Glossary/Media_query)
 
 ## Guides
 
@@ -60,9 +87,8 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 ## Related concepts
 
-- `media` attribute of the [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML) elements.
-- XML `media` attribute
-- SVG `media` attribute
+- HTML `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
+- [SVG `media` attribute](/en-US/docs/Web/SVG/Attribute/media)
 - [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators)
 - [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - [Feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
