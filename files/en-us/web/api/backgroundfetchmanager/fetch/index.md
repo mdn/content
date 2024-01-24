@@ -40,7 +40,7 @@ fetch(id, requests, options)
         - `src`
           - : A string representing a URL to the icon file.
         - `sizes` {{optional_inline}}
-          - : A string representing the sizes of the image, expressed using the same syntax as the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute of the [`<link>`](/en-US/docs/Web/HTML/Element/link) element.
+          - : A string representing the sizes of the image, expressed using the same syntax as the `sizes` attribute of the {{HTMLElement("link")}} element.
         - `type` {{optional_inline}}
           - : A string representing the {{Glossary("MIME")}} type of the icon.
         - `label` {{optional_inline}}
