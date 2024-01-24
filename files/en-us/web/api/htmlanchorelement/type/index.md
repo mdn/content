@@ -12,7 +12,6 @@ The **`type`** property of the {{domxref("HTMLAnchorElement")}} interface is a s
 
 It reflects the `type` attribute of the {{HTMLElement("a")}} element.
 
-
 ## Value
 
 A string.
