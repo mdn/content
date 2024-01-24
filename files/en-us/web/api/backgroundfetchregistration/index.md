@@ -17,7 +17,7 @@ A `BackgroundFetchRegistration` instance is returned by the {{domxref("Backgroun
 
 ## Instance properties
 
-The following properties are available synchronously, as convenience properties copied from those in the `BackgroundFetchRegistration` instance.
+_Also inherits properties from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref("BackgroundFetchRegistration.id")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the background fetch's ID.
@@ -53,6 +53,8 @@ The following properties are available synchronously, as convenience properties 
 
 ## Instance methods
 
+_Also inherits methods from its parent, {{domxref("EventTarget")}}._
+
 - {{domxref("BackgroundFetchRegistration.abort","BackgroundFetchRegistration.abort()")}} {{Experimental_Inline}}
   - : Aborts the background fetch. Returns a {{jsxref("Promise")}} that resolves with `true` if the fetch was successfully aborted.
 - {{domxref("BackgroundFetchRegistration.match","BackgroundFetchRegistration.match()")}} {{Experimental_Inline}}
@@ -61,6 +63,8 @@ The following properties are available synchronously, as convenience properties 
   - : Returns a {{jsxref("Promise")}} that resolves with an array of {{domxref("BackgroundFetchRecord")}} objects containing requests and responses.
 
 ## Events
+
+_Also inherits events from its parent, {{domxref("EventTarget")}}._
 
 Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
 
