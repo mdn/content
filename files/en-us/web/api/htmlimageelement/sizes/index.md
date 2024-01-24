@@ -166,3 +166,4 @@ The page is best {{LiveSampleLink('Selecting an image to fit window width', 'vie
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
