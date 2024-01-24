@@ -41,8 +41,7 @@ matchAll(request,options)
         prevents matching operations from validating the {{domxref("Request")}} `http` method.
         If `false` (the default) only `GET` and `HEAD` are allowed.
     - `ignoreVary` {{optional_inline}}
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
+      - : A boolean value. When `true` indicates that the {{HTTPHeader("Vary")}} header should be ignored.
         It defaults to `false`.
 
 ### Return value
