@@ -8,7 +8,7 @@ browser-compat: api.HTMLIFrameElement.name
 
 {{APIRef("HTML DOM")}}
 
-The **`name`** property of the {{domxref("HTMLIFrameElement")}} interface returns a string value that reflects the `name` attribute of the {{HTMLElement("iframe")}} element, indicating the specific name of the `<iframe>` element.
+The **`name`** property of the {{domxref("HTMLIFrameElement")}} interface is a string value that reflects the `name` attribute of the {{HTMLElement("iframe")}} element, indicating the specific name of the `<iframe>` element.
 
 ## Value
 
