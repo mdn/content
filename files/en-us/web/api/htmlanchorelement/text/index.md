@@ -18,7 +18,7 @@ A string.
 ## Example
 
 ```html
-<a id="exampleLink" href="https://example.com" >Example Link</a>
+<a id="exampleLink" href="https://example.com">Example Link</a>
 <p class="text"></p>
 ```
 
