@@ -33,19 +33,19 @@ fetch(id, requests, options)
 
   - : An object which will be used to customize the fetch progress dialog that the browser shows to the user. It has the following properties:
 
-    - `title`
+    - `title` {{optional_inline}}
       - : A string that will be used as the title for the progress dialog.
-    - `icons`
+    - `icons` {{optional_inline}}
       - : An array of objects, each representing an icon that the browser may use for the progress dialog. Each object has the following properties:
         - `src`
           - : A string representing a URL to the icon file.
-        - `sizes`
-          - : A string representing the sizes of the image, expressed using the same syntax as the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute of the [`<link>`](/en-US/docs/Web/HTML/Element/link) element. {{optional_inline}}
-        - `type`
-          - : A string representing the {{Glossary("MIME")}} type of the icon. {{optional_inline}}
-        - `label`
-          - : A string representing the accessible name of the icon. {{optional_inline}}
-    - `downloadTotal`
+        - `sizes` {{optional_inline}}
+          - : A string representing the sizes of the image, expressed using the same syntax as the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute of the [`<link>`](/en-US/docs/Web/HTML/Element/link) element.
+        - `type` {{optional_inline}}
+          - : A string representing the {{Glossary("MIME")}} type of the icon.
+        - `label` {{optional_inline}}
+          - : A string representing the accessible name of the icon.
+    - `downloadTotal` {{optional_inline}}
 
       - : A number representing the estimated total download size, in bytes, for the fetch operation. This is used to show the user how big the download is and to show the user download progress.
 
