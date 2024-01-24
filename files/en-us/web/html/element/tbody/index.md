@@ -54,7 +54,7 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 ### Not specifying a body
 
-This example demonstrates that the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are not nested within a table grouping element (`<tbody>`, `<tfoot>`, or `<thead>`)  and are, as in this example, the direct children of the {{HTMLElement("table")}} element.
+This example demonstrates that the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are not nested within a table grouping element (`<tbody>`, `<tfoot>`, or `<thead>`) and are, as in this example, the direct children of the {{HTMLElement("table")}} element.
 
 #### HTML
 
