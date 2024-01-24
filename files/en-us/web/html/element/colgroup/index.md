@@ -27,7 +27,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : Specifies the horizontal alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`align`](/en-US/docs/Web/HTML/Element/col#align) attribute. Use the {{cssxref("text-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
+  - : Specifies the horizontal alignment of each column group cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`align`](/en-US/docs/Web/HTML/Element/col#align) attribute. Use the {{cssxref("text-align")}} CSS property on the {{htmlelement("td")}} and {{htmlelement("th")}} elements instead, as this attribute is deprecated.
 
     > **Note:** Setting `text-align` on the `<colgroup>` element has no effect as {{HTMLElement("td")}} and {{HTMLElement("th")}} elements are not descendants of the `<colgroup>` element, and therefore they do not inherit from it.
     >
@@ -59,7 +59,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `width` {{deprecated_inline}}
 
-  - : Specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`width`](/en-US/docs/Web/HTML/Element/col#width) attribute. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
+  - : Specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute can take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that the descendant {{HTMLElement("col")}} elements may override this value using their own [`width`](/en-US/docs/Web/HTML/Element/col#width) attribute. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -74,7 +74,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
-This example demonstrates a seven column table divided into two `<colgroup>` elements that span multiple columns.
+This example demonstrates a seven-column table divided into two `<colgroup>` elements that span multiple columns.
 
 ### HTML
 
@@ -236,6 +236,6 @@ table {
 - {{cssxref("border")}}: CSS property to control borders of column group cells
 - {{cssxref("text-align")}}: CSS property to horizontally align each column group cell content
 - {{cssxref("vertical-align")}}: CSS property to vertically align each column group cell content
-- {{cssxref("visibility")}}: CSS property to hide cells of a column group
+- {{cssxref("visibility")}}: CSS property to hide (or show) cells of a column group
 - {{cssxref("width")}}: CSS property to control the default width for each column in a column group
 - {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: CSS pseudo-classes to select the desired column cells

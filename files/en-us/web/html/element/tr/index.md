@@ -54,7 +54,7 @@ This example demonstrates a table with four rows and three columns, where the fi
 
 #### HTML
 
-Four `<tr>` elements are used to create four basic table rows. Each row contains data using one header cell ({{HTMLElement("th")}} element) and two data cells ({{HTMLElement("td")}} elements). This row setup therefore creates a total of three columns. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is used for the headers ({{HTMLElement("th")}} elements) to specify which cells they relate to, which in the example below is all data cells ({{HTMLElement("td")}} elements) in each `row`.
+Four `<tr>` elements are used to create four table rows. Each row contains three cells - one header cell ({{HTMLElement("th")}}) and two data cells ({{HTMLElement("td")}}) - creating three columns. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute set on each header cell specifies which cells they relate to, which in this example is all data cells within the `row`.
 
 ```html
 <table>
@@ -86,7 +86,7 @@ Four `<tr>` elements are used to create four basic table rows. Each row contains
 The CSS {{cssxref(":nth-of-type")}} pseudo-class is used to select every `odd` row and set the {{cssxref("background-color")}} of those rows to a slightly darker tone, creating a so-called "zebra stripe" effect. This alternating background makes the rows of data in the table easier to parse and read—imagine having many rows and columns and trying to find some data in a particular row. In addition, the row header cells ({{HTMLElement("th")}} elements) are highlighted with a {{cssxref("background-color")}} to distinguish them from the data cells ({{HTMLElement("td")}} elements).
 
 ```css
-tr:nth-of-type(odd) td {
+tr:nth-of-type(odd) {
   background-color: #eee;
 }
 
@@ -121,9 +121,8 @@ This example extends the basic table from the [previous example](#basic_row_setu
 
 #### HTML
 
-An additional table row (`<tr>` element) is added as the first row of the table with column header cells ({{HTMLElement("th")}} elements). This makes it easier to understand the information in the columns and identify the data. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is used for the headers ({{HTMLElement("th")}} elements) within the first row to specify which cells they relate to, which in the example below is all cells in each `col` (column).
+An additional table row (`<tr>`) is added as the first row of the table with column header cells ({{HTMLElement("th")}}) providing a header for each column. We put this row in a {{HTMLElement("thead")}} grouping element to indicate this is the header of the table. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is added to each header cell (`<th>`) within this head row to explicitly specify that each header cell relates to all the cells within its own column, even though those cells are in the {{HTMLElement("tbody")}}.
 
-> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows into the respective table head and body sections. This is not implemented in this example to focus on the rows and keep the example simple.
 
 ```html
 <table>
@@ -160,7 +159,7 @@ An additional table row (`<tr>` element) is added as the first row of the table 
 The CSS is nearly unchanged from the [previous example](#basic_row_setup), except for some additional styling to highlight the "header row" so that the headers of the columns stand out from the other cells.
 
 ```css
-tr:nth-of-type(odd) td {
+tr:nth-of-type(odd) {
   background-color: #eee;
 }
 
@@ -342,6 +341,7 @@ th {
 
 {{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
+> **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute.  See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
 ## Technical summary
 
 <table class="properties">

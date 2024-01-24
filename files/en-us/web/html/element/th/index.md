@@ -16,13 +16,13 @@ The **`<th>`** [HTML](/en-US/docs/Web/HTML) element defines a cell as the header
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `abbr`
-  - : Contains a short abbreviated description of the header cell's content. Some user-agents, such as speech readers, may present this description before the content itself.
+  - : A short, abbreviated description of the header cell's content provided as an alternative label to use for the header cell when referencing the cell in other contexts. Some user-agents, such as speech readers, may present this description before the content itself.
 - `colspan`
-  - : Contains a non-negative integer value that indicates for how many columns the header cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (`1`).
+  - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, defaulting such values to `1`.
 - `headers`
-  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the `<th>` elements that apply to this element.
+  - : A list of space-separated strings corresponding to the `id` attributes of the `<th>` elements that provide the headers for this header cell.
 - `rowspan`
-  - : Contains a non-negative integer value that indicates for how many rows the header cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
+  - : A non-negative integer value indicating how many rows the header cell spans or extends. The default value is `1`; if its value is set to `0`, the header cell will extends to the end of the table grouping section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the `<th>` belongs to. Values higher than `65534` are clipped at `65534`.
 - `scope`
 
   - : Defines the cells that the header (defined in the `<th>`) element relates to. Possible {{Glossary("enumerated", "enumerated")}} values are:
@@ -40,7 +40,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : Specifies the horizontal alignment of the header cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
+  - : Specifies the horizontal alignment of the header cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `axis` {{deprecated_inline}}
 
@@ -94,7 +94,7 @@ The first row ({{HTMLElement("tr")}} element) contains the column headers (`<th>
 
 The remaining rows contain the main data of the table. Each of these rows has a row header (`<th>` element) introduced as the first cell. This creates a column with row headers as the first column of the table. Similar to the column headers, the [`scope`](#scope) attribute is set to `row` to specify which cells each row header relates to, which in the example below are all data cells ({{HTMLElement("td")}} elements) in each `row`.
 
-> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in this example to focus on the headers and keep the example simple.
+> **Note:** Normally, the grouping elements {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} are used to group rows with headers into the respective table head and body sections. These elements are ommitted in this example to reduce complexity and enable focusing on the use of header cells.
 
 ```html
 <table>
@@ -128,7 +128,7 @@ The remaining rows contain the main data of the table. Each of these rows has a 
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. Using the [`scope`](#scope) attributes of the headers, CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) are used to highlight the column and row headers (`<th>` elements) so that they stand out from the data cells ({{HTMLElement("td")}} elements).
+Some basic CSS is used to style the table and its cells. We use CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) to target header cells based on their [`scope`](#scope) attribute values, highlighting column and row headers (`<th>` elements) and differentiating them each other and from the data cells ({{HTMLElement("td")}}).
 
 ```css
 th,
@@ -175,7 +175,7 @@ An additional table row ({{HTMLElement("tr")}} element) is added as the second h
 
 As shown in the [usage notes](#usage_notes), the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes can be used for the `<th>` elements to allocate the header cells to the correct columns and rows. To achieve a "two-row" header in the table structure, the first two header cells within the first {{HTMLElement("tr")}} element are spanned across two rows. The third header cell is spanned two columns wide (remaining in the first row). This setup leaves two available areas in the third and fourth columns in the second row, where the two headers within the second {{HTMLElement("tr")}} element are automatically placed, with the default value being `1` for the [`colspan`](#colspan) and [`rowspan`](#rowspan) attributes.
 
-> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group such rows with headers into the respective table head and body sections. This is not implemented in this example to focus on the headers and spanning and keep the example simple.
+> **Note:** Normally, {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements are used to group rows with headers into the respective table head and body sections. This is not implemented in this example to focus on the headers and spanning and reduce the example's complexity.
 
 ```html
 <table>
@@ -260,7 +260,7 @@ For more complex relationships between header cells, using `th` elements with th
 
 To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each header cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Because of the way the "Pronunciation" column is split into two columns in the example, introducing a "two row" header, assistive technologies such as screen readers may not be able to identify which additional header cells (`th` elements) the "Pronunciation" header cell is related to and vice versa. Therefore, the [`headers`](#headers) attribute is used on the "Pronunciation", "IPA", and "Respelling" header cells to associate the related header cells based on the values of the unique identifiers from the added [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes in the form of a space-separated list.
 
-> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in this example to focus on the concept of the [`headers`](#headers) attribute.
+> **Note:** It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>

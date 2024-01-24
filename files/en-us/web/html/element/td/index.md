@@ -16,11 +16,11 @@ The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table th
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 - `colspan`
-  - : Contains a non-negative integer value that indicates for how many columns the data cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (`1`).
+  - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, setting to the default value (`1`).
 - `headers`
-  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the {{HTMLElement("th")}} elements that apply to this element.
+  - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the {{HTMLElement("th")}} elements that provide headings for this table cell.
 - `rowspan`
-  - : Contains a non-negative integer value that indicates for how many rows the data cell extends. Its default value is `1`; if its value is set to `0`, it extends until the end of the table section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than 65534 are clipped down to 65534.
+  - : Contains a non-negative integer value that indicates for how many rows the data cell spans or extends. The default value is `1`; if its value is set to `0`, it extends until the end of the table grouping section ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, even if implicitly defined), that the cell belongs to. Values higher than `65534` are clipped to `65534`.
 
 ### Deprecated attributes
 
@@ -28,11 +28,11 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `abbr` {{deprecated_inline}}
 
-  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute, as this attribute is deprecated.
+  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Global_attributes/title) attribute, as this attribute is deprecated. Or, preferably, include the content within the data cell, and use CSS to [visually clip overflowing text](/en-US/docs/Web/CSS/text-overflow).
 
 - `align` {{deprecated_inline}}
 
-  - : Specifies the horizontal alignment of the data cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
+  - : Specifies the horizontal alignment of the data cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `axis` {{deprecated_inline}}
 
@@ -85,9 +85,9 @@ This example uses `<td>` elements along with other table-related elements to int
 
 #### HTML
 
-Some table rows ({{HTMLElement("tr")}} elements) are used with row headers ({{HTMLElement("th")}} elements) and `<td>` elements. The {{HTMLElement("th")}} elements in each row form the first column of the table, while each corresponding `<td>` element contains data aligned with its respective column.
+Some table rows ({{HTMLElement("tr")}} elements) contain both header cells ({{HTMLElement("th")}} elements) and data cell `<td>` elements. The {{HTMLElement("th")}} element that is the first child of each row forms the first column of the table, with each `<th>` providing the row header for the data cells within that row. Each corresponding `<td>` element contains data aligned with its respective column header and row header cell.
 
-> **Note:** Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in this example to focus on the data cells and keep the example simple.
+> **Note:** Normally, a table head group with column headers would be implemented to make it easier to understand the information in the columns. The {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} elements would be used to group such rows of headers and data into the respective table head and body sections. This is not implemented in this example to focus on the data cells and reduce the complexity of this example.
 
 ```html
 <table>
@@ -156,7 +156,7 @@ This example extends and enhances the basic table from the [previous example](#b
 
 An additional data cell (`<td>` element) is introduced within the first row ({{HTMLElement("tr")}} element). This creates a fourth column in the table.
 
-Using the [`rowspan`](#rowspan) attribute, the "ABC" cell is spanned across the first three rows of the table. The last data cells of the subsequent rows are spanned two columns wide using the [`colspan`](#colspan) attribute to align them correctly in the table structure and layout. Note that an additional row ({{HTMLElement("tr")}} element) is added to the table to illustrate this.
+Using the [`rowspan`](#rowspan) attribute, the "ABC" cell is spanned across the first three rows of the table. The last data cells of the subsequent rows each span two columns. This is done using the [`colspan`](#colspan) attribute, aligning them correctly within the table structure. Note that an additional row ({{HTMLElement("tr")}} element) is added to the table to illustrate this.
 
 ```html
 <table>
@@ -239,7 +239,7 @@ For more complex relationships between data cells (`<td>` elements) and header c
 
 To improve the {{Glossary("accessibility", "accessibility")}} of the [previous example](#column_and_row_spanning) and to allow screen readers, for example, to speak the headers associated with each data cell, the [`headers`](#headers) attribute can be introduced along with [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attributes. Each row header cell ({{HTMLElement("th")}} element) associated with the "ABC" data cell, i.e., the letters "A", "B", and "C", is given a unique identifier with the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The "ABC" data cell (`<td>` element) then uses these `id` values in a space-separated list for the [`headers`](#headers) attribute.
 
-> **Note:** It's recommended to use a more unique value for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. The `id` values are kept simple in this example to focus on the concept of the [`headers`](#headers) attribute.
+> **Note:** It's recommended to use more descriptive and useful values for the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute. Each `id` in a document must be unique to that document. In this example, the `id` values are single characters to maintain focus on the concept of the [`headers`](#headers) attribute.
 
 ```html
 <table>
@@ -274,7 +274,7 @@ To improve the {{Glossary("accessibility", "accessibility")}} of the [previous e
 
 #### Result
 
-The [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning).
+While the [visual result](#result_2) is unchanged from the [previous example table](#column_and_row_spanning), each data cell (`<td>`) is now explicitly associated with its row header cell (`<th>`).
 
 ## Technical summary
 

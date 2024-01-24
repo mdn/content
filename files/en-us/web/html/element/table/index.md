@@ -63,11 +63,11 @@ The examples below include tables of progressively increasing complexity. For ad
 
 Since the structure of a `<table>` involves the use of several table-related HTML elements along with various associated attributes, the following examples are intended to provide a simplified explanation that covers the basics and common standards. Additional and more detailed information can be found on the corresponding linked pages.
 
-These table examples demonstrate how a complete and {{Glossary("accessibility", "accessible")}} table is structured with HTML and styled with [CSS](/en-US/docs/Web/CSS).
+These table examples demonstrate how to create an {{Glossary("accessibility", "accessible")}} table that is structured with HTML and styled with [CSS](/en-US/docs/Web/CSS).
 
 Because of how HTML tables are structured, the {{Glossary("markup", "markup")}} can quickly grow. For this reason, it is important to clearly define the table's purpose and final appearance to create the appropriate structure. A logical structure developed with {{Glossary("semantics", "semantic")}} markup is not only easier to style, but enables useful and accessible tables that can be understood and navigated by everyone, including search engines and users of assistive technologies.
 
-The first examples are very basic. First, we will develop a very basic HTML table structure for the table. The first examples contain no table section groups such as a defined head, body, and foot, and involve no cell spanning or explicitly defined cell relationships. Not even a caption is provided. As we work through the examples, they will be progressively enhanced to include all the table features that a complex data table should possess.
+The first example is basic, with subsequent examples growing in complexity. First, we will develop a very basic HTML table structure for the table. The first two examples contain no table section groups such as a defined head, body, or foot, and involve no cell spanning or explicitly defined cell relationships. Not even a caption is provided. As we work through the examples, they will be progressively enhanced to include all the table features that a complex data table should possess.
 
 ### Basic table
 
@@ -96,7 +96,7 @@ The table rows are defined with {{HTMLElement("tr")}} elements, and the columns 
 
 #### Result
 
-There is no custom [CSS](/en-US/docs/Web/CSS) or [user stylesheet](/en-US/docs/Web/CSS/Cascade#author_stylesheets) for the table. The styling results purely from the [user-agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets).
+There is no custom [CSS](/en-US/docs/Web/CSS) or [user stylesheet](/en-US/docs/Web/CSS/Cascade#author_stylesheets) applied to this table. The styling results purely from the [user-agent stylesheet](/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets).
 
 {{EmbedLiveSample('Basic_table', 650, 80)}}
 
@@ -106,7 +106,7 @@ This example extends the [basic table](#basic_table), extending the content and 
 
 #### HTML
 
-The table comprises four rows ({{HTMLElement("tr")}} elements) now, including a header row ({{HTMLElement("th")}} elements within the first row). Each row contains four columns, including a header column ({{HTMLElement("th")}} elements as the first child elements of the rows) and three data columns ({{HTMLElement("td")}} elements). As table sectioning elements are not used, the browser automatically defines the content group structure, i.e., all rows are wrapped within the body of the table ({{HTMLElement("tbody")}} element).
+The table comprises four rows ({{HTMLElement("tr")}} elements) now, with four columns each. The first row is a row of header cells (The first row contains only {{HTMLElement("th")}} elements). Subsequent rows include a header column ({{HTMLElement("th")}} elements as the first child elements of each row) and three data columns ({{HTMLElement("td")}} elements). As table sectioning elements are not used, the browser automatically defines the content group structure, i.e., all rows are wrapped within the body of the table of an implicit {{HTMLElement("tbody")}} element.
 
 ```html
 <table>
@@ -195,7 +195,7 @@ This is accomplished by introducing the [`scope`](/en-US/docs/Web/HTML/Element/t
 
 The CSS and visual result are unchanged—the adaptation provides valuable contextual information for assistive technologies such as screen readers to help identify which cells the headers relate to.
 
-> **Note:** If the table structure is even more complex, the (additional) use of the [`headers`](/en-US/docs/Web/HTML/Element/th#headers) attribute on the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements may improve the accessibility and help assistive technologies identify the correct relations between cells; see [Complicated tables](#complicated_tables).
+> **Note:** If the table structure is even more complex, the (additional) use of the [`headers`](/en-US/docs/Web/HTML/Element/th#headers) attribute on the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements may improve accessibility and help assistive technologies identify the relationships between cells; see [Complicated tables](#complicated_tables).
 
 ### Explicitly specifying table section groups
 
@@ -203,7 +203,7 @@ In addition to improving accessibility by [specifying cell relations](#specifyin
 
 #### HTML
 
-Since the first row ({{HTMLElement("tr")}} element) contains only column header cells, it can be enclosed in the {{HTMLElement("thead")}} element to specify the head section of the table. Moreover, what is automatically accomplished by the browser can also be defined explicitly—the body section of the table, which contains the main data of the table, is specified by enclosing the corresponding rows in the {{HTMLElement("tbody")}} element. The explicit use of the {{HTMLElement("tbody")}} element helps the browser to create the intended table structure, avoiding unwanted results.
+Since the first row ({{HTMLElement("tr")}} element) contains only column header cells and provides the header for the rest of the table's contents, it can be enclosed in the {{HTMLElement("thead")}} element to explicitly specify that row as the head section of the table. Moreover, what is automatically accomplished by the browser can also be defined explicitly—the body section of the table, which contains the main data of the table, is specified by enclosing the corresponding rows in the {{HTMLElement("tbody")}} element. The explicit use of the {{HTMLElement("tbody")}} element helps the browser to create the intended table structure, avoiding unwanted results.
 
 ```html
 <table>
@@ -305,7 +305,7 @@ td {
 
 {{EmbedLiveSample("Column_and_row_spanning", 650, 130)}}
 
-The head section now has two rows, one with the headers ({{HTMLElement("th")}} elements) "Name", "ID", "Membership Dates", and "Balance", and the other with the "Joined" and "Canceled", which are subheaders of the "Membership Dates" header. This is accomplished by:
+The head section now has two rows, one with the headers ({{HTMLElement("th")}} elements) "Name", "ID", "Membership Dates", and "Balance", and a "Membership Dates" header with two subheaders that are in a second row: "Joined" and "Canceled". This is accomplished by:
 
 - The first row's "Name", "ID", and "Balance" header cells span both table header rows by using the [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attribute, making them each two rows tall.
 - The first row's "Membership Dates" header cell spans two columns using the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute, causing it to be two columns wide.
@@ -317,7 +317,7 @@ It's a common and advisable practice to provide a summary for the table's conten
 
 #### HTML
 
-A table summary is added by using a table [caption](#captions) ({{HTMLElement("caption")}} element) as the first child element of the `<table>`.
+A table summary is added by using a table [caption](#captions) ({{HTMLElement("caption")}} element) as the first child element of the `<table>`. The caption provides the {{glossary("accessible description")}} for the table.
 
 Lastly, a table foot section ({{HTMLElement("tfoot")}} element) is added below the body, with a row that summarizes the "Balance" column by displaying a sum. The elements and attributes introduced earlier are applied.
 

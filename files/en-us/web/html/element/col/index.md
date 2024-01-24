@@ -56,7 +56,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `width` {{deprecated_inline}}
 
-  - : Specifies a default width for each column. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that this attribute overrides the specified [`width`](/en-US/docs/Web/HTML/Element/colgroup#width) of its {{HTMLElement("colgroup")}} parent element. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
+  - : Specifies a default width for each column. In addition to the standard pixel and percentage values, this attribute can take the special form `0*`, which means that the width of each column spanned should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` can also be used. Note that this attribute overrides the specified [`width`](/en-US/docs/Web/HTML/Element/colgroup#width) of its {{HTMLElement("colgroup")}} parent element. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
 ## Usage notes
 
@@ -72,7 +72,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
-This example demonstrates an eight column table divided into three `<col>` elements.
+This example demonstrates an eight-column table divided into three `<col>` elements.
 
 ### HTML
 
@@ -123,7 +123,7 @@ A {{HTMLElement("colgroup")}} element provides structures to a basic table, crea
 
 ### CSS
 
-We use CSS instead of deprecated HTML attributes to provide a background color to the columns and align the cell content:
+We use CSS, instead of deprecated HTML attributes, to provide a background color to the columns and align the cell content:
 
 ```css
 table {

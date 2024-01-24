@@ -21,7 +21,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `align` {{deprecated_inline}}
 
-  - : Specifies the horizontal alignment of each head cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
+  - : Specifies the horizontal alignment of each head cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
@@ -29,7 +29,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - `char` {{deprecated_inline}}
 
-  - : Specifies the alignment of the content to a character of each head cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
+  - : Specifies the alignment of the content to a character of each head cell. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
@@ -55,7 +55,7 @@ This example demonstrates a table divided into a head section with column header
 
 #### HTML
 
-A `<thead>` and {{HTMLElement("tbody")}} element is used to structure a basic table into {{Glossary("semantics", "semantic")}} sections. The `<thead>` element represents the head section of the table, which contains a row ({{HTMLElement("tr")}} element) of column headers using {{HTMLElement("th")}} elements.
+The `<thead>` and {{HTMLElement("tbody")}} elements are used to structure the table rows into {{Glossary("semantics", "semantic")}} sections. The `<thead>` element represents the head section of the table, which contains a row ({{HTMLElement("tr")}}) of column headers cells ({{HTMLElement("th")}}).
 
 ```html
 <table>
@@ -137,7 +137,7 @@ This example demonstrates a table head section with two rows.
 
 #### HTML
 
-To markup the table from the [basic example](#basic_head_structure) in a more advanced way, this example uses two table rows ({{HTMLElement("tr")}} elements) within the `<thead>` element to introduce a multi-row table head. An additional column is created to split the student names into first and last names.
+We extend the markup the table from the [basic example](#basic_head_structure) in this example by including two table rows ({{HTMLElement("tr")}}) within the `<thead>` element creating a multi-row table head. We included an additional column, splitting the student names into first and last names.
 
 ```html
 <table>
@@ -181,9 +181,11 @@ To markup the table from the [basic example](#basic_head_structure) in a more ad
 
 #### Cell spanning
 
-In order to allocate the header cells to the correct columns and rows, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are used on the {{HTMLElement("th")}} elements. The values set in these attributes specify how many cells each header cell ({{HTMLElement("th")}} element) is to span. Due to the way these attributes are set in this example, the two header cells in the second row are automatically placed in the correct location—fitting into the available areas in the table structure, with the default value being `1` for the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes. This is illustrated in the following figure, which corresponds to this example:
+In order to associate and line up the header cells with the correct columns and rows, the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are used on the {{HTMLElement("th")}} elements. The values set in these attributes specify how many cells each header cell ({{HTMLElement("th")}}) spans. Due to the way these attributes are set, the two second-row header cells are lined up with the columns they head. These each span one row and one column as the default values for the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/th#rowspan) attributes are both `1`.
 
-![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
+The column and row spanning demonstrated by this example are illustrated in the following figure:
+
+![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning one column and two rows each; cell 2 spanning two columns and one row; cells 5 and 6 span a single row and column each, fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
 
 #### CSS
 

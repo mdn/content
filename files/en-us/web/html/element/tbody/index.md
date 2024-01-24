@@ -54,7 +54,7 @@ See {{HTMLElement("table")}} for a complete table example introducing common sta
 
 ### Not specifying a body
 
-This example demonstrates that the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are outside existing `<tbody>` elements or, as in this example, if they're direct children of the {{HTMLElement("table")}} element.
+This example demonstrates that the browser automatically encapsulates {{HTMLElement("tr")}} elements within a `<tbody>` element if the rows are not nested within a table grouping element (`<tbody>`, `<tfoot>`, or `<thead>`)  and are, as in this example, the direct children of the {{HTMLElement("table")}} element.
 
 #### HTML
 
@@ -162,7 +162,7 @@ The use of such table content groups and {{Glossary("semantics", "semantic")}} m
 
 #### CSS
 
-The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headers of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `<tbody>` is used to style the body cells.
+The CSS is nearly unchanged from the [previous example](#not_specifying_a_body), except for some basic styling to highlight the table head so that the headers of the columns stand out from the data in the table body. As in the [example above](#not_specifying_a_body), the `tbody` [type selector](/en-US/docs/Web/CSS/Type_selectors) is used to style the body cells.
 
 ```css
 tbody {
@@ -208,7 +208,7 @@ Using multiple `<tbody>` elements allows creating row groupings within a table. 
 
 #### HTML
 
-Building on the table in the [previous basic example](#basic_body_structure), more students are added, and instead of listing each student's major on each row, the students are grouped by major. Note that each major is enclosed within its own `<tbody>` block, with the first row ({{HTMLElement("tr")}} element) serving as the head of the block, displaying the major title within a {{HTMLElement("th")}} element that uses the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute to span it across all three columns of the table. Each remaining row within each major's `<tbody>` represents each student.
+Building on the table in the [previous basic example](#basic_body_structure), more students are added and, instead of listing each student's major on each row, the students are grouped by major. Note that each major is enclosed within its own `<tbody>` block, with the first row ({{HTMLElement("tr")}} element) serving as the head of the block, displaying the major title within a {{HTMLElement("th")}} element that uses the [`colspan`](/en-US/docs/Web/HTML/Element/th#colspan) attribute to span the header across all three columns of the table. Each remaining row within each major's `<tbody>` represents one student.
 
 ```html
 <table>
