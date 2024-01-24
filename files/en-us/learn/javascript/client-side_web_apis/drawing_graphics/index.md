@@ -124,7 +124,7 @@ So that's it — our canvas is now primed and ready for drawing on! The `ctx` va
 Let's do one last thing before we move on. We'll color the canvas background black to give you a first taste of the canvas API. Add the following lines at the bottom of your JavaScript:
 
 ```js
-ctx.fillStyle = "rgb(0, 0, 0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 ```
 
@@ -148,7 +148,7 @@ Let's start with some simple rectangles.
 2. Next, add the following lines to the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.fillRect(50, 50, 100, 150);
    ```
 
@@ -157,7 +157,7 @@ Let's start with some simple rectangles.
 3. Let's add another rectangle into the mix — a green one this time. Add the following at the bottom of your JavaScript:
 
    ```js
-   ctx.fillStyle = "rgb(0, 255, 0)";
+   ctx.fillStyle = "rgb(0 255 0)";
    ctx.fillRect(75, 75, 100, 100);
    ```
 
@@ -179,7 +179,7 @@ So far we've looked at drawing filled rectangles, but you can also draw rectangl
 1. Add the following to the previous example, again below the previous JavaScript lines:
 
    ```js
-   ctx.strokeStyle = "rgb(255, 255, 255)";
+   ctx.strokeStyle = "rgb(255 255 255)";
    ctx.strokeRect(25, 25, 175, 200);
    ```
 
@@ -212,7 +212,7 @@ We'll be using some common methods and properties across all of the below sectio
 A typical, simple path-drawing operation would look something like so:
 
 ```js
-ctx.fillStyle = "rgb(255, 0, 0)";
+ctx.fillStyle = "rgb(255 0 0)";
 ctx.beginPath();
 ctx.moveTo(50, 50);
 // draw your path
@@ -234,7 +234,7 @@ Let's draw an equilateral triangle on the canvas.
 2. Next, start off your path by adding the following below your previous addition; here we set a color for our triangle, start drawing a path, and then move the pen to (50, 50) without drawing anything. That's where we'll start drawing our triangle.
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
+   ctx.fillStyle = "rgb(255 0 0)";
    ctx.beginPath();
    ctx.moveTo(50, 50);
    ```
@@ -274,7 +274,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 1. Let's add an arc to our canvas — add the following to the bottom of your code:
 
    ```js
-   ctx.fillStyle = "rgb(0, 0, 255)";
+   ctx.fillStyle = "rgb(0 0 255)";
    ctx.beginPath();
    ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
    ctx.fill();
@@ -658,7 +658,7 @@ When the "Clear canvas" button is pressed, we run a simple function that clears 
 
 ```js
 clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 });
 ```
@@ -778,10 +778,10 @@ Let's look at a simple example of how to create something with a WebGL library. 
 8. Before we get to defining `draw()`, we'll add a couple of lights to the scene, to liven things up a bit; add the following blocks next:
 
    ```js
-   const light = new THREE.AmbientLight("rgb(255,255,255)"); // soft white light
+   const light = new THREE.AmbientLight("rgb(255 255 255)"); // soft white light
    scene.add(light);
 
-   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
+   const spotLight = new THREE.SpotLight("rgb(255 255 255)");
    spotLight.position.set(100, 1000, 1000);
    spotLight.castShadow = true;
    scene.add(spotLight);
