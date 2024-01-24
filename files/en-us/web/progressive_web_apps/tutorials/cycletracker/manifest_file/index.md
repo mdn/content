@@ -43,7 +43,7 @@ To identify your PWA, the JSON must include a `name` or `short_name` member, or 
 When both the `name` and `short_name` are present, the `name` is used in most instances, with the `short_name` used when there is a limited space to display the application name.
 
 - [`description`](/en-US/docs/Web/Manifest/description)
-  - : Explanation of what the application does. It provides an [accessible description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) of the application's purpose and function.
+  - : Explanation of what the application does. It provides an {{glossary("accessible description")}} of the application's purpose and function.
 
 ### Task
 
