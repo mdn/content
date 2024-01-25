@@ -212,7 +212,13 @@ Likewise, if a user is on a smartphone in portrait mode with a viewport height o
 
 ### Inverting a query's meaning
 
-The `not` keyword inverts the meaning of a single media query. It only negates the specific media query it is applied to, negating the _entire_ media query. This means it will not apply to every media query in a comma-separated list of media queries. Rather, each `not` applies to the single query in the comma-separated list of media queries, applying to all the features within that single query.
+The `not` keyword inverts the meaning of a single media query. For example...INCLUDE THE DESCRIPTION OF THE SINGLE MEDIA QUERY "NOT" EXAMPLE CURRENTLY AT THE BOTTOM OF THE SECTION, HERE
+
+EXAMPLE CODE HERE
+
+Note that `not` only negates the specific media query it is applied to — in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to all the features within that single query. For example NOW DESCRIBE A COMMA-SEPARATED LIST EXAMPLE WITH A SINGLE NOT, TO SHOW WHAT YOU MEAN
+
+EXAMPLE CODE HERE
 
 To negate a single feature within a media query, use `not()`. The `not()` functional notation logical operator encompassing a media feature negates only that feature within the query.
 
