@@ -56,7 +56,7 @@ _Inherits methods from its parent interface, {{domxref("HTMLMediaElement")}}, an
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
   - : Requests that the user agent enters the video into picture-in-picture mode.
 - {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback()")}}
-  - : Registers a callback function that runs when a new video frame is sent to the compositor, allowing developers to perform efficient per-frame operations on video.
+  - : Registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
 
 ## Events
 
