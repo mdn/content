@@ -8,7 +8,7 @@ browser-compat: api.HTMLAnchorElement.type
 
 {{ApiRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLAnchorElement")}} interface is a string that is the MIME type of the linked resource.
+The **`type`** property of the {{domxref("HTMLAnchorElement")}} interface is a string that indicates the MIME type of the linked resource.
 
 It reflects the `type` attribute of the {{HTMLElement("a")}} element.
 
