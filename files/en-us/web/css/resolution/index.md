@@ -38,7 +38,7 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 }
 
 @media (resolution: 120dpcm) {
- /* … */
+  /* … */
 }
 
 @media (min-resolution: 2dppx) {
