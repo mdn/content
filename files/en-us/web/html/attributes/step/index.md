@@ -94,7 +94,7 @@ Then define an input with a minimum value of `1.2` and a step value of `2`.
 <input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
-Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Integers and even numbers followed by .2 are not valid. As we included an invalid value, supporting browsers will show the value as invalid. The number spinner, if present, will only show valid float values of `1.2` and greater
+Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Only floats with an odd-numbered integer part and a decimal part of `.2` are valid. The number spinner, if present, generates valid float values of `1.2` and greater, in increments of `2`.
 
 {{EmbedLiveSample("min_impact_on_step",200,55)}}
 
