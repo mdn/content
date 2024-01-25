@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.cookies.OnChangedCause
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `OnChangedCause` type of the {{WebExtAPIRef("cookies")}} API represents the reason a cookie changed.
 

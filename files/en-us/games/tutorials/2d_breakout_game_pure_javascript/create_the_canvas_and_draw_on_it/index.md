@@ -86,19 +86,19 @@ As you can see we're using the {{domxref("CanvasRenderingContext2D.beginPath()",
 - start angle and end angle (what angle to start and finish drawing the circle, in radians)
 - direction of drawing (`false` for clockwise, the default, or `true` for anti-clockwise.) This last parameter is optional.
 
-The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the `rgba()` function, or any of the other available color methods.
+The {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} property looks different than before. This is because, just as with CSS, color can be specified as a hexadecimal value, a color keyword, the `rgb()` function, or any of the other available color methods.
 
 Instead of using {{domxref("CanvasRenderingContext2D.fill()","fill()")}} and filling the shapes with colors, we can use {{domxref("CanvasRenderingContext2D.stroke()","stroke()")}} to only color the outer stroke. Try adding this code to your JavaScript too:
 
 ```js
 ctx.beginPath();
 ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+ctx.strokeStyle = "rgb(0 0 255 / 50%)";
 ctx.stroke();
 ctx.closePath();
 ```
 
-The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the `rgba()` function, the blue color is semi transparent.
+The code above prints a blue-stroked empty rectangle. Thanks to the alpha channel in the `rgb()` function, the blue color is semi transparent.
 
 ## Compare your code
 

@@ -15,6 +15,7 @@ This article provides information about the changes in Firefox 122 that affect d
 ### HTML
 
 - {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
+- The `type` HTML attribute no longer has an effect if set to `none`, `disc`, `circle` or `square` in {{HTMLElement("ol")}} and no longer has an effect if set to `1`, `a`, `A`, `i` or `I` in {{HTMLElement("ul")}}. As `type` is a deprecated attribute for `<ul>` and `<ol>` lists, these should be styled with {{CSSxref("list-style-type")}} CSS property instead. ([Firefox bug 1868087](https://bugzil.la/1868087)).
 
 #### Removals
 
@@ -25,6 +26,8 @@ This article provides information about the changes in Firefox 122 that affect d
 - The various methods for defining a CSS {{cssxref("offset-path")}} — including [`<basic-shape>`](/en-US/docs/Web/CSS/offset-path#basic-shape), [`<coord-box>`](/en-US/docs/Web/CSS/offset-path#coord-box), and [`url()`](/en-US/docs/Web/CSS/offset-path#url) — are now enabled by default. ([Firefox bug 1598159](https://bugzil.la/1598159))
 
 - The CSS {{cssxref("ray")}} function is now available by default. You can use this function to define an {{cssxref("offset-path")}} as a line segment that begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. ([Firefox bug 1598151](https://bugzil.la/1598151))
+
+- The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
 
 #### Removals
 
@@ -50,6 +53,9 @@ This article provides information about the changes in Firefox 122 that affect d
 #### Removals
 
 ### APIs
+
+- The [LargestContentfulPaint API](/en-US/docs/Web/API/LargestContentfulPaint) is now supported.
+  This API is part of the [Performance APIs](/en-US/docs/Web/API/Performance_API) and provides timing information about the largest image or text paint before users interact with a web page ([Firefox bug 1866266](https://bugzil.la/1866266)).
 
 #### DOM
 

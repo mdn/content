@@ -3,10 +3,12 @@ title: "CharacterBoundsUpdateEvent: CharacterBoundsUpdateEvent() constructor"
 short-title: CharacterBoundsUpdateEvent()
 slug: Web/API/CharacterBoundsUpdateEvent/CharacterBoundsUpdateEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.CharacterBoundsUpdateEvent.CharacterBoundsUpdateEvent
 ---
 
-{{APIRef("CharacterBoundsUpdateEvent API")}}
+{{APIRef("CharacterBoundsUpdateEvent API")}}{{SeeCompatTable}}
 
 The **`CharacterBoundsUpdateEvent()`** constructor returns a new {{DOMxRef("CharacterBoundsUpdateEvent")}} object.
 

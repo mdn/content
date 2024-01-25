@@ -101,7 +101,7 @@ For example, when developing the Accessibility sidebar, we could have temporaril
 
 If listed as the last content in the page, Yari, the engine that renders MDN, recognizes the `Quick_links` ID in the opening tag and converts the content of the identified `<section>` into a sidebar.
 
-The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibilty documents, followed by the ARIA roles and attributes.
+The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibility documents, followed by the ARIA roles and attributes.
 
 Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/blob/main/kumascript/macros/).
 

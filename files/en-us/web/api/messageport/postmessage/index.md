@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MessagePort.postMessage
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`postMessage()`** method of the
 {{domxref("MessagePort")}} interface sends a message from the port, and optionally,
