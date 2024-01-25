@@ -90,10 +90,10 @@ ball.draw();
 Without any boundary collision testing our ball runs out of the canvas quickly. We need to check if the `x` and `y` position of the ball is out of the canvas dimensions and invert the direction of the velocity vectors. To do so, we add the following checks to the `draw` method:
 
 ```js
-if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
   ball.vy = -ball.vy;
 }
-if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
   ball.vx = -ball.vx;
 }
 ```
@@ -137,10 +137,10 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
     ball.vx = -ball.vx;
   }
 
@@ -214,10 +214,10 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
     ball.vx = -ball.vx;
   }
 
@@ -288,10 +288,10 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
     ball.vx = -ball.vx;
   }
 
@@ -360,10 +360,10 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball radius) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+  if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
     ball.vx = -ball.vx;
   }
 
