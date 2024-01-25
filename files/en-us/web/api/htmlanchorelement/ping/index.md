@@ -17,7 +17,12 @@ It reflects the `ping` attribute of the {{HTMLElement("a")}} element.
 ## Example
 
 ```html
-<a id="exampleLink" href="https://example.com" ping="https://example-tracking.com">Example Link</a>
+<a
+  id="exampleLink"
+  href="https://example.com"
+  ping="https://example-tracking.com"
+  >Example Link</a
+>
 ```
 
 ```js
