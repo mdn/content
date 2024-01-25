@@ -43,12 +43,22 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length.
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. The size of actual lines boxes may differ based on their content as the unit enables length calculations based on the theoretical size of an ideal empty line.
+
+### Relative length units based on font root
+- `rcap`
+  - : Equal to the "cap height" (nominal height of capital letters) of the root element's {{Cssxref("font")}}.
+- `rch`
+  - : Equal to the width or the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the root element's {{Cssxref("font")}}.
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
+-  `rex`
+  - : Represents the x-height of the root element's {{Cssxref("font")}}.
+-  `ric`
+  - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found of the root element used to render it.
 - `rlh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value.
-
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property on the root element (typically {{HTMLElement("html")}}), converted to an absolute length. When used on the {{Cssxref("font-size")}} or {{Cssxref("line-height")}} properties of the root element, it refers to the properties' initial value. The size of actual lines boxes may differ based on their content as the unit enables length calculations based on the theoretical size of an ideal empty line.
+  - 
 ### Relative length units based on viewport
 
 The viewport-percentage length units are based on four different viewport sizes: small, large, dynamic, and default. The allowance for the different viewport sizes is in response to browser interfaces expanding and retracting dynamically and hiding and showing the content underneath.
