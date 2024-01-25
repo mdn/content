@@ -17,6 +17,7 @@ The **`for...of`** statement executes a loop that operates on a sequence of valu
 for (variable of iterable)
   statement
 ```
+
 - **`Best practice using variable`** always declare a variable `let` or `const` to ensure they are block-scoped. Otherwise `variable` as a global variable if running in non-strict mode
 
 - `variable`
