@@ -88,7 +88,7 @@ input:invalid {
 }
 ```
 
-Then define an input with a minimum value of 7.2, omitting the step attribute, wherein it defaults to 1.
+Then define an input with a minimum value of `1.2` and a step value of `2`.
 
 ```html
 <input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
