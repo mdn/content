@@ -34,7 +34,7 @@ const pTag = document.querySelector(".text");
 pTag.textContent = anchorElement.text + " " + "text property";
 ```
 
-## Result
+### Result
 
 {{EmbedLiveSample("Example",100,100)}}
 
