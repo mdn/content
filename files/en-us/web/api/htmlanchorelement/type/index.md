@@ -51,6 +51,5 @@ pTag.textContent = anchorElement.type;
 ## See also
 
 - {{domxref("HTMLLinkElement.type")}} property
-- {{domxref("HTMLOListElement.type")}} property
 - {{domxref("HTMLSourceElement.type")}} property
 - {{domxref("HTMLEmbedElement.type")}} property
