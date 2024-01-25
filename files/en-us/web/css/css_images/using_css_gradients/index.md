@@ -557,7 +557,7 @@ div {
 
 #### Example: length for circles
 
-For circles the size may be given as a [\<length>](/en-US/docs/Web/CSS/length), which is the size of the circle.
+For circles the size may be given as a {{cssxref("length")}}, which is the size of the circle.
 
 ```html hidden
 <div class="radial-circle-size"></div>

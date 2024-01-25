@@ -43,7 +43,7 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 ## What is a CSS value?
 
-In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
+In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
 > **Note:** You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
@@ -105,9 +105,7 @@ There are various numeric value types that you might find yourself using in CSS.
         A <code>&#x3C;dimension></code> is a <code>&#x3C;number></code> with a
         unit attached to it. For example, <code>45deg</code>, <code>5s</code>,
         or <code>10px</code>. <code>&#x3C;dimension></code> is an umbrella
-        category that includes the
-        <code><a href="/en-US/docs/Web/CSS/length">&#x3C;length></a></code
-        >, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
+        category that includes the {{cssxref("length")}}, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
         >, <code><a href="/en-US/docs/Web/CSS/time">&#x3C;time></a></code
         >, and
         <code
@@ -117,11 +115,7 @@ There are various numeric value types that you might find yourself using in CSS.
       </td>
     </tr>
     <tr>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/CSS/percentage">&#x3C;percentage></a></code
-        >
-      </td>
+      <td>{{cssxref("percentage")}}</td>
       <td>
         A <code>&#x3C;percentage></code> represents a fraction of some other
         value. For example, <code>50%</code>. Percentage values are always
@@ -134,7 +128,7 @@ There are various numeric value types that you might find yourself using in CSS.
 
 ### Lengths
 
-The numeric type you will come across most frequently is [`<length>`](/en-US/docs/Web/CSS/length). For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
+The numeric type you will come across most frequently is {{cssxref("length")}}. For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
 
 #### Absolute length units
 
@@ -336,7 +330,7 @@ The next example has font sizes set in percentages. Each `<li>` has a `font-size
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 800)}}
 
-Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
+Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes {{cssxref("length-percentage")}} then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
 ### Numbers
 
