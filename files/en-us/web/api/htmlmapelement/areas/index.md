@@ -50,7 +50,7 @@ const mapElementAreas = mapElement.areas;
 console.log(mapElementAreas[0].alt); // Output: "left arrow"
 ```
 
-## Results
+### Results
 
 {{EmbedLiveSample("Example",100,100)}}
 
