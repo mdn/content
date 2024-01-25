@@ -112,6 +112,12 @@ Media features are either range or discrete.
 
 _Discrete features_ take their value from an {{glossary("enumerated")}} set of possible keyword values. For example, the discrete `orientation` feature accepts either `landscape` or `portrait`.
 
+```css
+@media print and (orientation: portrait) {
+  /* … */
+}
+```
+
 Many _range features_ can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints.
 For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 1250px:
 
@@ -212,43 +218,15 @@ Likewise, if a user is on a smartphone in portrait mode with a viewport height o
 
 ### Inverting a query's meaning
 
-The `not` keyword inverts the meaning of a single media query. For example...INCLUDE THE DESCRIPTION OF THE SINGLE MEDIA QUERY "NOT" EXAMPLE CURRENTLY AT THE BOTTOM OF THE SECTION, HERE
-
-EXAMPLE CODE HERE
-
-Note that `not` only negates the specific media query it is applied to — in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to all the features within that single query. For example NOW DESCRIBE A COMMA-SEPARATED LIST EXAMPLE WITH A SINGLE NOT, TO SHOW WHAT YOU MEAN
-
-EXAMPLE CODE HERE
-
-To negate a single feature within a media query, use `not()`. The `not()` functional notation logical operator encompassing a media feature negates only that feature within the query.
-
-#### Applied to the entire media query
-
-The `not` is evaluated last in the following query:
+The `not` keyword inverts the meaning of a single media query. For example, this media query will not apply to printed documents:
 
 ```css
-@media not all and (monochrome) {
+@media not print {
   /* … */
 }
 ```
 
-This means that the above query is evaluated like this:
-
-```css
-@media not (all and (monochrome)) {
-  /* … */
-}
-```
-
-It wouldn't be evaluated like this:
-
-```css example-bad
-@media (not all) and (monochrome) {
-  /* … */
-}
-```
-
-As another example, the following media query:
+Note that `not` only negates the specific media query it is applied to — in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to all the features within that single query. In this example, the `not` applies to the first media query that concludes at the comma:
 
 ```css
 @media not screen and (color), print and (color) {
@@ -264,7 +242,35 @@ This means that the above query is evaluated like this:
 }
 ```
 
-#### Using not()
+Media conditions can be grouped by wrapping them in parentheses `()` which can then be nested within a condition the same as a single media query.
+
+The `not` is evaluated last in a media query, meaning it applies to the entire media query, not to a single feature within a query, as if an open parenthesis was added immediately after the `not` and closed at the end of the media query.
+
+The following query:
+
+```css
+@media not all and (monochrome) {
+  /* … */
+}
+```
+
+is evaluated like this:
+
+```css
+@media not (all and (monochrome)) {
+  /* … */
+}
+```
+
+It is not evaluated like this:
+
+```css example-bad
+@media (not all) and (monochrome) {
+  /* … */
+}
+```
+
+To negate a single feature within a media query, use parenthesis. Encompassing a `not` and a media feature negates in parentheses negates only that feature within the query.
 
 In this example, `not(hover)` matches if the device has no hover capability. The `not` applies to `hover` but not to `all`.
 
