@@ -62,7 +62,7 @@ mediaRecorder.onstop = (e) => {
 
   const audio = document.createElement("audio");
   audio.controls = true;
-  const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+  const blob = new Blob(chunks, { type: mediaRecorder.mimeType });
   const audioURL = window.URL.createObjectURL(blob);
   audio.src = audioURL;
   console.log("recorder stopped");

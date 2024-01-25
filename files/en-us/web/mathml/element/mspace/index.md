@@ -14,11 +14,11 @@ The **`<mspace>`** [MathML](/en-US/docs/Web/MathML) element is used to display a
 This element's attributes include the [global MathML attributes](/en-US/docs/Web/MathML/Global_attributes) as well as the following attributes:
 
 - `depth`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired depth (below the baseline) of the space.
+  - : A {{cssxref("length-percentage")}} indicating the desired depth (below the baseline) of the space.
 - `height`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired height (above the baseline) of the space.
+  - : A {{cssxref("length-percentage")}} indicating the desired height (above the baseline) of the space.
 - `width`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the desired width of the space.
+  - : A {{cssxref("length-percentage")}} indicating the desired width of the space.
 
 > **Note:** For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 

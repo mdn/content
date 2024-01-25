@@ -7,7 +7,7 @@ browser-compat: html.elements.caption
 
 {{HTMLSidebar}}
 
-The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table.
+The **`<caption>`** [HTML](/en-US/docs/Web/HTML) element specifies the caption (or title) of a table, providing the table an {{glossary("accessible description")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/caption.html", "tabbed-taller")}}
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onHidden
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser stops displaying a menu: for example because the user clicked outside it or selected an item.
 
