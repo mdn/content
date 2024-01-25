@@ -25,34 +25,51 @@ When designing reusable HTML components, you may also use [container queries](/e
 - {{cssxref("@import")}}
 - {{cssxref("@media")}}
 
-### Data types
+### Descriptors
+
+- {{cssxref("@media/any-hover", "any-hover")}}
+- {{cssxref("@media/any-pointer", "any-pointer")}}
+- {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+- {{cssxref("@media/color", "color")}}
+- {{cssxref("@media/color-gamut", "color-gamut")}}
+- {{cssxref("@media/color-index", "color-index")}}
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
+- {{cssxref("@media/device-height", "device-height")}}
+- {{cssxref("@media/device-width", "device-width")}}
+- {{cssxref("@media/display-mode", "display-mode")}}
+- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+- {{cssxref("@media/forced-colors", "forced-colors")}}
+- {{cssxref("@media/grid", "grid")}}
+- {{cssxref("@media/height", "height")}}
+- {{cssxref("@media/hover", "hover")}}
+- {{cssxref("@media/inverted-colors", "inverted-colors")}}
+- {{cssxref("@media/monochrome", "monochrome")}}
+- {{cssxref("@media/orientation", "orientation")}}
+- {{cssxref("@media/overflow-block", "overflow-block")}}
+- {{cssxref("@media/overflow-inline", "overflow-inline")}}
+- {{cssxref("@media/pointer", "pointer")}}
+- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+- {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+- {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+- {{cssxref("@media/resolution", "resolution")}}
+- {{cssxref("@media/scan", "scan")}}
+- {{cssxref("@media/scripting", "scripting")}}
+- {{cssxref("@media/update", "update")}}
+- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+- {{cssxref("@media/width", "width")}}
+
+> **Note:** CSS media queries level 5 introduces five `@media` descriptors that have not been implemented: {{cssxref("@media/environment-blending", "environment-blending")}}, {{cssxref("@media/horizontal-viewport-segments", "horizontal-viewport-segments")}}, {{cssxref("@media/nav-controls", "nav-controls")}}, {{cssxref("@media/vertical-viewport-segments", "vertical-viewport-segments")}}, and {{cssxref("@media/video-color-gamut", "video-color-gamut")}}
+
+> **Note:** CSS media queries level 4 deprecated three `@media` descriptors: {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}, {{cssxref("@media/device-height", "device-height")}}, and {{cssxref("@media/device-width", "device-width")}}.
+
+### Data types and operators
 
 - [`<media-types>`](/en-US/docs/Web/CSS/@media#media_types)
-- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features), including:
-
-  - {{cssxref("@media/width", "width")}}
-  - {{cssxref("@media/height", "height")}}
-  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - {{cssxref("@media/orientation", "orientation")}}
-
-  - {{cssxref("@media/resolution", "resolution")}}
-  - {{cssxref("@media/scan", "scan")}}
-  - {{cssxref("@media/grid", "grid")}}
-  - {{cssxref("@media/update", "update")}}
-  - {{cssxref("@media/overflow-block", "overflow-block")}}
-  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
-
-  - {{cssxref("@media/color", "color")}}
-  - {{cssxref("@media/color-index", "color-index")}}
-  - {{cssxref("@media/monochrome", "monochrome")}}
-  - {{cssxref("@media/color-gamut", "color-gamut")}}
-
-  - {{cssxref("@media/pointer", "pointer")}}
-  - {{cssxref("@media/hover", "hover")}}
-  - {{cssxref("@media/any-pointer", "any-pointer")}}
-  - {{cssxref("@media/any-hover", "any-hover")}}
-
+- [`<media-features>`](/en-US/docs/Web/CSS/@media#media_features)
 - [`<resolution>`](/en-US/docs/Web/CSS/resolution)
+- [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators)
 
 ### Glossary terms
 
@@ -67,7 +84,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 - [Beginner's guide to media queries](/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 
-  - : define this
+  - : Introduction to media queries and approaches for using them to create responsive designs.
 
 - [Testing media queries](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 
@@ -81,26 +98,33 @@ When designing reusable HTML components, you may also use [container queries](/e
 
   - : Tips and techniques for helping improve web content printer output.
 
-- [Learn: responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Learn: responsive images](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-  - : define this
+  - : Learn how to use media queries with `sizes` to implement responsive image solutions on websites.
 
 ## Related concepts
 
-- HTML `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
-- [SVG `media` attribute](/en-US/docs/Web/SVG/Attribute/media)
-- [Logical operators](/en-US/docs/Web/CSS/@media#logical_operators)
-- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
-- [Feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-- {{DOMxRef("MediaQueryList")}} interface and the {{DOMxRef("MediaQueryList.matches", "matches")}} and {{DOMxRef("MediaQueryList.media", "media")}} properties, and {{DOMxRef("MediaQueryList.change_event", "change")}} event.
-- {{DOMxRef("MediaList")}} interface and the {{DOMxRef("MediaList.mediaText", "mediaText")}} property
-- {{DOMxRef("Window.matchMedia", "matchMedia()")}} method
-- {{domxref("Window.matchMedia()")}} method
-- {{DOMxRef("MediaQueryListEvent")}} object
-<!--{{DOMxRef("")}}
-{{DOMxRef("")}}
-{{DOMxRef("")}}-->
-- HTML [sizes]() attribute
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+  - {{cssxref("@container")}} at-rule
+  - [Using container queries](/en-US/docs/Web/CSS/CSS_container_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_container_queries) module
+  - {{cssxref("@supports")}} at-rule
+  - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
+- [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
+  - {{cssxref("@page")}} at-rule
+- [CSS object model](/en-US/docs/Web/API/CSS_Object_Model) module
+  - {{DOMxRef("MediaQueryList")}} interface
+    - {{DOMxRef("MediaQueryList.matches", "matches")}} property
+    - {{DOMxRef("MediaQueryList.media", "media")}} property
+    - {{DOMxRef("MediaQueryList.change_event", "change")}} event
+  - {{DOMxRef("MediaList")}} interface
+    - {{DOMxRef("MediaList.mediaText", "mediaText")}} property
+  - {{DOMxRef("MediaQueryListEvent")}} object
+- HTML
+  - `sizes` attribute for [`<img>`](/en-US/docs/Web/HTML/Element/img#sizes), [`<link>`](/en-US/docs/Web/HTML/Element/link#sizes), and [`<source>`](/en-US/docs/Web/HTML/Element/source#sizes) for {{HTMLElement("picture")}}
+  - `media` attribute for [`<link>`](/en-US/docs/Web/HTML/Element/link#media), [`<source>`](/en-US/docs/Web/HTML/Element/source#media), and [`<style>`](/en-US/docs/Web/HTML/Element/style#media) [HTML](/en-US/docs/Web/HTML)
+  - [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Viewport_meta_tag)
+- SVG [`media`](/en-US/docs/Web/SVG/Attribute/media) attribute
 
 ## Specifications
 
@@ -108,8 +132,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 ## See also
 
+- [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
 - [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
-- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_container_queries) module
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.
