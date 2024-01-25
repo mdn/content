@@ -20,7 +20,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `shadowrootmode`
 
-  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element. It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same values.
+  - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element. It is a declarative version of the {{domxref("Element.attachShadow()")}} method and accepts the same {{glossary("enumerated")}} values.
 
     - `open`
 
