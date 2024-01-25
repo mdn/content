@@ -10,9 +10,11 @@ spec-urls:
 
 {{CSSRef}}
 
-**CSS media queries** module enables testing and querying viewport values or user-agent features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and in other contexts and languages, such as HTML and JavaScript.
+The **CSS media queries** module enables testing and querying of viewport values and browser or device features, to conditionally apply CSS styles based on the current user environment. Media queries are used in the CSS `@media` rule and other contexts and languages such as HTML and JavaScript.
 
-Media queries are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design). They enable applying CSS styles depending on the presence or value of device characteristics. It's common to apply a media query based on the {{Glossary("viewport")}} size so that layout choices can be made for devices with different screen sizes. For example, you may increase the font sizes when printing a page, the padding between paragraphs when a page is viewed in portrait mode, or the size of buttons on touchscreens.
+Media queries are a key component of [responsive design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design). They enable conditional setting of CSS styles depending on the presence or value of device characteristics. It's common to use a media query based on {{Glossary("viewport")}} size to set appropriate layouts on devices with different screen sizes — for example three columns on a wide screen or a single column on a narrow screen.
+
+Other common examples include increasing the font size and hiding navigation menus when printing a page, adjusting the padding between paragraphs when a page is viewed in portrait or landscape mode, or increasing the size of buttons to provide a larger hit area on touchscreens.
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 

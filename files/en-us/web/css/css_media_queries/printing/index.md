@@ -42,7 +42,7 @@ You can also use the {{cssxref("@page")}} at-rule to modify different aspects of
 
 ## Detecting print requests
 
-Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events determine when printing may have occurred. You can use this to adjust the user interface presented during printing (such as by displaying or hiding user interface elements during the print process).
+Browsers send {{domxref("Window/beforeprint_event", "beforeprint")}} and {{domxref("Window/afterprint_event", "afterprint")}} events to determine when printing may have occurred. You can use this to adjust the user interface presented during printing (for example displaying or hiding user interface elements during the print process).
 
 ## Examples
 

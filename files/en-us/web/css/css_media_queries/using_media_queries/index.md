@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-**Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution, aspect ratio, or orientation, the browser {{glossary("viewport")}} width or height, user preference setting such as preferring reduced motion, data usage, or tranparency, or other features.
+**Media queries** allow you to apply CSS styles depending on a device's media type (such as print vs. screen) or other features or characteristics such as screen resolution or orientation, aspect ratio, browser {{glossary("viewport")}} width or height, user preferences such as preferring reduced motion, data usage, or transparency.
 
 Media queries are used for the following:
 
@@ -93,8 +93,8 @@ For instance, this `@media` rule uses two media queries to target both screen an
 }
 ```
 
-See [media type](/en-US/docs/Web/CSS/@media#media_types) for the list of available media types.
-Because media types describe devices in very broad terms, most of the originally defined media types were deprecated, with just `screen`, `print`, and `all` available. To target more specific attributes, use _media features_ instead.
+See [media types](/en-US/docs/Web/CSS/@media#media_types) for the list of available media types.
+Because media types describe devices in very broad terms, most of the originally-defined media types were deprecated, with just `screen`, `print`, and `all` remaining. To target more specific attributes, use _media features_ instead.
 
 ## Targeting media features
 
@@ -110,7 +110,7 @@ This example applies styles when the user's _primary_ input mechanism (such as a
 
 Media features are either range or discrete.
 
-_Discrete features_ take their value from an {{glossary("enumerated")}} set of possible keyword values. For example, the discrete `orientation` feature accepts either `landscape` or `portrait`. Range features
+_Discrete features_ take their value from an {{glossary("enumerated")}} set of possible keyword values. For example, the discrete `orientation` feature accepts either `landscape` or `portrait`.
 
 Many _range features_ can be prefixed with "min-" or "max-" to express "minimum condition" or "maximum condition" constraints.
 For example, this CSS will apply styles only if your browser's {{glossary("viewport")}} width is equal to or narrower than 1250px:
@@ -129,7 +129,7 @@ This can also be written as:
 }
 ```
 
-With media query range features, you can either use the inclusive `min-` and `max-` prefixes or the more concise range syntax operators `<=`, `=>`.
+With media query range features, you can either use the inclusive `min-` and `max-` prefixes or the more concise range syntax operators `<=` and `=>`.
 
 The following media queries are equivalent:
 
@@ -143,7 +143,7 @@ The following media queries are equivalent:
 }
 ```
 
-The range comparisons above are all inclusive. To not include the comparison value, use `<` or `>`.
+The range comparisons above are inclusive. To not include the comparison value, use `<` and `>`.
 
 ```css
 @media (30em < width < 50em) {
@@ -151,7 +151,7 @@ The range comparisons above are all inclusive. To not include the comparison val
 }
 ```
 
-If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not zero or `none`.
+If you create a media feature query without specifying a value, the nested styles will be used as long as the feature's value is not 0 or `none`.
 For example, this CSS will apply to any device with a color screen:
 
 ```css
@@ -207,7 +207,7 @@ The following rule will apply its styles if the user's device has either a minim
 }
 ```
 
-In this example, if the user is printing to a PDF and the page height is 800px, the media query returns true because the first query component, the page has a height fo `680px` or taller, is true.
+In this example, if the user is printing to a PDF and the page height is 800px, the media query returns true because the first query component — which tests whether the page has a height of `680px` or more — is true.
 Likewise, if a user is on a smartphone in portrait mode with a viewport height of 480px, the media query returns true because the second query component is true.
 
 ### Inverting a query's meaning
