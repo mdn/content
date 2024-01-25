@@ -17,6 +17,7 @@ The **`for...of`** statement executes a loop that operates on a sequence of valu
 for (variable of iterable)
   statement
 ```
+- **`Best practice using variable`** always declare a variable `let` or `const` to ensure they are block-scoped. Otherwise `variable` as a global variable if running in non-strict mode
 
 - `variable`
   - : Receives a value from the sequence on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...of` loop is in.
