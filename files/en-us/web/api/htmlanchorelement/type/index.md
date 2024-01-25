@@ -36,8 +36,6 @@ console.log(anchorElement.type); // Output: "text/html"
 pTag.textContent = anchorElement.type;
 ```
 
-## Result
-
 {{EmbedLiveSample("Example",100,100)}}
 
 ## Specifications
