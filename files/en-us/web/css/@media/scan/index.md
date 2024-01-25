@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.scan
 
 {{CSSRef}}
 
-The **`scan`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on scanning process of the output device.
+The **`scan`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is used to apply CSS styles based on the scanning process of the output device.
 
 ## Syntax
 
@@ -20,7 +20,7 @@ The `scan` feature is specified as one of the following keyword values:
 
 ## Description
 
-Most modern screens, and all computer screens, use progressive rendering, displaying each screen fully with no special treatment.
+Most modern screens (and all computer screens) use progressive rendering, displaying each screen fully with no special treatment.
 
 Interlacing was used by CRT monitors and some plasma TVs to enable the appearance of faster frames per second (FPS) while reducing bandwidth. With interlacing, video frames alternate between rendering the even lines and the odd lines on the screen, downloading and rendering only half the screen for each frame, exploiting the human image-smoothing ability so the brain simulates a higher FPS broadcast at half the bandwidth cost.
 
@@ -78,5 +78,5 @@ p {
 
 ## See also
 
-- [@media](/en-US/docs/Web/CSS/@media) at-rule that is used to specify the scan expression.
+- The [@media](/en-US/docs/Web/CSS/@media) at-rule, which is used to specify the scan expression.
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) to understand when and how to use a media query.
