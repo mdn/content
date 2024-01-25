@@ -123,7 +123,6 @@ This example extends the basic table from the [previous example](#basic_row_setu
 
 An additional table row (`<tr>`) is added as the first row of the table with column header cells ({{HTMLElement("th")}}) providing a header for each column. We put this row in a {{HTMLElement("thead")}} grouping element to indicate this is the header of the table. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is added to each header cell (`<th>`) within this head row to explicitly specify that each header cell relates to all the cells within its own column, even though those cells are in the {{HTMLElement("tbody")}}.
 
-
 ```html
 <table>
   <tr>
