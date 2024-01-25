@@ -1005,10 +1005,10 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+    "toolbar_field": "rgb(255 255 255 / 91%)",
+    "toolbar_field_text": "rgb(0 100 0)",
+    "toolbar_field_highlight": "rgb(180 240 180 / 90%)",
+    "toolbar_field_highlight_text": "rgb(0 80 0)"
   }
 }</pre
           >
@@ -1044,10 +1044,10 @@ All these properties can be specified as either a string containing any valid [C
           <pre class="brush: json">
 "theme": {
   "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+    "toolbar_field": "rgb(255 255 255 / 91%)",
+    "toolbar_field_text": "rgb(0 100 0)",
+    "toolbar_field_highlight": "rgb(180 240 180 / 90%)",
+    "toolbar_field_highlight_text": "rgb(0 80 0)"
   }
 }</pre
           >

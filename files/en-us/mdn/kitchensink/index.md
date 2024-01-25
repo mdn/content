@@ -5,8 +5,6 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-{{MDNSidebar}}
-
 > **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
