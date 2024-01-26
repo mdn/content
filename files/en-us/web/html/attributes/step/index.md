@@ -80,16 +80,16 @@ If `any` is not explicitly set, valid values for the `number`, date/time input t
 <input type="number" min="10" step="2" />
 ```
 
-If `step` is omitted, any integer is valid, but floats like 4.2 are not valid as `step` defaults to 1. For 4.2 to be valid:
+If `step` is omitted, any integer is valid but floats like 4.2 are not valid as `step` defaults to 1. For 4.2 to be valid:
 
 - either `step` would have to be set to `any`, 0.1, or 0.2,
-- or the `min` value would have to be a number ending in .2, such as `0.2`, `1.2`, or `5.2`.
+- or the `min` value would have to be a number ending in .2, such as 0.2, 1.2, or -5.2.
 
 ## Examples
 
 ### `min` impact on step
 
-The value of `min` defines valid values, even if the `step` attribute is not included. This is because `step` defaults to `1`.
+The value of `min` defines valid values, even if the `step` attribute is not included. This is because `step` defaults to 1.
 
 In this example, we add a big red border around invalid inputs:
 
@@ -99,13 +99,13 @@ input:invalid {
 }
 ```
 
-We then define an input with a minimum value of `1.2` and a step value of `2`:
+We then define an input with a minimum value of 1.2 and a step value of 2:
 
 ```html
 <input id="myNumber" name="myNumber" type="number" step="2" min="1.2" />
 ```
 
-Valid values include `1.2`, `3.2`, `5.2`, `7.2`, `9.2`, `11.2`, and so on. Only floats with an odd-numbered integer part and a decimal part of `.2` are valid. The number spinner, if present, generates valid float values of `1.2` and greater, in increments of `2`.
+Valid values include 1.2, 3.2, 5.2, 7.2, 9.2, 11.2, and so on. Only floats with an odd-numbered integer part and a decimal part of .2 are valid. The number spinner, if present, generates valid float values of 1.2 and greater, in increments of 2.
 
 {{EmbedLiveSample("min_impact_on_step","100%",55)}}
 
