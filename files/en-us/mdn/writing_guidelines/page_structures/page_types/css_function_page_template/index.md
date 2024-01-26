@@ -38,7 +38,7 @@ browser-compat: css.functions.NameOfTheFunction
 > - **page-type**
 >   - : The `page-type` value for CSS functions is `css-function`.
 > - **status**
->   - : If applicable, the value of the technology `status` key can be [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), and/or **non-standard** (if not on a standards track).
+>   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses).
 > - **browser-compat**
 >   - : Replace the placeholder value <code>css.types.NameOfTheFunction</code> with the query string for the function in the [Browser compat data repo](https://github.com/mdn/browser-compat-data/tree/main/css/types). Check the _Other macros in the page_ section of this note block to see how this key-value is used to generate content for the _Specifications_ and _Browser compatibility_ sections.
 >
@@ -50,14 +50,15 @@ browser-compat: css.functions.NameOfTheFunction
 > You should update or delete them according to the advice below:
 >
 > - `\{{SeeCompatTable}}`: This macro generates an **Experimental** banner, which indicates that the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
->   If the technology you are documenting is not experimental, you can remove this macro.
 >   If the technology is experimental and is hidden behind a preference in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 > - `\{{Deprecated_Header}}`: This macro generates a **Deprecated** banner, which indicates that the use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
->   If it isn't, then you can remove the macro call.
+> - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 > - `\{{CSSRef}}`: This macro must be present on every CSS page. It generates a suitable CSS sidebar, depending on the tags included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you use this template.
 >
-> Samples of the **Experimental** and **Deprecated** banners are shown right after this note block.
+> Do not provide status header macros manually. Refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses) to add these statuses to the page.
+>
+> Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
 > ---
 >
@@ -71,7 +72,7 @@ browser-compat: css.functions.NameOfTheFunction
 >
 > _Remember to remove this note block before publishing._
 
-{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the function and says what it does.
 This should ideally be one or two short sentences.
