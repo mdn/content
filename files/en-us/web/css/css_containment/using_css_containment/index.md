@@ -2,9 +2,6 @@
 title: Using CSS containment
 slug: Web/CSS/CSS_containment/Using_CSS_containment
 page-type: guide
-browser-compat:
-  - css.properties.contain
-  - css.properties.content-visibility
 ---
 
 {{CSSRef}}
@@ -178,24 +175,10 @@ This happens in both cases, but with `content-visibility: auto` the content can 
 
 > **Note:** To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
 
-## Reference
-
-### CSS Properties
-
-- {{cssxref("contain")}}
-- {{cssxref("content-visibility")}}
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
 - [Learn: CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event

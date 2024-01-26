@@ -18,9 +18,9 @@ If the browser knows that a part of the page is independent, rendering can be op
 ### Properties
 
 - {{cssxref("contain")}}
-- {{cssxref("container")}}
-- {{cssxref("container-name")}}
-- {{cssxref("container-type")}}
+- {{cssxref("container")}} shorthand
+  - {{cssxref("container-name")}}
+  - {{cssxref("container-type")}}
 - {{cssxref("content-visibility")}}
 
 ### At-rules and descriptors
@@ -36,17 +36,27 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 ### Functions
 
+- {{CSSxRef("@container", "@container style()")}}
+
 ### Data types
+
+- [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 
 ### Events
 
+- {{domxref("Element.contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
+
 ### Interfaces
 
-- {{domxref("element.ContentVisibilityAutoStateChangeEvent_event", "ContentVisibilityAutoStateChangeEvent")}} event
+- {{domxref("ContentVisibilityAutoStateChangeEvent")}}
+  - {{domxref("ContentVisibilityAutoStateChangeEvent.skipped", "skipped")}} property
+- {{domxref("CSSContainerRule")}}
+  - {{domxref("CSSContainerRule.containerName")}}
+  - {{domxref("CSSContainerRule.containerQuery")}}
 
 ## Guides
 
-- CSS container queries
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 
   - : blah
 
@@ -56,8 +66,32 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 ## Related concepts
 
-- [CSS media queries]() module
+- [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Block formatting context](/en-US/docs/Web/CSS/Block_formatting_context)
+
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+
   - {{cssxref("@media")}} at-rule
+
+- [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
+
+  - {{cssxref("@starting-style")}} at-rule
+  - {{cssxref("transition-behavior")}} property
+
+- CSS box sizing module
+
+  - {{cssxref("contain-intrinsic-size")}} shorthand property
+  - {{CSSxRef("contain-intrinsic-inline-size")}} property
+  - {{CSSxRef("contain-intrinsic-size")}} property
+  - {{CSSxRef("contain-intrinsic-width")}} property
+  - {{CSSxRef("contain-intrinsic-height")}} property
+
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+
+  - [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
+
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/) module
+  - [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules) guide
 
 ## Specifications
 
