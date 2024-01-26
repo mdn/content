@@ -51,11 +51,11 @@ In summary:
 
 ### Experimental: "Standards positions" banner
 
-A small number of features are added to MDN when browser vendors do not all agree on the direction the feature is taking, and some oppose it in its current form. When this happens, it is usually because the feature is high-profile, and MDN wishes to encourage the web community to experiment with it, provide feedback, and help the browser vendors to reach a consensus.
+Occasionally, browser vendors disagree on how a feature is developing, and some may oppose it in its current form. In exceptional cases, MDN documents technologies in this state to encourage the web community to experiment with them, provide feedback, and help browser vendors reach a consensus.
 
-We think it is important to make the current status of such features clear to readers. We are currently discussing a longer-term solution for representing this information. Until that discussion is concluded, we are doing the following:
+It is important to clarify the current standardization status of such features to readers. While a longer-term solution for representing this information is not final, we are doing the following for specific high-profile technologies to avoid confusion:
 
-- Adding the following banner to the landing page for that feature (we don't think it necessary to add it to every subpage):
+- Adding this banner to the landing page for that feature (not for every subpage for the feature):
 
   ```text
   > **Warning:** This feature is currently opposed by two browser vendors. See [Standards positions](#standards_positions) for details of opposition.
