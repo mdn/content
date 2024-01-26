@@ -303,7 +303,10 @@ function draw() {
   ball.vy *= 0.99;
   ball.vy += 0.25;
 
-  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
+  if (
+    ball.y + ball.vy > canvas.height - ball.radius ||
+    ball.y + ball.vy < ball.radius
+  ) {
     ball.vy = -ball.vy;
   }
   if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
