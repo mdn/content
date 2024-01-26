@@ -278,5 +278,5 @@ The following macros are included on all reference pages, but are also supported
 - [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [Standardization status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status)
+- [Technology status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status)
 - [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

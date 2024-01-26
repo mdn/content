@@ -49,7 +49,7 @@ In summary:
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
 - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-The first three standardization status related macros in the above list are [automatically added](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses) to the content.
+The first three technology status related macros in the above list are [automatically added](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to the content.
 Hence, there is no need to add them manually to the content.
 
 ### Experimental: "Standards positions" banner

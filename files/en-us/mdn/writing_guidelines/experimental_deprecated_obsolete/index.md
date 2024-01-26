@@ -106,4 +106,4 @@ For example, as of Jan 2019, the [`inputmode`](/en-US/docs/Web/HTML/Global_attri
 
 ## See also
 
-- [Standardization status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status)
+- [Technology status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status)

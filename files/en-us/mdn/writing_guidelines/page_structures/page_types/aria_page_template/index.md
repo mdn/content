@@ -25,7 +25,7 @@ To include (appropriate)
 technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental),
 [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated),
 or **non-standard** refer section
-["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses).
+["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 
 ### Specifications
 

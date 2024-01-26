@@ -1,12 +1,12 @@
 ---
-title: Standardization status
-slug: MDN/Writing_guidelines/Page_structures/Standardization_status
+title: Technology status
+slug: MDN/Writing_guidelines/Page_structures/Technology_status
 page-type: mdn-writing-guide
 ---
 
 {{MDNSidebar}}
 
-Standardization status of a feature tells developers implementation stage of the feature among browsers. Using it, developers can decide if a feature is stable enough to use in production code. Each feature has one of the following statuses:
+Technology status of a feature tells developers implementation stage of the feature among browsers. Using it, developers can decide if a feature is stable enough to use in production code. Each feature has one of the following statuses:
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
   - : A feature is considered experimental if it is supported by one and only one browser engine. Some exceptions apply, however, for long-standing features and features behind flags and prefixes.
@@ -19,7 +19,7 @@ Standardization status of a feature tells developers implementation stage of the
 
 Detailed information about `experimental` and `standard` can be found on ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page. To see detailed instructions on how to choose status for a feature, refer [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in `@mdn/browser-compat-data` (BCD) repository.
 
-## How to add or update standardization statuses
+## How to add or update technology statuses
 
 Statuses of all the features are being maintained at only one place: [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository. Those statuses are _automatically_ updated in `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases) (mostly twice a week).
 
@@ -30,13 +30,13 @@ As there is an automation in place to synchronize the data, _there is no need to
 >
 > If you update statuses in both `content` and BCD repositories, and content changes get merged before BCD changes go live, then the content changes may get reverted till the BCD changes go live.
 >
-> Hence, it is best not to manually update standardization statuses in the content code.
+> Hence, it is best not to manually update technology statuses in the content code.
 
-## How are standardization statuses specified in content?
+## How are technology statuses specified in content?
 
-Following sections document mechanisms using which standardization statuses are placed in content. As mentioned before, it is not required to use these mechanism manually.
+Following sections document mechanisms using which technology statuses are placed in content. As mentioned before, it is not required to use these mechanisms manually.
 
-### Standardization status icons in sidebars
+### Technology status icons in sidebars
 
 To show status icons for a feature listed in sidebars, the [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) `status` property is used:
 
@@ -52,13 +52,13 @@ browser-compat: api.feature
 
 When sidebars are rendered, the code looks for the statuses in each page's front-matter.
 
-### Standardization status page banners
+### Technology status page banners
 
 The following macros are used to render the status banners in page headers:
 
 - `\{{SeeCompatTable}}`
 
-  - : For `experimental` status. It generates a **Experimental status** banner:
+  - : For `experimental` status. It generates an **Experimental status** banner:
     {{SeeCompatTable}}
 
 - `\{{Non-standard_Header}}`
@@ -70,7 +70,7 @@ The following macros are used to render the status banners in page headers:
   - : For `deprecated` status. It generates a **Deprecated status** banner:
     {{deprecated_header}}
 
-### Standardization status icons in definition lists
+### Technology status icons in definition lists
 
 The following macros are used to render inline status icons next to definition list items:
 

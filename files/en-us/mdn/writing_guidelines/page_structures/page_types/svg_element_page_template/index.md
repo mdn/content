@@ -39,7 +39,7 @@ browser-compat: path.to.feature.NameOfTheElement
 > - **page-type**
 >   - : Always `svg-element`.
 > - **status**
->   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses).
+>   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `svg.elements.NameOfTheElement` with the query string for the element in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -66,7 +66,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >   The content of the sidebar depends on the tags in the page metadata.
 > - Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >

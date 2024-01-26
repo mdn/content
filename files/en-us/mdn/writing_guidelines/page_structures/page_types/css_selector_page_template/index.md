@@ -38,7 +38,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > - **page-type**
 >   - : The `page-type` key for CSS properties is one of `css-selector`, `css-pseudo-class`, or `css-pseudo-element`, depending on whether the selector is a [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes), a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), a [combinator](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators), or a [basic selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#basic_selectors).
 > - **status**
->   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses).
+>   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>css.selectors.NameOfTheSelector</code> with the query string for the selector in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -61,7 +61,7 @@ browser-compat: css.selectors.NameOfTheSelector
 > - `\{{CSSRef}}` — this must be present on every CSS selector page. It generates a suitable CSS sidebar, depending on what tags are included on the page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer section ["How to add or update standardization statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Standardization_status#how_to_add_or_update_standardization_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to add these statuses to the page.
 >
 > Samples of the **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
