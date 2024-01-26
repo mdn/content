@@ -1,7 +1,7 @@
 ---
-title: CSS containment
-slug: Web/CSS/CSS_containment
-page-type: css-module
+title: Using CSS containment
+slug: Web/CSS/CSS_containment/Using_CSS_containment
+page-type: guide
 browser-compat:
   - css.properties.contain
   - css.properties.content-visibility
@@ -9,19 +9,17 @@ browser-compat:
 
 {{CSSRef}}
 
-The aim of the **CSS containment** module is to improve performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
-If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
+CSS containment improves the performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. If the browser knows that a part of the page is independent from the rest of the content, rendering can be optimized and performance improved.
 
-In addition, it lets developers indicate whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen.
-This allows the user agent to apply containment on elements when appropriate, and potentially defer layout and rendering until it is actually needed.
+The {{cssxref("contain")}} and {{cssxref("content-visibility")}} properties enable developers to inform user agents whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen. The user agent then applies containment to elements when appropriate, potentially deferring layout and rendering until needed.
 
-The specification defines the CSS properties {{cssxref("contain")}} and {{cssxref("content-visibility")}}.
-This document describes the basic aims of the specification.
-For details on CSS container queries, see [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
+This guide describes the basic aims of CSS containment and how to leverage `contain` and `content-visibility` for better user experience.
 
 ## Basic example
 
-Many webpages contain several sections which are independent of each other. For example a listing of article headlines and content, as in the markup below.
+Web pages often contain multiple sections which are, logically, independent of each other. CSS containment enables them to be physically independent of each other when it comes to rendering.
+
+For example, blogs usually contain several articles, each containing a headline and content, as in the markup below.
 
 ```html
 <h1>My blog</h1>
@@ -35,7 +33,7 @@ Many webpages contain several sections which are independent of each other. For 
 </article>
 ```
 
-Each article has the {{cssxref("contain")}} property with a value of `content` applied in the CSS.
+With CSS, we apply the {{cssxref("contain")}} property with a value of `content` to each article:
 
 ```css
 article {
@@ -43,25 +41,24 @@ article {
 }
 ```
 
-Each article is independent of the other articles on the page, and so they have been given `contain: content` to indicate to the browser that this is the case. The browser can then use this information to make decisions about how to render the content. For example, it might not render articles that are outside the viewable area.
+Logically, each article is independent of the other articles on the page. The `contain: content` indicates this to the browser. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
 
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted the browser does not need to recalculate layout or repaint any area outside of the containing element's subtree.
-If the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser may need to account for its size changing.
+If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted into the page, the browser does not need to recalculate layout or repaint any area outside of the containing element's subtree. We have told it by way of the `contain` property that each article is independent.
 
-We have told it by way of the `contain` property that each article is independent.
+If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
 
 The `content` value is shorthand for `contain: layout paint style`.
-It tells the browser that the internal layout of the element is totally separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
+It tells the browser that the internal layout of the element is completely separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
-This information is something that is usually known, and in fact quite obvious, to the web developer creating the page.
-However browsers cannot guess at your intent and cannot assume that an article will be entirely self-contained.
-Therefore this property gives you a nice way to explain to the browser this fact, and allow it to make performance optimizations based on that knowledge.
+This information is something that is usually known, and likely quite obvious, to the web developer creating the page.
+However browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
+This property provides a way of explaining this to the browser, thereby providing the browser with explicit permission to make performance optimizations.
 
 ## Key concepts and terminology
 
 ### `contain` values
 
-The values for the {{cssxref("contain")}} property indicate the type of containment that you want to apply to that element.
+The space-separated keywords value of the {{cssxref("contain")}} property indicate the type of containment that you want to apply to that element, including `layout`, `paint`, `style`, and `size` containment.
 
 #### Layout containment
 
@@ -71,13 +68,13 @@ article {
 }
 ```
 
-Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, and the containing box establishes an independent formatting context.
+Layout is normally scoped to the entire document, which means that if you move one element the entire document needs to be treated as if things could have moved anywhere. By using `contain: layout` you can tell the browser it only needs to check this element — everything inside the element is scoped to that element and does not affect the rest of the page, with the containing box establishing an independent [formatting context](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
 
 In addition:
 
-- `float` layout will be performed independently.
+- {{cssxref("float")}} layout will be performed independently.
 - Margins won't collapse across a layout containment boundary
-- The layout container will be a containing block for `absolute`/`fixed` position descendants.
+- The layout container is a containing block for `absolute`- and `fixed`-positioned descendants.
 - The containing box creates a stacking context, therefore {{cssxref("z-index")}} can be used.
 
 #### Paint containment
