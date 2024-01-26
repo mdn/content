@@ -205,7 +205,7 @@ To limit the styles to devices with a screen, you can chain the media features t
 
 You can use a comma-separated list of media queries to apply styles when the user's device matches any one of various media types, features, or states.
 
-The following rule will apply its styles if the user's device has either a minimum height of 680px _or_ is a screen device in portrait mode:
+The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ is if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
 
 ```css
 @media (min-height: 680px), screen and (orientation: portrait) {
@@ -213,12 +213,14 @@ The following rule will apply its styles if the user's device has either a minim
 }
 ```
 
-In this example, if the user is printing to a PDF and the page height is 800px, the media query returns true because the first query component — which tests whether the page has a height of `680px` or more — is true.
+In this example, if the user is printing to a PDF and the page height is 800px, the media query returns true because the first query component — which tests whether the viewport has a height of `680px` or more — is true.
 Likewise, if a user is on a smartphone in portrait mode with a viewport height of 480px, the media query returns true because the second query component is true.
+
+In a comma-separated list of media queries, the individual media queries end at the comma or, in the case of the last media query in the list, at the opening bracket (`{`).
 
 ### Inverting a query's meaning
 
-The `not` keyword inverts the meaning of a single media query. For example, this media query will not apply to printed documents:
+The `not` keyword inverts the meaning of a single media query. For example, the CSS styles in this media query will apply to everything _except_ printed media:
 
 ```css
 @media not print {
@@ -226,7 +228,7 @@ The `not` keyword inverts the meaning of a single media query. For example, this
 }
 ```
 
-Note that `not` only negates the specific media query it is applied to — in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to all the features within that single query. In this example, the `not` applies to the first media query that concludes at the comma:
+The `not` negates only the media query it is applied to. The `not`, without parenthesis, negates all the features within the media query in which it is contained. This means, in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to _all_ the features within that single query. In this example, the `not` applies to the first media query that concludes at the comma:
 
 ```css
 @media not screen and (color), print and (color) {
@@ -234,7 +236,7 @@ Note that `not` only negates the specific media query it is applied to — in a 
 }
 ```
 
-This means that the above query is evaluated like this:
+The above query is evaluated like this:
 
 ```css
 @media (not (screen and (color))), print and (color) {
@@ -242,7 +244,7 @@ This means that the above query is evaluated like this:
 }
 ```
 
-Media conditions can be grouped by wrapping them in parentheses `()` which can then be nested within a condition the same as a single media query.
+Both examples are valid. Media conditions can be grouped by wrapping them in parentheses `()` which can then be nested within a condition the same as a single media query.
 
 The `not` is evaluated last in a media query, meaning it applies to the entire media query, not to a single feature within a query, as if an open parenthesis was added immediately after the `not` and closed at the end of the media query.
 
@@ -270,15 +272,17 @@ It is not evaluated like this:
 }
 ```
 
-To negate a single feature within a media query, use parenthesis. Encompassing a `not` and a media feature negates in parentheses negates only that feature within the query.
+To negate a single feature within a media query, use parenthesis. Encompassing a `not` and a media feature in parentheses limits the components of the query that get negated.
 
-In this example, `not(hover)` matches if the device has no hover capability. The `not` applies to `hover` but not to `all`.
+In this example, we negate the `hover` media feature but not the `all` media type:
 
 ```css
 @media all and (not(hover)) {
   /* … */
 }
 ```
+
+The `not(hover)` matches if the device has no hover capability. In this case, because of the parentheses, the `not` applies to `hover` but not to `all`.
 
 ### Improving compatibility with older browsers
 
