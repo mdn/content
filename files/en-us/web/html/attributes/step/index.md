@@ -77,7 +77,7 @@ The default stepping value for `number` inputs is 1, allowing only integers to b
 If `any` is not explicitly set, valid values for the `number`, date/time input types, and `range` input types are equal to the basis for stepping - the [`min`](/en-US/docs/Web/HTML/Attributes/min) value and increments of the step value, up to the [`max`](/en-US/docs/Web/HTML/Attributes/max) value, if specified. The following example results in any even integer, 10 or greater, being valid:
 
 ```html
-<input type="number" min="10" step="2">
+<input type="number" min="10" step="2" />
 ```
 
 If `step` is omitted, any integer is valid, but floats like 4.2 are not valid as `step` defaults to 1. For 4.2 to be valid:
