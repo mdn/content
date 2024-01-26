@@ -35,7 +35,7 @@ jobs:
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
       # We have to rely on a custom filtering mechanism to run the checks only if required files are modified.
-      - uses: dorny/paths-filter@v2
+      - uses: dorny/paths-filter@v3
         name: See if any file needs checking
         id: filter
         with:
