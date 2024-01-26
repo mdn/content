@@ -18,7 +18,7 @@ Example: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/
 
 ![My Web New Tab add-on showing a Batman theme](myweb_new_tab_add_on.png)
 
-Examples: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
+Examples: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/) and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
 
 **Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page's HTML and CSS, extensions can help users see the web the way they want to.
 
@@ -34,7 +34,7 @@ Examples: [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/
 
 **Games**: Offer traditional computer games with off-line play features, or explore new game possibilities; for example, by incorporating gameplay into everyday browsing.
 
-Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
+Examples: [Solitaire Card Game](https://addons.mozilla.org/en-US/firefox/addon/solitaire-spider-freecell/) and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
 **Add development tools**: You may provide web development tools as your business or have developed a useful technique or approach to web development that you want to share. Either way, you can enhance the built-in Firefox developer tools by adding a new tab to the developer toolbar.
 
