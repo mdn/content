@@ -381,7 +381,7 @@ function draw() {
   ball.x += ball.vx;
   ball.y += ball.vy;
 
-  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball radius) {
+  if (ball.y + ball.vy > canvas.height - ball.radius || ball.y + ball.vy < ball.radius) {
     ball.vy = -ball.vy;
   }
   if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
