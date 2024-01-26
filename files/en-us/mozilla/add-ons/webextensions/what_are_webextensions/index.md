@@ -12,15 +12,13 @@ An extension adds features and functions to a browser. It's created using famili
 
 **Enhance or complement a website**: Use an add-on to deliver additional in-browser features or information from your website. Allow users to collect details from pages they visit to enhance the service you offer.
 
-![Amazon add-on example providing price comparison features](amazon_add_on.png)
-
-Examples: [Amazon Assistant for Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/), and [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
+Example: [Grammarly for Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/).
 
 **Let users show their personality**: Browser extensions can manipulate the content of web pages; for example, letting users add their favorite logo or picture as a background to every page they visit. Extensions may also enable users to update the look of the Firefox UI, the same way standalone [theme add-ons](https://extensionworkshop.com/documentation/themes/) do.
 
 ![My Web New Tab add-on showing a Batman theme](myweb_new_tab_add_on.png)
 
-Examples: [MyWeb New Tab](https://chrome.google.com/webstore/detail/myweb-new-tab/cnbiadnhebmicjcbpgajglfemclnlagh), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
+Examples: [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/), and [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/).
 
 **Add or remove content from web pages**: You might want to help users block intrusive ads from web pages, provide access to a travel guide whenever a country or city is mentioned in a web page, or reformat page content to offer a consistent reading experience. With the ability to access and update both a page's HTML and CSS, extensions can help users see the web the way they want to.
 
