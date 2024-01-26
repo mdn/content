@@ -10,14 +10,10 @@ This article provides information about the changes in Firefox 122 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
 - {{HTMLElement("hr")}} elements are now allowed as children of {{HTMLElement("select")}} elements. This is a new feature that improves the readability of select lists with many options. ([Firefox bug 1830909](https://bugzil.la/1830909)).
 - The `type` HTML attribute no longer has an effect if set to `none`, `disc`, `circle` or `square` in {{HTMLElement("ol")}} and no longer has an effect if set to `1`, `a`, `A`, `i` or `I` in {{HTMLElement("ul")}}. As `type` is a deprecated attribute for `<ul>` and `<ol>` lists, these should be styled with {{CSSxref("list-style-type")}} CSS property instead. ([Firefox bug 1868087](https://bugzil.la/1868087)).
-
-#### Removals
 
 ### CSS
 
@@ -29,13 +25,9 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - The {{CSSxref("clip-path")}} and {{CSSxref("offset-path")}} properties now accept [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions. These {{CSSXref("basic-shape")}} values allow the clipping and offsetting of elements with a rectangle defined by distance from the edge of the element (`rect()`) or coordinates and size (`xywh()`). ([Firefox bug 1868722](https://bugzil.la/1868722)).
 
-#### Removals
-
 ### JavaScript
 
 - The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods can now be used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another. After transfer, the original buffer is detached from its original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}. (See [Firefox bug 1865103](https://bugzil.la/1865103) for more details.)
-
-#### Removals
 
 ### SVG
 
@@ -44,14 +36,6 @@ This article provides information about the changes in Firefox 122 that affect d
 - Removed support for `data:` URLs in SVG `<use>` elements and via the [`SVGUseElement`](/en-US/docs/Web/API/SVGUseElement) interface to prevent [XSS](/en-US/docs/Glossary/Cross-site_scripting) attacks.
   The legacy functionality may be re-enabled by setting the `svg.use-element.data-url-href.allowed` preference to `true`, although this is not recommended for security reasons ([Firefox bug 1806964](https://bugzil.la/1806964)).
 
-### HTTP
-
-#### Removals
-
-### Security
-
-#### Removals
-
 ### APIs
 
 - The [LargestContentfulPaint API](/en-US/docs/Web/API/LargestContentfulPaint) is now supported.
@@ -59,17 +43,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### DOM
 
-### showPicker() method for HTML select elements
-
 - The {{domxref("HTMLSelectElement.showPicker()")}} method is now supported, allowing the browser picker for a {{HTMLElement("select")}} element to be programmatically launched when triggered by user interaction ([Firefox bug 1865207](https://bugzil.la/1865207)).
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -89,12 +63,6 @@ This article provides information about the changes in Firefox 122 that affect d
 
 - Fixed a bug with [Get Element Text](https://w3c.github.io/webdriver/#dfn-get-element-text), where the command was incorrectly returning an empty text when the element was located within a ShadowRoot's slot ([Firefox bug 1824664](https://bugzil.la/1824664)).
 
-## Changes for add-on developers
-
-### Removals
-
-### Other
-
 ## Experimental web features
 
 These features are newly shipped in Firefox 122 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
@@ -102,6 +70,13 @@ These features are newly shipped in Firefox 122 but are disabled by default. To 
 - **Declarative shadow DOM:** `dom.webcomponents.shadowdom.declarative.enabled`.
 
   The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute which can be set to either `open` or `closed`, the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. It allows the creation of a shadow DOM subtree declaratively. ([Firefox bug 1712140](https://bugzil.la/1712140))
+
+- **Clonable option and property for shadow DOM.**
+
+  - The {{domxref("Element.attachShadow()")}} method now supports the `clonable` boolean option that specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
+  - The {{domxref("ShadowRoot")}} interface now supports the {{domxref("ShadowRoot.clonable", "clonable")}} read-only property. It returns `true` if the shadow root is clonable, and `false` otherwise. It always returns `true` for shadow roots created via declarative shadow DOM.
+
+  When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1712140](https://bugzil.la/1868428))
 
 - **Popover API:** `dom.element.popover.enabled`.
 
