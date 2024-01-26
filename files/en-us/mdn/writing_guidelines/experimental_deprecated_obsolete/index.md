@@ -72,7 +72,7 @@ If the item was _never_ implemented in a release version of _any_ browser, not e
 
 If the item was implemented in any release version of any one or more browsers but _only_ behind a preference or a flag, do not delete the item from the documentation immediately. Instead, mark the item as **deprecated** as follows:
 
-- Update the status data in `browser-compat-data` repository by [submitting a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) to the repository.
+- Update the item's status data in the `browser-compat-data` repository by [submitting a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data).
 - Search the informative text of the overview page for that interface, element, etc., for any references to the removed item. Add warning boxes in appropriate places with text along the lines of "\[item] has been removed from the specification and will be removed from browsers soon. See \[link to page] for a new way to do this."
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
 - Search MDN Web Docs for references to the removed item, in case there are discussions elsewhere. Add similar warning boxes there as well.
@@ -83,7 +83,7 @@ If the item was implemented in any release version of any one or more browsers b
 
 If the item was implemented in one or more release builds of browsers without requiring a preference or a flag, mark the item as **deprecated**, as follows:
 
-- Update the status data in `browser-compat-data` repository by [submitting a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) to the repository.
+- Update the item's status data in the `browser-compat-data` repository by [submitting a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data).
 - Search the informative text of the overview page for that interface, element, etc., for any references to the removed item. Add warning boxes in appropriate places with text along the lines of "\[item] has been removed from the specification and is deprecated. It may be removed from browsers in the future, so you should not use it. See \[link to page] for a new way to do this."
 - Similarly, look for any discussion of the item in the guides and tutorials about the relevant API or technology. Add similar warnings.
 - Search MDN Web Docs for references to the removed item, in case there are discussions elsewhere. Add similar warning boxes there as well.
