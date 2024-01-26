@@ -228,7 +228,7 @@ The `not` keyword inverts the meaning of a single media query. For example, the 
 }
 ```
 
-The `not` negates only the media query it is applied to. The `not`, without parenthesis, negates all the features within the media query in which it is contained. This means, in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to _all_ the features within that single query. In this example, the `not` applies to the first media query that concludes at the comma:
+The `not` negates only the media query it is applied to. The `not`, without parenthesis, negates all the features within the media query in which it is contained. This means, in a comma-separated list of media queries, each `not` applies to the single query it is contained within, applying to _all_ the features within that single query. In this example, the `not` applies to the first media query, which concludes at the first comma:
 
 ```css
 @media not screen and (color), print and (color) {
@@ -244,7 +244,7 @@ The above query is evaluated like this:
 }
 ```
 
-Both examples are valid. Media conditions can be grouped by wrapping them in parentheses `()` which can then be nested within a condition the same as a single media query.
+Both examples are valid. Media conditions can be grouped by wrapping them in parentheses (`()`). These groups can then be nested within a condition the same as a single media query.
 
 The `not` is evaluated last in a media query, meaning it applies to the entire media query, not to a single feature within a query, as if an open parenthesis was added immediately after the `not` and closed at the end of the media query.
 
