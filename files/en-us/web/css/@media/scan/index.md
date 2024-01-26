@@ -42,22 +42,22 @@ p {
   border: solid;
 }
 
-@media (scan: interlace) {
+@media screen and (scan: interlace) {
   p {
     background: #f4ae8a;
   }
 }
-@media (scan: progressive) {
+@media screen and (scan: progressive) {
   p {
     text-decoration: underline;
   }
 }
-@media not (scan: progressive) {
+@media not screen and (scan: progressive) {
   p {
     border-style: dashed;
   }
 }
-@media not (scan: interlaced) {
+@media not screen and (scan: interlaced) {
   p {
     color: purple;
   }
