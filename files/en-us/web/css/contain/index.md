@@ -278,6 +278,6 @@ Because of containment, the first closing quote ignores the inner span and uses 
 ## See also
 
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - CSS {{cssxref("content-visibility")}} property
 - CSS {{cssxref("position")}} property

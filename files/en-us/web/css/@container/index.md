@@ -7,7 +7,7 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}
 
-The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_container_queries#naming_containment_contexts).
+The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
@@ -255,7 +255,7 @@ The following container query checks if the {{cssxref("computed_value")}} of the
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
+- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
