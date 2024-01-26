@@ -31,7 +31,7 @@ A string.
 ```js
 const anchorElement = document.getElementById("exampleLink");
 const pTag = document.querySelector(".text");
-pTag.textContent =  `Text property: ${anchorElement.text}`;
+pTag.textContent = `Text property: ${anchorElement.text}`;
 ```
 
 ### Result
