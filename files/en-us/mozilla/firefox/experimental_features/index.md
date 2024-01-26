@@ -1487,10 +1487,10 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 Firefox now supports the `clonable` option and property for shadow DOM.
 
-- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. ([Firefox bug 1712140](https://bugzil.la/1868428))
-- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise. ([Firefox bug 1868428](https://bugzil.la/1868428))
+- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
+- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise.
 
-When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`.
+When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
