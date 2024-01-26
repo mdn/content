@@ -4,6 +4,8 @@ slug: Web/CSS/CSS_media_queries/Printing
 page-type: guide
 ---
 
+{{CSSRef}}
+
 There may be times in which your website or application would like to improve the user's experience when printing content. There are several possible scenarios:
 
 - You wish to adjust layout to take advantage of the size and shape of the paper.
