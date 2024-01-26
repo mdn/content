@@ -387,7 +387,10 @@ function draw() {
   ) {
     ball.vy = -ball.vy;
   }
-  if (ball.x + ball.vx > canvas.width - ball.radius || ball.x + ball.vx < ball.radius) {
+  if (
+    ball.x + ball.vx > canvas.width - ball.radius ||
+    ball.x + ball.vx < ball.radius
+  ) {
     ball.vx = -ball.vx;
   }
 
