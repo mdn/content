@@ -49,8 +49,13 @@ In summary:
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
 - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-The first three technology status related macros in the above list are [automatically added](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to the content.
-Hence, there is no need to add them manually to the content.
+The first three technology status related macros in the above list are automatically added to the content to match the statuses stored in the `browser-comapt-data` repository.
+
+> **Warning:**
+> Do not manually add **\\{{SeeCompatTable}}**, **\\{{Deprecated_Header}}**,
+> and **\\{{Non-standard_Header}}** banners to the content.
+> Instead,
+> [update the technology status in `browser-compat-data` repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 
 ### Experimental: "Standards positions" banner
 

@@ -26,13 +26,6 @@ The technology statuses of all the features documented on MDN are defined in its
 > **Warning:**
 > Do not manually update technology statuses in the `mdn/content` repository. To update a feature's technology status, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an automated pull request updates the statuses in the `mdn/content` repository.
 
-> **Warning:**
-> If you manually update statuses in `content` repository without updating BCD repository, then your changes will get reverted on the next BCD release!
->
-> If you update statuses in both `content` and BCD repositories, and content changes get merged before BCD changes go live, then the content changes may get reverted till the BCD changes go live.
->
-> Hence, it is best not to manually update technology statuses in the content code.
-
 ## How are technology statuses specified in content?
 
 The following sections document mechanisms using which technology statuses are rendered in MDN documents. As mentioned, you should consider these mechanisms read-only as their inclusion in the content is automated.
