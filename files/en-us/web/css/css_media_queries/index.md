@@ -108,8 +108,8 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
   - {{cssxref("@container")}} at-rule
-  - [Using container queries](/en-US/docs/Web/CSS/CSS_container_queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_container_queries) module
+  - [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
   - {{cssxref("@supports")}} at-rule
   - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
