@@ -331,7 +331,7 @@ The following example creates the `coffees` array with three elements and a `len
 const coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
-An array defined with a literal in the global scope is created once when the script loads. However, if the array literal is inside a function, a new array is instantiated every time that function is called.
+An array literal creates a new array object every time the literal is evaluated. For example, an array defined with a literal in the global scope is created once when the script loads. However, if the array literal is inside a function, a new array is instantiated every time that function is called.
 
 > **Note:** Array literals create `Array` objects. See {{jsxref("Array")}} and [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) for details on `Array` objects.
 
