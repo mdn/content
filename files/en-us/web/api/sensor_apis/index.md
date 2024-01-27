@@ -3,6 +3,13 @@ title: Sensor APIs
 slug: Web/API/Sensor_APIs
 page-type: web-api-overview
 browser-compat: api.Sensor
+spec-urls:
+  - https://w3c.github.io/sensors/
+  - https://w3c.github.io/accelerometer/
+  - https://w3c.github.io/orientation-sensor/
+  - https://w3c.github.io/ambient-light/
+  - https://w3c.github.io/gyroscope/
+  - https://w3c.github.io/magnetometer/
 ---
 
 {{DefaultAPISidebar("Sensor API")}}
