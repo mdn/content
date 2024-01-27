@@ -230,11 +230,18 @@ The following query evaluates to true and applies the declared style if the cont
 }
 ```
 
-### Style container queries
+### Container style queries
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Container queries can also evaluate the computed style of the container element.
+Container queries can also evaluate the computed style of the container element. A _container style query_ is an `@container` query with that uses one or more `style()` functional notations. The parameter of each `style()` is a single `<style-feature>` - a valid CSS declaration, a CSS property, or a `<custom-property-name>`. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+
+A style feature without a value evaluates to true if the computed value is different from the initial value for the given property. If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
+
+Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise.
+
+The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+
 The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
 
 ```css
