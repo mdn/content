@@ -12,9 +12,9 @@ The **`HTMLProgressElement.value`** represents the current progress of the {{HTM
 
 ## Value
 
-A floating point number. If [`max`](Web/API/HTMLProgressElement/max) value is not set on the progress bar then value ranges between 0.0 and  the {{domxref("HTMLProgressElement.max")}} value.
+A floating point number. If [`max`](Web/API/HTMLProgressElement/max) value is not set on the progress bar then value ranges between 0.0 and the {{domxref("HTMLProgressElement.max")}} value.
 
-If the `value` is not set or removed then the progress bar becomes indeterminate.
+If the `value` property is not set on [`HTMLProgressElement`](/en-US/docs/Web/API/HTMLProgressElement) object, then the progress bar remains indeterminate.
 
 ## Examples
 
