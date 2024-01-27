@@ -40,7 +40,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - **page-type**
 >   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **status**
->   - : Do not provide status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
+>   - : Do not add or edit status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheConstructor` with the query string for the constructor in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).

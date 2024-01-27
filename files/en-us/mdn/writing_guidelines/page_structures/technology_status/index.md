@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-Technology status of a feature tells developers implementation stage of the feature among browsers. Using it, developers can decide if a feature is stable enough to use in production code. Each feature has one of the following statuses:
+Technology status provides developers with information about the implementation stage of the feature among browser vendors. A technology status is one of the following:
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
   - : A feature is considered experimental if it is supported by one and only one browser engine. Some exceptions apply, however, for long-standing features and features behind flags and prefixes.
@@ -17,13 +17,14 @@ Technology status of a feature tells developers implementation stage of the feat
 - `standard`
   - : If none of the above status apply, then the feature is considered standard. We don't need to explicitly mention this status in the content code because the status is assumed by default.
 
-Detailed information about `experimental` and `standard` can be found on ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page. To see detailed instructions on how to choose status for a feature, refer [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in `@mdn/browser-compat-data` (BCD) repository.
+For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page. To see detailed instructions on how to choose status for a feature, refer [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in `@mdn/browser-compat-data` (BCD) repository.
 
 ## How to add or update technology statuses
 
-Statuses of all the features are being maintained at only one place: [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository. Those statuses are _automatically_ updated in `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases) (mostly twice a week).
+The technology statuses of all the features documented on MDN are defined in its accompanying [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository entry and are _automatically_ updated in the `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases).```
 
-As there is an automation in place to synchronize the data, _there is no need to manually update the statuses in the content code_. You need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) to BCD repository to update a status. After your changes go live in BCD repository the content repo automatically, at next midnight, receives a pull request that updates the statuses in `content` repository.
+> **Warning:**
+> Do not manually update technology statuses in the `mdn/content` repository. To update a feature's technology status, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an automated pull request updates the statuses in the `mdn/content` repository.
 
 > **Warning:**
 > If you manually update statuses in `content` repository without updating BCD repository, then your changes will get reverted on the next BCD release!
@@ -34,7 +35,7 @@ As there is an automation in place to synchronize the data, _there is no need to
 
 ## How are technology statuses specified in content?
 
-Following sections document mechanisms using which technology statuses are placed in content. As mentioned before, it is not required to use these mechanisms manually.
+The following sections document mechanisms using which technology statuses are rendered in MDN documents. As mentioned, you should consider these mechanisms read-only as their inclusion in the content is automated.
 
 ### Technology status icons in sidebars
 

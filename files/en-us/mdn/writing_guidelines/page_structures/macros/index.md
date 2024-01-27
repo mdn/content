@@ -12,11 +12,8 @@ The [KumaScript guide](https://github.com/mdn/yari/blob/main/docs/kumascript/REA
 
 ## How macros are implemented
 
-Macros on MDN are implemented using server-executed [JavaScript](/en-US/docs/Web/JavaScript) code,
-interpreted using [Node.js](https://nodejs.org/en/).
-On top of that,
-we have a number of libraries we've implemented that provide services and features
-to let macros interact with the platform and its contents.
+Macros on MDN are implemented using server-executed [JavaScript](/en-US/docs/Web/JavaScript) code, interpreted using [Node.js](https://nodejs.org/en/).
+On top of that, we have a number of libraries we've implemented that provide services and features to let macros interact with the platform and its contents.
 
 ## Using a macro in content
 
