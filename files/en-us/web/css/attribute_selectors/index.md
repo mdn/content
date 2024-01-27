@@ -20,7 +20,8 @@ a[title] {
 }
 
 /* <a> elements with an href matching "https://example.org" */
-a[href="https://example.org"] {
+a[href="https://example.org"]
+{
   color: green;
 }
 
@@ -100,7 +101,8 @@ a[href$=".org"] {
 }
 
 /* Links that start with "https://" and end in ".org" */
-a[href^="https://"][href$=".org"] {
+a[href^="https://"][href$=".org"]
+{
   color: green;
 }
 ```
