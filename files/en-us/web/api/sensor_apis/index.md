@@ -16,7 +16,7 @@ spec-urls:
 
 The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
 
-## Sensor APIs concepts and usage
+## Concepts and usage
 
 Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('Accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
 
