@@ -8,7 +8,7 @@ browser-compat: api.HTMLAnchorElement.ping
 
 {{ApiRef("HTML DOM")}}
 
-The **`ping`** property of the {{domxref("HTMLAnchorElement")}} interface is a space-separated list of URLs. When the link is followed, the browser will send POST requests with the body PING to the URLs.
+The **`ping`** property of the {{domxref("HTMLAnchorElement")}} interface is a space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 
 It reflects the `ping` attribute of the {{HTMLElement("a")}} element.
 
