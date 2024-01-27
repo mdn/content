@@ -8,7 +8,7 @@ browser-compat: api.HTMLProgressElement.max
 
 {{APIRef("DOM")}}
 
-The **`HTMLProgressElement.max`** sets the upper bound of the {{HTMLElement("progress")}} element's range.
+The **`HTMLProgressElement.max`** represents the upper bound of the {{HTMLElement("progress")}} element's range.
 
 ## Value
 

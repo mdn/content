@@ -8,11 +8,11 @@ browser-compat: api.HTMLProgressElement.value
 
 {{APIRef("DOM")}}
 
-The **`HTMLProgressElement.value`** sets the current progress of the {{HTMLElement("progress")}} element.
+The **`HTMLProgressElement.value`** represents the current progress of the {{HTMLElement("progress")}} element.
 
 ## Value
 
-A floating point number with default value 0.0. If [`max`](Web/API/HTMLProgressElement/max) value is not set on the progress bar then value ranges between 0.0 and 1.0. If the `max` value is set then the `value` ranges between `0` and the `max` value.
+A floating point number. If [`max`](Web/API/HTMLProgressElement/max) value is not set on the progress bar then value ranges between 0.0 and  the {{domxref("HTMLProgressElement.max")}} value.
 
 If the `value` is not set or removed then the progress bar becomes indeterminate.
 
