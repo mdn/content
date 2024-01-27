@@ -28,6 +28,8 @@ Progress: <progress id="pBar"></progress> <span>0</span>%
 const pBar = document.getElementById("pBar");
 const span = document.getElementsByTagName("span")[0];
 
+console.log(`Default value of max: ${pBar.max}`);
+
 pBar.max = 100;
 pBar.value = 0;
 
