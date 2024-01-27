@@ -72,6 +72,7 @@ If the browser knows that a part of the page is independent, rendering can be op
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 
   - {{cssxref("@media")}} at-rule
+  - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) module
 
