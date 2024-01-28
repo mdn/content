@@ -13,7 +13,7 @@ The **`parseFromString()`** method of the {{domxref("DOMParser")}} interface par
 ## Syntax
 
 ```js-nolint
-parseFromString(string, mimeType)
+parseFromString(string, mimeType, options)
 ```
 
 ### Parameters
@@ -37,6 +37,14 @@ parseFromString(string, mimeType)
     The other valid values (`text/xml`, `application/xml`, `application/xhtml+xml`, and `image/svg+xml`) are functionally equivalent. They all invoke the XML parser, and the method will return a {{domxref("XMLDocument")}}.
 
     Any other value is invalid and will cause a [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError) to be thrown.
+
+- `options` (Optional)
+
+  - : An object. This object allows for additional configuration of the `parseFromString` method. Supported properties are:
+
+    - `includeShadowRoots`
+
+    A value of `includeShadowRoots` enabled parsing of HTML with Declarative Shadow Roots applied. This avoids some important security considerations as fragment parsing APIs like `innerHTML` or `insertAdjacentHTML()` don't support creation of Declarative Shadow Roots.
 
 ### Return value
 
@@ -92,6 +100,24 @@ if (errorNode) {
 ```
 
 Additionally, the parsing error may be reported to the browser's JavaScript console.
+
+### includeShadowRoots
+
+The below shows an example of passing `includeShadowRoots` as an option to `parseFromString`.
+
+```js
+<script>
+  const html = `
+    <div>
+      <template shadowrootmode="open"></template>
+    </div>
+  `;
+
+  const fragment = new DOMParser().parseFromString(html, 'text/html', {
+    includeShadowRoots: true
+  });
+</script>
+```
 
 ## Specifications
 
