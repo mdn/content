@@ -3,6 +3,7 @@ title: "-moz-user-focus"
 slug: Web/CSS/-moz-user-focus
 page-type: css-property
 status:
+  - deprecated
   - non-standard
 browser-compat: css.properties.-moz-user-focus
 ---
