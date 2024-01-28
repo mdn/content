@@ -28,13 +28,19 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 ## Fetch Interfaces
 
 - {{DOMxRef("fetch()")}}
-  - : The `fetch()` method used to fetch a resource.
+  - The `fetch()` method is used to fetch a resource. Learn more about making requests in the [Using Fetch guide](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+  
 - {{DOMxRef("Headers")}}
-  - : Represents response/request headers, allowing you to query them and take different actions depending on the results.
+  - The `Headers` interface represents response/request headers, allowing you to query them and take different actions depending on the results. Explore header manipulation in the [Using Fetch guide](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
 - {{DOMxRef("Request")}}
-  - : Represents a resource request.
+  - The `Request` interface represents a resource request. Create and customize requests for your needs. See examples in the [Using Fetch guide](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
 - {{DOMxRef("Response")}}
-  - : Represents the response to a request.
+  - The `Response` interface represents the response to a request. Learn how to handle different response scenarios in the [Using Fetch guide](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
+
+These interfaces play a crucial role in utilizing the Fetch API effectively. Refer to the linked guides for detailed information and practical examples.
+
 
 ## Specifications
 
