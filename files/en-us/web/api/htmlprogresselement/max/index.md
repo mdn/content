@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLProgressElement.max
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLProgressElement.max`** represents the upper bound of the {{HTMLElement("progress")}} element's range.
+The **`max`** property of the {{DOMxRef("HTMLProgressElement")}} interface represents the upper bound of the {{HTMLElement("progress")}} element's range.
 
 ## Value
 

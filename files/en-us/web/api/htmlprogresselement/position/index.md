@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLProgressElement.position
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
-The **`HTMLProgressElement.position`** read-only value returns current progress of the {{HTMLElement("progress")}} element.
+The **`position`** read-only property of the {{DOMxRef("HTMLProgressElement")}} interface returns current progress of the {{HTMLElement("progress")}} element.
 
 ## Value
 
