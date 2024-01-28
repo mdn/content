@@ -32,7 +32,7 @@ cancel(reason)
 
 ### Return value
 
-A {{jsxref("Promise")}}, which fulfills with the value given in the `reason` parameter.
+A {{jsxref("Promise")}}, which fulfills with `undefined` value.
 
 ### Exceptions
 
