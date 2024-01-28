@@ -42,9 +42,11 @@ parseFromString(string, mimeType, options)
 
   - : An object. This object allows for additional configuration of the `parseFromString` method. Supported properties are:
 
-    - `includeShadowRoots`
+    - `includeShadowRoots` {{Non-standard_Inline}}
 
     A value of `includeShadowRoots` enabled parsing of HTML with Declarative Shadow Roots applied. This avoids some important security considerations as fragment parsing APIs like `innerHTML` or `insertAdjacentHTML()` don't support creation of Declarative Shadow Roots.
+
+> As `includeShadowRoots` is non-standard, once available [`setHTMLUnsafe` and `parseHTMLUnsafe`](https://github.com/mdn/mdn/issues/459) should be used instead.
 
 ### Return value
 
