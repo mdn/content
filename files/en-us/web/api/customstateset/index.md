@@ -283,7 +283,9 @@ Click the element to see a different border being applied as the state changes.
 
 ## Compability with `<dashed-ident>` syntax
 
-Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the `:state()` function. Browsers supporting only this syntax will throw an error when supplied with an ident that is not prefixed with the double dash. If support for these browsers is required, it is possible to use a `<dashed-ident>` in the modern syntax, and selecting with both the `:--mystate` and `:state(mystate)` CSS selector:
+Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
+Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
+If support for these browsers is required, it is possible to use a `<dashed-ident>` as the state's `<custom-ident>`, and select it with both the `:--mystate` and `:state(mystate)` CSS selector:
 
 ### Using double dash prefixed idents
 
