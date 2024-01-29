@@ -32,12 +32,9 @@ createIndex(indexName, keyPath, options)
 ### Parameters
 
 - `indexName`
-  - : The name of the index to create. Note that it is possible to create an index with an
-    empty name.
+  - : The name of the index to create. Note that it is possible to create an index with an empty name.
 - `keyPath`
-  - : The key path for the index to use. Note that it is possible to create an index with
-    an empty `keyPath`, and also to pass in a sequence (array) as a
-    `keyPath`.
+  - : The key path for the index to use. Note that it is possible to create an index with an empty `keyPath`, and also to pass in a sequence (array) as a `keyPath`.
 - `options` {{optional_inline}}
 
   - : An object which can include the following
@@ -47,7 +44,7 @@ createIndex(indexName, keyPath, options)
     - `multiEntry`
       - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
         If `false`, it will add one single entry containing the array. Defaults to `false`.
-    - `locale` {{non-standard_inline}}
+    - `locale` {{non-standard_inline}} {{deprecated_inline}}
       - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
         (see [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
