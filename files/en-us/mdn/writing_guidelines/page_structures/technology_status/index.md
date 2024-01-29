@@ -6,25 +6,24 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-Technology status provides developers with information about the implementation stage of the feature among browser vendors. A technology status is one of the following:
+A technology status provides developers with information about the implementation stage of the feature among browser vendors and is one of the following:
 
 - [`experimental`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-experimental)
-  - : A feature is considered experimental if it is supported by one and only one browser engine. Some exceptions apply, however, for long-standing features and features behind flags and prefixes.
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
-  - : A feature is considered non-standard if it does not exist in any specification.
 - [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
-  - : A feature is considered deprecated if it is on the path to removal or the feature is discouraged from use despite its retention for backwards compatibility.
-- `standard`
-  - : If none of the above status apply, then the feature is considered standard. We don't need to explicitly mention this status in the content code because the status is assumed by default.
 
-For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page. To see detailed instructions on how to choose status for a feature, refer [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in `@mdn/browser-compat-data` (BCD) repository.
+If none of the above statuses apply, then the feature is considered `standard`.
+We don't explicitly add this status to content pages as a technology status is `standard` by default.
+For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
+
+To see detailed instructions on how to choose a status for a feature, refer to the [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in the `@mdn/browser-compat-data` (BCD) repository.
 
 ## How to add or update technology statuses
 
-The technology statuses of all the features documented on MDN are defined in its accompanying [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository entry and are _automatically_ updated in the `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases).```
+The technology statuses of all the features documented on MDN are defined in its accompanying [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository entry and are _automatically_ updated in the `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases).
 
 > **Warning:**
-> Do not manually update technology statuses in the `mdn/content` repository. To update a feature's technology status, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an automated pull request updates the statuses in the `mdn/content` repository.
+> Do not manually update technology statuses in the `mdn/content` repository. To update a feature's technology status, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an [automated pull request](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) updates the statuses in the `mdn/content` repository.
 
 ## How are technology statuses specified in content?
 
@@ -35,13 +34,14 @@ The following sections document mechanisms using which technology statuses are r
 To show status icons for a feature listed in sidebars, the [front-matter](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template#sect1) `status` property is used:
 
 ```yml
-title: Feature name
 ---
+title: Feature name
 status:
   - experimental
   - non-standard
   - deprecated
 browser-compat: api.feature
+---
 ```
 
 When sidebars are rendered, the code looks for the statuses in each page's front-matter.
