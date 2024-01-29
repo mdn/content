@@ -101,4 +101,6 @@ The **CSS containment** module also provides the ability to query a parent's siz
 
 ## See also
 
-- [An introduction to CSS containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
+- [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries) guide
+- [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) guide
+- {{cssxref("@supports")}} at-rule

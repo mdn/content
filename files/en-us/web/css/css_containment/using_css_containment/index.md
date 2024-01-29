@@ -180,5 +180,5 @@ This happens in both cases, but with `content-visibility: auto` the content can 
 - [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
 - [Learn: CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/)
+- [An Introduction to CSS Containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event
