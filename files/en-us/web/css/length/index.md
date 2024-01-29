@@ -59,7 +59,6 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - : Equal to the value of [`ic`](#ic) unit on the root element's font.
 - `rlh`
   - : Equal to the value of [`lh`](#lh) unit on the root element's font. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
- 
 
 ### Relative length units based on viewport
 
