@@ -8,7 +8,7 @@ browser-compat: api.HTMLIFrameElement.sandbox
 
 {{APIRef("HTML DOM")}}
 
-The **`sandbox`** property of the {{domxref("HTMLIFrameElement")}} interface indicates extra restrictions on the behavior of the nested content.
+The **`sandbox`** read-only property of the {{domxref("HTMLIFrameElement")}} interface returns a {{domxref("DOMTokenList")}} indicating extra restrictions on the behavior of the nested content.
 
 It reflects the `sandbox` attribute of the {{HTMLElement("iframe")}} element.
 
