@@ -88,7 +88,7 @@ The {{cssxref("background-repeat")}} property is used to control the tiling beha
 
 #### Sizing the background image
 
-The _balloons.jpg_ image used in the initial background images example, is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take [length](/en-US/docs/Web/CSS/length) or [percentage](/en-US/docs/Web/CSS/percentage) values, to size the image to fit inside the background.
+The _balloons.jpg_ image used in the initial background images example, is a large image that was cropped due to being larger than the element it is a background of. In this case we could use the {{cssxref("background-size")}} property, which can take {{cssxref("length")}} or {{cssxref("percentage")}} values, to size the image to fit inside the background.
 
 You can also use keywords:
 
@@ -123,7 +123,7 @@ You can use keywords such as `top` and `right` (look up the others on the {{cssx
 }
 ```
 
-And [Lengths](/en-US/docs/Web/CSS/length), and [percentages](/en-US/docs/Web/CSS/percentage):
+And {{cssxref("length", "lengths")}}, and {{cssxref("percentage", "percentages")}}:
 
 ```css
 .box {

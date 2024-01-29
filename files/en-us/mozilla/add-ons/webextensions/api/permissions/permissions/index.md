@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.permissions.Permissions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `Permissions` object represents a collection of permissions.
 

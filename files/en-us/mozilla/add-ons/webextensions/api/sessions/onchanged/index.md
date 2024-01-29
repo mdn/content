@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.sessions.onChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired whenever the list of closed tabs or windows changes.
 
