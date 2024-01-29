@@ -11,6 +11,8 @@ The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of q
 A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
+> **Note:** When using the {{cssxref("container-type")}} and `container-name` properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+
 ## Syntax
 
 ```css
