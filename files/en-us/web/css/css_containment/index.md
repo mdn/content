@@ -36,7 +36,7 @@ The **CSS containment** module also provides the ability to query a parent's siz
 
 ### Functions
 
-- {{CSSxRef("@container", "@container style()")}}
+- [`style()`](/en-US/docs/Web/CSS/@container#container_style_queries)
 
 ### Data types
 
