@@ -29,11 +29,6 @@ add(value)
 
 Undefined.
 
-### Exceptions
-
-- `SyntaxError` {{domxref("DOMException")}}
-  - : Thrown if the string is not a `<custom-ident>`.
-
 ## Examples
 
 The following function adds the state `checked` to a `CustomStateSet`.
