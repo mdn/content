@@ -59,7 +59,7 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 
-  - : blah
+  - : A guide to using container queries with `@container`, including naming containment contexts.
 
 - [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
 
