@@ -9,9 +9,9 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS containment** module improves performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page.
+The **CSS containment** module improves performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. Containment lets the developer define parts of the page as independent, enabling the browser to optimize rendering thereby improving performance.
 
-If the browser knows that a part of the page is independent, rendering can be optimized and performance improved.
+The **CSS containment** module also provides the ability to query a parent's size and features to conditionally apply CSS styles based on the containers. The module also introduces container relative unit values.
 
 ## Reference
 
