@@ -234,13 +234,31 @@ The following query evaluates to true and applies the declared style if the cont
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Container queries can also evaluate the computed style of the container element. A _container style query_ is an `@container` query with that uses one or more `style()` functional notations. The parameter of each `style()` is a single `<style-feature>` - a valid CSS declaration, a CSS property, or a `<custom-property-name>`. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
+Container queries can also evaluate the computed style of the container element. A _container style query_ is an `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as for [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries).
 
-A style feature without a value evaluates to true if the computed value is different from the initial value for the given property. If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
+```css
+@container style(<style-feature>),
+    not style(<style-feature>),
+    style(<style-feature>) and style(<style-feature>),
+    style(<style-feature>) or style(<style-feature>) {
+  /* <stylesheet> */
+}
+```
 
-Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise.
+The parameter of each `style()` is a single `<style-feature>` - a valid CSS declaration, a CSS property, or a `<custom-property-name>`.
 
-The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+```css
+@container style(--themeBackground),
+    not style(background-color: red),
+    style(color: green) and style(background-color: transparent),
+    style(--themeColor: blue) or style(--themeColor: purple) {
+  /* <stylesheet> */
+}
+```
+
+A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
+
+If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 
 The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
 
@@ -251,6 +269,10 @@ The following container query checks if the {{cssxref("computed_value")}} of the
 ```
 
 > **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+
+Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
+
+The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
 ## Specifications
 

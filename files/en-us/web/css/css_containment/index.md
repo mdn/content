@@ -40,6 +40,7 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 ### Data types
 
+- [`<style-feature>`]()
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 
 ### Events
