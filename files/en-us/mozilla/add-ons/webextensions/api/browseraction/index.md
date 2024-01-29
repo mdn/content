@@ -57,8 +57,6 @@ With the `browserAction` API, you can:
   - : Sets the badge's text color.
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}}
   - : Gets the badge's text color.
-- {{WebExtAPIRef("browserAction.getUserSettings()")}}
-  - : Gets the user-specified settings for the browser action.
 - {{WebExtAPIRef("browserAction.enable()")}}
   - : Enables the browser action for a tab. By default, browser actions are enabled for all tabs.
 - {{WebExtAPIRef("browserAction.disable()")}}
