@@ -10,7 +10,7 @@ browser-compat: api.CustomStateSet.add
 
 {{APIRef("Web Components")}}{{SeeCompatTable}}
 
-The **`add`** method of the {{domxref("CustomStateSet")}} interface adds an item to the `CustomStateSet`, after checking that the value is in the correct format.
+The **`add`** method of the {{domxref("CustomStateSet")}} interface adds value representing a custom state to the `CustomStateSet`.
 
 ## Syntax
 
