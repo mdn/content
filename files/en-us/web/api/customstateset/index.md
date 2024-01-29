@@ -66,9 +66,9 @@ The states can be used within the custom element but are not directly accessible
 Developers can select a custom element with a specific state using its state _custom state pseudo-class_.
 The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is the state as defined in the element.
 
-> **Warning:** Chrome supports the legacy syntax which uses a CSS `<dashed-ident>` rather than the `:state()` function. For these browsers `:state(mystatename)` would be invalid, and `:--mystatename` must be used instead.
-
 The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `mystatename` is present in the `CustomStateSet`).
+
+> **Warning:** Chrome supports the legacy syntax which uses a CSS `<dashed-ident>` rather than the `:state()` function. For these browsers `:state(mystatename)` would be invalid, and `:--mystatename` must be used instead.
 
 ## Examples
 
