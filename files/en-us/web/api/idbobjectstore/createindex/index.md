@@ -45,7 +45,7 @@ createIndex(indexName, keyPath, options)
       - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
         If `false`, it will add one single entry containing the array. Defaults to `false`.
     - `locale` {{non-standard_inline}} {{deprecated_inline}}
-      - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
+      - : Allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
         (see [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
         You can specify its value in one of three ways:
