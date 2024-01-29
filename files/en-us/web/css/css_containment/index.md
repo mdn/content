@@ -42,6 +42,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 ### Data types
 
+- [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
 - [`<style-feature>`](/en-US/docs/Web/CSS/@container#Container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 
@@ -70,7 +71,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ## Related concepts
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
-- [Block formatting context](/en-US/docs/Web/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 
@@ -94,7 +95,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
   - [Using CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) guide
 
-- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/) module
+- [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
   - [CSS nesting at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules) guide
 
 ## Specifications
