@@ -21,7 +21,10 @@ A string.
 ## Examples
 
 ```html
-<iframe id="el" src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
+<iframe
+  id="el"
+  src="https://example.com"
+  allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
 ```js
