@@ -21,7 +21,7 @@ The interface can be used to expose the internal states of a custom element, all
 ## Instance methods
 
 - {{domxref("CustomStateSet.add()")}} {{Experimental_Inline}}
-  - : Adds a value to the set, first checking that the _value_ is a `<custom-ident>`.
+  - : Adds a value to the set.
 - {{domxref("CustomStateSet.clear()")}} {{Experimental_Inline}}
   - : Removes all elements from the `CustomStateSet` object.
 - {{domxref("CustomStateSet.delete()")}} {{Experimental_Inline}}
