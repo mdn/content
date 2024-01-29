@@ -31,7 +31,7 @@ isEqualNode(otherNode)
 A boolean value that is `true` if the two nodes are equals, or `false` if not.
 If `otherNode` is `null`, `isEqualNode()` always return false.
 
-## Example
+## Examples
 
 In this example, we create three {{HTMLElement("div")}} blocks. The first and third
 have the same contents and attributes, while the second is different. Then we run some

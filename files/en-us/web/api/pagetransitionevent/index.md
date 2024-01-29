@@ -23,7 +23,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
-## Example
+## Examples
 
 ### HTML
 

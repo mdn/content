@@ -48,7 +48,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`AudioContext.createMediaElementSource()`](/en-US/docs/Web/API/AudioContext/createMediaElementSource#examples) for example code.
 

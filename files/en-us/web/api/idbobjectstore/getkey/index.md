@@ -46,7 +46,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 - `DataError` {{domxref("DOMException")}}
   - : Thrown if the key or key range provided contains an invalid key.
 
-## Example
+## Examples
 
 ```js
 let openRequest = indexedDB.open("telemetry");

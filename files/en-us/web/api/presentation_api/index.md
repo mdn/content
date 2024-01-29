@@ -39,7 +39,7 @@ Depending on the connection mechanism provided by the presentation device, any c
 - {{domxref("PresentationConnectionList")}}
   - : `PresentationConnectionList` represents the collection of non-terminated presentation connections. It is also a monitor for the event of new available presentation connection.
 
-## Example
+## Examples
 
 Example codes below highlight the usage of main features of the Presentation API: `controller.html` implements the controller and `presentation.html` implements the presentation. Both pages are served from the domain `https://example.org` (`https://example.org/controller.html` and `https://example.org/presentation.html`). These examples assume that the controlling page is managing one presentation at a time. Please refer to the comments in the code examples for further details.
 

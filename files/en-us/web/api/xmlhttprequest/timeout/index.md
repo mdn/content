@@ -14,7 +14,7 @@ The **`XMLHttpRequest.timeout`** property is an `unsigned long` representing the
 
 [Using a timeout with an asynchronous request](/en-US/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests#example_using_a_timeout).
 
-## Example
+## Examples
 
 ```js
 const xhr = new XMLHttpRequest();

@@ -92,7 +92,7 @@ You are free to use either constructors or factory methods, or mix both, however
 
 _Brief history:_ The first version of the Web Audio spec only defined the factory methods. After a [design review in October 2013](https://github.com/WebAudio/web-audio-api/issues/250), it was decided to add constructors because they have numerous benefits over factory methods. The constructors were added to the spec from August to October 2016. Factory methods continue to be included in the spec and are not deprecated.
 
-## Example
+## Examples
 
 This simple snippet of code shows the creation of some audio nodes, and how the `AudioNode` properties and methods can be used. You can find examples of such usage on any of the examples linked to on the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) landing page (for example [Violent Theremin](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 

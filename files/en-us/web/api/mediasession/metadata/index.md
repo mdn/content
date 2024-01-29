@@ -19,7 +19,7 @@ any standard media control user interface the device might offer.
 An instance of {{domxref("MediaMetadata")}} containing information about the media
 currently being played.
 
-## Example
+## Examples
 
 The following example checks for compatibility and creates a new media session with the
 relevant metadata:

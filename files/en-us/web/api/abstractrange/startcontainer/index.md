@@ -14,7 +14,7 @@ The read-only **`startContainer`** property of the {{domxref("AbstractRange")}} 
 
 The {{domxref("Node")}} inside which the start position of the range is found.
 
-## Example
+## Examples
 
 ```js
 let startNode = range.startContainer;

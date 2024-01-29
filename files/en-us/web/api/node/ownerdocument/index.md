@@ -18,7 +18,7 @@ child nodes are created.
 
 If this property is used on a node that is itself a document, the value is `null`.
 
-## Example
+## Examples
 
 ```js
 // Given a node "p", get the top-level HTML

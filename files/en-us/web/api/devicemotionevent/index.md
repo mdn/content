@@ -29,7 +29,7 @@ The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Event
 - {{DOMxRef("DeviceMotionEvent.interval")}} {{ReadOnlyInline}}
   - : A number representing the interval of time, in milliseconds, at which data is obtained from the device.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("devicemotion", (event) => {

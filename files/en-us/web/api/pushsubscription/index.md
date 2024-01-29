@@ -31,7 +31,7 @@ An instance of this interface can be serialized.
 - {{domxref("PushSubscription.unsubscribe()")}}
   - : Starts the asynchronous process of unsubscribing from the push service, returning a {{jsxref("Promise")}} that resolves to a boolean value when the current subscription is successfully unregistered.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then((reg) => {

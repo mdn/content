@@ -29,7 +29,7 @@ The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest c
 - DONE
   - : The fetch operation is complete. This could mean that either the data transfer has been completed successfully or failed.
 
-## Example
+## Examples
 
 ```js
 const xhr = new XMLHttpRequest();

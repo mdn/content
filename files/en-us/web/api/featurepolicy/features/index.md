@@ -31,7 +31,7 @@ None.
 A list of strings that represent names of all Permissions Policy directives supported by
 the user agent.
 
-## Example
+## Examples
 
 The following example logs all the supported directives in the console.
 

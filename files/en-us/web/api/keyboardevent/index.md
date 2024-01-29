@@ -227,7 +227,7 @@ In some GTK-based environments, auto-repeat dispatches a native key-up event aut
 
 In these environments, unfortunately, there's no way for web content to tell the difference between auto-repeating keys and keys that are just being pressed repeatedly.
 
-## Example
+## Examples
 
 ```js
 document.addEventListener(

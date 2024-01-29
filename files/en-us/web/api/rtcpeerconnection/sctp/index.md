@@ -18,7 +18,7 @@ The SCTP transport is used for transmitting and receiving data for any and all {
 
 A {{domxref("RTCSctpTransport")}} object describing the SCTP transport being used by the {{domxref("RTCPeerConnection")}} for transmitting and receiving on its data channels, or `null` if SCTP negotiation hasn't happened.
 
-## Example
+## Examples
 
 ```js
 const peerConnection = new RTCPeerConnection();

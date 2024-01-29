@@ -17,7 +17,7 @@ constructed and is the name commonly used to refer to the specific event, such a
 
 A string containing the type of {{domxref("Event")}}.
 
-## Example
+## Examples
 
 This example logs the event type whenever you press a keyboard key or click a mouse
 button.

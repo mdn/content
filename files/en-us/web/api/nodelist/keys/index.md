@@ -22,7 +22,7 @@ keys()
 
 Returns an {{jsxref("Iteration_protocols","iterator")}}.
 
-## Example
+## Examples
 
 ```js
 const node = document.createElement("div");

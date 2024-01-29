@@ -58,7 +58,7 @@ _Inherits methods from its parent interface, {{domxref("AudioScheduledSourceNode
 - {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
   - : Schedules a sound to stop playback at an exact time.
 
-## Example
+## Examples
 
 In the article [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode), a `ConstantSourceNode` is created to allow one slider control to change the gain on two {{domxref("GainNode")}}s. The three nodes are set up like this:
 

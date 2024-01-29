@@ -16,7 +16,7 @@ The **`expectedImprovement`** read-only property of the {{domxref("InkPresenter"
 
 A number.
 
-## Example
+## Examples
 
 ```js
 async function inkInit() {

@@ -39,7 +39,7 @@ new MediaMetadata(metadata)
         - `type` {{optional_inline}}
           - : The {{Glossary("MIME type")}} hint for the user agent that allows it to ignore images of types that it doesn't support. However, the user agent may still use MIME type sniffing after downloading the image to determine its type. It defaults to the empty string (`""`).
 
-## Example
+## Examples
 
 The following example creates a new {{domxref("MediaMetadata")}} object using the
 correct format of metadata.

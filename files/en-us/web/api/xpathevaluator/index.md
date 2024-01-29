@@ -23,7 +23,7 @@ The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath"
 - {{DOMxRef("XPathEvaluator.evaluate()")}}
   - : Evaluates an XPath expression string and returns a result of the specified type if possible.
 
-## Example
+## Examples
 
 ### Count the number of `<div>` elements
 

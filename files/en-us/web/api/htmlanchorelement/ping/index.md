@@ -14,7 +14,7 @@ It reflects the `ping` attribute of the {{HTMLElement("a")}} element.
 
 > **Note:** This property is not effective in Firefox and its usage may be limited due to privacy and security concerns.
 
-## Example
+## Examples
 
 ```html
 <a

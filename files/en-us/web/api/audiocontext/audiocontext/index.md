@@ -81,7 +81,7 @@ Chrome throws a {{jsxref("TypeError")}} exception with the message
 "The provided value '...' is not a valid enum value of type
 AudioContextLatencyCategory".
 
-## Example
+## Examples
 
 This example creates a new {{domxref("AudioContext")}} for interactive audio
 (optimizing for latency), with a sample rate of 44.1kHz and a specific audio output.

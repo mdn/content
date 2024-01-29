@@ -40,7 +40,7 @@ _The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("Ev
 - {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
   - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
 
-## Example
+## Examples
 
 The following example demonstrates how to opt out of the automatic virtual keyboard behavior, and detect the geometry of the virtual keyboard in the web page:
 

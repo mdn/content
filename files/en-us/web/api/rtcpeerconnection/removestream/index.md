@@ -40,7 +40,7 @@ removeStream(mediaStream)
 
 {{jsxref("undefined")}}.
 
-## Example
+## Examples
 
 ```js
 let pc;

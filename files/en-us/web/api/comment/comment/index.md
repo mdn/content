@@ -27,7 +27,7 @@ new Comment(aString)
 
 A new {{domxref("Comment")}} containing `aString`, or the empty string if no parameter was given.
 
-## Example
+## Examples
 
 ```js
 let comment = new Comment("Test");

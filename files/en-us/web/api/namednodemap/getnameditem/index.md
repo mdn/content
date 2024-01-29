@@ -29,7 +29,7 @@ getNamedItem(name)
 
 An {{domxref("Attr")}} corresponding to the `name` given in parameter, or `null` if none has been found.
 
-## Example
+## Examples
 
 ```html
 <pre test="test"></pre>

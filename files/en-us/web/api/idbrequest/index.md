@@ -49,7 +49,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - [`success`](/en-US/docs/Web/API/IDBRequest/success_event)
   - : Fired when an `IDBRequest` succeeds.
 
-## Example
+## Examples
 
 In the following code snippet, we open a database asynchronously and make a request; `onerror` and `onsuccess` functions are included to handle the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
 

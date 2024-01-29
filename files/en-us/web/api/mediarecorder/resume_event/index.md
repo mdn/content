@@ -25,7 +25,7 @@ onresume = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 pause.onclick = () => {

@@ -47,7 +47,7 @@ dispatchEvent(event)
 > handlers run on a nested callstack; they block the caller until they complete, but
 > exceptions do not propagate to the caller.
 
-## Example
+## Examples
 
 See [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events).
 

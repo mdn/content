@@ -57,7 +57,7 @@ setConfiguration(configuration)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if `configuration.iceServers` contains a URL with a scheme that is not supported.
 
-## Example
+## Examples
 
 In this example, it has already been determined that ICE restart is needed, and that negotiation needs to be done using a different ICE server.
 

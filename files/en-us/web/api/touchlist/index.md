@@ -21,7 +21,7 @@ The **`TouchList`** interface represents a list of contact points on a touch sur
 - {{domxref("TouchList.item()")}}
   - : Returns the {{domxref("Touch")}} object at the specified index in the list.
 
-## Example
+## Examples
 
 See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#example).
 

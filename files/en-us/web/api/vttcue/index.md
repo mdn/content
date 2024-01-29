@@ -46,7 +46,7 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.getCueAsHTML", "getCueAsHTML()")}}
   - : Returns the cue text as a {{domxref("DocumentFragment")}}.
 
-## Example
+## Examples
 
 ### HTML
 

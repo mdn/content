@@ -37,7 +37,7 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 - {{domxref("WebGLContextEvent.statusMessage")}}
   - : A read-only property containing additional information about the event.
 
-## Example
+## Examples
 
 ```js
 const canvas = document.getElementById("canvas");

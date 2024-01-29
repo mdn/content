@@ -14,7 +14,7 @@ The read-only **`endContainer`** property of the {{domxref("AbstractRange")}} in
 
 The {{domxref("Node")}} which contains the last character of the range.
 
-## Example
+## Examples
 
 ```js
 let endNode = range.endContainer;

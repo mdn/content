@@ -38,7 +38,7 @@ Using `XRRigidTransform` in these places rather than bare arrays that provide th
 
 When an `XRRigidTransform` is interpreted, the orientation is always applied to the affected object before the position is applied.
 
-## Example
+## Examples
 
 This code snippet creates an `XRRigidTransform` to specify the offset and orientation in relation to the current reference space to use when creating a new reference space. It then requests the first animation frame callback by calling the session's {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}} method.
 

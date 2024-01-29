@@ -35,7 +35,7 @@ _Inherits methods from its parent interface, {{domxref("EventTarget")}}._
 - {{domxref("MediaDevices/devicechange_event", "devicechange")}}
   - : Fired when a media input or output device is attached to or removed from the user's computer.
 
-## Example
+## Examples
 
 ```js
 // Put variables in global scope to make them available to the browser console.

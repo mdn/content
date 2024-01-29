@@ -49,7 +49,7 @@ The error object's {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorC
 
 The 701 error is fired only once per server URL from the list of available STUN or TURN servers provided when creating the {{domxref("RTCPeerConnection")}}. These errors occur only when the connection's [ICE gathering state](/en-US/docs/Web/API/RTCPeerConnection/iceGatheringState) is `gathering`.
 
-## Example
+## Examples
 
 The following example establishes a handler for `icecandidateerror`s that occur on the {{domxref("RTCPeerConnection")}} `pc`. This handler looks specifically for 701 errors that indicate that candidates couldn't reach the STUN or TURN server.
 

@@ -14,7 +14,7 @@ The **`endOffset`** property of the {{domxref("AbstractRange")}} interface retur
 
 An integer value indicating the number of characters into the {{domxref("Node")}} indicated by {{domxref("AbstractRange.endContainer", "endContainer")}} at which the final character of the range is located.
 
-## Example
+## Examples
 
 ```js
 let endOffset = range.endOffset;

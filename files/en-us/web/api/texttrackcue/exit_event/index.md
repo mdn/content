@@ -24,7 +24,7 @@ onexit = (event) => {};
 
 A generic {{DOMxRef("Event")}} with no added properties.
 
-## Example
+## Examples
 
 In the following example, `cue1` prints to the console when it stops being displayed as the active cue.
 

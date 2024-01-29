@@ -20,7 +20,7 @@ A `GamepadButton` object is returned by querying any value of the array returned
 - {{domxref("GamepadButton.value")}} {{ReadOnlyInline}}
   - : A double value used to represent the current state of analog buttons, such as the triggers on many modern gamepads. The values are normalized to the range 0.0 —1.0, with 0.0 representing a button that is not pressed, and 1.0 representing a button that is fully pressed.
 
-## Example
+## Examples
 
 The button values in the following example are stored as an array of {{domxref("GamepadButton")}} objects. This simple example checks to see if the {{domxref("GamepadButton.value")}} of a button is greater than `0`, or if the {{domxref("GamepadButton.pressed")}} property indicates the button has been pressed.
 

@@ -26,7 +26,7 @@ new Text(string)
 
 A new {{domxref("Text")}} object with the content of the `string` parameter, or the empty string if no parameter was given.
 
-## Example
+## Examples
 
 ```js
 let text = new Text("Test");

@@ -24,7 +24,7 @@ None; also, `PeriodicWave` doesn't inherit any properties.
 
 None; also, `PeriodicWave` doesn't inherit any methods.
 
-## Example
+## Examples
 
 See {{domxref("BaseAudioContext.createPeriodicWave")}} for simple example code that shows how to create a `PeriodicWave` object containing a simple sine wave.
 

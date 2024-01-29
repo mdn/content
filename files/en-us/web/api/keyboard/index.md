@@ -30,7 +30,7 @@ _Also inherits methods from its parent interface, {{DOMxRef("EventTarget")}}._
 - {{domxref('Keyboard.unlock()')}} {{experimental_inline}}
   - : Unlocks all keys captured by the `lock()` method and returns synchronously.
 
-## Example
+## Examples
 
 ### Keyboard mapping
 

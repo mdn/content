@@ -39,7 +39,7 @@ _Provides only the properties inherited from {{domxref("Event")}}._
 
 Depending on the browser, the shipping address information may be redacted for privacy reasons. That is, the {{domxref("PaymentAddress")}} which contains the shipping address may have some portions of its content altered, obscured, or left out entirely in order to prevent identifying the user without their consent (since if they choose to have you ship products to them, you'll need their address).
 
-## Example
+## Examples
 
 In this example, a handler for the `shippingaddresschange` event is set up to validate that the address meets requirements set by the web application.
 

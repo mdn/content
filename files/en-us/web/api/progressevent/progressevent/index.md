@@ -44,7 +44,7 @@ new ProgressEvent(type, options)
 
 A new {{domxref("ProgressEvent")}} object.
 
-## Example
+## Examples
 
 The example demonstrates how a `ProgressEvent` is built using a constructor. This is particularly useful for tracking the progress of processes like file uploads, downloads, or any long-running tasks.
 

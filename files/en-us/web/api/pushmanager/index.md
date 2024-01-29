@@ -36,7 +36,7 @@ This interface is accessed via the {{domxref("ServiceWorkerRegistration.pushMana
 - {{domxref("PushManager.unregister()")}} {{deprecated_inline}}
   - : Unregisters and deletes a specified subscription endpoint. In the updated API, a subscription is unregistered by calling the {{domxref("PushSubscription.unsubscribe()")}} method.
 
-## Example
+## Examples
 
 ```js
 this.onpush = (event) => {

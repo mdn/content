@@ -20,7 +20,7 @@ Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:hre
 
 A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
 
-## Example
+## Examples
 
 ### HTML
 

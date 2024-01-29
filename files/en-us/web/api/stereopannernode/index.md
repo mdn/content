@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#examples) for example code.
 

@@ -83,7 +83,7 @@ An `SVGLength` object can be designated as read only, which means that attempts 
   </tbody>
 </table>
 
-## Example
+## Examples
 
 ```xml
 <svg height="200" onload="start();" version="1.1" width="200" xmlns="http://www.w3.org/2000/svg">

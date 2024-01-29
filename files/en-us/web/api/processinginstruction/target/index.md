@@ -23,7 +23,7 @@ is a processing instruction whose `target` is `xml`.
 
 A string containing the name of the application.
 
-## Example
+## Examples
 
 ### In an XML document
 

@@ -28,7 +28,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent interface, {{domxref("SVGGeometryElement")}}._
 
-## Example
+## Examples
 
 ### SVG
 

@@ -24,7 +24,7 @@ this property returns the first node in the list of its direct children.
 
 A {{domxref("Node")}}, or `null` if there are none.
 
-## Example
+## Examples
 
 This example demonstrates the use of `firstChild` and how whitespace nodes
 might interfere with using this property.

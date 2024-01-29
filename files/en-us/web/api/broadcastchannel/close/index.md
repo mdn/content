@@ -22,7 +22,7 @@ that this channel is not needed anymore.
 channel.close()
 ```
 
-## Example
+## Examples
 
 ```js
 // Connect to a channel

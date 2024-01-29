@@ -14,7 +14,7 @@ The **`value`** property of the {{domxref("Attr")}} interface contains the value
 
 A string representing the attribute value.
 
-## Example
+## Examples
 
 The following example displays the current value of the attribute `test`. Clicking on the button will change it to a different value, and read it again to update the displayed value.
 

@@ -34,7 +34,7 @@ A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 - {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
   - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
-## Example
+## Examples
 
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 

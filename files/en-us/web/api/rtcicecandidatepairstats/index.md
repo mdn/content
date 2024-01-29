@@ -89,7 +89,7 @@ The active candidate pair describes the current configuration of the two ends of
 Any candidate pair that isn't the active pair of candidates for a transport gets deleted if the {{domxref("RTCIceTransport")}} performs an ICE restart, at which point the {{domxref("RTCIceTransport.state", "state")}} of the ICE transport returns to `new` and negotiation starts once again.
 For more information, see [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
-## Example
+## Examples
 
 This example computes the average time elapsed between connectivity checks.
 

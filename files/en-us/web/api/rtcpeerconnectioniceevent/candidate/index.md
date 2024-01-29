@@ -18,7 +18,7 @@ An {{domxref("RTCIceCandidate")}} object representing the ICE candidate that has
 received, or `null` to indicate that there are no further candidates for this
 negotiation session.
 
-## Example
+## Examples
 
 ```js
 pc.onicecandidate = (ev) => {

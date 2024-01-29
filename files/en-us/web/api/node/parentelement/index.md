@@ -17,7 +17,7 @@ parent, or its parent isn't a DOM {{DOMxRef("Element")}}.
 An {{domxref("Element")}} that is the parent element of the current node,
 or `null` if there isn't one.
 
-## Example
+## Examples
 
 ```js
 if (node.parentElement) {

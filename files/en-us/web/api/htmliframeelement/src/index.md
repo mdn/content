@@ -20,7 +20,7 @@ src = iframeElt.src
 iframeElt.src= src
 ```
 
-## Example
+## Examples
 
 ```js
 const iframe = document.createElement("iframe");

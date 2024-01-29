@@ -60,7 +60,7 @@ messages.
 Setting the tone buffer to an empty string (`""`) cancels any pending DTMF
 codes.
 
-## Example
+## Examples
 
 tbd
 

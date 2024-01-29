@@ -39,7 +39,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 _This interface has no methods, but inherits methods from: {{DOMxRef("EventTarget")}}._
 
-## Example
+## Examples
 
 TBD
 

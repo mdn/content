@@ -19,7 +19,7 @@ A string representing the target. Its value can be:
 - The name of a {{HTMLElement("frame")}}.
 - One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/a#target):`_blank`, `_self`, `_parent`, or `_top`.
 
-## Example
+## Examples
 
 ```html
 <a href="www.example1.com" class="link1" target="_blank">example1</a>

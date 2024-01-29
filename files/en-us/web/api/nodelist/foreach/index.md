@@ -44,7 +44,7 @@ forEach(callback, thisArg)
 
 {{jsxref('undefined')}}.
 
-## Example
+## Examples
 
 ```js
 const node = document.createElement("div");

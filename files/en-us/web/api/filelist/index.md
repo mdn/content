@@ -33,7 +33,7 @@ const file = document.getElementById("fileItem").files[0];
 - {{DOMxRef("FileList.item()", "item()")}}
   - : Returns a {{domxref("File")}} object representing the file at the specified index in the file list.
 
-## Example
+## Examples
 
 ### Logging filenames
 

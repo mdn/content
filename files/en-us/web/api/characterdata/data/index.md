@@ -14,7 +14,7 @@ The **`data`** property of the {{domxref("CharacterData")}} interface represent 
 
 A string with the character information contained in the {{domxref("CharacterData")}} node.
 
-## Example
+## Examples
 
 > **Note:** {{domxref("CharacterData")}} is an abstract interface.
 > The examples below use two concrete interfaces implementing it, {{domxref("Text")}} and {{domxref("Comment")}}.

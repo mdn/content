@@ -21,7 +21,7 @@ The value of the property reflects that of the {{httpheader("Sec-GPC")}} HTTP he
 `true` if the user explicitly _does not_ provide consent to sell or share their data.
 `false` if the user either grants consent, or has not indicated a preference.
 
-## Example
+## Examples
 
 ```js
 console.log(navigator.globalPrivacyControl);

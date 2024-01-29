@@ -20,7 +20,7 @@ remove()
 
 None.
 
-## Example
+## Examples
 
 ### Using `remove()`
 

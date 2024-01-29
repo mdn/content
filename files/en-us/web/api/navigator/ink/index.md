@@ -16,7 +16,7 @@ The **`ink`** read-only property of the {{domxref("Navigator")}} interface retur
 
 An {{domxref('Ink')}} object.
 
-## Example
+## Examples
 
 ```js
 async function inkInit() {

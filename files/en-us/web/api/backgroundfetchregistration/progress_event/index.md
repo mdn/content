@@ -32,7 +32,7 @@ onprogress = (event) => { }
 
 A generic {{domxref("Event")}} with no added properties.
 
-## Example
+## Examples
 
 The following example demonstrates how to log the progress of a download. The code first checks that a `downloadTotal` was provided when the background fetch was registered. This is then used to calculate the percentage, based on the `downloaded` property.
 

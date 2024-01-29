@@ -24,7 +24,7 @@ addEventListener("dequeue", (event) => {});
 ondequeue = (event) => {};
 ```
 
-## Example
+## Examples
 
 ```js
 audioEncoder.addEventListener("dequeue", (event) => {

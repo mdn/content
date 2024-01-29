@@ -91,7 +91,7 @@ If an error occurs while trying to load or render the image, and an `onerror` ev
 - The specified image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
 - The specified image is in a format not supported by the {{Glossary("user agent")}}.
 
-## Example
+## Examples
 
 ```js
 const img1 = new Image(); // Image constructor

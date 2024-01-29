@@ -14,7 +14,7 @@ The read-only **`collapsed`** property of the {{domxref("AbstractRange")}} inter
 
 A boolean value which is `true` if the range is _collapsed_. A collapsed range is one in which the start and end positions are the same, resulting in a zero-character-long range.
 
-## Example
+## Examples
 
 ```js
 let isCollapsed = range.collapsed;

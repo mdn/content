@@ -29,7 +29,7 @@ None.
 
 A sequence of {{domxref('PointerEvent')}} instances.
 
-## Example
+## Examples
 
 ### HTML
 

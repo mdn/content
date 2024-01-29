@@ -27,7 +27,7 @@ queryCommandState(command)
 
 `queryCommandState()` can return a boolean value or `null` if the state is unknown.
 
-## Example
+## Examples
 
 ### HTML
 

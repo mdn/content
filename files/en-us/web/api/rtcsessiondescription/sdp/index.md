@@ -36,7 +36,7 @@ m=video 53000 RTP/AVP 32
 a=rtpmap:32 MPV/90000
 ```
 
-## Example
+## Examples
 
 ```js
 // The remote description has been set previously on pc, an RTCPeerConnection

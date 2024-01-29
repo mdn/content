@@ -15,7 +15,7 @@ returns the number of characters in the contained data, as a positive integer.
 
 A positive integer with the length of the {{domxref("CharacterData.data")}} string.
 
-## Example
+## Examples
 
 > **Note:** {{domxref("CharacterData")}} is an abstract interface.
 > The examples below use {{domxref("Text")}}, a concrete interface implementing it.

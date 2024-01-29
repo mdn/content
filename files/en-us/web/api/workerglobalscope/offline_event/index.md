@@ -24,7 +24,7 @@ onoffline = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 The following code snippet shows an `onoffline` handler set inside a worker:
 

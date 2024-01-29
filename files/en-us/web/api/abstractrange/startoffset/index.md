@@ -14,7 +14,7 @@ The read-only **`startOffset`** property of the {{domxref("AbstractRange")}} int
 
 An integer value indicating the number of characters into the {{domxref("Node")}} indicated by {{domxref("AbstractRange.startContainer", "startContainer")}} at which the first character of the range is located.
 
-## Example
+## Examples
 
 ```js
 let startOffset = range.startOffset;

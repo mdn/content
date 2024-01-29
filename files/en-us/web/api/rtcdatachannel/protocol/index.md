@@ -25,7 +25,7 @@ another is raw binary or even some other format.
 A string identifying the app-defined subprotocol being used for exchanging data on the
 channel. If none has been established, this is an empty string ("").
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

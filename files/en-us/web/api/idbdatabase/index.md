@@ -55,7 +55,7 @@ The following events are available to `IDBDatabase` via event bubbling from {{do
 - `IDBTransaction` [`error`](/en-US/docs/Web/API/IDBTransaction/error_event)
   - : An event fired when a request returns an error and the event bubbles up to the connection object.
 
-## Example
+## Examples
 
 In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed ({{ domxref("IDBdatabase") }}). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 

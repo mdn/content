@@ -27,7 +27,7 @@ None.
 A boolean value that is `true` if the node has child nodes, and
 `false` otherwise.
 
-## Example
+## Examples
 
 ```js
 let foo = document.getElementById("foo");

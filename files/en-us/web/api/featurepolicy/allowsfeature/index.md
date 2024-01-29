@@ -35,7 +35,7 @@ allowsFeature(feature, origin)
 A {{JSxRef("Boolean")}} that is `true` if and only if the feature is
 allowed.
 
-## Example
+## Examples
 
 The following example queries whether or not the document is allowed to use camera API
 by the Permissions Policy. Please note that Camera API might be restricted by the

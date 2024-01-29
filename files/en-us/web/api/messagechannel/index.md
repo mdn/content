@@ -23,7 +23,7 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 - {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
   - : Returns port2 of the channel.
 
-## Example
+## Examples
 
 In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor.
 

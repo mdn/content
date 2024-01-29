@@ -32,7 +32,7 @@ The **`MediaStreamEvent()`** constructor creates a new {{domxref("MediaStreamEve
 
 A new {{domxref("MediaStreamEvent")}} object.
 
-## Example
+## Examples
 
 ```js
 // s is a MediaStream

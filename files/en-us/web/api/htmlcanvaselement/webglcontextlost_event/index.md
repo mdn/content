@@ -35,7 +35,7 @@ _This interface inherits properties from its parent interface, {{domxref("Event"
 - {{domxref("WebGLContextEvent.statusMessage")}}
   - : A read-only property containing additional information about the event.
 
-## Example
+## Examples
 
 With the help of the {{domxref("WEBGL_lose_context")}} extension, you can simulate the `webglcontextlost` event:
 

@@ -116,7 +116,7 @@ you have specific reasons otherwise, it's probably wise to use the same values u
 the call to `addEventListener()` when calling
 `removeEventListener()`.
 
-## Example
+## Examples
 
 This example shows how to add a `mouseover`-based event listener that
 removes a `click`-based event listener.

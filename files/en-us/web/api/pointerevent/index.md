@@ -89,7 +89,7 @@ The `PointerEvent` interface has several event types. To determine which event f
 - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - : This event is fired after pointer capture is released for a pointer.
 
-## Example
+## Examples
 
 Examples of each property, event type, and global event handler are included in their respective reference pages.
 

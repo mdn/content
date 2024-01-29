@@ -90,7 +90,7 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 - {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
   - : Initializes the value of a `MouseEvent` created. If the event has already been dispatched, this method does nothing.
 
-## Example
+## Examples
 
 This example demonstrates simulating a click (programmatically generating a click event) on a checkbox using DOM methods.
 Event state (canceled or not) is then determined with the return value of method {{domxref("EventTarget.dispatchEvent", "EventTarget.dispatchEvent()")}}.

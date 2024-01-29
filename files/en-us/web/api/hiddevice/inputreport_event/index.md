@@ -39,7 +39,7 @@ _This interface also inherits properties from {{domxref("Event")}}._
 - {{domxref("HIDInputReportEvent.reportId")}} {{ReadOnlyInline}}
   - : The one-byte identification prefix for this report, or 0 if the HID interface does not use report IDs.
 
-## Example
+## Examples
 
 The following example demonstrates listening for an `inputreport` event that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 

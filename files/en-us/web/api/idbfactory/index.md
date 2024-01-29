@@ -22,7 +22,7 @@ The **`IDBFactory`** interface of the [IndexedDB API](/en-US/docs/Web/API/Indexe
 - {{domxref("IDBFactory.databases")}}
   - : A method that returns a list of all available databases, including their names and versions.
 
-## Example
+## Examples
 
 In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 

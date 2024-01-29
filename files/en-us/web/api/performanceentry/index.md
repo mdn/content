@@ -44,7 +44,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
   - : Returns a JSON representation of the `PerformanceEntry` object.
 
-## Example
+## Examples
 
 ### Working with performance entries
 

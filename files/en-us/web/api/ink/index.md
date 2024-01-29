@@ -18,7 +18,7 @@ The **`Ink`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) provides a
 - {{domxref("Ink.requestPresenter", "requestPresenter()")}} {{Experimental_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object to handle rendering strokes.
 
-## Example
+## Examples
 
 ```js
 async function inkInit() {

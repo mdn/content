@@ -27,7 +27,7 @@ const boolean = InputDeviceCapabilities.firesTouchEvents
 
 A {{jsxref('Boolean')}}
 
-## Example
+## Examples
 
 ```js
 myButton.addEventListener("mousedown", (e) => {

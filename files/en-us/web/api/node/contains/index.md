@@ -36,7 +36,7 @@ A boolean value that is `true` if `otherNode` is contained in the node,
 If the `otherNode` parameter is `null`,
 `contains()` always returns `false`.
 
-## Example
+## Examples
 
 This function checks to see if an element is in the page's body. As
 `contains` is inclusive and determining if the body contains itself isn't the

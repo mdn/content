@@ -34,7 +34,7 @@ This can take on of the following values:
 - `closed`
   - : The {{DOMxRef("RTCPeerConnection")}} is closed.
 
-## Example
+## Examples
 
 ```js
 const peerConnection = new RTCPeerConnection(configuration);

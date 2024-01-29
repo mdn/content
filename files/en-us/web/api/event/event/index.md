@@ -38,7 +38,7 @@ new Event(type, options)
 
 A new {{domxref("Event")}} object.
 
-## Example
+## Examples
 
 ```js
 // create a look event that bubbles up and cannot be canceled

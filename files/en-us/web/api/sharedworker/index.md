@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{domxref("EventTarget")}}._
 
 _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
-## Example
+## Examples
 
 In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 

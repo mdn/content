@@ -24,7 +24,7 @@ onconnect = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
 

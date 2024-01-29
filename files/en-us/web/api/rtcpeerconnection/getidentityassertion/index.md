@@ -27,7 +27,7 @@ getIdentityAssertion()
 
 _There is neither parameter nor return value for this method._
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

@@ -34,7 +34,7 @@ new RTCDataChannelEvent(type, options)
 
 A new {{domxref("RTCDataChannelEvent")}} object configured as specified.
 
-## Example
+## Examples
 
 In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event is created. `dc` is a
 data channel which already exists.

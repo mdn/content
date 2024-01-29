@@ -21,7 +21,7 @@ on the object passed as {{domxref("RTCPeerConnection.createDataChannel()")}}'s `
 A boolean value which is `true` if in-order delivery is
 guaranteed and is otherwise `false`.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

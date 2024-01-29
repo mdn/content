@@ -26,7 +26,7 @@ ondevicechange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 In this example, we create a function called `updateDeviceList()`, which is
 called once when {{domxref("MediaDevices.getUserMedia()")}} successfully obtains a

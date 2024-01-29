@@ -14,7 +14,7 @@ It is similar to the `CanvasRenderingContext2D` object, with the following diffe
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
 - it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element
 
-## Example
+## Examples
 
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor.
 The `transferControlToOffscreen()` method is used to transfer the `OffscreenCanvas` object to the worker:

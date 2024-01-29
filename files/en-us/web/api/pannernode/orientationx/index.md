@@ -37,7 +37,7 @@ can still change the value of the parameter by assigning a new value to its
 An {{domxref("AudioParam")}} whose `value` is the X component of the
 direction in which the audio source is facing, in 3D Cartesian coordinate space.
 
-## Example
+## Examples
 
 In this example, we'll demonstrate how changing the orientation parameters of a {{
   domxref("PannerNode") }} in combination with {{domxref("PannerNode.coneInnerAngle",

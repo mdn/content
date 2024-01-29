@@ -22,7 +22,7 @@ See [Creating a data channel](/en-US/docs/Web/API/WebRTC_API/Using_data_channels
 the Web app itself; `false` if the negotiation was handled by the WebRTC
 layer. The default is `false`.
 
-## Example
+## Examples
 
 The code snippet below checks the value of `negotiated`; if it's
 `true`, a function called `shutdownRemoteChannel()` is called

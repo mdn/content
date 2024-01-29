@@ -47,7 +47,7 @@ The replaced {{domxref("Node")}}. This is the same node as `oldChild`.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if the parent of `oldChild` is not the current node.
 
-## Example
+## Examples
 
 ```js
 // Given:

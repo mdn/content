@@ -28,7 +28,7 @@ getNamedItemNS(namespace, localName)
 
 An {{domxref("Attr")}} corresponding to the namespace and local name given in parameters, or `null` if none has been found.
 
-## Example
+## Examples
 
 ```html hidden
 <pre></pre>

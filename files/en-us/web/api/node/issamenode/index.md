@@ -31,7 +31,7 @@ isSameNode(otherNode)
 
 A boolean value that is `true` if both nodes are strictly equal, `false` if not.
 
-## Example
+## Examples
 
 In this example, we create three {{HTMLElement("div")}} blocks. The first and third
 have the same contents and attributes, while the second is different. Then we run some

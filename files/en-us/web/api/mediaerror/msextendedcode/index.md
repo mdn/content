@@ -15,7 +15,7 @@ In the event of an error, the media element's error event will be fired. The ele
 
 Type: **long**; The platform specific error code.
 
-## Example
+## Examples
 
 ```js
 const video1 = object.getElementById("video1");

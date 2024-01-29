@@ -32,7 +32,7 @@ if the specified node is the last child in the parent element.
 A {{domxref("Node")}} representing the next sibling of the current node,
 or `null` if there are none.
 
-## Example
+## Examples
 
 ```html
 <div id="div-1">Here is div-1</div>

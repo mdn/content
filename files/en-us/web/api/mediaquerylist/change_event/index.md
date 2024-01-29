@@ -35,7 +35,7 @@ _The `MediaQueryListEvent` interface inherits properties from its parent interfa
 - {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}
   - : A string representing a serialized media query.
 
-## Example
+## Examples
 
 ```js
 const mql = window.matchMedia("(max-width: 600px)");

@@ -44,7 +44,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 - [`messageerror`](/en-US/docs/Web/API/Worker/messageerror_event)
   - : Fires when a `Worker` object receives a message that can't be [deserialized](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-## Example
+## Examples
 
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
 

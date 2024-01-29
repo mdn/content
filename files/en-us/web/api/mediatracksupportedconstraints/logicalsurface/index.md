@@ -22,7 +22,7 @@ isLogicalSurfaceSupported = supportedConstraints.logicalSurface
 
 A boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported by the device and user agent.
 
-## Example
+## Examples
 
 This method sets up the constraints object specifying the options for the call to
 {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}. It adds the

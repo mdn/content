@@ -10,7 +10,7 @@ browser-compat: api.RTCDataChannel.readyState
 
 The read-only `RTCDataChannel` property **`readyState`** returns a string which indicates the state of the data channel's underlying data connection.
 
-## Values
+## Value
 
 A string indicating the current state of the underlying data transport, which is one of the following values:
 
@@ -34,7 +34,7 @@ A string indicating the current state of the underlying data transport, which is
   - : The underlying data transport has closed,
     or the attempt to make the connection failed.
 
-## Example
+## Examples
 
 ```js
 const dataChannel = peerConnection.createDataChannel("File Transfer");

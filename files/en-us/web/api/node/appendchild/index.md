@@ -68,7 +68,7 @@ document.body
   .appendChild(document.createElement("p"));
 ```
 
-## Example
+## Examples
 
 ### Append a paragraph to the body
 

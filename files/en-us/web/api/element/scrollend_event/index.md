@@ -31,7 +31,7 @@ onscrollend = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ### Using `scrollend` with an event listener
 

@@ -25,7 +25,7 @@ The **`PermissionStatus`** interface of the [Permissions API](/en-US/docs/Web/AP
 - {{domxref("PermissionStatus.change_event", "change")}}
   - : Invoked upon changes to `PermissionStatus.state`, or the deprecated `PermissionStatus.status` in the case of older browsers.
 
-## Example
+## Examples
 
 ```js
 navigator.permissions

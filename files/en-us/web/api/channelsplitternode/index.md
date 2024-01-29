@@ -60,7 +60,7 @@ _No specific property; inherits properties from its parent, {{domxref("AudioNode
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createChannelSplitter()`](/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter#examples) for example code.
 

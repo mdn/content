@@ -34,7 +34,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("ScreenOrientation.change_event", "change")}}
   - : Fired whenever the screen changes orientation.
 
-## Example
+## Examples
 
 In the following example, we listen for an orientation {{DOMxRef("ScreenOrientation.change_event", "change")}} event and log the new {{DOMxRef("ScreenOrientation.type", "screen orientation type", "", "nocode")}} and {{DOMxRef("ScreenOrientation.angle", "angle", "", "nocode")}}.
 

@@ -14,7 +14,7 @@ The **`remote`** read-only property of the {{domxref("HTMLMediaElement")}} inter
 
 The associated {{domxref("RemotePlayback")}} object.
 
-## Example
+## Examples
 
 ```js
 const el = document.createElement("audio");

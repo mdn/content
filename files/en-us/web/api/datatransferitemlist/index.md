@@ -29,7 +29,7 @@ This interface has no constructor.
 - {{domxref("DataTransferItemList.operator[]")}}
   - : Getter that returns a {{domxref("DataTransferItem")}} at the given index.
 
-## Example
+## Examples
 
 This example shows how to use drag and drop.
 

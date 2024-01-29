@@ -58,7 +58,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}._
 
 _No specific methods; inherits methods from its parent, {{domxref("AudioNode")}}._
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createDelay()`](/en-US/docs/Web/API/BaseAudioContext/createDelay#examples) for example code.
 

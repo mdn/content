@@ -55,7 +55,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`AudioContext.createMediaStreamDestination()`](/en-US/docs/Web/API/AudioContext/createMediaStreamDestination#examples) for example code that creates a `MediaStreamAudioDestinationNode` and uses it as a source for audio to be recorded.
 

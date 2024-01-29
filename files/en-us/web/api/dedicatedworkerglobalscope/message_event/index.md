@@ -43,7 +43,7 @@ _This interface also inherits properties from its parent, {{domxref("Event")}}._
 - {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
   - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g. in channel messaging or when sending a message to a shared worker).
 
-## Example
+## Examples
 
 The following code snippet shows creation of a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor. Messages are passed to the worker when the value inside the form input `first` changes. An {{domxref("Worker.message_event", "onmessage")}} handler is also present, to deal with messages are passed back from the worker.
 

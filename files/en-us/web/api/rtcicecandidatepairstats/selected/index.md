@@ -22,7 +22,7 @@ A Firefox-specific Boolean value which is `true` if the candidate pair described
 
 In any other browser, you can determine the selected candidate pair by looking for a stats object of type `transport`, which is an {{domxref("RTCTransportStats")}} object. That object's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} property indicates whether or not the specified transport is the one being used.
 
-## Example
+## Examples
 
 The function shown in this example identifies the currently-selected candidate pair from a statistics report by first iterating over each report, looking for a `transport` report; when one is found, that transport's {{domxref("RTCTransportStats.selectedCandidatePairId", "selectedCandidatePairId")}} is used to get the {{domxref("RTCIceCandidatePair")}} describing the connection.
 

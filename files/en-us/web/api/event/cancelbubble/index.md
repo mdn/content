@@ -20,7 +20,7 @@ See [Browser compatibility](#browser_compatibility) for details.
 
 A boolean value. The value `true` means that the event must not be propagated further.
 
-## Example
+## Examples
 
 ```js
 elem.onclick = (event) => {

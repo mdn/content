@@ -21,7 +21,7 @@ To learn more about how request callbacks work, see [Collaborative Scheduling of
 - {{domxref("IdleDeadline.timeRemaining()")}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}}, which is a floating-point value providing an estimate of the number of milliseconds remaining in the current idle period. If the idle period is over, the value is 0. Your callback can call this repeatedly to see if there's enough time left to do more work before returning.
 
-## Example
+## Examples
 
 See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#example) in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
 

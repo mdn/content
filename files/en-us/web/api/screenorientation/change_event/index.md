@@ -24,7 +24,7 @@ onchange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 In the following example, the `change` callback prints the new {{DOMxRef("ScreenOrientation.type", "screen orientation type", "", "nocode")}} and {{DOMxRef("ScreenOrientation.angle", "angle", "", "nocode")}}.
 

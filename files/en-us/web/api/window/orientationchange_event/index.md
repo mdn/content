@@ -30,7 +30,7 @@ onorientationchange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 You can use the `orientationchange` event in an {{domxref("EventTarget/addEventListener", "addEventListener")}} method:
 

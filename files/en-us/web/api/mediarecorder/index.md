@@ -66,7 +66,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("MediaRecorder/stop_event", "stop")}}
   - : Fired when media recording ends, either when the {{domxref("MediaStream")}} ends, or after the {{domxref("MediaRecorder.stop()")}} method is called.
 
-## Example
+## Examples
 
 ```js
 if (navigator.mediaDevices) {

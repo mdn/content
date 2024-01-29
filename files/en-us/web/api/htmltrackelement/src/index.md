@@ -16,7 +16,7 @@ indicates the URL of the text track's data.
 
 A string object containing the URL of the text track data.
 
-## Example
+## Examples
 
 ```js
 // coming soon

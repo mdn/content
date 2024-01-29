@@ -22,9 +22,9 @@ reportValidity()
 
 ### Return value
 
-`true` or `false`
+`true` or `false`.
 
-## Example
+## Examples
 
 ```js
 document.forms["myform"].addEventListener(

@@ -18,7 +18,7 @@ directory selected by the user in an {{HTMLElement("input")}} element with its
 A string containing the path of the file relative to the ancestor
 directory the user selected.
 
-## Example
+## Examples
 
 In this example, a directory picker is presented which lets the user choose one or more
 directories. When the {{domxref("HTMLElement/change_event", "change")}} event occurs, a list of all files contained

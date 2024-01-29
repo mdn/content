@@ -29,7 +29,7 @@ The possible values are:
     such as a new interface being added or the addition of a new ICE server,
     the state will revert to `gathering` to gather those candidates.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

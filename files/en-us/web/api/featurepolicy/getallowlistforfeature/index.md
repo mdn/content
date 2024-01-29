@@ -34,7 +34,7 @@ The function will raise a warning if the specified Permissions Policy directive 
 known. However, it will also return empty array, indicating that no origin is allowed to
 use the feature.
 
-## Example
+## Examples
 
 The following example prints all the origins that are allowed to use Camera API by the
 Permissions Policy. Please note that Camera API might also be restricted by the [Permissions API](/en-US/docs/Web/API/Permissions_API), if the user did not grant the corresponding permission.

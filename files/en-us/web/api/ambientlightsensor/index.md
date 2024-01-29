@@ -35,7 +35,7 @@ _`AmbientLightSensor` doesn't have own methods. However, it inherits methods fro
 
 _`AmbientLightSensor` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
-## Example
+## Examples
 
 ```js
 if ("AmbientLightSensor" in window) {

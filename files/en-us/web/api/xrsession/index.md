@@ -82,7 +82,7 @@ _The following events are delivered to `XRSession` objects._
 - {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} {{Experimental_Inline}}
   - : An {{domxref("XRSessionEvent")}} which is sent to the session when its visibility state as indicated by the {{domxref("XRSession.visibilityState", "visibilityState")}} changes. Also available through the `onvisibilitychange` event handler property.
 
-## Example
+## Examples
 
 This example establishes a new `XRSession` in `inline` mode so that it can be displayed within an HTML element, avoiding the need for a dedicated AR or VR viewing device such as a headset.
 

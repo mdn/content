@@ -15,7 +15,7 @@ is the number of objects stored in the map.
 
 A number containing the number of objects in the map
 
-## Example
+## Examples
 
 ```html
 <pre zero="test" one="test" two="test"></pre>

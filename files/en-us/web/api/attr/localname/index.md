@@ -20,7 +20,7 @@ The local name is always in lower case, whatever case at the attribute creation.
 
 A string representing the local part of the attribute's qualified name.
 
-## Example
+## Examples
 
 The following example displays the local name of the first attribute of the two first elements, when we click on the appropriate button. The {{SVGElement("svg")}} element is XML and supports namespaces leading to the local name (`lang`) to be different from the qualified name `xml:lang`. The {{HTMLElement("label")}} element is HTML, that doesn't support namespaces, leading to a local name and the qualified name to be both `xml:lang`.
 

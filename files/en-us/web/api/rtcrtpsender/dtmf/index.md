@@ -23,7 +23,7 @@ An {{domxref("RTCDTMFSender")}} which can be used to send DTMF over the RTP sess
 > **Note:** Only audio tracks can support DTMF, and typically only one audio track per
 > `RTCPeerConnection` will have an associated {{domxref("RTCDTMFSender")}}
 
-## Example
+## Examples
 
 tbd
 

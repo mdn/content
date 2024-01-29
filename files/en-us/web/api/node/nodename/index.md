@@ -34,7 +34,7 @@ A string. Values for the different types of nodes are:
 - {{domxref("Text")}}
   - : The string `"#text"`.
 
-## Example
+## Examples
 
 This example displays the node names of several nodes
 

@@ -16,7 +16,7 @@ The **`scheduling`** read-only property of the {{domxref("Navigator")}} interfac
 
 A {{domxref("Scheduling")}} object.
 
-## Example
+## Examples
 
 See the {{domxref("Scheduling.isInputPending()")}} page for a full example.
 

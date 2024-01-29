@@ -18,7 +18,7 @@ Safari additionally requires the **`default`**
 boolean attribute to be set to true when implementing your own video player controls in
 order for the subtitles cues to be shown.
 
-### Value
+## Value
 
 A string which indicates the track's current mode. One of:
 
@@ -73,7 +73,7 @@ and manner of that performance varies depending on each text track's
   can then navigate to the desired chapter, which begins at the cue's start position and
   ends at the cue's end position.
 
-## Example
+## Examples
 
 In this example, we configure the text track's cues so that every time a cue is
 finished, the video automatically pauses playback. This is done by setting the

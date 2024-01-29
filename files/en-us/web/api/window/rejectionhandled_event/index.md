@@ -42,7 +42,7 @@ In addition to the `Window` interface, the event handler property `onrejectionha
 - {{domxref("HTMLFrameSetElement")}}
 - {{domxref("SVGSVGElement")}}
 
-## Example
+## Examples
 
 You can use the `rejectionhandled` event to log promises that get rejected to the console, along with the reasons why they were rejected:
 

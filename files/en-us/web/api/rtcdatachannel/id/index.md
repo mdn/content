@@ -31,7 +31,7 @@ easier for your code to do its own out-of-band data channel-related signaling.
 
 This can be also useful for logging and debugging purposes.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

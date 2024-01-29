@@ -16,7 +16,7 @@ The {{domxref("HTMLElement")}} property **`inert`** reflects the value of the el
 
 A Boolean which is `true` if the element is inert; otherwise, the value is `false`.
 
-## Example
+## Examples
 
 ### HTML
 

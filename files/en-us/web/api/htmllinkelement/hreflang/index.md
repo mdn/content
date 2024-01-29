@@ -16,7 +16,7 @@ It reflects the `hreflang` attribute of the {{HTMLElement("link")}} element and 
 
 A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` attribute.
 
-## Example
+## Examples
 
 ```html
 <link

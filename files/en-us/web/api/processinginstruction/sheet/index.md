@@ -17,7 +17,7 @@ The `xml-stylesheet` processing instruction is used to associate a stylesheet in
 
 The associated {{DOMxref("Stylesheet")}} object, or `null` if there are none.
 
-## Example
+## Examples
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

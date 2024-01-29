@@ -36,7 +36,7 @@ Returns the old attribute if replaced, or `null` if the attribute is new.
 - `InUseAttributeError` {{domxref("DOMException")}}
   - : Thrown if the attribute is still part of another map.
 
-## Example
+## Examples
 
 ```html
 <span ob:one="one"></span>

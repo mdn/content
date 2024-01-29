@@ -33,7 +33,7 @@ If `namespace` is null, or the empty string, `lookupPrefix()` returns `null`.
 If the node is a {{domxref("DocumentType")}} or a {{domxref("DocumentFragment")}},
 `lookupPrefix()` always returns `null`.
 
-## Example
+## Examples
 
 ```html
 Prefix for <code>http://www.w3.org/2000/svg</code> on &lt;output&gt;:

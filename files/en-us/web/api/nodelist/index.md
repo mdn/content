@@ -57,7 +57,7 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 - {{domxref("NodeList.values()")}}
   - : Returns an {{jsxref("Iteration_protocols", "iterator")}} allowing code to go through all values (nodes) of the key/value pairs contained in the collection.
 
-## Example
+## Examples
 
 It's possible to loop over the items in a `NodeList` using a [for](/en-US/docs/Web/JavaScript/Reference/Statements/for) loop:
 

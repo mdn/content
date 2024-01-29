@@ -71,7 +71,7 @@ However, it's important to note that the rule establishing this ordering was add
 
 The {{domxref("MediaStreamTrackAudioSourceNode")}} interface is similar to `MediaStreamAudioSourceNode`, but avoids this problem by letting you specify which track you want to use.
 
-## Example
+## Examples
 
 See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#examples) for example code that uses this object.
 

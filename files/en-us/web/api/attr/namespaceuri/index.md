@@ -25,7 +25,7 @@ is associated with a particular attribute node, cannot be changed.
 
 A string containing the URI of the namespace, or `null` if the attribute is not in a namespace.
 
-## Example
+## Examples
 
 The following example shows the results for a prefixed attribute in a case of an HTML element, and of a SVG element.
 As HTML doesn't handle namespaces, it will always return `null` in that case.

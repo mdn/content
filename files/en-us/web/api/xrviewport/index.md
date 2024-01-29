@@ -31,7 +31,7 @@ const xrViewport = xrWebGLLayer.getViewport(xrView);
 gl.viewport(xrViewport.x, xrViewport.y, xrViewport.width, xrViewport.height);
 ```
 
-## Example
+## Examples
 
 This example sets up an animation frame callback using {{domxref("XRSession.requestAnimationFrame", "requestAnimationFrame()")}}. After initial setup, it iterates over each of the views within the viewer's pose, configuring the viewport as dictated by the {{domxref("XRWebGLLayer")}}.
 

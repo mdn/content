@@ -28,7 +28,7 @@ oncontextrestored = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 The code fragment below detects the context restored event.
 

@@ -20,7 +20,7 @@ addEventListener("loadingdone", (event) => {});
 onloadingdone = (event) => {};
 ```
 
-## Example
+## Examples
 
 In the following example, when the font `Ephesis` has finished loading, "Font loading complete" is printed to the console.
 

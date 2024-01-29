@@ -16,7 +16,7 @@ returns the {{domxref("RTCDataChannel")}} associated with the event.
 A {{domxref("RTCDataChannel")}} object representing the data channel linking the
 receiving {{domxref("RTCPeerConnection")}} to its remote peer.
 
-## Example
+## Examples
 
 The first line of code in the {{DOMxRef("RTCPeerConnection.datachannel_event", "datachannel")}} event handler shown below takes
 the channel from the event object and saves it locally for use by the code handling data

@@ -26,7 +26,7 @@ The order of the returned `RTCRtpSender` instances is not defined by the specifi
 
 The array does not include senders associated with transceivers that have been [stopped](/en-US/docs/Web/API/RTCRtpTransceiver/currentDirection) (following offer/answer).
 
-## Example
+## Examples
 
 In this example, a `setMuting()` function is shown. This function takes as input an {{domxref("RTCPeerConnection")}}, `pc`, and a Boolean, `muting`. The function gets the list of the peer connection's senders and iterates over every sender, setting the corresponding media track's {{domxref("MediaStreamTrack.enabled", "enabled")}} to the inverse of the specified `muting`.
 

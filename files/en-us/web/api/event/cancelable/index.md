@@ -37,7 +37,7 @@ Event listeners that handle multiple kinds of events may want to check
 A boolean value, which is `true` if the event can be
 canceled.
 
-## Example
+## Examples
 
 For example, browser vendors are proposing that the {{domxref("Element/wheel_event",
   "wheel")}} event can only be canceled [the first time the listener is called](https://github.com/WICG/interventions/issues/33) — any following `wheel` events cannot be

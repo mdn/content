@@ -25,7 +25,7 @@ value = radioNodeList.value
 radioNodeList.value = string
 ```
 
-## Example
+## Examples
 
 ### HTML
 

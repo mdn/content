@@ -41,7 +41,7 @@ edge of the content area.
 > inherited from a containing element or by being located within a column described
 > by either {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
-## Example
+## Examples
 
 See [`HTMLImageElement.x`](/en-US/docs/Web/API/HTMLImageElement/x#example) for example code that demonstrates the use of the `HTMLImageElement.y` (and `HTMLImageElement.x`).
 

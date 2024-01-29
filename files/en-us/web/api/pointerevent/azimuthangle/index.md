@@ -25,7 +25,7 @@ An angle in radians between `0` and `2π` where `0` represents a transducer whos
 When the transducer is perpendicular to the surface ({{domxref("PointerEvent.altitudeAngle", "altitudeAngle")}} of `π/2`), the value is 0.
 For hardware and platforms that do not report tilt or angle, the value is `0`.
 
-## Example
+## Examples
 
 ```js
 someElement.addEventListener(

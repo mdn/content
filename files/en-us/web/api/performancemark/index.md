@@ -42,7 +42,7 @@ This interface also supports the following properties:
 
 This interface has no methods.
 
-## Example
+## Examples
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
 

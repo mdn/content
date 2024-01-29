@@ -27,7 +27,7 @@ The {{domxref("MutationObserver")}} interface provides the ability to watch for 
 
 <https://codepen.io/milofultz/pen/LYjPXPw>
 
-## Example
+## Examples
 
 The following example was adapted from [this blog post](https://hacks.mozilla.org/2012/05/dom-mutationobserver-reacting-to-dom-changes-without-killing-browser-performance/).
 

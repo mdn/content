@@ -18,7 +18,7 @@ If the transform is set in the peer connection [`track` event](/en-US/docs/Web/A
 
 A {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} -->, or `null` if the receiver has no associated transform stream.
 
-## Example
+## Examples
 
 Note that this is part of a larger example in the guide topic [Using WebRTC Encoded Transforms](/en-US/docs/Web/API/WebRTC_API/Using_Encoded_Transforms).
 

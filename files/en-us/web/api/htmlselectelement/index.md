@@ -80,7 +80,7 @@ Listen to these events using {{domxref("EventTarget/addEventListener", "addEvent
 - {{domxref("Element/input_event", "input")}} event
   - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
 
-## Example
+## Examples
 
 ### Get information about the selected option
 

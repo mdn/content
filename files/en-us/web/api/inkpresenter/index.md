@@ -25,7 +25,7 @@ The **`InkPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) p
 - {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} {{Experimental_Inline}}
   - : Passes the {{domxref("PointerEvent")}} that was used as the last rendering point for the current frame, allowing the OS-level compositor to render a delegated ink trail ahead of the next pointer event being dispatched.
 
-## Example
+## Examples
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 

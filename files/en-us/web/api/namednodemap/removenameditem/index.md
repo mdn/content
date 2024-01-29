@@ -31,7 +31,7 @@ The removed {{domxref("Attr")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no attribute with the given name.
 
-## Example
+## Examples
 
 ```html
 <pre test="testValue"></pre>

@@ -31,7 +31,7 @@ onmscandidatewindowshow = (event) => {};
 
 A generic {{DOMxRef("Event")}} with no added properties.
 
-### Example
+### Examples
 
 in IE11, developers can detect the opening of the IME candidate window by listening to `MSCandidateWindowShow` event, then call `getCandidateWindowClientRect()` function to find out where the candidate window is and position the suggestion UI away from it:
 

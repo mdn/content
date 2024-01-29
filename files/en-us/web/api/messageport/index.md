@@ -35,7 +35,7 @@ _Inherits events from its parent, {{domxref("EventTarget")}}_.
 - {{domxref("MessagePort.messageerror_event","messageerror")}}
   - : Fired when a `MessagePort` object receives a message that can't be deserialized.
 
-## Example
+## Examples
 
 In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel","MessageChannel()")}} constructor.
 

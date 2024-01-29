@@ -40,7 +40,7 @@ addStream(mediaStream)
 
 None.
 
-## Example
+## Examples
 
 This simple example adds the audio and video stream coming from the user's camera to
 the connection.

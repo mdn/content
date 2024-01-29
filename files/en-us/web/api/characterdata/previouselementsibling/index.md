@@ -16,7 +16,7 @@ or `null` if there is none.
 
 A {{domxref("Element")}} object, or `null` if no sibling has been found.
 
-## Example
+## Examples
 
 ```html
 <div id="div-01">Here is div-01</div>

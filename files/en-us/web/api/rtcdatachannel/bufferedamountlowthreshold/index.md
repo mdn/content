@@ -30,7 +30,7 @@ messages are actually sent, this value is reduced accordingly.
 The number of queued outgoing data bytes below which the buffer is considered to be
 "low."
 
-## Example
+## Examples
 
 In this snippet of code, `bufferedAmountLowThreshold` is set to 64kB, and a
 handler for the {{DOMxRef("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} event is established by setting the

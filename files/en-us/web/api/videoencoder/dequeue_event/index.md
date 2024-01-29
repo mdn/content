@@ -22,7 +22,7 @@ addEventListener("dequeue", (event) => {});
 ondequeue = (event) => {};
 ```
 
-## Example
+## Examples
 
 ```js
 videoEncoder.addEventListener("dequeue", (event) => {

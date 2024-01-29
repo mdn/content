@@ -26,7 +26,7 @@ None.
 
 None.
 
-## Example
+## Examples
 
 ```html
 <output id="result"></output>

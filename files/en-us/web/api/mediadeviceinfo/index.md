@@ -29,7 +29,7 @@ The list of devices obtained by calling {{domxref("MediaDevices.enumerateDevices
 - {{domxref("MediaDeviceInfo.toJSON()")}}
   - : Returns a JSON representation of the `MediaDeviceInfo` object.
 
-## Example
+## Examples
 
 Here's an example that uses {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} to get a list of devices.
 

@@ -18,7 +18,7 @@ created or modified by a script or dispatched via
 
 A boolean value.
 
-## Example
+## Examples
 
 ```js
 if (e.isTrusted) {

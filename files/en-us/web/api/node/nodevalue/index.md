@@ -33,7 +33,7 @@ The following table shows the return values for different types of nodes.
 
 > **Note:** When `nodeValue` is defined to be `null`, setting it has no effect.
 
-## Example
+## Examples
 
 ```html
 <div id="d1">Hello world</div>

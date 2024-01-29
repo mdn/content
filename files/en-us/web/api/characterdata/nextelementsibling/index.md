@@ -16,7 +16,7 @@ children list, or `null` if the specified element is the last one in the list.
 
 A {{domxref("Element")}} object, or `null` if no sibling has been found.
 
-## Example
+## Examples
 
 ```html
 TEXT

@@ -35,7 +35,7 @@ there's room to buffer them.
 The number of bytes of data currently queued to be sent over the data channel but have
 not yet been sent.
 
-## Example
+## Examples
 
 The snippet below includes a function which changes the contents of a block with the ID
 "bufferSize" to a string indicating the number of bytes currently buffered on an

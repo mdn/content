@@ -40,7 +40,7 @@ flow. Possible values are:
     This is known as _bubbling_, and occurs only if {{domxref("Event.bubbles")}} is
     `true`. {{domxref("EventTarget/addEventListener", "Event listeners", "", 1)}} registered for this phase are triggered during this process.
 
-## Example
+## Examples
 
 ### HTML
 

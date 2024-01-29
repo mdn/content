@@ -27,7 +27,7 @@ namedItem(key)
 
 - `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the _key_, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if there are none.
 
-## Example
+## Examples
 
 ### HTML
 

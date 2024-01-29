@@ -20,7 +20,7 @@ This allows specifying any text node and obtaining all adjacent text as a single
 
 A string with the concatenated text.
 
-## Example
+## Examples
 
 Suppose you have the following simple paragraph within your webpage:
 

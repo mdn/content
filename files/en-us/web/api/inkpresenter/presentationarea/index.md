@@ -20,7 +20,7 @@ This area is always the client coordinates for the element's border box, so movi
 
 An {{domxref("Element")}}.
 
-## Example
+## Examples
 
 ```js
 async function inkInit() {

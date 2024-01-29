@@ -25,7 +25,7 @@ An angle in radians between `0` and `π/2` where `0` is parallel to the device s
 Defaults to `π/2` (perpendicular to the surface) which differs from the [`altitudeAngle` in touch events](https://w3c.github.io/touch-events/#dom-touch-altitudeangle) which defaults to `0` (parallel to the surface).
 For hardware and platforms that do not report tilt or angle, the value is `π/2`.
 
-## Example
+## Examples
 
 ```js
 someElement.addEventListener(

@@ -32,7 +32,7 @@ A {{jsxref("JSON")}} object containing the following properties:
 - `sdp`
   - : Either `null` or the {{Glossary("SDP")}} message string corresponding to {{domxref("RTCSessionDescription.sdp")}} property.
 
-## Example
+## Examples
 
 ```js
 // sd is a RTCSessionDescriptor

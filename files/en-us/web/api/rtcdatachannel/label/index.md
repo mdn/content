@@ -28,7 +28,7 @@ A string identifier assigned by the website or app when the data channel was cre
 as specified when {{domxref("RTCPeerConnection.createDataChannel()")}} was called to
 create the channel.
 
-## Example
+## Examples
 
 This sample creates a data channel on an {{domxref("RTCPeerConnection")}}, then, some
 time later, sets the content of a UI element to display the channel's name.

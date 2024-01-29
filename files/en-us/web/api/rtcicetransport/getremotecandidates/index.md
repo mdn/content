@@ -38,7 +38,7 @@ It's important to keep in mind that there's no way to correlate these remote can
 with compatible local candidates. To find the best match found so far, call
 {{domxref("RTCIceTransport.getSelectedCandidatePair()")}}.
 
-## Example
+## Examples
 
 This simple example gets the remote candidate list from the
 {{domxref("RTCIceTransport")}} for the first {{domxref("RTCRtpSender")}} on the

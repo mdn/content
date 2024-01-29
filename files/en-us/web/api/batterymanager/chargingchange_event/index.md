@@ -24,7 +24,7 @@ onchargingchange = (event) => { }
 
 _A generic {{domxref("Event")}}._
 
-## Example
+## Examples
 
 ### HTML
 

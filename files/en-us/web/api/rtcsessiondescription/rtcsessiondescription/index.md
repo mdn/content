@@ -39,7 +39,7 @@ new RTCSessionDescription(options)
     - `sdp`
       - : A string containing a {{Glossary("SDP")}} message describing the session. This value is an empty string (`""`) by default and may not be `null`.
 
-## Example
+## Examples
 
 This example uses the constructor to convert an SDP offer into an
 `RTCSessionDescription` object.

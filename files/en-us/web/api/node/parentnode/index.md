@@ -21,7 +21,7 @@ and is not yet attached to the tree.
 A {{domxref("Node")}} that is the parent of the current node. The parent of an element is
 an `Element` node, a `Document` node, or a `DocumentFragment` node.
 
-## Example
+## Examples
 
 ```js
 if (node.parentNode) {

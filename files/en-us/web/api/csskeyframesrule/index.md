@@ -31,7 +31,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSKeyframesRule.findRule()")}}
   - : Returns a keyframe rule corresponding to the given key. The key is a string containing an index of the keyframe to be returned, resolving to a percentage between `0%` and `100%`. If no such keyframe exists, `findRule` returns `null`.
 
-## Example
+## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
 `myRules[0]` returns a `CSSKeyframesRule` object.

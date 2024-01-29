@@ -34,7 +34,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ClipboardEvent")}}
 
-## Example
+## Examples
 
 ### HTML
 

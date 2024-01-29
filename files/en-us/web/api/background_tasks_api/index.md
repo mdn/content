@@ -36,7 +36,7 @@ The Background Tasks API adds only one new interface:
 
 The {{domxref("Window")}} interface is also augmented by this API to offer the new {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} and {{domxref("window.cancelIdleCallback", "cancelIdleCallback()")}} methods.
 
-## Example
+## Examples
 
 In this example, we'll take a look at how you can use {{domxref("window.requestIdleCallback", "requestIdleCallback()")}} to run time-consuming, low-priority tasks during time the browser would otherwise be idle. In addition, this example demonstrates how to schedule updates to the document content using {{domxref("window.requestAnimationFrame", "requestAnimationFrame()")}}.
 

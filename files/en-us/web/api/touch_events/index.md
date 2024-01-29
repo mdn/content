@@ -33,7 +33,7 @@ Touch events are similar to mouse events except they support simultaneous touche
 - {{domxref("TouchList")}}
   - : Represents a group of touches; this is used when the user has, for example, multiple fingers on the surface at the same time.
 
-## Example
+## Examples
 
 This example tracks multiple touchpoints at a time, allowing the user to draw in a {{HTMLElement("canvas")}} with more than one finger at a time. It will only work on a browser that supports touch events.
 

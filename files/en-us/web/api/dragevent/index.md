@@ -42,7 +42,7 @@ Although this interface has a constructor, it is not possible to create a useful
 - {{domxref("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
 
-## Example
+## Examples
 
 An Example of each property, constructor, event type and global event handlers is included in their respective reference page.
 

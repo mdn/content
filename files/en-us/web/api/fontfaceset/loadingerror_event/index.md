@@ -20,7 +20,7 @@ addEventListener("loadingerror", (event) => {});
 onloadingerror = (event) => {};
 ```
 
-## Example
+## Examples
 
 In the following example, if the font `Ephesis` fails to load, "Font loading error" is printed to the console.
 

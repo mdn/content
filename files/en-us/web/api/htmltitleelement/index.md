@@ -22,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}}._
 
-## Example
+## Examples
 
 Do not confuse: `document.title` with `document.querySelector('title')`
 

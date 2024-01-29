@@ -30,7 +30,7 @@ A string containing the namespace URI corresponding to the prefix.
 If the prefix is not found, it returns `null`.
 If the requested `prefix` is `null`, it returns the default namespace URI.
 
-## Example
+## Examples
 
 ```html
 Namespace URL for <code>xlink</code> on &lt;output&gt;:

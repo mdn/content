@@ -22,7 +22,7 @@ This property also differs from [`originalTarget`](/en-US/docs/Web/API/Event/ori
 
 Returns the {{domxref("EventTarget")}} object, or null if there isn't one.
 
-## Example
+## Examples
 
 This property can be used with `<command>` to get the event details of the original object calling the command.
 

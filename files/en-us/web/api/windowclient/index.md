@@ -31,7 +31,7 @@ _`WindowClient` inherits properties from its parent interface, {{domxref("Client
 - {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
   - : Indicates the visibility of the current client. This value can be one of `"hidden"`, `"visible"`, or `"prerender"`.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener("notificationclick", (event) => {

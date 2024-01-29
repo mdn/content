@@ -30,7 +30,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("RTCDTMFSender.tonechange_event", "tonechange")}}
   - : The `tonechange` event is sent to the `RTCDTMFSender` instance's event handler to indicate that a tone has either started or stopped playing.
 
-## Example
+## Examples
 
 See the article [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for a full example.
 

@@ -14,7 +14,7 @@ The **`defaultPrevented`** read-only property of the {{domxref("Event")}} interf
 
 A boolean value, where `true` indicates that the default {{glossary("user agent")}} action was prevented, and `false` indicates that it was not.
 
-## Example
+## Examples
 
 This example logs attempts to visit links from two {{htmlElement("a")}} elements. JavaScript is used to prevent the second link from working.
 

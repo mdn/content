@@ -27,7 +27,7 @@ supports(token)
 
 A boolean value indicating whether the token was found.
 
-## Example
+## Examples
 
 ```js
 const iframe = document.getElementById("display");

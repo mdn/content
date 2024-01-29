@@ -14,7 +14,7 @@ The read-only **`ownerElement`** property of the {{domxref("Attr")}} interface r
 
 The {{domxref("Element")}} the attribute belongs to, or `null` if the attribute is not linked to an element.
 
-## Example
+## Examples
 
 The following example displays the qualified name of the element of the two first elements, when we click on the appropriate button.
 

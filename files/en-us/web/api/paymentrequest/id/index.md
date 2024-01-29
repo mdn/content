@@ -15,7 +15,7 @@ The **`id`** read-only attribute of the
 When constructing an instance of the {{domxref("PaymentRequest")}}, you are able to
 supply an custom id. If none is provided, the browser automatically sets the id value to a UUID.
 
-## Example
+## Examples
 
 This example shows how to give a {{domxref("PaymentRequest")}} instance a custom id.
 

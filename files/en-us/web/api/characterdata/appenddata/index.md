@@ -26,7 +26,7 @@ appendData(data)
 
 None.
 
-## Example
+## Examples
 
 ```html
 <span>Result: </span>A text

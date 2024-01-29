@@ -20,7 +20,7 @@ the {{domxref("MediaStream")}} associated with the event.
 event.stream
 ```
 
-## Example
+## Examples
 
 ```js
 pc.onaddstream = (ev) => {

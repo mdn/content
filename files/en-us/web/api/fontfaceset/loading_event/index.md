@@ -20,7 +20,7 @@ addEventListener("loading", (event) => {});
 onloading = (event) => {};
 ```
 
-## Example
+## Examples
 
 In the following example, when the font `Ephesis` starts to load, "Font is loading…" is printed to the console.
 

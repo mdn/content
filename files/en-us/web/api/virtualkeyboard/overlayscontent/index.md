@@ -18,7 +18,7 @@ If the `overlaysContent` property is set to `true`, the browser no longer resize
 
 A boolean. `false` by default, set it to `true` to opt out of the browser's automatic handling of the on-screen virtual keyboard.
 
-## Example
+## Examples
 
 ```js
 if ("virtualKeyboard" in navigator) {

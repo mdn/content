@@ -47,7 +47,7 @@ specified offset point.
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the node is read-only.
 
-## Example
+## Examples
 
 In this example, the text of a {{HTMLElement("p")}} is split into two text nodes, and a
 {{HTMLElement("u")}} is inserted between them.

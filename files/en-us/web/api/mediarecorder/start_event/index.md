@@ -26,7 +26,7 @@ onstart = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 record.onclick = () => {

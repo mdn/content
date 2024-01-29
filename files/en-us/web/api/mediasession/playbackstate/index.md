@@ -25,7 +25,7 @@ The value may be one of the following:
 - `playing`
   - : The browser's media session is currently playing media, which can be paused.
 
-## Example
+## Examples
 
 The following example sets up two functions for playing and pausing, then uses them as
 callbacks with the relevant action handlers. Each function harnesses the

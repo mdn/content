@@ -64,7 +64,7 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 - {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
   - : Indicates if the pointer represents the primary pointer of this pointer type.
 
-## Example
+## Examples
 
 ```js
 addEventListener("pointerrawupdate", (event) => {

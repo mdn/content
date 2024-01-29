@@ -38,7 +38,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
 - {{domxref("Gamepad.timestamp")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the last time the data for this gamepad was updated.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {

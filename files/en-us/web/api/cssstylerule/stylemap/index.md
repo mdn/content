@@ -16,7 +16,7 @@ which provides access to the rule's property-value pairs.
 
 A {{domxref('StylePropertyMap')}} object.
 
-## Example
+## Examples
 
 The following example shows `styleMap` being used to modify a style using
 the {{domxref('StylePropertyMap.set()')}} method.

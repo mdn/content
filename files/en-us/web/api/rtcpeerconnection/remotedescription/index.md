@@ -30,7 +30,7 @@ On a more fundamental level, the returned value is the value of
 {{domxref("RTCPeerConnection.currentRemoteDescription")}} is returned. See
 [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for details on this algorithm and why it's used.
 
-## Example
+## Examples
 
 This example looks at the `remoteDescription` and displays an alert
 containing the {{domxref("RTCSessionDescription")}} object's `type` and

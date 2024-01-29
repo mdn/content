@@ -29,7 +29,7 @@ None.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the animation's {{domxref("Animation.currentTime", "currentTime")}} is `unresolved` (perhaps it hasn't started playing yet), and the end time of the animation is positive infinity.
 
-## Example
+## Examples
 
 `Animation.pause()` is used many times in the Alice in Web Animations API Land [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010), largely because animations created with the {{domxref("Element.animate()")}} method immediately start playing and must be paused manually if you want to avoid that:
 

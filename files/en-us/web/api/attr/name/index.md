@@ -16,7 +16,7 @@ The qualified name is always in lower case, whatever case at the attribute creat
 
 A string representing the attribute's qualified name.
 
-## Example
+## Examples
 
 The following example displays the qualified name of the first attribute of the two first elements, when we click on the appropriate button.
 

@@ -16,7 +16,7 @@ The **`bubbles`** read-only property of the {{domxref("Event")}} interface indic
 
 A boolean value, which is `true` if the event bubbles up through the DOM tree.
 
-## Example
+## Examples
 
 ```js
 function handleInput(e) {

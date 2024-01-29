@@ -39,7 +39,7 @@ forEach(callback, thisArg)
 
 None.
 
-## Example
+## Examples
 
 In the following example we retrieve the list of classes set on a
 {{htmlelement("pre")}} element as a `DOMTokenList` using

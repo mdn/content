@@ -31,7 +31,7 @@ item(index)
 An {{domxref("Attr")}} or `null` if the number is greater than or equal to the `length` of
 the map.
 
-## Example
+## Examples
 
 ```html
 <pre zero="test" one="test" two="test"></pre>

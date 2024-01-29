@@ -47,7 +47,7 @@ You can add a `track` event listener to be notified when the new track is availa
 
 > **Note:** It may be helpful to keep in mind that you receive the `track` event when a new inbound track has been added to your connection, and you call {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add a track to the far end of the connection, thereby triggering a `track` event on the remote peer.
 
-## Example
+## Examples
 
 This simple example creates an event listener for the {{domxref("RTCPeerConnection.track_event", "track")}} event which sets the {{domxref("HTMLMediaElement.srcObject", "srcObject")}} of the {{HTMLElement("video")}} element with the ID `videobox` to the first stream in the list passed in the event's {{domxref("RTCTrackEvent.streams", "streams")}} array.
 

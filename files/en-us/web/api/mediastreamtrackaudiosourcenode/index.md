@@ -50,7 +50,7 @@ _The `MediaStreamTrackAudioSourceNode` interface has no properties of its own; h
 
 _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`AudioContext.createMediaStreamSource()`](/en-US/docs/Web/API/AudioContext/createMediaStreamSource#examples) for example code that uses this object.
 

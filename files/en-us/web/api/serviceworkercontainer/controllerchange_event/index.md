@@ -24,7 +24,7 @@ oncontrollerchange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.addEventListener("controllerchange", () => {

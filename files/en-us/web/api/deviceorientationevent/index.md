@@ -31,7 +31,7 @@ The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation 
 - `DeviceOrientationEvent.webkitCompassAccuracy` {{Non-Standard_Inline}} {{ReadOnlyInline}}
   - : The accuracy of the compass means that the deviation is positive or negative. It's usually 10.
 
-## Example
+## Examples
 
 ```js
 window.addEventListener("deviceorientation", (event) => {

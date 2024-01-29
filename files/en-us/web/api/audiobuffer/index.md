@@ -36,7 +36,7 @@ Objects of these types are designed to hold small audio snippets, typically less
 - {{domxref("AudioBuffer.copyToChannel()")}}
   - : Copies the samples to the specified channel of the `AudioBuffer`, from the `source` array.
 
-## Example
+## Examples
 
 The following simple example shows how to create an `AudioBuffer` and fill it with random white noise. You can find the full source code at our [webaudio-examples](https://github.com/mdn/webaudio-examples) repository; a [running live](https://mdn.github.io/webaudio-examples/audio-buffer/) version is also available.
 

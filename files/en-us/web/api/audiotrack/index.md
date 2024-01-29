@@ -53,7 +53,7 @@ tracks.forEach((track) => {
 
 The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}) format. For US English, this would be `"en-US"`, for example.
 
-## Example
+## Examples
 
 See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#examples) for a simple example that shows how to get an array of track kinds and labels for a specified media element, filtered by kind.
 

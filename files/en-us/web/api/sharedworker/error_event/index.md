@@ -24,7 +24,7 @@ onerror = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 The following code snippet creates a {{domxref("SharedWorker")}} object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor and sets up an `onerror` handler on the resulting object:
 

@@ -50,7 +50,7 @@ are:
 Assigning any other value to `dropEffect` has no effect and the old value is
 retained.
 
-## Example
+## Examples
 
 This example shows the use of the `dropEffect` and
 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} properties.

@@ -16,7 +16,7 @@ The **`end`** property of the {{domxref("CSSScopeRule")}} interface returns a st
 
 A string, or `null` if the `@scope` at-rule has no scope limit defined.
 
-## Example
+## Examples
 
 See the main {{domxref("CSSScopeRule")}} page for an example.
 

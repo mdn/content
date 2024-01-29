@@ -41,7 +41,7 @@ left edge of the content area.
 > containing element or by being located within a column described by either
 > {{HTMLElement("col")}} or {{HTMLElement("colgroup")}}.
 
-## Example
+## Examples
 
 The example below demonstrates the use of the `HTMLImageElement` properties
 {{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.

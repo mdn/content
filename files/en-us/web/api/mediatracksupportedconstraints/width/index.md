@@ -32,7 +32,7 @@ if the user agent supports the `width` constraint. If the property isn't
 present, this property is missing from the supported constraints dictionary, and you'll
 get {{jsxref("undefined")}} if you try to look at its value.
 
-## Example
+## Examples
 
 ```html hidden
 <div id="result"></div>

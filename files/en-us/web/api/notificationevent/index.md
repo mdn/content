@@ -33,7 +33,7 @@ _Also inherits properties from its parent interface, {{domxref("ExtendableEvent"
 
 _Also inherits methods from its parent interface, {{domxref("ExtendableEvent")}}_.
 
-## Example
+## Examples
 
 ```js
 self.addEventListener("notificationclick", (event) => {

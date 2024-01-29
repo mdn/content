@@ -26,7 +26,7 @@ onchange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 In the following example, the `change` callback prints the status of `userState` and `screenState` to the console.
 

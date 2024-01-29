@@ -24,7 +24,7 @@ onchange = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 navigator.permissions

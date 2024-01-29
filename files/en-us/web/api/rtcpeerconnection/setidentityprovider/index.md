@@ -39,7 +39,7 @@ setIdentityProvider(domainname, protocol, username)
 
 None ({{jsxref("undefined")}}).
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

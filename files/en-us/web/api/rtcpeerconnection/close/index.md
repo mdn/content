@@ -33,7 +33,7 @@ Make sure that you `delete` all references to the previous
 to the same remote peer, as not doing so might result in some errors depending on the
 browser.
 
-## Example
+## Examples
 
 ```js
 const pc = new RTCPeerConnection();

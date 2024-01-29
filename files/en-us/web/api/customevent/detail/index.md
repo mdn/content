@@ -15,7 +15,7 @@ returns any data passed when initializing the event.
 
 Whatever data the event was initialized with.
 
-## Example
+## Examples
 
 ```js
 // create custom events

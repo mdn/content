@@ -56,7 +56,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
-## Example
+## Examples
 
 See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`.
 

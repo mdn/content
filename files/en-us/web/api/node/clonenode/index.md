@@ -58,7 +58,7 @@ The cloned node has no parent and is not part of the document,
 _until_ it is added to another node that is part of the document,
 using {{domxref("Node.appendChild()")}} or a similar method.
 
-## Example
+## Examples
 
 ```js
 let p = document.getElementById("para1");

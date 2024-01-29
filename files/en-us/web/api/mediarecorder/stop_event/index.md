@@ -28,7 +28,7 @@ onstop = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 mediaRecorder.onstop = (e) => {

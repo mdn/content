@@ -38,7 +38,7 @@ and `false` if the command isn't`.`
   is unavailable, but also if the script calling it has insufficient privileges to
   perform the action.
 
-## Example
+## Examples
 
 ```js
 const flg = document.queryCommandEnabled("SelectAll");

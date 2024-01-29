@@ -31,7 +31,7 @@ A string that can have one of these values:
   - : Received binary messages' contents will be contained in {{jsxref("ArrayBuffer")}}
     objects.
 
-## Example
+## Examples
 
 This code configures a data channel to receive binary data in
 {{jsxref("ArrayBuffer")}} objects, and establishes a listener for {{DOMxRef("RTCDataChannel.message_event", "message")}}

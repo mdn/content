@@ -21,7 +21,7 @@ track is enabled; enabled tracks produce audio while the media is playing. Setti
 `enabled` to `false` effectively mutes the audio track, preventing
 it from contributing to the media's audio performance.
 
-## Example
+## Examples
 
 This example switches between the main and commentary audio tracks of a media element.
 

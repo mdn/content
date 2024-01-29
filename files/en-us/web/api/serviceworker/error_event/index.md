@@ -24,7 +24,7 @@ onerror = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 The following code snippet gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}} and sets up an `onerror` handler on the resulting object:
 

@@ -24,7 +24,7 @@ createSVGPoint()
 
 The returned value is an `SVGPoint` object.
 
-## Example
+## Examples
 
 ```js
 // Create an SVGPoint in the user coordinate system

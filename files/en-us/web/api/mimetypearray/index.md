@@ -25,7 +25,7 @@ The **`MimeTypeArray`** interface returns an array of {{domxref('MimeType')}} in
 - {{domxref("MimeTypeArray.namedItem()")}} {{Deprecated_Inline}}
   - : Returns the `MimeType` object with the specified name.
 
-## Example
+## Examples
 
 The following example tests whether a plugin is available for the 'application/pdf' mime type and if so, logs its description.
 

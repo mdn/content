@@ -35,7 +35,7 @@ _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are als
 
 _`TrackEvent` has no methods of its own; however, it is based on {{domxref("Event")}}, so it provides the methods available on `Event` objects._
 
-## Example
+## Examples
 
 This example sets up a function, `handleTrackEvent()`, which is called for any `addtrack` or `removetrack` event on the first {{HTMLElement("video")}} element found in the document.
 

@@ -31,7 +31,7 @@ _Also inherits properties from its parent, {{domxref("Event")}} interface._
 
 _No specific method, but inherits methods from its parent, {{domxref("Event")}} interface._
 
-## Example
+## Examples
 
 In the following code snippet, we make a request to open a database, and include handlers for the success and error cases. Upon a version change (after an `upgradeneeded` event), the `success` event will implement the `IDBVersionChangeEvent` interface. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 

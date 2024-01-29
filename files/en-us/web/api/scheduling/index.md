@@ -16,7 +16,7 @@ The **`Scheduling`** object provides methods and properties to control schedulin
 - {{domxref("Scheduling.isInputPending", "isInputPending()")}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether there are pending input events in the event queue, meaning that the user is attempting to interact with the page.
 
-## Example
+## Examples
 
 See the {{domxref("Scheduling.isInputPending()")}} page for a full example.
 

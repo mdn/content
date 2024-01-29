@@ -33,7 +33,7 @@ The {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}}
 
 You can add a `rtctransform` event listener to be notified when the new frame is available using either {{domxref("EventTarget.addEventListener", "DedicatedWorkerGlobalScope.addEventListener()")}} or the `onrtctransform` event handler property.
 
-## Example
+## Examples
 
 This example creates an event listener for the {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event.
 

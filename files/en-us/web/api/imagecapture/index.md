@@ -32,7 +32,7 @@ The **`ImageCapture`** interface of the [MediaStream Image Capture API](/en-US/d
 - {{domxref("ImageCapture.grabFrame()")}} {{Experimental_Inline}}
   - : Takes a snapshot of the live video in a {{domxref("MediaStreamTrack")}}, returning an {{domxref("ImageBitmap")}}, if successful.
 
-## Example
+## Examples
 
 The following code is taken from [Chrome's Grab Frame - Take Photo Sample](https://googlechrome.github.io/samples/image-capture/grab-frame-take-photo.html). Since `ImageCapture` requires some place to capture an image from, the example below starts with a device's media device (in other words a camera).
 

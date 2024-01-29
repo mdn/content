@@ -15,7 +15,7 @@ The **`disableRemotePlayback`** property of the {{domxref("HTMLMediaElement")}} 
 A boolean value indicating whether the media element may have a remote playback
 UI. (false means "not disabled", which means "enabled")
 
-## Example
+## Examples
 
 ```js
 const obj = document.createElement("audio");

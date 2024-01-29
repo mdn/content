@@ -16,7 +16,7 @@ It reflects the `type` attribute of the {{HTMLElement("a")}} element.
 
 A string.
 
-## Example
+## Examples
 
 ```html
 <a id="exampleLink" href="https://example.com" type="text/html">Example Link</a>

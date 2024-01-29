@@ -31,7 +31,7 @@ new CustomEvent(type, options)
 
 A new {{domxref("CustomEvent")}} object.
 
-## Example
+## Examples
 
 ```js
 // create custom events

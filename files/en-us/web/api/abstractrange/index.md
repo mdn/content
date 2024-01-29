@@ -135,7 +135,7 @@ The resulting document fragment looks like this:
 
 Notice especially that the contents of this fragment are all _below_ the shared common parent of the topmost nodes within it. The parent `<section>` is not needed to replicate the cloned content, so it isn't included.
 
-## Example
+## Examples
 
 Consider this simple HTML fragment of HTML.
 

@@ -18,7 +18,7 @@ In a worker, the time origin is the moment of creation of the worker.
 
 The value is a {{domxref("DOMHighResTimeStamp")}} accurate to 5 microseconds (0.005 ms), but the [precision is reduced](#reduced_time_precision) to prevent [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
-## Example
+## Examples
 
 ### HTML
 

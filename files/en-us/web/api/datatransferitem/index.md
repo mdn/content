@@ -29,7 +29,7 @@ This interface has no constructor.
 - {{domxref("DataTransferItem.webkitGetAsEntry()")}}
   - : Returns an object based on {{domxref("FileSystemEntry")}} representing the selected file's entry in its file system. This will generally be either a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} object.
 
-## Example
+## Examples
 
 All of this interface's methods and properties have their own reference page, and each reference page has an example of its usage.
 

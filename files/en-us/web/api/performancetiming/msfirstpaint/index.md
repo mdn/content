@@ -34,7 +34,7 @@ time and midnight January 1, 1970 (UTC).
 
 This property is supported only for documents displayed in IE9 Standards mode.
 
-## Example
+## Examples
 
 The following example shows how to calculate the time that is required to request the
 document before the document begins to display for the user.

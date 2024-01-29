@@ -42,7 +42,7 @@ removeTrack(sender)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the connection is not open.
 
-## Example
+## Examples
 
 This example adds a video track to a connection and sets up a listener on a close
 button which removes the track when the user clicks the button.

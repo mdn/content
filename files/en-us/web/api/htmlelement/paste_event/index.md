@@ -33,7 +33,7 @@ _Also inherits properties from its parent {{domxref("Event")}}_.
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or `paste` operation, along with its MIME type.
 
-## Example
+## Examples
 
 This example logs every copy and paste attempt to the {{htmlElement("textarea")}}.
 

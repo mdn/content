@@ -27,7 +27,7 @@ onerror = (event) => {};
 
 A generic {{domxref("Event")}}.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.onerror = (errorevent) => {

@@ -40,7 +40,7 @@ A new {{domxref("MediaStreamTrackAudioSourceNode")}} object representing the aud
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the specified {{domxref("MediaStreamTrack")}} isn't an audio track (that is, its {{domxref("MediaStreamTrack.kind", "kind")}} property isn't `audio`.
 
-## Example
+## Examples
 
 This example uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to obtain access to the user's camera, then creates a new {{domxref("MediaStreamAudioSourceNode")}} from the first audio track provided by the device.
 

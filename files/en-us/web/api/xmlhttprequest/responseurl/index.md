@@ -10,7 +10,7 @@ browser-compat: api.XMLHttpRequest.responseURL
 
 The read-only **`XMLHttpRequest.responseURL`** property returns the serialized URL of the response or the empty string if the URL is `null`. If the URL is returned, any URL fragment present in the URL will be stripped away. The value of `responseURL` will be the final URL obtained after any redirects.
 
-## Example
+## Examples
 
 ```js
 const xhr = new XMLHttpRequest();

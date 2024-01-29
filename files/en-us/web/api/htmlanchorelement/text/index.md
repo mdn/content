@@ -15,7 +15,7 @@ This property represents the same information as {{domxref("Node.textContent")}}
 
 A string.
 
-## Example
+## Examples
 
 ```html
 <a id="exampleLink" href="https://example.com">Example Link</a>

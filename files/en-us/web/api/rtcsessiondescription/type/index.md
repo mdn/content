@@ -31,7 +31,7 @@ The possible values are:
 - `"rollback"`
   - : This special type with an empty session description is used to roll back to the previous stable state.
 
-## Example
+## Examples
 
 ```js
 // The remote description has been set previously on pc, a RTCPeerConnection

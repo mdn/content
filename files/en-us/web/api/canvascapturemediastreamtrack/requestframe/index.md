@@ -37,7 +37,7 @@ in the future, so it would be wise to plan ahead and watch for exceptions such a
 `SecurityError` (although the specific error that might be thrown is not
 mentioned in the spec, this is a likely candidate).
 
-## Example
+## Examples
 
 ```js
 // Find the canvas element to capture

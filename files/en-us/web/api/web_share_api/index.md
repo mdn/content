@@ -40,7 +40,7 @@ If the policy is supported but has not been granted, both methods will indicate 
   - : Returns a {{jsxref("Promise")}} that resolves if the passed data was successfully sent to a share target.
     This method must be called on a button click or other user activation (requires {{Glossary("transient activation")}}).
 
-## Example
+## Examples
 
 The code below shows how you can share a link using {{domxref("navigator.share()")}}, triggered off a button click.
 

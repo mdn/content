@@ -20,7 +20,7 @@ The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissio
 - {{domxref("Permissions.revoke","Permissions.revoke()")}} {{Deprecated_Inline}}
   - : Revokes the permission currently set on a given API.
 
-## Example
+## Examples
 
 ```js
 navigator.permissions.query({ name: "geolocation" }).then((result) => {

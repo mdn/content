@@ -32,7 +32,7 @@ None.
 An array of strings representing the Permissions Policy directive names that are allowed by
 the Permissions Policy this method is called on.
 
-## Example
+## Examples
 
 The following example logs all the allowed directives for the current document. Please
 note that these features might be restricted by the Permissions API, if the user did not

@@ -17,7 +17,7 @@ If an `id` attribute is set on the {{HTMLElement("map")}} element, then this `na
 
 A non-empty string without whitespaces.
 
-## Example
+## Examples
 
 ```html
 <map name="image-map">

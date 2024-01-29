@@ -17,7 +17,7 @@ handler is called during the bubbling or capturing phase of the event.
 
 The associated {{domxref("EventTarget")}}.
 
-## Example
+## Examples
 
 The `event.target` property can be used in order to implement **event
 delegation**.

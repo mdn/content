@@ -18,7 +18,7 @@ The **`PerformanceObserverEntryList`** interface is a list of {{domxref("Perform
 - {{domxref("PerformanceObserverEntryList.getEntriesByName","PerformanceObserverEntryList.getEntriesByName()")}}
   - : Returns a list of all explicitly observed {{domxref("PerformanceEntry")}} objects based on the given name and entry type.
 
-## Example
+## Examples
 
 ### Using PerformanceObserverEntryList
 

@@ -214,7 +214,7 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
   - : From the current filter parameter settings this method calculates the frequency response for frequencies specified in the provided array of frequencies.
 
-## Example
+## Examples
 
 See [`AudioContext.createBiquadFilter`](/en-US/docs/Web/API/BaseAudioContext/createBiquadFilter#examples) for example code that shows how to use an `AudioContext` to create a Biquad filter node.
 

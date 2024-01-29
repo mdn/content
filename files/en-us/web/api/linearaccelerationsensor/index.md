@@ -30,7 +30,7 @@ _`LinearAccelerationSensor` doesn't have own methods. However, it inherits metho
 
 _`LinearAccelerationSensor` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
-## Example
+## Examples
 
 Linear acceleration is typically read in the {{domxref('Sensor.reading_event', 'reading')}} event callback. In the example below this occurs sixty times a second.
 

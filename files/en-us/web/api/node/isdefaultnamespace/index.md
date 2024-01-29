@@ -29,7 +29,7 @@ isDefaultNamespace(namespaceURI)
 
 A boolean value that holds the return value `true` or `false`, indicating if the parameter is the default namespace, or not.
 
-## Example
+## Examples
 
 ```html
 Is "" the default namespace for &lt;output&gt;:

@@ -20,7 +20,7 @@ Web browsers do not rely solely on the `hreflang` attribute after fetching the l
 
 A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` element.
 
-## Example
+## Examples
 
 ```html
 <a id="exampleLink" href="https://example.com" hreflang="en-IN">Example Link</a>

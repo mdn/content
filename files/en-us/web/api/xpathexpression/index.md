@@ -18,7 +18,7 @@ Objects of this type are created by calling {{domxref("XPathEvaluator.createExpr
 - {{DOMxRef("XPathExpression.evaluate()")}}
   - : Evaluates the XPath expression on the given node or document.
 
-## Example
+## Examples
 
 The following example shows the use of the `XPathExpression` interface.
 

@@ -52,7 +52,7 @@ A {{domxref("BlobEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("BlobEvent")}}
 
-## Example
+## Examples
 
 ```js
 const chunks = [];

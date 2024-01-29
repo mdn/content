@@ -36,7 +36,7 @@ The removed {{domxref("Attr")}}.
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if there is no attribute with the given namespace and local name.
 
-## Example
+## Examples
 
 ```html hidden
 <pre></pre>

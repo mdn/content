@@ -49,7 +49,7 @@ device activity indicators to show that the camera is not currently recording or
 streaming. For example, the green "in use" light next to the camera in iMac and MacBook
 computers turns off while the track is muted in this way.
 
-## Example
+## Examples
 
 This example demonstrates a {{domxref("Element/click_event", "click")}} event handler for a pause button.
 
