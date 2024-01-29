@@ -5,9 +5,9 @@ page-type: css-combinator
 browser-compat: css.selectors.subsequent-sibling
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
-The **subsequent-sibling combinator** (`~`) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
+The **subsequent-sibling combinator** (`~`, a tilde) separates two selectors and matches _all instances_ of the second element that follow the first element (not necessarily immediately) and share the same parent element.
 
 In the following example, the subsequent-sibling combinator (`~`) helps to select and style paragraphs that are both siblings of an image and appear after any image.
 

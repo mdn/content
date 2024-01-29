@@ -68,13 +68,13 @@ There are two main types of tasks you'll encounter:
 - "test your skills" tasks, for example in [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
 - more in-depth **assessments** at the end of some modules (e.g. see [Image gallery](/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery))
 
-For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/master/learn).
+For most of these tasks, have a look at the GitHub repos associated with the learning area (most of the files are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), some are in [`mdn/css-examples`]https://github.com/mdn/css-examples/tree/main/learn).
 
 Each assessment/skill test has an associated marking guide and recommended solution available to help you assess your work.
 There are patterns that make it easier to find these resources, for example:
 
-- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/conditionals>.
-- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/gallery>.
+- The **test your skills** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
+- The **assessment** marking guide and resources are available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
 
 ## Getting our code examples
 
@@ -111,7 +111,7 @@ You can update the `learning-area` repository with any changes made to the maste
 
 If you want to get in touch with us about anything, use the [communication channels](/en-US/docs/MDN/Community/Communication_channels). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
-If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
+If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Community/Contributing) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 
 ## See also
 

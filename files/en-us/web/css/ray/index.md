@@ -2,19 +2,12 @@
 title: ray()
 slug: Web/CSS/ray
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.ray
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`ray()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) defines the [`offset-path`](/en-US/docs/Web/CSS/offset-path) line segment that an animated element can follow. The line segment is referred to as "ray". The ray begins from an {{cssxref("offset-position")}} and extends in the direction of the specified angle. The length of a ray can be constrained by specifying a size and using the `contain` keyword.
-
-```css
-ray() = ray( <angle> && <size>? && contain? && [at <position>]? )
-<size> = closest-side | closest-corner | farthest-side | farthest-corner | sides
-```
 
 ## Syntax
 
@@ -69,6 +62,10 @@ The `ray()` function allows the positioning of an element along a path using pol
 The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the element's offset starting position. The default offset starting position of a ray is the default `offset-position` value: `auto`. If `offset-position` is explicitly specified as `auto` or omitted and allowed to default, the offset starting position is the `top left` corner (or `0 0`) of the element's box. With `offset-position: normal`, the starting position of the ray is `50%, 50%` of the element's containing block.
 
 The `<coord-box>` value of the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property provides the reference box for the ray path.
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

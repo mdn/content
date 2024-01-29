@@ -37,5 +37,5 @@ const supported = "contacts" in navigator && "ContactsManager" in window;
 
 ## See also
 
-- [A Contact Picker for the Web](https://developer.chrome.com/articles/contact-picker/)
+- [A Contact Picker for the Web](https://developer.chrome.com/docs/capabilities/web-apis/contact-picker)
 - [A Contact Picker demo on glitch](https://contact-picker.glitch.me/)

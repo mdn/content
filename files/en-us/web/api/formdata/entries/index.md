@@ -10,7 +10,7 @@ browser-compat: api.FormData.entries
 
 The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string object, and the value is either a string or a {{domxref("Blob")}}.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -34,15 +34,15 @@ formData.append("key2", "value2");
 
 // Display the key/value pairs
 for (const pair of formData.entries()) {
-  console.log(`${pair[0]}, ${pair[1]}`);
+  console.log(pair[0], pair[1]);
 }
 ```
 
 The result is:
 
 ```plain
-key1, value1
-key2, value2
+key1 value1
+key2 value2
 ```
 
 ## Specifications

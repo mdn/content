@@ -13,7 +13,7 @@ In the previous articles, we covered the styling of various form controls in a g
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>, including general
         knowledge of
@@ -126,7 +126,7 @@ The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the a custom radio button's inner circle when a radio button is selected:
 
 ```css
-input[type="radio"] + label::before {
+input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -139,7 +139,7 @@ input[type="radio"] + label::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
@@ -458,12 +458,8 @@ A fragment of the HTML is as follows — note the readonly attribute:
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-:is(
-    input:read-only,
-    input:-moz-read-only,
-    textarea:-moz-read-only,
-    textarea:read-only
-  ) {
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -497,7 +493,7 @@ The most common use of this is to add a different style onto the checkbox or rad
 As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 
 ```css
-input[type="radio"] + label::before {
+input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -510,7 +506,7 @@ input[type="radio"] + label::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }

@@ -44,7 +44,7 @@ The returned object has the following properties:
 ## Examples
 
 The code snippet below uses `await` to wait on the {{jsxref("Promise")}} returned by `getStats()`.
-When the promise fulfills, the result for the `bytesSent` property in the stats object is logged to the console.
+When the promise fulfills, the number of bytes that have not yet been read is logged to the console.
 
 ```js
 const stats = await stream.getStats();

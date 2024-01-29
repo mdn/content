@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.history.getVisits
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves information about all visits to the given URL.
 

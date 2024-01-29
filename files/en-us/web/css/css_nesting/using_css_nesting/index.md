@@ -6,13 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-The [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
+The [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module allows you to write your stylesheets so that they are easier to read, more modular, and more maintainable. As you are not constantly repeating selectors, the file size can also be reduced.
 
 CSS nesting is different from CSS preprocessors such as [Sass](https://sass-lang.com/) in that it is parsed by the browser rather than being pre-compiled by a CSS preprocessor. Also, in CSS nesting, the [specificity of the `&` nesting selector](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) is similar to the {{cssxref(':is',':is()')}} function; it is calculated using the highest specificity in the associated selector list.
 
 This guide shows different ways to arrange nesting in CSS.
-
-> **Note:** Early versions of the specification did not allow nesting of [type selectors](/en-US/docs/Web/CSS/Type_selectors) without the [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector). This has been updated so the `&` nesting selector is no longer needed. At the time of writing (Aug. 2023) Firefox supports the new version of the specification while Chrome and Safari support the old version of the specification and must use the `&` nesting selector for type selector nesting.
 
 ## Child selectors
 
@@ -333,7 +331,7 @@ As opposed to:
 
 #### Appending nesting selector
 
-In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the .featured .h2 can be nested in the style for the `h2`.
+In this example there are 3 cards, one of which is featured. The cards are all exactly the same except the featured card will have an alternative color for the heading. By appending the `&` nesting selector the style for the `.featured .h2` can be nested in the style for the `h2`.
 
 ##### HTML
 
@@ -365,7 +363,7 @@ In this example there are 3 cards, one of which is featured. The cards are all e
 }
 ```
 
-In the following CSS we are creating the styles for `.card`, `.card h2` and then in the `h2` styles we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card .featured h2`.
+In the following CSS we are creating the styles for `.card`, `.card h2` and then in the `h2` styles we nest the `.featured` class with the `&` nesting selector appended which creates a style for `.card.featured h2`.
 
 ```css
 .card {
@@ -376,7 +374,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured .card h2` */
+      /* equivalent to `.featured.card h2` */
       color: tomato;
     }
   }
@@ -389,7 +387,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
 
 ## Concatenation (is not possible)
 
-In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](http://getbem.com/naming/).
+In CSS preprocessors such as [Sass](https://sass-lang.com/), it is possible to use nesting to join strings to create new classes. This is common in CSS methodologies such as [BEM](https://getbem.com/naming/).
 
 ```css example-bad
 .component {
@@ -436,7 +434,7 @@ In the following example, there is an invalid selector (`%` is not a valid chara
 }
 ```
 
-## See Also
+## See also
 
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)

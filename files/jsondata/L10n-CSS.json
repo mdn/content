@@ -6,7 +6,7 @@
     "ja": "CSS リファレンス",
     "ko": "CSS 참조",
     "pt-BR": "Referência CSS",
-    "ru": "CSS документация",
+    "ru": "Справочник по CSS",
     "zh-CN": "CSS 参考",
     "zh-TW": "CSS 參考"
   },
@@ -50,7 +50,7 @@
     "ja": "プレビューでは CSS info は利用できません",
     "ko": "미리보기에서 CSS 정보를 사용할 수 없습니다",
     "pt-BR": "CSS info não disponível em visualização",
-    "ru": "CSS info недоступно в предпросмотре",
+    "ru": "CSS-данные недоступны для предпросмотра",
     "zh-CN": "CSS info 在预览中不可用",
     "zh-TW": "CSS info 在預覽中不可用"
   },
@@ -72,7 +72,7 @@
     "ja": "基本セレクター",
     "ko": "기본 선택자",
     "pt-BR": "Seletores Básicos",
-    "ru": "Базовые селекторы",
+    "ru": "Основные селекторы",
     "zh-CN": "基本选择器",
     "zh-TW": "基本選擇器"
   },

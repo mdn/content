@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.update()`** updates the title and/or URL of a bookmark, or the name of a bookmark folder.
 

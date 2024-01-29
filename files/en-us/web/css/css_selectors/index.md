@@ -66,7 +66,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{CSSXref(":nth-of-type", ":nth-of-type()")}}
 - {{CSSXref(":nth-last-child", ":nth-last-child()")}}
 - {{CSSXref(":nth-last-of-type", ":nth-last-of-type()")}}
-- {{CSSXref(":nth-of-type", ":nth-of-type()")}}
 - {{CSSXref(":only-child")}}
 - {{CSSXref(":only-of-type")}}
 - {{CSSXref(":optional")}}
@@ -103,10 +102,10 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{glossary("Pseudo-class")}} glossary term
 - [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
 - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
-- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
-- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
-- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
-- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#relative-selector)
+- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector)
+- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
+- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
+- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 

@@ -3,6 +3,8 @@ title: "IdentityProvider: getUserInfo() static method"
 short-title: getUserInfo()
 slug: Web/API/IdentityProvider/getUserInfo_static
 page-type: web-api-static-method
+status:
+  - experimental
 browser-compat: api.IdentityProvider.getUserInfo_static
 ---
 
