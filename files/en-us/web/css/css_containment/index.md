@@ -40,7 +40,7 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 ### Data types
 
-- [`<style-feature>`]()
+- [`<style-feature>`](/en-US/docs/Web/CSS/@container#Container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 
 ### Events
@@ -101,4 +101,4 @@ If the browser knows that a part of the page is independent, rendering can be op
 
 ## See also
 
-- [An introduction to CSS containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com(2019)
+- [An introduction to CSS containment](https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/) via Igalia.com (2019)
