@@ -83,7 +83,7 @@ This is mapped to the `checked` custom state, allowing styling to be applied usi
 First we define our class `LabeledCheckbox` which extends from `HTMLElement`.
 In the constructor we call the `super()` method, leaving most of the "work" to `connectedCallback()`, which is invoked when a custom element is added to the page.
 The content of the element is defined using a `<style>` element to be the text `[]` or `[x]` followed by a label.
-What's noteworthy here is that the custom state pseudo class is used to select the text to display: `:host(:state(checked))::`.
+What's noteworthy here is that the custom state pseudo class is used to select the text to display: `:host(:state(checked))`.
 After the example below, we'll cover what's happening in the snippet in more detail.
 
 ```js
