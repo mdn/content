@@ -52,7 +52,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `rch`
   - : Equal to the width or the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the root element's {{Cssxref("font")}}.
 - `rem`
-  - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value (a common browser default is `16px`, but user-defined preferences may modify this).
+  - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value. A common browser default is `16px`, but user-defined preferences may modify this.
 - `rex`
 - : Represents the x-height of the root element's {{Cssxref("font")}}.
 - `ric`
