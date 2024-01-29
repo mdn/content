@@ -55,7 +55,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
+  - : Returns a {{domxref("DOMTokenList")}} that reflects the [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox) HTML attribute, indicating extra restrictions on the behavior of the nested content.
 - {{domxref("HTMLIFrameElement.scrolling")}} {{Deprecated_Inline}}
   - : A string that indicates whether the browser should provide scrollbars for the frame.
 - {{domxref("HTMLIFrameElement.src")}}
