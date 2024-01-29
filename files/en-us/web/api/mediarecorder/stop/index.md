@@ -8,8 +8,7 @@ browser-compat: api.MediaRecorder.stop
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.stop()`** method
-(part of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is
+The **`stop()`** method of the {{domxref("MediaRecorder")}} interface is
 used to stop media capture.
 
 When the `stop()` method is invoked, the UA queues a task that runs the
@@ -37,11 +36,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
-An `InvalidState` error is raised if the `stop()` method is
-called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}}
-is "inactive" — it makes no sense to stop media capture if it is already stopped.
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the `MediaRecorder` is currently `"inactive"`; you cannot stop
+    the recording if the `MediaRecorder` is not active.
 
 ## Examples
 

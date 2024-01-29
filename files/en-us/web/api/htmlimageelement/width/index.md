@@ -82,3 +82,9 @@ This example may be easier to try out {{LiveSampleLink('Examples', 'in its own w
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLCanvasElement.width")}}
+- {{domxref("HTMLObjectElement.width")}}
+- {{domxref("HTMLVideoElement.width")}}

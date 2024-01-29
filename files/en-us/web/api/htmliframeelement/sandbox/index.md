@@ -56,7 +56,10 @@ A {{domxref("DOMTokenList")}}. Each item must be one of the following:
 ## Examples
 
 ```html
-<iframe id="el" src="https://example.com" sandbox="allow-same-origin allow-scripts"></iframe>
+<iframe
+  id="el"
+  src="https://example.com"
+  sandbox="allow-same-origin allow-scripts"></iframe>
 ```
 
 ```js

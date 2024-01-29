@@ -17,12 +17,12 @@ This interface inherits properties from {{domxref("Event")}}.
 
 ## Constructor
 
-- {{domxref("TextFormatUpdateEvent.TextFormatUpdateEvent", "TextFormatUpdateEvent()")}}
+- {{domxref("TextFormatUpdateEvent.TextFormatUpdateEvent", "TextFormatUpdateEvent()")}} {{experimental_inline}}
   - : Creates a new `TextFormatUpdateEvent` object.
 
 ## Instance methods
 
-- {{domxref('TextFormatUpdateEvent.getTextFormats')}}
+- {{domxref('TextFormatUpdateEvent.getTextFormats')}} {{experimental_inline}}
   - : Returns an {{jsxref("Array")}} of {{domxref("TextFormat")}} objects that represent the formats that the IME window wants to apply to the text.
 
 ## Examples

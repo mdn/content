@@ -8,8 +8,7 @@ browser-compat: api.MediaRecorder.pause
 
 {{APIRef("MediaStream Recording")}}
 
-The **`MediaRecorder.pause()`** method (part
-of the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)) is used
+The **`pause()`** method of the {{domxref("MediaRecorder")}} interface is used
 to pause recording of media streams.
 
 When a `MediaRecorder` object's `pause()`method is called, the
