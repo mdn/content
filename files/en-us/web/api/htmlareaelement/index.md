@@ -37,6 +37,8 @@ _Inherits properties from its parent {{domxref("HTMLElement")}}._
   - : A string containing the password specified before the domain name.
 - {{domxref("HTMLAreaElement.pathname")}}
   - : A string containing the path name component, if any, of the referenced URL.
+- {{domxref("HTMLAreaElement.ping")}}
+  - : A space-separated list of URLs. When the link is followed, the browser will send {{HTTPMethod("POST")}} requests with the body PING to the URLs.
 - {{domxref("HTMLAreaElement.port")}}
   - : A string containing the port component, if any, of the referenced URL.
 - {{domxref("HTMLAreaElement.protocol")}}
