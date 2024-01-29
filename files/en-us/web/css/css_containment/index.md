@@ -9,9 +9,11 @@ spec-urls:
 
 {{CSSRef}}
 
-The **CSS containment** module improves performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. Containment lets the developer define parts of the page as independent, enabling the browser to optimize rendering thereby improving performance.
+The **CSS containment** module defines containment and container queries.
 
-The **CSS containment** module also provides the ability to query a parent's size and features to conditionally apply CSS styles based on the containers. The module also introduces container relative unit values.
+Containment improves performance of web pages by allowing the browser to isolate a subtree of the page from the rest of the page. Containment lets the developer define parts of the page as independent, enabling the browser to optimize rendering thereby improving performance.
+
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), but the queries are based on the parent and the container the parent defines, rather than the viewport. Container queries enable querying a parent's size, features, and feature values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing an element as a query container and specify the name for the query's containment context.
 
 ## Reference
 
