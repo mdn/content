@@ -74,6 +74,8 @@ In addition:
 - The layout container is a [containing block](/en-US/docs/Web/CSS/Containing_block) for `absolute`- and `fixed`-positioned descendants.
 - The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
+> **Note:** The `style` and `layout` values of `contain` are automatically applied when using the {{cssxref("container-type")}} and {{cssxref("container-name")}} properties.
+
 #### Paint containment
 
 ```css
