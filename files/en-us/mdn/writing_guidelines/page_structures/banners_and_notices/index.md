@@ -61,4 +61,6 @@ It is important to clarify the current standardization status of such features t
   > **Warning:** This feature is currently opposed by two browser vendors. See [Standards positions](#standards_positions) for details of opposition.
   ```
 
-- Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section. See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of this section and what it should contain.
+- Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
+
+> **Note:** See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.
