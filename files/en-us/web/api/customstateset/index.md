@@ -281,9 +281,9 @@ Click the element to see a different border being applied as the state changes.
 
 {{EmbedLiveSample("Non-boolean internal states", "100%", 50)}}
 
-## Compability with legacy syntax
+## Compability with `<dashed-ident>` syntax
 
-The older legacy custom state syntax required a `<dashed-ident>` instead of the `:state()` function. Browsers supporting only the legacy syntax will throw an error when supplied with an ident that is not prefixed with the double dash. If support for these browsers is required, it is possible to use a `<dashed-ident>` in the modern syntax, and selecting with both the `:--mystate` and `:state(mystate)` CSS selector:
+Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the `:state()` function. Browsers supporting only this syntax will throw an error when supplied with an ident that is not prefixed with the double dash. If support for these browsers is required, it is possible to use a `<dashed-ident>` in the modern syntax, and selecting with both the `:--mystate` and `:state(mystate)` CSS selector:
 
 ### Using double dash prefixed idents
 
