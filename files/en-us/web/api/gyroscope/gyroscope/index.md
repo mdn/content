@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.Gyroscope.Gyroscope
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`Gyroscope()`** constructor
 creates a new {{domxref("Gyroscope")}} object which provides on each reading the

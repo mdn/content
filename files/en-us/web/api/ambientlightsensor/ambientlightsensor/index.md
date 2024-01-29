@@ -8,7 +8,7 @@ status:
 browser-compat: api.AmbientLightSensor.AmbientLightSensor
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`AmbientLightSensor()`** constructor creates a new {{domxref("AmbientLightSensor")}} object, which returns the current light level or illuminance of the ambient light around the hosting device.
 

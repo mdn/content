@@ -8,7 +8,7 @@ status:
 browser-compat: api.Magnetometer.Magnetometer
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
 The **`Magnetometer()`** constructor
 creates a new {{domxref("Magnetometer")}} object which returns information about the

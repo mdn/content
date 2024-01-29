@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.GravitySensor.GravitySensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`GravitySensor()`**
 constructor creates a new {{domxref("GravitySensor")}} object which

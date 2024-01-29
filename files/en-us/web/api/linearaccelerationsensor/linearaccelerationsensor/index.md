@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.LinearAccelerationSensor.LinearAccelerationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`LinearAccelerationSensor()`**
 constructor creates a new {{domxref("LinearAccelerationSensor")}} object which

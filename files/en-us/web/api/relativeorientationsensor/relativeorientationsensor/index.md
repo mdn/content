@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.RelativeOrientationSensor.RelativeOrientationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor()`**
 constructor creates a new {{domxref("RelativeOrientationSensor")}} object which

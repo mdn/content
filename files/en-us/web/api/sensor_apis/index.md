@@ -12,7 +12,7 @@ spec-urls:
   - https://w3c.github.io/magnetometer/
 ---
 
-{{DefaultAPISidebar("Sensor API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Sensor API")}}
 
 The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
 
