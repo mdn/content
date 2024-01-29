@@ -39,6 +39,8 @@ To construct a `WebSocket`, use the [`WebSocket()`](/en-US/docs/Web/API/WebSocke
 
 - {{domxref("WebSocket.close()")}}
   - : Closes the connection.
+- {{domxref("WebSocket.terminate()")}}
+  - : Terminates the connection.
 - {{domxref("WebSocket.send()")}}
   - : Enqueues data to be transmitted.
 
