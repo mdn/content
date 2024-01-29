@@ -43,7 +43,7 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `ic`
   - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh`
-  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. The size of actual lines boxes may differ based on their content as the unit enables length calculations based on the theoretical size of an ideal empty line.
+  - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
 ### Relative length units based on font root
 
