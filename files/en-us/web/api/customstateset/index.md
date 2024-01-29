@@ -68,7 +68,8 @@ The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is
 
 The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `mystatename` is present in the `CustomStateSet`).
 
-> **Warning:** Chrome supports the legacy syntax which uses a CSS `<dashed-ident>` rather than the `:state()` function. For these browsers `:state(mystatename)` would be invalid, and `:--mystatename` must be used instead.
+> **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
+For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
 
 ## Examples
 
