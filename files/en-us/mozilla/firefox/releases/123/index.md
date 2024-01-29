@@ -30,6 +30,10 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### HTTP
 
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code is enabled for [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources that the page is likely to need resources from while the server is still preparing the full response.
+  This can significantly reduce page load time.
+  For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
+
 #### Removals
 
 ### Security
