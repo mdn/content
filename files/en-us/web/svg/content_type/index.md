@@ -197,7 +197,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 - \<length>
 
   - : A length is a distance measurement, given as a number along with a unit.
-    The SVG2 specification aligns with CSS [`<length>`](/en-US/docs/Web/CSS/length) data types and units for the attribute syntax and values.
+    The SVG2 specification aligns with CSS {{cssxref("length")}} data types and units for the attribute syntax and values.
     A length unit identifier must be provided and the values of the length unit identifiers are case-insensitive.
     The syntax follows the CSS `<length>` syntax:
 
