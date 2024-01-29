@@ -11,7 +11,8 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
-An optional case-sensitive {{cssxref("container-name")}} can be provided which filters the set of query containers considered to just those with a matching query container name.
+The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filter the query containers that are targeted by the query.
+
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
 
 ## Syntax
@@ -32,13 +33,25 @@ For example:
     font-size: 1.5em;
   }
 }
+/* with an optional <container-name> */
+@container tall (height > 30rem) {
+  h2 {
+    line-height: 1.6;
+  }
+}
 ```
 
 ### Values
 
 - `<container-condition>`
-  - : A set of features that are evaluated against the query container when the size of the container changes.
-    Styles defined in the `<stylesheet>` are applied if the condition is true.
+
+  - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
+
+    - `<container-name>`
+      - : Optional. The name of the container as an {{cssxref("ident")}}.
+    - `<container-query>`
+      - : A set of features that are evaluated against the query container when the size of the container changes.
+
 - `<stylesheet>`
   - : A set of CSS declarations.
 
