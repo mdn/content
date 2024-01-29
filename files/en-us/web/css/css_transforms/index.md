@@ -103,10 +103,10 @@ You can [view this example's source on GitHub](https://github.com/mdn/css-exampl
   - [`visibility`](/en-US/docs/Web/CSS/visibility)
 - Data types:
   - [`<angle>`](/en-US/docs/Web/CSS/angle)
-  - [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage)
-  - [`<length>`](/en-US/docs/Web/CSS/length)
+  - {{cssxref("length-percentage")}}
+  - {{cssxref("length")}}
   - [`<number>`](/en-US/docs/Web/CSS/number)
-  - [`<percentage>`](/en-US/docs/Web/CSS/percentage)
+  - {{cssxref("percentage")}}
   - [`<position>`](/en-US/docs/Web/CSS/position_value)
 - Glossary terms:
   - [Interpolation](/en-US/docs/Glossary/Interpolation)

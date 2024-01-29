@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
 

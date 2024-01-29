@@ -3,10 +3,12 @@ title: "TextFormatUpdateEvent: TextFormatUpdateEvent() constructor"
 short-title: TextFormatUpdateEvent()
 slug: Web/API/TextFormatUpdateEvent/TextFormatUpdateEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.TextFormatUpdateEvent.TextFormatUpdateEvent
 ---
 
-{{APIRef("TextFormatUpdateEvent API")}}
+{{APIRef("TextFormatUpdateEvent API")}}{{SeeCompatTable}}
 
 The **`TextFormatUpdateEvent()`** constructor returns a new {{DOMxRef("TextFormatUpdateEvent")}} object.
 

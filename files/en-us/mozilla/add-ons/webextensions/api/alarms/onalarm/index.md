@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.alarms.onAlarm
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when any alarm set by the extension goes off.
 

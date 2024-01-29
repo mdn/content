@@ -19,7 +19,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string that specifies the alignment of the frame with respect to the surrounding context.
 - {{domxref("HTMLIFrameElement.allow")}}
   - : A string that indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this `<iframe>`.
-- {{domxref("HTMLIFrameElement.allowfullscreen")}}
+- {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
