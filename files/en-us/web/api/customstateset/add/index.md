@@ -23,7 +23,7 @@ add(value)
 ### Parameters
 
 - `value`
-  - : A string which must be a `<custom-ident>`.
+  - : A string.
 
 ### Return value
 
