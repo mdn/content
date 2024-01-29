@@ -8695,6 +8695,7 @@
 /en-US/docs/Web/API/IDBKeyRange/lowerBound	/en-US/docs/Web/API/IDBKeyRange/lowerBound_static
 /en-US/docs/Web/API/IDBKeyRange/only	/en-US/docs/Web/API/IDBKeyRange/only_static
 /en-US/docs/Web/API/IDBKeyRange/upperBound	/en-US/docs/Web/API/IDBKeyRange/upperBound_static
+/en-US/docs/Web/API/IDBLocaleAwareKeyRange	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IDBMutableFile	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/abort_event	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/error_event	/en-US/docs/Web/API/IndexedDB_API

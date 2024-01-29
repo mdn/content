@@ -43042,16 +43042,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/IDBLocaleAwareKeyRange": {
-    "modified": "2020-10-15T21:38:45.838Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Sebastianz",
-      "Seta00",
-      "chrisdavidmills"
-    ]
-  },
   "Web/API/IDBObjectStore": {
     "modified": "2020-10-15T21:10:03.883Z",
     "contributors": [
