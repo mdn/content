@@ -1,29 +1,35 @@
 ---
-title: "HTMLIFrameElement: allowFullscreen property"
-short-title: allowFullscreen
-slug: Web/API/HTMLIFrameElement/allowFullscreen
+title: "HTMLIFrameElement: allow property"
+short-title: allow
+slug: Web/API/HTMLIFrameElement/allow
 page-type: web-api-instance-property
-browser-compat: api.HTMLIFrameElement.allowFullscreen
+browser-compat: api.HTMLIFrameElement.allow
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`allowFullscreen`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean value that reflects the `allowfullscreen` attribute of the {{HTMLElement("iframe")}} element, indicating whether to allow the iframe's contents to use {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
+The **`allow`** property of the {{domxref("HTMLIFrameElement")}} interface indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this `<iframe>`. The policy defines what features are available to the `<iframe>` (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.
+
+The Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{HTTPHeader("Permissions-Policy")}} header. It doesn't replace it.
+
+It reflects the `allow` attribute of the {{HTMLElement("iframe")}} element.
 
 ## Value
 
-A boolean value.
+A string.
 
 ## Examples
 
 ```html
-<iframe id="el" allowfullscreen></iframe>
+<iframe id="el" src="https://example.com" allow="geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"></iframe>
 ```
 
 ```js
 const el = document.getElementById("el");
-console.log(el.allowFullscreen); // Output: true
+console.log(el.allow); // Output: "geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"
 ```
+
+See [Permissions Policy in `<iframe>` element](/en-US/docs/Web/HTTP/Permissions_Policy#iframe_syntax) for more available examples.
 
 ## Specifications
 
