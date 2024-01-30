@@ -58,7 +58,9 @@ It is important to clarify the current standardization status of such features t
 - Adding this banner to the landing page for that feature (not for every subpage for the feature):
 
   ```text
-  > **Warning:** This feature is currently opposed by two browser vendors. See [Standards positions](#standards_positions) for details of opposition.
+  > **Warning:** This feature is currently opposed by <number> browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+  
+  Replace `<number>` with the number of browser vendors opposing the feature.
   ```
 
 - Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
