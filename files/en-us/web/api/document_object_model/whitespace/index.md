@@ -140,7 +140,7 @@ This is why people visiting the web page will see the phrase "Hello World!" nice
 
 ### Whitespace in block formatting contexts
 
-Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 Within this context, whitespace is treated very differently.
 
