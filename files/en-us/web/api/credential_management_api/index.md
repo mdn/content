@@ -31,8 +31,11 @@ Later versions of the spec allow credentials to be retrieved from a different su
   - : Provides information about credentials from a federated identity provider, which is an entity that a website trusts to correctly authenticate a user, and which provides an API for that purpose. [OpenID Connect](https://openid.net/developers/specs/) is an example of such a framework.
 - {{domxref("PasswordCredential")}}
   - : Provides information about a username/password pair.
-- {{domxref("PublicKeyCredential")}}
-  - : Provides a credential for logging in using a more secure system based on asymmetric cryptography instead of a password.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.credentials")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CredentialsContainer")}} interface which exposes methods to request credentials and notify the user agent when interesting events occur such as successful sign in or sign out.
 
 ## Specifications
 
