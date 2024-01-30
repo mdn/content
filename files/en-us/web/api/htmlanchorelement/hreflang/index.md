@@ -40,9 +40,9 @@ console.log(anchorElement.hreflang); // Outputs: "en-IN"
 pTag.textContent = anchorElement.hreflang;
 ```
 
-## Result
+### Result
 
-{{EmbedLiveSample("Example",100,100)}}
+{{EmbedLiveSample("Examples",100,100)}}
 
 ## Specifications
 
