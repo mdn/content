@@ -42,9 +42,9 @@ const pTag = document.querySelector(".tag");
 pTag.textContent = myLink.hreflang;
 ```
 
-## Results
+### Results
 
-{{EmbedLiveSample("Example",100,100)}}
+{{EmbedLiveSample("Examples",100,100)}}
 
 ## Specifications
 
