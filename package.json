@@ -50,7 +50,7 @@
     "env-cmd": "10.1.0",
     "fdir": "^6.1.1",
     "gray-matter": "^4.0.3",
-    "husky": "9.0.6",
+    "husky": "9.0.7",
     "js-yaml": "^4.1.0",
     "lint-staged": "15.2.0",
     "markdownlint-cli2": "0.12.1",
