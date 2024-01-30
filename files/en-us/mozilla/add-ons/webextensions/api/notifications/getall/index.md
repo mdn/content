@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets all currently active notifications created by the extension.
 

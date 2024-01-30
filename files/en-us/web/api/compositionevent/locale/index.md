@@ -13,7 +13,7 @@ browser-compat: api.CompositionEvent.locale
 
 The **`locale`** read-only property of the
 {{domxref("CompositionEvent")}} interface returns the locale of current input method
-(for example, the keyboard layout locale if the composition is associated with IME).
+(for example, the keyboard layout locale if the composition is associated with {{glossary("IME")}}).
 
 > **Warning:** Even for browsers supporting it, don't trust the value contained in this property.
 > Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}

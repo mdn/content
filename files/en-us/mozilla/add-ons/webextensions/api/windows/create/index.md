@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates a new window.
 
