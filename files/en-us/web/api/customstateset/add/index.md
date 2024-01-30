@@ -23,7 +23,7 @@ add(value)
 ### Parameters
 
 - `value`
-  - : A string.
+  - : A string that represents the custom state.
 
 ### Return value
 
