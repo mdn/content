@@ -59,7 +59,6 @@ It is important to clarify the current standardization status of such features t
 
   ```text
   > **Warning:** This feature is currently opposed by <number> browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
-  
   Replace `<number>` with the number of browser vendors opposing the feature.
   ```
 
