@@ -54,4 +54,3 @@ gettingUserSettings.then(gotSettings);
 ## Browser compatibility
 
 {{Compat}}
-
