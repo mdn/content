@@ -15,7 +15,7 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 Do not confuse the {{Glossary("Primitive", "primitive")}} `Boolean` values `true` and `false` with the `true` and `false` values of the `Boolean` object.
 
-**Any** object, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
+Any **object**, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
 
 ```js
 const x = new Boolean(false);
