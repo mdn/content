@@ -54,9 +54,9 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value. A common browser default is `16px`, but user-defined preferences may modify this.
 - `rex`
-- : Represents the x-height of the root element's {{Cssxref("font")}}.
+  - : Represents the x-height of the root element's {{Cssxref("font")}}.
 - `ric`
-- : Equal to the value of [`ic`](#ic) unit on the root element's font.
+  - : Equal to the value of [`ic`](#ic) unit on the root element's font.
 - `rlh`
   - : Equal to the value of [`lh`](#lh) unit on the root element's font. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
