@@ -41,3 +41,8 @@ Later versions of the spec allow credentials to be retrieved from a different su
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Web Authentication API", "", "", "nocode")}}
+- {{domxref("WebOTP API", "", "", "nocode")}}
