@@ -49,10 +49,14 @@ _Inherits properties from its parent interface, {{domxref("HTMLMediaElement")}},
 
 _Inherits methods from its parent interface, {{domxref("HTMLMediaElement")}}, and {{domxref("HTMLElement")}}._
 
+- {{DOMxRef("HTMLVideoElement.cancelVideoFrameCallback()")}}
+  - : Cancels a previously-registered video frame callback (see {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback", "requestVideoFrameCallback()")}}).
 - {{domxref("HTMLVideoElement.getVideoPlaybackQuality()")}}
   - : Returns a {{domxref("VideoPlaybackQuality")}} object that contains the current playback metrics. This information includes things like the number of dropped or corrupted frames, as well as the total number of frames.
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-  - : Requests that the user agent make video enters picture-in-picture mode
+  - : Requests that the user agent enters the video into picture-in-picture mode.
+- {{DOMxRef("HTMLVideoElement.requestVideoFrameCallback()")}}
+  - : Registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame.
 
 ## Events
 

@@ -191,7 +191,7 @@ We can also see that the `setupTypeScript.js` file made a couple of changes to o
 
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
-![Type checking in VS Code - App object has been given an unknown property target](04-vscode-type-checking-in-main-ts.png)
+![Type checking in VS Code - App object has been given an unknown property traget](04-vscode-type-checking-in-main-ts.png)
 
 In the `App.svelte` component, the `setupTypeScript.js` script has added the `lang="ts"` attribute to the `<script>` tag. Moreover, thanks to type inference, in many cases we won't even need to specify types to get code assistance. For example, if you start adding an `ms` property to the `Alert` component call, TypeScript will infer from the default value that the `ms` property should be a number:
 

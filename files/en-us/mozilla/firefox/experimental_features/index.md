@@ -772,49 +772,6 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
   </tbody>
 </table>
 
-### rect() and xywh() basic shape functions
-
-The CSS [`rect()`](/en-US/docs/Web/CSS/basic-shape/rect) and [`xywh()`](/en-US/docs/Web/CSS/basic-shape/xywh) shape functions enable you to define a rectangle using the [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type. In CSS properties such as {{cssxref("offset-path")}}, these functions are used to define the shape of the path along which an element moves. Using the `rect()` function, you specify the rectangle edge offsets from the top edge and left edges of the containing block. Using the `xywh()` function, you specify the rectangle edge offsets from the left and top edges of the containing block as well as the width and height of the rectangle. In both the functions, you can optionally round off the corners.
-For more details, see [Firefox bug 1786161](https://bugzil.la/1786161) for the `rect()` function and [Firefox bug 1786160](https://bugzil.la/1786160) for the `xywh()` function.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>117</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>117</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference names</th>
-      <td colspan="2">
-      <code>layout.css.motion-path-basic-shapes.enabled</code>, <code>layout.css.basic-shape-rect.enabled</code>, <code>layout.css.basic-shape-xywh.enabled</code>
-    </td>
-    </tr>
-  </tbody>
-</table>
-
 ### zoom property
 
 The non-standard CSS {{cssxref("zoom")}} property is enabled in the Nightly release and lets you magnify an element similar to the {{cssxref("transform")}} property, but it affects the layout size of the element.
@@ -1525,6 +1482,22 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 </table>
 
 ### HTML DOM API
+
+#### Shadow DOM
+
+Firefox now supports the `clonable` option and property for shadow DOM.
+
+- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
+- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise.
+
+When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 122           | Yes                 |
+| Developer Edition | NA            | No                  |
+| Beta              | NA            | No                  |
+| Release           | NA            | No                  |
 
 #### Popover API
 

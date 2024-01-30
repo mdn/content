@@ -17,7 +17,7 @@ browser-compat: html.elements.input.type_button
 
 ### Button with a value
 
-An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
+An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ```html
 <input type="button" value="Click Me" />
