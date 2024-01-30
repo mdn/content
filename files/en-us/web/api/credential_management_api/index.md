@@ -54,3 +54,4 @@ Later versions of the spec allow credentials to be retrieved from a different su
 
 - {{domxref("Web Authentication API", "", "", "nocode")}}
 - {{domxref("WebOTP API", "", "", "nocode")}}
+- {{domxref("FedCM API", "Federated Credential Management (FedCM) API", "", "nocode")}}
