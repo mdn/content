@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.error_event
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}
 
 The `error` event is fired when a connection with a `WebSocket` has been closed due to an error (some data couldn't be sent for example).
 
