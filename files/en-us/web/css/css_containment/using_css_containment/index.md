@@ -84,7 +84,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box]([/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box](https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box]([/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 
