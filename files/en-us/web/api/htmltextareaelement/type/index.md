@@ -10,6 +10,9 @@ browser-compat: api.HTMLTextAreaElement.type
 
 The read-only **`type`** property of the {{domxref("HTMLTextAreaElement")}} represents a string `textarea` of the {{HTMLElement("textarea")}} element.
 
+## Value
+
+A string whose value is always `textarea`.
 ## Example
 
 ### HTML
