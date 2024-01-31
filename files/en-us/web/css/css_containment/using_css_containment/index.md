@@ -86,7 +86,7 @@ article {
 
 Paint containment essentially clips the box to the padding edge of the principal box. There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
 
-Another advantage is that if the containing box is offscreen, the browser does not need to paint its contained elements — these are also offscreen as they are contained completely by that box.
+Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 
 #### Size containment
 

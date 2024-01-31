@@ -10,7 +10,7 @@ Container queries enable you to apply styles to an element based on the size of 
 
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
-![A media query based on the viewport's width, which is the full width of the browser. The container query is based on the width of a container context, which is the width of the container element.](container-query.svg)
+![Two different query types. First, a media query based on the viewport's width, which is the full width of the browser. Second, a container query based on the width of a container element.](container-query.svg)
 
 ## Using container queries
 

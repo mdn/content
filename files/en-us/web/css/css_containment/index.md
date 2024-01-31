@@ -13,7 +13,7 @@ The **CSS containment** module defines containment and container queries.
 
 Containment enables the isolation of page subtrees from the rest of the DOM. The browser can then improve performance by optimizing the rendering of these independent parts.
 
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), but the queries are based on the parent and the container the parent defines, rather than the viewport. Container queries enable querying a parent's size, features, and feature values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing an element as a query container and specify the name for the query's containment context.
+Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/CSS_media_queries), except that the queries are based on the dimensions of a specific container element defined as a _containment context_, rather than on the dimensions of the viewport. Container queries enable querying a container's size, properties, and property values to conditionally apply CSS styles. When applying these conditional styles, you can use container query length units, which specify lengths relative to the dimensions of the query container. Additional properties are defined to enable establishing a specific element as a query container and giving it a specific name.
 
 ## Reference
 
