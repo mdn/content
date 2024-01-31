@@ -41,5 +41,5 @@ You can read up on our most commonly used macros on the [Commonly used macros](/
 
 - [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
-- [Technology status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status)
+- [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
 - [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

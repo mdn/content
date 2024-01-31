@@ -59,7 +59,7 @@ Following macros are automatically added to the content in order to match the st
 > Do not manually add **\\{{SeeCompatTable}}**, **\\{{Deprecated_Header}}**,
 > and **\\{{Non-standard_Header}}** banners to the content.
 > Instead,
-> [update the technology status in `browser-compat-data` repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
+> [update the feature status in `browser-compat-data` repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 
 ### Experimental: "Standards positions" banner
 
