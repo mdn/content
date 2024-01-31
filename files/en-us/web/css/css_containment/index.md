@@ -71,7 +71,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ## Related concepts
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 
