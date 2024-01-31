@@ -5,10 +5,11 @@ slug: Web/API/HTMLMediaElement/seekToNextFrame
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.HTMLMediaElement.seekToNextFrame
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`HTMLMediaElement.seekToNextFrame()`** method
 asynchronously advances the current play position to the next frame in the media.

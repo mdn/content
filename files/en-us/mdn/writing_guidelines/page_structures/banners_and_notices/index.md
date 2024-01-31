@@ -48,3 +48,22 @@ In summary:
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
   Also add `status` of `non-standard` to the page front-matter.
 - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
+### Experimental: "Standards positions" banner
+
+Occasionally, browser vendors disagree on how a feature is developing, and some may oppose it in its current form. In exceptional cases, MDN documents technologies in this state to encourage the web community to experiment with them, provide feedback, and help browser vendors reach a consensus.
+
+It is important to clarify the current standardization status of such features to readers. While a longer-term solution for representing this information is not final, we are doing the following for specific high-profile technologies to avoid confusion:
+
+- Adding this banner to the landing page for that feature (not for every subpage for the feature):
+
+  ```text
+  > **Warning:** This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
+  ```
+
+  - Replace `<number>` with the number of browser vendors opposing the feature.
+  - Use `vendor` or `vendors` as appropriate.
+
+- Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
+
+> **Note:** See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.

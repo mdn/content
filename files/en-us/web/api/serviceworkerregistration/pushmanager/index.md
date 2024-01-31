@@ -8,11 +8,13 @@ browser-compat: api.ServiceWorkerRegistration.pushManager
 
 {{APIRef("Service Workers API")}}
 
-The **`pushManager`** property of the
+The **`pushManager`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref("PushManager")}} interface for managing push subscriptions; this includes
 support for subscribing, getting an active subscription, and accessing push permission
 status.
+
+{{AvailableInWorkers}}
 
 ## Value
 

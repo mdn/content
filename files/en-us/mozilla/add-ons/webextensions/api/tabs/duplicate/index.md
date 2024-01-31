@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.duplicate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Duplicates a tab, given its ID.
 
