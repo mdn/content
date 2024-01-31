@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.extension.ViewType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type of extension view.
 

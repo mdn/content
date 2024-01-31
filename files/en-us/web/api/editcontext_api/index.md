@@ -2,10 +2,12 @@
 title: EditContext API
 slug: Web/API/EditContext_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat: api.EditContext
 ---
 
-{{DefaultAPISidebar("EditContext API")}}
+{{DefaultAPISidebar("EditContext API")}}{{SeeCompatTable}}
 
 The **EditContext API** can be used to build rich text editors on the web that support advanced text input experiences, such as {{glossary("Input Method Editor")}} (IME) composition, emoji picker, or any other platform-specific editing-related UI surfaces.
 
@@ -82,7 +84,7 @@ You can then render the text and selection in the view, using the information pr
 
 ## Interfaces
 
-- {{DOMxRef("EditContext")}}
+- {{DOMxRef("EditContext")}} {{experimental_inline}}
   - : The **`EditContext`** interface is a JavaScript reflection of the text edit context that's normally provided transparently by the browser when using standard editable regions such as `textarea`. `EditContext` provides the state of the text being edited, with information such as the text itself, the current selection, or the location of the text in the app's UI.
 - {{DOMxRef("TextFormat")}}
   - : The **`TextFormat`** interface is used to represent certain formats that should be applied to text ranges when the user is composing text within the IME composition window.

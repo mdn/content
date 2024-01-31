@@ -3,10 +3,12 @@ title: "TextUpdateEvent: TextUpdateEvent() constructor"
 short-title: TextUpdateEvent()
 slug: Web/API/TextUpdateEvent/TextUpdateEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.TextUpdateEvent.TextUpdateEvent
 ---
 
-{{APIRef("TextUpdateEvent API")}}
+{{APIRef("TextUpdateEvent API")}}{{SeeCompatTable}}
 
 The **`TextUpdateEvent()`** constructor returns a new {{DOMxRef("TextUpdateEvent")}} object.
 

@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerRegistration.installing
 
 {{APIRef("Service Workers API")}}
 
-The **`installing`** property of the
+The **`installing`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `installing`. This property is
 initially set to `null`.

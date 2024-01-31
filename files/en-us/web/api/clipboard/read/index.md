@@ -17,11 +17,20 @@ Browsers commonly support reading text, HTML, and PNG image data — see [browse
 
 ```js-nolint
 read()
+read(formats)
 ```
 
 ### Parameters
 
-None.
+- `formats` {{optional_inline}}
+
+  - : An optional object with the following properties:
+
+    - `unsanitized` {{optional_inline}}
+
+      - : An {{jsxref("Array")}} of strings containing MIME types of data formats that should not be sanitized when reading from the clipboard.
+
+        Certain browsers may sanitize the clipboard data when it is read, to prevent malicious content from being pasted into the document. For example, Chrome (and other Chromium-based browsers) sanitizes HTML data by stripping `<script>` tags and other potentially dangerous content. Use the `unsanitized` array to specify a list of MIME types that should not be sanitized.
 
 ### Return value
 
@@ -240,6 +249,104 @@ Notes:
 - If prompted, you will need to grant permission in order to paste the image.
 - This may not work on chromium browsers as the sample frame is not granted the [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) `clipboard-read` and `clipboard-write` permissions ([required by Chromium browsers](/en-US/docs/Web/API/Clipboard_API#security_considerations)).
 
+### Reading unsanitized HTML from the clipboard
+
+This example uses the `formats` parameter to read HTML data from the clipboard and get the code in its original form, without the browser sanitizing it first.
+
+#### HTML
+
+```html
+<textarea id="source" rows="5">
+  <style>h1 {color: red;} p {color: blue;}</style>
+  <h1>Hello world!</h1>
+  <p>This is a test.</p>
+  <script>alert('Hello world!');</script>
+</textarea>
+<button id="copy">Copy HTML</button>
+<button id="paste_normal">Paste HTML</button>
+<button id="paste_unsanitized">Paste unsanitized HTML</button>
+<textarea id="destination" rows="5"></textarea>
+```
+
+#### CSS
+
+```css
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+textarea {
+  grid-column: 1 / span 3;
+}
+```
+
+#### JavaScript
+
+```js
+const copyButton = document.getElementById("copy");
+const pasteButton = document.getElementById("paste_normal");
+const pasteUnsanitizedButton = document.getElementById("paste_unsanitized");
+const sourceTextarea = document.getElementById("source");
+const destinationTextarea = document.getElementById("destination");
+
+copyButton.addEventListener("click", async () => {
+  const text = sourceTextarea.value;
+  const type = "text/html";
+  const blob = new Blob([text], { type });
+  const data = [new ClipboardItem({ [type]: blob })];
+
+  try {
+    await navigator.clipboard.write(data);
+  } catch (error) {
+    destinationTextarea.value = `Clipboard write failed: ${error}`;
+  }
+});
+
+async function getHTMLFromClipboardContents(clipboardContents) {
+  for (const item of clipboardContents) {
+    if (item.types.includes("text/html")) {
+      const blob = await item.getType("text/html");
+      const blobText = await blob.text();
+      return blobText;
+    }
+  }
+
+  return null;
+}
+
+pasteButton.addEventListener("click", async () => {
+  try {
+    const clipboardContents = await navigator.clipboard.read();
+    const html = await getHTMLFromClipboardContents(clipboardContents);
+    destinationTextarea.value =
+      html || "Could not find HTML data in the clipboard.";
+  } catch (error) {
+    destinationTextarea.value = `Clipboard read failed: ${error}`;
+  }
+});
+
+pasteUnsanitizedButton.addEventListener("click", async () => {
+  try {
+    const clipboardContents = await navigator.clipboard.read({
+      unsanitized: ["text/html"],
+    });
+    const html = await getHTMLFromClipboardContents(clipboardContents);
+    destinationTextarea.value =
+      html || "Could not find HTML data in the clipboard.";
+  } catch (error) {
+    destinationTextarea.value = `Clipboard read failed: ${error}`;
+  }
+});
+```
+
+#### Result
+
+First click the "Copy HTML" button to write the HTML code from the first textarea to the clipboard. Then either click the "Paste HTML" button or the "Paste unsanitized HTML" button to paste the sanitized or unsanitized HTML code into the second textarea.
+
+{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "220")}}
+
 ## Specifications
 
 {{Specifications}}
@@ -251,7 +358,8 @@ Notes:
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- [Unblocking clipboard access](https://web.dev/articles/async-clipboard) on web.dev
+- [Unsanitized HTML in the Async Clipboard API](https://developer.chrome.com/docs/web-platform/unsanitized-html-async-clipboard) on developer.chrome.com
 - {{domxref("Clipboard.readText()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}

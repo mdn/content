@@ -137,7 +137,7 @@ Where a distance unit, also known as a length, is allowed as a value for a prope
 
 There are two types of relative lengths: font-relative lengths and viewport-percentage lengths. These both come in two types. Font-relative length units are either local font-relative or root font-relative. Viewport percentage lengths are either relative to the viewport height or width size or, as defined in the [CSS Containment module](/en-US/docs/Web/CSS/CSS_containment), relative to a [container](/en-US/docs/Web/CSS/CSS_container_queries#container_query_length_units).
 
-##### Font-relative lengths
+##### Local font-relative lengths
 
 Local font-relative lengths are relative to the "local" font size or line height, specifying a length in relation to a computed size of a feature of the [element](/en-US/docs/Web/HTML/Element) itself, or relative to the element's inherited value in the case of a circular reference, such as the `em` value for a {{cssxref("font-size")}} property or a `lh` value for a {{cssxref("line-height")}} property.
 For example, `em` is relative to the font size on the element and `ex` is relative to the x-height of the element's font.
@@ -151,8 +151,19 @@ For example, `em` is relative to the font size on the element and `ex` is relati
 | `ic`  | Average character advance of a full-width glyph in the element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
 | `lh`  | Line height of the element.                                                                                                            |
 
+##### Root font-relative lengths
+
 Root font-relative lengths specify a length in relation to the element's {{CSSxRef(":root", "root element")}} ancestor, such as {{HTMLElement("HTML")}} or {{SVGElement("SVG")}}.
 For example, `rem` is relative to the font size on the root element and `rex` is the x-height of the root element's font.
+
+| Unit   | Relative to                                                                                                                                 |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rcap` | Cap height (the nominal height of capital letters) of the root element's font.                                                              |
+| `rch`  | Average character advance of a narrow glyph in the root element's font, as represented by the "0" (ZERO, U+0030) glyph.                     |
+| `rem`  | Font size of the root element's font.                                                                                                       |
+| `rex`  | x-height of the root element's font.                                                                                                        |
+| `ric`  | Average character advance of a full-width glyph in the root element's font, as represented by the "水" (CJK water ideograph, U+6C34) glyph. |
+| `rlh`  | Line height of the root element.                                                                                                            |
 
 ##### Viewport units
 
@@ -189,6 +200,7 @@ For example, `cqw` is relative to the width of the query container and `cqh` is 
 | `cqw`   | 1% of a query container's width       |
 
 #### Absolute length units
+
 Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
 
 | Unit | Name                | Equivalent to       |

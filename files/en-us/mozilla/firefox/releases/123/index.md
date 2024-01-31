@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
+This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
 ## Changes for web developers
 
@@ -49,6 +49,8 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
+
+#### General
 
 #### WebDriver BiDi
 
