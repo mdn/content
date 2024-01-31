@@ -11,7 +11,7 @@ The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At
 Style declarations are filtered by a condition and applied to the container if the condition is true.
 The condition is evaluated when the container changes size.
 
-The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filter the query containers that are targeted by the query.
+The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
 
 Once an eligible query container has been selected for an element, each container feature in the `<container-condition>` is evaluated against that query container.
 
@@ -271,7 +271,7 @@ The parameter of each `style()` is a single `<style-feature>`. A **`<style-featu
 
 A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
 
-If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
+If the `<style-feature>` includes a value, the style query evaluates to true if the value of the CSS property passed as the `style()` argument is the same as that element's computed value of that property for the container being queried. Otherwise, it resolves to false.
 
 The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
 
