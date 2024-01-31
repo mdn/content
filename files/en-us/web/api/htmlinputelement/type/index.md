@@ -8,17 +8,17 @@ browser-compat: api.HTMLInputElement.type
 
 {{ApiRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLInputElement")}} interface is a string that indicates behaviour and rendering type of the {{HTMLElement("input")}} element.
+The **`type`** property of the {{domxref("HTMLInputElement")}} interface is a string that indicates behaviour type of the {{HTMLElement("input")}} element.
 
 It reflects the [`type`](/en-US/docs/Web/HTML/Element/input#type) attribute of the {{HTMLElement("input")}} element.
 
 ## Value
 
-A string representing type values. Default value is a `text`.
+A string representing the type.
 
-It's possible values are listed in [input types](/en-US/docs/Web/HTML/Element/input#input_types).
+Its possible values are listed in the attribute's [input types](/en-US/docs/Web/HTML/Element/input#input_types) section.
 
-## Examples
+## Example
 
 ### HTML
 
@@ -43,5 +43,5 @@ console.log(inputElement.type); // Output: "date"
 
 ## See also
 
-- {{domxref("HTMLTextAreaElement.type")}} property that returns the string "textarea".
+- {{domxref("HTMLTextAreaElement.type")}} property.
 - {{domxref("HTMLButtonElement.type")}} property
