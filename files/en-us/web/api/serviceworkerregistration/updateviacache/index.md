@@ -14,6 +14,8 @@ the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}
 Requests for `importScripts` still go via the HTTP cache. `updateViaCache` offers
 control over this behavior.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 Returns one of the following values:

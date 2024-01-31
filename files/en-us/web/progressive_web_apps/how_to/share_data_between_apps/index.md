@@ -73,7 +73,7 @@ async function shareData(data) {
 
 ### Sharing text data
 
-The following example demonstrates how to share a link and some text when a button in the app is clicked. The `canBrowserShareData` function used in the example is described in [Checking for support](#checking-for-support) and not repeated here.
+The following example demonstrates how to share a link and some text when a button in the app is clicked. The `canBrowserShareData` function used in the example is described in [Checking for support](#checking_for_support) and not repeated here.
 
 ```js
 // Retrieve the button from the DOM. The button is hidden for now.

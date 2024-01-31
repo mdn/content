@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.write
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Writes some response data to the output stream.
 

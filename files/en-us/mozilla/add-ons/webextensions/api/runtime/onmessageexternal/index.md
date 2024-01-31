@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onMessageExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this event to listen for messages from other extensions or web pages.
 

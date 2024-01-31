@@ -90,17 +90,17 @@ CSS.paintWorklet.addModule(
 
 ```css
 li {
-  --boxColor: hsl(55 90% 60% / 1);
+  --boxColor: hsl(55 90% 60% / 100%);
   background-image: paint(hollowHighlights, stroke, 2px);
 }
 
 li:nth-of-type(3n) {
-  --boxColor: hsl(155 90% 60% / 1);
+  --boxColor: hsl(155 90% 60% / 100%);
   background-image: paint(hollowHighlights, filled, 3px);
 }
 
 li:nth-of-type(3n + 1) {
-  --boxColor: hsl(255 90% 60% / 1);
+  --boxColor: hsl(255 90% 60% / 100%);
   background-image: paint(hollowHighlights, stroke, 1px);
 }
 ```

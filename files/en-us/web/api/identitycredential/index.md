@@ -20,7 +20,7 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 - {{domxref("IdentityCredential.token")}} {{experimental_inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.
+  - : Returns the token used to validate the associated sign-in.
 
 ## Examples
 

@@ -6,12 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.icon
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`icon`** read-only property of the
 {{domxref("Notification")}} interface contains the URL of an icon to be displayed as
 part of the notification, as specified in the `icon` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
+
+{{AvailableInWorkers}}
 
 ## Value
 
