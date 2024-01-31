@@ -43,5 +43,5 @@ console.log(inputElement.type); // Output: "date"
 
 ## See also
 
-- {{domxref("HTMLTextAreaElement.type")}} property.
+- {{domxref("HTMLTextAreaElement.type")}} property
 - {{domxref("HTMLButtonElement.type")}} property
