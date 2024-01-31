@@ -38,16 +38,16 @@ Below we have provided descriptions of the allowed values for both absolute and 
 
 > **Note:** Absolute and relative functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Absolute values
 
 Functional notation of absolute values: `rgb(R G B[ / A])`
 
 - `R`, `G`, `B`
-  - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`. These values represent the red, green, and blue channels, respectively.
+  - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). These values represent the red, green, and blue channels, respectively.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}}, where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
 
 #### Relative values
 
@@ -56,11 +56,11 @@ Functional notation of relative values: `rgb(from color red green blue[ / alpha]
 - `from`
   - : The keyword `from` is always included when defining a relative color.
 - `color`
-  - : A {{cssxref("&lt;color&gt;")}} value representing the **origin color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `red`, `green`, `blue`
-  - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`. These values represent the red, green, and blue channel values of the output color, respectively.
+  - : Each value can be represented as a {{CSSXref("&lt;number&gt;")}} between `0` and `255`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). These values represent the red, green, and blue channel values of the output color, respectively.
 - `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
@@ -69,9 +69,11 @@ The browser destructures the origin color into `rgb()` component values that are
 - The `r`, `g` and `b` values are resolved to `<number>`s between 0 and 255 that represent the origin color's red, green, and blue values.
 - The `alpha` channel is resolved to a `<number>` between 0 and 1 that represents the origin color's alpha value.
 
-When defining a relative color, the different channels of the output color can be expressed in several different ways.
+When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-For example, let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `r`, `g`, and `b` channel values as the output channel values:
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+
+Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `r`, `g`, and `b` channel values as the output channel values:
 
 ```css
 rgb(from hsl(0 100% 50%) r g b)
@@ -84,8 +86,6 @@ This function uses absolute values for the output color's channel values, output
 ```css
 rgb(from hsl(0 100% 50%) 132 132 224)
 ```
-
-> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
 
 The following function uses one of the origin color channel values for the output color channel value, but uses a new value for the other two output channel values, creating a relative color based on the origin color:
 

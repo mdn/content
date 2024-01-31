@@ -22,18 +22,18 @@ color(display-p3 1 0.5 0 / .5);
 /* Relative values */
 
 /* Add a semi-transparent alpha channel to green */
-color(from green xyz-d50 x y z / 0.5)
-/* Create a magenta color from blue by setting the output
-   color's r and b channel values equal to modified
-   versions of the origin color's r and b values */
-color(from blue display-p3 calc(r + 0.75) g calc(b - 0.35))
+color(from green srgb r g b / 0.5)
+/* Create a pink color from blue by setting the output
+   color's x and z channel values equal to modified
+   versions of the origin color's x and z values */
+color(from blue xyz calc(x + 0.75) y calc(z - 0.35))
 ```
 
 ### Values
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Absolute values
 
@@ -45,11 +45,11 @@ Functional notation of absolute values: `color(colorspace c1 c2 c3[ / A])`
 
 - `c1`, `c2`, `c3`
 
-  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none`. These values represent the component values for the colorspace. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted, but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
+  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the colorspace. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
 
 - `A` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
 
 #### Relative values
 
@@ -58,27 +58,34 @@ Functional notation of relative values: `color(from color colorspace c1 c2 c3[ /
 - `from`
   - : The keyword `from` is always included when defining a relative color.
 - `color`
-  - : A {{cssxref("&lt;color&gt;")}} value representing the **origin color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `colorspace`
   - : An {{CSSXref("&lt;ident&gt;")}} denoting one of the predefined colorspaces: `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, `rec2020`, `xyz`, `xyz-d50`, or `xyz-d65`.
 - `c1`, `c2`, `c3`
-  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none`. These values represent the component values for the output color. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted, but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
+  - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the output color. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
 - `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
 The browser destructures the origin color into `color()` component values for the specified colorspace that are made available inside the function as three color channel values, and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
 
-- The three color channel values are resolved to a `<number>`, nominally between 0 and 1, but as explained above they may be outside these bounds. Depending on the specified colorspace, these values will be one of the following:
-  - `r`, `g`, and `b`: Color channel values for RGB-based colorspaces, that is `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
-  - `x`, `y`, and `z`: Color channel values for CIE XYZ-based colorspaces, that is `xyz`, `xyz-d50`, and `xyz-d65`.
-    > **Note:** As per spec, specifying `r`, `g`, and `b` values inside a `color()` function with a CIE XYZ-based colorspace, or specifying `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, will result in an invalid color value. The origin color values have to match the specified type of colorspace.
+- The three color channel values of the origin color are resolved to a `<number>`. Depending on the specified colorspace, these values will be one of the following:
+
+  - `r`, `g`, and `b`: Color channel values for the RGB-based colorspaces `srgb`, `srgb-linear`, `display-p3`, `a98-rgb`, `prophoto-rgb`, and `rec2020`.
+  - `x`, `y`, and `z`: Color channel values for the CIE XYZ-based colorspaces `xyz`, `xyz-d50`, and `xyz-d65`.
+
+    > **Note:** Each of these values is usually between 0 and 1 but, as explained above, they may be outside these bounds.
+
+    > **Note:** Referencing `r`, `g`, and `b` values inside a `color()` function with a XYZ-based colorspace, or referencing `x`, `y`, and `z` values inside a `color()` function with an RGB-based colorspace, is invalid. The origin color channel values available inside the function will match the specified type of colorspace.
+
 - The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
 
-When defining a relative color, the different channels of the output color can be expressed in several different ways.
+When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-For example, let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following functions output the same color as the origin color — they use the origin color channel values as the output channel values:
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+
+Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). While you are unlikely to ever write the following functions because they output the same color as the origin color, this demonstrates how to use the origin color channel values as the output channel values:
 
 ```css
 color(from hsl(0 100% 50%) srgb r g b)
@@ -93,8 +100,6 @@ These functions use absolute values for the output color channel values, outputt
 color(from hsl(0 100% 50%) srgb 0.749938 0 0.609579)
 color(from hsl(0 100% 50%) xyz 0.75 0.6554 0.1)
 ```
-
-> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
 
 The following functions use two of the origin color channel values for the output color channel values, but use a new value for the other output channel value, creating a relative color based on the origin color in each case:
 

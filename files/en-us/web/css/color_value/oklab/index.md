@@ -41,20 +41,20 @@ oklab(from blue calc(l - 0.1) a b)
 
 Below we have provided descriptions of the allowed values for both absolute and relative colors.
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Absolute values
 
 Functional notation of absolute values: `oklab(L a b[ / A])`
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, where the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white). `L` specifies the perceived lightness.
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's perceived lightness. In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. It specifies the distance along the `a` axis in the Oklab colorspace, that is, how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `a` axis in the Oklab colorspace — that is, how green/red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. It specifies the distance along the `b` axis in the Oklab colorspace, that is, how blue/yellow the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis in the Oklab colorspace — that is, how blue/yellow the color is.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
 
 #### Relative values
 
@@ -63,15 +63,15 @@ Functional notation of relative values: `oklab(from color lightness a b[ / alpha
 - `from`
   - : The keyword `from` is always included when defining a relative color.
 - `color`
-  - : A {{cssxref("&lt;color&gt;")}} value representing the **origin color** that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 - `lightness`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`. This represents the output color's distance along the `a` axis in the Oklab colorspace, that is how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `a` axis in the Oklab colorspace — that is, how green/red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none`, This represents the output color's distance along the `b` axis in the Oklab colorspace, that is how blue/yellow the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis in the Oklab colorspace — that is, how blue/yellow the color is.
 - `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity). This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
@@ -81,9 +81,11 @@ The browser destructures the origin color into `oklab()` component values that a
 - The `a` and `b` channels are resolved to a `<number>` between -0.4 and 0.4 which represents the origin color's a and b axis positions.
 - The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
 
-When defining a relative color, the different channels of the output color can be expressed in several different ways.
+When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
-For example, let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `l`, `a`, and `b` channel values as the output channel values:
+It is important to bear in mind that, in the first two examples below, we are using relative color syntax. However, the first one outputs the same color as the origin color and the second one outputs a color not based on the origin color at all. They don't really create relative colors! You'd be unlikely to ever use these in a real codebase, and would probably just use an absolute color value instead. We included these examples as a starting point for learning about relative color syntax.
+
+Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The following function outputs the same color as the origin color — it uses the origin color's `l`, `a`, and `b` channel values as the output channel values:
 
 ```css
 oklab(from hsl(0 100% 50%) l a b)
@@ -96,8 +98,6 @@ This function uses absolute values for the output color's channel values, output
 ```css
 oklab(from hsl(0 100% 50%) 42.1% 41.25% -25.25%)
 ```
-
-> **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
 
 The following function uses two of the origin color channel values for the output color channel value, but uses a new value for the other output channel value, creating a relative color based on the origin color:
 
