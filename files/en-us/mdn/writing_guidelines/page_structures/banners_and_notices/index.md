@@ -39,17 +39,21 @@ For example, a page that has `\{{Compat}}` should usually have the `browser-comp
 > **Note:** Banner macros do not _depend_ on the metadata, but some other macro-inserted content does.
 > For example, the `\{{Compat}}` macro depends on the `browser-compat` metadata value.
 
-## What banners are/should be added
+## What banners should be added
 
 The [Page type templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#templates) include the most important macros.
-In summary:
+
+You need to add the following macros manually:
+
+- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+
+## What banners are automatically added
+
+Following macros are automatically added to the content in order to match the statuses stored in the `browser-compat-data` repository:
 
 - `\{{SeeCompatTable}}` — generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 - `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
-- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-
-The first three technology status related macros in the above list are automatically added to the content to match the statuses stored in the `browser-comapt-data` repository.
 
 > **Warning:**
 > Do not manually add **\\{{SeeCompatTable}}**, **\\{{Deprecated_Header}}**,

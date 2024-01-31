@@ -40,7 +40,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - **page-type**
 >   - : The `page-type` key for Web/API constructors is always `web-api-constructor`.
 > - **status**
->   - : Do not add or edit status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
+>   - : Do not add or edit status keys manually. To include (appropriate) technology status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** Refer to the section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value `path.to.feature.NameOfTheConstructor` with the query string for the constructor in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -68,7 +68,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
 >   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
-> Do not provide status header macros manually. Refer section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to add these statuses to the page.
+> Do not provide status header macros manually. Refer to the section ["How to add or update technology statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Technology_status#how_to_add_or_update_technology_statuses) to add these statuses to the page.
 >
 > Samples of the **Secure context**, **Experimental**, **Deprecated**, and **Non-standard** banners are shown right after this note block.
 >
@@ -94,7 +94,7 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 
 ### Return value
 
-Include a description of the constructor's return value, including data type and what it represents.
+Include a description of the constructor's return value, including the data type and what it represents.
 This is normally just "An instance of the `\{{domxref("NameOfTheParentInterface")}}` object."
 
 _To use this macro, remove the backticks and backslash in the markdown file._

@@ -44,7 +44,7 @@ browser-compat: api.feature
 ---
 ```
 
-When sidebars are rendered, the code looks for the statuses in each page's front-matter.
+When sidebars are rendered, the code looks for the statuses in each page's front-matter. As mentioned before, these statuses are updated automatically; you do not need to change them manually.
 
 ### Technology status page banners
 
