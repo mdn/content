@@ -30,7 +30,7 @@ For example, blogs usually contain several articles, each containing a headline 
 </article>
 ```
 
-With CSS, we apply the {{cssxref("contain")}} property with a value of `content` to each article:
+With CSS, we apply the {{cssxref("contain")}} property with a value of `content` to each article. The `content` value is shorthand for `contain: layout paint style`:
 
 ```css
 article {
@@ -38,18 +38,15 @@ article {
 }
 ```
 
-Logically, each article is independent of the other articles on the page. The `contain: content` indicates this to the browser. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
+Logically, each article is independent of the other articles on the page. This information is something that is usually known, and likely quite obvious, to the web developer creating the page.
+However, browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
 
-If we give each `<article>` the `contain` property with a value of `content`, when new elements are inserted into the page, the browser does not need to recalculate layout or repaint any area outside of the containing element's subtree. We have told it by way of the `contain` property that each article is independent.
-
-If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
-
-The `content` value is shorthand for `contain: layout paint style`.
+This property provides a way of explaining this to the browser, thereby providing the browser with explicit permission to make performance optimizations.
 It tells the browser that the internal layout of the element is completely separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
-This information is something that is usually known, and likely quite obvious, to the web developer creating the page.
-However, browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
-This property provides a way of explaining this to the browser, thereby providing the browser with explicit permission to make performance optimizations.
+By setting `contain: content` on each `<article>` we have indicated this; we have told the browser that each article is independent. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
+
+When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint preceding content or any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
 
 ## Key concepts and terminology
 
@@ -84,7 +81,7 @@ article {
 }
 ```
 
-Paint containment essentially clips the box to the padding edge of the [principal box]([/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same things are true for `paint` containment as `layout` containment (see above).
+Paint containment essentially clips the box to the padding edge of the [principal box]([/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box](/en-US/docs/Web/CSS/Visual_formatting_model#the_principal_box). There can be no visible overflow. The same additional notes are true for `paint` containment as `layout` containment (see above).
 
 Another advantage is that if the element with containment applied is offscreen, the browser does not need to paint its child elements — these are also offscreen as they are contained completely by that box.
 
@@ -120,6 +117,8 @@ The main use case for the `style` value is to prevent situations where a [CSS co
 
 Using `contain: style` ensures the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties create new counters scoped to that subtree only.
 
+You can include more than one containment type by including multiple space-separated values, such as `contain: layout paint` or by using one of the two [special values](#special-values).
+
 #### Special values
 
 There are two special values of `contain` that are shorthand for the first three or all four of the containment types:
@@ -129,11 +128,20 @@ There are two special values of `contain` that are shorthand for the first three
 
 We encountered the first in the example above. Using `contain: content` turns on `layout`, `paint`, and `style` containment. As it omits `size`, it is a safe value to apply widely.
 
-The `contain: strict`, which behaves the same as `contain: size layout paint style`, provides the most containment. It is riskier to use as it applies `size` containment; the risk exists that a box ends up zero-sized due to a reliance on the size of its children.
+The `contain: strict` declaration, which behaves the same as the declaration `contain: size layout paint style` with four space-separated values, provides the most containment. It is riskier to use as it applies `size` containment; the risk exists that a box ends up zero-sized due to a reliance on the size of its children.
 
 ```css
 article {
   contain: strict;
+  contain-intrinsic-size: 80vw auto;
+}
+```
+
+The above is the same as:
+
+```css
+article {
+  contain: size layout paint style;
   contain-intrinsic-size: 80vw auto;
 }
 ```
