@@ -13,6 +13,7 @@ The read-only **`type`** property of the {{domxref("HTMLTextAreaElement")}} alwa
 ## Value
 
 A string whose value is always `textarea`.
+
 ## Example
 
 ### HTML
