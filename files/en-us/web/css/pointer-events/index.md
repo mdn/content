@@ -80,6 +80,10 @@ Elements with `pointer-events: none` will still receive focus through sequential
 
 {{csssyntax}}
 
+## Javascript name
+
+`pointerEvents`
+
 ## Examples
 
 ### Disabling pointer events on all images
