@@ -10,11 +10,11 @@ CSS containment improves the performance of web pages by allowing the browser to
 
 The {{cssxref("contain")}} and {{cssxref("content-visibility")}} properties enable developers to inform user agents whether or not an element should render its contents at all, and whether it should render its contents when it is offscreen. The user agent then applies containment to elements when appropriate, potentially deferring layout and rendering until needed.
 
-This guide describes the basic aims of CSS containment and how to leverage `contain` and `content-visibility` for better user experience.
+This guide describes the basic aims of CSS containment and how to leverage `contain` and `content-visibility` for a better user experience.
 
 ## Basic example
 
-Web pages often contain multiple sections which are, logically, independent of each other. CSS containment enables them to be physically independent of each other when it comes to rendering.
+Web pages often contain multiple sections which are, logically, independent of each other. CSS containment enables them to be treated truly independently from each other when it comes to rendering.
 
 For example, blogs usually contain several articles, each containing a headline and content, as in the markup below.
 
@@ -48,7 +48,7 @@ The `content` value is shorthand for `contain: layout paint style`.
 It tells the browser that the internal layout of the element is completely separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
 This information is something that is usually known, and likely quite obvious, to the web developer creating the page.
-However browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
+However, browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
 This property provides a way of explaining this to the browser, thereby providing the browser with explicit permission to make performance optimizations.
 
 ## Key concepts and terminology
@@ -69,8 +69,8 @@ Layout is normally scoped to the entire document, which means that if you move o
 
 In addition:
 
-- {{cssxref("float")}} layout will be performed independently.
-- Margins won't collapse across a layout containment boundary
+- {{cssxref("float")}} layout will be performed independently inside the specified element.
+- Margins won't collapse across a layout containment boundary.
 - The layout container is a [containing block](/en-US/docs/Web/CSS/Containing_block) for `absolute`- and `fixed`-positioned descendants.
 - The containing box creates a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context), therefore {{cssxref("z-index")}} can be used.
 
@@ -122,7 +122,7 @@ Using `contain: style` ensures the {{cssxref("counter-increment")}} and {{cssxre
 
 #### Special values
 
-There are two special values of contain that are shorthand for the first three or all four of the containment types:
+There are two special values of `contain` that are shorthand for the first three or all four of the containment types:
 
 - `content`
 - `strict`
@@ -142,14 +142,14 @@ When using `strict`, make sure to include a size!
 
 ### `content-visibility`
 
-When you have a lot of content that would beneft from heavy containment that will often be off-screen, for example, if all your blog posts are viewable on the blog home pages as an infinitely scrollable blog, `content-visibility: auto` can be used to apply all of the containments at once.
+When you have a lot of content that would benefit from heavy containment that will often be offscreen — for example if all your blog posts are viewable on the blog home pages as an infinitely scrollable blog — `content-visibility: auto` can be used to apply all of the containments at once.
 
 The {{cssxref("content-visibility")}} property controls whether or not an element renders its contents at all, along with forcing a strong set of containments, allowing user agents to potentially omit large swathes of layout and rendering work until it becomes needed. It enables the user agent to skip an element's rendering work (including layout and painting) until it is needed — which makes the initial page load much faster.
 
 Its possible values are:
 
 - `visible`: The default behavior — an element's contents are laid out and rendered as normal.
-- `hidden`: The element [skips its contents](#skips-its-contents). The skipped contents must not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
+- `hidden`: The element [skips its contents](#skips-its-contents). The skipped contents will not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
 - `auto`: The element turns on layout containment, style containment, and paint containment, as if `contain: content` was set. If the element is not [relevant to the user](#relevant_to_the_user), it also skips its contents. Unlike `hidden`, the skipped content is still available for user interactions, remaining focusable, selectable, in regular tab order, and available to in-content search.
 
 ### Relevant to the user
@@ -165,7 +165,9 @@ When `content-visibility: auto` is set, and the browser determines that content 
 
 ### Skips its contents
 
-When you set `content-visibility: hidden`, you are telling the browser that the content is not relevant to the user, the browser should not render that content, and [skips its contents](https://drafts.csswg.org/css-contain/#skips-its-contents). The element referred to is not relevant to the user and will not be rendered, improving performance. When `content-visibility: auto` is set, and the browser determines that content is _not_ relevant to the user, the browser will also skip its content.
+When you set `content-visibility: hidden` on an element, you are telling the browser that it is not relevant to the user, and therefore its [contents should be skipped](https://drafts.csswg.org/css-contain/#skips-its-contents) and not rendered. This helps to improve performance.
+
+The browser will also skip an element's contents when `content-visibility: auto` is set on it, and the browser determines that its content is _not_ relevant to the user.
 
 When an element skips its contents:
 
@@ -173,7 +175,7 @@ When an element skips its contents:
 - Its contents are not painted, as if {{cssxref("visibility", "visibility: hidden")}} was set on it.
 - Its contents do not receive pointer events, as if {{cssxref("pointer-events", "pointer-events: none")}} was set on it.
 
-This happens in both cases, but with `content-visibility: auto` the content can be searched, receive focus, and otherwise move from not relevant to relevant. This is not the case for `content-visibility: hidden`.
+This happens in both the cases mentioned above, but with `content-visibility: auto` the content can be searched, receive focus, and otherwise move from not relevant to relevant. This is not the case for `content-visibility: hidden`.
 
 > **Note:** To animate the transition from `content-visibility: hidden` to a visible value, you will need to set {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} and {{cssxref("@starting-style")}} styles. See [transitioning `display` and `content-visibility`](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#transitioning_display_and_content-visibility) to learn more.
 
