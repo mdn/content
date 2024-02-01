@@ -271,7 +271,7 @@ The parameter of each `style()` is a single `<style-feature>`. A **`<style-featu
 
 A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
 
-If the `<style-feature>` includes a value, the style query evaluates to true if the value of the CSS property passed as the `style()` argument is the same as that element's computed value of that property for the container being queried. Otherwise, it resolves to false.
+If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
 
 The following container query checks if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`:
 

@@ -41,12 +41,12 @@ article {
 Logically, each article is independent of the other articles on the page. This information is something that is usually known, and likely quite obvious, to the web developer creating the page.
 However, browsers don't know the intent of your content and cannot assume that an article or other section of content will be entirely self-contained.
 
-This property provides a way of explaining this to the browser, thereby providing the browser with explicit permission to make performance optimizations.
+This property provides a way of explaining this to the browser and giving it explicit permission to make performance optimizations.
 It tells the browser that the internal layout of the element is completely separate from the rest of the page, and that everything about the element is painted inside its bounds. Nothing can visibly overflow.
 
 By setting `contain: content` on each `<article>` we have indicated this; we have told the browser that each article is independent. The browser can then use this information to make decisions about how to render each `<article>` of content. For example, it might not render articles that are outside the viewable area.
 
-When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint preceding content or any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
+When additional articles are appended at the end of the page, the browser does not need to recalculate layout or repaint the preceding content; it also doesn't need to touch any area outside of the containing element's subtree. If box model properties are dependent, however, the browser will need to recalculate layout and repaint. For example, if the `<article>` is styled such that its size depends on its contents (e.g. with `height: auto`), then the browser will need to account for its size changing.
 
 ## Key concepts and terminology
 
@@ -128,7 +128,9 @@ There are two special values of `contain` that are shorthand for the first three
 
 We encountered the first in the example above. Using `contain: content` turns on `layout`, `paint`, and `style` containment. As it omits `size`, it is a safe value to apply widely.
 
-The `contain: strict` declaration, which behaves the same as the declaration `contain: size layout paint style` with four space-separated values, provides the most containment. It is riskier to use as it applies `size` containment; the risk exists that a box ends up zero-sized due to a reliance on the size of its children.
+The `contain: strict` declaration, which behaves the same as the declaration `contain: size layout paint style` (which includes four space-separated values), provides the most containment. It is riskier to use as it applies `size` containment; the risk exists that a box could end up zero-sized due to a reliance on the size of its children.
+
+To remove this risk, always set a size when using `strict`:
 
 ```css
 article {
@@ -145,8 +147,6 @@ article {
   contain-intrinsic-size: 80vw auto;
 }
 ```
-
-When using `strict`, make sure to include a size!
 
 ### `content-visibility`
 
