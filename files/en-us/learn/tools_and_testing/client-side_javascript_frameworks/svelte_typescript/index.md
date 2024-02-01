@@ -144,7 +144,7 @@ Go to the root directory of the project and enter these commands:
 npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
 
 node scripts/setupTypeScript.js                   # run it
-Converted to TypeScript.
+# Converted to TypeScript.
 ```
 
 You will need to re-run your dependency manager to get started.
