@@ -15,7 +15,7 @@ The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 
 ## Syntax
 
-The `:state()` pseudo-class requires a custom identifier representing a state to match as its argument.
+The `:state()` pseudo-class takes as its argument a custom identifier that represents the state of the custom element to match.
 
 ```css-nolint
 :state(<custom identifier>) {
