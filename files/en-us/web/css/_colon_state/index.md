@@ -49,9 +49,10 @@ labeled-checkbox:state(checked) {
 
 See [CustomStateSet](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) for a live example of this code in action.
 
-### Styling with a custom state within a custom element
+### Matching a custom state inside a custom element
 
-You can use `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a state only within the shadow DOM of the current custom element.
+Custom elements can also match against a custom state as part of their implementation.
+This is achieved by using `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function, which matches a state only within the shadow DOM of the current custom element.
 
 For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox), the following CSS is used to inject a grey `[x]` before the element when it is in the "checked" state.
 
