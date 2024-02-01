@@ -32,7 +32,7 @@ As `float` implies the use of the block layout, it modifies the computed value o
 | `inline-grid`        | `grid`         |
 | _other_              | _unchanged_    |
 
-> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`. This was an exception to the rule, that the name of the DOM member is the {{Glossary("camel_case", "camel-case")}} name of the hyphenated CSS name (because "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
+> **Note:** When accessing the CSS `float` property in JavaScript through the {{domxref("HTMLElement.style")}} object, keep in mind that `float` is a reserved keyword in JavaScript. As a workaround, similar to how the "class" attribute is accessed as "className" and the "for" attribute of a \<label> element is accessed as "htmlFor", `float` can be accessed as `cssFloat`. However, modern browsers support the direct use of `float`. In older browsers, you must use `cssFloat` to access the `float` property.
 
 ## Syntax
 
