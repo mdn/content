@@ -8,7 +8,7 @@ status:
 browser-compat: api.InstallEvent
 ---
 
-> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event using a listener added with {{domxref("EventTarget/addEventListener", "addEventListener")}}.
 
 {{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
