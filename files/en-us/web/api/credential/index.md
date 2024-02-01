@@ -23,10 +23,6 @@ The **`Credential`** interface of the [Credential Management API](/en-US/docs/We
 - {{domxref("Credential.type")}} {{ReadOnlyInline}}
   - : Returns a string containing the credential's type. Valid values are `password`, `federated` and `public-key`. (For {{domxref("PasswordCredential")}}, {{domxref("FederatedCredential")}} and {{domxref("PublicKeyCredential")}})
 
-### Event handlers
-
-None.
-
 ## Instance methods
 
 None.
