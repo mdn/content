@@ -8,6 +8,8 @@ status:
 browser-compat: api.InstallEvent
 ---
 
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+
 {{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
@@ -15,8 +17,6 @@ The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event"
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
-
-> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 
 ## Constructor
 
