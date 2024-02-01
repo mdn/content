@@ -25,12 +25,12 @@ The `:state()` pseudo-class takes as its argument a custom identifier that repre
 
 ## Description
 
-Elements can have states that change due to user interaction and other factors, such as "hover" when a user hovers over an element, or "visited" for links that the user has clicked.
-Elements provided by user agents can be styled based on these states using CSS pseudo classes such as [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:visited`](/en-US/docs/Web/CSS/:visited).
-[Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element) (but not elements derived from built-in elements) can similarly expose their state, allowing the custom elements to be styled using the CSS `:state()` pseudo class.
+Elements can transition between states due to user interaction and other factors. For instance, an element can be in the "hover" state when a user hovers over the element, or a link can be in the "visited" state after a user clicks on it.
+Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:visited`](/en-US/docs/Web/CSS/:visited).
+Similarly, [autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element) (custom elements that are not derived from built-in elements) can expose their states, allowing the custom elements to be styled using the CSS `:state()` pseudo-class.
 
-The states of a custom element are represented by string values that are added to, or removed from, an attached [`CustomStateSet`](/en-US/docs/Web/API/CustomStateSet) object.
-The CSS `:state()` pseudo-class matches an element when the identifier passed as an argument is present in the `CustomStateSet` of the element.
+The states of a custom element are represented by string values. These values are added to or removed from a [`CustomStateSet`](/en-US/docs/Web/API/CustomStateSet) object associated with the element.
+The CSS `:state()` pseudo-class matches an element when the identifier, passed as an argument, is present in the `CustomStateSet` of the element.
 
 ## Examples
 
