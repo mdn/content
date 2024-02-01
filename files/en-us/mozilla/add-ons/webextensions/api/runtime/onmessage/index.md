@@ -214,7 +214,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-> **Warning:** Do not prepend `async` to the function. The function won't work as expected because prepending `async` causes the function to return a Promise that resolves to `true`.
+> **Warning:** Do not prepend `async` to the function, because that causes the return value to be a Promise (that resolves to `true`). `sendResponse` can only be called asynchronously when the listener returns `true` synchronously.
 
 ### Sending an asynchronous response using a Promise
 
