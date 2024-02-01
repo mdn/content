@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Evaluates an expression in the context of the inspected page, and displays the result in the extension sidebar pane.
 

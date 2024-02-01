@@ -6,9 +6,11 @@ page-type: web-api-event
 browser-compat: api.Notification.show_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`show`** event of the {{domxref("Notification")}} interface fires when a {{domxref("Notification")}} is displayed.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

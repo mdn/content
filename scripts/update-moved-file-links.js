@@ -1,12 +1,18 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { execGit, getRootDir, walkSync, isImagePath } from "./utils.js";
+import {
+  execGit,
+  getRootDir,
+  walkSync,
+  isImagePath,
+  IMG_RX,
+  SLUG_RX,
+} from "./utils.js";
 
-const SLUG_RX = /(?<=\nslug: ).*?$/gm;
 const HELP_MSG =
   "Usage:\n\t" +
   "node scripts/update-moved-file-links.js\n\t" +
-  "node scripts/update-moved-file-links.js [movedFromPath] [movedToPath]\n";
+  "node scripts/update-moved-file-links.js --check\n";
 
 /**
  * Try to get slug for an image from file path
@@ -26,43 +32,37 @@ export async function getImageSlug(imagePath, root) {
   }
 }
 
-let movedFiles = [];
 const rootDir = getRootDir();
-const argLength = process.argv.length;
+let movedFiles = [];
+let isCheckOnly = false;
 
 if (process.argv[2] === "--help" || process.argv[2] === "-h") {
   console.error(HELP_MSG);
   process.exit(0);
-} else if (argLength === 2 && argLength > 3) {
-  console.error(HELP_MSG);
-  process.exit(1);
-} else if (argLength === 3) {
-  movedFiles.push({ from: process.argv[2], to: process.argv[3] });
-} else {
-  // git log --name-status --pretty=format:"" --since "1 day ago" --diff-filter=R
-  let result = execGit(
-    [
-      "log",
-      "--name-status",
-      "--pretty=format:",
-      '--since="1 day ago"',
-      "--diff-filter=R",
-    ],
-    { cwd: "." },
-  );
+} else if (process.argv[2] === "--check") {
+  isCheckOnly = true;
+}
 
-  if (result.trim()) {
-    movedFiles.push(
-      ...result
-        .split("\n")
-        .filter((line) => line.trim() !== "" && line.includes("files/en-us"))
-        .map((line) => line.replaceAll(/files\/en-us\/|\/index.md/gm, ""))
-        .map((line) => line.split(/\s/))
-        .map((tuple) => {
-          return { from: tuple[1], to: tuple[2] };
-        }),
-    );
-  }
+// get staged and unstaged changes
+const result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+if (result.trim()) {
+  movedFiles.push(
+    ...result
+      .split("\n")
+      .filter(
+        (line) =>
+          /^\s*RM?\s+/gi.test(line) &&
+          line.includes("files/en-us") &&
+          (IMG_RX.test(line) || line.includes("index.md")),
+      )
+      .map((line) =>
+        line.replaceAll(/^\s*RM?\s+|files\/en-us\/|\/index.md/gm, ""),
+      )
+      .map((line) => line.split(/ -> /))
+      .map((tuple) => {
+        return { from: tuple[0], to: tuple[1] };
+      }),
+  );
 }
 
 if (movedFiles.length < 1) {
@@ -99,7 +99,7 @@ movedFiles = (
   )
 ).filter((e) => !!e);
 
-console.log(`Number of moved files to consider: ${movedFiles.length}`);
+console.log("Moved files:", movedFiles);
 
 let totalNo = 0;
 let updatedNo = 0;
@@ -108,7 +108,7 @@ for await (const filePath of walkSync(getRootDir())) {
     try {
       totalNo++;
       const content = await fs.readFile(filePath, "utf-8");
-      let updated = new String(content);
+      let updated = String(content);
       for (const moved of movedFiles) {
         // [text](link)
         updated = updated.replaceAll(`${moved.from})`, `${moved.to})`);
@@ -124,7 +124,14 @@ for await (const filePath of walkSync(getRootDir())) {
         updated = updated.replaceAll(`${moved.from}'`, `${moved.to}'`);
       }
 
-      if (content !== updated) {
+      if (content !== updated.valueOf()) {
+        if (isCheckOnly) {
+          console.error(
+            "File(s) have been moved. " +
+              "Run 'node scripts/update-moved-file-links.js' to update references.",
+          );
+          process.exit(1);
+        }
         updatedNo++;
         await fs.writeFile(filePath, updated);
       }

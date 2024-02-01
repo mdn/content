@@ -14,6 +14,8 @@ The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
 
+{{AvailableInWorkers}}
+
 ## Value
 
 A {{domxref('ContentIndex')}} object.

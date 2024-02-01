@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformOs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The operating system the browser is running on.
 

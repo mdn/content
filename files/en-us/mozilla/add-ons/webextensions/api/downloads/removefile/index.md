@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.removeFile
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`removeFile()`** function of the {{WebExtAPIRef("downloads")}} API removes a downloaded file from disk.
 

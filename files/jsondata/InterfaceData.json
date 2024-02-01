@@ -312,6 +312,10 @@
       "inh": "MediaStreamTrack",
       "impl": []
     },
+    "BufferedChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ByteLengthQueuingStrategy": {
       "inh": "",
       "impl": []
@@ -2000,6 +2004,14 @@
       "inh": "Sensor",
       "impl": []
     },
+    "ManagedMediaSource": {
+      "inh": "MediaSource",
+      "impl": []
+    },
+    "ManagedSourceBuffer": {
+      "inh": "SourceBuffer",
+      "impl": []
+    },
     "MathMLElement": {
       "inh": "Element",
       "impl": []
@@ -2500,6 +2512,10 @@
       "inh": "PerformanceEntry",
       "impl": []
     },
+    "PerformanceScriptTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceServerTiming": {
       "inh": "",
       "impl": []
@@ -2994,6 +3010,18 @@
     },
     "SharedWorkerGlobalScope": {
       "inh": "WorkerGlobalScope",
+      "impl": []
+    },
+    "SnapEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "SnapTargetArray": {
+      "inh": "",
+      "impl": []
+    },
+    "SnapTargetList": {
+      "inh": "",
       "impl": []
     },
     "SourceBuffer": {
