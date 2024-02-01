@@ -34,9 +34,9 @@ The CSS `:state()` pseudo-class matches an element when the identifier passed as
 
 ## Examples
 
-### Matching a custom element on a state
+### Matching a custom state
 
-This CSS shows how you to change the border of an autonomous custom element `<labeled-checkbox>` to red when it has the "checked" state.
+This CSS shows how to change the border of the autonomous custom element `<labeled-checkbox>` to `red` when it is in the "checked" state.
 
 ```css
 labeled-checkbox {
@@ -47,13 +47,13 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-See [CustomStateSet](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) for a live example this code in action.
+See [CustomStateSet](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) for a live example of this code in action.
 
 ### Styling with a custom state within a custom element
 
-You can use `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) function pseudo-class to match a state only within the shadow DOM of the current custom element.
+You can use `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function to match a state only within the shadow DOM of the current custom element.
 
-For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) the following CSS is used to inject a grey `[x]` before the element when it is checked.
+For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox), the following CSS is used to inject a grey `[x]` before the element when it is in the "checked" state.
 
 ```css
 :host(:state(checked))::before {
