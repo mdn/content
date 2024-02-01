@@ -70,7 +70,7 @@ Functional notation of relative values: `lab(from color lightness a b[ / alpha])
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `lab()` component values that are made available inside the function as `l` (lightness), `a` (green/red axis), `b` (blue/yellow axis), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside an `lab()` function, the browser first converts the origin color into an equivalent Lab color representation. It then separates that color into three different color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `l` channel value is resolved to a `<number>` between 0 and 100 that represents the origin color's lightness.
 - The `a` and `b` channels are resolved to a `<number>` between -125 and 125 which represents the origin color's a and b axis positions.

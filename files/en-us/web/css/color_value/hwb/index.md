@@ -76,7 +76,7 @@ Functional notation of relative values: `hwb(from color hue white black[ / alpha
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `hwb()` component values that are made available inside the function as `h` (hue), `w` (white), `b` (black), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside an `hwb()` function, the browser first converts the origin color into an equivalent HWB color representation. It then separates that color into three different color channel values — `h` (hue), `w` (white), and `b` (black) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `h` channel value is resolved to a `<number>` between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}}.
 - The `w` and `b` channels are resolved to a `<number>` between 0 and 100 which represents the origin color's whiteness and blackness.

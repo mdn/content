@@ -70,7 +70,7 @@ Functional notation of relative values: `lch(from color lightness chroma hue[ / 
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `lch()` component values that are made available inside the function as `l` (lightness), `c` (chroma), `h` (hue), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside an `lch()` function, the browser first converts the origin color into an equivalent Lch color representation. It then separates that color into three different color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `l` channel value is resolved to a `<number>` between 0 and 100 which represents the origin color's lightness.
 - The `c` channel value is resolved to a `<number>` between 0 and 150 which represents the origin color's chroma.

@@ -66,7 +66,7 @@ Functional notation of relative values: `oklch(from color lightness chroma hue[ 
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `oklch()` component values that are made available inside the function as `l` (lightness), `c` (chroma), `h` (hue), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside an `oklch()` function, the browser first converts the origin color into an equivalent Oklch color representation. It then separates that color into three different color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `l` channel value is resolved to a `<number>` between 0 and 1 which represents the origin color's lightness.
 - The `c` channel value is resolved to a `<number>` between 0 and 0.4 which represents the origin color's chroma.

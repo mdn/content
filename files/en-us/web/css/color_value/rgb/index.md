@@ -64,7 +64,7 @@ Functional notation of relative values: `rgb(from color red green blue[ / alpha]
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `rgb()` component values that are made available inside the function as `r` (red), `g` (green), `b` (blue), and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside an `rgb()` function, the browser first converts the origin color into an equivalent RGB color representation. It then separates that color into three different color channel values — `r` (red), `g` (green), and `b` (blue) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `r`, `g` and `b` values are resolved to `<number>`s between 0 and 255 that represent the origin color's red, green, and blue values.
 - The `alpha` channel is resolved to a `<number>` between 0 and 1 that represents the origin color's alpha value.

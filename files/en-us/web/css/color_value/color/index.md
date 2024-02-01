@@ -68,7 +68,7 @@ Functional notation of relative values: `color(from color colorspace c1 c2 c3[ /
 
 #### Defining relative color output channel components
 
-The browser destructures the origin color into `color()` component values for the specified colorspace that are made available inside the function as three color channel values, and `alpha`. These can be used in defining the output color channel values if desired, and take the following values:
+When using relative color syntax inside a `color()` function, the browser first converts the origin color into an equivalent representation in the specified colorspace. It then separates that color into three different color channel values plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The three color channel values of the origin color are resolved to a `<number>`. Depending on the specified colorspace, these values will be one of the following:
 
@@ -105,14 +105,20 @@ The following functions use two of the origin color channel values for the outpu
 
 ```css
 color(from hsl(0 100% 50%) srgb r 1 b)
+/* Computed output color: color(srgb 1 1 0) */
+
 color(from hsl(0 100% 50%) xyz x y 0.5)
+/* Computed output color: color(xyz-d65 0.412426 0.212648 0.5) */
 ```
 
 The following functions use the origin color channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output colors:
 
 ```css
 color(from hsl(0 100% 50%) srgb calc(r - 0.4) calc(g + 0.1) calc(b + 0.6))
+/* Computed output color: color(srgb 0.6 0.1 0.6)  */
+
 color(from hsl(0 100% 50%) xyz calc(x - 0.3) calc(y + 0.3) calc(z + 0.3))
+/* Computed output color: color(xyz-d65 0.112426 0.512648 0.319317) */
 ```
 
 ### Formal syntax
