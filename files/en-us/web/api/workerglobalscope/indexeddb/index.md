@@ -8,7 +8,7 @@ browser-compat: api.indexedDB
 
 {{APIRef("IndexedDB")}}
 
-The **`WorkerGlobalScope.indexedDB`** read-only property provides a mechanism for workers to
+The **`indexedDB`** read-only property of the {{domxref("WorkerGlobalScope")}} interface provides a mechanism for workers to
 asynchronously access the capabilities of indexed databases.
 
 ## Value
