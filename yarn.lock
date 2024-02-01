@@ -3857,10 +3857,10 @@ humanize-ms@^1.2.1:
   dependencies:
     ms "^2.0.0"
 
-husky@9.0.7:
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.7.tgz#047f24ec1b6c681206af714b4217c13ee97fff20"
-  integrity sha512-vWdusw+y12DUEeoZqW1kplOFqk3tedGV8qlga8/SF6a3lOiWLqGZZQvfWvY0fQYdfiRi/u1DFNpudTSV9l1aCg==
+husky@9.0.8:
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-9.0.8.tgz#e10824d483e8e0bd779bca79801a448d435829a6"
+  integrity sha512-/f3Oj+419kf2RkchD5GpFTPj8yAeMYuSs0vB+cgdi8pDxydI8zCFlK/kVQOCqAujahfW6fDBb7t/ZWxTfevOpA==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"

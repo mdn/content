@@ -13,10 +13,6 @@ The **`CredentialsContainer`** interface of the [Credential Management API](/en-
 
 None.
 
-### Event handlers
-
-None.
-
 ## Instance methods
 
 - {{domxref("CredentialsContainer.create()")}}
