@@ -16,13 +16,13 @@ If you want to see the final code, you can check out the [live demo](https://mdn
 
 ## Create the editor UI
 
-The first step is to create the UI for the editor. The editor will be a simple [`<div>`](/en-US/docs/Web/HTML/Element/div) element with he [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute set to `false` to disable spell checking:
+The first step is to create the UI for the editor. The editor will be a simple {{HTMLElement("div")}} element with the [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) attribute set to `false` to disable spell checking:
 
 ```html
 <div id="html-editor" spellcheck="false"></div>
 ```
 
-The following CSS code is used to make the editor fill the entire viewport and scroll when there's too much content to fit. The [`white-space`](/en-US/docs/Web/CSS/white-space) property is also used to preserve whitespace, and the [`tab-size`](/en-US/docs/Web/CSS/tab-size) property is used to make tab characters render as two spaces. Finally, some default background and text colors are set.
+The following CSS code is used to make the editor fill the entire viewport and scroll when there's too much content to fit. The {{CSSXref("white-space")}} property is also used to preserve whitespace, and the {{CSSXref("tab-size")}} property is used to make tab characters render as two spaces. Finally, some default background and text colors are set.
 
 ```css
 #html-editor {
@@ -40,11 +40,11 @@ The following CSS code is used to make the editor fill the entire viewport and s
 
 ## Make the editor editable
 
-To make an element editable on the web, most of the time, you use an [`<input>`](/en-US/docs/Web/HTML/Element/input) element, a [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea) element, or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
+To make an element editable on the web, most of the time, you use an {{HTMLElement("input")}} element, a {{HTMLElement("textarea")}} element, or the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute.
 
 However, with the EditContext API, you can make other types of elements editable without using an attribute. To see the list of elements that can be used with the EditContext API, see [Possible elements](/en-US/docs/Web/API/HTMLElement/editContext#possible_elements) on the HTMLElement editContext property page.
 
-To make the editor editable, you create an {{domxref("EditContext")}} instance, and then you set the [`editContext`](/en-US/docs/Web/API/HTMLElement/editContext) property of the editor element to the `EditContext` instance:
+To make the editor editable, you create an {{domxref("EditContext")}} instance, and then you set the {{DOMxRef("HTMLElement.editContext", "editContext")}} property of the editor element to the `EditContext` instance:
 
 ```js
 if ("EditContext" in window) {
