@@ -12,7 +12,7 @@ This article goes through all the steps that are necessary to build a text edito
 
 ## Final code and live demo
 
-If you want to see the final code, you can check out the [live demo](https://mdn.github.io/dom-examples/editcontext-api/html-editor/) and [source code](https://github.com/mdn/dom-examples/tree/master/editcontext-api/html-editor) on GitHub.
+If you want to see the final code, you can check out the [live demo](https://mdn.github.io/dom-examples/edit-context/html-editor/) and [source code](https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor) on GitHub.
 
 ## Create the editor UI
 
@@ -490,7 +490,7 @@ editContext.addEventListener("textformatupdate", (e) => {
 
 This article showed you how to use the EditContext API to build a simple HTML code editor that supports IME composition and syntax highlighting.
 
-The final code and live demo can be found on GitHub: [live demo](https://mdn.github.io/dom-examples/editcontext-api/html-editor/) and [source code](https://github.com/mdn/dom-examples/tree/master/editcontext-api/html-editor).
+The final code and live demo can be found on GitHub: [live demo](https://mdn.github.io/dom-examples/edit-context/html-editor/) and [source code](https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor).
 
 More importantly, this article showed you that the EditContext API provides a lot of flexibility when it comes to the user interface of your editor. Based on this demo, you could build a similar text editor that uses a `<canvas>` element to render the syntax-highlighted HTML code instead of the `<div>` that the demo uses. You could also change how each token is rendered, or how the selection is rendered.
 
