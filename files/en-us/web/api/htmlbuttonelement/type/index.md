@@ -43,5 +43,5 @@ console.log(buttonElement.type); // Output: "reset"
 
 ## See also
 
-- {{domxref("HTMLTextAreaElement.type")}} property.
+- {{domxref("HTMLTextAreaElement.type")}} property
 - {{domxref("HTMLInputElement.type")}} property
