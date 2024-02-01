@@ -47,10 +47,11 @@ window.addEventListener("devicemotion", (event) => {
 
 ## See also
 
-- {{domxref("Window/deviceorientation_event", "deviceorientation")}}
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
 - {{DOMxRef("DeviceOrientationEvent")}}
-- {{domxref("Window/devicemotion_event", "devicemotion")}}
+- {{DOMxRef("Window.deviceorientation_event", "deviceorientation")}} event
+- {{DOMxRef("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} event
+- {{DOMxRef("Window/devicemotion_event", "devicemotion")}} event
 - {{DOMxRef("Accelerometer")}}
 - {{DOMxRef("LinearAccelerationSensor")}}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

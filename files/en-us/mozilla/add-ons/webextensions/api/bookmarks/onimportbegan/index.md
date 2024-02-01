@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onImportBegan
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser has started importing a set of bookmarks.
 

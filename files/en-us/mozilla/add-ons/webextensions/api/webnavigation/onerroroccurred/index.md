@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onErrorOccurred
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 

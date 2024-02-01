@@ -116,7 +116,7 @@ _No changes._
 
 ### JavaScript
 
-The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Operators/Expression_closures) syntax has been removed ([Firefox bug 1426519](https://bugzil.la/1426519)).
+The non-standard [expression closure](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) syntax has been removed ([Firefox bug 1426519](https://bugzil.la/1426519)).
 
 ### APIs
 

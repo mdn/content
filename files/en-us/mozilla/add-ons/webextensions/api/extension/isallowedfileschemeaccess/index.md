@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedFileSchemeAccess
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
 

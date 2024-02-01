@@ -8,7 +8,7 @@ browser-compat: api.MediaRecorder.stop_event
 
 {{APIRef("MediaStream Recording")}}
 
-The `stop` event is fired when
+The **`stop`** event of the {{domxref("MediaRecorder")}} interface is fired when
 {{domxref("MediaRecorder.stop()")}} is called, or when the media stream being
 captured ends. In each case, the `stop` event is preceded by a
 `dataavailable` event, making the {{domxref("Blob")}} captured up to that

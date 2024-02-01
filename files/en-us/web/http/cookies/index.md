@@ -122,6 +122,16 @@ But these request paths don't:
 - `/docsets`
 - `/fr/docs`
 
+##### Path default value
+
+If the `Path` attribute is not set, its default value is computed from the [path](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource) of the URI that set the cookie, as follows:
+
+- If the path is empty, does not start with `"/"`, or contains no more than one `"/"` character, then the default value for `Path` is `"/"`.
+- Otherwise, the default value for `Path` is the path from the start up to but not including the final `"/"` character.
+
+For example, if the cookie was set from `"https://example.org/a/b/c`, then the default value of `Path`
+would be `"/a/b"`.
+
 #### SameSite attribute
 
 The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute lets servers specify whether/when cookies are sent with cross-site requests (where {{Glossary("Site")}} is defined by the registrable domain and the _scheme_: http or https).
@@ -198,9 +208,13 @@ A cookie is associated with a particular domain and scheme (such as `http` or `h
 If the cookie domain and scheme match the current page, the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 
 If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
-While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners) that may set third-party cookies.
-These are mainly used for advertising and tracking across the web.
-For example, the [types of cookies used by Google](https://policies.google.com/technologies/types).
+While the server hosting a web page sets first-party cookies, the page may contain components stored on servers in other domains, such as images or other documents embedded in {{htmlelement("iframe")}}s. These components may set third-party cookies.
+
+> **Note:** Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites.
+
+Typical use cases for third-party cookies include sharing user profile information or collecting analytics across different related domains. They are also often used for advertising and tracking users across the web.
+
+> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes and to comply with [regulations](#cookie-related_regulations). For example, see [Google's notice on the types of cookies it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
 
 A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites.
 Firefox, by default, blocks third-party cookies that are known to contain trackers.

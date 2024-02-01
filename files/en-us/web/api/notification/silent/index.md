@@ -6,13 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.silent
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be
 silent, i.e., no sounds or vibrations should be issued, regardless of the device
 settings. This is specified in the `silent` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
+
+{{AvailableInWorkers}}
 
 ## Value
 
