@@ -36,7 +36,7 @@ const options = {
 
 const n = new Notification("New review activity", options);
 
-console.log(n.vibrate); // "[200, 100, 200]"
+console.log(n.vibrate); // [200, 100, 200]
 ```
 
 ## Specifications
