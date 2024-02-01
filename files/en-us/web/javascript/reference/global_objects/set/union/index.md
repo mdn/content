@@ -47,7 +47,7 @@ The following example computes the union between the set of even numbers (<10) a
 ```js
 const evens = new Set([2, 4, 6, 8]);
 const squares = new Set([1, 4, 9]);
-console.log(evens.union(squares)); // Set(6) { 1, 2, 4, 6, 8, 9 }
+console.log(evens.union(squares)); // Set(6) { 2, 4, 6, 8, 1, 9 }
 ```
 
 ## Specifications
