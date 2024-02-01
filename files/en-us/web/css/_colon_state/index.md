@@ -11,8 +11,6 @@ browser-compat: css.selectors.state
 
 The **`:state()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) that have the specified custom state.
 
-<!-- {{EmbedInteractiveExample("pages/tabbed/pseudo-class-state.html", "tabbed-shorter")}} -->
-
 ## Syntax
 
 The `:state()` pseudo-class takes as its argument a custom identifier that represents the state of the custom element to match.
