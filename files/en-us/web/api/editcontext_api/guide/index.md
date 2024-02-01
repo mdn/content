@@ -129,6 +129,11 @@ To render the selection, because the EditContext API gives you the selection as 
 
 ```js
 function convertFromOffsetsToSelection(start, end) {
+  // Deal with backwards selections.
+  const isBackwards = start > end;
+  const orderedStart = isBackwards ? end : start;
+  const orderedEnd = isBackwards ? start : end;
+
   // Create a TreeWalker that walks over all the
   // text nodes in the editor element.
   const treeWalker = document.createTreeWalker(editorEl, NodeFilter.SHOW_TEXT);
@@ -143,16 +148,16 @@ function convertFromOffsetsToSelection(start, end) {
   while (treeWalker.nextNode()) {
     const node = treeWalker.currentNode;
 
-    if (!anchorNode && offset + node.textContent.length >= start) {
+    if (!anchorNode && offset + node.textContent.length >= orderedStart) {
       // The anchor node is the first node that contains the start offset.
       anchorNode = node;
-      anchorOffset = start - offset;
+      anchorOffset = orderedStart - offset;
     }
 
-    if (offset + node.textContent.length >= end) {
+    if (offset + node.textContent.length >= orderedEnd) {
       // The extent node is the first node that contains the end offset.
       extentNode = node;
-      extentOffset = end - offset;
+      extentOffset = orderedEnd - offset;
       break;
     }
 
@@ -160,7 +165,12 @@ function convertFromOffsetsToSelection(start, end) {
   }
 
   // Return an object that can be used to create a DOM selection.
-  return { anchorNode, anchorOffset, extentNode, extentOffset };
+  return {
+    anchorNode: isBackwards ? extentNode : anchorNode,
+    anchorOffset: isBackwards ? extentOffset : anchorOffset,
+    extentNode: isBackwards ? anchorNode : extentNode,
+    extentOffset: isBackwards ? anchorOffset : extentOffset,
+  };
 }
 ```
 
@@ -218,6 +228,12 @@ To handle them, you can listen to the {{domxref("keydown_event", "keydown")}} ev
 ```js
 // Handle key presses that are not already handled by the EditContext.
 editorEl.addEventListener("keydown", (e) => {
+  // EditContext.updateText() expects the start and end offsets
+  // to be in the correct order, but the current selection state
+  // might be backwards.
+  const start = Math.min(editContext.selectionStart, editContext.selectionEnd);
+  const end = Math.max(editContext.selectionStart, editContext.selectionEnd);
+
   // Handling the Tab key.
   if (e.key === "Tab") {
     // Prevent the default behavior of the Tab key.
@@ -225,17 +241,10 @@ editorEl.addEventListener("keydown", (e) => {
 
     // Use the EditContext.updateText method to insert a tab character
     // at the current selection position.
-    editContext.updateText(
-      editContext.selectionStart,
-      editContext.selectionEnd,
-      "\t",
-    );
+    editContext.updateText(start, end, "\t");
 
     // Update the selection to be after the inserted tab character.
-    editContext.updateSelection(
-      editContext.selectionStart + 1,
-      editContext.selectionStart + 1,
-    );
+    editContext.updateSelection(start + 1, start + 1);
 
     // Re-render the editor.
     render();
@@ -245,17 +254,10 @@ editorEl.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     // Use the EditContext.updateText method to insert a newline character
     // at the current selection position.
-    editContext.updateText(
-      editContext.selectionStart,
-      editContext.selectionEnd,
-      "\n",
-    );
+    editContext.updateText(start, end, "\n");
 
     // Update the selection to be after the inserted newline character.
-    editContext.updateSelection(
-      editContext.selectionStart + 1,
-      editContext.selectionStart + 1,
-    );
+    editContext.updateSelection(start + 1, start + 1);
 
     // Re-render the editor.
     render();
@@ -308,10 +310,6 @@ function convertFromSelectionToOffsets(selection) {
   // The selection is outside the editor element.
   if (!anchorNodeFound || !extentNodeFound) {
     return null;
-  }
-
-  if (anchorOffset > extentOffset) {
-    [anchorOffset, extentOffset] = [extentOffset, anchorOffset];
   }
 
   return { start: anchorOffset, end: extentOffset };
@@ -399,7 +397,7 @@ editContext.addEventListener("characterboundsupdate", (e) => {
 
 ## Apply IME composition text formats
 
-For the final step, there is one more thing you need to do to fully support IME composition. When the user is composing text with an IME, the IME might decide that certain parts of the text being composed should be formatted differently to indicate the composition state. For example, the IME might decide to render the text in a different color, or to underline it.
+For the final step, there is one more thing you need to do to fully support IME composition. When the user is composing text with an IME, the IME might decide that certain parts of the text being composed should be formatted differently to indicate the composition state. For example, the IME might decide to underline the text.
 
 Because you're responsible for rendering the content in the editable text region, the EditContext API doesn't do this for you. Instead, the API fires the {{domxref("EditContext.textformatupdate_event", "textformatupdate")}} event, and it's up to you to listen to this event and apply the formatting to the text.
 
@@ -416,12 +414,12 @@ First, use the {{cssxref("::highlight", "::highlight()")}} pseudo-element to def
   text-decoration: underline 2px;
 }
 
-::highlight(ime-double-thin) {
-  text-decoration: underline double 1px;
+::highlight(ime-dotted-thin) {
+  text-decoration: underline dotted 1px;
 }
 
-::highlight(ime-double-thick) {
-  text-decoration: underline double 2px;
+::highlight(ime-dotted-thick) {
+  text-decoration: underline dotted 2px;
 }
 
 /* The rest of the highlights are omitted for brevity. */
@@ -435,8 +433,6 @@ Next, create instances of the highlights using the {{domxref("Highlight")}} cons
 const imeHighlights = {
   "solid-thin": null,
   "solid-thick": null,
-  "double-thin": null,
-  "double-thick": null,
   "dotted-thin": null,
   "dotted-thick": null,
   "dashed-thin": null,
