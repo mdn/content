@@ -27,7 +27,7 @@ The `aria-description` attribute is similar to [`aria-label`](/en-US/docs/Web/Ac
 
 The `aria-description` and `aria-describedby` properties have the same purpose; both provide the user with additional descriptive text for the object on which it is set. If descriptive text is available in the DOM, use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) instead.
 
-The `aria-description` property should only be used when providing a visible description is not the desired user experience. The `aria-describedby` attribute takes as its value a list of `id`s of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriate descriptive text that can be associated with the object by `id` reference. If both attributes are present, `aria-describedby` takes precedence in defining the accessible description property.
+The `aria-description` property should only be used when providing a visible description is not the desired user experience. The `aria-describedby` attribute takes as its value a list of `id`s of the elements that contain descriptive text about the object. The `aria-description` is used when there is no appropriate descriptive text that can be associated with the object by `id` reference. If both attributes are present, `aria-describedby` takes precedence in defining the {{glossary("accessible description")}} property.
 
 The content of the description, whether set by `aria-description` or `aria-describedby`, should be flat text. If the content is very long, has semantic meaning requirements, or has a navigational structure, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details) instead.
 
