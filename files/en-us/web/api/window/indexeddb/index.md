@@ -8,7 +8,7 @@ browser-compat: api.indexedDB
 
 {{APIRef("IndexedDB")}}
 
-The **`Window.indexedDB`** read-only property provides a mechanism for applications to
+The **`indexedDB`** read-only property of the {{domxref("Window")}} interface provides a mechanism for applications to
 asynchronously access the capabilities of indexed databases.
 
 ## Value
