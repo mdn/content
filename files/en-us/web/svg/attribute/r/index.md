@@ -58,6 +58,7 @@ svg {
 ## circle
 
 For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor its size. With a value lower or equal to zero the circle won't be drawn at all.
+
 <table class="properties">
   <tbody>
     <tr>
