@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.preventSilentAccess
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`preventSilentAccess()`** method
 of the {{domxref("CredentialsContainer")}} interface sets a flag that specifies

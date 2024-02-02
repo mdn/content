@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createTexture()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUTexture")}} in which to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.

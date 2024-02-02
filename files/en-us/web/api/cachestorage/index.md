@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CacheStorage
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
