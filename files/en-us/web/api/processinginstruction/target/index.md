@@ -59,7 +59,7 @@ The processing instruction line will be considered, and represented, as a {{domx
 ```
 
 ```js
-const node = document.querySelector("pre").previousSibling.previousSibling;
+const node = document.querySelector("pre").previousSibling;
 const result = `Node with the processing instruction: ${node.nodeName}: ${node.nodeValue}\n`;
 document.querySelector("pre").textContent = result;
 ```
