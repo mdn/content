@@ -108,7 +108,7 @@ For example:
 
 ```js
 async function foo() {
-  await 1;
+  return await 1;
 }
 ```
 
