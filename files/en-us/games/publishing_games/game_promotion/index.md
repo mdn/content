@@ -24,7 +24,7 @@ While you can create your website from scratch, there are also tools that can he
 
 ## Social media
 
-Your social media presence is very important. Hashtags can help find friends and allow you to engage with the community and help other devs in need. Honesty is key and you should be authentic; nobody likes boring press releases or pushy advertisements. When the time comes, your community will help you spread the word about your shiny new game!
+Your social media presence is very important. The `#gamedev` hashtag can help find friends and allow you to engage with the community and help other devs in need. Honesty is key and you should be authentic; nobody likes boring press releases or pushy advertisements. When the time comes, your community will help you spread the word about your shiny new game!
 
 Keep an eye on gamers who stream on YouTube and Twitch, and be active on forums such as [HTML5GameDevs.com](https://www.html5gamedevs.com/). Share your news and answer questions so that people will value what you're doing and will know that you're trustworthy. Remember to not be too pushy when it comes to telling everyone about your games — you're not a walking advertisement.
 
