@@ -365,7 +365,7 @@ The CSS sets the height of the logging element.
 }
 ```
 
-#### HTML
+#### Logging test code
 
 This example is designed to show "how to log", so "what is logged" isn't all that important.
 This is therefore trivially implemented as a button that the user can press to iterate a value.
@@ -373,8 +373,6 @@ This is therefore trivially implemented as a button that the user can press to i
 ```html
 <button id="iterate" type="button">Press me many times</button>
 ```
-
-#### JavaScript
 
 ```js
 const iterateButton = document.querySelector("#iterate");
@@ -439,7 +437,7 @@ Note that the JavaScript above ensures that if it does overflow, addition of new
 }
 ```
 
-#### HTML
+#### Logging test code
 
 This example is designed to show "how to log", so "what is logged" isn't all that important.
 This is therefore trivially implemented as a button that the user can press to iterate a value.
@@ -447,8 +445,6 @@ This is therefore trivially implemented as a button that the user can press to i
 ```html
 <button id="iterate" type="button">Press me many times</button>
 ```
-
-#### JavaScript
 
 ```js
 const iterateButton = document.querySelector("#iterate");
