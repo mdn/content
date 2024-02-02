@@ -8,7 +8,7 @@ browser-compat: api.Credential.type
 
 {{APIRef("Credential Management API")}}
 
-The **`type`** property of the
+The **`type`** read-only property of the
 {{domxref("Credential")}} interface returns a string containing the
 credential's type. Valid values are `password`, `federated` and
 `public-key`.
