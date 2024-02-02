@@ -129,11 +129,6 @@ To render the selection, because the EditContext API gives you the selection as 
 
 ```js
 function convertFromOffsetsToSelection(start, end) {
-  // Deal with backwards selections.
-  const isBackwards = start > end;
-  const orderedStart = isBackwards ? end : start;
-  const orderedEnd = isBackwards ? start : end;
-
   // Create a TreeWalker that walks over all the
   // text nodes in the editor element.
   const treeWalker = document.createTreeWalker(editorEl, NodeFilter.SHOW_TEXT);
@@ -148,16 +143,19 @@ function convertFromOffsetsToSelection(start, end) {
   while (treeWalker.nextNode()) {
     const node = treeWalker.currentNode;
 
-    if (!anchorNode && offset + node.textContent.length >= orderedStart) {
+    if (!anchorNode && offset + node.textContent.length >= start) {
       // The anchor node is the first node that contains the start offset.
       anchorNode = node;
-      anchorOffset = orderedStart - offset;
+      anchorOffset = start - offset;
     }
 
-    if (offset + node.textContent.length >= orderedEnd) {
+    if (!extentNode && offset + node.textContent.length >= end) {
       // The extent node is the first node that contains the end offset.
       extentNode = node;
-      extentOffset = orderedEnd - offset;
+      extentOffset = end - offset;
+    }
+
+    if (anchorNode && extentNode) {
       break;
     }
 
@@ -165,12 +163,7 @@ function convertFromOffsetsToSelection(start, end) {
   }
 
   // Return an object that can be used to create a DOM selection.
-  return {
-    anchorNode: isBackwards ? extentNode : anchorNode,
-    anchorOffset: isBackwards ? extentOffset : anchorOffset,
-    extentNode: isBackwards ? anchorNode : extentNode,
-    extentOffset: isBackwards ? anchorOffset : extentOffset,
-  };
+  return { anchorNode, anchorOffset, extentNode, extentOffset };
 }
 ```
 
