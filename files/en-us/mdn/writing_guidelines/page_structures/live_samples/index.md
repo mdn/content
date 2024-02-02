@@ -11,7 +11,8 @@ It also allows authors to be absolutely sure that the code blocks in documentati
 
 The live sample system can process code blocks written in HTML, CSS, and JavaScript, regardless of the order in which they are written in the page. This ensures that the output corresponds to the combined source code because the system runs the code directly within the page.
 
-> **Note:** "Live samples" are _not inherently interactive_, but you can [add some interactivity yourself if needed](#interactive_live_samples).
+Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#what_types_of_code_example_are_available), live samples don't provide inbuilt support for capturing console logging or resetting examples that are changed by user input.
+The [Examples](#examples) section shows how you can implement these, and other, useful features.
 
 ## How does the live sample system work?
 
@@ -221,11 +222,11 @@ Each piece of code must be in a code block, with a separate block for each langu
 
 So make sure the code blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.
 
-## Live sample demo
+## Examples
 
-This section is the result of using the live sample template button to create not only the main heading ("Live sample demo"), but also subheadings for our HTML, CSS, and JavaScript content. You're not limited to one block of each; in addition, they don't even need to be in any particular order. Mix and match!
+This section contains examples showing how the live sample system may be used, including the different ways of grouping the code blocks that comprise an example, and how to display logging output in your samples.
 
-You may choose to delete any of these you wish; if you don't need any script, just delete that heading and its code block. You can also delete the heading for a code block ("HTML", "CSS", or "JavaScript"), since these are not used by the live sample macro.
+Note that the headings for code blocks ("HTML", "CSS", or "JavaScript") are used by convention in most MDN examples, but are not actually required by the live sample macro.
 
 ### Grouping code blocks by heading
 
@@ -323,66 +324,168 @@ We get this output by running the code blocks above using the string identifier 
 
 {{EmbedLiveSample("hello-world")}}
 
-## Conventions regarding live samples
+### Displaying a single entry log
 
-- Orders of code blocks
-  - : When adding a live sample, the code blocks should be sorted so that the first one corresponds to the main language for this sample (if there is one). For example, when adding a live sample for the HTML Reference, the first block should be HTML, when adding a live sample for the CSS Reference, it should be CSS and so on.
-- Naming of headings
-  - : When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
-- Using a "Result" block
-  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).
+This example shows how to implement a simple single-entry log in your live sample, where the previous value is replaced whenever a new log entry is added.
 
-## Interactive live samples
+For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
+Generally when implementing your own samples you should place logging elements below other UI elements.
 
-Unlike [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#interactive_examples), live samples don't provide mechanisms for outputting the result of `console.log()` calls, or resetting the example values or code to their default state.
-If you want those features then you have to implement them yourself.
-
-In most cases emulating a basic console log is sufficient for demonstrating the features of an API.
-If you're allowing users to enter values or modify the UI, it also makes sense to provide a "Reset" button to restore the example to its original state.
-
-### Example live sample with reload and logging
-
-This example shows how to implement a simple interactive example.
-When the user enters a value into either of two numeric inputs the example logs the calculation and result.
+> **Note:** Displaying log output as part of the sample provides a much better user experience than using `console.log()`.
 
 #### HTML
 
-The first part of the HTML creates two numeric inputs and their labels, restricting their values between 0 and 9.
-
-```html
-<label for="num1">Number 1:</label>
-<input type="number" id="num1" name="num1" value="0" min="0" max="9" />
-<label for="num2">Number 2:</label>
-<input type="number" id="num2" name="num2" value="0" min="0" max="9" />
-```
-
-We then create a {{HTMLElement("pre")}} element that will be used for logging.
+Create a {{HTMLElement("pre")}} element with an `id` of `"log"` for displaying the log output.
 
 ```html
 <pre id="log"></pre>
 ```
 
-Last of all, we define a "Reset" button for resetting the example.
-
-```html
-<button id="reset" type="button">Reset</button>
-```
-
 #### JavaScript
 
-The code for logging is kept deliberately simple and safe.
-The logging function `log()` provides a compact mechanism to write log text into a new line of the log element each time it is called.
-The method sets the content of the log element using the `innerText` property, which is safer than using `innerHTML` because the logged text is not parsed to HTML (which might potentially inject malicious code).
+Next define the logging function `log()`.
+This takes the text to be logged as an argument, and uses it to replace the existing log.
 
 ```js
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText += `\n${text}`;
+  logElement.innerText = text;
 }
 ```
 
-The code to reload and clear the example adds an event listener on the "reset" button that calls [`window.location.reload`](/en-US/docs/Web/API/Location/reload) with argument of `true`.
-This forces the {{HTMLElement("iframe")}} containing the example to reload itself, bypassing the cache.
+Note that the content of the log element is set using the `innerText` property, which is safer than using `innerHTML` because the logged text is not parsed to HTML (which might potentially inject malicious code).
+
+#### CSS
+
+The CSS sets the height of the logging element.
+
+```css
+#log {
+  height: 20px;
+}
+```
+
+#### HTML
+
+This example is designed to show "how to log", so "what is logged" isn't all that important.
+This is therefore trivially implemented as a button that the user can press to iterate a value.
+
+```html
+<button id="iterate" type="button">Press me many times</button>
+```
+
+#### JavaScript
+
+```js
+const iterateButton = document.querySelector("#iterate");
+let iterValue = 0;
+iterateButton.addEventListener("click", () => {
+  iterValue++;
+  log(`The button has been pressed ${iterValue} times`);
+});
+```
+
+#### Result
+
+Press the button to add new log content.
+
+{{EmbedLiveSample("Displaying a single entry log", "100%", "80px")}}
+
+### Displaying a log that appends items
+
+This example shows how to implement a simple "logging console" in your live sample.
+The console appends a new line to the end of the output each time a log is added, scrolling the new item into view.
+
+For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
+Generally when implementing your own samples you should place logging elements below other UI elements.
+
+> **Note:** Displaying log output as part of the sample is a much better user experience than using `console.log()`.
+
+> **Note:** See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
+
+#### HTML
+
+Create a {{HTMLElement("pre")}} element with an `id` of `"log"` for displaying the log output.
+
+```html
+<pre id="log"></pre>
+```
+
+#### JavaScript
+
+Next define the logging function `log()`.
+This takes the text to be logged as an argument, and appends it to the content in the log element as a new line.
+The function also sets the element `scrollTop` to the `scrollHeight` of the element, which forces the new line of log text to scroll into view.
+
+```js
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}\n${text}`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+As with the previous example we set the content using the `innerText` property as this is less susceptible to malicious code than using `innerHTML`.
+
+#### CSS
+
+The CSS adds scrollbars if the element content overflows, and also sets the height of the logging element.
+Note that the JavaScript above ensures that if it does overflow, addition of new log text will scroll the text into view.
+
+```css
+#log {
+  height: 100px;
+  overflow: scroll;
+}
+```
+
+#### HTML
+
+This example is designed to show "how to log", so "what is logged" isn't all that important.
+This is therefore trivially implemented as a button that the user can press to iterate a value.
+
+```html
+<button id="iterate" type="button">Press me many times</button>
+```
+
+#### JavaScript
+
+```js
+const iterateButton = document.querySelector("#iterate");
+let iterValue = 0;
+iterateButton.addEventListener("click", () => {
+  iterValue++;
+  log(`The button has been pressed ${iterValue} times`);
+});
+```
+
+#### Result
+
+Press the button to add new log content.
+
+{{EmbedLiveSample("Displaying a log that appends items", "100%", "150px")}}
+
+### Displaying a reset button
+
+A reset button can be helpful for examples that cannot be restored to their initial state without resetting the page.
+For example, [the `Highlight.priority` "setting priority" example](/en-US/docs/Web/API/Highlight/priority#result_2) needs a reset button, because once you've set either priority the initial state is unavailable.
+
+This example shows how to add a reset button to the [Displaying a log that appends item](#displaying_a_log_that_appends_items) example above.
+Note that the JavaScript and CSS for the logging code are the same as in the previous example, so that code has are hidden.
+
+#### HTML
+
+The HTML for the example now includes a reset button.
+
+```html
+<button id="iterate" type="button">Press me many times</button>
+<button id="reset" type="button">Reset</button>
+<pre id="log"></pre>
+```
+
+#### JavaScript
+
+The code for the button adds a `click` event handler function that simply reloads the frame containing the current example.
 
 ```js
 const reload = document.querySelector("#reset");
@@ -392,31 +495,40 @@ reload.addEventListener("click", () => {
 });
 ```
 
-Next the code adds a listener on both of the {{HTMLElement("input")}} elements, which calls the `multiplyAndLog()` method whenever the value in either element is changed.
-The `multiplyAndLog()` method formats a string for the calculation and then calls `log()` to record the result.
-
-```js
-const inputs = document.querySelectorAll("input");
-inputs.forEach((input) => {
-  input.addEventListener("change", () => {
-    multiplyAndLog();
-  });
-});
-
-const input1 = document.querySelector("#num1");
-const input2 = document.querySelector("#num2");
-
-function multiplyAndLog() {
-  const logText = `${input1.value} x ${input2.value} = ${
-    input1.value * input2.value
-  }`;
-  log(logText);
+```css hidden
+#log {
+  height: 100px;
+  overflow: scroll;
 }
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}\n${text}`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+
+const iterateButton = document.querySelector("#iterate");
+let iterValue = 0;
+iterateButton.addEventListener("click", () => {
+  iterValue++;
+  log(`The button has been press ${iterValue} times`);
+});
 ```
 
 #### Result
 
-Enter a value in either number input to log the multiplication of the values in both inputs.
-Click "Reset" to reset the example.
+Click the "Press me many times" button a number of times.
+Reset the example by pressing the "Reset" button.
 
-{{EmbedLiveSample("Example live sample with reload and logging", "100%", "300px")}}
+{{EmbedLiveSample("Displaying a reset button", "100%", "150px")}}
+
+## Conventions regarding live samples
+
+- Orders of code blocks
+  - : When adding a live sample, the code blocks should be sorted so that the first one corresponds to the main language for this sample (if there is one). For example, when adding a live sample for the HTML Reference, the first block should be HTML, when adding a live sample for the CSS Reference, it should be CSS and so on.
+- Naming of headings
+  - : When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.
+- Using a "Result" block
+  - : After the different code blocks, please use a last "Result" block before using the `EmbedLiveSample` macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).
