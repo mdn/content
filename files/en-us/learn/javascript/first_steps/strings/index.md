@@ -26,7 +26,7 @@ Next, we'll turn our attention to strings — this is what pieces of text are ca
 
 ## The power of words
 
-Words are very important to humans — they are a large part of how we communicate. Since the Web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to our text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript contains many features for manipulating strings, creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
+Words are very important to humans — they are a large part of how we communicate. Since the web is a largely text-based medium designed to allow humans to communicate and share information, it is useful for us to have control over the words that appear on it. {{glossary("HTML")}} provides structure and meaning to text, {{glossary("CSS")}} allows us to precisely style it, and JavaScript offers many features for manipulating strings. These include creating custom welcome messages and prompts, showing the right text labels when needed, sorting terms into the desired order, and much more.
 
 Pretty much all of the programs we've shown you so far in the course have involved some string manipulation.
 
