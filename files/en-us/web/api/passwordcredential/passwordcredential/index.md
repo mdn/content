@@ -46,6 +46,11 @@ Either of the following:
     form should, at the very least, contain an id and password. It could also require a
     CSRF token.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if one of the `id`, `origin` or `password` option is empty.
+
 ## Examples
 
 This example shows how to set up an {{domxref("HTMLFormElement")}} to capture data
