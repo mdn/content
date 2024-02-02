@@ -6,11 +6,11 @@ page-type: guide
 
 {{DefaultAPISidebar("FedCM API")}}
 
-This article describes the process by which a relying party (RP) can use the Federated Credential Management (FedCM) API to perform a federated sign-in via an identity provider (IdP).
+This article describes the process by which a relying party (RP) can use the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) to perform a federated sign-in via an identity provider (IdP).
 
 ## Calling the get() method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to make a request for users to sign in to the RP with an IdP, using the available [IdP config and endpoints](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints). A typical request might look like this:
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user signs in to the RP with an IdP. A typical request might look like this:
 
 ```js
 async function signIn() {
