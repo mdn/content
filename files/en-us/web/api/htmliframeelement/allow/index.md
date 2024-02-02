@@ -12,11 +12,13 @@ The **`allow`** property of the {{domxref("HTMLIFrameElement")}} interface indic
 
 The Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{HTTPHeader("Permissions-Policy")}} header. It doesn't replace it.
 
+See [`<iframe>`'s Permissions Policy syntax](/en-US/docs/Web/HTTP/Permissions_Policy#iframe_syntax) for more details.
+
 It reflects the `allow` attribute of the {{HTMLElement("iframe")}} element.
 
 ## Value
 
-A string indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this {{HTMLElement("iframe")}} element, each policy must be separated by space. See [`<iframe>`'s Permissions Policy syntax](/en-US/docs/Web/HTTP/Permissions_Policy#iframe_syntax) for more details.
+A string indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this {{HTMLElement("iframe")}} element, each policy must be separated by space.
 
 ## Examples
 
