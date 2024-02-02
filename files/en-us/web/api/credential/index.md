@@ -30,7 +30,7 @@ None.
 ## Examples
 
 ```js
-let pwdCredential = new PasswordCredential({
+const pwdCredential = new PasswordCredential({
   id: "example-username", // Username/ID
   name: "Carina Anand", // Display name
   password: "correct horse battery staple", // Password

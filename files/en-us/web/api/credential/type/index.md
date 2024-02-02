@@ -17,12 +17,6 @@ credential's type. Valid values are `password`, `federated` and
 
 A string contains a credential's given name.
 
-## Examples
-
-```js
-// TBD
-```
-
 ## Specifications
 
 {{Specifications}}
