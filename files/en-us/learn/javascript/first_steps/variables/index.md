@@ -168,7 +168,7 @@ var myName;
 
 > **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code.
 
