@@ -1,6 +1,6 @@
 ---
 title: Using container style queries
-slug: Web/CSS/CSS_containment/Container_styles_queries
+slug: Web/CSS/CSS_containment/Container_style_queries
 page-type: guide
 browser-compat: css.at-rules.container.style
 ---
