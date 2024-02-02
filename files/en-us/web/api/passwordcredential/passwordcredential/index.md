@@ -37,7 +37,7 @@ Either of the following:
     - `name` {{optional_inline}}
       - : The name of the user signing in.
     - `origin`
-      - : The origin that the credential is effective.
+      - : The origin that the credential will take effective.
     - `password`
       - : The password of the user signing in.
 
