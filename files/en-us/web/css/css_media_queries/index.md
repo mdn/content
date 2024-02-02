@@ -18,7 +18,7 @@ Other common examples include increasing the font size and hiding navigation men
 
 In [CSS](/en-US/docs/Web/CSS), use the {{cssxref("@media")}} [at-rule](/en-US/docs/Web/CSS/At-rule) to conditionally apply part of a style sheet based on the result of a media query. To conditionally apply an entire style sheet, use {{cssxref("@import")}}.
 
-When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
+When designing reusable HTML components, you may also use [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries), which allow you to apply styles based on the size of a containing element rather than the viewport or other device characteristics.
 
 ## Reference
 
@@ -108,8 +108,8 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
   - {{cssxref("@container")}} at-rule
-  - [Using container queries](/en-US/docs/Web/CSS/CSS_container_queries)
-- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_container_queries) module
+  - [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
   - {{cssxref("@supports")}} at-rule
   - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media) module
@@ -134,7 +134,7 @@ When designing reusable HTML components, you may also use [container queries](/e
 
 ## See also
 
+- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using the `srcset` and `sizes` attributes](/en-US/docs/Web/HTML/Element/img#using_the_srcset_and_sizes_attributes)
-- [Container queries](/en-US/docs/Web/CSS/CSS_container_queries)
 - [CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)
 - Use {{cssxref("@supports")}} to apply styles that depend on browser support for various CSS technologies.
