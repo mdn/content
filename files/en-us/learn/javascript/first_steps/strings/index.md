@@ -137,7 +137,7 @@ Here, we are using the {{domxref("window.prompt()", "window.prompt()")}} functio
 
 ### Concatenation using "+"
 
-You can only use `${}` with template literals, not normal strings. You can concatenate normal strings using the `+` operator:
+You can use `${}` only with template literals, not normal strings. You can concatenate normal strings using the `+` operator:
 
 ```js
 const greeting = "Hello";
