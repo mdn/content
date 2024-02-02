@@ -20,7 +20,7 @@ A style declaration is reset by setting it to `null` or an empty string, e.g., `
 
 > **Note:** CSS property names are converted to JavaScript identifier with these rules:
 >
-> - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase). `float`, however, is a reserved keyword in JavaScript; historically, it was converted to `cssFloat`. While modern browsers support the direct use of `float` in JavaScript to access the `float` CSS property, `cssFloat` is used in older browsers and still supported as an alias in modern browsers.
+> - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase). `float`, however, is a reserved keyword in JavaScript. While modern browsers support the direct use of `float` in JavaScript to access the `float` CSS property, this property name was historically converted to `cssFloat`. `cssFloat` is used in older browsers and still supported as an alias in modern browsers.
 > - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
 >
 > The `style` property has the same priority in the CSS cascade as an inline style declaration set via the `style` attribute.
