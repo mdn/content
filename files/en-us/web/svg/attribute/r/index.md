@@ -16,7 +16,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
-When the value is set in percentage, it refers to the normalized diagonal of the current SVG viewport.
+When the value is set as a percentage, it refers to the normalized diagonal of the current SVG viewport.
 
 ## Example
 
