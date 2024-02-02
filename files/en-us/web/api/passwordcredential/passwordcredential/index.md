@@ -18,15 +18,15 @@ from the `init` object for global {{domxref('fetch()')}}.
 ## Syntax
 
 ```js-nolint
-new PasswordCredential(passwordCredentialData)
-new PasswordCredential(htmlFormElement)
+new PasswordCredential(data)
+new PasswordCredential(form)
 ```
 
 ### Parameters
 
 Either of the following:
 
-- `passwordCredentialData`
+- `data`
 
   - : An object with the following properties:
 
@@ -39,7 +39,7 @@ Either of the following:
     - `password`
       - : The password of the user signing in.
 
-- `htmlFormElement`
+- `form`
   - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
     form should, at the very least, contain an id and password. It could also require a
     CSRF token.
