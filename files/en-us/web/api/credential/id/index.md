@@ -8,10 +8,7 @@ browser-compat: api.Credential.id
 
 {{APIRef("Credential Management API")}}
 
-The **`id`** read-only property of the
-{{domxref("Credential")}} interface returns a string containing the
-credential's identifier. This might be any one of a GUID, username, or email
-address.
+The **`id`** read-only property of the {{domxref("Credential")}} interface returns a string containing the credential's identifier. This might be any one of a GUID, username, or email address.
 
 ## Value
 
