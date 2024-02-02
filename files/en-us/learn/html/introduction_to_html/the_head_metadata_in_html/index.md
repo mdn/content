@@ -182,12 +182,6 @@ One effect of this is that when you link to MDN Web Docs on Facebook, the link a
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)
 
-Twitter also has its own similar proprietary metadata called [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards), which has a similar effect when the site's URL is displayed on twitter.com. For example:
-
-```html
-<meta name="twitter:title" content="Mozilla Developer Network" />
-```
-
 ## Adding custom icons to your site
 
 To further enrich your site design, you can add references to custom icons in your metadata, and these will be displayed in certain contexts. The most commonly used of these is the **favicon** (short for "favorites icon", referring to its use in the "favorites" or "bookmarks" lists in browsers).
