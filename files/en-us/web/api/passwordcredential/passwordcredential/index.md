@@ -31,15 +31,15 @@ Either of the following:
   - : An object with the following properties:
 
     - `iconURL` {{optional_inline}}
-      - : The URL of a user's avatar image.
+      - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`
-      - : The ID of the user signing in.
+      - : A string representing a unique ID for the credential.
     - `name` {{optional_inline}}
-      - : The name of the user signing in.
+      - : A string representing the credential username.
     - `origin`
-      - : The origin that the credential will take effective.
+      - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
     - `password`
-      - : The password of the user signing in.
+      - : A string representing the credential password.
 
 - `form`
   - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
