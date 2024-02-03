@@ -1,7 +1,7 @@
 ---
 title: "ReferenceError: deprecated caller or arguments usage"
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-page-type: javascript-error
+page-type: javascript-error.
 ---
 
 {{jsSidebar("Errors")}}
