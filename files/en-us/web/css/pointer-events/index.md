@@ -80,10 +80,6 @@ Elements with `pointer-events: none` will still receive focus through sequential
 
 {{csssyntax}}
 
-## Javascript name
-
-`pointerEvents`
-
 ## Examples
 
 ### Disabling pointer events on all images
@@ -134,5 +130,6 @@ a[href="http://example.com"]
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
 - The SVG attribute {{SVGAttr("visibility")}}
+- The PointerEvent API {{domxref("PointerEvent")}}
 - [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - {{cssxref("user-select")}} - controls whether the user can select text
