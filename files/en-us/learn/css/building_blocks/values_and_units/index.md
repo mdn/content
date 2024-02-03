@@ -421,8 +421,8 @@ The three parts are:
 
 ### HSL
 
-Another function is the [`hsl()`](en-US/docs/Web/CSS/color_value/hsl) function which also specifies an `srgb()` color.
-Similar to the `hwb()` function, HSL uses `Hue`, in addition to `Saturation` and `Lightness`: 
+Another function is the [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) function which also specifies an `srgb()` color.
+Similar to the `hwb()` function, HSL uses `Hue`, in addition to `Saturation` and `Lightness`:
 
 - **Hue**
 - **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation.
