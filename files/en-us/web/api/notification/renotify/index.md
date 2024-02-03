@@ -36,7 +36,7 @@ const options = {
 
 const n = new Notification("New review activity", options);
 
-console.log(n.renotify); // "true"
+console.log(n.renotify); // true
 ```
 
 ## Specifications

@@ -144,7 +144,7 @@ Go to the root directory of the project and enter these commands:
 npx degit sveltejs/template/scripts scripts       # download script file to a scripts folder
 
 node scripts/setupTypeScript.js                   # run it
-Converted to TypeScript.
+# Converted to TypeScript.
 ```
 
 You will need to re-run your dependency manager to get started.
@@ -187,7 +187,7 @@ Clicking _Install all_ will install Svelte for VS Code.
 
 We can also see that the `setupTypeScript.js` file made a couple of changes to our project. The `main.js` file has been renamed to `main.ts`, which means that VS Code can provide hover-information on our Svelte components:
 
-![VS Code screenshot showing that when you add type="ts" to a component, it gives you three dot alert hints](03-vscode-hints-in-main-ts.png)
+![VS Code screenshot showing that when hovering on a component, it gives you hints](03-vscode-hints-in-main-ts.png)
 
 We also get type checking for free. If we pass an unknown property in the options parameter of the `App` constructor (for example a typo like `traget` instead of `target`), TypeScript will complain:
 
@@ -199,7 +199,7 @@ In the `App.svelte` component, the `setupTypeScript.js` script has added the `la
 
 And if you pass something that is not a number, it will complain about it:
 
-![Type checking in VS Code - App object has been given an unknown property target](06-vscode-type-checking-in-components.png)
+![Type checking in VS Code - the ms variable has been given a non-numeric value](06-vscode-type-checking-in-components.png)
 
 The application template has a `check` script configured that runs `svelte-check` against your code. This package allows you to detect errors and warnings normally displayed by a code editor from the command line, which makes it pretty useful for running it in a continuous integration (CI) pipeline. Just run `npm run check` to check for unused CSS, and return A11y hints and TypeScript compile errors.
 
