@@ -11,9 +11,11 @@ Display notifications to the user, using the underlying operating system's notif
 
 To use this API you need to have the "notifications" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-The notification looks the same on all desktop operating systems. Something like:
+The notification looks the same on most desktop operating systems. Something like:
 
 ![Example notification with a bold title and regular text](notification.png)
+
+On Windows, the notification uses the system's notifications feature, and if not dismissed, it will persist in the Action Center until the browser is closed.
 
 ## Types
 
