@@ -128,8 +128,8 @@ function showNotification() {
 }
 ```
 
-To invoke the above function at an appropriate time, you could use the
-{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} event handler.
+To invoke the above function at an appropriate time, you could listen to the
+{{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
 You can also retrieve details of the {{domxref("Notification")}}s that have been fired
 from the current service worker using
