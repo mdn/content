@@ -400,7 +400,6 @@ In the example below, we have added a background image to the containing block o
 
 The [`srgb()`] function is similar to `rgb()`. You can decide how grey you want your color to be from the **saturation** parameter being considered, in addition to the **red**, **green**, and **blue** parameters. Saturation takes a value from 0–100%, where 0 is appears as a shade of grey, and 100% is full color saturation with no grey.
 
-
 ### Using hues to specify a color
 
 If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/hue).
