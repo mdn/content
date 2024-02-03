@@ -43,7 +43,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 ### Data types
 
 - [`<container-name>`](/en-US/docs/Web/CSS/@container#values)
-- [`<style-feature>`](/en-US/docs/Web/CSS/@container#Container_style_queries)
+- [`<style-feature>`](/en-US/docs/Web/CSS/@container#container_style_queries)
 - [Container relative `<length>` units](/en-US/docs/Web/CSS/length#container_query_length_units)
 
 ### Events
