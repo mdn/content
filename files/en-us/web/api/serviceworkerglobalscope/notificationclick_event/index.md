@@ -10,6 +10,11 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 
 The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
 
+Notifications created on the main thread or in workers which aren't service workers
+using the {{domxref("Notification.Notification","Notification()")}} constructor will
+instead receive a {{domxref("Notification/click_event", "click")}} event on the {{domxref("Notification")}} object
+itself.
+
 This event is not cancelable and does not bubble.
 
 ## Syntax
