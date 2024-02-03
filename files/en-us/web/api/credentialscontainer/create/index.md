@@ -110,10 +110,12 @@ If a single credential cannot be successfully created, the Promise will resolve 
 ```js
 navigator.credentials
   .create({
-    id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
-    name: "fluffybunny",
-    origin: "example.com",
-    password: "fluffyhaxx0r",
+    password: {
+      id: "ergnjregoith5y9865jhokmfdskl;vmfdl;kfd...",
+      name: "fluffybunny",
+      origin: "example.com",
+      password: "fluffyhaxx0r",
+    },
   })
   .then((pwdCred) => {
     console.log(pwdCred.name);

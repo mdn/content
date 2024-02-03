@@ -89,8 +89,10 @@ If a single credential cannot be unambiguously obtained, the Promise will resolv
 ```js
 navigator.credentials
   .get({
-    protocols: ["openidconnect"],
-    providers: ["https://www.facebook.com", "https://accounts.google.com"],
+    federated: {
+      protocols: ["openidconnect"],
+      providers: ["https://www.facebook.com", "https://accounts.google.com"],
+    },
   })
   .then((fedCred) => {
     console.log(fedCred.provider);
