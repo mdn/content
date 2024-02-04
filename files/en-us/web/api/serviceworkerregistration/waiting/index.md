@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerRegistration.waiting
 
 {{APIRef("Service Workers API")}}
 
-The **`waiting`** property of the
+The **`waiting`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `installed`. This property is initially
 set to `null`.

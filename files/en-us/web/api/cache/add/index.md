@@ -17,7 +17,7 @@ fetch(url).then((response) => {
   if (!response.ok) {
     throw new TypeError("bad response status");
   }
-  return cache.add(url);
+  return cache.put(url, response);
 });
 ```
 

@@ -15,7 +15,7 @@ browser-compat: html.elements.input.type_reset
 
 ## Value
 
-An `<input type="reset">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label. Buttons such as `reset` don't have a value otherwise.
+An `<input type="reset">` element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label providing the button with an {{glossary("accessible description")}}. Buttons such as `reset` don't have a value otherwise.
 
 ### Setting the value attribute
 

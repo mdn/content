@@ -36,7 +36,7 @@ getComputedStyle(element, pseudoElt)
 A _live_ {{DOMxRef("CSSStyleDeclaration")}}
 object, which updates automatically when the element's styles are changed.
 
-### Throws
+### Exceptions
 
 - {{JSxRef("TypeError")}}
 

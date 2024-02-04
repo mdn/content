@@ -138,8 +138,8 @@ These guidelines should be followed to ensure that the code examples you write d
 - Use `rgb()` for more complex colors (including semi-transparent ones):
 
   ```css example-good
-  color: rgb(0, 0, 0, 0.5);
-  color: rgb(248, 242, 230);
+  color: rgb(0 0 0 / 50%);
+  color: rgb(248 242 230);
   ```
 
 - For hex colors, use the short form where relevant:
