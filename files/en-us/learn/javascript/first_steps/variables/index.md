@@ -314,7 +314,7 @@ myNumberArray[2]; // should return 40
 
 The square brackets specify an index value corresponding to the position of the value you want returned. You might have noticed that arrays in JavaScript are zero-indexed: the first element is at index 0.
 
-You'll learn a lot more about arrays in [a future article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
+You'll learn a lot more about arrays in [the arrays article](/en-US/docs/Learn/JavaScript/First_steps/Arrays).
 
 ### Objects
 
@@ -332,7 +332,7 @@ To retrieve the information stored in the object, you can use the following synt
 dog.name;
 ```
 
-We won't be looking at objects any more for now — you can learn more about those in [a future module](/en-US/docs/Learn/JavaScript/Objects).
+We won't be looking at objects any more for now — you can learn more about those in [the objects module](/en-US/docs/Learn/JavaScript/Objects).
 
 ## Dynamic typing
 
