@@ -13,32 +13,6 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 ### Boolean primitives and Boolean objects
 
-When used in conditional statements, the Boolean {{Glossary("Primitive", "primitives")}} `true` and `false` behave as one might expect:
-
-```js
-if (true) {
-  console.log("This log is printed.");
-}
-
-if (false) {
-  console.log("This log is NOT printed.");
-}
-```
-
-But the same can't be said for `Boolean` objects like `Boolean(true)` and `Boolean(false)`:
-
-```js
-if (Boolean(true)) {
-  console.log("This log is printed.");
-}
-
-if (Boolean(false)) {
-  console.log("This log is ALSO printed.");
-}
-```
-
-The reason `Boolean(false)` behaves this way is because `Boolean(false)` is a `Boolean` _object_, and _all_ objects evaluate to true.
-
 Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
 
 ```js
@@ -47,13 +21,21 @@ const good2 = !!expression; // or this
 const bad = new Boolean(expression); // don't use this!
 ```
 
-If you specify any object, including a `Boolean` object whose value is `false`, as the initial value of a `Boolean` object, the new `Boolean` object has a value of `true`.
+This is because _all_ objects, including a `Boolean` object whose wrapped value is `false`, are {{glossary("truthy")}} and evaluate to `true` in places such as conditional statements. (See also the [boolean coercion](#boolean_coercion) section below.)
 
 ```js
-const myFalse = new Boolean(false); // initial value of false
-const g = Boolean(myFalse); // initial value of true
-const myString = new String("Hello"); // string object
-const s = Boolean(myString); // initial value of true
+if (new Boolean(true)) {
+  console.log("This log is printed.");
+}
+
+if (new Boolean(false)) {
+  console.log("This log is ALSO printed.");
+}
+
+const myFalse = new Boolean(false); // myFalse is a Boolean object (not the primitive value false)
+const g = Boolean(myFalse); // g is true
+const myString = new String("Hello"); // myString is a String object
+const s = Boolean(myString); // s is true
 ```
 
 > **Warning:** You should rarely find yourself using `Boolean` as a constructor.
