@@ -264,7 +264,6 @@ Try creating a few more variables now, with the above guidance in mind.
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
 
-So far we've looked at the first two, but there are others.
 
 ### Numbers
 
