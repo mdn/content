@@ -43,7 +43,8 @@ waitUntil(promise)
 
 ### Parameters
 
-A {{jsxref("Promise")}}.
+A {{jsxref("Promise")}}. As illustrated by the example below, `waitUntil()` does
+not accept an anonymous function as the parameter.
 
 ### Return value
 
