@@ -240,7 +240,7 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
    export let todo: TodoType;
    ```
 
-   > **Note:** Another reminder: When importing a `.ts` file, you have to omit the extension. Check the [`import` section](https://www.typescriptlang.org/docs/handbook/modules.html#import) of the TypeScript manual for more information.
+   > **Note:** Another reminder: When importing a `.ts` file, you have to omit the extension. Check the [`modules-in-typescript` section](https://www.typescriptlang.org/docs/handbook/2/modules.html#modules-in-typescript) of the TypeScript manual for more information.
 
 6. Now from `Todos.svelte` we will instantiate a `Todo` component with a literal object as its parameter before the call to the `MoreActions` component, like this:
 
