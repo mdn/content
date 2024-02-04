@@ -7,15 +7,25 @@ browser-compat: css.at-rules.container.style
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Container style queries enable you to apply styles to an element based on the style features of the element's container.For example, you can query a container, and target styles to a descendant of the container only if the container is `display: inline flex`, has a dark mode custom variable value set, has a background color is not transparent, or other style feature.
+Basic [container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to an element based on the [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container. Container style queries enable you to apply styles to an element based on the style features of the element's container. For example, you can target styles to a descendant of the container if the container is `display: inline flex`, has a dark mode custom variable value set, has a background color that is not transparent, or based on any other style feature.
 
-In this guide,
-
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. With container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the size or style features of a container.
+In this guide, we learn how to use the `style()` functional notation withing the {{cssxref("@container")}} `<container-condition>` to create container style queries.
 
 ### Container queries
 
-With {{cssxref("@container")}} query, declarations are filtered by a condition and applied to the container if the condition is true. Once an eligible query container has been selected for an element, each container query feature in the `<container-condition>` is evaluated against that query container. An optional case-sensitive {{cssxref("container-name")}} can be provided which filters the set of query containers considered to just those with a matching query container name.
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or, with container style queries, other style features of a container.
+
+With {{cssxref("@container")}} query, declarations are filtered by a condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set and the condition is true for that element. The styles within a container query style block are applied to Once an eligible query container has been selected for an element, each container query feature in the `<container-condition>` is evaluated against that query container.
+
+In a basic container query, the `<container-condition>` includes one or more size features. The syntax is identical to a [`@media` queries](/en-US/docs/Web/CSS/@media), with the size features that can be queried limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}. Media queries are based on the viewport, of which there is only one. Every element is a potential container, so unlike media queries, you can name your container, filtering the set of query containers considered to those with a matching query container name.
+
+```css
+@container medium (10em <= width <= 20em) {
+  /* styles */
+}
+```
+
+In the above example, the `medium` container can be any element that is between 10em and 20em, inclusive.
 
 ### Container style queries
 
