@@ -105,7 +105,7 @@ Our above example has a single field called `my_field_name`, of type `models.Cha
 
 The field name is used to refer to it in queries and templates.
 Fields also have a label, which is specified using the `verbose_name` argument (with a default value of `None`).
-If `verbose_name` is not set, the label is created from the field name by replacing any underscores with a space, and capitalizing the first letter (for example, the field `my_field_name` would have a default label of _My field name_ when used in forms).
+If `verbose_name` is not set, the label is created from the field name by replacing any underscores with a space, and capitalizing the first letter (for example, the field `my_field_name` would have a default label of _My field Name_ when used in forms).
 
 The order that fields are declared will affect their default order if a model is rendered in a form (e.g. in the Admin site), though this may be overridden.
 
