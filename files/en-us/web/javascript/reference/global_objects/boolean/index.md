@@ -37,7 +37,7 @@ if (Boolean(false)) {
 }
 ```
 
-The reason `Boolean(false)` behaves this way is because `Boolean(false)` is a `Boolean` *object*, and *all* objects evaluate to true. 
+The reason `Boolean(false)` behaves this way is because `Boolean(false)` is a `Boolean` _object_, and _all_ objects evaluate to true.
 
 Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
 
