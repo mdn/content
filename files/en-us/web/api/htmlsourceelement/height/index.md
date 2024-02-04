@@ -48,7 +48,7 @@ A non-negative number indicating the height of the image resource in CSS pixels.
 ```js
 const img = document.getElementById("img");
 const sources = img.querySelectorAll("source");
-console.log(Array.from(sources).map(el => el.height)); // Output: [400, 800, 800]
+console.log(Array.from(sources).map((el) => el.height)); // Output: [400, 800, 800]
 ```
 
 ## Specifications

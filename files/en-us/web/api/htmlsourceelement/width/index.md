@@ -48,7 +48,7 @@ A non-negative number indicating the width of the image resource in CSS pixels.
 ```js
 const img = document.getElementById("img");
 const sources = img.querySelectorAll("source");
-console.log(Array.from(sources).map(el => el.width)); // Output: [1000, 800, 600]
+console.log(Array.from(sources).map((el) => el.width)); // Output: [1000, 800, 600]
 ```
 
 ## Specifications
