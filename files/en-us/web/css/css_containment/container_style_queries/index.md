@@ -7,9 +7,9 @@ browser-compat: css.at-rules.container.style
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Container style queries enable you to apply styles to an element based on the style features of the element's container.
+Container style queries enable you to apply styles to an element based on the style features of the element's container.For example, you can query a container, and target styles to a descendant of the container only if the container is `display: inline flex`, has a dark mode custom variable value set, has a background color is not transparent, or other style feature.
 
-If, for example, you can style an element based on whether the container is `display: inline flex`, has a dark mode custom variable value set, or if the background color is not transparent.
+In this guide,
 
 Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. With container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the size or style features of a container.
 
