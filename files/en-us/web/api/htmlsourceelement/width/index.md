@@ -62,5 +62,8 @@ console.log(Array.from(sources).map(el => el.width)); // Output: [1000, 800, 600
 ## See also
 
 - {{domxref("HTMLCanvasElement.width")}}
+- {{domxref("HTMLEmbedElement.width")}}
+- {{domxref("HTMLIFrameElement.width")}}
 - {{domxref("HTMLImageElement.width")}}
 - {{domxref("HTMLObjectElement.width")}}
+- {{domxref("HTMLVideoElement.width")}}

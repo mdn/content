@@ -62,5 +62,8 @@ console.log(Array.from(sources).map(el => el.height)); // Output: [400, 800, 800
 ## See also
 
 - {{domxref("HTMLCanvasElement.height")}}
+- {{domxref("HTMLEmbedElement.height")}}
+- {{domxref("HTMLIFrameElement.height")}}
 - {{domxref("HTMLImageElement.height")}}
 - {{domxref("HTMLObjectElement.height")}}
+- {{domxref("HTMLVideoElement.height")}}
