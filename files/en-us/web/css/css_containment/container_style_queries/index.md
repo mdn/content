@@ -15,17 +15,37 @@ In this guide, we learn how to use the `style()` functional notation withing the
 
 Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or, with container style queries, other style features of a container.
 
-With {{cssxref("@container")}} query, declarations are filtered by a condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set and the condition is true for that element. The styles within a container query style block are applied to Once an eligible query container has been selected for an element, each container query feature in the `<container-condition>` is evaluated against that query container.
-
-In a basic container query, the `<container-condition>` includes one or more size features. The syntax is identical to a [`@media` queries](/en-US/docs/Web/CSS/@media), with the size features that can be queried limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}. Media queries are based on the viewport, of which there is only one. Every element is a potential container, so unlike media queries, you can name your container, filtering the set of query containers considered to those with a matching query container name.
+With {{cssxref("@container")}} query, declarations are filtered by a condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set and the condition is true for that element.
 
 ```css
-@container medium (10em <= width <= 20em) {
+form {
+  container-type: inline-size;
+}
+@container (10em <= width <= 20em) {
   /* styles */
 }
 ```
 
-In the above example, the `medium` container can be any element that is between 10em and 20em, inclusive.
+In this example, the `<container-condition>` is `(10em <= width <= 20em)` and all {{htmlelement("form")}} elements are potential matches for any unnamed container queries. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
+
+In a basic container query, the `<container-condition>` includes one or more size features. The syntax is identical to a [`@media` queries](/en-US/docs/Web/CSS/@media), with the size features that can be queried limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`.
+
+A `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}. Media queries are based on the viewport, of which there is only one. Every element with a `container-type` property set is a container, and there may be many. So, unlike media queries, you can give each of your containers a name, then limit the containers matched by the @container query block by that name. The name filters the set of query containers considered to those with a matching query container name.
+
+```css
+@container card (orientation: landscape) and (max-width: 40rem) {
+  /* styles */
+}
+
+.cards li {
+  container-type: inline-size;
+  container-name: card;
+}
+```
+
+In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the list-items' descendants. This container query is limited to only elements with `container-name: card` applied.
+
+These ba
 
 ### Container style queries
 
