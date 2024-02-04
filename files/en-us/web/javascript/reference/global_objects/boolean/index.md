@@ -13,25 +13,31 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 ### Boolean primitives and Boolean objects
 
-Do not confuse the {{Glossary("Primitive", "primitive")}} `Boolean` values `true` and `false` with the `true` and `false` values of the `Boolean` object.
-
-Any **object**, including a `Boolean` object whose value is `false`, evaluates to `true` when passed to a conditional statement. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `true`:
+When used in conditional statements, the Boolean {{Glossary("Primitive", "primitives")}} `true` and `false` behave as one might expect:
 
 ```js
-const x = new Boolean(false);
-if (x) {
-  // this code is executed
+if (true) {
+  console.log("This log is printed.");
+}
+
+if (false) {
+  console.log("This log is NOT printed.");
 }
 ```
 
-This behavior does not apply to `Boolean` primitives. For example, the condition in the following {{jsxref("Statements/if...else", "if")}} statement evaluates to `false`:
+But the same can't be said for `Boolean` objects like `Boolean(true)` and `Boolean(false)`:
 
 ```js
-const x = false;
-if (x) {
-  // this code is not executed
+if (Boolean(true)) {
+  console.log("This log is printed.");
+}
+
+if (Boolean(false)) {
+  console.log("This log is ALSO printed.");
 }
 ```
+
+The reason `Boolean(false)` behaves this way is because `Boolean(false)` is a `Boolean` *object*, and *all* objects evaluate to true. 
 
 Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
 
