@@ -114,8 +114,8 @@ Now we can target parts on the `<card-component>` from the `<card-wrapper>` like
 
 ```css
 ::part(body) {
-   color: red;
-   font-style: italic;
+  color: red;
+  font-style: italic;
 }
 
 ::part(header) {
