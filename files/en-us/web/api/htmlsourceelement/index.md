@@ -16,7 +16,7 @@ The **`HTMLSourceElement`** interface provides special properties (beyond the re
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLSourceElement.height")}}
-  - : A number that reflects the [`height`](/en-US/docs/Web/HTML/Element/source#height) HTML attribute, indicating the height of the image resource in CSS pixels. The property has a meaning only if the parent of current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
+  - : A number that reflects the [`height`](/en-US/docs/Web/HTML/Element/source#height) HTML attribute, indicating the height of the image resource in CSS pixels. The property has a meaning only if the parent of the current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
 - {{domxref("HTMLSourceElement.media")}}
   - : A string reflecting the [`media`](/en-US/docs/Web/HTML/Element/source#media) HTML attribute, containing the intended type of the media resource.
 - {{domxref("HTMLSourceElement.sizes")}}
@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLSourceElement.type")}}
   - : A string reflecting the [`type`](/en-US/docs/Web/HTML/Element/source#type) HTML attribute, containing the type of the media resource.
 - {{domxref("HTMLSourceElement.width")}}
-  - : A number that reflects the [`width`](/en-US/docs/Web/HTML/Element/source#width) HTML attribute, indicating the width of the image resource in CSS pixels. The property has a meaning only if the parent of current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
+  - : A number that reflects the [`width`](/en-US/docs/Web/HTML/Element/source#width) HTML attribute, indicating the width of the image resource in CSS pixels. The property has a meaning only if the parent of the current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
 
 ## Instance methods
 
