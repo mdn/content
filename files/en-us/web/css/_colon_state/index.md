@@ -88,7 +88,7 @@ question-box::part(checkbox):state(checked) {
 }
 ```
 
-For a live example of this code in action, see the ["Question box"](/en-US/docs/Web/API/CustomStateSet#question_box_exposing_states_in_shadow_parts) example on the `CustomStateSet` page.
+For a live example of this code in action, see the ["Question box"](/en-US/docs/Web/API/CustomStateSet#matching_a_custom_state_in_a_shadow_part_of_a_custom_element) example on the `CustomStateSet` page.
 
 ## Specifications
 

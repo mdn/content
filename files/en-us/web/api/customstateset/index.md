@@ -183,7 +183,7 @@ Click the element to see a different border being applied as the checkbox `check
 
 {{EmbedLiveSample("Labeled Checkbox", "100%", 50)}}
 
-### Question box: exposing states in shadow parts
+### Matching a custom state in a shadow part of a custom element
 
 This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element for styling.
 Shadow parts are sections of the shadow tree that are intentionally exposed to pages that use the custom element.
