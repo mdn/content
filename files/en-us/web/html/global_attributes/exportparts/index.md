@@ -188,7 +188,6 @@ Now we can target parts on the `<card-component>` from the `<card-wrapper>` like
 
 Note `footer` is not bold, as we did not include it in `exportparts`.
 
-
 ### Exposing mapped parts
 
 To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`):
