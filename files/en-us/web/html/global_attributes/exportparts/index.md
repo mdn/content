@@ -79,7 +79,7 @@ We style parts of the `<card-component>` shadow tree using the `::parts()` pseud
   color: red;
   font-style: italic;
 }
-```css
+```
 
 #### Results
 
