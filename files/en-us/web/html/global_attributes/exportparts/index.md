@@ -177,7 +177,8 @@ Now we can target parts on the `<card-component>` from the `<card-wrapper>` like
   font-style: italic;
 }
 
-::part(header, footer) {
+::part(header),
+::part(footer) {
   font-weight: bold;
 }
 ```
