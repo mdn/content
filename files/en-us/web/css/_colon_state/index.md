@@ -23,7 +23,8 @@ The `:state()` pseudo-class takes as its argument a custom identifier that repre
 
 ## Description
 
-Elements can transition between states due to user interaction and other factors. For instance, an element can be in the "hover" state when a user hovers over the element, or a link can be in the "visited" state after a user clicks on it.
+Elements can transition between states due to user interaction and other factors.
+For instance, an element can be in the "hover" state when a user hovers over the element, or a link can be in the "visited" state after a user clicks on it.
 Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as [`:hover`](/en-US/docs/Web/CSS/:hover) and [`:visited`](/en-US/docs/Web/CSS/:visited).
 Similarly, [autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element) (custom elements that are not derived from built-in elements) can expose their states, allowing the custom elements to be styled using the CSS `:state()` pseudo-class.
 
@@ -45,7 +46,7 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-See [CustomStateSet](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) for a live example of this code in action.
+See the ["Labeled checkbox" in `CustomStateSet`](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) for a live example of this code in action.
 
 ### Matching a custom state in a custom element's shadow DOM
 
@@ -60,6 +61,33 @@ For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/
   background: grey;
 }
 ```
+
+### Matching a custom state against a shadow part
+
+The CSS `:state()` pseudo-class can also be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element.
+
+The shadow parts of a custom element are the parts of its shadow tree that it exposes to a containing page for styling purposes.
+Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+The [`::part()`](/en-US/docs/Web/CSS/::part) pseudo element is used to match against specific parts, and can be followed by `:state()` to match against parts with a particular state.
+
+For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as part named `checkbox`:
+
+```js
+shadowRoot.innerHTML = `<labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
+```
+
+The page CSS can then match against the part, and the part in a particular state, as shown:
+
+```css
+question-box::part(checkbox) {
+  color: red;
+}
+question-box::part(checkbox):state(checked) {
+  color: green;
+}
+```
+
+A full (live) example is shown in the `CustomStateSet` example [Question box: exposing states in shadow parts](/en-US/docs/Web/API/CustomStateSet#question_box_exposing_states_in_shadow_parts).
 
 ## Specifications
 
