@@ -7,7 +7,7 @@ browser-compat: css.at-rules.container.style
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Basic [container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to an element based on the [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container. Container style queries enable you to apply styles to an element based on the style features of the element's container. For example, you can target styles to a descendant of the container if the container is `display: inline flex`, has a dark mode custom variable value set, has a background color that is not transparent, or based on any other style feature.
+Basic [container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio. Container style queries enable you to apply styles to any element's descendants based on the style features of that element, such as if the element is `display: inline flex`, has a dark mode custom variable value set, has a background color that is not transparent, or any other style feature. While you have to explicitly set an element to be a container for container size queries, every element is a style container.
 
 In this guide, we learn the basics of container queries by looking at container size queries, then learn how to use the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create container style queries.
 
@@ -21,7 +21,7 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 }
 ```
 
-With {{cssxref("@container")}} query, declarations are filtered by a condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set and the condition is true for that element. For an element to be a container for any container size queries, set `container-type: size` or `container-type: inline-size` must be set on the container element.
+With container size queries, declarations are filtered by a size condition and applied if 1) the element has been declared to be a container with the {{cssxref("container-type")}} property set to `size` or `inline-size`, and 2) the condition is true for that element.
 
 ```css
 form {
