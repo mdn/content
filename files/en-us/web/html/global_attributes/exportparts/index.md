@@ -19,7 +19,14 @@ Attribute `exportparts` must be placed on a _shadow Host_, which is the element 
 
 ## Examples
 
-First let's create a card component that we will then wrap with another component.
+
+### Basic component
+
+To demonstrate how `exportparts` is used to enable targeting parts within nested components, we will create a component, and then nest it within another component. 
+
+#### HTML
+
+First, let's create a card component that we will then wrap with another component. We also use the new element we created, populating the slots with plain text as content.
 
 ```html
 <template id="card-component-template">
