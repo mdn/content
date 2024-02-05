@@ -48,7 +48,7 @@ For example:
   - : An optional `<container-name>` and a `<container-query>`. Styles defined in the `<stylesheet>` are applied if the condition is true.
 
     - `<container-name>`
-      - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, spccified as an {{cssxref("ident")}}.
+      - : Optional. The name of the container that the styles will be applied to when the query evaluates to true, specified as an {{cssxref("ident")}}.
     - `<container-query>`
       - : A set of features that are evaluated against the query container when the size of the container changes.
 
