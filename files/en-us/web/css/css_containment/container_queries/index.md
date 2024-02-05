@@ -1,26 +1,27 @@
 ---
 title: CSS container queries
-slug: Web/CSS/CSS_container_queries
+slug: Web/CSS/CSS_containment/Container_queries
 page-type: guide
 ---
 
 {{CSSRef}}
 
 Container queries enable you to apply styles to an element based on the size of the element's container. If, for example, a container has less space available in the surrounding context, you can hide certain elements or use smaller fonts.
+
 Container queries are an alternative to [media queries](/en-US/docs/Web/CSS/CSS_media_queries), which apply styles to elements based on viewport size or other device characteristics.
 
-![A media query based on the viewport's width, which is the full width of the browser, and a container query based on the width of a container context, which is the width of the container element.](container-query.svg)
+![Two different query types. First, a media query based on the viewport's width, which is the full width of the browser. Second, a container query based on the width of a container element.](container-query.svg)
 
 ## Using container queries
 
 To use container queries, you need to declare a **containment context** on an element so that the browser knows you might want to query the dimensions of this container later.
-To do this, use the {{Cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
+To do this, use the {{cssxref("container-type")}} property with a value of `size`, `inline-size`, or `normal`.
 
 These values have the following effects:
 
 - `size`
   - : The query will be based on the [inline and block](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container.
-    Applies layout, style, and size containment to the container.
+    Applies layout, style, and size [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) to the container.
 - `inline-size`
   - : The query will be based on the [inline](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions) dimensions of the container.
     Applies layout, style, and inline-size containment to the element.
