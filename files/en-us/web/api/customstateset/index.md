@@ -63,10 +63,19 @@ The states can be used within the custom element but are not directly accessible
 
 ### Interaction with CSS
 
-Developers can select a custom element with a specific state using its state _custom state pseudo-class_.
+Developers can select a custom element with a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
 The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is the state as defined in the element.
-
 The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `mystatename` is present in the `CustomStateSet`).
+
+For example, the following CSS might be used to match a `labeled-checkbox` custom element where the element's `CustomStateSet` contains `checked`, and apply a solid border:
+
+```css
+labeled-checkbox:state(checked) {
+  border: solid;
+}
+```
+
+CSS can also match a custom state [within custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function, and can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo element to match the state of elements within a shadow tree that have a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
 > **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
@@ -171,6 +180,127 @@ labeled-checkbox:state(checked) {
 Click the element to see a different border being applied as the checkbox `checked` state is toggled.
 
 {{EmbedLiveSample("Labeled Checkbox", "100%", 50)}}
+
+### Question box: exposing states in shadow parts
+
+This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element for styling.
+These are the parts of the shadow tree that are intentionally exposed to pages that use the custom element.
+
+The example creates a `<question-box>` custom element, which is an element that displays a question prompt along with a checkbox with the label "Yes".
+The element uses the `<labeled-checkbox>` defined in the [previous example](#labeled_checkbox) for the checkbox.
+
+#### JavaScript
+
+```js hidden
+class LabeledCheckbox extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    // Attach an ElementInternals to get states property
+    this._internals = this.attachInternals();
+    this.addEventListener("click", this._onClick.bind(this));
+
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.innerHTML = `<style>
+        :host {
+          display: block;
+        }
+       :host::before {
+         content: '[ ]';
+         white-space: pre;
+         font-family: monospace;
+       }
+       :host(:state(checked))::before { content: '[x]'; background: grey; }
+       </style>
+       <slot>Label</slot>`;
+  }
+
+  get checked() {
+    return this._internals.states.has("checked");
+  }
+
+  set checked(flag) {
+    if (flag) {
+      this._internals.states.add("checked");
+    } else {
+      this._internals.states.delete("checked");
+    }
+  }
+
+  _onClick(event) {
+    // Toggle the 'checked' property when the element is clicked
+    this.checked = !this.checked;
+  }
+}
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+```
+
+First we define our custom element class `QuestionBox`, which extends `HTMLElement`.
+As always, the constructor first calls the `super()` method.
+It then calls [`attachShadow()`](/en-US/docs/Web/API/Element/attachShadow) to attach a shadow DOM tree to the custom element.
+The shadow DOM is attached with `mode: 'closed'` to ensure that nodes within the shadow DOM are not available outside of the element, unless explicitly exposed as a [shadow part](/en-US/docs/Web/CSS/CSS_shadow_parts).
+
+```js
+class QuestionBox extends HTMLElement {
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: "closed" });
+    shadowRoot.innerHTML = `<div><slot>Question</slot></div>
+       <labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
+  }
+}
+```
+
+The content of the shadow root is set using [`innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
+This defines a {{HTMLElement("slot")}} that contains the default prompt text for the element of "Question".
+It then defines a `<labeled-checkbox>` custom element with default text`"Yes"`.
+This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+
+Note that the code and styling for the `<labeled-checkbox>` is exactly the same as in [previous example](#labeled_checkbox), and is therefore not shown.
+
+We then call the {{domxref("CustomElementRegistry/define", "define()")}} method on the object returned by {{domxref("Window.customElements")}} in order to register the custom element with name `<question-box>`:
+
+```js
+customElements.define("question-box", QuestionBox);
+```
+
+#### HTML
+
+After registering the custom element we can use the element in HTML as shown below.
+
+```html
+<!-- Question box with default prompt "Question" -->
+<question-box></question-box>
+<!-- Question box with custom prompt "Continue?" -->
+<question-box>Continue?</question-box>
+```
+
+#### CSS
+
+The first block of CSS uses the [`::part()`](/en-US/docs/Web/CSS/::part) selector to match on the exposed shadow part named `checkbox`, setting it to be red by default.
+
+```css
+question-box::part(checkbox) {
+  color: red;
+}
+```
+
+We then use `:state()` after `::part()` to match on `checkbox` parts with the `checked` state:
+
+```css
+question-box::part(checkbox):state(checked) {
+  color: green;
+}
+```
+
+#### Result
+
+Click either of the checkboxes to see the colour change from red to green when the `checked` state is toggled.
+
+{{EmbedLiveSample("Question box", "100%", 100)}}
 
 ### Non-boolean internal states
 
