@@ -286,34 +286,10 @@ Click the element to see a different border being applied as the state changes.
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required, it is possible to use a `<dashed-ident>` as the state's value, and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
-
-### Using double dash prefixed idents
-
-#### JavaScript
-
-```js
-class CompatibleStateElement extends HTMLElement {
-  connectedCallback() {
-    const internals = this.attachInternals();
-    // The double dash is required in browsers with the
-    // legacy syntax, but works with the modern syntax
-    internals.states.set("--loaded");
-  }
-}
-```
-
-#### CSS
-
-```css
-compatible-state-element:is(:--loaded, :state(--loaded)) {
-  border: solid green;
-}
-```
-
+If support for these browsers is required it is possible to use a try/catch to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
 ### Using a try catch block
 
-An alternative solution can be to use a `try` `catch` block to fall back to the legacy syntax:
+Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS:
 
 #### JavaScript
 
@@ -336,6 +312,32 @@ class CompatibleStateElement extends HTMLElement {
 
 ```css
 compatible-state-element:is(:--loaded, :state(loaded)) {
+  border: solid green;
+}
+```
+
+
+### Using double dash prefixed idents
+
+An alternative solution can be to use the `<dashed-ident>` within JavaScript. The downside to this is that the dashes must be included in when using the `:state()` syntax in CSS:
+
+#### JavaScript
+
+```js
+class CompatibleStateElement extends HTMLElement {
+  connectedCallback() {
+    const internals = this.attachInternals();
+    // The double dash is required in browsers with the
+    // legacy syntax, but works with the modern syntax
+    internals.states.set("--loaded");
+  }
+}
+```
+
+#### CSS
+
+```css
+compatible-state-element:is(:--loaded, :state(--loaded)) {
   border: solid green;
 }
 ```
