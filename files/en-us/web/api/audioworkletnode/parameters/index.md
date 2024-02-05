@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AudioWorkletNode.parameters
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The read-only **`parameters`** property of the
 {{domxref("AudioWorkletNode")}} interface returns the associated

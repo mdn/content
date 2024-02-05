@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.remove
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.pushManager
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`pushManager`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
