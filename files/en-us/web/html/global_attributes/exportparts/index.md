@@ -43,7 +43,9 @@ First, let's create a card component that we will then wrap with another compone
 </template>
 ```
 
-Then we can take the HTML above, and use it to "define" our web component.
+#### JavaScript
+
+We use JavaScript to define our web component defined in the HTML above:
 
 ```js
 customElements.define(
