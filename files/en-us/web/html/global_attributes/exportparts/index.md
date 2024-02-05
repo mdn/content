@@ -74,7 +74,7 @@ customElements.define(
 
 We style parts of the `<card-component>` shadow tree using the `::parts()` pseudo-element:
 
-```css
+````css
 ::part(body) {
   color: red;
   font-style: italic;
@@ -84,7 +84,6 @@ We style parts of the `<card-component>` shadow tree using the `::parts()` pseud
 #### Results
 
 {{ EmbedLiveSample('Basic_component', '100%', '160') }}
- 
 ### Nested component
 
 Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component. We then export the parts from the nested component that we want to make styleable from outside the component's shadow tree with the `exportparts` attribute.
@@ -93,7 +92,7 @@ Continuing the above `<card-component>` example, we create a nested component by
 <template id="card-wrapper">
   <card-component exportparts="base, header, body, footer"></card-component>
 </template>
-```
+````
 
 ```js
 customElements.define(
@@ -114,14 +113,19 @@ customElements.define(
 Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
 
 ```css
-card-wrapper::part(header) {
+::part(body) {
+   color: red;
+   font-style: italic;
+}
+
+::part(header) {
   font-weight: bold;
 }
 ```
 
 ### Exposing mapped parts
 
-To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`): 
+To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`):
 
 #### HTML
 
@@ -140,6 +144,7 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 ```
 
 #### JavaScript
+
 ```js
 customElements.define(
   "card-wrapper",
@@ -159,7 +164,6 @@ customElements.define(
 #### CSS
 
 In targetting parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
-
 
 ```css
 /* selects the exported parts name */
