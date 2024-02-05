@@ -75,7 +75,9 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-CSS can also match a custom state [within custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function, and can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo element to match the state of elements within a shadow tree that have a matching [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+CSS can also match a custom state [within custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function.
+
+`:state()` can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that have a particular state.
 
 > **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
