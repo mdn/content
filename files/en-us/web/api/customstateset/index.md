@@ -298,7 +298,7 @@ class CompatibleStateElement extends HTMLElement {
     const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, but works with the modern syntax
-    internals.states.set("--loaded");
+    internals.states.add("--loaded");
   }
 }
 ```
@@ -324,9 +324,9 @@ class CompatibleStateElement extends HTMLElement {
     // The double dash is required in browsers with the
     // legacy syntax, not supplying it will throw
     try {
-      internals.states.set("loaded");
+      internals.states.add("loaded");
     } catch {
-      internals.states.set("--loaded");
+      internals.states.add("--loaded");
     }
   }
 }
