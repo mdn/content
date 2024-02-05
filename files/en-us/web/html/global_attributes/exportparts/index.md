@@ -41,6 +41,12 @@ First, let's create a card component that we will then wrap with another compone
     <div part="footer"><slot name="footer_slot"></slot></div>
   </div>
 </template>
+
+<card-component>
+  <p slot="header_slot">This is the header</p>
+  <p slot="body_slot">This is the body</p>
+  <p slot="footer_slot">This is the footer</p>
+</card-component>
 ```
 
 #### JavaScript
