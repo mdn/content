@@ -74,7 +74,7 @@ customElements.define(
 
 We style parts of the `<card-component>` shadow tree using the `::parts()` pseudo-element:
 
-````css
+```css
 ::part(body) {
   color: red;
   font-style: italic;
