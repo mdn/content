@@ -137,6 +137,9 @@ Now we can target parts on the `<card-component>` from the `<card-wrapper>` like
 }
 ```
 
+#### Results
+
+{{ EmbedLiveSample('Nested_component', '100%', '160') }}
 ### Exposing mapped parts
 
 To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`):
