@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLMediaElement.setMediaKeys
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SecureContext_Header}}
 
 The **`setMediaKeys()`** method of the
 {{domxref("HTMLMediaElement")}} interface returns a {{jsxref("Promise")}} that resolves
