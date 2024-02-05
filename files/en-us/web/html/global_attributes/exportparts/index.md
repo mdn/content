@@ -84,6 +84,7 @@ We style parts of the `<card-component>` shadow tree using the `::parts()` pseud
 #### Results
 
 {{ EmbedLiveSample('Basic_component', '100%', '160') }}
+
 ### Nested component
 
 Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component. We then export the parts from the nested component that we want to make styleable from outside the component's shadow tree with the `exportparts` attribute.
@@ -92,7 +93,7 @@ Continuing the above `<card-component>` example, we create a nested component by
 <template id="card-wrapper">
   <card-component exportparts="base, header, body, footer"></card-component>
 </template>
-````
+```
 
 ```js
 customElements.define(
