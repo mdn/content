@@ -416,7 +416,7 @@ A great starting point for using hues in CSS is the [`hwb()`](/en-US/docs/Web/CS
 The three parts are:
 
 - **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/hue) value between 0 and 360, representing the angles around a color wheel.
-- **Whiteness**: How white is the color? This takes a value from 0% (no whiteness) to 100% (full whiteness).
+- **Whiteness**: How white is the color? This takes a value from `0%` (no whiteness) to `100%` (full whiteness).
 - **Blackness**: How black is the color? This takes a value from 0% (no blackness) to 100% (full blackness).
 
 ### HSL
