@@ -17,7 +17,7 @@ and `false` if it is not.
 
 ## Value
 
-A boolean value:`true` if it is possible to navigate forwards in the navigation history, `false`otherwise.
+A boolean value: `true` if it is possible to navigate forwards in the navigation history, `false` otherwise.
 
 ## Examples
 

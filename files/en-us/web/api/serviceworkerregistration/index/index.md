@@ -8,11 +8,13 @@ status:
 browser-compat: api.ServiceWorkerRegistration.index
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
 {{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
+
+{{AvailableInWorkers}}
 
 ## Value
 

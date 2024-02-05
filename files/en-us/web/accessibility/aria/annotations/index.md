@@ -71,7 +71,7 @@ We have already alluded to the difference between these two above — `aria-desc
 <p id="description-id">An extended text description of some kind.</p>
 
 <div aria-describedby="description-id">
-  <!-- Some kind of UI feature that needs an accessible description -->
+  <!-- Some kind of UI feature that needs an {{glossary("accessible description")}} -->
 </div>
 ```
 
@@ -93,7 +93,7 @@ This difference becomes apparent when you get to how the content is interpreted 
 
 Content associated via `aria-describedby` becomes part of the accessible description and is flattened into a simple string (lists, links, etc. are not exposed). Generally it is announced after the accessible name. ARIA 1.3 also identifies [which roles _disallow_ its use](https://w3c.github.io/aria/#namefromprohibited) (such as `generic`, which maps to `<div>`).
 
-Content associated via `aria-details` is _not_ factored into the accessible description computation. A screen reader would ideally make the user aware the content is available and then let the user navigate directly to that content. As such, it can contain rich content. The role of the referenced element (eg: `comment`, `definition`) may affect how a screen reader exposes or references the content. `aria-details` has no restrictions on which roles may use it.
+Content associated via `aria-details` is _not_ factored into the {{glossary("accessible description")}} computation. A screen reader would ideally make the user aware the content is available and then let the user navigate directly to that content. As such, it can contain rich content. The role of the referenced element (eg: `comment`, `definition`) may affect how a screen reader exposes or references the content. `aria-details` has no restrictions on which roles may use it.
 
 ## A basic description
 

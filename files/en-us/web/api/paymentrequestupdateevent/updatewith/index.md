@@ -39,14 +39,20 @@ updateWith(details)
         - `pending`
           - : A Boolean value which is `true` if the specified `amount` has not yet been finalized. This can be used to show items such as shipping or tax amounts that depend upon the selection of shipping address, shipping option, or so forth. The user agent may show this information but is not required to do so.
 
-    - `error` {{optional_inline}} {{deprecated_inline}}
-      - : A string specifying an error message to present to the user*.* When calling `updateWith()`, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field specific errors, use `shippingAddressErrors`.
+    - `error` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+
+      - : A string specifying an error message to present to the user*.* When calling `updateWith()`, including `error` in the updated data causes the {{Glossary("user agent")}} to display the text as a general error message. For address field-specific errors, use the `shippingAddressErrors` field.
+
     - `modifiers` {{optional_inline}}
-      - : An array of {{domxref("PaymentDetailsModifier")}} objects, each describing a modifier for particular payment method identifiers. For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
-    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}}
-      - : An {{domxref("AddressErrors")}} object which includes an error message for each property of the shipping address that could not be validated.
-    - `shippingOptions` {{optional_inline}}
-      - : An array of {{domxref("PaymentShippingOption")}} objects, each describing one available shipping option from which the user may choose.
+
+      - : An {{jsxref("Array")}} of `PaymentDetailsModifier` objects, whose properties are described in {{domxref("PaymentRequestEvent.modifiers")}}.
+
+        For example, you can use one to adjust the total payment amount based on the selected payment method ("5% cash discount!").
+
+    - `shippingAddressErrors` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : An object which includes an error message for each property of the shipping address that could not be validated.
+    - `shippingOptions` {{optional_inline}} {{deprecated_inline}} {{non-standard_inline}}
+      - : An array of objects, each describing one available shipping option from which the user may choose.
     - `total` {{optional_inline}}
       - : An object with the same properties as the objects in `displayItems` providing an updated total for the payment. Make sure this equals the sum of all of the items in `displayItems`. _This is not calculated automatically_. You must update this value yourself anytime the total amount due changes. This lets you have flexibility for how to handle things like tax, discounts, and other adjustments to the total price charged.
 

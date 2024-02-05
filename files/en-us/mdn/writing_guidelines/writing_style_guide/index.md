@@ -393,7 +393,7 @@ Try to be consistent, though.
 
 ## Page components
 
-This section lists the guidelines to follow for components such as headings, notes, links, and examples that commonly appear on a page.
+This section lists the guidelines to follow for different parts of each page, such as headings, notes, links, and examples.
 
 - [Code examples](#code_examples)
 - [Cross-references (linking)](#cross-references_linking)
@@ -444,7 +444,7 @@ You can link part of a sentence to an article or the section of an article. Be m
 
 On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
-We follow similar cross-referencing guidelines in the [See also](#see-also-section) sections at the end of reference pages, glossary pages, and guides.
+We follow similar cross-referencing guidelines in the [See also](#see_also) sections at the end of reference pages, glossary pages, and guides.
 
 ### External links
 
@@ -511,6 +511,7 @@ If you include images or other media on a page, follow these guidelines:
 - Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
+- Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
 
 ### Lists
 

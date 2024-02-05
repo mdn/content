@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRView.transform
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only **`transform`** property of the
 {{domxref("XRView")}} interface is an {{domxref("XRRigidTransform")}} object which

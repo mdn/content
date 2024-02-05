@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQueue.copyExternalImageToTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`copyExternalImageToTexture()`** method of the
 {{domxref("GPUQueue")}} interface copies a snapshot taken from a source image, video, or canvas into a given {{domxref("GPUTexture")}}.

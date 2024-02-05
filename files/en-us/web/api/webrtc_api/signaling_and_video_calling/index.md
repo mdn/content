@@ -602,7 +602,7 @@ function closeVideoCall() {
   remoteVideo.removeAttribute("src");
   remoteVideo.removeAttribute("srcObject");
   localVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
+  localVideo.removeAttribute("srcObject");
 
   document.getElementById("hangup-button").disabled = true;
   targetUsername = null;

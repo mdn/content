@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removePasswords
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears saved passwords.
 

@@ -15,7 +15,7 @@ The **Shared Storage API** is a client-side storage mechanism that enables unpar
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is the use of cookies set on third-party content embedded in sites (for example via {{htmlelement("iframe")}} elements). These cookies can be used to track and profile users, and share information across sites.
 
-To prevent cross-site tracking, browsers are working towards partitioning all storage types, including [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and the [Cache API](/en-US/docs/Web/API/Cache). However, a major barrier to achieving this is the need for several legitimate use cases that rely on cross-site information sharing. Examples of such uses cases include advertisers wanting to measure the reach of their across sites and generate reports, and site owners wanting to customize user experiences based on the group they are in or their previous site interactions.
+To prevent cross-site tracking, browsers are working towards partitioning all storage types, including [Cookies](/en-US/docs/Web/HTTP/Cookies), [Web Storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and the [Cache API](/en-US/docs/Web/API/Cache). However, a major barrier to achieving this is the need for several legitimate use cases that rely on cross-site information sharing. Examples of such use cases include advertisers wanting to measure the reach of their ads across sites and generate reports, and site owners wanting to customize user experiences based on the group they are in or their previous site interactions.
 
 The Shared Storage API provides a flexible solution for such use cases. It aims to provide the required data storage, processing, and sharing capabilities without the ability to track and profile users.
 
@@ -58,7 +58,7 @@ Writing data to shared storage is simple — you use methods defined on the {{do
 This functionality is available in two different contexts:
 
 - In the main browsing context, where your site or app runs, on {{domxref("WindowSharedStorage")}}. This is available via `window.sharedStorage`.
-- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is is available via `this.sharedStorage`.
+- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is available via `this.sharedStorage`.
 
 In our A/B testing example, we define a function in our app context that generates a random number — 0 or 1 — to represent an experiment group. We then run the {{domxref("SharedStorage.set", "window.sharedStorage.set()")}} function to assign the user to a group and save the result in shared storage:
 

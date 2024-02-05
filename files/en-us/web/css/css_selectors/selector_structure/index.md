@@ -5,7 +5,7 @@ page-type: guide
 spec-urls: https://drafts.csswg.org/selectors/
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 The CSS selector represents a particular pattern of element or elements in a tree structure. The term "selector" can refer to a [simple selector](#simple_selector), a [compound selector](#compound_selector), or a [complex selector](#complex_selector). When included in the `:has()` pseudo-class as a parameter, these selectors are referred to as [relative selectors](#relative_selector), representing elements relative to one or more anchor elements.
 

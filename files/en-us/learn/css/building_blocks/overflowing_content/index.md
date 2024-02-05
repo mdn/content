@@ -13,10 +13,9 @@ Overflow is what happens when there is too much content to fit in an element box
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -93,7 +92,7 @@ If you only want scrollbars to appear when there is more content than can fit in
 
 ## Overflow establishes a Block Formatting Context
 
-When you use the `<overflow>` values `scroll` and `auto`, you create a [**Block Formatting Context** (BFC)](/en-US/docs/Web/Guide/CSS/Block_formatting_context). This means that the content of an element box with these `overflow` values acquires a self-contained layout. Content outside such an element box cannot poke into the element box, and nothing from the element box can poke into the surrounding layout. This enables scrolling behavior, as all box content needs to be contained and not overlap to create a consistent scrolling experience.
+When you use the `<overflow>` values `scroll` and `auto`, you create a [**Block Formatting Context** (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). This means that the content of an element box with these `overflow` values acquires a self-contained layout. Content outside such an element box cannot poke into the element box, and nothing from the element box can poke into the surrounding layout. This enables scrolling behavior, as all box content needs to be contained and not overlap to create a consistent scrolling experience.
 
 ## Unwanted overflow in web design
 

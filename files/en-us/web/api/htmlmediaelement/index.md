@@ -119,7 +119,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}
   - : Begins playback of the media.
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}}
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
 - {{domxref("HTMLMediaElement.setMediaKeys()")}}
   - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.
@@ -139,7 +139,9 @@ _These methods are obsolete and should not be used, even if a browser still supp
 
 ## Events
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits events from its parent, {{domxref("HTMLElement")}}_.
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : Fired when the resource was not fully loaded, but not as the result of an error.

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.browsingData.DataTypeSet
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`browsingData.DataTypeSet`** type describes a set of data types.
 

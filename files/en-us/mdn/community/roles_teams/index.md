@@ -110,7 +110,7 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating-a-maintainer).
+> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -276,7 +276,7 @@ Life happens and your commitment levels as a contributor could change over time.
 - Downgrade to a less-demanding role.
 - Step away from the project completely (apply for an emeritus status).
 
-In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact-the-mdn-team).
+In all these situations, feel free to discuss your situation and current commitment levels with the [MDN team](#contact_the_mdn_team).
 
 ### Demoting or removing inactive contributors
 

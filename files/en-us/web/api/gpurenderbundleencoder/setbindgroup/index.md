@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render bundle commands, for a given index.

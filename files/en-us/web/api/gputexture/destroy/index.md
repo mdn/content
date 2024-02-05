@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.destroy
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`destroy()`** method of the
 {{domxref("GPUTexture")}} interface destroys the `GPUTexture`.
