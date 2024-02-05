@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.getViewport
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRWebGLLayer")}} interface's
 **`getViewport()`** method returns the

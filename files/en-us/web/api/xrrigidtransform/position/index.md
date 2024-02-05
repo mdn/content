@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.position
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRRigidTransform")}} property
 **`position`** is a {{domxref("DOMPointReadOnly")}} object which
