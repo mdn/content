@@ -85,7 +85,7 @@ customElements.define(
 
 #### CSS
 
-We style parts of the `<card-component>` shadow tree using the `::parts()` pseudo-element:
+We style parts of the `<card-component>` shadow tree using the {{cssxref("::part")}} pseudo-element:
 
 ```css
 ::part(body) {
