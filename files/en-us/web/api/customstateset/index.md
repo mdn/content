@@ -63,11 +63,11 @@ The states can be used within the custom element but are not directly accessible
 
 ### Interaction with CSS
 
-Developers can select a custom element with a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
+You can select a custom element that is in a specific state using the [`:state()`](/en-US/docs/Web/CSS/:state) _custom state pseudo-class_.
 The format of this pseudo-class is `:state(mystatename)`, where `mystatename` is the state as defined in the element.
-The custom state pseudo-class matches the custom element only if the state is `true` (i.e. if `mystatename` is present in the `CustomStateSet`).
+The custom state pseudo-class matches the custom element only if the state is `true` (i.e., if `mystatename` is present in the `CustomStateSet`).
 
-For example, the following CSS might be used to match a `labeled-checkbox` custom element where the element's `CustomStateSet` contains `checked`, and apply a solid border:
+For example, the following CSS matches a `labeled-checkbox` custom element when the element's `CustomStateSet` contains the `checked` state, and applies a `solid` border to the checkbox:
 
 ```css
 labeled-checkbox:state(checked) {
@@ -75,9 +75,9 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-CSS can also match a custom state [within custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function.
+CSS can also be used to match a custom state [within a custom element's shadow DOM](/en-US/docs/Web/CSS/:state#matching_a_custom_state_in_a_custom_elements_shadow_dom) by specifying `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function.
 
-`:state()` can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that have a particular state.
+Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
 > **Warning:** Chrome supports a deprecated syntax that selects custom states using a CSS `<dashed-ident>` rather than the `:state()` function.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](compability_with_dashed-ident_syntax) section below.
@@ -186,9 +186,9 @@ Click the element to see a different border being applied as the checkbox `check
 ### Question box: exposing states in shadow parts
 
 This example, which is adapted from the specification, demonstrates that custom states can be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element for styling.
-These are the parts of the shadow tree that are intentionally exposed to pages that use the custom element.
+Shadow parts are sections of the shadow tree that are intentionally exposed to pages that use the custom element.
 
-The example creates a `<question-box>` custom element, which is an element that displays a question prompt along with a checkbox with the label "Yes".
+The example creates a `<question-box>` custom element that displays a question prompt along with a checkbox labeled "Yes".
 The element uses the `<labeled-checkbox>` defined in the [previous example](#labeled_checkbox) for the checkbox.
 
 #### JavaScript
@@ -257,13 +257,13 @@ class QuestionBox extends HTMLElement {
 ```
 
 The content of the shadow root is set using [`innerHTML`](/en-US/docs/Web/API/ShadowRoot/innerHTML).
-This defines a {{HTMLElement("slot")}} that contains the default prompt text for the element of "Question".
-It then defines a `<labeled-checkbox>` custom element with default text`"Yes"`.
+This defines a {{HTMLElement("slot")}} element that contains the default prompt text "Question" for the element.
+We then define a `<labeled-checkbox>` custom element with the default text `"Yes"`.
 This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
-Note that the code and styling for the `<labeled-checkbox>` is exactly the same as in [previous example](#labeled_checkbox), and is therefore not shown.
+Note that the code and styling for the `<labeled-checkbox>` element are exactly the same as in the [previous example](#labeled_checkbox), and are therefore not repeated here.
 
-We then call the {{domxref("CustomElementRegistry/define", "define()")}} method on the object returned by {{domxref("Window.customElements")}} in order to register the custom element with name `<question-box>`:
+Next, we call the {{domxref("CustomElementRegistry/define", "define()")}} method on the object returned by {{domxref("Window.customElements")}} to register the custom element with the name `question-box`:
 
 ```js
 customElements.define("question-box", QuestionBox);
@@ -271,18 +271,19 @@ customElements.define("question-box", QuestionBox);
 
 #### HTML
 
-After registering the custom element we can use the element in HTML as shown below.
+After registering the custom element, we can use the element in HTML as shown below.
 
 ```html
 <!-- Question box with default prompt "Question" -->
 <question-box></question-box>
+
 <!-- Question box with custom prompt "Continue?" -->
 <question-box>Continue?</question-box>
 ```
 
 #### CSS
 
-The first block of CSS uses the [`::part()`](/en-US/docs/Web/CSS/::part) selector to match on the exposed shadow part named `checkbox`, setting it to be red by default.
+The first block of CSS matches the exposed shadow part named `checkbox` using the [`::part()`](/en-US/docs/Web/CSS/::part) selector, styling it to be `red` by default.
 
 ```css
 question-box::part(checkbox) {
@@ -290,7 +291,7 @@ question-box::part(checkbox) {
 }
 ```
 
-We then use `:state()` after `::part()` to match on `checkbox` parts with the `checked` state:
+The second block follows `::part()` with `:state()`, in order to match `checkbox` parts that are in the `checked` state:
 
 ```css
 question-box::part(checkbox):state(checked) {
@@ -300,7 +301,7 @@ question-box::part(checkbox):state(checked) {
 
 #### Result
 
-Click either of the checkboxes to see the colour change from red to green when the `checked` state is toggled.
+Click either of the checkboxes to see the color change from `red` to `green` when the `checked` state toggles.
 
 {{EmbedLiveSample("Question box", "100%", 100)}}
 
