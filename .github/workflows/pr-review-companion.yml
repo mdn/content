@@ -1,0 +1,96 @@
+# Things to do and run after a "tests" job in "PR Test" workflow has completed successfully.
+# Note, as of right now, this workflow does a bunch of things. It might be
+# worth considering to break it up so there's a dedicated post-PR
+# workflow just to posting PR comments about flaws, for example.
+
+name: PR review companion
+
+on: workflow_call
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Download artifact"
+        uses: actions/download-artifact@v4
+        with:
+          name: build
+          path: build
+
+      - uses: actions/checkout@v4
+        with:
+          repository: mdn/yari
+          path: yari
+
+      - name: Install Python
+        id: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      # See https://www.peterbe.com/plog/install-python-poetry-github-actions-faster
+      - name: Load cached ~/.local
+        uses: actions/cache@v4
+        with:
+          path: ~/.local
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
+
+      - name: Install Python poetry
+        uses: snok/install-poetry@v1.3
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Load cached venv
+        id: cached-poetry-dependencies
+        uses: actions/cache@v4
+        with:
+          path: yari/deployer/.venv
+          # the trailing number is used to increase for getting
+          # a different cache key when this file changes
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}-${{ steps.setup-python.outputs.python-version }}-0
+
+      - name: Install poetry dependencies
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction --no-root
+
+      - name: Install Deployer
+        run: |
+          cd yari/deployer
+          poetry install --no-interaction
+
+      - name: Deploy and analyze built content
+        env:
+          BUILD_OUT_ROOT: ${{ github.workspace }}/build
+
+          DEPLOYER_BUCKET_NAME: mdn-content-dev
+          AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOYER_DEV_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_DEV_AWS_SECRET_ACCESS_KEY }}
+          DEPLOYER_LOG_EACH_SUCCESSFUL_UPLOAD: false
+
+        run: |
+          PR_NUMBER=`cat build/NR`
+
+          echo "Pull request:"
+          echo "https://github.com/mdn/content/pull/$PR_NUMBER"
+
+          cd yari/deployer
+
+          poetry run deployer upload \
+            --prefix="pr$PR_NUMBER" \
+            --default-cache-control 0 \
+            "$BUILD_OUT_ROOT"
+
+          poetry run deployer analyze-pr-build \
+            --prefix="pr$PR_NUMBER" \
+            --analyze-flaws \
+            --analyze-dangerous-content \
+            --github-token="${{secrets.GITHUB_TOKEN}}" \
+            --repo=$GITHUB_REPOSITORY \
+            --pr-number=$PR_NUMBER \
+            --diff-file=$BUILD_OUT_ROOT/DIFF \
+            $BUILD_OUT_ROOT

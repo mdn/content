@@ -1,0 +1,114 @@
+---
+title: "::-webkit-scrollbar"
+slug: Web/CSS/::-webkit-scrollbar
+page-type: css-pseudo-element
+status:
+  - non-standard
+browser-compat:
+  - css.selectors.-webkit-scrollbar
+  - css.selectors.-webkit-scrollbar-button
+  - css.selectors.-webkit-scrollbar-thumb
+  - css.selectors.-webkit-scrollbar-track
+  - css.selectors.-webkit-scrollbar-track-piece
+  - css.selectors.-webkit-scrollbar-corner
+  - css.selectors.-webkit-resizer
+---
+
+{{CSSRef}}{{Non-standard_Header}}
+
+The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has scrollable overflow.
+
+> **Note:** The `::-webkit-scrollbar` vendor-prefixed pseudo-element is not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
+> The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support this pseudo-element. When these properties are set, `::-webkit-scrollbar` styling is disabled.
+
+## CSS Scrollbar Selectors
+
+You can use the following pseudo-elements to customize various parts of the scrollbar for WebKit browsers:
+
+- `::-webkit-scrollbar` — the entire scrollbar.
+- `::-webkit-scrollbar-button` — the buttons on the scrollbar (arrows pointing upwards and downwards that scroll one line at a time).
+- `::-webkit-scrollbar:horizontal{}` — the horizontal scrollbar.
+- `::-webkit-scrollbar-thumb` — the draggable scrolling handle.
+- `::-webkit-scrollbar-track` — the track (progress bar) of the scrollbar, where there is a gray bar on top of a white bar.
+- `::-webkit-scrollbar-track-piece` — the part of the track (progress bar) not covered by the handle.
+- `::-webkit-scrollbar:vertical{}` — the vertical scrollbar.
+- `::-webkit-scrollbar-corner` — the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet. This is often the bottom-right corner of the browser window.
+- `::-webkit-resizer` — the draggable resizing handle that appears at the bottom corner of some elements.
+
+## Examples
+
+### CSS
+
+```css
+.visible-scrollbar,
+.invisible-scrollbar,
+.mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+ * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+```
+
+### HTML
+
+```html
+<div class="visible-scrollbar">
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
+  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
+  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
+  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
+  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
+  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
+  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
+  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
+  Aliquam at enim ligula.
+</div>
+
+<div class="invisible-scrollbar">
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+</div>
+
+<div class="mostly-customized-scrollbar">
+  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
+  And pretty tall<br />
+  thing with weird scrollbars.<br />
+  Who thought scrollbars could be made weird?
+</div>
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
+
+## Specifications
+
+Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}

@@ -1,0 +1,6 @@
+*	text=auto eol=lf
+*.md	linguist-detectable
+CODE_OF_CONDUCT.md	-linguist-detectable
+LICENSE.md	-linguist-detectable
+README.md	-linguist-detectable
+REVIEWING.md	-linguist-detectable

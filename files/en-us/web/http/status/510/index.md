@@ -1,0 +1,27 @@
+---
+title: 510 Not Extended
+slug: Web/HTTP/Status/510
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
+---
+
+{{HTTPSidebar}}
+
+The HyperText Transfer Protocol (HTTP) **`510 Not Extended`**
+response status code is sent in the context of the HTTP Extension Framework, defined in
+[RFC 2774](https://datatracker.ietf.org/doc/html/rfc2774).
+
+In that specification a client may send a request that contains an extension
+declaration, that describes the extension to be used. If the server receives such a
+request, but any described extensions are not supported for the request, then the server
+responds with the 510 status code.
+
+## Status
+
+```http
+510 Not Extended
+```
+
+## Specifications
+
+{{Specifications}}

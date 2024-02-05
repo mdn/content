@@ -1,0 +1,83 @@
+# ----------------------------------------------------------------------------
+# MDN Content CODEOWNERS
+# ----------------------------------------------------------------------------
+# Order is important. The last matching pattern takes precedence. For more
+# detailed information, see:
+# https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners
+# ----------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------
+# DEFAULT OWNERS
+# ----------------------------------------------------------------------------
+*    @mdn/core-yari-content
+
+# ----------------------------------------------------------------------------
+# DEFAULT ENGLISH CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/    @mdn/yari-content-mdn
+
+# ----------------------------------------------------------------------------
+# ENGLISH WEB ACCESSIBILITY CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/accessibility/    @mdn/yari-content-accessibility
+/files/en-us/learn/accessibility/    @mdn/yari-content-accessibility
+
+# ----------------------------------------------------------------------------
+# ENGLISH CSS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/css/    @mdn/yari-content-css
+/files/en-us/learn/css/    @mdn/yari-content-css
+
+# ----------------------------------------------------------------------------
+# ENGLISH HTML CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/html/    @mdn/yari-content-html
+/files/en-us/learn/html/    @mdn/yari-content-html
+
+# ----------------------------------------------------------------------------
+# ENGLISH JAVASCRIPT CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/javascript/    @mdn/yari-content-javascript
+/files/en-us/learn/javascript/    @mdn/yari-content-javascript
+
+# ----------------------------------------------------------------------------
+# ENGLISH HTTP CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/http/    @mdn/yari-content-http
+/files/en-us/learn/server-side/    @mdn/yari-content-http
+
+# ----------------------------------------------------------------------------
+# ENGLISH WEB API CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/api/    @mdn/yari-content-web-api
+
+# ----------------------------------------------------------------------------
+# ENGLISH SVG CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/svg/    @mdn/yari-content-svg
+
+# ----------------------------------------------------------------------------
+# ENGLISH MOZILLA ADD-ONS CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/mozilla/add-ons/    @mdn/yari-content-mozilla-add-ons
+
+# ----------------------------------------------------------------------------
+# ENGLISH MATHML CONTENT OWNER(S)
+# ----------------------------------------------------------------------------
+/files/en-us/web/mathml/    @mdn/content-mathml
+
+
+# ----------------------------------------------------------------------------
+# CONTROL FILES OWNER(S)
+# ----------------------------------------------------------------------------
+# These should be the last matches in this file, since any pull request that
+# tries to change any one or more of these files should be escalated to the
+# owners specified here.
+# ----------------------------------------------------------------------------
+/.github/     @mdn/core-dev
+/*            @mdn/core-dev
+/*.md         @mdn/core-yari-content
+# These are @mdn-bot because the auto-merge GHA workflow uses the PAT of this account.
+# If another reviewer is specified, update the PAT token or auto-merge will cease to be automatic.
+/package.json @mdn-bot
+/yarn.lock    @mdn-bot

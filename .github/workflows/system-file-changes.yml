@@ -1,0 +1,30 @@
+name: System file changes
+
+on:
+  pull_request_target:
+    paths:
+      - ".github/workflows/**"
+      - ".github/CODEOWNERS"
+      - ".github/dependabot.yml"
+      - "scripts/**"
+      - package.json
+      - yarn.lock
+
+jobs:
+  block:
+    # This makes sure it only runs on our origin repo
+    # and makes an exception for Dependabot.
+    if: github.repository_owner == 'mdn' && github.event.pull_request.user.login != 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      # - uses: hmarr/debug-action@v2
+      - name: Stop anything and everything
+        run: |
+          # It would be nice if we could disable this workflow if the PR
+          # was made from a branch within the origin repo. But it seems you
+          # can't do that :(
+          # See https://github.community/t/how-do-you-figure-out-if-a-pr-is-from-a-work-in-pull-request-target-workflows/170001
+
+          echo "If you're an admin, you have to use your admin privileges to override."
+          echo "If you're not an admin, please ping someone for a review."
+          exit 1
