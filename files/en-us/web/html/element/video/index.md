@@ -373,7 +373,11 @@ This example plays a video when activated, providing the user with the browser's
   poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
   width="620">
   Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="https://archive.org/details/BigBuckBunny_124" download="BigBuckBunny_124">download it</a>
+  <a
+    href="https://archive.org/details/BigBuckBunny_124"
+    download="BigBuckBunny_124"
+    >download it</a
+  >
   and watch it with your favorite video player!
 </video>
 ```
@@ -409,7 +413,9 @@ This example builds on the last one, offering three different sources for the me
     type="video/mp4" />
 
   Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4" download="ed_1024_512kb.mp4">
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
     download the MP4
   </a>
   and watch it with your favorite video player!
