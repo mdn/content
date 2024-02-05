@@ -19,10 +19,9 @@ Attribute `exportparts` must be placed on a _shadow Host_, which is the element 
 
 ## Examples
 
-
 ### Basic component
 
-To demonstrate how `exportparts` is used to enable targeting parts within nested components, we will create a component, and then nest it within another component. 
+To demonstrate how `exportparts` is used to enable targeting parts within nested components, we will create a component, and then nest it within another component.
 
 #### HTML
 
@@ -71,9 +70,24 @@ customElements.define(
 );
 ```
 
-### Re-exporting parts
+#### CSS
 
-With the above `<card-component>`, we could wrap it with another component and export all of the "parts" as is.
+We style parts of the `<card-component>` shadow tree using the `::parts()` pseudo-element:
+
+```css
+::part(body) {
+  color: red;
+  font-style: italic;
+}
+```css
+
+#### Results
+
+{{ EmbedLiveSample('Basic_component', '100%', '160') }}
+ 
+### Nested component
+
+Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component. We then export the parts from the nested component that we want to make styleable from outside the component's shadow tree with the `exportparts` attribute.
 
 ```html
 <template id="card-wrapper">
@@ -105,11 +119,13 @@ card-wrapper::part(header) {
 }
 ```
 
-### Renaming / Remapping parts
+### Exposing mapped parts
 
-To rename an exportpartm the syntax looks something like this: `exportparts="<original-name>:<new-name>,<original-name>:<new-name>"`
+To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`): 
 
-And here's the prior `CardWrapper` with the remapping syntax:
+#### HTML
+
+We update the prior `<card-wrapper>` custom element with the remapping syntax (omitting `body` from the exported parts list):
 
 ```html
 <template id="card-wrapper">
@@ -117,13 +133,13 @@ And here's the prior `CardWrapper` with the remapping syntax:
     exportparts="
        base:card__base, 
        header:card__header, 
-       body:card__body, 
        footer:card__footer
      ">
   </card-component>
 </template>
 ```
 
+#### JavaScript
 ```js
 customElements.define(
   "card-wrapper",
@@ -140,10 +156,19 @@ customElements.define(
 );
 ```
 
-Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
+#### CSS
+
+In targetting parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
+
 
 ```css
+/* selects the exported parts name */
 card-wrapper::part(card__header) {
+  font-weight: bold;
+}
+/* selects nothing: these part names were not exported */
+card-wrapper::part(footer),
+::part(body) {
   font-weight: bold;
 }
 ```
