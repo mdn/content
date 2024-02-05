@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSource.targetRaySpace
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSource")}} property
 **`targetRaySpace`** returns an {{domxref("XRSpace")}}

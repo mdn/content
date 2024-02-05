@@ -75,7 +75,7 @@ Because `fibonacci()` is an infinite iterator, you can't use a `for` loop to ite
 
 ### Combining drop() with take()
 
-You can combine `drop()` with {{jsxref("Iterator.prototype.take()")}} to get a slice of an iterator:
+You can combine `take()` with {{jsxref("Iterator.prototype.drop()")}} to get a slice of an iterator:
 
 ```js
 for (const n of fibonacci().drop(2).take(5)) {

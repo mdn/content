@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.insertDebugMarker
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`insertDebugMarker()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface marks a specific point in a series of encoded render bundle pass commands with a label.

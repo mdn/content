@@ -6,9 +6,11 @@ page-type: web-api-event
 browser-compat: api.Notification.error_event
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`error`** event of the {{domxref("Notification")}} interface fires when something goes wrong with a {{domxref("Notification")}} (in many cases an error preventing the notification from being displayed.)
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -34,5 +36,4 @@ A generic {{domxref("Event")}}.
 
 ## See also
 
-- {{domxref("Notification")}}
 - [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)

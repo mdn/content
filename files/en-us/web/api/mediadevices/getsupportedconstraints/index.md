@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaDevices.getSupportedConstraints
 ---
 
-{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
 The **`getSupportedConstraints()`** method of the {{domxref("MediaDevices")}} interface returns an object based on the {{domxref("MediaTrackSupportedConstraints")}} dictionary, whose member fields each specify one of the constrainable properties the {{Glossary("user agent")}} understands.
 

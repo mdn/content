@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The maximum number of combined dynamic and session scoped rules an extension can add.
 

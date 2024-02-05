@@ -380,7 +380,7 @@ to take effect, as the specificity is the same */
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0);
+  background-color: rgb(0 0 0 / 0%);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -390,7 +390,7 @@ to take effect, as the specificity is the same */
 }
 
 [popover]:popover-open::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 
 /* The nesting selector (&) cannot represent pseudo-elements
@@ -398,7 +398,7 @@ so this starting-style rule cannot be nested */
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 }
 ```
@@ -498,11 +498,11 @@ html {
 
 @keyframes backdrop-fade-in {
   0% {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 
   100% {
-    background-color: rgb(0 0 0 / 0.25);
+    background-color: rgb(0 0 0 / 25%);
   }
 }
 ```

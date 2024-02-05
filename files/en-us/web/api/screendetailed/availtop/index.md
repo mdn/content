@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScreenDetailed.availTop
 ---
 
-{{APIRef("Window Management API")}}{{seecompattable}}
+{{APIRef("Window Management API")}}{{seecompattable}}{{SecureContext_Header}}
 
 The **`availTop`** read-only property of the
 {{domxref("ScreenDetailed")}} interface is a number representing the y-coordinate (top edge) of the available screen area inside the OS virtual screen arrangement, relative to the [multi-screen origin](/en-US/docs/Web/API/Window_Management_API/Multi-screen_origin).

@@ -67,7 +67,7 @@ This example shows three images: the image with a `blur()` filter function appli
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image xlink:href="flag.jpg" filter="url(#blur)" />
+  <image href="flag.jpg" xlink:href="flag.jpg" filter="url(#blur)" />
 </svg>
 ```
 
@@ -96,7 +96,7 @@ svg:not([height]) {
           <filter id="svgBlur">
             <feGaussianBlur stdDeviation="3.5" />
           </filter>
-          <image xlink:href="flag.jpg" filter="url(#svgBlur)" />
+          <image href="flag.jpg" xlink:href="flag.jpg" filter="url(#svgBlur)" />
         </svg>
       </td>
       <td>

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaDevices
 ---
 
-{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
 The **`MediaDevices`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} provides access to connected media input devices like cameras and microphones, as well as screen sharing. In essence, it lets you obtain access to any hardware source of media data.
 

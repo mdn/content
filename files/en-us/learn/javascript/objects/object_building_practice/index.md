@@ -13,7 +13,7 @@ In previous articles we looked at all the essential JavaScript object theory and
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
@@ -74,7 +74,7 @@ function random(min, max) {
 }
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 ```
 
