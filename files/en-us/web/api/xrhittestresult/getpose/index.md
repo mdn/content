@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRHitTestResult.getPose
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getPose()`** method of the {{domxref("XRHitTestResult")}} interface returns the {{domxref("XRPose")}} of the hit test result relative to the given base space.
 
