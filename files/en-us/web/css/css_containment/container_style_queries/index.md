@@ -1,5 +1,5 @@
 ---
-title: Using container style queries
+title: Using container size and style queries
 slug: Web/CSS/CSS_containment/Container_style_queries
 page-type: guide
 browser-compat: css.at-rules.container
@@ -7,9 +7,9 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}{{SeeCompatTable}}
 
-Basic [container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio. Container style queries enable you to apply styles to any element's descendants based on the style features of that element, such as if the element is `display: inline flex`, has a dark mode custom variable value set, has a background color that is not transparent, or any other style feature. While you have to explicitly set an element to be a container for container size queries, every element is a style container.
+[Container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio. Style queries currently only work with CSS [custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties) values, returning true or false depending on the computed style features of an element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature, such as if the container is `display: inline flex`, has a dark mode custom variable value set, or has a background color that is not transparent. While you have to explicitly set an element to be a container for container size queries, every element is a style container.
 
-In this guide, we learn the basics of container queries by looking at container size queries, then learn how to use the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create container style queries.
+In this guide, we learn the basics of container queries by looking at container size queries, then learn how to use the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create container style queries, with a deep dive into [style queries for custom properties](#style_queries_for_custom_properties).
 
 ## Container size queries
 
@@ -131,9 +131,9 @@ The above will return true for any element that has a value for `font-weight` th
 
 This feature is not yet supported in any browser.
 
-### CSS custom property
+## Style queries for custom properties
 
-Custom properties, also called "CSS variables" are CSS properties. They can be included within a `<style-query>` just as you would any other CSS property: either with a value as a CSS declaration, or without the value as a property name. And, there is [browser support](#browser_compatibility)!
+Style queries for custom properties allow you to query the value of custom properties, also called "CSS variables". Custom properties are CSS properties. They can be included within a `<style-query>` just as you would any other CSS property: either with a value as a CSS declaration, or without the value as a property name. And, there is [browser support](#browser_compatibility)!
 
 ```css
 @container style(--accent-color: blue) {
