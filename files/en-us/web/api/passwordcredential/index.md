@@ -31,10 +31,6 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
 - {{domxref("PasswordCredential.password")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A string containing the password of the credential.
 
-### Event handlers
-
-None.
-
 ## Instance methods
 
 None.

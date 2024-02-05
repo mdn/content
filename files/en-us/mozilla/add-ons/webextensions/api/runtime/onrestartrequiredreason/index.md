@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnRestartRequiredReason
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The reason that the {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} event is being dispatched.
 

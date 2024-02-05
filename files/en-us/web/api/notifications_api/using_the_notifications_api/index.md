@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.Notification
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 The [Notifications API](/en-US/docs/Web/API/Notifications_API) lets a web page or app send notifications that are displayed outside the page at the system level; this lets web apps send information to a user even if the application is idle or in the background. This article looks at the basics of using this API in your own apps.
 
@@ -14,6 +14,8 @@ Typically, system notifications refer to the operating system's standard notific
 ![Desktop notification: To do list via mdn.github.io HEY! Your task "Go shopping" is now overdue](desktop-notification.png)
 
 The system notification system will vary of course by platform and browser, but this is OK, and the Notifications API is written to be general enough for compatibility with most system notification systems.
+
+{{AvailableInWorkers}}
 
 ## Examples
 

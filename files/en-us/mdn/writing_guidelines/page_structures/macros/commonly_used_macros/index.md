@@ -274,7 +274,7 @@ The following macros are included on all reference pages, but are also supported
 
 ## See also
 
-- [Quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks)
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
 - [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
