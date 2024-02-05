@@ -102,65 +102,54 @@ We style parts of the `<card-component>` shadow tree using the {{cssxref("::part
 
 Continuing the above `<card-component>` example, we create a nested component by wrapping the `<card-component>` within another component; in this case, the `<card-wrapper>` component. We then export the parts from the nested component that we want to make styleable from outside the component's shadow tree with the `exportparts` attribute.
 
-```html
-<template id="card-wrapper">
-  <card-component exportparts="base, header, body, footer"></card-component>
-</template>
-```
-
-```js
-customElements.define(
-  "card-wrapper",
-  class extends HTMLElement {
-    constructor() {
-      super(); // Always call super first in constructor
-      const cardWrapper = document.getElementById("card-wrapper").content;
-      const shadowRoot = this.attachShadow({
-        mode: "open",
-      });
-      shadowRoot.appendChild(cardWrapper.cloneNode(true));
-    }
-  },
-);
-```
-
-Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
-
-```css
-::part(body) {
-  color: red;
-  font-style: italic;
-}
-
-::part(header) {
-  font-weight: bold;
-}
-```
-
-#### Results
-
-{{ EmbedLiveSample('Nested_component', '100%', '160') }}
-### Exposing mapped parts
-
-To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`):
-
 #### HTML
 
-We update the prior `<card-wrapper>` custom element with the remapping syntax (omitting `body` from the exported parts list):
+```html-hidden
+<template id="card-component-template">
+  <style>
+    .base {
+      display: grid;
+    }
+  </style>
+  <div class="base" part="base">
+    <div part="header"><slot name="header_slot"></slot></div>
+    <div part="body"><slot name="body_slot"></slot></div>
+    <div part="footer"><slot name="footer_slot"></slot></div>
+  </div>
+</template>
+
+<card-component>
+  <p slot="header_slot">This is the header</p>
+  <p slot="body_slot">This is the body</p>
+  <p slot="footer_slot">This is the footer</p>
+</card-component>
+```
 
 ```html
 <template id="card-wrapper">
-  <card-component
-    exportparts="
-       base:card__base, 
-       header:card__header, 
-       footer:card__footer
-     ">
-  </card-component>
+  <card-component exportparts="base, header, body"></card-component>
 </template>
 ```
 
 #### JavaScript
+
+```js-hidden
+customElements.define(
+  "card-component",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardComponent = document.getElementById(
+        "card-component-template",
+      ).content;
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(cardComponent.cloneNode(true));
+    }
+  },
+);
+```
 
 ```js
 customElements.define(
@@ -180,7 +169,104 @@ customElements.define(
 
 #### CSS
 
-In targetting parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
+Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
+
+```css
+::part(body) {
+  color: red;
+  font-style: italic;
+}
+
+::part(header, footer) {
+  font-weight: bold;
+}
+```
+
+#### Results
+
+{{ EmbedLiveSample('Nested_component', '100%', '160') }}
+
+Note `footer` is not bold, as we did not include it in `exportparts`.
+
+### Exposing mapped parts
+
+To rename exported parts, we include a comma-separated list of mapped parts, with each mapped part including the original name and exported name separated by a colon (`:`):
+
+#### HTML
+
+We update the prior `<card-wrapper>` custom element with the remapping syntax (omitting `body` from the exported parts list):
+
+```html-hidden
+<template id="card-component-template">
+  <style>
+    .base {
+      display: grid;
+    }
+  </style>
+  <div class="base" part="base">
+    <div part="header"><slot name="header_slot"></slot></div>
+    <div part="body"><slot name="body_slot"></slot></div>
+    <div part="footer"><slot name="footer_slot"></slot></div>
+  </div>
+</template>
+
+<card-component>
+  <p slot="header_slot">This is the header</p>
+  <p slot="body_slot">This is the body</p>
+  <p slot="footer_slot">This is the footer</p>
+</card-component>
+```
+
+```html
+<template id="card-wrapper">
+  <card-component
+    exportparts="
+       base:card__base, 
+       header:card__header, 
+       footer:card__footer
+     ">
+  </card-component>
+</template>
+```
+
+#### JavaScript
+
+```js-hidden
+customElements.define(
+  "card-component",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardComponent = document.getElementById(
+        "card-component-template",
+      ).content;
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(cardComponent.cloneNode(true));
+    }
+  },
+);
+
+```js
+customElements.define(
+  "card-wrapper",
+  class extends HTMLElement {
+    constructor() {
+      super(); // Always call super first in constructor
+      const cardWrapper = document.getElementById("card-wrapper").content;
+      const shadowRoot = this.attachShadow({
+        mode: "open",
+      });
+      shadowRoot.appendChild(cardWrapper.cloneNode(true));
+    }
+  },
+);
+```
+
+#### CSS
+
+In targetting the parts of the `<card-component>` from within the `<card-wrapper>`, we can only style the exported parts via their exposed part names:
 
 ```css
 /* selects the exported parts name */
@@ -193,6 +279,10 @@ card-wrapper::part(footer),
   font-weight: bold;
 }
 ```
+
+#### Results
+
+{{ EmbedLiveSample('Exposing_mapped_parts', '100%', '160') }}
 
 ## Specifications
 
