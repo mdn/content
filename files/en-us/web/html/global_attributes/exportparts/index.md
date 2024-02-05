@@ -104,7 +104,7 @@ Continuing the above `<card-component>` example, we create a nested component by
 
 #### HTML
 
-```html-hidden
+```html hidden
 <template id="card-component-template">
   <style>
     .base {
@@ -133,7 +133,7 @@ Continuing the above `<card-component>` example, we create a nested component by
 
 #### JavaScript
 
-```js-hidden
+```js hidden
 customElements.define(
   "card-component",
   class extends HTMLElement {
@@ -197,7 +197,7 @@ To rename exported parts, we include a comma-separated list of mapped parts, wit
 
 We update the prior `<card-wrapper>` custom element with the remapping syntax (omitting `body` from the exported parts list):
 
-```html-hidden
+```html hidden
 <template id="card-component-template">
   <style>
     .base {
@@ -232,7 +232,7 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 
 #### JavaScript
 
-```js-hidden
+```js hidden
 customElements.define(
   "card-component",
   class extends HTMLElement {
