@@ -27,6 +27,7 @@ With container size queries, declarations are filtered by a size condition and a
 form {
   container-type: inline-size;
 }
+
 @container (10em <= width <= 20em) {
   /* styles */
 }
@@ -34,9 +35,11 @@ form {
 
 In this example, the `<container-condition>` is `(10em <= width <= 20em)` and all {{htmlelement("form")}} elements are potential matches for any unnamed container queries. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
 
-In a basic container query, the `<container-condition>` includes one or more size features. The syntax is identical to a [`@media` queries](/en-US/docs/Web/CSS/@media), with the size features that can be queried limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`.
+In a container size query, the `<container-condition>` includes one or more size-features. A `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}.
 
-A `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}. Media queries are based on the viewport, of which there is only one. Every element with a `container-type` property set is a container, and there may be many. So, unlike media queries, you can give each of your containers a name, then limit the containers matched by the @container query block by that name.
+The syntax for `<size-features>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media). The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`.
+
+Media queries are based on the viewport, of which there is only one, and its size rarely changes. There are often thousands of elements on a page. Querying the size of every element all the time would be bad for performance and, therefore, user experience. Additionally, if a descendant style changed the size of the container element, an infinite could could occur. For these reasons, container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). You can also use the {{cssxref("container-name")}} property to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition.
 
 ```css
 @container <container-name> <container-query> {
@@ -44,7 +47,7 @@ A `<container-condition>` can also include an optional case-sensitive {{cssxref(
 }
 ```
 
-The `<container-name>` is a case-sensitive {{cssxref("ident")}}. The name in the container-name matches the value of the `container-name` property. The name filters the set of query containers considered to those with a matching query container name. The `<container-query>` is similar to the `<media-query>`, with the same syntax rules and the same logical operators.
+The `<container-name>` is a case-sensitive {{cssxref("ident")}}. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
 
 ```css
 @container card (orientation: landscape) and (max-width: 40rem) {
@@ -57,7 +60,7 @@ The `<container-name>` is a case-sensitive {{cssxref("ident")}}. The name in the
 }
 ```
 
-In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the list-items' descendants. This container query is limited to only elements with `container-name: card` applied.
+In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the list-items' descendants. This container query is limited to only elements with `container-name: card` applied. The `<container-query>` has the same syntax rules and the same logical operators as a `<media-query>`.
 
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
@@ -89,7 +92,13 @@ A style feature without a value evaluates to true if the computed value is diffe
 
 If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 
-Let's take a look at the different style types:
+A few things to note:
+
+- All elements can be styles query containers; setting a `container-type` is not required. As descendant styles don't impact the computed styles of an ancestor, containment is needed.
+- If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. The `none` value removes any query names associated with a container; it doest not prevent the element from being a style container.
+- The container condition can include both style and size features. If including size features, include the `container-type` property.
+
+Now, let's dive in and take a look at the different style types:
 
 ### CSS declaration
 
