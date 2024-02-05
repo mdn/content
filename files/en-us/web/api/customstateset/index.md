@@ -73,7 +73,7 @@ The custom state pseudo-class matches the custom element only if the state is `t
 
 ## Examples
 
-### Labeled Checkbox
+### Labeled checkbox
 
 This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
 This is mapped to the `checked` custom state, allowing styling to be applied using the `:state(checked)` custom state pseudo class.
@@ -286,34 +286,11 @@ Click the element to see a different border being applied as the state changes.
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required, it is possible to use a `<dashed-ident>` as the state's value, and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
+If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
 
-### Using double dash prefixed idents
+### Using a try...catch block
 
-#### JavaScript
-
-```js
-class CompatibleStateElement extends HTMLElement {
-  connectedCallback() {
-    const internals = this.attachInternals();
-    // The double dash is required in browsers with the
-    // legacy syntax, but works with the modern syntax
-    internals.states.add("--loaded");
-  }
-}
-```
-
-#### CSS
-
-```css
-compatible-state-element:is(:--loaded, :state(--loaded)) {
-  border: solid green;
-}
-```
-
-### Using a try catch block
-
-An alternative solution can be to use a `try` `catch` block to fall back to the legacy syntax:
+Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS:
 
 #### JavaScript
 
@@ -336,6 +313,32 @@ class CompatibleStateElement extends HTMLElement {
 
 ```css
 compatible-state-element:is(:--loaded, :state(loaded)) {
+  border: solid green;
+}
+```
+
+### Using double dash prefixed idents
+
+An alternative solution can be to use the `<dashed-ident>` within JavaScript.
+The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax:
+
+#### JavaScript
+
+```js
+class CompatibleStateElement extends HTMLElement {
+  connectedCallback() {
+    const internals = this.attachInternals();
+    // The double dash is required in browsers with the
+    // legacy syntax, but works with the modern syntax
+    internals.states.add("--loaded");
+  }
+}
+```
+
+#### CSS
+
+```css
+compatible-state-element:is(:--loaded, :state(--loaded)) {
   border: solid green;
 }
 ```
