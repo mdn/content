@@ -286,9 +286,9 @@ Click the element to see a different border being applied as the state changes.
 
 Previously custom elements with custom states were selected using a `<dashed-ident>` instead of the [`:state()`](/en-US/docs/Web/CSS/:state) function.
 Browsers that don't support `:state()`, including versions of Chrome, will throw an error when supplied with an ident that is not prefixed with the double dash.
-If support for these browsers is required it is possible to use a try/catch to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
+If support for these browsers is required, either use a [try...catch](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block to support both syntaxes, or use a `<dashed-ident>` as the state's value and select it with both the `:--mystate` and `:state(--mystate)` CSS selector:
 
-### Using a try catch block
+### Using a try...catch block
 
 Setting the state to a name without the two dashes will cause an error in some versions of Chrome, catching this error and providing the `<dashed-ident>` alternative allows both to be selected for in CSS:
 
@@ -301,9 +301,9 @@ class CompatibleStateElement extends HTMLElement {
     // The double dash is required in browsers with the
     // legacy syntax, not supplying it will throw
     try {
-      internals.states.set("loaded");
+      internals.states.add("loaded");
     } catch {
-      internals.states.set("--loaded");
+      internals.states.add("--loaded");
     }
   }
 }
@@ -320,7 +320,8 @@ compatible-state-element:is(:--loaded, :state(loaded)) {
 
 ### Using double dash prefixed idents
 
-An alternative solution can be to use the `<dashed-ident>` within JavaScript. The downside to this is that the dashes must be included in when using the `:state()` syntax in CSS:
+An alternative solution can be to use the `<dashed-ident>` within JavaScript.
+The downside to this approach is that the dashes must be included when using the CSS `:state()` syntax:
 
 #### JavaScript
 
@@ -330,7 +331,7 @@ class CompatibleStateElement extends HTMLElement {
     const internals = this.attachInternals();
     // The double dash is required in browsers with the
     // legacy syntax, but works with the modern syntax
-    internals.states.set("--loaded");
+    internals.states.add("--loaded");
   }
 }
 ```
