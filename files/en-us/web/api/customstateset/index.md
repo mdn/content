@@ -73,7 +73,7 @@ The custom state pseudo-class matches the custom element only if the state is `t
 
 ## Examples
 
-### Labeled Checkbox
+### Labeled checkbox
 
 This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
 This is mapped to the `checked` custom state, allowing styling to be applied using the `:state(checked)` custom state pseudo class.
@@ -316,7 +316,6 @@ compatible-state-element:is(:--loaded, :state(loaded)) {
   border: solid green;
 }
 ```
-
 
 ### Using double dash prefixed idents
 
