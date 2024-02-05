@@ -247,6 +247,7 @@ customElements.define(
     }
   },
 );
+```
 
 ```js
 customElements.define(
