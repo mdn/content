@@ -36,9 +36,9 @@ First, let's create a card component that we will then wrap with another compone
     }
   </style>
   <div class="base" part="base">
-    <div part="header"><slot name="header"></slot></div>
-    <div part="body"><slot></slot></div>
-    <div part="footer"><slot name="footer"></slot></div>
+    <div part="header"><slot name="header_slot"></slot></div>
+    <div part="body"><slot name="body_slot"></slot></div>
+    <div part="footer"><slot name="footer_slot"></slot></div>
   </div>
 </template>
 ```
