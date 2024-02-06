@@ -134,7 +134,7 @@ Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
 Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
 ```
 
-### Allowing embedded `get()` calls in an `<iframe>`
+### Allowing embedded `create` and `get()` calls in an `<iframe>`
 
 If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there are a couple of steps to follow:
 
@@ -156,7 +156,9 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
    </iframe>
    ```
 
-2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
+2. The `<iframe>` must also have {{glossary("Transient activation")}} when the methods are called.
+
+3. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
