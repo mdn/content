@@ -56,9 +56,8 @@ This is achieved by using `:state()` within the [`:host()`](/en-US/docs/Web/CSS/
 For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox), the following CSS is used to inject a grey `[x]` before the element when it is in the "checked" state.
 
 ```css
-:host(:state(checked))::before {
+:host(:state(checked))::before { 
   content: "[x]";
-  background: grey;
 }
 ```
 

@@ -214,7 +214,7 @@ class LabeledCheckbox extends HTMLElement {
          white-space: pre;
          font-family: monospace;
        }
-       :host(:state(checked))::before { content: '[x]'; background: grey; }
+       :host(:state(checked))::before { content: '[x]'; }
        </style>
        <slot>Label</slot>`;
   }
