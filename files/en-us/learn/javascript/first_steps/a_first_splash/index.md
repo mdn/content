@@ -13,7 +13,7 @@ Now you've learned something about the theory of JavaScript and what you can do 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -142,7 +142,7 @@ In our example:
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
-> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the [next article](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Functions
 
@@ -166,7 +166,7 @@ checkGuess();
 
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
-> **Note:** You'll learn a lot more about functions [later in the course](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> **Note:** You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
 ### Operators
 
@@ -426,10 +426,10 @@ This is because of the loop. The line `const fruits = ['apples', 'bananas', 'che
 A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
 
 1. Get the first item in `fruits`.
-2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
+2. Set the `fruit` variable to that item, then run the code between the `{}` curly braces.
 3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
 
-In this case, the code inside the brackets is writing out `fruit` to the console.
+In this case, the code inside the curly braces is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
@@ -487,7 +487,7 @@ Let's play with some browser objects a bit.
 
    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
+5. Now try typing `guesses` into the console and pressing <kbd>Enter</kbd> (or <kbd>Return</kbd>, depending on your keyboard). The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
    ```js

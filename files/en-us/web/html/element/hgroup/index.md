@@ -1,5 +1,5 @@
 ---
-title: <hgroup>
+title: "<hgroup>: The Heading Group element"
 slug: Web/HTML/Element/hgroup
 page-type: html-element
 browser-compat: html.elements.hgroup
@@ -10,6 +10,8 @@ browser-compat: html.elements.hgroup
 The **`<hgroup>`** [HTML](/en-US/docs/Web/HTML) element represents a heading and related content. It groups a single [`<h1>–<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element with one or more [`<p>`](/en-US/docs/Web/HTML/Element/p).
 
 {{EmbedInteractiveExample("pages/tabbed/hgroup.html", "tabbed-standard")}}
+
+> **Note:** The `<hgroup>` element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification but is still part of the WHATWG specification and is at least partially supported by most browsers.
 
 ## Attributes
 
@@ -91,8 +93,10 @@ The `<hgroup>` presently has no strong accessibility semantics. The content of t
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

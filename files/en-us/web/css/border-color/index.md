@@ -34,7 +34,7 @@ border-color: red;
 border-color: red #f015ca;
 
 /* top | left and right | bottom */
-border-color: red rgb(240, 30, 50, 0.7) green;
+border-color: red rgb(240 30 50 / 70%) green;
 
 /* top | right | bottom | left */
 border-color: red yellow green blue;

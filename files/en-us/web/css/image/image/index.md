@@ -116,7 +116,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 
 ```css
 .quarterlogo {
-  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
+  background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }
@@ -146,7 +146,6 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("url", "url()")}}
 - {{CSSxRef("clip-path")}}
-- {{CSSxRef("-moz-image-rect")}}
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}

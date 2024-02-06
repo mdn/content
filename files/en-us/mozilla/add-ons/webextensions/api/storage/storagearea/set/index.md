@@ -5,9 +5,9 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.set
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Stores one or more items in the storage area, or update existing items.
+Stores one or more items in the storage area or updates stored items.
 
 When you store or update a value using this API, the {{WebExtAPIRef("storage.onChanged")}} event fires.
 
@@ -23,25 +23,23 @@ let settingItem = browser.storage.<storageType>.set(
 )
 ```
 
-`<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
+`<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 
 - `keys`
 
-  - : An object containing one or more key/value pairs to be stored in storage. If an item already exists, its value will be updated.
+  - : An object containing one or more key/value pairs to be stored. If an item is in storage, its value is updated.
 
     Values can be [primitive](/en-US/docs/Glossary/Primitive) (such as a number, boolean, or string), {{jsxref("Array")}}, or {{jsxref("Object")}} types.
 
-    It's generally not possible to store other types, such as `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer`, and so on. Some of these unsupported types will restore as an empty object, and some cause `set()` to throw an error. The exact behavior here is browser-specific.
+    It's generally not possible to store other types, such as `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer`, and so on. Some unsupported types restore as an empty object, while others cause `set()` to throw an error. The behavior is browser-specific.
+
+> **Note:** If you want to remove keys from storage, use {{WebExtAPIRef("storage.storageArea.remove")}}. If you want to overwrite a value with a void value, use `null`, i.e., `key: null`.
 
 ### Return value
 
-A {{jsxref("Promise")}} that will be fulfilled with no arguments if the operation succeeded. If the operation failed, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
+A {{jsxref("Promise")}} that is fulfilled with no arguments if the operation succeeds. If the operation fails, the promise is rejected with an error message.
 
 ## Examples
 
@@ -83,5 +81,9 @@ browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.

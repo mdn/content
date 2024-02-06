@@ -29,7 +29,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
 
-- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+- `controlslist`
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `audio` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
@@ -46,11 +46,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disableremoteplayback` {{experimental_inline}}
+- `disableremoteplayback`
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
-    > **Note:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
+    In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
 - `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
@@ -246,8 +246,8 @@ Browsers don't all support the same [file types](/en-US/docs/Web/Media/Formats/C
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    Download <a href="myAudio.mp3" download="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
@@ -274,7 +274,7 @@ You can style the default controls with properties that affect the block as a si
 
 To get a consistent look and feel across browsers, you'll need to create custom controls; these can be marked up and styled in whatever way you want, and then JavaScript can be used along with the {{domxref("HTMLMediaElement")}} API to wire up their functionality.
 
-[Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
+[Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
 
 ### Detecting addition and removal of tracks
 
@@ -316,7 +316,7 @@ The following example shows simple usage of the `<audio>` element to play an OGG
 ```html
 <!-- Simple audio playback -->
 <audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg">Download OGG audio</a>.
+  <a href="AudioTest.ogg" download="AudioTest.ogg">Download OGG audio</a>.
 </audio>
 ```
 
@@ -329,7 +329,7 @@ This example specifies which audio track to embed using the `src` attribute on a
 ```html
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav">Download WAV audio</a>.
+  <a href="foo.wav" download="foo.wav">Download WAV audio</a>.
 </audio>
 ```
 
@@ -347,7 +347,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ## Accessibility concerns
 
-Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
+Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are hearing impaired to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
 
@@ -377,7 +377,7 @@ Also it's a good practice to provide some content (such as the direct download l
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
     Download <a href="myAudio.mp3">MP3</a> or
-    <a href="myAudio.ogg">OGG</a> audio.
+    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> audio.
   </p>
 </audio>
 ```
@@ -467,4 +467,4 @@ Also it's a good practice to provide some content (such as the direct download l
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
 - [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

@@ -3,7 +3,7 @@ title: "RTCIceCandidatePairStats: responsesReceived property"
 short-title: responsesReceived
 slug: Web/API/RTCIceCandidatePairStats/responsesReceived
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.responsesReceived
+browser-compat: api.RTCStatsReport.type_candidate-pair.responsesReceived
 ---
 
 {{APIRef("WebRTC")}}

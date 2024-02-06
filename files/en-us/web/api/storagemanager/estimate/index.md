@@ -12,6 +12,8 @@ The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks 
 
 This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint
@@ -40,6 +42,11 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - How often the user visits
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
+
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Examples
 
@@ -81,7 +88,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

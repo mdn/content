@@ -22,7 +22,7 @@ for complete information about expressions.
 ## Block statement
 
 The most basic statement is a _block statement_, which is used to group
-statements. The block is delimited by a pair of curly brackets:
+statements. The block is delimited by a pair of curly braces:
 
 ```js
 {
@@ -228,7 +228,7 @@ The optional `break` statement associated with each `case` clause
 ensures that the program breaks out of `switch` once the matched statement is
 executed, and then continues execution at the statement following `switch`.
 If `break` is omitted, the program continues execution inside the
-`switch` statement (and will evaluate the next `case`, and so on).
+`switch` statement (and will execute statements under the next `case`, and so on).
 
 ##### Example
 
@@ -282,7 +282,6 @@ this purpose:
 
 - [ECMAScript exceptions](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types)
 - [`DOMException`](/en-US/docs/Web/API/DOMException)
-  and [`DOMError`](/en-US/docs/Web/API/DOMError)
 
 ### throw statement
 

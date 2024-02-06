@@ -27,7 +27,7 @@ The number of possible parenthesized substrings is unlimited, but the `RegExp` o
 
 ### Using $n with RegExp.prototype.test()
 
-The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.
+The following script uses the {{jsxref("RegExp.prototype.test()")}} method to grab a number in a generic string.
 
 ```js
 const str = "Test 24";
@@ -47,8 +47,8 @@ Please note that any operation involving the usage of other regular expressions 
 
 ## See also
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
+- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
+- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
+- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/toolbar_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#toolbar
-  - https://w3c.github.io/aria-practices/#toolbar
+  - https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/
 ---
 
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
@@ -86,7 +86,7 @@ When the toolbar has focus within it, provide visual cues. When an element withi
 
 [Toolbar example from <abbr>W3C</abbr>, the World Wide Web Consortium](https://www.w3.org/TR/wai-aria-practices-1.2/examples/toolbar/toolbar.html)
 
-## Accessibility Concerns
+## Accessibility concerns
 
 Avoid including controls whose operation requires arrow keys used for toolbar navigation (right and left arrows, or top and bottom for vertical toolbars). If you must include such a control, make it the last control in the toolbar. For example, in a horizontal toolbar, a textbox could be included as the last element.
 
@@ -105,6 +105,6 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -6,24 +6,23 @@ page-type: guide
 
 {{DefaultAPISidebar("Web Components")}}
 
-An important aspect of web components is encapsulation — being able to keep the markup structure, style, and behavior hidden and separate from other code on the page so that different parts do not clash, and the code can be kept nice and clean. The Shadow DOM API is a key part of this, providing a way to attach a hidden separated DOM to an element. This article covers the basics of using the Shadow DOM.
+An important aspect of custom elements is encapsulation, because a custom element, by definition, is a piece of reusable functionality: it might be dropped into any web page and be expected to work. So it's important that code running in the page should not be able to accidentally break a custom element by modifying its internal implementation. Shadow DOM enables you to attach a DOM tree to an element, and have the internals of this tree hidden from JavaScript and CSS running in the page.
+
+This article covers the basics of using the shadow DOM.
 
 ## High-level view
 
 This article assumes you are already familiar with the concept of the [DOM (Document Object Model)](/en-US/docs/Web/API/Document_Object_Model/Introduction) — a tree-like structure of connected nodes that represents the different elements and strings of text appearing in a markup document (usually an HTML document in the case of web documents). As an example, consider the following HTML fragment:
 
 ```html
-<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Simple DOM example</title>
+    <title>DOM example</title>
   </head>
   <body>
     <section>
-      <img
-        src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+      <img src="dinosaur.png" alt="A red Tyrannosaurus Rex." />
       <p>
         Here we will add a link to the
         <a href="https://www.mozilla.org/">Mozilla homepage</a>
@@ -33,9 +32,22 @@ This article assumes you are already familiar with the concept of the [DOM (Docu
 </html>
 ```
 
-This fragment produces the following DOM structure:
+This fragment produces the following DOM structure (excluding whitespace-only text nodes):
 
-![DOM Tree with elements and text nodes, content of non empty text nodes, including element's attribute names and contents ](dom-screenshot.png)
+```plain
+- HTML
+    - HEAD
+        - META charset="utf-8"
+        - TITLE
+            - #text: DOM example
+    - BODY
+        - SECTION
+            - IMG src="dinosaur.png" alt="A red Tyrannosaurus Rex."
+            - P
+                - #text: Here we will add a link to the
+                - A href="https://www.mozilla.org/"
+                    - #text: Mozilla homepage
+```
 
 _Shadow_ DOM allows hidden DOM trees to be attached to elements in the regular DOM tree — this shadow DOM tree starts with a shadow root, underneath which you can attach any element, in the same way as the normal DOM.
 
@@ -50,180 +62,324 @@ There are some bits of shadow DOM terminology to be aware of:
 
 You can affect the nodes in the shadow DOM in exactly the same way as non-shadow nodes — for example appending children or setting attributes, styling individual nodes using element.style.foo, or adding style to the entire shadow DOM tree inside a {{htmlelement("style")}} element. The difference is that none of the code inside a shadow DOM can affect anything outside it, allowing for handy encapsulation.
 
-Note that the shadow DOM is not a new thing by any means — browsers have used it for a long time to encapsulate the inner structure of an element. Think for example of a {{htmlelement("video")}} element, with the default browser controls exposed. All you see in the DOM is the `<video>` element, but it contains a series of buttons and other controls inside its shadow DOM. The shadow DOM spec has made it so that you are allowed to actually manipulate the shadow DOM of your own custom elements.
+Before shadow DOM was made available to web developers, browsers were already using it to encapsulate the inner structure of an element. Think for example of a {{htmlelement("video")}} element, with the default browser controls exposed. All you see in the DOM is the `<video>` element, but it contains a series of buttons and other controls inside its shadow DOM. The shadow DOM spec enables you to manipulate the shadow DOM of your own custom elements.
 
-## Basic usage
+## Creating a shadow DOM
 
-You can attach a shadow root to any element using the {{domxref("Element.attachShadow()")}} method. This takes as its parameter an options object that contains one option — `mode` — with a value of `open` or `closed`:
+### Imperatively with JavaScript
 
-```js
-const shadowOpen = elementRef.attachShadow({ mode: "open" });
-const shadowClosed = elementRef.attachShadow({ mode: "closed" });
+The following page contains two elements, a {{htmlelement("div")}} element with an [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of `"host"`, and a {{htmlelement("span")}} element containing some text:
+
+```html
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
 ```
 
-`open` means that you can access the shadow DOM using JavaScript written in the main page context, for example using the {{domxref("Element.shadowRoot")}} property:
+We're going to use the `"host"` element as the shadow host. We call {{domxref("Element.attachShadow()", "attachShadow()")}} on the host to create the shadow DOM, and can then add nodes to the shadow DOM just like we would to the main DOM. In this example we add a single `<span>` element:
 
 ```js
-const myShadowDom = myCustomElem.shadowRoot;
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const span = document.createElement("span");
+span.textContent = "I'm in the shadow DOM";
+shadow.appendChild(span);
 ```
 
-If you attach a shadow root to a custom element with `mode: "closed"` set, you won't be able to access the shadow DOM from the outside — `myCustomElem.shadowRoot` returns `null`. This is the case with built in elements that contain shadow DOMs, such as `<video>`.
+The result looks like this:
 
-Note that within the same JavaScript realm, this is not a fully secure way to hide the shadow root, because code can override `Element.prototype.attachShadow` so it always uses `mode: "open"`, as [this blog post shows](https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af). However, unless you are in an environment where malicious code manipulating globals is a concern, you likely don't have to worry about this. Furthermore, because web extensions don't have access to the window's globals, this still reliably protects the shadow DOM from web extensions.
+{{EmbedLiveSample("Imperatively with JavaScript")}}
 
-If you are attaching a shadow DOM to a custom element as part of its constructor (by far the most useful application of the shadow DOM), you would use something like this:
+### Declaratively with HTML
 
-```js
-const shadow = this.attachShadow({ mode: "open" });
+Creating a shadow DOM via JavaScript API might be a good option for client-side rendered applications. For other applications, a server-side rendered UI might have better performance and, therefore, a better user experience. In such cases, you can use the {{htmlelement("template")}} element to declaratively define the shadow DOM. The key to this behavior is the {{glossary("enumerated")}} `shadowrootmode` attribute, which can be set to either `open` or `closed`, the same values as the `mode` option of {{domxref("Element.attachShadow()", "attachShadow()")}} method.
+
+```html
+<div id="host">
+  <template shadowrootmode="open">
+    <span>I'm in the shadow DOM</span>
+  </template>
+</div>
 ```
 
-When you've attached a shadow DOM to an element, manipulating it is a matter of just using the same DOM APIs as you use for the regular DOM manipulation:
+{{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
 
-```js
-const para = document.createElement("p");
-shadow.appendChild(para);
-// etc.
+> **Note:** By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
+
+After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this:
+
+```plain
+- DIV id="host"
+  - #shadow-root
+    - SPAN
+      - #text: I'm in the shadow DOM
 ```
 
-## Working through a simple example
+Note that there's no `<template>` element in the DOM tree.
 
-Now let's walk through a simple example to demonstrate the shadow DOM in action inside a custom element — [`<popup-info>`](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component) (see a [live example](https://mdn.github.io/web-components-examples/popup-info-box-web-component/) also). This takes an image icon and a text string, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information. To begin with, in our JavaScript file we define a class called `PopUpInfo`, which extends `HTMLElement`:
+## Encapsulation from JavaScript
+
+So far this might not look like much. But let's see what happens if code running in the page tries to access elements in the shadow DOM.
+
+This page is just like the last one, except we've added two {{htmlelement("button")}} elements.
+
+```html
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+<br />
+
+<button id="upper" type="button">Uppercase span elements</button>
+<button id="reload" type="button">Reload</button>
+```
+
+Clicking the "Uppercase span elements" button finds all `<span>` elements in the page and changes their text to uppercase.
+Clicking the "Reload" button just reloads the page, so you can try again.
 
 ```js
-class PopUpInfo extends HTMLElement {
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const span = document.createElement("span");
+span.textContent = "I'm in the shadow DOM";
+shadow.appendChild(span);
+
+const upper = document.querySelector("button#upper");
+upper.addEventListener("click", () => {
+  const spans = Array.from(document.querySelectorAll("span"));
+  for (const span of spans) {
+    span.textContent = span.textContent.toUpperCase();
+  }
+});
+
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
+```
+
+If you click "Uppercase span elements", you'll see that {{domxref("Document.querySelectorAll()")}} doesn't find the elements in our shadow DOM: they are effectively hidden from JavaScript in the page:
+
+{{EmbedLiveSample("Encapsulation from JavaScript")}}
+
+## Element.shadowRoot and the "mode" option
+
+In the example above, we pass an argument `{ mode: "open" }` to `attachShadow()`. With `mode` set to `"open"`, the JavaScript in the page is able to access the internals of your shadow DOM through the {{domxref("Element.shadowRoot", "shadowRoot")}} property of the shadow host.
+
+In this example, as before, the HTML contains the shadow host, a `<span>` element in the main DOM tree, and two buttons:
+
+```html
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+<br />
+
+<button id="upper" type="button">Uppercase shadow DOM span elements</button>
+<button id="reload" type="button">Reload</button>
+```
+
+This time the "Uppercase" button uses `shadowRoot` to find the `<span>` elements in the DOM:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const span = document.createElement("span");
+span.textContent = "I'm in the shadow DOM";
+shadow.appendChild(span);
+
+const upper = document.querySelector("button#upper");
+upper.addEventListener("click", () => {
+  const spans = Array.from(host.shadowRoot.querySelectorAll("span"));
+  for (const span of spans) {
+    span.textContent = span.textContent.toUpperCase();
+  }
+});
+
+const reload = document.querySelector("#reload");
+reload.addEventListener("click", () => document.location.reload());
+```
+
+This time, the JavaScript running in the page can access the shadow DOM internals:
+
+{{EmbedLiveSample("Element.shadowRoot and the \"mode\" option")}}
+
+The `{mode: "open"}` argument gives the page a way to break the encapsulation of your shadow DOM. If you don't want to give the page this ability, pass `{mode: "closed"}` instead, and then `shadowRoot` returns `null`.
+
+However, you should not consider this a strong security mechanism, because there are ways it can be evaded, for example by browser extensions running in the page. It's more of an indication that the page should not access the internals of your shadow DOM tree.
+
+## Encapsulation from CSS
+
+In this version of the page, the HTML is the same as the original:
+
+```html
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+```
+
+In the JavaScript, we create the shadow DOM:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const span = document.createElement("span");
+span.textContent = "I'm in the shadow DOM";
+shadow.appendChild(span);
+```
+
+This time, we'll have some CSS targeting `<span>` elements in the page:
+
+```css
+span {
+  color: blue;
+  border: 1px solid black;
+}
+```
+
+The page CSS does not affect nodes inside the shadow DOM:
+
+{{EmbedLiveSample("Encapsulation from CSS")}}
+
+## Applying styles inside the shadow DOM
+
+In this section we'll look at two different ways to apply styles inside a shadow DOM tree:
+
+- [_Programmatically_](#constructable_stylesheets), by constructing a {{domxref("CSSStyleSheet")}} object and attaching it to the shadow root.
+- [_Declaratively_](#adding_style_elements_in_template_declarations), by adding a {{htmlelement("style")}} element in a {{htmlelement("template")}} element's declaration.
+
+In both cases, the styles defined in the shadow DOM tree are scoped to that tree, so just as page styles don't affect elements in the shadow DOM, shadow DOM styles don't affect elements in the rest of the page.
+
+### Constructable stylesheets
+
+To style page elements in the shadow DOM with constructable stylesheets, we can:
+
+1. Create an empty {{domxref("CSSStyleSheet")}} object
+2. Set its content using {{domxref("CSSStyleSheet.replace()")}} or {{domxref("CSSStyleSheet.replaceSync()")}}
+3. Add it to the shadow root by assigning it to {{domxref("ShadowRoot.adoptedStyleSheets")}}
+
+Rules defined in the `CSSStyleSheet` will be scoped to the shadow DOM tree, as well as any other DOM trees to which we have assigned it.
+
+Here, again, is the HTML containing our host and a `<span>`:
+
+```html
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+```
+
+This time we will create the shadow DOM and assign a `CSSStyleSheet` object to it:
+
+```js
+const sheet = new CSSStyleSheet();
+sheet.replaceSync("span { color: red; border: 2px dotted black;}");
+
+const host = document.querySelector("#host");
+
+const shadow = host.attachShadow({ mode: "open" });
+shadow.adoptedStyleSheets = [sheet];
+
+const span = document.createElement("span");
+span.textContent = "I'm in the shadow DOM";
+shadow.appendChild(span);
+```
+
+The styles defined in the shadow DOM tree are not applied in the rest of the page:
+
+{{EmbedLiveSample("Constructable stylesheets")}}
+
+### Adding `<style>` elements in `<template>` declarations
+
+An alternative to constructing `CSSStyleSheet` objects is to include a {{htmlelement("style")}} element inside the {{htmlelement("template")}} element used to define a web component.
+
+In this case the HTML includes the `<template>` declaration
+
+```html
+<template id="my-element">
+  <style>
+    span {
+      color: red;
+      border: 2px dotted black;
+    }
+  </style>
+  <span>I'm in the shadow DOM</span>
+</template>
+
+<div id="host"></div>
+<span>I'm not in the shadow DOM</span>
+```
+
+In the JavaScript, we will create the shadow DOM and add the content of the `<template>` to it:
+
+```js
+const host = document.querySelector("#host");
+const shadow = host.attachShadow({ mode: "open" });
+const template = document.getElementById("my-element");
+
+shadow.appendChild(template.content);
+```
+
+Again, the styles defined in the `<template>` are applied only within the shadow DOM tree, and not in the rest of the page:
+
+{{EmbedLiveSample("adding_style_elements_in_template_declarations")}}
+
+### Choosing between programmatic and declarative options
+
+Which of these options to use is dependent on your application and personal preference.
+
+Creating a `CSSStyleSheet` and assigning it to the shadow root using `adoptedStyleSheets` allows you to create a single stylesheet and share it among many DOM trees. For example, a component library could create a single stylesheet and then share it among all the custom elements belonging to that library. The browser will parse that stylesheet once. Also, you can make dynamic changes to the stylesheet and have them propagate to all components that use the sheet.
+
+The approach of attaching a `<style>` element is great if you want to be declarative, have few styles, and don't need to share styles across different components.
+
+## Shadow DOM and custom elements
+
+Without the encapsulation provided by shadow DOM, [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) would be impossibly fragile. It would be too easy for a page to accidentally break a custom element's behavior or layout by running some page JavaScript or CSS. As a custom element developer, you'd never know whether the selectors applicable inside your custom element conflicted with those that applied in a page that chose to use your custom element.
+
+Custom elements are implemented as a class which extends either the base {{domxref("HTMLElement")}} or a built-in HTML element such as {{domxref("HTMLParagraphElement")}}. Typically, the custom element itself is a shadow host, and the element creates multiple elements under that root, to provide the internal implementation of the element.
+
+The example below creates a `<filled-circle>` custom element that just renders a circle filled with a solid color.
+
+```js
+class FilledCircle extends HTMLElement {
   constructor() {
-    // Always call super first in constructor
     super();
+  }
+  connectedCallback() {
+    // Create a shadow root
+    // The custom element itself is the shadow host
+    const shadow = this.attachShadow({ mode: "open" });
 
-    // write element functionality in here
+    // create the internal implementation
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const circle = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "circle",
+    );
+    circle.setAttribute("cx", "50");
+    circle.setAttribute("cy", "50");
+    circle.setAttribute("r", "50");
+    circle.setAttribute("fill", this.getAttribute("color"));
+    svg.appendChild(circle);
+
+    shadow.appendChild(svg);
   }
 }
-```
 
-Inside the class definition we define the element's constructor, which defines all the functionality the element will have when an instance of it is instantiated.
-
-### Creating the shadow root
-
-We first attach a shadow root to the custom element:
-
-```js
-// Create a shadow root
-const shadow = this.attachShadow({ mode: "open" });
-```
-
-### Creating the shadow DOM structure
-
-Next, we use some DOM manipulation to create the element's internal shadow DOM structure:
-
-```js
-// Create spans
-const wrapper = document.createElement("span");
-wrapper.setAttribute("class", "wrapper");
-const icon = document.createElement("span");
-icon.setAttribute("class", "icon");
-icon.setAttribute("tabindex", "0");
-const info = document.createElement("span");
-info.setAttribute("class", "info");
-
-// Take attribute content and put it inside the info span
-const text = this.getAttribute("data-text");
-info.textContent = text;
-
-// Insert icon
-const img = document.createElement("img");
-img.src = this.hasAttribute("img")
-  ? this.getAttribute("img")
-  : "img/default.png";
-img.alt = this.hasAttribute("alt") ? this.getAttribute("alt") : "";
-icon.appendChild(img);
-```
-
-### Styling the shadow DOM
-
-After that we create a {{htmlelement("style")}} element and populate it with some CSS to style it:
-
-```js
-// Create some CSS to apply to the shadow DOM
-let style = document.createElement("style");
-
-style.textContent = `
-.wrapper {
-  position: relative;
-}
-
-.info {
-  font-size: 0.8rem;
-  width: 200px;
-  display: inline-block;
-  border: 1px solid black;
-  padding: 10px;
-  background: white;
-  border-radius: 10px;
-  opacity: 0;
-  transition: 0.6s all;
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  z-index: 3;
-}
-
-img {
-  width: 1.2rem;
-}
-
-.icon:hover + .info, .icon:focus + .info {
-  opacity: 1;
-}`;
-```
-
-### Attaching the shadow DOM to the shadow root
-
-The final step is to attach all the created elements to the shadow root:
-
-```js
-// attach the created elements to the shadow DOM
-shadow.appendChild(style);
-shadow.appendChild(wrapper);
-wrapper.appendChild(icon);
-wrapper.appendChild(info);
-```
-
-### Using our custom element
-
-Once the class is defined, using the element is as simple as defining it, and putting it on the page, as explained in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements):
-
-```js
-// Define the new element
-customElements.define("popup-info", PopUpInfo);
+customElements.define("filled-circle", FilledCircle);
 ```
 
 ```html
-<popup-info
-  img="img/alt.png"
-  data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card."></popup-info>
+<filled-circle color="blue"></filled-circle>
 ```
 
-### Internal versus external styles
+{{EmbedLiveSample("Shadow DOM and custom elements", 100, 160)}}
 
-In the above example we apply style to the Shadow DOM using a {{htmlelement("style")}} element, but it is perfectly possible to do it by referencing an external stylesheet from a {{htmlelement("link")}} element instead.
-
-For example, take a look at this code from our [popup-info-box-external-stylesheet](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/) example (see the [source code](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/main.js)):
-
-```js
-// Apply external styles to the shadow DOM
-const linkElem = document.createElement("link");
-linkElem.setAttribute("rel", "stylesheet");
-linkElem.setAttribute("href", "style.css");
-
-// Attach the created element to the shadow DOM
-shadow.appendChild(linkElem);
-```
-
-Note that {{htmlelement("link")}} elements do not block paint of the shadow root, so there may be a flash of unstyled content (FOUC) while the stylesheet loads.
-
-Many modern browsers implement an optimization for {{htmlelement("style")}} tags either cloned from a common node or that have identical text, to allow them to share a single backing stylesheet. With this optimization the performance of external and internal styles should be similar.
+For more examples, illustrating different aspects of custom element implementation, see our [guide to custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
 
 ## See also
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
+- {{domxref("Element.attachShadow()")}}
+- {{domxref("ShadowRoot.adoptedStyleSheets")}}
+- {{domxref("CSSStyleSheet.replace()")}}
+- {{domxref("CSSStyleSheet.replaceSync()")}}
+- {{HTMLelement("template")}}
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- {{CSSXref(":host")}}
+- {{CSSXref(":host_function", ":host()")}}
+- {{CSSXref(":host-context", ":host-context()")}}
+- {{CSSXref("::slotted", "::slotted()")}}
+- [CSS shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
+- {{CSSXref("::part")}}

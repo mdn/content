@@ -9,7 +9,7 @@ browser-compat: api.Element
 
 **`Element`** is the most general base class from which all element objects (i.e. objects that represent elements) in a {{DOMxRef("Document")}} inherit. It only has methods and properties common to all kinds of elements. More specific classes inherit from `Element`.
 
-For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements, while the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements. Most functionality is specified further down the class hierarchy.
+For example, the {{DOMxRef("HTMLElement")}} interface is the base interface for HTML elements. Similarly, the {{DOMxRef("SVGElement")}} interface is the basis for all SVG elements, and the {{DOMxRef("MathMLElement")}} interface is the base interface for MathML elements. Most functionality is specified further down the class hierarchy.
 
 Languages outside the realm of the Web platform, like XUL through the `XULElement` interface, also implement `Element`.
 
@@ -58,7 +58,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
     > **Note:** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml/) namespace in both HTML and XML trees.
 
 - {{DOMxRef("Element.nextElementSibling")}} {{ReadOnlyInline}}
-  - : An {{DOMxRef("Element")}}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
+  - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
 - {{DOMxRef("Element.part")}}
@@ -66,7 +66,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
 - {{DOMxRef("Element.previousElementSibling")}} {{ReadOnlyInline}}
-  - : An {{DOMxRef("Element")}}, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
+  - : An `Element`, the element immediately preceding the given one in the tree, or `null` if there is no sibling element.
 - {{DOMxRef("Element.scrollHeight")}} {{ReadOnlyInline}}
   - : Returns a number representing the scroll view height of an element.
 - {{DOMxRef("Element.scrollLeft")}}
@@ -88,7 +88,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
 
 ### Instance properties included from ARIA
 
-_The `Element` interface includes the following properties, defined on the `ARIAMixin` mixin._
+_The `Element` interface also includes the following properties._
 
 - {{domxref("Element.ariaAtomic")}}
   - : A string reflecting the [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) attribute, which indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
@@ -102,6 +102,8 @@ _The `Element` interface includes the following properties, defined on the `ARIA
   - : A string reflecting the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndex")}}
   - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
+- {{domxref("Element.ariaColIndexText")}} {{experimental_inline}}
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaCurrent")}}
@@ -150,6 +152,8 @@ _The `Element` interface includes the following properties, defined on the `ARIA
   - : A string reflecting the [`aria-rowcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) attribute, which defines the total number of rows in a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndex")}}
   - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
+- {{domxref("Element.ariaRowIndexText")}} {{experimental_inline}}
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 - {{domxref("Element.ariaRowSpan")}}
   - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaSelected")}}
@@ -171,24 +175,22 @@ _The `Element` interface includes the following properties, defined on the `ARIA
 
 _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DOMxRef("EventTarget")}}._
 
-- {{DOMxRef("EventTarget.addEventListener()")}}
-  - : Registers an event handler to a specific event type on the element.
 - {{DOMxRef("Element.after()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just after the `Element`.
-- {{DOMxRef("Element.attachShadow()")}}
-  - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.animate()")}}
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the element.
+- {{DOMxRef("Element.attachShadow()")}}
+  - : Attaches a shadow DOM tree to the specified element and returns a reference to its {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.before()")}}
   - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the `Element`'s parent, just before the `Element`.
+- {{DOMxRef("Element.checkVisibility()")}}
+  - : Returns whether an element is expected to be visible or not based on configurable checks.
 - {{DOMxRef("Element.closest()")}}
-  - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
+  - : Returns the `Element` which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
 - {{DOMxRef("Element.computedStyleMap()")}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
-- {{DOMxRef("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this node in the DOM and returns a boolean value that indicates whether no handler canceled the event.
 - {{DOMxRef("Element.getAnimations()")}}
   - : Returns an array of Animation objects currently active on the element.
 - {{DOMxRef("Element.getAttribute()")}}
@@ -245,8 +247,6 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Removes the node representation of the named attribute from the current node.
 - {{DOMxRef("Element.removeAttributeNS()")}}
   - : Removes the attribute with the specified name and namespace, from the current node.
-- {{DOMxRef("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the element.
 - {{DOMxRef("Element.replaceChildren()")}}
   - : Replaces the existing children of a {{domxref("Node")}} with a specified new set of children.
 - {{DOMxRef("Element.replaceWith()")}}
@@ -286,18 +286,33 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 
 Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
 
+- {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a script has been executed.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
-- {{domxref("HTMLDialogElement/cancel_event", "cancel")}}
-  - : Fires on a {{HTMLElement("dialog")}} when the user instructs the browser that they wish to dismiss the currently open modal dialog. The browser fires this event when the user presses the <kbd>Esc</kbd> key to close the modal dialog.
+- {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
+  - : Fired when a script is about to be executed.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} {{Experimental_Inline}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}
   - : Fired when the document view or an element has been scrolled.
+- {{domxref("Element/scrollend_event", "scrollend")}}
+  - : Fires when the document view has completed scrolling.
 - {{domxref("Element/securitypolicyviolation_event","securitypolicyviolation")}}
   - : Fired when a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) is violated.
 - {{domxref("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
+
+### Animation events
+
+- {{domxref("Element/animationcancel_event", "animationcancel")}}
+  - : Fired when an animation unexpectedly aborts.
+- {{domxref("Element/animationend_event", "animationend")}}
+  - : Fired when an animation has completed normally.
+- {{domxref("Element/animationiteration_event", "animationiteration")}}
+  - : Fired when an animation iteration has completed.
+- {{domxref("Element/animationstart_event", "animationstart")}}
+  - : Fired when an animation starts.
 
 ### Clipboard events
 
@@ -331,7 +346,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Fullscreen events
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : Sent to an {{domxref("Element")}} when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
+  - : Sent to an `Element` when it transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 
@@ -356,6 +371,8 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointing device button (e.g., a mouse's primary button) is clicked twice on a single element.
 - {{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}
   - : Occurs when an element is activated, for instance, through a mouse click or a keypress.
+- {{domxref("Element/DOMMouseScroll_event", "DOMMouseScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Occurs when mouse wheel or similar device is operated and the accumulated scroll amount is over 1 line or 1 page since last event.
 - {{domxref("Element/mousedown_event", "mousedown")}}
   - : Fired when a pointing device button is pressed on an element.
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
@@ -370,6 +387,10 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when a pointing device is moved onto the element to which the listener is attached or onto one of its children.
 - {{domxref("Element/mouseup_event", "mouseup")}}
   - : Fired when a pointing device button is released on an element.
+- {{domxref("Element/mousewheel_event", "mousewheel")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a mouse wheel or similar device is operated.
+- {{domxref("Element/MozMousePixelScroll_event", "MozMousePixelScroll")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : Fired when a mouse wheel or similar device is operated.
 - {{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}} {{Non-standard_Inline}}
   - : Fired each time the amount of pressure changes on the trackpadtouchscreen.
 - {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} {{Non-standard_Inline}}
@@ -379,8 +400,39 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}} {{Non-standard_Inline}}
   - : Fired after the {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
 
+### Pointer events
+
+- {{domxref("Element/gotpointercapture_event", "gotpointercapture")}}
+  - : Fired when an element captures a pointer using {{domxref("Element/setPointerCapture", "setPointerCapture()")}}.
+- {{domxref("Element/lostpointercapture_event", "lostpointercapture")}}
+  - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
+- {{domxref("Element/pointercancel_event", "pointercancel")}}
+  - : Fired when a pointer event is canceled.
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+  - : Fired when a pointer becomes active.
+- {{domxref("Element/pointerenter_event", "pointerenter")}}
+  - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
+- {{domxref("Element/pointerleave_event", "pointerleave")}}
+  - : Fired when a pointer is moved out of the hit test boundaries of an element.
+- {{domxref("Element/pointermove_event", "pointermove")}}
+  - : Fired when a pointer changes coordinates.
+- {{domxref("Element/pointerout_event", "pointerout")}}
+  - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
+- {{domxref("Element/pointerover_event", "pointerover")}}
+  - : Fired when a pointer is moved into an element's hit test boundaries.
+- {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} {{Experimental_Inline}}
+  - : Fired when a pointer changes any properties that don't fire {{domxref("Element/pointerdown_event", "pointerdown")}} or {{domxref("Element/pointerup_event", "pointerup")}} events.
+- {{domxref("Element/pointerup_event", "pointerup")}}
+  - : Fired when a pointer is no longer active.
+
 ### Touch events
 
+- {{domxref("Element/gesturechange_event","gesturechange")}} {{Non-standard_Inline}}
+  - : Fired when digits move during a touch gesture.
+- {{domxref("Element/gestureend_event","gestureend")}} {{Non-standard_Inline}}
+  - : Fired when there are no longer multiple fingers contacting the touch surface, thus ending the gesture.
+- {{domxref("Element/gesturestart_event","gesturestart")}} {{Non-standard_Inline}}
+  - : Fired when multiple fingers contact the touch surface, thus starting a new gesture.
 - {{domxref("Element/touchcancel_event", "touchcancel")}}
   - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
 - {{domxref("Element/touchend_event", "touchend")}}
@@ -389,6 +441,17 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when one or more touch points are moved along the touch surface.
 - {{domxref("Element/touchstart_event", "touchstart")}}
   - : Fired when one or more touch points are placed on the touch surface.
+
+### Transition events
+
+- {{domxref("Element/transitioncancel_event", "transitioncancel")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has been cancelled.
+- {{domxref("Element/transitionend_event", "transitionend")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has finished playing.
+- {{domxref("Element/transitionrun_event", "transitionrun")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) is created (i.e., when it is added to a set of running transitions), though not necessarily started.
+- {{domxref("Element/transitionstart_event", "transitionstart")}}
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions) has started transitioning.
 
 ## Specifications
 

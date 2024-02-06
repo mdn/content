@@ -106,7 +106,7 @@ const greeter = {
 ### Callback syntax
 
 Also, check your syntax when using callbacks.
-Brackets and commas can quickly get confusing.
+Braces and commas can quickly get confusing.
 
 ```js-nolint example-bad
 promise.then(

@@ -13,7 +13,7 @@ Programming languages are very useful for rapidly completing repetitive tasks, f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
@@ -82,7 +82,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(
       random(canvas.width),
       random(canvas.height),
@@ -104,7 +104,7 @@ You don't have to understand all the code for now, but let's look at the part of
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.fillStyle = "rgb(255 0 0 / 50%)";
   ctx.arc(
     random(canvas.width),
     random(canvas.height),
@@ -126,7 +126,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ctx.arc(
   random(canvas.width),
   random(canvas.height),
@@ -161,7 +161,7 @@ for (const cat of cats) {
 In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
-2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
 
 ### map() and filter()

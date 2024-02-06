@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputCancelled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user has cancelled their interaction with your extension (for example, by clicking outside the address bar).
 

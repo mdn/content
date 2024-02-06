@@ -9,20 +9,22 @@ browser-compat: webextensions.api.action
 
 Adds a button to the browser's toolbar.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> **Note:** This API is available in Manifest V3 or higher. It replaces the Manifest V2 APIs {{WebExtAPIRef("browserAction")}} and, in Chrome and Safari, {{WebExtAPIRef("pageAction")}}.
 
 A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
-You can associate a popup with the button. The popup is specified using HTML, CSS and JavaScript, just like a normal web page. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
+You can associate a popup with the button. Like a web page, the popup is specified using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages, you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
-If you specify a popup, it will be shown — and the content will be loaded — when the user clicks the icon. If you do not specify a popup, then when the user clicks the icon an event is dispatched to your extension.
+If you specify a popup, it is shown — and the content loaded — when the user clicks the icon. If you do not specify a popup, an event is dispatched to your extension when the user clicks the icon.
 
-You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
+The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `action` {{WebExtAPIRef("menus.ContextType")}}.
+
+You can define most of a browser action's properties declaratively using the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key in the manifest.json.
 
 With the `action` API, you can:
 
 - use {{WebExtAPIRef("action.onClicked")}} to listen for clicks on the icon.
-- get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs, or for a specific tab by passing the tab ID as an additional argument.
+- get and set the icon's properties — icon, title, popup, and so on. You can get and set these globally across all tabs or for a tab by passing the tab ID as an additional argument.
 
 ## Types
 
@@ -77,7 +79,7 @@ With the `action` API, you can:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

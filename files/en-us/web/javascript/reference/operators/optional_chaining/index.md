@@ -103,7 +103,7 @@ You can also use the optional chaining operator with [bracket notation](/en-US/d
 const nestedProp = obj?.["prop" + "Name"];
 ```
 
-This is particularly useful for arrays, since array indices must be accessed with brackets.
+This is particularly useful for arrays, since array indices must be accessed with square brackets.
 
 ```js
 function printMagicIndex(arr) {
@@ -111,7 +111,7 @@ function printMagicIndex(arr) {
 }
 
 printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
-printMagicIndex(); // undefined; if not using ?., this would throw
+printMagicIndex(); // undefined; if not using ?., this would throw an error: "Cannot read properties of undefined (reading '42')"
 ```
 
 ### Optional chaining not valid on the left-hand side of an assignment

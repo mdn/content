@@ -72,4 +72,4 @@ resizeObserver.observe(document.querySelector("div"));
 
 ## See also
 
-- [ResizeObserver: It's Like document.onresize for Elements](https://web.dev/resize-observer/)
+- [ResizeObserver: It's Like document.onresize for Elements](https://web.dev/articles/resize-observer)

@@ -172,11 +172,11 @@ scroll-snap-type: unset;
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
 .x.proximity-scroll-snapping {
   scroll-snap-type: x proximity;
+}
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
 }
 .y.proximity-scroll-snapping {
   scroll-snap-type: y proximity;
@@ -233,4 +233,4 @@ scroll-snap-type: unset;
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

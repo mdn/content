@@ -21,21 +21,25 @@ The `box-shadow` property enables you to cast a drop shadow from the frame of al
 /* Keyword values */
 box-shadow: none;
 
-/* offset-x | offset-y | color */
-box-shadow: 60px -16px teal;
+/* A color and two length values */
+/* <color> | <length> | <length> */
+box-shadow: red 60px -16px;
 
-/* offset-x | offset-y | blur-radius | color */
+/* Three length values and a color */
+/* <length> | <length> | <length> | <color> */
 box-shadow: 10px 5px 5px black;
 
-/* offset-x | offset-y | blur-radius | spread-radius | color */
-box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/* Four length values and a color */
+/* <length> | <length> | <length> | <length> | <color> */
+box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 
-/* inset | offset-x | offset-y | color */
+/* inset, length values, and a color */
+/* <inset> | <length> | <length> | <color> */
 box-shadow: inset 5em 1em gold;
 
 /* Any number of shadows, separated by commas */
 box-shadow:
-  3px 3px red,
+  3px 3px red inset,
   -1em 0 0.4em olive;
 
 /* Global values */
@@ -48,7 +52,7 @@ box-shadow: unset;
 
 Specify a single box-shadow using:
 
-- Two, three, or four [`<length>`](/en-US/docs/Web/CSS/length) values.
+- Two, three, or four {{cssxref("length")}} values.
 
   - If only two values are given, they are interpreted as `<offset-x>` and `<offset-y>` values.
   - If a third value is given, it is interpreted as a `<blur-radius>`.
@@ -61,32 +65,29 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 ### Values
 
-- `inset`
-  - : If not specified (default), the shadow is assumed to be a drop shadow (as if the box were raised above the content).
-    The presence of the `inset` keyword changes the shadow to one inside the frame (as if the content was debossed inside the box). Inset shadows are drawn inside the border (even transparent ones), above the background, but below content.
-- `<offset-x>`
-  - : The {{cssxref("&lt;length&gt;")}} value specifies the horizontal distance. Negative values place the shadow to the left of the element.
-- `<offset-y>`
+- `<color>` {{optional_inline}}
 
-  - : The {{cssxref("&lt;length&gt;")}} values specifies the vertical distance. Negative values place the shadow above the element.
+  - : Specifies color for the shadow. See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
+    If not specified, the value of the {{cssxref("color")}} property defined in the parent element is used.
 
-    If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+- `<length>`
 
-- `<blur-radius>`
+  - : Specifies the offset length of the shadow. This parameter accepts two, three, or four values. Third and fourth values are optional. They are interpreted as follows:
 
-  - : This is a third {{cssxref("&lt;length&gt;")}} value. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be `0` (the shadow's edge is sharp). The specification does not include an exact algorithm for how the blur radius should be calculated, however, it does elaborate as follows:
+    - If two values are specified, they are interpreted as `<offset-x>` (horizontal offset) and `<offset-y>` (vertical offset) values. Negative `<offset-x>` value places the shadow to the left of the element. Negative `<offset-y>` value places the shadow above the element.\
+      If not specified, the value of `0` is used for the missing length. If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
+    - If three values are specified, the third value is interpreted as `<blur-radius>`. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be set to`0` (meaning that the shadow's edge will be sharp). The specification does not include an exact algorithm for how the blur radius should be calculated; however, it does elaborate as follows:
 
-    > …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow's edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
+      > …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow's edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
 
-- `<spread-radius>`
-  - : This is a fourth {{cssxref("&lt;length&gt;")}} value. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be `0` (the shadow will be the same size as the element).
-- `<color>`
-  - : See {{cssxref("&lt;color&gt;")}} values for possible keywords and notations.
-    If not specified, it defaults to {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}}.
+    - If four values are specified, the fourth value is interpreted as `<spread-radius>`. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be set to `0` (that is, the shadow will be the same size as the element).
+
+- `inset` {{optional_inline}}
+  - : Changes the shadow from an outer box-shadow to an inner box-shadow (as if the content is pressed into the box). Inset shadows are drawn inside the box's border (even if the border is transparent), and they appear above the background but below the content. By default, the shadow behaves like a drop shadow, giving the appearance that the box is elevated above its content. This is the default behavior when `inset` is not specified.
 
 ### Interpolation
 
-When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as {{cssxref("length")}}s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If in any pair of shadows, one has `inset` set and the other does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 
@@ -124,9 +125,9 @@ In this example, we include three shadows: an inset shadow, a regular drop shado
 blockquote {
   padding: 20px;
   box-shadow:
-    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    inset 0 -3em 3em rgb(0 200 0 / 30%),
+    0 0 0 2px white,
+    0.3em 0.3em 1em rgb(200 0 0 / 60%);
 }
 ```
 

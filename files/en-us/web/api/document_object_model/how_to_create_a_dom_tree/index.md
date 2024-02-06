@@ -83,14 +83,14 @@ doc.appendChild(peopleElem);
 
 DOM trees can be:
 
-- [queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
-- converted to strings using [XMLSerializer](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
-- [posted to a web server](/en-US/docs/Web/API/XMLHttpRequest) using `XMLHttpRequest`
-- transformed using [XSLT](/en-US/docs/Web/XSLT) or [XLink](/en-US/docs/Glossary/XLink).
+- [Queried using XPath expressions](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript).
+- Converted to strings using [XMLSerializer](/en-US/docs/Web/XML/Parsing_and_serializing_XML).
+- [Posted to a web server](/en-US/docs/Web/API/Fetch_API) using the Fetch API.
+- Transformed using [XSLT](/en-US/docs/Web/XSLT) or [XLink](/en-US/docs/Glossary/XLink).
 
 ## See also
 
 - [XML](/en-US/docs/Web/XML)
 - [XPath](/en-US/docs/Web/XPath)
-- [Parsing and serializing XML](/en-US/docs/Web/Guide/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)
+- [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)

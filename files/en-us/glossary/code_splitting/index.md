@@ -6,9 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Code splitting** is the splitting of code into various bundles or components which can then be loaded on demand or in parallel.
-
-As an application grows in complexity or is maintained, CSS and JavaScripts files or bundles grow in byte size, especially as the number and size of included third-party libraries increases. To prevent the requirement of downloading ginormous files, scripts can be split into multiple smaller files. Then features required at page load can be downloaded immediately with additional scripts being [lazy loaded](/en-US/docs/Glossary/Lazy_load) after the page or application is interactive, thus improving performance. While the total amount of code is the same (and perhaps even a few bytes larger), the amount of code needed during initial load can be reduced.
+**Code splitting** is the practice of splitting the code a web application depends on — including its own code and any third-party dependencies — into separate bundles that can be loaded independently of each other.
+This allows an application to load only the code it actually needs at a given point in time, and load other bundles on demand.
+This approach is used to improve application performance, especially on initial load.
 
 Code splitting is a feature supported by bundlers like [Webpack](https://webpack.js.org/) and [Browserify](https://browserify.org/) which can create multiple bundles that can be dynamically loaded at runtime.
 

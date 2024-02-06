@@ -1,6 +1,7 @@
 ---
 title: XOR
 slug: WebAssembly/Reference/Numeric/XOR
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

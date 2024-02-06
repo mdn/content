@@ -33,7 +33,7 @@ filter(callbackFn, thisArg)
 
 ### Return value
 
-A new typed array with the elements that pass the test. If no elements pass the test, an empty array will be returned.
+A copy of the given typed array containing just the elements that pass the test. If no elements pass the test, an empty typed array is returned.
 
 ## Description
 

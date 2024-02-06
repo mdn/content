@@ -23,23 +23,9 @@ For example, to style the [wordmark](https://en.wikipedia.org/wiki/Wordmark) of 
 
 Appropriate use cases for `<sup>` include (but aren't necessarily limited to):
 
-- Displaying exponents, such as "x
-
-  <sup>3</sup>
-
-  ." It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
-
-- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M
-
-  <sup>lle</sup>
-
-  "); this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
-
-- Representing ordinal numbers, such as "4
-
-  <sup>th</sup>
-
-  " instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
+- Displaying exponents, such as "x<sup>3</sup>". It may be worth considering the use of [MathML](/en-US/docs/Web/MathML) for these, especially in more complex cases. See [Exponents](#exponents) under [Examples](#examples) below.
+- Displaying [superior lettering](https://en.wikipedia.org/wiki/Superior_letter), which is used in some languages when rendering certain abbreviations. For example, in French, the word "mademoiselle" can be abbreviated "M<sup>lle</sup>"; this is an acceptable use case. See [Superior lettering](#superior_lettering) for examples.
+- Representing ordinal numbers, such as "4<sup>th</sup>" instead of "fourth." See [Ordinal numbers](#ordinal_numbers) for examples.
 
 ## Examples
 
@@ -131,8 +117,9 @@ Ordinal numbers, such as "fourth" in English or "quinto" in Spanish may be abbre
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">superscript</a
+          ></code
         >
       </td>
     </tr>

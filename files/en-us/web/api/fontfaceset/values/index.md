@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.values
 ---
 
-{{DefaultAPISidebar("")}}
+{{APIRef("CSS Font Loading API")}}
 
 The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a new iterator object that yields the values for each element in the `FontFaceSet` object in insertion order.
 

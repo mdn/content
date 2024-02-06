@@ -9,6 +9,8 @@ browser-compat: http.headers.Link
 
 The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
 
+> **Note:** Some browsers do not support the "icon" relation via HTTP ([FF#1185705](https://bugzilla.mozilla.org/show_bug.cgi?id=1185705)). Use HTML `<link rel="icon">` instead.
+
 ## Syntax
 
 ```http

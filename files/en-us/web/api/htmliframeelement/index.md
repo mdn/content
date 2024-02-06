@@ -19,7 +19,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string that specifies the alignment of the frame with respect to the surrounding context.
 - {{domxref("HTMLIFrameElement.allow")}}
   - : A list of origins the frame is allowed to display content from. This attribute also accepts the values `self` and `src` which represent the origin in the iframe's src attribute. The default value is `src`.
-- {{domxref("HTMLIFrameElement.allowfullscreen")}} {{Experimental_Inline}}
+- {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
@@ -35,10 +35,15 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.
 - {{domxref("HTMLIFrameElement.height")}}
   - : A string that reflects the [`height`](/en-US/docs/Web/HTML/Element/iframe#height) HTML attribute, indicating the height of the frame.
+- {{domxref("HTMLIFrameElement.loading")}}
+  - : A string providing a hint to the browser that the iframe should be loaded immediately (`eager`) or on an as-needed basis (`lazy`).
+    This reflects the [`loading`](/en-US/docs/Web/HTML/Element/iframe#loading) HTML attribute.
 - {{domxref("HTMLIFrameElement.longDesc")}} {{Deprecated_Inline}}
   - : A string that contains the URI of a long description of the frame.
 - {{domxref("HTMLIFrameElement.marginHeight")}} {{Deprecated_Inline}}
@@ -47,8 +52,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A string being the width of the frame margin.
 - {{domxref("HTMLIFrameElement.name")}}
   - : A string that reflects the [`name`](/en-US/docs/Web/HTML/Element/iframe#name) HTML attribute, containing a name by which to refer to the frame.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.referrerPolicy")}}
   - : A string that reflects the [`referrerPolicy`](/en-US/docs/Web/HTML/Element/iframe#referrerpolicy) HTML attribute indicating which referrer to use when fetching the linked resource.
 - {{domxref("HTMLIFrameElement.sandbox")}}

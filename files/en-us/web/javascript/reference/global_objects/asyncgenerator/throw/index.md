@@ -24,7 +24,7 @@ asyncGeneratorInstance.throw(exception)
 
 If the thrown error is not caught, it will return a {{jsxref("Promise")}} which rejects with the exception passed in.
 
-If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return a {{jsxref("Promise")}} which resolves with an {{jsxref("Global_Objects/Object", "Object")}} with two properties:
+If the exception is caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) and the generator resumes to yield more values, it will return a {{jsxref("Promise")}} which resolves with an {{jsxref("Object")}} with two properties:
 
 - `done`
   - : A boolean value:

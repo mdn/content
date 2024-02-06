@@ -7,7 +7,7 @@ status:
 browser-compat: api.IdentityCredential
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`IdentityCredential`** interface of the [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) represents a user identity credential arising from a successful federated sign-in.
 
@@ -20,7 +20,7 @@ A successful {{domxref("CredentialsContainer.get", "navigator.credentials.get()"
 _Inherits properties from its ancestor, {{domxref("Credential")}}._
 
 - {{domxref("IdentityCredential.token")}} {{experimental_inline}}
-  - : Returns a {{jsxref("Promise")}} that resolves with the {{domxref("Credential")}} instance that matches the provided parameters.
+  - : Returns the token used to validate the associated sign-in.
 
 ## Examples
 

@@ -33,7 +33,7 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for a typed array element, in which case `false` is immediately returned.
 
 ## Description
 
@@ -43,7 +43,7 @@ See {{jsxref("Array.prototype.every()")}} for more details. This method is not g
 
 ### Testing size of all typed array elements
 
-The following example tests whether all elements in the typed array are bigger than 9.
+The following example tests whether all elements in the typed array are 10 or bigger.
 
 ```js
 function isBigEnough(element, index, array) {

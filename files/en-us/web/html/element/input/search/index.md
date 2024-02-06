@@ -107,11 +107,11 @@ If `incremental` is not specified, the {{domxref("HTMLInputElement/search_event"
 
 The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
-### mozactionhint
+### mozactionhint {{deprecated_inline}}
 
 A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
 
-This attribute has been deprecated: use the [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) global attribute instead.
+<strong>Deprecated: Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) instead.</strong>
 
 ### results
 
@@ -415,7 +415,7 @@ You can see a good example of a search form used in context at our [website-aria
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>

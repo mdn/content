@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PushSubscription.toJSON
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}
 
 The `toJSON()` method of the {{domxref("PushSubscription")}} interface is a
 standard serializer: it returns a JSON representation of the subscription properties,
@@ -24,8 +24,8 @@ None.
 
 ### Return value
 
-A JSON object. It currently only contains the subscription endpoint, as an
-`endpoint` member.
+A JSON object. It contains the subscription endpoint, `expirationTime` and public keys, as an
+`endpoint` member, an `expirationTime` member and a `keys` member.
 
 ## Examples
 

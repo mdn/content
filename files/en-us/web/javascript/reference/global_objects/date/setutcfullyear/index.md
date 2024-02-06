@@ -36,8 +36,8 @@ Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](
 
 If you do not specify the `monthValue` and
 `dateValue` parameters, the values returned from the
-{{jsxref("Date.prototype.getUTCMonth()", "getUTCMonth()")}} and
-{{jsxref("Date.prototype.getUTCDate()", "getUTCDate()")}} methods are used.
+{{jsxref("Date/getUTCMonth", "getUTCMonth()")}} and
+{{jsxref("Date/getUTCDate", "getUTCDate()")}} methods are used.
 
 If a parameter you specify is outside of the expected range,
 `setUTCFullYear()` attempts to update the other parameters and the date

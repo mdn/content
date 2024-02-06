@@ -1,5 +1,5 @@
 ---
-title: <footer>
+title: "<footer>: The Footer element"
 slug: Web/HTML/Element/footer
 page-type: html-element
 browser-compat: html.elements.footer
@@ -46,7 +46,7 @@ The **`<footer>`** [HTML](/en-US/docs/Web/HTML) element represents a footer for 
       <th scope="row">Implicit ARIA role</th>
       <td>
         <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role">contentinfo</a>, or
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a>
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Generic_role">generic</a>
         if a descendant of an
         <a href="/en-US/docs/Web/HTML/Element/article">article</a>,
         <a href="/en-US/docs/Web/HTML/Element/aside">aside</a>,

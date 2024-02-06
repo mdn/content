@@ -113,15 +113,15 @@ Highlights:
 - The [Notifications API](/en-US/docs/Web/API/Notifications_API) is now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 916893](https://bugzil.la/916893)).
 - `DOMRequest` and `DOMCursor` are now available in [Web workers](/en-US/docs/Web/API/Web_Workers_API) ([Firefox bug 1167650](https://bugzil.la/1167650)).
 - The [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API) has been completely implemented and is now enabled by default ([Firefox bug 1149381](https://bugzil.la/1149381)).
-- Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
-- The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ([Firefox bug 1174731](https://bugzil.la/1174731)).
+- Shared workers can no longer be shared between private (i.e., browsing in a private window) and non-private documents (see [Firefox bug 1177621](https://bugzil.la/1177621)).
+- The {{domxref("URL.searchParams")}} property is now read-only ([Firefox bug 1174731](https://bugzil.la/1174731)).
 - The {{domxref('HTMLAnchorElement.hash')}} property no longer decodes URL fragment ([Firefox bug 1093611](https://bugzil.la/1093611)).
 
 ### MathML
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see [Firefox bug 947654](https://bugzil.la/947654) and [Firefox bug 1160456](https://bugzil.la/1160456).
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g., `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as the first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see [Firefox bug 947654](https://bugzil.la/947654) and [Firefox bug 1160456](https://bugzil.la/1160456).
 
 ### SVG
 
@@ -129,11 +129,11 @@ Mathematical formulas require special fonts. So far, these fonts were hard-coded
 
 ### Audio/Video
 
-- The `media.autoplay.enabled` preference now also apply to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ([Firefox bug 659285](https://bugzil.la/659285)).
+- The `media.autoplay.enabled` preference now also applies to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ([Firefox bug 659285](https://bugzil.la/659285)).
 
 ## Networking
 
-- The `X-Content-Duration` header is no longer supported ([Webkit bug 1160695](https://bugzil.la/1160695)).
+- The `X-Content-Duration` header is no longer supported ([Firefox bug 1160695](https://bugzil.la/1160695)).
 - Draft versions of the HTTP/2 protocol are no more supported ([Firefox bug 1132357](https://bugzil.la/1132357)).
 
 ## Security

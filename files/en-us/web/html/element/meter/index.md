@@ -53,8 +53,9 @@ The **`<meter>`** [HTML](/en-US/docs/Web/HTML) element represents either a scala
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">meter</a
+          ></code
         >
       </td>
     </tr>
@@ -143,3 +144,4 @@ On Google Chrome, the resulting meter looks like this:
 ## See also
 
 - {{HTMLElement("progress")}}
+- {{cssxref("::-webkit-meter-bar")}}, {{cssxref("::-webkit-meter-inner-element") }}, {{cssxref("::-webkit-meter-even-less-good-value")}}, {{cssxref("::-webkit-meter-optimum-value")}}, {{cssxref("::-webkit-meter-suboptimum-value")}}: non-standard pseudo-elements

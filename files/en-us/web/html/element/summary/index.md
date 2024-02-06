@@ -21,6 +21,8 @@ The `<summary>` element's contents can be any heading content, plain text, or HT
 
 A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
+The content of the `<details>` provides the {{glossary("accessible description")}} for the `<summary>`.
+
 ### Default label text
 
 If a `<details>` element's first child is not a `<summary>` element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.
@@ -126,13 +128,7 @@ This example adds some semantics to the `<summary>` element to indicate the labe
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/button_role"
-            >button</a
-          ></code
-        >
-      </td>
+      <td> <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>

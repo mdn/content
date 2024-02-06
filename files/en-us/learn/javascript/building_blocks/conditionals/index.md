@@ -13,7 +13,7 @@ In any programming language, the code needs to make decisions and carry out acti
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
@@ -438,27 +438,7 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 500px;overflow: auto;">
-  <label for="month">Select month: </label>
-  <select id="month">
-    <option value="January">January</option>
-    <option value="February">February</option>
-    <option value="March">March</option>
-    <option value="April">April</option>
-    <option value="May">May</option>
-    <option value="June">June</option>
-    <option value="July">July</option>
-    <option value="August">August</option>
-    <option value="September">September</option>
-    <option value="October">October</option>
-    <option value="November">November</option>
-    <option value="December">December</option>
-  </select>
-
-  <h1></h1>
-
-  <ul></ul>
-</div>
+<iframe id="output" width="100%" height="600px"></iframe>
 
 <h2>Editable code</h2>
 <p class="a11y-label">
@@ -488,7 +468,7 @@ function createCalendar(days, choice) {
   }
 }
 
-createCalendar(31,'January');
+createCalendar(31, 'January');
 </textarea>
 
 <div class="playable-buttons">
@@ -498,25 +478,6 @@ createCalendar(31,'January');
 ```
 
 ```css hidden
-.output * {
-  box-sizing: border-box;
-}
-
-.output ul {
-  padding-left: 0;
-}
-
-.output li {
-  display: block;
-  float: left;
-  width: 25%;
-  border: 2px solid white;
-  padding: 5px;
-  height: 40px;
-  background-color: #4a2db6;
-  color: white;
-}
-
 html {
   font-family: sans-serif;
 }
@@ -539,46 +500,29 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById("code");
 const reset = document.getElementById("reset");
 const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+const outputIFrame = document.querySelector("#output");
+const textarea = document.getElementById("code");
+const initialCode = textarea.value;
+let userCode = textarea.value;
 
-function updateCode() {
-  eval(textarea.value);
-}
+const solutionCode = `const select = document.querySelector("select");
+const list = document.querySelector("ul");
+const h1 = document.querySelector("h1");
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
-  }
-  updateCode();
-});
-
-const jsSolution = `const select = document.querySelector('select');
-const list = document.querySelector('ul');
-const h1 = document.querySelector('h1');
-
-select.addEventListener('change', () => {
+select.addEventListener("change", () => {
   const choice = select.value;
 
   let days = 31;
-  if (choice === 'February') {
+  if (choice === "February") {
     days = 28;
-  } else if (choice === 'April' || choice === 'June' || choice === 'September'|| choice === 'November') {
+  } else if (
+    choice === "April" ||
+    choice === "June" ||
+    choice === "September" ||
+    choice === "November"
+  ) {
     days = 30;
   }
 
@@ -586,26 +530,112 @@ select.addEventListener('change', () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = '';
+  list.innerHTML = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
-    const listItem = document.createElement('li');
+    const listItem = document.createElement("li");
     listItem.textContent = i;
     list.appendChild(listItem);
   }
 }
 
-createCalendar(31,'January');`;
+createCalendar(31, "January");`;
 
-let solutionEntry = jsSolution;
+function outputDocument(code) {
+  const outputBody = `
+<div class="output" style="height: 500px; overflow: auto">
+  <label for="month">Select month: </label>
+  <select id="month">
+    <option value="January">January</option>
+    <option value="February">February</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+    <option value="May">May</option>
+    <option value="June">June</option>
+    <option value="July">July</option>
+    <option value="August">August</option>
+    <option value="September">September</option>
+    <option value="October">October</option>
+    <option value="November">November</option>
+    <option value="December">December</option>
+  </select>
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+  <h1></h1>
+
+  <ul></ul>
+</div>`;
+
+  const outputStyle = `
+.output * {
+  box-sizing: border-box;
+}
+
+.output ul {
+  padding-left: 0;
+}
+
+.output li {
+  display: block;
+  float: left;
+  width: 25%;
+  border: 2px solid white;
+  padding: 5px;
+  height: 40px;
+  background-color: #4a2db6;
+  color: white;
+}
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}`;
+  return `
+<!doctype html>
+<html>
+  <head>
+    <style>${outputStyle}</style>
+  </head>
+  <body>
+    ${outputBody}
+    <script>${code}</script>
+  </body>
+</html>`;
+}
+
+function update() {
+  output.setAttribute("srcdoc", outputDocument(textarea.value));
+}
+
+update();
+
+textarea.addEventListener("input", update);
+
+reset.addEventListener("click", () => {
+  textarea.value = initialCode;
+  userEntry = textarea.value;
+  solution.value = "Show solution";
+  update();
+});
+
+solution.addEventListener("click", () => {
+  if (solution.value === "Show solution") {
+    // remember the state of the user's code
+    // so we can restore it
+    userCode = textarea.value;
+    textarea.value = solutionCode;
+    solution.value = "Hide solution";
+  } else {
+    textarea.value = userCode;
+    solution.value = "Show solution";
+  }
+  update();
+});
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-
-textarea.onkeydown = function (e) {
+textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
     insertAtCaret("\t");
@@ -632,30 +662,16 @@ function insertAtCaret(text) {
   textarea.focus();
   textarea.scrollTop = scrollPos;
 }
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
 ```
 
-{{ EmbedLiveSample('Active_learning_A_simple_calendar', '100%', 1110) }}
+{{ EmbedLiveSample('Active_learning_A_simple_calendar', '100%', 1210) }}
 
 ## Active learning: More color choices
 
 In this example, you are going to take the ternary operator example we saw earlier and convert the ternary operator into a switch statement to allow us to apply more choices to the simple website. Look at the {{htmlelement("select")}} — this time you'll see that it has not two theme options, but five. You need to add a switch statement just underneath the `// ADD SWITCH STATEMENT` comment:
 
 - It should accept the `choice` variable as its input expression.
-- For each case, the choice should equal one of the possible `<option> value`s that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
+- For each case, the choice should equal one of the possible `<option>` values that can be selected, that is, `white`, `black`, `purple`, `yellow`, or `psychedelic`.
 - For each case, the `update()` function should be run, and be passed two color values, the first one for the background color, and the second one for the text color. Remember that color values are strings, so they need to be wrapped in quotes.
 
 If you make a mistake, you can always reset the example with the "Reset" button. If you get really stuck, press "Show solution" to see a solution.

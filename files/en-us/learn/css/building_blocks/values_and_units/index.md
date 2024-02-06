@@ -17,10 +17,9 @@ In this lesson, we will take a look at some of the most frequently used value ty
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -44,7 +43,7 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 ## What is a CSS value?
 
-In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or [`<length>`](/en-US/docs/Web/CSS/length). When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
+In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
 > **Note:** You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
@@ -57,7 +56,7 @@ In the following example, we have set the color of our heading using a keyword, 
 ```css
 h1 {
   color: black;
-  background-color: rgb(197, 93, 161);
+  background-color: rgb(197 93 161);
 }
 ```
 
@@ -106,9 +105,7 @@ There are various numeric value types that you might find yourself using in CSS.
         A <code>&#x3C;dimension></code> is a <code>&#x3C;number></code> with a
         unit attached to it. For example, <code>45deg</code>, <code>5s</code>,
         or <code>10px</code>. <code>&#x3C;dimension></code> is an umbrella
-        category that includes the
-        <code><a href="/en-US/docs/Web/CSS/length">&#x3C;length></a></code
-        >, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
+        category that includes the {{cssxref("length")}}, <code><a href="/en-US/docs/Web/CSS/angle">&#x3C;angle></a></code
         >, <code><a href="/en-US/docs/Web/CSS/time">&#x3C;time></a></code
         >, and
         <code
@@ -118,11 +115,7 @@ There are various numeric value types that you might find yourself using in CSS.
       </td>
     </tr>
     <tr>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/CSS/percentage">&#x3C;percentage></a></code
-        >
-      </td>
+      <td>{{cssxref("percentage")}}</td>
       <td>
         A <code>&#x3C;percentage></code> represents a fraction of some other
         value. For example, <code>50%</code>. Percentage values are always
@@ -135,7 +128,7 @@ There are various numeric value types that you might find yourself using in CSS.
 
 ### Lengths
 
-The numeric type you will come across most frequently is [`<length>`](/en-US/docs/Web/CSS/length). For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
+The numeric type you will come across most frequently is {{cssxref("length")}}. For example, `10px` (pixels) or `30em`. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.
 
 #### Absolute length units
 
@@ -216,11 +209,11 @@ Relative length units are relative to something else, perhaps the size of the pa
     </tr>
     <tr>
       <td><code>vb</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">block axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">block axis</a>.</td>
     </tr>
     <tr>
       <td><code>vi</code></td>
-      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline">inline axis</a>.</td>
+      <td>1% of the size of the initial containing block in the direction of the root element's <a href="/en-US/docs/Web/CSS/CSS_logical_properties_and_values#block_vs._inline">inline axis</a>.</td>
     </tr>
     <tr>
       <td><code>svw, svh</code></td>
@@ -265,6 +258,62 @@ However, if you change the `<html>` element's `font-size` in the CSS you will se
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1100)}}
 
+#### Line height units
+
+`lh` and `rlh` are relative lengths units similar to `em` and `rem`. The difference between `lh` and `rlh` is that the first one is relative to the line height of the element itself, while the second one is relative to the line height of the root element, usually `<html>`.
+
+Using these units, we can precisely align box decoration to the text. In this example, we use `lh` unit to create notepad-like lines using [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient). It doesn't matter what's the line height of the text, the lines will always start in the right place.
+
+```css hidden
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+  gap: 24px;
+  background-color: floralwhite;
+  font-family: sans-serif;
+}
+
+@supports not (height: 1lh) {
+  body::before {
+    grid-column: 1 / -1;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: tomato;
+    color: white;
+    content: "You browser doesn’t support lh unit just yet";
+  }
+}
+```
+
+```css
+p {
+  margin: 0;
+  background-image: repeating-linear-gradient(
+    to top,
+    lightskyblue 0 2px,
+    transparent 2px 1lh
+  );
+}
+```
+
+```html
+<p style="line-height: 2em">
+  Summer is a time for adventure, and this year was no exception. I had many
+  exciting experiences, but two of my favorites were my trip to the beach and my
+  week at summer camp.
+</p>
+
+<p style="line-height: 4em">
+  At the beach, I spent my days swimming, collecting shells, and building
+  sandcastles. I also went on a boat ride and saw dolphins swimming alongside
+  us.
+</p>
+```
+
+{{EmbedLiveSample("line_height_units", "100%", "370")}}
+
 ### Percentages
 
 In a lot of cases, a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's `font-size` as a percentage, it will be a percentage of the `font-size` of the element's parent. If you use a percentage for a `width` value, it will be a percentage of the `width` of the parent.
@@ -281,7 +330,7 @@ The next example has font sizes set in percentages. Each `<li>` has a `font-size
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 800)}}
 
-Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
+Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes {{cssxref("length-percentage")}} then you can use a length or a percentage. If the allowed value only includes `<length>`, it is not possible to use a percentage.
 
 ### Numbers
 
@@ -295,15 +344,20 @@ Some value types accept numbers, without any unit added to them. An example of a
 
 ## Color
 
-There are many ways to specify color in CSS, some of which are more recently implemented than others. The same color values can be used everywhere in CSS, whether you are specifying text color, background color, or whatever else.
+Color values can be used in many places in CSS, whether you are specifying the color of text, backgrounds, borders, and lots more.
+There are many ways to set color in CSS, allowing you to control plenty of exciting properties.
 
-The standard color system available in modern computers supports 24-bit colors, which allows the display of about 16.7 million distinct colors via a combination of different red, green and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216). Let's have a look at some of the ways in which we can specify colors in CSS.
+The standard color system available in modern computers supports 24-bit colors, which allows displaying about 16.7 million distinct colors via a combination of different red, green, and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216).
 
-> **Note:** In this tutorial we will look at the common methods of specifying color that have good browser support; there are others but they don't have as good support and are less common.
+In this section, we'll first look at the most commonly seen ways of specifying colors: using keywords, hexadecimal, and `rgb()` values.
+We'll also take a quick look at additional color functions, enabling you to recognize them when you see them or experiment with different ways of applying color.
+
+You will likely decide on a color palette and then use those colors — and your favorite way of specifying color — throughout your project.
+You can mix and match color models, but it's usually best if your entire project uses the same method of declaring colors for consistency!
 
 ### Color keywords
 
-Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are an intuitive way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the [`<color>`](/en-US/docs/Web/CSS/color_value) value type.
+You will see the color keywords (or 'named colors') used in many MDN code examples. As the [`<named-color>`s](/en-US/docs/Web/CSS/named-color) data type contains a very finite number of color values, these are not commonly used on production websites. As the keyword represents the color as a human-readable text value, named colors are used in code examples to clearly tell the user what color is expected so the learner can focus on the content being taught.
 
 **Try playing with different color values in the live examples below, to get more of an idea how they work.**
 
@@ -311,17 +365,20 @@ Quite often in examples here in the learn section or elsewhere on MDN you will s
 
 ### Hexadecimal RGB values
 
-The next type of color value you are likely to encounter is hexadecimal codes. Each hex value consists of a hash/pound symbol (#) followed by six hexadecimal numbers, each of which can take one of 16 values between 0 and f (which represents 15) — so `0123456789abcdef`. Each pair of values represents one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256).
+The next type of color value you are likely to encounter is hexadecimal codes.
+Hexadecimal uses 16 characters from `0-9` and `a-f`, so the entire range is `0123456789abcdef`.
+Each hex color value consists of a hash/pound symbol (`#`) followed by three or six hexadecimal characters (`#fcc` or `#ffc0cb`, for example), with an optional one or two hexadecimal characters representing the alpha-transparency of the previous three or six character color values.
 
-These values are a bit more complex and less easy to understand, but they are a lot more versatile than keywords — you can use hex values to represent any color you want to use in your color scheme.
+When using hexadecimal to describe RGB values, each **pair** of hexadecimal characters is a decimal number representing one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256).
+These values are less intuitive than keywords for defining colors, but they are a lot more versatile because you can represent any RGB color with them.
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 800)}}
 
 **Again, try changing the values to see how the colors vary.**
 
-### RGB and RGBA values
+### RGB values
 
-The third scheme we'll talk about here is RGB. An RGB value is a function — `rgb()` — which is given three parameters that represent the red, green, and blue channel values of the colors, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 — somewhat easier to understand.
+To create RGB values directly, the `rgb()` function takes three parameters representing **red**, **green**, and **blue** channel values of the colors, with an optional fourth value separated by a slash ('/') representing opacity, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 or a percent between 0% and 100% inclusive (but not a mixture of the two).
 
 Let's rewrite our last example to use RGB colors:
 
@@ -339,15 +396,22 @@ In the example below, we have added a background image to the containing block o
 
 > **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`, but for backwards compatibility with old websites, the `rgba()` syntax is still supported, and has exactly the same behavior as `rgb()`.
 
-### HSL and HSLA values
+### Using hues to specify a color
 
-An alternative way to specify colors is the HSL color model. Instead of red, green, and blue values, the `hsl()` function accepts hue, saturation, and lightness values, which are used to distinguish between the 16.7 million colors, but in a different way:
+If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you might want to try using [`<hue>`](/en-US/docs/Web/CSS/hue).
+Hue is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
+The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-- **Hue**: The base shade of the color. This takes a value between 0 and 360, representing the angles around a {{glossary("color wheel")}}.
-- **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation
-- **Lightness**: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white)
+A great starting point for using hues in CSS is the `hsl()` function.
+Let's take a quick look at the parts you can specify:
 
-We can update the RGB example to use HSL colors like this:
+- **Hue**: The base shade of the color. This takes a [`<hue>`](/en-US/docs/Web/CSS/hue) value between 0 and 360, representing the angles around a color wheel.
+- **Saturation**: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation.
+- **Lightness**: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white).
+
+Similar to `rgb()`, the `hsl()` color value also has an optional fourth value, separated from the color with a slash (`/`), representing the alpha transparency.
+
+Let's update the RGB example to use HSL colors instead:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 800)}}
 
@@ -357,7 +421,8 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 > **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
-You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!
+There are other color functions available such as `hwb()` and `lch()` which also use `<hue>` component, and even functions such as `lab()` which let you work with colors based on what humans can see.
+If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 
 ## Images
 

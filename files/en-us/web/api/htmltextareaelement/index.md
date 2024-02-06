@@ -13,319 +13,84 @@ The **`HTMLTextAreaElement`** interface provides special properties and methods 
 
 ## Instance properties
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td><code>accessKey</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#accesskey"><code>accesskey</code></a> attribute.
-      </td>
-    </tr>
-    <tr>
-      <td><code>autocapitalize</code> {{experimental_inline}}</td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the element's
-        capitalization behavior for user input. Valid values are:
-        <code>none</code>, <code>off</code>, <code>characters</code>,
-        <code>words</code>, <code>sentences</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>autocomplete</code> {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>autofocus</code></td>
-      <td>
-        <code><em>boolean</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#autofocus"><code>autofocus</code></a> attribute,
-        indicating that the control should have input focus when the page loads
-      </td>
-    </tr>
-    <tr>
-      <td><code>cols</code></td>
-      <td>
-        <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#cols"><code>cols</code></a> attribute, indicating
-        the visible width of the text area.
-      </td>
-    </tr>
-    <tr>
-      <td><code>defaultValue</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the control's default
-        value, which behaves like the {{domxref("Node.textContent")}}
-        property.
-      </td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>
-        <code><em>boolean</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#disabled"><code>disabled</code></a> attribute,
-        indicating that the control is not available for interaction.
-      </td>
-    </tr>
-    <tr>
-      <td><code>form</code> {{ReadOnlyInline}}</td>
-      <td>
-        <code><em>object</em>:</code> Returns a reference to the parent form
-        element. If this element is not contained in a form element, it can be
-        the <a href="/en-US/docs/Web/HTML/Element/form#id"><code>id</code></a> attribute of any
-        {{HTMLElement("form")}} element in the same document or the
-        value <code>null</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>inputMode</code> {{experimental_inline}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>maxLength</code></td>
-      <td>
-        <code><em>long</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#maxlength"><code>maxlength</code></a> attribute,
-        indicating the maximum number of characters the user can enter. This
-        constraint is evaluated only when the value changes.
-      </td>
-    </tr>
-    <tr>
-      <td><code>minLength</code></td>
-      <td>
-        <code><em>long</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#minlength"><code>minlength</code></a> attribute,
-        indicating the minimum number of characters the user can enter. This
-        constraint is evaluated only when the value changes.
-      </td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#name"><code>name</code></a> attribute, containing
-        the name of the control.
-      </td>
-    </tr>
-    <tr>
-      <td><code>placeholder</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#placeholder"><code>placeholder</code></a> attribute,
-        containing a hint to the user about what to enter in the control.
-      </td>
-    </tr>
-    <tr>
-      <td><code>readOnly</code></td>
-      <td>
-        <code><em>boolean</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#readonly"><code>readonly</code></a> attribute,
-        indicating that the user cannot modify the value of the control.
-      </td>
-    </tr>
-    <tr>
-      <td><code>required</code></td>
-      <td>
-        <code><em>boolean</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#required"><code>required</code></a>) attribute,
-        indicating that the user must specify a value before submitting the
-        form.
-      </td>
-    </tr>
-    <tr>
-      <td><code>rows</code></td>
-      <td>
-        <code><em>unsigned long</em>:</code> Returns / Sets the element's
-        <a href="/en-US/docs/Web/HTML/Element/textarea#rows><code>rows</code></a> attribute, indicating
-        the number of visible text lines for the control.
-      </td>
-    </tr>
-    <tr>
-      <td><code>selectionDirection</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the direction in which
-        selection occurred. This is "<code>forward</code>" if selection was
-        performed in the start-to-end direction of the current locale, or
-        "<code>backward</code>" for the opposite direction. This can also be
-        "<code>none</code>" if the direction is unknown.
-      </td>
-    </tr>
-    <tr>
-      <td><code>selectionEnd</code></td>
-      <td>
-        <code><em>unsigned long</em>:</code> Returns / Sets the index of the end
-        of selected text. If no text is selected, contains the index of the
-        character that follows the input cursor. On being set, the control
-        behaves as if <code>setSelectionRange()</code> had been called with this
-        as the second argument, and <code>selectionStart</code> as the first
-        argument.
-      </td>
-    </tr>
-    <tr>
-      <td><code>selectionStart</code></td>
-      <td>
-        <code><em>unsigned long</em>:</code> Returns / Sets the index of the
-        beginning of selected text. If no text is selected, contains the index
-        of the character that follows the input cursor. On being set, the
-        control behaves as if <code>setSelectionRange()</code> had been called
-        with this as the first argument, and <code>selectionEnd</code> as the
-        second argument.
-      </td>
-    </tr>
-    <tr>
-      <td><code>tabIndex</code></td>
-      <td>
-        <code><em>long</em>:</code> Returns / Sets the position of the element
-        in the tabbing navigation order for the current document.
-      </td>
-    </tr>
-    <tr>
-      <td><code>textLength</code> {{ReadOnlyInline}}</td>
-      <td>
-        <code><em>long</em>:</code> Returns the code point length of the
-        control's <code>value</code>. Same as reading <code>value.length</code>
-      </td>
-    </tr>
-    <tr>
-      <td><code>type</code> {{ReadOnlyInline}}</td>
-      <td>
-        <code><em>string</em>:</code> Returns the string <code>textarea</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>validationMessage</code> {{ReadOnlyInline}}</td>
-      <td>
-        <code><em>string</em>:</code> Returns a localized message that describes
-        the validation constraints that the control does not satisfy (if any).
-        This is the empty string if the control is not a candidate for
-        constraint validation (<code>willValidate</code> is <code>false</code>),
-        or it satisfies its constraints.
-      </td>
-    </tr>
-    <tr>
-      <td><code>validity</code> {{ReadOnlyInline}}</td>
-      <td>
-        <code><em>{{domxref("ValidityState")}} object</em>:</code>
-        Returns the validity states that this element is in.
-      </td>
-    </tr>
-    <tr>
-      <td><code>value</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the raw value contained in
-        the control.
-      </td>
-    </tr>
-    <tr>
-      <td><code>willValidate</code> {{ReadOnlyInline}}</td>
-      <td>
-        <p>
-          <code><em>boolean</em>:</code> Returns whether the element is a
-          candidate for constraint validation. <code>false</code> if any
-          conditions bar it from constraint validation, including its
-          <code>readOnly</code> or <code>disabled</code> property is
-          <code>true</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>wrap</code></td>
-      <td>
-        <code><em>string</em>:</code> Returns / Sets the
-        <a href="/en-US/docs/Web/HTML/Element/textarea#wrap"><code>wrap</code></a> HTML attribute,
-        indicating how the control wraps text.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLTextAreaElement.labels")}} {{ReadOnlyInline}}
-      </td>
-      <td>
-        {{domxref("NodeList")}}: Returns a list of label elements
-        associated with this element.
-      </td>
-    </tr>
-  </tbody>
-</table>
+_Also inherits properties from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}}.
+- {{domxref("HTMLTextAreaElement.autocapitalize", "autocapitalize")}}
+  - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.
+- {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
+  - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/textarea#autocomplete) attribute.
+- {{domxref("HTMLTextAreaElement.cols", "cols")}}
+  - : A number that represents the element's [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attribute, indicating the visible width of the text area.
+- {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
+  - : A string that represents the control's default value, which behaves like the {{domxref("Node.textContent")}} property.
+- {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
+  - : A string that represents the directionality of the element.
+- {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
+  - : A boolean that represents the element's [`disabled`](/en-US/docs/Web/HTML/Element/textarea#disabled) attribute, indicating that the control is not available for interaction.
+- {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
+  - : Returns a reference to the parent form element. If this element is not contained in a form element, it can be the [`id`](/en-US/docs/Web/HTML/Element/form#id) attribute of any {{HTMLElement("form")}} element in the same document or the value `null`.
+- {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NodeList")}} of the {{HTMLElement("label")}} elements associated with this element.
+- {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
+  - : A number that represents the element's [`maxlength`](/en-US/docs/Web/HTML/Element/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.
+- {{domxref("HTMLTextAreaElement.minLength", "minLength")}}
+  - : A number that represents the element's [`minlength`](/en-US/docs/Web/HTML/Element/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.
+- {{domxref("HTMLTextAreaElement.name", "name")}}
+  - : A string that represents the element's [`name`](/en-US/docs/Web/HTML/Element/textarea#name) attribute, containing the name of the control.
+- {{domxref("HTMLTextAreaElement.placeholder", "placeholder")}}
+  - : A string that represents the element's [`placeholder`](/en-US/docs/Web/HTML/Element/textarea#placeholder) attribute, containing a hint to the user about what to enter in the control.
+- {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}}
+  - : A boolean that represents the element's [`readonly`](/en-US/docs/Web/HTML/Element/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.
+- {{domxref("HTMLTextAreaElement.required", "required")}}
+  - : A boolean that represents the element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute, indicating that the user must specify a value before submitting the form.
+- {{domxref("HTMLTextAreaElement.rows", "rows")}}
+  - : A number that represents the element's [`rows`](/en-US/docs/Web/HTML/Element/textarea#rows) attribute, indicating the number of visible text lines for the control.
+- {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}}
+  - : A string that represents the direction in which selection occurred. This is `forward` if selection was performed in the start-to-end direction of the current locale, or `backward` for the opposite direction. This can also be `none` if the direction is unknown.
+- {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
+  - : A number that represents the index of the end of selected text. If no text is selected, it contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.
+- {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}}
+  - : A number that represents the index of the beginning of selected text. If no text is selected, it contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument and `selectionEnd` as the second argument.
+- {{domxref("HTMLTextAreaElement.textLength", "textLength")}} {{ReadOnlyInline}}
+  - : Returns the code point length of the control's `value`. Same as reading `value.length`.
+- {{domxref("HTMLTextAreaElement.type", "type")}} {{ReadOnlyInline}}
+  - : Returns the string `textarea`.
+- {{domxref("HTMLTextAreaElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
+  - : Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
+- {{domxref("HTMLTextAreaElement.validity", "validity")}} {{ReadOnlyInline}}
+  - : Returns the validity state that this element is in.
+- {{domxref("HTMLTextAreaElement.value", "value")}}
+  - : A string that represents the raw value contained in the control.
+- {{domxref("HTMLTextAreaElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
+  - : Returns whether the element is a candidate for constraint validation. `false` if any conditions bar it from constraint validation, including its `readOnly` or `disabled` property is `true`.
+- {{domxref("HTMLTextAreaElement.wrap", "wrap")}}
+  - : A string that represents the element's [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) attribute, indicating how the control wraps text.
 
 ## Instance methods
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>{{domxref("HTMLElement/blur", "blur()")}}</td>
-      <td>
-        Removes focus from the control; keystrokes will subsequently go nowhere.
-      </td>
-    </tr>
-    <tr>
-      <td>{{domxref("HTMLElement/focus", "focus()")}}</td>
-      <td>
-        Gives focus to the control; keystrokes will subsequently go to this
-        element.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/select", "select()")}}
-      </td>
-      <td>Selects the contents of the control.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/setRangeText", "setRangeText()")}}
-      </td>
-      <td>Replaces a range of text in the element with new text.</td>
-    </tr>
-    <tr>
-      <td>
-        {{domxref("HTMLInputElement/setSelectionRange", "setSelectionRange()")}}
-      </td>
-      <td>Selects a range of text in the element (but does not focus it).</td>
-    </tr>
-    <tr>
-      <td><code>checkValidity()</code></td>
-      <td>
-        Returns <code>false</code> if the element is a candidate for constraint
-        validation, and it does not satisfy its constraints. In this case, it
-        also fires a cancelable <code>invalid</code> event at the control. It
-        returns <code>true</code> if the control is not a candidate for
-        constraint validation, or if it satisfies its constraints.
-      </td>
-    </tr>
-    <tr>
-      <td><code>reportValidity()</code></td>
-      <td>
-        <p>
-          This method reports the problems with the constraints on the element,
-          if any, to the user. If there are problems, it fires a cancelable
-          <code>invalid</code> event at the element, and returns
-          <code>false</code>; if there are no problems, it returns
-          <code>true</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>setCustomValidity(DOMstring)</code></td>
-      <td>
-        Sets a custom validity message for the element. If this message is not
-        the empty string, then the element is suffering from a custom validity
-        error, and does not validate.
-      </td>
-    </tr>
-  </tbody>
-</table>
+_Also inherits methods from its parent interface, {{DOMxRef("HTMLElement")}}._
 
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}}.
+- {{domxref("HTMLTextAreaElement.checkValidity", "checkValidity()")}}
+  - : Returns `false` if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable `invalid` event at the control. It returns `true` if the control is not a candidate for constraint validation, or if it satisfies its constraints.
+- {{domxref("HTMLTextAreaElement.reportValidity", "reportValidity()")}}
+  - : This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.
+- {{domxref("HTMLTextAreaElement.select", "select()")}}
+  - : Selects the contents of the control.
+- {{domxref("HTMLTextAreaElement.setCustomValidity", "setCustomValidity()")}}
+  - : Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.
+- {{domxref("HTMLTextAreaElement.setRangeText", "setRangeText()")}}
+  - : Replaces a range of text in the element with new text.
+- {{domxref("HTMLTextAreaElement.setSelectionRange", "setSelectionRange()")}}
+  - : Selects a range of text in the element (but does not focus it).
 
 ## Events
 
+_Also inherits events from its parent interface, {{DOMxRef("HTMLElement")}}._
+
 Listen to these events using {{domxref("EventTarget/addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface:
 
-- {{domxref("HTMLElement/input_event", "input")}} event
-  - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
+- {{domxref("HTMLTextAreaElement/select_event", "select")}} event
+  - : Fires when some text has been selected.
 - {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} event {{experimental_inline}}
   - : Fires when the text selection in a {{HTMLElement("textarea")}} element has been changed.
 

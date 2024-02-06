@@ -8,7 +8,7 @@ status:
 browser-compat: api.NavigatorUAData.getHighEntropyValues
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
@@ -31,10 +31,12 @@ getHighEntropyValues(hints)
 
     - `"architecture"`
     - `"bitness"`
+    - `"formFactor"`
+    - `"fullVersionList"`
     - `"model"`
     - `"platformVersion"`
     - `"uaFullVersion"` {{Deprecated_Inline}}
-    - `"fullVersionList"`
+    - `"wow64"`
 
 ### Return value
 
@@ -55,6 +57,14 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 - `bitness`
   - : A string containing the architecture bitness. For example, `"32"` or `"64"`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Bitness")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+- `formFactor`
+  - : A string containing the form-factor of a device. For example, `"Tablet"` or `"VR"`.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Form-Factor")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+- `fullVersionList`
+  - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.
+    For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
+    Please note that one object may intentionally contain invalid information to prevent sites from relying on a fixed list of browsers.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 - `model`
   - : A string containing the model of mobile device. For example, `"Pixel 2XL"`. If device is not a mobile device or if device model is not known, `model` will be `""`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Model")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
@@ -64,11 +74,9 @@ A {{jsxref("Promise")}} that resolves to an object containing some or all of the
 - `uaFullVersion` {{Deprecated_Inline}}
   - : A string containing the full browser version. For example, `"103.0.5060.134"`. Deprecated in favor of `fullVersionList`.
     Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
-- `fullVersionList`
-  - : An array of objects with properties `"brand"` and `"version"` representing the browser name and full version respectively.
-    For example, `{"brand": "Google Chrome", "version": "103.0.5060.134"}, {"brand": "Chromium", "version": "103.0.5060.134"}`.
-    Please note that one object may intentionally contain invalid information to prevent sites from relying on a fixed list of browsers.
-    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
+- `wow64`
+  - : A boolean indicating if the user agent's binary is running in 32-bit mode on 64-bit Windows.
+    Note that this information can be sent to a server in the {{HTTPHeader("Sec-CH-UA-WoW64")}} header if the server explicitly requests it in the {{HTTPHeader("Accept-CH")}} header.
 
 ### Exceptions
 

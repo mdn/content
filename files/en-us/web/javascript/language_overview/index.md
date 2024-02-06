@@ -76,8 +76,8 @@ const circumference = 2 * Math.PI * r;
 
 There are three ways to convert a string to a number:
 
-- {{jsxref("Global_Objects/parseInt", "parseInt()")}}, which parses the string for an integer.
-- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}, which parses the string for a floating-point number.
+- {{jsxref("parseInt()")}}, which parses the string for an integer.
+- {{jsxref("parseFloat()")}}, which parses the string for a floating-point number.
 - The [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) function, which parses a string as if it's a number literal and supports many different number representations.
 
 You can also use the [unary plus `+`](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus) as a shorthand for `Number()`.
@@ -413,7 +413,7 @@ const obj = {
 };
 ```
 
-Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Brackets, on the other hand, allow indexing the object with a dynamic key value.
+Object properties can be [accessed](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) using dot (`.`) or square brackets (`[]`). When using the dot notation, the key must be a valid [identifier](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers). Square brackets, on the other hand, allow indexing the object with a dynamic key value.
 
 ```js
 // Dot notation
@@ -812,7 +812,7 @@ For more information, see the [modules guide page](/en-US/docs/Web/JavaScript/Gu
 
 Throughout this page, we've constantly mentioned that certain features are _language-level_ while others are _runtime-level_.
 
-JavaScript is a general-purpose scripting language. The [core language specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) focuses on pure computational logic. It doesn't deal with any input/output — in fact, without extra runtime-level APIs (most notably [`console.log()`](/en-US/docs/Web/API/console/log)), a JavaScript program's behavior is entirely unobservable.
+JavaScript is a general-purpose scripting language. The [core language specification](/en-US/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript) focuses on pure computational logic. It doesn't deal with any input/output — in fact, without extra runtime-level APIs (most notably [`console.log()`](/en-US/docs/Web/API/console/log_static)), a JavaScript program's behavior is entirely unobservable.
 
 A runtime, or a host, is something that feeds data to the JavaScript engine (the interpreter), provides extra global properties, and provides hooks for the engine to interact with the outside world. Module resolution, reading data, printing messages, sending network requests, etc. are all runtime-level operations. Since its inception, JavaScript has been adopted in various environments, such as browsers (which provide APIs like [DOM](/en-US/docs/Web/API/Document_Object_Model)), Node.js (which provides APIs like [file system access](https://nodejs.org/api/fs.html)), etc. JavaScript has been successfully integrated in web (which was its primary purpose), mobile apps, desktop apps, server-side apps, serverless, embedded systems, and more. While you learn about JavaScript core features, it's also important to understand host-provided features in order to put the knowledge to use. For example, you can read about all [web platform APIs](/en-US/docs/Web/API), which are implemented by browsers, and sometimes non-browsers.
 

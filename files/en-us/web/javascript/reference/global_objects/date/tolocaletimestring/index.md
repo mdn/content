@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Date.toLocaleTimeString
 
 {{JSRef}}
 
-The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the time portion of the date. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
+The **`toLocaleTimeString()`** method of {{jsxref("Date")}} instances returns a string with a language-sensitive representation of the time portion of this date in the local timezone. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method simply calls `Intl.DateTimeFormat`.
 
-When formatting large numbers of dates, it is better to create an {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method.
+Every time `toLocaleTimeString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DateTimeFormat")}} object and use its {{jsxref("Intl/DateTimeFormat/format", "format()")}} method, because a `DateTimeFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
 {{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 
@@ -23,7 +23,7 @@ toLocaleTimeString(locales, options)
 
 ### Parameters
 
-The `locales` and `options` arguments customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
+The `locales` and `options` parameters customize the behavior of the function and let applications specify the language whose formatting conventions should be used.
 
 In implementations that support the [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat), these parameters correspond exactly to the [`Intl.DateTimeFormat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) constructor's parameters. Implementations without `Intl.DateTimeFormat` support are asked to ignore both parameters, making the locale used and the form of the string returned entirely implementation-dependent.
 
@@ -43,16 +43,17 @@ See the [`Intl.DateTimeFormat()` constructor](/en-US/docs/Web/JavaScript/Referen
 
 ### Return value
 
-A string representing the time portion of the given {{jsxref("Global_Objects/Date", "Date")}} instance according to language-specific conventions.
+A string representing the time portion of the given date according to language-specific conventions.
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`, where `options` has been normalized as described above.
+
+> **Note:** Most of the time, the formatting returned by `toLocaleTimeString()` is consistent. However, the output may vary with time, language, and implementation — output variations are by design and allowed by the specification. You should not compare the results of `toLocaleTimeString()` to static values.
 
 ## Examples
 
 ### Using toLocaleTimeString()
 
-Basic use of this method without specifying a `locale` returns a formatted string in the default locale and
-with default options.
+Basic use of this method without specifying a `locale` returns a formatted string in the default locale and with default options.
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
@@ -79,10 +80,7 @@ function toLocaleTimeStringSupportsLocales() {
 
 ### Using locales
 
-This example shows some of the variations in localized time formats. In order to get
-the format of the language used in the user interface of your application, make sure to
-specify that language (and possibly some fallback languages) using the
-`locales` argument:
+This example shows some of the variations in localized time formats. In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
@@ -114,22 +112,21 @@ console.log(date.toLocaleTimeString(["ban", "id"]));
 
 ### Using options
 
-The results provided by `toLocaleTimeString()` can be customized using the
-`options` argument:
+The results provided by `toLocaleTimeString()` can be customized using the `options` parameter:
 
 ```js
 const date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// an application may want to use UTC and make that visible
+// An application may want to use UTC and make that visible
 const options = { timeZone: "UTC", timeZoneName: "short" };
 console.log(date.toLocaleTimeString("en-US", options));
 // "3:00:00 AM GMT"
 
-// sometimes even the US needs 24-hour time
+// Sometimes even the US needs 24-hour time
 console.log(date.toLocaleTimeString("en-US", { hour12: false }));
 // "19:00:00"
 
-// show only hours and minutes, use options with the default locale - use an empty array
+// Show only hours and minutes, use options with the default locale - use an empty array
 console.log(
   date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
 );
@@ -146,7 +143,7 @@ console.log(
 
 ## See also
 
-- [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+- {{jsxref("Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
 - {{jsxref("Date.prototype.toTimeString()")}}

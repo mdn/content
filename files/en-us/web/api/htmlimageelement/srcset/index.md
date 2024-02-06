@@ -96,9 +96,9 @@ a `2x` descriptor) should be used for 2x displays.
 ```html
 <div class="box">
   <img
-    src="/en-us/web/html/element/img/clock-demo-200px.png"
+    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
+    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 
@@ -113,7 +113,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }

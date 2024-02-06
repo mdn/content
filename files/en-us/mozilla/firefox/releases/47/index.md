@@ -50,9 +50,9 @@ _No change._
 ### JavaScript
 
 - The new ES2017 {{jsxref("Object.values()")}} and {{jsxref("Object.entries()")}} methods have been implemented ([Firefox bug 1232639](https://bugzil.la/1232639)).
-- The deprecated [old Proxy API](/en-US/docs/Archive/Web/Old_Proxy_API) (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
+- The deprecated, old Proxy API (`Proxy.create` and `Proxy.createFunction`) now presents a deprecation warning in the console and will be removed in a future version. Use the standard {{jsxref("Proxy")}} object instead ([Firefox bug 892903](https://bugzil.la/892903)).
 - Support for the deprecated non-standard `flags` argument of `String.prototype.`{{jsxref("String.prototype.match", "match")}}/{{jsxref("String.prototype.search", "search")}}/{{jsxref("String.prototype.replace", "replace")}} has been dropped in non-release builds ([Firefox bug 1245801](https://bugzil.la/1245801)).
-- As per the new ES2016 specification, the {{jsxref("Proxy")}} [enumerate](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/enumerate) trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ([Firefox bug 1246318](https://bugzil.la/1246318)).
+- As per the new ES2016 specification, the {{jsxref("Proxy")}} enumerate trap for [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) statements has been removed ([Firefox bug 1246318](https://bugzil.la/1246318)).
 - The {{jsxref("Array.prototype.indexOf()")}} and {{jsxref("Array.prototype.lastIndexOf()")}} methods (and their {{jsxref("TypedArray")}} equivalents) have been updated to never return `-0` as per the ECMAScript specification ([Firefox bug 1242043](https://bugzil.la/1242043)).
 
 ### Interfaces/APIs/DOM
@@ -77,7 +77,7 @@ _No change._
 
 #### WebRTC
 
-- Support for the {{domxref("RTCIceServer")}} dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the {{domxref("RTCIceServer.credentialType", "credentialType")}} property. This property is a string which specifies whether the credential is a password or a token. Currently, Firefox only supports `"password"`.
+- Support for the `RTCIceServer` dictionary has been updated in keeping with revisions to the WebGL 1.0 specification by adding support for the [credentialType](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#credentialtype) property. This property is a string that specifies whether the credential is a password or a token. Currently, Firefox only supports `"password"`.
 
 #### New APIs
 
@@ -86,10 +86,10 @@ _No change._
 #### Others
 
 - {{domxref("Cache.add()")}} and {{domxref("Cache.addAll()")}} now raises a `TypeError` exception if the response status is not in the `200` range ([Firefox bug 1244764](https://bugzil.la/1244764)).
-- The [App installation and management APIs](/en-US/docs/Mozilla/Firefox_OS/API/App_installation_and_management_APIs) (`navigator.mozApps.*`) are no longer exposed to non-Firefox OS platforms ([Firefox bug 1238576](https://bugzil.la/1238576)).
+- The App installation and management APIs (`navigator.mozApps.*`) are no longer exposed to non-Firefox OS platforms ([Firefox bug 1238576](https://bugzil.la/1238576)).
 - [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) methods can now use the RSA-PSS cryptographic algorithm ([Firefox bug 1191936](https://bugzil.la/1191936)).
 - The [Permissions API](/en-US/docs/Web/API/Permissions_API) has had the {{domxref("Permissions.revoke()")}} method added ([Firefox bug 1197461](https://bugzil.la/1197461)).
-- The [Browser API](/en-US/docs/Web/API/Browser_API), which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ([Firefox bug 1238160](https://bugzil.la/1238160)).
+- The Browser API, which extends the functionality of {{htmlelement("iframe")}}s to allow the creation of frames for displaying web content using HTML — and was previously only available in Firefox OS — is now available to desktop chrome code too ([Firefox bug 1238160](https://bugzil.la/1238160)).
 - The [Notification API](/en-US/docs/Web/API/Notification)'s {{domxref("Notification/requestPermission_static","requestPermission()")}} method has been updated from a callback to a promised-based syntax ([Firefox bug 1241278](https://bugzil.la/1241278)).
 - The [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) has been updated to the latest spec and unprefixed. Some methods have been renamed or have seen their capitalization changed ([Firefox bug 743198](https://bugzil.la/743198)). Note that this is behind the `full-screen-api.unprefix.enabled` preference, defaulting to false ([Firefox bug 1268749](https://bugzil.la/1268749)).
 
@@ -108,7 +108,7 @@ _No change._
 
 ## Security
 
-- URL with the `view-source:` protocol don't open the [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) tool anymore when used from a Web page ([Firefox bug 1172165](https://bugzil.la/1172165)).
+- URLs with the `view-source:` protocol don't open the [View Source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) tool anymore when used from a Web page ([Firefox bug 1172165](https://bugzil.la/1172165)).
 - The Firefox [click-to-activate plugin whitelist](https://blog.mozilla.org/futurereleases/2013/09/24/plugin-activation-in-firefox/) has been removed: only Flash doesn't need to be clicked to be activated ([Firefox bug 1263630](https://bugzil.la/1263630)).
 
 ## Changes for add-on and Mozilla developers
@@ -119,7 +119,7 @@ _No change._
 
 ### FUEL
 
-The [FUEL](/en-US/docs/Mozilla/Tech/Toolkit_API/FUEL) JavaScript library, introduced back in Firefox 3, **has been removed**. This library was designed to aid in add-on development and with the introduction of the [Add-on SDK](/en-US/docs/Mozilla/Add-ons/SDK) and, now, by [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) support, is no longer useful. ([Firefox bug 1090880](https://bugzil.la/1090880))
+The FUEL JavaScript library, introduced back in Firefox 3, **has been removed**. This library was designed to aid in add-on development and with the introduction of the Add-on SDK and, now, by [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) support, is no longer useful. ([Firefox bug 1090880](https://bugzil.la/1090880))
 
 ### XUL
 

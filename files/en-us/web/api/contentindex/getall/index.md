@@ -33,36 +33,38 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
 
   - : Each item returned is an {{jsxref('Object')}} containing the following data:
 
-    - `id`: A unique {{jsxref('String')}} identifier.
-    - `title`: A {{jsxref('String')}} title for the item. Used in
-      user-visible lists of content.
-    - `title`: A {{jsxref('String')}} title of the item. Used in
-      user-visible lists of content.
-    - `description`: A {{jsxref('String')}} description of the item. Used
-      in user-visible lists of content.
-    - `url`: A {{jsxref('String')}} containing the URL of the corresponding
-      HTML document. Needs to be under the scope of the current
-      {{domxref('ServiceWorker','service worker')}}.
-    - `category` {{Optional_Inline}}: A {{jsxref('String')}} defining the
-      category of content. Can be:
+    - `id`
+      - : A unique {{jsxref('String')}} identifier.
+    - `title`
+      - : A {{jsxref('String')}} title of the item.
+        Used in user-visible lists of content.
+    - `description`
+      - : A {{jsxref('String')}} description of the item.
+        Used in user-visible lists of content.
+    - `url`
+      - : A {{jsxref('String')}} containing the URL of the corresponding HTML document.
+        Needs to be under the scope of the current {{domxref('ServiceWorker','service worker')}}.
+    - `category` {{Optional_Inline}}
 
-      - `''` An empty {{jsxref('String')}}, this is the default.
-      - `homepage`
-      - `article`
-      - `video`
-      - `audio`
+      - : A {{jsxref('String')}} defining the category of content.
+        Can be:
 
-    - `icons` {{Optional_Inline}}: An {{jsxref('Array')}} of image
-      resources, defined as an {{jsxref('Object')}} with the following data:
+        - `''` An empty {{jsxref('String')}}, this is the default.
+        - `homepage`
+        - `article`
+        - `video`
+        - `audio`
 
-      - `src`
-        - : A URL {{jsxref('String')}} of the source image.
-      - `sizes` {{Optional_Inline}}
-        - : A {{jsxref('String')}}
-          representation of the image size.
-      - `type` {{Optional_Inline}}
-        - : The {{Glossary("MIME type")}} of the
-          image.
+    - `icons` {{Optional_Inline}}
+
+      - : An {{jsxref('Array')}} of image resources, defined as an {{jsxref('Object')}} with the following data:
+
+        - `src`
+          - : A URL {{jsxref('String')}} of the source image.
+        - `sizes` {{Optional_Inline}}
+          - : A {{jsxref('String')}} representation of the image size.
+        - `type` {{Optional_Inline}}
+          - : The {{Glossary("MIME type")}} of the image.
 
 ### Exceptions
 
@@ -123,6 +125,6 @@ async function createReadingList() {
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.storage.StorageArea.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes one or more items from the storage area.
 
@@ -19,7 +19,7 @@ let removingItem = browser.storage.<storageType>.remove(
 )
 ```
 
-`<storageType>` will be one of the writable storage types — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
+`<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 

@@ -13,7 +13,7 @@ The toolbar button (browser action) is very like the address bar button (page ac
 
 ## Specifying the browser action
 
-You define the browser action's properties using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in manifest.json:
+You define the browser action's properties using the [`"browser_action"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in manifest.json:
 
 ```json
 "browser_action": {
@@ -25,7 +25,7 @@ You define the browser action's properties using the [`browser_action`](/en-US/d
 }
 ```
 
-The only mandatory key is `default_icon`.
+There are no mandatory properties for this key. If you don't specify `"default_icon"` the extension icon is used, and the default web extension puzzle pace icon is used if the extension doesn't specify an icon. If `"default_title"` isn't specified, the extension name is used.
 
 There are two ways to specify a browser action: with or without a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups). If you don't specify a popup, when the user clicks the button an event is dispatched to the extension, which the extension listens for using [`browserAction.onClicked`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked):
 
@@ -33,7 +33,7 @@ There are two ways to specify a browser action: with or without a [popup](/en-US
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-If you specify a popup, the click event is not dispatched: instead, the popup is shown when the user clicks the button. The user is able to interact with the popup and it closes automatically when the user clicks outside it. See the [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) article for more details on creating and managing popups.
+If you specify a popup, the click event is not dispatched: instead, the popup is shown when the user clicks the button. The user can interact with the popup, which closes automatically when the user clicks outside it. See the [Popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) article for more details on creating and managing popups.
 
 Note that your extension can have only one browser action.
 

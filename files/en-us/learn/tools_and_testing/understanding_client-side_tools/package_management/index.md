@@ -397,7 +397,7 @@ Although the package manager will do its best to deduplicate packages you may wa
 
 ### More commands
 
-You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.js.org/en/cli/add) commands will have parity with npm, with a handful of additions.
+You can find out more about the individual commands for [npm](https://docs.npmjs.com/cli-documentation/) and [yarn](https://classic.yarnpkg.com/en/docs/cli/) online. Again, [pnpm](https://pnpm.io/cli/add) commands will have parity with npm, with a handful of additions.
 
 ## Making your own commands
 

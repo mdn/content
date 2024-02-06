@@ -1,6 +1,7 @@
 ---
 title: "XSLT: Extensible Stylesheet Language Transformations"
 slug: Web/XSLT
+page-type: landing-page
 ---
 
 {{XsltSidebar}}

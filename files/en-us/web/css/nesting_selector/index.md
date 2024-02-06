@@ -7,7 +7,11 @@ browser-compat: css.selectors.nesting
 
 {{CSSRef}}
 
-The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting). Nested child rule selectors are relative to the parent rule selectors, with the child rule component having the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
+The CSS **`&` nesting selector** explicitly states the relationship between parent and child rules when using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting). It makes the nested child rule selectors _relative to the parent element_. Without the `&` nesting selector, the child rule selector selects child elements. The child rule selectors have the same [specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity) weight as if they were within {{cssxref(":is", ":is()")}}.
+
+> **Note:** _Child rule_ does not mean _child element selector_. A child rule can target parent element or child elements depending on use of the `&` nesting selector.
+
+If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/:scope).
 
 ## Syntax
 
@@ -22,7 +26,7 @@ parentRule {
 
 ### `&` nesting selector and whitespace
 
-In this example, nesting is done without the **`&` nesting selector**. When the browser parses the nested selectors, it automatically adds whitespace between the selectors to create a new CSS selector rule.
+Consider the following code where nesting is done _without_ the `&` nesting selector.
 
 ```css
 .parent-rule {
@@ -31,8 +35,11 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
     /* child rule properties */
   }
 }
+```
 
-/* the browser parses this as */
+When the browser parses the nested selectors, it automatically adds whitespace between the selectors to create a new CSS selector rule. The following code shows the equivalent non-nested rules:
+
+```css
 .parent-rule {
   /* parent rule style properties */
 }
@@ -42,9 +49,9 @@ In this example, nesting is done without the **`&` nesting selector**. When the 
 }
 ```
 
-When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the **`&` nesting selector** must be immediately prepended to achieve the desired effect.
+When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo-class')}} or creating [compound selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector), the `&` nesting selector must be immediately prepended to achieve the desired effect.
 
-Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the **`&` nesting selector** is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered descendant of the parent rule selector_. This is not what we wanted.
+Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the `&` nesting selector is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered descendant of the parent rule selector_. This is, however, not what we want.
 
 ```css
 .parent-rule {
@@ -54,7 +61,7 @@ Consider an example where we want to style an element, providing styles to be ap
   }
 }
 
-/* the browser parses this as */
+/* the browser parses the above nested rules as shown below */
 .parent-rule {
   /* parent rule properties */
 }
@@ -64,7 +71,7 @@ Consider an example where we want to style an element, providing styles to be ap
 }
 ```
 
-With the **`&` nesting selector** added with no whitespace, the elements matched by the parent rule will be styled when hovered.
+With the `&` nesting selector added with no whitespace, the elements matched by the parent rule will be styled when hovered.
 
 ```css
 .parent-rule {
@@ -74,7 +81,7 @@ With the **`&` nesting selector** added with no whitespace, the elements matched
   }
 }
 
-/* the browser parses this as */
+/* the browser parses the above nested rules as shown below */
 .parent-rule {
   /* parent rule properties */
 }
@@ -96,7 +103,8 @@ The `&` nesting selector can also be appended to reverse the context of the rule
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .card {
   /* .card styles */
 }
@@ -116,7 +124,8 @@ The `&` nesting selector can be placed multiple times:
   }
 }
 
-/* the browser parses this as */
+/* the browser parses above nested rules as */
+
 .card {
   /* .card styles */
 }
@@ -130,7 +139,7 @@ The `&` nesting selector can be placed multiple times:
 
 Both of the following examples produce the same output. The first one uses normal CSS styles and the second one uses the `&` nesting selector.
 
-### Normal CSS styles
+### Using normal CSS styles
 
 This example uses normal CSS styling.
 
@@ -165,7 +174,7 @@ This example uses normal CSS styling.
 
 {{EmbedLiveSample('Original_CSS_styles','100%','65')}}
 
-### Nested CSS styles
+### Using `&` in nested CSS styles
 
 This example uses nested CSS styling.
 
@@ -183,7 +192,7 @@ This example uses nested CSS styling.
 .example {
   font-family: system-ui;
   font-size: 1.2rem;
-  & a {
+  & > a {
     color: tomato;
     &:hover,
     &:focus {
@@ -197,6 +206,31 @@ This example uses nested CSS styling.
 #### Result
 
 {{EmbedLiveSample('Nested_CSS_styles','100%','65')}}
+
+### Using `&` outside nested rule
+
+If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/:scope).
+
+```html
+<p>Hover over the output box to change document's background color.</p>
+```
+
+```css
+& {
+  color: blue;
+  font-weight: bold;
+}
+
+&:hover {
+  background-color: wheat;
+}
+```
+
+#### Result
+
+In this case, all the styles apply to [document](/en-US/docs/Web/API/Document).
+
+{{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
 
 ## Specifications
 

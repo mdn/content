@@ -87,7 +87,7 @@ input:required:invalid {
 
 ### Showing sections in stages
 
-In this example we use `:invalid` along with `~`, the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
+In this example we use `:invalid` along with `~`, the [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
 
 #### HTML
 

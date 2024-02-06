@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/menuitem_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
@@ -118,6 +118,6 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,14 +1,13 @@
 ---
 title: WebAssembly.Table.prototype.set()
 slug: WebAssembly/JavaScript_interface/Table/set
-browser-compat: javascript.builtins.WebAssembly.Table.set
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Table.set
 ---
 
 {{WebAssemblySidebar}}
 
-The **`set()`** prototype method of
-the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object mutates a reference stored at a given index
-to a different value.
+The **`set()`** prototype method of the [`WebAssembly.Table`](/en-US/docs/WebAssembly/JavaScript_interface/Table) object mutates a reference stored at a given index to a different value.
 
 ## Syntax
 
@@ -21,8 +20,7 @@ set(index, value)
 - `index`
   - : The index of the function reference you want to mutate.
 - `value`
-  - : The value you want to mutate the reference to. This must be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions),
-    a JavaScript wrapper for an underlying Wasm function.
+  - : The value you want to mutate the reference to. This must be a value of the table's element type. Depending on the type, it may be an [exported WebAssembly function](/en-US/docs/WebAssembly/Exported_functions), a JavaScript wrapper for an underlying Wasm function, or a host reference.
 
 ### Return value
 
@@ -30,24 +28,14 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- If _index_ is greater than or equal
-  to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a
-  {{jsxref("RangeError")}} is thrown.
-- If _value_ is not an exported WebAssembly function or
-  [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null),
-  a {{jsxref("TypeError")}} is thrown.
+- If `index` is greater than or equal to [`Table.prototype.length`](/en-US/docs/WebAssembly/JavaScript_interface/Table/length), a {{jsxref("RangeError")}} is thrown.
+- If `value` is not of the element type of the table, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
 ### Using Table.set
 
-The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html)
-and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html))
-creates a new WebAssembly Table instance with an initial size of 2
-references. We then print out the table length and contents of the two indexes
-(retrieved via [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get)) to show that
-the length is two, and the indexes currently contain no function references (they
-currently return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
+The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of two references. We then print out the table length and contents of the two indexes (retrieved via [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get)) to show that the length is two, and the indexes currently contain no function references (they currently return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
@@ -64,12 +52,7 @@ const importObj = {
 };
 ```
 
-Finally, we load and instantiate a Wasm module (table2.wasm) using the
-[`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming), log the table length, and invoke the
-two referenced functions that are now stored in the table (the table2.wasm module (see
-[text representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat))
-adds two function references to the table, both of which print out
-a simple value):
+Finally, we load and instantiate a Wasm module (table2.wasm) using [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static), print the table length, and invoke the two referenced functions that are now stored in the table. The `table2.wasm` module adds two function references to the table, both of which print out a simple value (see [text representation](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.wat):
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -81,12 +64,9 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 );
 ```
 
-Note how you've got to include a second function invocation operator at the end of the
-accessor to actually invoke the referenced function and log the value stored inside it
-(e.g. `get(0)()` rather than `get(0)`) .
+Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`) .
 
-This example shows that we're creating and accessing the table from JavaScript, but the
-same table is visible and callable inside the Wasm instance too.
+This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the Wasm instance, too.
 
 ## Specifications
 

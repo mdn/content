@@ -23,6 +23,91 @@ Value equality is based on the [SameValueZero](/en-US/docs/Web/JavaScript/Equali
 
 The [`has`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/has) method checks if a value is in the set, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the set. In particular, it is, on average, faster than the [`Array.prototype.includes`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method when an array has a `length` equal to a set's `size`.
 
+### Set composition
+
+The `Set` object provides some methods that allow you to compose sets like you would with mathematical operations. These methods include:
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Method</th>
+      <th scope="col">Return type</th>
+      <th scope="col">Mathematical equivalent</th>
+      <th scope="col">Venn diagram</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{jsxref("Set/difference", "A.difference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∖</mo><mi>B</mi></mrow><annotation encoding="TeX">A\setminus B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="difference/diagram.svg" alt="A Venn diagram where two circles overlap. The difference of A and B is the part of A that is not overlapping B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/intersection", "A.intersection(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cap B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="intersection/diagram.svg" alt="A Venn diagram where two circles overlap. The intersection of A and B is the part where they overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/symmetricDifference", "A.symmetricDifference(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∖</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∪</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∖</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="TeX">(A\setminus B)\cup(B\setminus A)</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="symmetricDifference/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either circle but not both." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/union", "A.union(B)")}}</td>
+      <td><code>Set</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∪</mo><mi>B</mi></mrow><annotation encoding="TeX">A\cup B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="union/diagram.svg" alt="A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isDisjointFrom", "A.isDisjointFrom(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>∩</mo><mi>B</mi><mo>=</mo><mi>∅</mi></mrow><annotation encoding="TeX">A\cap B = \empty</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isDisjointFrom/diagram.svg" alt="A Venn diagram with two circles. A and B are disjoint because the circles have no region of overlap." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSubsetOf", "A.isSubsetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="TeX">A\subseteq B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isSubsetOf/diagram.svg" alt="A Venn diragram with two circles. A is a subset of B because A is completely contained in B." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+    <tr>
+      <td>{{jsxref("Set/isSupersetOf", "A.isSupersetOf(B)")}}</td>
+      <td><code>Boolean</code></td>
+      <td><math display="inline"><semantics><mrow><mi>A</mi><mo>⊇</mo><mi>B</mi></mrow><annotation encoding="TeX">A\supseteq B</annotation></semantics></math></td>
+      <td style="margin:0;padding:0"><img src="isSupersetOf/diagram.svg" alt="A Venn diagram with two circles. A is a superset of B because B is completely contained in A." style="margin:0;border:0;border-radius:0" width="200" /></td>
+    </tr>
+  </tbody>
+</table>
+
+To make them more generalizable, these methods don't just accept `Set` objects, but anything that's [set-like](#set-like_objects).
+
+### Set-like objects
+
+All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+
+- A {{jsxref("Set/size", "size")}} property that contains a number.
+- A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.
+- A {{jsxref("Set/keys", "keys()")}} method that returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) of the elements in the set.
+
+For example, {{jsxref("Map")}} objects are set-like because they also have {{jsxref("Map/size", "size")}}, {{jsxref("Map/has", "has()")}}, and {{jsxref("Map/keys", "keys()")}}, so they behave just like sets of keys when used in set methods:
+
+```js
+const a = new Set([1, 2, 3]);
+const b = new Map([
+  [1, "one"],
+  [2, "two"],
+  [4, "four"],
+]);
+console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
+```
+
+> **Note:** The set-like protocol invokes the `keys()` method instead of [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
+
+[Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are not set-like because they don't have a `has()` method or the `size` property, and their `keys()` method produces indices instead of elements. {{jsxref("WeakSet")}} objects are also not set-like because they don't have a `keys()` method.
+
 ### Set-like browser APIs
 
 Browser **`Set`-like objects** (or "setlike objects") are [Web API](/en-US/docs/Web/API) interfaces that behave in many ways like a `Set`.
@@ -88,14 +173,28 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Removes all elements from the `Set` object.
 - {{jsxref("Set.prototype.delete()")}}
   - : Removes the element associated to the `value` and returns a boolean asserting whether an element was successfully removed or not. `Set.prototype.has(value)` will return `false` afterwards.
+- {{jsxref("Set.prototype.difference()")}}
+  - : Takes a set and returns a new set containing elements in this set but not in the given set.
 - {{jsxref("Set.prototype.entries()")}}
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order. This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.
 - {{jsxref("Set.prototype.forEach()")}}
   - : Calls `callbackFn` once for each value present in the `Set` object, in insertion order. If a `thisArg` parameter is provided, it will be used as the `this` value for each invocation of `callbackFn`.
 - {{jsxref("Set.prototype.has()")}}
   - : Returns a boolean asserting whether an element is present with the given value in the `Set` object or not.
+- {{jsxref("Set.prototype.intersection()")}}
+  - : Takes a set and returns a new set containing elements in both this set and the given set.
+- {{jsxref("Set.prototype.isDisjointFrom()")}}
+  - : Takes a set and returns a boolean indicating if this set has no elements in common with the given set.
+- {{jsxref("Set.prototype.isSubsetOf()")}}
+  - : Takes a set and returns a boolean indicating if all elements of this set are in the given set.
+- {{jsxref("Set.prototype.isSupersetOf()")}}
+  - : Takes a set and returns a boolean indicating if all elements of the given set are in this set.
 - {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
+- {{jsxref("Set.prototype.symmetricDifference()")}}
+  - : Takes a set and returns a new set containing elements which are in either this set or the given set, but not in both.
+- {{jsxref("Set.prototype.union()")}}
+  - : Takes a set and returns a new set containing elements which are in either or both of this set and the given set.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 - [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
@@ -270,25 +369,19 @@ console.log([...mySet]); // Will show you exactly the same Array as myArray
 
 ```js
 // Use to remove duplicate elements from an array
+const numbers = [2, 13, 4, 4, 2, 13, 13, 4, 4, 5, 5, 6, 6, 7, 5, 32, 13, 4, 5];
 
-const numbers = [2, 3, 4, 4, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 5, 32, 3, 4, 5];
-
-console.log([...new Set(numbers)]);
-
-// [2, 3, 4, 5, 6, 7, 32]
+console.log([...new Set(numbers)]); // [2, 13, 4, 5, 6, 7, 32]
 ```
 
 ### Relation to strings
 
 ```js
-const text = "India";
+// Case sensitive (set will contain "F" and "f")
+new Set("Firefox"); // Set(7) [ "F", "i", "r", "e", "f", "o", "x" ]
 
-const mySet = new Set(text); // Set(5) {'I', 'n', 'd', 'i', 'a'}
-mySet.size; // 5
-
-// case sensitive & duplicate omission
-new Set("Firefox"); // Set(7) { "F", "i", "r", "e", "f", "o", "x" }
-new Set("firefox"); // Set(6) { "f", "i", "r", "e", "o", "x" }
+// Duplicate omission ("f" occurs twice in the string but set will contain only one)
+new Set("firefox"); // Set(6) [ "f", "i", "r", "e", "o", "x" ]
 ```
 
 ### Use a set to ensure the uniqueness of a list of values

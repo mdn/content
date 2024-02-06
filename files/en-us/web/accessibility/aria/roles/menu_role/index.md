@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/menu_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menu
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
 The `menu` role is a type of composite widget that offers a list of choices to the user.
@@ -13,7 +13,7 @@ The `menu` role is a type of composite widget that offers a list of choices to t
 
 A `menu` generally represents a grouping of common actions or functions that the user can invoke. The `menu` role is appropriate when a list of menu items is presented in a manner similar to a menu on a desktop application. Submenus, also known as pop-up menus, also have the role `menu`.
 
-While the term "menu" is generically used a term used to describe site navigation, the `menu` role is for a list of action or functions that require complex functionality, such as composite widget focus management and first-character navigation
+While the term "menu" is a generically used term to describe site navigation, the `menu` role is for a list of actions or functions that require complex functionality, such as composite widget focus management and first-character navigation
 
 A menu can be a permanently visible list of controls or a widget that can be made to open and close. A closed `menu` widget is usually opened, or made visible, by activating a menu button, choosing an item in a menu that opens a submenu, or by invoking a command, such as <kbd>Shift + F10</kbd> in Windows which opens a context specific menu.
 
@@ -55,23 +55,23 @@ If the menu is visually persistent, consider the [`menubar`](/en-US/docs/Web/Acc
 ### Keyboard interactions
 
 - <kbd>Space</kbd> / <kbd>Enter</kbd>
-  - : If the item is a parent menu item, opens submenu and moves focus to first item in the submenu. Otherwise, activates the menu item, which loads new content and places focus on the heading that titles the content.
+  - : If the item is a parent menu item, it opens the submenu and moves focus to the first item in the submenu. Otherwise, activates the menu item, which loads new content and places focus on the heading that titles the content.
 - <kbd>Escape</kbd>
-  - : When in a submenu, closes the submenu and moves focus to parent menu or menubar item.
+  - : When in a submenu, it closes the submenu and moves focus to the parent menu or menubar item.
 - <kbd>Right Arrow</kbd>
-  - : In a menubar, moves focus to the next item in the menubar. If focus is on the last item, moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, closes the submenu and moves focus to next item in the menubar. Otherwise, opens submenu of newly focused menubar item, keeping focus on that parent menubar item. If not in a menubar or submenu and not on a menuitem with a submenu, if focus is not the last focusable element in the menu, optionally moves focus to the next focusable element.
+  - : In a menubar, moves focus to the next item in the menubar. If focus is on the last item, it moves focus to the first item. If in a submenu, if focus is on an item that does not have a submenu, it closes the submenu and moves focus to the next item in the menubar. Otherwise, it opens the submenu of the newly focused menubar item, keeping focus on that parent menubar item. If not in a menubar or submenu and not on a `menuitem` with a submenu, if focus is not the last focusable element in the menu, it optionally moves focus to the next focusable element.
 - <kbd>Left Arrow </kbd>
-  - : Moves focus to the previous item in the menubar. If focus is on the first item, moves focus to the last item. If in a submenu, closes submenu and moves focus to parent menu item. If not in a menubar or submenu, if focus is not the first focusable element in the menu, optionally moves focus to the last focusable element.
+  - : Moves focus to the previous item in the menubar. If focus is on the first item, it moves focus to the last item. If in a submenu, it closes the submenu and moves focus to the parent menu item. If not in a menubar or submenu, if focus is not the first focusable element in the menu, it optionally moves focus to the last focusable element.
 - <kbd>Down Arrow</kbd>
-  - : Opens submenu and moves focus to first item in the submenu.
+  - : Opens submenu and moves focus to the first item in the submenu.
 - <kbd>Up Arrow</kbd>
-  - : Opens submenu and moves focus to last item in the submenu.
+  - : Opens submenu and moves focus to the last item in the submenu.
 - <kbd>Home</kbd>
-  - : Moves focus to first item in the menubar.
+  - : Moves focus to the first item in the menubar.
 - <kbd>End</kbd>
-  - : Moves focus to last item in the menubar.
+  - : Moves focus to the last item in the menubar.
 - Any character key
-  - : Moves focus to next item in the menubar having a name that starts with the typed character. If none of the items have a name starting with the typed character, focus does not move.
+  - : Moves focus to the next item in the menubar having a name that starts with the typed character. If none of the items have a name starting with the typed character, focus does not move.
 
 ## Examples
 
@@ -164,11 +164,11 @@ For a menu to open, the user generally interacts with a menu button as the opene
 
 The opening and closing of the menu toggles the [`aria-expanded="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute on the button. It is added when the menu is open. Removed or set to `false` when the menu is closed. The `true` value indicates that the menu is displayed and that activating the menu button closes the menu.
 
-When the menu is open, the button itself generally does not received focus as users arrow thru the menuitems. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
+When the menu is open, the button itself generally does not receive focus as users arrow through the menu items. Rather, <kbd>Escape</kbd> and optionally <kbd>Shift + Tab</kbd> closes the menu and returns focus to the menu button.
 
 The `menu` role was set on the {{HTMLElement('ul')}}, identifying the `<ul>` element as a menu.
 
-The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and adjacent sibling selectors to toggle the visibility of the menu:
+The showing and hiding of the menu can be done with CSS. For example, in these code examples we can use the attribute and next-sibling selectors to toggle the visibility of the menu:
 
 ```css
 [role="menu"] {
@@ -179,7 +179,7 @@ The showing and hiding of the menu can be done with CSS. For example, in these c
 }
 ```
 
-The navigation example has a static button. In submenu example has a button that gets updated when the user selects a new value. In this case, the `aria-label="Text Color: purple"` is set on the `menu` element. It defines the accessible name for the menu as "Text color: purple"; identifying the purpose of the menu (selecting a text color) and the current value (purple). When a selection to a new color is made, the value of the `aria-label` property should be updated as well.
+The navigation example has a static button. The submenu example has a button that gets updated when the user selects a new value. In this case, the `aria-label="Text Color: purple"` is set on the `menu` element. It defines the accessible name for the menu as "Text color: purple"; identifying the purpose of the menu (selecting a text color) and the current value (purple). When a new color is selected, the value of the `aria-label` property should be updated as well.
 
 ## Specifications
 
@@ -197,6 +197,6 @@ The navigation example has a static button. In submenu example has a button that
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

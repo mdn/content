@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Array.splice
 The **`splice()`** method of {{jsxref("Array")}} instances changes the contents of an array by
 removing or replacing existing elements and/or adding new elements [in place](https://en.wikipedia.org/wiki/In-place_algorithm).
 
-To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array.prototype.slice()", "slice()")}}.
+To create a new array with a segment removed and/or replaced without mutating the original array, use {{jsxref("Array/toSpliced", "toSpliced()")}}. To access part of an array without modifying it, see {{jsxref("Array/slice", "slice()")}}.
 
 {{EmbedInteractiveExample("pages/js/array-splice.html")}}
 
@@ -85,6 +85,30 @@ const removed = myFish.splice(2, 0, "drum", "guitar");
 
 // myFish is ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
 // removed is [], no elements removed
+```
+
+### Remove 0 (zero) elements at index 0, and insert "angel"
+
+`splice(0, 0, ...elements)` inserts elements at the start of the array like {{jsxref("Array/unshift", "unshift()")}}.
+
+```js
+const myFish = ["clown", "mandarin", "sturgeon"];
+const removed = myFish.splice(0, 0, "angel");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
+```
+
+### Remove 0 (zero) elements at last index, and insert "sturgeon"
+
+`splice(array.length, 0, ...elements)` inserts elements at the end of the array like {{jsxref("Array/push", "push()")}}.
+
+```js
+const myFish = ["angel", "clown", "mandarin"];
+const removed = myFish.splice(myFish.length, 0, "sturgeon");
+
+// myFish is ["angel", "clown", "mandarin", "sturgeon"]
+// no items removed
 ```
 
 ### Remove 1 element at index 3

@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Roles/menuitemradio_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitemradio
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
 A `menuitemradio` is checkable menuitem in a set of elements with the same role, only one of which can be checked at a time.
@@ -151,6 +151,6 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

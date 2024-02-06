@@ -38,7 +38,7 @@ The `g` flag of `regexp` has no effect on the `search()` result, and the search 
 When you want to know whether a pattern is found, and _also_ know its index within a string, use `search()`.
 
 - If you only want to know if it exists, use the {{jsxref("RegExp.prototype.test()")}} method, which returns a boolean.
-- If you need the content of the matched text, use {{jsxref("String.prototype.match()", "match()")}} or {{jsxref("RegExp.prototype.exec()")}}.
+- If you need the content of the matched text, use {{jsxref("String.prototype.match()")}} or {{jsxref("RegExp.prototype.exec()")}}.
 
 ## Examples
 

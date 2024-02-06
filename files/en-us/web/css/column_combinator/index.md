@@ -7,7 +7,7 @@ status:
 browser-compat: css.selectors.column
 ---
 
-{{CSSRef("Selectors")}}{{SeeCompatTable}}
+{{CSSRef}} {{SeeCompatTable}}
 
 The **column combinator** (`||`) is placed between two CSS selectors. It matches only those elements matched by the second selector that belong to the column elements matched by the first.
 
@@ -83,5 +83,5 @@ col.selected||td {
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}
 - {{CSSxRef("grid")}}
-- {{CSSxRef(":nth-col")}}
-- {{CSSxRef(":nth-last-col")}}
+- {{CSSxRef(":nth-of-type")}}
+- {{CSSxRef(":nth-last-of-type")}}

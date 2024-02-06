@@ -70,7 +70,7 @@ transition-duration: unset;
   height: 100px;
   background-color: red;
   font-size: 18px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 
@@ -79,7 +79,7 @@ transition-duration: unset;
   background-color: blue;
   color: yellow;
   font-size: 12px;
-  transition-property: background-color font-size transform color;
+  transition-property: background-color, font-size, transform, color;
   transition-timing-function: ease-in-out;
 }
 

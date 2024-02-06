@@ -33,7 +33,7 @@ findIndex(callbackFn, thisArg)
 
 ### Return value
 
-The index of the first element in the array that passes the test. Otherwise, `-1`.
+The index of the first element in the typed array that passes the test. Otherwise, `-1`.
 
 ## Description
 

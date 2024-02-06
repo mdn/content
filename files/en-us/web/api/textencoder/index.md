@@ -20,7 +20,7 @@ The **`TextEncoder`** interface takes a stream of code points as input and emits
 
 _The `TextEncoder` interface doesn't inherit any properties._
 
-- {{DOMxRef("TextEncoder.prototype.encoding")}} {{ReadOnlyInline}}
+- {{DOMxRef("TextEncoder.encoding")}} {{ReadOnlyInline}}
   - : Always returns `utf-8`.
 
 ## Instance methods

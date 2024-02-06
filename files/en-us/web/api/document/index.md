@@ -51,6 +51,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns the document location as a string.
 - {{DOMxRef("Document.embeds")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the embedded {{HTMLElement('embed')}} elements in the document.
+- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+  - : Returns the {{DOMxRef("FeaturePolicy")}} interface with the feature policies applied to the document.
 - {{domxref("Document.firstElementChild")}} {{ReadOnlyInline}}
   - : Returns the first child element of the current document.
 - {{DOMxRef("Document.fonts")}}
@@ -81,8 +83,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns an {{DOMxRef("HTMLCollection")}} of the available plugins.
 - {{DOMxRef("Document.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the element set as the target for mouse events while the pointer is locked. `null` if lock is pending, pointer is unlocked, or if the target is in another document.
-- {{DOMxRef("Document.featurePolicy")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : Returns the {{DOMxRef("FeaturePolicy")}} interface which provides a simple API for introspecting the feature policies applied to a specific document.
+- {{DOMxRef("Document.prerendering")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a boolean that indicates whether the document is currently in the process of prerendering, as initiated via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - {{DOMxRef("Document.scripts")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("HTMLCollection")}} of the {{HTMLElement("script")}} elements in the document.
 - {{DOMxRef("Document.scrollingElement")}} {{ReadOnlyInline}}
@@ -106,8 +108,6 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the ability to edit the whole document.
 - {{DOMxRef("Document.dir")}}
   - : Gets/sets directionality (rtl/ltr) of the document.
-- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
-  - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fullscreenEnabled")}} {{ReadOnlyInline}}
   - : Indicates whether fullscreen mode is available.
 - {{DOMxRef("Document.lastModified")}} {{ReadOnlyInline}}
@@ -137,10 +137,12 @@ _The `Document` interface for HTML documents inherits from the {{DOMxRef("HTMLDo
   - : Gets/sets the background color of the current document.
 - {{DOMxRef("Document.characterSet","Document.charset")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
+- {{DOMxRef("Document.domain")}} {{Deprecated_Inline}}
+  - : Gets/sets the domain of the current document.
 - {{DOMxRef("Document.fgColor")}} {{Deprecated_Inline}}
   - : Gets/sets the foreground color, or text color, of the current document.
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-  - : `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+  - : Returns `true` when the document is in [fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 - {{DOMxRef("Document.characterSet", "Document.inputEncoding")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Alias of {{DOMxRef("Document.characterSet")}}. Use this property instead.
 - {{DOMxRef("Document.lastStyleSheetSet")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
@@ -238,6 +240,8 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to unpartitioned cookies.
 - {{DOMxRef("Document.importNode()")}}
   - : Returns a clone of a node from an external document.
+- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
+  - : Allows you to change the element being used as the background image for a specified element ID.
 - {{DOMxRef("Document.prepend()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
@@ -252,10 +256,10 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
   - : Replaces the existing children of a document with a specified new set of children.
 - {{DOMxRef("Document.requestStorageAccess()")}}
   - : Allows a document loaded in a third-party context (i.e. embedded in an {{htmlelement("iframe")}}) to request access to unpartitioned cookies, in cases where user agents by default block access to unpartitioned cookies by sites loaded in a third-party context to improve privacy.
+- {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
+  - : Allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
 - {{domxref("Document.startViewTransition()")}} {{Experimental_Inline}}
   - : Starts a new {{domxref("View Transitions API", "view transition", "", "nocode")}} and returns a {{domxref("ViewTransition")}} object to represent it.
-- {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
-  - : Allows you to change the element being used as the background image for a specified element ID.
 
 The `Document` interface is extended with the {{DOMxRef("XPathEvaluator")}} interface:
 
@@ -299,31 +303,18 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 ## Events
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface. In addition to the events listed below, many events can bubble from {{domxref("Node", "nodes", "", "nocode")}} contained in the document tree.
 
 - {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} element finishes executing its script
 - {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a static {{HTMLElement("script")}} is about to start executing.
+- {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
+  - : Fired on a prerendered document when it is activated (i.e. the user views the page).
 - {{DOMxRef("Document.securitypolicyviolation_event", "securitypolicyviolation")}}
   - : Fired when a content security policy is violated.
-- {{DOMxRef("Document/scroll_event", "scroll")}}
-  - : Fired when the document view or an element has been scrolled.
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : Fired when the content of a tab has become visible or has been hidden.
-- {{DOMxRef("Document/wheel_event","wheel")}}
-  - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
-
-### Animation events
-
-- {{DOMxRef("Document/animationcancel_event", "animationcancel")}}
-  - : Fired when an animation unexpectedly aborts.
-- {{DOMxRef("Document/animationend_event", "animationend")}}
-  - : Fired when an animation has completed normally.
-- {{DOMxRef("Document/animationiteration_event", "animationiteration")}}
-  - : Fired when an animation iteration has completed.
-- {{DOMxRef("Document/animationstart_event", "animationstart")}}
-  - : Fired when an animation starts.
 
 ### Clipboard events
 
@@ -334,38 +325,12 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/paste_event", "paste")}}
   - : Fired when the user initiates a paste action through the browser's user interface.
 
-### Drag & drop events
-
-- {{DOMxRef("Document/drag_event", "drag")}}
-  - : Fired every few hundred milliseconds as an element or text selection is being dragged by the user.
-- {{DOMxRef("Document/dragend_event", "dragend")}}
-  - : Fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
-- {{DOMxRef("Document/dragenter_event", "dragenter")}}
-  - : Fired when a dragged element or text selection enters a valid drop target.
-- {{DOMxRef("Document/dragleave_event", "dragleave")}}
-  - : Fired when a dragged element or text selection leaves a valid drop target.
-- {{DOMxRef("Document/dragover_event", "dragover")}}
-  - : Fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
-- {{DOMxRef("Document/dragstart_event", "dragstart")}}
-  - : Fired when the user starts dragging an element or text selection.
-- {{DOMxRef("Document/drop_event", "drop")}}
-  - : Fired when an element or text selection is dropped on a valid drop target.
-
 ### Fullscreen events
 
 - {{DOMxRef("Document/fullscreenchange_event", "fullscreenchange")}}
   - : Fired when the `Document` transitions into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
 - {{DOMxRef("Document/fullscreenerror_event", "fullscreenerror")}}
   - : Fired if an error occurs while attempting to switch into or out of [fullscreen](/en-US/docs/Web/API/Fullscreen_API/Guide) mode.
-
-### Keyboard events
-
-- {{DOMxRef("Document/keydown_event", "keydown")}}
-  - : Fired when a key is pressed.
-- {{DOMxRef("Document/keypress_event", "keypress")}} {{Deprecated_Inline}}
-  - : Fired when a key that produces a character value is pressed down.
-- {{DOMxRef("Document/keyup_event", "keyup")}}
-  - : Fired when a key is released.
 
 ### Load & unload events
 
@@ -374,59 +339,24 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Document/readystatechange_event", "readystatechange")}}
   - : Fired when the {{DOMxRef("Document/readyState", "readyState")}} attribute of a document has changed.
 
-### Pointer events
+### Pointer lock events
 
-- {{DOMxRef("Document/gotpointercapture_event", "gotpointercapture")}}
-  - : Fired when an element captures a pointer using [`setPointerCapture()`](/en-US/docs/Web/API/Element/setPointerCapture).
-- {{DOMxRef("Document/lostpointercapture_event", "lostpointercapture")}}
-  - : Fired when a [captured pointer](/en-US/docs/Web/API/Pointer_events#pointer_capture) is released.
-- {{DOMxRef("Document/pointercancel_event", "pointercancel")}}
-  - : Fired when a pointer event is canceled.
-- {{DOMxRef("Document/pointerdown_event", "pointerdown")}}
-  - : Fired when a pointer becomes active.
-- {{DOMxRef("Document/pointerenter_event", "pointerenter")}}
-  - : Fired when a pointer is moved into the hit test boundaries of an element or one of its descendants.
-- {{DOMxRef("Document/pointerleave_event", "pointerleave")}}
-  - : Fired when a pointer is moved out of the hit test boundaries of an element.
 - {{DOMxRef("Document/pointerlockchange_event", "pointerlockchange")}}
   - : Fired when the pointer is locked/unlocked.
 - {{DOMxRef("Document/pointerlockerror_event", "pointerlockerror")}}
   - : Fired when locking the pointer failed.
-- {{DOMxRef("Document/pointermove_event", "pointermove")}}
-  - : Fired when a pointer changes coordinates.
-- {{DOMxRef("Document/pointerout_event", "pointerout")}}
-  - : Fired when a pointer is moved out of the _hit test_ boundaries of an element (among other reasons).
-- {{DOMxRef("Document/pointerover_event", "pointerover")}}
-  - : Fired when a pointer is moved into an element's hit test boundaries.
-- {{DOMxRef("Document/pointerup_event", "pointerup")}}
-  - : Fired when a pointer is no longer active.
+
+### Scroll events
+
+- {{DOMxRef("Document/scroll_event", "scroll")}}
+  - : Fired when the document view or an element has been scrolled.
+- {{DOMxRef("Document/scrollend_event", "scrollend")}}
+  - : Fired when the document view or an element has been scrolled.
 
 ### Selection events
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : Fired when the current text selection on a document is changed.
-
-### Touch events
-
-- {{DOMxRef("Document/touchcancel_event", "touchcancel")}}
-  - : Fired when one or more touch points have been disrupted in an implementation-specific manner (for example, too many touch points are created).
-- {{DOMxRef("Document/touchend_event", "touchend")}}
-  - : Fired when one or more touch points are removed from the touch surface.
-- {{DOMxRef("Document/touchmove_event", "touchmove")}}
-  - : Fired when one or more touch points are moved along the touch surface.
-- {{DOMxRef("Document/touchstart_event", "touchstart")}}
-  - : Fired when one or more touch points are placed on the touch surface.
-
-### Transition events
-
-- {{DOMxRef("Document/transitioncancel_event", "transitioncancel")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is canceled.
-- {{DOMxRef("Document/transitionend_event", "transitionend")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has completed.
-- {{DOMxRef("Document/transitionrun_event", "transitionrun")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) is first created.
-- {{DOMxRef("Document/transitionstart_event", "transitionstart")}}
-  - : Fired when a [CSS transition](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) has actually started.
 
 ## Specifications
 

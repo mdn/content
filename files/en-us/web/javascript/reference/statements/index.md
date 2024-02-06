@@ -61,7 +61,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Iterates over the enumerable properties of an object, in arbitrary order. For each distinct property, statements can be executed.
 - {{jsxref("Statements/for...of", "for...of")}}
-  - : Iterates over iterable objects (including {{jsxref("Global_Objects/Array", "arrays", "", "true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+  - : Iterates over iterable objects (including {{jsxref("Array", "arrays", "", "true")}}, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/for-await...of", "for await...of")}}
   - : Iterates over async iterable objects, array-like objects, [iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
 - {{jsxref("Statements/while", "while")}}
@@ -72,7 +72,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/Empty", "Empty", "", 1)}}
   - : An empty statement is used to provide no statement, although the JavaScript syntax would expect one.
 - {{jsxref("Statements/block", "Block", "", 1)}}
-  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly brackets.
+  - : A block statement is used to group zero or more statements. The block is delimited by a pair of curly braces.
 - {{jsxref("Statements/Expression_statement", "Expression statement", "", 1)}}
   - : An expression statement evaluates an expression and discards its result. It allows the expression to perform side effects, such as executing a function or updating a variable.
 - {{jsxref("Statements/debugger", "debugger")}}
