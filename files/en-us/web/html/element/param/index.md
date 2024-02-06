@@ -12,7 +12,7 @@ browser-compat: html.elements.param
 The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an {{HTMLElement("object")}} element.
 
 > **Note:**
-> It's recommended to use the {{HTMLElement("object")}} element with a [`data` attribute](/en-US/docs/Web/HTML/Element/object#data) to set the URL of an external resource instead.
+> Use the {{HTMLElement("object")}} element with a [`data`](/en-US/docs/Web/HTML/Element/object#data) attribute to set the URL of an external resource.
 
 ## Attributes
 
