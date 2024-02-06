@@ -121,9 +121,9 @@ The availability of WebAuthn can be controlled using a [Permissions Policy](/en-
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
-Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts. In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document; `create()` on the other hand cannot be used in {{htmlelement("iframe")}}s.
+Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts. In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document. `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`).
 
-> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `SecurityError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ### Basic access control
 
@@ -136,26 +136,38 @@ Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com
 
 ### Allowing embedded `get()` calls in an `<iframe>`
 
-If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of steps to follow:
+If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there are a couple of steps to follow:
 
 1. The site embedding the relying party site must provide permission via an `allow` attribute:
+
+   If using `get()`:
+
+   ```html
+   <iframe src="https://auth.provider.com" allow="publickey-credentials-get *">
+   </iframe>
+   ```
+
+   If using `set()`:
 
    ```html
    <iframe
      src="https://auth.provider.com"
-     allow="publickey-credentials-get *" />
+     allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
+   </iframe>
    ```
 
 2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
+   Permissions-Policy: publickey-credentials-set=*
    ```
 
    Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
 
    ```http
    Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+   Permissions-Policy: publickey-credentials-set=("https://*.auth.provider.com")
    ```
 
 ## Interfaces
