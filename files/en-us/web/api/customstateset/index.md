@@ -249,7 +249,7 @@ The shadow DOM is attached with `mode: 'closed'` to ensure that nodes within the
 class QuestionBox extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "closed" });
+    const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<div><slot>Question</slot></div>
        <labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
   }
