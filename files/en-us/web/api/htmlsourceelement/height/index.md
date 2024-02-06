@@ -8,7 +8,7 @@ browser-compat: api.HTMLSourceElement.height
 
 {{APIRef("HTML DOM")}}
 
-The **`height`** property of the {{domxref("HTMLSourceElement")}} interface reflects a non-negative number indicating the height of the image resource in CSS pixels.
+The **`height`** property of the {{domxref("HTMLSourceElement")}} interface is a non-negative number indicating the height of the image resource in CSS pixels.
 
 The property has a meaning only if the parent of the current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
 
