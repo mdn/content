@@ -28,6 +28,7 @@ HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
+Access-Control-Allow-Headers: origin, x-requested-with
 Access-Control-Max-Age: 86400
 ```
 
