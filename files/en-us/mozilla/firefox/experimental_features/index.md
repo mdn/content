@@ -1800,10 +1800,10 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
   </tbody>
 </table>
 
-#### Custom element state pseudo-class
+#### Custom element custom states
 
-Custom elements can expose their internal state via the {{domxref("ElementInternals.states","states")}} property as a {{domxref("CustomStateSet")}}. A CSS custom state pseudo-class such as `:--somestate` can match that element's state.
-(See [Firefox bug 1861466](https://bugzil.la/1861466) for more details.)
+Custom elements can expose their internal state by adding and removing an associated custom identifer to their {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) custom state pseudo-class can then match against custom elements within the state by passing the same identifier.
+(See [Firefox bug 1861466](https://bugzil.la/1861466) and [Firefox bug 1866351](https://bugzil.la/1866351) for more details.)
 
 <table>
   <thead>
