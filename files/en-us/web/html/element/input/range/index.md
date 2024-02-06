@@ -71,14 +71,6 @@ The `step` attribute can also be set to the `any` string value. This `step` valu
 
 The default stepping value for `range` inputs is 1, allowing only integers to be entered, _unless_ the stepping base is not an integer; for example, if you set `min` to -10 and `value` to 1.5, then a `step` of 1 will allow only values such as 1.5, 2.5, 3.5,… in the positive direction and -0.5, -1.5, -2.5,… in the negative direction. See the [HTML `step` attribute](/en-US/docs/Web/HTML/Attributes/step).
 
-## Non-standard Attributes
-
-### orient
-
-Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically.
-
-> **Note:** The following input attributes do not apply to the input range: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, and `src`. Any of these attributes, if included, will be ignored.
-
 ## Examples
 
 While the `number` type lets users enter a number with optional constraints forcing their value to be between a minimum and a maximum value, it does require that they enter a specific value. The `range` input type lets you ask the user for a value in cases where the user may not even care—or know—what the specific numeric value selected is.
@@ -249,92 +241,7 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range, wherein the knob slides up and down, set the CSS {{cssxref('appearance')}} property to `slider-vertical` and include the non-standard `orient` attribute for Firefox.
-
-#### Horizontal range control
-
-Consider this range control:
-
-```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1" />
-```
-
-{{EmbedLiveSample("Horizontal_range_control", 200, 40)}}
-
-This control is horizontal (at least on most if not all major browsers; others might vary).
-
-#### Using the appearance property
-
-The {{cssxref('appearance')}} property has a non-standard value of `slider-vertical` that, well, makes sliders vertical.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range:
-
-```css
-input[type="range"] {
-  appearance: slider-vertical;
-}
-```
-
-{{EmbedLiveSample("Using_the_appearance_property", 200, 200)}}
-
-#### Using the orient attribute
-
-In Firefox only, there is a non-standard `orient` property.
-
-Use similar HTML as in the previous examples, we add the attribute with a value of `vertical`:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-{{EmbedLiveSample("Using_the_orient_attribute", 200, 200)}}
-
-#### writing-mode: bt-lr
-
-The {{cssxref('writing-mode')}} property should generally not be used to alter text direction for internationalization or localization purposes, but can be used for special effects.
-
-We use the same HTML as in the previous examples:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" />
-```
-
-We target just the inputs with a type of range, changing the writing mode from the default to `bt-lr`, or bottom-to-top and left-to-right:
-
-```css
-input[type="range"] {
-  writing-mode: bt-lr;
-}
-```
-
-{{EmbedLiveSample("writing-mode_bt-lr", 200, 40)}}
-
-#### Putting it all together
-
-As each of the above examples works in different browsers, you can put all of them in a single example to make it work cross browser:
-
-We keep the `orient` attribute with a value of `vertical` for Firefox:
-
-```html
-<input type="range" min="0" max="11" value="7" step="1" orient="vertical" />
-```
-
-We target just the `input`s with a `type` of `range` and `orient` set to `vertical`, changing the `writing-mode` from the default to `bt-lr`, or bottom-to-top and left-to-right, for pre-Blink versions of Edge, and add `appearance: slider-vertical` which is supported in Blink and Webkit browsers:
-
-```css
-input[type="range"][orient="vertical"] {
-  writing-mode: bt-lr;
-  appearance: slider-vertical;
-}
-```
-
-{{EmbedLiveSample("Putting_it_all_together", 200, 200)}}
+To create a vertical range wherein the knob slides up and down, you can set the {{cssxref("writing-mode")}} property to a value of `vertical-rl` or `vertical-lr`, as explained in [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls). You can also set the CSS {{cssxref('appearance')}} property to `slider-vertical` if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
 
 ## Technical summary
 
