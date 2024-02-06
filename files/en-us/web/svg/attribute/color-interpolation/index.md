@@ -74,6 +74,68 @@ You can use this attribute with the following SVG elements:
 - `linearRGB`
   - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
 
+## Example
+
+This example shows two `SVG`s with {{SVGElement("linearGradient")}} element that defines the gradient to use to fill a {{SVGElement("rect")}} element. The first `SVG` does not that the `color-interpolation` attribute and hence defaults to `sRGB`. The second `SVG` uses `color-interpolation="linearRGB"`. In unsupported browsers the gradient will look the same.
+
+```css hidden
+svg {
+  display: block;
+}
+```
+
+```html
+<svg width="450" height="70">
+  <title>Example of using the color-interpolation attribute</title>
+  <defs>
+    <linearGradient id="gradientDefault">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="25%" stop-color="blue" />
+      <stop offset="50%" stop-color="white" />
+      <stop offset="75%" stop-color="red" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="400"
+    height="40"
+    fill="url(#gradientDefault)"
+    stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation not set
+  </text>
+</svg>
+```
+
+```html
+<svg width="450" height="70">
+  <title>Example of using the color-interpolation attribute</title>
+  <defs>
+    <linearGradient id="gradientLinearRGB" color-interpolation="linearRGB">
+      <stop offset="0%" stop-color="white" />
+      <stop offset="25%" stop-color="blue" />
+      <stop offset="50%" stop-color="white" />
+      <stop offset="75%" stop-color="red" />
+      <stop offset="100%" stop-color="white" />
+    </linearGradient>
+  </defs>
+  <rect
+    x="0"
+    y="0"
+    width="400"
+    height="40"
+    fill="url(#gradientLinearRGB)"
+    stroke="black" />
+  <text x="0" y="60" font-family="courier" font-size="16">
+    color-interpolation="linearRGB"
+  </text>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "100%", "140")}}
+
 ## Specifications
 
 {{Specifications}}
