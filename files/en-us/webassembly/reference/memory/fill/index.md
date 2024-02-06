@@ -1,6 +1,7 @@
 ---
 title: Fill
 slug: WebAssembly/Reference/Memory/Fill
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

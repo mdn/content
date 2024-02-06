@@ -1,6 +1,7 @@
 ---
 title: Copy
 slug: WebAssembly/Reference/Memory/Copy
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}
