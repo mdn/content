@@ -1802,7 +1802,8 @@ The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref
 
 #### Custom element custom states
 
-Custom elements can expose their internal state by adding and removing an associated custom identifer to their {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) custom state pseudo-class can then match against custom elements within the state by passing the same identifier.
+Custom elements can now define custom states and match against them using CSS.
+Custom states are represented as custom identifers that can be added to, or removed from, the element's {{domxref("ElementInternals.states")}} property (a {{domxref("CustomStateSet")}}). The CSS [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class takes a custom identifier as an argument, and matches against custom elements if the identifier is present in their set of `states`, and not otherwise.
 (See [Firefox bug 1861466](https://bugzil.la/1861466) and [Firefox bug 1866351](https://bugzil.la/1866351) for more details.)
 
 <table>
