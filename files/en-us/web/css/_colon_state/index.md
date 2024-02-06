@@ -62,21 +62,21 @@ For example, in the [`CustomStateSet` labeled checkbox example](/en-US/docs/Web/
 }
 ```
 
-### Matching a custom state in shadow parts
+### Matching a custom state in a shadow part
 
 The `:state()` pseudo-class can also be used to target the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element.
 
 Shadow parts are parts of a custom element's shadow tree that are exposed to a containing page for styling purposes.
-Shadow parts are defined and named using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
-The [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element is used to match these parts, and can be followed by the `:state()` pseudo-class to match parts that are in the specified state.
+They are defined and named using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
+The [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element is used to match shadow parts, and can be followed by the `:state()` pseudo-class to match parts that are in the specified state.
 
-For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as a part named `checkbox`:
+For example, consider a custom element named `<question-box>` that uses a `<labeled-checkbox>` custom element as a shadow part named `checkbox`:
 
 ```js
 shadowRoot.innerHTML = `<labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
 ```
 
-The page CSS can then match against the part, and the part in a particular state, as shown:
+The page CSS can match the `checkbox` part and style it based on its `checked` state, as shown below:
 
 ```css
 question-box::part(checkbox) {
