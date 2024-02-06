@@ -118,11 +118,11 @@ Continuing the above `<card-component>` example, we create a nested component by
   </div>
 </template>
 
-<card-component>
+<card-wrapper>
   <p slot="header_slot">This is the header</p>
   <p slot="body_slot">This is the body</p>
   <p slot="footer_slot">This is the footer</p>
-</card-component>
+</card-wrapper>
 ```
 
 ```html
@@ -211,11 +211,11 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
   </div>
 </template>
 
-<card-component>
+<card-wrapper>
   <p slot="header_slot">This is the header</p>
   <p slot="body_slot">This is the body</p>
   <p slot="footer_slot">This is the footer</p>
-</card-component>
+</card-wrapper>
 ```
 
 ```html
@@ -272,11 +272,11 @@ In targetting the parts of the `<card-component>` from within the `<card-wrapper
 
 ```css
 /* selects the exported parts name */
-card-wrapper::part(card__header) {
+::part(card__header) {
   font-weight: bold;
 }
 /* selects nothing: these part names were not exported */
-card-wrapper::part(footer),
+::part(footer),
 ::part(body) {
   font-weight: bold;
 }
