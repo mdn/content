@@ -10,7 +10,7 @@ browser-compat: api.HTMLSourceElement.width
 
 The **`width`** property of the {{domxref("HTMLSourceElement")}} interface is a non-negative number indicating the width of the image resource in CSS pixels.
 
-The property has a meaning only if the parent of the current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
+The property has an effect only if the parent of the current {{HTMLElement("source")}} element is a {{HTMLElement("picture")}} element.
 
 It reflects the `width` attribute of the {{HTMLElement("source")}} element.
 
