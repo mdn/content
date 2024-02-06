@@ -17,14 +17,9 @@ UI. (`false` means "not disabled", which means "enabled")
 
 ## Example
 
-```html
-<audio id="el" src="/example.mp3"></audio>
-```
-
 ```js
-const el = document.getElementById("el");
-
-el.disableRemotePlayback = true;
+const obj = document.createElement("audio");
+obj.disableRemotePlayback = true;
 ```
 
 ## Specifications
