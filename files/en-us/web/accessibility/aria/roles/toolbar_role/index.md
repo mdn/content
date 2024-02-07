@@ -96,7 +96,7 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
