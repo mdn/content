@@ -117,18 +117,36 @@ Continuing the above `<card-component>` example, we create a nested component by
     <div part="footer"><slot name="footer_slot"></slot></div>
   </div>
 </template>
-
-<card-wrapper>
-  <p slot="header_slot">This is the header</p>
-  <p slot="body_slot">This is the body</p>
-  <p slot="footer_slot">This is the footer</p>
-</card-wrapper>
 ```
 
 ```html
 <template id="card-wrapper">
-  <card-component exportparts="base, header, body"></card-component>
+  <card-component exportparts="base, header, body">
+    <span slot="header_slot"><slot name="H"></slot></span>
+    <span slot="body_slot"><slot name="B"></slot></span>
+    <span slot="footer_slot"><slot name="F"></slot></span>
+  </card-component>
 </template>
+```
+
+We include a `<card-wrapper>` custom element, and a `<card-component>` for comparison:
+
+```html
+<h2>Card wrapper</h2>
+
+<card-wrapper>
+  <p slot="H">This is the header</p>
+  <p slot="B">This is the body</p>
+  <p slot="F">This is the footer</p>
+</card-wrapper>
+
+<h2>Card component</h2>
+
+<card-component>
+  <p slot="header_slot">This is the header</p>
+  <p slot="body_slot">This is the body</p>
+  <p slot="footer_slot">This is the footer</p>
+</card-component>
 ```
 
 #### JavaScript
@@ -169,7 +187,7 @@ customElements.define(
 
 #### CSS
 
-Now we can target parts on the `<card-component>` from the `<card-wrapper>` like so:
+Now we can target parts of the `<card-component>` directly and when nested within a `<card-wrapper>` like so:
 
 ```css
 ::part(body) {
@@ -187,7 +205,7 @@ Now we can target parts on the `<card-component>` from the `<card-wrapper>` like
 
 {{ EmbedLiveSample('Nested_component', '100%', '160') }}
 
-Note `footer` is not bold, as we did not include it in `exportparts`.
+Note `footer` is not bold when nested, as we did not include it in `exportparts`.
 
 ### Exposing mapped parts
 
@@ -212,9 +230,9 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 </template>
 
 <card-wrapper>
-  <p slot="header_slot">This is the header</p>
-  <p slot="body_slot">This is the body</p>
-  <p slot="footer_slot">This is the footer</p>
+  <p slot="H">This is the header</p>
+  <p slot="B">This is the body</p>
+  <p slot="F">This is the footer</p>
 </card-wrapper>
 ```
 
@@ -226,6 +244,9 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
        header:card__header, 
        footer:card__footer
      ">
+    <span slot="header_slot"><slot name="H"></slot></span>
+    <span slot="body_slot"><slot name="B"></slot></span>
+    <span slot="footer_slot"><slot name="F"></slot></span>
   </card-component>
 </template>
 ```
