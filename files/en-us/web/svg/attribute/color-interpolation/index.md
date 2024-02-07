@@ -76,7 +76,9 @@ You can use this attribute with the following SVG elements:
 
 ## Example
 
-This example shows two `SVG`s with {{SVGElement("linearGradient")}} element that defines the gradient to use to fill a {{SVGElement("rect")}} element. The first `SVG` does not that the `color-interpolation` attribute and hence defaults to `sRGB`. The second `SVG` uses `color-interpolation="linearRGB"`. In unsupported browsers the gradient will look the same.
+This example shows two `SVG`s with {{SVGElement("linearGradient")}} element that defines the gradient that is used to fill the {{SVGElement("rect")}} element.
+
+In this first `SVG` the `color-interpolation` attribute is not included and defaults to `sRGB`.
 
 ```css hidden
 svg {
@@ -108,6 +110,8 @@ svg {
   </text>
 </svg>
 ```
+
+In this second `SVG` the `color-interpolation` attribute is included and set to `linearRGB`. In unsupported browsers the gradient will look the same.
 
 ```html
 <svg width="450" height="70">
