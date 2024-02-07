@@ -43,8 +43,8 @@ First, let's create a card component that we will then wrap with another compone
 ```html
 <template id="card-component-template">
   <style>
-    p {
-      margin: 0.5em 0;
+    :host {
+      display: block;
     }
   </style>
   <div class="base" part="base">
@@ -106,6 +106,11 @@ Continuing the above `<card-component>` example, we create a nested component by
 
 ```html hidden
 <template id="card-component-template">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
   <div class="base" part="base">
     <div part="header"><slot name="header_slot"></slot></div>
     <div part="body"><slot name="body_slot"></slot></div>
@@ -319,7 +324,8 @@ In targetting the parts of the `<card-component>` from within the `<card-wrapper
 
 - [`part`](/en-US/docs/Web/HTML/Global_attributes/part) HTML attribute
 - {{HTMLElement("template")}} and {{HTMLElement("slot")}} HTML elements
-- {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
+- {{CSSXref("::part")}} and {{CSSXref("::slotted")}} pseudo-elements
+- {{CSSXref(":host")}} pseudo-class
 - [`ShadowRoot`]("/en-US/docs/Web/API/ShadowRoot) interface
 - {{DOMxRef("Element.part")}} property
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
