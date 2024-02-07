@@ -71,19 +71,19 @@ showNotification(title, options)
     - `renotify` {{optional_inline}} {{experimental_inline}}
       - : A boolean that indicates whether to suppress vibrations
         and audible alerts when reusing a `tag` value.
-        If _options_'s `renotify` is true
-        and _options_'s `tag` is the empty string a TypeError will be
+        If _options_'s `renotify` is `true`
+        and _options_'s `tag` is the empty string a `TypeError` will be
         thrown. The default is `false`.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
       - : Indicates that on devices with sufficiently
         large screens, a notification should remain active until the user clicks or
-        dismisses it. If this value is absent or false, the desktop version of Chrome will
+        dismisses it. If this value is absent or `false`, the desktop version of Chrome will
         auto-minimize notifications after approximately twenty seconds. The default value
         is `false`.
     - `silent` {{optional_inline}}
       - : When set indicates that no sounds or vibrations should be
-        made. If _options_'s `silent` is true
-        and _options_'s `vibrate` is present a TypeError exception
+        made. If _options_'s `silent` is `true`
+        and _options_'s `vibrate` is present a `TypeError` exception
         will be thrown. The default value is `false`.
     - `tag` {{optional_inline}}
       - : An ID for a given notification that allows you to find,
