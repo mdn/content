@@ -45,7 +45,7 @@ _Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{dom
 ## Example
 
 ```js
-//Inside a service worker.
+// Inside a service worker.
 self.onnotificationclose = (event) => {
   console.log("On notification close: ", event.notification.tag);
 };
