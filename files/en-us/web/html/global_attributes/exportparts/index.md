@@ -204,7 +204,7 @@ Now we can target parts of the `<card-component>` directly and when nested withi
 
 #### Results
 
-{{ EmbedLiveSample('Nested_component', '100%', '160') }}
+{{ EmbedLiveSample('Nested_component', '100%', '400') }}
 
 Note `footer` is not bold when nested, as we did not include it in `exportparts`.
 
