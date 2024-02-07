@@ -29,13 +29,13 @@ onnotificationclose = (event) => {};
 
 ## Event type
 
-A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 
 ## Event properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
