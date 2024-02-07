@@ -68,7 +68,7 @@ Content-Type: multipart/form-data; boundary=something
 In a {{HTTPMethod("POST")}} request, resulting from an HTML form submission, the `Content-Type` of the request is specified by the `enctype` attribute on the {{HTMLElement("form")}} element.
 
 ```html
-<form action="/" method="post" enctype="multipart/form-data">
+<form action="/foo" method="post" enctype="multipart/form-data">
   <input type="text" name="description" value="some text" />
   <input type="file" name="myFile" />
   <button type="submit">Submit</button>
