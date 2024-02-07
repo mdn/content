@@ -24,7 +24,7 @@ showNotification(title, options)
 ### Parameters
 
 - `title`
-  - : The title that must be shown within the notification
+  - : The title that must be shown within the notification.
 - `options` {{optional_inline}}
 
   - : An object that allows configuring the notification. It can have the following
@@ -45,7 +45,7 @@ showNotification(title, options)
         {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : a string containing the URL of an image
+      - : A string containing the URL of an image
         to represent the notification when there is not enough space to display the
         notification itself such as for example, the Android Notification Bar. On Android
         devices, the badge should accommodate devices up to 4x resolution, about 96 by 96
@@ -59,10 +59,10 @@ showNotification(title, options)
     - `dir` {{optional_inline}}
       - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
     - `icon` {{optional_inline}}
-      - : a string containing the URL of an image to
+      - : A string containing the URL of an image to
         be used as an icon by the notification.
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : a string containing the URL of an image to
+      - : A string containing the URL of an image to
         be displayed in the notification.
     - `lang` {{optional_inline}}
       - : Specify the lang used within the notification. This string
