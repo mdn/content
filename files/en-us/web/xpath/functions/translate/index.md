@@ -56,7 +56,7 @@ Example
 Output
 
 ```plain
-The quick red fdx.
+The quick red fox.
 ```
 
 - If `XYZ` contains more characters than `abc`, the extra characters are ignored.
