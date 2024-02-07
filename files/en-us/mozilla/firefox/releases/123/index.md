@@ -28,6 +28,8 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### SVG
 
+- The {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements now support changing the color space to be `linearRGB` or `sRGB` via the {{SVGAttr("color-interpolation")}} attribute. This can also be applied to the SVG elements via the {{CSSXref("color-interpolation")}} CSS property.
+
 #### Removals
 
 ### HTTP
