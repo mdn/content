@@ -121,6 +121,11 @@ Continuing the above `<card-component>` example, we create a nested component by
 
 ```html
 <template id="card-wrapper">
+  <style>
+    :host {
+      display: block;
+    }
+  </style>
   <card-component exportparts="base, header, body">
     <span slot="header_slot"><slot name="H"></slot></span>
     <span slot="body_slot"><slot name="B"></slot></span>
