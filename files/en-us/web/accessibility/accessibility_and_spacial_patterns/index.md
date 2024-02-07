@@ -54,7 +54,7 @@ Space has to surround the braille character. A user of braille does not lay a fi
 
 The nature of space can change depending upon what MIME type is being used, and its version. For example, borders on SVG can extend both inward and outward from its dimensions, or for newer versions of SVG, entirely outward from it, thus reducing the space around the SVG to enable perception.
 
-## See Also
+## See also
 
 ### MDN
 

@@ -141,7 +141,7 @@ Inherited into role:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-errormessage`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
 - CSS {{CSSXRef(':valid')}} pseudoclass
