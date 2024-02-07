@@ -8,7 +8,7 @@ browser-compat: api.ServiceWorkerGlobalScope.notificationclose_event
 
 {{APIRef("Web Notifications")}}
 
-The **`notificationclose`** event fires when a user closes a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+The **`notificationclose`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface fires when a user closes a displayed notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
 Notifications created on the main thread or in workers which aren't service workers
 using the {{domxref("Notification.Notification","Notification()")}} constructor will
