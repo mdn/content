@@ -43,8 +43,8 @@ First, let's create a card component that we will then wrap with another compone
 ```html
 <template id="card-component-template">
   <style>
-    .base {
-      display: grid;
+    p {
+       margin: 0.5em 0;
     }
   </style>
   <div class="base" part="base">
@@ -107,8 +107,8 @@ Continuing the above `<card-component>` example, we create a nested component by
 ```html hidden
 <template id="card-component-template">
   <style>
-    .base {
-      display: grid;
+    p, h2 {
+       margin: 0.5em 0;
     }
   </style>
   <div class="base" part="base">
@@ -218,8 +218,8 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 ```html hidden
 <template id="card-component-template">
   <style>
-    .base {
-      display: grid;
+    p {
+       margin: 0.5em 0;
     }
   </style>
   <div class="base" part="base">
