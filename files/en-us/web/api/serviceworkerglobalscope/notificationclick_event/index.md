@@ -92,7 +92,7 @@ self.onnotificationclick = (event) => {
 };
 ```
 
-You can handle event actions using `event.action` within a {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event handler:
+You can handle event actions using `event.action` within a `notificationclick` event handler:
 
 ```js
 navigator.serviceWorker.register("sw.js");
