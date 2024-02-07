@@ -14,6 +14,8 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### HTML
 
+- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1712140](https://bugzil.la/1870052))
+
 #### Removals
 
 ### CSS
@@ -37,6 +39,10 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### APIs
+
+- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) now supports cross-origin credential creation.
+  Specifically [`navigator.credentials.create({publicKey})`](/en-US/docs/Web/API/CredentialsContainer/create) can now be called in nested browsing contexts loaded from a different origin to the top-most document, if allowed by a [`Feature-Policy: publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) on the top level nesting [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe#allow).
+  ([Firefox bug 1870863](https://bugzil.la/1870863)).
 
 #### DOM
 

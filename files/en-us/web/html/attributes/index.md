@@ -184,16 +184,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
-      </td>
-      <td>Contains the time range of already buffered media.</td>
-    </tr>
-    <tr>
-      <td>
         <code><a href="/en-US/docs/Web/HTML/Attributes/capture">capture</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>

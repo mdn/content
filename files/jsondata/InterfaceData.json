@@ -4012,6 +4012,10 @@
       "inh": "WritableStream",
       "impl": []
     },
+    "WebTransportWriter": {
+      "inh": "WritableStreamDefaultWriter",
+      "impl": []
+    },
     "WGSLLanguageFeatures": {
       "inh": "",
       "impl": []

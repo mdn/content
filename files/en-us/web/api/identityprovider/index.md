@@ -7,7 +7,7 @@ status:
 browser-compat: api.IdentityProvider
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`IdentityProvider`** interface of the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) represents an identity provider (IdP) and provides access to related information and functionality.
 

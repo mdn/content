@@ -186,8 +186,8 @@ The code below shows how this works using the example of an autonomous custom el
 
 The `collapsed` state is represented as a boolean property (with setter and getter methods) that is not visible outside of the element.
 To make this state selectable in CSS the custom element first calls {{domxref("HTMLElement.attachInternals()")}} in its constructor in order to attach an {{domxref("ElementInternals")}} object, which in turn provides access to a {{domxref("CustomStateSet")}} through the {{domxref("ElementInternals.states")}} property.
-The setter for the (internal) collapsed state adds the _dashed identifier_ `--hidden` to the `CustomStateSet` when the state is `true`, and removes it when the state is `false`.
-The dashed identifier is just a string preceded by two dashes: in this case we called it `--hidden`, but we could have just as easily called it `--collapsed`.
+The setter for the (internal) collapsed state adds the _identifier_ `hidden` to the `CustomStateSet` when the state is `true`, and removes it when the state is `false`.
+The identifier is just a string: in this case we called it `hidden`, but we could have just as easily called it `collapsed`.
 
 ```js
 class MyCustomElement extends HTMLElement {
@@ -197,16 +197,16 @@ class MyCustomElement extends HTMLElement {
   }
 
   get collapsed() {
-    return this._internals.states.has("--hidden");
+    return this._internals.states.has("hidden");
   }
 
   set collapsed(flag) {
     if (flag) {
       // Existence of identifier corresponds to "true"
-      this._internals.states.add("--hidden");
+      this._internals.states.add("hidden");
     } else {
       // Absence of identifier corresponds to "false"
-      this._internals.states.delete("--hidden");
+      this._internals.states.delete("hidden");
     }
   }
 }
@@ -215,14 +215,14 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-After adding `<my-custom-element>` to the HTML we can use the dashed identifier added to the `CustomStateSet`, prefixed with `:`, as a custom state pseudo-class for selecting the element state.
-For example, below we select on the `--hidden` state being true (and hence the element's `collapsed` state) using the `:--hidden` selector, and remove the border.
+After adding `<my-custom-element>` to the HTML we can use the identifier added to the `CustomStateSet`, passed to the `:state()` function, as a custom state pseudo-class for selecting the element state.
+For example, below we select on the `hidden` state being true (and hence the element's `collapsed` state) using the `:hidden` selector, and remove the border.
 
 ```css
 my-custom-element {
   border: dashed red;
 }
-my-custom-element:--hidden {
+my-custom-element:state(hidden) {
   border: none;
 }
 ```

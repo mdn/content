@@ -8,7 +8,7 @@ status:
 browser-compat: api.IdentityProvider.getUserInfo_static
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getUserInfo()`** static method of the {{domxref("IdentityProvider")}} interface returns information about a previously signed in user, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a previously signed in user returns to the relying party (RP) site.
 
