@@ -7,10 +7,8 @@ if [ -f ".husky/_/history" ]; then
   lastHash=$(cat ./.husky/_/history)
   isUpdated=$(git diff $lastHash HEAD -- ./package.json)
   if [ "$isUpdated" != "" ]; then
-    yarn install
+    echo ⚠🔥 package.json has been modified please run 'yarn install'! 🔥
   fi
 else
   yarn install
 fi
-
-echo $(git rev-parse HEAD) > ./.husky/_/history
