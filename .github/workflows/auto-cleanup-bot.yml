@@ -34,25 +34,31 @@ jobs:
 
       - name: Create PR with only fixable issues
         if: success()
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
           title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             All issues auto-fixed
+          labels: |
+            automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}
 
       - name: Create PR with notice on unfixed issues
         if: failure()
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: auto-fix Markdownlint, Prettier, and front-matter issues"
           branch: markdownlint-auto-cleanup
           title: "fix: auto-cleanup by bot"
           author: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
+          committer: mdn-bot <108879845+mdn-bot@users.noreply.github.com>
           body: |
             Auto-fix was run, but additional issues found.
             Please review the run log: https://github.com/mdn/content/actions/runs/${{ github.run_id }}
+          labels: |
+            automated pr
           token: ${{ secrets.AUTOMERGE_TOKEN }}
