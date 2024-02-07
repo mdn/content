@@ -106,12 +106,6 @@ Continuing the above `<card-component>` example, we create a nested component by
 
 ```html hidden
 <template id="card-component-template">
-  <style>
-    p,
-    h2 {
-      margin: 0.5em 0;
-    }
-  </style>
   <div class="base" part="base">
     <div part="header"><slot name="header_slot"></slot></div>
     <div part="body"><slot name="body_slot"></slot></div>
@@ -188,9 +182,19 @@ customElements.define(
 
 #### CSS
 
-Now we can target parts of the `<card-component>` directly and when nested within a `<card-wrapper>` like so:
+Now, we can target parts of the `<card-component>` directly and when nested within a `<card-wrapper>` like so:
 
 ```css
+h2 {
+  background-color: #dedede;
+}
+
+card-wrapper,
+card-component {
+  border: 1px dashed blue;
+  width: fit-content;
+}
+
 ::part(body) {
   color: red;
   font-style: italic;
@@ -218,11 +222,6 @@ We update the prior `<card-wrapper>` custom element with the remapping syntax (o
 
 ```html hidden
 <template id="card-component-template">
-  <style>
-    p {
-      margin: 0.5em 0;
-    }
-  </style>
   <div class="base" part="base">
     <div part="header"><slot name="header_slot"></slot></div>
     <div part="body"><slot name="body_slot"></slot></div>
