@@ -624,23 +624,6 @@ In fact, there is no way to guarantee that IndexedDB transactions will complete,
 
 At least with the addition of the abort notifications and {{domxref("IDBDatabase.close_event", "IDBDatabase.onclose")}}, you can know when this has happened.
 
-## Locale-aware sorting
-
-Mozilla has implemented the ability to perform locale-aware sorting of IndexedDB data in Firefox 43+. By default, IndexedDB didn't handle internationalization of sorting strings at all, and everything was sorted as if it were English text. For example, b, á, z, a would be sorted as:
-
-- a
-- b
-- z
-- á
-
-which is obviously not how users want their data to be sorted — Aaron and Áaron for example should go next to one another in a contacts list. Achieving proper international sorting therefore required the entire dataset to be called into memory, and sorting to be performed by client-side JavaScript, which is not very efficient.
-
-This new functionality enables developers to specify a locale when creating an index using {{domxref("IDBObjectStore.createIndex()")}} (check out its parameters.) In such cases, when a cursor is then used to iterate through the dataset, and you want to specify locale-aware sorting, you can use a specialized {{domxref("IDBLocaleAwareKeyRange")}}.
-
-{{domxref("IDBIndex")}} has also had new properties added to it to specify if it has a locale specified, and what it is: `locale` (returns the locale if any, or null if none is specified) and `isAutoLocale` (returns `true` if the index was created with an auto locale, meaning that the platform's default locale is used, `false` otherwise.)
-
-> **Note:** This feature is currently hidden behind a flag — to enable it and experiment, go to `about:config` and enable `dom.indexedDB.experimental`.
-
 ## Full IndexedDB example
 
 We have a complete example using the IndexedDB API. The example uses IndexedDB to store and retrieve publications.

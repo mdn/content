@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.setPipeline
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setPipeline()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface sets the {{domxref("GPURenderPipeline")}} to use for subsequent render bundle commands.
