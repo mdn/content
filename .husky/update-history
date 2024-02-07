@@ -1,0 +1,7 @@
+# The script updates main branche's HEAD commit number.
+# The stored commit number is used by post-merge script.
+
+BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+if [[ "$BRANCH" == "main" ]]; then
+  echo $(git rev-parse HEAD) > ./.husky/_/history
+fi
