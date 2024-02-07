@@ -38,7 +38,7 @@ showNotification(title, options)
           - : A string identifying a user action to be displayed on the notification.
         - `title`
           - : A string containing action text to be shown to the user.
-        - `icon`
+        - `icon` {{optional_inline}}
           - : A string containing the URL of an icon to display with the action.
 
         Appropriate responses are built using `event.action` within the
