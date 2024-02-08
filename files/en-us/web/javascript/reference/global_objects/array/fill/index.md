@@ -33,7 +33,7 @@ fill(value, start, end)
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
     - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all indices until the end to be filled.
-    - If `end` implies a position before or at the position that `start` implies, nothing is extracted.
+    - If `end` implies a position before or at the position that `start` implies, nothing is filled.
 
 ### Return value
 
