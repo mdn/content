@@ -799,7 +799,7 @@
 /en-US/docs/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/CSS/resize	/en-US/docs/Web/CSS/resize
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
-/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
@@ -11677,7 +11677,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
-/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
