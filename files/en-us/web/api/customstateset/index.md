@@ -243,7 +243,6 @@ customElements.define("labeled-checkbox", LabeledCheckbox);
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
 As always, the constructor first calls the `super()` method.
 Next, we attach a shadow DOM tree to the custom element by calling [`attachShadow()`](/en-US/docs/Web/API/Element/attachShadow).
-The shadow DOM is attached with `mode: 'closed'` to ensure that nodes within the shadow DOM are not available from outside the element, unless explicitly exposed as a [shadow part](/en-US/docs/Web/CSS/CSS_shadow_parts).
 
 ```js
 class QuestionBox extends HTMLElement {
