@@ -13,11 +13,13 @@ The **Federated Credential Management API** (or _FedCM API_) provides a standard
 
 ## FedCM concepts
 
-Identity federation is the delegation of user authentication from a website requiring user sign-up or sign-in, such as an e-commerce or social networking site (also known as a relying party or RP), to a trusted third-party IdP. Users register an account with the IdP, which can then be used for signing in on multiple RPs. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, as compared to each site managing its own sign-in needs with separate usernames and passwords.
+Identity federation is the delegation of user authentication from a website requiring user sign-up or sign-in, such as an e-commerce or social networking site (also known as a relying party or RP), to a trusted third-party identity provider (IdP) such as Google, Facebook/Meta, GitHub, etc.
 
-The problem is that traditional identity federation relies on {{htmlelement("iframe")}}s, redirects, and third-party cookies, which are also used for third-party tracking. Browsers are limiting the usage of these features in an effort to preserve user privacy, but a side effect is that this makes valid, non-tracking uses more difficult to implement, and this includes identity federation.
+Relying parties (RPs) can then integrate with IdPs, allowing users to use the accounts they have registered with the IdP, to sign in to them. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, as compared to each site managing its own sign-in needs with separate usernames and passwords.
 
-Affected identity federation use cases that rely on third-party cookies:
+The problem is that traditional identity federation relies on {{htmlelement("iframe")}}s, redirects, and third-party cookies, which are also used for third-party tracking. Browsers are limiting the usage of these features in an effort to preserve user privacy, but a side effect is that this makes valid, non-tracking uses more difficult to implement, which includes identity federation.
+
+This affects federated sign-in in general, as well as more specific identity federation use cases:
 
 - [OIDC front-channel logout](https://openid.net/specs/openid-connect-frontchannel-1_0.html): This flow requires the IDP to embed several RP `<iframe>`s, which rely on RP cookies.
 - Social Widgets: In order to provide social widgets, the IdP third-party cookie must be provided from the RP top-level origin.
@@ -28,10 +30,12 @@ FedCM aims to work around this problem, providing a dedicated mechanism for fede
 
 There are two parts to using the FedCM API, which are covered in the linked guides below:
 
-1. [IdP integration with FedCM](/en-US/docs/Web/API/FedCM_API/IDP_integration).
-2. [RP federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in) using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
+1. [IdP integration with FedCM](/en-US/docs/Web/API/FedCM_API/IDP_integration) — what an identity provider needs to provide so that an RP can integrate with it.
+2. [RP federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in) — the FedCM functionality an RP needs to use to sign a user in using their IdP account. A FedCM sign-in request is initiated using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method.
 
-## Permissions Policy integration and IFrame support
+> **Note:** [Google Sign In](https://developers.google.com/identity/gsi/web/guides/overview) is an example of an IdP that already supports FedCM. [Migrate to FedCM](https://developers.google.com/identity/gsi/web/guides/fedcm-migration) provides instructions for RPs wishing to migrate existing apps using Google Sign In to federated sign-in.
+
+## Permissions Policy integration and `<iframe>` support
 
 The {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions-Policy](/en-US/docs/Web/HTTP/Permissions_Policy) can be used to control permission to use FedCM, more specifically usage of the {{domxref("CredentialsContainer.get", "get()")}} method.
 

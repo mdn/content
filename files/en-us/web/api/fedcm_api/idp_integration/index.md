@@ -188,7 +188,7 @@ Sec-Fetch-Dest: webidentity
 account_id=123&client_id=client1234&nonce=Ct60bD&disclosure_text_shown=true&is_auto_selected=true
 ```
 
-When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the authentication:
+A request to this endpoint is sent as a result of the user choosing an account to sign in with from the relevant browser UI. When sent valid user credentials, this endpoint should respond with a validation token that the RP can use to validate the user on its own server, according to the usage instructions outlined by the IdP they are using for identity federation. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
 
 ```json
 {
@@ -199,9 +199,9 @@ When sent valid user credentials, this endpoint should respond with a validation
 The request payload contains the following params:
 
 - `client_id`
-  - : The RP's client identifier.
+  - : The RP's client identifier (which matches the `clientId` from the original `get()` request).
 - `account_id`
-  - : The unique ID of the user account to be signed in.
+  - : The unique ID of the user account to be signed in (which matches the user's `id` from the accounts list endpoint response).
 - `nonce` {{optional_inline}}
   - : The request nonce, provided by the RP.
 - `disclosure_text_shown`

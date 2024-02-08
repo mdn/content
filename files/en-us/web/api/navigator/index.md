@@ -50,7 +50,7 @@ _Doesn't inherit any properties._
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
 - {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Provides access to the browser's {{domxref("NavigatorLogin")}} object, which defines login functionality for federated identity providers (IdPs). See [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details.
+  - : Provides access to the browser's {{domxref("NavigatorLogin")}} object, which a federated identity provider (IdP) can use to set a user's login status when they sign into or out of the IdP. See [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details.
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
 - {{domxref("Navigator.mediaCapabilities")}} {{ReadOnlyInline}}

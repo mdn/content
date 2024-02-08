@@ -32,7 +32,7 @@ get(options)
 
     - "Credential type"
 
-      - : An object or boolean defining the type of credential being requested — this can be one of one of:
+      - : An object or boolean defining the type of credential being requested — this can be one of:
 
         - `federated`: An object containing requirements for a requested credential from a federated identify provider. Bear in mind that the Federated Credential Management API (the `identity` credential type) supersedes this credential type. See the [Credential Management API](#credential_management_api) section below for more details.
         - `password`: A boolean value indicating that a password credential is being requested. See the [Credential Management API](#credential_management_api) section below for more details.
@@ -103,6 +103,8 @@ navigator.credentials
 
 The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
 
+Relying parties (RPs) can call `get()` with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the device.
+
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
 ### `identity` object structure
@@ -116,7 +118,7 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
     - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
 - `providers`
-  - : An array of objects specifying details of the different IdPs to be used to sign in. Each object can contain the following properties:
+  - : An array of objects specifying details of the IdPs to be used to sign in. Each object can contain the following properties:
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) section on the _FedCM API_ landing page for more information.
     - `clientId`
@@ -126,16 +128,22 @@ The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
+> **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls. This may change in the future.
+
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters.
+A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters if the user identity is successfully validated by the IdP.
+
+This object contains a token that the RP can then send to its server to validate the user on their service. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
+
+> **Note:** The exact nature of the token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see the [Google Sign In instructions](https://developers.google.com/identity/gsi/web/guides/fedcm-migration), for example) to make sure they are using it correctly.
 
 If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently without making a request to the IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint). See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
 
 ### Exceptions
 
 - `IdentityCredentialError` {{domxref("DOMException")}}
-  - : The request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about why. See the [Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) below for more information on how it can be used.
+  - : The request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about why. See the [Error API example](#example_including_error_api_information) below for more information on how it can be used.
 - `NetworkError` {{domxref("DOMException")}}
   - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
 - `NotAllowedError` {{domxref("DOMException")}}
