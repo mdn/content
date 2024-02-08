@@ -73,8 +73,7 @@ img.addEventListener(
   "load",
   () => {
     // execute drawImage statements here
-  },
-  false,
+  }
 );
 img.src = "myImage.png"; // Set source path
 ```
