@@ -35,7 +35,7 @@ The CSS `:state()` pseudo-class matches an element when the identifier, passed a
 The `:state()` pseudo-class can also be used to match custom states within the implementation of a custom element.
 This is achieved by using `:state()` within the [`:host()`](/en-US/docs/Web/CSS/:host_function) pseudo-class function, which matches a state only within the shadow DOM of the current custom element.
 
-Additionally, the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element followed by the `:state()` pseudo-class allows matching on the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state (shadow parts are parts of a custom element's shadow tree that are explicitly exposed to a containing page for styling purposes).
+Additionally, the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element followed by the `:state()` pseudo-class allows matching on the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state. (**Shadow parts** are parts of a custom element's shadow tree that are explicitly exposed to a containing page for styling purposes.)
 
 ## Examples
 
@@ -52,7 +52,7 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-For a live example of this code in action, see the ["Labeled checkbox"](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) example on the `CustomStateSet` page.
+For a live example of this code in action, see the [Labeled checkbox](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) example on the `CustomStateSet` page.
 
 ### Matching a custom state in a custom element's shadow DOM
 
@@ -92,7 +92,7 @@ question-box::part(checkbox):state(checked) {
 }
 ```
 
-For a live example of this code in action, see the ["Matching a custom state in a shadow part of a custom element"](/en-US/docs/Web/API/CustomStateSet#matching_a_custom_state_in_a_shadow_part_of_a_custom_element) example on the `CustomStateSet` page.
+For a live example of this code in action, see the [Matching a custom state in a shadow part of a custom element](/en-US/docs/Web/API/CustomStateSet#matching_a_custom_state_in_a_shadow_part_of_a_custom_element) example on the `CustomStateSet` page.
 
 ## Specifications
 
