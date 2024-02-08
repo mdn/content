@@ -215,7 +215,8 @@ class MyCustomElement extends HTMLElement {
 customElements.define("my-custom-element", MyCustomElement);
 ```
 
-After adding `<my-custom-element>` to the HTML we can use the identifier added to the `CustomStateSet`, passed to the [`:state()`](/en-US/docs/Web/CSS/:state) function, as a custom state pseudo-class for selecting the element state.
+We can use the identifier added to the custom element's `CustomStateSet` (`this._internals.states`) for matching the element's custom state.
+This is matched by passing the identifier to the [`:state()`](/en-US/docs/Web/CSS/:state) pseudo-class.
 For example, below we select on the `hidden` state being true (and hence the element's `collapsed` state) using the `:hidden` selector, and remove the border.
 
 ```css
