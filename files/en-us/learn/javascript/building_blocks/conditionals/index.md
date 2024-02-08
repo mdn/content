@@ -227,7 +227,11 @@ So for example, the first code block will only be run if `choice === 'sunny'` _a
 Let's look at a quick OR example:
 
 ```js
-if (iceCreamVanOutside || houseStatus === "on fire") {
+if (iceCreamVanOutside === "on fire"
+
+  /* you can also change this to something else like "on water" This is because if this is not done, iceCreamVanOutside will always be true. The message "You should leave the house quickly." is always displayed. For better understanding, it is best to ascribe a condition so that it can be compared to the string as this can be misleading to newbies */ 
+
+|| houseStatus === "on fire") {
   console.log("You should leave the house quickly.");
 } else {
   console.log("Probably should just stay in then.");
