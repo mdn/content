@@ -7,7 +7,7 @@ browser-compat: css.properties.offset-position
 
 {{CSSRef}}
 
-The **`offset-position`** [CSS](/en-US/docs/Web/CSS) property defines the initial position of an element along a path. This property is typically used in combination with the {{cssxref("offset-path")}} property to create a motion effect. The value of `offset-position` determines where the element gets placed initially for moving along an offset path if the `offset-path` functions such as {{cssxref("ray", "ray()")}} do not specify their own starting position.
+The **`offset-position`** [CSS](/en-US/docs/Web/CSS) property defines the initial position of an element along a path. This property is typically used in combination with the {{cssxref("offset-path")}} property to create a motion effect. The value of `offset-position` determines where the element gets placed initially for moving along an offset path if an `offset-path` function such as {{cssxref("path", "path()")}} does not specify its own starting position.
 
 The `offset-position` property is part of a motion system based on {{cssxref("offset")}} constituent properties, including {{cssxref("offset-anchor")}}, {{cssxref("offset-distance")}}, and `offset-path`. These properties work together to create various motion effects along a path.
 
@@ -48,7 +48,7 @@ offset-position: unset;
 ### Values
 
 - `normal`
-  - : Indicates that the element does not have an offset starting position and places the element at `(50%, 50%)` of the containing block. This is the default value.
+  - : Indicates that the element does not have an offset starting position and places the element at `50% 50%` of the containing block. This is the default value.
 - `auto`
   - : Indicates that the offset starting position is the top-left corner of the element's box.
 - {{cssxref("&lt;position&gt;")}}
@@ -166,7 +166,7 @@ This example visually compares various initial offset starting position of an el
 ```css hidden
 .wrap {
   position: relative;
-  width: 600px;
+  width: 80vw;
   height: 120px;
   border: 1px solid black;
   margin: 0 2em 4em 5em;
@@ -234,7 +234,7 @@ pre {
 
 {{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
 
-In box `0`, the absence of the `offset-path` property means setting `offset-position` to either `normal` or `auto` has no effect. Notice that when `offset-position` is `normal`, the ray starts at (`50%, 50%`) of the containing block. This is the default starting position of an offset path and is used when no `offset-position` is specified. Also notice the difference between offset starting positions `auto` and `left top`. The value `auto` aligns the element's anchor point to its own top-left corner, whereas the value `left top` aligns the element's anchor point to the top-left corner of the containing block.
+In `box0`, the absence of the `offset-path` property means that an `offset-position` of either `normal` or `auto` has no effect. When `offset-position` is `normal`, the ray starts at the center of the containing block (i.e., `50% 50%`). This is the default starting position of an offset path and is used when no `offset-position` is specified. Notice the difference between offset starting positions `auto` and `left top`. The value `auto` aligns the element's anchor point to its own top-left corner, whereas the value `left top` aligns the element's anchor point to the top-left corner of the containing block.
 
 ## Specifications
 
