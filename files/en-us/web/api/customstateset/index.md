@@ -84,7 +84,7 @@ Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en
 
 ## Examples
 
-### Labeled checkbox
+### Matching the custom state of a custom checkbox element
 
 This example, which is adapted from the specification, demonstrates a custom checkbox element that has an internal "checked" state.
 This is mapped to the `checked` custom state, allowing styling to be applied using the `:state(checked)` custom state pseudo class.
@@ -189,7 +189,7 @@ This example, which is adapted from the specification, demonstrates that custom 
 Shadow parts are sections of the shadow tree that are intentionally exposed to pages that use the custom element.
 
 The example creates a `<question-box>` custom element that displays a question prompt along with a checkbox labeled "Yes".
-The element uses the `<labeled-checkbox>` defined in the [previous example](#labeled_checkbox) for the checkbox.
+The element uses the `<labeled-checkbox>` defined in the [previous example](#matching_the_custom_state_of_a_custom_checkbox_element) for the checkbox.
 
 #### JavaScript
 
@@ -260,7 +260,7 @@ This defines a {{HTMLElement("slot")}} element that contains the default prompt 
 We then define a `<labeled-checkbox>` custom element with the default text `"Yes"`.
 This checkbox is exposed as a shadow part of the question box with the name `checkbox` using the [`part`](/en-US/docs/Web/HTML/Global_attributes#part) attribute.
 
-Note that the code and styling for the `<labeled-checkbox>` element are exactly the same as in the [previous example](#labeled_checkbox), and are therefore not repeated here.
+Note that the code and styling for the `<labeled-checkbox>` element are exactly the same as in the [previous example](#matching_the_custom_state_of_a_custom_checkbox_element), and are therefore not repeated here.
 
 Next, we call the {{domxref("CustomElementRegistry/define", "define()")}} method on the object returned by {{domxref("Window.customElements")}} to register the custom element with the name `question-box`:
 

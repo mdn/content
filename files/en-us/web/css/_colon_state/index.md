@@ -52,7 +52,7 @@ labeled-checkbox:state(checked) {
 }
 ```
 
-For a live example of this code in action, see the [Labeled checkbox](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) example on the `CustomStateSet` page.
+For a live example of this code in action, see the [Matching the custom state of a custom checkbox element](/en-US/docs/Web/API/CustomStateSet#matching_the_custom_state_of_a_custom_checkbox_element) example on the `CustomStateSet` page.
 
 ### Matching a custom state in a custom element's shadow DOM
 
@@ -66,7 +66,7 @@ The following CSS injects a grey `[x]` before the element when it is in the "che
 }
 ```
 
-For a live example of this code in action, see the ["Labeled checkbox"](/en-US/docs/Web/API/CustomStateSet#labeled_checkbox) example on the `CustomStateSet` page.
+For a live example of this code in action, see the [Matching the custom state of a custom checkbox element](/en-US/docs/Web/API/CustomStateSet#matching_the_custom_state_of_a_custom_checkbox_element) example on the `CustomStateSet` page.
 
 ### Matching a custom state in a shadow part
 
