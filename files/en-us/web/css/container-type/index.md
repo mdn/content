@@ -7,11 +7,13 @@ browser-compat: css.properties.container-type
 
 {{CSSRef}}
 
-An element can be established as a query container for [container size queries](/en-US/docs/Web/CSS/CSS_container_queries) using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of size containment used in a container query.
+An element can be established as a query container for [container size queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of size containment used in a container query.
 
 Size containment turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element's size, which in turn could change the content size and flip the query back to true, and so on.
 
 The container size has to be set explicitly or by context — for example, block elements, flex containers, and grid containers stretching to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.
+
+> **Note:** When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
 
 ## Syntax
 
@@ -144,7 +146,7 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property

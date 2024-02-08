@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.active
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
-The **`active`** property of the
+The **`active`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
 {{domxref("ServiceWorker.state")}} is `activating` or `activated`.
 This property is initially set to `null`.

@@ -77,7 +77,7 @@ myHTMLElement.ariaChecked = true;
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)

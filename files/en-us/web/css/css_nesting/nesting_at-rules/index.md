@@ -142,7 +142,7 @@ Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested 
 }
 ```
 
-## See Also
+## See also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)

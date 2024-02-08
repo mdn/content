@@ -3,12 +3,10 @@ title: "CookieStore: set() method"
 short-title: set()
 slug: Web/API/CookieStore/set
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.set
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`set()`** method of the {{domxref("CookieStore")}} interface sets a cookie with the given name and value or options object.
 
