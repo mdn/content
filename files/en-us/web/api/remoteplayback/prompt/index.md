@@ -43,7 +43,7 @@ The promise will be rejected with one of the following exceptions:
 - `NotFoundError` {{domxref("DOMException")}}
   - : Thrown if remote playback is unavailable.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if the user deny permission to use the device.
+  - : Thrown if the user denies permission to use the device.
 
 ## Security
 
