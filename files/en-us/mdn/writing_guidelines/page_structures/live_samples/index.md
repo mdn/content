@@ -371,7 +371,7 @@ This example is designed to show "how to log", so "what is logged" isn't all tha
 This is therefore trivially implemented as a button that the user can press to increment a value.
 
 ```html
-<button id="iterate" type="button">Press me many times</button>
+<button id="increment" type="button">Press me many times</button>
 ```
 
 ```js
