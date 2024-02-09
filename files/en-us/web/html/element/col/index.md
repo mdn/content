@@ -7,7 +7,7 @@ browser-compat: html.elements.col
 
 {{HTMLSidebar}}
 
-The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns in a column group represented by its parent {{HTMLElement("colgroup")}} element. The `<col>` element is only valid as a child of a {{HTMLElement("colgroup")}} element that has no [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute defined.
+The **`<col>`** [HTML](/en-US/docs/Web/HTML) element defines one or more columns within a column group, often represented by its parent {{HTMLElement("colgroup")}} element. However `<col>` element must be placed in a {{HTMLElement("colgroup")}} element that has no [`span`](/en-US/docs/Web/HTML/Element/colgroup#span) attribute defined.
 
 {{EmbedInteractiveExample("pages/tabbed/col.html","tabbed-taller")}}
 
