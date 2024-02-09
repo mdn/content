@@ -368,7 +368,7 @@ The CSS sets the height of the logging element.
 #### Logging test code
 
 This example is designed to show "how to log", so "what is logged" isn't all that important.
-This is therefore trivially implemented as a button that the user can press to iterate a value.
+This is therefore trivially implemented as a button that the user can press to increment a value.
 
 ```html
 <button id="iterate" type="button">Press me many times</button>
@@ -418,7 +418,7 @@ The function also sets the element `scrollTop` to the `scrollHeight` of the elem
 ```js
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText = `${logElement.innerText}\n${text}`;
+  logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
 }
 ```
@@ -440,16 +440,16 @@ Note that the JavaScript above ensures that if it does overflow, addition of new
 #### Logging test code
 
 This example is designed to show "how to log", so "what is logged" isn't all that important.
-This is therefore trivially implemented as a button that the user can press to iterate a value.
+This is therefore trivially implemented as a button that the user can press to increment a value.
 
 ```html
-<button id="iterate" type="button">Press me many times</button>
+<button id="increment" type="button">Press me many times</button>
 ```
 
 ```js
-const iterateButton = document.querySelector("#iterate");
+const incrementButton = document.querySelector("#iterate");
 let iterValue = 0;
-iterateButton.addEventListener("click", () => {
+incrementButton.addEventListener("click", () => {
   iterValue++;
   log(`The button has been pressed ${iterValue} times`);
 });
@@ -466,15 +466,15 @@ Press the button to add new log content.
 A reset button can be helpful for examples that cannot be restored to their initial state without resetting the page.
 For example, [the `Highlight.priority` "setting priority" example](/en-US/docs/Web/API/Highlight/priority#result_2) needs a reset button, because once you've set either priority the initial state is unavailable.
 
-This example shows how to add a reset button to the [Displaying a log that appends item](#displaying_a_log_that_appends_items) example above.
-Note that the JavaScript and CSS for the logging code are the same as in the previous example, so that code has are hidden.
+This example shows how to add a reset button to the [Displaying a log that appends items](#displaying_a_log_that_appends_items) example above.
+Note that the JavaScript and CSS for the logging code are the same as in the previous example, so that code is hidden.
 
 #### HTML
 
 The HTML for the example now includes a reset button.
 
 ```html
-<button id="iterate" type="button">Press me many times</button>
+<button id="increment" type="button">Press me many times</button>
 <button id="reset" type="button">Reset</button>
 <pre id="log"></pre>
 ```
@@ -505,9 +505,9 @@ function log(text) {
   logElement.scrollTop = logElement.scrollHeight;
 }
 
-const iterateButton = document.querySelector("#iterate");
+const incrementButton = document.querySelector("#iterate");
 let iterValue = 0;
-iterateButton.addEventListener("click", () => {
+incrementButton.addEventListener("click", () => {
   iterValue++;
   log(`The button has been press ${iterValue} times`);
 });
