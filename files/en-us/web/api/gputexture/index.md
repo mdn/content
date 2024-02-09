@@ -53,13 +53,13 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 
 ```js
 //...
-let cubeTexture: GPUTexture; // Sample is written in TypeScript
+let cubeTexture;
 {
   const img = document.createElement("img");
 
   img.src = new URL(
     "../../../assets/img/Di-3d.png",
-    import.meta.url
+    import.meta.url,
   ).toString();
 
   await img.decode();
@@ -78,7 +78,7 @@ let cubeTexture: GPUTexture; // Sample is written in TypeScript
   device.queue.copyExternalImageToTexture(
     { source: imageBitmap },
     { texture: cubeTexture },
-    [imageBitmap.width, imageBitmap.height]
+    [imageBitmap.width, imageBitmap.height],
   );
 }
 //...
