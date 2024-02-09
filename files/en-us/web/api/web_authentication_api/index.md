@@ -150,7 +150,7 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
    </iframe>
    ```
 
-   If using `set()`:
+   If using `create()`:
 
    ```html
    <iframe
