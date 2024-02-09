@@ -97,10 +97,10 @@ Date.parse("02/30/2014"); // 1393718400000 in all implementations
 
 // Chrome, Safari, and Firefox 122 and later parse only the first three letters for the month.
 // FF121 and earlier parse first three letters and any substring up to the correct month name.
-Date.parse("04 Dec 1995"); // Valid all implementations
-Date.parse("04 Decem 1995"); // Valid all implementations
-Date.parse("04 December 1995"); // Valid all implementations
-Date.parse("04 DecFoo 1995"); // NaN in Firefox 121 and earlier. Valid otherwise.
+Date.parse("04 Dec 1995"); // 818031600000 in all implementations
+Date.parse("04 Decem 1995"); // 818031600000 in all implementations
+Date.parse("04 December 1995"); // 818031600000 in all implementations
+Date.parse("04 DecFoo 1995"); // NaN in Firefox 121 and earlier. 818031600000 in other implementations
 Date.parse("04 De 1995"); // NaN in all implementations
 ```
 
