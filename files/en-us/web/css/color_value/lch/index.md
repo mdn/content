@@ -3,6 +3,9 @@ title: lch()
 slug: Web/CSS/color_value/lch
 page-type: css-function
 browser-compat: css.types.color.lch
+spec-urls:
+  - https://drafts.csswg.org/css-color-5/#relative-LCH
+  - https://drafts.csswg.org/css-color/#lab-colors
 ---
 
 {{CSSRef}}
@@ -20,18 +23,14 @@ lch(52.2345% 72.2 56.2 / .5);
 
 /* Relative values */
 
-/* Add a semi-transparent alpha channel to green */
 lch(from green l c h / 0.5)
-/* Create lighter and darker blue variants by setting the output
-   colors' l channel values equal to the origin color's l
-   channel value plus or minus 10% */
-lch(from blue calc(l + 10) c h)
-lch(from blue calc(l - 10) c h)
+lch(from #0000FF calc(l + 10) c h)
+lch(from hsl(180 100% 50%) calc(l - 10) c h)
 ```
 
 ### Values
 
-Below we have provided descriptions of the allowed values for both absolute and relative colors.
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
 > This case is notable where `100%` is equal to the number `100` for the `L` value and `150` for the `C` value.
@@ -43,7 +42,7 @@ Below we have provided descriptions of the allowed values for both absolute and 
 Functional notation of absolute values: `lch(L C H[ / A])`
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's CIE Lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
 - `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value is a measure of the color's chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`). Here `0%` is equivalent to `0` and `100%` is equivalent to `150`.
 - `H`
@@ -53,29 +52,27 @@ Functional notation of absolute values: `lch(L C H[ / A])`
 
 #### Relative values
 
-Functional notation of relative values: `lch(from color lightness chroma hue[ / alpha])`
+Functional notation of relative values: `lch(from <color> L C H[ / A])`
 
-- `from`
-  - : The keyword `from` is always included when defining a relative color.
-- `color`
-  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
-- `lightness`
+- `from <color>`
+  - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+- `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the lightness value of the output color. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
-- `chroma`
+- `C`
   - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's chroma value (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`). Here `0%` is equivalent to `0` and `100%` is equivalent to `150`.
-- `hue`
+- `H`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case). This value represents the output color's hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
-- `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `lch()` function, the browser first converts the origin color into an equivalent Lch color representation. It then separates that color into three different color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside an `lch()` function, the browser converts the origin color into an equivalent Lch color (if it is not already specified as such) The color is defined as three distinct color channel values — `l` (lightness), `c` (chroma), and `h` (hue) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `l` channel value is resolved to a `<number>` between 0 and 100 which represents the origin color's lightness.
-- The `c` channel value is resolved to a `<number>` between 0 and 150 which represents the origin color's chroma.
-- The `h` channel value is resolved to a `<number>` between 0 and 360 which represents the origin color's hue.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
+- The `l` channel value is resolved to a `<number>` between 0 and 100.
+- The `c` channel value is resolved to a `<number>` between 0 and 150.
+- The `h` channel value is resolved to a `<number>` between 0 and 360.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
@@ -87,7 +84,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 lch(from hsl(0 100% 50%) l c h)
 ```
 
-> **Note:** If the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `lch(54.29 106.854 40.856)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -95,13 +92,13 @@ This function uses absolute values for the output color's channel values, output
 lch(from hsl(0 100% 50%) 29.6871% 66.83 327.109)
 ```
 
-The following function uses one of the origin color channel values for the output color channel value, but uses a new value for the other two output channel values, creating a relative color based on the origin color:
+The following function uses the origin color's `h` channel value for the output color's `h` channel value, but uses a new value for the output color's `l` and `c` channel values, creating a relative color based on the origin color:
 
 ```css
 lch(from hsl(0 100% 50%) 70 150 h)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
+The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
 
 ```css
 lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0.1))

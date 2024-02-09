@@ -3,11 +3,16 @@ title: lab()
 slug: Web/CSS/color_value/lab
 page-type: css-function
 browser-compat: css.types.color.lab
+spec-urls:
+  - https://drafts.csswg.org/css-color-5/#relative-Lab
+  - https://drafts.csswg.org/css-color/#lab-colors
 ---
 
 {{CSSRef}}
 
-The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* color space. Lab represents the entire range of color that humans can see.
+The **`lab()`** functional notation expresses a given color in the CIE L\*a\*b\* color space.
+
+Lab represents the entire range of colors that humans can see by specifying the color's lightness, a red/green axis value, a blue/yellow axis value, and optional alpha transparency.
 
 ## Syntax
 
@@ -20,61 +25,60 @@ lab(52.2345% 40.1645 59.9971 / .5);
 
 /* Relative values */
 
-/* Add a semi-transparent alpha channel to green */
 lab(from green l a b / 0.5)
-/* Create lighter and darker blue variants by setting the output
-   colors' l channel values equal to the origin color's l
-   channel value plus or minus 10% */
-lab(from blue calc(l + 10) a b)
-lab(from blue calc(l - 10) a b)
+lab(from #0000FF calc(l + 10) a b)
+lab(from hsl(180 100% 50%) calc(l - 10) a b)
 ```
 
 ### Values
 
-Below we have provided descriptions of the allowed values for both absolute and relative colors.
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
-> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
-> This case is notable where `100%` is equal to the number `100` for the `L` value and `125` for the `a` and `b` values.
+#### Absolute value syntax
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+```text
+lab(L a b[ / A])
+```
 
-#### Absolute values
-
-Functional notation of absolute values: `lab(L a b[ / A])`
+The parameters are as follows:
 
 - `L`
-  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's CIE Lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `a` axis in the CIELAB colorspace — that is, how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `a` axis, which defines how green or red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis in the CIELAB colorspace — that is, how blue/yellow the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis, which defines how blue or yellow the color is..
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
 
-#### Relative values
+#### Relative value syntax
 
-Functional notation of relative values: `lab(from color lightness a b[ / alpha])`
+```text
+lab(from <color> L a b[ / A])
+```
 
-- `from`
-  - : The keyword `from` is always included when defining a relative color.
-- `color`
-  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
-- `lightness`
+The parameters are as follows:
+
+- `from <color>`
+  - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+- `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case) This value represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `a` axis in the CIELAB colorspace — that is, how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `a` axis, which defines how green or red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis in the CIELAB colorspace — that is, how blue/yellow the color is.
-- `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-125` and `125`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis, which defines how blue or yellow the color is.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+
+> **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`. This is not always the case however — as mentioned above, `100%` is equal to `100` for the `L` value and `125` for the `a` and `b` values. See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `lab()` function, the browser first converts the origin color into an equivalent Lab color representation. It then separates that color into three different color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside a `lab()` function, the browser converts the origin color into an equivalent Lab color (if it is not already specified as such). The color is defined as three distinct color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `l` channel value is resolved to a `<number>` between 0 and 100 that represents the origin color's lightness.
-- The `a` and `b` channels are resolved to a `<number>` between -125 and 125 which represents the origin color's a and b axis positions.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
+- The `l` channel value is resolved to a `<number>` between 0 and 100.
+- The `a` and `b` channels are resolved to a `<number>` between -125 and 125.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
@@ -86,7 +90,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 lab(from hsl(0 100% 50%) l a b)
 ```
 
-> **Note:** If the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `lab(53.24 80.09 67.2)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -94,13 +98,13 @@ This function uses absolute values for the output color's channel values, output
 lab(from hsl(0 100% 50%) 29.692% 44.89% -29.034%)
 ```
 
-The following function uses two of the origin color channel values for the output color channel value, but uses a new value for the other output channel value, creating a relative color based on the origin color:
+The following function uses the origin color's `l` and `b` channel values for the output color's `l` and `b` channel values, but uses a new value for the output color's `a` channel value, creating a relative color based on the origin color:
 
 ```css
 lab(from hsl(0 100% 50%) l -100 b)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
+The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
 
 ```css
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))

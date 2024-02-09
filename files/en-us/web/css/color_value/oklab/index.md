@@ -3,6 +3,9 @@ title: oklab()
 slug: Web/CSS/color_value/oklab
 page-type: css-function
 browser-compat: css.types.color.oklab
+spec-urls:
+  - https://drafts.csswg.org/css-color-5/#relative-Oklab
+  - https://drafts.csswg.org/css-color/#ok-lab
 ---
 
 {{CSSRef}}
@@ -28,18 +31,14 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 
 /* Relative values */
 
-/* Add a semi-transparent alpha channel to green */
 oklab(from green l a b / 0.5)
-/* Create lighter and darker blue variants by setting the output
-   colors' l channel values equal to the origin color's l
-   channel value plus or minus 10% */
-oklab(from blue calc(l + 0.1) a b)
-oklab(from blue calc(l - 0.1) a b)
+oklab(from #0000FF calc(l + 0.1) a b)
+oklab(from hsl(180 100% 50%) calc(l - 0.1) a b)
 ```
 
 ### Values
 
-Below we have provided descriptions of the allowed values for both absolute and relative colors.
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
 > **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
@@ -50,36 +49,34 @@ Functional notation of absolute values: `oklab(L a b[ / A])`
 - `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's perceived lightness. In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `a` axis in the Oklab colorspace — that is, how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `a` axis in the Oklab colorspace, which defines how green or red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis in the Oklab colorspace — that is, how blue/yellow the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the `b` axis in the Oklab colorspace, which defines how blue or yellow the color is.
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
 
 #### Relative values
 
-Functional notation of relative values: `oklab(from color lightness a b[ / alpha])`
+Functional notation of relative values: `oklab(from <color> L a b[ / A])`
 
-- `from`
-  - : The keyword `from` is always included when defining a relative color.
-- `color`
-  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
-- `lightness`
+- `from <color>`
+  - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+- `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `a`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `a` axis in the Oklab colorspace — that is, how green/red the color is.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `a` axis in the Oklab colorspace, which defines how green or red the color is.
 - `b`
-  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis in the Oklab colorspace — that is, how blue/yellow the color is.
-- `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : A {{CSSXref("&lt;number&gt;")}} between `-0.4` and `0.4`, a {{CSSXref("&lt;percentage&gt;")}} between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value represents the output color's distance along the `b` axis in the Oklab colorspace, which defines how blue or yellow the color is.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `oklab()` function, the browser first converts the origin color into an equivalent Oklab color representation. It then separates that color into three different color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside an `oklab()` function, the browser converts the origin color into an equivalent Oklab color (if it is not already specified as such). The color defined as three distinct color channel values — `l` (lightness), `a` (green/red axis), and `b` (blue/yellow axis) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `l` channel value is resolved to a `<number>` between 0 and 1 that represents the origin color's lightness.
-- The `a` and `b` channels are resolved to a `<number>` between -0.4 and 0.4 which represents the origin color's a and b axis positions.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
+- The `l` channel value is resolved to a `<number>` between 0 and 1.
+- The `a` and `b` channels are resolved to a `<number>` between -0.4 and 0.4.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
@@ -91,7 +88,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 oklab(from hsl(0 100% 50%) l a b)
 ```
 
-> **Note:** If the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `oklab(0.62 0.22488 0.125859)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -99,13 +96,13 @@ This function uses absolute values for the output color's channel values, output
 oklab(from hsl(0 100% 50%) 42.1% 41.25% -25.25%)
 ```
 
-The following function uses two of the origin color channel values for the output color channel value, but uses a new value for the other output channel value, creating a relative color based on the origin color:
+The following function uses the origin color's `l` and `b` channel values for the output color's `l` and `b` channel value, but uses a new value for the output color's `a` channel value, creating a relative color based on the origin color:
 
 ```css
 oklab(from hsl(0 100% 50%) l -0.3 b)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
+The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
 
 ```css
 oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alpha - 0.1))

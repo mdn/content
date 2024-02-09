@@ -3,6 +3,9 @@ title: hwb()
 slug: Web/CSS/color_value/hwb
 page-type: css-function
 browser-compat: css.types.color.hwb
+spec-urls:
+  - https://drafts.csswg.org/css-color-5/#relative-HWB
+  - https://drafts.csswg.org/css-color/#the-hwb-notation
 ---
 
 {{CSSRef}}
@@ -21,21 +24,14 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 
 /* Relative values */
 
-/* Change the hue value to 240 degrees to transform red to blue
-   but keep the same w and b values */
-hwb(from rgb(255 0 0) 240 w b)
-/* Add a semi-transparent alpha channel to green */
 hwb(from green h w b / 0.5)
-/* Create lighter and darker blue variants by setting the output
-   colors' w or b channel values equal to the origin colors' w or b
-   channel values plus 30% */
-hwb(from blue h calc(w + 30) b)
-hwb(from blue h w calc(b + 30))
+hwb(from #0000FF h calc(w + 30) b)
+hwb(from lch(40%, 70, 240deg) h w calc(b - 30))
 ```
 
 ### Values
 
-Below we have provided descriptions of the allowed values for both absolute and relative colors.
+Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
 > **Note:** Absolute and relative functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
@@ -61,26 +57,24 @@ Functional notation of absolute values: `hwb(H W B[ / A])`
 
 #### Relative values
 
-Functional notation of relative values: `hwb(from color hue white black[ / alpha])`
+Functional notation of relative values: `hwb(from <color> H W B[ / A])`
 
-- `from`
-  - : The keyword `from` is always included when defining a relative color.
-- `color`
-  - : The **origin color**: A {{cssxref("&lt;color&gt;")}} value representing the original color that the relative color is based on. Note that this can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
-- `hue`
+- `from <color>`
+  - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
+- `H`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case). This represents the hue angle of the output color.
-- `white`, `black`
-  - : Each value can be written as a {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). These values represent the whiteness and blackness channel values of the output color, respectively. They specify the amount of white and black to mix in, from `0%` (no whiteness or blackness) to `100%` (full whiteness or blackness). If `white + black = 100%`, it defines some shade of gray. If `white + black > 100%`, `white` and `black` are effectively normalized as `white / (white + black)` and `black / (white + black)`, respectively.
-- `alpha` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+- `W`, `B`
+  - : Each value can be written as a {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). These values represent the whiteness and blackness channel values of the output color, respectively. They specify the amount of white and black to mix in, from `0%` (no whiteness or blackness) to `100%` (full whiteness or blackness). If `W + B = 100%`, it defines some shade of gray. If `W + B > 100%`, `W` and `B` are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
 
 #### Defining relative color output channel components
 
-When using relative color syntax inside an `hwb()` function, the browser first converts the origin color into an equivalent HWB color representation. It then separates that color into three different color channel values — `h` (hue), `w` (white), and `b` (black) — plus an alpha channel value. These channel values are made available inside the function to be used when defining the output color channel values:
+When using relative color syntax inside an `hwb()` function, the browser converts the origin color into an equivalent HWB color (if it is not already specified as such). The color is defined as three distinct color channel values — `h` (hue), `w` (white), and `b` (black) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
-- The `h` channel value is resolved to a `<number>` between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}}.
-- The `w` and `b` channels are resolved to a `<number>` between 0 and 100 which represents the origin color's whiteness and blackness.
-- The `alpha` channel is resolved to a `<number>` between 0 and 1 which represents the origin color's alpha value.
+- The `h` channel value is resolved to a `<number>` between 0 and 360.
+- The `w` and `b` channels are resolved to a `<number>` between 0 and 100.
+- The `alpha` channel is resolved to a `<number>` between 0 and 1.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
 
@@ -92,7 +86,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 hwb(from hsl(0 100% 50%) h w b)
 ```
 
-> **Note:** If the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels).
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `hwb(0 0 0)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -100,13 +94,13 @@ This function uses absolute values for the output color's channel values, output
 hwb(from hsl(0 100% 50%) 240 52% 12%)
 ```
 
-The following function uses two of the origin color channel values for the output color channel value, but uses a new value for the other output channel value, creating a relative color based on the origin color:
+The following function uses the origin color's `h` and `b` channel values for the output color's `h` and `b` channel values, but uses a new value for the output color's `w` channel value, creating a relative color based on the origin color:
 
 ```css
 hwb(from hsl(0 100% 50%) h 30% b)
 ```
 
-The following function uses the origin color's channel values inside {{cssxref("calc")}} functions to calculate new channel values for the output color:
+The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
 
 ```css
 hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 0.1))
