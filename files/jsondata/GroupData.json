@@ -215,12 +215,10 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "OTPCredential",
-        "PasswordCredential",
-        "PublicKeyCredential"
+        "PasswordCredential"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.credentials"],
       "events": []
     },
     "CSS Counter Styles": {

@@ -282,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
   <source src="myVideo.mp4" type="video/mp4" />
   <p>
     Your browser doesn't support HTML video. Here is a
-    <a href="myVideo.mp4">link to the video</a> instead.
+    <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
   </p>
 </video>
 ```
@@ -409,7 +409,9 @@ This example builds on the last one, offering three different sources for the me
     type="video/mp4" />
 
   Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
     download the MP4
   </a>
   and watch it with your favorite video player!

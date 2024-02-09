@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.executeBundles
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`executeBundles()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface executes commands previously recorded into the referenced {{domxref("GPURenderBundle")}}s, as part of this render pass.

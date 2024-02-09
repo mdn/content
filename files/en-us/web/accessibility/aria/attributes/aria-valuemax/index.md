@@ -66,7 +66,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `max` attribute](/en-US/docs/Web/HTML/Element/input/range#max)

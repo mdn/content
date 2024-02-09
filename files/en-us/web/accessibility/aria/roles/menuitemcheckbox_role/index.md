@@ -131,7 +131,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
