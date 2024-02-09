@@ -375,9 +375,9 @@ This is therefore trivially implemented as a button that the user can press to i
 ```
 
 ```js
-const iterateButton = document.querySelector("#iterate");
+const incrementButton = document.querySelector("#increment");
 let incrementValue = 0;
-iterateButton.addEventListener("click", () => {
+incrementButton.addEventListener("click", () => {
   incrementValue++;
   log(`The button has been pressed ${incrementValue} time(s)`);
 });
