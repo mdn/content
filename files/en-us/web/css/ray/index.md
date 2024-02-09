@@ -53,14 +53,12 @@ The parameters can be specified in any order.
 
 ## Description
 
-The `ray()` function positions an element along a path by specifying points in a two-dimensional space through an angle and a distance from a reference point (polar coordinates). This feature makes the `ray()` function useful for creating 2D spatial transitions. For comparison, this approach differs from the method of specifying a point by its horizontal and vertical distances from a fixed origin (rectangular coordinates), which is used by the {{cssxref("translate","translate()")}} function, and from moving an element along a defined path through animation.
+The `ray()` function positions an element along a path by specifying its location in a two-dimensional space through an angle and a distance from a reference point (polar coordinates). This feature makes the `ray()` function useful for creating 2D spatial transitions. For comparison, this approach differs from the method of specifying a point by its horizontal and vertical distances from a fixed origin (rectangular coordinates), which is used by the {{cssxref("translate","translate()")}} function, and from moving an element along a defined path through animation.
 
 As `ray()` works in 2D space, it's important to consider both the initial position and orientation of the element. When the `ray()` function is applied as the `offset-path` value on an element, here's how you can control these aspects:
 
-- The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the element's offset starting position. By default, the ray's starting position is determined by the {{cssxref("offset-position")}} value. If `offset-position` is explicitly specified as `normal` (or omitted and allowed to default to `normal`), the element is positioned at the `center` (or `50% 50%`) of its containing block. Specifying `offset-position: auto` sets the starting position at the element's `top left` corner (or `0 0` of the element).
-- The element is initially rotated such that its [inline axis](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout#the_two_axes_of_a_grid_layout) — its direction of text flow — aligns with the angle specified by `ray()`. For example, with the `ray()` angle of `0deg`, which lies on the y-axis pointing up, the element's inline axis is rotated to be vertical to match the ray's angle. The element maintains this rotation throughout its path. To customize this behavior, use the {{cssxref("offset-rotate")}} property, which allows you to specify a different rotation angle or direction for the element, enabling more precise control over its appearance as it follows the path.
-
-To define the spatial context for these operations, the `<coord-box>` value of the [`offset-path`](/en-US/docs/Web/CSS/offset-path) property provides the reference box for the ray path, defining where and how these movements and orientations are calculated.
+- The element is initially positioned by moving the element's [`offset-anchor`](/en-US/docs/Web/CSS/offset-anchor) point to the element's offset starting position. By default, the ray's starting position is determined by the {{cssxref("offset-position")}} value. If `offset-position` is explicitly specified as `normal` (or omitted and allowed to default to `normal`), the element is positioned at the `center` (or `50% 50%`) of its containing block. Specifying `offset-position: auto` sets the starting position at the `top left` corner (or `0 0`) of the element's position.
+- The element is initially rotated such that its [inline axis](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout#the_two_axes_of_a_grid_layout) — its direction of text flow — aligns with the angle specified by `ray()`. For example, with the `ray()` angle of `0deg`, which lies on the y-axis pointing up, the element's inline axis is rotated to be vertical to match the ray's angle. The element maintains this rotation throughout its path. To customize this behavior, use the {{cssxref("offset-rotate")}} property, which allows you to specify a different rotation angle or direction for the element, enabling more precise control over its appearance as it follows the path. For example, setting `offset-rotate: 0deg` will remove any rotation applied by `ray()`, aligning back the element's inline axis with the direction of text flow.
 
 ## Formal syntax
 
@@ -81,7 +79,6 @@ body {
 }
 
 .container {
-  position: relative;
   width: 80vw;
   height: 100px;
   border: 1px dashed black;
@@ -113,8 +110,11 @@ pre {
 .box {
   background-color: palegreen;
   border-top: 4px solid black;
-  position: absolute;
   opacity: 20%;
+}
+
+.box:first-of-type {
+  position: absolute;
 }
 
 .box1 {

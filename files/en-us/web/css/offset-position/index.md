@@ -165,7 +165,6 @@ This example visually compares various initial offset starting position of an el
 
 ```css hidden
 .wrap {
-  position: relative;
   width: 80vw;
   height: 120px;
   border: 1px solid black;
@@ -198,11 +197,12 @@ pre {
   background-color: green;
   border-top: 6px dashed white;
   background-clip: border-box;
-  position: absolute;
-  top: 20px;
-  left: 20px;
   opacity: 20%;
   color: white;
+}
+
+.box:first-of-type {
+  position: absolute;
 }
 
 .box0 {
