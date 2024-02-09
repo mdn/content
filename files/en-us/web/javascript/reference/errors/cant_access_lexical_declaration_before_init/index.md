@@ -80,7 +80,7 @@ test();
 
 In this example, the imported variable `a` is asynchronously accessed, so both modules are evaluated before the access to `a` occurs.
 
-```js
+```js example-good
 // -- a.js (entry module) --
 import { b } from "./b.js";
 
