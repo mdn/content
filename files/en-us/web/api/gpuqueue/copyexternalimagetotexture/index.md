@@ -179,7 +179,6 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
 
 ```js
-let cubeTexture: GPUTexture; // TypeScript
 {
   const img = document.createElement("img");
   img.src = new URL(
@@ -189,7 +188,7 @@ let cubeTexture: GPUTexture; // TypeScript
   await img.decode();
   const imageBitmap = await createImageBitmap(img);
 
-  cubeTexture = device.createTexture({
+  const cubeTexture = device.createTexture({
     size: [imageBitmap.width, imageBitmap.height, 1],
     format: "rgba8unorm",
     usage:
