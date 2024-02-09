@@ -427,13 +427,15 @@ As with the previous example we set the content using the `innerText` property a
 
 #### CSS
 
-The CSS adds scrollbars if the element content overflows, and also sets the height of the logging element.
+The CSS adds scrollbars if the element content overflows, sets the height of the logging element, and adds a border.
 Note that the JavaScript above ensures that if it does overflow, addition of new log text will scroll the text into view.
 
 ```css
 #log {
   height: 100px;
   overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
 
@@ -459,7 +461,7 @@ incrementButton.addEventListener("click", () => {
 
 Press the button to add new log content.
 
-{{EmbedLiveSample("Displaying a log that appends items", "100%", "150px")}}
+{{EmbedLiveSample("Displaying a log that appends items", "100%", "180px")}}
 
 ### Displaying a reset button
 
@@ -495,13 +497,15 @@ reload.addEventListener("click", () => {
 #log {
   height: 100px;
   overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
 }
 ```
 
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText = `${logElement.innerText}\n${text}`;
+  logElement.innerText = `${logElement.innerText}${text}\n`;
   logElement.scrollTop = logElement.scrollHeight;
 }
 
@@ -518,7 +522,7 @@ incrementButton.addEventListener("click", () => {
 Click the "Press me many times" button a number of times.
 Reset the example by pressing the "Reset" button.
 
-{{EmbedLiveSample("Displaying a reset button", "100%", "150px")}}
+{{EmbedLiveSample("Displaying a reset button", "100%", "180px")}}
 
 ## Conventions regarding live samples
 
