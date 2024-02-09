@@ -376,10 +376,10 @@ This is therefore trivially implemented as a button that the user can press to i
 
 ```js
 const iterateButton = document.querySelector("#iterate");
-let iterValue = 0;
+let incrementValue = 0;
 iterateButton.addEventListener("click", () => {
-  iterValue++;
-  log(`The button has been pressed ${iterValue} times`);
+  incrementValue++;
+  log(`The button has been pressed ${incrementValue} time(s)`);
 });
 ```
 
@@ -447,11 +447,11 @@ This is therefore trivially implemented as a button that the user can press to i
 ```
 
 ```js
-const incrementButton = document.querySelector("#iterate");
-let iterValue = 0;
+const incrementButton = document.querySelector("#increment");
+let incrementValue = 0;
 incrementButton.addEventListener("click", () => {
-  iterValue++;
-  log(`The button has been pressed ${iterValue} times`);
+  incrementValue++;
+  log(`The button has been pressed ${incrementValue} time(s)`);
 });
 ```
 
@@ -505,11 +505,11 @@ function log(text) {
   logElement.scrollTop = logElement.scrollHeight;
 }
 
-const incrementButton = document.querySelector("#iterate");
-let iterValue = 0;
+const incrementButton = document.querySelector("#increment");
+let incrementValue = 0;
 incrementButton.addEventListener("click", () => {
-  iterValue++;
-  log(`The button has been press ${iterValue} times`);
+  incrementValue++;
+  log(`The button has been pressed ${incrementValue} time(s)`);
 });
 ```
 
