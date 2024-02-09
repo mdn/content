@@ -162,14 +162,14 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
-   Permissions-Policy: publickey-credentials-set=*
+   Permissions-Policy: publickey-credentials-create=*
    ```
 
    Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
 
    ```http
    Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
-   Permissions-Policy: publickey-credentials-set=("https://*.auth.provider.com")
+   Permissions-Policy: publickey-credentials-create=("https://*.auth.provider.com")
    ```
 
 ## Interfaces
