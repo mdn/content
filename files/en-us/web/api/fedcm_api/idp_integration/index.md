@@ -91,7 +91,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
+The browser sends credentialed requests (i.e. with a cookie that identifies the user that is signed in) to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
 
 For example:
 

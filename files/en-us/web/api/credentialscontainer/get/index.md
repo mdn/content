@@ -120,7 +120,7 @@ Relying parties (RPs) can call `get()` with an `identity` option to request that
 - `providers`
   - : An array of objects specifying details of the IdPs to be used to sign in. Each object can contain the following properties:
     - `configURL`
-      - : A string specifying the URL of the IdP's config file. See the [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) section on the _FedCM API_ landing page for more information.
+      - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
       - : A string specifying the RP's client identifier. This information is issued by the IdP to the RP in a separate process that is specific to the IdP.
     - `loginHint` {{optional_inline}}
