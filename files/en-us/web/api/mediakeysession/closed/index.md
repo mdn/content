@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.closed
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The `MediaKeySession.closed` read-only property returns a
 {{jsxref('Promise')}} signaling when a {{domxref('MediaKeySession')}} closes. This

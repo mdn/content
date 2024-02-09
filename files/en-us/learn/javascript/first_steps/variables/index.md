@@ -264,8 +264,6 @@ Try creating a few more variables now, with the above guidance in mind.
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
 
-So far we've looked at the first two, but there are others.
-
 ### Numbers
 
 You can store numbers in variables, either whole numbers like 30 (also called integers) or decimal numbers like 2.456 (also called floats or floating point numbers). You don't need to declare variable types in JavaScript, unlike some other programming languages. When you give a variable a number value, you don't include quotes:
