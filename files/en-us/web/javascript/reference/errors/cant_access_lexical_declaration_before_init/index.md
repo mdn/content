@@ -52,7 +52,7 @@ test();
 
 In this example, the imported variable `a` is accessed but is uninitialized, because the evaluation of `a.js` is blocked by the evaluation of the current module `b.js`.
 
-```js
+```js example-bad
 // -- a.js (entry module) --
 import { b } from "./b.js";
 
