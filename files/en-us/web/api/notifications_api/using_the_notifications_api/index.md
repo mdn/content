@@ -2,11 +2,6 @@
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 page-type: guide
-browser-compat:
-  - api.Notification
-  - api.ServiceWorkerRegistration.showNotification
-  - api.ServiceWorkerRegistration.getNotifications
-spec-urls: https://notifications.spec.whatwg.org/
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -225,14 +220,6 @@ window.addEventListener("load", () => {
 ### Result
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
