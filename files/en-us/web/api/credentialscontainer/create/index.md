@@ -316,7 +316,8 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Possible causes include:
     - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
-    - The function is called cross-origin when the {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy is set by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) (and permitted), but the frame does not also have {{glossary("Transient activation")}}.
+    - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
+    - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
 
 ## Examples
 
