@@ -7,13 +7,9 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[Container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio. Style queries currently only work with CSS [custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties) values, returning true or false depending on the computed style features of an element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature, such as if the container is `display: inline flex`, has a dark mode custom variable value set, or has a background color that is not transparent. While you have to explicitly set an element to be a container for container size queries, every element is a style container.
+[Container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on features of the container. The query returns true or false depending on whether the query condition is true for the element container.
 
-In this guide, we learn the basics of container queries by looking at container size queries, then learn how to use the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create container style queries, with a deep dive into [style queries for custom properties](#style_queries_for_custom_properties).
-
-## Container size queries
-
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or, with container style queries, other style features of a container.
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or other style features, rather than the viewport's. Container queries have the same syntax rules and the same logical operators as media queries.
 
 ```css
 @container <container-condition> {
@@ -21,7 +17,21 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 }
 ```
 
-With container size queries, declarations are filtered by a size condition and applied if 1) the element has been declared to be a container with the {{cssxref("container-type")}} property set to `size` or `inline-size`, and 2) the condition is true for that element.
+There are two types of container queries: container size queries and container style queries.
+
+Container size queries enable applying styles based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio, on elements that have been declared to be a container.
+
+Container style queries enable applying styles based on the container's style features. All non-empty elements can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). The query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature and computed value, such as if the container is `display: inline flex` or has a non-transparent background color. In the future, container style queries are expected to support querying any CSS property or declaration.
+
+In this guide, we learn the basics of container queries by looking at container size queries, then learn how to use the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create container style queries, with a deep dive into [style queries for custom properties](#style_queries_for_custom_properties).
+
+## Container size queries
+
+With container size queries, declarations are filtered by a size condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set to `size` or `inline-size`, and the condition is true for that element.
+
+Media queries are based on the viewport, of which there is only one, and its size rarely changes. There are often thousands of elements on a page. Querying the size of every element all the time would be bad for performance and, therefore, user experience. Additionally, if a descendant style changed the size of the container element, an infinite could occur. For these reasons, container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment).
+
+In a container size query, the `<container-condition>` includes one or more `<size-query>`. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The syntax for `<size-query>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media).
 
 ```css
 form {
@@ -33,13 +43,11 @@ form {
 }
 ```
 
-In this example, the `<container-condition>` is `(10em <= width <= 20em)` and all {{htmlelement("form")}} elements are potential matches for any unnamed container queries. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
+In this example, the `<size-query>` in this size container query `<container-condition>` is `(10em <= width <= 20em)`. All {{htmlelement("form")}} elements are potential matches for any unnamed container queries. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
 
-In a container size query, the `<container-condition>` includes one or more size-features. A `<container-condition>` can also include an optional case-sensitive {{cssxref("container-name")}}.
+### Limiting queries by name
 
-The syntax for `<size-features>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media). The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`.
-
-Media queries are based on the viewport, of which there is only one, and its size rarely changes. There are often thousands of elements on a page. Querying the size of every element all the time would be bad for performance and, therefore, user experience. Additionally, if a descendant style changed the size of the container element, an infinite could could occur. For these reasons, container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). You can also use the {{cssxref("container-name")}} property to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition.
+A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}.
 
 ```css
 @container <container-name> <container-query> {
@@ -47,7 +55,7 @@ Media queries are based on the viewport, of which there is only one, and its siz
 }
 ```
 
-The `<container-name>` is a case-sensitive {{cssxref("ident")}}. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
+The `<container-name>` is a case-sensitive {{cssxref("ident")}}. You can use the {{cssxref("container-name")}} property to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
 
 ```css
 @container card (orientation: landscape) and (max-width: 40rem) {
@@ -60,7 +68,7 @@ The `<container-name>` is a case-sensitive {{cssxref("ident")}}. That name needs
 }
 ```
 
-In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the list-items' descendants. This container query is limited to only elements with `container-name: card` applied. The `<container-query>` has the same syntax rules and the same logical operators as a `<media-query>`.
+This container size query is limited to only elements with `container-name: card` applied. In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
 
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
