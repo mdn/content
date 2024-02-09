@@ -91,7 +91,7 @@ The following table summarizes the different requests made by the FedCM API:
 
 ### The accounts list endpoint
 
-The browser sends credentialed requests to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to.
+The browser sends credentialed requests to this endpoint via the `GET` method. The request has no `client_id` parameter, {{httpheader("Origin")}} header, or {{httpheader("Referer")}} header. This effectively prevents the IdP from learning which RP the user is trying to sign in to. The list of accounts returned is RP-agnostic.
 
 For example:
 
@@ -103,7 +103,7 @@ Cookie: 0x23223
 Sec-Fetch-Dest: webidentity
 ```
 
-The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with, with a JSON structure that matches the following:
+The response to a successful request returns a list of all the IdP accounts that the user is currently signed in with (not specific to any particular RP), with a JSON structure that matches the following:
 
 ```json
 {

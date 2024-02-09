@@ -138,14 +138,14 @@ This object contains a token that the RP can then send to its server to validate
 
 > **Note:** The exact nature of the token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see the [Google Sign In instructions](https://developers.google.com/identity/gsi/web/guides/fedcm-migration), for example) to make sure they are using it correctly.
 
-If the browser's login status for the IdP is `"logged-out"`, the FedCM request fails silently without making a request to the IdP's [accounts list endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint). See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status.
-
 ### Exceptions
 
 - `IdentityCredentialError` {{domxref("DOMException")}}
   - : The request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, and rejects with an error response containing information about why. See the [Error API example](#example_including_error_api_information) below for more information on how it can be used.
 - `NetworkError` {{domxref("DOMException")}}
-  - : The IdP did not respond within 60 seconds, or the provided credentials were not valid/found.
+
+  - : The IdP did not respond within 60 seconds, the provided credentials were not valid/found, or the browser's login status for the IdP is set to `"logged-out"` (see [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more information about FedCM login status). In the latter case, there may be some delay in the rejection to avoid leaking the IdP login status to the RP.
+
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by an {{HTTPHeader("Permissions-Policy/identity-credentials-get","identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
