@@ -66,12 +66,61 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 
 ## Examples
 
+### Setting hyphenation limits
+
+In this example we have four paragraphs each containing the same text, and will set different values for `hyphenate-limit-chars` to see the effect.
+
+#### HTML
+
+```html
+<div class="container">
+  <p id="ex1">juxtaposition and acknowledgement</p>
+  <p id="ex2">juxtaposition and acknowledgement</p>
+  <p id="ex3">juxtaposition and acknowledgement</p>
+  <p id="ex4">juxtaposition and acknowledgement</p>
+</div>
+```
+
+#### CSS
+
 ```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
 p {
+  margin: 1rem;
+  width: 120px;
+  border: 2px dashed #999;
+  font-size: 1.5rem;
   hyphens: auto;
-  hyphenate-limit-chars: 10 3 4;
+}
+
+#ex2 {
+  hyphenate-limit-chars: 14;
+}
+
+#ex3 {
+  hyphenate-limit-chars: 13 9 3;
+}
+
+#ex4 {
+  hyphenate-limit-chars: 12 7 5;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("Setting hyphenation limits", "", 200)}}
+
+In the first example, we don't set `hyphenate-limit-chars`, and the user agent applies its default algorithm.
+
+In the second example, we specify `hyphenate-limit-chars: 14` meaning that words must be at least 14 characters long before they are hyphenated. In the example, "juxtaposition" is no longer hyphenated, since it is only 13 characters long.
+
+In the third example, we specify `hyphenate-limit-chars: 13 9 3`, so each hyphenated word must have at least 9 characters before the hyphen. The effect is that "acknowledgement" is now hyphenated as "acknowledge-ment" rather than "acknowl-edgement".
+
+In the fourth example, we specify `hyphenate-limit-chars: 12 7 5`, so each hyphenated word must have at least 5 characters after the hyphen. The effect is that "juxtaposition" is hyphenated as "juxtapo-sition" rather than "juxtaposi-tion".
 
 ## Specifications
 
