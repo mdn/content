@@ -57,7 +57,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns` browser support](https://a11ysupport.io/tech/aria/aria-owns_attribute)

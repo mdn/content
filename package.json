@@ -40,7 +40,7 @@
   "dependencies": {
     "@apideck/better-ajv-errors": "^0.3.6",
     "@caporal/core": "^2.0.7",
-    "@mdn/yari": "2.39.0",
+    "@mdn/yari": "2.39.1",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
     "async": "^3.2.5",
@@ -52,7 +52,7 @@
     "gray-matter": "^4.0.3",
     "husky": "9.0.10",
     "js-yaml": "^4.1.0",
-    "lint-staged": "15.2.1",
+    "lint-staged": "15.2.2",
     "markdownlint-cli2": "0.12.1",
     "markdownlint-rule-search-replace": "1.2.0",
     "prettier": "3.2.5"
