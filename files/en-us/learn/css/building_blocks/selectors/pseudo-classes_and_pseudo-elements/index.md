@@ -87,7 +87,6 @@ You can see that this selects the first line of both paragraphs.
 
 ## Combining pseudo-classes and pseudo-elements
 
-If you wanted to make the first line of the first paragraph bold you could chain the `:first-child` and `::first-line` selectors together. Try editing the previous live example so it uses the following CSS. We are saying that we want to select the first line, of the first `<p>` element, which is inside an `<article>` element.
 
 ```css
 article p:first-child::first-line {
@@ -110,9 +109,8 @@ A more valid use of these pseudo-elements is to insert an icon, for example the 
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/after-icon.html", '100%', 400)}}
 
-These pseudo-elements are also frequently used to insert an empty string, which can then be styled just like any element on the page.
 
-In this next example, we have added an empty string using the `::before` pseudo-element. We have set this to `display: block` in order that we can style it with a width and height. We then use CSS to style it just like any element. You can play around with the CSS and change how it looks and behaves.
+w it looks and behaves.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
 
