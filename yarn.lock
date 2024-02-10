@@ -848,15 +848,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.5.tgz#9587c6b592e87f8a5ccab80ccdd8b5184f867922"
   integrity sha512-+8zfCGZzBoAoLK6jYnOm9Xa2LcdNRDVrUXatuBNuGJHyt7tpR+k/+de2LSGHiU34TYrfAXk7g9x8/IpXR+4zhw==
 
-"@mdn/browser-compat-data@^5.5.9":
-  version "5.5.9"
-  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.9.tgz#03721285c791e762826de77aad04d044d2d7ecf2"
-  integrity sha512-36jBin7kGrMn+RC/8k9IKeKvZyMweA0sDNIthUbzSGTQasfMIp2naJ1e+ISUtzu/7RrpDjRh4BkVTSO6f0XArA==
+"@mdn/browser-compat-data@^5.5.10":
+  version "5.5.10"
+  resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.10.tgz#b7c0454a617b268b7a9ab9ca6c886abd1ec69473"
+  integrity sha512-s2GGND9oLhEuksOFtICYOBZdMWPANBXTMqAXh89q6g1Mi3+OuWEmp9WFzw2v/nmS175vqeewpC1kDJA7taaxyA==
 
-"@mdn/yari@2.39.1":
-  version "2.39.1"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.39.1.tgz#f2ca75946adcf1802b965108330170f1704f42ac"
-  integrity sha512-nwKZ7lWbl2dJqRk0xK37DJ+geUJV9qWgmS8q9aE61Wg5sPsUbwj3BBAWw6i6cPgM8HDMnST51gLg/8k5EWBqXA==
+"@mdn/yari@2.39.2":
+  version "2.39.2"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.39.2.tgz#a245cf7a265be18ea6c8b4148c3800de6674f8b7"
+  integrity sha512-gyJMECgWZGjGYEF51ZXtwc59Q21inaGI/G+ggjsFYRSxZyyYWFSD6na2pyWIFdX2294Us61CSL7lFm5ZSN0b5Q==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -866,14 +866,14 @@
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.0"
     "@mdn/bcd-utils-api" "^0.0.5"
-    "@mdn/browser-compat-data" "^5.5.9"
+    "@mdn/browser-compat-data" "^5.5.10"
     "@mozilla/glean" "2.0.5"
     "@sentry/integrations" "^7.100.1"
     "@sentry/node" "^7.100.1"
     "@stripe/stripe-js" "^2.4.0"
     "@use-it/interval" "^1.0.0"
     "@vscode/ripgrep" "^1.15.9"
-    "@webref/css" "^6.11.0"
+    "@webref/css" "^6.11.1"
     accept-language-parser "^1.5.0"
     async "^3.2.5"
     chalk "^5.3.0"
@@ -885,7 +885,7 @@
     cookie-parser "^1.4.6"
     css-tree "^2.3.1"
     dayjs "^1.11.10"
-    dexie "^3.2.4"
+    dexie "^3.2.5"
     dotenv "^16.4.1"
     ejs "^3.1.9"
     express "^4.18.2"
@@ -914,7 +914,7 @@
     mdn-data "^2.4.0"
     open "^10.0.3"
     open-editor "^4.1.1"
-    openai "^4.26.1"
+    openai "^4.27.0"
     pg "^8.11.3"
     pgvector "^0.1.7"
     prism-svelte "^0.5.0"
@@ -1312,10 +1312,10 @@
     proxy-from-env "^1.1.0"
     yauzl "^2.9.2"
 
-"@webref/css@^6.11.0":
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.11.0.tgz#0afa18d3065153f269b65bdceea4767438ebeaa1"
-  integrity sha512-fSG0TzVwF8S5J8P7nz+gRDZbTIrI8M4jSsiLUKU3aRC6Ojqpc7C/JsQmUNSX8OrSSEQRNK4+9Rq8J22905xcsw==
+"@webref/css@^6.11.1":
+  version "6.11.1"
+  resolved "https://registry.yarnpkg.com/@webref/css/-/css-6.11.1.tgz#4346cba2e723f6c89b751035ef5be027c2abfce0"
+  integrity sha512-C12N4cdcZC0z2Tt/yl4J3zHDU7HQXaj9MM9NzfdLieXvjQt/K1n/pJzA67zyHiNv9EnScqWoTnJfBQW6ms/6JA==
 
 abort-controller@^3.0.0:
   version "3.0.0"
@@ -2711,10 +2711,12 @@ devlop@^1.0.0, devlop@^1.1.0:
   dependencies:
     dequal "^2.0.0"
 
-dexie@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.4.tgz#b22a9729be1102acb2eee16102ea6e2bc76454cf"
-  integrity sha512-VKoTQRSv7+RnffpOJ3Dh6ozknBqzWw/F3iqMdsZg958R0AS8AnY9x9d1lbwENr0gzeGJHXKcGhAMRaqys6SxqA==
+dexie@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/dexie/-/dexie-3.2.5.tgz#f68e34b98e0e5e3412cf86b540a2cc6cbf9b0266"
+  integrity sha512-MA7vYQvXxWN2+G50D0GLS4FqdYUyRYQsN0FikZIVebOmRoNCSCL9+eUbIF80dqrfns3kmY+83+hE2GN9CnAGyA==
+  dependencies:
+    karma-safari-launcher "^1.0.0"
 
 diff-sequences@^29.6.3:
   version "29.6.3"
@@ -5149,6 +5151,11 @@ junk@^3.1.0:
   resolved "https://registry.npmjs.org/junk/-/junk-3.1.0.tgz"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
+karma-safari-launcher@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/karma-safari-launcher/-/karma-safari-launcher-1.0.0.tgz#96982a2cc47d066aae71c553babb28319115a2ce"
+  integrity sha512-qmypLWd6F2qrDJfAETvXDfxHvKDk+nyIjpH9xIeI3/hENr0U3nuqkxaftq73PfXZ4aOuOChA6SnLW4m4AxfRjQ==
+
 keyv@3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/keyv/-/keyv-3.0.0.tgz"
@@ -6428,10 +6435,10 @@ open@^8.4.0:
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
 
-openai@^4.26.1:
-  version "4.26.1"
-  resolved "https://registry.yarnpkg.com/openai/-/openai-4.26.1.tgz#7b7c0225c09922445f68f3c4cdbd5775ed31108c"
-  integrity sha512-DvWbjhWbappsFRatOWmu4Dp1/Q4RG9oOz6CfOSjy0/Drb8G+5iAiqWAO4PfpGIkhOOKtvvNfQri2SItl+U7LhQ==
+openai@^4.27.0:
+  version "4.27.0"
+  resolved "https://registry.yarnpkg.com/openai/-/openai-4.27.0.tgz#4ada66a19c369b202e8a939b8bd287e4dca036f4"
+  integrity sha512-j1ZEx9NiBpm31rxWqQTjQt1QvH/8001xHsc/pRoPjkRDYWONCb+qkR6L9C7Wl6ar72Mz1ybtn1bv6fqAoTPlKw==
   dependencies:
     "@types/node" "^18.11.18"
     "@types/node-fetch" "^2.6.4"
