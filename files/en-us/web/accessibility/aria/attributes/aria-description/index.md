@@ -49,7 +49,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)

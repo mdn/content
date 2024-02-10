@@ -54,7 +54,7 @@ When you do anything to remove or shift an item from where it would be placed in
 
 ## Summary
 
-In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
+In this guide, we have covered the ways to take an element out of flow in order to achieve some very specific types of positioning. In the next guide we will look at a related issue, that of creating a [Block Formatting Context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), in [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
 
 ## See also
 

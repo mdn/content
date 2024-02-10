@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
+This article provides information about the changes in Firefox 122 that affect developers. Firefox 122 was released on [January 23, 2024](https://whattrainisitnow.com/release/?version=122).
 
 ## Changes for web developers
 
@@ -28,6 +28,8 @@ This article provides information about the changes in Firefox 122 that affect d
 ### JavaScript
 
 - The {{jsxref("ArrayBuffer.prototype.transfer()")}} and {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} methods can now be used to [transfer ownership](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer#transferring_arraybuffers) of memory from one {{jsxref("ArrayBuffer")}} to another. After transfer, the original buffer is detached from its original memory and hence unusable; the state can be checked using {{jsxref("ArrayBuffer.prototype.detached")}}. (See [Firefox bug 1865103](https://bugzil.la/1865103) for more details.)
+
+- For parity with other browsers, [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) and the [`Date()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) only consider the first three letters of the specified month when [non-standard date strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#non-standard_date_strings) are parsed. Previously only truncated values of the full month name with three or more characters were accepted (See [Firefox bug 1862910](https://bugzil.la/1862910) for more details.)
 
 ### SVG
 

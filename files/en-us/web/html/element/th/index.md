@@ -94,7 +94,7 @@ The first row ({{HTMLElement("tr")}} element) contains the column headers (`<th>
 
 The remaining rows contain the main data of the table. Each of these rows has a row header (`<th>` element) introduced as the first cell. This creates a column with row headers as the first column of the table. Similar to the column headers, the [`scope`](#scope) attribute is set to `row` to specify which cells each row header relates to, which in the example below are all data cells ({{HTMLElement("td")}} elements) in each `row`.
 
-> **Note:** Normally, the grouping elements {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} are used to group rows with headers into the respective table head and body sections. These elements are ommitted in this example to reduce complexity and enable focusing on the use of header cells.
+> **Note:** Normally, the grouping elements {{HTMLElement("thead")}} and {{HTMLElement("tbody")}} are used to group rows with headers into the respective table head and body sections. These elements are omitted in this example to reduce complexity and enable focusing on the use of header cells.
 
 ```html
 <table>

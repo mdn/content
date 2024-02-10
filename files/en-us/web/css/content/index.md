@@ -133,7 +133,7 @@ The keywords and data types mentioned above are described in more detail below:
 
 ## Examples
 
-The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element-replacement-with-url).
+The first five examples create generated content on pseudo-elements. The last three are [examples of element replacement](#element_replacement_with_url).
 
 ### Appending strings based on an element's class
 
@@ -396,7 +396,7 @@ div {
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
-Check the [browser compatibility chart](#browser-compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
+Check the [browser compatibility chart](#browser_compatibility). All browsers support gradients and all browsers support replacing elements with images, but not all browsers support gradients as a `content` value and not all browsers support alt text on replacements. If the browser displays a box with no gradient, replacing elements is supported, but gradients are not supported as a content replacement value. If the element is replaced with a striped gradient, the browser supports both.
 
 ### Element replacement with `image-set()`
 

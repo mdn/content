@@ -32,7 +32,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - HTML [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute

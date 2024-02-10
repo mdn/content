@@ -82,7 +82,7 @@ Allow the term itself to define the accessible name. Do not use `aria-label` or 
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `definition` role](/en-US/docs/Web/Accessibility/ARIA/Roles/definition_role).
 - The HTML {{HTMLElement('dfn')}} element

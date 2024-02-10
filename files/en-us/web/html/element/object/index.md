@@ -39,7 +39,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : A message that the browser can show while loading the object's implementation and data.
 - `type`
   - : The [content type](/en-US/docs/Glossary/MIME_type) of the resource specified by **data**. At least one of **data** and **type** must be defined.
-- `usemap`
+- `usemap` {{deprecated_inline}}
   - : A hash-name reference to a {{HTMLElement("map")}} element; that is a '#' followed by the value of a [`name`](/en-US/docs/Web/HTML/Element/map#name) of a map element.
 - `width`
   - : The width of the display resource, in [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Absolute values only. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
