@@ -70,6 +70,8 @@ The `<container-name>` is a case-sensitive {{cssxref("ident")}}. You can use the
 
 This container size query is limited to only elements with `container-name: card` applied. In the above example, all list items nested within an element with a class of `cards` with a width that is greater than its height, are the containers. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
 
+Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries. To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container but it can still be a style query. To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
+
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
 ## Container style queries
@@ -85,7 +87,12 @@ Container queries can evaluate the computed style of the container element. A _c
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. A **`<style-feature>`** is a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). Style queries for custom properties, with and without a value, have browser support. Check the [browser compatibility table](#browser_compatibility) at the bottom of the page to see if regular CSS declarations and properties are support.
+The parameter of each `style()` is a single `<style-feature>`. Per the CSS containment specification, a **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with and without a value. See the [browser compatibility table](#browser_compatibility) for declaration and property support status.
+
+If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the custom property value (or, in the future, the CSS declaration) passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
+A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
+
+Eventually we'll be able to write style queries like so:
 
 ```css
 @container style(color: green) and style(background-color: transparent),
@@ -96,20 +103,32 @@ The parameter of each `style()` is a single `<style-feature>`. A **`<style-featu
 }
 ```
 
-A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
-
-If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the given in the CSS declaration or custom property value passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
+Until style queries for regular CSS declarations and properties are supported, we are limited to including on custom properties as the `style()` parameter.
 
 A few things to note:
 
-- All elements can be styles query containers; setting a `container-type` is not required. As descendant styles don't impact the computed styles of an ancestor, containment is needed.
-- If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. The `none` value removes any query names associated with a container; it doest not prevent the element from being a style container.
+- All elements can be styles query containers; setting a `container-type` is not required. As descendant styles don't impact the computed styles of an ancestor, containment is not needed.
+- If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. Setting `container-name: none` removes any query names associated with a container; it does not prevent the element from being a style container.
 - The container condition can include both style and size features. If including size features, include the `container-type` property.
 - At the time of this writing (February 2024), container style queries only work with CSS custom property values in the `style()` query.
 
 Now, let's dive in and take a look at the different `<style-feature>` types:
 
-### CSS declaration
+### Style queries for custom properties
+
+Style queries for custom properties allow you to query the value of custom properties, also called "CSS variables". Custom properties are CSS properties. They can be included within a `<style-query>` just as you would any other CSS property: either with a value as a CSS declaration, or without the value as a property name. And, there is [browser support](#browser_compatibility)!
+
+```css
+@container style(--accent-color: blue) {
+  /* <stylesheet> */
+}
+```
+
+The above container query checked if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`.
+
+> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+
+### Style query CSS declarations and properties
 
 Not yet supported in any browser, the `style()` functional notation can include a regular CSS declaration. This basic example makes the background color of any {{htmlelement("b")}} and {{htmlelement("strong")}} elements yellow when the parent is already bold.
 
@@ -122,7 +141,7 @@ Not yet supported in any browser, the `style()` functional notation can include 
 }
 ```
 
-The matching is done against on the computed value of the parent container; if the parent's computed font-weight is `bold` (not `bolder` or `900`), there is a match. We did not have to define any elements as style containers as, by default, all elements are style containers. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
+The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. We did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 
@@ -137,21 +156,7 @@ It is expected that style queries will also accept properties in a boolean conte
 
 The above will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("headers", "h1-h6")}} and {{htmlelement("th")}}. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's font-weight is no the default value for that user-agent, the style query will return true.
 
-This feature is not yet supported in any browser.
-
-## Style queries for custom properties
-
-Style queries for custom properties allow you to query the value of custom properties, also called "CSS variables". Custom properties are CSS properties. They can be included within a `<style-query>` just as you would any other CSS property: either with a value as a CSS declaration, or without the value as a property name. And, there is [browser support](#browser_compatibility)!
-
-```css
-@container style(--accent-color: blue) {
-  /* <stylesheet> */
-}
-```
-
-The above container query checked if the {{cssxref("computed_value")}} of the container element's `--accent-color` is `blue`.
-
-> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+These features are not yet supported in any browser.
 
 ## Specifications
 
