@@ -39,9 +39,9 @@ It can have one of the following values:
 ```js
 const textSelectionDirection = document.querySelector("#selectionDirection");
 const pConsole = document.querySelector("#direction");
-pConsole.textContent = 
-    "Selection direction : " + textSelectionDirection.selectionDirection;
-``` 
+pConsole.textContent =
+  "Selection direction : " + textSelectionDirection.selectionDirection;
+```
 
 ### Result
 

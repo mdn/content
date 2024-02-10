@@ -30,13 +30,13 @@ A non-negative number.
 
 <!-- use selectionStart on text input element -->
 <fieldset>
-    <legend>selectionStart property on type=text</legend>
-    <label for="statement">Select 'mdn' word from the text</label>
-    <input 
-        type="text" 
-        id="statement" 
-        value="The mdn is the best resource for developers" />
-    <button id="statement-btn">Select mdn text</button>
+  <legend>selectionStart property on type=text</legend>
+  <label for="statement">Select 'mdn' word from the text</label>
+  <input
+    type="text"
+    id="statement"
+    value="The mdn is the best resource for developers" />
+  <button id="statement-btn">Select mdn text</button>
 </fieldset>
 ```
 
