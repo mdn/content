@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUOutOfMemoryError.GPUOutOfMemoryError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUOutOfMemoryError()`** constructor creates a new
 {{domxref("GPUOutOfMemoryError")}} object instance.

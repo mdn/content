@@ -235,7 +235,7 @@ The alternative multi-selection model is a modifier key model in which moving fo
 
 {{Specifications}}
 
-## See Also
+## See also
 
 <section id="Quick_links">
 
