@@ -7,6 +7,7 @@ status:
 browser-compat:
   - api.NetworkInformation
   - api.Navigator.connection
+spec-urls: https://wicg.github.io/netinfo/
 ---
 
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
