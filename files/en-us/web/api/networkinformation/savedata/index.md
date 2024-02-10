@@ -10,7 +10,7 @@ browser-compat: api.NetworkInformation.saveData
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-The **`NetworkInformation.saveData`** read-only
+The **`saveData`** read-only
 property of the {{domxref("NetworkInformation")}} interface returns `true` if
 the user has set a reduced data usage option on the user agent.
 
