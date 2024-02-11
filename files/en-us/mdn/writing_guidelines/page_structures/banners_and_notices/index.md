@@ -30,7 +30,7 @@ browser-compat: api.Bluetooth
 ```
 
 A page that has a banner will usually also have "complementary" page metadata.
-For example, a page that has `\{{Compat}}` should usually have the `browser-compat` property added in front-matter.
+For example, a page that has `\{{SeeCompatTable}}` also has the `experimental` status added too (as shown above) to ensure that it has appropriate icons in the sidebar.
 
 > **Note:** Banner macros do not _depend_ on the metadata, but some other macro-inserted content does.
 > For example, the `\{{Compat}}` macro depends on the `browser-compat` metadata value.
