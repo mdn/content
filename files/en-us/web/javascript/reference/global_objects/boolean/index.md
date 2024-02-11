@@ -15,9 +15,12 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 For converting non-boolean values to boolean, use `Boolean` as a function or use the [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) operator. Do not use the `Boolean()` constructor with `new`.
 
-```js
-const good = Boolean(expression); // use this
-const good2 = !!expression; // or this
+```js example-good
+const good = Boolean(expression);
+const good2 = !!expression;
+```
+
+```js example-bad
 const bad = new Boolean(expression); // don't use this!
 ```
 
