@@ -16,7 +16,7 @@ This article describes the more important banners and how they are added.
 Banners are added using macros.
 Banner macros should be inserted below the page metadata, alongside the page sidebar macro.
 For example,
-the `\{{SecureContext_Header}}` macro has been used
+in the block below, the `\{{SecureContext_Header}}` macro has been used
 to indicate
 that the [Bluetooth API](/en-US/docs/Web/API/Bluetooth) is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
