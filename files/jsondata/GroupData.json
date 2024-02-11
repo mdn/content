@@ -1005,10 +1005,7 @@
       "overview": ["Network Information API"],
       "interfaces": ["NetworkInformation"],
       "methods": [],
-      "properties": [
-        "Navigator.connection",
-        "WorkerNavigator.connection"
-      ],
+      "properties": ["Navigator.connection", "WorkerNavigator.connection"],
       "events": []
     },
     "Page Visibility API": {
