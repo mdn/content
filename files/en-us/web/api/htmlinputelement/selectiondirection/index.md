@@ -16,9 +16,12 @@ A string.
 
 It can have one of the following values:
 
-- 'forward': The user is extending the selection towards the end of the input text.
-- 'backward': The user is extending the selection towards the start of the input text.
-- 'none': The user is not extending the selection.
+- `forward`
+  - : The user is extending the selection towards the end of the input text.
+- `backward`
+  - : The user is extending the selection towards the start of the input text.
+- `none`
+  - : The user is not extending the selection.
 
 > **Note:** On Windows, the direction indicates the position of the caret relative to the selection: a "forward" selection has the caret at the end of the selection and a "backward" selection has the caret at the start of the selection. Windows has no "none" direction.
 
