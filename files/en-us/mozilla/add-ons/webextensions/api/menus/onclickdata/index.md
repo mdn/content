@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.menus.OnClickData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Information passed to the {{WebExtAPIRef("menus.onClicked")}} event listener when a menu item is clicked.
 

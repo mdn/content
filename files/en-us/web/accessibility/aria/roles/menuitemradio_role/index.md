@@ -142,7 +142,7 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`radio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/radio_role)
 - [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)

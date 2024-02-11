@@ -111,7 +111,7 @@ You can update the `learning-area` repository with any changes made to the maste
 
 If you want to get in touch with us about anything, use the [communication channels](/en-US/docs/MDN/Community/Communication_channels). We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns.
 
-If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Contribute) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
+If you're interested in helping develop/improve the content, take a look at [how you can help](/en-US/docs/MDN/Community/Contributing) and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.
 
 ## See also
 
@@ -122,7 +122,7 @@ If you're interested in helping develop/improve the content, take a look at [how
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://twitter.com/JeremiePat).
+  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : A great interactive site for learning programming languages from scratch.
 - [BitDegree](https://www.bitdegree.org/learn/)

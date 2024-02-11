@@ -31,6 +31,8 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
   - : A boolean value indicating if the element can be dragged.
+- {{DOMxRef("HTMLElement.editContext")}} {{experimental_inline}}
+  - : Returns the {{DOMxRef("EditContext")}} associated with the element, or `null` if there isn't one.
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}
@@ -66,7 +68,7 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
 - {{domxref("HTMLElement.popover")}}
   - : Gets and sets an element's popover state via JavaScript (`"auto"` or `"manual"`), and can be used for feature detection. Reflects the value of the [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) global HTML attribute.
 - {{DOMxRef("HTMLElement.spellcheck")}}
-  - : A boolean value that controls [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck). It is present on all HTML elements, though it doesn't have an effect on all of them.
+  - : A boolean value that controls the [spell-checking](/en-US/docs/Web/HTML/Global_attributes/spellcheck) hint. It is available on all HTML elements, though it doesn't affect all of them.
 - {{DOMxRef("HTMLElement.style")}}
   - : A {{DOMxRef("CSSStyleDeclaration")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
 - {{DOMxRef("HTMLElement.tabIndex")}}
@@ -75,10 +77,12 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string containing the text that appears in a popup box when mouse is over the element.
 - {{DOMxRef("HTMLElement.translate")}}
   - : A boolean value representing the translation.
+- {{DOMxRef("HTMLElement.virtualKeyboardPolicy")}} {{Experimental_Inline}}
+  - : A string indicating the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available, if the element's content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
 
 ## Instance methods
 
-_Also, inherits methods from its parent, {{DOMxRef("Element")}}._
+_Also inherits methods from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement.attachInternals()")}}
   - : Returns an {{DOMxRef("ElementInternals")}} object, and enables a custom element to participate in HTML forms.
@@ -103,6 +107,8 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 
 - {{DOMxRef("HTMLElement/cancel_event", "cancel")}}
   - : Fired for {{HTMLElement("input")}} and {{HTMLElement("dialog")}} elements when the user cancels the currently open dialog by closing it with the <kbd>Esc</kbd> key.
+- {{DOMxRef("HTMLElement/change_event", "change")}}
+  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("Element/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 - {{DOMxRef("HTMLElement/error_event", "error")}}
   - : Fired when a resource failed to load, or can't be used.
 - {{DOMxRef("HTMLElement/load_event", "load")}}
@@ -133,15 +139,6 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
   - : This event is fired when the user starts dragging an element or text selection.
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
-
-### Input events
-
-- {{DOMxRef("HTMLElement/beforeinput_event", "beforeinput")}}
-  - : Fired when the value of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element is about to be modified.
-- {{DOMxRef("HTMLElement/input_event", "input")}}
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
-- {{DOMxRef("HTMLElement/change_event", "change")}}
-  - : Fired when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed and committed by the user. Unlike the {{domxref("HTMLElement/input_event", "input")}} event, the `change` event is not necessarily fired for each alteration to an element's `value`.
 
 ### Popover events
 

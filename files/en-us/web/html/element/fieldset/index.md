@@ -31,7 +31,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 There are several special styling considerations for `<fieldset>`.
 
-Its {{cssxref("display")}} value is `block` by default, and it establishes a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). If the `<fieldset>` is styled with an inline-level `display` value, it will behave as `inline-block`, otherwise it will behave as `block`. By default there is a `2px` `groove` border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.
+Its {{cssxref("display")}} value is `block` by default, and it establishes a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). If the `<fieldset>` is styled with an inline-level `display` value, it will behave as `inline-block`, otherwise it will behave as `block`. By default there is a `2px` `groove` border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.
 
 If a {{htmlelement("legend")}} is present, it is placed over the `block-start` border. The `<legend>` shrink-wraps, and also establishes a formatting context. The `display` value is blockified. (For example, `display: inline` behaves as `block`.)
 

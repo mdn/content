@@ -41,7 +41,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A boolean attribute that, if present, specifies that observed topics should be sent with the request for the {{htmlelement("iframe")}}'s source. See the [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
-- `credentialless` {{Experimental_Inline}} {{Non-standard_Inline}}
+- `credentialless` {{Experimental_Inline}}
 
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
 
