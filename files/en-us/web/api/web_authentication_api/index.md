@@ -143,25 +143,25 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 
 1. The site embedding the relying party site must provide permission via an `allow` attribute:
 
-   If using `get()`:
+   - If using `get()`:
 
-   ```html
-   <iframe src="https://auth.provider.com" allow="publickey-credentials-get *">
-   </iframe>
-   ```
+     ```html
+     <iframe src="https://auth.provider.com" allow="publickey-credentials-get *">
+     </iframe>
+     ```
 
-   If using `create()`:
+   - If using `create()`:
 
-   ```html
-   <iframe
-     src="https://auth.provider.com"
-     allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
-   </iframe>
-   ```
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
+     </iframe>
+     ```
 
-2. The `<iframe>` must also have {{glossary("Transient activation")}} when the methods are called.
+     The `<iframe>` must also have {{glossary("Transient activation")}} if `create()` is called cross-origin.
 
-3. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
+2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
