@@ -156,7 +156,7 @@ Different browsers handle the checkbox and span differently, often ugly ways:
 
 #### Using appearance: none on radios/checkboxes
 
-As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}`:none;` Let's take this example HTML:
+As we showed before, you can remove the default appearance of a checkbox or radio button altogether with {{cssxref('appearance')}}`:none;`. Let's take this example HTML:
 
 ```html
 <form>

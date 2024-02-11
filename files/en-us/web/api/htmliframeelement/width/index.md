@@ -36,5 +36,8 @@ console.log(el.width); // Output: '800'
 ## See also
 
 - {{domxref("HTMLCanvasElement.width")}}
+- {{domxref("HTMLEmbedElement.width")}}
 - {{domxref("HTMLImageElement.width")}}
 - {{domxref("HTMLObjectElement.width")}}
+- {{domxref("HTMLSourceElement.width")}}
+- {{domxref("HTMLVideoElement.width")}}
