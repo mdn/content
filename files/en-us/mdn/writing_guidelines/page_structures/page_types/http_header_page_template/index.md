@@ -36,7 +36,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - **page-type**
 >   - : For HTTP headers, must be `http-header`. For other HTTP `page-type` values, see the [HTTP section](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key#http_page_types) of the documentation for the `page-type` front matter key.
 > - **status**
->   - : Do not add or edit status keys manually. To include (appropriate) feature status keys [**experimental**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), or **non-standard** Refer to the section ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
+>   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How to add or update feature statuses"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
 >
 >   - : Replace the placeholder value <code>path.to.feature.NameOfTheHeader</code> with the query string for the header in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
@@ -57,7 +57,7 @@ browser-compat: path.to.feature.NameOfTheHeader
 > - `\{{deprecated_header}}` — this generates a **Deprecated** banner that indicates that use of the header is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
-> You should update or delete following macros according to the advice below:
+> You should update or delete the following macros according to the advice below:
 >
 > - `\{{httpsidebar}}` — this generates the HTTP sidebar that must appear on every HTTP reference page.
 >   Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.

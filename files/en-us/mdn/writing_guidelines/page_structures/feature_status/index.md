@@ -12,8 +12,7 @@ A feature status provides developers with information about the implementation s
 - [`non-standard`](https://github.com/mdn/browser-compat-data/blob/main/schemas/compat-data-schema.md#status-information)
 - [`deprecated`](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#setting-deprecated)
 
-If none of the above statuses apply, then the feature is considered `standard`.
-We don't explicitly add this status to content pages as a feature status is `standard` by default.
+If none of the above statuses apply, then the feature is considered a stable and standard feature. We don't explicitly add this status to content pages.\
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
 
 To see detailed instructions on how to choose a status for a feature, refer to the [choosing status properties](https://github.com/mdn/browser-compat-data/blob/main/docs/data-guidelines/index.md#choosing-status-properties) section in the `@mdn/browser-compat-data` (BCD) repository.

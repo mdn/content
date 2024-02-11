@@ -13,12 +13,8 @@ This article describes the more important banners and how they are added.
 
 ## How to add a banner
 
-Banners are added using macros.
-Banner macros should be inserted below the page metadata, alongside the page sidebar macro.
-For example,
-in the block below, the `\{{SecureContext_Header}}` macro has been used
-to indicate
-that the [Bluetooth API](/en-US/docs/Web/API/Bluetooth) is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Banners are added using macros. Banner macros should be inserted below the page metadata, alongside the page sidebar macro. For example, in the block below, the `\{{SecureContext_Header}}` macro has been used
+to indicate that the {{domxref("Bluetooth")}} interface is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
 ```md
 ---
@@ -49,13 +45,13 @@ You need to add the following macros manually:
 
 ## What banners are automatically added
 
-Following macros are automatically added to the content in order to match the statuses stored in the `browser-compat-data` repository:
+The following macros are automatically added to the content in order to match the statuses stored in the browser-compat-data repository:
 
 - `\{{SeeCompatTable}}` — generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 - `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 - `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
 
-[Update the feature status in `browser-compat-data` repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) in order to change these values.
+[Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) in order to change these values.
 
 > **Note:** While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.
 
