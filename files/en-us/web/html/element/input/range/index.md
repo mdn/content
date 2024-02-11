@@ -241,7 +241,7 @@ input[type="range"] {
 
 By default, browsers render range inputs as sliders with the knob sliding left and right.
 
-To create a vertical range wherein the knob slides up and down, you can set the {{cssxref("writing-mode")}} property to a value of `vertical-rl` or `vertical-lr`, as explained in [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls). You can also set the CSS {{cssxref('appearance')}} property to `slider-vertical` if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
+To create a vertical range wherein the knob slides up and down, you can set the {{cssxref("writing-mode")}} property to a value of `vertical-rl` or `vertical-lr`, as explained in [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls). You can also set the CSS {{cssxref('appearance')}} property to the non-standard `slider-vertical` value if you want to support older versions of Chrome and Safari, and include the non-standard `orient="vertical"` attribute to support older versions of Firefox.
 
 ## Technical summary
 

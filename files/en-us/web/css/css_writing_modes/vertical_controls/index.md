@@ -6,11 +6,11 @@ page-type: guide
 
 {{CSSRef}}
 
-The guide explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref("direction")}} properties to create and configure vertical form controls, including [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) sliders, {{htmlelement("progress")}} bars, {{htmlelement("meter")}} elements, {{htmlelement("select")}} elements, and {{htmlelement("button")}}s (including [`button`](/en-US/docs/Web/HTML/Element/input/button), [`reset`](/en-US/docs/Web/HTML/Element/input/reset), and [`submit`](/en-US/docs/Web/HTML/Element/input/submit) `<input>` types).
+The guide explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref("direction")}} properties to create and configure vertical form controls, including [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) sliders, {{htmlelement("progress")}} bars, {{htmlelement("meter")}} elements, {{htmlelement("select")}} elements, {{htmlelement("button")}}s (including [`button`](/en-US/docs/Web/HTML/Element/input/button), [`reset`](/en-US/docs/Web/HTML/Element/input/reset), and [`submit`](/en-US/docs/Web/HTML/Element/input/submit) `<input>` types), [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea)s, and text-based inputs (for example [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text), [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), and [`<input type="url">`](/en-US/docs/Web/HTML/Element/input/url)).
 
 ## General technique
 
-In modern browsers, the {{cssxref("writing-mode")}} property can be set to a vertical value to cause relevant form controls to display vertically, which is useful when creating vertical language forms (for example, Chinese or Japanese). Specifically:
+In modern browsers, the {{cssxref("writing-mode")}} property can be set to a vertical value to cause relevant form controls to display vertically with text characters written on their side at a 90 degree angle from the default. This is useful when creating vertical language forms (for example, Chinese or Japanese). Specifically:
 
 - `writing-mode: vertical-lr` will create from controls with a left-to-right block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the right of previous lines.
 - `writing-mode: vertical-rl` will create from controls with a right-to-left block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the left of previous lines.
@@ -20,7 +20,7 @@ In addition, the {{cssxref("direction")}} property can be used to control the di
 - `direction: ltr` will cause the content to start at the top and flow towards the bottom.
 - `direction: rtl` will cause the content to start at the bottom and flow towards the top.
 
-In text-based controls the difference is obvious — the flow of text starts at the top or bottom. In non-text-based controls such as range sliders, `direction` controls what direction the control is drawn in. For example, `direction: ltr` would mean that the lowest value is at the top of the slider, and the highest value is at the bottom of the slider.
+This is referred to as the **inline base direction** — the primary direction in which content is ordered on a line, which defines on which sides the "start" and "end" of a line are. In text-based controls the difference is obvious — the flow of text starts at the top or bottom. In non-text-based controls such as range sliders, `direction` controls what direction the control is drawn in. For example, `direction: ltr` would mean that the lowest value is at the top of the slider, and the highest value is at the bottom of the slider.
 
 The sections below show how to create different types of vertial form control, along with examples of each. Consult the browser compatibility information on each of the linked reference pages to find out the exact support information for each type.
 
@@ -60,7 +60,7 @@ progress {
 
 {{cssxref("writing-mode", "writing-mode: vertical-lr")}} (and `vertical-rl`) causes the controls to be displayed vertically in modern browsers.
 
-> **Note:** The non-standard `appearance: slider-vertical` property is included to provide some measure of support for vertical controls to older versions of Safari and Chrome. Be aware that their effect is limited — it only causes `range` sliders to display vertically, and not `<meter>` and `<progress>` elements.
+> **Note:** The non-standard `appearance: slider-vertical` property is included to provide some measure of support for vertical controls to older versions of Safari and Chrome. Be aware that their effect is limited — it only causes `range` sliders to display vertically, and with the text flowing from bottom to top. It has no effect on `<meter>` and `<progress>` elements. While not included above, there is also a non-standard `orient="vertical"` attribute that can be added to the `<input type="range">` element itself to create vertical range sliders in older versions of Firefox.
 
 #### Result
 
@@ -255,7 +255,7 @@ The result of this looks like so:
 
 ## Text-based inputs
 
-Last but not least, we'll look at handle vertical {{htmlelement("textareas")}} and textual `<input>` types. Note that, while we have only shown an `<input type="text">` element in the examples below, the behavior is the same for other textual [`<input>`](/en-US/docs/Web/HTML/Element/input) types: [`password`](/en-US/docs/Web/HTML/Element/input/button), [`number`](/en-US/docs/Web/HTML/Element/input/reset), [`url`](/en-US/docs/Web/HTML/Element/input/submit), etc.
+Last but not least, we'll look at handle vertical {{htmlelement("textarea")}}s and textual `<input>` types. Note that, while we have only shown an `<input type="text">` element in the examples below, the behavior is the same for other textual [`<input>`](/en-US/docs/Web/HTML/Element/input) types: [`password`](/en-US/docs/Web/HTML/Element/input/button), [`number`](/en-US/docs/Web/HTML/Element/input/reset), [`url`](/en-US/docs/Web/HTML/Element/input/submit), etc.
 
 ### Basic text input example
 
