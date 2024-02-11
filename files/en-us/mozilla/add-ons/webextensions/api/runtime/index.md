@@ -96,6 +96,8 @@ It also provides messaging APIs enabling you to:
   - : Fired when a message is sent from either an extension process or a content script.
 - {{WebExtAPIRef("runtime.onMessageExternal")}}
   - : Fired when a message is sent from another extension. Cannot be used in a content script.
+- {{WebExtAPIRef("runtime.onPerformanceWarning")}}
+  - : Fired when a runtime performance issue is detected for the extension.
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Fired when the device needs to be restarted.
 
