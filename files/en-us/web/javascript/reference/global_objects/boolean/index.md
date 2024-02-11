@@ -13,7 +13,7 @@ The **`Boolean`** object represents a truth value: `true` or `false`.
 
 ### Boolean primitives and Boolean objects
 
-Do not use the `Boolean()` constructor with `new` to convert a non-boolean value to a boolean value — use `Boolean` as a function or a [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) instead:
+For converting non-boolean values to boolean, use `Boolean` as a function or use the [double NOT](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT#double_not_!!) operator. Do not use the `Boolean()` constructor with `new`.
 
 ```js
 const good = Boolean(expression); // use this
