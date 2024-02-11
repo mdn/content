@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.selectionStart
 
 The **`selectionStart`** property of the {{domxref("HTMLInputElement")}} interface is a number that represents the beginning index of the selected text. When nothing is selected, then returns the position of the text input cursor (caret) inside of the `<input>` element.
 
-> **Note:** According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionStart` property on the rest of input types.Additionally, this property returns `null` while accessing `selectionStart` property on non-text input elements.
+> **Note:** According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionStart` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionStart` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionStart` property on non-text input elements.
 
 If `selectionStart` is greater than `selectionEnd`, then both are
 treated as the value of `selectionEnd`.
@@ -19,7 +19,7 @@ treated as the value of `selectionEnd`.
 
 A non-negative number.
 
-## Example
+## Examples
 
 ### HTML
 
@@ -31,11 +31,11 @@ A non-negative number.
 <!-- use selectionStart on text input element -->
 <fieldset>
   <legend>selectionStart property on type=text</legend>
-  <label for="statement">Select 'mdn' word from the text</label>
+  <label for="statement">Select 'mdn' word from the text : </label>
   <input
     type="text"
     id="statement"
-    value="The mdn is the best resource for developers" />
+    value="The mdn is a documentation repository." />
   <button id="statement-btn">Select mdn text</button>
 </fieldset>
 ```
@@ -53,12 +53,13 @@ statementBtn.addEventListener("click", () => {
   inputElement.focus();
 });
 
+// open browser console to verify output
 console.log(colorStart.selectionStart); // Output : null
 ```
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
