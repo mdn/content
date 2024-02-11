@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.type
 
 {{ApiRef("HTML DOM")}}
 
-The **`type`** property of the {{domxref("HTMLButtonElement")}} interface is a string that indicates behaviour type of the {{HTMLElement("button")}} element.
+The **`type`** property of the {{domxref("HTMLButtonElement")}} interface is a string that indicates the behavior type of the {{HTMLElement("button")}} element.
 
 It reflects the [`type`](/en-US/docs/Web/HTML/Element/button#type) attribute of the {{HTMLElement("button")}} element.
 
@@ -30,7 +30,7 @@ Its possible values are listed in the attribute's [button types](/en-US/docs/Web
 
 ```js
 const buttonElement = document.querySelector("#buttton");
-console.log(buttonElement.type); // Output: "reset"
+console.log(buttonElement.type); // "reset"
 ```
 
 ## Specifications
