@@ -69,12 +69,9 @@ If you try to call `drawImage()` before the image has finished loading, it won't
 
 ```js
 const img = new Image(); // Create new img element
-img.addEventListener(
-  "load",
-  () => {
-    // execute drawImage statements here
-  }
-);
+img.addEventListener("load", () => {
+  // execute drawImage statements here
+});
 img.src = "myImage.png"; // Set source path
 ```
 
