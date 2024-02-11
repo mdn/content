@@ -146,7 +146,9 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
    - If using `get()`:
 
      ```html
-     <iframe src="https://auth.provider.com" allow="publickey-credentials-get *">
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-get *">
      </iframe>
      ```
 
