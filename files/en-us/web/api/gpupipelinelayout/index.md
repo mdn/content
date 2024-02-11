@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUPipelineLayout
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUPipelineLayout`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} defines the {{domxref("GPUBindGroupLayout")}}s used by a pipeline. {{domxref("GPUBindGroup")}}s used with the pipeline during command encoding must have compatible {{domxref("GPUBindGroupLayout")}}s.
 
