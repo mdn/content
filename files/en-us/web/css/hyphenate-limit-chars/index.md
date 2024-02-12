@@ -68,7 +68,7 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 
 ### Setting hyphenation limits
 
-In this example we have four paragraphs each containing the same text, and will set different values for `hyphenate-limit-chars` to see the effect.
+In this example, we have four boxes each containing the same text. We'll set different values for `hyphenate-limit-chars` to see the effect.
 
 #### HTML
 
