@@ -75,7 +75,7 @@ Bodies can be broadly divided into two categories:
 
 ### Status line
 
-_Note: The start-line is called the "status line" in requests._
+_Note: The start-line is called the "status line" in responses._
 
 The start line of an HTTP response, called the _status line_, contains the following information:
 
