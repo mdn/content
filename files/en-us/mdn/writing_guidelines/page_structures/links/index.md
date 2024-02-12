@@ -26,7 +26,7 @@ MDN provides macros that create a list of links:
 
 ### Example link list
 
-To include an ordered list of links which includes this page and its siblings, write the following:
+To include an ordered list of links that includes this page and its siblings, write the following:
 
 ```md
 \{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}

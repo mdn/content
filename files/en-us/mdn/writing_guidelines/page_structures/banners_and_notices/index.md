@@ -6,8 +6,11 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-Banners are added to some pages, in particular API reference, in order to highlight important factors that will affect how the described content is used.
-For example, banners are used to highlight when a particular interface, method or property is deprecated, and should not be used in production code.
+Banners are displayed in some pages, in particular API reference, in order to highlight important factors that will affect how the described content is used.
+For example, banners are used to highlight when a particular interface, method or property is deprecated, and should not be used in production code, or can only be used in a secure context.
+
+Banners are rendered using macros in the page content.
+Some banner macros are added automatically to the page, while others are added manually.
 
 This article describes the more important banners and how they are added.
 
