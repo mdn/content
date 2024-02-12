@@ -9,7 +9,7 @@ browser-compat: api.NavigatorLogin
 
 {{securecontext_header}}{{APIRef("FedCM API")}}{{SeeCompatTable}}
 
-The **`NavigatorLogin`** interface of the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) defines login functionality for federated identity providers (IdPs). Specifically, it enables a federated identity provider (IdP) to set a user's login status when they sign into or out of the IdP.
+The **`NavigatorLogin`** interface of the [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) defines login functionality for federated identity providers (IdPs). Specifically, it enables a federated identity provider (IdP) to set its login status when a user signs into or out of the IdP.
 
 See [Update login status using the Login Status API](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) for more details of how this is used.
 

@@ -140,7 +140,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} 
 
 This object contains a token that the RP can then send to its server to validate the user on their service. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
 
-> **Note:** The exact nature of the token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
+> **Note:** The exact nature of the token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
 ### Exceptions
 

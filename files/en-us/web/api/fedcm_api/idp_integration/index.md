@@ -236,17 +236,17 @@ This information can be used in a couple of different ways:
 
 ## Update login status using the Login Status API
 
-The **Login Status API** allows an IdP to inform a browser of the current user's login (sign-in) status with that IdP. This allows the browser to reduce the number of requests it makes to the IdP (because it does not need to request accounts when it knows that the user is not logged in to the IdP), and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
+The **Login Status API** allows an IdP to inform a browser of its login (sign-in) status in that particular browser. This allows the browser to reduce the number of requests it makes to the IdP (because it does not need to waste time requesting accounts when there are no users logged in to the IdP), and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
-- `"logged-in"`: The user has at least one account signed in to this IdP.
-- `"logged-out"`: The user is signed out of this IdP from all accounts.
-- `"unknown"`: The sign-in status of this user with this IdP is not known. This is the default value.
+- `"logged-in"`: The IdP has at least one user account signed in. Note that, at this stage, the RP and browser don't know which user that is. Information on specific users is returned from the IdP's [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) at a later point in the FedCM flow.
+- `"logged-out"`: All IdP accounts are currently signed out.
+- `"unknown"`: The sign-in status of this IdP is not known. This is the default value.
 
 ### Setting login status
 
-The IdP should update the user's login status when they sign in to or out of the IdP. This can be done in two different ways:
+The IdP should update its login status when a user signs into or out of the IdP. This can be done in two different ways:
 
 - The {{httpheader("Set-Login")}} HTTP response header can be set in a top-level navigation or a same-origin subresource request:
 
@@ -271,21 +271,21 @@ The IdP should update the user's login status when they sign in to or out of the
 When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
 - If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
-- If the login status is `"logged-out"`, the FedCM request fails silently without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
+- If the login status is `"logged-out"`, the promise returned by the FedCM `get()` request rejects without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.
 - If the login status is `"unknown"`, a request is made to the IdP's accounts list endpoint and the login status is updated depending on the response:
   - If the endpoint returns a list of available accounts for sign-in, update the status to `"logged-in"` and display the sign-in options to the user in the browser-provided FedCM dialog.
-  - If the endpoint returns no accounts, update the status to `"logged-out"`; the FedCM request then fails silently.
+  - If the endpoint returns no accounts, update the status to `"logged-out"`; the promise returned by the FedCM `get()` request then rejects.
 
 ### What if the browser and the IdP login status become out of sync?
 
-Despite the Login Status API informing the browser of the user's login status with an IdP, it is possible for the browser and IdP to become out of sync. For example, the IdP session might expire, meaning that the user ends up signed out without the application having a chance to set the login status to `"logged-out"`. When federated sign-in is attempted, a request will then be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
+Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP session might expire, meaning that a user account ends up signed out without the application having a chance to set the login status to `"logged-out"`. When federated sign-in is attempted, a request will then be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-In such a case, the browser can dynamically let the user sign in to the IdP, providing an option for the user to open the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints)). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+In such a case, the browser can dynamically let a user sign in to the IdP, providing an option for them to open the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints)). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 
 - Inform the browser that the user has signed in by [setting login status](#setting_login_status) to `"logged-in"`.
-- Close the sign in dialog by calling the {{domxref("IdentityProvider.close_static", "IdentityProvider.close()")}} method.
+- Close the sign-in dialog by calling the {{domxref("IdentityProvider.close_static", "IdentityProvider.close()")}} method.
 
 ## See also
 

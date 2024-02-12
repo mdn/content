@@ -10,7 +10,7 @@ This article describes the process by which a relying party (RP) can use the [Fe
 
 ## Calling the get() method
 
-RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the browser. The IdP identifies the RP by its `clientId`, which was issued by the IdP to the RP in a separate process that is specific to the IdP. The IdP identifies the specific user using credentials (cookies) provided to the user on login.
+RPs can call {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the browser. The IdP identifies the RP by its `clientId`, which was issued by the IdP to the RP in a separate process that is specific to the IdP. The IdP identifies the specific user using credentials (cookies) provided to the browser on login.
 
 The method returns a promise that fulfills with an {{domxref("IdentityCredential")}} object if the user identity is successfully validated by the IdP. This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
 
@@ -18,7 +18,7 @@ The RP sends the token to its server to validate the certificate, and on success
 
 If the user has never signed into the IdP or is logged out, the `get()` method rejects with an error and the RP can direct the user to the IdP login page to sign in or create an account.
 
-> **Note:** The exact structure and content of the validation token token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
+> **Note:** The exact structure and content of the validation token token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
 A typical request might look like this:
 

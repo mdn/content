@@ -57,7 +57,7 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 - {{domxref("IdentityProvider")}}
   - : Represents an IdP and provides access to related information and functionality.
 - {{domxref("NavigatorLogin")}}
-  - : Defines login functionality for IdPs, including the {{domxref("NavigatorLogin.setStatus", "Navigator.login.setStatus()")}} method for [updating login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api).
+  - : Defines login functionality for IdPs, including the {{domxref("NavigatorLogin.setStatus", "Navigator.login.setStatus()")}} method for [updating IdP login status](/en-US/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api).
 
 ## Extensions to other interfaces
 
