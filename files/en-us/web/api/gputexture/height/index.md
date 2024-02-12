@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.height
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`height`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the height of the `GPUTexture`.

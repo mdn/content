@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUPipelineError.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUPipelineError()`** constructor creates a new
 {{domxref("GPUPipelineError")}} object instance.

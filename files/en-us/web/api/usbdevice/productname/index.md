@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.productName
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`productName`** read only property of the
 {{domxref("USBDevice")}} interface the manufacturer-defined name that identifies a USB

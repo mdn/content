@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSystem.requestSession
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
 **`requestSession()`** method returns a {{jsxref("promise")}}
