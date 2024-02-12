@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.serialNumber
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`serialNumber`** read only property of the
 {{domxref("USBDevice")}} interface is the manufacturer-defined serial number for the

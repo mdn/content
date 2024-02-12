@@ -53,7 +53,7 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role
 - [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
