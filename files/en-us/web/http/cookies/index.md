@@ -66,7 +66,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 Cookies can persist for two different periods, depending on the attributes used with the {{HTTPHeader("Set-Cookie")}} header when they were created:
 
 - _Permanent_ cookies are deleted at a date specified by the `Expires` attribute or after a period prescribed by the `Max-Age` attribute.
-- _Session_ cookies – cookies without a `Max age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
+- _Session_ cookies – cookies without a `Max-age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
 For example:
 
