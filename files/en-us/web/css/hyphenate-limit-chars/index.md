@@ -116,7 +116,7 @@ p {
 
 In the first example, we don't set `hyphenate-limit-chars`, and the user agent applies its default algorithm.
 
-In the second example, we specify `hyphenate-limit-chars: 14` meaning that words must be at least 14 characters long before they are hyphenated. In the example, "juxtaposition" is no longer hyphenated, since it is only 13 characters long.
+In the second example, we specify `hyphenate-limit-chars: 14`, meaning that words must be at least 14 characters long before they are hyphenated. As a result, "juxtaposition" is no longer hyphenated, since it is only 13 characters long.
 
 In the third example, we specify `hyphenate-limit-chars: 13 9 3`, so each hyphenated word must have at least 9 characters before the hyphen. The effect is that "acknowledgement" is now hyphenated as "acknowledge-ment" rather than "acknowl-edgement".
 
