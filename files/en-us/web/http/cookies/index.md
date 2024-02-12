@@ -76,6 +76,7 @@ You can specify an expiration date or time period after which the cookie should 
   ```http
   Set-Cookie: id=a3fWa; Expires=Thu, 31 Oct 2021 07:28:00 GMT;
   ```
+
   or after the period specified in the `Max-Age` attribute:
 
   ```http
