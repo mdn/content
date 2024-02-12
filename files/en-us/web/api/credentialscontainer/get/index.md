@@ -103,7 +103,7 @@ navigator.credentials
 
 The [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) provides a standard mechanism for identity providers (IdPs) to enable identity federation services in a privacy-preserving way without relying on third-party cookies and redirects. This includes a JavaScript API that enables the use of federated authentication for purposes such as signing in or signing up to a website. For more usage information, check out the linked landing page for the API.
 
-Relying parties (RPs) can call `get()` with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the device.
+Relying parties (RPs) can call `get()` with an `identity` option to request that a user signs in to the RP with an existing IdP account that they are already signed in to on the browser.
 
 > **Note:** Usage of `get()` with the `identity` parameter may be blocked by an {{httpheader("Permissions-Policy/identity-credentials-get", "identity-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
@@ -118,7 +118,13 @@ Relying parties (RPs) can call `get()` with an `identity` option to request that
     - `signup`: An option for situations where the user is signing in to the origin with a new IdP account they've not used here before. Browsers will provide a text string similar to "Sign up to \<page-origin\> with \<IdP\>".
     - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
 - `providers`
-  - : An array of objects specifying details of the IdPs to be used to sign in. Each object can contain the following properties:
+
+  - : An array of objects specifying details of the IdPs to be used to sign in.
+
+    > **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls. This may change in the future.
+
+    Each object can contain the following properties:
+
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
     - `clientId`
@@ -128,15 +134,13 @@ Relying parties (RPs) can call `get()` with an `identity` option to request that
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
-> **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls. This may change in the future.
-
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters if the user identity is successfully validated by the IdP.
 
 This object contains a token that the RP can then send to its server to validate the user on their service. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
 
-> **Note:** The exact nature of the token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see the [Google Sign In instructions](https://developers.google.com/identity/gsi/web/guides/fedcm-migration), for example) to make sure they are using it correctly.
+> **Note:** The exact nature of the token is opaque to the FedCM API, and to browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
 ### Exceptions
 
@@ -195,11 +199,13 @@ async function signIn() {
 }
 ```
 
-> **Note:** Once a user has already signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
+> **Note:** After a user has signed in with an IdP, the IdP can call the static {{domxref("IdentityProvider.getUserInfo_static", "IdentityProvider.getUserInfo()")}} method to retrieve their details. `getUserInfo()` must be called from within an IdP-origin {{htmlelement("iframe")}} to ensure that RP scripts cannot access the data. This information can then be used to display a personalized welcome message and sign-in button. This approach is already common on sites that use identity federation for sign-in. However, `getUserInfo()` offers a way to achieve this without relying on third-party cookies.
 
 #### Example including Error API information
 
-If the request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) is unable to validate the authentication, it will respond with an error response, which is exposed like this:
+If the IdP is unable to validate the authentication for a request to the [ID assertion endpoint](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) it will respond with an error.
+
+The error may be handled in code as shown:
 
 ```js
 async function signIn() {

@@ -236,7 +236,7 @@ This information can be used in a couple of different ways:
 
 ## Update login status using the Login Status API
 
-The **Login Status API** allows an IdP to inform a browser of the current user's login (sign-in) status with that IdP. This allows the browser to reduce the number of requests it makes to the IdP and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
+The **Login Status API** allows an IdP to inform a browser of the current user's login (sign-in) status with that IdP. This allows the browser to reduce the number of requests it makes to the IdP (because it does not need to request accounts when it knows that the user is not logged in to the IdP), and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
@@ -268,7 +268,7 @@ The IdP should update the user's login status when they sign in to or out of the
 
 ### How login status affects federated sign-in flow
 
-Later on, when an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
+When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in), the login status is checked:
 
 - If the login status is `"logged-in"`, a request is made to the IdP's [accounts list endpoint](#the_accounts_list_endpoint) and available accounts for sign-in are displayed to the user in the browser-provided FedCM dialog.
 - If the login status is `"logged-out"`, the FedCM request fails silently without making a request to the accounts list endpoint. In such a case it is up to the developer to handle the flow, for example by prompting the user to go and sign in to a suitable IdP.

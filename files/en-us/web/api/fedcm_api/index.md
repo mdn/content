@@ -15,7 +15,7 @@ The **Federated Credential Management API** (or _FedCM API_) provides a standard
 
 Identity federation is the delegation of user authentication from a website requiring user sign-up or sign-in, such as an e-commerce or social networking site (also known as a relying party or RP), to a trusted third-party identity provider (IdP) such as Google, Facebook/Meta, GitHub, etc.
 
-Relying parties (RPs) can then integrate with IdPs, allowing users to use the accounts they have registered with the IdP, to sign in to them. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, as compared to each site managing its own sign-in needs with separate usernames and passwords.
+Relying parties (RPs) can integrate with IdPs, allowing users to sign-in using the accounts they have registered with the IdP. Identity federation via a small set of dedicated IdPs has improved web authentication in terms of security, consumer confidence, and user experience, as compared to each site managing its own sign-in needs with separate usernames and passwords.
 
 The problem is that traditional identity federation relies on {{htmlelement("iframe")}}s, redirects, and third-party cookies, which are also used for third-party tracking. Browsers are limiting the usage of these features in an effort to preserve user privacy, but a side effect is that this makes valid, non-tracking uses more difficult to implement, which includes identity federation.
 
