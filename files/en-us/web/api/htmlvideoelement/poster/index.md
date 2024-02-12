@@ -19,7 +19,7 @@ A string.
 ## Examples
 
 ```html
-<video id="media" poster="https://example.com/poster.jpg"></video>
+<video id="media" src="https://video.com/movie.mp4" poster="https://example.com/poster.jpg"></video>
 ```
 
 ```js
