@@ -114,7 +114,7 @@ p {
 
 {{EmbedLiveSample("Setting hyphenation limits", "", 200)}}
 
-In the first example, we don't set `hyphenate-limit-chars`, and the user agent applies its default algorithm.
+In the first box, we don't set `hyphenate-limit-chars`, allowing the user agent to apply its default algorithm.
 
 In the second example, we specify `hyphenate-limit-chars: 14`, meaning that words must be at least 14 characters long before they are hyphenated. As a result, "juxtaposition" is no longer hyphenated, since it is only 13 characters long.
 
