@@ -51,7 +51,7 @@ function touchHandler(e) {
   if (e.touches) {
     playerX = e.touches[0].pageX - canvas.offsetLeft - playerWidth / 2;
     playerY = e.touches[0].pageY - canvas.offsetTop - playerHeight / 2;
-    output.textContent = `Touch:  x: ${playerX}, y: ${playerY}`;
+    output.textContent = `Touch:\nx: ${playerX}, y: ${playerY}`;
     e.preventDefault();
   }
 }
