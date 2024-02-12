@@ -21,7 +21,7 @@ A string.
 ```html
 <video
   id="media"
-  src="https://video.com/movie.mp4"
+  src="https://example.com/video.mp4"
   poster="https://example.com/poster.jpg"></video>
 ```
 
