@@ -75,12 +75,14 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT+0300");
 
 // Single number
 Date.parse("0");
-// 946684800000 in Chrome (Sat Jan 01 2000 00:00:00 GMT+0000);
-// NaN in Firefox;
+// Nan in Firefox ≤122
+// 946684800000 in Chrome and Firefox ≥123  (Sat Jan 01 2000 00:00:00 GMT+0000);
 // -62167219200000 in Safari (Sat Jan 01 0000 00:00:00 GMT+0000)
 
 // Two-digit number that may be a month
-Date.parse("28"); // NaN in all implementations
+Date.parse("28");
+// NaN Chrome and Firefox
+// -61283606400000 in Safari (Fri Dec 31 0027 23:58:45 GMT-0001)
 
 // Two-digit year
 Date.parse("70/01/01"); // 0 in all implementations
@@ -91,8 +93,8 @@ Date.parse("Mar 32, 2014"); // NaN in all implementations
 Date.parse("2014/25/23"); // NaN in all implementations
 
 Date.parse("2014-02-30");
-// NaN in Safari and Firefox;
-// 1393718400000 in Chrome (Sun Mar 02 2014 00:00:00 GMT+0000)
+// NaN in Safari
+// 1393718400000 in Chrome and Firefox (Sun Mar 02 2014 00:00:00 GMT+0000)
 Date.parse("02/30/2014"); // 1393718400000 in all implementations
 
 // Chrome, Safari, and Firefox 122 and later parse only the first three letters for the month.
