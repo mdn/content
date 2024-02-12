@@ -22,13 +22,13 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
 <body contextmenu="share">
   <menu type="context" id="share">
     <menu label="share">
-      <menuitem label="Twitter" onclick="shareViaTwitter()"></menuitem>
+      <menuitem label="LinkedIn" onclick="shareViaLinkedIn()"></menuitem>
       <menuitem label="Facebook" onclick="shareViaFacebook()"></menuitem>
     </menu>
   </menu>
   <ol>
     <li>
-      Anywhere in the example you can share the page on Twitter and Facebook
+      Anywhere in the example you can share the page on LinkedIn and Facebook
       using the Share menu from your context menu.
     </li>
     <li contextmenu="changeFont" id="fontSizing">
@@ -58,9 +58,9 @@ A _context menu_ is a menu that appears upon user interaction, such as a right-c
 ### JavaScript
 
 ```js
-function shareViaTwitter() {
+function shareViaLinkedIn() {
   window.open(
-    "https://twitter.com/intent/tweet?text=" +
+    "https://www.linkedin.com/shareArticle?url=" +
       "Hurray! I am learning ContextMenu from MDN via Mozilla",
   );
 }
