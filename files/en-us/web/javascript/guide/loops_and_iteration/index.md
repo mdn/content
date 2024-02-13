@@ -203,7 +203,7 @@ following `while` loop execute forever because the condition never becomes
 `false`:
 
 ```js example-bad
-// Infinite loops are bad! 
+// Infinite loops are bad!
 while (true) {
   console.log("Hello, world!");
 }
@@ -259,7 +259,7 @@ for (let i = 0; i < 10; i++) {
   if (i === ans) {
     break;
   }
-console.log(i);
+  console.log(i);
 }
 //  1 2 3 4
 ```
@@ -318,19 +318,18 @@ statement that executes when the value of `i` is `3`. Thus,
 ```js
 let i = 0;
 
-while (i < 6) {
+while (i < 5) {
   i++;
   if (i === 3) {
     continue;
   }
-  
   console.log(i);
 }
 // Logs:
 // 1 2 4 5
 ```
 
-If you comment out the `continue;`, the loop would run till the end and you would see `1,2,4,5`.
+If you comment out the `continue;`, the loop would run without interruption and you would see `1 2 3 4 5`.
 
 ### Example 2
 
