@@ -77,7 +77,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT+0300");
 
 // Single number
 Date.parse("0");
-// Nan in Firefox ≤122
+// NaN in Firefox ≤122
 // 946684800000 in Chrome and Firefox ≥123  (Sat Jan 01 2000 00:00:00 GMT+0000);
 // -62167219200000 in Safari (Sat Jan 01 0000 00:00:00 GMT+0000)
 
