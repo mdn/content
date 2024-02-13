@@ -25,17 +25,17 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1.  [container size queries](#container-size-queries),
-2.  [naming containers](#naming_containers) to limit their scope, and
-3.  using the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
+1. [container size queries](#container-size-queries),
+2. [naming containers](#naming_containers) to limit their scope, and
+3. using the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
 ## Container size queries
 
-Elements are declared as size query containers by setting their {{cssxref("container-type")}} property set to `size` or `inline-size`. With container size queries, declarations are filtered by a size condition and applied if the element has been declared to be a container and the condition is true for that element.
+With size queries, container queries are filtered by a size condition and applied if the element has both 1) been declared to be a container and 2) the container condition is true for that element.
 
-Container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). This is a performance necessity. Querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
+Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} (or the {{cssxref("container")}} shorthand) property set to `size` or `inline-size`. Container size queries are relevant only for these elements as these property values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). This is a performance necessity. Querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
 
-In a container size query, the `<container-condition>` includes one or more `<size-query>`s. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The syntax for `<size-query>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media).
+In a container size query, the `<container-condition>` includes one or more `<size-query>`s. Each size query includes a size feature name, a comparison operator, and a value. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The boolean syntax and logic combining one or more `<size-query>`s is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
 ```css
 form {
@@ -47,7 +47,9 @@ form {
 }
 ```
 
-In this example, the `<size-query>` in this size container query `<container-condition>` is `(10em <= width <= 20em)`. All {{htmlelement("form")}} elements are potential matches for any unnamed container queries. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
+The `<size-query>` in this size container query `<container-condition>` example is `(10em <= width <= 20em)`. In this case, all {{htmlelement("form")}} elements are potential matches for any unnamed container query. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
+
+We could have limited the elements matched by the query by adding a name to the `<container-condition>`. We could also have limited the `@container` queries applicable to {{htmlelement("form")}} elements by setting a {{cssxref("container-name")}}.
 
 ## Naming containers
 
@@ -59,9 +61,9 @@ A `<container-condition>` can include an optional case-sensitive {{cssxref("cont
 }
 ```
 
-The `<container-name>` is a case-sensitive {{cssxref("ident")}}. You can use the {{cssxref("container-name")}} property to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
+The `<container-name>` is a case-sensitive {{cssxref("ident")}}. You can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
 
-Container names also enable querying styles from elements that aren't a direct parent.
+Container names also enable querying styles from elements that aren't a direct parent. When a containment context is given a name, it can be specifically targeted using the `@container` at-rule instead of the nearest ancestor with containment.
 
 ```css
 @container card (orientation: landscape) and (max-width: 40rem) {
