@@ -142,7 +142,7 @@ In this second SVG, the `color-interpolation` attribute is included on the `<lin
 </svg>
 ```
 
-In this third `SVG` the `color-interpolation` attribute is not included, on the `<radialGradient>` element, and defaults to `sRGB`.
+In this third SVG, the `color-interpolation` attribute is not included on the `<radialGradient>` element, which defaults to `sRGB`.
 
 ```html
 <svg width="450" height="70">
