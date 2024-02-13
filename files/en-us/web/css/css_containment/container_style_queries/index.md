@@ -127,21 +127,57 @@ Now, let's dive in and take a look at the different `<style-feature>` types:
 
 ### Style queries for custom properties
 
-Style queries for custom properties allow you to query the custom property, also called "CSS variables", of a parent element. [Custom properties are CSS properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with a value as a CSS property assignment or without the value as a custom property name. This query type has some [browser support](#browser_compatibility).
+Style queries for custom properties allow you to query the custom property, also called "CSS variables", of a parent element. Container style queries for custom properties has some [browser support](#browser_compatibility).
+
+[Custom properties are CSS properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with a value as a CSS property assignment or without the value as a custom property name.
+
+#### Stand alone custom property queries
+
+The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value.
 
 ```css
 @container style(--theme-color) {
   /* <stylesheet> */
 }
+```
 
+In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. For example, if the custom variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
+
+```css
+:root {
+  --theme-color: rebeccapurple;
+}
+
+/* every element is matched (see exception below) */
+@container style(--theme-color) {
+  /* <stylesheet> */
+}
+```
+
+If explicitly defined with the {{cssxref("@property")}} CSS at-rule, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition.
+
+```css
+@property --theme-color {
+  initial-value: rebeccapurple;
+  inherited: true;
+}
+```
+
+If this explicit definition was declared, there would be an exception to the "every element is matched" comment preceding the container query: the `:root` element would NOT match as the custom property value for that element and all the elements inheriting the `rebeccapurple` value is the same as the `initial-value`. Only elements that override that value, and those element's descendants, would be a match.
+
+#### Custom property with a value
+
+If a style query includes a value for the custom property, the element's computed value for that property must be an exact match, with equivalent values only being a match if custom property was defined with the {{cssxref("@property")}} at rule containing a `syntax` descriptor.
+
+```css
 @container style(--accent-color: blue) {
   /* <stylesheet> */
 }
 ```
 
-The first container query in the code above matches the element on which the `--theme-color` property was declared and all of its descendants. The second container style query matches any element that has `blue` as the {{cssxref("computed_value")}} of for the `--accent-color` custom property.
+This container style query matches any element that has `blue` as the {{cssxref("computed_value")}} of for the `--accent-color` custom property.
 
-If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}}. When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values. To ensure the container style query matches all cases of sRGB blue, declare the color like so:
+In this case, the equivalent hexidecimal code `#0000ff` will match only if the property was defined as a color with {{cssxref("@property")}}. To ensure the container style query matches all cases of sRGB blue, we would declare the `--accent-color` like so:
 
 ```css
 @property --accent-color {
@@ -150,6 +186,12 @@ If a custom property has a value of `blue`, the equivalent hexidecimal code `#00
   initial-value: #00f;
 }
 ```
+
+When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+
+### Nested queries
+
+Container queries can be nested within other container queries. The styles defined inside multiple nested container queries are applied when all of the wrapping container queries are true.
 
 ### Style query CSS declarations and properties
 
