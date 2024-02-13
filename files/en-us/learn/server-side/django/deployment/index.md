@@ -146,118 +146,11 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
-### Update your application repository in GitHub
-
-Many hosting services allow you to import and/or synchronize projects from a local repository or from cloud-based source version control platforms.
-This can make deployment and iterative development much easier.
-
-You should already be using GitHub to store the local library sources (this was set up in [Source code management with Git and GitHub](/en-US/docs/Learn/Server-side/Django/development_environment#source_code_management_with_git_and_github) as part of setting up your development environment.
-
-This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any hosting service (or for development) others might not.
-Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to backup your changes as shown:
-
-```bash
-# Fetch the latest main branch
-git checkout main
-git pull origin main
-
-# Create branch vanilla_deployment from the current branch (main)
-git checkout -b vanilla_deployment
-
-# Push the new branch to GitHub
-git push origin vanilla_deployment
-
-# Switch back to main
-git checkout main
-
-# Make any further changes in a new branch
-git checkout -b my_changes_for_deployment # Create a new branch
-```
-
-## Example: Installing LocalLibrary on Railway
-
-This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
-
-### Why Railway?
-
-We are choosing to use Railway for several reasons:
-
-- Railway has a [starter plan](https://docs.railway.app/reference/plans#starter-plan) free tier that is _really_ free, albeit with some limitations.
-  The fact that it is affordable for all developers is really important to MDN!
-- Railway takes care of most of the infrastructure so you don't have to.
-  Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
-- The skills and concepts you will learn when using Railway are transferrable.
-  While Railway has some excellent new features, many of the same ideas and approaches are used by other popular hosting services.
-- The service and plan limitations do not really impact us using Railway for the tutorial.
-  For example:
-
-  - The starter plan only offers 500 hours of continuous deployment time each month, and $5 of credit that is consumed based on usage.
-    At the end of each month the hours and credit are reset and any projects must be redeployed.
-    These constraints mean that you could run this tutorial continuously for about 21 days, which is more than enough for development and testing.
-    However you wouldn't be able to use this plan for a "real" production site.
-  - The starter plan environment has only 512 MB of RAM and 1 GB of storage memory; more than enough for the tutorial.
-  - At time of writing there is only one supported region, which is in the USA.
-    The service outside this region might be slower, or blocked by local regulations.
-  - Other limitations can be found in the [Railway plan documentation](https://docs.railway.app/reference/plans#starter-plan).
-
-- The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
-
-While Railway is appropriate for hosting this demonstration, you should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
-
-### How does Railway work?
-
-Web applications are each run in their own isolated and independent virtualized container.
-In order to execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
-For Django apps we provide this information in a number of text files:
-
-- **runtime.txt**: states the programming language and version to use.
-- **requirements.txt**: lists the Python dependencies needed for your site, including Django.
-- **Procfile**: A list of processes to be executed to start the web application.
-  For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
-- **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
-
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
-For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
-The database service itself may be hosted by Railway or some other provider.
-
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
-The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
-One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
-
-In order to get our application to work on Railway, we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
-Once we've done all that, we can set up a Railway account, get the Railway client, and install our website.
-
-That's all the overview you need in order to get started.
-
-### Update the app for Railway
-
-This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Railway.
-Note that these changes will not prevent you using the local testing and workflows we've already learned.
-
-#### Procfile
-
-A _Procfile_ is the web application "entry point".
-It lists the commands that will be executed by Railway to start your site.
-
-Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
-
-```plain
-web: python manage.py migrate && python manage.py collectstatic --no-input && gunicorn locallibrary.wsgi
-```
-
-The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
-We then call the command Django migration command `python manage.py migrate` to set up the database tables.
-Next, we call the Django command `python manage.py collectstatic` to collect static files into the folder defined by the `STATIC_ROOT` project setting (see the section [serving static files in production](#serving_static_files_in_production) below).
-Finally, we start the _gunicorn_ process, a popular web application server, passing it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
-
-Note that you can also use the Procfile to start worker processes or to run other non-interactive tasks before the release is deployed.
-
 #### Gunicorn
 
-[Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications on Railway (as referenced in the Procfile above).
+[Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications.
 
-While we don't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server.
+While we don't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it locally so that it becomes part of our [requirements](#requirements) when the application is deployed.
 
 First make sure that you're in the Python virtual environment that was created when you [set up the development environment](/en-US/docs/Learn/Server-side/Django/development_environment) (use the `workon [name-of-virtual-environment]` command).
 Then install _Gunicorn_ locally on the command line using _pip_:
@@ -270,7 +163,7 @@ pip3 install gunicorn
 
 SQLite, the default Django database that you've been using for development, is a reasonable choice for small to medium websites.
 Unfortunately it cannot be used on some popular hosting services, such as Heroku, because they don't provide persistent data storage in the application environment (a requirement of SQLite).
-While that might not affect us on Railway, we'll show you another approach that will work on Railway, Heroku, and some other services.
+While that might not affect us for the example deployment(s), we'll show you another approach that will work on Railway, Heroku, and some other services.
 
 The approach is to use a database that runs in its own process somewhere on the Internet, and is accessed by the Django library application using an address passed as an environment variable.
 In this case we'll use a Postgres database that is also hosted on Railway, but you could use any database hosting service you like.
@@ -283,7 +176,7 @@ In addition to installing the _dj-database-url_ package we'll also need to insta
 
 _dj-database-url_ is used to extract the Django database configuration from an environment variable.
 
-Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
+Install it locally so that it becomes part of our [requirements](#requirements) to set up on the deployment server:
 
 ```bash
 pip3 install dj-database-url
@@ -349,7 +242,7 @@ It is called with the following command:
 python3 manage.py collectstatic
 ```
 
-For this tutorial, _collectstatic_ is run by Railway before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
+For this tutorial, _collectstatic_ can be run before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
 `Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
 
 ##### settings.py
@@ -376,7 +269,6 @@ We'll actually do the file serving using a library called [WhiteNoise](https://p
 There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections).
 The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of the easiest methods for serving static assets directly from Gunicorn in production.
 
-Railway calls _collectstatic_ to prepare your static files for use by WhiteNoise after it uploads your application.
 Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
@@ -424,7 +316,9 @@ You don't need to do anything else to configure _WhiteNoise_ because it uses you
 
 #### Requirements
 
-The Python requirements of your web application must be stored in a file **requirements.txt** in the root of your repository. Railway will then install these automatically when it rebuilds your environment. You can create this file using _pip_ on the command line (run the following in the repo root):
+The Python requirements of your web application should be stored in a file **requirements.txt** in the root of your repository.
+Many hosting services will automatically install dependencies in this file (in others you have to do this yourself).
+You can create this file using _pip_ on the command line (run the following in the repo root):
 
 ```bash
 pip3 freeze > requirements.txt
@@ -441,6 +335,107 @@ psycopg2-binary==2.9.6
 wheel==0.38.1
 whitenoise==6.5.0
 ```
+
+### Update your application repository in GitHub
+
+Many hosting services allow you to import and/or synchronize projects from a local repository or from cloud-based source version control platforms.
+This can make deployment and iterative development much easier.
+
+You should already be using GitHub to store the local library source code (this was set up in [Source code management with Git and GitHub](/en-US/docs/Learn/Server-side/Django/development_environment#source_code_management_with_git_and_github) as part of setting up your development environment.
+
+This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any hosting service (or for development) others might not.
+Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to backup your changes as shown:
+
+```bash
+# Fetch the latest main branch
+git checkout main
+git pull origin main
+
+# Create branch vanilla_deployment from the current branch (main)
+git checkout -b vanilla_deployment
+
+# Push the new branch to GitHub
+git push origin vanilla_deployment
+
+# Switch back to main
+git checkout main
+
+# Make any further changes in a new branch
+git checkout -b my_changes_for_deployment # Create a new branch
+```
+
+## Example: Installing LocalLibrary on Railway
+
+This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
+
+### Why Railway?
+
+> **Warning:** Railway no longer has a completely free starter tier.
+> We've kept these instructions because Railway has some great features, and will be a better option for some users.
+
+Railway is an attractive hosting option for several reasons:
+
+- Railway takes care of most of the infrastructure so you don't have to.
+  Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- The skills and concepts you will learn when using Railway are transferrable.
+  While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
+- [Railway documentation](https://docs.railway.app/) is clear and complete.
+- The service appears to be very reliable, and if you end up loving it, the pricing is predictable, and scaling your app is very easy.
+
+You should take the time to determine if Railway is [suitable for your own website](#choosing_a_hosting_provider).
+
+### How does Railway work?
+
+Web applications are each run in their own isolated and independent virtualized container.
+In order to execute your application, Railway needs to be able to set up the appropriate environment and dependencies, and also understand how it is launched.
+For Django apps we provide this information in a number of text files:
+
+- **runtime.txt**: states the programming language and version to use.
+- **requirements.txt**: lists the Python dependencies needed for your site, including Django.
+- **Procfile**: A list of processes to be executed to start the web application.
+  For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
+- **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
+
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
+For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
+The database service itself may be hosted by Railway or some other provider.
+
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
+The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
+One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
+
+In order to get our application to work on Railway, we'll need to put our Django web application into a git repository, add the files above, integrate with a database add-on, and make changes to properly handle static files.
+Once we've done all that, we can set up a Railway account, get the Railway client, and install our website.
+
+That's all the overview you need in order to get started.
+
+### Update the app for Railway
+
+This section explains the changes you'll need to make to our _LocalLibrary_ application to get it to work on Railway.
+We really only have to create a `Procfile` and `runtime.txt` file, because almost everything else is already present.
+
+Note that these changes will not prevent you using the local testing and workflows we've already learned.
+
+#### Procfile
+
+A _Procfile_ is the web application "entry point".
+It lists the commands that will be executed by Railway to start your site.
+
+Create the file `Procfile` (with no file extension) in the root of your GitHub repo and copy/paste in the following text:
+
+```plain
+web: python manage.py migrate && python manage.py collectstatic --no-input && gunicorn locallibrary.wsgi
+```
+
+The `web:` prefix tells Railway that this is a web process and can be sent HTTP traffic.
+We then call the command Django migration command `python manage.py migrate` to set up the database tables.
+Next, we call the Django command `python manage.py collectstatic` to collect static files into the folder defined by the `STATIC_ROOT` project setting (see the section [serving static files in production](#serving_static_files_in_production) below).
+Finally, we start the _gunicorn_ process, a popular web application server, passing it configuration information in the module `locallibrary.wsgi` (created with our application skeleton: **/locallibrary/wsgi.py**).
+
+You will note that we already set up the project to include _gunicorn_ and support serving static files!
+
+You can also use the Procfile to start worker processes or to run other non-interactive tasks before the release is deployed.
 
 #### Runtime
 
@@ -463,13 +458,17 @@ Run the development web server as usual and then check the site still works as y
 python3 manage.py runserver
 ```
 
-Next, lets `push` the changes to GitHub. In the terminal (after having navigated to our local repository), enter the following commands:
+Next, lets `push` the changes to GitHub.
+In the terminal (after having navigated to our local repository), enter the following commands:
 
 ```python
+git checkout -b railway_changes
 git add -A
 git commit -m "Added files and changes required for deployment"
-git push origin main
+git push origin railway_changes
 ```
+
+Then create and merge the PR on GitHub.
 
 We should now be ready to start deploying LocalLibrary on Railway.
 
@@ -545,12 +544,6 @@ CSRF_TRUSTED_ORIGINS = ['https://web-production-3640.up.railway.app']
 ```
 
 Then save your settings and commit them to your GitHub repo (Railway will automatically update and redeploy your application).
-
-```bash
-git add -A
-git commit -m 'Update ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS with site URL'
-git push origin main
-```
 
 ### Provision and connect a Postgres SQL database
 
