@@ -54,7 +54,7 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 - Minimum number of characters before the hyphen: 2
 - Minimum number of characters after the hyphen: 2
 
-> **Note:** If a word is shorter than any of the provided values, it will not be hyphenated.
+Note that if a word is too short to meet the given constraints, it will not be hyphenated. For example, given a value like `hyphenate-limit-chars auto 3 4`, words shorter than 7 characters will never be hyphenated, since it is impossible to have 3 characters before the hyphen and 4 characters after it.
 
 ## Formal definition
 
