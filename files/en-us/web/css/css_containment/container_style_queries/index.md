@@ -213,10 +213,10 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
       <label for="blue">--theme: blue</label>
     </li>
     <li>
-      <input type="radio" name="selection" value="unset" id="other" />
+      <input type="radio" name="selection" value="currentcolor" id="other" />
       <label for="other">Other</label>
       <label for="color">color:</label>
-      <input text="checkbox" name="selection" value="unset" id="color" />
+      <input text="checkbox" name="selection" value="currentcolor" id="color" />
     </li>
   </ol>
 </fieldset>
@@ -288,7 +288,7 @@ These style queries include values for the custom property. These will match if 
 }
 ```
 
-{{EmbedLiveSample('example','100%','280')}}
+{{EmbedLiveSample('example','100%','200')}}
 
 Try changing the color value. Notice that any equivalent of `red` will make the `<output>` red, while removing the outline. Any other valid color , including `currentcolor` or `hsl(0 100% 50%)` makes the first style query return true. Valid values for `color` that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling), and will be ignored. When invalid, the `--theme` value inherits its initial value.
 
@@ -298,9 +298,24 @@ When declaring custom properties, consider using `@property` with the {{cssxref(
 
 Container queries can be nested within other container queries. The styles defined inside multiple nested container queries are applied when all of the wrapping container queries are true.
 
+```css
+@container style(--theme: red) {
+  output {
+    outline: 1px dotted;
+  }
+  @container style(--theme: purple) {
+    output {
+      outline: 5px dotted;
+    }
+  }
+}
+```
+
+In this case, the `<output>` will have a large dotted border if it's nested in a container where `--theme: purple` is set, and that container is nested within a container whose `--theme` value is `red`.
+
 ### Style query CSS declarations and properties
 
-Not yet supported in any browser, the `style()` functional notation can include a regular CSS declaration. This basic example makes the background color of any {{htmlelement("b")}} and {{htmlelement("strong")}} elements yellow when the parent is already bold.
+Not yet supported in any browser, the `style()` functional notation can include a regular CSS declaration.
 
 ```css
 @container style(font-weight: bold) {
@@ -311,7 +326,9 @@ Not yet supported in any browser, the `style()` functional notation can include 
 }
 ```
 
-The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. We did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
+This basic example makes the background color of any {{htmlelement("b")}} and {{htmlelement("strong")}} elements yellow when the parent is already bold.
+
+The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. Just as with custom property container style queries, we did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 
@@ -326,7 +343,7 @@ It is expected that style queries will also accept properties in a boolean conte
 }
 ```
 
-The above will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("headers", "h1-h6")}} and {{htmlelement("th")}}. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's font-weight is no the default value for that user-agent, the style query will return true.
+The above will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("heading_elements", "heading elements")}} and {{htmlelement("th")}}. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's font-weight is no the default value for that user-agent, the style query will return true.
 
 These features are not yet supported in any browser.
 
