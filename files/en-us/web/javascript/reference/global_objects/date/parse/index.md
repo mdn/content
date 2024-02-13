@@ -58,6 +58,8 @@ Date.parse("2019-01-01T00:00:00");
 
 Implementations usually default to the local time zone when the date string is non-standard. For consistency, we will assume that the code uses the UTC timezone.
 
+> **Note:** The local time zone comes from the system setting of the device, for example _London/Europe_ GMT. Daylight saving affects this, which is set by the local Government to that time zone, this can affect the parsed date. In the UK they experiment with no DST from 18 Feb 1968 02:00 to 31 Oct 1971 03:00 which set the local time to UTC +1. This means that `Date.parse()` between those dates will be out by minus 1 hour or `-360000` milliseconds. This is not specific to the UK most countries have [experimented with DST for different amounts of time](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country#Past_observance). Added the specific time zone will correct this `Date.parse("Jan 1, 1970 GMT")`.
+
 ```js
 Date.parse("Jan 1, 1970"); // 0 in all implementations
 
