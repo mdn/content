@@ -47,7 +47,7 @@ This article provides information about the changes in Firefox 122 that affect d
 
 #### Removals
 
-- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property in website code (see [Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
+- Removed support for the CSS [`-moz-user-focus`](/en-US/docs/Web/CSS/-moz-user-focus) property ([Firefox bug 1871745](https://bugzil.la/1871745) and [Firefox bug 1868552](https://bugzil.la/1868552)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
