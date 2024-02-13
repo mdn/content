@@ -57,6 +57,9 @@ color-interpolation: linearRGB;
 
 ## Example
 
+In the first SVG, the `color-interpolation` property is not included on the `<linearGradient>` element and color interpolation defaults to `sRGB`.
+The second example shows color interpolation using the `linearRGB` value.
+
 ```html
 <svg width="450" height="70">
   <title>Example of using the color-interpolation CSS Property</title>
