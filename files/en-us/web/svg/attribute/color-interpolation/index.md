@@ -162,7 +162,7 @@ In this third SVG, the `color-interpolation` attribute is not included on the `<
 </svg>
 ```
 
-In this forth `SVG` the `color-interpolation` attribute is included, on the `<radialGradient>` element, and set to `linearRGB`.
+In this fourth SVG, the `color-interpolation` attribute is included on the `<radialGradient>` element and set to `linearRGB`.
 
 ```html
 <svg width="450" height="70">
