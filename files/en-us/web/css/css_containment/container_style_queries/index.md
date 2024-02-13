@@ -133,26 +133,19 @@ Style queries for custom properties allow you to query the custom property, also
 
 #### Stand alone custom property queries
 
-The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value.
-
-```css
-@container style(--theme-color) {
-  /* <stylesheet> */
-}
-```
-
-In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. For example, if the custom variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
+The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the style query will match all elements that have a value for `--theme-color` that differs from the initial value. It returns false if the value is the same ase the value of the `initial-value` descriptor within the `@property` at-rule, if there is one.
 
 ```css
 :root {
   --theme-color: rebeccapurple;
 }
 
-/* every element is matched (see exception below) */
 @container style(--theme-color) {
   /* <stylesheet> */
 }
 ```
+
+In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
 
 If explicitly defined with the {{cssxref("@property")}} CSS at-rule, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition.
 
@@ -161,13 +154,25 @@ If explicitly defined with the {{cssxref("@property")}} CSS at-rule, the style q
   initial-value: rebeccapurple;
   inherited: true;
 }
+
+:root {
+  --theme-color: rebeccapurple;
+}
+
+main {
+  --theme-color: blue;
+}
+
+@container style(--theme-color) {
+  /* <stylesheet> */
+}
 ```
 
-If this explicit definition was declared, there would be an exception to the "every element is matched" comment preceding the container query: the `:root` element would NOT match as the custom property value for that element and all the elements inheriting the `rebeccapurple` value is the same as the `initial-value`. Only elements that override that value, and those element's descendants, would be a match.
+In this example, the `:root` element would NOT match as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value`. Only elements that override that value, in this case the {{htmlelement("p")}} and its descendants, are a match.
 
 #### Custom property with a value
 
-If a style query includes a value for the custom property, the element's computed value for that property must be an exact match, with equivalent values only being a match if custom property was defined with the {{cssxref("@property")}} at rule containing a `syntax` descriptor.
+If a style query includes a value for the custom property, the element's computed value for that property must be an exact match, with equivalent values only being a match if the custom property was defined with the {{cssxref("@property")}} at rule containing a `syntax` descriptor.
 
 ```css
 @container style(--accent-color: blue) {
@@ -186,6 +191,97 @@ In this case, the equivalent hexidecimal code `#0000ff` will match only if the p
   initial-value: #00f;
 }
 ```
+
+##### Example
+
+In this example, we have a {{htmlelement("fieldset")}} with four radio buttons.
+
+```html
+<fieldset>
+  <legend>Change the value of <code>--theme</code></legend>
+  <ol>
+    <li>
+      <input type="radio" name="selection" value="red" id="red" />
+      <label for="red">--theme: red;</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="green" id="green" />
+      <label for="green">--theme: green</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="blue" id="blue" />
+      <label for="blue">--theme: blue</label>
+    </li>
+    <li>
+      <input type="radio" name="selection" value="unset" id="unset" />
+      <label for="unset">--theme: unset</label>
+    </li>
+  </ol>
+</fieldset>
+<output>I change colors</output>
+```
+
+When a radio button is selected, JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements.
+
+```javascript
+const radios = document.querySelectorAll('input[name="selection"]');
+const body = document.querySelector("body");
+
+for (let i = 0; i < radios.length; i++) {
+  radios[i].addEventListener("change", (e) => {
+    body.style.setProperty("--theme", e.target.value);
+  });
+}
+```
+
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("&lt;color>")}} and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hexidecimal")}}, {{cssxref("named-color")}}, or other syntax (for example, `#00F` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
+
+```css
+@property --theme {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f00;
+}
+```
+
+The first style feature query is a custom property with no value. This will The {{htmlelement("output")}} will have an outline and padding if the `<output>` true when the computed value for `--theme-color` is different from the `initial-value` of any equivaluent of `#f00` (`red`).
+
+```css
+@container style(--theme) {
+  output {
+    outline: 1px dotted;
+    padding: 3px 5px;
+    color: #777;
+  }
+}
+```
+
+The next three container style queries include a value for the custom property. These will match if container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. When red it will also be bold, to better demonstrate that the container query is a match.
+
+```css
+@container style(--theme: red) {
+  output {
+    color: red;
+    font-weight: bold;
+  }
+}
+
+@container style(--theme: green) {
+  output {
+    color: green;
+  }
+}
+
+@container style(--theme: blue) {
+  output {
+    color: blue;
+  }
+}
+```
+
+We did not include styles for `--theme: unset`, as `unset` is not a valid `<color>` creating an invalid inline style.
+
+{{EmbedLiveSample('example','100%','280')}}
 
 When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
