@@ -203,7 +203,7 @@ following `while` loop execute forever because the condition never becomes
 `false`:
 
 ```js example-bad
-// Infinite loops are bad!
+// Infinite loops are bad! 
 while (true) {
   console.log("Hello, world!");
 }
@@ -254,11 +254,14 @@ The following example iterates through the elements in an array until it finds t
 index of an element whose value is `theValue`:
 
 ```js
-for (let i = 0; i < a.length; i++) {
-  if (a[i] === theValue) {
+let ans = 5;
+for (let i = 0; i < 10; i++) {
+  if (i === ans) {
     break;
   }
+console.log(i);
 }
+//  1 2 3 4
 ```
 
 ### Example 2: Breaking to a label
@@ -309,25 +312,25 @@ continue label;
 
 The following example shows a `while` loop with a `continue`
 statement that executes when the value of `i` is `3`. Thus,
-`n` takes on the values `1`, `3`, `7`, and
-`12`.
+`n` takes on the values `1`, `2`, `4`, and
+`5`.
 
 ```js
 let i = 0;
-let n = 0;
-while (i < 5) {
+
+while (i < 6) {
   i++;
   if (i === 3) {
     continue;
   }
-  n += i;
-  console.log(n);
+  
+  console.log(i);
 }
 // Logs:
-// 1 3 7 12
+// 1 2 4 5
 ```
 
-If you comment out the `continue;`, the loop would run till the end and you would see `1,3,6,10,15`.
+If you comment out the `continue;`, the loop would run till the end and you would see `1,2,4,5`.
 
 ### Example 2
 
