@@ -7,9 +7,9 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[Container queries]((/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on features of the container. The query returns true or false depending on whether the query condition is true for the element container.
+[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on features of the container. The query returns true or false depending on whether the query condition is true for the element container.
 
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The media query {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the container query {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or other style features, rather than the viewport's. Container queries have the same syntax rules and the same logical operators as media queries.
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or other style features, rather than the viewport's. Container queries have the same syntax rules and the same logical operators as media queries.
 
 ```css
 @container <container-condition> {
@@ -17,21 +17,25 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 }
 ```
 
-There are two types of container queries: container size queries and container style queries.
+There are two types of container queries: _container size queries_ and _container style queries_.
 
-Container size queries enable applying styles based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio, on elements that have been declared to be a container.
+**Container size queries** enable applying styles based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio, on elements that have been declared to be a container.
 
-Container style queries enable applying styles based on the container's style features. All non-empty elements can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). The query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature and computed value, such as if the container is `display: inline flex` or has a non-transparent background color. In the future, container style queries are expected to support querying any CSS property or declaration.
+**Container style queries** enable applying styles based on the container's style features. All non-empty elements can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). The query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature and computed value, such as if the container is `display: inline flex` or has a non-transparent background color. In the future, container style queries are expected to support querying any CSS property or declaration.
 
-In this guide, we learn the basics of container queries by looking at container size queries, [naming containers](#naming_containers) to limit their scope, and using the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
+In this guide, we learn the basics of container queries by looking at:
+
+1.  [container size queries](#container-size-queries),
+2.  [naming containers](#naming_containers) to limit their scope, and
+3.  using the `style()` functional notation within the {{cssxref("@container")}} `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
 ## Container size queries
 
-With container size queries, declarations are filtered by a size condition and applied if the element has been declared to be a container with the {{cssxref("container-type")}} property set to `size` or `inline-size`, and the condition is true for that element.
+Elements are declared as size query containers by setting their {{cssxref("container-type")}} property set to `size` or `inline-size`. With container size queries, declarations are filtered by a size condition and applied if the element has been declared to be a container and the condition is true for that element.
 
-Media queries are based on the viewport, of which there is only one, and its size rarely changes. There are often thousands of elements on a page. Querying the size of every element all the time would be bad for performance and, therefore, user experience. Additionally, if a descendant style changed the size of the container element, an infinite could occur. For these reasons, container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment).
+Container size queries are relevant only for elements with a `container-type` property of either `size` or `inline-size` set is a container, as these values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). This is a performance necessity. Querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
 
-In a container size query, the `<container-condition>` includes one or more `<size-query>`. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The syntax for `<size-query>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media).
+In a container size query, the `<container-condition>` includes one or more `<size-query>`s. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The syntax for `<size-query>` is identical to the size feature syntax of [`@media` queries](/en-US/docs/Web/CSS/@media).
 
 ```css
 form {
