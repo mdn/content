@@ -113,7 +113,7 @@ svg {
 </svg>
 ```
 
-In this second `SVG` the `color-interpolation` attribute is included, on the `<linearGradient>` element, and set to `linearRGB`.
+In this second SVG, the `color-interpolation` attribute is included on the `<linearGradient>` element and set to `linearRGB`.
 
 ```html
 <svg width="450" height="70">
