@@ -211,6 +211,8 @@ The request payload contains the following params:
 
 > **Note:** If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
 
+#### ID assertion error responses
+
 If the IdP cannot issue a token — for example if the client is unauthorized — the ID assertion endpoint will respond with an error response containing information about the nature of the error. For example:
 
 ```json
@@ -240,7 +242,7 @@ The **Login Status API** allows an IdP to inform a browser of its login (sign-in
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
-- `"logged-in"`: The IdP has at least one user account signed in. Note that, at this stage, the RP and browser don't know which user that is. Information on specific users is returned from the IdP's [`accounts_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_accounts_list_endpoint) at a later point in the FedCM flow.
+- `"logged-in"`: The IdP has at least one user account signed in. Note that, at this stage, the RP and browser don't know which user that is. Information on specific users is returned from the IdP's [`accounts_endpoint`](#the_accounts_list_endpoint) at a later point in the FedCM flow.
 - `"logged-out"`: All IdP accounts are currently signed out.
 - `"unknown"`: The sign-in status of this IdP is not known. This is the default value.
 
@@ -280,7 +282,7 @@ When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in
 
 Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-When this occurs, the browser can dynamically let a user sign into the IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url` field). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+When this occurs, the browser can dynamically let a user sign into the IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url` ). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 
