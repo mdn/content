@@ -10,10 +10,14 @@ The guide explains how to use the CSS {{cssxref("writing-mode")}} and {{cssxref(
 
 ## General technique
 
-In modern browsers, the {{cssxref("writing-mode")}} property can be set to a vertical value to cause relevant form controls to display vertically with text characters written on their side at a 90 degree angle from the default. This is useful when creating vertical language forms (for example, Chinese or Japanese). Specifically:
+In modern browsers, the {{cssxref("writing-mode")}} property can be set to a vertical value to cause relevant form controls to display vertically with normally horizontal text characters (for example in Latin languages) written on their side at a 90 degree angle from the default. Normally vertical text characters, for example in Chinese or Japanese, are unaffected in this regard.
 
-- `writing-mode: vertical-lr` will create from controls with a left-to-right block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the right of previous lines.
-- `writing-mode: vertical-rl` will create from controls with a right-to-left block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the left of previous lines.
+This is useful when creating vertical language forms. Specifically:
+
+- `writing-mode: vertical-lr` will create vertical form controls with a left-to-right block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the right of previous lines.
+- `writing-mode: vertical-rl` will create vertical form controls with a right-to-left block flow direction, meaning that in controls with wrapping or multiple lines of text, subsequent lines will appear to the left of previous lines.
+
+> **Note:** The experimental `sideways-lr` and `sideways-rl` values have much the same effect as `vertical-lr` and `vertical-rl` respectively, except that normally vertical text characters (for example in Chinese or Japanese) are rotated 90 degress to display on their sides, and horizontal text characters (for example in Latin languages) are unaffected in this regard.
 
 In addition, the {{cssxref("direction")}} property can be used to control the direction of the content inside the controls:
 
