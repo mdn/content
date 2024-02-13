@@ -64,7 +64,7 @@ Some developers will choose the increased flexibility provided by IaaS over PaaS
 
 ## Choosing a hosting provider
 
-There are well over 100 hosting providers that are known to either actively support or work well with Django (you can find a fairly large list at [DjangoFriendly hosts](https://djangofriendly.com/index.html)).
+There are many hosting providers that are known to either actively support or work well with Django, including: [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/), [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://aws.amazon.com/), [Azure](https://azure.microsoft.com/en-us/), [Google Cloud](https://cloud.google.com/), [Hetzner](https://www.hetzner.com/), and [Vultr Cloud Compute](https://www.vultr.com/news/new-free-tier-plan/) — to name just a few.
 These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
 Some of the things to consider when choosing a host:
@@ -82,10 +82,10 @@ Some of the things to consider when choosing a host:
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
 These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
 They are however great for testing low traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
-Popular choices in this category include [Railway](https://railway.app/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), etc
+Popular choices in this category include [Vultr Cloud Compute](https://www.vultr.com/news/new-free-tier-plan/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/pricing/details/app-service/), and so on.
 
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
-[Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
+[Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [Digital Ocean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
 > **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
@@ -146,6 +146,34 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
+### Update your application repository in GitHub
+
+Many hosting services allow you to import and/or synchronize projects from a local repository or from cloud-based source version control platforms.
+This can make deployment and iterative development much easier.
+
+You should already be using GitHub to store the local library sources (this was set up in [Source code management with Git and GitHub](/en-US/docs/Learn/Server-side/Django/development_environment#source_code_management_with_git_and_github) as part of setting up your development environment.
+
+This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any hosting service (or for development) others might not.
+Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to backup your changes as shown:
+
+```bash
+# Fetch the latest main branch
+git checkout main
+git pull origin main
+
+# Create branch vanilla_deployment from the current branch (main)
+git checkout -b vanilla_deployment
+
+# Push the new branch to GitHub
+git push origin vanilla_deployment
+
+# Switch back to main
+git checkout main
+
+# Make any further changes in a new branch
+git checkout -b my_changes_for_deployment # Create a new branch
+```
+
 ## Example: Installing LocalLibrary on Railway
 
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
@@ -201,107 +229,6 @@ In order to get our application to work on Railway, we'll need to put our Django
 Once we've done all that, we can set up a Railway account, get the Railway client, and install our website.
 
 That's all the overview you need in order to get started.
-
-### Creating an application repository in GitHub
-
-Railway is closely integrated with GitHub and the **git** source code version control system, and you can configure it to automatically deploy changes to a particular repository or branch on GitHub.
-Alternatively you can push your current local code branch direct to the railway deployment using the CLI.
-
-> **Note:** Using a source code management system like GitHub is good software development practice.
-> Skip this step if you're already using GitHub to manage your source.
-
-There are a lot of ways to work with git, but one of the easiest is to first set up an account on [GitHub](https://github.com/), create the repository there, and then sync to it locally:
-
-1. Visit <https://github.com/> and create an account.
-2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
-3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-
-   - Enter a new repository name and description.
-     For example, you might use the name "django_local_library" and description "Local Library website written in Django".
-   - Choose **Python** in the _Add .gitignore_ selection list.
-   - Choose your preferred license in the _Add license_ selection list.
-   - Check **Initialize this repository with a README**.
-
-4. Press **Create repository**.
-5. Click the green **Clone or download** button on your new repo page.
-6. Copy the URL value from the text field inside the dialog box that appears.
-   If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
-
-Now that the repository ("repo") is created we are going to want to clone it on our local computer:
-
-1. Install _git_ for your local computer (you can find versions for different platforms [here](https://git-scm.com/downloads)).
-2. Open a command prompt/terminal and clone your repo using the URL you copied above:
-
-   ```bash
-   git clone https://github.com/<your_git_user_id>/django_local_library.git
-   ```
-
-   This will create the repo in a new folder in the current working directory.
-
-3. Navigate into the new repo.
-
-   ```bash
-   cd django_local_library
-   ```
-
-The final steps are to copy your application into this local project directory and then add (or "push", in git lingo) the local repo to your remote GitHub repo:
-
-1. Copy your Django application into this folder (all the files at the same level as **manage.py** and below, **not** their containing locallibrary folder).
-2. Open the **.gitignore** file, copy the following lines into the bottom of it, and then save (this file is used to identify files that should not be uploaded to git by default).
-
-   ```plain
-   # Text backup files
-   *.bak
-
-   # Database
-   *.sqlite3
-   ```
-
-3. Open a command prompt/terminal and use the `add` command to add all files to git.
-   This adds the files which aren't ignored by the **.gitignore** file to the "staging area".
-
-   ```bash
-   git add -A
-   ```
-
-4. Use the `status` command to check that all files you are about to `commit` are correct (you want to include source files, not binaries, temporary files etc.).
-   It should look a bit like the listing below.
-
-   ```plain
-   > git status
-   On branch main
-   Your branch is up-to-date with 'origin/main'.
-   Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
-
-           modified:   .gitignore
-           new file:   catalog/__init__.py
-           ...
-           new file:   catalog/migrations/0001_initial.py
-           ...
-           new file:   templates/registration/password_reset_form.html
-   ```
-
-5. When you're satisfied, `commit` the files to your local repo. This is essentially equivalent to signing off on the changes and making them an official part of the local repo.
-
-   ```bash
-   git commit -m "First version of application moved into GitHub"
-   ```
-
-6. At this point, the remote repo has not been changed.
-   The last step is to synchronize (`push`) your local repo up to the remote GitHub repo using the following command:
-
-   ```bash
-   git push origin main
-   ```
-
-When this operation completes, you should be able to go back to the page on GitHub where you created your repo, refresh the page, and see that your whole application has now been uploaded. You can continue to update your repo as files change using this add/commit/push cycle.
-
-> **Note:** This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any platform (or development) others might not.
->
-> The _best_ way to do this is to use _git_ to manage your revisions. With _git_ you can not only go back to a particular old version, but you can maintain this in a separate "branch" from your production changes and cherry-pick any changes to move between production and development branches. [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources) is well worth the effort, but is beyond the scope of this topic.
->
-> The _easiest_ way to do this is to just copy your files into another location. Use whichever approach best matches your knowledge of git!
 
 ### Update the app for Railway
 
