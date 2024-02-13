@@ -194,7 +194,7 @@ In this case, the equivalent hexidecimal code `#0000ff` will match only if the p
 
 ##### Example
 
-In this example, we have a {{htmlelement("fieldset")}} with four radio buttons.
+In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. The fourth option includes a text {{htmlelement("input")}} for entering a custom color.
 
 ```html
 <fieldset>
@@ -213,28 +213,38 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons.
       <label for="blue">--theme: blue</label>
     </li>
     <li>
-      <input type="radio" name="selection" value="unset" id="unset" />
-      <label for="unset">--theme: unset</label>
+      <input type="radio" name="selection" value="unset" id="other" />
+      <label for="other">Other</label>
+      <label for="color">color:</label>
+      <input text="checkbox" name="selection" value="unset" id="color" />
     </li>
   </ol>
 </fieldset>
 <output>I change colors</output>
 ```
 
-When a radio button is selected, JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements.
+When a radio button is selected, JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements. When the text `<input>` is updated, the {{domxref("HTMLInputElement", "value")}} of the `other` is updated, updating the value of `--theme` if `other` is {{domxref("HTMLInputElement", "checked")}}.
 
-```javascript
+```js
 const radios = document.querySelectorAll('input[name="selection"]');
 const body = document.querySelector("body");
+const other = document.getElementById("other");
+const color = document.getElementById("color");
 
 for (let i = 0; i < radios.length; i++) {
   radios[i].addEventListener("change", (e) => {
     body.style.setProperty("--theme", e.target.value);
   });
 }
+color.addEventListener("input", (e) => {
+  other.style.setProperty("value", e.target.value);
+  if (other.checked) {
+    body.style.setProperty("--theme", e.target.value);
+  }
+});
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("&lt;color>")}} and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hexidecimal")}}, {{cssxref("named-color")}}, or other syntax (for example, `#00F` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#00F` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
 
 ```css
 @property --theme {
@@ -244,44 +254,43 @@ We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssx
 }
 ```
 
-The first style feature query is a custom property with no value. This will The {{htmlelement("output")}} will have an outline and padding if the `<output>` true when the computed value for `--theme-color` is different from the `initial-value` of any equivaluent of `#f00` (`red`).
+```css hidden
+output {
+  padding: 3px 5px;
+  margin-top: 5px;
+}
+```
+
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a dotted outline.
 
 ```css
 @container style(--theme) {
   output {
-    outline: 1px dotted;
-    padding: 3px 5px;
+    outline: 2px dotted;
     color: #777;
   }
 }
 ```
 
-The next three container style queries include a value for the custom property. These will match if container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. When red it will also be bold, to better demonstrate that the container query is a match.
+These style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. When equal to `red`, `blue`, or `green`, the {{cssxref("color")}} will be the color current value of `--theme`. When `red` it will also be bold, to better demonstrate that the container query is a match.
 
 ```css
+@container style(--theme: green) or style(--theme: blue) or style(--theme: red) {
+  output {
+    color: var(--theme);
+  }
+}
+
 @container style(--theme: red) {
   output {
-    color: red;
     font-weight: bold;
-  }
-}
-
-@container style(--theme: green) {
-  output {
-    color: green;
-  }
-}
-
-@container style(--theme: blue) {
-  output {
-    color: blue;
   }
 }
 ```
 
-We did not include styles for `--theme: unset`, as `unset` is not a valid `<color>` creating an invalid inline style.
-
 {{EmbedLiveSample('example','100%','280')}}
+
+Try changing the color value. Notice that any equivalent of `red` will make the `<output>` red, while removing the outline. Any other valid color , including `currentcolor` or `hsl(0 100% 50%)` makes the first style query return true. Valid values for `color` that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling), and will be ignored. When invalid, the `--theme` value inherits its initial value.
 
 When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
