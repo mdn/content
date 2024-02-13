@@ -40,7 +40,7 @@ async function signIn() {
 }
 ```
 
-The `identity.providers` property takes an array of objects containing the path to an IdP config file (`configURL`) and the RP's client identifier (`clientId`) issued by the IdP.
+The `identity.providers` property takes an array containing a single object specifying the path to an IdP config file (`configURL`) and the RP's client identifier (`clientId`) issued by the IdP.
 
 > **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. To offer users a choice of identity provider, the RP will need to call `get()` separately for each. This may change in the future.
 
@@ -85,7 +85,7 @@ The flow is as follows:
 
 8. The browser uses the information obtained by the previous two requests to create the UI asking the user to choose an account to sign in to the RP with (in the case where there is more than one available). The UI also asks the user for permission to sign in to the RP using their chosen federated IdP account.
 
-   > **Note:** At this stage, if the `get()` request was made and user mediation is required (for example the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option is set to `required`), the user will be asked to enter their sign in details. If user mediation is not required (for example the `mediation` option is set to `optional` and the browser determines that mediation is not required), the user will be signed in automatically without entering their credentials.
+   > **Note:** At this stage, if the user has previously authenticated with a federated RP account in the current browser instance (i.e. created a new account with the RP or signed into the RP's website using an existing account), they may be able to **auto-reauthenticate**, depending on what the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option is set to in the `get()` call. If so the user will be signed in automatically without entering their credentials, as soon as `get()` is invoked. See the [Auto-reauthentication](#auto-reauthentication) section for more details.
 
 9. If the user grants permission to do so, the browser makes a credentialed request to the [`id_assertion_endpoint`](/en-US/docs/Web/API/FedCM_API/IDP_integration#the_id_assertion_endpoint) to request a validation token from the IdP for the selected account.
 
@@ -99,9 +99,46 @@ The flow is as follows:
 
 11. When the flow is complete, the `get()` promise resolves with an {{domxref("IdentityCredential")}} object, which provides further RP functionality. Most notably, this object contains a token that the RP can verify comes from the IdP (using a certificate) and that contains trusted information about the signed in user. Once the RP validates the token, they can use the contained information to sign the user in and start a new session, sign them up to their service, etc. The format and structure of the token depends on the IdP and has nothing to do with the FedCM API (the RP needs to follow the IdP's instructions).
 
-## Features available via IdentityCredential
+## Auto-reauthentication
 
-The {{domxref("IdentityCredential")}} object obtained from a successful FedCM sign-in provides access to the token used to validate the sign-in (see {{domxref("IdentityCredential.token")}}) and an indication of whether the federated sign-in was carried out using automatic reauthentication, i.e. without user mediation (see {{domxref("IdentityCredential.isAutoSelected")}}).
+FedCM auto-reauthentication lets users reauthenticate automatically when they try to sign into an RP again after their initial authentication using FedCM. "Initial authentication" refers to when the user creates an account or signs into the RP's website via the FedCM sign-in dialog for the first time on the RP site, on the same browser instance.
+
+The idea is that after the user has granted permission to allow communication between the RP and the IdP to allow federated sign-in to occur, there's no privacy or security benefit for enforcing another explicit user confirmation for something that they have already previously acknowledged.
+
+Auto-reauthentication behavior is controlled by the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option in the `get()` call:
+
+```js
+async function signIn() {
+  const identityCredential = await navigator.credentials.get({
+    identity: {
+      providers: [
+        {
+          configURL: "https://accounts.idp.example/config.json",
+          clientId: "********",
+        },
+      ],
+    },
+    mediation: "optional", // this is the default
+  });
+
+  // isAutoSelected is true if auto-reauthentication occurred.
+  const isAutoSelected = identityCredential.isAutoSelected;
+}
+```
+
+Auto-reauthentication can occur if `mediation` is set to `optional`, which tends to make sense to use on an RP sign-in page, or `silent`, which makes sense on pages other than the dedicated sign-in page but where you want to keep users signed in — for example, the pages of a checkout flow on an e-commerce website.
+
+With these `mediation` options, auto-reauthentication will occur under the following conditions:
+
+- FedCM is available to use. For example, the user has not disabled FedCM either globally or in the RP's settings.
+- The user has only used one account to sign into the RP website on this browser via FedCM.
+- The user is signed into the IdP with that account.
+- Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
+- The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
+
+When these conditions are met, an attempt to automatically reauthenticate the user starts as soon as the `get()` is invoked.
+
+In addition, the {{domxref("IdentityCredential.isAutoSelected")}} property provides an indication of whether the federated sign-in was carried out using auto-reauthentication. This is helpful to evaluate the API performance and improve UX accordingly. Also, when it's unavailable, the user may be prompted to sign in with explicit user mediation, which is a `get()` call with `mediation: required`.
 
 ## See also
 

@@ -207,7 +207,7 @@ The request payload contains the following params:
 - `disclosure_text_shown`
   - : A string of `"true"` or `"false"` indicating whether the disclosure text was shown or not. The disclosure text is the information shown to the user (which can include the terms of service and privacy policy links, if provided) if the user is signed in to the IdP but doesn't have an account specifically on the current RP (in which case they'd need to choose to "Continue as..." their IdP identity and then create a corresponding account on the RP).
 - `is_auto_selected`
-  - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of automatic reauthentication, i.e. without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
+  - : A string of `"true"` or `"false"` indicating whether the authentication validation request has been issued as a result of [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication), i.e. without user mediation. This can occur when the {{domxref("CredentialsContainer.get", "get()")}} call is issued with a [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option value of `"optional"` or `"silent"`. It is useful for the IdP to know whether auto reauthentication occurred for performance evaluation and in case higher security is desired. For example, the IdP could return an error code telling the RP that it requires explicit user mediation (`mediation="required"`).
 
 > **Note:** If the {{domxref("CredentialsContainer.get", "get()")}} call succeeds, the `is_auto_selected` value is also communicated to the RP via the {{domxref("IdentityCredential.isAutoSelected")}} property.
 
@@ -236,7 +236,7 @@ This information can be used in a couple of different ways:
 
 ## Update login status using the Login Status API
 
-The **Login Status API** allows an IdP to inform a browser of its login (sign-in) status in that particular browser. This allows the browser to reduce the number of requests it makes to the IdP (because it does not need to waste time requesting accounts when there are no users logged in to the IdP), and mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
+The **Login Status API** allows an IdP to inform a browser of its login (sign-in) status in that particular browser — by this, we mean "whether any users are logged into the IdP on the current browser or not". The browser stores this state for each IdP; the FedCM API then uses it to reduce the number of requests it makes to the IdP (because it does not need to waste time requesting accounts when there are no users logged in to the IdP). It also mitigates [potential timing attacks](https://github.com/fedidcg/FedCM/issues/447).
 
 For each known IdP (identified by its config URL) the browser keeps a tri-state variable representing the login state with three possible values:
 
@@ -278,9 +278,9 @@ When an [RP attempts federated sign-in](/en-US/docs/Web/API/FedCM_API/RP_sign-in
 
 ### What if the browser and the IdP login status become out of sync?
 
-Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP session might expire, meaning that a user account ends up signed out without the application having a chance to set the login status to `"logged-out"`. When federated sign-in is attempted, a request will then be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
+Despite the Login Status API informing the browser of the IdP's login status, it is possible for the browser and IdP to become out of sync. For example, the IdP sessions might expire, meaning that all user accounts end up signed out but the login status is still set to `"logged-in"` (the application was not able to set the login status to `"logged-out"`). In such a case, when federated sign-in is attempted, a request will be made to the IdP's accounts list endpoint but no available accounts will be returned because the session is no longer available.
 
-In such a case, the browser can dynamically let a user sign in to the IdP, providing an option for them to open the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints)). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
+When this occurs, the browser can dynamically let a user sign into the IdP by opening the IdP's sign-in page in a dialog (the sign-in URL is found in the IdP's [config file](#provide_a_config_file_and_endpoints) `login_url` field). The exact nature of this flow is up to the browser; for example, [Chrome handles it like this](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#what_if_the_user_session_expires_let_the_user_sign_in_through_a_dynamic_login_flow).
 
 Once the user is signed in to the IdP, the IdP should:
 

@@ -54,7 +54,7 @@ get(options)
 
         If `mediation` is omitted, it will default to `"optional"`.
 
-        > **Note:** In the case of a federated authentication (FedCM API) request, whether the `get()` call resulted in attempted automatic reauthentication or not is communicated to the IdP (via the `is_auto_selected` value sent to the IdP's `id_assertion_endpoint` during validation; see [FedCM sign-in flow](/en-US/docs/Web/API/FedCM_API/RP_sign-in#fedcm_sign-in_flow)) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
+        > **Note:** In the case of a federated authentication (FedCM API) request, a `mediation` value of `optional` or `silent` may result in attempted [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication). Whether this occurred is communicated to the IdP (via the [`is_auto_selected`](/en-US/docs/Web/API/FedCM_API/IDP_integration#is_auto_selected) parameter sent to the IdP's `id_assertion_endpoint` during validation) and the RP (via the {{domxref("IdentityCredential.isAutoSelected")}} property). This is useful for performance evaluation, security requirements (the IdP may wish to reject automatic reauthentication requests and always require user mediation), and general UX (an IdP or RP may wish to present different UX for auto and non-auto login experiences).
 
     - `signal` {{optional_inline}}
 
@@ -119,11 +119,7 @@ Relying parties (RPs) can call `get()` with an `identity` option to request that
     - `use`: Suitable for situations where a different action, such as validating a payment, is being performed. Browsers will provide a text string similar to "Use \<page-origin\> with \<IdP\>".
 - `providers`
 
-  - : An array of objects specifying details of the IdPs to be used to sign in.
-
-    > **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls. This may change in the future.
-
-    Each object can contain the following properties:
+  - : An array containing a single object specifying details of an IdP to be used to sign in. This object can contain the following properties:
 
     - `configURL`
       - : A string specifying the URL of the IdP's config file. See [Provide a config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) for more information.
@@ -134,11 +130,17 @@ Relying parties (RPs) can call `get()` with an `identity` option to request that
     - `nonce` {{optional_inline}}
       - : A random string that can be included to ensure the response is issued specifically for this request and prevent {{glossary("replay attack", "replay attacks")}}.
 
+    > **Note:** Currently FedCM only allows the API to be invoked with a single IdP, i.e. the `identity.providers` array has to have a length of 1. Multiple IdPs must be supported via different `get()` calls.
+
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with an {{domxref("IdentityCredential")}} instance matching the provided parameters if the user identity is successfully validated by the IdP.
 
-This object contains a token that the RP can then send to its server to validate the user on their service. Once the RP validates the user, they can sign them in, sign them up to their service, etc.
+This object contains a token that includes user identity information that has been signed with the IdP's {{glossary("digital certificate")}}.
+
+The RP sends the token to its server to validate the certificate, and on success can use the (now trusted) identity information in the token to sign them into their service (starting a new session), sign them up to their service if they are a new user, etc.
+
+If the `get()` method's promise rejects, the RP can direct the user to the IdP login page to sign in or create an account.
 
 > **Note:** The exact nature of the token is opaque to the FedCM API, and to the browser. The IdP decides on the syntax and usage of it, and the RP needs to follow the instructions provided by the IdP (see [Verify the Google ID token on your server side](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token), for example) to make sure they are using it correctly.
 
