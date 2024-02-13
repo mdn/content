@@ -68,7 +68,7 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 
 ### Setting hyphenation limits
 
-In this example, we have four boxes each containing the same text. We'll set different values for `hyphenate-limit-chars` to see the effect.
+In this example, we have four boxes each containing the same text. For the purpose of comparison, the first box shows the default hyphenation applied by the browser. The next three boxes demonstrate the result of constraining the browser's default behavior using different `hyphenate-limit-chars` values.
 
 #### HTML
 
@@ -112,20 +112,16 @@ p {
 
 #### Result
 
-This example illustrates different constraints that `hyphenate-limit-chars` can apply to the browser's hyphenation algorithm.
-
-We'll first show the default hyphenation applied by the browser, and then see the effect of constraining the default behavior using the `hyphenate-limit-chars` property.
-
 {{EmbedLiveSample("Setting hyphenation limits", "", 200)}}
 
-In the first box, we don't set `hyphenate-limit-chars`, allowing the user agent to apply its default algorithm. This will use values of `5 2 2`, unless the browser can find better values.
+In the first box, we don't set `hyphenate-limit-chars`, allowing the browser to apply its default algorithm. By default, the browser uses the values `5 2 2` unless it can find better values.
 
-In the second box, we will prevent the browser hyphenating words unless they are at least 14 charcters long. We do this by setting `hyphenate-limit-chars: 14`. The effect is "juxtaposition" is no longer hyphenated, since it is only 13 characters long.
+In the second box, we prevent the browser from hyphenating words unless they are at least 14 characters long by setting `hyphenate-limit-chars: 14`. As a result, "juxtaposition" is not hyphenated in the second box because it is only 13 characters long.
 
 In the third box, we will make the browser include at least 9 characters before the hyphen. We do this by setting `hyphenate-limit-chars: 5 9 2`. The effect is that "acknowledgement" is now hyphenated as "acknowledge-ment" rather than "acknowl-edgement".
 
-In the fourth box, we will make the browser include at least 7 characters after the hyphen. We do this by setting
-`hyphenate-limit-chars: 5 2 7`. The effect is that "juxtaposition" is hyphenated as "juxta-position" rather than "juxtaposi-tion".
+In the fourth box, we make the browser include at least 7 characters after the hyphen by setting
+`hyphenate-limit-chars: 5 2 7`. The effect is that "juxtaposition" is hyphenated as "juxta-position" rather than the default "juxtaposi-tion".
 
 ## Specifications
 
