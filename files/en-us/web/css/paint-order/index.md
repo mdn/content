@@ -58,25 +58,25 @@ When one value is specified, that one is painted first, followed by the other tw
 
 ### Reversing the paint order of stroke and fill
 
-#### SVG
+#### HTML
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
-  <text x="10" y="75">stroke in front</text>
-  <text x="10" y="150" class="stroke-behind">stroke behind</text>
-</svg>
+<div>stroke in front</div>
+<div class="stroke-behind">stroke behind</div>
 ```
 
 #### CSS
 
 ```css
-text {
+div {
   font-family: sans-serif;
   font-size: 50px;
   font-weight: bold;
   fill: black;
-  stroke: red;
-  stroke-width: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 4px;
 }
 
 .stroke-behind {
