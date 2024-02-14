@@ -31,6 +31,8 @@ Values of this type are objects. They contain the following properties:
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
   - : `string`. The URL of the tab's favicon. Only present if the extension has the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) or [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). It may also be `undefined` if the page has no favicon, or an empty string if the tab is loading.
+- `groupId` {{optional_inline}}
+  - : `integer`. The ID of the group that the tab belongs to.
 - `height` {{optional_inline}}
   - : `integer`. The height of the tab in pixels.
 - `hidden`
@@ -57,6 +59,8 @@ Values of this type are objects. They contain the following properties:
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.
 - `openerTabId` {{optional_inline}}
   - : `integer`. The ID of the tab that opened this tab, if any. This property is only present if the opener tab still exists and is in the same window.
+- `pendingUrl`
+  - : `string`. The URL the tab is navigating to, before it has committed. This property is only present if the extension's manifest includes the "tabs" permission and there is a pending navigation.
 - `pinned`
   - : `boolean`. Whether the tab is pinned.
 - `selected` {{deprecated_inline}}
