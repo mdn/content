@@ -46,4 +46,4 @@ Functional notation: `device-cmyk(C M Y K[ / A][, color])`
 
 ## Browser compatibility
 
-{{Compat}}
+There is no browser implementing this feature.

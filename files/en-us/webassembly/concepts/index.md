@@ -6,7 +6,7 @@ page-type: guide
 
 {{WebAssemblySidebar}}
 
-This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's rendering engine.
+This article explains the concepts behind how WebAssembly works including its goals, the problems it solves, and how it runs inside the web browser's JavaScript engine.
 
 ## What is WebAssembly?
 
@@ -79,7 +79,6 @@ Let's talk about these options:
 
 Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
 
-- [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
 

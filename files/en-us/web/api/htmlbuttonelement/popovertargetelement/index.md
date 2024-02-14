@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLButtonElement.popoverTargetElement
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Popover API")}}
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a button.
 

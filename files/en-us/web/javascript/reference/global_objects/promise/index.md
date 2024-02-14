@@ -192,6 +192,8 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+- {{jsxref("Promise.withResolvers()")}}
+  - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
 ## Instance properties
 
@@ -367,7 +369,7 @@ btn.addEventListener("click", testPromise);
 
 ### Loading an image with XHR
 
-Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
+Another simple example using `Promise` and {{domxref("XMLHttpRequest")}} to load an image is available at the MDN GitHub [js-examples](https://github.com/mdn/js-examples/tree/main/promises-test) repository. You can also [see it in action](https://mdn.github.io/js-examples/promises-test/). Each step is commented on and allows you to follow the Promise and XHR architecture closely.
 
 ### Incumbent settings object tracking
 

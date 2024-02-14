@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformOs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The operating system the browser is running on.
 
@@ -22,7 +22,7 @@ Values of this type are strings. Possible values are:
 - `"android"`
   - : The underlying operating system is Android.
 - `"cros"`
-  - : The underlying operating system is Chrome OS.
+  - : The underlying operating system is ChromeOS.
 - `"linux"`
   - : The underlying operating system is Linux.
 - `"openbsd"`

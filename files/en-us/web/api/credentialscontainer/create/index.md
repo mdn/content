@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.create
 ---
 
-{{APIRef("Credential Management API")}}
+{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`create()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that resolves with a new credential instance based on the provided options, the information from which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
 

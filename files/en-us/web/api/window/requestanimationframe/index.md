@@ -9,8 +9,8 @@ browser-compat: api.Window.requestAnimationFrame
 {{APIRef}}
 
 The **`window.requestAnimationFrame()`** method tells the
-browser that you wish to perform an animation. It requests the browser to call a
-user-supplied callback function prior to the next repaint.
+browser you wish to perform an animation. It requests the browser to call a
+user-supplied callback function before the next repaint.
 
 The frequency of calls to the callback function will generally match the display
 refresh rate. The most common refresh rate is 60hz,
@@ -22,9 +22,9 @@ performance and battery life.
 > **Note:** Your callback function must call `requestAnimationFrame()` again if
 > you want to animate another frame. `requestAnimationFrame()` is one-shot.
 
-> **Warning:** Be sure to always use the first argument (or some other method for
+> **Warning:** Be sure always to use the first argument (or some other method for
 > getting the current time) to calculate how much the animation will progress in
-> a frame — **otherwise the animation will run faster on high refresh-rate screens**.
+> a frame — **otherwise, the animation will run faster on high refresh-rate screens**.
 > For ways to do that, see the examples below.
 
 ## Syntax
@@ -43,9 +43,9 @@ requestAnimationFrame(callback)
     [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal
     precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
-    {{domxref("document.timeline.currentTime")}}. This timestamp is shared
-    between all windows that run on the same agent (that is, all same-origin windows,
-    and more importantly same-origin iframes) — which allows synchronizing
+    {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared
+    between all windows that run on the same agent (all same-origin windows
+    and, more importantly, same-origin iframes) — which allows synchronizing
     animations across multiple `requestAnimationFrame` callbacks. The timestamp
     value is also similar to calling {{domxref('performance.now()')}} at the start
     of the callback function, but it is never the same value.
@@ -55,7 +55,7 @@ requestAnimationFrame(callback)
 
 ### Return value
 
-A `long` integer value, the request id, that uniquely identifies the entry
+A `long` integer value, the request ID, that uniquely identifies the entry
 in the callback list. This is a non-zero value, but you may not make any other
 assumptions about its value. You can pass this value to
 {{domxref("window.cancelAnimationFrame()")}} to cancel the refresh callback request.
@@ -98,15 +98,15 @@ function step(timeStamp) {
 window.requestAnimationFrame(step);
 ```
 
-These next three examples illustrate different approaches to setting the zero point in time,
+The following three examples illustrate different approaches to setting the zero point in time,
 the baseline for calculating the progress of your animation in each frame. If you
 want to synchronize to an external clock, such as {{domxref("BaseAudioContext.currentTime")}},
 the highest precision available is the duration of a single frame, 16.67ms @60hz. The
 callback's timestamp argument represents the end of the previous frame, so the soonest
-your newly calculated value(s) will be rendered is the next frame.
+your newly calculated value(s) will be rendered is in the next frame.
 
 This example waits until the first callback executes to set `zero`. If your animation
-jumps to a new value when it starts, you must structure it this way. If you have no need to
+jumps to a new value when it starts, you must structure it this way. If you do not need to
 synchronize to anything external, such as audio, then this approach is recommended because
 some browsers have a multi-frame delay between the initial call to `requestAnimationFrame()`
 and the first call to the callback function.
@@ -127,9 +127,9 @@ function animate(timeStamp) {
 }
 ```
 
-This example uses {{domxref("document.timeline.currentTime")}} to set a zero value
-prior to the first call to `requestAnimationFrame`. {{domxref("document.timeline.currentTime")}}
-aligns with the timeStamp argument, so the zero value is equivalent to the
+This example uses {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} to set a zero value
+before the first call to `requestAnimationFrame`. `document.timeline.currentTime`
+aligns with the `timeStamp` argument, so the zero value is equivalent to the
 0th frame's timestamp.
 
 ```js
@@ -145,9 +145,9 @@ function animate(timeStamp) {
 ```
 
 This example animates using {{domxref("performance.now()")}} instead of the callback's
-timestamp value. You might use this if you want to achieve slightly higher synchronization
+timestamp value. You might use this to achieve slightly higher synchronization
 precision, though the extra degree of precision is variable and not much of an increase.
-Note: This example does not allow you to reliably synchronize animation callbacks.
+Note: This example does not allow you to synchronize animation callbacks reliably.
 
 ```js
 const zero = performance.now();
@@ -172,8 +172,6 @@ function animate() {
 ## See also
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- {{domxref("OffscreenCanvas")}}
-- [DedicatedWorkerGlobalScope](/en-US/docs/Web/API/DedicatedWorkerGlobalScope)
-- [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
+- {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)

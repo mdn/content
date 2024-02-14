@@ -79,7 +79,7 @@ There are even more members you can use than listed above — be sure to check t
 
 ## Installing the PWA
 
-Using the information found in our web app manifest, supporting browsers can display an installation prompt to the user. When the user visits the PWA, they can be prompted to install it on their device. When the accept the prompt, the PWA is installed just like other OS-native apps and the user can launch and use the web app as normal.
+Using the information found in our web app manifest, supporting browsers can display an installation prompt to the user. When the user visits the PWA, they can be prompted to install it on their device. When they accept the prompt, the PWA is installed just like other OS-native apps and the user can launch and use the web app as normal.
 
 To learn more about how users can install PWAs, see [Installing and uninstalling web apps](/en-US/docs/Web/Progressive_web_apps/Guides/Installing).
 

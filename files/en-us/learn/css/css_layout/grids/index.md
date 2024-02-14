@@ -85,8 +85,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -142,8 +142,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -195,8 +195,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -264,8 +264,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -329,8 +329,8 @@ body {
 .container > div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -423,8 +423,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {
@@ -525,8 +525,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {
@@ -663,8 +663,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 header {
   grid-area: header;
@@ -700,7 +700,7 @@ footer {
 
 article {
   padding: 10px;
-  border: 2px solid rgb(79, 185, 227);
+  border: 2px solid rgb(79 185 227);
   border-radius: 5px;
 }
 ```
@@ -726,8 +726,8 @@ body {
 .container div {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 ```
 
@@ -818,8 +818,8 @@ header,
 footer {
   border-radius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
 }
 
 aside {

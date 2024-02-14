@@ -22,5 +22,6 @@ The work of the [Unicode Consortium](https://home.unicode.org/) is a fundamental
 ## See also
 
 - {{glossary("Localization")}}
+- [W3C Internationalization Activity](https://www.w3.org/International/)
 - [Unicode Consortium](https://home.unicode.org/)
 - [JavaScript Internationalization API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)

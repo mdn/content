@@ -39,7 +39,7 @@ The image file formats that are most commonly used on the web are:
 - [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
 - [WebP (Web Picture format)](/en-US/docs/Web/Media/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
 
-Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in Edge.
+Formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
 
 SVG remains the recommended format for images that must be drawn accurately at different sizes.
 
@@ -111,7 +111,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
 
-- `fetchpriority` {{experimental_inline}}
+- `fetchpriority`
 
   - : Provides a hint of the relative priority to use when fetching the image. Allowed values:
 
@@ -144,6 +144,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - : Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
 
     > **Note:** Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+    > **Note:** Images with `loading` set to `lazy` will never be loaded if they do not intersect a visible part of an element, even if loading them would change that as unloaded images have a `width` and `height` of `0`. Putting `width` and `height` on lazyloaded images fixes this issue and is a best practice, [recommended by the specification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Doing so also helps prevent layout shifts.
 
 - `referrerpolicy`
 

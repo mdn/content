@@ -3,10 +3,12 @@ title: "IdentityProvider: getUserInfo() static method"
 short-title: getUserInfo()
 slug: Web/API/IdentityProvider/getUserInfo_static
 page-type: web-api-static-method
-browser-compat: api.IdentityProvider.getUserInfo
+status:
+  - experimental
+browser-compat: api.IdentityProvider.getUserInfo_static
 ---
 
-{{APIRef("FedCM API")}}{{SeeCompatTable}}
+{{APIRef("FedCM API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getUserInfo()`** static method of the {{domxref("IdentityProvider")}} interface returns information about a previously signed in user, which can be used to provide a personalized welcome message and sign-in button. This method has to be called from within an identity provider (IdP)-origin {{htmlelement("iframe")}} so that RP scripts cannot access the data. This must occur after a previously signed in user returns to the relying party (RP) site.
 
@@ -36,7 +38,7 @@ IdentityProvider.getUserInfo(config)
 ### Parameters
 
 - `config`
-  - : A configuation object, which can contain the following properties:
+  - : A configuration object, which can contain the following properties:
     - `configURL`
       - : The URL of the [configuration file](/en-US/docs/Web/API/FedCM_API#provide_a_config_file) for the identity provider from which you want to get user information.
     - `clientId`

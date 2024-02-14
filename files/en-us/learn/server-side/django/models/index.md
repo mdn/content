@@ -119,6 +119,10 @@ The following common arguments can be used when declaring many/most of the diffe
 - [null](https://docs.djangoproject.com/en/4.2/ref/models/fields/#null): If `True`, Django will store blank values as `NULL` in the database for fields where this is appropriate (a `CharField` will instead store an empty string). The default is `False`.
 - [blank](https://docs.djangoproject.com/en/4.2/ref/models/fields/#blank): If `True`, the field is allowed to be blank in your forms. The default is `False`, which means that Django's form validation will force you to enter a value. This is often used with `null=True`, because if you're going to allow blank values, you also want the database to be able to represent them appropriately.
 - [choices](https://docs.djangoproject.com/en/4.2/ref/models/fields/#choices): A group of choices for this field. If this is provided, the default corresponding form widget will be a select box with these choices instead of the standard text field.
+- [unique](https://docs.djangoproject.com/en/4.2/ref/models/fields/#unique):
+  If `True`, ensures that the field value is unique across the database.
+  This can be used to prevent duplication of fields that can't have the same values.
+  The default is `False`.
 - [primary_key](https://docs.djangoproject.com/en/4.2/ref/models/fields/#primary-key):
   If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
@@ -286,39 +290,59 @@ Copy the `Genre` model code shown below and paste it into the bottom of your `mo
 As mentioned above, we've created the genre as a model rather than as free text or a selection list so that the possible values can be managed through the database rather than being hard coded.
 
 ```python
+from django.urls import reverse # Used to generate URLs by reversing the URL patterns
+
 class Genre(models.Model):
     """Model representing a book genre."""
-    name = models.CharField(max_length=200, help_text='Enter a book genre (e.g. Science Fiction)')
+    name = models.CharField(
+        max_length=200,
+        unique=True,
+        help_text="Enter a book genre (e.g. Science Fiction, French Poetry etc.)"
+    )
 
     def __str__(self):
         """String for representing the Model object."""
         return self.name
+
+    def get_absolute_url(self):
+        """Returns the url to access a particular genre instance."""
+        return reverse('genre-detail', args=[str(self.id)])
 ```
 
-The model has a single `CharField` field (`name`), which is used to describe the genre (this is limited to 200 characters and has some `help_text`). At the end of the model, we declare a `__str__()` method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called `Name` in forms.
+The model has a single `CharField` field (`name`), which is used to describe the genre (this is limited to 200 characters and has some `help_text`).
+We've set this field to be unique (`unique=True`) because there should only be one record for each genre.
+
+After the field, we declare a `__str__()` method, which returns the name of the genre defined by a particular record. No verbose name has been defined, so the field will be called `Name` in forms.
+The final method, `get_absolute_url()` returns a URL that can be used to access a detail record for this model (for this to work, we will have to define a URL mapping that has the name `genre-detail`, and define an associated view and template).
 
 ### Book model
 
-Copy the `Book` model below and again paste it into the bottom of your file. The `Book` model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan. The model uses a `CharField` to represent the book's `title` and `isbn`. For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise, it would default to "Isbn"). We also set the parameter `unique` as `true` to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table). The model uses `TextField` for the `summary`, because this text may need to be quite long.
+Copy the `Book` model below and again paste it into the bottom of your file. The `Book` model represents all information about an available book in a general sense, but not a particular physical "instance" or "copy" available for loan.
+
+The model uses a `CharField` to represent the book's `title` and `isbn`.
+For `isbn`, note how the first unnamed parameter explicitly sets the label as "ISBN" (otherwise, it would default to "Isbn"). We also set the parameter `unique` as `true` to ensure all books have a unique ISBN (the unique parameter makes the field value globally unique in a table).
+Unlike for the `isbn` (and the genre name), the `title` is not set to be unique, because it is possible for different books to have the same name.
+The model uses `TextField` for the `summary`, because this text may need to be quite long.
 
 ```python
-from django.urls import reverse # Used to generate URLs by reversing the URL patterns
-
 class Book(models.Model):
     """Model representing a book (but not a specific copy of a book)."""
     title = models.CharField(max_length=200)
+    author = models.ForeignKey('Author', on_delete=models.RESTRICT, null=True)
+    # Foreign Key used because book can only have one author, but authors can have multiple books.
+    # Author as a string rather than object because it hasn't been declared yet in file.
 
-    # Foreign Key used because book can only have one author, but authors can have multiple books
-    # Author is a string rather than an object because it hasn't been declared yet in the file
-    author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True)
-
-    summary = models.TextField(max_length=1000, help_text='Enter a brief description of the book')
-    isbn = models.CharField('ISBN', max_length=13, unique=True,
-                             help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn">ISBN number</a>')
+    summary = models.TextField(
+        max_length=1000, help_text="Enter a brief description of the book")
+    isbn = models.CharField('ISBN', max_length=13,
+                            unique=True,
+                            help_text='13 Character <a href="https://www.isbn-international.org/content/what-isbn'
+                                      '">ISBN number</a>')
 
     # ManyToManyField used because genre can contain many books. Books can cover many genres.
     # Genre class has already been defined so we can specify the object above.
-    genre = models.ManyToManyField(Genre, help_text='Select a genre for this book')
+    genre = models.ManyToManyField(
+        Genre, help_text="Select a genre for this book")
 
     def __str__(self):
         """String for representing the Model object."""
@@ -331,11 +355,11 @@ class Book(models.Model):
 
 The genre is a `ManyToManyField`, so that a book can have multiple genres and a genre can have many books. The author is declared as `ForeignKey`, so each book will only have one author, but an author may have many books (in practice a book might have multiple authors, but not in this implementation!)
 
-In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the `author` field are `null=True`, which allows the database to store a `Null` value if no author is selected, and `on_delete=models.SET_NULL`, which will set the value of the book's author field to `Null` if the associated author record is deleted.
+In both field types the related model class is declared as the first unnamed parameter using either the model class or a string containing the name of the related model. You must use the name of the model as a string if the associated class has not yet been defined in this file before it is referenced! The other parameters of interest in the `author` field are `null=True`, which allows the database to store a `Null` value if no author is selected, and `on_delete=models.RESTRICT`, which will prevent the book's associated author being deleted if it is referenced by any book.
 
-> **Warning:** By default `on_delete=models.CASCADE`, which means that if the author was deleted, this book would be deleted too! We use `SET_NULL` here, but we could also use `PROTECT` or `RESTRICT` to prevent the author being deleted while any book uses it.
+> **Warning:** By default `on_delete=models.CASCADE`, which means that if the author was deleted, this book would be deleted too! We use `RESTRICT` here, but we could also use `PROTECT` to prevent the author being deleted while any book uses it or `SET_NULL` to set the book's author to `Null` if the record is deleted.
 
-The model also defines `__str__()`, using the book's `title` field to represent a `Book` record. The final method, `get_absolute_url()` returns a URL that can be used to access a detail record for this model (for this to work, we will have to define a URL mapping that has the name `book-detail`, and define an associated view and template).
+The model also defines `__str__()`, using the book's `title` field to represent a `Book` record. The final method, `get_absolute_url()` returns a URL that can be used to access a detail record for this model (we will have to define a URL mapping that has the name `book-detail`, and define an associated view and template).
 
 ### BookInstance model
 
@@ -350,8 +374,10 @@ Some of the fields and methods will now be familiar. The model uses:
 import uuid # Required for unique book instances
 
 class BookInstance(models.Model):
+
     """Model representing a specific copy of a book (i.e. that can be borrowed from the library)."""
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4,
+                          help_text="Unique ID for this particular book across whole library")
     book = models.ForeignKey('Book', on_delete=models.RESTRICT, null=True)
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
@@ -381,7 +407,8 @@ class BookInstance(models.Model):
 
 We additionally declare a few new types of field:
 
-- `UUIDField` is used for the `id` field to set it as the `primary_key` for this model. This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
+- `UUIDField` is used for the `id` field to set it as the `primary_key` for this model.
+  This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
 - `DateField` is used for the `due_back` date (at which the book is expected to become available after being borrowed or in maintenance). This value can be `blank` or `null` (needed for when the book is available). The model metadata (`Class Meta`) uses this field to order records when they are returned in a query.
 - `status` is a `CharField` that defines a choice/selection list. As you can see, we define a tuple containing tuples of key-value pairs and pass it to the choices argument. The value in a key/value pair is a display value that a user can select, while the keys are the values that are actually saved if the option is selected. We've also set a default value of 'm' (maintenance) as books will initially be created unavailable before they are stocked on the shelves.
 

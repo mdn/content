@@ -43,8 +43,6 @@ You can run a local HTTP server using a [VSCode plugin](/en-US/docs/Learn/Common
 
 > **Note:** that the Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
-You can also create a [local server with the IntelliJ IDE](https://www.jetbrains.com/help/idea/creating-local-server-configuration.html), which comes with a [configurable built-in PHP web server](https://www.jetbrains.com/help/idea/php-built-in-web-server.html#configuring-built-in-web-server).
-
 Learn how to [set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server side language](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
 
 ## Localhost with npx

@@ -61,12 +61,7 @@ The flow elements are:
 - {{HTMLElement("figure")}}
 - {{HTMLElement("footer")}}
 - {{HTMLElement("form")}}
-- {{HTMLElement("Heading_Elements", "h1")}}
-- {{HTMLElement("Heading_Elements", "h2")}}
-- {{HTMLElement("Heading_Elements", "h3")}}
-- {{HTMLElement("Heading_Elements", "h4")}}
-- {{HTMLElement("Heading_Elements", "h5")}}
-- {{HTMLElement("Heading_Elements", "h6")}}
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("header")}}
 - {{HTMLElement("hgroup")}}
 - {{HTMLElement("hr")}}
@@ -116,7 +111,7 @@ The flow elements are:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- Plain text
+- plain text
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -127,15 +122,15 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Sectioning content
 
-Sectioning content is a subset of flow content, and can be used everywhere flow content is expected. Elements belonging to the sectioning content model create a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) that defines the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
+Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
 
 ### Heading content
 
-Heading content is a subset of flow content, which defines the title of a section, whether marked by an explicit [sectioning content](#sectioning_content) element, or implicitly defined by the heading content itself. Heading content can be used everywhere flow content is expected.
+Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
-Elements belonging to this category are {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}} and {{HTMLElement("hgroup")}}.
+Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
@@ -143,7 +138,7 @@ Elements belonging to this category are {{HTMLElement("Heading_Elements", "h1")}
 
 ### Phrasing content
 
-Phrasing content is a subset of flow content that defines the text and the markup it contains, and can be used everywhere flow content is expected. Runs of phrasing content make up paragraphs.
+Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.
 
 Elements belonging to this category are:
 
@@ -195,7 +190,8 @@ Elements belonging to this category are:
 - {{HTMLElement("u")}}
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
-- {{HTMLElement("wbr")}} and plain text (not only consisting of white spaces characters).
+- {{HTMLElement("wbr")}}
+- plain text (including more than just whitespace characters)
 
 A few other elements belong to this category, but only if a specific condition is fulfilled:
 
@@ -209,7 +205,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content is a subset of flow content that imports another resource or inserts content from another markup language or namespace into the document, and can be used everywhere flow content is expected. Elements that belong to this category include:
+Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document. Elements that belong to this category include:
 
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
@@ -220,18 +216,19 @@ Embedded content is a subset of flow content that imports another resource or in
 - {{HTMLElement("object")}}
 - {{HTMLElement("picture")}}
 - {{SVGElement("svg")}}
-- {{HTMLElement("video")}}.
+- {{HTMLElement("video")}}
 
 ### Interactive content
 
-Interactive content is a subset of flow content that includes elements that are specifically designed for user interaction, and can be used everywhere flow content is expected. Elements that belong to this category include:
+Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction. Elements that belong to this category include:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
 - {{HTMLElement("embed")}}
 - {{HTMLElement("iframe")}}
 - {{HTMLElement("label")}}
-- {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
 
 Some elements belong to this category only under specific conditions:
 
@@ -272,7 +269,7 @@ This category contains several sub-categories:
 - resettable
   - : Elements that can be affected when a form is reset. Contains {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
 
-## Secondary categories
+## Secondary content categories
 
 There are some secondary classifications of elements that can be useful to be aware of as well.
 

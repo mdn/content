@@ -16,11 +16,10 @@ browser-compat:
 
 {{CSSRef}}{{Non-standard_Header}}
 
-The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has `overflow:scroll;` set.
+The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has scrollable overflow.
 
-> **Note:** If `overflow:scroll;` is not set, no scrollbar is displayed.
-
-> **Note:** `::-webkit-scrollbar` is only available in [Blink](https://www.chromium.org/blink/)- and [WebKit](https://webkit.org)-based browsers (e.g., Chrome, Edge, Opera, Safari, all browsers on iOS, and [others](https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based)). A standardized method of styling scrollbars is available with {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}}, but is currently only supported in Firefox.
+> **Note:** The `::-webkit-scrollbar` vendor-prefixed pseudo-element is not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
+> The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support this pseudo-element. When these properties are set, `::-webkit-scrollbar` styling is disabled.
 
 ## CSS Scrollbar Selectors
 

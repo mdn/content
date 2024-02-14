@@ -9,9 +9,11 @@ browser-compat: http.headers.Range
 
 The **`Range`** HTTP request header indicates the parts of a resource that the server should return.
 Several parts can be requested at the same time in one `Range` header, and the server may send back these ranges in a multipart document.
-If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} for the response.
+If the server sends back ranges, it uses the {{HTTPStatus("206", "206 Partial Content")}} status code for the response.
 If the ranges are invalid, the server returns the {{HTTPStatus("416", "416 Range Not Satisfiable")}} error.
-The server can also ignore the `Range` header and return the whole resource with a {{HTTPStatus("200")}} status code.
+
+A server that doesn't support range requests may ignore the `Range` header and return the whole resource with a {{HTTPStatus("200")}} status code.
+Ignoring the `Range` header is equivalent to `Accept-Ranges: none`, so the {{HTTPHeader("Accept-Ranges")}} response header is rarely used for this purpose.
 
 Currently only [`bytes` units are registered](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units) which are _offsets_ (zero-indexed & inclusive).
 If the requested data has a [content coding](/en-US/docs/Web/HTTP/Headers/Content-Encoding) applied, each byte range represents the encoded sequence of bytes, not the bytes that would be obtained after decoding.
@@ -116,6 +118,7 @@ Range: bytes=0-499, -499
 - {{HTTPHeader("If-Range")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Accept-Ranges")}}
 - {{HTTPStatus("206", "206 Partial Content")}}
 - {{HTTPStatus("416", "416 Range Not Satisfiable")}}
 - [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests) guide

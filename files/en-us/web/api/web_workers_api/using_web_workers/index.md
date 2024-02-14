@@ -7,7 +7,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/#workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can perform I/O using [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) (although the `responseXML` and `channel` attributes are always null) or [`fetch`](/en-US/docs/Web/API/Fetch_API) (with no such restrictions). Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
 
 This article provides a detailed introduction to using web workers.
 
@@ -23,7 +23,9 @@ You can run whatever code you like inside the worker thread, with some exception
 
 Data is sent between workers and the main thread via a system of messages — both sides send their messages using the `postMessage()` method, and respond to messages via the `onmessage` event handler (the message is contained within the {{domxref("Worker/message_event", "message")}} event's data attribute). The data is copied rather than shared.
 
-Workers may, in turn, spawn new workers, as long as those workers are hosted within the same origin as the parent page. In addition, workers may use [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) for network I/O, with the exception that the `responseXML` and `channel` attributes on `XMLHttpRequest` always return `null`.
+Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
+
+In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ## Dedicated workers
 
@@ -807,7 +809,7 @@ To learn how to debug web workers, see the documentation for each browser's Java
 You can use most standard JavaScript features inside a web worker, including:
 
 - {{domxref("Navigator")}}
-- {{domxref("XMLHttpRequest")}}
+- {{domxref("fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
 

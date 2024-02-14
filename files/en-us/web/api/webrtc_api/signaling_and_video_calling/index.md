@@ -18,7 +18,7 @@ In this article, we will further enhance the [WebSocket chat](https://webrtc-fro
 
 Establishing a WebRTC connection between two devices requires the use of a **signaling server** to resolve how to connect them over the internet. A signaling server's job is to serve as an intermediary to let two peers find and establish a connection while minimizing exposure of potentially private information as much as possible. How do we create this server and how does the signaling process actually work?
 
-First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("XMLHttpRequest")}} to carrier pigeons to exchange the signaling information between the two peers.
+First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("fetch()")}} to carrier pigeons to exchange the signaling information between the two peers.
 
 It's important to note that the server doesn't need to understand or interpret the signaling data content. Although it's {{Glossary("SDP")}}, even this doesn't matter so much: the content of the message going through the signaling server is, in effect, a black box. What does matter is when the {{Glossary("ICE")}} subsystem instructs you to send signaling data to the other peer, you do so, and the other peer knows how to receive this information and deliver it to its own ICE subsystem. All you have to do is channel the information back and forth. The contents don't matter at all to the signaling server.
 
@@ -450,6 +450,16 @@ Any errors are caught and passed to `handleGetUserMediaError()`, described in [H
 
 > **Note:** As is the case with the caller, once the `setLocalDescription()` fulfillment handler has run, the browser begins firing {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} events that the callee must handle, one for each candidate that needs to be transmitted to the remote peer.
 
+Finally, the caller handles the answer message it received by creating a new {{domxref("RTCSessionDescription")}} object representing the callee's session description and passing it into
+{{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}.
+
+```js
+function handleVideoAnswerMsg(msg) {
+  const desc = new RTCSessionDescription(msg.sdp);
+  myPeerConnection.setRemoteDescription(desc).catch(reportError);
+}
+```
+
 ##### Sending ICE candidates
 
 The ICE negotiation process involves each peer sending candidates to the other, repeatedly, until it runs out of potential ways it can support the `RTCPeerConnection`'s media transport needs. Since ICE doesn't know about your signaling server, your code handles transmission of each candidate in your handler for the {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event.
@@ -592,7 +602,7 @@ function closeVideoCall() {
   remoteVideo.removeAttribute("src");
   remoteVideo.removeAttribute("srcObject");
   localVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
+  localVideo.removeAttribute("srcObject");
 
   document.getElementById("hangup-button").disabled = true;
   targetUsername = null;
@@ -608,11 +618,11 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 
 Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
-Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
+Finally, we set the {{domxref("HTMLButtonElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 
 #### Dealing with state changes
 
-There are a number of additional events you can set listeners for which notifying your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
+There are a number of additional events for which you can set listeners to notify your code of a variety of state changes. We use three of them: {{domxref("RTCPeerConnection.iceconnectionstatechange_event", "iceconnectionstatechange")}}, {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}, and {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}.
 
 ##### ICE connection state
 

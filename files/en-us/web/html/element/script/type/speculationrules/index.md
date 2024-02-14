@@ -2,14 +2,16 @@
 title: <script type="speculationrules">
 slug: Web/HTML/Element/script/type/speculationrules
 page-type: html-attribute-value
+status:
+  - experimental
 browser-compat: html.elements.script.type.speculationrules
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 ## Syntax
 
@@ -62,9 +64,9 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
 
 The JSON structure contains one or more fields at the top level, each one representing an action to define speculation rules for. At present the supported actions are:
 
-- `"prefetch"` {{optional_inline}}
+- `"prefetch"` {{optional_inline}} {{experimental_inline}}
   - : Rules for potential future navigations that should have their associated document response body downloaded, leading to significant performance improvements when those documents are navigated to. Note that none of the subresources referenced by the page are downloaded.
-- `"prerender"` {{optional_inline}}
+- `"prerender"` {{optional_inline}} {{experimental_inline}}
   - : Rules for potential future navigations that should have their associated documents fully downloaded, rendered, and loaded into an invisible tab. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. When those documents are navigated to, navigations will be instant, leading to major performance improvements.
 
 > **Note:** Consult the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) main page for full details on how to use prefetch and prerender effectively.
@@ -79,7 +81,7 @@ Specifically, each object can contain the following properties:
       - : Denotes that the URLs will come from a specific list.
 - `"urls"`
   - : An array of strings representing the list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
-- `"requires"` {{optional_inline}}
+- `"requires"` {{optional_inline}} {{experimental_inline}}
 
   - : An array of strings representing capabilities of the browser parsing the rule, which must be available if the rule is to be applied to the specified URLs.
 
@@ -94,7 +96,7 @@ Specifically, each object can contain the following properties:
         - A future Safari implementation may possibly use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
-- `"referrer_policy"` {{optional_inline}}
+- `"referrer_policy"` {{optional_inline}} {{experimental_inline}}
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
 
 > **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.

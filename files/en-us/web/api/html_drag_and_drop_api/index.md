@@ -2,7 +2,7 @@
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
-spec-urls: https://html.spec.whatwg.org/multipage/#dnd
+spec-urls: https://html.spec.whatwg.org/multipage/dnd.html
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

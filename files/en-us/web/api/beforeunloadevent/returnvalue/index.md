@@ -8,7 +8,7 @@ status:
 browser-compat: api.BeforeUnloadEvent.returnValue
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`returnValue`** property of the
 {{domxref("BeforeUnloadEvent")}} interface, when set to a truthy value, triggers a browser-generated confirmation dialog asking users to confirm if they _really_ want to leave the page when they try to close or reload it, or navigate somewhere else. This is intended to help prevent loss of unsaved data.

@@ -46,7 +46,7 @@ In this example, the id selector (`#a`) has a specificity of [`1-0-0`](/en-US/do
 
 The `.foo` class selector has a specificity of `0-1-0`. This makes the total specificity `1-0-1` for `& c` and `0-1-1` for `.foo c`, meaning that `color: blue;` wins out.
 
-## See Also
+## See also
 
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)

@@ -17,7 +17,7 @@ No notable changes.
 ### CSS
 
 - Container queries and container query length units are now supported by default.
-  For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_container_queries#container_query_length_units) documentation ([Firefox bug 1809720](https://bugzil.la/1809720)).
+  For more information on these queries and the related units of length, see the [CSS Container Queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) documentation ([Firefox bug 1809720](https://bugzil.la/1809720)).
 - The [color-gamut media query](/en-US/docs/Web/CSS/@media/color-gamut) is now supported ([Firefox bug 1422237](https://bugzil.la/1422237)).
 - The [`list`](/en-US/docs/Web/HTML/Element/datalist#color_type) attribute is supported in `<input>` elements with `type="color"` on Windows and Linux ([Firefox bug 960984](https://bugzil.la/960984)).
 - The [`@page`](/en-US/docs/Web/CSS/@page) at-rule now supports named pages, which allows a user to create page breaks for specific selectors using the [`page`](/en-US/docs/Web/CSS/page) property ([Firefox bug 1787947](https://bugzil.la/1787947))
@@ -36,7 +36,7 @@ No notable changes.
 - {{domxref("ReadableStream")}} now supports [asynchronous iteration over the chunks in a stream](/en-US/docs/Web/API/ReadableStream#async_iteration) using the `for await...of` syntax ([Firefox bug 1734244](https://bugzil.la/1734244)).
 
 - WebRTC now supports sending the set of available encodings when adding a transceiver to a peer connection, and also getting the active encoding associated with a sender.
-  Specifically, {{domxref("RTCPeerConnection.addTransceiver()")}} now supports using the [`sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) option in the [`init`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#init) parameter object, and [`RTCRtpEncodingParameters.active`](/en-US/docs/Web/API/RTCRtpEncodingParameters#active) can be used to determine whether or not the encoding is being used to send data.
+  Specifically, {{domxref("RTCPeerConnection.addTransceiver()")}} now supports using the [`sendEncodings`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#sendencodings) option in the [`init`](/en-US/docs/Web/API/RTCPeerConnection/addTransceiver#init) parameter object, and `active` can be used to determine whether or not the encoding is being used to send data.
   (See [Firefox bug 1676855](https://bugzil.la/1676855) for more details.)
 
 - WebRTC methods {{domxref("RTCRtpSender.getParameters()")}}, {{domxref("RTCRtpSender.setParameters()")}}, and {{domxref("RTCRtpReceiver.getParameters()")}} are now compliant with the specification ([Firefox bug 1401592](https://bugzil.la/1401592)).

@@ -3,14 +3,14 @@ title: "CookieStore: getAll() method"
 short-title: getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CookieStore.getAll
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -83,16 +83,22 @@ Each object contains the following properties:
 
 ### Exceptions
 
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the origin does not {{glossary("Serialization", "serialize")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if getting the cookie or cookies represented by the given `name` or `options` fails.
+  - : Thrown if:
+    - The `url` option is present and is not equal with the creation URL, if in main thread.
+    - The `url` option is present and its origin is not the same as the origin of the creation URL.
+    - Querying cookies represented by the given `name` or `options` fails.
 
 ## Examples
 
-In this example we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
-let cookies = await cookieStore.getAll();
-if (cookies) {
+const cookies = await cookieStore.getAll();
+
+if (cookies.length > 0) {
   console.log(cookies);
 } else {
   console.log("Cookie not found");

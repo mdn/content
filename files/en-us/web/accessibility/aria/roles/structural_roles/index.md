@@ -55,12 +55,12 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -48,7 +48,7 @@ The following properties are specified as part of the [Window Management API](/e
   - : A number representing the y-coordinate (top edge) of the available screen area.
 - {{domxref("ScreenDetailed.left", "Screen.left")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : A number representing the x-coordinate (left-hand edge) of the total screen area.
-- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("ScreenDetailed.top", "Screen.top")}} {{ReadOnlyInline}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : A number representing the y-coordinate (top edge) of the total screen area.
 
 ## Instance methods
@@ -63,14 +63,14 @@ _Also inherits methods from its parent {{domxref("EventTarget")}}_.
 ## Events
 
 - {{domxref("Screen.change_event", "change")}} {{experimental_inline}} {{securecontext_inline}}
-  - : Fired on a specific screen when it changes in some way — for example available width or height, or orientation.
+  - : Fired on a specific screen when it changes in some way — width or height, available width or height, color depth, or orientation.
 - {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fires when the screen orientation changes.
 
 ## Examples
 
 ```js
-if (screen.pixelDepth < 8) {
+if (screen.colorDepth < 8) {
   // use low-color version of page
 } else {
   // use regular, colorful page

@@ -261,7 +261,3 @@ Here's the final code listing, along with a viewable live example:
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/8r66fdvp/","","350")}}
 
 You can also [see it on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/Babylon.js/shapes.html) and [fork the repository](https://github.com/end3r/MDN-Games-3D/) if you want to play with it yourself locally. Now you know the basics of Babylon.js engine; happy experimentation!
-
-## See also
-
-- [Learning Babylon.js book](http://learningbabylonjs.com/)

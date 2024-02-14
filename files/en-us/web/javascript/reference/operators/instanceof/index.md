@@ -214,7 +214,7 @@ if (!(mycar instanceof Car)) {
 
 This is really different from:
 
-```js example-bad
+```js-nolint example-bad
 if (!mycar instanceof Car) {
   // unreachable code
 }

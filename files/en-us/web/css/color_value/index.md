@@ -29,7 +29,7 @@ rgb(255 0 153 / 80%)
 
 /* HSL (Hue, Saturation, Lightness) */
 hsl(150 30% 60%)
-hsl(150 30% 60% / 0.8)
+hsl(150 30% 60% / 80%)
 
 /* HWB (Hue, Whiteness, Blackness) */
 hwb(12 50% 0%)
@@ -50,6 +50,10 @@ oklab(59% 0.1 0.1 / 0.5)
 /* Oklch (Lightness, Chroma, Hue) */
 oklch(60% 0.15 50)
 oklch(60% 0.15 50 / 0.5)
+
+/* light-dark */
+light-dark(white, black)
+light-dark(rgb(255 255 255), rgb(0 0 0))
 ```
 
 A `<color>` value can be specified using one of the methods listed below:
@@ -62,6 +66,7 @@ A `<color>` value can be specified using one of the methods listed below:
   - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
+- By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
 ### currentcolor keyword
 
@@ -172,7 +177,7 @@ the preprocessing procedure is:
    oklch(63.612% 0.1522 78.748)
    ```
 
-## Accessibility considerations
+## Accessibility concerns
 
 Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 

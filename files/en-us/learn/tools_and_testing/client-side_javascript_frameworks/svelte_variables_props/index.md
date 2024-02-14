@@ -392,8 +392,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
      filter === "active"
        ? todos.filter((t) => !t.completed)
        : filter === "completed"
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
    ```
 
    We use the `filter` variable to control the active filter: _all_, _active_, or _completed_. Just assigning one of these values to the filter variable will activate the filter and update the list of to-dos. Let's see how to achieve this.
