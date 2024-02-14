@@ -374,7 +374,7 @@ In the following CSS we are creating the styles for `.card`, `.card h2` and then
     /* equivalent to `.card h2` */
     color: slateblue;
     .featured & {
-      /* equivalent to `.featured.card h2` */
+      /* equivalent to `.featured :is(.card h2)` */
       color: tomato;
     }
   }
