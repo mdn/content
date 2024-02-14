@@ -45,9 +45,9 @@ The natural logarithm (base `e`) of `value`, when `base` is not defined.
 
 ## Examples
 
-### Sizes based on `log()` function
+### Using the `log()` function on a logarithmic scale
 
-In this example, the width of each bar is relative to it's value on a [log<sub>10</sub> scale](https://en.wikipedia.org/wiki/Logarithmic_scale).
+This example illustrates how the `log()` function can be used to visualize data values by using a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale). The width of each bar in this example is relative to its data value on a logarithmic scale with base 10.
 
 #### HTML
 
