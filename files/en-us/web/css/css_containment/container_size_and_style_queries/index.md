@@ -78,13 +78,13 @@ Container names also enable querying styles from elements that aren't a direct p
 
 In this container size query example, the query is limited to only elements with `container-name: card` applied. The styles within the query block will apply to the descendants of all list items nested within an element with a class of `cards` with a width that is greater than its height. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
 
-Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries. To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container but it can still be a style query. To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
+Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries. To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container but it can still be a [style container](#container_style_queries). To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
 
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
 ## Container style queries
 
-Container queries can evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as including [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries), but using the `style()` function with a `<style-feature>` instead of the `supports()` function with a `<support-condition>`:
+Container queries can evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as including [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries), but using the `style()` function with a `<style-feature>` (instead of the `supports()` function with a `<support-condition>`):
 
 ```css
 @container style(<style-feature>),
@@ -95,7 +95,7 @@ Container queries can evaluate the computed style of the container element. A _c
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. Per the CSS containment specification, a **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with and without a value. See the [browser compatibility table](#browser_compatibility) for declaration and property support status.
+The parameter of each `style()` is a single `<style-feature>`. Per the CSS containment specification, a **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table](#browser_compatibility).
 
 If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the custom property value (or, in the future, the CSS declaration) passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
@@ -111,7 +111,7 @@ In the future, we'll be able to write style queries like so:
 }
 ```
 
-The `style()` functional notation is used around the style feature to differentiate it from a size query. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 100vw`. Querying `@containers (max-width: 100vw)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That is different from querying `@containers style(max-width: 100vw)` which is a style query.
+The `style()` functional notation is used to differentiate style queries from a size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 100vw`. Querying `@containers (max-width: 100vw)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 100vw or less. That is different from querying `@containers style(max-width: 100vw)` which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `100vw`.
 
 Until style queries for regular CSS declarations and properties are supported, we are limited to including only custom properties as the `style()` parameter, with or without a value:
 
