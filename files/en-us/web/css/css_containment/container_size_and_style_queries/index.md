@@ -338,7 +338,7 @@ When supported, this basic example will make the background color of any {{htmle
 
 The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. Just as with custom property container style queries, we did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
 
-Style features that query a shorthand property will be true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style({{cssxref("border")}}: 2px solid red)` will resolve to true if all 12 longhand properties ({{cssxref("border-style-bottom")}}, etc.) that make up that shorthand are true.
+Style features that query a shorthand property will be true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style({{cssxref("border")}}: 2px solid red)` will resolve to true if all 12 longhand properties ({{cssxref("border-bottom-style")}}, etc.) that make up that shorthand are true.
 
 The global CSS values `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
