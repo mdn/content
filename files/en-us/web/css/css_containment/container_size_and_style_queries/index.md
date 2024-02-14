@@ -7,9 +7,9 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to container elements based on features of the container. The query returns true or false depending on whether the query condition is true for the element container.
+[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to elements contained within a particular container based on the features of that container. The query returns true or false depending on whether the query condition is true for the container.
 
-Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on the container's size or other style features, rather than the viewport's. Container queries have the same syntax rules and the same logical operators as media queries.
+Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on a containing element's size or other style features, rather than the viewport's. Container queries have the same syntax rules and logical operators as media queries.
 
 ```css
 @container <container-condition> {
@@ -19,9 +19,9 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 
 There are two types of container queries: _container size queries_ and _container style queries_.
 
-**Container size queries** enable applying styles based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of the element's container, including the orientation and aspect ratio, on elements that have been declared to be a container.
+**Container size queries** enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and aspect ratio. The containing elements need to be explicitly declared as _size query containers_.
 
-**Container style queries** enable applying styles based on the container's style features. All non-empty elements can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). The query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any style feature and computed value, such as if the container is `display: inline flex` or has a non-transparent background color. In the future, container style queries are expected to support querying any CSS property or declaration.
+**Container style queries** enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
 
 In this guide, we learn the basics of container queries by looking at:
 
@@ -31,9 +31,9 @@ In this guide, we learn the basics of container queries by looking at:
 
 ## Container size queries
 
-With size queries, container queries are filtered by a size condition and applied if the element has both 1) been declared to be a container and 2) the container condition is true for that element.
+Container size queries are filtered by a size condition. The associated styles are applied to contained elements if the container element has been declared to be a container and the container condition is true for that element.
 
-Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} (or the {{cssxref("container")}} shorthand) property set to `size` or `inline-size`. Container size queries are relevant only for these elements as these property values add [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment). This is a performance necessity. Querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
+Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} property (or the {{cssxref("container")}} shorthand) to `size` or `inline-size`. Declaring size query containers adds [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) to them. This is a performance necessity — querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
 
 In a container size query, the `<container-condition>` includes one or more `<size-query>`s. Each size query includes a size feature name, a comparison operator, and a value. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The boolean syntax and logic combining one or more `<size-query>`s is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
@@ -47,7 +47,7 @@ form {
 }
 ```
 
-The `<size-query>` in this size container query `<container-condition>` example is `(10em <= width <= 20em)`. In this case, all {{htmlelement("form")}} elements are potential matches for any unnamed container query. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
+The `<container-condition>` in this example contains a single `<size-query>` — `(10em <= width <= 20em)`. In this case, all {{htmlelement("form")}} elements are potential matches for any unnamed container query. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
 
 We could have limited the elements matched by the query by adding a name to the `<container-condition>`. We could also have limited the `@container` queries applicable to {{htmlelement("form")}} elements by setting a {{cssxref("container-name")}}.
 
@@ -84,7 +84,7 @@ With container queries, we are not limited to size queries! You can also query a
 
 ## Container style queries
 
-Container queries can evaluate the computed style of the container element. A _container style query_ is a `@container` query that uses one or more `style()` functional notations. The boolean syntax and logic combining style features into a style query is the same as including [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries), but using the `style()` function with a `<style-feature>` (instead of the `supports()` function with a `<support-condition>`):
+A _container style query_ is a `@container` query that evaluates computed styles of the container element as defined in one or more `style()` functional notations. The boolean syntax and logic used to combine style features into a style query is the same as in [CSS feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries). The only difference is the function name — `style()` within a `<style-feature>` as opposed to `supports()`within a `<support-condition>`:
 
 ```css
 @container style(<style-feature>),
@@ -95,7 +95,7 @@ Container queries can evaluate the computed style of the container element. A _c
 }
 ```
 
-The parameter of each `style()` is a single `<style-feature>`. Per the CSS containment specification, a **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table](#browser_compatibility).
+The parameter of each `style()` function is a single `<style-feature>`. Per the CSS containment specification, a **`<style-feature>`** can be a valid CSS [declaration](/en-US/docs/Web/CSS/syntax#css_declarations), a CSS property, or a [`<custom-property-name>`](/en-US/docs/Web/CSS/var#values). The only style feature currently supported is custom properties, with or without a value. See the [browser compatibility table](#browser_compatibility).
 
 If the `<style-feature>` includes a value, the style query evaluates to true if the computed value of the custom property value (or, in the future, the CSS declaration) passed as the `style()` argument is true for the container being queried. Otherwise, it resolves to false.
 A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
@@ -111,7 +111,7 @@ In the future, we'll be able to write style queries like so:
 }
 ```
 
-The `style()` functional notation is used to differentiate style queries from a size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 100vw`. Querying `@containers (max-width: 100vw)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 100vw or less. That is different from querying `@containers style(max-width: 100vw)` which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `100vw`.
+The `style()` functional notation is used to differentiate style queries from size queries. While not yet supported, we will eventually be able to query regular CSS declarations such as `max-width: 100vw`. Querying `@containers (max-width: 100vw)` is a size query; containment with {{cssxref("container-type")}}, or the {{cssxref("container")}} shorthand, is needed. That query will return true if the container is 100vw or less. That is different from querying `@containers style(max-width: 100vw)`, which is a style query; when supported, this query will return true if the container has a {{cssxref("max-width")}} value of `100vw`.
 
 Until style queries for regular CSS declarations and properties are supported, we are limited to including only custom properties as the `style()` parameter, with or without a value:
 
@@ -133,11 +133,11 @@ Now, let's dive in and take a look at the different `<style-feature>` types:
 
 ### Style queries for custom properties
 
-Style queries for custom properties allow you to query the custom properties, also called "CSS variables", of a parent element. [Custom properties are CSS properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with a value as a CSS property assignment or without the value as a custom property name.
+Style queries for custom properties allow you to query the [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties), also called "CSS variables", of a parent element. They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with or without a value.
 
-#### Stand alone custom property queries
+#### Standalone custom property queries
 
-The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the query will return false if the value is the same ase the value of the `initial-value` descriptor within the `@property` at-rule, if there is one. The style query will return true and match all elements that have a custom property value that differs from the `initial-value` or for all elements that have a custom property of any value if the custom property was declared without being registered.
+The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the query will return false if the value is the same as the value of the `initial-value` descriptor within the `@property` at-rule, if there is one. The style query will return true and match all elements that have a custom property value that differs from the `initial-value` or for all elements that have a custom property of any value if the custom property was declared without being registered.
 
 ```css
 :root {
@@ -229,7 +229,7 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
 <output>I change colors</output>
 ```
 
-JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement", "value")}} of the `other` is updated, updating the value of `--theme` if the `other` radio button is {{domxref("HTMLInputElement", "checked")}}.
+JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is {{domxref("HTMLInputElement.checked", "checked")}}, which in turn updates the value of `--theme`.
 
 ```js
 const radios = document.querySelectorAll('input[name="selection"]');
@@ -250,7 +250,7 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`).
 
 ```css
 @property --theme {
@@ -338,7 +338,7 @@ When supported, this basic example will make the background color of any {{htmle
 
 The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. Just as with custom property container style queries, we did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
 
-Style features that query a shorthand property will be true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style({{cssxref("border")}}: 2px solid red)` will resolve to true if all 12 longhand properties ({{cssxref("border-bottom-style")}}, etc.) that make up that shorthand are true.
+Style features that query a shorthand property will be true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style({{cssxref("border")}}: 2px solid red)` will resolve to true if all 12 longhand properties ({{cssxref("border-bottom-style")}}, etc.) that make up that shorthand are set to the same equivalent values.
 
 The global CSS values `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
@@ -351,7 +351,7 @@ It is expected that style queries will also accept properties in a boolean conte
 }
 ```
 
-The above will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("heading_elements", "heading elements")}} and {{htmlelement("th")}}. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's font-weight is no the default value for that user-agent, the style query will return true.
+The above example will return true for any element that has a value for `font-weight` that differs from its initial value. User-agent stylesheets set `font-weight: bold` for {{htmlelement("heading_elements", "heading")}} and {{htmlelement("th")}} elements, for example. Some browsers set {{htmlelement("strong")}} and {{htmlelement("b")}} to `bold`, others to `bolder`. {{htmlelement("optgroup")}} also sometimes has a `font-weight` other than `normal` set by the user agent. As long as the element's font-weight is not the default value for that user-agent, the style query will return true.
 
 These features are not yet supported in any browser.
 
