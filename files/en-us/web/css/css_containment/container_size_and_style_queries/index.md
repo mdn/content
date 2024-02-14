@@ -124,22 +124,20 @@ Until style queries for regular CSS declarations and properties are supported, w
 
 A few things to note:
 
-- All elements can be style query containers; setting a `container-type` is not required. As descendant styles don't impact the computed styles of an ancestor, containment is not needed.
+- All elements can be style query containers; setting a `container-type` is not required. When descendant styles don't impact the computed styles of an ancestor, containment is not needed.
+- A `<container-condition>` can include both style and size features. If including size features, include the `container-type` property.
 - If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. Setting `container-name: none` removes any query names associated with a container; it does not prevent the element from being a style container.
-- The container condition can include both style and size features. If including size features, include the `container-type` property.
 - At the time of this writing (February 2024), container style queries only work with CSS custom property values in the `style()` query.
 
 Now, let's dive in and take a look at the different `<style-feature>` types:
 
 ### Style queries for custom properties
 
-Style queries for custom properties allow you to query the custom property, also called "CSS variables", of a parent element. Container style queries for custom properties has some [browser support](#browser_compatibility).
-
-[Custom properties are CSS properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with a value as a CSS property assignment or without the value as a custom property name.
+Style queries for custom properties allow you to query the custom properties, also called "CSS variables", of a parent element. [Custom properties are CSS properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). They are included within a `<style-query>` just as you would include any regular CSS property within a feature query: either with a value as a CSS property assignment or without the value as a custom property name.
 
 #### Stand alone custom property queries
 
-The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the style query will match all elements that have a value for `--theme-color` that differs from the initial value. It returns false if the value is the same ase the value of the `initial-value` descriptor within the `@property` at-rule, if there is one.
+The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the query will return false if the value is the same ase the value of the `initial-value` descriptor within the `@property` at-rule, if there is one. The style query will return true and match all elements that have a custom property value that differs from the `initial-value` or for all elements that have a custom property of any value if the custom property was declared without being registered.
 
 ```css
 :root {
@@ -153,7 +151,7 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 
 In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
 
-If explicitly defined with the {{cssxref("@property")}} CSS at-rule, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition.
+If explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition.
 
 ```css
 @property --theme-color {
@@ -174,11 +172,11 @@ main {
 }
 ```
 
-In this example, the `:root` element would NOT match as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value`. Only elements that override that value, in this case the {{htmlelement("p")}} and its descendants, are a match.
+In this example, the `:root` element would not NOT match the style query as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value`. Only elements that override that value, in this case the {{htmlelement("main")}} and its descendants, are a match.
 
 #### Custom property with a value
 
-If a style query includes a value for the custom property, the element's computed value for that property must be an exact match, with equivalent values only being a match if the custom property was defined with the {{cssxref("@property")}} at rule containing a `syntax` descriptor.
+If a style query includes a value for the custom property, the element's computed value for that property must be an exact match, with equivalent values only being a match if the custom property was defined with the {{cssxref("@property")}} at rule (or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}) containing a `syntax` descriptor.
 
 ```css
 @container style(--accent-color: blue) {
@@ -188,7 +186,7 @@ If a style query includes a value for the custom property, the element's compute
 
 This container style query matches any element that has `blue` as the {{cssxref("computed_value")}} of for the `--accent-color` custom property.
 
-In this case, the equivalent hexidecimal code `#0000ff` will match only if the property was defined as a color with {{cssxref("@property")}}. To ensure the container style query matches all cases of sRGB blue, we would declare the `--accent-color` like so:
+In this case, the equivalent hexidecimal code `#0000ff` will match only if the property was defined as a color with `@property` or `CSS.registerProperty`. To ensure the container style query matches all cases equivalent to sRGB `blue`, we would declare the `--accent-color` like so:
 
 ```css
 @property --accent-color {
@@ -197,6 +195,8 @@ In this case, the equivalent hexidecimal code `#0000ff` will match only if the p
   initial-value: #00f;
 }
 ```
+
+In this case, if the value of `--accent-color` were set to `blue`, `#00f`, `#0000ff`, `rgb(0 0 255 / 1)`, or `rgb(0% 0% 100%)` it would return true for `@container style(--accent-color: blue)`.
 
 ##### Example
 
@@ -229,7 +229,7 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
 <output>I change colors</output>
 ```
 
-When a radio button is selected, JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements. When the text `<input>` is updated, the {{domxref("HTMLInputElement", "value")}} of the `other` is updated, updating the value of `--theme` if `other` is {{domxref("HTMLInputElement", "checked")}}.
+JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement", "value")}} of the `other` is updated, updating the value of `--theme` if the `other` radio button is {{domxref("HTMLInputElement", "checked")}}.
 
 ```js
 const radios = document.querySelectorAll('input[name="selection"]');
@@ -250,7 +250,7 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#00F` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`.
 
 ```css
 @property --theme {
@@ -278,7 +278,9 @@ The first style feature query is a custom property with no value. This query typ
 }
 ```
 
-These style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. When equal to `red`, `blue`, or `green`, the {{cssxref("color")}} will be the color current value of `--theme`. When `red` it will also be bold, to better demonstrate that the container query is a match.
+These two style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme`.
+
+The second style query states that when `--theme` is equivalent `red`, the `<output>`'s contents will also be bold. We did this to better demonstrate that the container query is a match,
 
 ```css
 @container style(--theme: green) or style(--theme: blue) or style(--theme: red) {
@@ -296,9 +298,9 @@ These style queries include values for the custom property. These will match if 
 
 {{EmbedLiveSample('example','100%','200')}}
 
-Try changing the color value. Notice that any equivalent of `red` will make the `<output>` red, while removing the outline. Any other valid color , including `currentcolor` or `hsl(0 100% 50%)` makes the first style query return true. Valid values for `color` that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling), and will be ignored. When invalid, the `--theme` value inherits its initial value.
+Try changing the color value. Notice that any equivalent of `red` will make the `<output>` red, while removing the outline. Any other valid color value, including `currentcolor` or `hsl(180 100% 50%)`, etc., makes the first style query return true. Valid values for the {{cssxref("color")}} property that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling), and will be ignored. When invalid, the `--theme` value inherits its initial value.
 
-When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+> **Note:** When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
 ### Nested queries
 
@@ -321,7 +323,7 @@ In this case, the `<output>` will have a large dotted border if it's nested in a
 
 ### Style query CSS declarations and properties
 
-Not yet supported in any browser, the `style()` functional notation can include a regular CSS declaration.
+Not yet supported in any browser, the `style()` functional notation can include regular CSS declarations including CSS properties and property value pairs.
 
 ```css
 @container style(font-weight: bold) {
@@ -332,17 +334,17 @@ Not yet supported in any browser, the `style()` functional notation can include 
 }
 ```
 
-This basic example makes the background color of any {{htmlelement("b")}} and {{htmlelement("strong")}} elements yellow when the parent is already bold.
+When supported, this basic example will make the background color of any {{htmlelement("b")}} and {{htmlelement("strong")}} elements yellow when the parent is already `bold`.
 
 The matching is done against the computed value of the parent container; if the parent's computed {{cssxref("font-weight")}} is `bold` (not `bolder` or `900`), there is a match. Just as with custom property container style queries, we did not have to define any elements as style containers as all elements are style containers by default. As long as an element doesn't have a `container-name` set, if it has `font-weight: bold` set or inherited, it will match.
 
-Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
+Style features that query a shorthand property will be true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style({{cssxref("border")}}: 2px solid red)` will resolve to true if all 12 longhand properties ({{cssxref("border-style-bottom")}}, etc.) that make up that shorthand are true.
 
-The global `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
+The global CSS values `revert` and `revert-layer` are invalid as values in a `<style-feature>` and cause the container style query to be false.
 
-Do not apply the styles you are querying in the feature query to the element you're styling with that query as this may cause an infinite loop.
+Do not apply the styles you are querying in the style query to the element you are styling with that query as this may cause an infinite loop.
 
-It is expected that style queries will also accept properties in a boolean context. The style query will return false if the value of the property is the initial value for that property (has not been changed), and true otherwise.
+It is expected that style queries will also accept properties in a boolean context. The style query will return false if the value of the property is the initial value for that property (if it has not been changed), and true otherwise.
 
 ```css
 @container style(font-weight) {
