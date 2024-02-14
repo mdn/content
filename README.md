@@ -45,6 +45,7 @@ By participating in and contributing to our projects and discussions, you acknow
 ## Get in touch
 
 You can communicate with the MDN Web Docs team and community using the [communication channels][].
-
+https://github.com/Foxhgf/Foxhgf/pull/8/files
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
-[MDN Web Docs]: https://developer.mozilla.org/
+[MDN Web Docs]: https://
+developer.mozilla.org/
