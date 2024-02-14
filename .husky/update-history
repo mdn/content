@@ -2,6 +2,6 @@
 # The stored commit hash is used by the post-merge script .husky/post-merge
 
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-if [[ "$BRANCH" == "main" ]]; then
+if [ "$BRANCH" = "main" ]; then
   echo $(git rev-parse HEAD) > ./.husky/_/history
 fi
