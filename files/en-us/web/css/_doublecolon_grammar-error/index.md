@@ -2,12 +2,10 @@
 title: "::grammar-error"
 slug: Web/CSS/::grammar-error
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.grammar-error
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
 
