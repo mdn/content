@@ -33,7 +33,7 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)

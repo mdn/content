@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderBundleEncoder.drawIndexed
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`drawIndexed()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws indexed primitives based on the vertex and index buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}} and {{domxref("GPURenderBundleEncoder.setIndexBuffer", "setIndexBuffer()")}}.

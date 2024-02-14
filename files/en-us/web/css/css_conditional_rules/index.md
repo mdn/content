@@ -18,7 +18,7 @@ CSS conditional rules now include feature queries; the `@supports` at-rule enabl
 
 The CSS conditional rules module also expands `@media` to enable nesting at-rules, with the related [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module removing unused media types and adding many media features and conditions that can be targeted.
 
-The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
+The [CSS container queries module](/en-US/docs/Web/CSS/CSS_containment/Container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
 
 There are plans to further extend possible queries by adding the generalized conditional rule `@when` and the chained conditional rule `@else`. These two at-rules are not yet supported.
 
@@ -118,6 +118,6 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries) module
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) module
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

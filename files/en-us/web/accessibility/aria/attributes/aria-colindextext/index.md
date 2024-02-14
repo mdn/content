@@ -90,7 +90,7 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`Element.ariaColIndexText`](/en-US/docs/Web/API/Element/ariaColIndexText)
 - [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
