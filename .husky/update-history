@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 # This script stores the 'main' branch's HEAD commit hash in .husky/_/history
 # The stored commit hash is used by the post-merge script .husky/post-merge
 

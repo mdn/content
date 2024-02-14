@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 if [ "$BRANCH" != "main" ]; then
   exit 0
