@@ -49,3 +49,4 @@ https://github.com/Foxhgf/Foxhgf/pull/8/files
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
 [MDN Web Docs]: https://
 developer.mozilla.org/
+https://github.com/Foxhgf/Foxhgf.git
