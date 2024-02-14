@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### HTML
 
-- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1712140](https://bugzil.la/1870052))
+- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
 #### Removals
 
@@ -27,6 +27,8 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### SVG
+
+- The {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements now support changing the color space to be `linearRGB` or `sRGB` via the {{SVGAttr("color-interpolation")}} attribute. This can also be applied to the SVG elements via the {{CSSXref("color-interpolation")}} CSS property.
 
 #### Removals
 
