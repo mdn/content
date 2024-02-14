@@ -665,7 +665,7 @@ You can also [add the `codecs` parameter](/en-US/docs/Web/Media/Formats/codecs_p
   </tbody>
 </table>
 
->**Warning:** Time limit on Firefox (Linux 64 bit) for Ogg Opus playback.
+> **Warning:** Time limit on Firefox (Linux 64 bit) for Ogg Opus playback.
 >
 >Ogg Opus audio files longer than 12h 35m 39s are truncated and exhibit seeking issues when played on Firefox Linux 64 bit.
 >
