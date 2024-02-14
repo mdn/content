@@ -238,6 +238,7 @@ All fields from `M` (monochrome flag) onward are optional; you may stop includin
   - : AV1 Professional Profile, level 5.3, Main tier, 10 bits per color component, 4:2:2 chroma subsampling using ITU-R BT.2100 color primaries, transfer characteristics, and YCbCr color matrix. The studio swing representation is indicated.
 - `av01.0.15M.10`
   - : AV1 Main Profile, level 5.3, Main tier, 10 bits per color component. The remaining properties are taken from the defaults: 4:2:0 chroma subsampling, BT.709 color primaries, transfer characteristics, and matrix coefficients. Studio swing representation.
+
 ### VP9
 
 #### ISO Base Media File Format syntax
