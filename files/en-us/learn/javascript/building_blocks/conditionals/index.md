@@ -565,10 +565,37 @@ function outputDocument(code) {
   <ul></ul>
 </div>`;
 
+  const outputStyle = `
+.output * {
+  box-sizing: border-box;
+}
+
+.output ul {
+  padding-left: 0;
+}
+
+.output li {
+  display: block;
+  float: left;
+  width: 25%;
+  border: 2px solid white;
+  padding: 5px;
+  height: 40px;
+  background-color: #4a2db6;
+  color: white;
+}
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+}`;
   return `
 <!doctype html>
 <html>
   <head>
+    <style>${outputStyle}</style>
   </head>
   <body>
     ${outputBody}
@@ -755,37 +782,10 @@ function outputDocument(code) {
   <h1>This is my website</h1>
 </div>`;
 
-  const outputStyle = `
-.output * {
-  box-sizing: border-box;
-}
-
-.output ul {
-  padding-left: 0;
-}
-
-.output li {
-  display: block;
-  float: left;
-  width: 25%;
-  border: 2px solid white;
-  padding: 5px;
-  height: 40px;
-  background-color: #4a2db6;
-  color: white;
-}
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}`;
   return `
 <!doctype html>
 <html>
   <head>
-    <style>${outputStyle}</style>
   </head>
   <body>
     ${outputBody}
