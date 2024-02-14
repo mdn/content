@@ -101,9 +101,9 @@ The flow is as follows:
 
 ## Auto-reauthentication
 
-FedCM auto-reauthentication lets users reauthenticate automatically when they try to sign into an RP again after their initial authentication using FedCM. "Initial authentication" refers to when the user creates an account or signs into the RP's website via the FedCM sign-in dialog for the first time on the RP site, on the same browser instance.
+FedCM auto-reauthentication lets users reauthenticate automatically when they try to sign in to an RP again after their initial authentication using FedCM. "Initial authentication" refers to when the user creates an account or signs into the RP's website via the FedCM sign-in dialog for the first time on the RP site, on the same browser instance.
 
-The idea is that after the user has granted permission to allow communication between the RP and the IdP to allow federated sign-in to occur, there's no privacy or security benefit for enforcing another explicit user confirmation for something that they have already previously acknowledged.
+After the initial authentication, auto-reauthentication can be used to sign into the RP website again automatically, without needing to show the user a "Continue as..." confirmation prompt. If the user has recently granted permission to allow federated sign-in to occur with a particular account, there's no privacy or security benefit to immediately enforcing another explicit user confirmation.
 
 Auto-reauthentication behavior is controlled by the [`mediation`](/en-US/docs/Web/API/CredentialsContainer/get#mediation) option in the `get()` call:
 
@@ -126,7 +126,7 @@ async function signIn() {
 }
 ```
 
-Auto-reauthentication can occur if `mediation` is set to `optional`, which tends to make sense to use on an RP sign-in page, or `silent`, which makes sense on pages other than the dedicated sign-in page but where you want to keep users signed in — for example, the pages of a checkout flow on an e-commerce website.
+Auto-reauthentication can occur if `mediation` is set to `optional` or `silent`.
 
 With these `mediation` options, auto-reauthentication will occur under the following conditions:
 
@@ -136,9 +136,14 @@ With these `mediation` options, auto-reauthentication will occur under the follo
 - Auto-reauthentication didn't happen within the last 10 minutes. This restriction is put into place to stop users being auto-reauthenticated immediately after they sign out — which would make for a pretty confusing user experience.
 - The RP hasn't called {{domxref("CredentialsContainer.preventSilentAccess", "preventSilentAccess()")}} after the previous sign in. This can be used by an RP to explicitly disable auto-reauthentication if desired.
 
-When these conditions are met, an attempt to automatically reauthenticate the user starts as soon as the `get()` is invoked.
+When these conditions are met, an attempt to automatically reauthenticate the user starts as soon as the `get()` is invoked. If auto-reauthentication is successful, the user will log into the RP site again, without being shown a confirmation prompt, using the same IdP account and validated token as they did before.
 
-In addition, the {{domxref("IdentityCredential.isAutoSelected")}} property provides an indication of whether the federated sign-in was carried out using auto-reauthentication. This is helpful to evaluate the API performance and improve UX accordingly. Also, when it's unavailable, the user may be prompted to sign in with explicit user mediation, which is a `get()` call with `mediation: required`.
+If auto-reauthentication fails, the behavior depends on the `mediation` value that was chosen:
+
+- `optional`: the user _will_ be shown the dialog box and asked for confirmation again. As a result, this option tends to make sense to use on a page where a user journey is not in mid-flow, such an RP sign-in page.
+- `silent`: The `get()` promise will reject and the developer will need to handle guiding the user back to the sign-in page to start the process again. This option makes sense on pages where a user journey is in flow and you need to keep them signed in until completion, for example the pages of a checkout flow on an e-commerce website.
+
+> **Note:** The {{domxref("IdentityCredential.isAutoSelected")}} property provides an indication of whether the federated sign-in was carried out using auto-reauthentication. This is helpful to evaluate the API performance and improve UX accordingly. Also, when it's unavailable, the user may be prompted to sign in with explicit user mediation, which is a `get()` call with `mediation: required`.
 
 ## See also
 
