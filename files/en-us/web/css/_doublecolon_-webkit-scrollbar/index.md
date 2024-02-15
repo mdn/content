@@ -18,8 +18,12 @@ browser-compat:
 
 The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has scrollable overflow.
 
-> **Note:** The `::-webkit-scrollbar` vendor-prefixed pseudo-element is not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
-> The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support this pseudo-element. When these properties are set, `::-webkit-scrollbar` styling is disabled.
+> **Note:**
+> The `::-webkit-scrollbar` vendor-prefixed pseudo-elements are not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
+> The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support these pseudo-elements.
+>
+> If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
+> See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
 
 ## CSS Scrollbar Selectors
 
@@ -37,7 +41,9 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 ## Examples
 
-### CSS
+### Styling scrollbars using `-webkit-scrollbar`
+
+#### CSS
 
 ```css
 .visible-scrollbar,
@@ -47,6 +53,8 @@ You can use the following pseudo-elements to customize various parts of the scro
   width: 10em;
   overflow: auto;
   height: 2em;
+  padding: 1em;
+  margin: auto;
 }
 
 .invisible-scrollbar::-webkit-scrollbar {
@@ -67,7 +75,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 }
 ```
 
-### HTML
+#### HTML
 
 ```html
 <div class="visible-scrollbar">
@@ -95,9 +103,70 @@ You can use the following pseudo-elements to customize various parts of the scro
 </div>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("styling_scrollbars_using_-webkit-scrollbar")}}
+
+### Adding a fallback for scrollbar styles
+
+You can use a {{cssxref("@supports")}} at-rule to detect if a browser supports the standard {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} properties, and otherwise use a fallback with `::-webkit-scrollbar-*` pseudo-elements.
+
+#### HTML
+
+```html
+<div class="scrollbox">
+  <h1>Yoshi</h1>
+  <p>
+    Yoshi is a fictional dinosaur who appears in video games published by
+    Nintendo. Yoshi debuted in Super Mario World (1990) on the SNES as Mario and
+    Luigi's sidekick.
+  </p>
+  <p>
+    Throughout the mainline Super Mario series, Yoshi typically serves as
+    Mario's trusted steed.
+  </p>
+  <p>
+    With a gluttonous appetite, Yoshi can gobble enemies with his long tongue,
+    and lay eggs that doubly function as projectiles.
+  </p>
+</div>
+```
+
+#### CSS
+
+```css hidden
+.scrollbox {
+  overflow: auto;
+  width: 20rem;
+  height: 4rem;
+  border: 2px solid cornflowerblue;
+  margin: 2rem auto;
+  font-family: monospace;
+}
+```
+
+```css
+/* For browsers that support `scrollbar-*` properties */
+@supports (scrollbar-color: auto) {
+  .scrollbox {
+    scrollbar-color: aquamarine cornflowerblue;
+  }
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  .scrollbox::-webkit-scrollbar-thumb {
+    background: aquamarine;
+  }
+  .scrollbox::-webkit-scrollbar-track {
+    background: cornflowerblue;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("adding_a_fallback_to_standard_scrollbar_style_properties")}}
 
 ## Specifications
 
@@ -109,6 +178,7 @@ Not part of any standard.
 
 ## See also
 
-- WebKit blog on [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/)
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
+- [Scrollbar styling](https://developer.chrome.com/docs/css-ui/scrollbar-styling) on developer.chrome.com (2024)
+- [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/) on WebKit.org (2009)
