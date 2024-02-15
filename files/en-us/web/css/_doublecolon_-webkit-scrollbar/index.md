@@ -110,6 +110,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 ### Adding a fallback for scrollbar styles
 
 You can use a {{cssxref("@supports")}} at-rule to detect if a browser supports the standard {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} properties, and otherwise use a fallback with `::-webkit-scrollbar-*` pseudo-elements.
+The following example shows how to apply colors to scrollbars using {{cssxref("scrollbar-color")}} if supported and `::-webkit-scrollbar-*` pseudo-elements if not.
 
 #### HTML
 
@@ -155,10 +156,10 @@ You can use a {{cssxref("@supports")}} at-rule to detect if a browser supports t
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  .scrollbox::-webkit-scrollbar-thumb {
+  .scrollbox::-webkit-scrollbar {
     background: aquamarine;
   }
-  .scrollbox::-webkit-scrollbar-track {
+  .scrollbox::-webkit-scrollbar-thumb {
     background: cornflowerblue;
   }
 }
