@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.i18n.LanguageCode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A [language tag](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) such as `"en-US"` or "`fr`".
 

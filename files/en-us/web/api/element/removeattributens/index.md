@@ -9,7 +9,9 @@ browser-compat: api.Element.removeAttributeNS
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNS()`** method of the
-{{domxref("Element")}} interface removes the specified attribute from an element.
+{{domxref("Element")}} interface removes the specified attribute with the specified namespace from an element.
+
+If you are working with HTML and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.removeAttribute()", "removeAttribute()")}} method instead.
 
 ## Syntax
 
@@ -38,10 +40,6 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 // Now: <div id="div1" width="200px" />
 ```
 
-## Notes
-
-{{ DOMAttributeMethods() }}
-
 ## Specifications
 
 {{Specifications}}
@@ -50,5 +48,8 @@ d.removeAttributeNS("http://www.mozilla.org/ns/specialspace", "specialAlign");
 
 {{Compat}}
 
-In Firefox 3 and later, this method resets DOM values to
-their defaults.
+## See also
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.getAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}

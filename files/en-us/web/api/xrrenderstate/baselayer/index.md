@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRRenderState.baseLayer
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only **`baseLayer`** property of the
 {{domxref("XRRenderState")}} interface returns the {{domxref("XRWebGLLayer")}} instance

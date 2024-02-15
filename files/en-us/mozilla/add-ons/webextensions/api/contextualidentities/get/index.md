@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets information about a contextual identity, given its cookie store ID.
 

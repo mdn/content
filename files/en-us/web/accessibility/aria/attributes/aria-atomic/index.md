@@ -30,7 +30,7 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Event.ariaAtomic](/en-US/docs/Web/API/Element/ariaAtomic)
 

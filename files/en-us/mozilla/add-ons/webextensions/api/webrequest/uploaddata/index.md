@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.UploadData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contains data uploaded in a URL request.
 
