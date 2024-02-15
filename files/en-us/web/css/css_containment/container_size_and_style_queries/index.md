@@ -7,7 +7,7 @@ browser-compat: css.at-rules.container
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to elements contained within a particular container based on the features of that container. The query returns true or false depending on whether the query condition is true for the container.
+[Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) enable you to apply styles to elements nested within a specific container based on the features of that container. The query returns true or false depending on whether the query condition is true for the container.
 
 Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_queries). The {{cssxref("@media")}} at-rule enables applying styles to elements based on viewport size or other device characteristics. Similarly, the {{cssxref("@container")}} at-rule enables applying styles to elements based on a containing element's size or other style features, rather than the viewport's. Container queries have the same syntax rules and logical operators as media queries.
 
@@ -17,11 +17,14 @@ Container queries are similar to [media queries](/en-US/docs/Web/CSS/CSS_media_q
 }
 ```
 
-There are two types of container queries: _container size queries_ and _container style queries_.
+There are two types of container queries: _container size queries_ and _container style queries_:
 
-**Container size queries** enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and aspect ratio. The containing elements need to be explicitly declared as _size query containers_.
+- **Container size queries**
 
-**Container style queries** enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
+  - : Size queries enable applying styles to elements based on the current [size](/en-US/docs/Web/CSS/@container#descriptors) of a containing element, including the orientation and aspect ratio. The containing elements need to be explicitly declared as _size query containers_.
+
+- **Container style queries**
+  - : Style queries enable applying styles to elements based on a containing element's style features. Any non-empty element can be a style query container. Currently, the only style feature supported by style queries is CSS [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). In this case, the query returns true or false depending on the computed value of the element's custom property. When container style queries are fully supported, they will enable you to apply styles to any element's descendants based on any property, declaration, or computed value — for example if the container is `display: inline flex` or has a non-transparent background color.
 
 In this guide, we learn the basics of container queries by looking at:
 
@@ -33,7 +36,19 @@ In this guide, we learn the basics of container queries by looking at:
 
 Container size queries are filtered by a size condition. The associated styles are applied to contained elements if the container element has been declared to be a container and the container condition is true for that element.
 
-Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} property (or the {{cssxref("container")}} shorthand) to `size` or `inline-size`. Declaring size query containers adds [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) to them. This is a performance necessity — querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
+Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} property (or the {{cssxref("container")}} shorthand) to `size` or `inline-size`.
+
+```css
+@container (orientation: landscape) {
+  /* styles applied to descendants of this size container */
+}
+
+.sizeContainer {
+  container-type: size;
+}
+```
+
+Declaring size query containers adds [containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment) to them. This is a performance necessity — querying the size of every element in the DOM, all the time, would be bad for performance and user experience. Additionally, if a descendant style changed the size of the container element, an infinite loop could occur.
 
 In a container size query, the `<container-condition>` includes one or more `<size-query>`s. Each size query includes a size feature name, a comparison operator, and a value. The size features that can be queried are limited to `width`, `height`, `inline-size`, `block-size`, `aspect-ratio`, and `orientation`. The boolean syntax and logic combining one or more `<size-query>`s is the same as for [`@media`](/en-US/docs/Web/CSS/@media) size feature queries.
 
@@ -49,11 +64,11 @@ form {
 
 The `<container-condition>` in this example contains a single `<size-query>` — `(10em <= width <= 20em)`. In this case, all {{htmlelement("form")}} elements are potential matches for any unnamed container query. The styles declared within our container query apply to the descendants of all forms between `10em` and `30em` wide, inclusive.
 
-We could have limited the elements matched by the query by adding a name to the `<container-condition>`. We could also have limited the `@container` queries applicable to {{htmlelement("form")}} elements by setting a {{cssxref("container-name")}}.
-
 ## Naming containers
 
-A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}.
+A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. In the form example, we could have limited the elements matched by the query by adding a name to the `<container-condition>`. We could also have limited the `@container` queries applicable to {{htmlelement("form")}} elements by setting a {{cssxref("container-name")}}.
+
+The optional `<container-name>` set within the query condition filters the set of query containers considered to just those with a matching query container name. The {{cssxref("container-name")}} property specifies a list of query container names that can be used by `@container` rules to filter which query containers are targeted. Names enable querying aspects of a specific container, even if the container is not a direct parent.
 
 ```css
 @container <container-name> <container-query> {
@@ -61,12 +76,10 @@ A `<container-condition>` can include an optional case-sensitive {{cssxref("cont
 }
 ```
 
-The `<container-name>` is a case-sensitive {{cssxref("ident")}}. You can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to give container elements a name to ensure that the elements are only matched by the limited set of container queries that contain the same container name in the `@container` query condition. That name needs to match the value of the `container-name` property of the element for the query to apply to that element. The name filters the set of query containers considered to those with a matching query container name.
-
-Container names also enable querying styles from elements that aren't a direct parent. When a containment context is given a name, it can be specifically targeted using the `@container` at-rule instead of the nearest ancestor with containment.
+Once you've added names to your `@container` at rules, you can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to apply container a space-separated list of names to container elements. Styles contained inside the named `@container` at rules will only be applied to matching elements inside size query containers with the same names set on them, providing container filtering functionality. The `<container-name>` is a case-sensitive {{cssxref("ident")}}.
 
 ```css
-@container card (orientation: landscape) and (max-width: 40rem) {
+@container card (orientation: landscape) {
   /* styles */
 }
 
@@ -76,9 +89,46 @@ Container names also enable querying styles from elements that aren't a direct p
 }
 ```
 
-In this container size query example, the query is limited to only elements with `container-name: card` applied. The styles within the query block will apply to the descendants of all list items nested within an element with a class of `cards` with a width that is greater than its height. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
+This example size query is limited to only elements with `container-name: card` applied. In this example, the styles within the query block will apply to the descendants of all list items nested within an element with a class of `cards` with a width that is greater than its height. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
 
-Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries. To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container but it can still be a [style container](#container_style_queries). To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
+```css
+@container wide (orientation: landscape) and (min-width: 20em) {
+  /* styles applied to descendants of .sizeContainer if size features match */
+}
+
+@container narrow (orientation: portrait) or (max-width: 20em) {
+  /* styles applied to descendants of .sizeContainer if size features match */
+}
+
+.sizeContainer {
+  container-type: size;
+  container-name: wide narrow;
+}
+```
+
+In this container size query example, the element has two containers names. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if that element is exactly a 20em square).
+
+Container names also enable querying styles from elements that aren't a direct parent. When a containment context is given a name, it can be specifically targeted using the `@container` at-rule instead of the nearest ancestor with containment.
+
+Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries.
+
+To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container but it can still be a [style container](#container_style_queries).
+
+To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
+
+```css
+article {
+  container-name: none;
+  container-type: size;
+}
+
+main {
+  container-name: neverUsedName;
+  container-type: normal;
+}
+```
+
+In the above example, the {{htmlelement("article")}} element can matched any unnamed container query. In other words, it will be tested by each `@container` query that doesn't include a name in the `<container-condition>`. On the other hand, assuming the `neverUsedName` is never used as a container query name, the {{htmlelement("main")}} element will never be queried. If it is, it will still not be tested against any size queries as the `container-type` value of `normal` means it is not a size query container.
 
 With container queries, we are not limited to size queries! You can also query a container's style features.
 
