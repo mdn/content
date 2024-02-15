@@ -17,10 +17,10 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("error", (event) => {});
 
-onerror = (event, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => {};
 ```
 
-> **Note:** Due to historical reasons, `onerror` on `window` is the only event handler property that receives more than one argument.
+> **Note:** For historical reasons, `onerror` on `Window` and {{domxref("WorkerGlobalScope")}} objects is the only event handler property that receives more than one argument.
 
 ## Event type
 
@@ -28,11 +28,11 @@ The event object is a {{domxref("ErrorEvent")}} instance if it was generated fro
 
 {{InheritanceDiagram("ErrorEvent")}}
 
-## Usage notes
+## Description
 
 ### Event handler property
 
-For historical reasons, the `onerror` event handler property, on `Window` objects only, has different behavior from other event handler properties.
+For historical reasons, the `onerror` event handler property, on `Window` and {{domxref("WorkerGlobalScope")}} objects only, has different behavior from other event handler properties.
 
 Note that this only applies to handlers assigned to `onerror`, not to handlers added using `addEventListener()`.
 
@@ -56,7 +56,7 @@ When canceled, the error won't appear in the console, but the current script wil
 
 The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
-- `event`
+- `message`
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
 - `source`
   - : A string containing the URL of the script that generated the error.
