@@ -306,7 +306,7 @@ We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssx
 ```css
 @property --theme {
   syntax: "<color>";
-  inherits: false;
+  inherits: true;
   initial-value: #f00;
 }
 ```
