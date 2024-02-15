@@ -17,20 +17,20 @@ This interface inherits properties from {{domxref("Event")}}.
 
 ## Constructor
 
-- {{domxref("TextUpdateEvent.TextUpdateEvent", "TextUpdateEvent()")}}
+- {{domxref("TextUpdateEvent.TextUpdateEvent", "TextUpdateEvent()")}} {{experimental_inline}}
   - : Creates a new `TextUpdateEvent` object.
 
 ## Instance properties
 
-- {{domxref('TextUpdateEvent.updateRangeStart')}} {{readonlyinline}}
+- {{domxref('TextUpdateEvent.updateRangeStart')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the index of the first character in the range of text that was updated.
-- {{domxref('TextUpdateEvent.updateRangeEnd')}} {{readonlyinline}}
+- {{domxref('TextUpdateEvent.updateRangeEnd')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the index of the last character in the range of text that was updated.
-- {{domxref('TextUpdateEvent.text')}} {{readonlyinline}}
+- {{domxref('TextUpdateEvent.text')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the text that was inserted in the updated range.
-- {{domxref('TextUpdateEvent.selectionStart')}} {{readonlyinline}}
+- {{domxref('TextUpdateEvent.selectionStart')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the index of the first character in the new selection range, after the update.
-- {{domxref('TextUpdateEvent.selectionEnd')}} {{readonlyinline}}
+- {{domxref('TextUpdateEvent.selectionEnd')}} {{readonlyinline}} {{experimental_inline}}
   - : Returns the index of the last character in the new selection range, after the update.
 
 ## Examples

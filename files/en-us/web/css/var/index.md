@@ -23,7 +23,6 @@ var(--custom-prop);
 var(--custom-prop,);  /* empty value as fallback */
 var(--custom-prop, initial); /* initial value of the property as fallback */
 var(--custom-prop, #FF0000);
-var(--my-background, linear-gradient(transparent, aqua), pink);
 var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```

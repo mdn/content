@@ -19,7 +19,7 @@ For more details about the motivation for and usage of this API, see the documen
 
 This API defines a single method: {{domxref("navigator.sendBeacon()")}}.
 
-The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("Blob")}}, a string literal or object, or a {{domxref("FormData")}} object. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
+The method takes two arguments, the URL and the data to send in the request. The data argument is optional and its type may be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("ReadableStream")}}, a {{domxref("Blob")}}, a {{domxref("FormData")}} object, or a {{domxref("URLSearchParams")}} object. If the browser successfully queues the request for delivery, the method returns "`true`"; otherwise, it returns "`false`".
 
 ## Specifications
 

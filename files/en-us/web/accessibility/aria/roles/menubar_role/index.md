@@ -87,7 +87,7 @@ Note: The above interactions assumed the `menubar` is horizontal. If the `menuba
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`toolbar` role](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
 
