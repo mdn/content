@@ -65,7 +65,7 @@ Used in **ALL** roles (except [`generic`](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription).
 - [`Element.ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription)

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Detects the language of the provided text using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 

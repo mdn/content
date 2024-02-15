@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.management.ExtensionInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An `ExtensionInfo` object contains information about an add-on.
 

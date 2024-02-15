@@ -6,13 +6,15 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
+This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
 ## Changes for web developers
 
 ### Developer Tools
 
 ### HTML
+
+- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
 #### Removals
 
@@ -26,9 +28,16 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### SVG
 
+- The {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements now support changing the color space to be `linearRGB` or `sRGB` via the {{SVGAttr("color-interpolation")}} attribute. This can also be applied to the SVG elements via the {{CSSXref("color-interpolation")}} CSS property.
+
 #### Removals
 
 ### HTTP
+
+- The [`103 Early Hints`](/en-US/docs/Web/HTTP/Status/103) HTTP [information response](/en-US/docs/Web/HTTP/Status#information_responses) status code is now enabled for [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources that the page is likely to need while the server is still preparing the full response.
+  This can significantly reduce page load time.
+  Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
+  For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
 
 #### Removals
 
@@ -37,6 +46,10 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### APIs
+
+- The [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) now supports cross-origin credential creation.
+  Specifically [`navigator.credentials.create({publicKey})`](/en-US/docs/Web/API/CredentialsContainer/create) can now be called in nested browsing contexts loaded from a different origin to the top-most document, if allowed by a [`Feature-Policy: publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) on the top level nesting [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe#allow).
+  ([Firefox bug 1870863](https://bugzil.la/1870863)).
 
 #### DOM
 
@@ -49,6 +62,8 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
+
+#### General
 
 #### WebDriver BiDi
 

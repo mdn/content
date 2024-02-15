@@ -128,7 +128,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
 - HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute

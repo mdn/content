@@ -122,7 +122,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Sectioning content
 
-Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} elements, {{HTMLElement("footer")}} elements, and [heading content](#heading_content).
+Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
 Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
 
@@ -133,8 +133,6 @@ Heading content, a subset of flow content, defines the title of a section. This 
 Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} and {{HTMLElement("hgroup")}}.
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
-
-> **Note:** The {{HTMLElement("hgroup")}} element is not recommended as it does not work properly with assistive technologies. It was removed from the W3C HTML specification prior to HTML 5 being finalized, but is still part of the WHATWG specification and is at least partially supported by most browsers.
 
 ### Phrasing content
 
