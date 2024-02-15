@@ -8,8 +8,9 @@ browser-compat: api.Element.removeAttributeNode
 
 {{ APIRef("DOM") }}
 
-The **`removeAttributeNode()`** method of the
-{{domxref("Element")}} interface removes the specified attribute from the element.
+The **`removeAttributeNode()`** method of the {{domxref("Element")}} interface removes the specified {{domxref("Attr")}} node from the element.
+
+If you don't need to inspect the attribute node before removing it, you can use the {{domxref("Element.removeAttribute()")}} method instead.
 
 ## Syntax
 
@@ -51,8 +52,6 @@ There is no `removeAttributeNodeNS` method; the
 `removeAttributeNode` method can remove both namespaced attributes and
 non-namespaced attributes.
 
-{{ DOMAttributeMethods() }}
-
 ## Specifications
 
 {{Specifications}}
@@ -60,3 +59,9 @@ non-namespaced attributes.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Element.getAttributeNode()")}}
+- {{domxref("Element.setAttributeNode()")}}

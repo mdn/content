@@ -80,7 +80,7 @@ The properties are as follows:
 - `accounts_endpoint`
   - : The URL for the accounts list endpoint, which returns a list of accounts that the user is currently signed in to on the IdP. The browser uses these to create a list of sign-in choices to show to the user in the browser-provided FedCM UI.
 - `client_metadata_endpoint` {{optional_inline}}
-  - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages, to be used in the FedCM UI.
+  - : The URL for the client metadata endpoint, which provides URLs pointing to the RP's metadata and terms of service pages as registered at the IdP, to be used in the FedCM UI.
 - `id_assertion_endpoint`
   - : The URL for the ID assertion endpoint, which when sent valid user credentials should respond with a validation token that the RP can use to validate the authentication.
 - `branding` {{optional_inline}}
@@ -136,7 +136,7 @@ This includes the following information:
 
 #### The client metadata endpoint
 
-Provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
+An endpoint at the IdP that takes a `client_id` as input and provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
 
 ```json
 {
