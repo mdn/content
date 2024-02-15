@@ -313,8 +313,11 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 
 ### Exceptions
 
-- `SecurityError` {{domxref("DOMException")}}
-  - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Possible causes include:
+    - Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+    - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Element/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
+    - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
 
 ## Examples
 

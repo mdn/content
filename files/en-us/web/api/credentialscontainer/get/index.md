@@ -336,7 +336,7 @@ A {{jsxref("Promise")}} that resolves with an {{domxref("PublicKeyCredential")}}
 
 ### Exceptions
 
-- `SecurityError` {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
   - : Usage was blocked by a {{HTTPHeader("Permissions-Policy/publickey-credentials-get","publickey-credentials-get")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ### Examples
