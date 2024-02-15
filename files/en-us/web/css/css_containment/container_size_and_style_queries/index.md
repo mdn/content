@@ -156,7 +156,8 @@ In the future, we'll be able to write style queries like so:
 @container style(color: green) and style(background-color: transparent),
     not style(background-color: red),
     style(--themeBackground),
-    style(--themeColor: blue) or style(--themeColor: purple) {
+    style(--themeColor: blue) or style(--themeColor: purple),
+    (max-width: 100vw) and style(max-width: 600px) {
   /* <stylesheet> */
 }
 ```
@@ -175,7 +176,7 @@ Until style queries for regular CSS declarations and properties are supported, w
 A few things to note:
 
 - All elements can be style query containers; setting a `container-type` is not required. When descendant styles don't impact the computed styles of an ancestor, containment is not needed.
-- A `<container-condition>` can include both style and size features. If including size features, include the `container-type` property.
+- A `<container-condition>` can include both style and size features. If including size features in your query, make sure your container elements have a `container-type` of `size` or `inline-size` set.
 - If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. Setting `container-name: none` removes any query names associated with a container; it does not prevent the element from being a style container.
 - At the time of this writing (February 2024), container style queries only work with CSS custom property values in the `style()` query.
 
@@ -201,7 +202,7 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 
 In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
 
-If explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition.
+If explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition. This is different from the example above in which the CSS variable was introduced via a simple CSS custom property value assignment; in that case querying that custom property will always return true.
 
 ```css
 @property --theme-color {
@@ -222,7 +223,7 @@ main {
 }
 ```
 
-In this example, the `:root` element would not NOT match the style query as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value`. Only elements that override that value, in this case the {{htmlelement("main")}} and its descendants, are a match.
+In this example, the `:root` element would not NOT match the style query as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value`. The `initial-value` is `rebeccapurple`. The value assignment in `:root` is also `rebeccapurple`. Only elements that differ from the initial value, in this case the {{htmlelement("main")}} and its descendants that inherit that changed value, are a match.
 
 #### Custom property with a value
 
