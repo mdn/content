@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.popErrorScope
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`popErrorScope()`** method of the
 {{domxref("GPUDevice")}} interface pops an existing GPU error scope from the error scope stack (originally pushed using {{domxref("GPUDevice.pushErrorScope()")}}) and returns a {{jsxref("Promise")}} that resolves to an object describing the first error captured in the scope, or `null` if no error occurred.

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.dns.resolve
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Resolves the given hostname to a DNS record.
 

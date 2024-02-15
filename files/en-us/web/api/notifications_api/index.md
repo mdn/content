@@ -9,9 +9,11 @@ browser-compat:
 spec-urls: https://notifications.spec.whatwg.org/
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
+
+{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -54,7 +56,7 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}} event
   - : Occurs when a user closes a displayed notification.
 - {{domxref("ServiceWorkerRegistration.getNotifications()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves to an array of {{domxref("Notification")}} objects.
+  - : Returns a list of the notifications in the order that they were created from the current origin via the current service worker registration.
 - {{domxref("ServiceWorkerRegistration.showNotification()")}}
   - : Displays the notification with the requested title.
 

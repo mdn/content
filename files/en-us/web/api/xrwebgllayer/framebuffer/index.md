@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.framebuffer
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebuffer`** is an opaque {{domxref("WebGLFramebuffer")}}
