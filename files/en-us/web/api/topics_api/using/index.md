@@ -8,7 +8,7 @@ status:
 
 {{DefaultAPISidebar("Topics API")}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Topics API in your applications. See the [Enrollment](/en-US/docs/Web/API/Topics_API#enrollment) section for details of what sub-features are gated by enrollment.
 
