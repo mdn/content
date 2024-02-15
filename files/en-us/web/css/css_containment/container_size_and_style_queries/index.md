@@ -331,7 +331,7 @@ The first style feature query is a custom property with no value. This query typ
 
 These two style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme`.
 
-The second style query states that when `--theme` is equivalent `red`, the `<output>`'s contents will also be bold. We did this to better demonstrate that the container query is a match,
+The second style query states that when `--theme` is equivalent `red`, the `<output>`'s contents will also be bold. We did this to better demonstrate that the container query is a match.
 
 ```css
 @container style(--theme: green) or style(--theme: blue) or style(--theme: red) {
@@ -349,7 +349,11 @@ The second style query states that when `--theme` is equivalent `red`, the `<out
 
 {{EmbedLiveSample('example','100%','200')}}
 
-Try changing the color value. Notice that any equivalent of `red` will make the `<output>` red, while removing the outline. Any other valid color value, including `currentcolor` or `hsl(180 100% 50%)`, etc., makes the first style query return true. Valid values for the {{cssxref("color")}} property that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling), and will be ignored. When invalid, the `--theme` value inherits its initial value.
+Enter different color values into the text box. You may notice that values that are RGB equivalents of `red` will make the `<output>` red - as it matches `style(--theme: red)`, while removing the outline, because `style(--theme)` returns false if the element's value for `--theme` is the same as the initial value for `--theme` defined in by the `@property` at-ryle. Any non-red RGB valid color value, including `currentcolor` or `hsl(180 100% 50%)`, etc., makes the first style query return true; they are values that are different from the `iniitial-value`.
+
+Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid `<color>` values. Valid values for the {{cssxref("color")}} property that aren't value `<color>` values, such as `unset` or `inherit`, are [invalid](/en-US/docs/Web/CSS/CSS_syntax/Error_handling) for this custom property, and will be ignored.
+
+If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {{HTMLElement("body")}} to `--theme: unset` or `--theme: gibberish`. Neither of these are colors. Both are invalid and ignored. This means the initial value is inherited and unchanged, with `style(--theme)` returning false and `style(--theme: red)` returning true.
 
 > **Note:** When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
