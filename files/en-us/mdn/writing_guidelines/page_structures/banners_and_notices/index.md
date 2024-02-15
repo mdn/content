@@ -37,7 +37,7 @@ For example, a page that has `\{{SeeCompatTable}}` also has the `experimental` s
 > **Note:** Banner macros do not _depend_ on the metadata, but some other macro-inserted content does.
 > For example, the `\{{Compat}}` macro depends on the `browser-compat` metadata value.
 
-## What banners should be added
+### Banners that must be added manually
 
 The [Page type templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#templates) include the most important macros.
 
@@ -45,7 +45,7 @@ You need to add the following macros manually:
 
 - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
 
-## What banners are automatically added
+### Banners that must be added automatically
 
 The following macros are automatically added to the content in order to match the statuses stored in the browser-compat-data repository:
 
