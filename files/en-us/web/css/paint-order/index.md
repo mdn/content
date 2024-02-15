@@ -90,6 +90,8 @@ text {
 
 ### Reversing the paint order of stroke and fill using HTML
 
+To control the fill and stroke order in HTML, you can use the {{cssxref("-webkit-text-stroke-color")}} and {{cssxref("-webkit-text-stroke-width")}} CSS properties.
+
 #### HTML
 
 ```html
