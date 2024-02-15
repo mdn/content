@@ -136,7 +136,7 @@ This includes the following information:
 
 #### The client metadata endpoint
 
-An endpoint at the IdP that takes a client_id as input and provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
+An endpoint at the IdP that takes a `client_id` as input and provides URLs pointing to the RP's metadata and terms of service pages, to be used in the browser-supplied FedCM UI. This should follow the JSON structure seen below:
 
 ```json
 {
