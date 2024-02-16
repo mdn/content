@@ -303,7 +303,7 @@ color.addEventListener("input", (e) => {
 });
 ```
 
-We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color>")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match whether declared using {{cssxref("rgb")}}, {{cssxref("hex-color")}}, {{cssxref("named-color")}}, or other syntax (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`).
+We use the `@property` at-rule to define a CSS variable `--theme` to be a {{cssxref("color_value", "&lt;color&gt;")}} value and set the `initial-value` to `#00F`, ensuring equivalent colors are a match regardless of what syntax is used (for example, `#F00` is equal to `rgb(255 0 0)`, `#ff0000`, and `red`).
 
 ```css
 @property --theme {
