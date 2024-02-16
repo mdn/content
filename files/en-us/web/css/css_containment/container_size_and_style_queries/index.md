@@ -173,7 +173,7 @@ Until style queries for regular CSS declarations and properties are supported, w
 }
 ```
 
-A few things to note:
+A few things to note that have already been mentioned but are important to remember:
 
 - All elements can be style query containers; setting a `container-type` is not required. When descendant styles don't impact the computed styles of an ancestor, containment is not needed.
 - A `<container-condition>` can include both style and size features. If including size features in your query, make sure your container elements have a `container-type` of `size` or `inline-size` set.
