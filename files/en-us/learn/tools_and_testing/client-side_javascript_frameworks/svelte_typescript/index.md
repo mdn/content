@@ -585,7 +585,7 @@ Let's fix it.
    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
    ```svelte
-   <h2 id="list-heading" bind:this="{headingEl}" tabindex="{-1}">
+   <h2 id="list-heading" bind:this="{headingEl}" tabindex={-1}>
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
