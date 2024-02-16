@@ -16,7 +16,7 @@ The **Permissions API** provides a consistent programmatic way to query the stat
 Note that the permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, and user prompts.
 So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) on platforms that support the [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions#browser_support) property.
+{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -33,7 +33,6 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API): `clipboard-read`, `clipboard-write`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`

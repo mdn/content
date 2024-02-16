@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.size
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`size`** read-only property of the
 {{domxref("GPUBuffer")}} interface represents the length of the `GPUBuffer`'s memory allocation, in bytes.

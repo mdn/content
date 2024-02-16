@@ -35,3 +35,4 @@ If the `crossOrigin` property is not specified, the resource is fetched without 
 
 - {{domxref("HTMLImageElement.crossOrigin")}}
 - {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}
