@@ -66,7 +66,7 @@ The `<container-condition>` in this example contains a single `<size-query>` —
 
 ## Naming containers
 
-A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. In the form example, we could have limited the elements matched by the query by adding a name to the `<container-condition>`. We could also have limited the `@container` queries applicable to {{htmlelement("form")}} elements by setting a {{cssxref("container-name")}}.
+A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. In the form example, we could have limited the elements matched by the query by adding a name to the `<container-condition>` and then setting the {{cssxref("container-name")}} property with its value equal to the same name on the form elements we want to match.
 
 The optional `<container-name>` set within the query condition filters the set of query containers considered to just those with a matching query container name. The {{cssxref("container-name")}} property specifies a list of query container names that can be used by `@container` rules to filter which query containers are targeted. Names enable querying aspects of a specific container, even if the container is not a direct parent.
 
