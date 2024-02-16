@@ -34,7 +34,7 @@ In this guide, we learn the basics of container queries by looking at:
 
 ## Container size queries
 
-Container size queries are filtered by a size condition. The associated styles are applied to contained elements if the container element has been declared to be a container and the container condition is true for that element.
+Container size queries are filtered by a size condition. The associated styles are applied to contained elements if the container element has been declared to be a container and the container condition is true for that element. An element's size container is the nearest ancestor with containment.
 
 Elements are declared as _size query containers_ by setting their {{cssxref("container-type")}} property (or the {{cssxref("container")}} shorthand) to `size` or `inline-size`.
 
