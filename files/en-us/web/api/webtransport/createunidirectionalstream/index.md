@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.createUnidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`createUnidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens a unidirectional stream.
 

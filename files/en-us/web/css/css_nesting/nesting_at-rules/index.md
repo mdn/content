@@ -71,7 +71,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
   display: grid;
   @media (orientation: landscape) {
     grid-auto-flow: column;
-    @media (min-width > 1024px) {
+    @media (min-width: 1024px) {
       max-inline-size: 1024px;
     }
   }
@@ -89,7 +89,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
     grid-auto-flow: column;
   }
 }
-@media (orientation: landscape) and (min-width > 1024px) {
+@media (orientation: landscape) and (min-width: 1024px) {
   .foo {
     max-inline-size: 1024px;
   }
@@ -142,7 +142,7 @@ Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested 
 }
 ```
 
-## See Also
+## See also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)

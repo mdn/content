@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaKeySession.keyStatuses
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The **`MediaKeySession.keyStatuses`** read-only property
 returns a reference to a read-only {{domxref('MediaKeyStatusMap')}} of the current

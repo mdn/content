@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.bookmarks.getTree
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 **`bookmarks.getTree()`** returns an array containing the root of the bookmarks tree as a {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}} object.
 

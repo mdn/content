@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.OrientationSensor.populateMatrix
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
-The **`populateMatrix`** method of the
+The **`populateMatrix()`** method of the
 {{domxref("OrientationSensor")}} interface populates the given target matrix with the
 rotation matrix based on the latest sensor reading. The rotation matrix is shown
 below.

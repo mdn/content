@@ -35,3 +35,9 @@ Macros are heavily cached; for any set of input values (both parameters and envi
 Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.
 
 You can read up on our most commonly-used macros on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) page; also, you can browse through the [complete sources for all macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Most of the macro sources have documentation built into them, as comments at the top.
+
+## See also
+
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Link macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Links)
+- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github

@@ -5,14 +5,14 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a bookmark item (a bookmark or a folder) is created.
 
 ## Syntax
 
 ```js-nolint
-browser.bookmarks.onCreated.addListener()
+browser.bookmarks.onCreated.addListener(listener)
 browser.bookmarks.onCreated.removeListener(listener)
 browser.bookmarks.onCreated.hasListener(listener)
 ```

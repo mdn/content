@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.action.getUserSettings
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the user-specified settings for the browser action.
 

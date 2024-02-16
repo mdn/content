@@ -8,7 +8,7 @@ browser-compat: api.URL.searchParams
 
 {{APIRef("URL API")}}
 
-The **`searchParams`** readonly property of the
+The **`searchParams`** read-only property of the
 {{domxref("URL")}} interface returns a {{domxref("URLSearchParams")}} object allowing
 access to the {{httpmethod("GET")}} decoded query arguments contained in the URL.
 

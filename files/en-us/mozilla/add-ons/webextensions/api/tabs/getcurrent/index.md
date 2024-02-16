@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.getCurrent
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 

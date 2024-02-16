@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.highlight
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Highlights (selects) one or more tabs. Tabs are specified using a window ID and a range of tab indices.
 
