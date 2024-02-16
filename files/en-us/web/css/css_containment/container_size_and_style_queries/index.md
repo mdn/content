@@ -89,7 +89,7 @@ Once you've added names to your `@container` at rules, you can use the {{cssxref
 }
 ```
 
-This example size query is limited to only elements with `container-name: card` applied. In this example, the styles within the query block will apply to the descendants of all list items nested within an element with a class of `cards` with a width that is greater than its height. The styles within the container query style block will apply to the descendants of the {{htmlelement("li")}} elements that match the size query that are descendants of an element with a [`class`](/en-US/docs/Web/HTML/Global_attributes/class) of `card`. If other elements have `card` within their space-separated `container-name` value and match the size query, the styles will be applied to those elements' descendants as well.
+This example size query is limited to elements with a `container-name` of `card` applied to them. In this example, the styles within the container query style block will apply to the descendants of all {{htmlelement("li")}} elements nested within an element with a class of `cards` with a width that is greater than its height. Note that if there are other elements with `container-name: card` applied to them and that match the size query, the styles will be applied to those elements' descendants as well.
 
 ```css
 @container wide (orientation: landscape) and (min-width: 20em) {
