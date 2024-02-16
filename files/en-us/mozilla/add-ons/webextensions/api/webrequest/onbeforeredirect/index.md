@@ -125,7 +125,7 @@ Events have three functions:
   - : `string`. Target of the request.
 - `urlClassification`
 
-  - : `object`. The type of tracking associated with the request, if with the request has been classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with the following properties:
+  - : `object`. The type of tracking associated with the request, if the request is classified by [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop). This is an object with these properties:
 
     - `firstParty`
       - : `array` of `strings`. Classification flags for the request's first party.
@@ -134,12 +134,14 @@ Events have three functions:
 
     The classification flags include:
 
-    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting. `fingerprinting_content` indicates the request is loaded from an origin that has been found to fingerprint but is not considered to participate in tracking, such as a payment provider.
+    - `fingerprinting` and `fingerprinting_content`: indicates the request is involved in fingerprinting ("an origin found to fingerprint").
+      - `fingerprinting` indicates the domain is in the fingerprinting and tracking category. Examples of this type of domain include advertisers who want to associate a profile with the visiting user.
+      - `fingerprinting_content` indicates the domain is in the fingerprinting category but not the tracking category. Examples of this type of domain include payment providers who use fingerprinting techniques to identify the visiting user for anti-fraud purposes.
     - `cryptomining` and `cryptomining_content`: similar to the fingerprinting category but for cryptomining resources.
     - `tracking`, `tracking_ad`, `tracking_analytics`, `tracking_social`, and `tracking_content`: indicates the request is involved in tracking. `tracking` is any generic tracking request, the `ad`, `analytics`, `social`, and `content` suffixes identify the type of tracker.
-    - `any_basic_tracking`: a meta flag that combines any tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
-    - `any_strict_tracking`: a meta flag that combines any tracking and fingerprinting flags, including `tracking_content` and `fingerprinting_content`.
-    - `any_social_tracking`: a meta flag that combines any social tracking flags.
+    - `any_basic_tracking`: a meta flag that combines tracking and fingerprinting flags, excluding `tracking_content` and `fingerprinting_content`.
+    - `any_strict_tracking`: a meta flag that combines all tracking and fingerprinting flags.
+    - `any_social_tracking`: a meta flag that combines all social tracking flags.
 
 ## Browser compatibility
 
