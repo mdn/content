@@ -320,18 +320,18 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a dotted outline.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
   output {
-    outline: 2px dotted;
+    outline: 5px dotted var(--theme);
     color: #777;
   }
 }
 ```
 
-The second and third style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme`.
+The second and third style queries include values for the custom property. These will match if the container's `--theme` value is an equivalent color to the value listed, even if that value is the same as the `initial-value`. The first query matches elements whose `--theme` value is equivalent to `red`, `blue`, or `green`. When it is, the {{cssxref("color")}} will be the color current value of `--theme` (in the case of `blue` and `green`, overriding the grey set in the first style query).
 
 The second style query states that when `--theme` is equivalent to `red`, the `<output>`'s contents will also be bold. We did this to better demonstrate that the container query is a match.
 
