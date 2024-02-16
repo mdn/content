@@ -123,6 +123,8 @@ Host: foo.com
 
 > **Note:** You can find this example on GitHub — see [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
+> **Note:** The data will not be appended if the `action` URL scheme cannot handle queries, e.g. `file:`.
+
 #### The POST method
 
 The [`POST` method](/en-US/docs/Web/HTTP/Methods/POST) is a little different. It's the method the browser uses to talk to the server when asking for a response that takes into account the data provided in the body of the HTTP request: "Hey server, take a look at this data and send me back an appropriate result." If a form is sent using this method, the data is appended to the body of the HTTP request.
@@ -178,6 +180,8 @@ The only thing displayed to the user is the URL called. As we mentioned above, w
 
 1. If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
 2. If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
+
+> **Note:** The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
 
 ## On the server side: retrieving the data
 
