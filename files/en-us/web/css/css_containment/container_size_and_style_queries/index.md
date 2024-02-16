@@ -202,6 +202,7 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 
 In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
 
+#### Registered properties
 If explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}}, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition. This is different from the example above in which the CSS variable was introduced via a simple CSS custom property value assignment; in that case querying that custom property will always return true.
 
 ```css
