@@ -27,7 +27,15 @@ sort(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
+  - : A function that determines the order of the elements. It returns a number where:
+
+    - A negative value indicates that `a` should come before `b`.
+    - A positive value indicates that `a` should come after `b`.
+    - Zero indicates that `a` and `b` are considered equal.
+
+    Note: `NaN` is treated as `0`.
+
+    The function is called with the following arguments:
 
     - `a`
       - : The first element for comparison. Will never be `undefined`.
