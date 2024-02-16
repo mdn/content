@@ -588,7 +588,6 @@ Let's write an example:
    You will also see a status of **passed** or **failed** instead of **completed**, because of the `if` or `else` blocks of code.
 
    [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
-   
    You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
 > **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
