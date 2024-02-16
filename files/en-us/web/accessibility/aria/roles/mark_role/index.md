@@ -51,7 +51,6 @@ Will be part of [WAI-ARIA 1.3](https://w3c.github.io/aria/#mark), which is still
 ## See also
 
 - HTML {{HTMLElement('mark')}} element
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
 
 <section id="Quick_links">
 
