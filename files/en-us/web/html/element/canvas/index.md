@@ -9,73 +9,6 @@ browser-compat: html.elements.canvas
 
 Use the **HTML `<canvas>` element** with either the [canvas scripting API](/en-US/docs/Web/API/Canvas_API) or the [WebGL API](/en-US/docs/Web/API/WebGL_API) to draw graphics and animations.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
-          >embedded content</a
-        >, palpable content.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Transparent but with no
-        <a
-          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
-          >interactive content</a
-        >
-        descendants except for {{HTMLElement("a")}} elements,
-        {{HTMLElement("button")}} elements,
-        {{HTMLElement("input")}} elements whose
-        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
-        <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>
-        Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>Any</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLCanvasElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
@@ -154,6 +87,75 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
 - [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
 - [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >,
+        <a href="/en-US/docs/Web/HTML/Content_categories#embedded_content"
+          >embedded content</a
+        >, palpable content.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Transparent but with no
+        <a
+          href="/en-US/docs/Web/HTML/Content_categories#interactive_content"
+          >interactive content</a
+        >
+        descendants except for {{HTMLElement("a")}} elements,
+        {{HTMLElement("button")}} elements,
+        {{HTMLElement("input")}} elements whose
+        <a href="/en-US/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
+        <code>checkbox</code>, <code>radio</code>, or <code>button</code>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        Any element that accepts
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
+          >phrasing content</a
+        >.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>Any</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLCanvasElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
