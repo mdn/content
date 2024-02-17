@@ -56,7 +56,7 @@ function setView() {
 }
 ```
 
-Here we are grabbing a {{domxref("VRPose")}} object using `getState()` and storing it in `posState`. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.hasPosition")}} and {{domxref("VRPose.hasOrientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
+Here we are grabbing a {{domxref("VRPose")}} object using `getState()` and storing it in `posState`. We then check to make sure that position and orientation info is present in the current frame using {{domxref("VRPose.position")}} and {{domxref("VRPose.orientation")}} (these return `null` if, for example the head mounted display is turned off or not pointing at the position sensor, which would cause an error.)
 
 We then output the x, y and z position and orientation values for informational purposes, and use those values to update the `xPos`, `yPos`, `zPos`, `xOrient`, `yOrient`, and `zOrient` variables, which are used to update the scene rendering on each frame.
 
@@ -66,5 +66,4 @@ We then output the x, y and z position and orientation values for informational 
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

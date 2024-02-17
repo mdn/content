@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.getInstalledRelatedApps
 ---
 
-{{ ApiRef() }}{{SeeCompatTable}}
+{{ ApiRef() }}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
@@ -31,7 +31,7 @@ Defining the relationship is done in a different way depending on the type of ap
   - A self-defining entry inside its own `related_applications` manifest member in the case of a PWA checking if it is installed on the underlying platform.
   - An `assetlinks.json` file in its [`/.well-known/`](https://tools.ietf.org/html/rfc5785) directory in the case of an app outside the scope of the PWA checking whether it is installed.
 
-See [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/get-installed-related-apps/) for more details on how to handle each one of these cases.
+See [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps) for more details on how to handle each one of these cases.
 
 > **Note:** Most supporting browsers provide their own install UI when an installable PWA is detected, which won't appear if it is already installed — see [Making PWAs installable > Installation from the web](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_the_web). This can be suppressed using the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which could also be combined with `getInstalledRelatedApps()` to suppress it based on a platform-specific app being available. See [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt#responding_to_platform-specific_apps_being_installed) for further useful information.
 
@@ -55,8 +55,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
   - : A string representing the [platform](https://github.com/w3c/manifest/wiki/Platforms) (ecosystem or operating system) the related app is associated with. This can be:
     - `"chrome_web_store"`: A [Google Chrome Web Store](https://chrome.google.com/webstore) app.
     - `"play"`: A [Google Play Store](https://play.google.com/) app.
-    - `"chromeos_play"`: A [Chrome OS Play](https://support.google.com/googleplay/answer/7021273) app.
-    - `"itunes"`: An [Apple App Store](https://www.apple.com/app-store/) app.
+    - `"chromeos_play"`: A [ChromeOS Play](https://support.google.com/googleplay/answer/7021273) app.
     - `"webapp"`: A [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
     - `"windows"`: A [Windows Store](https://www.microsoft.com/store/apps) app.
     - `"f-droid"`: An [F-Droid](https://f-droid.org/) app.
@@ -103,4 +102,4 @@ if (psApp && doesVersionSendPushMessages(psApp.version)) {
 
 ## See also
 
-- [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/get-installed-related-apps/)
+- [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps)

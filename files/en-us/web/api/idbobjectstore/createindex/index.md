@@ -32,12 +32,9 @@ createIndex(indexName, keyPath, options)
 ### Parameters
 
 - `indexName`
-  - : The name of the index to create. Note that it is possible to create an index with an
-    empty name.
+  - : The name of the index to create. Note that it is possible to create an index with an empty name.
 - `keyPath`
-  - : The key path for the index to use. Note that it is possible to create an index with
-    an empty `keyPath`, and also to pass in a sequence (array) as a
-    `keyPath`.
+  - : The key path for the index to use. Note that it is possible to create an index with an empty `keyPath`, and also to pass in a sequence (array) as a `keyPath`.
 - `options` {{optional_inline}}
 
   - : An object which can include the following
@@ -47,8 +44,8 @@ createIndex(indexName, keyPath, options)
     - `multiEntry`
       - : If `true`, the index will add an entry in the index for each array element when the `keyPath` resolves to an array.
         If `false`, it will add one single entry containing the array. Defaults to `false`.
-    - `locale` {{non-standard_inline}}
-      - : Currently Firefox-only (43+), this allows you to specify a locale for the index.
+    - `locale` {{non-standard_inline}} {{deprecated_inline}}
+      - : Allows you to specify a locale for the index.
         Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
         (see [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
         You can specify its value in one of three ways:
@@ -79,7 +76,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
     belongs to is not active (e.g. has been deleted or removed.) In Firefox
     previous to version 41, an `InvalidStateError` was raised in
     this case as well, which was misleading; this has now been fixed (see
-    [Webkit bug 1176165](https://bugzil.la/1176165).)
+    [Firefox bug 1176165](https://bugzil.la/1176165).)
 
 ## Examples
 

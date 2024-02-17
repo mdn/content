@@ -10,7 +10,7 @@ The JavaScript exception "x can't be converted to BigInt" occurs when attempting
 
 ## Message
 
-```
+```plain
 TypeError: Cannot convert null to a BigInt (V8-based)
 TypeError: can't convert null to BigInt (Firefox)
 TypeError: Invalid argument type in ToBigInt operation (Safari)
@@ -64,4 +64,4 @@ const b = new BigInt64Array(3).fill(3n);
 
 ## See also
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)

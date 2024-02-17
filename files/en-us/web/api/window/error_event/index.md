@@ -174,4 +174,4 @@ scriptError.addEventListener("click", () => {
 
 ## See also
 
-- This event on `Element` targets: {{domxref("Element/error_event", "error")}} event
+- This event on `Element` targets: {{domxref("HTMLElement/error_event", "error")}} event

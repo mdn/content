@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.grammar.trailing_commas
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 **Trailing commas** (sometimes called "final commas") can be useful when adding new elements, parameters, or properties to JavaScript code. If you want to add a new property, you can add a new line without modifying the previously last line if that line already uses a trailing comma. This makes version-control diffs cleaner and editing code might be less troublesome.
 
@@ -122,7 +122,7 @@ Math.max(10, 20,);
 
 Function parameter definitions or function invocations only containing a comma will throw a {{jsxref("SyntaxError")}}. Furthermore, when using [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), trailing commas are not allowed:
 
-```js example-bad
+```js-nolint example-bad
 function f(,) {} // SyntaxError: missing formal parameter
 (,) => {};       // SyntaxError: expected expression, got ','
 f(,)             // SyntaxError: expected expression, got ','
@@ -226,4 +226,4 @@ export { A as B, C as D, E as F, };
 
 ## See also
 
-- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types)
+- [Grammar and types](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types) guide

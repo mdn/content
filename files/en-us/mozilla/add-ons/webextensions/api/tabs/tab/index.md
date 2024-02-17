@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.Tab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type **`tabs.Tab`** contains information about a tab. This provides access to information about what content is in the tab, how large the content is, what special states or restrictions are in effect, and so forth.
 
@@ -26,7 +26,7 @@ Values of this type are objects. They contain the following properties:
 - `autoDiscardable` {{optional_inline}}
   - : `boolean`. Whether the tab can be discarded by the browser. The default value is `true`. When set to `false`, the browser cannot automatically discard the tab. However, the tab can be discarded by {{WebExtAPIRef("tabs.discard")}}.
 - `cookieStoreId` {{optional_inline}}
-  - : `string`. The cookie store of the tab. If different tabs can have different cookie stores (for example, to support [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), you can pass this as the `storeId` option into various methods of the {{WebExtAPIRef("cookies")}} API, to set and get cookies associated with this tab's cookie store. Only present if the extension has the `"cookies"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+  - : `string`. The cookie store of the tab. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `discarded` {{optional_inline}}
   - : `boolean`. Whether the tab is discarded. A discarded tab is one whose content has been unloaded from memory, but is still visible in the tab strip. Its content gets reloaded the next time it's activated.
 - `favIconUrl` {{optional_inline}}
@@ -51,7 +51,7 @@ Values of this type are objects. They contain the following properties:
   - : `boolean`. True if the tab can be [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
 - `isInReaderMode`
   - : `boolean`. True if the tab is currently being [rendered in Reader Mode](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), false otherwise.
-- `lastAccessed`
+- `lastAccessed` {{optional_inline}}
   - : `double`. Time at which the tab was last accessed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `mutedInfo` {{optional_inline}}
   - : {{WebExtAPIRef('tabs.MutedInfo')}}. The current muted state for the tab and the reason for the last state change.

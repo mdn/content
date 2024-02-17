@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getAcceptLanguages
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the [accept-languages](/en-US/docs/Web/HTTP/Content_negotiation#the_accept-language_header) of the browser. This is different from the locale used by the browser. To get the locale, use {{WebExtAPIRef('i18n.getUILanguage')}}.
 

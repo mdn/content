@@ -13,7 +13,7 @@ In the previous articles, we covered the styling of various form controls in a g
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic understanding of
+        A basic understanding of
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">HTML</a> and
         <a href="/en-US/docs/Learn/CSS/First_steps">CSS</a>, including general
         knowledge of
@@ -54,7 +54,7 @@ These basic pseudo-classes should be familiar to you now. [CSS selectors](/en-US
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g. elements that support the [`required`](/en-US/docs/Web/HTML/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
 - {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g. elements that support the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g. elements with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Attributes/checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the [`selected`](/en-US/docs/Web/HTML/Attributes/selected) attribute set).
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the [`selected`](/en-US/docs/Web/HTML/Element/option#selected) attribute set).
 
 There are many others, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems. The UI pseudo-classes listed above have excellent browser support, but of course, you should test your form implementations carefully to ensure they work for your target audience.
 
@@ -126,7 +126,7 @@ The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [
 This is really useful when you want to add a visual indicator to an element, such as a label or icon, when alternative indicators are also available to ensure accessibility for all users. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the a custom radio button's inner circle when a radio button is selected:
 
 ```css
-input[type="radio"] + label::before {
+input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -139,7 +139,7 @@ input[type="radio"] + label::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
@@ -155,7 +155,7 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 <p>Required fields are labeled with "required".</p>
 ```
 
-screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
+Screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
 Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
@@ -224,7 +224,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 
 ```html
 <div>
-  <label for="fname">First name *: </label>
+  <label for="fname">First name: </label>
   <input id="fname" name="fname" type="text" required />
   <span></span>
 </div>
@@ -458,12 +458,8 @@ A fragment of the HTML is as follows — note the readonly attribute:
 If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
 
 ```css
-:is(
-    input:read-only,
-    input:-moz-read-only,
-    textarea:-moz-read-only,
-    textarea:read-only
-  ) {
+input:read-only,
+textarea:read-only {
   border: 0;
   box-shadow: none;
   background-color: white;
@@ -497,7 +493,7 @@ The most common use of this is to add a different style onto the checkbox or rad
 As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
 
 ```css
-input[type="radio"] + label::before {
+input[type="radio"]::before {
   display: block;
   content: " ";
   width: 10px;
@@ -510,7 +506,7 @@ input[type="radio"] + label::before {
   transition: all 0.3s ease-in;
 }
 
-input[type="radio"]:checked + label::before {
+input[type="radio"]:checked::before {
   transform: translate(3px, 3px) scale(1);
   transition: all 0.3s cubic-bezier(0.25, 0.25, 0.56, 2);
 }
@@ -563,7 +559,7 @@ input:default ~ span::after {
 }
 ```
 
-This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the general sibling combinator (`~`) rather than the adjacent sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
+This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the subsequent-sibling combinator (`~`) rather than the Next-sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
 
 See the live result below:
 

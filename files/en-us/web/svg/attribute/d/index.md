@@ -678,7 +678,7 @@ svg {
     <circle cx="50" cy="10" r="1.5" />
     <circle cx="90" cy="90" r="1.5" />
   </g>
-  <use xlink:href="#ControlPoints" x="100" />
+  <use href="#ControlPoints" x="100" />
 </svg>
 ```
 
@@ -870,7 +870,10 @@ svg {
 
   <!-- Highlight the curve vertex and control points -->
   <g>
-    <polyline points="10,50 25,25 40,50" stroke="rgba(0,0,0,.2)" fill="none" />
+    <polyline
+      points="10,50 25,25 40,50"
+      stroke="rgb(0 0 0 / 20%)"
+      fill="none" />
     <circle cx="25" cy="25" r="1.5" />
 
     <!-- Curve vertex points -->
@@ -880,7 +883,7 @@ svg {
     <g id="SmoothQuadraticDown">
       <polyline
         points="40,50 55,75 70,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="55" cy="75" r="1.5" fill="lightgrey" />
@@ -890,16 +893,16 @@ svg {
     <g id="SmoothQuadraticUp">
       <polyline
         points="70,50 85,25 100,50"
-        stroke="rgba(0,0,0,.2)"
+        stroke="rgb(0 0 0 / 20%)"
         stroke-dasharray="2"
         fill="none" />
       <circle cx="85" cy="25" r="1.5" fill="lightgrey" />
       <circle cx="100" cy="50" r="1.5" />
     </g>
 
-    <use xlink:href="#SmoothQuadraticDown" x="60" />
-    <use xlink:href="#SmoothQuadraticUp" x="60" />
-    <use xlink:href="#SmoothQuadraticDown" x="120" />
+    <use href="#SmoothQuadraticDown" x="60" />
+    <use href="#SmoothQuadraticUp" x="60" />
+    <use href="#SmoothQuadraticDown" x="120" />
   </g>
 </svg>
 ```

@@ -28,7 +28,7 @@ Functional notation: `color(colorspace c1 c2 c3[ / A])`
 
 - `c1`, `c2`, `c3`
 
-  - : {{CSSXref("number")}}, {{CSSXref("percentage")}} values or the keyword `none`, which provide the component values in the color space.
+  - : {{CSSXref("number")}} between 0 and 1, a {{CSSXref("percentage")}} or the keyword `none`, which provide the component values in the color space.
 
 - `A` {{optional_inline}}
 
@@ -166,19 +166,19 @@ div {
 ```css
 @media (color-gamut: p3) {
   div {
-    background-color: color(display-p3 0 0 1);
+    background-color: color(display-p3 1 0 0);
   }
 }
 
 @media (color-gamut: srgb) {
   div:nth-child(2) {
-    background-color: color(srgb 0 0 1);
+    background-color: color(srgb 1 0 0);
   }
 }
 
 @media (color-gamut: rec2020) {
   div:nth-child(3) {
-    background-color: color(rec2020 0 0 1);
+    background-color: color(rec2020 1 0 0);
   }
 }
 ```

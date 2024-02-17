@@ -138,7 +138,7 @@ The most important parts to note are as follows:
   We've coupled this with a {{cssxref("width")}} of 100%, meaning that the table will fill any container it is put in, and be nicely responsive (although it would still need some more work to get it looking good on narrow screen widths).
 
 - A {{cssxref("border-collapse")}} value of `collapse` is standard best practice for any table styling effort. By default, when you set borders on table elements, they will all have spacing between them, as the below image illustrates: ![a 2 by 2 table with default spacing between the borders showing no border collapse](no-border-collapse.png) This doesn't look very nice (although it might be the look you want, who knows?). With `border-collapse: collapse;` set, the borders collapse down into one, which looks much better: ![a 2 by 2 table with border-collapse property set to collapse showing borders collapse into one](border-collapse.png)
-- We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders round the table header and footer later on — it looks really odd and disjointed when you don't have a border round the whole outside of the table and end up with gaps.
+- We've put a {{cssxref("border")}} around the whole table, which is needed because we'll be putting some borders around the table header and footer later on — it looks really odd and disjointed when you don't have a border around the whole outside of the table and end up with gaps.
 - We've set some {{cssxref("padding")}} on the {{htmlelement("th")}} and {{htmlelement("td")}} elements — this gives the data items some space to breathe, making the table look a lot more legible.
 
 At this point, our table already looks a lot better:
@@ -221,11 +221,7 @@ tfoot {
 thead th,
 tfoot th,
 tfoot td {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.1),
-    rgba(0, 0, 0, 0.5)
-  );
+  background: linear-gradient(to bottom, rgb(0 0 0 / 10%), rgb(0 0 0 / 50%));
   border: 3px solid purple;
 }
 ```
@@ -260,7 +256,7 @@ table {
 }
 ```
 
-- Earlier on you saw the {{cssxref(":nth-child")}} selector being used to select specific child elements. It can also be given a formula as a parameter, so it will select a sequence of elements. The formula `2n-1` would select all the odd numbered children (1, 3, 5, etc.) and the formula `2n` would select all the even numbered children (2, 4, 6, etc.) We've used the `odd` and `even` keywords in our code, which do exactly the same things as the aforementioned formulae. In this case we are giving the odd and even rows different (lurid) colors.
+- Earlier on you saw the {{cssxref(":nth-child")}} selector being used to select specific child elements. It can also be given a formula as a parameter, so it will select a sequence of elements. The formula `2n+1` would select all the odd numbered children (1, 3, 5, etc.) and the formula `2n` would select all the even numbered children (2, 4, 6, etc.) We've used the `odd` and `even` keywords in our code, which do exactly the same things as the aforementioned formulae. In this case we are giving the odd and even rows different (lurid) colors.
 - We've also added a repeating background tile to all the body rows, which is just a bit of noise (a semi-transparent `.png` with a bit of visual distortion on it) to provide some texture.
 - Lastly, we've given the entire table a solid background color so that browsers that don't support the `:nth-child` selector still have a background for their body rows.
 

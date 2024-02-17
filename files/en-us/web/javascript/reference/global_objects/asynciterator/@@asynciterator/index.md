@@ -17,6 +17,10 @@ The **`[@@asyncIterator]()`** method of {{jsxref("AsyncIterator")}} instances im
 asyncIterator[Symbol.asyncIterator]()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 The value of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this), which is the async iterator object itself.

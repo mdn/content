@@ -8,11 +8,10 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you've understood our [Working with JSON](/en-US/docs/Learn/JavaScript/Objects/JSON) article.
 
-> **Note:** You can try out solutions in the interactive editors below, however it may be helpful to download the code and use an online tool such as [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) to work on the tasks.
+> **Note:** You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
 >
-> If you get stuck, then ask us for help — see the [Assessment or further help](#assessment_or_further_help) section at the bottom of this page.
-
-> **Note:** In the examples below, if there is an error in your code it will be outputted into the results panel on the page, to help you try to figure out the answer (or into the browser's JavaScript console, in the case of the downloadable version).
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## JSON 1
 
@@ -37,16 +36,3 @@ Try updating the live code below to recreate the finished example:
 > **Callout:**
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/json1-download.html) to work in your own editor or in an online editor.
-
-## Assessment or further help
-
-You can practice these examples in the Interactive Editor above.
-
-If you would like your work assessed, or are stuck and want to ask for help:
-
-1. Write a post asking for assessment and/or help at the [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250). Your post should include:
-
-   - A descriptive title such as "Assessment wanted for JSON skill test".
-   - Details of what you have already tried, and what you would like us to do, e.g. if you are stuck and need help, or want an assessment.
-   - Your code.
-   - A link to the actual task or assessment page, so we can find the question you want help with.

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onHistoryStateUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the page used the [>history API](/en-US/docs/Web/API/History_API/Working_with_the_History_API) to update the URL displayed in the browser's location bar. All future events for this frame will use the updated URL.
 
@@ -51,8 +51,8 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
   - : `string`. The URL to which the given frame will navigate.
-- `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation will occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`

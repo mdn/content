@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUBuffer
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUBuffer`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a block of memory that can be used to store raw data to use in GPU operations.
 
@@ -69,7 +69,7 @@ await stagingBuffer.mapAsync(
 );
 
 const copyArrayBuffer = stagingBuffer.getMappedRange(0, BUFFER_SIZE);
-const data = copyArrayBuffer.slice();
+const data = copyArrayBuffer.slice(0);
 stagingBuffer.unmap();
 console.log(new Float32Array(data));
 ```

@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Boolean.Boolean
 
 The **`Boolean()`** constructor creates {{jsxref("Boolean")}} objects. When called as a function, it returns primitive values of type Boolean.
 
-{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/boolean-constructor.html", "shorter")}}
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MessagePort.postMessage
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`postMessage()`** method of the
 {{domxref("MessagePort")}} interface sends a message from the port, and optionally,
@@ -17,18 +17,19 @@ transfers ownership of objects to other browsing contexts.
 ## Syntax
 
 ```js-nolint
-postMessage(message, transferList)
+postMessage(message)
+postMessage(message, options)
+postMessage(message, transfer)
 ```
 
 ### Parameters
 
 - `message`
-  - : The message you want to send through the channel. This can be of any basic data
-    type. Multiple data items can be sent as an array.
-- `transferList` {{optional_inline}}
-  - : [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to be transferred — these objects have their
-    ownership transferred to the receiving browsing context, so are no longer usable by
-    the sending browsing context.
+  - : The message you want to send through the channel. This can be of any basic data type. Multiple data items can be sent as an array.
+- `options` {{optional_inline}}
+  - : An optional object containing a `transfer` field with an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+- `transfer` {{optional_inline}}
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
 
 ### Return value
 

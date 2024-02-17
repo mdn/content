@@ -436,17 +436,17 @@ See below how the structure then looks like.
       <path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10" />
     </g>
     <g id="quadrant">
-      <use xlink:href="#segment" />
-      <use xlink:href="#segment" transform="rotate(18)" />
-      <use xlink:href="#segment" transform="rotate(36)" />
-      <use xlink:href="#segment" transform="rotate(54)" />
-      <use xlink:href="#segment" transform="rotate(72)" />
+      <use href="#segment" />
+      <use href="#segment" transform="rotate(18)" />
+      <use href="#segment" transform="rotate(36)" />
+      <use href="#segment" transform="rotate(54)" />
+      <use href="#segment" transform="rotate(72)" />
     </g>
     <g id="petals">
-      <use xlink:href="#quadrant" />
-      <use xlink:href="#quadrant" transform="rotate(90)" />
-      <use xlink:href="#quadrant" transform="rotate(180)" />
-      <use xlink:href="#quadrant" transform="rotate(270)" />
+      <use href="#quadrant" />
+      <use href="#quadrant" transform="rotate(90)" />
+      <use href="#quadrant" transform="rotate(180)" />
+      <use href="#quadrant" transform="rotate(270)" />
     </g>
     <radialGradient
       id="fade"
@@ -472,11 +472,8 @@ See below how the structure then looks like.
       r="200"
       stroke="none"
       fill="url(#fade)" />
-    <use id="outer-petals" xlink:href="#petals" />
-    <use
-      id="inner-petals"
-      xlink:href="#petals"
-      transform="rotate(9) scale(0.33)" />
+    <use id="outer-petals" href="#petals" />
+    <use id="inner-petals" href="#petals" transform="rotate(9) scale(0.33)" />
   </g>
 </svg>
 ```

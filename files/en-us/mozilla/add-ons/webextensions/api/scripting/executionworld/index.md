@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ExecutionWorld
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Specifies the execution environment of a script injected with {{WebExtAPIRef("scripting.executeScript()")}}
 or registered with {{WebExtAPIRef("scripting.registerContentScripts()")}}.
@@ -26,6 +26,7 @@ Values of this type are strings. Possible values are:
 
   > **Warning:** Due to the lack of isolation, the web page can detect the executed code and interfere with it.
   > Do not use the `MAIN` world unless it is acceptable for web pages to read, access, or modify the logic or data that flows through the executed code.
+  > `MAIN` is not supported in Firefox (although it is planned and the work to introduce it is tracked by [Bug 1736575](https://bugzil.la/1736575)). In the meantime, JavaScript code running in the isolated content script sandbox can use the Firefox "Xray vision" feature, as described in [Share objects with page scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts).
 
 ## Browser compatibility
 

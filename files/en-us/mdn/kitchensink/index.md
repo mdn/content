@@ -5,8 +5,6 @@ page-type: guide
 browser-compat: html.elements.video
 ---
 
-{{MDNSidebar}}
-
 > **Warning:** Don't delete this page. It's used by [mdn/yari](https://github.com/mdn/yari) for its automation.
 
 ## About this page
@@ -34,7 +32,7 @@ Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
 
 ### Plain text
 
-```
+```plain
   ___________________________
 < I'm an expert in my field. >
   ---------------------------
@@ -351,7 +349,7 @@ The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macr
   - {{Glossary("XMLHttpRequest", "XHR")}}
 
 - [AJAX](https://en.wikipedia.org/wiki/AJAX) on Wikipedia
-- [Ajax](/en-US/docs/Web/Guide/AJAX)
+- [Ajax](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
 - [Using Fetch API](/en-US/docs/Web/API/Fetch_API/Using_Fetch)

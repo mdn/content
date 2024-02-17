@@ -53,17 +53,23 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
     If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth.
     If omitted, the browser will download the resource and then detect the format.
-    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes.
+    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal_syntax), enclose the format string in quotes.
     Possible values are described in the [Font formats](#font_formats) section below.
 - `tech()` {{Experimental_inline}}
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
-    The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
+    The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
 
   - : Specifies the font name should the font be available on the user's device.
     Enclosing the font name in quotes is optional.
 
     > **Note:** For OpenType and TrueType fonts, `<font-face-name>` is used to match either the Postscript name or the full font name in the name table of locally available fonts. Which type of name is used varies by platform and font, so you should include both of these names to assure proper matching across platforms. Platform substitutions for a given font name must not be used.
+
+    > **Note:** Locally available fonts may have been preinstalled on the user's device, or may have been actively installed by the user.
+    >
+    > While the set of preinstalled fonts is likely to be the same for all users of a particular device, the set of user-installed fonts is not. By discovering the set of user-installed fonts, a site can therefore build a {{glossary("fingerprinting", "fingerprint")}} for the device, helping the site to track users across the web.
+    >
+    > To prevent this, user agents may ignore user-installed fonts when using `local()`.
 
 - `<font-face-name>`
   - : Specifies the full name or postscript name of a locally-installed font face using the `local()` component value, which uniquely identifies a single font face within a larger family.

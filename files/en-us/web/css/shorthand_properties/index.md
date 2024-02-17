@@ -209,10 +209,13 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("border-width")}}
   - {{cssxref("column-rule")}}
   - {{cssxref("columns")}}
+  - {{cssxref("container")}}
   - {{cssxref("contain-intrinsic-size")}}
   - {{cssxref("flex")}}
   - {{cssxref("flex-flow")}}
   - {{cssxref("font")}}
+  - {{cssxref("font-synthesis")}}
+  - {{cssxref("font-variant")}}
   - {{cssxref("gap")}}
   - {{cssxref("grid")}}
   - {{cssxref("grid-area")}}
@@ -223,6 +226,7 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
   - {{cssxref("list-style")}}
   - {{cssxref("margin")}}
   - {{cssxref("mask")}}
+  - {{cssxref("mask-border")}}
   - {{cssxref("offset")}}
   - {{cssxref("outline")}}
   - {{cssxref("overflow")}}

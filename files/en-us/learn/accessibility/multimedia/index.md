@@ -13,8 +13,7 @@ Another category of content that can create accessibility problems is multimedia
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
-        JavaScript, and an understanding of
+        A basic understanding of HTML, CSS, JavaScript, and an understanding of
         <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
           >what accessibility is</a
         >.
@@ -227,9 +226,9 @@ Each time the time updates (once per second), we fire this function. It works ou
 
 This gives you a basic idea of how to add custom player functionality to video/audio player instances. For more information on how to add more complex features to video/audio players, see:
 
-- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery)
-- [Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player)
+- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery)
+- [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
+- [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
 
 We've also created an advanced example to show how you could create an object-oriented system that finds every video and audio player on the page (no matter how many there are) and adds our custom controls to it. See [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) (also [see the source code](https://github.com/mdn/learning-area/tree/main/accessibility/multimedia/custom-controls-OOJS)).
 
@@ -323,7 +322,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](https://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on GitHub, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Note:** Text tracks and transcriptions also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 

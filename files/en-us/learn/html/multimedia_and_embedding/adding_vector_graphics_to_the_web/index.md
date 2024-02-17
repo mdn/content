@@ -51,9 +51,9 @@ Moreover, vector image files are much lighter than their raster equivalents, bec
 
 ## What is SVG?
 
-[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)
+[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. SVG defines elements for creating basic shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}, as well as elements for creating more complex shapes, like {{svgelement("path")}} and {{svgelement("polygon")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix), {{svgelement("animate")}} (animate parts of your vector graphic), and {{svgelement("mask")}} (apply a mask over the top of your image).
 
-As a simple example, the following code creates a circle and a rectangle:
+As a basic example, the following code creates a circle and a rectangle:
 
 ```html
 <svg
@@ -331,7 +331,6 @@ In the last article of this module, we'll explore [responsive images](/en-US/doc
 ## See also
 
 - [SVG tutorial](/en-US/docs/Web/SVG/Tutorial/Getting_Started) on MDN
-- [Quick tips for responsive SVGs](https://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)

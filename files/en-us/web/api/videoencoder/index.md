@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.VideoEncoder
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
 
 The **`VideoEncoder`** interface of the {{domxref('WebCodecs API', '', '', 1)}} encodes {{domxref("VideoFrame")}} objects into {{domxref("EncodedVideoChunk")}}s.
 
@@ -32,7 +32,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("VideoEncoder.isConfigSupported()")}}
+- {{domxref("VideoEncoder.isConfigSupported_static", "VideoEncoder.isConfigSupported()")}}
   - : Returns a promise indicating whether the provided `VideoEncoderConfig` is supported.
 
 ## Instance methods
@@ -60,4 +60,4 @@ _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
 ## See also
 
-[Video processing with WebCodecs](https://web.dev/webcodecs/)
+[Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)

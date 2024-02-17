@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.browserAction.ColorArray
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 ## Type
 

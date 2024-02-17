@@ -30,7 +30,7 @@ Designing your icon as an SVG file is a good idea, as this will allow it to be s
 
 Use the [`icons`](/en-US/docs/Web/Manifest/icons) web app manifest member to define a set of icons for your PWA.
 
-As described in [Create the necessary icon sizes](#create-the-necessary-icon-sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
+As described in [Create the necessary icon sizes](#create_the_necessary_icon_sizes), you should create multiple versions of your icon to ensure it appears correctly in all the places where it's used. This is why the `icons` member is an array of objects, each of which represents an icon, with its own size, type, and purpose. Each icon object has the following properties:
 
 - `src`
   - : The URL of the icon image file.
@@ -117,13 +117,11 @@ The following web app manifest example uses a WebP image for the small icon, an 
 }
 ```
 
-Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference-your-icons-in-the-web-app-manifest).
+Learn more about how to reference the various icon sizes in [Reference your icons in the web app manifest](#reference_your_icons_in_the_web_app_manifest).
 
 ## Support masking
 
-Depending on the operating system, the device capabilities, or the user theme, a mask may be applied to your icon to match a particular shape or color. Maskable icons are adaptive icons that enable your icon to fill up the entire shape an operating system provides. For example, on Android, app icons can have a circular mask or theme color applied to them, or both. If the icon is adaptive, or maskable, the icon will fill up the circle and can be colored according to the user's theme. Otherwise, the icon will appear within a white or theme-colored circle.
-
-![The Android 13 home screen, showing circular and color themed app icons](./android-13-home-screen.png)
+Depending on the operating system and the device capabilities, a mask may be applied to your icon to match a particular shape. Maskable icons are adaptive icons that can be displayed in a variety of shapes that operating systems provide. For example, on Android, app icons can have a circular mask.
 
 Your PWA app icon should specifically support masking to look well integrated with operating systems that apply masks. Icons that do not support masking may appear cropped or smaller than expected. On Android, non-maskable icons are centered within the circular mask and given a white background, which may not look good with your icon.
 
@@ -161,7 +159,7 @@ You can also use tools like [Maskable.app](https://maskable.app/) to preview how
 ## See also
 
 - [`icons` manifest member](/en-US/docs/Web/Manifest/icons)
-- [App design](https://web.dev/learn/pwa/app-design/#the-icon) on web.dev
-- [Adaptive icon support in PWAs with maskable icons](https://web.dev/maskable-icon/) on web.dev
+- [App design](https://web.dev/learn/pwa/app-design#the_icon) on web.dev
+- [Adaptive icon support in PWAs with maskable icons](https://web.dev/articles/maskable-icon) on web.dev
 - [Define icons and a theme color](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/icon-theme-color) on microsoft.com
 - [PWA Image Generator](https://www.pwabuilder.com/imageGenerator) on pwabuilder.com

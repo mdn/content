@@ -5,9 +5,9 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getManifest
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, deserialized from JSON to an object. Firefox returns null for missing values, and removes unsupported keys.
+Get the complete [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file, deserialized from JSON to an object.
 
 ## Syntax
 

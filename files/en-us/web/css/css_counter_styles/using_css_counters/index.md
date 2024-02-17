@@ -71,7 +71,7 @@ h3::before {
 The {{cssxref("counter", "counter()")}} function is used when the numbering of nesting levels does not include the context of parent levels.
 For example, here each nested level restarts from one:
 
-```
+```plain
 1 One
   1 Nested one
   2 Nested two
@@ -85,7 +85,7 @@ For example, here each nested level restarts from one:
 The {{cssxref("counters", "counters()")}} function is used when the count for nested levels must include the count from parent levels.
 For example, you might use this to lay out sections as shown:
 
-```
+```plain
 1 One
   1.1 Nested one
   1.2 Nested two
@@ -311,3 +311,5 @@ li::before {
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}
 - {{cssxref("@counter-style")}}
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module

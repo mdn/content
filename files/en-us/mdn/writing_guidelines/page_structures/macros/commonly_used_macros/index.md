@@ -15,7 +15,7 @@ See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Oth
 
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
-Link macros are recommended over normal HTML links because they are succinct and translation-friendly.
+Link macros are recommended over normal Markdown links because they are succinct and translation-friendly.
 For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links
@@ -260,3 +260,21 @@ You can use the argument `notservice` to indicate that a feature works in web wo
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}
+
+## Browser compatibility and specification macros
+
+The following macros are included on all reference pages, but are also supported by all page types:
+
+- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
+
+  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature passed as the parameter. If no parameter is included, it defaults to the features defined by `browser-compat` in the frontmatter. An optional depth parameter sets how deep sub features should be added to the table. The depth, if omitted, defaults to 1, meaning only the first level of sub feature data from BCD will be included.
+
+- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
+  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
+
+## See also
+
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
+- [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github

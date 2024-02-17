@@ -137,5 +137,5 @@ console.log(formatter.formatRangeToParts(startRange, endRange));
 ## See also
 
 - {{jsxref("Intl.NumberFormat")}}
-- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format")}}
-- Formatting dates: {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}
+- {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
+- {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}

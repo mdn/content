@@ -10,7 +10,7 @@ The `id` function finds nodes matching the given ids and returns a node-set cont
 
 ### Syntax
 
-```
+```plain
 id( expression )
 ```
 

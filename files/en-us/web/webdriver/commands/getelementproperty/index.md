@@ -56,7 +56,7 @@ print(text_box.get_property("value"))
 
 Output:
 
-```
+```plain
 foo
 bar
 ```

@@ -2,6 +2,7 @@
 title: Trusted Types API
 slug: Web/API/Trusted_Types_API
 page-type: web-api-overview
+browser-compat: api.trustedTypes
 spec-urls: https://w3c.github.io/trusted-types/dist/spec/
 ---
 
@@ -66,7 +67,7 @@ console.log(escaped instanceof TrustedHTML); // true
 el.innerHTML = escaped;
 ```
 
-Read more about this example, and discover other ways to sanitize input in the article [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/).
+Read more about this example, and discover other ways to sanitize input in the article [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types).
 
 ## Specifications
 
@@ -74,9 +75,9 @@ Read more about this example, and discover other ways to sanitize input in the a
 
 ## Browser compatibility
 
-See the compatibility data for each of the Trusted Types API interfaces.
+{{Compat}}
 
 ## See also
 
-- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/trusted-types/)
+- [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
 - [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))

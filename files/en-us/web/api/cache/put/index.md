@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.put
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`put()`** method of the
 {{domxref("Cache")}} interface allows key/value pairs to be added to the current
@@ -76,7 +76,7 @@ like so:
 let response;
 const cachedResponse = caches
   .match(event.request)
-  .catch(() => fetch(event.request))
+  .then((r) => (r !== undefined ? r : fetch(event.request)))
   .then((r) => {
     response = r;
     caches.open("v1").then((cache) => {

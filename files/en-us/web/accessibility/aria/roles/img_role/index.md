@@ -69,7 +69,7 @@ For example, if you use emojis in your text, the meaning might be obvious to a s
 
 This seems to work OK across some browser/screen reader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
 
-Another example where this might be suitable is when using ASCII emoji combinations, like the legendary "Table flip":
+Another example where this might be suitable is when using {{Glossary("ASCII")}} emoji combinations, like the legendary "Table flip":
 
 ```html
 <div role="img" aria-label="Table flip">
@@ -137,6 +137,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

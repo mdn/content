@@ -14,7 +14,7 @@ The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function
 ## Syntax
 
 ```js-nolint
-catch(onRejected)
+promiseInstance.catch(onRejected)
 ```
 
 ### Parameters
@@ -26,7 +26,7 @@ catch(onRejected)
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. It's eventually rejected if `onRejected` throws an error or returns a Promise which is itself rejected; otherwise, it's eventually fulfilled.
+Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. If `onRejected` is called, the returned promise will resolve based on the return value of this call, or reject with the thrown error from this call. If the current promise fulfills, `onRejected` is not called and the returned promise fulfills to the same value.
 
 ## Description
 
@@ -83,7 +83,7 @@ p1.then((value) => {
     console.error(e.message); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 
@@ -96,7 +96,7 @@ p1.then((value) => {
     console.error(e); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 ```

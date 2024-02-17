@@ -11,7 +11,7 @@ unexpected token that doesn't belong at this position in the code.
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid character (Edge)
 SyntaxError: illegal character (Firefox)
 SyntaxError: Invalid or unexpected token (Chrome)
@@ -36,7 +36,7 @@ Some characters look similar, but will cause the parser to fail interpreting you
 Famous examples of this are quotes, the minus or semicolon
 ([greek question mark (U+37e)](https://en.wikipedia.org/wiki/Question_mark#Greek_question_mark) looks same).
 
-```js example-bad
+```js-nolint example-bad
 “This looks like a string”; // SyntaxError: illegal character
 // “ and ” are not " but look like it
 
@@ -61,7 +61,7 @@ Some editors and IDEs will notify you or at least use a slightly different highl
 
 It's easy to forget a character here or there.
 
-```js example-bad
+```js-nolint example-bad
 const colors = ["#000", #333", "#666"];
 // SyntaxError: illegal character
 ```
@@ -77,7 +77,7 @@ const colors = ["#000", "#333", "#666"];
 When copy pasting code from external sources, there might be invalid characters. Watch
 out!
 
-```js example-bad
+```js-nolint example-bad
 const foo = "bar";​
 // SyntaxError: illegal character
 ```
@@ -85,7 +85,7 @@ const foo = "bar";​
 When inspecting this code in an editor like Vim, you can see that there is actually a
 [zero-width space (ZWSP) (U+200B)](https://en.wikipedia.org/wiki/Zero-width_space) character.
 
-```
+```js-nolint
 const foo = "bar";<200b>
 ```
 

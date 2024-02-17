@@ -9,7 +9,7 @@ browser-compat: api.EventCounts
 
 The **`EventCounts`** interface of the [Performance API](/en-US/docs/Web/API/Performance_API) provides the number of events that have been dispatched for each event type.
 
-An `EventCounts` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_objects), in which each key is the name string for an event type, and the corresponding value is an integer indicating the number of events that have been dispatched for that event type.
+An `EventCounts` instance is a read-only [`Map`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the name string for an event type, and the corresponding value is an integer indicating the number of events that have been dispatched for that event type.
 
 ## Constructor
 

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigUint64Array
 
 {{JSRef}}
 
-The **`BigUint64Array`** typed array represents an array of 64-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once established, you can reference elements in the array using the object's methods, or by using standard array index syntax (that is, using bracket notation).
+The **`BigUint64Array`** typed array represents an array of 64-bit unsigned integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0n`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
 `BigUint64Array` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 
@@ -44,7 +44,7 @@ _Inherits instance methods from its parent {{jsxref("TypedArray")}}_.
 
 ## Examples
 
-### Different ways to create a `BigUint64Array`
+### Different ways to create a BigUint64Array
 
 ```js
 // From a length
@@ -86,6 +86,7 @@ console.log(biguint64FromIterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("BigInt64Array")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

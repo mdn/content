@@ -6,6 +6,7 @@ browser-compat:
   - api.Permissions
   - api.Navigator.permissions
   - api.WorkerNavigator.permissions
+spec-urls: https://w3c.github.io/permissions/
 ---
 
 {{DefaultAPISidebar("Permissions API")}}
@@ -15,7 +16,7 @@ The **Permissions API** provides a consistent programmatic way to query the stat
 Note that the permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, and user prompts.
 So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) on platforms that support the [WorkerNavigator.permissions](/en-US/docs/Web/API/WorkerNavigator/permissions#browser_support) property.
+{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -32,22 +33,21 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
-- [Clipboard API](/en-US/docs/Web/API/Clipboard_API): `clipboard-read`, `clipboard-write`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
-- [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API)
+- [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
 - [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
-- [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`
+- [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`
 - [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
-- [Web Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API): `speaker-selection`
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
+- [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 
 ## Examples
 
-We have made a simple example available called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have created a simple example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
 
 Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
@@ -72,5 +72,5 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 - [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
 - [Using the Permissions API to Detect How Often Users Allow or Deny Camera Access](https://blog.addpipe.com/using-permissions-api-to-detect-getusermedia-responses/)
-- {{DOMxRef("Notification.permission")}}
+- {{DOMxref("Notification.permission_static", "Notification.permission")}}
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)

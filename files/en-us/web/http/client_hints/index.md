@@ -56,6 +56,8 @@ In other words, the request for a specific set of hints does not expire until th
 A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
+> **Note:** The client hints set for a particular origin can also be cleared by sending a {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} response header for a URL inside that origin.
+
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.
@@ -119,7 +121,7 @@ Headers include: {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}, {{HTTPHeader("
 ### Device client hints
 
 Device client hints allow a server to vary responses based on device characteristics including available memory and screen properties.
-Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("DPR")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
+Headers include: {{HTTPHeader("Device-Memory")}}, {{HTTPHeader("Width")}}, {{HTTPHeader("Viewport-Width")}}.
 
 ### Network client hints
 
@@ -132,4 +134,4 @@ Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTP
 - [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

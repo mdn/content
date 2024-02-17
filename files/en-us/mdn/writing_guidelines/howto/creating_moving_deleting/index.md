@@ -22,7 +22,7 @@ The general step-by-step process for creating a page would be:
 
 1. Start a fresh, up-to-date branch to work in.
 
-   ```sh
+   ```bash
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
@@ -36,7 +36,7 @@ The general step-by-step process for creating a page would be:
 
 3. Add and commit your new files as well as push your new branch to your fork.
 
-   ```sh
+   ```bash
    git add files/en-us/folder/you/created
    git commit -m "appropriate message about your changes"
    git push -u origin my-add
@@ -49,7 +49,7 @@ The general step-by-step process for creating a page would be:
 Moving one or more documents or an entire tree of documents is easy
 because we've created a special command that takes care of the details for you:
 
-```sh
+```bash
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
@@ -67,7 +67,7 @@ For example, let's say you want to move the entire
 
 1. You'll start a fresh branch to work in.
 
-   ```sh
+   ```bash
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
@@ -79,18 +79,25 @@ For example, let's say you want to move the entire
 
 2. Perform the move (which will delete and modify existing files as well as create new files).
 
-   ```sh
+   ```bash
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
-3. Add and commit all of the deleted, created, and modified files as well as push your branch to your fork.
+3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
 
-   ```sh
-   git commit -a
+   ```bash
+   node scripts/update-moved-file-links.js
+   ```
+
+4. Add and commit all the deleted, created, and modified files as well as push your branch to your fork.
+
+   ```bash
+   git add .
+   git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push -u origin my-move
    ```
 
-4. Create your pull request.
+5. Create your pull request.
 
 > **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) about it.
 
@@ -101,7 +108,7 @@ Documents should only be removed from MDN Web Docs under special circumstances. 
 Deleting one or more documents or an entire tree of documents is easy, just like moving pages, because we've created a special command that takes care of the
 details for you:
 
-```sh
+```bash
 yarn content delete <document-slug> [locale]
 ```
 
@@ -120,7 +127,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 1. You'll start a fresh branch to work in.
 
-   ```sh
+   ```bash
    cd ~/repos/mdn/content
    git checkout main
    git pull mdn main
@@ -132,19 +139,19 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 2. Perform the delete.
 
-   ```sh
+   ```bash
    yarn content delete Learn/Accessibility --recursive
    ```
 
 3. Add a redirect. The target page can be an external URL or another page on MDN Web Docs.
 
-   ```sh
+   ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
-4. Add and commit all of the deleted files as well as push your branch to your fork.
+4. Add and commit all the deleted files as well as push your branch to your fork.
 
-   ```sh
+   ```bash
    git commit -a
    git push -u origin my-delete
    ```
@@ -153,7 +160,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 > **Note:** If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
 >
-> ```sh
+> ```bash
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
 > ```
 

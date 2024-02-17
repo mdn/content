@@ -138,3 +138,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- HTML {{HTMLElement("template")}} element
+- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+- CSS {{CSSXref("::slotted")}} pseudo-element
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

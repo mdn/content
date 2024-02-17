@@ -64,7 +64,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{DOMxRef("RTCPeerConnection.generateCertificate", "generateCertificate()")}}
+- {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}
   - : Creates an X.509 certificate and its corresponding private key, returning a {{jsxref("Promise")}} that resolves with the new {{DOMxRef("RTCCertificate")}} once it is generated.
 
 ## Instance methods
@@ -93,7 +93,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
   - : Returns an object which indicates the current configuration of the connection.
 - {{DOMxRef("RTCPeerConnection.getIdentityAssertion", "getIdentityAssertion()")}}
   - : Initiates the gathering of an identity assertion and returns a {{jsxref("Promise")}} which resolves to an identity assertion encoded as a string.
-    This has an effect only f {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} is not `closed`.
+    This has an effect only if {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} is not `closed`.
 - {{DOMxRef("RTCPeerConnection.getReceivers", "getReceivers()")}}
   - : Returns an array of {{DOMxRef("RTCRtpReceiver")}} objects, each of which represents one {{Glossary("RTP")}} receiver.
 - {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}
@@ -182,5 +182,5 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 ## See also
 
 - <https://github.com/jesup/nightly-gupshup/blob/master/static/js/chat.js>
-- [Get started with WebRTC](https://web.dev/webrtc-basics/)
+- [Get started with WebRTC](https://web.dev/articles/webrtc-basics)
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): Node.js HTML video capture, peer-to-peer video and filesharing application ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

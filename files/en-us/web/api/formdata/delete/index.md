@@ -6,11 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.delete
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`delete()`** method of the {{domxref("FormData")}} interface deletes a key and its value(s) from a `FormData` object.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -45,5 +45,5 @@ formData.delete("username");
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

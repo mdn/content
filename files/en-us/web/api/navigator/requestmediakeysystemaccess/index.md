@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 
-{{DefaultAPISidebar("Encrypted Media Extensions")}}
+{{DefaultAPISidebar("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method
 returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}}
@@ -73,7 +73,7 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a
 ### Firefox compatibility notes
 
 Firefox 55 outputs a warning to the console if a candidate
-{{domxref("MediaKeySystemConfiguration")}} included in
+`MediaKeySystemConfiguration` included in
 `supportedConfigurations` includes an `audioCapabilities` or
 `videoCapabilities` object whose value of `contentType` doesn't
 specify a `"codecs"` substring defining which codecs within the media wrapper

@@ -29,7 +29,7 @@ _This interface doesn't inherit any property._
   - : Returns an `unsigned long` bitmask that describes the types of {{domxref("Node")}}
     to be matched. Non-matching nodes are skipped, but relevant child nodes may be included.
 
-    The possible bitmask values are constants from the {{domxref("NodeFilter")}} interface:
+    The possible bitmask values are constants from the `NodeFilter` interface:
 
     | Constant                                                 | Numerical value                                         | Description                                                                                                                                                                                                                                                                                                                                                                                       |
     | -------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                                                 |
 
 - {{domxref("NodeIterator.filter")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("NodeFilter")}} used to select the relevant nodes.
+  - : Returns a `NodeFilter` used to select the relevant nodes.
 - {{domxref("NodeIterator.referenceNode")}} {{ReadOnlyInline}}
   {{experimental_inline() }}
   - : Returns the {{domxref("Node")}} to which the iterator is anchored.
@@ -78,7 +78,4 @@ _This interface doesn't inherit any method._
 ## See also
 
 - The creator method: {{domxref("Document.createNodeIterator()")}}.
-- Related interfaces:
-
-  - {{domxref("NodeFilter")}}
-  - {{domxref("TreeWalker")}}
+- Related interface: {{domxref("TreeWalker")}}

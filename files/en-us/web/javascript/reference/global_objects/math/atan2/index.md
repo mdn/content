@@ -110,7 +110,7 @@ for (const x of [-Infinity, -1, -0, 0, 1, Infinity]) {
 
 The output is:
 
-```
+```plain
 | x     | y     | atan2 | atan  |
 |-------|-------|-------|-------|
 | -∞    | -∞    | -3π/4 | NaN   |

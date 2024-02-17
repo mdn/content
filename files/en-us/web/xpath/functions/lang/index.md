@@ -10,7 +10,7 @@ The `lang` function determines whether the context node matches the given langua
 
 ### Syntax
 
-```
+```plain
 lang(string )
 ```
 
@@ -48,7 +48,7 @@ And this part of an XSL template:
 
 The output might be:
 
-```
+```plain
 3
 1
 1

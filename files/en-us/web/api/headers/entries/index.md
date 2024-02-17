@@ -13,7 +13,7 @@ The **`Headers.entries()`** method returns an
 contained in this object. Both the key and value of each pair are
 {{jsxref("String")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -45,7 +45,7 @@ for (const pair of myHeaders.entries()) {
 
 The result is:
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```

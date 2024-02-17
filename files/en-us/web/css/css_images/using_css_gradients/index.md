@@ -110,7 +110,7 @@ div {
 
 When using an angle, `0deg` creates a vertical gradient running bottom to top, `90deg` creates a horizontal gradient running left to right, and so on in a clockwise direction. Negative angles run in the counterclockwise direction.
 
-![Four boxes listing angle and showing associated gradient. 0deg starts and top and goes to bottom. 90deg starts at right and goes left. 180deg starts and bottom and goes to the top. -90deg starts at left and goes right.](linear_red_angles.png)
+![Four boxes listing angle and showing associated gradient from red to white. 0deg starts at the bottom and goes up. 90deg starts at left and goes right. 180deg starts at the top and goes down. -90deg starts at right and goes left.](linear_red_angles.png)
 
 ## Declaring colors & creating effects
 
@@ -353,10 +353,10 @@ div {
 .stacked-linear {
   background: linear-gradient(
       217deg,
-      rgba(255, 0, 0, 0.8),
-      rgba(255, 0, 0, 0) 70.71%
-    ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
-    linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+      rgb(255 0 0 / 80%),
+      rgb(255 0 0 / 0%) 70.71%
+    ), linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
+    linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
 }
 ```
 
@@ -368,7 +368,7 @@ Radial gradients are similar to linear gradients, except that they radiate out f
 
 ### A basic radial gradient
 
-As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of it's box:
+As with linear gradients, all you need to create a radial gradient are two colors. By default, the center of the gradient is at the 50% 50% mark, and the gradient is elliptical matching the aspect ratio of its box:
 
 ```html hidden
 <div class="simple-radial"></div>
@@ -439,7 +439,7 @@ div {
 
 Unlike linear gradients, you can specify the size of radial gradients. Possible values include `closest-corner`, `closest-side`, `farthest-corner`, and `farthest-side`, with `farthest-corner` being the default. Circles can also be sized with a length, and ellipses a length or percentage.
 
-#### Example: closest-side for ellipses
+#### Example: `closest-side` for ellipses
 
 This example uses the `closest-side` size value, which means the size is set by the distance from the starting point (the center) to the closest side of the enclosing box.
 
@@ -468,7 +468,7 @@ div {
 
 {{ EmbedLiveSample('Example_closest-side_for_ellipses', 240, 100) }}
 
-#### Example: farthest-corner for ellipses
+#### Example: `farthest-corner` for ellipses
 
 This example is similar to the previous one, except that its size is specified as `farthest-corner`, which sets the size of the gradient by the distance from the starting point to the farthest corner of the enclosing box from the starting point.
 
@@ -497,7 +497,7 @@ div {
 
 {{ EmbedLiveSample('Example_farthest-corner_for_ellipses', 240, 100) }}
 
-#### Example: closest-side for circles
+#### Example: `closest-side` for circles
 
 This example uses `closest-side`, which makes the circle's radius to be the distance between the center of the gradient and the closest side. In this case the radius is the distance between the center and the bottom edge, because the gradient is placed 25% from the left and 25% from the bottom, and the div element's height is smaller than the width.
 
@@ -557,7 +557,7 @@ div {
 
 #### Example: length for circles
 
-For circles the size may be given as a [\<length>](/en-US/docs/Web/CSS/length), which is the size of the circle.
+For circles the size may be given as a {{cssxref("length")}}, which is the size of the circle.
 
 ```html hidden
 <div class="radial-circle-size"></div>
@@ -598,18 +598,18 @@ div {
   background:
     radial-gradient(
       circle at 50% 0,
-      rgba(255, 0, 0, 0.5),
-      rgba(255, 0, 0, 0) 70.71%
+      rgb(255 0 0 / 50%),
+      rgb(255 0 0 / 0%) 70.71%
     ),
     radial-gradient(
       circle at 6.7% 75%,
-      rgba(0, 0, 255, 0.5),
-      rgba(0, 0, 255, 0) 70.71%
+      rgb(0 0 255 / 50%),
+      rgb(0 0 255 / 0%) 70.71%
     ),
     radial-gradient(
         circle at 93.3% 75%,
-        rgba(0, 255, 0, 0.5),
-        rgba(0, 255, 0, 0) 70.71%
+        rgb(0 255 0 / 50%),
+        rgb(0 255 0 / 0%) 70.71%
       ) beige;
   border-radius: 50%;
 }
@@ -750,24 +750,24 @@ div {
 .multi-repeating-linear {
   background: repeating-linear-gradient(
       190deg,
-      rgba(255, 0, 0, 0.5) 40px,
-      rgba(255, 153, 0, 0.5) 80px,
-      rgba(255, 255, 0, 0.5) 120px,
-      rgba(0, 255, 0, 0.5) 160px,
-      rgba(0, 0, 255, 0.5) 200px,
-      rgba(75, 0, 130, 0.5) 240px,
-      rgba(238, 130, 238, 0.5) 280px,
-      rgba(255, 0, 0, 0.5) 300px
+      rgb(255 0 0 / 50%) 40px,
+      rgb(255 153 0 / 50%) 80px,
+      rgb(255 255 0 / 50%) 120px,
+      rgb(0 255 0 / 50%) 160px,
+      rgb(0 0 255 / 50%) 200px,
+      rgb(75 0 130 / 50%) 240px,
+      rgb(238 130 238 / 50%) 280px,
+      rgb(255 0 0 / 50%) 300px
     ), repeating-linear-gradient(
       -190deg,
-      rgba(255, 0, 0, 0.5) 30px,
-      rgba(255, 153, 0, 0.5) 60px,
-      rgba(255, 255, 0, 0.5) 90px,
-      rgba(0, 255, 0, 0.5) 120px,
-      rgba(0, 0, 255, 0.5) 150px,
-      rgba(75, 0, 130, 0.5) 180px,
-      rgba(238, 130, 238, 0.5) 210px,
-      rgba(255, 0, 0, 0.5) 230px
+      rgb(255 0 0 / 50%) 30px,
+      rgb(255 153 0 / 50%) 60px,
+      rgb(255 255 0 / 50%) 90px,
+      rgb(0 255 0 / 50%) 120px,
+      rgb(0 0 255 / 50%) 150px,
+      rgb(75 0 130 / 50%) 180px,
+      rgb(238 130 238 / 50%) 210px,
+      rgb(255 0 0 / 50%) 230px
     ), repeating-linear-gradient(23deg, red 50px, orange 100px, yellow 150px, green
         200px, blue 250px, indigo 300px, violet 350px, red 370px);
 }
@@ -796,69 +796,62 @@ div {
       90deg,
       transparent,
       transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
+      rgb(255 127 0 / 25%) 50px,
+      rgb(255 127 0 / 25%) 56px,
       transparent 56px,
       transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
+      rgb(255 127 0 / 25%) 63px,
+      rgb(255 127 0 / 25%) 69px,
       transparent 69px,
       transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
+      rgb(255 206 0 / 25%) 116px,
+      rgb(255 206 0 / 25%) 166px
     ), repeating-linear-gradient(
       0deg,
       transparent,
       transparent 50px,
-      rgba(255, 127, 0, 0.25) 50px,
-      rgba(255, 127, 0, 0.25) 56px,
+      rgb(255 127 0 / 25%) 50px,
+      rgb(255 127 0 / 25%) 56px,
       transparent 56px,
       transparent 63px,
-      rgba(255, 127, 0, 0.25) 63px,
-      rgba(255, 127, 0, 0.25) 69px,
+      rgb(255 127 0 / 25%) 63px,
+      rgb(255 127 0 / 25%) 69px,
       transparent 69px,
       transparent 116px,
-      rgba(255, 206, 0, 0.25) 116px,
-      rgba(255, 206, 0, 0.25) 166px
+      rgb(255 206 0 / 25%) 116px,
+      rgb(255 206 0 / 25%) 166px
     ), repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 5px,
-      rgba(143, 77, 63, 0.25) 5px,
-      rgba(143, 77, 63, 0.25) 10px
-    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px, rgba(143, 77, 63, 0.25) 10px);
+      rgb(143 77 63 / 25%) 5px,
+      rgb(143 77 63 / 25%) 10px
+    ), repeating-linear-gradient(45deg, transparent, transparent 5px, rgb(
+          143 77 63 / 25%
+        ) 5px, rgb(143 77 63 / 25%) 10px);
 
   background: repeating-linear-gradient(
       90deg,
       transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
+      rgb(255 127 0 / 25%) 50px 56px,
       transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
+      rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
+      rgb(255 206 0 / 25%) 116px 166px
     ), repeating-linear-gradient(
       0deg,
       transparent 0 50px,
-      rgba(255, 127, 0, 0.25) 50px 56px,
+      rgb(255 127 0 / 25%) 50px 56px,
       transparent 56px 63px,
-      rgba(255, 127, 0, 0.25) 63px 69px,
+      rgb(255 127 0 / 25%) 63px 69px,
       transparent 69px 116px,
-      rgba(255, 206, 0, 0.25) 116px 166px
+      rgb(255 206 0 / 25%) 116px 166px
     ), repeating-linear-gradient(
       -45deg,
       transparent 0 5px,
-      rgba(143, 77, 63, 0.25) 5px 10px
-    ), repeating-linear-gradient(45deg, transparent 0 5px, rgba(
-          143,
-          77,
-          63,
-          0.25
-        ) 5px 10px);
+      rgb(143 77 63 / 25%) 5px 10px
+    ), repeating-linear-gradient(45deg, transparent 0 5px, rgb(143 77 63 / 25%) 5px
+        10px);
 }
 ```
 
@@ -910,17 +903,17 @@ div {
   background:
     repeating-radial-gradient(
         ellipse at 80% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 15px,
-        rgba(255, 255, 255, 0.5) 30px
+        rgb(0 0 0 / 50%),
+        rgb(0 0 0 / 50%) 15px,
+        rgb(255 255 255 / 50%) 15px,
+        rgb(255 255 255 / 50%) 30px
       ) top left no-repeat,
     repeating-radial-gradient(
         ellipse at 20% 50%,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 10px,
-        rgba(255, 255, 255, 0.5) 20px
+        rgb(0 0 0 / 50%),
+        rgb(0 0 0 / 50%) 10px,
+        rgb(255 255 255 / 50%) 10px,
+        rgb(255 255 255 / 50%) 20px
       ) top left no-repeat yellow;
   background-size:
     200px 200px,
@@ -936,5 +929,5 @@ div {
 - Gradient-related CSS data types: {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
 - Gradient-related CSS properties: {{cssxref("background")}}, {{cssxref("background-image")}}
 - [CSS Gradients Patterns Gallery, by Lea Verou](https://projects.verou.me/css3patterns/)
-- [CSS Gradients Library, by Estelle Weyl](http://standardista.com/cssgradients/)
+- [CSS Gradients Library, by Estelle Weyl](https://standardista.com/cssgradients/)
 - [Gradient CSS Generator](https://cssgenerator.org/gradient-css-generator.html)

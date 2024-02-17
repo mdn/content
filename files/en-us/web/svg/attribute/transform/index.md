@@ -42,13 +42,13 @@ svg {
       d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
   </g>
 
-  <use xlink:href="#heart" fill="none" stroke="red" />
+  <use href="#heart" fill="none" stroke="red" />
 </svg>
 ```
 
 {{EmbedLiveSample("Example", '100%', 200)}}
 
-In SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}).
+In SVG 1.1, only these 16 elements were allowed to use it: {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, and {{SVGElement('use')}}.
 
 Also, as a legacy from SVG 1.1, {{SVGElement('linearGradient')}} and {{SVGElement('radialGradient')}} support the `gradientTransform` attribute, and {{SVGElement('pattern')}} supports the `patternTransform` attribute, both of which act exactly like the `transform` attribute.
 

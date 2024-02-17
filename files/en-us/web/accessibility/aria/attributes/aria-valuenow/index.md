@@ -86,7 +86,7 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 - `<number>`
   - : A decimal number, between the minimum and maximum values.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueNow")}}
   - : The [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
@@ -115,7 +115,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Element/input/range#value)

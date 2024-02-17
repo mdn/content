@@ -21,7 +21,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Debugger
 
-- ["Blackbox" a source file](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignore_a_source/index.html) is now called "ignore" a source file. ([Firefox bug 1642811](https://bugzil.la/1642811))
+- ["Blackbox" a source file](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/ignoring_sources/index.html) is now called "ignore" a source file. ([Firefox bug 1642811](https://bugzil.la/1642811))
 - Inline preview is now available on [exceptions](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/breaking_on_exceptions/index.html). ([Firefox bug 1581708](https://bugzil.la/1581708))
 - Items in the Watch Expressions and Scopes sections now have tooltips on hover, showing their values ([Firefox bug 1631545](https://bugzil.la/1631545))
 - In the [Call Stack section](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#call-stack), there is now a context menu option to **Restart Frame**, to execute the current stack frame from its beginning. ([Firefox bug 1594467](https://bugzil.la/1594467))
@@ -78,7 +78,7 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 #### Media, WebRTC, and Web Audio
 
-- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ([Firefox bug 1615191](https://bugzil.la/1615191)).
+- Firefox now supports remote timestamps on statistics records whose {{domxref("RTCStatsReport", "RTCStats.type")}} is `remote-outbound-rtp`. The {{domxref("RTCRemoteOutboundRtpStreamStats")}} dictionary which is used to provide these statistics now includes the {{domxref("RTCRemoteOutboundRtpStreamStats.remoteTimestamp", "remoteTimestamp")}} property, which states the timestamp on the remote peer at which the statistics were collected or generated ([Firefox bug 1615191](https://bugzil.la/1615191)).
 
 #### Removals
 

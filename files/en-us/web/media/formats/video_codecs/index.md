@@ -144,7 +144,7 @@ Additionally, all codecs have their strengths and weaknesses. Some have trouble 
         The higher the color bit depth, the higher the quality of color fidelity
         is achieved in the video. Additionally, in saturated portions of the
         image (that is, where colors are pure and intense, such as a bright,
-        pure red [<code>rgba(255, 0, 0, 1)</code>]), color depths below 10 bits
+        pure red [<code>rgb(255 0 0 / 100%)</code>]), color depths below 10 bits
         per component (10-bit color) allow banding, where gradients cannot be
         represented without visible stepping of the colors.
       </td>
@@ -1205,7 +1205,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
           <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
           containers only.
         </p>
-        <p>Chrome does not support MP4V-ES; however, Chrome OS does.</p>
+        <p>Chrome does not support MP4V-ES; however, ChromeOS does.</p>
       </td>
     </tr>
     <tr>
@@ -1745,7 +1745,7 @@ Web browsers are _required_ to support VP8 for WebRTC, but not all browsers that
         <p>Edge support for VP8 requires the use of <a href="/en-US/docs/Web/API/Media_Source_Extensions_API">Media Source Extensions</a>.</p>
         <p>macOS: Safari 14.1 supports VP8 in WebRTC, MSE and video elements. Safari 12.2 only supports VP8 in WebRTC connections.</p>
         <p>iOS: Safari 12.1 and later support VP8 in WebRTC connections only.</p>
-        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported()")}} to check for availability.</p>
+        <p>Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.</p>
       </td>
     </tr>
     <tr>
@@ -1910,7 +1910,7 @@ This is especially true if you wish to use an open codec rather than a proprieta
         </table>
         <p>
           Firefox only supports VP8 in MSE when no H.264 hardware decoder is available. Use
-          {{domxref("MediaSource.isTypeSupported()")}} to check for availability.
+          {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}} to check for availability.
         </p>
         <ul>
           <li>Safari 14: (macOS, iOS) supports VP9 in WebM for WebRTC.</li>

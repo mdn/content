@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
 
-{{APIRef('XMLHttpRequest')}}
+{{APIRef("XMLHttpRequest API")}}
 
 The {{domxref("XMLHttpRequest")}} method **`setRequestHeader()`** sets the value of an HTTP request header.
 When using `setRequestHeader()`, you must call it after calling {{domxref("XMLHttpRequest.open", "open()")}}, but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
@@ -50,5 +50,5 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [HTML in XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

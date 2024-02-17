@@ -458,7 +458,7 @@ fetch("/login", {
 });
 ```
 
-Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the dictionary.
+Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the [`options`](/en-US/docs/Web/API/fetch#options) parameter.
 
 ## Feature detection
 

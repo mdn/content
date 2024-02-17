@@ -38,7 +38,7 @@ Before learning how to use badges, consider these best practices to ensure your 
 
 ### Check for support
 
-To ensure the Badging API is [supported](#support-for-badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
+To ensure the Badging API is [supported](#support_for_badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
 
 ```js
 if (navigator.setAppBadge) {
@@ -70,7 +70,7 @@ Like notifications, badges can be a very effective way to re-engage users with y
 
 Make sure to update your application badge in real-time. This means updating the badge count to reflect how many new items are actually left for the user to consume, and clearing the app badge when there are no new items.
 
-For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating-the-badge-in-the-background) by using the `navigator.setAppBadge()` method from a service worker.
+For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating_the_badge_in_the_background) by using the `navigator.setAppBadge()` method from a service worker.
 
 Once the user launches the app and starts reading messages, the email client app should update its badge accordingly by calling `navigator.setAppBadge()` with the new unread messages count, or by calling `navigator.clearAppBadge()` when there are no unread messages.
 
@@ -149,4 +149,4 @@ self.addEventListener("push", (event) => {
 
 - [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
 - [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
-- [Codelab: Build a push notification server](https://web.dev/push-notifications-server-codelab/)
+- [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

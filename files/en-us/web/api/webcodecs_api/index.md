@@ -74,7 +74,7 @@ used to demux audio and video data into {{domxref("EncodedAudioChunk")}} and {{d
 ## Examples
 
 In the following example, frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded.
-See the full example and read more about it in the article [Video processing with WebCodecs](https://web.dev/webcodecs/).
+See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
 
 ```js
 let frame_counter = 0;
@@ -100,7 +100,7 @@ while (true) {
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs API Samples](https://w3c.github.io/webcodecs/samples/)
 - [Real-Time Video Processing with WebCodecs and Streams: Processing Pipelines](https://webrtchacks.com/real-time-video-processing-with-webcodecs-and-streams-processing-pipelines-part-1/)
 - [Video Frame Processing on the Web – WebAssembly, WebGPU, WebGL, WebCodecs, WebNN, and WebTransport](https://webrtchacks.com/video-frame-processing-on-the-web-webassembly-webgpu-webgl-webcodecs-webnn-and-webtransport/)

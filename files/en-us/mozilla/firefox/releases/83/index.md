@@ -29,7 +29,7 @@ This article provides information about the changes in Firefox 83 that will affe
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
+- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
 
 ### HTTP
 

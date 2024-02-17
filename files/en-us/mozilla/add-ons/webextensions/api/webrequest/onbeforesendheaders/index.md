@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 
@@ -81,9 +81,15 @@ Events have three functions:
 ### details
 
 - `cookieStoreId`
-  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity.
+  - : `string`. If the request is from a tab open in a contextual identity, the cookie store ID of the contextual identity. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the document in which the resource will be loaded. For example, if the web page at "https\://example.com" contains an image or an iframe, then the `documentUrl` for the image or iframe will be "https\://example.com". For a top-level document, `documentUrl` is undefined.
+- `frameAncestors`
+  - : `array`. Contains information for each document in the frame hierarchy up to the top-level document. The first element in the array contains information about the immediate parent of the document being requested, and the last element contains information about the top-level document. If the load is actually for the top-level document, then this array is empty.
+    - `url`
+      - : `string`. The URL that the document was loaded from.
+    - `frameId`
+      - : `integer`. The `frameId` of the document. `details.frameAncestors[0].frameId` is the same as `details.parentFrameId`.
 - `frameId`
   - : `integer`. Zero if the request happens in the main frame; a positive value is the ID of a subframe in which the request happens. If the document of a (sub-)frame is loaded (`type` is `main_frame` or `sub_frame`), `frameId` indicates the ID of this frame, not the ID of the outer frame. Frame IDs are unique within a tab.
 - `incognito`

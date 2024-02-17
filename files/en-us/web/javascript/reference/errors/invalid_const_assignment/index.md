@@ -13,7 +13,7 @@ declarations can't be re-assigned or redeclared.
 
 ## Message
 
-```
+```plain
 TypeError: Assignment to constant variable. (V8-based)
 TypeError: invalid assignment to const 'x' (Firefox)
 TypeError: Attempted to assign to readonly property. (Safari)

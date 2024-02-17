@@ -23,7 +23,7 @@ print(session.current_url)
 
 Output:
 
-```
+```url
 https://self-signed.badssl.com/
 ```
 

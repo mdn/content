@@ -13,7 +13,7 @@ Welcome to the MDN beginner's server-side programming course! In this first arti
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. A basic understanding of what a web server is.
+        A basic understanding of what a web server is.
       </td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@ Real-world examples include social-networking sites which allow users to determi
 
 ### Store session/state information
 
-Server-side programming allows developers to make use of **sessions** — basically, a mechanism that allows a server to store information on the current user of a site and send different responses based on that information.
+Server-side programming allows developers to make use of **sessions** — basically, a mechanism that allows a server to store information associated with the current user of a site and send different responses based on that information.
 
 This allows, for example, a site to know that a user has previously logged in and display links to their emails or order history, or perhaps save the state of a simple game so that the user can go to a site again and carry on where they left it.
 

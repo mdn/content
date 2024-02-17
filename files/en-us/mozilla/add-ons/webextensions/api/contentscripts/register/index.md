@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.register
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this function to register one or more content scripts.
 
@@ -27,7 +27,7 @@ let registering = browser.contentScripts.register(
 
   - : `object`. A `RegisteredContentScriptOptions` object representing the content scripts to register. It has similar syntax to the objects in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key array. The differences are:
 
-    - property names use camelCase, rather than underscores (for example, `excludeMatches`, not `exclude_matches`
+    - property names use {{Glossary("camel_case", "camel case")}}, rather than underscores ({{Glossary("snake_case", "snake case")}}) — for example, `excludeMatches`, not `exclude_matches`.
     - the `js` and `css` properties allow you to register strings as well as URLs, so their syntax has to distinguish these types.
 
     The `RegisteredContentScriptOptions` object has the following properties:
@@ -35,7 +35,7 @@ let registering = browser.contentScripts.register(
     - `allFrames` {{optional_inline}}
       - : Same as `all_frames` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) key.
     - `cookieStoreId` {{optional_inline}}
-      - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these.
+      - : A string or array of strings. Registers the content script in the tabs that belong to one or more cookie store IDs. This enables scripts to be registered for all default or non-contextual identity tabs, private browsing tabs (if the [extension is enabled in private browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing)), the tabs of a [contextual identity](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities), or a combination of these. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
     - `css` {{optional_inline}}
       - : An array of objects. Each object has either a property named `file`, which is a URL starting at the extension's manifest.json and pointing to a CSS file to register, or a property named `code`, which is some CSS code to register.
     - `excludeGlobs` {{optional_inline}}

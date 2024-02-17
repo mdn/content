@@ -17,6 +17,10 @@ The **`getCollations()`** method of {{jsxref("Intl.Locale")}} instances returns 
 getCollations()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of strings representing all collation types commonly used for the `Locale`, sorted in alphabetical order, with the `standard` and `search` values always excluded. If the `Locale` already has a [`collation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation), then the returned array contains that single value.

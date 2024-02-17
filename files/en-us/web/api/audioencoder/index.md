@@ -7,7 +7,7 @@ status:
 browser-compat: api.AudioEncoder
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`AudioEncoder`** interface of the [WebCodecs API](/en-US/docs/Web/API/WebCodecs_API) encodes {{domxref("AudioData")}} objects.
 
@@ -34,7 +34,7 @@ _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
 ## Static methods
 
-- {{domxref("AudioEncoder.isConfigSupported()")}} {{Experimental_Inline}}
+- {{domxref("AudioEncoder.isConfigSupported_static", "AudioEncoder.isConfigSupported()")}} {{Experimental_Inline}}
   - : Returns a promise indicating whether the provided `AudioEncoderConfig` is supported.
 
 ## Instance methods

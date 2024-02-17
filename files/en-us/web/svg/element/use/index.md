@@ -36,7 +36,7 @@ svg {
 ## Attributes
 
 - {{SVGAttr("href")}}
-  - : The URL to an element/fragment that needs to be duplicated.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
+  - : The URL to an element/fragment that needs to be duplicated. See [Usage notes](#usage_notes) for details on common pitfalls.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Content_type#url) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
   - : An [`<IRI>`](/en-US/docs/Web/SVG/Content_type#iri) reference to an element/fragment that needs to be duplicated. If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.<br/> _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Content_type#iri) ; _Default value_: none; _Animatable_: **yes**
 - {{SVGAttr("x")}}
@@ -67,7 +67,7 @@ svg {
 - ARIA Attributes
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
 - XLink Attributes
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
+  - : {{SVGAttr("xlink:href")}} {{deprecated_inline}}, {{SVGAttr("xlink:title")}}
 
 ## Usage notes
 
@@ -78,9 +78,13 @@ Since the cloned nodes are not exposed, care must be taken when using [CSS](/en-
 
 For security reasons, browsers may apply the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) on `use` elements and may refuse to load a cross-origin URL in the {{SVGAttr("href")}} attribute. There is currently no defined way to set a cross-origin policy for `use` elements.
 
+> **Warning:** Loading resources with data URIs in the `href` attribute is deprecated for security reasons.
+> This applies to `<use href="data:...` and also when setting `href` by using the [`set`](/en-US/docs/Web/SVG/Element/set) or [`setAttribute`](/en-US/docs/Web/API/Element/setAttribute) method.
+> See "Load from data: URI" in the [Browser compatibility](#browser_compatibility) table to check support in different browser versions.
+
 > **Warning:** Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.
 
-{{svginfo}}
+{{SVGInfo}}
 
 ## Specifications
 

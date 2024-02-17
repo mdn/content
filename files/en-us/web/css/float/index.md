@@ -32,7 +32,7 @@ As `float` implies the use of the block layout, it modifies the computed value o
 | `inline-grid`        | `grid`         |
 | _other_              | _unchanged_    |
 
-> **Note:** If you're referring to this property from JavaScript as a member of the {{domxref("HTMLElement.style")}} object, modern browsers support `float`, but in older browsers you have to spell it as `cssFloat`. This was an exception to the rule, that the name of the DOM member is the camel-case name of the dash-separated CSS name (because "float" is a reserved word in JavaScript, as seen in the need to escape "class" as "className" and escape \<label>'s "for" as "htmlFor").
+> **Note:** When accessing a CSS property in JavaScript through the {{domxref("HTMLElement.style")}} object, single-word property names are used as is. Although `float` is a reserved keyword in JavaScript, the CSS `float` property is accessed as `float` in modern browsers. In older browsers, you must use `cssFloat` to access the `float` property. (This is similar to how the "class" attribute is accessed as "className" and the "for" attribute of a `<label>` element is accessed as "htmlFor".)
 
 ## Syntax
 
@@ -147,5 +147,5 @@ Sometimes you may want to force an item to move below any floated elements. For 
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - Use {{cssxref("clear")}} to force an item to move below a floated element.

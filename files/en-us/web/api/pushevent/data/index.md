@@ -6,13 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.PushEvent.data
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}
 
 The `data` read-only property of the **`PushEvent`** interface returns a reference to a {{domxref("PushMessageData")}} object containing data sent to the {{domxref("PushSubscription")}}.
 
 ## Value
 
-A {{domxref("PushMessageData")}} object.
+A {{domxref("PushMessageData")}} object or `null` if no `data` member is passed when the event instance initialized.
 
 ## Examples
 

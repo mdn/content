@@ -6,14 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Element.requestPointerLock
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Pointer Lock API")}}
 
-The **`Element.requestPointerLock()`** method lets you
-asynchronously ask for the pointer to be locked on the given element.
+The **`requestPointerLock()`** method of the {{domxref("Element")}} interface lets you asynchronously ask for the pointer to be locked on the given element.
 
-To track the success or failure of the request, it is necessary to listen for the
-{{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events at the
-{{domxref("Document")}} level.
+To track the success or failure of the request, it is necessary to listen for the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} and {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events at the {{domxref("Document")}} level.
+
+> **Note:** In the current specification, `requestPointerLock()` only communicates the success or failure of the request by firing {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} or {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} events. [A proposed update to the specification](https://github.com/w3c/pointerlock/pull/49) updates `requestPointerLock()` to return a {{jsxref("Promise")}} which communicates success or failure. This page documents the version that returns a {{jsxref("Promise")}}. However, note that this version is not yet a standard and is not implemented by all browsers. See [Browser compatibility](#browser_compatibility) for more information.
 
 ## Syntax
 
@@ -33,7 +32,15 @@ requestPointerLock(options)
 
 A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
-> **Note:** Some browsers do not yet support the promise version of `requestPointerLock()`, just the older synchronous version.
+## Security
+
+{{Glossary("Transient activation")}} is required when calling `requestPointerLock()`. The user has to interact with the page or a UI element in order for this feature to work. Also, the target element's associated document must be in the active state.
+
+If calling `requestPointerLock()` immediately after releasing the pointer lock via the default unlock gesture (instead of through a `exitPointerLock()` call), the call will fail, even if a {{Glossary("transient activation")}} is available.
+
+If calling `requestPointerLock()` with {{domxref("Element.requestFullscreen()", "requestFullscreen()")}}, the `requestPointerLock()` must be called first, because the {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} will consume the state of {{Glossary("Transient activation", "transient activation")}}.
+
+The `allow-pointer-lock` [sandbox token](/en-US/docs/Web/HTML/Element/iframe#sandbox) must be added when calling `requestPointerLock()` in an {{htmlelement("iframe")}} element. Also, no other elements in other {{htmlelement("iframe")}} elements may be in pointer lock mode.
 
 ## Examples
 
@@ -63,11 +70,7 @@ For more example code, see:
 
 - [pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) ([see source code](https://github.com/mdn/dom-examples/tree/main/pointer-lock))
 - {{domxref("Pointer Lock API", "Pointer Lock API", "", "nocode")}}
-- [Disable mouse acceleration to provide a better FPS gaming experience](https://web.dev/disable-mouse-acceleration/)
-
-## Security
-
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+- [Disable mouse acceleration to provide a better FPS gaming experience](https://web.dev/articles/disable-mouse-acceleration)
 
 ## Specifications
 

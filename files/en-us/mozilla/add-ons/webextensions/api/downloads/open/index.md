@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.open
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event fires when the item is opened for the first time.
 

@@ -78,7 +78,7 @@ color: #ff00ffff; /* #rrggbbaa */
 
 /* by HSL representation of the sRGB value */
 color: hsl(300 100% 50%);
-color: hsl(300deg 100% 50% / 1);
+color: hsl(300deg 100% 50% / 100%);
 
 /* by HWB representation of the sRGB value */
 color: hwb(300deg 0% 0%);
@@ -167,7 +167,7 @@ A color contrast ratio is meaningless without its luminance component, and once 
 
 Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
-Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://contrast-ratio.com/) available, and even instructions on how to [build your own contrast checker](https://alvaromontoro.com/blog/67854/building-your-own-color-contrast-checker).
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://contrast-ratio.com/) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
 
 ## Perceiving color
 
@@ -211,8 +211,8 @@ The implication is that web developers who seek to improve the legibility of tex
 
 ## Saturation
 
-Saturation deserves a special mention in discussions about color ("hues") and accessibility. Generally speaking, most focus is on luminance when attempting to ensure enough contrast between text and its background or evaluating the possibility of inducing seizures in those sensitive to photosensitive seizures. One aspect of color ("hues"), independent of luminance, deserves special attention as it applies to accessibility: the concept of saturation. This is due to its ability to cause seizures in those susceptible to photosensitive seizures, regardless of color's luminance. As discussed in [the particular case of red](#the-special-case-of-red),
-the [Epilepsy Foundation](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf) noted that, _irrespective of luminance, a transition to or from a saturated red is also considered a risk_.
+Saturation deserves a special mention in discussions about color ("hues") and accessibility. Generally speaking, most focus is on luminance when attempting to ensure enough contrast between text and its background or evaluating the possibility of inducing seizures in those sensitive to photosensitive seizures. One aspect of color ("hues"), independent of luminance, deserves special attention as it applies to accessibility: the concept of saturation. This is due to its ability to cause seizures in those susceptible to photosensitive seizures, regardless of color's luminance. As discussed in [the particular case of red](#the_special_case_of_red),
+the [Epilepsy Foundation](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf) noted that, _irrespective of luminance, a transition to or from a saturated red is also considered a risk_.
 
 Saturation is sometimes described as the "purity" or "intensity" of a color. Although these are good definitions for "pigments" in an artist's paint set, they are not as accurate as color definitions from a computer screen.
 
@@ -310,4 +310,4 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
 - [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
-- [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)
+- [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)

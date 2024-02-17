@@ -144,7 +144,7 @@ const size14 = makeSizer(14);
 const size16 = makeSizer(16);
 ```
 
-`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons (in this case hyperlinks) as demonstrated in the following code example.
+`size12`, `size14`, and `size16` are now functions that resize the body text to 12, 14, and 16 pixels, respectively. You can attach them to buttons as demonstrated in the following code example.
 
 ```js
 document.getElementById("size-12").onclick = size12;
@@ -164,7 +164,7 @@ Run the code using [JSFiddle](https://jsfiddle.net/hotae160/).
 
 Languages such as Java allow you to declare methods as private, meaning that they can be called only by other methods in the same class.
 
-JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
+JavaScript, prior to [classes](/en-US/docs/Web/JavaScript/Reference/Classes), didn't have a native way of declaring [private methods](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#private_methods), but it was possible to emulate private methods using closures. Private methods aren't just useful for restricting access to code. They also provide a powerful way of managing your global namespace.
 
 The following code illustrates how to use closures to define public functions that can access private functions and variables. Note that these closures follow the [Module Design Pattern](https://www.google.com/search?q=javascript+module+pattern).
 
@@ -336,7 +336,7 @@ setX(6);
 console.log(getX()); // 6
 ```
 
-Closures can close over imported values as well, which are regarded as _live {{glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
+Closures can close over imported values as well, which are regarded as _live {{Glossary("binding", "bindings")}}_, because when the original value changes, the imported one changes accordingly.
 
 ```js
 // myModule.js
