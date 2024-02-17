@@ -40,7 +40,7 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 
 ```plain
 -moz-float-edge =
-  border-box | content-box | margin-box | padding-box
+  content-box | margin-box
 ```
 
 ## Examples
