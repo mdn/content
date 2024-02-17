@@ -9,6 +9,8 @@ browser-compat: javascript.operators.in
 
 The **`in`** operator returns `true` if the specified property is in the specified object or its prototype chain.
 
+If you need to find if a certain value exists in an array, use {{jsxref("Array/includes", "includes()")}}.
+
 {{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 
 ## Syntax
