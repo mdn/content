@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 
-{{DefaultAPISidebar("Encrypted Media Extensions")}}
+{{DefaultAPISidebar("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`Navigator.requestMediaKeySystemAccess()`** method
 returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}}

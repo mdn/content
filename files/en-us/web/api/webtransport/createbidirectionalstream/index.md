@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebTransport.createBidirectionalStream
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`createBidirectionalStream()`** method of the {{domxref("WebTransport")}} interface asynchronously opens and returns a bidirectional stream.
 

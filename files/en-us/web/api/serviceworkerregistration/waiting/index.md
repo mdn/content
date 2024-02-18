@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.waiting
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`waiting`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
