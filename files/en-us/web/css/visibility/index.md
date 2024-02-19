@@ -55,7 +55,7 @@ When animated, visibility values are interpolated between _visible_ and _not-vis
 
 ## Notes
 
-- Support for `visibility: collapse` is missing or partially incorrect in some modern browsers. It may not be correctly treated like `visibility: hidden` on elements other than table rows and columns.
+- Support for `visibility: collapse` is missing or partially incorrect in some if not all modern browsers, especially in the case where a spanning cell commences in, or crosses into or through, a collapsed row - in such cases the spanning cell should still appear as a cell spanning the remaining rows, but not bleeding out into subsequent rows. It may not be correctly treated like `visibility: hidden` on elements other than table rows and columns.
 - `visibility: collapse` may change the layout of a table if the table has nested tables within the cells that are collapsed, unless `visibility: visible` is specified explicitly on nested tables.
 
 ## Formal definition
