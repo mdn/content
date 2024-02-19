@@ -63,11 +63,17 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
+* Added the [network.fetchError](https://w3c.github.io/webdriver-bidi/#event-network-fetchError) event that is emitted when a network request ends in an error ([Firefox bug 1790375](https://bugzil.la/1790375)).
+* Support for the [browsingContext.locateNodes](https://w3c.github.io/webdriver-bidi/#commands-browsingcontextlocatenodes) command has been introduced that can be used to find elements on the given page. Supported locators for now are `CssLocator` ([Firefox bug 1790375](https://bugzil.la/1855023)) and `XPathLocator` ([Firefox bug 1790375](https://bugzil.la/1869536)).
+* Improved the [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) command on Android to seamlessly switch to opening a new tab if the `type` argument is specified as `window` ([Firefox bug 1790375](https://bugzil.la/1875086)).
+* Fixed an issue with the deserialization process of a `DateRemoteValue`, where the presence of a non-standard (ISO 8601) date string such as 200009 did not trigger an error ([Firefox bug 1790375](https://bugzil.la/1872116)).
+* Fixed an issue with the [script.evaluate](https://w3c.github.io/webdriver-bidi/#command-script-evaluate), [script.callFunction](https://w3c.github.io/webdriver-bidi/#command-script-callFunction), and [script.disown](https://w3c.github.io/webdriver-bidi/#command-script-disown) commands where specifying both the `context` and `realm` arguments would result in an `invalid argument` error, rather than simply ignoring the `realm` argument as intended ([Firefox bug 1790375](https://bugzil.la/1873688)).
+
 #### Marionette
+
+* Fixed a bug with [Element Send Keys](https://w3c.github.io/webdriver/#element-send-keys) where sending text containing surrogate pairs would fail ([Firefox bug 1790375](https://bugzil.la/1866431)).
 
 ## Changes for add-on developers
 
