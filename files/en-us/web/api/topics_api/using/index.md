@@ -22,34 +22,38 @@ Let's say we've got an ad tech platform, `ad-tech1.example`, which is embedding 
 - `knitting.example`
 - `football.example`
 
-1. The `<iframe>` content from `ad-tech1.example` implements a [feature that enables the Topics API](#what_api_features_enable_the_topics_api) on embedding pages. As a result, when each of the sites is loaded, the browser:
+If the `<iframe>` content from `ad-tech1.example` implements a [feature that enables the Topics API](#what_api_features_enable_the_topics_api), when each of the sites is loaded the browser will:
 
-   - Infers topics of interest from the site URL. The topics are taken from a [standard taxonomy](/en-US/docs/Web/API/Topics_API#what_topics_are_there); for the above URL examples for example, they would be "Fitness", "Fibre & textile arts", and "Soccer".
-   - Records a **topics history entry** for each **observed topic** in a private topics history storage. Each topics history entry includes the following information:
-     - A document id (i.e. an identifier for the current page).
-     - Topics calculation input data (i.e. the page hostname).
-     - The time (since the Unix epoch) when the page was first observed.
-     - The domain(s) where the topic was observed (known as **topic caller domains**).
+1. Infer **topics of interest** from the site URL. The topics are taken from a [standard taxonomy](/en-US/docs/Web/API/Topics_API#what_topics_are_there); for the above URL examples, they would be "Fitness", "Fibre & textile arts", and "Soccer".
+2. **Mark the topics as observed**, which involves recording a **topics history entry** for each one in a private topics history storage. Each topics history entry includes the following information:
+   - A document id (i.e. an identifier for the current page).
+   - Topics calculation input data (i.e. the page hostname).
+   - The time (since the Unix epoch) when the page was first observed.
+   - The domain(s) where the topic was observed (known as **topic caller domains**).
 
-2. The browser keeps track of how often the user observes each topic during each new **epoch**. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints)).
+### Selecting topics of interest to influence ad choice
 
-3. The browser selects a topic for each user, for each epoch, using the following algorithm:
+On an ongoing basis, the browser will:
 
-   1. It makes a list of the the top five observed topics. If the number of topics observed was fewer than 5, it adds random topics from the taxonomy to make the number up to five.
+1. Keeps track of how often the user observes each topic during each new **epoch**. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints)).
+
+2. Selects a topic for each user, for each epoch, using the following algorithm:
+
+   1. It makes a list of the top five observed topics. If the number of topics observed was fewer than 5, it adds random topics from the taxonomy to make the number up to five.
    2. It chooses one of the top five topics at random.
-   3. There is 5% chance that the chosen topic will be replaced with a completely random topic. However, this random topic will only be used if the ad tech platform has previous observed that topic for the user.
+   3. There is a 5% chance that the chosen topic will be replaced with a completely random topic. However, this random topic will only be used if the ad tech platform has previously observed that topic for the user.
+
+3. Returns up to three **chosen topics** to `ad-tech1.example` (the chosen topics for the last three epochs), only if they appear in the list of caller domains for that topic, as stored in the topic's history entry.
 
    > **Note:** Initially, no topics are returned, so the `<iframe>` will likely display a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
-4. The chosen topic is returned to `ad-tech1.example`, only if they appear in the list of caller domains for that topic, as stored in the topic's history entry.
+   > **Note:** Exactly how the top topics are chosen is defined by the browser rather than the spec, and will vary across implementations. For example, [read about how Chromium does this](https://developers.google.com/privacy-sandbox/blog/topics-enhancements#top_topics_selection).
 
-5. `ad-tech1.example` then uses that topic to select a relevant ad to serve to the user.
-
-> **Note:** Exactly how the top topics are chosen is defined by the user agent rather than the spec, and will vary across implementations. For example, [read about how Chromium does this](https://developers.google.com/privacy-sandbox/blog/topics-enhancements#top_topics_selection).
+`ad-tech1.example` then uses the returned topics to select a relevant ad to serve to the user.
 
 ## What API features enable the Topics API?
 
-The following features all trigger the browser to observe topics. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
+The following features all serve a dual purpose — they trigger the browser to observe topics, **and** return the topics to the caller. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
 
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
@@ -59,26 +63,28 @@ The following features all trigger the browser to observe topics. To do so, they
   <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
   ```
 
-## How are topics returned to the caller?
+When the request associated with one of the above features is sent:
 
-When the request associated with a [Topics API feature](#what_api_features_enable_the_topics_api) included in the ad tech `<iframe>` is sent:
+1. A {{httpheader("Sec-Browsing-Topics")}} header is sent along with the request, which contains the topic(s) chosen for the current user.
+2. The ad tech server selects a relevant ad to display in the `<iframe>`, based on these topics, and sends the required data to display it in the response.
+3. An {{httpheader("Observe-Browsing-Topics")}} header should be set on the response to the request — this has the effect of causing the browser to record the current page visit as observed by the calling ad tech provider, so the associated topic(s) will be recorded in a topics history entry, and subsequently be used in [topic selection](#selecting_topics_of_interest_to_influence_ad_choice).
 
-1. A {{httpheader("Sec-Browsing-Topics")}} header is sent along with the request, which contains the topic chosen for the current user.
-2. The ad tech server selects a relevant ad to display in the `<iframe>`.
-3. The topic provided in the {{httpheader("Sec-Browsing-Topics")}} header can be marked as observed by setting an {{httpheader("Observe-Browsing-Topics")}} header on the response to the request.
+   > **Note:** It is important to clarify that this doesn't record the chosen topics sent in the `Sec-Browsing-Topics` header as observed. It records the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded) as observed.
 
-In addition, the ad tech platform can call {{domxref("Document.browsingTopics()")}} and then return a user's current chosen topic to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, but is somewhat less performant. You are advised to use one of the HTTP header methods listed above, falling back to `browsingTopics()` only in situations where the headers cannot be used.
+### The `browsingTopics()` method
 
-> **Note:** Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically.
+Alternatively, the embedded `<iframe>` can call {{domxref("Document.browsingTopics()")}} to return a user's current chosen topic(s), which can then be returned to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, but is somewhat less performant. You are advised to use one of the HTTP header methods listed above, falling back to `browsingTopics()` only in situations where the headers cannot be used.
+
+> **Note:** Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically when the method is called.
 
 ## Private topic sets
 
-As mentioned earlier, a caller can only access topics that they themselves have observed for a user — and not topics observed by other callers. For example:
+A caller can only access topics that they themselves have observed for a user — and not topics observed by other callers. For example:
 
-- If the `ad-tech1.example` platform has a presence on `tennis.example`, they would observe topics like "Sports" and "Tennis" for a user who visits that site.
-- If another ad tech platform, `ad-tech2.example`, has a presence on "gardening.example", they would observe the topic "Gardening".
+- If the `ad-tech1.example` platform has an `<iframe>` embedded on `tennis.example` that includes a Topics API feature, they would observe topics like "Sports" and "Tennis" for a user who visits that site.
+- If another ad tech platform, `ad-tech2.example`, has a Topics API `<iframe>` embedded on "gardening.example", they would observe the topic "Gardening".
 
-To reiterate, these ad tech platforms will only get topics for a user that they have observed. In this example, `ad-tech1.example` won't get "Gardening" and `ad-tech2.example` won't get "Tennis".
+These ad tech platforms will only get topics for a user that they have observed. In this example, `ad-tech1.example` won't get "Gardening" and `ad-tech2.example` won't get "Tennis".
 
 In other words, callers such as ad tech platforms only get topics for pages where they have a presence. More importantly, the recorded topics of interest are the only information that can be accessed via this API — unlike with tracking cookies, no other information can be leaked.
 
@@ -87,7 +93,7 @@ In other words, callers such as ad tech platforms only get topics for pages wher
 ### Using `Document.browsingTopics()`
 
 ```js
-// Get an array of top topics for this user
+// Get an array of topics for this user
 const topics = await document.browsingTopics();
 
 // Request an ad creative

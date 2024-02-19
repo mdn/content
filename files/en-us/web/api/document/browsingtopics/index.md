@@ -10,13 +10,13 @@ browser-compat: api.Document.browsingTopics
 
 {{APIRef("Topics API")}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section below for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
-The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing observed topics for the current user and site, for the three most recent epochs. It also triggers the browser to observe topics for the current user and site.
+The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the selected topics for the current user. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
 
-See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ browsingTopics(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an array of up to three objects representing the current user's top topics of interest for the current observing domain. Each object contains the following properties:
+A {{jsxref("Promise")}} that fulfills with an array of up to three objects representing the current user's selected topics for the last three epochs. Each object contains the following properties:
 
 - `configVersion`
   - : A string identifying the algorithm (other than the model part) used to calculate the topic.
@@ -46,8 +46,6 @@ A {{jsxref("Promise")}} that fulfills with an array of up to three objects repre
   - : A number representing the ID of the topic, which can be used by the browser to retrieve the topic from the taxonomy (see an example [taxonomy of interests](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md)).
 - `version`
   - : The `configVersion`, `modelVersion`, and `taxonomyVersion`, concatenated with colons (`:`) between each.
-
-> **Note:** The method returns a random topic from the top five for each of the three most recent epochs (an epoch is a week by default), with a 5% chance that any of these may be randomly chosen from the full [taxonomy of topics](https://github.com/patcg-individual-drafts/topics/blob/main/taxonomy_v1.md).
 
 The exact property values may vary by browser implementation. An example object from Chrome might look as follows:
 

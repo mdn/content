@@ -9,15 +9,15 @@ browser-compat: http.headers.Sec-Browsing-Topics
 
 {{HTTPSidebar}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
-The **`Sec-Browsing-Topics`** request header sends observed topics along with a request, which are used by an ad tech platform to choose a personalized ad to display to the current user. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+The **`Sec-Browsing-Topics`** request header sends the selected topics for the current user along with the associated request, which are used by an ad tech platform to choose a personalized ad to display.
 
 If the calling site does not have the Topics API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment), attempting to create or modify `Sec-Browsing-Topics` fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
 
-See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 <table class="properties">
   <tbody>
@@ -40,7 +40,7 @@ Sec-Browsing-Topics: <array-of-observed-topics>
 
 ## Directives
 
-A JSON object representing an array of objects containing the observed topics. Each object contains the following properties:
+A JSON object representing an array of up to three objects representing the current user's selected topics for the last three epochs. Each object contains the following properties:
 
 - `configVersion`
   - : A string identifying the algorithm (other than the model part) used to calculate the topic.

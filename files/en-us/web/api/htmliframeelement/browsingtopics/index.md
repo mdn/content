@@ -10,15 +10,15 @@ browser-compat: api.HTMLIFrameElement.browsingTopics
 
 {{APIRef("HTML DOM")}}
 
-> **Warning:** One or more browser vendors oppose this feature — in its current state, it will never be implemented across all browsers. See [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) for details of opposition.
+> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
-The **`browsingTopics`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean that specifies whether observed topics should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
+The **`browsingTopics`** property of the {{domxref("HTMLIFrameElement")}} interface is a boolean specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source in a {{httpheader("Sec-Browsing-Topics")}} header. This reflects the `browsingtopics` content attribute value.
 
-See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 ## Value
 
-A boolean. The default value is `false`; set it to `true` to send the associated `<iframe>` source request with a {{httpheader("Sec-Browsing-Topics")}} header containing observed topics for the current site and user.
+A boolean. The default value is `false`; set it to `true` to send the associated `<iframe>` source request with a {{httpheader("Sec-Browsing-Topics")}} header containing the selected topics for the current user.
 
 ## Examples
 
