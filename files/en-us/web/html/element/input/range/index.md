@@ -314,5 +314,6 @@ To create a vertical range wherein the knob slides up and down, you can set the 
 - [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} and {{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input/)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
