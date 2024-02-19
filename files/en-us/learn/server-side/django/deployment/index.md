@@ -364,7 +364,326 @@ git checkout main
 git checkout -b my_changes_for_deployment # Create a new branch
 ```
 
-## Example: Installing LocalLibrary on Railway
+## Example: Hosting on PythonAnywhere
+
+This section provides a practical demonstration of how to host _LocalLibrary_ on [PythonAnywhere](https://www.pythonanywhere.com/).
+
+### Why PythonAnywhere?
+
+We are choosing to use PythonAnywhere for several reasons:
+
+- PythonAnywhere has a [free beginner plan](https://www.pythonanywhere.com/pricing/) that is _really_ free, albeit with some limitations.
+  The fact that it is affordable for all developers is really important to MDN!
+
+  > **Note:** This tutorial has been hosted on Heroku, Railway, and now PythonAnywhere, migrating when the previously free plans were discontinued.
+  > We've chosen PythonAnywhere because we think this plan is likely to remain free.
+  > We've kept the Railway example too, which is not free, for comparison, and because it allows us to more easily demonstrate features such as integration with a Postgres databases running on a different service.
+
+- PythonAnywhere takes care of the infrastructure so you don't have to.
+  Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
+- The skills and concepts you will learn when using PythonAnywhere are transferrable.
+- The service and plan limitations do not particularly impact us using PythonAnywhere for the tutorial.
+  For example:
+
+  - The beginner plan allows one web app at `<your-username>.pythonanywhere.com`, restricted outbound Internet access from your apps, low CPU/bandwidth, no IPython/Jupyter notebook support, no free Postgres database.
+    But there is enough space for our basic site to run!
+  - Custom domains are not supported (at time of writing).
+  - The environment shuts down when not in use, so may be slow to restart.
+    You can run it forever, but you will need to visit the site every three months and renew the web application.
+  - There is free support for a separate MySQL database, but not Postgres.
+    In this demonstration we'll just use the default Django SQLite database.
+
+PythonAnywhere is appropriate for hosting this demonstration, and can be scaled to larger projects if needed.
+You should take the time to determine if it is [suitable for your own website](#choosing_a_hosting_provider).
+
+### How does PythonAnywhere work?
+
+PythonAnywhere provides an entirely web-based interface for uploading, editing, and otherwise working with your application.
+
+Through the interface you can launch a bash console to a Ubuntu Linux environment in which you can create your application.
+In this demonstration we'll use the console to clone our local library GitHub repository, and create a Python environment in which we can run the web application.
+
+The free plan doesn't provides separate Postgres support.
+While we could use some other hosting service for our database, we'll just use the default SQLite database created by Django in the hosted Ubuntu environment (there is more than enough space for demonstrating the library functionality).
+
+Once the application is running, it can be configured for production by setting environment variables through the bash console.
+
+That's all the overview you need to get started.
+
+### Get a PythonAnywhere account
+
+To start using PythonAnywhere you will first need to create an account:
+
+- Go to PythonAnywhere [Plans and pricing](https://www.pythonanywhere.com/pricing/) page, and select the **Create a Beginner account** button.
+- Create an account with your username, email, and password, acknowledge the terms and conditions, and then select **Register**.
+- You'll then be logged in and redirected to the PythonAnywhere dashboard: `https://www.pythonanywhere.com/user/<your_user_name>/`.
+
+### Install library from GitHub
+
+Next we're going open a Bash prompt, set up a virtual environment, and fetch the local library source code from Github.
+We'll also configure the default database and collect static files so that they can be served by PythonAnywhere.
+
+1. First open the Console management screen by selecting **Consoles** in the top application bar.
+2. Then select the **Bash** link to create and launch a new console:
+
+   ![Image of PythonAnywhere Console management screen](python_anywhere_start_bash_console.png)
+
+   Note that any console that you create is saved for your later re-use, along with all its history.
+   The green arrow above shows that this account has a console we could have opened instead.
+
+3. In the console, enter the following command to create a Python 3.10 virtual environment named "env_local_library" for installing the local library dependencies.
+
+   ```bash
+   mkvirtualenv --python=python3.10 env_local_library
+   ```
+
+   This is exactly the same process as covered in [Setting up a Django development environment](/en-US/docs/Learn/Server-side/Django/development_environment).
+   We could have named the environment anything, and we can deactivate it and reactivate it using the commands below:
+
+   ```bash
+   deactivate
+   workon env_local_library
+   ```
+
+4. Next get the library sources from GitHub.
+   PythonAnywhere expects you to install applications in a folder named after your site URL.
+
+   > **Note:** Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+
+   Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
+
+   ```bash
+   git clone https://github.com/<github_username>/django-locallibrary-tutorial.git <pythonaware_username>.pythonanywhere.com
+
+   # Navigate into the new folder
+   cd <pythonaware_username>.pythonanywhere.com
+   ```
+
+5. Install the library dependencies using the `requirements.txt` file:
+
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+6. Create and configure an SQLite database on the hosting computer (just as we did during development).
+
+   ```bash
+   python manage.py migrate
+   ```
+
+   > **Note:** For the Railway example we will [Configure a Postgres database](/en-US/docs/Learn/Server-side/Django/Deployment#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
+   > It is important that `migrate` is called _after_ configuring what database to use database.
+
+7. Collect all the static files into a location where they can be [served in production](#serving_static_files_in_production):
+
+   ```bash
+   python manage.py collectstatic --no-input
+   ```
+
+8. Create a superuser for accessing the site (as covered in the [Django admin site](/en-US/docs/Learn/Server-side/Django/Admin_site#creating_a_superuser) section):
+
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+   Note the details, as you'll need them to test your site.
+
+### Setup the web app
+
+After getting the local library sources and installing the dependencies in a virtual environment, we need to tell PythonAnywhere how to find them and use them as a web app.
+
+1. Navigate to the _Web_ section of the site and select the **Add a new web app** link:
+
+   ![PythonAnywhere "Web" section showing button for adding a new app](python_anywhere_web_add_new_app.png)
+
+   The _Create new web app_ wizard will then open to guide you through configuring the main properties of the web app.
+
+2. Select **Next** to skip through the web app domain name configuration.
+   The free account will create the domain based on your user name: `<user_name>.pythonanywhere.com`.
+
+   ![PythonAnywhere prompt for setting the domain name of new web app](python_anywhere_web_add_new_app_prompt.png)
+
+3. In the _Select a Python Web framework_ screen select **Manual configuration**.
+
+   ![PythonAnywhere prompt for selecting web framework used for the application](python_anywhere_web_add_select_framework_manual.png)
+
+   Manual configuration allows us complete control over how the environment is configured.
+   This doesn't matter so much now, but it would if we were hosting multiple sites, potentially with different versions of Python and/or Django.
+
+4. In the _Select a Python version_ screen select **3.10**
+
+   ![PythonAnywhere prompt for selecting Python version for Web application](python_anywhere_web_add_select_python_version.png)
+
+   More generally you should select the latest version of Python allowed by the version of Django that you are using.
+
+5. In the _Manual configuration_ screen select **Next** (the screen just explains some of the options for configuration)
+
+   ![PythonAnywhere prompt explaining next configuration options](python_anywhere_web_add_manual_config.png)
+
+   The web app is created, and displayed in the Web section as shown.
+   The screen has a **Reload** button that you can use to reload the web application after you make any further changes.
+   As noted on the screen, you'll need to click the **Run until 3 months from today** button to keep the site alive for another three months (and ongoing).
+
+   ![PythonAnywhere Configured Web app](python_anywhere_web_configuration.png)
+
+6. Scroll down to the "Code" section of the _Web_ tab and select the link to the WSGI configuration file.
+   This will have a name with the form `/var/www/<user_name>_pythonanywhere_com_wsgi.py`.
+
+   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
+
+   Replace the content in the file with the following text (first updating "hamishwillee" with your own username), and then select the **Save** button.
+
+   ```py
+   import os
+   import sys
+
+   path = '/home/hamishwillee/hamishwillee.pythonanywhere.com'
+   if path not in sys.path:
+       sys.path.append(path)
+
+   os.environ['DJANGO_SETTINGS_MODULE'] = 'locallibrary.settings'
+
+   from django.core.wsgi import get_wsgi_application
+   application = get_wsgi_application()
+   ```
+
+   Note that the role of the WGSI file is to help the Gunicorn server find the local library application.
+   PythonAnywhere expects this file to be in this location, which is why the WSGI file already in the project cannot be used.
+
+7. Scroll down to the "Virtualenv" section of the _Web_ tab.
+   Select the link **Enter the path to a virtual env, if desired** and enter the path of the virtual evironment created in the previous section.
+   If you named it "env_local_library" as suggested, the path will be: `/home/<user_name>/.virtualenvs/env_local_library`
+
+   ![PythonAnywhere Virtual env section of Web tab](python_anywhere_web_virtualenv.png)
+
+8. Scroll down to the "Static files" section of the _Web_ tab.
+
+   ![PythonAnywhere Static files section of Web tab](python_anywhere_web_static_files.png)
+
+   Select the **Enter URL** link and enter `\static_files\`.
+   This is the `STATIC_URL` in the [application settings](/en-US/docs/Learn/Server-side/Django/Deployment#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
+
+9. Near the top of the _Web_ tab select the **Reload** button to restart the site.
+   Then then select the site URL link to launch the live site:
+
+![PythonAnywhere Web screen with the link to launch the site highlighted](python_anywhere_web_open_site.png)
+
+### Set ALLOWED_HOSTS and CSRF_TRUSTED_ORIGINS
+
+When the site is opened, at this point you'll see an error debug screen as shown below.
+This is a Django security error that is raised because our source code is not running on an "allowed host".
+
+![A detailed error page with a full traceback of an invalid HTTP_HOST header](python_anywhere_error_disallowed_host.png)
+
+> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> In the next section we'll show you how to disable this level of logging on the live site using [environment variables](/en-US/docs/Learn/Server-side/Django/Deployment#using_environment_variables_on_pythonanywhere).
+
+Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
+
+```python
+## For example, for a site URL at 'hamishwillee.pythonanywhere.com'
+## (replace the string below with your own site URL):
+ALLOWED_HOSTS = ['hamishwillee.pythonanywhere.com', '127.0.0.1']
+
+# During development, you can instead set just the base URL
+# (you might decide to change the site a few times).
+# ALLOWED_HOSTS = ['.pythonanywhere.com','127.0.0.1']
+```
+
+Since the applications uses CSRF protection, you will also need to set the [CSRF_TRUSTED_ORIGINS](https://docs.djangoproject.com/en/4.2/ref/settings/#csrf-trusted-origins) key.
+Open **/locallibrary/settings.py** and add a line like the one below:
+
+```python
+## For example, for a site URL is at 'web-production-3640.up.railway.app'
+## (replace the string below with your own site URL):
+CSRF_TRUSTED_ORIGINS = ['https://hamishwillee.pythonanywhere.com']
+
+# During development/for this tutorial you can instead set just the base URL
+# CSRF_TRUSTED_ORIGINS = ['https://*.pythonanywhere.com']
+```
+
+Save these settings and commit them to your GitHub repo.
+
+You will then need to update the version of your project on PythonAnywhere.
+Assuming you're using your Bash prompt in the folder `<user_name>.pythonanywhere.com`, and you have pushed the changes to the main branch, then you could import them in the Bash prompt using the command:
+
+```Bash
+git pull origin main
+```
+
+Use the **Restart** button on the `Web` tab to restart the application.
+If you refresh your hosted site, it should now open and display the home page of the site.
+
+You should be able to log in with the superuser account you created above, and create authors, genres, books, and so on, just as you did on your local computer.
+
+### Using environment variables on PythonAnywhere
+
+In the section on [Getting your website ready to publish](/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables in production.
+
+Specifically we set up the library so that you can set:
+
+- `DJANGO_DEBUG=False` to reduce the debug tracing shown to the user when there is an error.
+- `DJANGO_SECRET_KEY` to some secret value in production.
+- `DATABASE_URL` if your application uses a hosted database (we do not in this example).
+
+The way that environment variables are set depends on the hosting service.
+[PythonAnywhere recommends that you read them from an environment file](https://help.pythonanywhere.com/pages/environment-variables-for-web-apps).
+
+The steps are:
+
+1. Open a PythonAware Bash prompt.
+2. Navigate to your application directory (replacing `<user-name>` with your own account):
+
+   ```bash
+   cd ~/<user-name>.pythonanywhere.com
+   ```
+
+3. Make sure that the virtual environment used by the server is active.
+   If not, activate it using:
+
+   ```bash
+   workon env_local_library
+   ```
+
+4. Install [python-dotenv](https://pypi.org/project/python-dotenv/), a tool for reading key-value pairs out of a file and saving them as environment variables.
+
+   ```bash
+   pip install python-dotenv
+   ```
+
+   Note that you might also add _python-dotenv_ to your `requirements.txt` file.
+
+5. You can set the environment variables by writing them as key-value pairs to the `.env` file.
+   For example, to set `DJANGO_DEBUG` to `False` in the Bash console, enter the following following command:
+
+   ```bash
+   echo "DJANGO_DEBUG=False" >> .env
+   ```
+
+   Note that these are _secrets_!
+   You must not save them to GitHub, and you might want to add `.env` to your `.gitignore` file so that it is not added by accident.
+
+6. The final step is to ensure that variables in the `.env` file are read into the environment.
+
+   Open the _Web_ tab and scroll down to the "Code" section.
+   Select the link to open the WSGI configuration file.
+
+   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
+
+   Add the following lines to the top of the file (after `import sys`), replacing the `<user-name>` with your own account, and then press the **Save** button.
+
+   ```py
+   from dotenv import load_dotenv
+   project_folder = os.path.expanduser('~/<user-name>.pythonanywhere.com') # adjust as appropriate
+   load_dotenv(os.path.join(project_folder, '.env'))
+   ```
+
+7. Restart the application.
+
+You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
+If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
+
+## Example: Hosting on Railway
 
 This section provides a practical demonstration of how to install _LocalLibrary_ on [Railway](https://railway.app/).
 
@@ -571,21 +890,14 @@ On completion you will now see both the application and database services in the
 
 ![Railway project with application and Postgres database service](railway_project_two_services.png)
 
-Select the PostgreSQL service to display information about the database.
-Open the _Connect_ tab and copy the "Postgres Connection URL" (this is the address that we set up the locallibrary to read as an environment variable).
+Select the web service and then the _Variables_ tab.
+Select **New Variable** and then in the _Variable name_ box, select **Add reference**.
+Scroll down and select `DATABASE_URL` (this is the name of the variable that we set up the locallibrary to read as an environment variable).
 
-![Railway website screen with provision Postgres container command line text and connection URL](railway_postgresql_connect.png)
+![Railway website screen selecting a DATABASE_URL](railway_postgresql_connect.png)
 
-To make this accessible to the library application we need to add it to the application process using an environment variable.
-First open the application service.
-Then select the _Variables_ tab and press the **New Variable** button.
-
-Enter the variable name `DATABASE_URL` and the connection URL you copied for the database.
-This will look something like the screen shown below.
-
-![Railway website variables screen - add database url](railway_variables_database_url.png)
-
-Select **Add** to add the variable; the project will then redeploy.
+Then select **Add** to add the variable reference and finally **Deploy** (this will appear in a popup).
+Note that you could also have opened the Postgres database, then its variable tab, and copied the variable across.
 
 If you open the project now it should display just as it did locally.
 Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
