@@ -73,7 +73,7 @@ This article provides information about the changes in Firefox 123 that affect d
 
 #### Marionette
 
-* Fixed a bug with [Element Send Keys](https://w3c.github.io/webdriver/#element-send-keys) where sending text containing surrogate pairs would fail ([Firefox bug 1790375](https://bugzil.la/1866431)).
+- Fixed a bug with [Element Send Keys](https://w3c.github.io/webdriver/#element-send-keys) where sending text containing surrogate pairs would fail ([Firefox bug 1790375](https://bugzil.la/1866431)).
 
 ## Changes for add-on developers
 
