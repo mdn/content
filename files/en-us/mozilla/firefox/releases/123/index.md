@@ -97,6 +97,12 @@ The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](h
 
 These features are newly shipped in Firefox 123 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Web Codecs API:** `dom.media.webcodecs.enabled`.
+
+  The video interfaces of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) are supported on Linux desktop on Nightly.
+  These include: [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
+  ([Firefox bug 1874445](https://bugzil.la/1874445)).
+
 ## Older versions
 
 {{Firefox_for_developers(122)}}
