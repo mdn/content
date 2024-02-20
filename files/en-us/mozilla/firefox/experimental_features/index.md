@@ -1006,6 +1006,49 @@ This enables splitting a string into meaningful items (graphemes, words or sente
   </tbody>
 </table>
 
+### Growable SharedArrayBuffer
+
+The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
+The maximum allowed size of the buffer is specified using the `option.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
+The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can grow and its maximum allowed size, respectively.
+([Firefox bug 1842773](https://bugzil.la/1842773).)
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>124</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.sharedarraybuffer_growable</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
