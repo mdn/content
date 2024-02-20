@@ -15,16 +15,6 @@ The **`<feFlood>`** SVG filter primitive fills the filter subregion with the col
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
 

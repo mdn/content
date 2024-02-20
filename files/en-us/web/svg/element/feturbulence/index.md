@@ -15,16 +15,6 @@ The **`<feTurbulence>`** [SVG](/en-US/docs/Web/SVG) filter primitive creates an 
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("baseFrequency")}}
 - {{SVGAttr("numOctaves")}}
 - {{SVGAttr("seed")}}
