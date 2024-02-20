@@ -13,6 +13,67 @@ The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-conta
 
 A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Usage notes
+
+- Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
+- When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
+- Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
+- The publication date and time of an `<article>` element can be described using the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) attribute of a {{HTMLElement("time")}} element.
+
+## Examples
+
+```html
+<article class="film_review">
+  <h2>Jurassic Park</h2>
+  <section class="main_review">
+    <h3>Review</h3>
+    <p>Dinos were great!</p>
+  </section>
+  <section class="user_reviews">
+    <h3>User reviews</h3>
+    <article class="user_review">
+      <h4>Too scary!</h4>
+      <p>Way too scary for me.</p>
+      <footer>
+        <p>
+          Posted on
+          <time datetime="2015-05-16 19:00">May 16</time>
+          by Lisa.
+        </p>
+      </footer>
+    </article>
+    <article class="user_review">
+      <h4>Love the dinos!</h4>
+      <p>I agree, dinos are my favorite.</p>
+      <footer>
+        <p>
+          Posted on
+          <time datetime="2015-05-17 19:00">May 17</time>
+          by Tom.
+        </p>
+      </footer>
+    </article>
+  </section>
+  <footer>
+    <p>
+      Posted on
+      <time datetime="2015-05-15 19:00">May 15</time>
+      by Staff.
+    </p>
+  </footer>
+</article>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples','','570')}}
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -81,65 +142,6 @@ A given document can have multiple articles in it; for example, on a blog that s
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Usage notes
-
-- Each `<article>` should be identified, typically by including a heading ([`<h1>` - `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element) as a child of the `<article>` element.
-- When an `<article>` element is nested, the inner element represents an article related to the outer element. For example, the comments of a blog post can be `<article>` elements nested in the `<article>` representing the blog post.
-- Author information of an `<article>` element can be provided through the {{HTMLElement("address")}} element, but it doesn't apply to nested `<article>` elements.
-- The publication date and time of an `<article>` element can be described using the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) attribute of a {{HTMLElement("time")}} element.
-
-## Examples
-
-```html
-<article class="film_review">
-  <h2>Jurassic Park</h2>
-  <section class="main_review">
-    <h3>Review</h3>
-    <p>Dinos were great!</p>
-  </section>
-  <section class="user_reviews">
-    <h3>User reviews</h3>
-    <article class="user_review">
-      <h4>Too scary!</h4>
-      <p>Way too scary for me.</p>
-      <footer>
-        <p>
-          Posted on
-          <time datetime="2015-05-16 19:00">May 16</time>
-          by Lisa.
-        </p>
-      </footer>
-    </article>
-    <article class="user_review">
-      <h4>Love the dinos!</h4>
-      <p>I agree, dinos are my favorite.</p>
-      <footer>
-        <p>
-          Posted on
-          <time datetime="2015-05-17 19:00">May 17</time>
-          by Tom.
-        </p>
-      </footer>
-    </article>
-  </section>
-  <footer>
-    <p>
-      Posted on
-      <time datetime="2015-05-15 19:00">May 15</time>
-      by Staff.
-    </p>
-  </footer>
-</article>
-```
-
-## Result
-
-{{EmbedLiveSample('Examples','','570')}}
 
 ## Specifications
 

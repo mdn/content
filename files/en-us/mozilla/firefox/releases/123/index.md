@@ -14,7 +14,7 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### HTML
 
-- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1712140](https://bugzil.la/1870052))
+- The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
 #### Removals
 
@@ -23,6 +23,11 @@ This article provides information about the changes in Firefox 123 that affect d
 #### Removals
 
 ### JavaScript
+
+- The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
+  - Incorrect day of month (e.g. "31 April") now skips over to the following month (e.g. "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
+  - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
+  - Single number dates are now accepted (e.g. `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
 
 #### Removals
 
@@ -53,9 +58,14 @@ This article provides information about the changes in Firefox 123 that affect d
 
 #### DOM
 
+- Custom locale support for the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) has been deprecated, including the [`options.locale`](/en-US/docs/Web/API/IDBObjectStore/createIndex#locale) parameter to `IDBObjectStore.createIndex()`, and the `IDBIndex` properties [`isAutoLocale`](/en-US/docs/Web/API/IDBIndex/isAutoLocale) and [`locale`](/en-US/docs/Web/API/IDBIndex/locale).
+  ([Firefox bug 1872675](https://bugzil.la/1872675) and [Firefox bug 1730706](https://bugzil.la/1730706)).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](https://bugzil.la/1730706)).
 
 ### WebAssembly
 
@@ -63,11 +73,17 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
-
 #### WebDriver BiDi
 
+- Added the [network.fetchError](https://w3c.github.io/webdriver-bidi/#event-network-fetchError) event that is emitted when a network request ends in an error ([Firefox bug 1790375](https://bugzil.la/1790375)).
+- Support for the [browsingContext.locateNodes](https://w3c.github.io/webdriver-bidi/#commands-browsingcontextlocatenodes) command has been introduced to find elements on the given page. Supported locators for now are `CssLocator` ([Firefox bug 1855023](https://bugzil.la/1855023)) and `XPathLocator` ([Firefox bug 1869536](https://bugzil.la/1869536)).
+- Improved the [browsingContext.create](https://w3c.github.io/webdriver-bidi/#command-browsingContext-create) command on Android to seamlessly switch to opening a new tab if the `type` argument is specified as `window` ([Firefox bug 1875086](https://bugzil.la/1875086)).
+- Fixed an issue with the deserialization process of a `DateRemoteValue`, where the presence of a non-standard (ISO 8601) date string such as `200009` did not trigger an error ([Firefox bug 1872116](https://bugzil.la/1872116)).
+- Fixed an issue with the [script.evaluate](https://w3c.github.io/webdriver-bidi/#command-script-evaluate), [script.callFunction](https://w3c.github.io/webdriver-bidi/#command-script-callFunction), and [script.disown](https://w3c.github.io/webdriver-bidi/#command-script-disown) commands where specifying both the `context` and `realm` arguments would result in an `invalid argument` error, rather than simply ignoring the `realm` argument as intended ([Firefox bug 1873688](https://bugzil.la/1873688)).
+
 #### Marionette
+
+- Fixed a bug with [Element Send Keys](https://w3c.github.io/webdriver/#element-send-keys) where sending text containing surrogate pairs would fail ([Firefox bug 1866431](https://bugzil.la/1866431)).
 
 ## Changes for add-on developers
 
@@ -80,6 +96,12 @@ This article provides information about the changes in Firefox 123 that affect d
 ## Experimental web features
 
 These features are newly shipped in Firefox 123 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Web Codecs API:** `dom.media.webcodecs.enabled`.
+
+  The video interfaces of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) are supported on Linux desktop on Nightly.
+  These include: [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
+  ([Firefox bug 1874445](https://bugzil.la/1874445)).
 
 ## Older versions
 
