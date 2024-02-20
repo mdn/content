@@ -58,9 +58,14 @@ This article provides information about the changes in Firefox 123 that affect d
 
 #### DOM
 
+- Custom locale support for the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) has been deprecated, including the [`options.locale`](/en-US/docs/Web/API/IDBObjectStore/createIndex#locale) parameter to `IDBObjectStore.createIndex()`, and the `IDBIndex` properties [`isAutoLocale`](/en-US/docs/Web/API/IDBIndex/isAutoLocale) and [`locale`](/en-US/docs/Web/API/IDBIndex/locale).
+  ([Firefox bug 1872675](https://bugzil.la/1872675) and [Firefox bug 1730706](https://bugzil.la/1730706)).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
+
+The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](https://bugzil.la/1730706)).
 
 ### WebAssembly
 
