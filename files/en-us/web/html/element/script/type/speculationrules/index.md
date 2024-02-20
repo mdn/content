@@ -13,6 +13,8 @@ The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/sc
 
 Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
+> **Note:** As an alternative, speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
+
 ## Syntax
 
 ```html
