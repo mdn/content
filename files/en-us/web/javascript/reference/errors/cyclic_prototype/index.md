@@ -7,8 +7,8 @@ page-type: javascript-error
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "TypeError: can't set prototype: it would cause a prototype chain cycle"
-occurs when a given object's prototype is assigned to an object that has the given object
-in its prototype chain.
+occurs when a given object's prototype is assigned to an object that has the given object in
+its [prototype chain](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_prototype_chain).
 
 ## Message
 
@@ -20,17 +20,13 @@ TypeError: cyclic __proto__ value (Safari)
 
 ## Error type
 
-{{jsxref("SyntaxError")}}
+{{jsxref("TypeError")}}
 
 ## What went wrong?
 
-When a property or a method of an object is accessed, Javascript first checks if it is in the object itself.
-If it is, it provides that. If it's not, it then accesses it on the object's prototype object, in exactly the same way.
-This repeats until it reaches an object with `null` as its prototpye, or finds the property or the method.
-
-This requires that accessing "the prototype of the prototype of the prototype...",
-walking the protype chain, reaches no loops.
-This error means that a loop, also called a cycle, would have been introduced.
+A loop, also called a cycle, was introduced in a prototype chain.
+That means that walking that prototype chain, the same places would have been accessed over and over again,
+instead of reaching `null`.
 
 ## Examples
 
@@ -50,22 +46,7 @@ Object.setPrototypeOf(c, a);
 // TypeError: can't set prototype: it would cause a prototype chain cycle
 ```
 
-### Another section?
-
-If you are using an older browser that does not yet implement
-[`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or
-[`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class),
-for example, you should update to a more recent browser version that does support these
-new language features.
-
-```js
-"use strict";
-class DocArchiver {}
-
-// SyntaxError: class is a reserved identifier
-// (throws in older browsers only, e.g. Firefox 44 and older)
-```
-
 ## See also
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Object Prototypes](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
