@@ -2,6 +2,8 @@
 title: Speculation-Rules
 slug: Web/HTTP/Headers/Speculation-Rules
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Speculation-Rules
 ---
 
