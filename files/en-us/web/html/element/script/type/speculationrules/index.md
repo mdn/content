@@ -66,9 +66,9 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
 
 The JSON structure contains one or more fields at the top level, each one representing an action to define speculation rules for. At present the supported actions are:
 
-- `"prefetch"` {{optional_inline}} {{experimental_inline}}
+- `"prefetch"` {{optional_inline}}
   - : Rules for potential future navigations that should have their associated document response body downloaded, leading to significant performance improvements when those documents are navigated to. Note that none of the subresources referenced by the page are downloaded.
-- `"prerender"` {{optional_inline}} {{experimental_inline}}
+- `"prerender"` {{optional_inline}}
   - : Rules for potential future navigations that should have their associated documents fully downloaded, rendered, and loaded into an invisible tab. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. When those documents are navigated to, navigations will be instant, leading to major performance improvements.
 
 > **Note:** Consult the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) main page for full details on how to use prefetch and prerender effectively.
@@ -80,10 +80,14 @@ Specifically, each object can contain the following properties:
 - `"source"`
   - : A string representing the source of the URLs to which the rule applies. Possible values are:
     - `"list"`
-      - : Denotes that the URLs will come from a specific list.
+      - : Denotes that the URLs will come from a specific list, which will be specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
 - `"urls"`
   - : An array of strings representing the list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
-- `"requires"` {{optional_inline}} {{experimental_inline}}
+- `"expects_no_vary_search"`
+  - : A string indicating to the browser what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/preload requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/preload to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
+- `"referrer_policy"`
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
+- `"requires"`
 
   - : An array of strings representing capabilities of the browser parsing the rule, which must be available if the rule is to be applied to the specified URLs.
 
@@ -98,14 +102,13 @@ Specifically, each object can contain the following properties:
         - A future Safari implementation may possibly use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
-- `"referrer_policy"` {{optional_inline}} {{experimental_inline}}
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
-
 > **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
-### Further examples
+## Examples
 
-The earlier examples showed separate speculation rules defined for prefetch and prerender. It is possible to define both in a single set of rules:
+### Prefetch and prerender in the same set of rules
+
+The basic examples shown in the description section included separate speculation rules defined for prefetch and prerender. It is possible to define both in a single set of rules:
 
 ```html
 <script type="speculationrules">
@@ -127,6 +130,8 @@ The earlier examples showed separate speculation rules defined for prefetch and 
   }
 </script>
 ```
+
+### Multiple rule sets
 
 It is also allowable to include multiple sets of rules in a single HTML file:
 
@@ -200,6 +205,48 @@ if (
 ```
 
 You can see this in action in this [prerender demos](https://prerender-demos.glitch.me/) page.
+
+### `"expects_no_vary_search"` example
+
+Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for caching purposes depends on the behavior of the application:
+
+1. If this parameter has the effect of loading a completely new page containing the information for the specified user, then the URL should be cached separately.
+2. If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then the URL should be considered the same for caching purposes. This could result in performance improvements around the loading of the user pages and could be achieved via a {{httpheader("No-Vary-Search")}} with a value of `params=("id")`.
+
+How does this affect speculation rules? Consider the following code:
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        "urls": ["/users"]
+      }
+    ]
+  }
+</script>
+<a href="/users?id=345">User Bob</a>
+```
+
+What would happen if the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
+
+To solve this, we can provide a hint for as to what the page author expects the `No-Vary-Search` value to be. A rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [
+      {
+        "urls": ["/users"],
+        "expects_no_vary_search": "params=(\"id\")"
+      }
+    ]
+  }
+</script>
+<a href="/users?id=345">User Bob</a>
+```
+
+This indicates that Option 2 described above is what the server is expected to produce. If a navigation starts while there is an ongoing prefetch of `/users`, this informs the browser that it is appropriate to wait for the prefetch, instead of immediately starting another fetch for `/users?id=345`.
 
 ## Specifications
 
