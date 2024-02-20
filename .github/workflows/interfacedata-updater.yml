@@ -22,8 +22,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: "mdn-content/.nvmrc"
-          cache: yarn
-          cache-dependency-path: "mdn-content/yarn.lock"
 
       - name: Checkout webref
         uses: actions/checkout@v4
