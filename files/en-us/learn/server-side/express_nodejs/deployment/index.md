@@ -683,7 +683,7 @@ On completion you will now see both the application and database services in the
 Select the MongoDB service to display information about the database.
 Open the _Variables_ tab and copy the "Mongo_URL" (this is the address of the database).
 
-![Railway database settings screen showing the URL needed to connect to the database](railway_variables_database_url-1.png)
+![Railway database settings screen showing the URL needed to connect to the database](railway_mongodb_connect-1.png)
 
 To make this accessible to the library application we need to add it to the application process using an environment variable.
 First open the application service.
