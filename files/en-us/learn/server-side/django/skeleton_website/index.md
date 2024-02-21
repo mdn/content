@@ -58,13 +58,8 @@ At the end of this article, we discuss other site-wide configuration you might a
 To create the project:
 
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
-2. Navigate to where you want to store your Django apps (make it somewhere easy to find like inside your _Documents_ folder), and create a folder for your new website (in this case: _django_projects_). Then change into your newly-created directory:
-
-   ```bash
-   mkdir django_projects
-   cd django_projects
-   ```
-
+2. Navigate to the folder where you want to store your local library application.
+   This should be the folder named "django_local_library" that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
 3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
 
    ```bash
@@ -87,8 +82,8 @@ locallibrary/
 
 Our current working directory should look something like this:
 
-```python
-../django_projects/locallibrary/
+```bash
+../django_local_library/locallibrary/
 ```
 
 The _locallibrary_ project sub-folder is the entry point for the website:
@@ -347,6 +342,23 @@ Don't worry! This error page is expected because we don't have any pages/urls de
 At this point, we know that Django is working!
 
 > **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+
+## Don't forget to backup to Github
+
+We've just done some significant work, so now is a good time to backup the project.
+You can use a similar set of commands to those in the [Modify and sync changes](/en-US/docs/Learn/Server-side/Django/development_environment#modify_and_sync_changes) section of the _Development environment_ topic:
+
+```bash
+git checkout -b skeleton_website # Create and activate a new branch "skeleton_website"
+git add -A # Add all changed files to the staging area
+git commit -m "Create Skeleton framework for LocalLibrary" # Commit the changed files
+git push origin skeleton_website # Push the branch to GitHub
+```
+
+The create and merge a PR from your GitHub repo.
+Note that if you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
+
+We won't necessarily mention this in future, but you may find it useful to create new branches at the end of each section in this tutorial.
 
 ## Challenge yourself
 
