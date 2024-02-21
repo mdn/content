@@ -32,13 +32,17 @@ A script example:
   {
     "prerender": [
       {
-        "source": "list",
-        "urls": ["extra.html", "extra2.html"]
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/logout" } },
+            { "not": { "selector_matches": ".no-prerender" } }
+          ]
+        }
       }
     ],
     "prefetch": [
       {
-        "source": "list",
         "urls": ["next.html", "next2.html"],
         "requires": ["anonymous-client-ip-when-cross-origin"],
         "referrer_policy": "no-referrer"
