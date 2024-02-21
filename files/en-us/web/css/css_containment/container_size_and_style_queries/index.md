@@ -89,7 +89,7 @@ Once you've added names to your `@container` at rules, you can use the {{cssxref
 }
 ```
 
-This example size query is limited to elements with a `container-name` of `card` applied to them. In this example, the styles within the container query style block will apply to the descendants of all {{htmlelement("li")}} elements nested within an element with a class of `cards` with a width that is greater than its height. Note that if there are other elements with `container-name: card` applied to them and that match the size query, the styles will be applied to those elements' descendants as well.
+This example size query is limited to elements with a `container-name` of `card` applied to them. In this example, the styles within the container query style block will apply to the descendants of all {{htmlelement("li")}} elements nested within an element with a class of `cards` with a width that is greater than their height. Note that if there are other elements with `container-name: card` applied to them that match the size query, the styles will also be applied to those elements' descendants.
 
 ```css
 @container wide (orientation: landscape) and (min-width: 20em) {
@@ -180,7 +180,7 @@ A few things to note that have already been mentioned but are important to remem
 - If you don't want an element to be considered as a container, ever, give it a `container-name` that will not be used. Setting `container-name: none` removes any query names associated with a container; it does not prevent the element from being a style container.
 - At the time of this writing (February 2024), container style queries only work with CSS custom property values in the `style()` query.
 
-Now, let's dive in and take a look at the different `<style-feature>` types:
+Now, let's dive in and take a look at the different `<style-feature>` types.
 
 ### Style queries for custom properties
 
@@ -200,7 +200,7 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 }
 ```
 
-In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}}.
+In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}} node.
 
 #### Registered properties
 
