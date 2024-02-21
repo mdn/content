@@ -24,6 +24,8 @@ The feature statuses of all the features documented on MDN are defined in its ac
 > **Warning:**
 > Do not manually update feature statuses in the `mdn/content` repository. To update a feature's status, you need to [submit a pull request](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md#updating-the-compat-data) in the BCD repository. After your changes are approved and merged in BCD, an [automated pull request](https://github.com/search?q=repo%3Amdn%2Fcontent+Synchronize+with+BCD&type=pullrequests) updates the statuses in the `mdn/content` repository.
 
+The automation uses [`browser-compat`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables#using_bcd_data_in_mdn_pages) key in the front-matter. The key stores BCD query required to locate the feature in the compatiblity data. If the `browser-compat` key has multiple values then the automation uses only the first value to render status macros.
+
 ## How are feature statuses specified in content?
 
 The following sections document mechanisms using which feature statuses are rendered in MDN documents. As mentioned, you should consider these mechanisms read-only as their inclusion in the content is automated.
