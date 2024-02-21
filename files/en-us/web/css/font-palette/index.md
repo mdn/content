@@ -52,6 +52,60 @@ This example allows you to use the first palette marked as _dark_ (works best on
 }
 ```
 
+### Animating between two palettes
+
+This example illustrates how `font-palette` values can be animated between to create a smooth font animation.
+
+#### HTML
+
+We'll start off with a simple paragraph of text to animate:
+
+```html
+<p>color-palette<br />animation</p>
+```
+
+#### CSS
+
+In the CSS, we import a color font from Google Fonts, and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then create {{cssxref("@keyframes")}} that animate between these two palettes, and apply this animation to our paragraph. Non-supporting browsers flip between the two palettes without animation.
+
+```css
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+
+@font-palette-values --blue {
+  font-family: Nabla;
+  base-palette: 2;
+}
+
+@font-palette-values --yellow {
+  font-family: Nabla;
+  base-palette: 7;
+}
+
+@keyframes animate-palette {
+  from {
+    font-palette: --yellow;
+  }
+
+  to {
+    font-palette: --blue;
+  }
+}
+
+p {
+  font-family: "Nabla";
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
+  animation: animate-palette 2s infinite alternate linear;
+}
+```
+
+#### Result
+
+The output looks like this:
+
+{{EmbedLiveSample("Animating between two palettes", "100%", 300)}}
+
 ## Specifications
 
 {{Specifications}}
