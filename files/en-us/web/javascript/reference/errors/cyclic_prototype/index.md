@@ -6,9 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "TypeError: can't set prototype: it would cause a prototype chain cycle"
-occurs when a given object's prototype is assigned to an object that has the given object in
-its [prototype chain](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_prototype_chain).
+The JavaScript exception "TypeError: can't set prototype: it would cause a prototype chain cycle" occurs when an object's prototype is set to an object such that the [prototype chain](/en-US/docs/Learn/JavaScript/Objects/Object_prototypes#the_prototype_chain) becomes circular (`a` and `b` both have each other in their prototype chains).
 
 ## Message
 
@@ -24,19 +22,19 @@ TypeError: cyclic __proto__ value (Safari)
 
 ## What went wrong?
 
-A loop, also called a cycle, was introduced in a prototype chain.
-That means that walking that prototype chain, the same places would have been
-accessed over and over again, instead of eventually reaching `null`.
+A loop, also called a cycle, was introduced in a prototype chain. That means that when walking this prototype chain, the same place would be accessed over and over again, instead of eventually reaching `null`.
+
+This error is thrown at the time of setting the prototype. In an operation like `Object.setPrototypeOf(a, b)`, if `a` already exists in the prototype chain of `b`, this error will be thrown.
 
 ## Examples
 
-```js-nolint example-bad
+```js example-bad
 const a = {};
 Object.setPrototypeOf(a, a);
 // TypeError: can't set prototype: it would cause a prototype chain cycle
 ```
 
-```js-nolint example-bad
+```js example-bad
 const a = {};
 const b = {};
 const c = {};
