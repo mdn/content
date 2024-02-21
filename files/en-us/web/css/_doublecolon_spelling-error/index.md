@@ -48,7 +48,7 @@ In this example, eventual supporting browsers should highlight any flagged spell
 
 ```css
 ::spelling-error {
-  text-decoration: wavy red;
+  text-decoration: wavy red underline;
 }
 ```
 
