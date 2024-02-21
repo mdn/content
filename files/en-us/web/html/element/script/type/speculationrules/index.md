@@ -11,7 +11,7 @@ browser-compat: html.elements.script.type.speculationrules
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
+Speculation rules take the form of a JSON structure that determine what links (documents pointed to by {{htmlelement("a")}} elements) should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 > **Note:** As an alternative, speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
 
@@ -39,7 +39,6 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
   {
     "prefetch": [
       {
-        "source": "list",
         "urls": ["next.html", "next2.html"],
         "requires": ["anonymous-client-ip-when-cross-origin"],
         "referrer_policy": "no-referrer"
@@ -54,8 +53,8 @@ A `<script type="speculationrules">` element must contain a valid JSON structure
   {
     "prerender": [
       {
-        "source": "list",
-        "urls": ["next3.html", "next4.html"]
+        "where": { "href_matches": "/next" },
+        "eagerness": "eager"
       }
     ]
   }
@@ -78,11 +77,25 @@ Each action field contains an array, which in turn contains one or more objects.
 Specifically, each object can contain the following properties:
 
 - `"source"`
-  - : A string representing the source of the URLs to which the rule applies. Possible values are:
+  - : A string representing the URLs to which the rule applies. This can be one of:
+    - `"document"`
+      - : Specifies that the URLs will be matched from links contained in the associated document, based on the conditions described by a `"where"` key. Note that the presence of a `"where"` key implies `"source": "document"`, so it is optional.
     - `"list"`
-      - : Denotes that the URLs will come from a specific list, which will be specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
+      - : Specifies that the URLs will come from a specific list, specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
 - `"urls"`
-  - : An array of strings representing a list of URLs to apply the rule to, in the case of a `"source": "list"` ruleset. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
+  - : An array of strings representing a list of URLs to apply the rule to, in the case of a `"source": "list"` rule. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
+- `"where"`
+
+  - : An object representing the conditions by which the rule matches URLs contained in the associated document, in the case of a `"source": "document"` rule. This object can contain exactly one of the following properties:
+
+    - `"href_matches"`: A string containing a URL pattern, or an array containing multiple URL pattern strings. Links in the document whose URLs match the pattern(s) will have the rule applied. URLs can be absolute or relative. Note that wildcard characters (`*`) can be used in URL patterns to match multiple similar URLs.
+    - `"selector_matches"`: A string containing a CSS selector, or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
+    - `"and"`: An array containing one or more objects containing conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`), all of which must match for the rule to be applied to them.
+    - `"not"`: An object containing one condition (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`) which, if it matches, will _not_ have the rule applied to it.
+    - `"or"`: An array containing one or more objects containing conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`), any of which can match for the rule to be applied to them.
+
+    `"where"` conditions can be nested multiple levels deep to create complex conditions, or you can choose to split them into separate rules to keep them simple. See [where examples](#where_examples) for multiple examples of use.
+
 - `"eagerness"`
 
   - : A string providing a hint to the browser as to how eagerly it should prefetch/preload link targets in order to balance performance advantages against resource overheads. Possible values are:
@@ -126,7 +139,6 @@ The basic examples shown in the description section included separate speculatio
   {
     "prefetch": [
       {
-        "source": "list",
         "urls": ["next.html", "next2.html"],
         "requires": ["anonymous-client-ip-when-cross-origin"],
         "referrer_policy": "no-referrer"
@@ -134,7 +146,6 @@ The basic examples shown in the description section included separate speculatio
     ],
     "prerender": [
       {
-        "source": "list",
         "urls": ["next3.html", "next4.html"]
       }
     ]
@@ -151,7 +162,6 @@ It is also allowable to include multiple sets of rules in a single HTML file:
   {
     "prefetch": [
       {
-        "source": "list",
         "urls": ["next.html", "next2.html"],
         "requires": ["anonymous-client-ip-when-cross-origin"],
         "referrer_policy": "no-referrer"
@@ -163,7 +173,6 @@ It is also allowable to include multiple sets of rules in a single HTML file:
   {
     "prerender": [
       {
-        "source": "list",
         "urls": ["next3.html", "next4.html"]
       }
     ]
@@ -178,11 +187,9 @@ And multiple rules in a single result set:
 {
   "prerender": [
     {
-      "source": "list",
       "urls": ["one.html"]
     },
     {
-      "source": "list",
       "urls": ["two.html"]
     }
   ]
@@ -204,7 +211,6 @@ if (
   const specRules = {
     prerender: [
       {
-        source: "list",
         urls: ["/next.html"],
       },
     ],
@@ -216,6 +222,62 @@ if (
 ```
 
 You can see this in action in this [prerender demos](https://prerender-demos.glitch.me/) page.
+
+### `where` examples
+
+A document-sourced rule contains a `"where"` property, which is equal to an object containing criteria that define which links in the document are matched and therefore have the speculation rule applied to them. The most basic version will match a single URL pattern or CSS selector:
+
+```json
+{ "where": { "href_matches": "/next" } }
+```
+
+```json
+{ "where": { "selector_matches": ".important-link" } }
+```
+
+`"href_matches"` and `"selector_matches"` can also be set equal to arrays of values, so multiple URL patterns or CSS selectors can be matched simultaneously:
+
+```json
+{ "where": { "href_matches": ["/next", "/profile"] } }
+```
+
+```json
+{ "where": { "selector_matches": [".important-link", "#unique-link"] } }
+```
+
+URL patterns can also contain wildcard (`*`) characters, allowing a single value to match multiple URLs. The following for example could match `user/`, `user/settings`, `user/stats`, etc.
+
+```json
+{ "where": { "href_matches": "/user/*" } }
+```
+
+Any condition can be negated by placing it inside a `"not"` condition — this means that, when matched, it _won't_ have the speculation rule applied to it. For example:
+
+```json
+{ "where": { "not": { "href_matches": "/logout" } } }
+```
+
+However, this isn't much use on its own, as by default links aren't prerendered or prefetched. `"not"` is useful when combined with other conditions inside `"and"` or `"or"` conditions — these take the value of arrays containing multiple conditions, all of any of which have to match for the speculation rules to apply to them.
+
+In the following complete speculation rule example, all same-origin pages are designated as safe-to-prerender, except those known to be problematic — the `/logout` page, and any links marked up with a class of `.no-prerender`:
+
+```html
+<script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/logout" } },
+            { "not": { "selector_matches": ".no-prerender" } }
+          ]
+        }
+      }
+    ]
+  }
+</script>
+```
 
 ### `"expects_no_vary_search"` example
 
