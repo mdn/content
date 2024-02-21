@@ -25,8 +25,7 @@ TypeError: cyclic __proto__ value (Safari)
 ## What went wrong?
 
 A loop, also called a cycle, was introduced in a prototype chain.
-That means that walking that prototype chain, the same places would have been accessed over and over again,
-instead of reaching `null`.
+That means that walking that prototype chain, the same places would have been accessed over and over again, instead of eventually reaching `null`.
 
 ## Examples
 
