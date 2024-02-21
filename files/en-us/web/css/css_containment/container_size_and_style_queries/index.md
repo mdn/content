@@ -190,6 +190,10 @@ Style queries for custom properties allow you to query the [custom properties](/
 
 The `<style-query>` parameter of the `style()` functional notation can include just a CSS variable name; a custom property with no value. When no value is included, the query will return false if the value is the same as the value of the `initial-value` descriptor within the `@property` at-rule, if there is one. The style query will return true and match all elements that have a custom property value that differs from the `initial-value` or for all elements that have a custom property of any value if the custom property was declared without being registered.
 
+##### Unregistered custom properties
+
+When CSS variables are introduced via a simple CSS custom property value assignment, valueless custom property queries always return true.
+
 ```css
 :root {
   --theme-color: rebeccapurple;
@@ -202,9 +206,9 @@ The `<style-query>` parameter of the `style()` functional notation can include j
 
 In this example, the container query matches the element on which the `--theme-color` property was declared and all of its descendants. As the CSS variable `--theme-color` was declared on the {{cssxref(":root")}}, the style query `style(--theme-color)` will be true for every element within that {{glossary("DOM")}} node.
 
-#### Registered properties
+##### Registered properties
 
-If explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}}, the style query `style(--theme-color)` will only be true for elements where the computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition. This is different from the example above in which the CSS variable was introduced via a simple CSS custom property value assignment; in that case querying that custom property will always return true.
+The behavior of registered custom properties is different. When explicitly defined with the {{cssxref("@property")}} CSS at-rule or via JavaScript with {{domxref('CSS/registerProperty_static', 'CSS.registerProperty()')}}, the style query `style(--theme-color)` only returns true for elements if the element's computed value for `--theme-color` is different from the [`initial-value`](/en-US/docs/Web/CSS/@property/initial-value) set in the original definition of that custom property.
 
 ```css
 @property --theme-color {
@@ -225,7 +229,7 @@ main {
 }
 ```
 
-In this example, the `:root` element would NOT match the style query as the custom property value for that element (and all the elements inheriting the value) is the same as the `initial-value` — both are `rebeccapurple`. Only elements that differ from the initial value, in this case the {{htmlelement("main")}} and its descendants that inherit that changed value, are a match.
+In this example, the `:root` element does NOT match the style query because the value of the custom property is the same as the `initial-value` value. The custom property value for the element (and all the elements inheriting the value) is still `rebeccapurple`. Only elements that differ from the initial value, in this case, the {{htmlelement("main")}} and its descendants that inherit that changed value, are a match.
 
 #### Custom property with a value
 
