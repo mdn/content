@@ -82,9 +82,20 @@ Specifically, each object can contain the following properties:
     - `"list"`
       - : Denotes that the URLs will come from a specific list, which will be specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
 - `"urls"`
-  - : An array of strings representing the list of URLs to apply the rule to. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
+  - : An array of strings representing a list of URLs to apply the rule to, in the case of a `"source": "list"` ruleset. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
+- `"eagerness"`
+
+  - : A string providing a hint to the browser as to how eagerly it should prefetch/preload link targets in order to balance performance advantages against resource overheads. Possible values are:
+
+    - `"immediate"`: The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/preload should start as soon as possible, subject only to considerations such as user preferences and resource limits.
+    - `"eager"`: The author wants to prefetch/preload a large number of navigations, as early as possible. Prefetch/preload should start on any slight suggestion that a link may be followed. For example, the user could move their mouse cursor towards the link, hover/focus it for a moment, or pause scrolling with the link in a prominent place.
+    - `"moderate"`: The author is looking for a balance between `eager` and `conservative`. Prefetch/preload should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
+    - `"conservative"`: The author wishes to get some benefit from speculative loading with a fairly small tradeoff of resources. Prefetch/preload should start only when the user is about to start activating a link.
+
+    If not specified, `"source": "list"` rules default to `immediate` and `"source": "document"` rules default to `conservative`. The browser takes this hint into consideration along with its own heuristics, so it may select a link that the author has hinted as less eager than another, if the less eager candidate is considered a better choice.
+
 - `"expects_no_vary_search"`
-  - : A string indicating to the browser what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/preload requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/preload to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
+  - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/preload requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/preload to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 - `"referrer_policy"`
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
 - `"requires"`
@@ -208,7 +219,7 @@ You can see this in action in this [prerender demos](https://prerender-demos.gli
 
 ### `"expects_no_vary_search"` example
 
-Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for caching purposes depends on the behavior of the application:
+Consider the case of a user directory landing page, `/users`, which has an `id` parameter added to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for caching purposes depends on the behavior of the application:
 
 1. If this parameter has the effect of loading a completely new page containing the information for the specified user, then the URL should be cached separately.
 2. If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then the URL should be considered the same for caching purposes. This could result in performance improvements around the loading of the user pages and could be achieved via a {{httpheader("No-Vary-Search")}} with a value of `params=("id")`.
@@ -228,9 +239,9 @@ How does this affect speculation rules? Consider the following code:
 <a href="/users?id=345">User Bob</a>
 ```
 
-What would happen if the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
+What would happen in this case when the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
 
-To solve this, we can provide a hint for as to what the page author expects the `No-Vary-Search` value to be. A rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
+To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
 
 ```html
 <script type="speculationrules">
@@ -247,6 +258,36 @@ To solve this, we can provide a hint for as to what the page author expects the 
 ```
 
 This indicates that Option 2 described above is what the server is expected to produce. If a navigation starts while there is an ongoing prefetch of `/users`, this informs the browser that it is appropriate to wait for the prefetch, instead of immediately starting another fetch for `/users?id=345`.
+
+### `eagerness` examples
+
+The following set of speculation rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prefetch/prerender each matching set of links.
+
+```html
+<script type="speculationrules">
+  {
+    "prefetch": [{ "urls": ["/next"], "eagerness": "immediate" }],
+    "prerender": [
+      { "urls": ["/next"], "eagerness": "eager" },
+      {
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "/logout" } }
+          ]
+        },
+        "eagerness": "conservative"
+      }
+    ]
+  }
+</script>
+```
+
+Here we are hinting that:
+
+- The `/next` URL (the next step on a user onboarding journey) is important so should be immediately prefetched.
+- The same URL should also be eagerly prerendered if the user makes any kind of move towards navigating to it.
+- All URLs contained in the document should be conservatively prerendered (i.e. when the user starts to activate them), except for the `/logout` URL. It is unlikely that the user would want to sign out while in the middle of their onboarding journey.
 
 ## Specifications
 
