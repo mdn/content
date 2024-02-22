@@ -1665,8 +1665,8 @@ The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText(
     </tr>
     <tr>
       <th>Beta</th>
+      <td>122</td>
       <td>Yes</td>
-      <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
