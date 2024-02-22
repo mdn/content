@@ -21,8 +21,8 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 > **Note:**
 > The `::-webkit-scrollbar` vendor-prefixed pseudo-elements are not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
 > The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support these pseudo-elements.
->
-> If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
+
+> **Note:** If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
 > See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
 
 ## CSS Scrollbar Selectors
