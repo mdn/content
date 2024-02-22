@@ -18,11 +18,10 @@ browser-compat:
 
 The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's scrollbar when it has scrollable overflow.
 
-> **Note:**
-> The `::-webkit-scrollbar` vendor-prefixed pseudo-elements are not supported on all browsers (see [Browser compatibility](#browser_compatibility)).
-> The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as an alternative for browsers that do not support these pseudo-elements.
+The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as alternatives for browsers that do not support this pseudo-element and the related `::-webkit-scrollbar-*` pseudo-elements (see [Browser compatibility](#browser_compatibility)).
 
-> **Note:** If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
+> **Note:**
+> If {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are supported and have any value other than `auto` set, they will override `::-webkit-scrollbar-*` styling.
 > See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
 
 ## CSS Scrollbar Selectors
@@ -41,7 +40,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 ## Accessibility concerns
 
-Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default breaks [external consistency](https://inclusivedesignprinciples.org/#be-consistent) negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
+Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default [breaks external consistency](https://inclusivedesignprinciples.org/#be-consistent) which negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
 
 ## Examples
 
@@ -109,7 +108,7 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 
 #### Result
 
-{{EmbedLiveSample("styling_scrollbars_using_-webkit-scrollbar")}}
+{{EmbedLiveSample("styling_scrollbars_using_-webkit-scrollbar", 600, 300)}}
 
 ### Adding a fallback for scrollbar styles
 
@@ -143,7 +142,7 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 .scrollbox {
   overflow: auto;
   width: 20rem;
-  height: 4rem;
+  height: 5rem;
   border: 2px solid cornflowerblue;
   margin: 2rem auto;
   font-family: monospace;
@@ -171,6 +170,8 @@ The following example shows how to apply colors to scrollbars using {{cssxref("s
 
 #### Result
 
+In the example below, you can scroll the bordered box vertically to see the effect of styling the scrollbar.
+
 {{EmbedLiveSample("adding_a_fallback_to_standard_scrollbar_style_properties")}}
 
 ## Specifications
@@ -185,5 +186,6 @@ Not part of any standard.
 
 - {{CSSxRef("scrollbar-width")}}
 - {{CSSxRef("scrollbar-color")}}
+- [Don't use custom scrollbars](https://ericwbailey.website/published/dont-use-custom-css-scrollbars/) (2023)
 - [Scrollbar styling](https://developer.chrome.com/docs/css-ui/scrollbar-styling) on developer.chrome.com (2024)
 - [Styling Scrollbars](https://webkit.org/blog/363/styling-scrollbars/) on WebKit.org (2009)
