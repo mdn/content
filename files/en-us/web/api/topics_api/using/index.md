@@ -35,15 +35,15 @@ If the `<iframe>` content from `ad-tech1.example` implements a [feature that ena
 
 On an ongoing basis, the browser will:
 
-1. Keeps track of how often the user observes each topic during each new **epoch**. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints)).
+1. Keep track of how often the user observes each topic during each new **epoch**. An epoch is a week by default, but the length can be altered for testing purposes (see [Testing hints](#testing_hints)).
 
-2. Selects a topic for each user, for each epoch, using the following algorithm:
+2. Select a topic for each user, for each epoch, using the following algorithm:
 
    1. It makes a list of the top five observed topics. If the number of topics observed was fewer than 5, it adds random topics from the taxonomy to make the number up to five.
    2. It chooses one of the top five topics at random.
    3. There is a 5% chance that the chosen topic will be replaced with a completely random topic. However, this random topic will only be used if the ad tech platform has previously observed that topic for the user.
 
-3. Returns up to three **chosen topics** to `ad-tech1.example` (the chosen topics for the last three epochs), only if they appear in the list of caller domains for that topic, as stored in the topic's history entry.
+3. Return up to three **chosen topics** (the chosen topics for the last three epochs) to `ad-tech1.example`, only if `ad-tech1.example` appears in the list of caller domains for each topic, as stored in the topic's history entry.
 
    > **Note:** Initially, no topics are returned, so the `<iframe>` will likely display a default non-targeted ad. However, once the end of the first epoch is reached, the API will start to return topics and `ad-tech1.example` can start to show more relevant ads based on the observed topics for the current user.
 
@@ -57,10 +57,19 @@ The following features all serve a dual purpose — they trigger the browser to 
 
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
-- You can set a `browsingtopics` attribute (or set the equivalent {{domxref("HTMLIFrameElement.browsingTopics")}} property to `true`) directly on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. For example:
+- You can set a `browsingtopics` attribute on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. This could be done:
+
+  - Declaratively on the HTML:
 
   ```html
   <iframe browsingtopics src="ad-tech1.example"> ... </iframe>
+  ```
+
+  - Programmatically by setting the equivalent {{domxref("HTMLIFrameElement.browsingTopics")}} property to `true`:
+
+  ```js
+  const iframeElem = document.querySelector("iframe");
+  iframeElem.browsingTopics = true;
   ```
 
 When the request associated with one of the above features is sent:
@@ -73,7 +82,7 @@ When the request associated with one of the above features is sent:
 
 ### The `browsingTopics()` method
 
-Alternatively, the embedded `<iframe>` can call {{domxref("Document.browsingTopics()")}} to return a user's current chosen topic(s), which can then be returned to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, but is somewhat less performant. You are advised to use one of the HTTP header methods listed above, falling back to `browsingTopics()` only in situations where the headers cannot be used.
+Alternatively, the embedded `<iframe>` can call {{domxref("Document.browsingTopics()")}} to return a user's current chosen topic(s), which can then be returned to the ad tech platform in a subsequent fetch request. This does not rely on the HTTP headers, but is somewhat less performant. You are advised to use one of the HTTP header methods listed above, falling back to `browsingTopics()` only in situations where the headers cannot be modified.
 
 > **Note:** Because the `browsingTopics()` method does not rely on the HTTP headers, the {{httpheader("Observe-Browsing-Topics")}} header is not used for setting the topics as observed and recording/updating topics history entries; the browser does this automatically when the method is called.
 
