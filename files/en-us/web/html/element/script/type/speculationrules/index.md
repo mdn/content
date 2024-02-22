@@ -89,6 +89,7 @@ Specifically, each object can contain the following properties:
   - : An object representing the conditions by which the rule matches URLs contained in the associated document, in the case of a `"source": "document"` rule. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it. This object can contain exactly one of the following properties:
 
     - `"href_matches"`: A string containing a URL pattern, or an array containing multiple URL pattern strings, which follow the standard [URL Pattern API syntax](/en-US/docs/Web/API/URL_Pattern_API). Links in the document whose URLs match the pattern(s) will have the rule applied.
+    - `"relative_to"`: In the case of an `"href_matches"` condition, this can specify where you want that condition to be matched relative to. This works in exactly the same way as the rule-level [`"relative_to"`](/en-US/docs/Web/HTML/Element/script/type/speculationrules#relative_to) key, except that it only affects a single `"href_matches"` condition inside a `"where"` key.
     - `"selector_matches"`: A string containing a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors), or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
     - `"and"`: An array containing one or more objects containing conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`), all of which must match for the rule to be applied to them.
     - `"not"`: An object containing one condition (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`) which, if it matches, will _not_ have the rule applied to it. All links that _do not_ match the condition _will_ have the rule applied.
@@ -103,7 +104,7 @@ Specifically, each object can contain the following properties:
     - `"immediate"`: The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/prerender should start as soon as possible, subject only to considerations such as user preferences and resource limits.
     - `"eager"`: The author wants to prefetch/prerender a large number of navigations, as early as possible. Prefetch/prerender should start on any slight suggestion that a link may be followed. For example, the user could move their mouse cursor towards the link, hover/focus it for a moment, or pause scrolling with the link in a prominent place.
     - `"moderate"`: The author is looking for a balance between `eager` and `conservative`. Prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
-    - `"conservative"`: The author wishes to get some benefit from speculative loading with a fairly small tradeoff of resources. Prefetch/prerender should start only when the user is about to start activating a link.
+    - `"conservative"`: The author wishes to get some benefit from speculative loading with a fairly small tradeoff of resources. Prefetch/prerender should start only when the user is about to start clicking on the link, for example on {{domxref("Element.mousedown_event", "mousedown")}} or {{domxref("Element.pointerdown_event", "pointerdown")}}.
 
     If not specified, `"source": "list"` rules default to `immediate` and `"source": "document"` rules default to `conservative`. The browser takes this hint into consideration along with its own heuristics, so it may select a link that the author has hinted as less eager than another, if the less eager candidate is considered a better choice.
 
@@ -111,6 +112,15 @@ Specifically, each object can contain the following properties:
   - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 - `"referrer_policy"`
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
+- `"relative_to"`
+
+  - : A string specifying where you want links matched by URL to be matched relative to. The value can be one of:
+
+    - `document`: URLs should be matched relative to the document the speculation rules are being set on.
+    - `ruleset`: URLs should be matched relative to the file the rules are specified in. This is the default value.
+
+    When rules are specified inside the same document they are being set for (i.e. in an inline `<script>` element), this key setting makes no different. It is significant when the rules are contained in an external file (i.e. as is the case when using the {{httpheader("Speculation-Rules")}} header to specify rules).
+
 - `"requires"`
 
   - : An array of strings representing capabilities of the browser parsing the rule, which must be available if the rule is to be applied to the specified URLs.
@@ -298,6 +308,32 @@ In the following complete speculation rule example, all same-origin pages are ma
 ```
 
 > **Note:** The `where` pattern above excludes cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
+
+### `"relative_to"` example
+
+For rule sets that are externally fetched (i.e. via the {{httpheader("Speculation-Rules")}}) response header, URLs in list rules and URL patterns in document rules are parsed relative to the containing external text file's URL. To parse URLs in a list rule relative to the document's base URL, `"relative_to"` is used like this:
+
+```json
+{
+  "urls": ["/home", "/about"],
+  "relative_to": "document"
+}
+```
+
+For document rules, `"relative_to"` can be paired directly with `"href_matches"` and the document's base URL would only be used for patterns in that particular condition:
+
+```json
+{
+  "where": {
+    "or": [
+      { "href_matches": "/home", "relative_to": "document" },
+      { "href_matches": "/about" }
+    ]
+  }
+}
+```
+
+In the above example, only the first `"href_matches"` will be matched relative to the document's base URL.
 
 ### `"expects_no_vary_search"` example
 
