@@ -17,6 +17,9 @@ font-palette: normal;
 
 /* Using a user-defined palette */
 font-palette: --one;
+
+/* Creating a new palette by blending two others */
+font-palette: palette-mix(in lch, --blue, --yellow);
 ```
 
 ### Values
@@ -29,6 +32,8 @@ font-palette: --one;
   - : Specifies the first palette in the font that matches 'dark' to be used for the font. Some fonts contain metadata that identify a palette as applicable for a dark (close to black) background. If a font does not have this metadata, the value behaves as `normal`.
 - `<palette-identifier>`
   - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
+- {{cssxref("font-palette/palette-mix", "palette-mix()")}}
+  - : Creates a new `font-palette` value by blending together two existing `font-palette` values in specified percentages, and according to a specified color intepolation method.
 
 ## Formal definition
 
@@ -116,6 +121,7 @@ The output looks like this:
 
 ## See also
 
+- {{cssxref("font-palette/palette-mix","palette-mix()")}}
 - {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}} descriptor
 - {{cssxref("@font-palette-values/font-family", "font-family")}} descriptor
