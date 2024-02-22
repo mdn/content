@@ -471,7 +471,7 @@ We'll also configure the default database and collect static files so that they 
    python manage.py migrate
    ```
 
-   > **Note:** For the Railway example we will [Configure a Postgres database](/en-US/docs/Learn/Server-side/Django/Deployment#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
+   > **Note:** For the Railway example we will [Configure a Postgres database](#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
    > It is important that `migrate` is called _after_ configuring what database to use database.
 
 7. Collect all the static files into a location where they can be [served in production](#serving_static_files_in_production):
@@ -561,7 +561,7 @@ After getting the local library sources and installing the dependencies in a vir
    ![PythonAnywhere Static files section of Web tab](python_anywhere_web_static_files.png)
 
    Select the **Enter URL** link and enter `\static_files\`.
-   This is the `STATIC_URL` in the [application settings](/en-US/docs/Learn/Server-side/Django/Deployment#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
+   This is the `STATIC_URL` in the [application settings](#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
 
 9. Near the top of the _Web_ tab select the **Reload** button to restart the site.
    Then then select the site URL link to launch the live site:
@@ -576,7 +576,7 @@ This is a Django security error that is raised because our source code is not ru
 ![A detailed error page with a full traceback of an invalid HTTP_HOST header](python_anywhere_error_disallowed_host.png)
 
 > **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
-> In the next section we'll show you how to disable this level of logging on the live site using [environment variables](/en-US/docs/Learn/Server-side/Django/Deployment#using_environment_variables_on_pythonanywhere).
+> In the next section we'll show you how to disable this level of logging on the live site using [environment variables](#using_environment_variables_on_pythonanywhere).
 
 Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/4.2/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
 
@@ -618,7 +618,7 @@ You should be able to log in with the superuser account you created above, and c
 
 ### Using environment variables on PythonAnywhere
 
-In the section on [Getting your website ready to publish](/en-US/docs/Learn/Server-side/Django/Deployment#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables in production.
+In the section on [Getting your website ready to publish](#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables in production.
 
 Specifically we set up the library so that you can set:
 
