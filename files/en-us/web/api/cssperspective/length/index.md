@@ -16,7 +16,7 @@ value is 0 or a negative number, no perspective transform is applied.
 
 ## Value
 
-A {{domxref("CSSNumericValue")}}
+A {{domxref("CSSUnitValue")}}
 
 ## Examples
 
