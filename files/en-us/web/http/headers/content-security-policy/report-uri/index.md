@@ -15,9 +15,8 @@ attempts to violate the Content Security Policy. These violation reports consist
 documents sent via an HTTP POST request to the specified URI.
 
 > **Warning:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive,
-> {{CSP("report-to")}} isn't supported in most browsers yet.
-> So for compatibility with current browsers
-> while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
+> {{CSP("report-to")}} is not yet supported by Firefox.
+> So for compatibility with Firefox
 > you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
 > ```http

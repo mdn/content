@@ -5,21 +5,18 @@
  */
 
 import fs from "node:fs/promises";
-import path from "node:path";
 import {
   execGit,
   getRootDir,
   walkSync,
-  isImagePath,
   getLocations,
   IMG_RX,
   stringToFragment,
 } from "./utils.js";
 
-const rootDir = getRootDir();
-const argLength = process.argv.length;
 const deletedSlugs = [];
-const fragmentDetails = [];
+const addedFragmentDetails = [];
+let deletedFragmentDetails = [];
 let isAllOk = true;
 
 function getDeletedSlugs() {
@@ -63,18 +60,27 @@ function getFragmentDetails(fromStaging = true) {
         .substring(0, segment.indexOf(" "))
         .replaceAll(/files\/en-us\/|\/index.md/gm, "");
 
-      const headerRx = /^-#+ .*$/gm;
-      const fragments = [...segment.matchAll(headerRx)]
+      const addedHeaderRx = /^\+#+ .*$/gm;
+      const addedFragments = [...segment.matchAll(addedHeaderRx)]
         .map((match) => match[0].toLowerCase())
-        .map((header) => header.replace(/-#+ /g, ""))
+        .map((header) => header.replace(/\+#+ /g, ""))
         .map((header) => stringToFragment(header));
 
-      for (const fragment of fragments) {
-        fragmentDetails.push(`${path}#${fragment}`);
-      }
+      const removedHeaderRx = /^-#+ .*$/gm;
+      [...segment.matchAll(removedHeaderRx)]
+        .map((match) => match[0].toLowerCase())
+        .map((header) => header.replace(/-#+ /g, ""))
+        .map((header) => stringToFragment(header))
+        .filter((header) => !addedFragments.includes(header))
+        .forEach((header) => deletedFragmentDetails.push(`${path}#${header}`));
+
+      addedFragments.forEach((header) =>
+        addedFragmentDetails.push(`${path}#${header}`),
+      );
     }
   }
-  console.log("fragmentDetails", fragmentDetails);
+
+  console.log("deletedFragmentDetails", deletedFragmentDetails);
 }
 
 if (process.argv[2] !== "--workflow") {
@@ -84,7 +90,11 @@ if (process.argv[2] !== "--workflow") {
   getFragmentDetails(false);
 }
 
-if (deletedSlugs.length < 1 && fragmentDetails.length < 1) {
+deletedFragmentDetails = deletedFragmentDetails.filter(
+  (fragment) => !addedFragmentDetails.includes(fragment),
+);
+
+if (deletedSlugs.length < 1 && deletedFragmentDetails.length < 1) {
   console.log("Nothing to check. 🎉");
   process.exit(0);
 }
@@ -97,12 +107,12 @@ for await (const filePath of walkSync(getRootDir())) {
 
       // check deleted links
       for (const slug of deletedSlugs) {
-        isAllOk = false;
         const locations = getLocations(
           content,
           new RegExp(`/${slug}[)># \"']`, "mig"),
         );
         if (locations.length) {
+          isAllOk = false;
           for (const location of locations) {
             console.error(
               `ERROR:${relativePath}:${location.line}:${location.column}:Slug '${slug}' has been deleted`,
@@ -112,15 +122,15 @@ for await (const filePath of walkSync(getRootDir())) {
       }
 
       // check broken URL fragment
-      for (const fragment of fragmentDetails) {
-        isAllOk = false;
+      for (const fragment of deletedFragmentDetails) {
         const locations = getLocations(content, fragment);
         // check fragments in the same file
         const urlParts = fragment.split("#");
-        if (filePath.includes(urlParts[0])) {
-          locations.push(...getLocations(content, urlParts[1]));
+        if (filePath.includes(`${urlParts[0]}/index.md`)) {
+          locations.push(...getLocations(content, `[(]#${urlParts[1]}`));
         }
         if (locations.length) {
+          isAllOk = false;
           for (const location of locations) {
             console.error(
               `ERROR:${relativePath}:${location.line}:${location.column}:URL fragment in URL '${fragment}' is broken`,
