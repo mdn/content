@@ -64,10 +64,8 @@ The Topics API has no distinct interfaces of its own.
 
 To use the Topics API in your sites, you must specify it in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the following sub-features won't work:
 
-- The {{domxref("Document.browsingTopics()")}} method
-  - : The promise returned by `browsingTopics()` rejects with a `NotAllowedError` {{domxref("DOMException")}}.
-- The {{httpheader("Sec-Browsing-Topics")}} header
-  - : Creating or modifying the header fails silently, and any existing `Sec-Browsing-Topics` header is deleted.
+- The promise returned by {{domxref("Document.browsingTopics()")}} method will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+- Creating or modifying the {{httpheader("Sec-Browsing-Topics")}} header will fail silently, and any existing `Sec-Browsing-Topics` header will be deleted.
 
 ## Examples
 
