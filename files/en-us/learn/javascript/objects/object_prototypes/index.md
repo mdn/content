@@ -143,6 +143,8 @@ This should be predictable, given the description of the prototype chain. When w
 
 This is called "shadowing" the property.
 
+(Note: `getYear()` is deprecated, a suitable alternative is `getFullYear()`.)
+
 ## Setting a prototype
 
 There are various ways of setting an object's prototype in JavaScript, and here we'll describe two: `Object.create()` and constructors.
