@@ -22,13 +22,13 @@ new CSSPerspective(length)
 
 - {{domxref('CSSPerspective.length','length')}}
   - : A value for the distance from z=0 of the {{domxref('CSSPerspective')}} object to be
-    constructed. This must be a {{cssxref('length')}}.
+    constructed. This must be a {{cssxref('length')}} of type {{cssxref('CSSUnitValue')}}.
 
 ### Exceptions
 
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
   - : Raised if the value of `CSSPerspective.length` exists but is not a
-    {{cssxref('length')}}.
+    {{cssxref('CSSUnitValue')}}.
 
 ## Examples
 
