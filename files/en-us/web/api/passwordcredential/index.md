@@ -9,7 +9,7 @@ browser-compat: api.PasswordCredential
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{securecontext_header}}
 
-The interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the `credential` member of the `init` object for global {{domxref('fetch()')}}.
+The **`PasswordCredential`** interface of the [Credential Management API](/en-US/docs/Web/API/Credential_Management_API) provides information about a username/password pair. In supporting browsers an instance of this class may be passed in the `credential` member of the `init` object for global {{domxref('fetch()')}}.
 
 > **Note:** This interface is restricted to top-level contexts and cannot be used from an {{HTMLElement("iframe")}}.
 

@@ -173,7 +173,7 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
 
-- {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}} {{Experimental_Inline}}
+- {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}}
 
   - : Controls whether the current document is allowed to use [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API) to indicate that device should not turn off or dim the screen.
 
