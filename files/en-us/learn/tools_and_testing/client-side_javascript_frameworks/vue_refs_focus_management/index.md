@@ -1,5 +1,5 @@
 ---
-title: Focus management with Vue refs
+title: Vue refs and lifecycle methods for focus management
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
 page-type: learn-module-chapter
 ---
