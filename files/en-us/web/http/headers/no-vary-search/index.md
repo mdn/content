@@ -12,7 +12,7 @@ spec-urls: https://wicg.github.io/nav-speculation/no-vary-search.html
 
 The **`No-Vary-Search`** response header specifies a set of rules that define how a URL's query parameters will affect cache matching. These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
 
-> **Note:** [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) can include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/preload requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/preload to finish, or start a new fetch request when the speculation rule is matched.
+> **Note:** [Speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) can include an `expects_no_vary_search` field, which indicates to the browser what the expected `No-Vary-Search` value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched.
 
 <table class="properties">
   <tbody>
@@ -49,7 +49,31 @@ No-Vary-Search: params, except=("param1" "param2")
 
 ## Examples
 
-### Considering whether a user `id` param affects caching
+### Stopping parameter order from causing additional cache entries
+
+If you have for example a search page that stores its search criteria in URL parameters, and you can't guarantee that the parameters will be added to the URL in the same order each time, you can stop additional cache entries arising from URLs that are identical except for the order of the parameters using `key-order`:
+
+```html
+No-Vary-Search: key-order
+```
+
+When added to the associated request responses, this would cause the following URLs to only produce a single cache entry:
+
+```text
+search.example.com?a=1&b=2&c=3
+search.example.com?b=2&a=1&c=3
+```
+
+The prescence of different URL parameters, however, will cause multiple cache entries. For example:
+
+```text
+search.example.com?a=1&b=2&c=3
+search.example.com?b=2&a=1&c=3&d=4
+```
+
+The below examples illustrate how to control which parameters cause additional cache entries, and which are ignored in this context.
+
+### Stopping a user `id` param from affects caching
 
 Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for caching purposes depends on the behavior of the application:
 
@@ -62,7 +86,7 @@ If your application behaves like the second example described above, you could c
 No-Vary-Search: params=("id")
 ```
 
-### Multiple parameters
+### Stopping multiple parameters from causing additional cache entries
 
 Say you also had URL parameters that sorted the list of users on the page in ascending or descending alphabetical order, and specified the language to display the UI strings in, for example `/users?id=345&order=asc&lang=fr`.
 

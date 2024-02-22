@@ -11,7 +11,7 @@ browser-compat: html.elements.script.type.speculationrules
 
 The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Element/script) indicates that the body of the element contains speculation rules.
 
-Speculation rules take the form of a JSON structure that determine what links (documents pointed to by {{htmlelement("a")}} elements) should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
+Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
 > **Note:** As an alternative, speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
 
@@ -79,36 +79,36 @@ Specifically, each object can contain the following properties:
 - `"source"`
   - : A string representing the URLs to which the rule applies. This can be one of:
     - `"document"`
-      - : Specifies that the URLs will be matched from links contained in the associated document, based on the conditions described by a `"where"` key. Note that the presence of a `"where"` key implies `"source": "document"`, so it is optional.
+      - : Specifies that the URLs will be matched from links contained in the associated document (i.e. pointed to by {{htmlelement("a")}} and {{htmlelement("area")}} elements), based on the conditions described by a `"where"` key. Note that the presence of a `"where"` key implies `"source": "document"`, so it is optional.
     - `"list"`
-      - : Specifies that the URLs will come from a specific list, specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
+      - : Specifies that the URLs will come from a list, specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
 - `"urls"`
   - : An array of strings representing a list of URLs to apply the rule to, in the case of a `"source": "list"` rule. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
 - `"where"`
 
-  - : An object representing the conditions by which the rule matches URLs contained in the associated document, in the case of a `"source": "document"` rule. This object can contain exactly one of the following properties:
+  - : An object representing the conditions by which the rule matches URLs contained in the associated document, in the case of a `"source": "document"` rule. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it. This object can contain exactly one of the following properties:
 
-    - `"href_matches"`: A string containing a URL pattern, or an array containing multiple URL pattern strings. Links in the document whose URLs match the pattern(s) will have the rule applied. URLs can be absolute or relative. Note that wildcard characters (`*`) can be used in URL patterns to match multiple similar URLs.
-    - `"selector_matches"`: A string containing a CSS selector, or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
+    - `"href_matches"`: A string containing a URL pattern, or an array containing multiple URL pattern strings, which follow the standard [URL Pattern API syntax](/en-US/docs/Web/API/URL_Pattern_API). Links in the document whose URLs match the pattern(s) will have the rule applied.
+    - `"selector_matches"`: A string containing a [CSS selector](/en-US/docs/Web/CSS/CSS_selectors), or an array containing multiple CSS selectors. Links in the document matched by those selectors will have the rule applied.
     - `"and"`: An array containing one or more objects containing conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`), all of which must match for the rule to be applied to them.
-    - `"not"`: An object containing one condition (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`) which, if it matches, will _not_ have the rule applied to it.
+    - `"not"`: An object containing one condition (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`) which, if it matches, will _not_ have the rule applied to it. All links that _do not_ match the condition _will_ have the rule applied.
     - `"or"`: An array containing one or more objects containing conditions (`"href_matches"`, `"selector_matches"`, `"and"`, `"not"`, or `"or"`), any of which can match for the rule to be applied to them.
 
-    `"where"` conditions can be nested multiple levels deep to create complex conditions, or you can choose to split them into separate rules to keep them simple. See [where examples](#where_examples) for multiple examples of use.
+    `"where"` conditions can be nested multiple levels deep to create complex conditions, or you can choose to split them into separate rules to keep them simple. See [where examples](#where_examples) for more explanation, and multiple examples of use.
 
 - `"eagerness"`
 
-  - : A string providing a hint to the browser as to how eagerly it should prefetch/preload link targets in order to balance performance advantages against resource overheads. Possible values are:
+  - : A string providing a hint to the browser as to how eagerly it should prefetch/prerender link targets in order to balance performance advantages against resource overheads. Possible values are:
 
-    - `"immediate"`: The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/preload should start as soon as possible, subject only to considerations such as user preferences and resource limits.
-    - `"eager"`: The author wants to prefetch/preload a large number of navigations, as early as possible. Prefetch/preload should start on any slight suggestion that a link may be followed. For example, the user could move their mouse cursor towards the link, hover/focus it for a moment, or pause scrolling with the link in a prominent place.
-    - `"moderate"`: The author is looking for a balance between `eager` and `conservative`. Prefetch/preload should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
-    - `"conservative"`: The author wishes to get some benefit from speculative loading with a fairly small tradeoff of resources. Prefetch/preload should start only when the user is about to start activating a link.
+    - `"immediate"`: The author thinks the link is very likely to be followed, and/or the document may take significant time to fetch. Prefetch/prerender should start as soon as possible, subject only to considerations such as user preferences and resource limits.
+    - `"eager"`: The author wants to prefetch/prerender a large number of navigations, as early as possible. Prefetch/prerender should start on any slight suggestion that a link may be followed. For example, the user could move their mouse cursor towards the link, hover/focus it for a moment, or pause scrolling with the link in a prominent place.
+    - `"moderate"`: The author is looking for a balance between `eager` and `conservative`. Prefetch/prerender should start when there is a reasonable suggestion that the user will follow a link in the near future. For example, the user could scroll a link into the viewport and hover/focus it for some time.
+    - `"conservative"`: The author wishes to get some benefit from speculative loading with a fairly small tradeoff of resources. Prefetch/prerender should start only when the user is about to start activating a link.
 
     If not specified, `"source": "list"` rules default to `immediate` and `"source": "document"` rules default to `conservative`. The browser takes this hint into consideration along with its own heuristics, so it may select a link that the author has hinted as less eager than another, if the less eager candidate is considered a better choice.
 
 - `"expects_no_vary_search"`
-  - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/preload requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/preload to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
+  - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 - `"referrer_policy"`
   - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
 - `"requires"`
@@ -225,7 +225,9 @@ You can see this in action in this [prerender demos](https://prerender-demos.gli
 
 ### `where` examples
 
-A document-sourced rule contains a `"where"` property, which is equal to an object containing criteria that define which links in the document are matched and therefore have the speculation rule applied to them. The most basic version will match a single URL pattern or CSS selector:
+A document-sourced rule contains a `"where"` property, which is equal to an object containing criteria that define which links in the document are matched. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it.
+
+The most basic version will match a single URL pattern or CSS selector:
 
 ```json
 { "where": { "href_matches": "/next" } }
@@ -245,26 +247,42 @@ A document-sourced rule contains a `"where"` property, which is equal to an obje
 { "where": { "selector_matches": [".important-link", "#unique-link"] } }
 ```
 
-URL patterns can also contain wildcard (`*`) characters, allowing a single value to match multiple URLs. The following for example could match `user/`, `user/settings`, `user/stats`, etc.
+URL patterns and selectors can also contain wildcard (`*`) characters, allowing a single value to match multiple URLs. The following for example could match `user/`, `user/settings`, `user/stats`, etc.
 
 ```json
 { "where": { "href_matches": "/user/*" } }
 ```
 
-Any condition can be negated by placing it inside a `"not"` condition — this means that, when matched, it _won't_ have the speculation rule applied to it. For example:
+Any condition can be negated by placing it inside a `"not"` condition — this means that, when matched, a link _won't_ have the speculation rule applied to it, but when _not_ matched, it _will_. The following example will cause all links that _don't_ match the URL pattern `/logout` to have the rule applied to them, but not links that match `/logout`:
 
 ```json
 { "where": { "not": { "href_matches": "/logout" } } }
 ```
 
-However, this isn't much use on its own, as by default links aren't prerendered or prefetched. `"not"` is useful when combined with other conditions inside `"and"` or `"or"` conditions — these take the value of arrays containing multiple conditions, all of any of which have to match for the speculation rules to apply to them.
+#### Combining multiple `"where"` conditions with `"and"` or `"or"`
 
-In the following complete speculation rule example, all same-origin pages are designated as safe-to-prerender, except those known to be problematic — the `/logout` page, and any links marked up with a class of `.no-prerender`:
+Multiple conditions can be combined inside `"and"` or `"or"` conditions — these take the value of arrays containing multiple conditions, all or any of which (respectively) have to match for the speculation rules to apply to a link. Using `"and"` or `"or"`, conditions can be nested multiple levels deep — there is no specified limit on allowed nesting levels.
+
+It is useful to think of the `"where"` object as being equivalent to an `if` statement. So
+
+```text
+{ and: [A, B, { or: [C, { not: D }] }] }
+```
+
+is equivalent to
+
+```text
+if (A && B && (C || !D)) {
+  apply speculation rule
+}
+```
+
+In the following complete speculation rule example, all same-origin pages are marked for prefetching except those known to be problematic — the `/logout` page, and any links marked up with a class of `.no-prerender`:
 
 ```html
 <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
         "where": {
           "and": [
@@ -278,6 +296,8 @@ In the following complete speculation rule example, all same-origin pages are de
   }
 </script>
 ```
+
+> **Note:** The `where` pattern above excludes cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
 
 ### `"expects_no_vary_search"` example
 
@@ -321,24 +341,21 @@ To solve this, we can provide a hint as to what the page author expects the `No-
 
 This indicates that Option 2 described above is what the server is expected to produce. If a navigation starts while there is an ongoing prefetch of `/users`, this informs the browser that it is appropriate to wait for the prefetch, instead of immediately starting another fetch for `/users?id=345`.
 
-### `eagerness` examples
+### `eagerness` example
 
-The following set of speculation rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prefetch/prerender each matching set of links.
+The following set of speculation rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prerender each matching set of links.
 
 ```html
 <script type="speculationrules">
   {
-    "prefetch": [{ "urls": ["/next"], "eagerness": "immediate" }],
     "prerender": [
-      { "urls": ["/next"], "eagerness": "eager" },
       {
-        "where": {
-          "and": [
-            { "href_matches": "/*" },
-            { "not": { "href_matches": "/logout" } }
-          ]
-        },
+        "where": { "href_matches": "/*" },
         "eagerness": "conservative"
+      },
+      {
+        "where": { "selector_matches": ".product-link" },
+        "eagerness": "eager"
       }
     ]
   }
@@ -347,9 +364,8 @@ The following set of speculation rules shows how `eagerness` can be used to hint
 
 Here we are hinting that:
 
-- The `/next` URL (the next step on a user onboarding journey) is important so should be immediately prefetched.
-- The same URL should also be eagerly prerendered if the user makes any kind of move towards navigating to it.
-- All URLs contained in the document should be conservatively prerendered (i.e. when the user starts to activate them), except for the `/logout` URL. It is unlikely that the user would want to sign out while in the middle of their onboarding journey.
+- All same-site links contained in the document should be conservatively prerendered (i.e. when the user starts to activate them).
+- Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e. if the user makes any kind of move towards navigating to them).
 
 ## Specifications
 

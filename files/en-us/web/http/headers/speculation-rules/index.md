@@ -9,7 +9,7 @@ browser-compat: http.headers.Speculation-Rules
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-The **`Speculation-Rules`** response header provides a list of URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
+The **`Speculation-Rules`** response header provides one or more URLs pointing to text resources containing speculation rule JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set. See the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) for more information.
 
 The text resource containing the speculation rules JSON can have any valid name and extension, but it must be served with an `application/speculationrules+json` MIME type.
 
