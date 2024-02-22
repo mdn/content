@@ -162,6 +162,8 @@ The `Content-Length` header indicates the size of the body, and the `Content-Typ
 
 > **Note:** You can find this example on GitHub — see [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
+> **Note:** The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
+
 ### Viewing HTTP requests
 
 HTTP requests are never displayed to the user (if you want to see them, you need to use tools such as the [Firefox Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) or the [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)). As an example, your form data will be shown as follows in the Chrome Network tab. After submitting the form:
@@ -180,8 +182,6 @@ The only thing displayed to the user is the URL called. As we mentioned above, w
 
 1. If you need to send a password (or any other sensitive piece of data), never use the `GET` method or you risk displaying it in the URL bar, which would be very insecure.
 2. If you need to send a large amount of data, the `POST` method is preferred because some browsers limit the sizes of URLs. In addition, many servers limit the length of URLs they accept.
-
-> **Note:** The `GET` method will be used instead if the `action` URL scheme cannot handle a request body, e.g. `data:`.
 
 ## On the server side: retrieving the data
 
