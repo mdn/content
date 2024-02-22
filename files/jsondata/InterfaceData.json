@@ -692,8 +692,8 @@
       "inh": "CSSTransformComponent",
       "impl": []
     },
-    "CSSPositionFallbackRule": {
-      "inh": "CSSGroupingRule",
+    "CSSPositionTryRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSPropertyRule": {
@@ -778,10 +778,6 @@
     },
     "CSSTranslate": {
       "inh": "CSSTransformComponent",
-      "impl": []
-    },
-    "CSSTryRule": {
-      "inh": "CSSRule",
       "impl": []
     },
     "CSSUnitValue": {
@@ -1193,6 +1189,10 @@
       "impl": []
     },
     "FontMetrics": {
+      "inh": "",
+      "impl": []
+    },
+    "ForDebuggingOnly": {
       "inh": "",
       "impl": []
     },
@@ -1880,8 +1880,12 @@
       "inh": "",
       "impl": []
     },
-    "InterestGroupBiddingScriptRunnerGlobalScope": {
+    "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
       "inh": "InterestGroupScriptRunnerGlobalScope",
+      "impl": []
+    },
+    "InterestGroupBiddingScriptRunnerGlobalScope": {
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupReportingScriptRunnerGlobalScope": {
@@ -1889,7 +1893,7 @@
       "impl": []
     },
     "InterestGroupScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
+      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
       "impl": []
     },
     "InterestGroupScriptRunnerGlobalScope": {
@@ -2181,10 +2185,6 @@
       "impl": []
     },
     "MLActivation": {
-      "inh": "",
-      "impl": []
-    },
-    "MLCommandEncoder": {
       "inh": "",
       "impl": []
     },
@@ -2638,6 +2638,10 @@
     },
     "PromiseRejectionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "ProtectedAudience": {
+      "inh": "",
       "impl": []
     },
     "ProximitySensor": {
