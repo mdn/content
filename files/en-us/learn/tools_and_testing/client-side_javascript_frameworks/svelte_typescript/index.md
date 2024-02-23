@@ -585,7 +585,7 @@ Let's fix it.
    To fix it, replace `tabindex="-1"` with `tabindex={-1}`, like this:
 
    ```svelte
-   <h2 id="list-heading" bind:this="{headingEl}" tabindex={-1}>
+   <h2 id="list-heading" bind:this={headingEl} tabindex={-1}>
      {completedTodos} out of {totalTodos} items completed
    </h2>
    ```
@@ -821,7 +821,7 @@ Our stores have already been ported to TypeScript, but we can do better. We shou
 
 ### Understanding TypeScript generics
 
-Generics allow us to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified between angle brackets, and by convention are denoted with an upper-cased single char letter. Generic types allow us to capture the types provided by the user to be used later.
+Generics allow you to create reusable code components that work with a variety of types instead of a single type. They can be applied to interfaces, classes, and functions. Generic types are passed as parameters using a special syntax: they are specified within angle brackets and are conventionally denoted with a single uppercase letter. Generic types allow you to capture the types provided by the user, ensuring they're available for future processing.
 
 Let's see a quick example, a simple `Stack` class that lets us `push` and `pop` elements, like this:
 
