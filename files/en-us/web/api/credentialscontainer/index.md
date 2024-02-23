@@ -24,12 +24,6 @@ None.
 - {{domxref("CredentialsContainer.store()")}}
   - : Stores a set of credentials for a user, inside a provided {{domxref("Credential")}} instance and returns that instance in a {{jsxref("Promise")}}.
 
-## Examples
-
-```js
-// TBD
-```
-
 ## Specifications
 
 {{Specifications}}

@@ -122,7 +122,7 @@ If you're interested in helping develop/improve the content, take a look at [how
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://twitter.com/JeremiePat).
+  - : A great series of videos explaining web fundamentals, aimed at absolute beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
 - [Codecademy](https://www.codecademy.com/)
   - : A great interactive site for learning programming languages from scratch.
 - [BitDegree](https://www.bitdegree.org/learn/)

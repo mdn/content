@@ -246,7 +246,7 @@ There are many other server-side technologies you can use for form handling, inc
 - Node.js
   - [Express](/en-US/docs/Learn/Server-side/Express_Nodejs)
   - [Next.js](https://nextjs.org/) (for React apps)
-  - [Nuxt](https://nuxtjs.org/) (for Vue apps)
+  - [Nuxt](https://nuxt.com/) (for Vue apps)
   - [Remix](https://remix.run/)
 - PHP
   - [Laravel](https://laravel.com/)

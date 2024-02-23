@@ -17,9 +17,9 @@ The `-moz-orient` property is specified as one of the keyword values chosen from
 
 ### Values
 
-- `inline`
+- `inline` {{non-standard_inline}}
   - : The element is rendered in the same direction as the axis of the text: horizontally for horizontal writing modes, vertically for vertical writing modes.
-- `block`
+- `block` {{non-standard_inline}}
   - : The element is rendered orthogonally to the axis of the text: vertically for horizontal writing modes, horizontal for vertical writing modes.
 - `horizontal`
   - : The element is rendered horizontally.
