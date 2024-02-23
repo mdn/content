@@ -57,7 +57,8 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
   overflow: auto;
   height: 2em;
   padding: 1em;
-  margin: auto;
+  margin: 1em auto;
+  outline: 2px dashed #ccc;
 }
 
 .invisible-scrollbar::-webkit-scrollbar {
