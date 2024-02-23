@@ -36,9 +36,9 @@ The `text-wrap` property is specified as a single keyword chosen from the list o
 
 ### Values
 
-- `wrap` {{experimental_inline}}
+- `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
-- `nowrap` {{experimental_inline}}
+- `nowrap`
   - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
 - `balance`
   - : Text is wrapped in a way that best balances the number of characters on each line, enhancing layout quality and legibility. Because counting characters and balancing them across multiple lines is computationally expensive, this value is only supported for blocks of text spanning a limited number of lines (six or less for Chromium and ten or less for Firefox).
