@@ -129,7 +129,7 @@ Here is a service worker code example showing how to listen to a server's Push m
 
 ```js
 // Listen to "push" events in the service worker.
-self.addEventListener("push", (event) => {
+self.addEventListener("push", async (event) => {
   // Extract the unread count from the push message data.
   const message = event.data.json();
   const unreadCount = message.unreadCount;
@@ -142,8 +142,10 @@ self.addEventListener("push", (event) => {
       navigator.clearAppBadge();
     }
   }
-  // ⚠️ Obligatory, but skipped for brevity:
-  // show the notification to the user.
+  // It's obligatory to show the notification to the user.
+  navigator.serviceWorker.ready.then((registration) => {
+    registration.showNotification(`${unreadCount} unread messages`);
+  });
 });
 ```
 
