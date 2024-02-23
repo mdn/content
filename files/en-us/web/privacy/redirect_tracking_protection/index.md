@@ -4,8 +4,6 @@ slug: Web/Privacy/Redirect_tracking_protection
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
-
 Firefox 79+ protects users against redirect tracking by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
@@ -75,3 +73,7 @@ WebKit first shipped redirect tracking protection in [ITP 2.0](https://webkit.or
 - The list of origins to be cleared in Firefox is based on our [tracking protection list](/en-US/docs/Web/Privacy/Storage_Access_Policy#tracking_protection_explained); WebKit relies on ITP's classification.
 - Firefox's definition of "interaction" includes user scrolling when visiting the origin as a first party; WebKit's does not.
 - Firefox will not clear data for an origin if it has received interaction as a first party in the last 45 days of calendar time; WebKit's interaction window is 30 days of browser use (e.g. days in which the user has had at least one interaction with Safari).
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>
