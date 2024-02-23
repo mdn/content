@@ -103,14 +103,14 @@ This section briefly explains how you can check what versions of Python are pres
 
 > **Note:** Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
 
-### Ubuntu 20.04
+### Ubuntu 22.04
 
-Ubuntu Linux 20.04 LTS includes Python 3.8.10 by default.
+Ubuntu Linux 22.04 LTS includes Python 3.10.12 by default.
 You can confirm this by running the following command in the bash terminal:
 
 ```bash
 python3 -V
-# Output: Python 3.8.10
+# Output: Python 3.10.12
 ```
 
 However, the Python Package Index tool (_pip3_) you'll need to install packages for Python 3 (including Django) is **not** available by default.
@@ -120,9 +120,8 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
-> **Note:** Python 3.8 is the oldest version [supported by Django 4.2](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
-> While Django recommend you update to the latest version, you don't _need_ to use the latest version for this tutorial.
-> If you want to update Python, then there are instructions on the internet.
+> **Note:** Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
+> You don't _need_ to use the latest version of Python for this tutorial, but if you want to there are instructions on the internet.
 
 ### macOS
 
@@ -140,8 +139,8 @@ You can easily install Python 3 (along with the _pip3_ tool) from [python.org](h
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/macos/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Locate the file using _Finder_, and double-click the package file. Following the installation prompts.
 
@@ -160,8 +159,8 @@ Windows doesn't include Python by default, but you can easily install it (along 
 1. Download the required installer:
 
    1. Go to <https://www.python.org/downloads/windows/>
-   2. Download the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 4.2.
-      (at time of writing this is Python 3.11.4).
+   2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
+      (at time of writing this is Python 3.11.8).
 
 2. Install Python by double-clicking on the downloaded file and following the installation prompts
 3. Be sure to check the box labeled "Add Python to PATH"
