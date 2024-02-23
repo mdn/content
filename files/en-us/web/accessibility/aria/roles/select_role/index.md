@@ -21,7 +21,7 @@ Do not use.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `composite` role](/en-US/docs/Web/Accessibility/ARIA/Roles/composite_role)
 - [ARIA: `group` role](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role)

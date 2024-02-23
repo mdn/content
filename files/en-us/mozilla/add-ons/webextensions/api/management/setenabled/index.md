@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.setEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Enables or disables the given add-on.
 

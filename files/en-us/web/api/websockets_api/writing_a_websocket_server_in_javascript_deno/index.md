@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
 

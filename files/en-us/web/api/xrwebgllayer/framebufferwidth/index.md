@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.framebufferWidth
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebufferWidth`** specifies the width of the framebuffer,

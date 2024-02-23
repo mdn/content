@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLElement.hidePopover
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Popover API")}}
 
 The **`hidePopover()`** method of the {{domxref("HTMLElement")}} interface hides a [popover](/en-US/docs/Web/API/Popover_API) element (i.e. one that has a valid [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) attribute) by removing it from the {{glossary("top layer")}} and styling it with `display: none`.
 
@@ -33,9 +33,11 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Hiding a popover
+
 The following example provides functionality to hide a popover by pressing a particular key on the keyboard.
 
-### HTML
+#### HTML
 
 ```html
 <button popovertarget="mypopover">Toggle popover's display</button>
@@ -44,7 +46,7 @@ The following example provides functionality to hide a popover by pressing a par
 </div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -56,9 +58,9 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("","100%",100)}}
+{{EmbedLiveSample("Hiding a popover","100%",100)}}
 
 ## Specifications
 

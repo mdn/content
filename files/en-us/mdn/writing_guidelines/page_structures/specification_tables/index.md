@@ -49,7 +49,7 @@ The specifications table for the `css.property.text-align` key above is rendered
 
 When documenting a non-standard feature, in particular one that has been removed from a standardization track, don't call the `\{{Specifications}}` macro.
 
-Instead, try to provide information about the standardization status and possible alternatives. Examples:
+Instead, try to provide information about the feature status and possible alternatives. Examples:
 
 - This method is no longer on a standardization track. It is kept for compatibility purposes. Use the _this other method_ instead.
 - This method was originally a part of [DOM Level 2 Traversal and Range](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/), but is absent in the current DOM specification. This feature is no longer on track to become a standard.

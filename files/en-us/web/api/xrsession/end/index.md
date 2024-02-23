@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.end
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`end()`** method shuts down the
 {{domxref("XRSession")}} on which it's called, returning a promise which resolves once

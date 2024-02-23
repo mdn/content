@@ -55,7 +55,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
-  - : Support for `-moz-calc` has been added. This lets you specify `{{cssxref("&lt;length&gt;")}}` values as mathematical expressions.
+  - : Support for `-moz-calc` has been added. This lets you specify {{cssxref("length")}} values as mathematical expressions.
 - Selector grouping
   - : Support for `:-moz-any` to group selectors and factorize combinators.
 - Background image subrectangle support
@@ -187,7 +187,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td><code>-moz-calc</code></td>
       <td>
         Lets you specify
-        {{cssxref("&lt;length&gt;")}} values as
+        {{cssxref("length")}} values as
         mathematical expressions.
       </td>
     </tr>
@@ -224,7 +224,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
 - The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
-- Gecko's handling of [CSS units](/en-US/docs/Web/CSS/length) has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
+- Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
 
@@ -365,22 +365,22 @@ If you're a theme developer, you should read [Theme changes in Firefox 4](/en-US
 
 #### Changes to the tabbrowser element
 
-Several changes were made to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element that impact extensions that interact with tabs. In addition to supporting app tabs, these changes also change the tab bar into a standard toolbar, which lets the user drag toolbar buttons into it.
+Several changes were made to the `<xul:tabbrowser>` element that impact extensions that interact with tabs. In addition to supporting app tabs, these changes also change the tab bar into a standard toolbar, which lets the user drag toolbar buttons into it.
 
-- The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
-- The tab context menu is no longer an anonymous child of the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser). It can therefore be overlaid directly with [XUL overlays](/en-US/docs/XUL_Overlays). It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
-- The new [`visibleTabs`](/en-US/docs/XUL/Property/visibleTabs) property was added to let you get an array of the currently visible tabs; this lets you determine which tabs are visible in the current tab set. This is used by Firefox Panorama, for example.
-- Added the new [`showOnlyTheseTabs`](/en-US/docs/Mozilla/Tech/XUL/Method/showOnlyTheseTabs) method; this is used by Firefox Panorama.
-- Added the new [`getIcon`](/en-US/docs/Mozilla/Tech/XUL/Method/getIcon) method, which lets you get a tab's favicon without having to pull up the [`<xul:browser>`](/en-US/docs/Mozilla/Tech/XUL/browser) element.
-- Added the new [`tabbrowser.tabs`](/en-US/docs/XUL/Property/tabbrowser.tabs) property, which lets you easily get a list of the tabs in a [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element.
-- The new [`pinTab`](/en-US/docs/Mozilla/Tech/XUL/Method/pinTab) and [`unpinTab`](/en-US/docs/Mozilla/Tech/XUL/Method/unpinTab) methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).
-- Added the [`getTabModalPromptBox`](/en-US/docs/Mozilla/Tech/XUL/Method/getTabModalPromptBox) method and [`tabmodalPromptShowing`](/en-US/docs/Mozilla/Tech/XUL/Attribute/tabmodalPromptShowing) attribute to the [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) to support tab-modal alerts.
+- The `TabClose`, `TabSelect`, and `TabOpen` events no longer bubble up to the `<xul:tabbrowser>` element (`gBrowser`). Event listeners for those events should be added to `gBrowser.tabContainer` rather than to `gBrowser` directly.
+- The tab context menu is no longer an anonymous child of the `<xul:tabbrowser>`. It can therefore be overlaid directly with XUL overlays. It can also be accessed more directly in JavaScript via `gBrowser.tabContextMenu`. See [this blog post](https://gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
+- The new `visibleTabs` property was added to let you get an array of the currently visible tabs; this lets you determine which tabs are visible in the current tab set. This is used by Firefox Panorama, for example.
+- Added the new `showOnlyTheseTabs` method; this is used by Firefox Panorama.
+- Added the new `getIcon` method, which lets you get a tab's favicon without having to pull up the `<xul:browser>` element.
+- Added the new `tabbrowser.tabs` property, which lets you easily get a list of the tabs in a `<xul:tabbrowser>` element.
+- The new `pinTab` and `unpinTab` methods let you pin and unpin tabs (that is, switch them between being app tabs and regular tabs).
+- Added the `getTabModalPromptBox` method and `tabmodalPromptShowing` attribute to the `<xul:tabbrowser>` to support tab-modal alerts.
 
 #### Changes to popups
 
-- The [`<xul:popup>`](/en-US/docs/Mozilla/Tech/XUL/popup) element is no longer supported; you should use [`<xul:menupopup>`](/en-US/docs/Mozilla/Tech/XUL/menupopup) instead. (If you continue using `popup`, you will encounter glitches, since the element has no special meaning anymore. For example, [`<xul:menuseparator>`](/en-US/docs/Mozilla/Tech/XUL/menuseparator) can appear transparent when used in a [`<xul:popup>`](/en-US/docs/Mozilla/Tech/XUL/popup).)
-- The [`<xul:menupopup>`](/en-US/docs/Mozilla/Tech/XUL/menupopup) XUL element now has a [`triggerNode`](/en-US/docs/XUL/Property/triggerNode) property, which indicates the node on which the event occurred that caused the popup to open. This also required the addition of a trigger event parameter to the [`openPopup`](/en-US/docs/Mozilla/Tech/XUL/Method/openPopup) method. Also, the [`anchorNode`](/en-US/docs/XUL/Property/anchorNode) property has been added; it returns the anchor specified when the popup was created.
-- The [`<xul:panel>`](/en-US/docs/Mozilla/Tech/XUL/panel) element now offers [`fade`](/en-US/docs/Mozilla/Tech/XUL/Attribute/fade) and [`flip`](/en-US/docs/Mozilla/Tech/XUL/Attribute/flip) attributes, which are used to configure the behavior of new "arrow" style notification panels.
+- The `<xul:popup>` element is no longer supported; you should use `<xul:menupopup>` instead. (If you continue using `popup`, you will encounter glitches, since the element has no special meaning anymore. For example, `<xul:menuseparator>` can appear transparent when used in a `<xul:popup>`.)
+- The `<xul:menupopup>` XUL element now has a `triggerNode` property, which indicates the node on which the event occurred that caused the popup to open. This also required the addition of a trigger event parameter to the `openPopup` method. Also, the `anchorNode` property has been added; it returns the anchor specified when the popup was created.
+- The `<xul:panel>` element now offers `fade` and `flip` attributes, which are used to configure the behavior of new "arrow" style notification panels.
 
 #### Remote XUL support removed
 
@@ -388,33 +388,33 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 
 #### Miscellaneous XUL changes
 
-- The `readonly` attribute now correctly works for [XBL fields](/en-US/docs/XBL/XBL_1.0_Reference/Elements#field).
-- The [`<xul:resizer>`](/en-US/docs/Mozilla/Tech/XUL/resizer) element now lets you use the [`element`](/en-US/docs/Mozilla/Tech/XUL/Attribute/element) attribute to specify an element to resize, instead of resizing the window.
-- The [`<xul:resizer>`](/en-US/docs/Mozilla/Tech/XUL/resizer) element now has an [`type`](/en-US/docs/Mozilla/Tech/XUL/Attribute/resizer.type) attribute that lets you specify that the resizer is for a window instead of an element, to prevent the window resizer from being drawn twice.
-- The "active" attribute no longer gets set on active XUL windows. Instead, you can use the new [`:-moz-window-inactive`](/en-US/docs/Web/CSS/:-moz-window-inactive) pseudoclass in order to assign different styles to background windows.
-- The [`emptytext`](/en-US/docs/Mozilla/Tech/XUL/Attribute/emptytext) attribute is now deprecated; you should use [`placeholder`](/en-US/docs/Mozilla/Tech/XUL/Attribute/placeholder) instead.
-- The [`<xul:window>`](/en-US/docs/Mozilla/Tech/XUL/window) element now offers a [`accelerated`](/en-US/docs/Mozilla/Tech/XUL/Attribute/accelerated) attribute; when true, the hardware layer manager is permitted to accelerate the window.
-- The [`<xul:stack>`](/en-US/docs/Mozilla/Tech/XUL/stack) element now supports the [`bottom`](/en-US/docs/Mozilla/Tech/XUL/Attribute/bottom) and [`right`](/en-US/docs/Mozilla/Tech/XUL/Attribute/right) attributes.
-- Events are now fired during [`<xul:toolbox>`](/en-US/docs/Mozilla/Tech/XUL/toolbox) customization, allowing you to [detect changes to toolbars](/en-US/docs/XUL/Toolbars/Toolbar_customization_events).
-- The [`alternatingbackground`](/en-US/docs/Mozilla/Tech/XUL/Attribute/alternatingbackground) attribute for [`<xul:tree>`](/en-US/docs/Mozilla/Tech/XUL/tree) elements is no longer supported; you can use the [`:-moz-tree-row`](/en-US/docs/Web/CSS/:-moz-tree-row) pseudo-class instead.
+- The `readonly` attribute now correctly works for XBL fields.
+- The `<xul:resizer>` element now lets you use the `element` attribute to specify an element to resize, instead of resizing the window.
+- The `<xul:resizer>` element now has a `type` attribute that lets you specify that the resizer is for a window instead of an element, to prevent the window resizer from being drawn twice.
+- The `"active"` attribute no longer gets set on active XUL windows. Instead, you can use the new `:-moz-window-inactive` pseudoclass in order to assign different styles to background windows.
+- The `emptytext` attribute is now deprecated; you should use `placeholder` instead.
+- The `<xul:window>` element now offers an `accelerated` attribute; when true, the hardware layer manager is permitted to accelerate the window.
+- The `<xul:stack>` element now supports the `bottom` and `right` attributes.
+- Events are now fired during `<xul:toolbox>` customization, allowing you to detect changes to toolbars.
+- The `alternatingbackground` attribute for `<xul:tree>` elements is no longer supported; you can use the `:-moz-tree-row` pseudo-class instead.
 - The Bookmarks Toolbar overflow button with anonid chevronPopup is no longer anonymous; it has an ID of "PlacesChevron".
-- The [`<xul:tabs>`](/en-US/docs/Mozilla/Tech/XUL/tabs) element now has a [`tabbox`](/en-US/docs/XUL/Property/tabbox) property, replacing the old `_tabbox` property, which has been deprecated (and was never documented).
-- XUL [`<xul:window>`](/en-US/docs/Mozilla/Tech/XUL/window) elements now have the [`drawintitlebar`](/en-US/docs/Mozilla/Tech/XUL/Attribute/drawintitlebar) attribute; if this is `true`, the window's content area includes the title bar, allowing drawing into the title bar.
-- New `TabPinned` and `TabUnpinned` events are available, allowing you to [detect when tabs are pinned and unpinned](/../../../../en-US/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab_is_pinned_or_unpinned).
-- The new [`TabAttrModified` event](/en-US/docs/Code_snippets/Tabbed_browser#Notification_when_a_tab%27s_attributes_change) is sent when a tab's [`label`](/en-US/docs/Mozilla/Tech/XUL/Attribute/label), [`crop`](/en-US/docs/Mozilla/Tech/XUL/Attribute/crop), [`busy`](/en-US/docs/Mozilla/Tech/XUL/Attribute/busy), [`image`](/en-US/docs/Mozilla/Tech/XUL/Attribute/image), or [`selected`](/en-US/docs/Mozilla/Tech/XUL/Attribute/selected) attributes change.
-- [`<xul:tab>`](/en-US/docs/Mozilla/Tech/XUL/tab) elements now have a [`pinned`](/en-US/docs/Mozilla/Tech/XUL/Attribute/pinned) attribute, letting you determine whether or not a tab is currently pinned.
-- The `setDirectionIndicator` class on [`<xul:tree>`](/en-US/docs/Mozilla/Tech/XUL/tree) elements hasn't done anything for some time now; now it's not used at all anymore.
-- The [`<xul:window>`](/en-US/docs/Mozilla/Tech/XUL/window) element now has a [`chromemargin`](/en-US/docs/Mozilla/Tech/XUL/Attribute/chromemargin) attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.
-- The [`<xul:window>`](/en-US/docs/Mozilla/Tech/XUL/window) element now has a [`disablechrome`](/en-US/docs/Mozilla/Tech/XUL/Attribute/disablechrome) attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as `about:addons`.
-- The [`<xul:window>`](/en-US/docs/Mozilla/Tech/XUL/window) element now has a [`disablefastfind`](/en-US/docs/Mozilla/Tech/XUL/Attribute/disablefastfind) attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.
-- Toolbars can now be external to toolboxes, while still being considered a member of the [`<xul:toolbox>`](/en-US/docs/Mozilla/Tech/XUL/toolbox), by setting the [`toolboxid`](/en-US/docs/XUL/Property/toolboxid) property of the [`<xul:toolbar>`](/en-US/docs/Mozilla/Tech/XUL/toolbar). Also, the [`<xul:toolbox>`](/en-US/docs/Mozilla/Tech/XUL/toolbox) element now has a [`externalToolbars`](/en-US/docs/XUL/Property/externalToolbars) property, which lists all the toolbars that are considered members of the toolbox.
-- Support has been added for [logging XUL templates](/en-US/docs/XUL/Template_Guide/Template_Logging) for debugging purposes.
+- The `<xul:tabs>` element now has a `tabbox` property, replacing the old `_tabbox` property, which has been deprecated (and was never documented).
+- XUL `<xul:window>` elements now have the `drawintitlebar` attribute; if this is `true`, the window's content area includes the title bar, allowing drawing into the title bar.
+- New `TabPinned` and `TabUnpinned` events are available, allowing you to detect when tabs are pinned and unpinned.
+- The new `TabAttrModified` event is sent when a tab's `label`, `crop`, `busy`, `image`, or `selected` attributes change.
+- `<xul:tab>` elements now have a `pinned` attribute, letting you determine whether or not a tab is currently pinned.
+- The `setDirectionIndicator` class on `<xul:tree> elements hasn't done anything for some time now; now it's not used at all anymore.
+- The `<xul:window>` element now has a `chromemargin` attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.
+- The `<xul:window>` element now has a `disablechrome` attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as `about:addons`.
+- The `<xul:window>` element now has a `disablefastfind` attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.
+- Toolbars can now be external to toolboxes, while still being considered a member of the `<xul:toolbox>`, by setting the `toolboxid` property of the `<xul:toolbar>`. Also, the `<xul:toolbox>` element now has a `externalToolbars` property, which lists all the toolbars that are considered members of the toolbox.
+- Support has been added for logging XUL templates for debugging purposes.
 
 ### UI changes affecting developers
 
 - [The add-on bar](/en-US/docs/Mozilla/Firefox/Releases/4/The_add-on_bar)
   - : The status bar has been removed in favor of the new add-on bar. You'll need to update your extension to use this if you've been adding UI to the status bar in the past.
-- [Hiding browser chrome](/en-US/docs/Hiding_browser_chrome)
+- Hiding browser chrome
   - : You can now hide the browser's chrome when it's desirable to do so; for example, `about:addons` does this.
 
 ### Storage
