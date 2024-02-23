@@ -1,9 +1,9 @@
----
+tab---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
 page-type: http-status-code
 browser-compat: http.status.308
----
+-esc--
 
 {{HTTPSidebar}}
 
@@ -24,9 +24,9 @@ incorrectly sometimes be changed to a {{HTTPMethod("GET")}} method.
 
 ## Status
 
-```http
+`tab``http
 308 Permanent Redirect
-```
+`esc``
 
 ## Specifications
 
