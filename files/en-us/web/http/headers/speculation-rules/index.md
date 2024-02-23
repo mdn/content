@@ -44,13 +44,13 @@ Speculation-Rules: <url-list>
 Single speculation rules file reference:
 
 ```http
-Speculation-Rules: "./rules/prefetch.json"
+Speculation-Rules: "/rules/prefetch.json"
 ```
 
 Multiple speculation rules file references:
 
 ```http
-Speculation-Rules: "./rules/prefetch.json","./rules/prerender.json"
+Speculation-Rules: "/rules/prefetch.json","/rules/prerender.json"
 ```
 
 > **Note:** The URL values must be contained in quotes.

@@ -111,7 +111,11 @@ Specifically, each object can contain the following properties:
 - `"expects_no_vary_search"`
   - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
 - `"referrer_policy"`
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will not override a stricter policy set on the referring page.
+
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case (meaning, at least as strict as the default `"strict-origin-when-cross-origin"` value, so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`).
+
+    > **Note:** In the case of document rules, the matched link's specified referrer policy (e.g. using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
+
 - `"relative_to"`
 
   - : A string specifying where you want links matched by URL to be matched relative to. The value can be one of:
@@ -119,7 +123,7 @@ Specifically, each object can contain the following properties:
     - `document`: URLs should be matched relative to the document the speculation rules are being set on.
     - `ruleset`: URLs should be matched relative to the file the rules are specified in. This is the default value.
 
-    When rules are specified inside the same document they are being set for (i.e. in an inline `<script>` element), this key setting makes no different. It is significant when the rules are contained in an external file (i.e. as is the case when using the {{httpheader("Speculation-Rules")}} header to specify rules).
+    When rules are specified inside the same document they are being set for (i.e. in an inline `<script>` element), this key setting makes no difference. It is significant when the rules are contained in an external file (i.e. as is the case when using the {{httpheader("Speculation-Rules")}} header to specify rules).
 
 - `"requires"`
 
@@ -379,7 +383,7 @@ This indicates that Option 2 described above is what the server is expected to p
 
 ### `eagerness` example
 
-The following set of speculation rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prerender each matching set of links.
+The following set of document rules shows how `eagerness` can be used to hint at the eagerness with which the browser should prerender each matching set of links.
 
 ```html
 <script type="speculationrules">
@@ -402,6 +406,8 @@ Here we are hinting that:
 
 - All same-site links contained in the document should be conservatively prerendered (i.e. when the user starts to activate them).
 - Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e. if the user makes any kind of move towards navigating to them).
+
+> **Note:** The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and for these you are more likely to use document rules to find them on the page.
 
 ## Specifications
 

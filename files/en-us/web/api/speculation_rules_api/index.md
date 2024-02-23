@@ -57,7 +57,7 @@ Speculation rules using a `<script>` element need to be explicitly allowed in th
 An HTTP header example:
 
 ```http
-Speculation-Rules: ./rules/prefetch.json
+Speculation-Rules: "/rules/prefetch.json"
 ```
 
 The text resource containing the speculation rules JSON can have any valid name and extension, but it must be served with an `application/speculationrules+json` MIME type.
