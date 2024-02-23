@@ -58,8 +58,7 @@ At the end of this article, we discuss other site-wide configuration you might a
 To create the project:
 
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
-2. Navigate to the folder where you want to store your local library application.
-   This should be the folder named "django_local_library" that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
+2. Navigate to the folder where you want to create your local library application (later on we'll move it to the "django_local_library" that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment).
 3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
 
    ```bash
@@ -67,24 +66,18 @@ To create the project:
    cd locallibrary
    ```
 
-The `django-admin` tool creates a folder/file structure as follows:
+   The `django-admin` tool creates a folder/file structure as follows:
 
-```bash
-locallibrary/
-    manage.py
-    locallibrary/
-        __init__.py
-        settings.py
-        urls.py
-        wsgi.py
-        asgi.py
-```
-
-Our current working directory should look something like this:
-
-```bash
-../django_local_library/locallibrary/
-```
+   ```bash
+   locallibrary/
+       manage.py
+       locallibrary/
+           __init__.py
+           settings.py
+           urls.py
+           wsgi.py
+           asgi.py
+   ```
 
 The _locallibrary_ project sub-folder is the entry point for the website:
 
@@ -345,20 +338,34 @@ At this point, we know that Django is working!
 
 ## Don't forget to backup to Github
 
-We've just done some significant work, so now is a good time to backup the project.
-You can use a similar set of commands to those in the [Modify and sync changes](/en-US/docs/Learn/Server-side/Django/development_environment#modify_and_sync_changes) section of the _Development environment_ topic:
+We've just done some significant work, so now is a good time to backup the project using GitHub.
+
+First copy the _content_ of the top level **locallibrary** folder into the "django_local_library" folder that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
+This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else in the top level folder.
+
+Then add and commit the changes in the **django_local_library** folder and push them to GitHub.
+From the root of that folder, you can use a similar set of commands to those in the [Modify and sync changes](/en-US/docs/Learn/Server-side/Django/development_environment#modify_and_sync_changes) section of the _Development environment_ topic:
 
 ```bash
+git checkout main
+git pull origin main
 git checkout -b skeleton_website # Create and activate a new branch "skeleton_website"
 git add -A # Add all changed files to the staging area
 git commit -m "Create Skeleton framework for LocalLibrary" # Commit the changed files
 git push origin skeleton_website # Push the branch to GitHub
 ```
 
-The create and merge a PR from your GitHub repo.
-Note that if you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
+Then create and merge a PR from your GitHub repo.
+After merging you can switch back to the `main` branch and pull your changes from GitHub:
 
-We won't necessarily mention this in future, but you may find it useful to create new branches at the end of each section in this tutorial.
+```bash
+git checkout main
+git pull origin main
+```
+
+> **Note:** If you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
+
+We won't necessarily mention this again in future, but you may find it useful to update GitHub with your changes at the end of each section in this tutorial.
 
 ## Challenge yourself
 
