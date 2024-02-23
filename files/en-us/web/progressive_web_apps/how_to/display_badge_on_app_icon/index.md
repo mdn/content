@@ -120,6 +120,7 @@ PWAs can use the following mechanisms to update in the background and display, u
 
 - [Push API](/en-US/docs/Web/API/Push_API)
   - : PWAs can use this API to receive messages from a server even when the app is not running. Most browsers require a notification to be displayed whenever a push message is received. This is fine for some use cases (for example, showing a notification when updating the badge), but makes it impossible to subtly update the badge without displaying a notification. In addition, users must grant your site notification permission in order to receive push messages.
+    For more information, see the [ServiceWorkerRegistration: showNotification() method](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
   - : PWAs can use this API to run code in the background when a stable network connection is detected.
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
