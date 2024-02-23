@@ -143,7 +143,7 @@ self.addEventListener("push", (event) => {
       navigator.clearAppBadge();
     }
   }
-  // It's obligatory to show the notification to the user.  
+  // It's obligatory to show the notification to the user.
   self.registration.showNotification(`${unreadCount} unread messages`);
 });
 ```
