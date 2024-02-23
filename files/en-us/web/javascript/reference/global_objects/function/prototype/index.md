@@ -17,7 +17,7 @@ An object.
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **Note:** The `prototype` property of [classes](/en-US/docs/Web/JavaScript/Reference/Classes) is not writable.
+> **Note:** [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are a type of function, so most of the same rules apply. However, the `prototype` property of a `class` is not directly accessible or modifiable from within an instance of that class.
 
 ## Description
 
