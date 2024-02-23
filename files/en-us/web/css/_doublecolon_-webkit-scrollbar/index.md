@@ -58,7 +58,7 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
   height: 2em;
   padding: 1em;
   margin: 1em auto;
-  outline: 2px dashed #ccc;
+  outline: 2px dashed cornflowerblue;
 }
 
 .invisible-scrollbar::-webkit-scrollbar {
@@ -83,27 +83,36 @@ Authors should avoid styling scrollbars, as changing the appearance of scrollbar
 
 ```html
 <div class="visible-scrollbar">
-  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at nulla
-  elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
-  dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
-  velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit posuere
-  est. Nulla libero sapien, egestas ac felis porta, cursus ultricies quam.
-  Vestibulum tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
-  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet faucibus.
-  Curabitur nibh justo, faucibus sed velit cursus, mattis cursus dolor.
-  Pellentesque id pretium est. Quisque convallis nisi a diam malesuada mollis.
-  Aliquam at enim ligula.
+  <h3>Visible scrollbar</h3>
+  <p>
+    Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor. Proin at
+    nulla elementum, consectetur ex eget, commodo ante. Sed eros mi, bibendum ut
+    dignissim et, maximus eget nibh. Phasellus blandit quam turpis, at mollis
+    velit pretium ut. Nunc consequat efficitur ultrices. Nullam hendrerit
+    posuere est. Nulla libero sapien, egestas ac felis porta, cursus ultricies
+    quam. Vestibulum tincidunt accumsan sapien, a fringilla dui semper in.
+    Vivamus consectetur ipsum a ornare blandit. Aenean tempus at lorem sit amet
+    faucibus. Curabitur nibh justo, faucibus sed velit cursus, mattis cursus
+    dolor. Pellentesque id pretium est. Quisque convallis nisi a diam malesuada
+    mollis. Aliquam at enim ligula.
+  </p>
 </div>
 
 <div class="invisible-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+  <h3>Invisible scrollbar</h3>
+  <p>
+    Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+  </p>
 </div>
 
 <div class="mostly-customized-scrollbar">
-  Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
-  And pretty tall<br />
-  thing with weird scrollbars.<br />
-  Who thought scrollbars could be made weird?
+  <h3>Custom scrollbar</h3>
+  <p>
+    Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br />
+    And pretty tall<br />
+    thing with weird scrollbars.<br />
+    Who thought scrollbars could be made weird?
+  </p>
 </div>
 ```
 
