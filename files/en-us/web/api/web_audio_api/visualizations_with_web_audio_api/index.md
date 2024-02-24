@@ -24,8 +24,7 @@ This node is then connected to your audio source at some point between your sour
 ```js
 const source = audioCtx.createMediaStreamSource(stream);
 source.connect(analyser);
-analyser.connect(distortion);
-distortion.connect(audioCtx.destination);
+analyser.connect(audioCtx.destination);
 ```
 
 > **Note:** you don't need to connect the analyser's output to another node for it to work, as long as the input is connected to the source, either directly or via another node.
