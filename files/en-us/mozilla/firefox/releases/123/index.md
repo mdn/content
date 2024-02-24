@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
+This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 was released on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
 ## Changes for web developers
 
@@ -16,12 +16,6 @@ This article provides information about the changes in Firefox 123 that affect d
 
 - The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
-#### Removals
-
-### CSS
-
-#### Removals
-
 ### JavaScript
 
 - The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
@@ -29,13 +23,9 @@ This article provides information about the changes in Firefox 123 that affect d
   - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
   - Single number dates are now accepted (e.g. `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
 
-#### Removals
-
 ### SVG
 
 - The {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements now support changing the color space to be `linearRGB` or `sRGB` via the {{SVGAttr("color-interpolation")}} attribute. This can also be applied to the SVG elements via the {{CSSXref("color-interpolation")}} CSS property.
-
-#### Removals
 
 ### HTTP
 
@@ -43,12 +33,6 @@ This article provides information about the changes in Firefox 123 that affect d
   This can significantly reduce page load time.
   Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
   For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -67,10 +51,6 @@ This article provides information about the changes in Firefox 123 that affect d
 
 The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](https://bugzil.la/1730706)).
 
-### WebAssembly
-
-#### Removals
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### WebDriver BiDi
@@ -88,10 +68,6 @@ The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](h
 ## Changes for add-on developers
 
 - Addition of fhe {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
-
-### Removals
-
-### Other
 
 ## Experimental web features
 
