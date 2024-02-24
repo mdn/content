@@ -78,12 +78,12 @@ The grouping operator can be used to eliminate this ambiguity, since when the pa
 })();
 ```
 
-Another way to do this is by wrapping the function declaration and its call with the grouping operator.
+Another way to do this is by wrapping the function and its call with the grouping operator.
 
 ```js
 (function () {
   // code
-})();
+}());
 ```
 
 You may also use [unary operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#unary_operators), before the function, especially the [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void#immediately_invoked_function_expressions) operator to eliminate ambiguity.
