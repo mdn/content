@@ -72,19 +72,29 @@ To do this:
    - When it has downloaded, run it.
    - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
    - Click _Install_, then click _Close_ when the installation has finished.
-
+ 
 2. Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
-
+   
+   -On ubuntu terminal follow the following:
+   
    ```bash
-   python -V
+   # if you run "py" or "py -V" and get and output:
+   Command 'py' not found
+   #then install "py" command using:
+   sudo apt install pythonpy
+   ```   
+    ```bash
+    python -V
    # If the above fails, try:
    python3 -V
-   # Or, if the "py" command is available, try:
-   py -V
    ```
-
-3. This should return a version number. If this is OK, navigate to the directory that contains the website code you want to test, using the `cd` command.
-
+    -if the above failed, run this command on ubuntu terminal:
+   - To install python3 v 3.10.12 on ubuntu using the command:
+   ```bash
+    sudo apt install python-is-python3
+   ```
+4. This should return a version number. If this is OK, navigate to the directory that contains the website code you want to test, using the `cd` command.
+   
    ```bash
    # include the directory name to enter it, for example
    cd Desktop
@@ -92,7 +102,7 @@ To do this:
    cd ..
    ```
 
-4. Enter the command to start up the server in that directory:
+6. Enter the command to start up the server in that directory:
 
    ```bash
    # If Python version returned above is 3.X
@@ -102,7 +112,7 @@ To do this:
    python -m SimpleHTTPServer
    ```
 
-5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
+7. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
 > **Note:** If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
 
