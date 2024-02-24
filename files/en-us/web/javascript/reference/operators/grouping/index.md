@@ -76,7 +76,15 @@ The grouping operator can be used to eliminate this ambiguity, since when the pa
 })();
 ```
 
-You may also use the [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void#immediately_invoked_function_expressions) operator to eliminate ambiguity.
+Another way to do this is by wrapping the function declaration and its call with the grouping operator.
+
+```js
+(function () {
+  // code
+})();
+```
+
+You may also use [unary operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#unary_operators), before the function, especially the [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void#immediately_invoked_function_expressions) operator to eliminate ambiguity.
 
 In an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) concise body (one that directly returns an expression without the keyword `return`), the grouping operator can be used to return an object literal expression, because otherwise the left curly brace would be interpreted as the start of the function body.
 
