@@ -183,7 +183,7 @@ In this fourth SVG, the `color-interpolation` attribute is included on the `<rad
     fill="url(#radLinearRGB)"
     stroke="black" />
   <text x="0" y="60" font-family="courier" font-size="16">
-    color-interpolation="sRGB" (SVG attr)
+    color-interpolation="linearRGB" (SVG attr)
   </text>
 </svg>
 ```
