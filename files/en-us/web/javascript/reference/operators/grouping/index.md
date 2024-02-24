@@ -60,6 +60,8 @@ The function `a` will be called before the function `b`, which will be called be
 
 ### Using the grouping operator to eliminate parsing ambiguity
 
+#### IIFE functions
+
 An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot start with the keyword `function`, because the parser would see it as the start of a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function). This means the following [IIFE](/en-US/docs/Glossary/IIFE) syntax is invalid:
 
 ```js-nolint example-bad
@@ -86,11 +88,15 @@ Another way to do this is by wrapping the function declaration and its call with
 
 You may also use [unary operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#unary_operators), before the function, especially the [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void#immediately_invoked_function_expressions) operator to eliminate ambiguity.
 
+#### Arrow functions' return value
+
 In an [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) concise body (one that directly returns an expression without the keyword `return`), the grouping operator can be used to return an object literal expression, because otherwise the left curly brace would be interpreted as the start of the function body.
 
 ```js
 const f = () => ({ a: 1 });
 ```
+
+#### Property accessor with primitive types
 
 If a property is accessed on a number literal, the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) dot `.` may be ambiguous with a decimal point, unless the number already has a decimal point. You can wrap integer literals in parentheses to eliminate this ambiguity.
 
