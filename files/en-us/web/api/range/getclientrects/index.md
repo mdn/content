@@ -62,7 +62,7 @@ for (const rect of rectList) {
 
 #### Result
 
-{{EmbedLiveSample}}
+{{EmbedLiveSample("Logging selected client rect sizes")}}
 
 ## Specifications
 
