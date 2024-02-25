@@ -81,9 +81,9 @@ This example demonstrates how to offer a video in different formats: WebM for br
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm" />
-  <source src="foo.ogg" type="video/ogg" />
-  <source src="foo.mov" type="video/quicktime" />
+  <source src="foo.webm" type="video/webm">
+  <source src="foo.ogg" type="video/ogg">
+  <source src="foo.mov" type="video/quicktime">
   I'm sorry; your browser doesn't support HTML video.
 </video>
 ```
@@ -94,8 +94,8 @@ This example demonstrates how to offer an alternate source file for viewports ab
 
 ```html
 <video controls>
-  <source src="foo-large.webm" media="(min-width: 800px)" />
-  <source src="foo.webm" />
+  <source src="foo-large.webm" media="(min-width: 800px)">
+  <source src="foo.webm">
   I'm sorry; your browser doesn't support HTML video.
 </video>
 ```
@@ -108,9 +108,9 @@ In this example, two `<source>` elements are included within {{HTMLElement("pict
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)" />
-  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)" />
-  <img src="mdn-logo-narrow.png" alt="MDN Web Docs" />
+  <source srcset="mdn-logo-wide.png" media="(min-width: 800px)">
+  <source srcset="mdn-logo-medium.png" media="(min-width: 600px)">
+  <img src="mdn-logo-narrow.png" alt="MDN Web Docs">
 </picture>
 ```
 
@@ -127,22 +127,22 @@ A [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) allow
     srcset="landscape.png"
     media="(min-width: 1000px)"
     width="1000"
-    height="400" />
+    height="400">
   <source
     srcset="square.png"
     media="(min-width: 800px)"
     width="800"
-    height="800" />
+    height="800">
   <source
     srcset="portrait.png"
     media="(min-width: 600px)"
     width="600"
-    height="800" />
+    height="800">
   <img
     src="fallback.png"
     alt="Image used when the browser does not support the sources"
     width="500"
-    height="400" />
+    height="400">
 </picture>
 ```
 
