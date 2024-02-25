@@ -11697,43 +11697,6 @@
       "groovecoder"
     ]
   },
-  "MDN/Contribute": {
-    "modified": "2020-12-14T09:31:17.213Z",
-    "contributors": [
-      "sourabhramsingh",
-      "maxTarlov",
-      "chrisdavidmills",
-      "aditibasu",
-      "wbamberg",
-      "SphinxKnight",
-      "shwetabhsuman",
-      "jswisher",
-      "wdot789",
-      "fotografi",
-      "Sheppy",
-      "vikash111",
-      "Kerstomaat",
-      "ertogrul",
-      "elwakil",
-      "Thomskii",
-      "Lasantha",
-      "jsx",
-      "saifulislam1",
-      "adi28galaxyak",
-      "Volluta",
-      "Husaria",
-      "klez",
-      "pytseng",
-      "alispivak",
-      "utente-pc",
-      "emmanuelodenyire",
-      "Mars"
-    ]
-  },
-  "MDN/Contribute/Processes": {
-    "modified": "2020-09-30T15:17:09.733Z",
-    "contributors": ["wbamberg", "david_ross", "jswisher", "Sheppy"]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2019-06-05T12:41:23.682Z",
     "contributors": [
@@ -12953,10 +12916,6 @@
       "chrisdavidmills",
       "aswan"
     ]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/downloads/drag": {
-    "modified": "2020-10-15T21:44:35.541Z",
-    "contributors": ["wbamberg", "Makyen", "chrisdavidmills"]
   },
   "Mozilla/Add-ons/WebExtensions/API/downloads/erase": {
     "modified": "2020-10-15T21:44:38.278Z",
@@ -42344,7 +42303,7 @@
     "modified": "2019-03-18T20:56:26.488Z",
     "contributors": ["wbamberg", "chrisdavidmills", "rugk"]
   },
-  "Web/API/Houdini": {
+  "Web/API/Houdini_APIs": {
     "modified": "2020-07-16T03:51:08.991Z",
     "contributors": [
       "Wind1808",
@@ -43080,16 +43039,6 @@
       "jpmedley",
       "arronei",
       "libbymc",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/IDBLocaleAwareKeyRange": {
-    "modified": "2020-10-15T21:38:45.838Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "Sebastianz",
-      "Seta00",
       "chrisdavidmills"
     ]
   },
@@ -72661,19 +72610,6 @@
       "peterbraden"
     ]
   },
-  "Web/Accessibility/Architecture": {
-    "modified": "2019-03-24T00:11:44.656Z",
-    "contributors": [
-      "Sheppy",
-      "fscholz",
-      "badrfoot",
-      "Aaronlev",
-      "Joanmarie",
-      "Parente",
-      "Rd4Uix",
-      "Nickolay"
-    ]
-  },
   "Web/Accessibility/Cognitive_accessibility": {
     "modified": "2019-11-18T16:53:41.344Z",
     "contributors": ["Igor-Sangin", "ericwbailey", "estelle", "jswisher"]
@@ -77189,6 +77125,43 @@
       "mfluehr",
       "fscholz",
       "teoli"
+    ]
+  },
+  "Web/CSS/CSS_display/Block_formatting_context": {
+    "modified": "2020-11-02T20:53:20.927Z",
+    "contributors": [
+      "spollard",
+      "pacexy",
+      "wbamberg",
+      "Mookiepiece",
+      "SelenIT",
+      "TrevorKarjanis",
+      "mfuji09",
+      "Konrud",
+      "estelle",
+      "wavesheep",
+      "jennyevans",
+      "MelvinIdema",
+      "chrisdavidmills",
+      "Ende93",
+      "xiaohanyu",
+      "YvonneZhang",
+      "pythonista27",
+      "S-Dey",
+      "mfluehr",
+      "yisibl",
+      "alberts+",
+      "rainyLeo",
+      "PageYe",
+      "HashemQolami",
+      "Jeremie",
+      "teoli",
+      "kscarfone",
+      "tregagnon",
+      "Sheppy",
+      "cbiesinger",
+      "Kohei",
+      "DBaron"
     ]
   },
   "Web/CSS/CSS_filter_effects": {
@@ -91992,43 +91965,6 @@
       "www_test",
       "nicci.izzy",
       "ethertank"
-    ]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2020-11-02T20:53:20.927Z",
-    "contributors": [
-      "spollard",
-      "pacexy",
-      "wbamberg",
-      "Mookiepiece",
-      "SelenIT",
-      "TrevorKarjanis",
-      "mfuji09",
-      "Konrud",
-      "estelle",
-      "wavesheep",
-      "jennyevans",
-      "MelvinIdema",
-      "chrisdavidmills",
-      "Ende93",
-      "xiaohanyu",
-      "YvonneZhang",
-      "pythonista27",
-      "S-Dey",
-      "mfluehr",
-      "yisibl",
-      "alberts+",
-      "rainyLeo",
-      "PageYe",
-      "HashemQolami",
-      "Jeremie",
-      "teoli",
-      "kscarfone",
-      "tregagnon",
-      "Sheppy",
-      "cbiesinger",
-      "Kohei",
-      "DBaron"
     ]
   },
   "Web/Guide/CSS/Getting_started/Challenge_solutions": {

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MessagePort
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`MessagePort`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) represents one of the two ports of a {{domxref("MessageChannel")}}, allowing messages to be sent from one port and listening out for them arriving at the other.
 
@@ -27,6 +27,8 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}_.
   - : Disconnects the port, so it is no longer active.
 
 ## Events
+
+_Inherits events from its parent, {{domxref("EventTarget")}}_.
 
 - {{domxref("MessagePort.message_event","message")}}
   - : Fired when a `MessagePort` object receives a message.

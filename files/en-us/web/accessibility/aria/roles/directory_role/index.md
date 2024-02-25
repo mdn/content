@@ -22,7 +22,7 @@ Use the [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role) role instea
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The `list` role](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)
 - The {{HTMLElement('ul')}} element

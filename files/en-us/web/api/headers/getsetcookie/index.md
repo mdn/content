@@ -12,6 +12,8 @@ The **`getSetCookie()`** method of the {{domxref("Headers")}} interface returns 
 
 This method is intended for use on server environments (for example Node.js). Browsers block frontend JavaScript code from accessing the {{httpheader("Set-Cookie")}} header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

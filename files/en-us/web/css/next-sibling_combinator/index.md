@@ -5,7 +5,7 @@ page-type: css-combinator
 browser-compat: css.selectors.next-sibling
 ---
 
-{{CSSRef("Selectors")}}
+{{CSSRef}}
 
 The **next-sibling combinator** (`+`) separates two selectors and matches the second element only if it _immediately_ follows the first element, and both are children of the same parent {{DOMxRef("element")}}.
 
