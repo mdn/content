@@ -24,7 +24,7 @@ _This interface also inherits properties from its parent, {{domxref("SVGGeometry
 
 ## Instance methods
 
-_This interface has no methods but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
+_This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 
 ## Examples
 
