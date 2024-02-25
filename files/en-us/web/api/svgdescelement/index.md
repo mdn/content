@@ -13,7 +13,7 @@ The **`SVGDescElement`** interface corresponds to the {{SVGElement("desc")}} ele
 
 ## Instance properties
 
-_This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
+_This interface has no properties but inherits properties from its parent, {{domxref("SVGElement")}}._
 
 ## Instance methods
 
