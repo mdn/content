@@ -8,7 +8,8 @@ page-type: guide
 
 HTTP messages are how data is exchanged between a server and a client. There are two types of messages: _requests_ sent by the client to trigger an action on the server, and _responses_, the answer from the server.
 
-HTTP messages are composed of textual information encoded in ASCII, and span over multiple lines. In HTTP/1.1, and earlier versions of the protocol, these messages were openly sent across the connection. In HTTP/2, the once human-readable message is now divided up into HTTP frames, providing optimization and performance improvements.
+HTTP messages are composed of a start line, optional headers containing metadata about the message, and an optional body (or "payload").
+In HTTP/1.1, and earlier versions of the protocol, the headers were encoded in US ASCII while in HTTP/2 and later the headers are encoded with UTF-8. In all versions the encoding of the message body, if present, is not mandated, but must be specified in the {{HTTPHeader("Content-Type")}} header. In HTTP/1.1, and earlier versions of the protocol, the messages were openly sent across the connection. In HTTP/2, the message is now divided up into HTTP frames, providing optimization and performance improvements.
 
 Web developers, or webmasters, rarely craft these textual HTTP messages themselves: software, a Web browser, proxy, or Web server, perform this action. They provide HTTP messages through config files (for proxies or servers), APIs (for browsers), or other interfaces.
 
