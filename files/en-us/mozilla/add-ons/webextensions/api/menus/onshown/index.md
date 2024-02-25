@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser has shown a menu.
 

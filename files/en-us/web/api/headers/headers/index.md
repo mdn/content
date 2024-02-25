@@ -11,6 +11,8 @@ browser-compat: api.Headers.Headers
 The **`Headers()`** constructor creates a new
 {{domxref("Headers")}} object.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

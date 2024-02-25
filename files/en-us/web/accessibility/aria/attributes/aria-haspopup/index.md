@@ -76,7 +76,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`menu`](/en-US/docs/Web/Accessibility/ARIA/Roles/menu_role)
