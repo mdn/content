@@ -14,7 +14,7 @@ browser-compat: api.Document.browsingTopics
 
 > **Note:** An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use this feature in your applications.
 
-The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the selected topics for the current user, which can then be returned to the ad tech platform in a subsequent fetch request. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
+The `browsingTopics()` method of the {{domxref("Document")}} interface returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the current epoch, which can then be returned to the ad tech platform in a subsequent fetch request. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
 
 See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 

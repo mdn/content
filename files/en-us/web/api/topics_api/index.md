@@ -40,7 +40,7 @@ The Topics API has no distinct interfaces of its own.
 ### Extensions to other interfaces
 
 - {{domxref("Document.browsingTopics()")}}
-  - : Returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the three most recent epochs. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
+  - : Returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the current epoch. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded).
 - {{domxref("fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 - {{domxref("HTMLIFrameElement.browsingTopics")}}

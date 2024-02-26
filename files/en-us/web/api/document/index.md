@@ -175,7 +175,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.append()")}}
   - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}}
-  - : Returns a promise that fulfills with an array of objects representing observed topics for the current user and site. It also triggers the browser to observe topics for the current user and site. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
+  - : Returns a promise that fulfills with an array of objects representing the selected topics for the current user, for the current epoch. It also triggers the browser to observe the topics inferred from the calling site's URL (i.e. the site where the ad tech `<iframe>` is embedded). See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
   - : See {{DOMxRef("Window.captureEvents")}}.
 - {{DOMxRef("Document.caretPositionFromPoint()")}}
