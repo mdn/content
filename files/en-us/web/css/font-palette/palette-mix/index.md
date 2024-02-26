@@ -16,17 +16,16 @@ The **`palette-mix()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CS
 font-palette: palette-mix(in lch, normal, dark)
 
 /* Blending author-defined palettes */
-font-palette: palette-mix(in lch, --blue, --yellow)
+font-palette: palette-mix(in lch, --blues, --yellows)
 
 /* Varying percentage of each palette mixed */
-font-palette: palette-mix(in lch, --blue 50%, --yellow 50%)
-font-palette: palette-mix(in lch, --blue 70%, --yellow 30%)
-font-palette: palette-mix(in lch, --blue 30%, --yellow 70%)
+font-palette: palette-mix(in lch, --blues 50%, --yellows 50%)
+font-palette: palette-mix(in lch, --blues 70%, --yellows 30%)
 
 /* Varying color interpolation method */
-font-palette: palette-mix(in srgb, --blue, --yellow)
-font-palette: palette-mix(in hsl, --blue, --yellow)
-font-palette: palette-mix(in hsl shorter hue, --blue, --yellow)
+font-palette: palette-mix(in srgb, --blues, --yellows)
+font-palette: palette-mix(in hsl, --blues, --yellows)
+font-palette: palette-mix(in hsl shorter hue, --blues, --yellows)
 
 ```
 
