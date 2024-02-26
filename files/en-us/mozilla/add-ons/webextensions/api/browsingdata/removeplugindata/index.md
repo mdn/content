@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removePluginData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears data stored by browser plugins.
 

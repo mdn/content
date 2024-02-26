@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CacheStorage.match
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`match()`** method of the {{domxref("CacheStorage")}} interface checks if a given {{domxref("Request")}} or URL string is a key for a stored {{domxref("Response")}}.
 This method returns a {{jsxref("Promise")}} for a {{domxref("Response")}}, or a {{jsxref("Promise")}} which resolves to `undefined` if no match is found.

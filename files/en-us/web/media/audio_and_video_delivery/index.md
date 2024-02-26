@@ -119,38 +119,41 @@ We set the source of the video depending on the type of video file the browser s
 
 ## Web Audio API
 
+In this example we retrieve an MP3 file using the {{domxref("fetch()")}} API, load it into a source, and play it.
+
 ```js
-let context;
-let request;
+let audioCtx;
+let buffer;
 let source;
 
-try {
-  context = new AudioContext();
-  request = new XMLHttpRequest();
-  request.open(
-    "GET",
-    "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3",
-    true,
-  );
-  request.responseType = "arraybuffer";
-
-  request.onload = () => {
-    context.decodeAudioData(request.response, (buffer) => {
-      source = context.createBufferSource();
-      source.buffer = buffer;
-      source.connect(context.destination);
-      // autoplay
-      source.start(0); // start was previously noteOn
-    });
-  };
-
-  request.send();
-} catch (e) {
-  alert("web audio api not supported");
+async function loadAudio() {
+  try {
+    // Load an audio file
+    const response = await fetch("viper.mp3");
+    // Decode it
+    buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
+  } catch (err) {
+    console.error(`Unable to fetch the audio file. Error: ${err.message}`);
+  }
 }
+
+const play = document.getElementById("play");
+play.addEventListener("click", async () => {
+  if (!audioCtx) {
+    audioCtx = new AudioContext();
+    await loadAudio();
+  }
+  source = audioCtx.createBufferSource();
+  source.buffer = buffer;
+  source.connect(audioCtx.destination);
+  source.start();
+  play.disabled = true;
+});
 ```
 
-In this example we retrieve an MP3 file via XHR, load it into a source and play it ([Try it for yourself](https://jsbin.com/facutone/1/edit?js)). Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
+You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
+
+Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
 ## getUserMedia / Stream API
 
@@ -490,7 +493,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ## Basic tutorials
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
-  - : A guide to creating a basic cross browser video player using the {{ htmlelement ("video") }} element.
+  - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
@@ -515,6 +518,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 - [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
   - : This article explains how to add captions and subtitles to HTML {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/en-US/docs/Web/API/WebVTT_API) and the {{ htmlelement("track") }} element.
+- [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
   - : A guide to writing cross browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.

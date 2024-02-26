@@ -70,7 +70,7 @@ Columnheader has the same semantics `<th scope="col">`.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 - [`grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
@@ -86,6 +86,6 @@ Columnheader has the same semantics `<th scope="col">`.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

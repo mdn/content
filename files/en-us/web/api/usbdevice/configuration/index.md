@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.configuration
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`configuration`** read only property of the
 {{domxref("USBDevice")}} interface returns a {{domxref("USBConfiguration")}} object for

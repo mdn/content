@@ -2,12 +2,10 @@
 title: rect()
 slug: Web/CSS/basic-shape/rect
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.basic-shape.rect
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
@@ -24,7 +22,7 @@ The inset rectangle is defined by specifying four offset values, starting with t
 
 - `<length-percentage>`
 
-  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} value of the distance of the top, right, bottom, or left edge of the rectangle from the top or left edge of the containing block. The first (top) and third (bottom) values are distances from the top edge of the containing block, and the second (right) and fourth (left) values are distances from the left edge of the containing block. The second (right) and third (bottom) values are clamped by the fourth (left) and second (top) values, respectively, to prevent the bottom edge from crossing over the top edge and right edge from crossing over the left edge. For example, `rect(10px 0 0 20px)` is clamped to `rect(10px 20px 10px 20px)`.
+  - : Specifies the {{cssxref("&lt;length-percentage&gt;")}} value of the distance of the top, right, bottom, or left edge of the rectangle from the top or left edge of the containing block. The first (top) and third (bottom) values are distances from the top edge of the containing block, and the second (right) and fourth (left) values are distances from the left edge of the containing block. The second (right) and third (bottom) values are clamped by the fourth (left) and first (top) values, respectively, to prevent the bottom edge from crossing over the top edge and right edge from crossing over the left edge. For example, `rect(10px 0 0 20px)` is clamped to `rect(10px 20px 10px 20px)`.
 
 - `auto`
 

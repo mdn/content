@@ -66,7 +66,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 Cookies can persist for two different periods, depending on the attributes used with the {{HTTPHeader("Set-Cookie")}} header when they were created:
 
 - _Permanent_ cookies are deleted at a date specified by the `Expires` attribute or after a period prescribed by the `Max-Age` attribute.
-- _Session_ cookies – cookies without a `Max age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
+- _Session_ cookies – cookies without a `Max-age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
 For example:
 
@@ -84,7 +84,7 @@ You can ensure that cookies are sent securely and aren't accessed by unintended 
 
 A cookie with the `Secure` attribute is only sent to the server with an encrypted request over the HTTPS protocol. It's never sent with unsecured HTTP (except on localhost), which means {{Glossary("MitM", "man-in-the-middle")}} attackers can't access it easily. Insecure sites (with `http:` in the URL) can't set cookies with the `Secure` attribute. However, don't assume that `Secure` prevents all access to sensitive information in cookies. For example, someone with access to the client's hard disk (or JavaScript if the `HttpOnly` attribute isn't set) can read and modify the information.
 
-A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxref("Document.cookie")}} API; it's only sent to the server. For example, cookies that persist in server-side sessions don't need to be available to JavaScript and should have the `HttpOnly` attribute. This precaution helps mitigate cross-site scripting ([XSS](</en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>)) attacks.
+A cookie with the `HttpOnly` attribute is inaccessible to the JavaScript {{domxref("Document.cookie")}} API; it's only sent to the server. For example, cookies that persist in server-side sessions don't need to be available to JavaScript and should have the `HttpOnly` attribute. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
 Here's an example:
 
@@ -121,6 +121,16 @@ But these request paths don't:
 - `/`
 - `/docsets`
 - `/fr/docs`
+
+##### Path default value
+
+If the `Path` attribute is not set, its default value is computed from the [path](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#path_to_resource) of the URI that set the cookie, as follows:
+
+- If the path is empty, does not start with `"/"`, or contains no more than one `"/"` character, then the default value for `Path` is `"/"`.
+- Otherwise, the default value for `Path` is the path from the start up to but not including the final `"/"` character.
+
+For example, if the cookie was set from `"https://example.org/a/b/c`, then the default value of `Path`
+would be `"/a/b"`.
 
 #### SameSite attribute
 
@@ -198,9 +208,13 @@ A cookie is associated with a particular domain and scheme (such as `http` or `h
 If the cookie domain and scheme match the current page, the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 
 If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
-While the server hosting a web page sets first-party cookies, the page may contain images or other components stored on servers in other domains (for example, ad banners) that may set third-party cookies.
-These are mainly used for advertising and tracking across the web.
-For example, the [types of cookies used by Google](https://policies.google.com/technologies/types).
+While the server hosting a web page sets first-party cookies, the page may contain components stored on servers in other domains, such as images or other documents embedded in {{htmlelement("iframe")}}s. These components may set third-party cookies.
+
+> **Note:** Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites.
+
+Typical use cases for third-party cookies include sharing user profile information or collecting analytics across different related domains. They are also often used for advertising and tracking users across the web.
+
+> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes and to comply with [regulations](#cookie-related_regulations). For example, see [Google's notice on the types of cookies it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
 
 A third-party server can create a profile of a user's browsing history and habits based on cookies sent to it by the same browser when accessing multiple sites.
 Firefox, by default, blocks third-party cookies that are known to contain trackers.
@@ -210,7 +224,7 @@ Cookie blocking can cause some third-party components (such as social media widg
 There are some useful features available for developers who wish to respect user privacy, and minimize third-party tracking:
 
 - Servers can (and should) set the cookie [SameSite attribute](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) to specify whether or not third-party cookies may be sent.
-- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) enables developers to opt-in their cookies to partitioned storage, with a separate cookie jar per top-level site. This enables valid non-tracking uses of third-party cookies to continue working in browsers that do not allow cookies to be used for third-party tracking.
+- [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) enables developers to opt-in their cookies to partitioned storage, with a separate cookie jar per top-level site. This enables valid non-tracking uses of third-party cookies to continue working in browsers that do not allow cookies to be used for third-party tracking.
 
 ### Cookie-related regulations
 

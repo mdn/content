@@ -31,7 +31,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 - `controls`
   - : If this attribute is present, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback.
-- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+- `controlslist`
 
   - : The [`controlslist`](https://wicg.github.io/controls-list/explainer.html) attribute, when specified, helps the browser select what controls to show for the `video` element whenever the browser shows its own set of controls (that is, when the `controls` attribute is specified).
 
@@ -50,7 +50,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword `anonymous` was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disablepictureinpicture` {{experimental_inline}}
+- `disablepictureinpicture`
   - : Prevents the browser from suggesting a Picture-in-Picture context menu or to request Picture-in-Picture automatically in some cases.
 - `disableremoteplayback`
 
@@ -282,7 +282,7 @@ Browsers don't all support the same video formats; you can provide multiple sour
   <source src="myVideo.mp4" type="video/mp4" />
   <p>
     Your browser doesn't support HTML video. Here is a
-    <a href="myVideo.mp4">link to the video</a> instead.
+    <a href="myVideo.mp4" download="myVideo.mp4">link to the video</a> instead.
   </p>
 </video>
 ```
@@ -409,7 +409,9 @@ This example builds on the last one, offering three different sources for the me
     type="video/mp4" />
 
   Sorry, your browser doesn't support embedded videos, but don't worry, you can
-  <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">
+  <a
+    href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
+    download="ed_1024_512kb.mp4">
     download the MP4
   </a>
   and watch it with your favorite video player!
@@ -498,7 +500,7 @@ Captions should not obstruct the main subject of the video. They can be position
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
