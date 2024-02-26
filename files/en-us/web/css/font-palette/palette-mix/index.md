@@ -67,12 +67,12 @@ In the CSS, we import a color font from Google Fonts, and define two custom `fon
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
 
-@font-palette-values --blue {
+@font-palette-values --blueNabla {
   font-family: Nabla;
   base-palette: 2;
 }
 
-@font-palette-values --yellow {
+@font-palette-values --yellowNabla {
   font-family: Nabla;
   base-palette: 7;
 }
@@ -85,15 +85,15 @@ p {
 }
 
 .yellow {
-  font-palette: --yellow;
+  font-palette: --yellowNabla;
 }
 
 .blue {
-  font-palette: --blue;
+  font-palette: --blueNabla;
 }
 
 .mix {
-  font-palette: palette-mix(in lch, --blue, --yellow);
+  font-palette: palette-mix(in lch, --blueNabla 55%, --yellowNabla 45%);
 }
 ```
 
