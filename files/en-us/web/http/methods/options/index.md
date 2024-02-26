@@ -17,7 +17,7 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
     </tr>
     <tr>
       <th scope="row">Successful response has body</th>
-      <td>Yes</td>
+      <td>May</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Safe/HTTP", "Safe")}}</th>

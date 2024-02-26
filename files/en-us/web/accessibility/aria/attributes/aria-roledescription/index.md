@@ -68,7 +68,7 @@ Supported by all roles and by all base markup elements except for `role="generic
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Roles)
 

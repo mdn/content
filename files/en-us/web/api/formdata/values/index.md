@@ -10,7 +10,7 @@ browser-compat: api.FormData.values
 
 The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all values contained in the {{domxref("FormData")}}. The values are strings or {{domxref("Blob")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 

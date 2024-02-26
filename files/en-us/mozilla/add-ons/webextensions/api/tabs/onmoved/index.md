@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onMoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a tab is moved within a window.
 
