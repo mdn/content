@@ -167,7 +167,7 @@ In this fourth SVG, the `color-interpolation` attribute is included on the `<rad
 ```html
 <svg width="450" height="70">
   <title>
-    Example of linearGradient using the color-interpolation attribute
+    Example of radialGradient using the color-interpolation attribute
   </title>
   <defs>
     <radialGradient id="radLinearRGB" color-interpolation="linearRGB">
