@@ -59,7 +59,7 @@ To create the project:
 
 1. Open a command shell (or a terminal window), and make sure you are in your [virtual environment](/en-US/docs/Learn/Server-side/Django/development_environment#using_a_virtual_environment).
 2. Navigate to the folder where you want to create your local library application (later on we'll move it to the "django_local_library" that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment).
-3. Create the new project using the `django-admin startproject` command as shown, and then change into the project folder:
+3. Create the new project using the `django-admin startproject` command as shown, and then navigate into the project folder:
 
    ```bash
    django-admin startproject locallibrary
@@ -145,7 +145,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Add our new application
-    'catalog.apps.CatalogConfig', #This object was created for us in /catalog/apps.py
+    'catalog.apps.CatalogConfig', # This object was created for us in /catalog/apps.py
 ]
 ```
 
@@ -157,7 +157,7 @@ The new line specifies the application configuration object (`CatalogConfig`) th
 
 This is also the point where you would normally specify the database to be used for the project. It makes sense to use the same database for development and production where possible, in order to avoid minor differences in behavior. You can find out about the different options in [Databases](https://docs.djangoproject.com/en/5.0/ref/settings/#databases) (Django docs).
 
-We'll use the default SQLite database for this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
+We'll use the default SQLite database for most of this example, because we don't expect to require a lot of concurrent access on a demonstration database, and it requires no additional work to set up! You can see how this database is configured in **settings.py**:
 
 ```python
 DATABASES = {
@@ -168,7 +168,7 @@ DATABASES = {
 }
 ```
 
-Because we are using SQLite, we don't need to do any further setup here. Let's move on!
+Later on in the [Deploying Django to production](/en-US/docs/Learn/Server-side/Django/Deployment#database_configuration) we'll also show you how to configure a Postgres database, which might be more suitable for larger sites.
 
 ## Other project settings
 
@@ -236,7 +236,7 @@ Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `
 Add the following lines to the bottom of the file:
 
 ```python
-#Add URL maps to redirect the base URL to our application
+# Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
@@ -276,7 +276,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 > ```
 
-As a final step, create a file inside your catalog folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
+As a final step, create a file inside your _catalog_ folder called **urls.py**, and add the following text to define the (empty) imported `urlpatterns`. This is where we'll add our patterns as we build the application.
 
 ```python
 from django.urls import path
@@ -310,7 +310,9 @@ The `makemigrations` command _creates_ (but does not apply) the migrations for a
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
-> **Note:** See [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
+> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+>
+> See [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
 ### Running the website
 
@@ -330,29 +332,32 @@ Once the server is running, you can view the site by navigating to `http://127.0
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalog.urls` module (which we're redirected to when we get a URL to the root of the site).
 
-> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
-
 At this point, we know that Django is working!
 
-> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
 
 ## Don't forget to backup to Github
 
 We've just done some significant work, so now is a good time to backup the project using GitHub.
 
 First copy the _content_ of the top level **locallibrary** folder into the "django_local_library" folder that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
-This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else in the top level folder.
+This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else inside the top level folder.
 
 Then add and commit the changes in the **django_local_library** folder and push them to GitHub.
 From the root of that folder, you can use a similar set of commands to those in the [Modify and sync changes](/en-US/docs/Learn/Server-side/Django/development_environment#modify_and_sync_changes) section of the _Development environment_ topic:
 
 ```bash
+# Get the current source from GitHub on the main branch
 git checkout main
 git pull origin main
+
+# Create a branch and add/commit your newly created app skeleton
 git checkout -b skeleton_website # Create and activate a new branch "skeleton_website"
 git add -A # Add all changed files to the staging area
 git commit -m "Create Skeleton framework for LocalLibrary" # Commit the changed files
-git push origin skeleton_website # Push the branch to GitHub
+
+# Push the branch to GitHub
+git push origin skeleton_website
 ```
 
 Then create and merge a PR from your GitHub repo.
