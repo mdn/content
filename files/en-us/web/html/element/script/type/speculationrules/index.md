@@ -77,13 +77,17 @@ Each action field contains an array, which in turn contains one or more objects.
 Specifically, each object can contain the following properties:
 
 - `"source"`
+
   - : A string representing the URLs to which the rule applies. This can be one of:
     - `"document"`
       - : Specifies that the URLs will be matched from links contained in the associated document (i.e. pointed to by {{htmlelement("a")}} and {{htmlelement("area")}} elements), based on the conditions described by a `"where"` key. Note that the presence of a `"where"` key implies `"source": "document"`, so it is optional.
     - `"list"`
       - : Specifies that the URLs will come from a list, specified in the `"urls"` key. Note that the presence of a `"urls"` key implies `"source": "list"`, so it is optional.
+
 - `"urls"`
+
   - : An array of strings representing a list of URLs to apply the rule to, in the case of a `"source": "list"` rule. These can be absolute or relative URLs. Relative URLs will be parsed relative to the document base URL (if inline in a document) or relative to the external resource URL (if externally fetched).
+
 - `"where"`
 
   - : An object representing the conditions by which the rule matches URLs contained in the associated document, in the case of a `"source": "document"` rule. Effectively, the `"where"` object represents a test that is performed on every link on the page to see whether the speculation rule is applied to it. This object can contain exactly one of the following properties:
@@ -109,10 +113,14 @@ Specifically, each object can contain the following properties:
     If not specified, `"source": "list"` rules default to `immediate` and `"source": "document"` rules default to `conservative`. The browser takes this hint into consideration along with its own heuristics, so it may select a link that the author has hinted as less eager than another, if the less eager candidate is considered a better choice.
 
 - `"expects_no_vary_search"`
+
   - : A string providing a hint to the browser as to what the expected {{httpheader("No-Vary-Search")}} header value will be (if any) for documents that it is receiving prefetch/prerender requests for via the speculation rules. The browser can use this to determine ahead of time whether it is more useful to wait for an existing prefetch/prerender to finish, or start a new fetch request when the speculation rule is matched. See the [`"expects_no_vary_search"` example](#expects_no_vary_search_example) for more explanation of how this can be used.
+
 - `"referrer_policy"`
 
-  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`). A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case (meaning, at least as strict as the default `"strict-origin-when-cross-origin"` value, so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`).
+  - : A string representing a specific referrer policy string to use when requesting the URLs specified in the rule — see [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) for possible values. The purpose of this is to allow the referring page to set a stricter policy specifically for the speculative request than the policy the page already has set (either by default, or by using `Referrer-Policy`).
+
+    > **Note:** A cross-site prefetch requires a referrer policy that is at least as strict as the default `"strict-origin-when-cross-origin"` value — so `"strict-origin-when-cross-origin"`, `"same-origin"`, `"strict-origin"`, or `"no-referrer"`. A laxer policy set in the speculation rules will override a stricter policy set on the referring page as long as it is still sufficiently strict for the cross-site case.
 
     > **Note:** In the case of document rules, the matched link's specified referrer policy (e.g. using the [`referrerpolicy`](/en-US/docs/Web/HTML/Element/a#referrerpolicy) attribute) will be used, unless the rule specifies a policy that overrides it.
 
@@ -315,7 +323,7 @@ In the following complete speculation rule example, all same-origin pages are ma
 
 ### `"relative_to"` example
 
-For rule sets that are externally fetched (i.e. via the {{httpheader("Speculation-Rules")}}) response header, URLs in list rules and URL patterns in document rules are parsed relative to the containing external text file's URL. To parse URLs in a list rule relative to the document's base URL, `"relative_to"` is used like this:
+For rule sets that are externally fetched (i.e. via the {{httpheader("Speculation-Rules")}}) response header, URLs in list rules and URL patterns in document rules are parsed relative to the containing external text file's URL by default. To parse URLs in a list rule relative to the document's base URL, `"relative_to"` is used like this:
 
 ```json
 {
@@ -338,6 +346,22 @@ For document rules, `"relative_to"` can be paired directly with `"href_matches"`
 ```
 
 In the above example, only the first `"href_matches"` will be matched relative to the document's base URL.
+
+Note that `relative_to` is mainly relevant if the speculation rules JSON file is on a different origin to the document you wish to apply them to:
+
+1. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then `/home` always equates to `https://example.com/home` regardless of whether `relative_to` is set to `document` or `ruleset`.
+
+2. However, if the document is located at `https://example.com/some/subpage.html` and the rules are at `https://other.example/resources/rules.json` (for example, on a third party, or a cookieless resource origin), then:
+
+   - `"relative_to": "document"` will cause `/home` to equate to `https://example.com/home`.
+   - `"relative_to": "ruleset"` will cause `/home` to equate to `https://other.example/home`.
+
+   This is the typical use case for `"relative_to"`.
+
+3. Another potential (but rarer) use case is when your URLs are specified in the form `home` instead of `/home`. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then:
+
+   - `"relative_to": "document"` would cause `home` to equate to `https://example.com/some/home`.
+   - `"relative_to": "ruleset"` would cause `home` to equate to `https://example.com/resources/home`.
 
 ### `"expects_no_vary_search"` example
 

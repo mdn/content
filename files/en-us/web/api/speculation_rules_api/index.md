@@ -114,7 +114,7 @@ For browsers that support it, speculation rules prerender should be preferred ov
 
 ### Speculation rules API feature detection
 
-You can check if the Speculation Rules JavaScript API is supported using the following code:
+You can check if the Speculation Rules API is supported using the following code:
 
 ```js
 if (

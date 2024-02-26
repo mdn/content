@@ -49,64 +49,66 @@ No-Vary-Search: params, except=("param1" "param2")
 
 ## Examples
 
-### Stopping parameter order from causing additional cache entries
+### Allowing responses from URLs with differently ordered params to match the same cache entry
 
-If you have for example a search page that stores its search criteria in URL parameters, and you can't guarantee that the parameters will be added to the URL in the same order each time, you can stop additional cache entries arising from URLs that are identical except for the order of the parameters using `key-order`:
+If you have for example a search page that stores its search criteria in URL parameters, and you can't guarantee that the parameters will be added to the URL in the same order each time, you can allow responses from URLs that are identical except for the order of the parameters to match the same cache entry using `key-order`:
 
-```html
+```http
 No-Vary-Search: key-order
 ```
 
-When added to the associated request responses, this would cause the following URLs to only produce a single cache entry:
+When added to the associated request responses, the following would match the same cache entry:
 
 ```text
-search.example.com?a=1&b=2&c=3
-search.example.com?b=2&a=1&c=3
+https://search.example.com?a=1&b=2&c=3
+https://search.example.com?b=2&a=1&c=3
 ```
 
-The prescence of different URL parameters, however, will cause multiple cache entries. For example:
+The presence of different URL parameters, however, will cause the response not to match the same cache entry. For example:
 
 ```text
-search.example.com?a=1&b=2&c=3
-search.example.com?b=2&a=1&c=3&d=4
+https://search.example.com?a=1&b=2&c=3
+https://search.example.com?b=2&a=1&c=3&d=4
 ```
 
-The below examples illustrate how to control which parameters cause additional cache entries, and which are ignored in this context.
+The below examples illustrate how to control which parameters are ignored in the context of cache matching.
 
-### Stopping a user `id` param from affects caching
+### Allowing responses from URLs with a different param to match the same cache entry
 
-Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for caching purposes depends on the behavior of the application:
+Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for cache matching purposes depends on the behavior of the application:
 
-- If this parameter has the effect of loading a completely new page containing the information for the specified user, then the URL should be cached separately.
-- If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then the URL should be considered the same for caching purposes. This could result in performance improvements around the loading of the user pages.
+- If this parameter has the effect of loading a completely new page containing the information for the specified user, then the response from this URL should be cached separately.
+- If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then the response from this URL should match the same cache entry. This could result in performance improvements around the loading of the user pages.
 
 If your application behaves like the second example described above, you could cause both `/users` and `/users?id=345` to be treated as identical for caching purposes via a `No-Vary-Search` header like so:
 
-```html
+```http
 No-Vary-Search: params=("id")
 ```
 
-### Stopping multiple parameters from causing additional cache entries
+> **Note:** If a parameter is excluded from the cache key using `params`, if it is included in the URL it will be ignored for the purposes of cache matching, regardless of where it appears in the parameter list.
+
+### Allowing responses from URLs with multiple different params to match the same cache entry
 
 Say you also had URL parameters that sorted the list of users on the page in ascending or descending alphabetical order, and specified the language to display the UI strings in, for example `/users?id=345&order=asc&lang=fr`.
 
 You could get the browser to ignore all of these when considering cache matching like so:
 
-```html
+```http
 No-Vary-Search: params=("id" "order" "lang")
 ```
 
-If you wanted the browser to ignore all of them _and_ any others that might be present, you could use the boolean form of `params`:
+If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 
-```html
+```http
 No-Vary-Search: params
 ```
 
-### Specifying params that _do_ trigger separate caching
+### Specifying params that _do_ cause cache matching misses
 
-Say the app behaved differently, with `/users` pointing to the main user directory landing page and `/users?id=345` pointing to a completely separate detail page for a specific user. In this case you would want the browser to ignore all the parameters mentioned above for cache matching purposes, _except_ for `id`, which would create a new cache entry each time. This can be achieved like so:
+Say the app behaved differently, with `/users` pointing to the main user directory landing page and `/users?id=345` pointing to a completely separate detail page for a specific user. In this case you would want the browser to ignore all the parameters mentioned above for cache matching purposes, _except_ for `id`, the presence of which would cause the browser to not match the `/users` cache entry and create a new one. This can be achieved like so:
 
-```html
+```http
 No-Vary-Search: params, except=("id")
 ```
 
