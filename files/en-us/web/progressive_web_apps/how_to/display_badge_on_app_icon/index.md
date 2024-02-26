@@ -30,7 +30,7 @@ Safari and Firefox on desktop do not support the Badging API and do not support 
 
 ### Mobile support
 
-Badges are supported on mobile operating systems, including Chromium-based browsers running on Android and in Safari on iOS and iPadOS, starting with iPadOS 16.4.
+Badges are supported in Safari on iOS and iPadOS, starting with iPadOS 16.4. Badges are not supported on Chromium-based browsers running on Android.
 
 ## Badge best practices
 
