@@ -14,7 +14,7 @@ MDN provides macros that create a list of links:
 
 - [`\{{LandingPageListSubPages}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs)
 
-  - : Inserts a definition list ({{HTMLelement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLelement("dt")}} term and its first paragraph as the {{HTMLelement("dd")}} term.
+  - : Inserts a definition list ({{HTMLElement("dl")}}) of the subpages of the current page, with each page's title as the {{HTMLElement("dt")}} term and its first paragraph as the {{HTMLElement("dd")}} term.
 
 - [`\{{ListSubpagesForSidebar()}}`](https://github.com/mdn/yari/blob/main/kumascript/macros/ListSubpagesForSidebar.ejs)
 
@@ -26,7 +26,7 @@ MDN provides macros that create a list of links:
 
 ### Example link list
 
-To include an ordered list of links which includes this page and its siblings. write the following:
+To include an ordered list of links that includes this page and its siblings, write the following:
 
 ```md
 \{{ListSubpagesForSidebar("/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros", 1)}}
@@ -73,4 +73,4 @@ To learn which parameters each macro supports and the order of parameters for ea
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros ( `\{{Compat}}`, `\{{Compat(&lt;feature>)}}`, and `\{{Compat(&lt;feature>, &lt;depth>)}}`) and specification macros (`\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`)
-- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices)including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
+- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
