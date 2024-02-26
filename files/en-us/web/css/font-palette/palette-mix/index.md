@@ -37,12 +37,19 @@ Functional notation:
 palette-mix(method, palette1 [p1], palette2 [p2])
 ```
 
-- `<method>`
+- `method`
   - : A {{cssxref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
 - `palette1`, `palette2`
   - : The {{cssxref("font-palette")}} values to blend together. These can be _any_ `font-palette` values, including `palette-mix()` functions, `normal`, `dark`, and `light`.
 - `p1`, `p2` {{optional_inline}}
-  - : {{cssxref("&lt;percentage&gt;")}} values between `0%` and `100%` specifying the amount of each palette to mix. The percentages follow the same [normalization rules](/en-US/docs/Web/CSS/color_value/color-mix#p1) as the {{cssxref("color_value/color-mix", "color-mix()")}} function.
+
+  - : {{cssxref("&lt;percentage&gt;")}} values between `0%` and `100%` specifying the amount of each palette to mix. They are normalized as follows:
+
+    - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
+    - If `p1` is omitted, then `p1 = 100% - p2`.
+    - If `p2` is omitted, then `p2 = 100% - p1`.
+    - If `p1 = p2 = 0%`, the function is invalid.
+    - If `p1 + p2 ≠ 100%`, then `p1' = p1 / (p1 + p2)` and `p2' = p2 / (p1 + p2)`, where `p1'` and `p2'` are the normalization results.
 
 ## Examples
 
@@ -114,4 +121,6 @@ The output looks like this:
 ## See also
 
 - {{cssxref("font-palette")}}
+- {{cssxref("@font-palette-values", "@font-palette-values")}}
 - {{cssxref("color_value/color-mix", "color-mix()")}}
+- [Color spaces and color models](/en-US/docs/Web/CSS/CSS_colors/Applying_color#color_spaces_and_color_models) for information about color spaces

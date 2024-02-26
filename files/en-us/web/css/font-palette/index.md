@@ -33,7 +33,7 @@ font-palette: palette-mix(in lch, --blue, --yellow);
 - `<palette-identifier>`
   - : Allows you to specify your own values for the font palette by using the [@font-palette-values](/en-US/docs/Web/CSS/@font-palette-values) at-rule. This value is specified using the [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) format.
 - {{cssxref("font-palette/palette-mix", "palette-mix()")}}
-  - : Creates a new `font-palette` value by blending together two existing `font-palette` values in specified percentages, and according to a specified color intepolation method.
+  - : Creates a new `font-palette` value by blending together two `font-palette` values by specified percentages and color interpolation methods.
 
 ## Formal definition
 
@@ -63,7 +63,7 @@ This example illustrates how to animate `font-palette` value changes to create a
 
 #### HTML
 
-We'll start off with a simple paragraph of text to animate:
+The HTML contains a single paragraph of text to animate:
 
 ```html
 <p>color-palette<br />animation</p>
@@ -71,7 +71,7 @@ We'll start off with a simple paragraph of text to animate:
 
 #### CSS
 
-In the CSS, we import a color font from Google Fonts, and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then create {{cssxref("@keyframes")}} that animate between these two palettes, and apply this animation to our paragraph. Non-supporting browsers flip between the two palettes without animation.
+In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla](https://nabla.typearture.com/) from [Google Fonts](https://fonts.google.com/?coloronly=true), and define two custom `font-palette` values using the {{cssxref("@font-palette-values")}} at-rule. We then create {{cssxref("@keyframes")}} that animate between these two palettes, and apply this animation to our paragraph.
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
@@ -110,6 +110,8 @@ p {
 The output looks like this:
 
 {{EmbedLiveSample("Animating between two palettes", "100%", 300)}}
+
+> **Note:** Browsers that still implement `discrete` `font-palette` animation will flip between the two palettes rather than smoothly animating.
 
 ## Specifications
 
