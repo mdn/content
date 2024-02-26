@@ -40,7 +40,7 @@ palette-mix(method, palette1 [p1], palette2 [p2])
 - `<method>`
   - : A {{cssxref("&lt;color-interpolation-method&gt;")}} specifying the interpolation color space.
 - `palette1`, `palette2`
-  - : The {{cssxref("font-palette")}} values to blend together. These can be _any_ `font-palette` values, including `palette-mix()` functions.
+  - : The {{cssxref("font-palette")}} values to blend together. These can be _any_ `font-palette` values, including `palette-mix()` functions, `normal`, `dark`, and `light`.
 - `p1`, `p2` {{optional_inline}}
   - : {{cssxref("&lt;percentage&gt;")}} values between `0%` and `100%` specifying the amount of each palette to mix. The percentages follow the same [normalization rules](/en-US/docs/Web/CSS/color_value/color-mix#p1) as the {{cssxref("color_value/color-mix", "color-mix()")}} function.
 
