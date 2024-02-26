@@ -16,7 +16,9 @@ Understanding whether the callback is synchronously or asynchronously called is 
 
 ```js
 let value = 1;
-
+function doSomething(callBack){
+callBack();
+}
 doSomething(() => {
   value = 2;
 });
