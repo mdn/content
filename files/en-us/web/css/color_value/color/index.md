@@ -32,11 +32,13 @@ color(from #0000FF xyz calc(x + 0.75) y calc(z - 0.35))
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+#### Absolute value syntax
 
-#### Absolute values
+```text
+color(colorspace c1 c2 c3[ / A])
+```
 
-Functional notation of absolute values: `color(colorspace c1 c2 c3[ / A])`
+The parameters are as follows:
 
 - `colorspace`
 
@@ -48,11 +50,17 @@ Functional notation of absolute values: `color(colorspace c1 c2 c3[ / A])`
 
 - `A` {{optional_inline}}
 
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If included, the value is preceded by a slash (`/`).
 
-#### Relative values
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
-Functional notation of relative values: `color(from <color> colorspace c1 c2 c3[ / A])`
+#### Relative value syntax
+
+```text
+color(from <color> colorspace c1 c2 c3[ / A])
+```
+
+The parameters are as follows:
 
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
@@ -61,7 +69,7 @@ Functional notation of relative values: `color(from <color> colorspace c1 c2 c3[
 - `c1`, `c2`, `c3`
   - : Each value can be written as a {{CSSXref("number")}}, a {{CSSXref("percentage")}}, or the keyword `none` (equivalent to `0` in this case). These values represent the component values for the output color. When using a `<number>` value, 0-1 represents the bounds of the colorspace. Values outside of that range are permitted but will be out of {{glossary("Gamut", "gamut")}} for the given colorspace. When using a percentage value, 100% represents 1 and 0% represents 0.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 

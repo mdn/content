@@ -31,11 +31,13 @@ oklch(from hsl(180 100% 50%) calc(l - 0.1) c h)
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+#### Absolute value syntax
 
-#### Absolute values
+```text
+oklch(L C H[ / A])
+```
 
-Functional notation of absolute values: `oklch(L C H[ / A])`
+The parameters are as follows:
 
 - `L`
   - : A {{CSSXref("&lt;number&gt;")}} between `0` and `1`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's perceived lightness. In this case, the number `0` corresponds to `0%` (black) and the number `1` corresponds to `100%` (white).
@@ -44,11 +46,17 @@ Functional notation of absolute values: `oklch(L C H[ / A])`
 - `H`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case). This value represents the color's hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If included, the value is preceded by a slash (`/`).
 
-#### Relative values
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
-Functional notation of relative values: `oklch(from <color> L C H[ / A])`
+#### Relative value syntax
+
+```text
+oklch(from <color> L C H[ / A])
+```
+
+The parameters are as follows:
 
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**: This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
@@ -59,7 +67,7 @@ Functional notation of relative values: `oklch(from <color> L C H[ / A])`
 - `H`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case). This represents the output color's hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 

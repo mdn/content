@@ -35,7 +35,7 @@ hsl(from #0000FF h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 ```
 
-The absolute syntax can also be written in a legacy form in which all values are separated with commas.
+The absolute values can also be written in a legacy form in which all values are separated with commas.
 
 ### Values
 
@@ -43,11 +43,13 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 > **Note:** Absolute and relative functional notation serializes to sRGB values, and the values of the red, green, blue components may be rounded in serialization.
 
-> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
+#### Absolute value syntax
 
-#### Absolute values
+```text
+hsl(H S L[ / A])
+```
 
-Functional notation of absolute values: `hsl(H S L[ / A])`
+The parameters are as follows:
 
 - `H`
   - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case). This value represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference page.
@@ -56,11 +58,17 @@ Functional notation of absolute values: `hsl(H S L[ / A])`
 - `L`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This value represents the color's lightness. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If the `alpha` channel value is not explicitly specified, it defaults to 100%.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. If the `alpha` channel value is not explicitly specified, it defaults to 100%. If included, the value is preceded by a slash (`/`).
 
-#### Relative values
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for more information on the effect of `none`.
 
-Functional notation of relative values: `hsl(from <color> H S L[ / A])`
+#### Relative value syntax
+
+````text
+hsl(from <color> H S L[ / A])
+```text
+
+The parameters are as follows:
 
 - `from <color>`
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. Note that the origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
@@ -71,14 +79,14 @@ Functional notation of relative values: `hsl(from <color> H S L[ / A])`
 - `L`
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
-  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color.
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} where the number `1` corresponds to `100%` (full opacity), or the keyword `none` to explicitly specify no alpha channel. This represents the alpha channel value of the output color. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
 
 #### Defining relative color output channel components
 
 When using relative color syntax inside an `hsl()` function, the browser converts the origin color into an equivalent HSL color (if it is not already specified as such) The color is defined as three distinct color channel values — `h` (hue), `s` (saturation), and `l` (lightness) — plus an alpha channel value (`alpha`). These channel values are made available inside the function to be used when defining the output color channel values:
 
 - The `h` value is resolved to a {{cssxref("&lt;number&gt;")}} between 0 and 360 that represents the origin color's {{cssxref("&lt;hue&gt;")}} degree value.
-- The `s` and `l` values are resolved to a `<number>` between 0 and 100.
+- The `s` and `l` values are each resolved to a `<number>` between 0 and 100.
 - The `alpha` value is resolved to a `<number>` between 0 and 1.
 
 When defining a relative color, the different channels of the output color can be expressed in several different ways. Below, we'll study some examples to illustrate these.
@@ -89,7 +97,7 @@ Let's start with an origin color of `rgb(255 0 0)` (equivalent to `red`). The fo
 
 ```css
 hsl(from rgb(255 0 0) h s l)
-```
+````
 
 > **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/rgb", "rgb()")}} color `rgb(255 0 0)` is converted to `hsl(0 100 50)`.
 
