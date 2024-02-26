@@ -68,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/locallibrary/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e. generically "`<the model name>_list`").
+That's it! The generic view will query the database to get all records for the specified model (`Book`) then render a template located at **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** (which we will create below). Within the template you can access the list of books with the template variable named `object_list` OR `book_list` (i.e. generically "`<the model name>_list`").
 
 > **Note:** This awkward path for the template location isn't a misprint — the generic views look for templates in `/application_name/the_model_name_list.html` (`catalog/book_list.html` in this case) inside the application's `/application_name/templates/` directory (`/catalog/templates/)`.
 
@@ -120,7 +120,7 @@ When doing this it is important to follow the pattern used above:
 
 ### Creating the List View template
 
-Create the HTML file **/locallibrary/catalog/templates/catalog/book_list.html** and copy in the text below. As discussed above, this is the default template file expected by the generic class-based list view (for a model named `Book` in an application named `catalog`).
+Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/book_list.html** and copy in the text below. As discussed above, this is the default template file expected by the generic class-based list view (for a model named `Book` in an application named `catalog`).
 
 Templates for generic views are just like any other templates (although of course the context/information passed to the template may differ).
 As with our _index_ template, we extend our base template in the first line and then replace the block named `content`.
@@ -206,7 +206,7 @@ We can also call _functions_ in the model from within our template — in this c
 
 #### Update the base template
 
-Open the base template (**/locallibrary/catalog/templates/_base_generic.html_**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
+Open the base template (**/django-locallibrary-tutorial/catalog/templates/_base_generic.html_**) and insert **{% url 'books' %}** into the URL link for **All books**, as shown below. This will enable the link in all pages (we can successfully put this in place now that we've created the "books" URL mapper).
 
 ```django
 <li><a href="{% url 'index' %}">Home</a></li>
@@ -420,7 +420,7 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-That's it! All you need to do now is create a template called **/locallibrary/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e. generically "`the_model_name`").
+That's it! All you need to do now is create a template called **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**, and the view will pass it the database information for the specific `Book` record extracted by the URL mapper. Within the template you can access the book's details with the template variable named `object` OR `book` (i.e. generically "`the_model_name`").
 
 If you need to, you can change the template used and the name of the context object used to reference the book in the template. You can also override methods to, for example, add additional information to the context.
 
@@ -455,7 +455,7 @@ def book_detail_view(request, primary_key):
 
 ### Creating the Detail View template
 
-Create the HTML file **/locallibrary/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
+Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html** and give it the below content. As discussed above, this is the default template file name expected by the generic class-based _detail_ view (for a model named `Book` in an application named `catalog`).
 
 ```django
 {% extends "base_generic.html" %}
@@ -612,7 +612,7 @@ The different pages are accessed using GET parameters — to access page 2 you w
 
 Now that the data is paginated, we need to add support to the template to scroll through the results set. Because we might want paginate all list views, we'll add this to the base template.
 
-Open **/locallibrary/catalog/templates/_base_generic.html_** and find the "content block" (as shown below).
+Open **/django-locallibrary-tutorial/catalog/templates/_base_generic.html_** and find the "content block" (as shown below).
 
 ```django
 {% block content %}{% endblock %}
@@ -667,7 +667,7 @@ The code required for the URL mappers and the views should be virtually identica
 >
 > - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template.
 >   Follow the [same process](#update_the_base_template) as we did when we updated the **All books** link.
-> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL).
+> - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#creating_the_detail_view_template) (**/django-locallibrary-tutorial/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL).
 >   The recommended way to do this is to call `get_absolute_url()` on the author model as shown below.
 >
 >   ```django

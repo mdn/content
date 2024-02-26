@@ -121,7 +121,7 @@ The `Form` class is the heart of Django's form handling system. It specifies the
 
 The declaration syntax for a `Form` is very similar to that for declaring a `Model`, and shares the same field types (and some similar parameters). This makes sense because in both cases we need to ensure that each field handles the right types of data, is constrained to valid data, and has a description for display/documentation.
 
-Form data is stored in an application's forms.py file, inside the application directory. Create and open the file **locallibrary/catalog/forms.py**. To create a `Form`, we import the `forms` library, derive from the `Form` class, and declare the form's fields. A very basic form class for our library book renewal form is shown below — add this to your new file:
+Form data is stored in an application's forms.py file, inside the application directory. Create and open the file **django-locallibrary-tutorial/catalog/forms.py**. To create a `Form`, we import the `forms` library, derive from the `Form` class, and declare the form's fields. A very basic form class for our library book renewal form is shown below — add this to your new file:
 
 ```python
 from django import forms
@@ -222,7 +222,7 @@ That's all we need for the form in this example!
 
 ### URL configuration
 
-Before we create our view, let's add a URL configuration for the _renew-books_ page. Copy the following configuration to the bottom of **locallibrary/catalog/urls.py**:
+Before we create our view, let's add a URL configuration for the _renew-books_ page. Copy the following configuration to the bottom of **django-locallibrary-tutorial/catalog/urls.py**:
 
 ```python
 urlpatterns += [
@@ -351,7 +351,7 @@ The final step in the form-handling part of the view is to redirect to another p
 
 That's everything needed for the form handling itself, but we still need to restrict access to the view to just logged-in librarians who have permission to renew books. We use `@login_required` to require that the user is logged in, and the `@permission_required` function decorator with our existing `can_mark_returned` permission to allow access (decorators are processed in order). Note that we probably should have created a new permission setting in `BookInstance` ("`can_renew`"), but we will reuse the existing one to keep the example simple.
 
-The final view is therefore as shown below. Please copy this into the bottom of **locallibrary/catalog/views.py**.
+The final view is therefore as shown below. Please copy this into the bottom of **django-locallibrary-tutorial/catalog/views.py**.
 
 ```python
 import datetime
@@ -617,7 +617,7 @@ In this section, we're going to use generic editing views to create pages to add
 
 ### Views
 
-Open the views file (**locallibrary/catalog/views.py**) and append the following code block to the bottom of it:
+Open the views file (**django-locallibrary-tutorial/catalog/views.py**) and append the following code block to the bottom of it:
 
 ```python
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -666,7 +666,7 @@ We'll update the template below to make clear that you can't delete an `Author` 
 
 ### URL configurations
 
-Open your URL configuration file (**locallibrary/catalog/urls.py**) and add the following configuration to the bottom of the file:
+Open your URL configuration file (**django-locallibrary-tutorial/catalog/urls.py**) and add the following configuration to the bottom of the file:
 
 ```python
 urlpatterns += [
@@ -682,7 +682,7 @@ There is nothing particularly new here! You can see that the views are classes, 
 
 The "create" and "update" views use the same template by default, which will be named after your model: `model_name_form.html` (you can change the suffix to something other than **\_form** using the `template_name_suffix` field in your view, for example, `template_name_suffix = '_other_suffix'`)
 
-Create the template file `locallibrary/catalog/templates/catalog/author_form.html` and copy the text below.
+Create the template file `django-locallibrary-tutorial/catalog/templates/catalog/author_form.html` and copy the text below.
 
 ```django
 {% extends "base_generic.html" %}
@@ -701,7 +701,7 @@ Create the template file `locallibrary/catalog/templates/catalog/author_form.htm
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
 The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view).
-Create the template file `locallibrary/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
+Create the template file `django-locallibrary-tutorial/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```django
 {% extends "base_generic.html" %}
@@ -737,7 +737,7 @@ If not, it displays a form asking the user to confirm they want to delete the au
 
 The final step is to hook the pages into the sidebar.
 First we'll add a link for creating the author into the _base template_, so that it is visible in all pages for logged in users who are considered "staff" and who have permission to create authors (`catalog.add_author`).
-Open **/locallibrary/catalog/templates/base_generic.html** and add the lines that allow users with the permission to create the author (in the same block as the link that shows "All Borrowed" books).
+Open **/django-locallibrary-tutorial/catalog/templates/base_generic.html** and add the lines that allow users with the permission to create the author (in the same block as the link that shows "All Borrowed" books).
 Remember to reference the URL using it's name `'author-create'` as shown below.
 
 ```django

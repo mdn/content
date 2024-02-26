@@ -134,7 +134,7 @@ In addition we now have:
 
 Now that the application has been created, we have to register it with the project so that it will be included when any tools are run (like adding models to the database for example). Applications are registered by adding them to the `INSTALLED_APPS` list in the project settings.
 
-Open the project settings file, **django_projects/locallibrary/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
+Open the project settings file, **django-locallibrary-tutorial/locallibrary/settings.py**, and find the definition for the `INSTALLED_APPS` list. Then add a new line at the end of the list, as shown below:
 
 ```bash
 INSTALLED_APPS = [
@@ -149,7 +149,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/locallibrary/catalog/apps.py** when you created the application.
+The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
 
 > **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
 
@@ -187,7 +187,7 @@ There are two other settings you won't change now, but that you should be aware 
 
 The website is created with a URL mapper file (**urls.py**) in the project folder. While you can use this file to manage all your URL mappings, it is more usual to defer mappings to the associated application.
 
-Open **locallibrary/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
+Open **django-locallibrary-tutorial/locallibrary/urls.py** and note the instructional text which explains some of the ways to use the URL mapper.
 
 ```python
 """
@@ -295,7 +295,7 @@ Before we do that, we should first run a _database migration_. This updates our 
 
 ### Running database migrations
 
-Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/locallibrary/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
+Django uses an Object-Relational-Mapper (ORM) to map model definitions in the Django code to the data structure used by the underlying database. As we change our model definitions, Django tracks the changes and can create database migration scripts (in **/django-locallibrary-tutorial/catalog/migrations/**) to automatically migrate the underlying data structure in the database to match the model.
 
 When we created the website, Django automatically added a number of models for use by the admin section of the site (which we'll look at later). Run the following commands to define tables for those models in the database (make sure you are in the directory that contains **manage.py**):
 
@@ -340,7 +340,7 @@ At this point, we know that Django is working!
 
 We've just done some significant work, so now is a good time to backup the project using GitHub.
 
-First copy the _content_ of the top level **locallibrary** folder into the "django_local_library" folder that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
+First move the _content_ of the top level **locallibrary** folder into the **django_local_library** folder that you [created as a local Github repository](/en-US/docs/Learn/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
 This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else inside the top level folder.
 
 Then add and commit the changes in the **django_local_library** folder and push them to GitHub.
