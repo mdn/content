@@ -59,7 +59,7 @@ This example allows you to use the first palette marked as _dark_ (works best on
 
 ### Animating between two palettes
 
-This example illustrates how `font-palette` values can be animated between to create a smooth font animation.
+This example illustrates how to animate `font-palette` value changes to create a smooth font animation.
 
 #### HTML
 
