@@ -15,7 +15,7 @@ following a request being sent.
 ## Value
 
 A string which contains either the textual data received using the
-`XMLHttpRequest` or `null` if the request failed or
+`XMLHttpRequest` or `null` if the request failed (non 2XX status) or
 `""` if the request has not yet been sent by calling
 {{domxref("XMLHttpRequest.send", "send()")}}.
 
