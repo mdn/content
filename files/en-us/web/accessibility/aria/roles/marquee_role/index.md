@@ -29,7 +29,7 @@ The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)

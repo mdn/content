@@ -35,10 +35,6 @@ _The interface may also inherit methods from its parent interface, {{domxref("CS
 
 _The interface may also inherit methods from its parent interface, {{domxref("CSSNumericValue")}}._
 
-## Event handlers
-
-No
-
 ## Examples
 
 We create an element with a [`width`](/en-US/docs/Web/CSS/width) determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function, then {{domxref("console/log_static", "console.log()")}} the `operator`.

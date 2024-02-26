@@ -2,7 +2,6 @@
 title: Using the Notifications API
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 page-type: guide
-browser-compat: api.Notification
 ---
 
 {{DefaultAPISidebar("Web Notifications")}}{{securecontext_header}}
@@ -76,27 +75,21 @@ Clicking this calls the `askNotificationPermission()` function:
 
 ```js
 function askNotificationPermission() {
-  // function to actually ask the permissions
-  function handlePermission(permission) {
-    // set the button to shown or hidden, depending on what the user answers
-    notificationBtn.style.display =
-      Notification.permission === "granted" ? "none" : "block";
-  }
-
-  // Let's check if the browser supports notifications
+  // Check if the browser supports notifications
   if (!("Notification" in window)) {
     console.log("This browser does not support notifications.");
-  } else {
-    Notification.requestPermission().then((permission) => {
-      handlePermission(permission);
-    });
+    return;
   }
+  Notification.requestPermission().then((permission) => {
+    // set the button to shown or hidden, depending on what the user answers
+    notificationBtn.style.display = permission === "granted" ? "none" : "block";
+  });
 }
 ```
 
 Looking at the second main block first, you'll see that we first check to see if Notifications are supported. If they are, we run the promise-based version of `Notification.requestPermission()`, and if not, we log a message to the console.
 
-To avoid duplicating code, we have stored a few bits of housekeeping code inside the `handlePermission()` function, which is the first main block inside this snippet. Inside here we explicitly set the `Notification.permission` value (some old versions of Chrome failed to do this automatically), and show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
+Inside the promise resolution handler passed to `then`, we show or hide the button depending on what the user chose in the permission dialog. We don't want to show it if permission has already been granted, but if the user chose to deny permission, we want to give them the chance to change their mind later on.
 
 ## Creating a notification
 
@@ -221,14 +214,6 @@ window.addEventListener("load", () => {
 ### Result
 
 {{ EmbedLiveSample('Tag_example', '100%', 30) }}
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

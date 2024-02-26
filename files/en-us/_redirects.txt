@@ -604,7 +604,7 @@
 /en-US/docs/CSS/background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS/background-repeat	/en-US/docs/Web/CSS/background-repeat
 /en-US/docs/CSS/background-size	/en-US/docs/Web/CSS/background-size
-/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS/block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS/border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS/border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS/border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -799,7 +799,7 @@
 /en-US/docs/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/CSS/resize	/en-US/docs/Web/CSS/resize
 /en-US/docs/CSS/resolution	/en-US/docs/Web/CSS/resolution
-/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/CSS/right	/en-US/docs/Web/CSS/right
 /en-US/docs/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/CSS/shape	/en-US/docs/Web/CSS/shape
@@ -984,7 +984,7 @@
 /en-US/docs/CSS:background-image	/en-US/docs/Web/CSS/background-image
 /en-US/docs/CSS:background-position	/en-US/docs/Web/CSS/background-position
 /en-US/docs/CSS:background-repeat	/en-US/docs/Web/CSS/background-repeat
-/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/CSS:block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/CSS:border	/en-US/docs/Web/CSS/border
 /en-US/docs/CSS:border-bottom	/en-US/docs/Web/CSS/border-bottom
 /en-US/docs/CSS:border-bottom-color	/en-US/docs/Web/CSS/border-bottom-color
@@ -8408,7 +8408,7 @@
 /en-US/docs/Web/API/HTMLContentElement.select	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/getDistributedNodes	/en-US/docs/Web/API/HTMLSlotElement
 /en-US/docs/Web/API/HTMLContentElement/select	/en-US/docs/Web/API/HTMLSlotElement
-/en-US/docs/Web/API/HTMLDialogElement/cancel	/en-US/docs/Web/API/HTMLElement/cancel_event
+/en-US/docs/Web/API/HTMLDialogElement/cancel_event	/en-US/docs/Web/API/HTMLElement/cancel_event
 /en-US/docs/Web/API/HTMLDialogElement/close()	/en-US/docs/Web/API/HTMLDialogElement/close
 /en-US/docs/Web/API/HTMLDialogElement/returnValue()	/en-US/docs/Web/API/HTMLDialogElement/returnValue
 /en-US/docs/Web/API/HTMLDialogElement/show()	/en-US/docs/Web/API/HTMLDialogElement/show
@@ -8695,6 +8695,7 @@
 /en-US/docs/Web/API/IDBKeyRange/lowerBound	/en-US/docs/Web/API/IDBKeyRange/lowerBound_static
 /en-US/docs/Web/API/IDBKeyRange/only	/en-US/docs/Web/API/IDBKeyRange/only_static
 /en-US/docs/Web/API/IDBKeyRange/upperBound	/en-US/docs/Web/API/IDBKeyRange/upperBound_static
+/en-US/docs/Web/API/IDBLocaleAwareKeyRange	/en-US/docs/Web/API/IDBIndex
 /en-US/docs/Web/API/IDBMutableFile	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/abort_event	/en-US/docs/Web/API/IndexedDB_API
 /en-US/docs/Web/API/IDBMutableFile/error_event	/en-US/docs/Web/API/IndexedDB_API
@@ -11379,7 +11380,7 @@
 /en-US/docs/Web/CSS/Alias	/en-US/docs/Web/CSS/cursor
 /en-US/docs/Web/CSS/All_About_The_Containing_Block	/en-US/docs/Web/CSS/Containing_block
 /en-US/docs/Web/CSS/Aural	/en-US/docs/Web/CSS/@media/aural
-/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/Guide/CSS/Block_formatting_context
+/en-US/docs/Web/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/CSS/CSS3_Columns	/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts
 /en-US/docs/Web/CSS/CSS_Background_and_Borders	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 /en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator
@@ -11480,6 +11481,7 @@
 /en-US/docs/Web/CSS/CSS_Variables	/en-US/docs/Web/CSS/CSS_cascading_variables
 /en-US/docs/Web/CSS/CSS_Viewport	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_charsets	/en-US/docs/Web/CSS/CSS_syntax
+/en-US/docs/Web/CSS/CSS_container_queries	/en-US/docs/Web/CSS/CSS_containment/Container_queries
 /en-US/docs/Web/CSS/CSS_descriptor_definition	/en-US/docs/Web/CSS
 /en-US/docs/Web/CSS/CSS_flex-wrap	/en-US/docs/Web/CSS/flex-wrap
 /en-US/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox	/en-US/docs/Glossary/Flexbox
@@ -11553,7 +11555,6 @@
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
-/en-US/docs/Web/CSS/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
 /en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
@@ -11677,7 +11678,7 @@
 /en-US/docs/Web/CSS/repeating-linear-gradient()	/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
 /en-US/docs/Web/CSS/repeating-radial-gradient()	/en-US/docs/Web/CSS/gradient/repeating-radial-gradient
-/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value#rgb()_and_rgba()
+/en-US/docs/Web/CSS/rgb	/en-US/docs/Web/CSS/color_value/rgb
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
@@ -12033,6 +12034,7 @@
 /en-US/docs/Web/Guide/Audio_and_video_delivery/cross_browser_video_player	/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player
 /en-US/docs/Web/Guide/Audio_and_video_manipulation	/en-US/docs/Web/Media/Audio_and_video_manipulation
 /en-US/docs/Web/Guide/CSS	/en-US/docs/Learn/CSS
+/en-US/docs/Web/Guide/CSS/Block_formatting_context	/en-US/docs/Web/CSS/CSS_display/Block_formatting_context
 /en-US/docs/Web/Guide/CSS/CSS_Image_Sprites	/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
 /en-US/docs/Web/Guide/CSS/Consistent_list_indentation	/en-US/docs/Web/CSS/CSS_lists/Consistent_list_indentation
 /en-US/docs/Web/Guide/CSS/Counters	/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
@@ -12778,6 +12780,7 @@
 /en-US/docs/Web/Performance/Time_to_interactive	/en-US/docs/Glossary/Time_to_interactive
 /en-US/docs/Web/Performance/business_case_for_performance	/en-US/docs/Learn/Performance/business_case_for_performance
 /en-US/docs/Web/Performance/learn	/en-US/docs/Web/Performance/How_browsers_work
+/en-US/docs/Web/Privacy/Partitioned_cookies	/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies
 /en-US/docs/Web/Privacy/Tracking_Protection	/en-US/docs/Web/Privacy/Firefox_tracking_protection
 /en-US/docs/Web/Progressive_web_apps/Add_to_home_screen	/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /en-US/docs/Web/Progressive_web_apps/Advantages	/en-US/docs/Web/Progressive_web_apps
