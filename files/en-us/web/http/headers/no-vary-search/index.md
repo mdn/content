@@ -57,14 +57,14 @@ If you have for example a search page that stores its search criteria in URL par
 No-Vary-Search: key-order
 ```
 
-When added to the associated request responses, the following would match the same cache entry:
+When this header is added to the associated responses, the following URLs would be treated as equivalent when searching the cache:
 
 ```text
 https://search.example.com?a=1&b=2&c=3
 https://search.example.com?b=2&a=1&c=3
 ```
 
-The presence of different URL parameters, however, will cause the response not to match the same cache entry. For example:
+The presence of different URL parameters, however, will cause these URLs to be cached separately. For example:
 
 ```text
 https://search.example.com?a=1&b=2&c=3
@@ -78,7 +78,7 @@ The below examples illustrate how to control which parameters are ignored in the
 Consider a case where a user directory landing page, `/users`, has already been cached. An `id` parameter might be used to bring up information on a specific user, for example `/users?id=345`. Whether this URL should be considered identical for cache matching purposes depends on the behavior of the application:
 
 - If this parameter has the effect of loading a completely new page containing the information for the specified user, then the response from this URL should be cached separately.
-- If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then the response from this URL should match the same cache entry. This could result in performance improvements around the loading of the user pages.
+- If this parameter has the effect of highlighting the specified user on the same page, and perhaps revealing a pullout panel displaying their data, then it would be better for the browser to use the cached response for `/users`. This could result in performance improvements around the loading of the user pages.
 
 If your application behaves like the second example described above, you could cause both `/users` and `/users?id=345` to be treated as identical for caching purposes via a `No-Vary-Search` header like so:
 
@@ -106,7 +106,9 @@ No-Vary-Search: params
 
 ### Specifying params that _do_ cause cache matching misses
 
-Say the app behaved differently, with `/users` pointing to the main user directory landing page and `/users?id=345` pointing to a completely separate detail page for a specific user. In this case you would want the browser to ignore all the parameters mentioned above for cache matching purposes, _except_ for `id`, the presence of which would cause the browser to not match the `/users` cache entry and create a new one. This can be achieved like so:
+Say the app behaved differently, with `/users` pointing to the main user directory landing page and `/users?id=345` pointing to a completely separate detail page for a specific user. In this case you would want the browser to ignore all the parameters mentioned above for cache matching purposes, _except_ for `id`, the presence of which would cause the browser to not match the `/users` cache entry and request `/users?id=345` from the server.
+
+This can be achieved like so:
 
 ```http
 No-Vary-Search: params, except=("id")

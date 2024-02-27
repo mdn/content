@@ -347,11 +347,11 @@ For document rules, `"relative_to"` can be paired directly with `"href_matches"`
 
 In the above example, only the first `"href_matches"` will be matched relative to the document's base URL.
 
-Note that `relative_to` is mainly relevant if the speculation rules JSON file is on a different origin to the document you wish to apply them to:
+`relative_to` is mainly relevant if the speculation rules JSON file is on a different origin to the document you wish to apply them to:
 
 1. If the document is located at `https://example.com/some/subpage.html` and the rules are at `https://example.com/resources/rules.json`, then `/home` always equates to `https://example.com/home` regardless of whether `relative_to` is set to `document` or `ruleset`.
 
-2. However, if the document is located at `https://example.com/some/subpage.html` and the rules are at `https://other.example/resources/rules.json` (for example, on a third party, or a cookieless resource origin), then:
+2. However, if the document is located at `https://example.com/some/subpage.html` and the rules are at `https://other.example/resources/rules.json` (for example, on a third-party or cookieless resource origin), then:
 
    - `"relative_to": "document"` will cause `/home` to equate to `https://example.com/home`.
    - `"relative_to": "ruleset"` will cause `/home` to equate to `https://other.example/home`.
