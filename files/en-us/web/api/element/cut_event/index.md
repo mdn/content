@@ -8,7 +8,7 @@ browser-compat: api.Element.cut_event
 
 {{APIRef}}
 
-The **`cut`** event is fired when the user has initiated a "cut" action through the browser's user interface.
+The **`cut`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "cut" action through the browser's user interface.
 
 If the user attempts a cut action on uneditable content, the `cut` event still fires but the event object contains no data.
 
@@ -21,6 +21,8 @@ Note though that cancelling the default action will also prevent the document fr
 The handler cannot _read_ the clipboard data.
 
 It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `cut` event, but this will not affect the system clipboard or the document's contents.
+
+This event [bubbles](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture), is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 
 ## Syntax
 

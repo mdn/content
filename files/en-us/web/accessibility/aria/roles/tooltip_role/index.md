@@ -95,7 +95,7 @@ The tooltip can be instantiated with CSS. Change the class name with JavaScript 
 
 The above hides the tooltip with CSS in the default state or if the hidetooltip class has been added with JavaScript (when the user hit <kbd>Escape</kbd>), with high specificity to ensure the tooltip doesn't show. When the owning element receives focus, it gets positioned relatively and the tooltip becomes visible.
 
-## Accessibility Concerns
+## Accessibility concerns
 
 If the information is important enough for a tooltip, isn't it important enough to always be visible?
 
@@ -109,7 +109,7 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
@@ -120,6 +120,6 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

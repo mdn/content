@@ -69,6 +69,8 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : A boolean value that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio.
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
   - : Returns a `unsigned short` (enumeration) indicating the readiness state of the media.
+- {{domxref("HTMLMediaElement.remote")}} {{ReadOnlyInline}}
+  - : Return a {{domxref("RemotePlayback")}} object instance associated with the media element.
 - {{domxref("HTMLMediaElement.seekable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
@@ -117,7 +119,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
   - : Pauses the media playback.
 - {{domxref("HTMLMediaElement.play()")}}
   - : Begins playback of the media.
-- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}}
+- {{domxref("HTMLMediaElement.seekToNextFrame()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Seeks to the next frame in the media. This non-standard, experimental method makes it possible to manually drive reading and rendering of media at a custom speed, or to move through the media frame-by-frame to perform filtering or other operations.
 - {{domxref("HTMLMediaElement.setMediaKeys()")}}
   - : Returns {{jsxref("Promise")}}. Sets the {{domxref("MediaKeys")}} keys to use when decrypting media during playback.
@@ -133,11 +135,13 @@ _These methods are obsolete and should not be used, even if a browser still supp
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
+  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [`loadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 
 ## Events
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits events from its parent, {{domxref("HTMLElement")}}_.
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : Fired when the resource was not fully loaded, but not as the result of an error.

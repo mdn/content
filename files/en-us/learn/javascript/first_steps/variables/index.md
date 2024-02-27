@@ -13,7 +13,7 @@ After reading the last couple of articles you should now know what JavaScript is
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -168,7 +168,7 @@ var myName;
 
 > **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
-This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) for more detail on the subject.
+This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
 Hoisting no longer works with `let`. If we changed `var` to `let` in the above example, it would fail with an error. This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code.
 
@@ -263,8 +263,6 @@ Try creating a few more variables now, with the above guidance in mind.
 ## Variable types
 
 There are a few different types of data we can store in variables. In this section we'll describe these in brief, then in future articles, you'll learn about them in more detail.
-
-So far we've looked at the first two, but there are others.
 
 ### Numbers
 

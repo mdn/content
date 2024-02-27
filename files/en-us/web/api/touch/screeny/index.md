@@ -8,8 +8,6 @@ browser-compat: api.Touch.screenY
 
 {{ APIRef("Touch Events") }}
 
-## Summary
-
 Returns the Y coordinate of the touch point relative to the screen, not including any scroll offset.
 
 ## Value

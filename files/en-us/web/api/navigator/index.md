@@ -19,7 +19,7 @@ _Doesn't inherit any properties._
 
 - {{domxref("Navigator.bluetooth")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Bluetooth")}} object for the current document, providing access to [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) functionality.
-- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}}
+- {{domxref("Navigator.clipboard")}} {{ReadOnlyInline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
 - {{domxref("Navigator.connection")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("NetworkInformation")}} object containing information about the network connection of a device.
@@ -49,6 +49,8 @@ _Doesn't inherit any properties._
   - : Returns an array of strings representing the languages known to the user, by order of preference.
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("LockManager")}} object that provides methods for requesting a new {{domxref('Lock')}} object and querying for an existing {{domxref('Lock')}} object.
+- {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Provides access to the browser's {{domxref("NavigatorLogin")}} object, which a federated identity provider (IdP) can use to set a user's login status when they sign into or out of the IdP. See [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API) for more details.
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : Returns the maximum number of simultaneous touch contact points are supported by the current device.
 - {{domxref("Navigator.mediaCapabilities")}} {{ReadOnlyInline}}
@@ -98,8 +100,6 @@ _Doesn't inherit any properties._
   - : Returns the build identifier of the browser. In modern browsers this property now returns a fixed timestamp as a privacy measure, e.g. `20181001000000` in Firefox 64 onwards.
 - {{domxref("Navigator.globalPrivacyControl")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a boolean indicating a user's consent to their information being shared or sold.
-- {{domxref("Navigator.securitypolicy")}} {{Non-standard_Inline}}
-  - : Returns an empty string. In Netscape 4.7x, returns "US & CA domestic policy" or "Export policy".
 - {{domxref("Navigator.standalone")}} {{Non-standard_Inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
 
