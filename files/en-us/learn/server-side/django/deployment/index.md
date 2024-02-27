@@ -551,7 +551,7 @@ After getting the local library sources and installing the dependencies in a vir
    PythonAnywhere expects this file to be in this location, which is why the WSGI file already in the project cannot be used.
 
 7. Scroll down to the "Virtualenv" section of the _Web_ tab.
-   Select the link **Enter the path to a virtual env, if desired** and enter the path of the virtual evironment created in the previous section.
+   Select the link **Enter the path to a virtual env, if desired** and enter the path of the virtual environment created in the previous section.
    If you named it "env_local_library" as suggested, the path will be: `/home/<user_name>/.virtualenvs/env_local_library`
 
    ![PythonAnywhere Virtual env section of Web tab](python_anywhere_web_virtualenv.png)
