@@ -55,7 +55,7 @@ On an ongoing basis, the browser will:
 
 ## What API features enable the Topics API?
 
-The following features all serve a dual purpose — they trigger the browser to observe topics, **and** return the user's top topics to the caller. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
+The following features all serve a dual purpose — they return the user's top topics to the caller and they trigger the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
 
 - You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
 - You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
