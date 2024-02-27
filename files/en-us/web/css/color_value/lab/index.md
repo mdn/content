@@ -100,13 +100,23 @@ This function uses absolute values for the output color's channel values, output
 lab(from hsl(0 100% 50%) 29.692% 44.89% -29.034%)
 ```
 
-The following function uses the origin color's `l` and `b` channel values for the output color's `l` and `b` channel values, but uses a new value for the output color's `a` channel value, creating a relative color based on the origin color:
+In the above case, the output color is `lab(29.692 56.1125 -36.2925)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 lab(from hsl(0 100% 50%) l -100 b)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent `lab()` color — `lab(54.29 80.8198 69.8997)`.
+- Sets the `l` and `b` channel values for the output color to those of the origin `lab()` equivalent's `L` and `b` channel values — those values are `54.29` and `69.8997`, respectively.
+- Sets the output color's `a` channel value to a new value not based on the origin color: `-100`.
+
+The above example's output color is `lab(54.29 -100 69.8997)`.
+
+In the following example, the `hsl()` origin color is again converted to the `lab()` equivalent — `lab(54.29 80.8198 69.8997)`. {{cssxref("calc")}} calculations are applied to the `L`, `a`, `b`, and `A` values, resulting in an output color of `lab(74.29 60.8198 29.8997 / 0.9)`:
 
 ```css
 lab(from hsl(0 100% 50%) calc(l + 20) calc(a - 20) calc(b - 40) / calc(alpha - 0.1))

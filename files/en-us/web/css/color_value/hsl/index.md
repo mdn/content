@@ -99,7 +99,7 @@ Let's start with an origin color of `rgb(255 0 0)` (equivalent to `red`). The fo
 hsl(from rgb(255 0 0) h s l)
 ````
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/rgb", "rgb()")}} color `rgb(255 0 0)` is converted to `hsl(0 100 50)`.
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/rgb", "rgb()")}} color `rgb(255 0 0)` is converted to an sRGB `color()` function equivalent to `hsl(0 100 50)`: `color(srgb 1 0 0)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -107,13 +107,23 @@ This function uses absolute values for the output color's channel values, output
 hsl(from rgb(255 0 0) 240 60% 70%)
 ```
 
-The following function uses the origin color's `h` channel value for the output color's `h` channel value, but uses new values for output color's `s` and `l` channel values, creating a relative color based on the origin color:
+In the above case, the output color is the sRGB `color()` equivalent of `hsl(240 60% 70%)`: `color(srgb 0.52 0.52 0.88)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 hsl(from rgb(255 0 0) h 30% 60%)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `rgb()` origin color to an equivalent of the `hsl()` representation in the sRGB color space — `color(srgb 1 0 0)` behind the scenes.
+- Sets the `H` channel value for the output color to that of the origin `color()` equivalent's `H` value — `1`.
+- Sets the output color's `S` and `L` channel values to new values not based on the origin color: `30%` and `60%`, respectively.
+
+The above example's output color is `color(srgb 0.72 0.48 0.48)`.
+
+In the following example, the `rgb()` origin color is again converted into an equivalent of the `hwb()` representation in the sRGB color space — `color(srgb 1 0 0 / 0.8)` in this case. {{cssxref("calc")}} calculations are applied to the `H`, `S`, `L`, and `A` values, resulting in an output color of `color(srgb 171 171 -190 / 0.7)`:
 
 ```css
 hsl(from rgb(255 0 0 / 0.8) calc(h + 60) calc(s - 20) calc(l - 10) / calc(alpha - 0.1))
@@ -193,12 +203,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
   --base-color: orange;
 }
 
-#one {
-  /* As per the spec, l + 20% should be specified like this
-  background-color: hsl(from var(--base-color) h s calc(l + 20)); */
+/* As per the spec, s and l values should resolve to a number between 0-100
+   However, Chrome 121+ incorrectly resolves them to numbers between 0-1
+   hence currently using calculations like l + 0.2 instead of l + 20 */
 
-  /* In Chrome 121+, s and l channel values incorrectly resolve to numbers between 0-1
-     rather than 0-100, hence l + 20% currently being specified like this */
+#one {
   background-color: hsl(from var(--base-color) h s calc(l + 0.2));
 }
 
@@ -207,11 +216,6 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  /* As per the spec, l - 20% should be specified like this
-  background-color: hsl(from var(--base-color) h s calc(l - 20)); */
-
-  /* In Chrome 121+, s and l channel values incorrectly resolve to numbers between 0-1
-     rather than 0-100, hence l - 20% currently being specified like this */
   background-color: hsl(from var(--base-color) h s calc(l - 0.2));
 }
 

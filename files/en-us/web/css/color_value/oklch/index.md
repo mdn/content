@@ -96,13 +96,23 @@ This function uses absolute values for the output color's channel values, output
 oklch(from hsl(0 100% 50%) 42.1% 0.25 328.363)
 ```
 
-The following function uses the origin color's `h` channel value for the output color's `h` channel value, but uses a new value for the output color's `l` and `c` channel values, creating a relative color based on the origin color:
+In the above case, the output color is `oklch(0.421 0.25 328.363)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 oklch(from hsl(0 100% 50%) 0.8 0.4 h)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent `oklch()` color — `oklch(0.627966 0.257704 29.2346)`.
+- Sets the `H` channel value for the output color to that of the origin `oklch()` equivalent's `H` channel value — `29.2346`.
+- Sets the output color's `L` and `C` channel values to new values not based on the origin color: `0.8` and `0.4` respectively.
+
+The above example's output color is `oklch(0.8 0.4 29.2346)`.
+
+In the following example, the `hsl()` origin color is again converted to the `oklch()` equivalent — `oklch(0.627966 0.257704 29.2346)`. {{cssxref("calc")}} calculations are applied to the `L`, `C`, `H`, and `A` values, resulting in an output color of `oklch(0.827966 0.357704 9.23462 / 0.9)`:
 
 ```css
 oklch(from hsl(0 100% 50%) calc(l + 0.2) calc(c + 0.1) calc(h - 20) / calc(alpha - 0.1))

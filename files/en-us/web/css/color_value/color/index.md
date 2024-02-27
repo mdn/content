@@ -103,7 +103,10 @@ These functions use absolute values for the output color channel values, outputt
 
 ```css
 color(from hsl(0 100% 50%) srgb 0.749938 0 0.609579)
+/* Computed output color: color(srgb 0.749938 0 0.609579) */
+
 color(from hsl(0 100% 50%) xyz 0.75 0.6554 0.1)
+/* Computed output color: color(xyz-d65 0.75 0.6554 0.1 */
 ```
 
 The following functions use two of the origin color channel values for the output color channel values (`r` and `b`, and `x` and `y`, respectively), but use a new value for the other output channel value (`g` and `z`, respectively), creating a relative color based on the origin color in each case:

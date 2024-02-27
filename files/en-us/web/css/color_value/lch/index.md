@@ -100,13 +100,23 @@ This function uses absolute values for the output color's channel values, output
 lch(from hsl(0 100% 50%) 29.6871% 66.83 327.109)
 ```
 
-The following function uses the origin color's `h` channel value for the output color's `h` channel value, but uses a new value for the output color's `l` and `c` channel values, creating a relative color based on the origin color:
+In the above case, the output color is `lch(29.6871 66.83 327.109)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 lch(from hsl(0 100% 50%) 70 150 h)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent `lch()` color — `lch(54.29 106.854 40.856)`.
+- Sets the `H` channel value for the output color to that of the origin `lch()` equivalent's `H` channel value — `40.856`.
+- Sets the output color's `L` and `C` channel values to new values not based on the origin color: `70` and `150` respectively.
+
+The above example's output color is `lch(70 150 40.856)`.
+
+In the following example, the `hsl()` origin color is again converted to the `lch()` equivalent — `lch(54.29 106.854 40.856)`. {{cssxref("calc")}} calculations are applied to the `L`, `C`, `H`, and `A` values, resulting in an output color of `lch(74.29 86.8541 0.856018 / 0.9)`:
 
 ```css
 lch(from hsl(0 100% 50%) calc(l + 20) calc(c - 20) calc(h - 40) / calc(alpha - 0.1))

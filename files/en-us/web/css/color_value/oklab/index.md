@@ -104,13 +104,23 @@ This function uses absolute values for the output color's channel values, output
 oklab(from hsl(0 100% 50%) 42.1% 41.25% -25.25%)
 ```
 
-The following function uses the origin color's `l` and `b` channel values for the output color's `l` and `b` channel value, but uses a new value for the output color's `a` channel value, creating a relative color based on the origin color:
+In the above case, the output color is `oklab(0.421 0.165 -0.101)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 oklab(from hsl(0 100% 50%) l -0.3 b)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent `oklab()` color — `oklab(0.627966 0.22488 0.125859)`.
+- Sets the `L` and `b` channel values for the output color to those of the origin `oklab()` equivalent's `L` and `b` channel values — those values are `0.627966` and `0.125859`, respectively.
+- Sets the output color's `a` channel value to a new value not based on the origin color: `-0.3`.
+
+The above example's output color is `oklab(0.627966 -0.3 0.125859)`.
+
+In the following example, the `hsl()` origin color is again converted to the `oklab()` equivalent — `oklab(0.627966 0.22488 0.125859)`. {{cssxref("calc")}} calculations are applied to the `L`, `a`, `b`, and `A` values, resulting in an output color of `oklab(0.827966 0.14488 -0.0741406 / 0.9)`:
 
 ```css
 oklab(from hsl(0 100% 50%) calc(l + 0.2) calc(a - 0.08) calc(b - 0.2) / calc(alpha - 0.1))

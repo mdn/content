@@ -94,7 +94,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 hwb(from hsl(0 100% 50%) h w b)
 ```
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `hwb(0 0 0)`.
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to an sRGB `color()` function equivalent to `hwb(0 0 0)`: `color(srgb 1 0 0)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -102,13 +102,23 @@ This function uses absolute values for the output color's channel values, output
 hwb(from hsl(0 100% 50%) 240 52% 12%)
 ```
 
-The following function uses the origin color's `h` and `b` channel values for the output color's `h` and `b` channel values, but uses a new value for the output color's `w` channel value, creating a relative color based on the origin color:
+In the above case, the output color is the sRGB `color()` equivalent of `hwb(240 52% 12%)`: `color(srgb 0.52 0.52 0.88)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 hwb(from hsl(0 100% 50%) h 30% b)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent of the `hwb()` representation in the sRGB color space — `color(srgb 1 0 0)` behind the scenes.
+- Sets the `H` and `B` channel values for the output color to those of the origin `color()` equivalent's `H` and `B` channel values — those values are `1` and `0`, respectively.
+- Sets the output color's `W` channel value to a new value not based on the origin color: `30%`.
+
+The above example's output color is `color(srgb 1 0.3 0.3)`.
+
+In the following example, the `hsl()` origin color is again converted into an equivalent of the `hwb()` representation in the sRGB color space — `color(srgb 1 0 0)`. {{cssxref("calc")}} calculations are applied to the `H`, `W`, `B`, and `A` values, resulting in an output color of `color(srgb 0.714286 0.714286 0.714286 / 0.9)`:
 
 ```css
 hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 0.1))
@@ -155,12 +165,11 @@ These variants are defined using relative colors — the `--base-color` [custom 
   --base-color: orange;
 }
 
-#one {
-  /* As per the spec, w + 30% should be specified like this
-  background-color: hwb(from var(--base-color) h calc(w + 30) b); */
+/* As per the spec, w and b values should resolve to a number between 0-100
+   However, Chrome 121+ incorrectly resolves them to numbers between 0-1
+   hence currently using calculations like w + 0.3 instead of w + 30 */
 
-  /* In Chrome 121+, w and b channel values incorrectly resolve to numbers between 0-1
-     rather than 0-100, hence w + 30% currently being specified like this */
+#one {
   background-color: hwb(from var(--base-color) h calc(w + 0.3) b);
 }
 
@@ -169,11 +178,6 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #three {
-  /* As per the spec, b + 30% should be specified like this
-  background-color: hwb(from var(--base-color) h w calc(b + 30)); */
-
-  /* In Chrome 121+, w and b channel values incorrectly resolve to numbers between 0-1
-     rather than 0-100, hence b + 30% currently being specified like this */
   background-color: hwb(from var(--base-color) h w calc(b + 0.3));
 }
 

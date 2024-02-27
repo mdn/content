@@ -31,7 +31,7 @@ rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 ```
 
-The absolute values can also be written in a legacy form in which all values are separated with commas.
+The absolute values can also be written in a legacy form in which all values are separated with commas. Mixing number and percent value types is not valid in the comma-separated legacy syntax: the `R`, `G`, and `B` values must be either all numbers or all percentages.
 
 ### Values
 
@@ -86,7 +86,7 @@ Let's start with an origin color of `hsl(0 100% 50%)` (equivalent to `red`). The
 rgb(from hsl(0 100% 50%) r g b)
 ```
 
-> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to `rgb(255 0 0)`.
+> **Note:** As mentioned above, if the output color is using a different color model to the origin color, the origin color is converted to the same model or space as the output color in the background so that it can be represented in a way that is compatible (i.e. using the same channels). For example, in the above case the {{cssxref("color_value/hsl", "hsl()")}} color `hsl(0 100% 50%)` is converted to an sRGB `color()` function equivalent to `rgb(255 0 0)`: `color(srgb 1 0 0)`.
 
 This function uses absolute values for the output color's channel values, outputting a completely different color not based on the origin color:
 
@@ -94,13 +94,23 @@ This function uses absolute values for the output color's channel values, output
 rgb(from hsl(0 100% 50%) 132 132 224)
 ```
 
-The following function uses the origin color's `r` channel value for the output color's `r` channel value, but uses a new value for the output color's `g` and `b` channel values, creating a relative color based on the origin color:
+In the above case, the output color is the sRGB `color()` equivalent of `rgb(132 132 224)`: `color(srgb 0.517647 0.517647 0.878431)`.
+
+The following function creates a relative color based on the origin color:
 
 ```css
 rgb(from hsl(0 100% 50%) r 80 80)
 ```
 
-The following example uses {{cssxref("calc")}} functions to calculate new channel values for the output color that are relative to the origin color channel values:
+This example:
+
+- Converts the `hsl()` origin color to an equivalent of the `rgb()` representation in the sRGB color space — `color(srgb 1 0 0)` behind the scenes.
+- Sets the `R` channel value for the output color to that of the origin `color()` equivalent's `R` value — `1`.
+- Sets the output color's `G` and `B` channel values to new values not based on the origin color: `80` and `80`.
+
+The above example's output color is `color(srgb 1 0.313726 0.313726)`.
+
+In the following example, the `hsl()` origin color is again converted into an equivalent of the `rgb()` representation in the sRGB color space — `color(srgb 1 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values, resulting in an output color of `color(srgb 0.5 0.0980392 0.686275 / 0.9)`:
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))
@@ -152,23 +162,13 @@ These variants are defined using relative colors — the `--base-color` [custom 
 }
 
 #two {
-  /* As per the spec, - and + 30% should be specified like this
   background-color: rgb(from var(--base-color) calc(r - 76.5) g calc(b + 76.5));
-
-  /* In Chrome 121+, r, g, and b channel values incorrectly resolve to numbers
-     between 0-1 rather than 0-255, hence + and - 30% currently being specified
-     like this */
-  background-color: rgb(from var(--base-color) calc(r - 0.3) g calc(b + 0.3));
+  /* 76.5 is 30% of 255 */
 }
 
 #three {
-  /* As per the spec, - and + 60% should be specified like this
   background-color: rgb(from var(--base-color) calc(r - 153) g calc(b + 153));
-
-  /* In Chrome 121+, r, g, and b channel values incorrectly resolve to numbers
-     between 0-1 rather than 0-255, hence + and - 60% currently being specified
-     like this */
-  background-color: rgb(from var(--base-color) calc(r - 0.6) g calc(b + 0.6));
+  /* 153 is 60% of 255 */
 }
 
 /* Use @supports to add in support for Safari 16.4+, which supports old
