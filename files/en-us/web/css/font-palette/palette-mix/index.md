@@ -62,9 +62,9 @@ This example shows how to use the `palette-mix()` function to create a new palet
 The HTML contains three paragraphs to apply our font information to:
 
 ```html
-<p class="yellow">Yellow palette</p>
-<p class="blue">Blue palette</p>
-<p class="mix">Mixed palette</p>
+<p class="yellowPalette">Yellow palette</p>
+<p class="bluePalette">Blue palette</p>
+<p class="mixedPalette">Mixed palette</p>
 ```
 
 #### CSS
@@ -76,12 +76,12 @@ In the CSS, we import a color font from Google Fonts, and define two custom `fon
 
 @font-palette-values --blueNabla {
   font-family: Nabla;
-  base-palette: 2;
+  base-palette: 2; /* this is Nabla's blue palette */
 }
 
 @font-palette-values --yellowNabla {
   font-family: Nabla;
-  base-palette: 7;
+  base-palette: 7; /* this is Nabla's yellow palette */
 }
 
 p {
@@ -91,15 +91,15 @@ p {
   margin: 0;
 }
 
-.yellow {
+.yellowPalette {
   font-palette: --yellowNabla;
 }
 
-.blue {
+.bluePalette {
   font-palette: --blueNabla;
 }
 
-.mix {
+.mixedPalette {
   font-palette: palette-mix(in lch, --blueNabla 55%, --yellowNabla 45%);
 }
 ```
