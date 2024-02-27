@@ -860,6 +860,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "DigitalCredential": {
+      "inh": "Credential",
+      "impl": []
+    },
     "DigitalGoodsService": {
       "inh": "",
       "impl": []
@@ -1876,6 +1880,10 @@
       "inh": "UIEvent",
       "impl": []
     },
+    "InstallEvent": {
+      "inh": "ExtendableEvent",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
       "impl": []
@@ -2326,6 +2334,14 @@
     },
     "NotificationEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "NotRestoredReasonDetails": {
+      "inh": "",
+      "impl": []
+    },
+    "NotRestoredReasons": {
+      "inh": "",
       "impl": []
     },
     "OES_draw_buffers_indexed": {
@@ -3574,6 +3590,10 @@
     },
     "TextEncoderStream": {
       "inh": "",
+      "impl": []
+    },
+    "TextEvent": {
+      "inh": "UIEvent",
       "impl": []
     },
     "TextFormat": {
