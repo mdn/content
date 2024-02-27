@@ -328,12 +328,13 @@ After installing all the different dependencies above, your **requirements.txt**
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
 ```plain
-Django==4.2.3
-dj-database-url==2.0.0
-gunicorn==21.2.3
-psycopg2-binary==2.9.6
+Django==5.0.2
+dj-database-url==2.1.0
+gunicorn==21.2.0
+psycopg2-binary==2.9.9
 wheel==0.38.1
-whitenoise==6.5.0
+whitenoise==6.6.0
+python-dotenv==1.0.1
 ```
 
 ### Update your application repository in GitHub

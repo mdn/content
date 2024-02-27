@@ -155,10 +155,10 @@ urlpatterns += [
 ```
 
 Navigate to the `http://127.0.0.1:8000/accounts/` URL (note the trailing forward slash!).
-Django will show an error that it could not find a mapping for this URL, and list all the URLs it tried.
-From this you can see the URLs that will work, for example:
+Django will show an error that it could not find a mapping for this URL, and list all the URLs that it tried.
+From this you can see the URLs that will work once we have created templates.
 
-> **Note:** Using the above method adds the following URLs with names in square brackets, which can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
+> **Note:** Adding the `accounts/` path as shown above adds the following URLs, along with names (given in square brackets) that can be used to reverse the URL mappings. You don't have to implement anything else — the above URL mapping automatically maps the below mentioned URLs.
 >
 > ```python
 > accounts/ login/ [name='login']
@@ -200,7 +200,7 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 To make the **templates** directory visible to the template loader we need to add it in the template search path.
 Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**).
 
-Then import the `os` module (add the following line near the top of the file).
+Then import the `os` module (add the following line near the top of the file if it isn't already present).
 
 ```python
 import os # needed by code below
@@ -281,7 +281,8 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Logout template
 
-If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll see some odd behavior — your user will be logged out sure enough, but you'll be taken to the **Admin** logout page. That's not what you want, if only because the login link on that page takes you to the Admin login screen (and that is only available to users who have the `is_staff` permission).
+If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
+We'll add a form you can use to logout in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
 
@@ -294,7 +295,7 @@ Create and open **/django-locallibrary-tutorial/templates/registration/logged_ou
 {% endblock %}
 ```
 
-This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. If you go to the logout URL again you should see this page:
+This template is very simple. It just displays a message informing you that you have been logged out, and provides a link that you can press to go back to the login screen. The screen renders like this (after logout):
 
 ![Library logout page v1](library_logout.png)
 
@@ -395,7 +396,7 @@ This is the last password-reset template, which is displayed to notify you when 
 
 ### Testing the new authentication pages
 
-Now that you've added the URL configuration and created all these templates, the authentication pages should now just work!
+Now that you've added the URL configuration and created all these templates, the authentication pages (other than logout) should now just work!
 
 You can test the new authentication pages by first attempting to log in to your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
@@ -424,9 +425,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
 
 ```django
   <ul class="sidebar-nav">
-
     …
-
    {% if user.is_authenticated %}
      <li>User: \{{ user.get_username }}</li>
      <li>
@@ -438,6 +437,7 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% else %}
      <li><a href="{% url 'login' %}?next=\{{ request.path }}">Login</a></li>
    {% endif %}
+    …
   </ul>
 ```
 
@@ -448,7 +448,7 @@ We create the login link URL using the `url` template tag and the name of the `l
 The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
-We also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
+YOu also also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
 
 ```css
 #logout-form {
@@ -460,7 +460,7 @@ We also need to append the following styles to **/django-locallibrary-tutorial/c
 }
 ```
 
-> **Note:** Try it out by clicking Login/Logout in the sidebar.
+Try it out by clicking the Login/Logout links in the sidebar.
 
 ### Testing in views
 
