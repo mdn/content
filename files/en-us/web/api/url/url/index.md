@@ -53,16 +53,16 @@ When the constructor variant with two arguments is called the resulting URL is n
 If you need a strict concatenation of the two arguments the `url` must not have a leading slash and the `base` must have a trailing slash.
 
 ```js
-const A = new URL('articles', 'https://developer.mozilla.org/api/v1')
+const A = new URL("articles", "https://developer.mozilla.org/api/v1");
 // => 'https://developer.mozilla.org/api/articles'
 
-const B = new URL('/articles', 'https://developer.mozilla.org/api/v1')
+const B = new URL("/articles", "https://developer.mozilla.org/api/v1");
 // => 'https://developer.mozilla.org/articles'
 
-const C = new URL('articles', 'https://developer.mozilla.org/api/v1/')
+const C = new URL("articles", "https://developer.mozilla.org/api/v1/");
 // => 'https://developer.mozilla.org/api/v1/articles'
 
-const D = new URL('/articles', 'https://developer.mozilla.org/api/v1/')
+const D = new URL("/articles", "https://developer.mozilla.org/api/v1/");
 // => 'https://developer.mozilla.org/articles'
 ```
 
