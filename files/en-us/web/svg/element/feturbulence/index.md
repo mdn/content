@@ -63,6 +63,7 @@ This element implements the {{domxref("SVGFETurbulenceElement")}} interface.
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes), including {{SVGAttr('result')}}.
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
