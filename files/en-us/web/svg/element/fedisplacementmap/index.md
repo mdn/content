@@ -69,6 +69,7 @@ This element implements the {{domxref("SVGFEDisplacementMapElement")}} interface
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
