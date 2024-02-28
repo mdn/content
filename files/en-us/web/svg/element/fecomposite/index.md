@@ -263,6 +263,7 @@ This example defines filters for each of the supported operations (`over`, `atop
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

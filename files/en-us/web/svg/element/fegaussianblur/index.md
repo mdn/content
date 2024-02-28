@@ -86,6 +86,7 @@ This element implements the {{domxref("SVGFEGaussianBlurElement")}} interface.
 
 ## See also
 
+- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

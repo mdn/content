@@ -39,6 +39,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
+- `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
+
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the {{htmlelement("iframe")}}'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+
 - `credentialless` {{Experimental_Inline}}
 
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
@@ -237,7 +241,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
