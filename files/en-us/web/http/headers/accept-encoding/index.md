@@ -59,7 +59,7 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : A compression format that uses the [zlib](https://en.wikipedia.org/wiki/Zlib) structure with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) compression algorithm.
 - `br`
   - : A compression format that uses the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
-- `zstd` {{Non-standard_Inline}}
+- `zstd`
   - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
 - `identity`
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
