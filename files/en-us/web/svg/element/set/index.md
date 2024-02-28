@@ -63,4 +63,6 @@ svg {
 
 ## See also
 
+- {{SVGAttr("attributeName")}} attribute
+- [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes), including {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, and {{SVGAttr("fill")}}.
 - {{SVGElement("animate")}}
