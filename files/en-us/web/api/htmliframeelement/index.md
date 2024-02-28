@@ -23,7 +23,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
-- {{domxref("HTMLIFrameElement.browsingTopics")}} {{Experimental_Inline}}
+- {{domxref("HTMLIFrameElement.browsingTopics")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : A boolean property specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
