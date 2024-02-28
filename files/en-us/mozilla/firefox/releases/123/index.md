@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
+This article provides information about the changes in Firefox 123 that affect developers. Firefox 123 was released on [February 20, 2024](https://whattrainisitnow.com/release/?version=123).
 
 ## Changes for web developers
 
@@ -16,21 +16,16 @@ This article provides information about the changes in Firefox 123 that affect d
 
 - The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
-#### Removals
-
-### CSS
-
-#### Removals
-
 ### JavaScript
 
-#### Removals
+- The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
+  - Incorrect day of month (e.g. "31 April") now skips over to the following month (e.g. "1 May"). ([Firefox bug 1872333](https://bugzil.la/1872333)).
+  - Incomplete time zone (e.g. "1/1/70 gm") or AM/PM (e.g. "1/1/70 10:00 a") are no longer accepted. ([Firefox bug 1870570](https://bugzil.la/1870570)).
+  - Single number dates are now accepted (e.g. `Date.parse("0")` now returns `946684800000` - Sat Jan 01 2000 00:00:00). ([Firefox bug 1870434](https://bugzil.la/1870434)).
 
 ### SVG
 
 - The {{SVGElement("linearGradient")}} and {{SVGElement("radialGradient")}} SVG elements now support changing the color space to be `linearRGB` or `sRGB` via the {{SVGAttr("color-interpolation")}} attribute. This can also be applied to the SVG elements via the {{CSSXref("color-interpolation")}} CSS property.
-
-#### Removals
 
 ### HTTP
 
@@ -38,12 +33,6 @@ This article provides information about the changes in Firefox 123 that affect d
   This can significantly reduce page load time.
   Note that support for using the `103 Early Hints` header for [preconnecting](/en-US/docs/Web/HTML/Attributes/rel/preconnect) was added in [Firefox 120](/en-US/docs/Mozilla/Firefox/Releases/120#http).
   For more details see [Firefox bug 1874445](https://bugzil.la/1874445).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -53,13 +42,14 @@ This article provides information about the changes in Firefox 123 that affect d
 
 #### DOM
 
+- Custom locale support for the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) has been deprecated, including the [`options.locale`](/en-US/docs/Web/API/IDBObjectStore/createIndex#locale) parameter to `IDBObjectStore.createIndex()`, and the `IDBIndex` properties [`isAutoLocale`](/en-US/docs/Web/API/IDBIndex/isAutoLocale) and [`locale`](/en-US/docs/Web/API/IDBIndex/locale).
+  ([Firefox bug 1872675](https://bugzil.la/1872675) and [Firefox bug 1730706](https://bugzil.la/1730706)).
+
 #### Media, WebRTC, and Web Audio
 
 #### Removals
 
-### WebAssembly
-
-#### Removals
+The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](https://bugzil.la/1730706)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -79,13 +69,15 @@ This article provides information about the changes in Firefox 123 that affect d
 
 - Addition of fhe {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
 
-### Removals
-
-### Other
-
 ## Experimental web features
 
 These features are newly shipped in Firefox 123 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Web Codecs API:** `dom.media.webcodecs.enabled`.
+
+  The video interfaces of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) are supported on Linux desktop on Nightly.
+  These include: [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
+  ([Firefox bug 1874445](https://bugzil.la/1874445)).
 
 ## Older versions
 

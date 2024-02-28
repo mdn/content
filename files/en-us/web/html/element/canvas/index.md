@@ -38,7 +38,7 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 ### Maximum canvas size
 
-The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://github.com/jhildenbiddle/canvas-size#test-results) (2021).
+The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
 
 > **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
 
@@ -127,7 +127,7 @@ The `<canvas>` element on its own is just a bitmap and does not provide informat
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
