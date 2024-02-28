@@ -47,6 +47,25 @@ new URL(url, base)
 | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | {{jsxref("TypeError")}} | `url` (in the case of absolute URLs) or `base` + `url` (in the case of relative URLs) is not a valid URL. |
 
+## Merging of url and base paths
+
+When the constructor variant with two arguments is called the resulting URL is not simply a concatenation of the two; the path sections of both arguments are merged according to [RFC 3986 - Relative Resolution](https://datatracker.ietf.org/doc/html/rfc3986.html#section-5.2).
+If you need a strict concatenation of the two arguments the `url` must not have a leading slash and the `base` must have a trailing slash.
+
+```js
+const A = new URL('articles', 'https://developer.mozilla.org/api/v1')
+// => 'https://developer.mozilla.org/api/articles'
+
+const B = new URL('/articles', 'https://developer.mozilla.org/api/v1')
+// => 'https://developer.mozilla.org/articles'
+
+const C = new URL('articles', 'https://developer.mozilla.org/api/v1/')
+// => 'https://developer.mozilla.org/api/v1/articles'
+
+const D = new URL('/articles', 'https://developer.mozilla.org/api/v1/')
+// => 'https://developer.mozilla.org/articles'
+```
+
 ## Examples
 
 ```js
