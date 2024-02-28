@@ -3,11 +3,12 @@ title: Sec-Browsing-Topics
 slug: Web/HTTP/Headers/Sec-Browsing-Topics
 page-type: http-header
 status:
+  - experimental
   - non-standard
 browser-compat: http.headers.Sec-Browsing-Topics
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 

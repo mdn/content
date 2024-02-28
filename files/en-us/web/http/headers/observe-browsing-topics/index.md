@@ -3,11 +3,12 @@ title: Observe-Browsing-Topics
 slug: Web/HTTP/Headers/Observe-Browsing-Topics
 page-type: http-header
 status:
+  - experimental
   - non-standard
 browser-compat: http.headers.Observe-Browsing-Topics
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
 
 > **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
