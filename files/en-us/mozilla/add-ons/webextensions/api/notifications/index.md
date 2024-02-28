@@ -9,13 +9,15 @@ browser-compat: webextensions.api.notifications
 
 Display notifications to the user, using the underlying operating system's notification mechanism. Because this API uses the operating system's notification mechanism, the details of how notifications appear and behave may differ according to the operating system and the user's settings.
 
+On macOS, the notification looks something like:
+
+![Example notification on macOS, located below the system clock, with a bold title reading "Click notification" followed by regular text reading "You clicked https://developer.mozilla.org/en-US/docs/MDN". The notification has the Firefox Nightly logo on the left side, and a link icon on the right.](notification-macos.png)
+
+On Windows, the notification will persist in the Action Center until the browser is closed. The notification looks something like:
+
+![Example notification on Windows 10, located above the system clock, with a bold title reading "Click notification" followed by regular text reading "You clicked https://developer.mozilla.org/en-US/docs/MDN". The notification has a small Firefox logo in the top left corner that is followed by the "Mozilla Firefox", and a link icon to the left of the primary notification text.](notification-windows.png)
+
 To use this API you need to have the "notifications" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
-
-The notification looks the same on most desktop operating systems. Something like:
-
-![Example notification with a bold title and regular text](notification.png)
-
-On Windows, the notification uses the system's notifications feature, and if not dismissed, it will persist in the Action Center until the browser is closed.
 
 ## Types
 
