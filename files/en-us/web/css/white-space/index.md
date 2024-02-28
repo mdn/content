@@ -229,6 +229,40 @@ select.addEventListener("change", (e) => {
 
 {{EmbedLiveSample("In_action", "100%", 350)}}
 
+### Multiple lines in SVG text element
+
+The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, but check support.
+
+#### HTML
+
+The text inside the `<text>` element needs to be split into multiple lines for the new-lines to be detected. After the first line the rest need to have their whitespace removed.
+
+```html
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="320"
+  height="150"
+  viewBox="0 0 320 150"
+  version="1.1">
+  <text y="20" x="10" dy="1rem">
+    Here is an English paragraph that is broken into multiple lines in the
+    source code so that it can be more easily read and edited in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 150)}}
+
 ## Specifications
 
 {{Specifications}}
