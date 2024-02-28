@@ -124,6 +124,8 @@ p::first-letter {
 
 ### Styling first letter in SVG text element
 
+> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+
 #### HTML
 
 ```html
