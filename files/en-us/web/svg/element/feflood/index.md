@@ -59,8 +59,6 @@ This element implements the {{domxref("SVGFEFloodElement")}} interface.
 ## See also
 
 - [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
-- {{SVGAttr("flood-color")}} attribute
-- {{SVGAttr("flood-opacity")}} attribute
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}
