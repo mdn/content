@@ -123,6 +123,30 @@ To copy all CSS style sheets from the originating window, loop through all style
 // ...
 ```
 
+## Target styles at the document when in Picture-in-Picture mode
+
+The {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features)'s `picture-in-picture` value allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
+
+In our demo, we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature to create light and dark color schemes that are applied based on the user's preference, only when the app is being shown in Picture-in-Picture mode.
+
+```css
+@media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
+  body {
+    background: antiquewhite;
+  }
+}
+
+@media (display-mode: picture-in-picture) and (prefers-color-scheme: dark) {
+  body {
+    background: #333;
+  }
+
+  a {
+    color: antiquewhite;
+  }
+}
+```
+
 ## Handle when the Picture-in-Picture window closes
 
 The code for toggling the Picture-in-Picture window closed again when the button is pressed a second time looks like this:

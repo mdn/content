@@ -46,7 +46,7 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 ## Interfaces
 
 - {{domxref("DocumentPictureInPicture")}}
-  - : The entry point for creating and handling document picture-in-picture windows.
+  - : The entry point for creating and handling document Picture-in-Picture windows.
 - {{domxref("DocumentPictureInPictureEvent")}}
   - : Event object for the {{domxref("DocumentPictureInPicture/enter_event", "enter")}} event, which fires when the Picture-in-Picture window is opened.
 
@@ -54,6 +54,11 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 
 - {{domxref("Window.documentPictureInPicture")}}
   - : Returns a reference to the {{domxref("DocumentPictureInPicture")}} object for the current document context.
+
+## CSS additions
+
+- {{cssxref("@media/display-mode", "display-mode")}}, the `picture-in-picture` value
+  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
 
 ## Examples
 
