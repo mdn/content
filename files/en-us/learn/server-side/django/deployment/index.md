@@ -98,23 +98,38 @@ The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_webs
 The critical settings that you must check are:
 
 - `DEBUG`. This should be set as `False` in production (`DEBUG = False`). This stops the sensitive/confidential debug trace and variable information from being displayed.
-- `SECRET_KEY`. This is a large random value used for CSRF protection, etc. It is important that the key used in production is not in source control or accessible outside the production server. The Django documents suggest that this might best be loaded from an environment variable or read from a server-only file.
+- `SECRET_KEY`. This is a large random value used for CSRF protection, etc. It is important that the key used in production is not in source control or accessible outside the production server.
 
-  ```python
-  # Read SECRET_KEY from an environment variable
-  import os
-  SECRET_KEY = os.environ['SECRET_KEY']
+The Django documents suggest that secret information might best be loaded from an environment variable or read from a server-only file.
+Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, falling back to values defined in an **.env** file in the root, and lastly to using the default values in the configuration file.
+This is very flexible as it allows any configuration supported by the hosting server.
 
-  # OR
+For reading environment values from a file we'll use [python-dotenv](https://pypi.org/project/python-dotenv/).
+This is a library for reading key-value pairs out of a file and using them as environment variables, but only if the corresponding environment variable is not defined.
 
-  # Read secret key from a file
-  with open('/etc/secret_key.txt') as f:
-      SECRET_KEY = f.read().strip()
-  ```
+Install the library into your virtual environment as shown (and also update your `requirements.txt` file):
 
-Let's change the _LocalLibrary_ application so that we read our `SECRET_KEY` and `DEBUG` variables from environment variables if they are defined, but otherwise use the default values in the configuration file.
+```bash
+pip3 install python-dotenv
+```
 
-Open **/locallibrary/settings.py**, disable the original `SECRET_KEY` configuration and add the new lines as shown below.
+Then open **/locallibrary/settings.py** and insert the following code after `BASE_DIR` is defined, but before the security warning: `# SECURITY WARNING: keep the secret key used in production secret!`
+
+```py
+# Support env variables from .env file if defined
+import os
+from dotenv import load_dotenv
+env_path = load_dotenv(os.path.join(BASE_DIR, '.env'))
+load_dotenv(env_path)
+```
+
+This loads the `.env` file from the root of the web application.
+Variables defined as `KEY=VALUE` in the file are imported when the key is used in `os.environ.get('<KEY>'', '<DEFAULT VALUE>')`, if defined.
+
+> **Note:** Any values that you add to **.env** are likely to be _secrets_!
+> You must not save them to GitHub, and you should add `.env` to your `.gitignore` file so that it is not added by accident.
+
+Next disable the original `SECRET_KEY` configuration and add the new lines as shown below.
 During development no environment variable will be specified for the key, so the default value will be used (it shouldn't matter what key you use here, or if the key "leaks", because you won't use it in production).
 
 ```python
@@ -132,7 +147,8 @@ Then comment out the existing `DEBUG` setting and add the new line shown below.
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ```
 
-The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False`. Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
+The value of the `DEBUG` will be `True` by default, but will only be `False` if the value of the `DJANGO_DEBUG` environment variable is set to `False` or `DJANGO_DEBUG=False` is set in the **.env** file.
+Please note that environment variables are strings and not Python types. We therefore need to compare strings. The only way to set the `DEBUG` variable to `False` is to actually set it to the string `False`.
 
 You can set the environment variable to "False" on Linux by issuing the following command:
 
@@ -619,7 +635,7 @@ You should be able to log in with the superuser account you created above, and c
 
 ### Using environment variables on PythonAnywhere
 
-In the section on [Getting your website ready to publish](#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables in production.
+In the section on [Getting your website ready to publish](#getting_your_website_ready_to_publish) we modified the application so that it can be configured using environment variables or variables in a **.env** file in production.
 
 Specifically we set up the library so that you can set:
 
@@ -628,7 +644,8 @@ Specifically we set up the library so that you can set:
 - `DATABASE_URL` if your application uses a hosted database (we do not in this example).
 
 The way that environment variables are set depends on the hosting service.
-[PythonAnywhere recommends that you read them from an environment file](https://help.pythonanywhere.com/pages/environment-variables-for-web-apps).
+For PythonAnywhere you need to read them from an environment file.
+We're already set up for that, so all we need to do is create the file.
 
 The steps are:
 
@@ -639,47 +656,14 @@ The steps are:
    cd ~/<user-name>.pythonanywhere.com
    ```
 
-3. Make sure that the virtual environment used by the server is active.
-   If not, activate it using:
-
-   ```bash
-   workon env_local_library
-   ```
-
-4. Install [python-dotenv](https://pypi.org/project/python-dotenv/), a tool for reading key-value pairs out of a file and saving them as environment variables.
-
-   ```bash
-   pip install python-dotenv
-   ```
-
-   Note that you might also add _python-dotenv_ to your `requirements.txt` file.
-
-5. You can set the environment variables by writing them as key-value pairs to the `.env` file.
-   For example, to set `DJANGO_DEBUG` to `False` in the Bash console, enter the following following command:
+3. Set the environment variables by writing them as key-value pairs to the `.env` file.
+   For example, to set `DJANGO_DEBUG` to `False` in the Bash console, enter the following command:
 
    ```bash
    echo "DJANGO_DEBUG=False" >> .env
    ```
 
-   Note that these are _secrets_!
-   You must not save them to GitHub, and you might want to add `.env` to your `.gitignore` file so that it is not added by accident.
-
-6. The final step is to ensure that variables in the `.env` file are read into the environment.
-
-   Open the _Web_ tab and scroll down to the "Code" section.
-   Select the link to open the WSGI configuration file.
-
-   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
-
-   Add the following lines to the top of the file (after `import sys`), replacing the `<user-name>` with your own account, and then press the **Save** button.
-
-   ```py
-   from dotenv import load_dotenv
-   project_folder = os.path.expanduser('~/<user-name>.pythonanywhere.com') # adjust as appropriate
-   load_dotenv(os.path.join(project_folder, '.env'))
-   ```
-
-7. Restart the application.
+4. Restart the application.
 
 You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
 If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
