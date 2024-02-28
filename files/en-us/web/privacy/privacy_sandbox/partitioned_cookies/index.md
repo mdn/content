@@ -1,4 +1,4 @@
----
+{{SeeCompatTable}}---
 title: Cookies Having Independent Partitioned State (CHIPS)
 slug: Web/Privacy/Privacy_sandbox/Partitioned_cookies
 page-type: guide
