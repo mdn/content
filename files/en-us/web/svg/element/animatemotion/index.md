@@ -64,12 +64,16 @@ svg {
 
 - [Animation timing attributes](/en-US/docs/Web/SVG/Attribute#animation_timing_attributes)
   - : {{SVGAttr("begin")}}, {{SVGAttr("dur")}}, {{SVGAttr("end")}}, {{SVGAttr("min")}}, {{SVGAttr("max")}}, {{SVGAttr("restart")}}, {{SVGAttr("repeatCount")}}, {{SVGAttr("repeatDur")}}, {{SVGAttr("fill")}}
+
 - [Animation value attributes](/en-US/docs/Web/SVG/Attribute#animation_value_attributes)
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
+
 - [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+
 - [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
+
 ## Usage notes
 
 This element implements the {{domxref("SVGAnimateMotionElement")}} interface.
