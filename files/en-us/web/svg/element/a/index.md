@@ -110,4 +110,4 @@ svg|a:active {
 ## See also
 
 - {{SVGAttr("xlink:title")}} attribute
-- HTML {{HTMLElement("a") element
+- HTML {{HTMLElement("a")}} element
