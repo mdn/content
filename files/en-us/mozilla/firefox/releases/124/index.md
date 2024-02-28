@@ -26,6 +26,8 @@ This article provides information about the changes in Firefox 124 that affect d
 
 ### SVG
 
+- The {{cssxref("::first-letter")}} and {{cssxref("::first-line")}} CSS pseudo-elements can now be applied to the {{SVGElement("text")}} SVG element. This allows you to change the fill, stroke or font of the first letter/line of a `<text>` element using CSS, for example. ([Firefox bug 1302722](https://bugzil.la/1302722)).
+
 #### Removals
 
 ### HTTP
