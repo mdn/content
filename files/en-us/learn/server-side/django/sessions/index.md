@@ -48,7 +48,7 @@ Django uses a cookie containing a special _session id_ to identify each browser 
 
 Sessions were enabled automatically when we [created the skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) (in tutorial 2).
 
-The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**locallibrary/locallibrary/settings.py**), as shown below:
+The configuration is set up in the `INSTALLED_APPS` and `MIDDLEWARE` sections of the project file (**django-locallibrary-tutorial/locallibrary/settings.py**), as shown below:
 
 ```python
 INSTALLED_APPS = [
@@ -87,7 +87,7 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 ```
 
-The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in [How to use sessions](https://docs.djangoproject.com/en/4.2/topics/http/sessions/) (Django docs).
+The API also offers a number of other methods that are mostly used to manage the associated session cookie. For example, there are methods to test that cookies are supported in the client browser, to set and check cookie expiry dates, and to clear expired sessions from the data store. You can find out about the full API in [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) (Django docs).
 
 ## Saving session data
 
@@ -108,13 +108,13 @@ request.session['my_car']['wheels'] = 'alloy'
 request.session.modified = True
 ```
 
-> **Note:** You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**locallibrary/locallibrary/settings.py**).
+> **Note:** You can change the behavior so the site will update the database/send cookie on every request by adding `SESSION_SAVE_EVERY_REQUEST = True` into your project settings (**django-locallibrary-tutorial/locallibrary/settings.py**).
 
 ## Simple example — getting visit counts
 
 As a simple real-world example we'll update our library to tell the current user how many times they have visited the _LocalLibrary_ home page.
 
-Open **/locallibrary/catalog/views.py**, and add the lines that contain `num_visits` into `index()` (as shown below).
+Open **/django-locallibrary-tutorial/catalog/views.py**, and add the lines that contain `num_visits` into `index()` (as shown below).
 
 ```python
 def index(request):
@@ -140,9 +140,9 @@ def index(request):
 
 Here we first get the value of the `'num_visits'` session key, setting the value to 0 if it has not previously been set. Each time a request is received, we then increment the value and store it back in the session (for the next time the user visits the page). The `num_visits` variable is then passed to the template in our context variable.
 
-> **Note:** We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/4.2/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
+> **Note:** We might also test whether cookies are even supported in the browser here (see [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) for examples) or design our UI so that it doesn't matter whether or not cookies are supported.
 
-Add the line shown at the bottom of the following block to your main HTML template (**/locallibrary/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
+Add the line shown at the bottom of the following block to your main HTML template (**/django-locallibrary-tutorial/catalog/templates/index.html**) at the bottom of the "Dynamic content" section to display the `num_visits` context variable.
 
 ```django
 <h2>Dynamic content</h2>
@@ -160,7 +160,7 @@ Add the line shown at the bottom of the following block to your main HTML templa
 </p>
 ```
 
-Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.
+Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.
 
 Save your changes and restart the test server. Every time you refresh the page, the number should update.
 
@@ -172,6 +172,6 @@ In our next articles we'll explain the authentication and authorization (permiss
 
 ## See also
 
-- [How to use sessions](https://docs.djangoproject.com/en/4.2/topics/http/sessions/) (Django docs)
+- [How to use sessions](https://docs.djangoproject.com/en/5.0/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
