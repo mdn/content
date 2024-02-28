@@ -55,6 +55,9 @@ This element implements the {{domxref("SVGFEMergeElement")}} interface.
 
 ## See also
 
+- [SVG Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filters_attributes)
+- {{SVGAttr("flood-color")}} attribute
+- {{SVGAttr("flood-opacity")}} attribute
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}
