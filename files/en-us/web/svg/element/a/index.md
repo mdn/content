@@ -106,3 +106,8 @@ svg|a:active {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("xlink:title")}} attribute
+- HTML {{HTMLElement("a") element
