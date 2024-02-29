@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onResponseStarted
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the first byte of the response body is received.
 

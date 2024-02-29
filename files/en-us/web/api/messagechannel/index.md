@@ -5,11 +5,16 @@ page-type: web-api-interface
 browser-compat: api.MessageChannel
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API) allows us to create a new message channel and send data through it via its two {{domxref("MessagePort")}} properties.
 
 {{AvailableInWorkers}}
+
+## Constructor
+
+- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
+  - : Returns a new `MessageChannel` object with two new {{domxref("MessagePort")}} objects.
 
 ## Instance properties
 
@@ -18,16 +23,11 @@ The **`MessageChannel`** interface of the [Channel Messaging API](/en-US/docs/We
 - {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
   - : Returns port2 of the channel.
 
-## Constructor
-
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : Returns a new `MessageChannel` object with two new {{domxref("MessagePort")}} objects.
-
 ## Example
 
-In the following example, you can see a new channel being created using the {{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
+In the following example, you can see a new channel being created using the {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor.
 
-When the IFrame has loaded, we register an `onmessage` handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
+When the IFrame has loaded, we register an {{domxref("MessagePort/message_event","onmessage")}} handler for {{domxref("MessageChannel.port1")}} and transfer {{domxref("MessageChannel.port2")}} to the IFrame using the {{domxref("window.postMessage")}} method along with a message.
 
 When a message is received back from the IFrame, the `onMessage` function outputs the message to a paragraph.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.disable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Disables the browser action for a tab, meaning that it cannot be clicked when that tab is active.
 

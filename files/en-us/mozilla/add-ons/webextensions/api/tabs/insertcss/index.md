@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.insertCSS
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Injects CSS into a page.
 

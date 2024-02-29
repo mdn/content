@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDevice.createQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createQuerySet()`** method of the
 {{domxref("GPUDevice")}} interface creates a {{domxref("GPUQuerySet")}} that can be used to record the results of queries on passes, such as occlusion or timestamp queries.

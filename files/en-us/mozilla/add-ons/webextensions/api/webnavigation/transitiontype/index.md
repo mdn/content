@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webNavigation.TransitionType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 

@@ -29,12 +29,12 @@ The **`mathbackground`** [global attribute](/en-US/docs/Web/MathML/Global_attrib
 <math mathbackground="#1fef"> <!-- Fully opaque shorthand -->
 
 <!-- RGB value -->
-<math mathbackground="rgb(255, 255, 128)"> <!-- Fully opaque -->
-<math mathbackground="rgba(117, 190, 218, 0.5)"> <!-- 50% transparent -->
+<math mathbackground="rgb(255 255 128)"> <!-- Fully opaque -->
+<math mathbackground="rgb(117 190 218 / 50%)"> <!-- 50% transparent -->
 
 <!-- HSL value -->
 <math mathbackground="hsl(50 33% 25%)"> <!-- Fully opaque -->
-<math mathbackground="hsl(50 33% 25% / 0.75)"> <!-- 75% opaque, i.e. 25% transparent -->
+<math mathbackground="hsl(50 33% 25% / 75%)"> <!-- 75% opaque, i.e. 25% transparent -->
 ```
 
 ### Values

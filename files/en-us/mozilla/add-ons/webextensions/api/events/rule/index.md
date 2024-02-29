@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.events.Rule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Description of a declarative rule for handling events.
 

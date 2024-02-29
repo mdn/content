@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.management.onEnabled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The event listener called when the `enabled` event is fired, indicating that an add-on is now enabled.
 

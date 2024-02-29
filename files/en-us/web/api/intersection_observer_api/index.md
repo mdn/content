@@ -170,8 +170,8 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
   position: relative;
   left: 175px;
   width: 150px;
-  background-color: rgb(245, 170, 140);
-  border: 2px solid rgb(201, 126, 17);
+  background-color: rgb(245 170 140);
+  border: 2px solid rgb(201 126 17);
   padding: 4px;
   margin-bottom: 6px;
 }
@@ -199,8 +199,8 @@ To get a feeling for how thresholds work, try scrolling the box below around. Ea
     sans-serif;
   position: absolute;
   margin: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  background-color: rgb(255 255 255 / 70%);
+  border: 1px solid rgb(0 0 0 / 70%);
   width: 3em;
   height: 18px;
   padding: 2px;
@@ -362,8 +362,8 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 1);
-  border: 4px solid rgb(20, 20, 120);
+  background-color: rgb(40 40 190 / 100%);
+  border: 4px solid rgb(20 20 120);
   transition:
     background-color 1s,
     border 1s;
@@ -384,7 +384,7 @@ The CSS isn't terribly important for the purposes of this example; it lays out t
   width: 350px;
   height: 350px;
   margin-top: 10px;
-  border: 4px solid rgb(20, 20, 120);
+  border: 4px solid rgb(20 20 120);
   text-align: center;
   padding: 20px;
 }
@@ -403,8 +403,8 @@ const numSteps = 20.0;
 
 let boxElement;
 let prevRatio = 0.0;
-let increasingColor = "rgba(40, 40, 190, ratio)";
-let decreasingColor = "rgba(190, 40, 40, ratio)";
+let increasingColor = "rgb(40 40 190 / ratio)";
+let decreasingColor = "rgb(190 40 40 / ratio)";
 
 // Set things up
 window.addEventListener(
@@ -582,7 +582,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-For each {{domxref("IntersectionObserverEntry")}} in the list `entries`, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in `increasingColor` (remember, it's `"rgba(40, 40, 190, ratio)"`), replaces the word "ratio" with the entry's `intersectionRatio`. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.
+For each {{domxref("IntersectionObserverEntry")}} in the list `entries`, we look to see if the entry's {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} is going up; if it is, we set the target's {{cssxref("background-color")}} to the string in `increasingColor` (remember, it's `"rgb(40 40 190 / ratio)"`), replaces the word "ratio" with the entry's `intersectionRatio`. The result: not only does the color get changed, but the transparency of the target element changes, too; as the intersection ratio goes down, the background color's alpha value goes down with it, resulting in an element that's more transparent.
 
 Similarly, if the `intersectionRatio` is going down, we use the string `decreasingColor` and replace the word "ratio" in that with the `intersectionRatio` before setting the target element's `background-color`.
 

@@ -31,10 +31,6 @@ The [&lt;dashed-ident&gt;](/en-US/docs/Web/CSS/dashed-ident) is a user defined i
 - [override-colors](/en-US/docs/Web/CSS/@font-palette-values/override-colors)
   - : Specifies the colors in the base palette to override.
 
-## Formal definition
-
-{{cssinfo}}
-
 ## Formal syntax
 
 {{csssyntax}}

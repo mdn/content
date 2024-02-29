@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface begins a render pass debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPURenderPassEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.

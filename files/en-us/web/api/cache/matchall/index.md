@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.matchAll
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`matchAll()`** method of the {{domxref("Cache")}}
 interface returns a {{jsxref("Promise")}} that resolves to an array of all matching

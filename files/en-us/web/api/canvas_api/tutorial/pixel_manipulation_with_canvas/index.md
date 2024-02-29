@@ -60,7 +60,7 @@ To create a new, blank `ImageData` object, you should use the {{domxref("CanvasR
 const myImageData = ctx.createImageData(width, height);
 ```
 
-This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgba(0,0,0,0)).
+This creates a new `ImageData` object with the specified dimensions. All pixels are preset to transparent black (all zeroes, i.e., rgb(0 0 0 / 0%)).
 
 You can also create a new `ImageData` object with the same dimensions as the object specified by `anotherImageData`. The new object's pixels are all preset to transparent black. **This does not copy the image data!**
 
@@ -106,11 +106,11 @@ function pick(event, destination) {
   const pixel = ctx.getImageData(x, y, 1, 1);
   const data = pixel.data;
 
-  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
-  destination.style.background = rgba;
-  destination.textContent = rgba;
+  const rgbColor = `rgb(${data[0]} ${data[1]} ${data[2]} / ${data[3] / 255})`;
+  destination.style.background = rgbColor;
+  destination.textContent = rgbColor;
 
-  return rgba;
+  return rgbColor;
 }
 
 canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));

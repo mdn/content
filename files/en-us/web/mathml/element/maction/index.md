@@ -22,7 +22,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   - : The action which specifies what happens for this element. Special behavior
     for the following values were implemented by some browsers:
 
-    - `statusline`: If there is a click on the _expression_ or the reader moves the pointer over it, the _message_ is sent to the browser's status line. The syntax is: `<maction actiontype="statusline"> expression message </maction>.`
+    - `statusline`: If there is a click on the _expression_ or the reader moves the pointer over it, the _message_ is sent to the browser's status line. The syntax is: `<maction actiontype="statusline"> expression message </maction>`.
     - `toggle`: When there is a click on the subexpression, the rendering alternates the display of selected subexpressions. Therefore each click increments the `selection` value.
       The syntax is: `<maction actiontype="toggle" selection="positive-integer" > expression1 expression2 expressionN </maction>`.
 
@@ -66,7 +66,7 @@ The following example uses the "toggle" `actiontype`:
 </p>
 ```
 
-{{ EmbedLiveSample('maction_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples', 700, 200)}}
 
 ## Specifications
 

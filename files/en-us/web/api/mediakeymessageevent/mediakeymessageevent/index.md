@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMessageEvent")}} object.
 

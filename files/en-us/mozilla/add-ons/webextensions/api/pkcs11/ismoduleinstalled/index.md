@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.isModuleInstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Checks whether the named PKCS #11 module is currently installed in Firefox.
 

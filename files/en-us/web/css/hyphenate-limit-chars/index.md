@@ -11,8 +11,6 @@ The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property specifies th
 
 This property provides you with fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.
 
-In the interactive example above, the default minimum word length setting of `hyphenate-limit-chars` is too large for either of the long words to be hyphenated, and so the output looks untidy. However, by choosing the other value option, the minimum word length limit is reduced. This allows both the long words to be hyphenated, making for a neater layout.
-
 ## Syntax
 
 ```css
@@ -56,7 +54,7 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 - Minimum number of characters before the hyphen: 2
 - Minimum number of characters after the hyphen: 2
 
-> **Note:** If a word is shorter than any of the provided values, it will not be hyphenated.
+Note that if a word is too short to meet the given constraints, it will not be hyphenated. For example, given a value like `hyphenate-limit-chars: auto 3 4`, words shorter than 7 characters will never be hyphenated, since it is impossible to have 3 characters before the hyphen and 4 characters after it.
 
 ## Formal definition
 
@@ -68,12 +66,64 @@ If `auto` is set for any of the values, the user agent will choose an appropriat
 
 ## Examples
 
+### Setting hyphenation limits
+
+In this example, we have four boxes each containing the same text. For the purpose of comparison, the first box shows the default hyphenation applied by the browser. The next three boxes demonstrate the result of constraining the browser's default behavior using different `hyphenate-limit-chars` values.
+
+#### HTML
+
+```html
+<div class="container">
+  <p id="ex1">juxtaposition and acknowledgement</p>
+  <p id="ex2">juxtaposition and acknowledgement</p>
+  <p id="ex3">juxtaposition and acknowledgement</p>
+  <p id="ex4">juxtaposition and acknowledgement</p>
+</div>
+```
+
+#### CSS
+
 ```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
 p {
+  margin: 1rem;
+  width: 120px;
+  border: 2px dashed #999;
+  font-size: 1.5rem;
   hyphens: auto;
-  hyphenate-limit-chars: 10 3 4;
+}
+
+#ex2 {
+  hyphenate-limit-chars: 14;
+}
+
+#ex3 {
+  hyphenate-limit-chars: 5 9 2;
+}
+
+#ex4 {
+  hyphenate-limit-chars: 5 2 7;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("Setting hyphenation limits", "", 200)}}
+
+In the first box, we don't set `hyphenate-limit-chars`, allowing the browser to apply its default algorithm. By default, the browser uses the values `5 2 2` unless it can find better values.
+
+In the second box, we prevent the browser from hyphenating words unless they are at least 14 characters long by setting `hyphenate-limit-chars: 14`. As a result, "juxtaposition" is not hyphenated in the second box because it is only 13 characters long.
+
+In the third box, we constrain the browser to include at least 9 characters before the hyphen by setting `hyphenate-limit-chars: 5 9 2`. The effect is that "acknowledgement" is now hyphenated as "acknowledge-ment" rather than the default version "acknowl-edgement", as shown in the first box.
+
+Note that the browser does not have to include exactly 9 characters before the hyphen: as long as the constraints given in `hyphenate-limit-chars` are satisfied, the browser can break the word in the place it considers best. So in this case, for example, it chooses "acknowledge-ment" rather than the less readable "acknowled-gement".
+
+In the fourth box, we make the browser include at least 7 characters after the hyphen by setting
+`hyphenate-limit-chars: 5 2 7`. The effect is that "juxtaposition" is hyphenated as "juxta-position" rather than the default "juxtaposi-tion".
 
 ## Specifications
 

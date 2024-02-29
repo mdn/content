@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBindGroupLayout.label
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`label`** property of the
 {{domxref("GPUBindGroupLayout")}} interface provides a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.

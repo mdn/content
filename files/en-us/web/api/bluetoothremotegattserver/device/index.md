@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.device
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTServer.device`** read-only property
 returns a reference to the {{domxref("BluetoothDevice")}} running the server.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUUncapturedErrorEvent.GPUUncapturedErrorEvent
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUUncapturedErrorEvent()`** constructor creates a new
 {{domxref("GPUUncapturedErrorEvent")}} object instance.

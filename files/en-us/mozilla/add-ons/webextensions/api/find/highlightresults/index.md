@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.find.highlightResults
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Highlights the results of a previous call to {{WebExtAPIRef("find.find()")}}.
 

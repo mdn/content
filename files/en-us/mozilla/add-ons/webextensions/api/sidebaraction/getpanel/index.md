@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.getPanel
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets a URL to the HTML document that defines the sidebar's contents.
 

@@ -21,6 +21,8 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 
 > **Note:** you can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
+{{AvailableInWorkers}}
+
 ## Constructor
 
 - {{domxref("Headers.Headers()", "Headers()")}}

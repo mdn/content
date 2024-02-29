@@ -67,7 +67,7 @@ Used in **ALL** roles
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)

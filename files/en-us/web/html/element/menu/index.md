@@ -106,7 +106,7 @@ button {
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{No_Tag_Omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

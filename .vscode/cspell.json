@@ -68,5 +68,6 @@
       "path": "./project-words.txt",
       "addWords": true
     }
-  ]
+  ],
+  "enableFiletypes": ["xml"]
 }

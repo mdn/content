@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.extension.setUpdateUrlData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets parameters for the extension's update URL. This value is ignored for extensions that are hosted in the browser vendor's store.
 

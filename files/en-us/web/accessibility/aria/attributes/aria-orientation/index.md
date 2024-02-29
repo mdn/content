@@ -75,7 +75,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Understanding WCAG: Keyboard](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
 

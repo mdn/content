@@ -60,7 +60,7 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [HTML `placeholder` attribute](/en-US/docs/Web/HTML/Element/input#placeholder)
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)

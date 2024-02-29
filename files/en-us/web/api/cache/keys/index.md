@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.keys
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`keys()`** method of the {{domxref("Cache")}} interface returns a
 {{jsxref("Promise")}} that resolves to an array of {{domxref("Request")}} objects

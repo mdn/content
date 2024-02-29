@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.open
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`open()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a device session has

@@ -46,7 +46,7 @@ This example sets the fill color of an `SVGRectElement` to a random value whenev
     width="300"
     height="100"
     id="myrect"
-    style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)" />
+    style="fill:rgb(0 0 255);stroke-width:1;stroke:rgb(0 0 0)" />
   <text x="60" y="40" fill="white" font-size="40">Click Me</text>
 </svg>
 ```
@@ -60,7 +60,7 @@ myRect.addEventListener("click", () => {
   const r = Math.floor(Math.random() * 255);
   const g = Math.floor(Math.random() * 255);
   const b = Math.floor(Math.random() * 255);
-  myRect.style.fill = `rgb(${r}, ${g}, ${b})`;
+  myRect.style.fill = `rgb(${r} ${g} ${b})`;
 });
 ```
 

@@ -56,7 +56,7 @@ Fonts can supply a number of different alternatives for various glyphs, such as 
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}}
 
-In this case, `@stylistic(alternates)` will show all the alternate characters for either font). Applying this to just the word 'My' alters the way the 'M' renders, and applying `@styleset(alt-a)` only changes the lower case 'a'.
+In this case, `@stylistic(alternates)` will show all the alternate characters for either font. Applying this to just the word 'My' alters the way the 'M' renders, and applying `@styleset(alt-a)` only changes the lower case 'a'.
 
 Try changing the line
 
@@ -75,7 +75,6 @@ and notice that the lower case 'a' reverts to its regular form and the lower cas
 #### More about alternates
 
 - <https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates>
-- [https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-alternates](/en-US/docs/Web/CSS/font-variant-alternates)
 
 ### Ligatures
 

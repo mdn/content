@@ -17,15 +17,6 @@ A **`<glyph>`** defines a single glyph in an SVG font.
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("d")}} {{Deprecated_Inline}}
 - {{SVGAttr("horiz-adv-x")}} {{Deprecated_Inline}}
 - {{SVGAttr("vert-origin-x")}} {{Deprecated_Inline}}

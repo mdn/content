@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUUncapturedErrorEvent.error
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`error`** read-only property of the
 {{domxref("GPUUncapturedErrorEvent")}} interface is a {{domxref("GPUError")}} object instance providing access to the details of the error.

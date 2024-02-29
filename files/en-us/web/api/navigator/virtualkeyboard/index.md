@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.virtualKeyboard
 ---
 
-{{APIRef("VirtualKeyboard")}}{{SeeCompatTable}}
+{{APIRef("VirtualKeyboard")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`virtualKeyboard`** read-only property
 of the {{domxref("navigator")}} interface returns a reference to the {{domxref("VirtualKeyboard")}} instance object.

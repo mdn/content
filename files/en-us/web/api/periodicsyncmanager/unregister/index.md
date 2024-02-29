@@ -28,7 +28,7 @@ unregister(tag)
 
 ### Return value
 
-A resolved {{jsxref("Promise")}}.
+Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ### Exceptions
 

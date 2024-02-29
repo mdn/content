@@ -4,8 +4,6 @@ slug: Web/Privacy/State_Partitioning
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy")}}
-
 State Partitioning is a broad effort to rework how Firefox manages client-side
 state (i.e., data stored in the browser) to mitigate the ability of websites
 to abuse state for cross-site tracking. This effort aims to
@@ -298,3 +296,7 @@ on `example.com` and for `social.example` on
 ```plain
 https://tracker.example,http://example.com;https://social.example,https://news.example
 ```
+
+<section id="Quick_links">
+{{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}
+</section>

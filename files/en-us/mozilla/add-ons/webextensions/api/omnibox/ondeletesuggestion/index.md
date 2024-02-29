@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onDeleteSuggestion
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired whenever the user deletes a suggestion.
 A suggestion can be deleted when {{WebExtAPIRef("omnibox.SuggestResult","SuggestResult")}}`.deletable` is set to true.

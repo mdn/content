@@ -147,17 +147,11 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
 
 ## Examples
 
+### Setting margin-left as a percentage
+
 Percentage values for `margin-left` are relative to the container's inline size.
 
-### CSS
-
-```css
-.example {
-  margin-left: 50%;
-}
-```
-
-### HTML
+#### HTML
 
 ```html
 <p>
@@ -174,9 +168,17 @@ Percentage values for `margin-left` are relative to the container's inline size.
 </p>
 ```
 
-### Result
+#### CSS
 
-{{EmbedLiveSample("","","250")}}
+```css
+.example {
+  margin-left: 50%;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Setting margin-left as a percentage","","250")}}
 
 ## Specifications
 

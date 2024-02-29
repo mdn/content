@@ -109,7 +109,7 @@ Instead of using tooltips and hiding important information, consider writing cle
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The `dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [CSS: `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)

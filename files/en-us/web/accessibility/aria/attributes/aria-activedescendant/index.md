@@ -48,7 +48,7 @@ Relevant only as an attribute on elements with the following roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 <section id="Quick_links">
 

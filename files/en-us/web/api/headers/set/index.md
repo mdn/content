@@ -21,6 +21,8 @@ For security reasons, some headers can only be controlled by the user agent. The
 headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}}
 and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
+{{AvailableInWorkers}}
+
 ## Syntax
 
 ```js-nolint

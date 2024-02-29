@@ -6,12 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.body
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`body`** read-only property of the
 {{domxref("Notification")}} interface indicates the body string of the notification, as
 specified in the `body` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
+
+{{AvailableInWorkers}}
 
 ## Value
 

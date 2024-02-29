@@ -17,12 +17,6 @@ The **`<font-face-name>`** element points to a locally installed copy of this fo
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGATTR("name")}} {{Deprecated_Inline}}
 
 ## DOM Interface

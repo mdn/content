@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates a notification, given its ID.
 

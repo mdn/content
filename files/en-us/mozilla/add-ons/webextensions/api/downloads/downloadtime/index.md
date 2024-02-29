@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadTime
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DownloadTime` type of the {{WebExtAPIRef("downloads")}} API represents the time a download took to complete.
 

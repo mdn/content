@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUAdapterInfo.vendor
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`vendor`** read-only property of the
 {{domxref("GPUAdapterInfo")}} interface returns the name of the adapter vendor, or an empty string if it is not available.

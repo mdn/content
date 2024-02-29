@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.history.search
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Searches the browser's history for {{WebExtAPIRef("history.HistoryItem")}} objects matching the given criteria.
 

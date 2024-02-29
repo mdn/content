@@ -58,6 +58,8 @@ const obj = {
 };
 ```
 
+Properties defined using this syntax are own properties of the created object, and they are configurable, enumerable, and writable, just like normal properties.
+
 [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), and [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) properties all have their respective method syntaxes; see examples below.
 
 However, note that the method syntax is not equivalent to a normal property with a function as its value — there are semantic differences. This makes methods defined in object literals more consistent with methods in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).

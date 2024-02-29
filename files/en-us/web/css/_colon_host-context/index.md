@@ -91,6 +91,7 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 - [Web components](/en-US/docs/Web/API/Web_components)
 - CSS {{cssxref(":host")}} pseudo-class
 - CSS {{cssxref(":host_function", ":host()")}} pseudo-class
+- CSS {{cssxref(":state",":state()")}} pseudo-class
 - CSS {{CSSXref("::slotted")}} pseudo-element
 - HTML {{HTMLElement("template")}} element
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

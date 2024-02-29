@@ -42,7 +42,7 @@ Rotation around the z axis — that is, twisting the device — causes the **alp
 
 ![Positive alpha rotates the device counter-clockwise.](alpha.png)
 
-The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated toward the left.
+The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated counterclockwise. As such, 90° corresponds with pointing west, 180° with south, and 270° with east.
 
 ### Beta
 

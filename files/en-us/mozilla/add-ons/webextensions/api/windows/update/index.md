@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates the properties of a window. Use this to move, resize, and (un)focus a window, etc.
 

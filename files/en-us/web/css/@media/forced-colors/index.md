@@ -47,7 +47,7 @@ Additionally the following properties have special behavior in forced colors mod
 - {{cssxref("color-scheme")}} is forced to 'light dark'
 - {{cssxref("scrollbar-color")}} is forced to 'auto'
 
-The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/color_value#system_colors) for additional details of when each might be appropriate in various UI contexts.
+The system colors that are forced for the above properties depend on the context of the element. For example the {{cssxref("color")}} property on button element will be forced to `ButtonText`. On normal text it will be forced to `CanvasText`. See the [list of system colors](/en-US/docs/Web/CSS/system-color) for additional details of when each might be appropriate in various UI contexts.
 
 > **Note:** user agents choose system colors based on native element semantics, _not_ on added ARIA roles.
 > As an example, adding `role="button"` to a `div` will **not** cause an element's color to be forced to `ButtonText`

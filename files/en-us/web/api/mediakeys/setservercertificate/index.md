@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeys.setServerCertificate
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
 
 The **`MediaKeys.setServerCertificate()`** method provides a
 server certificate to be used to encrypt messages to the license server.

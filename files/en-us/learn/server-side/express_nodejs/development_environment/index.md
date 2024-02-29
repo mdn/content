@@ -77,11 +77,11 @@ After `nvm-windows` has installed, open a command prompt (or PowerShell) and ent
 nvm install lts
 ```
 
-At time of writing the LTS version of nodejs is 18.15.0.
+At time of writing the LTS version of nodejs is 20.11.0.
 You can set this as the _current version_ to use with the command below:
 
 ```bash
-nvm use 18.15.0
+nvm use 20.11.0
 ```
 
 > **Note:** If you get "Access Denied" warnings, you will need to run this command in a prompt with administration permissions.
@@ -100,12 +100,12 @@ After `nvm` has installed, open a terminal enter the following command to downlo
 nvm install --lts
 ```
 
-At the time of writing, the LTS version of nodejs is 18.15.0.
+At the time of writing, the LTS version of nodejs is 20.11.0.
 The command `nvm list` shows the downloaded set of version and the current version.
 You can set a particular version as the _current version_ with the command below (the same as for `nvm-windows`)
 
 ```bash
-nvm use 18.15.0
+nvm use 20.11.0
 ```
 
 Use the command `nvm --help` to find out other command line options.
@@ -118,14 +118,14 @@ A good way to do this is to use the "version" command in your terminal/command p
 
 ```bash
 > node -v
-v18.15.0
+v20.11.0
 ```
 
 The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v
-9.3.1
+10.2.4
 ```
 
 As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:

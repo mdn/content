@@ -214,7 +214,7 @@ Most browsers set the name and version in the format _BrowserName/VersionNumber_
 
 Also, pay attention not to use a simple regular expression on the BrowserName, user agents also contain strings outside the Keyword/Value syntax. Safari & Chrome contain the string 'like Gecko', for instance.
 
-| Engine                          | Must contain    | Must not contain               |
+| Browser name                    | Must contain    | Must not contain               |
 | ------------------------------- | --------------- | ------------------------------ |
 | Firefox                         | `Firefox/xyz`   | `Seamonkey/xyz`                |
 | Seamonkey                       | `Seamonkey/xyz` |                                |

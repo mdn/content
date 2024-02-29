@@ -29,15 +29,15 @@ conic-gradient(in hsl longer hue, red, blue, green, red)
 
 /* Color wheel */
 conic-gradient(
-  hsl(360, 100%, 50%),
-  hsl(315, 100%, 50%),
-  hsl(270, 100%, 50%),
-  hsl(225, 100%, 50%),
-  hsl(180, 100%, 50%),
-  hsl(135, 100%, 50%),
-  hsl(90, 100%, 50%),
-  hsl(45, 100%, 50%),
-  hsl(0, 100%, 50%)
+  hsl(360 100% 50%),
+  hsl(315 100% 50%),
+  hsl(270 100% 50%),
+  hsl(225 100% 50%),
+  hsl(180 100% 50%),
+  hsl(135 100% 50%),
+  hsl(90 100% 50%),
+  hsl(45 100% 50%),
+  hsl(0 100% 50%)
 )
 ```
 
@@ -70,7 +70,7 @@ The conic-gradient syntax is similar to the radial-gradient syntax, but the colo
 
 ![color stops along the circumference of a conic gradient and the axis of a radial gradient.](screenshot_2018-11-29_21.09.19.png)
 
-A conic gradient is specified by indicating a rotation angle, the center of the gradient, and then specifying a list of color-stops. Unlike linear and radial gradients, whose color-stops are placed by specifying a [length](/en-US/docs/Web/CSS/length), the color-stops of a conic gradient are specified with an [angle](/en-US/docs/Web/CSS/angle). Units include `deg` for degrees, `grad` for gradients, `rad` for radians, and `turn` for turns. There are 360 degrees, 400 gradians, 2π radians, and 1 turn in a circle. Browsers supporting conic gradients also accept percent values, with 100% equaling 360 degrees, but this is not in the specification.
+A conic gradient is specified by indicating a rotation angle, the center of the gradient, and then specifying a list of color-stops. Unlike linear and radial gradients, whose color-stops are placed by specifying a {{cssxref("length")}}, the color-stops of a conic gradient are specified with an [angle](/en-US/docs/Web/CSS/angle). Units include `deg` for degrees, `grad` for gradients, `rad` for radians, and `turn` for turns. There are 360 degrees, 400 gradians, 2π radians, and 1 turn in a circle. Browsers supporting conic gradients also accept percent values, with 100% equaling 360 degrees, but this is not in the specification.
 
 Similar to radial gradients, the conic gradient syntax provides for positioning the center of the gradient anywhere within, or even outside, the image. The values for the position are similar to the syntax for 2-value background-position.
 

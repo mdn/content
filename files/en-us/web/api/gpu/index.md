@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPU
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPU`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is the starting point for using WebGPU. It can be used to return a {{domxref("GPUAdapter")}} from which you can request devices, configure features and limits, and more.
 

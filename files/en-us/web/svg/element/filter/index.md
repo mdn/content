@@ -15,16 +15,6 @@ The **`<filter>`** [SVG](/en-US/docs/Web/SVG) element defines a custom filter ef
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [XLink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("x")}}
 - {{SVGAttr("y")}}
 - {{SVGAttr("width")}}

@@ -12,7 +12,7 @@ The **`Headers.values()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
 in this object. The values are {{jsxref("String")}} objects.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 

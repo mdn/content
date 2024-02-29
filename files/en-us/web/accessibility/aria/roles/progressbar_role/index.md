@@ -94,7 +94,7 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement('progress')}} element
 - Other range widgets include:

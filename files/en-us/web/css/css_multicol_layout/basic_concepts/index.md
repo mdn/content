@@ -40,7 +40,7 @@ In the below example, we use the `column-count` property to create three columns
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-In the above example, the content is wrapped within the paragraph `<p>` tags with the default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a [block formatting context (BFC)](/en-US/docs/Web/Guide/CSS/Block_formatting_context) because of which margins on child elements do not collapse with any margin on the container.
+In the above example, the content is wrapped within the paragraph `<p>` tags with the default styling. Therefore, there is a margin above each paragraph. You can see how this margin causes the first line of text to be pushed down. This is because a multicol container creates a [block formatting context (BFC)](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) because of which margins on child elements do not collapse with any margin on the container.
 
 ### Specifying the width of columns
 
@@ -82,7 +82,7 @@ This CSS would give the same result as [example 2](#specifying_the_width_of_colu
 }
 ```
 
-This CSS would give the same result as [example 3](#specifying-both-number-and-width-of-columns), with both `column-count` and `column-width` set.
+This CSS would give the same result as [example 3](#specifying_both_number_and_width_of_columns), with both `column-count` and `column-width` set.
 
 ```css
 .container {

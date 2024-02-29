@@ -34,7 +34,7 @@ There are a few concepts worth digging into before looking at how the flex prope
 
 In order to work out how much space there is available to lay out flex items, the browser needs to know how big the item is to start with. How is this worked out for items that don't have a width or a height applied using an absolute length unit?
 
-There is a concept in CSS of {{CSSxRef('min-content')}} and {{CSSxRef('max-content')}}; these keywords can be used in place of a [length unit](/en-US/docs/Web/CSS/length).
+There is a concept in CSS of {{CSSxRef('min-content')}} and {{CSSxRef('max-content')}}; these keywords can be used in place of a {{cssxref("length")}} unit.
 
 In the live example below for instance I have two paragraph elements that contain a string of text. The first paragraph has a width of `min-content`. You should be able to see that the text has taken all of the soft wrapping opportunities available to it, becoming as small as it can be without overflowing. This then, is the `min-content` size of that string. Essentially, the longest word in the string is dictating the size.
 

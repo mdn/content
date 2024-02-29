@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.openPopup
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Open the page action's popup.
 

@@ -266,7 +266,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += "\nFinished!";
+  results.textContent += "\nFinished!\n\n";
 }
 
 const calculateBtn = document.querySelector("#calculate");

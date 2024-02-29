@@ -74,6 +74,10 @@ attachShadow(options)
             element.shadowRoot; // Returns null
             ```
 
+    - `clonable` {{Optional_Inline}}
+
+      - : A boolean that specifies whether the shadow root is clonable: when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy. Its default value is `false`, unless the shadow root is created via declarative shadow DOM.
+
     - `delegatesFocus` {{Optional_Inline}}
 
       - : A boolean that, when set to `true`, specifies behavior that mitigates custom element issues around focusability.
@@ -102,6 +106,8 @@ Returns a {{domxref("ShadowRoot")}} object.
     or the static property `disabledFeatures` has been given a value of `"shadow"` in the element definition.
 
 ## Examples
+
+### Word count custom element
 
 The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) demo ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 You can see that we use `attachShadow()` in the middle of the code to create a shadow root, which we then attach our custom element's contents to.
@@ -146,6 +152,32 @@ class WordCount extends HTMLParagraphElement {
 
 // Define the new element
 customElements.define("word-count", WordCount, { extends: "p" });
+```
+
+### Disabling shadow DOM
+
+If the element has a static property named `disabledFeatures`, which is an array containing the string `"shadow"`, then the `attachShadow()` call will throw an exception.
+
+For example:
+
+```js
+class MyCustomElement extends HTMLElement {
+  // Disable shadow DOM for this element.
+  static disabledFeatures = ["shadow"];
+
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    // Create a shadow root.
+    // This will throw an exception.
+    const shadow = this.attachShadow({ mode: "open" });
+  }
+}
+
+// Define the new element
+customElements.define("my-custom-element", MyCustomElement);
 ```
 
 ## Specifications

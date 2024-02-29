@@ -70,7 +70,7 @@ Columnheader has the same semantics `<th scope="col">`.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`table` role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)
 - [`grid` role](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)

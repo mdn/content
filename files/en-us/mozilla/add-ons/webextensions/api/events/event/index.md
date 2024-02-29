@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.events.Event
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object which allows the addition and removal of listeners for a browser event.
 

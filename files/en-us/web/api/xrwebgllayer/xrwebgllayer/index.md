@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.XRWebGLLayer
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API) **`XRWebGLLayer()`** constructor creates and
 returns a new {{domxref("XRWebGLLayer")}} object, providing the linkage between the

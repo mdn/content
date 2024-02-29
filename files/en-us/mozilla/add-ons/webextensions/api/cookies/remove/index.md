@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`remove()`** method of the {{WebExtAPIRef("cookies")}} API deletes a cookie, given its name and URL.
 

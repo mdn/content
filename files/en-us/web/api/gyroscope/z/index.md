@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gyroscope.z
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`z`** read-only property of the
 {{domxref("Gyroscope")}} interface returns a number specifying the

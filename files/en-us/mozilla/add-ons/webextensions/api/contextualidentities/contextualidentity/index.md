@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.contextualIdentities.ContextualIdentity
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`contextualIdentities.ContextualIdentity`** type describes a single contextual identity.
 

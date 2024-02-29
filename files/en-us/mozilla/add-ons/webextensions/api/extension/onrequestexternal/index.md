@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.extension.onRequestExternal
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Warning:** This is not implemented in Firefox because it has been deprecated since Chrome 33. Please use [runtime.onMessageExternal](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) instead.
 

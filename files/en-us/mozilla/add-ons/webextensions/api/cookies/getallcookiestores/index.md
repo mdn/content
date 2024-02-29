@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAllCookieStores
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`getAllCookieStores()`** method of the {{WebExtAPIRef("cookies")}} API returns a list of all cookie stores.
 

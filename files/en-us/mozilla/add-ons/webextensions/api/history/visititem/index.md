@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.history.VisitItem
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An object describing a single visit to a page.
 

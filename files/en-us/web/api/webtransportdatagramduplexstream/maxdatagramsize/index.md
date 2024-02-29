@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransportDatagramDuplexStream.maxDatagramSize
 ---
 
-{{APIRef("WebTransport API")}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}}
 
 The **`maxDatagramSize`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns the maximum allowable size of outgoing datagrams, in bytes, that can be written to {{domxref("WebTransportDatagramDuplexStream.writable", "writable")}}.
 

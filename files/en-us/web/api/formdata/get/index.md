@@ -13,7 +13,7 @@ returns the first value associated with a given key from within a `FormData`
 object. If you expect multiple values and want all of them, use the
 {{domxref("FormData.getAll()","getAll()")}} method instead.
 
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Syntax
 

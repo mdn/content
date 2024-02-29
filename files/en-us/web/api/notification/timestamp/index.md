@@ -8,7 +8,7 @@ status:
 browser-compat: api.Notification.timestamp
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`timestamp`** read-only property of the
 {{domxref("Notification")}} interface returns a number, as
@@ -21,9 +21,11 @@ arbitrary timestamp that you want associated with the notification. For example,
 timestamp for an upcoming meeting could be set in the future, whereas a timestamp for a
 missed message could be set in the past.
 
+{{AvailableInWorkers}}
+
 ## Value
 
-A number representing a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds.
+A number representing a timestamp, given as {{Glossary("Unix time")}} in milliseconds.
 
 ## Examples
 

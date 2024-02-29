@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.extensionTypes.ImageFormat
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The format of an image.
 

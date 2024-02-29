@@ -31,14 +31,20 @@ There are some additional syntax restrictions:
 
 ## Description
 
-Sometimes it is desirable to allow access to a property that returns a dynamically
-computed value, or you may want to reflect the status of an internal variable without
-requiring the use of explicit method calls. In JavaScript, this can be accomplished with
-the use of a _getter_.
+Sometimes it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
 
-It is not possible to simultaneously have a getter bound to a property and have that
-property actually hold a value, although it _is_ possible to use a getter and a
-setter in conjunction to create a type of pseudo-property.
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The getter syntax allows you to specify the getter function in an object initializer.
+
+```js
+const obj = {
+  get prop() {
+    // getter, the code executed when reading obj.prop
+    return someValue;
+  },
+};
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 

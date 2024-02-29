@@ -55,7 +55,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
-  - : Support for `-moz-calc` has been added. This lets you specify `{{cssxref("&lt;length&gt;")}}` values as mathematical expressions.
+  - : Support for `-moz-calc` has been added. This lets you specify {{cssxref("length")}} values as mathematical expressions.
 - Selector grouping
   - : Support for `:-moz-any` to group selectors and factorize combinators.
 - Background image subrectangle support
@@ -187,7 +187,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td><code>-moz-calc</code></td>
       <td>
         Lets you specify
-        {{cssxref("&lt;length&gt;")}} values as
+        {{cssxref("length")}} values as
         mathematical expressions.
       </td>
     </tr>
@@ -224,7 +224,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
 - The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
-- Gecko's handling of [CSS units](/en-US/docs/Web/CSS/length) has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
+- Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
 

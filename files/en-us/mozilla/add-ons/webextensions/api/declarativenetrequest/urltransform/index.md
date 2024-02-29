@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.URLTransform
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details describing a URL transformation to perform for a redirect rule. This object can be specified at {{WebExtAPIRef("declarativeNetRequest.RuleAction", "rule.action")}}.redirect.transform.
 

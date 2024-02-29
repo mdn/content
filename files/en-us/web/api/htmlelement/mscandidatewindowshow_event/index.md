@@ -9,7 +9,7 @@ status:
 
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
-The **`mscandidatewindowshow`** event is thrown immediately after the Input Method Editor (IME) candidate window is set to appear, but before it renders.
+The **`mscandidatewindowshow`** event is thrown immediately after the {{glossary("Input Method Editor")}} (IME) candidate window is set to appear, but before it renders.
 
 This proprietary method is specific to Internet Explorer.
 

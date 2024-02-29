@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser is about to start a navigation event.
 

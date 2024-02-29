@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getPlatformInfo
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns information about the current platform. This can only be called in the background script context.
 

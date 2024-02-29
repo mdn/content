@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XRReferenceSpace.getOffsetReferenceSpace
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRReferenceSpace")}}
 interface's **`getOffsetReferenceSpace()`** method returns a

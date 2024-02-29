@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.forgetClosedTab
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a closed tab from the browser's list of recently closed tabs. Note that the sites visited by that tab are not removed from the browser's history. Use the {{WebExtAPIRef("browsingData")}} or {{WebExtAPIRef("history")}} APIs to remove history.
 

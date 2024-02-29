@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.uninstallModule
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Uninstalls the named PKCS #11 module from Firefox.
 

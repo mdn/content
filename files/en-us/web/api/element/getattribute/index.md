@@ -15,6 +15,8 @@ element.
 If the given attribute does not exist, the value returned will
 either be `null` or `""` (the empty string); see [Non-existing attributes](#non-existing_attributes) for details.
 
+If you need to inspect the {{domxref("Attr")}} node's properties, you can use the {{domxref("Element.getAttributeNode()", "getAttributeNode()")}} method instead.
+
 ## Syntax
 
 ```js-nolint
@@ -84,3 +86,10 @@ let nonce = script.nonce;
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.setAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.toggleAttribute()")}}

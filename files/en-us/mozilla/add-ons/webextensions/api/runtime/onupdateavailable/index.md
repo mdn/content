@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onUpdateAvailable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when an update to the extension is available. This event enables an extension to delay an update: for example, because it is in the middle of some operation which should not be interrupted.
 

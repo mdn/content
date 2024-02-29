@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.notifications.clear
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Clears a notification, given its ID.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.USBDevice.deviceProtocol
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`deviceProtocol`** read only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for

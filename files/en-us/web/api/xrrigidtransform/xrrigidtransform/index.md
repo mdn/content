@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.XRRigidTransform.XRRigidTransform
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The
 **`XRRigidTransform()`** constructor creates

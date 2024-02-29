@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{SecureContext_Header}}
 
 The **`AudioWorkletNode()`**
 constructor creates a new {{domxref("AudioWorkletNode")}} object, which represents an

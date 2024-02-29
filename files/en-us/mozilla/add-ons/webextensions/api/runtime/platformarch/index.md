@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformArch
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The machine's processor architecture.
 

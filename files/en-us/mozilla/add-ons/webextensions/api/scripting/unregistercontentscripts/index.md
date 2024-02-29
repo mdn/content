@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.unregisterContentScripts
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Unregisters one or more content scripts.
 

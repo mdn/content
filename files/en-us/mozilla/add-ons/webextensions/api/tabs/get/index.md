@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Given a tab ID, get the tab's details as a {{WebExtAPIRef("tabs.Tab")}} object.
 

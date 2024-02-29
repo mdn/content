@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSystem.isSessionSupported
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRSystem")}} method
 **`isSessionSupported()`** returns a promise which resolves to

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.removed
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}} property {{domxref("XRInputSourcesChangeEvent.removed", "removed")}} is an array of
 zero or more {{domxref("XRInputSource")}} objects representing the input sources that have been removed from the {{domxref("XRSession")}}.

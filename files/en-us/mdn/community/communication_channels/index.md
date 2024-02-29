@@ -58,6 +58,6 @@ You can use the forums listed below for discussing code problems.
 
 Each localization team has its own [method of communication](/en-US/docs/MDN/Community/Contributing/Translated_content).
 
-## Mailing list
+## Email
 
-For any nonpublic communication, send an email to [mdn-admins](mailto:mdn-admins@mozilla.org).
+For any nonpublic communication, send an email to [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla.com).

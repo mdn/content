@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired immediately after a notification has been shown.
 

@@ -78,7 +78,7 @@ Some properties only apply to input element types that support the corresponding
   - : A {{jsxref("Date")}} that represents the value of the element, interpreted as a date, or `null` if conversion is not possible.
 
 - {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}}
-  - : A number that represents the value of the element, interpreted as one of the following, in order: A time value, a number or `NaN` if conversion is impossible.
+  - : A number that represents the value of the element, interpreted as one of the following, in order: A time value, a number, or `NaN` if conversion is impossible.
 
 ### Instance properties related to the parent form
 

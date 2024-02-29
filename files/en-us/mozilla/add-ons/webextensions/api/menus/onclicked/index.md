@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a menu item is clicked.
 

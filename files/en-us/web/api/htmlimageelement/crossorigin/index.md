@@ -103,7 +103,7 @@ img {
 }
 
 output {
-  background: rgba(100, 100, 100, 0.1);
+  background: rgb(100 100 100 / 100%);
   font-family: Courier, monospace;
   width: 95%;
 }

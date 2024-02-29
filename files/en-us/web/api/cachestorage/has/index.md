@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CacheStorage.has
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`has()`** method of the {{domxref("CacheStorage")}}
 interface returns a {{jsxref("Promise")}} that resolves to `true` if a

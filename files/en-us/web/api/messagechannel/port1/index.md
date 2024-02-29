@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MessageChannel.port1
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
 The **`port1`** read-only property of the
 {{domxref("MessageChannel")}} interface returns the first port of the message channel —
@@ -23,7 +23,7 @@ attached to the context that originated the channel.
 
 In the following code block, you can see a new channel being created using the
 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} constructor. When the
-{{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2")}} to the
+{{HTMLElement("iframe")}} has loaded, we pass {{domxref("MessageChannel.port2", "port2")}} to the
 {{HTMLElement("iframe")}} using {{domxref("MessagePort.postMessage")}} along with a
 message. The `handleMessage` handler then responds to a message being sent
 back from the `<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}),

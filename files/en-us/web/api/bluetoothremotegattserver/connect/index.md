@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the

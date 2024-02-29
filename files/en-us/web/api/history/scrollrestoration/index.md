@@ -8,7 +8,7 @@ browser-compat: api.History.scrollRestoration
 
 {{APIRef("History API")}}
 
-The **`scrollRestoration`** property of {{DOMxRef("History")}}
+The **`scrollRestoration`** property of the {{DOMxRef("History")}}
 interface allows web applications to explicitly set default scroll restoration behavior
 on history navigation.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.InjectionTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This object contains details specifying the injection target for CSS and JavaScript. Its used in {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}}, and {{WebExtAPIRef("scripting.removeCSS()")}}.
 

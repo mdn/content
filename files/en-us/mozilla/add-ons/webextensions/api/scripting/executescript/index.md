@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.executeScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Injects a script into a target context. The script is run at `document_idle` by default.
 

@@ -2,12 +2,10 @@
 title: Set.prototype.intersection()
 slug: Web/JavaScript/Reference/Global_Objects/Set/intersection
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Set.intersection
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`intersection()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements in both this set and the given set.
 

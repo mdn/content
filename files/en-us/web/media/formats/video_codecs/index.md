@@ -144,7 +144,7 @@ Additionally, all codecs have their strengths and weaknesses. Some have trouble 
         The higher the color bit depth, the higher the quality of color fidelity
         is achieved in the video. Additionally, in saturated portions of the
         image (that is, where colors are pure and intense, such as a bright,
-        pure red [<code>rgba(255, 0, 0, 1)</code>]), color depths below 10 bits
+        pure red [<code>rgb(255 0 0 / 100%)</code>]), color depths below 10 bits
         per component (10-bit color) allow banding, where gradients cannot be
         represented without visible stepping of the colors.
       </td>

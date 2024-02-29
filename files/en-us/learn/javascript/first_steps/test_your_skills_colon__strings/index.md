@@ -53,7 +53,7 @@ In the next string task, you are given the same quote that you ended up with in 
 
 1. Change the casing to correct sentence case (all lowercase, except for upper case first letter). Store the new quote in a variable called `fixedQuote`.
 2. In `fixedQuote`, replace "green eggs and ham" with another food that you really don't like.
-3. There is one more small fix to do — add a full stop onto the end of the quote, and save the final version in a variable called `finalQuote`.
+3. There is one more small fix to do — add a period to the end of the quote, and save the final version in a variable called `finalQuote`.
 
 Try updating the live code below to recreate the finished example:
 

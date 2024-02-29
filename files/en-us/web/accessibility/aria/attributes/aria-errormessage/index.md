@@ -92,7 +92,7 @@ Inherits from roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML [`invalid`](/en-US/docs/Web/HTML/Global_attributes#invalid) attribute
 - CSS {{CSSxref(':invalid')}} pseudoclass

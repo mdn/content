@@ -444,7 +444,7 @@ You can link part of a sentence to an article or the section of an article. Be m
 
 On MDN, another way to link to a reference page is by using a macro. These macros are described on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) page. For example, to link to the reference page of an HTML element, use the `HTMLElement` macro, and to link to the reference page of a CSS property, use the `CSSxRef` macro.
 
-We follow similar cross-referencing guidelines in the [See also](#see-also-section) sections at the end of reference pages, glossary pages, and guides.
+We follow similar cross-referencing guidelines in the [See also](#see_also) sections at the end of reference pages, glossary pages, and guides.
 
 ### External links
 

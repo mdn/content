@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.hid
 ---
 
-{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{APIRef("WebHID API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`Navigator.hid`**
 read-only property returns an {{domxref("HID")}} object providing methods

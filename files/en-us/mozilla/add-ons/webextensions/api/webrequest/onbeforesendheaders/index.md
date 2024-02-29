@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeSendHeaders
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This event is triggered before sending any HTTP data, but after all HTTP headers are available. This is a good place to listen if you want to modify HTTP request headers.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQueue.writeTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`writeTexture()`** method of the
 {{domxref("GPUQueue")}} interface writes a provided data source into a given {{domxref("GPUTexture")}}.

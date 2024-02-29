@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.preferredReflectionFormat
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`preferredReflectionFormat`** property of the {{DOMxRef("XRSession")}} interface returns this session's preferred reflection format used for lighting estimation texture data.
 

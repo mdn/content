@@ -42,7 +42,7 @@ In the above Wikipedia style entry for Madam C.J. Walker, the `hilitebox` with r
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Document structure roles](/en-US/docs/Web/Accessibility/ARIA/Roles#1._document_structure_roles)
 

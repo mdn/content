@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUQuerySet.count
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`count`** read-only property of the
 {{domxref("GPUQuerySet")}} interface is a number specifying the number of queries managed by the `GPUQuerySet`.

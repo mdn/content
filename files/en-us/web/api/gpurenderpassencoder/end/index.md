@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.end
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`end()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface completes recording of the current render pass command sequence.

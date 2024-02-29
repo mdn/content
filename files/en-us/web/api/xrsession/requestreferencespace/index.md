@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestReferenceSpace
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestReferenceSpace()`** method of the
 {{DOMxRef("XRSession")}} interface returns a {{JSxRef("promise")}} that resolves with

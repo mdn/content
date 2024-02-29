@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.sendMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sends a single message from the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) to any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) or extension pages/iframes that belong to the extension and are running in the specified tab.
 

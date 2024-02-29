@@ -48,7 +48,7 @@ Used in **all** roles. Usable in all HTML elements as well.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - {{HTMLElement('label')}}
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)

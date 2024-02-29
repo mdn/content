@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.windows.WindowType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The type of browser window this is.
 

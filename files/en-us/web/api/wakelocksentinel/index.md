@@ -14,6 +14,7 @@ The screen wake lock prevents device screens from dimming or locking when an app
 A screen wake lock is requested using the {{domxref('WakeLock.request()','navigator.wakeLock.request()')}} method, which returns a {{jsxref('Promise')}} that fulfills with a `WakeLockSentinel` object if the lock is granted.
 
 An acquired screen wake lock can be released manually via the {{domxref('WakeLockSentinel.release','release()')}} method, or automatically via the platform screen wake lock. The latter may occur if the document becomes inactive or loses visibility, if the device is low on power, or if the user turns on a power save mode.
+A released `WakeLockSentinel` cannot be re-used: a new sentinel must be be requested using {{domxref('WakeLock.request()','navigator.wakeLock.request()')}} if a new lock is needed.
 Releasing all `WakeLockSentinel` instances of a given wake lock type will cause the underlying platform wake lock to be released.
 
 An event is fired at the `WakeLockSentinel` if the platform lock is released, allowing applications to configure their UI, and re-request the lock if needed.

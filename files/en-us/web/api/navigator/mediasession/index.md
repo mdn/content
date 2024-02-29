@@ -8,7 +8,7 @@ browser-compat: api.Navigator.mediaSession
 
 {{APIRef("Media Session API")}}
 
-The read-only **`mediaSession`** property of the {{domxref("Navigator")}}
+The **`mediaSession`** read-only property of the {{domxref("Navigator")}}
 interface returns a {{domxref("MediaSession")}}
 object that can be used to share with the browser metadata and other information about
 the current playback state of media being handled by a document.

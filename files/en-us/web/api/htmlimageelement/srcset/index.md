@@ -113,7 +113,7 @@ the wrap must occur.
 ```css
 .box {
   width: 200px;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px solid rgb(150 150 150);
   padding: 0.5em;
   word-break: break-all;
 }

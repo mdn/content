@@ -43,10 +43,11 @@ The following example shows the creation of a `WritableStream` with a custom
 sink and an API-supplied queuing strategy. It then calls a function called
 `sendMessage()`, passing the newly created stream and a string. Inside this
 function it calls the stream's `getWriter()` method, which returns an
-instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is
-used to write each chunk of the string to the stream. Finally, `write()` and
-`close()` return promises that are processed to deal with success or failure
-of chunks and streams.
+instance of {{domxref("WritableStreamDefaultWriter")}}. Each chunk of the
+encoded string is written to the stream using the `write()` method, and the
+`forEach()` method of the encoded `Uint8Array` to process it byte-by-byte.
+Finally, `close()` is called and the Promise it returns is handled to deal
+with success (or any failures) of the chunked write operations.
 
 ```js
 const list = document.querySelector("ul");
@@ -55,7 +56,7 @@ function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
   const defaultWriter = writableStream.getWriter();
   const encoder = new TextEncoder();
-  const encoded = encoder.encode(message, { stream: true });
+  const encoded = encoder.encode(message);
   encoded.forEach((chunk) => {
     defaultWriter.ready
       .then(() => {
@@ -116,7 +117,7 @@ const writableStream = new WritableStream(
 sendMessage("Hello, world.", writableStream);
 ```
 
-You can find the full code in our [Simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
+You can view a live demonstration of this at our [simple writer example](https://mdn.github.io/dom-examples/streams/simple-writer/).
 
 ## Specifications
 

@@ -7,7 +7,7 @@ status:
 browser-compat: webextensions.api.tabs.onSelectionChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 > **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onActivated")}} instead.
 

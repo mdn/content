@@ -6,6 +6,7 @@ bézier
 Bhattacharya
 Brosset
 callouts
+cdylib
 CEST
 CIELAB
 cjpeg
@@ -57,6 +58,7 @@ Paciello
 prophoto
 rgba
 ripgrep
+rustc
 sctp
 srgb
 tabak

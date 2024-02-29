@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUQueue
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUQueue`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} controls execution of encoded commands on the GPU.
 

@@ -6,9 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.MessageChannel.MessageChannel
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Channel Messaging API")}}
 
-The `MessageChannel()` constructor of the {{domxref("MessageChannel")}}
+The **`MessageChannel()`** constructor of the {{domxref("MessageChannel")}}
 interface returns a new {{domxref("MessageChannel")}} object with two new
 {{domxref("MessagePort")}} objects.
 
@@ -31,9 +31,9 @@ A new {{domxref("MessageChannel")}} object.
 ## Examples
 
 In the following code block, you can see a new channel being created using the
-{{domxref("MessageChannel()", "MessageChannel.MessageChannel")}} constructor.
+`MessageChannel()` constructor.
 When the {{HTMLElement("iframe")}} has loaded,
-we pass `port2` to the `<iframe>` using {{domxref("MessagePort.postMessage")}} along with a message.
+we pass {{domxref("MessageChannel.port2", "port2")}} to the `<iframe>` using {{domxref("MessagePort.postMessage")}} along with a message.
 The `handleMessage` handler then responds to a message being sent back from the
 `<iframe>` (using {{domxref("MessagePort.message_event", "onmessage")}}), putting it into a paragraph.
 The {{domxref("MessageChannel.port1", "port1")}} is listened to, to check when the message arrives.

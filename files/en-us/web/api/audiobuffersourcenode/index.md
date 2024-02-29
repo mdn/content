@@ -67,10 +67,6 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 - {{domxref("AudioBufferSourceNode.start", "start()")}}
   - : Schedules playback of the audio data contained in the buffer, or begins playback immediately. Additionally allows the start offset and play duration to be set.
 
-## Event handlers
-
-_Inherits event handlers from its parent, {{domxref("AudioScheduledSourceNode")}}_.
-
 ## Examples
 
 In this example, we create a two-second buffer, fill it with white noise, and then play it using an `AudioBufferSourceNode`. The comments should clearly explain what is going on.

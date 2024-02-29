@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUAdapter
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUAdapter`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a GPU adapter. From this you can request a {{domxref("GPUDevice")}}, adapter info, features, and limits.
 

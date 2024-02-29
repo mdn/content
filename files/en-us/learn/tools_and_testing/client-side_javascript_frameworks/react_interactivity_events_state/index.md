@@ -600,7 +600,7 @@ import FilterButton from "./components/FilterButton";
 
 function App(props) {
   function addTask(name) {
-    const newTask = { id: `todo-${nanoid}`, name, completed: false };
+    const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
   }
 

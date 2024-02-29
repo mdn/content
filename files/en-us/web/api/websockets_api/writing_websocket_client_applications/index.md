@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 page-type: guide
 ---
 
-{{APIRef("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onCreated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a bookmark item (a bookmark or a folder) is created.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChildrenReordered
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the children of a folder have changed their order due to the order being sorted in the UI. This is not called as a result of a call to {{WebExtAPIRef("bookmarks.move()")}} or a drag operation in the UI.
 

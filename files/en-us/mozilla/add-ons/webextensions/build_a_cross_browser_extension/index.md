@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 page-type: guide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari).
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTServer.connected`** read-only
 property returns a boolean value that returns true while this script execution

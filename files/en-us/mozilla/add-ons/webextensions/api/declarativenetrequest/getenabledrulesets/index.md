@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getEnabledRulesets
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Returns the IDs for the set of activated static rulesets.
 

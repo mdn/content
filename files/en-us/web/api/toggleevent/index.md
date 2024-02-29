@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ToggleEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Popover API")}}
 
 The **`ToggleEvent`** interface represents an event notifying the user when a [popover element](/en-US/docs/Web/API/Popover_API)'s state toggles between showing and hidden.
 

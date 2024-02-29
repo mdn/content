@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSourceEvent.frame
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourceEvent")}} property
 **`frame`** specifies an {{domxref("XRFrame")}} object

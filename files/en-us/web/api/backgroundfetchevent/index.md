@@ -27,10 +27,6 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 - {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
-### Event handlers
-
-None.
-
 ## Instance methods
 
 None.

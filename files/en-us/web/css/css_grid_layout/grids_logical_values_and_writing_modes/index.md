@@ -65,7 +65,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("","",200)}}
+{{EmbedLiveSample("Issues with physical properties","",200)}}
 
 This is a very simple example of the problem with physical values and properties being used in CSS. They prevent the browser being able to do the work to switch writing mode, as they make the assumption that the text is flowing left to right and top to bottom.
 

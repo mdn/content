@@ -91,7 +91,7 @@ input {
 }
 ```
 
-{{EmbedLiveSample("",600,160)}}
+{{EmbedLiveSample("Custom properties in action",600,160)}}
 
 In these color swatches, the {{cssxref("background-color")}} is set using the {{cssxref("color_value/hsl", "hsl()")}} {{cssxref("&lt;color&gt;")}} function as `hsl(var(--hue) 50% 50%)`.
 Each color swatch increments the {{cssxref("hue")}} value by 10 degrees like `calc(var(--hue) + 10)`, `calc(var(--hue) + 20)` etc.

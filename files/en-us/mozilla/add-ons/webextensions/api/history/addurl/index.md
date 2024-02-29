@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.history.addUrl
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Adds a record to the browser's history of a visit to the given URL. The visit's time is recorded as the time of the call, and the {{WebExtAPIRef("history.TransitionType", "TransitionType")}} is recorded as "link".
 

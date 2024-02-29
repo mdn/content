@@ -15,13 +15,6 @@ The **`<mpath>`** sub-element for the {{SVGElement("animateMotion")}} element pr
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface

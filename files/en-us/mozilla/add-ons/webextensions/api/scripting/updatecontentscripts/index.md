@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.updateContentScripts
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates registered content scripts. If there are errors during script parsing and file validation, or if the IDs specified do not exist, no scripts are updated.
 

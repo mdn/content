@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.management.onUninstalled
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when an add-on is uninstalled.
 

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.browserAction.getBadgeBackgroundColor
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the background color of the browser action's badge.
 

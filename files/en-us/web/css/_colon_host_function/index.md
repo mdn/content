@@ -80,3 +80,4 @@ The `:host(.footer) { color : red; }` rule styles all instances of the `<context
 - [Web components](/en-US/docs/Web/API/Web_components)
 - {{CSSxRef(":host")}}
 - {{CSSxRef(":host-context", ":host-context()")}}
+- {{CSSxRef(":state",":state()")}}

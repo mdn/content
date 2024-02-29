@@ -123,6 +123,8 @@ Media feature expressions test for their presence or value, and are entirely opt
     Added in Media Queries Level 5.
 - {{cssxref("@media/resolution", "resolution")}}
   - : Pixel density of the output device.
+- {{cssxref("@media/scan", "scan")}}
+  - : Whether display output is progressive or interlaced.
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
@@ -246,6 +248,7 @@ For more examples, please see [Using media queries](/en-US/docs/Web/CSS/CSS_medi
 
 ## See also
 
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - In JavaScript, `@media` can be accessed via the CSS object model interface {{domxref("CSSMediaRule")}}.
 - [Extended Mozilla media features](/en-US/docs/Web/CSS/Mozilla_Extensions#media_features)

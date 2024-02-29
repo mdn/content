@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSource.gamepad
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSource")}} property **`gamepad`** returns a {{domxref("Gamepad")}} object describing the state of the buttons and axes on the XR input source, if it is a gamepad or comparable device. If the device isn't a gamepad-like device, this property's value is `null`.
 

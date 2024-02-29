@@ -147,9 +147,6 @@ In this example we build on the previous one, including a `media` attribute on t
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
-        >, and if the <code>scoped</code> attribute is present:
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
         >.
       </td>
     </tr>

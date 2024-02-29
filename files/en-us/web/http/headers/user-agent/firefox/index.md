@@ -17,7 +17,7 @@ The UA string of Firefox itself is broken down into four components:
 - `Mozilla/5.0` is the general token that says the browser is Mozilla compatible, and is common to almost every browser today.
 - `platform` describes the native platform the browser is running on (e.g. Windows, Mac, Linux or Android), and whether or not it's a mobile phone. Firefox OS phones say "`Mobile`"; the web is the platform. Note that `platform` can consist of multiple "; "-separated tokens. See below for further details and examples.
 
-- `rv:geckoversion` indicates the release version of Gecko (such as "`17.0`"). In recent browsers, `geckoversion` is the same as `firefoxversion`.
+- `rv:geckoversion` indicates the release version of Gecko (such as "`17.0`").
 - `Gecko/geckotrail` indicates that the browser is based on Gecko.
 - On Desktop, `geckotrail` is the fixed string "`20100101`"
 - `Firefox/firefoxversion` indicates the browser is Firefox, and provides the version (such as "`17.0`").

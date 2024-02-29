@@ -32,7 +32,7 @@ The [Website security](/en-US/docs/Web/Security) topic provides an overview of w
 
 > **Warning:** The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes `GET` request data in URL parameters, `POST` data, HTTP headers and cookies, user-uploaded files, etc. Always check and sanitize all incoming data. Always assume the worst.
 
-The good news for Django users is that many of the more common threats are handled by the framework! The [Security in Django](https://docs.djangoproject.com/en/4.2/topics/security/) (Django docs) article explains Django's security features and how to secure a Django-powered website.
+The good news for Django users is that many of the more common threats are handled by the framework! The [Security in Django](https://docs.djangoproject.com/en/5.0/topics/security/) (Django docs) article explains Django's security features and how to secure a Django-powered website.
 
 ## Common threats/protections
 
@@ -42,7 +42,7 @@ Rather than duplicate the Django documentation here, in this article we'll demon
 
 XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts _through_ the website into the browsers of other users. This is usually achieved by storing malicious scripts in the database where they can be retrieved and displayed to other users, or by getting users to click a link that will cause the attacker's JavaScript to be executed by the user's browser.
 
-Django's template system protects you against the majority of XSS attacks by [escaping specific characters](https://docs.djangoproject.com/en/4.2/ref/templates/language/#automatic-html-escaping) that are "dangerous" in HTML. We can demonstrate this by attempting to inject some JavaScript into our LocalLibrary website using the Create-author form we set up in [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms).
+Django's template system protects you against the majority of XSS attacks by [escaping specific characters](https://docs.djangoproject.com/en/5.0/ref/templates/language/#automatic-html-escaping) that are "dangerous" in HTML. We can demonstrate this by attempting to inject some JavaScript into our LocalLibrary website using the Create-author form we set up in [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn/Server-side/Django/Forms).
 
 1. Start the website using the development server (`python3 manage.py runserver`).
 2. Open the site in your local browser and login to your superuser account.
@@ -161,12 +161,12 @@ Django also provides other forms of protection (most of which would be hard or n
   - : In this attack a malicious user hijacks clicks meant for a visible top level site and routes them to a hidden page beneath. This technique might be used, for example, to display a legitimate bank site but capture the login credentials in an invisible [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe) controlled by the attacker. Django contains [clickjacking](/en-US/docs/Glossary/Clickjacking) protection in the form of the [`X-Frame-Options middleware`](https://docs.djangoproject.com/en/4.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware) which, in a supporting browser, can prevent a site from being rendered inside a frame.
 - Enforcing TLS/HTTPS
   - : TLS/HTTPS can be enabled on the web server in order to encrypt all traffic between the site and browser, including authentication credentials that would otherwise be sent in plain text (enabling HTTPS is highly recommended). If HTTPS is enabled then Django provides a number of other protections you can use:
-    - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
-    - [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-SECURE_SSL_REDIRECT) is used to redirect all HTTP requests to HTTPS.
-    - Use [HTTP Strict Transport Security](https://docs.djangoproject.com/en/4.2/ref/middleware/#http-strict-transport-security) (HSTS). This is an HTTP header that informs a browser that all future connections to a particular site should always use HTTPS. Combined with redirecting HTTP requests to HTTPS, this setting ensures that HTTPS is always used after a successful connection has occurred. HSTS may either be configured with [`SECURE_HSTS_SECONDS`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-SECURE_HSTS_SECONDS) and [`SECURE_HSTS_INCLUDE_SUBDOMAINS`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS) or on the Web server.
-    - Use 'secure' cookies by setting [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-SESSION_COOKIE_SECURE) and [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-CSRF_COOKIE_SECURE) to `True`. This will ensure that cookies are only ever sent over HTTPS.
+    - [`SECURE_PROXY_SSL_HEADER`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SECURE_PROXY_SSL_HEADER) can be used to check whether content is secure, even if it is incoming from a non-HTTP proxy.
+    - [`SECURE_SSL_REDIRECT`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SECURE_SSL_REDIRECT) is used to redirect all HTTP requests to HTTPS.
+    - Use [HTTP Strict Transport Security](https://docs.djangoproject.com/en/5.0/ref/middleware/#http-strict-transport-security) (HSTS). This is an HTTP header that informs a browser that all future connections to a particular site should always use HTTPS. Combined with redirecting HTTP requests to HTTPS, this setting ensures that HTTPS is always used after a successful connection has occurred. HSTS may either be configured with [`SECURE_HSTS_SECONDS`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SECURE_HSTS_SECONDS) and [`SECURE_HSTS_INCLUDE_SUBDOMAINS`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SECURE_HSTS_INCLUDE_SUBDOMAINS) or on the Web server.
+    - Use 'secure' cookies by setting [`SESSION_COOKIE_SECURE`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-SESSION_COOKIE_SECURE) and [`CSRF_COOKIE_SECURE`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-CSRF_COOKIE_SECURE) to `True`. This will ensure that cookies are only ever sent over HTTPS.
 - Host header validation
-  - : Use [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/4.2/ref/settings/#std:setting-ALLOWED_HOSTS) to only accept requests from trusted hosts.
+  - : Use [`ALLOWED_HOSTS`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-ALLOWED_HOSTS) to only accept requests from trusted hosts.
 
 There are many other protections, and caveats to the usage of the above mechanisms. While we hope that this has given you an overview of what Django offers, you should still read the Django security documentation.
 
@@ -174,13 +174,13 @@ There are many other protections, and caveats to the usage of the above mechanis
 
 Django has effective protections against a number of common threats, including XSS and CSRF attacks. In this article we've demonstrated how those particular threats are handled by Django in our _LocalLibrary_ website. We've also provided a brief overview of some of the other protections.
 
-This has been a very brief foray into web security. We strongly recommend that you read [Security in Django](https://docs.djangoproject.com/en/4.2/topics/security/) to gain a deeper understanding.
+This has been a very brief foray into web security. We strongly recommend that you read [Security in Django](https://docs.djangoproject.com/en/5.0/topics/security/) to gain a deeper understanding.
 
 The next and final step in this module about Django is to complete the [assessment task](/en-US/docs/Learn/Server-side/Django/django_assessment_blog).
 
 ## See also
 
-- [Security in Django](https://docs.djangoproject.com/en/4.2/topics/security/) (Django docs)
+- [Security in Django](https://docs.djangoproject.com/en/5.0/topics/security/) (Django docs)
 - [Server side website security](/en-US/docs/Web/Security) (MDN)
 - [Securing your site](/en-US/docs/Web/Security/Securing_your_site) (MDN)
 

@@ -335,7 +335,7 @@ Constants passed to {{domxref("WebGLRenderingContext.getParameter()")}} to speci
       <td>0x883D</td>
       <td>
         Passed to <code>getParameter</code> to get the current alpha blend
-        function. Same as BLEND_EQUATION
+        function.
       </td>
     </tr>
     <tr>

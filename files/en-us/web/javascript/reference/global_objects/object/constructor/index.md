@@ -45,6 +45,8 @@ Note that `constructor` usually comes from the constructor's [`prototype`](/en-U
 ```js
 const o = new TypeError(); // Inheritance: TypeError -> Error -> Object
 const proto = Object.getPrototypeOf;
+
+Object.hasOwn(o, "constructor"); // false
 proto(o).constructor === TypeError; // true
 proto(proto(o)).constructor === Error; // true
 proto(proto(proto(o))).constructor === Object; // true

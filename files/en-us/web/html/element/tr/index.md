@@ -11,506 +11,337 @@ The **`<tr>`** [HTML](/en-US/docs/Web/HTML) element defines a row of cells in a 
 
 {{EmbedInteractiveExample("pages/tabbed/tr.html","tabbed-taller")}}
 
-To provide additional control over how cells fit into (or span across) columns, both `<th>` and `<td>` support the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) attribute, which lets you specify how many columns wide the cell should be, with the default being 1. Similarly, you can use the [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attribute on cells to indicate they should span more than one table row.
-
-This can take a little practice to get right when building your tables. We have some [examples](#examples) below, but for more examples and an in-depth tutorial, see the [HTML tables](/en-US/docs/Learn/HTML/Tables) series in our [Learn web development](/en-US/docs/Learn) area, where you'll learn how to use the table elements and their attributes to get just the right layout and formatting for your tabular data.
-
 ## Attributes
 
-This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes). There are also several [deprecated attributes](#deprecated_attributes), which you should avoid but may need to know when reading older code.
+This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ### Deprecated attributes
 
-The following attributes may still be implemented in browsers but are no longer part of the HTML specification and may be missing or may not work as expected. They should be avoided.
+The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
 
-  - : A string which specifies how the cell's context should be aligned horizontally within the cells in the row; this is shorthand for using `align` on every cell in the row individually. Possible values are:
-
-    - `left`
-      - : Align the content of each cell at its left edge.
-    - `center`
-      - : Center the contents of each cell between their left and right edges.
-    - `right`
-      - : Align the content of each cell at its right edge.
-    - `justify`
-      - : Widen whitespaces within the text of each cell so that the text fills the full width of each cell (full justification).
-    - `char`
-      - : Align each cell in the row on a specific character (such that each row in the column that is configured this way will horizontally align its cells on that character). This uses the [`char`](#char) and [`charoff`](#charoff) to establish the alignment character (typically "." or "," when aligning numerical data) and the number of characters that should follow the alignment character. This alignment type was never widely supported.
-
-    If no value is expressly set for `align`, the parent node's value is inherited.
-
-    > **Note:** Instead of using the obsolete `align` attribute, you should instead use the CSS {{CSSxRef("text-align")}} property to establish `left`, `center`, `right`, or `justify` alignment for the row's cells. To apply character-based alignment, set the CSS {{CSSxRef("text-align")}} property to the alignment character (such as `"."` or `","`).
+  - : Specifies the horizontal alignment of each row cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and on offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : A string specifying a color to apply to the backgrounds of each of the row's cells. This can be either a [hexadecimal `#RRGGBB` or `#RGB` value](/en-US/docs/Web/CSS/color_value/rgb) or a [color keyword](/en-US/docs/Web/CSS/named-color). Omitting the attribute or setting it to `null` in JavaScript causes the row's cells to inherit the row's parent element's background color.
-
-    > **Note:** The {{HTMLElement("tr")}} element should be styled using [CSS](/en-US/docs/Web/CSS). To give a similar effect as the `bgcolor` attribute, use the CSS property {{CSSxRef("background-color")}}.
+  - : Defines the background color of each row cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a '`#`', or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
 
-  - : A string that sets the character to align the cells in each row's columns (each row's centering that uses the same character gets aligned with others using the same character. Typical values for this include a period (`"."`) or comma (`","`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
-
-    > **Note:** This attribute is obsolete and rarely implemented anyway. To achieve the same effect as the [`char`](#char) attribute, set the CSS {{CSSxRef("text-align")}} property to the same string you would specify for the `char` property, such as `text-align: "."`.
+  - : Specifies the alignment of the content to a character of each row cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
 
 - `charoff` {{deprecated_inline}}
 
-  - : A string indicating the number of characters on the tail end of the column's data should be displayed after the alignment character specified by the `char` attribute. For example, when displaying money values for currencies that use hundredths of a unit (such as the dollar, which is divided into 100 cents), you would typically specify a value of 2, so that in tandem with `char` being set to `"."`, the values in a column would be cleanly aligned on the decimal points, with the number of cents properly displayed to the right of the decimal point.
-
-    > **Note:** This attribute is obsolete, and was never widely supported anyway.
+  - : Specifies the number of characters to offset the row cell content from the alignment character specified by the [`char`](#char) attribute.
 
 - `valign` {{deprecated_inline}}
 
-  - : A string specifying the vertical alignment of the text within each cell in the row. Possible values for this attribute are:
+  - : Specifies the vertical alignment of each row cell. The possible {{Glossary("enumerated")}} values are `baseline`, `bottom`, `middle`, and `top`. Use the {{cssxref("vertical-align")}} CSS property instead, as this attribute is deprecated.
 
-    - `baseline`
-      - : Aligns each cell's content text as closely as possible to the bottom of the cell, handling alignment of different fonts and font sizes by aligning the characters along the [baseline](https://en.wikipedia.org/wiki/Baseline) of the font(s) used in the row. If all the characters in the row are the same size, the effect is the same as `bottom`.
-    - `bottom`,
-      - : Draws the text in each of the row's cells as closely as possible to the bottom edge of those cells.
-    - `middle`
-      - : Each cell's text is vertically centered.
-    - `top`
-      - : Each cell's text is drawn as closely as possible to the top edge of the containing cell.
+## Usage notes
 
-    > **Note:** Don't use the obsolete `valign` attribute. Instead, add the CSS {{CSSxRef("vertical-align")}} property to the row.
+- The `<tr>` may be placed as a direct child of its parent {{HTMLElement("table")}} element, but only if the `<table>` has no child {{HTMLElement("tbody")}} elements, and only after any {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, and {{HTMLElement("thead")}} elements. Otherwise, the parent must be a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, or {{HTMLElement("tfoot")}} element.
+- The CSS pseudo-classes {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, and {{cssxref(":last-of-type")}} are often useful for selecting the desired set of rows and their data and header cells ({{HTMLElement("td")}} and {{HTMLElement("th")}} elements).
 
 ## Examples
 
-See {{HTMLElement("table")}} for examples on `<tr>`.
+See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
-### Basic example
+### Basic row setup
 
-This simple example shows a table listing people's names along with various information about membership in a club or service.
+This example demonstrates a table with four rows and three columns, where the first column contains headers for the row data cells.
 
 #### HTML
 
-This HTML demonstrates the most basic structure of a table. There are no groups, no cells that span multiple rows or columns, no captions, and only the most basic styling to create lines around the components of the table for something resembling clarity.
-
-There are just four rows (including one header row), each with four columns (including one header column). Not even the table section elements are used; instead, the browser is allowed to determine this automatically. We'll add {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, and {{HTMLElement("tfoot")}} in the next example.
+Four `<tr>` elements are used to create four table rows. Each row contains three cells - one header cell ({{HTMLElement("th")}}) and two data cells ({{HTMLElement("td")}}) - creating three columns. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute set on each header cell specifies which cells they relate to, which in this example is all data cells within the `row`.
 
 ```html
 <table>
   <tr>
-    <th>Name</th>
-    <th>ID</th>
-    <th>Member Since</th>
-    <th>Balance</th>
+    <th scope="row">A</th>
+    <td>Alfa</td>
+    <td>AL fah</td>
   </tr>
   <tr>
-    <td>Margaret Nguyen</td>
-    <td>427311</td>
-    <td><time datetime="2010-06-03">June 3, 2010</time></td>
-    <td>0.00</td>
+    <th scope="row">B</th>
+    <td>Bravo</td>
+    <td>BRAH voh</td>
   </tr>
   <tr>
-    <td>Edvard Galinski</td>
-    <td>533175</td>
-    <td><time datetime="2011-01-13">January 13, 2011</time></td>
-    <td>37.00</td>
+    <th scope="row">C</th>
+    <td>Charlie</td>
+    <td>CHAR lee</td>
   </tr>
   <tr>
-    <td>Hoshi Nakamura</td>
-    <td>601942</td>
-    <td><time datetime="2012-07-23">July 23, 2012</time></td>
-    <td>15.00</td>
+    <th scope="row">D</th>
+    <td>Delta</td>
+    <td>DELL tah</td>
   </tr>
 </table>
 ```
 
 #### CSS
 
-This simple CSS just adds a solid black border around the table and around each of its cells, including those specified using both {{HTMLElement("th")}} and {{HTMLElement("td")}}. That way, both header and data cells are easily demarcated.
+The CSS {{cssxref(":nth-of-type")}} pseudo-class is used to select every `odd` row and set the {{cssxref("background-color")}} of those rows to a slightly darker tone, creating a so-called "zebra stripe" effect. This alternating background makes the rows of data in the table easier to parse and read—imagine having many rows and columns and trying to find some data in a particular row. In addition, the row header cells ({{HTMLElement("th")}} elements) are highlighted with a {{cssxref("background-color")}} to distinguish them from the data cells ({{HTMLElement("td")}} elements).
 
 ```css
-table {
-  border: 1px solid black;
+tr:nth-of-type(odd) {
+  background-color: #eee;
 }
 
-th,
-td {
-  border: 1px solid black;
+tr th[scope="row"] {
+  background-color: #d6ecd4;
 }
 ```
-
-#### Result
-
-{{EmbedLiveSample("Basic_example", 500, 125)}}
-
-### Row and column spanning
-
-Now, let's introduce another column that shows the date the user's membership ended, along with a super-heading above the "joined" and "canceled" dates called "Membership Dates". This involves adding both row and column spans to the table, so that the heading cells can wind up in the right places.
-
-#### Result
-
-Let's actually look at the output first this time:
-
-{{EmbedLiveSample("Row_and_column_spanning", 500, 150)}}
-
-Notice how the heading area here is actually two rows, one with "Name", "ID", "Membership Dates", and "Balance" headings, and the other with "Joined" and "Canceled", which are subheadings below "Membership Dates". This is accomplished by:
-
-- Having the first row's "Name", "ID", and "Balance" heading cells span two rows using the [`rowspan`](#rowspan) attribute, making them each two rows tall.
-- Having the first row's "Membership Dates" heading cell span two columns using the [`colspan`](#colspan) attribute, which causes this heading actually to be two columns wide.
-- Having a second row of {{HTMLElement("th")}} elements that contains only the "Joined" and "Canceled" headings. Because the other columns are already occupied by first-row cells that span into the second row, these wind up correctly positioned under the "Membership Dates" heading.
-
-#### HTML
-
-The HTML is similar to the previous example's, except for the addition of the new column in each data row, and the changes to the header. Those changes make the HTML look like this:
-
-```html
-<table>
-  <tr>
-    <th rowspan="2">Name</th>
-    <th rowspan="2">ID</th>
-    <th colspan="2">Membership Dates</th>
-    <th rowspan="2">Balance</th>
-  </tr>
-  <tr>
-    <th>Joined</th>
-    <th>Canceled</th>
-  </tr>
-  <tr>
-    <th>Margaret Nguyen</th>
-    <td>427311</td>
-    <td><time datetime="2010-06-03">June 3, 2010</time></td>
-    <td>n/a</td>
-    <td>0.00</td>
-  </tr>
-  <tr>
-    <th>Edvard Galinski</th>
-    <td>533175</td>
-    <td><time datetime="2011-01-13">January 13, 2011</time></td>
-    <td><time datetime="2017-04-08">April 8, 2017</time></td>
-    <td>37.00</td>
-  </tr>
-  <tr>
-    <th>Hoshi Nakamura</th>
-    <td>601942</td>
-    <td><time datetime="2012-07-23">July 23, 2012</time></td>
-    <td>n/a</td>
-    <td>15.00</td>
-  </tr>
-</table>
-```
-
-The differences that matter here—for the purposes of discussing row and column spans—are in the first few lines of the code above. Note the use of `rowspan` on to make the "Name", "ID", and "Balance" headers occupy two rows instead of just one, and the use of `colspan` to make the "Membership Dates" header cell span across two columns.
-
-The CSS is unchanged from before.
 
 ```css hidden
 table {
-  border: 1px solid black;
-}
-
-th,
-td {
-  border: 1px solid black;
-}
-```
-
-### Explicitly specifying table content groups
-
-Before really getting into styling this table, let's take a moment to add row and column groups to help make our CSS easier.
-
-#### HTML
-
-The HTML is where the action is here, and the action is pretty simple.
-
-```html
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-The differences that matter here—for the purposes of discussing row and column spans—are in the first few lines of the code above. Note the use of `rowspan` on to make the "Name", "ID", and "Balance" headers occupy two rows instead of just one, and the use of `colspan` to make the "Membership Dates" header cell span across two columns.
-
-Once again, we haven't touched the CSS.
-
-```css hidden
-table {
-  border: 1px solid black;
-}
-
-th,
-td {
-  border: 1px solid black;
-}
-```
-
-#### Result
-
-The output is entirely unchanged, despite the addition of useful contextual information under the hood:
-
-{{EmbedLiveSample("Explicitly_specifying_table_content_groups", 500, 150)}}
-
-### Basic styling
-
-As is the case with all parts of a table, you can change the appearance of a table row and its contents using CSS. Any styles applied to the `<tr>` element will affect the cells within the row unless overridden by styles applied to those cells.
-
-Let's apply a basic style to the table to adjust the typeface being used, and add a background color to the header row.
-
-#### Result
-
-Again, let's take a look at the result first.
-
-{{EmbedLiveSample("Basic_styling", 500, 200)}}
-
-```html hidden
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-This time, the HTML is unchanged, so let's dive right into the CSS.
-
-```css
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-}
-
-thead > tr {
-  background-color: rgb(228, 240, 245);
-}
-
-th,
-td {
-  border: 1px solid black;
-  padding: 4px 6px;
-}
-```
-
-While we add a {{CSSxRef("font")}} property to the {{HTMLElement("table")}} element here to set a more visually-appealing typeface (or an abominable sans-serif typeface, depending on your personal opinion), the interesting part is the second style here, where we style `<tr>` elements located within the {{HTMLElement("thead")}} so they have a light blue background color. This is a way to quickly apply a background color to all the cells in the heading area at once.
-
-This does _not_ affect the style of the {{HTMLElement("th")}} elements in the first column, though, where we treat the member names as a row heading.
-
-### Advanced styling
-
-Now we'll go all-out, with styles on rows in the header and body areas both, including alternating row colors, cells with different colors depending on position within a row, and so forth.
-
-#### Result
-
-Here's what the final table will look like:
-
-{{EmbedLiveSample("Advanced_styling", 500, 200)}}
-
-There is no change to the HTML again. See what proper preparation of your HTML can do for you?
-
-```html hidden
-<table>
-  <thead>
-    <tr>
-      <th rowspan="2">Name</th>
-      <th rowspan="2">ID</th>
-      <th colspan="2">Membership Dates</th>
-      <th rowspan="2">Balance</th>
-    </tr>
-    <tr>
-      <th>Joined</th>
-      <th>Canceled</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Margaret Nguyen</th>
-      <td>427311</td>
-      <td><time datetime="2010-06-03">June 3, 2010</time></td>
-      <td>n/a</td>
-      <td>0.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Edvard Galinski</th>
-      <td>533175</td>
-      <td><time datetime="2011-01-13">January 13, 2011</time></td>
-      <td><time datetime="2017-04-08">April 8, 2017</time></td>
-      <td>37.00</td>
-    </tr>
-    <tr>
-      <th scope="row">Hoshi Nakamura</th>
-      <td>601942</td>
-      <td><time datetime="2012-07-23">July 23, 2012</time></td>
-      <td>n/a</td>
-      <td>15.00</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-#### CSS
-
-The CSS is much more involved this time. It's not complicated, but there's a lot going on. Let's break it down.
-
-##### The table and base styles
-
-```css
-table {
-  border: 1px solid black;
-  font:
-    16px "Open Sans",
-    Helvetica,
-    Arial,
-    sans-serif;
-  border-spacing: 0;
   border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
 }
 ```
 
-Here we've added the {{CSSxRef("border-spacing")}} and {{CSSxRef("border-collapse")}} properties to eliminate spacing between cells and collapse borders that touch one another to be a single border instead of winding up with double borders.
+#### Result
+
+{{EmbedLiveSample("Basic_row_setup", 650, 140)}}
+
+### Header row
+
+This example extends the basic table from the [previous example](#basic_row_setup) by adding a header row as the first row of the table.
+
+#### HTML
+
+An additional table row (`<tr>`) is added as the first row of the table with column header cells ({{HTMLElement("th")}}) providing a header for each column. We put this row in a {{HTMLElement("thead")}} grouping element to indicate this is the header of the table. The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute is added to each header cell (`<th>`) within this head row to explicitly specify that each header cell relates to all the cells within its own column, even though those cells are in the {{HTMLElement("tbody")}}.
+
+```html
+<table>
+  <tr>
+    <th scope="col">Symbol</th>
+    <th scope="col">Code word</th>
+    <th scope="col">Pronunciation</th>
+  </tr>
+  <tr>
+    <th scope="row">A</th>
+    <td>Alfa</td>
+    <td>AL fah</td>
+  </tr>
+  <tr>
+    <th scope="row">B</th>
+    <td>Bravo</td>
+    <td>BRAH voh</td>
+  </tr>
+  <tr>
+    <th scope="row">C</th>
+    <td>Charlie</td>
+    <td>CHAR lee</td>
+  </tr>
+  <tr>
+    <th scope="row">D</th>
+    <td>Delta</td>
+    <td>DELL tah</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+The CSS is nearly unchanged from the [previous example](#basic_row_setup), except for some additional styling to highlight the "header row" so that the headers of the columns stand out from the other cells.
 
 ```css
+tr:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+tr th[scope="col"] {
+  background-color: #505050;
+  color: #fff;
+}
+
+tr th[scope="row"] {
+  background-color: #d6ecd4;
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
 th,
 td {
-  border: 1px solid black;
-  padding: 4px 6px;
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Header_row", 650, 170)}}
+
+### Sorting rows
+
+There are no native methods for sorting the rows (`<tr>` elements) of a {{HTMLElement("table")}}. But using {{jsxref("Array.prototype.sort()")}}, {{domxref("Node.removeChild")}}, and {{domxref("Node.appendChild")}}, a custom `sort()` function can be implemented in JavaScript to sort an {{domxref("HTMLCollection")}} of `<tr>` elements.
+
+#### HTML
+
+A {{HTMLElement("tbody")}} element is used in this basic table to mark the body section of the table and to include three rows ({{HTMLElement("tr")}} elements) with data ({{HTMLElement("td")}} elements), creating one column with numbers in descending order.
+
+```html
+<table>
+  <tbody>
+    <tr>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### JavaScript
+
+In the JavaScript code below, the created `sort()` function is attached to the {{HTMLElement("tbody")}} element so that it sorts the table cells in order of increasing value and updates the display accordingly.
+
+```js
+HTMLTableSectionElement.prototype.sort = function (cb) {
+  Array.from(this.rows)
+    .sort(cb)
+    .forEach((e) => this.appendChild(this.removeChild(e)));
+};
+
+document
+  .querySelector("table")
+  .tBodies[0].sort((a, b) => a.textContent.localeCompare(b.textContent));
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 4px 8px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Sorting_rows', '650', '80')}}
+
+### Sorting rows with a click on header cells
+
+This example extends the basic table from the [previous example](#sorting_rows) by making the sorting interactive and independent for multiple columns.
+
+#### HTML
+
+An additional data cell ({{HTMLElement("td")}} element) is added to each row (`<tr>` element) within the table body ({{HTMLElement("tbody")}} element) to create a second column with letters in ascending order. Using the {{HTMLElement("thead")}} element, a head section is added before the body section to introduce a head row with table header cells ({{HTMLElement("th")}} element). These header cells are used in the JavaScript code below to make them clickable and then to perform the corresponding sorting when activated per click.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Numbers</th>
+      <th>Letters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+#### JavaScript
+
+A click event handler is added to each table header ({{HTMLElement("th")}} element) of each {{HTMLElement("table")}} in the {{domxref("HTMLDocument", "document")}}; it sorts all the rows (`<tr>` elements) of the {{HTMLElement("tbody")}} based on the contents of the data cells ({{HTMLElement("td")}} elements) contained in the rows.
+
+> **Note:** This solution assumes that the {{HTMLElement("td")}} elements are populated by raw text with no descendant elements.
+
+```js
+const allTables = document.querySelectorAll("table");
+
+for (const table of allTables) {
+  const tBody = table.tBodies[0];
+  const rows = Array.from(tBody.rows);
+  const headerCells = table.tHead.rows[0].cells;
+
+  for (const th of headerCells) {
+    const cellIndex = th.cellIndex;
+
+    th.addEventListener("click", () => {
+      rows.sort((tr1, tr2) => {
+        const tr1Text = tr1.cells[cellIndex].textContent;
+        const tr2Text = tr2.cells[cellIndex].textContent;
+        return tr1Text.localeCompare(tr2Text);
+      });
+
+      tBody.append(...rows);
+    });
+  }
+}
+```
+
+```css hidden
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 4px 8px;
 }
 
 th {
-  vertical-align: bottom;
+  background-color: #505050;
+  color: #fff;
+  cursor: pointer;
 }
 ```
 
-And here are the default styles for all table cells. Now let's customize!
+#### Result
 
-##### The top header: overall
+{{EmbedLiveSample('Sorting_rows_with_a_click_on_header_cells', '650', '100')}}
 
-We're going to look at the top header in two pieces. First, the overall styling of the header:
-
-```css
-thead > tr {
-  background-color: rgb(228, 240, 245);
-}
-
-thead > tr:nth-of-type(2) {
-  border-bottom: 2px solid black;
-}
-```
-
-This sets the background color of all `<tr>` elements in the table's heading (as specified using {{HTMLElement("thead")}}). Then we set the bottom border of the top header to be a two-pixel wide line. Notice, however, that we're using the {{CSSxRef(":nth-of-type")}} selector to apply {{CSSxRef("border-bottom")}} to the _second_ row in the heading. Why? Because the heading is made of two rows that are spanned by some of the cells. That means there are actually two rows there; applying the style to the first row would not give us the expected result.
-
-##### The "Joined" and "Canceled" headers
-
-Let's style these two header cells with green and red hues to represent the "good" of a new member and the "bummer" of a canceled membership.
-
-```css
-thead > tr:last-of-type > th:nth-of-type(1) {
-  background-color: rgb(225, 255, 225);
-}
-
-thead > tr:last-of-type > th:nth-of-type(2) {
-  background-color: rgb(255, 225, 225);
-}
-```
-
-Here we dig into the last row of the table's header block and give the first header cell in it (the "Joined" header) a greenish color, and the second header cell in it (the "Canceled" header) a reddish hue.
-
-##### Color every body other row differently
-
-It's common to help improve readability of table data by alternating row colors. Let's add a bit of color to every even row:
-
-```css
-tbody > tr:nth-of-type(even) {
-  background-color: rgb(237, 238, 242);
-}
-```
-
-##### Give the left-side header some style
-
-Since we want the first column to stand out as well, we'll add some custom styling here, too.
-
-```css
-tbody > tr > th:first-of-type {
-  text-align: left;
-  background-color: rgb(225, 229, 244);
-}
-```
-
-This styles the first header cell in each row of the table's body with {{CSSxRef("text-align")}} to left-justify the member names, and with a somewhat different background color.
-
-##### Justify the balances
-
-Finally, since it's standard practice to right-justify currency values in tables, let's do that here.
-
-```css
-tbody > tr > td:last-of-type {
-  text-align: right;
-}
-```
-
-This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLElement("td")}} in each body row to `"right"`.
+> **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
+> **Note:** To be usable and accessible, the header cell of each sortable column must be identifiable as a sorting button and each must define whether the column is currently sorted in ascending or descending order visually and with the [`aria-sort`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-sort) attribute. See the [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/)'s [sortable table example](https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/sortable-table/) for more information.
 
 ## Technical summary
 
@@ -531,7 +362,7 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
         {{HTMLElement("th")}} elements;
         {{Glossary("script-supporting element", "script-supporting elements")}}
         ({{HTMLElement("script")}} and
-        {{HTMLElement("template")}}) are also allowed
+        {{HTMLElement("template")}}) are also allowed.
       </td>
     </tr>
     <tr>
@@ -542,7 +373,7 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
         {{HTMLElement("tr")}} element, or if the row is the last element
         in its parent table group ({{HTMLElement("thead")}},
         {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}})
-        element
+        element.
       </td>
     </tr>
     <tr>
@@ -553,8 +384,8 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, and
         {{HTMLElement("thead")}} elements); otherwise, the parent must
-        be {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or
-        {{HTMLElement("tfoot")}}
+        be a {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or
+        {{HTMLElement("tfoot")}} element.
       </td>
     </tr>
     <tr>
@@ -588,8 +419,10 @@ This just sets the CSS {{CSSxRef("text-align")}} property for the last {{HTMLEle
 
 ## See also
 
-- [Learning area: HTML tables](/en-US/docs/Learn/HTML/Tables): An introduction to using tables, including `<tr>`.
-- {{DOMxRef("HTMLTableRowElement")}}: the interface on which `<tr>` is based.
-- Other table-related elements:
-
-  - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, and {{HTMLElement("colgroup")}}
+- [Learn: HTML tables](/en-US/docs/Learn/HTML/Tables)
+- {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}: Other table-related elements
+- {{cssxref("background-color")}}: CSS property to set the background color of each row cell
+- {{cssxref("border")}}: CSS property to control borders of row cells
+- {{cssxref("text-align")}}: CSS property to horizontally align each row cell content
+- {{cssxref("vertical-align")}}: CSS property to vertically align each row cell content
+- {{cssxref(":nth-of-type")}}, {{cssxref(":first-of-type")}}, {{cssxref(":last-of-type")}}: CSS pseudo-classes to select the desired row cells

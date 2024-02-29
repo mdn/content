@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`ignoreDepthValues`** is a Boolean value which is

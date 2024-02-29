@@ -285,6 +285,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
        <input
          type="text"
          id="expiration"
+         name="expiration"
          required
          placeholder="MM/YY"
          pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />

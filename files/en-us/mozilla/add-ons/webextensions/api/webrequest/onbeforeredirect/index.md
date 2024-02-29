@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onBeforeRedirect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a server-initiated redirect is about to occur.
 

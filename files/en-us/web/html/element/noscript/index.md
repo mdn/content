@@ -9,6 +9,32 @@ browser-compat: html.elements.noscript
 
 The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+```html
+<noscript>
+  <!-- anchor linking to external file -->
+  <a href="https://www.mozilla.org/">External Link</a>
+</noscript>
+<p>Rocks!</p>
+```
+
+### Result with scripting enabled
+
+Rocks!
+
+### Result with scripting disabled
+
+[External Link](https://www.mozilla.org/)
+
+Rocks!
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -48,7 +74,7 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -80,30 +106,6 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-```html
-<noscript>
-  <!-- anchor linking to external file -->
-  <a href="https://www.mozilla.org/">External Link</a>
-</noscript>
-<p>Rocks!</p>
-```
-
-### Result with scripting enabled
-
-Rocks!
-
-### Result with scripting disabled
-
-[External Link](https://www.mozilla.org/)
-
-Rocks!
 
 ## Specifications
 

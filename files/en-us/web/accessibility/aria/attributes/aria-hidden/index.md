@@ -81,7 +81,7 @@ Used in **ALL** roles
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
 - [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)

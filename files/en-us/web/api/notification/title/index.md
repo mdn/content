@@ -6,12 +6,14 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.title
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}}
 
 The **`title`** read-only property of the
 {{domxref("Notification")}} interface indicates the title of the notification, as
 specified in the `title` parameter of the
 {{domxref("Notification.Notification","Notification()")}} constructor.
+
+{{AvailableInWorkers}}
 
 ## Value
 

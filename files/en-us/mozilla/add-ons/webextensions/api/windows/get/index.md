@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets details about a window, given its ID. The details are passed into a callback.
 

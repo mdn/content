@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.getURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Given a relative path from the [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to a resource packaged with the extension, return a fully-qualified URL.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.getNativeFramebufferScaleFactor_static
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The static method
 **`XRWebGLLayer.getNativeFramebufferScaleFactor()`** returns a

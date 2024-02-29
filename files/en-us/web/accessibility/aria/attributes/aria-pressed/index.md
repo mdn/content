@@ -55,7 +55,7 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button)
 - [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit)

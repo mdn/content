@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.remove
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Removes a contextual identity, given its cookie store ID.
 

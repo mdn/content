@@ -15,12 +15,6 @@ The **`<feDistantLight>`** filter primitive defines a distant light source that 
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("azimuth")}}
 - {{SVGAttr("elevation")}}
 

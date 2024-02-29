@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.tabs.ZoomSettingsMode
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Defines how zoom changes are handled. Extensions can pass this value into {{WebExtAPIRef("tabs.setZoomSettings()")}} to control how the browser handles attempts to change zoom settings for a tab. Defaults to "automatic".
 

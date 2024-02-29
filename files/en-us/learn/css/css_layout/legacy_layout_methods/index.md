@@ -430,8 +430,6 @@ Try replacing your bottom block of rules with the following, then reload it in t
 
 > **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
-> **Note:** If you can't get this to work, it might be because your browser does not support the `calc()` function, although it is fairly well supported across browsers — as far back as IE9.
-
 ### Semantic versus "unsemantic" grid systems
 
 Adding classes to your markup to define layout means that your content and markup becomes tied to your visual presentation. You will sometimes hear this use of CSS classes described as being "unsemantic" — describing how the content looks — rather than a semantic use of classes that describes the content. This is the case with our `span2`, `span3`, etc., classes.

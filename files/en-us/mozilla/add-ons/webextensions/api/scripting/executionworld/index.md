@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.scripting.ExecutionWorld
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Specifies the execution environment of a script injected with {{WebExtAPIRef("scripting.executeScript()")}}
 or registered with {{WebExtAPIRef("scripting.registerContentScripts()")}}.

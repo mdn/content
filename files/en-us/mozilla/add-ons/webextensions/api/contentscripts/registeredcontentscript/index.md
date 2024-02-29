@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `RegisteredContentScript` is returned by a call to {{WebExtAPIRef("contentScripts.register()")}} and represents the content scripts registered in that call.
 

@@ -53,11 +53,11 @@ src:
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font format.
     If the value is not supported or invalid, the browser may not download the resource, potentially saving bandwidth.
     If omitted, the browser will download the resource and then detect the format.
-    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal-syntax), enclose the format string in quotes.
+    If including a font source for backward-compatibility that is not in the list of [defined keywords](#formal_syntax), enclose the format string in quotes.
     Possible values are described in the [Font formats](#font_formats) section below.
 - `tech()` {{Experimental_inline}}
   - : An optional declaration that follows the `url()` value that provides a hint for the user agent on the font technology.
-    The value for `tech()` may be one of the keywords described in [Font technologies](#font-technologies).
+    The value for `tech()` may be one of the keywords described in [Font technologies](#font_technologies).
 - `local(<font-face-name>)`
 
   - : Specifies the font name should the font be available on the user's device.

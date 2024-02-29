@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.BooleanDelta
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `BooleanDelta` type of the {{WebExtAPIRef("downloads")}} API represents the difference between two booleans.
 

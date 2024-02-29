@@ -58,7 +58,7 @@ Each `<absolute-size>` keyword value is sized relative to the `medium` size and 
 
 In CSS1 (1996), the scaling factor between adjacent keyword value indexes was 1.5, which was too large. In CSS2 (1998), the scaling factor between adjacent keyword value indexes was 1.2, which created issues for the small values. As a single fixed ratio between adjacent absolute-size keywords was found to be problematic, there is no longer a fixed ratio recommendation. The only recommendation to preserve readability is that the smallest font size should not be less than `9px`.
 
-For each `<absolute-size>` keyword value, the following table lists the scaling factor, mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) headings, and mapping to the deprecated [HTML `size` attribute](#html-size-attribute).
+For each `<absolute-size>` keyword value, the following table lists the scaling factor, mapping to [`<h1>` to `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements) headings, and mapping to the deprecated [HTML `size` attribute](#html_size_attribute).
 
 | `<absolute-size>`     | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
 | --------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRView.eye
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRView")}} interface's read-only **`eye`**
 property is a string indicating which eye's viewpoint the `XRView` represents: `left` or

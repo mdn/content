@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUDevice
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUDevice`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a logical GPU device. This is the main interface through which the majority of WebGPU functionality is accessed.
 

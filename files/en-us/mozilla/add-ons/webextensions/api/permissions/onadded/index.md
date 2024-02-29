@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onAdded
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the extension granted new permissions.
 

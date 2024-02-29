@@ -13,7 +13,7 @@ You can also pass it directly to the {{domxref("URLSearchParams")}} constructor 
 
 An object implementing `FormData` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('FormData.entries()', 'entries()')}}: `for (const p of myFormData)` is equivalent to `for (const p of myFormData.entries())`.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+{{AvailableInWorkers}}
 
 ## Constructor
 

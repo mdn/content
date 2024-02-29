@@ -63,7 +63,7 @@ Applying those coordinates to the CSS {{cssxref("clip-path")}} property using th
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 ```
 
-This would create a rectangle shape the size of its parent content by specifying the coordinates of its four corners: top-left (`0% 0%`), top-right (`100% 0%`), bottom-right (`100% 100%`), and bottom-right (`0% 100%`).
+This would create a rectangle shape the size of its parent content by specifying the coordinates of its four corners: top-left (`0% 0%`), top-right (`100% 0%`), bottom-right (`100% 100%`), and bottom-left (`0% 100%`).
 
 ## Formal syntax
 

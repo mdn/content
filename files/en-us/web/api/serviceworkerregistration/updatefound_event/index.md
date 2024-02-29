@@ -6,10 +6,12 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerRegistration.updatefound_event
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}
 
 The **`updatefound`** event of the
 {{domxref("ServiceWorkerRegistration")}} interface is fired any time the {{domxref("ServiceWorkerRegistration.installing")}} property acquires a new service worker.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 

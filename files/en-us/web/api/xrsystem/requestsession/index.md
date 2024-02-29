@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSystem.requestSession
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
 **`requestSession()`** method returns a {{jsxref("promise")}}
@@ -219,7 +219,7 @@ navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["cpu-optimized", "gpu-optimized"],
-    formatPreference: ["luminance-alpha", "float32"],
+    dataFormatPreference: ["luminance-alpha", "float32"],
   },
 });
 ```

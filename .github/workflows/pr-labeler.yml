@@ -1,13 +1,48 @@
-name: "Pull request labeler"
+name: PR labeler
+
 on:
   - pull_request_target
 
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
 jobs:
-  triage:
+  # Docs: https://github.com/actions/labeler
+  label-by-path:
     # do not run on forks
     if: github.repository == 'mdn/content'
+    name: Label by path
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v4
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
+  # Docs: https://github.com/CodelyTV/pr-size-labeler
+  label-by-size:
+    # do not run on forks
+    if: github.repository == 'mdn/content'
+    needs: label-by-path
+    name: Label by size
+    runs-on: ubuntu-latest
+    steps:
+      - uses: codelytv/pr-size-labeler@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          github_api_url: "https://api.github.com"
+          xs_label: "size/xs"
+          xs_max_size: "5"
+          s_label: "size/s"
+          s_max_size: "50"
+          m_label: "size/m"
+          m_max_size: "500"
+          l_label: "size/l"
+          l_max_size: "1000"
+          xl_label: "size/xl"
+          fail_if_xl: "false"
+          message_if_xl: ""
+          files_to_ignore: |
+            "files/en-us/_redirects.txt"
+            "files/en-us/_wikihistory.json"

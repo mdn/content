@@ -11,6 +11,8 @@ The **`contenteditable`** [global attribute](/en-US/docs/Web/HTML/Global_attribu
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-contenteditable.html","tabbed-shorter")}}
 
+## Value
+
 The attribute must take one of the following values:
 
 - `true` or an _empty string_, which indicates that the element is editable.

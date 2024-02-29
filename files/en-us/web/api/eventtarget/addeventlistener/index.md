@@ -22,8 +22,7 @@ but the target may be any object that supports events (such as {{domxref("IDBReq
 > - In contrast to using an `onXYZ` property, it gives you finer-grained control of the phase when the listener is activated (capturing vs. bubbling).
 > - It works on any event target, not just HTML or SVG elements.
 
-The method `addEventListener()` works by adding a function, or an object that implements
-{{domxref("EventTarget.addEventListener", "EventListener")}}, to the list of event listeners for the specified event type
+The method `addEventListener()` works by adding a function, or an object that implements a `handleEvent()` function, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
 > **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.

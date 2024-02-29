@@ -77,10 +77,10 @@ Border repeat styles, when included, are interpreted in the order of `<repeat-x>
 
 ## Formal definition
 
-- {{ Xref_cssinitial() }}: `none`
+- [Initial value](/en-US/docs/Web/CSS/initial_value): `none`
 - Applies to: all elements
-- {{ Xref_cssinherited() }}: no
-- {{ Xref_csscomputed() }}: as specified
+- [Inherited](/en-US/docs/Web/CSS/Inheritance): no
+- [Computed value](/en-US/docs/Web/CSS/computed_value): as specified
 
 ## Formal syntax
 

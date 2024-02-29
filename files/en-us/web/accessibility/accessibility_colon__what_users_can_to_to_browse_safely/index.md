@@ -68,7 +68,7 @@ Most operating systems such as Windows 10, have accessibility options that are s
 
 #### Turn off animations in the operating system
 
-In the Windows10 operating system, the user has an ability to turn off animations. This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.
+In the Windows 10 operating system, the user has an ability to turn off animations. This will not work on animated gifs; the source of the animation is self-contained within a gif and is not affected by these settings.
 
 ![Screen shot showing how to turn off animations in Windows10](turnoffanimationsinwindows.png)
 

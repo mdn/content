@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets information about all open windows, passing them into a callback.
 

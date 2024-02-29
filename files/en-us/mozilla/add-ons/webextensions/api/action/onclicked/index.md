@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.action.onClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSourcesChangeEvent.added
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourcesChangeEvent")}}
 property {{domxref("XRInputSourcesChangeEvent.added", "added")}} is a list of zero or

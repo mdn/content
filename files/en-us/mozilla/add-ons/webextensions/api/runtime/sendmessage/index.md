@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sends a single message to event listeners within your extension or a different extension.
 

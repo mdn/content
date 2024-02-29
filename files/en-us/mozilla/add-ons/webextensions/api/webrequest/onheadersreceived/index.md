@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.onHeadersReceived
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the HTTP response headers for a request are received. Use this event to modify HTTP response headers.
 

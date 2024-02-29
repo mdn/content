@@ -24,10 +24,6 @@ _This interface also inherits properties from {{domxref("Credential")}}._
 - {{domxref("Credential.type", "OTPCredential.type")}}
   - : Inherited from {{domxref("Credential")}}. Always set to `otp` for `OTPCredential` instances.
 
-### Event handlers
-
-None.
-
 ## Instance methods
 
 None.

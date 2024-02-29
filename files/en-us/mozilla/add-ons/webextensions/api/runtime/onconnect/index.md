@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.runtime.onConnect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a connection is made with either an extension process or a content script.
 

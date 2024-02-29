@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Adds a new panel to the devtools.
 

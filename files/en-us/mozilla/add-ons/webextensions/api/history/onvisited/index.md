@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.history.onVisited
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired each time the user visits a page. A {{WebExtAPIRef("history.HistoryItem")}} object is passed to the listener. This event fires before the page has loaded.
 

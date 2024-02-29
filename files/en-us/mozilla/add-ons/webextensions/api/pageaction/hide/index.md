@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.pageAction.hide
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Hides the page action for a given tab.
 

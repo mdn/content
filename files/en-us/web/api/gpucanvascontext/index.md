@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUCanvasContext
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUCanvasContext`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents the WebGPU rendering context of a {{htmlelement("canvas")}} element, returned via an {{domxref("HTMLCanvasElement.getContext()")}} call with a `contextType` of `"webgpu"`.
 
