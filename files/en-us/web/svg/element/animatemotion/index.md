@@ -71,15 +71,6 @@ svg {
 - [Animation event attributes](/en-US/docs/Web/SVG/Attribute/Events#animation_event_attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
 ## Usage notes
 
 This element implements the {{domxref("SVGAnimateMotionElement")}} interface.
