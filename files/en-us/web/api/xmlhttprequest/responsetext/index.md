@@ -15,7 +15,7 @@ following a request being sent.
 ## Value
 
 A string which contains either the textual data received using the
-`XMLHttpRequest` or `""` if the request failed or the response has not yet been received.
+`XMLHttpRequest` or `""` if the request failed or if no content has been received yet.
 
 While handling an asynchronous request, the value of `responseText` always
 has the current content received from the server, even if it's incomplete because the
