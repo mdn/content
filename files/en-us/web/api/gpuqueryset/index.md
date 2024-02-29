@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUQuerySet
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUQuerySet`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} is used to record the results of queries on passes, such as occlusion or timestamp queries.
 

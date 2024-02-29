@@ -215,12 +215,10 @@
         "Credential",
         "CredentialsContainer",
         "FederatedCredential",
-        "OTPCredential",
-        "PasswordCredential",
-        "PublicKeyCredential"
+        "PasswordCredential"
       ],
       "methods": [],
-      "properties": [],
+      "properties": ["Navigator.credentials"],
       "events": []
     },
     "CSS Counter Styles": {
@@ -474,9 +472,17 @@
     },
     "FedCM API": {
       "overview": ["FedCM API"],
-      "interfaces": ["IdentityCredential", "IdentityProvider"],
+      "guides": [
+        "/docs/Web/API/FedCM_API/IDP_integration",
+        "/docs/Web/API/FedCM_API/RP_sign-in"
+      ],
+      "interfaces": [
+        "IdentityCredential",
+        "IdentityProvider",
+        "NavigatorLogin"
+      ],
       "methods": ["CredentialsContainer.get()"],
-      "properties": [],
+      "properties": ["Navigator.login"],
       "events": []
     },
     "Fetch API": {
@@ -1563,6 +1569,14 @@
         "Element: mouseout"
       ]
     },
+    "Topics API": {
+      "overview": ["Topics API"],
+      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "interfaces": [],
+      "methods": ["Document.browsingTopics()", "fetch()"],
+      "properties": ["HTMLIFrameElement.browsingTopics"],
+      "events": []
+    },
     "Touch Events": {
       "overview": ["Touch events"],
       "guides": [
@@ -2160,8 +2174,8 @@
       "properties": [],
       "events": []
     },
-    "Websockets API": {
-      "overview": ["Websockets API"],
+    "WebSockets API": {
+      "overview": ["WebSockets API"],
       "guides": [
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
