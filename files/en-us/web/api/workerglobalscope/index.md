@@ -27,7 +27,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
   - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("WorkerGlobalScope.fonts")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FontFaceSet")}} associated with the worker.
-- {{domxref("indexedDB", "WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for workers to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("isSecureContext", "WorkerGlobalScope.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).

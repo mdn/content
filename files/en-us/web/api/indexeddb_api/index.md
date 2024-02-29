@@ -35,7 +35,7 @@ To get access to a database, call [`open()`](/en-US/docs/Web/API/IDBFactory/open
 ### Connecting to a database
 
 - {{domxref("IDBFactory")}}
-  - : Provides access to a database. This is the interface implemented by the global object {{domxref("indexedDB")}} and is therefore the entry point for the API.
+  - : Provides access to a database. An object of this type is the value of the global {{domxref("Window.indexedDB")}} and {{domxref("WorkerGlobalScope.indexedDB")}} properties. It is therefore the entry point for the API.
 - {{domxref("IDBOpenDBRequest")}}
   - : Represents a request to open a database.
 - {{domxref("IDBDatabase")}}
