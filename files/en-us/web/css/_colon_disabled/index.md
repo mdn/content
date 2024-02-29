@@ -57,9 +57,9 @@ input[type="text"]:disabled {
 ### JavaScript
 
 ```js
-// Wait for the page to finish loading
+// Toggle the disabled Input fields when the checkbox is clicked
 document.addEventListener(
-  "DOMContentLoaded",
+  "click",
   () => {
     // Attach `change` event listener to checkbox
     document.getElementById("billing-checkbox").onchange = toggleBilling;
