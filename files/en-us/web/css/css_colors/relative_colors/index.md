@@ -27,10 +27,10 @@ Relative colors are created using the same color functions as absolute colors, b
 
 1. Include a basic color function (represented by _`color-function()`_ above) such as [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), etc. Which one you pick depends on the color model you want to use for the relative color you are creating (the **output color**).
 2. Pass in the **origin color** (represented above by _`origin-color`_) your relative color will be based on, preceded by the `from` keyword. This can be any valid {{cssxref("&lt;color&gt;")}} value using any available color model, including a color value contained in a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), system colors, `currentColor`, etc.
-3. Provide an output value for each individual channel. The output color is defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders (preceded by a _`colorspace`_ in the case of [`color()`](/en-US/docs/Web/CSS/color_value/color) functions). The channels defined here depend on the color function you are using for your relative color. For example, if you are using {{cssxref("hsl","hsl()")}}, you would need to define the values for hue, saturation, and lightness. Each channel value can be a new value, the same as the original value, or a value relative to the channel value of the origin color.
-4. Optionally, an `alpha` channel value for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case with absolute color values).
+3. Provide an output value for each individual channel. The output color is defined after the origin color — represented above by the _`channel1`_, _`channel2`_, and _`channel3`_ placeholders (and preceded by a _`colorspace`_ in the case of [`color()`](/en-US/docs/Web/CSS/color_value/color) functions). The channels defined here depend on the color function you are using for your relative color. For example, if you are using [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), you would need to define the values for hue, saturation, and lightness. Each channel value can be a new value, the same as the original value, or a value relative to the channel value of the origin color.
+4. Optionally, an `alpha` channel value for the output color can be defined, preceded by a slash (`/`). If the `alpha` channel value is not explicitly specified, it defaults to the alpha channel value of the _`origin-color`_ (not 100%, which is the case for absolute color values).
 
-The browser converts the origin color to the same syntax as the color function then destructures it into the component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function, `L`, `a`, and `b` in the case of the `lab()` function, etc. — that can be used to calculate new output channel values.
+The browser converts the origin color to a syntax compatible with the color function then destructures it into component color channels (plus the `alpha` channel if the origin color has one). These are made available as appropriately-named values inside the color function — `r`, `g`, and `b` in the case of the `rgb()` function, `L`, `a`, and `b` in the case of the `lab()` function, etc. — that can be used to calculate new output channel values.
 
 Let's look at relative color syntax in action. The below CSS is used to style two {{htmlelement("div")}} elements, one with a absolute background color — `red` — and one with a relative background color created with the `rgb()` function, based on the same `red` color value:
 
@@ -69,7 +69,12 @@ The output is as follows:
 
 {{ EmbedLiveSample("General syntax", "100%", "200") }}
 
-The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as an input, converts it to the output color's syntax (equivalent to `rgb(255 0 0)`), and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser). This results in a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value.
+The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function, which takes `red` as the origin color, converts it to a value in a color space compatible with the output color's syntax (`color(srgb 1 0 0)` behind the scenes, which is equivalent to `rgb(255 0 0)`), and then defines the new color as having a red channel of value `200` and green and blue channels with a value the same as the origin color (it uses the `g` and `b` values made available inside the function by the browser). This results in a slightly darker red. If we had specified a red channel value of `255` (or just the `r` value), the resulting output color would be exactly the same as the input value.
+
+> **Note:** As mentioned above, when calculating a relative color the first thing the browser does is to convert the provided origin color (`red` in the above example) into a value in a color space compatible with the color function being used (`rgb()`). This is done so that the browser is able to calculate the output color from the origin color. In addition, the output color's computed value will match this same representation.
+>
+> - In the case of sRGB color functions ([`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)) the browser always converts the origin color into a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) representation behind the scenes.
+> - In the case of non-sRGB color functions, the browser always converts the origin color into the same function type as the output color type, provided of course the two are not of the saqme type already. For example, if a [`lab()`](/en-US/docs/Web/CSS/color_value/lab) output color type is being used, the origin color is converted to a `lab()` type.
 
 These five lines all produce an equivalent output color:
 
@@ -102,14 +107,14 @@ rgb(from red 0 0 255)
 
 > **Note:** Bear in mind that, if you are using relative color syntax but outputting the same color as the origin color or a color not based on the origin color at all, you are not really creating a relative color. You'd be unlikely to ever do this in a real codebase, and would probably just use an absolute color value instead. But, we felt it useful to explain that you _can_ do this with relative color syntax, as a starting point for learning about it.
 
-You can even mix up or repeat the provided values. The following takes a slightly darker red as an input and outputs a light gray color with the output channels all set to the origin color's `r` channel value:
+You can even mix up or repeat the provided values. The following takes a slightly darker red as an input and outputs a light gray color — the output color's `r`, `g`, and `b` channels are all set to the origin color's `r` channel value:
 
 ```css
 rgb(from rgb(200 0 0) r r r)
 /* output color is equivalent to rgb(200 200 200), light gray */
 ```
 
-The following uses the origin color's channel values for the output color, but in reverse order:
+The following uses the origin color's channel values for the output color's `r`, `g`, and `b` channel values, but in reverse order:
 
 ```css
 rgb(from rgb(200 170 0) b g r)
@@ -161,7 +166,7 @@ rgb(from red r g b)
 rgb(from red r g b / alpha)
 ```
 
-As you can see from the above example, the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility — generally you won't be interested in (and might not even know) the system a color is defined in. You'll just want to grab the color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
+It is worth mentioning again that the color system of the origin color doesn't need to match the color system being used to create the output color. Again, this provides a lot of flexibility — generally you won't be interested in (and might not even know) the system the origin color is defined in. You'll just want to grab the color and, for example, create a lighter variant of it by putting it into an `hsl()` function and varying the lightness value.
 
 > **Note:** Relative colors cannot be defined via legacy color syntax, for example `rgba()` and `hsla()` functions. However, you can pass in legacy origin colors.
 
@@ -171,10 +176,10 @@ When creating a relative color, you can use values defined in [CSS custom proper
 
 In the below CSS we define two custom properties:
 
-- `--base-color` contains our base brand color, a nice purple.
-- `--standard-opacity` contains the standard opacity value that we want to apply to semi-transparent boxes.
+- `--base-color` contains our base brand color — `purple`.
+- `--standard-opacity` contains the standard brand opacity value that we want to apply to semi-transparent boxes — `0.75`.
 
-We then give two {{htmlelement("div")}} elements a background color. One is given an absolute color — our `--base-color` brand purple. The other one is given a relative color equal to our brand purple, transformed to have an alpha channel equal to our standard opacity value.
+We then give two {{htmlelement("div")}} elements a background color. One is given an absolute color — our `--base-color` brand purple. The other one is given a relative color equal to our brand purple, transformed to add an alpha channel equal to our standard opacity value.
 
 ```html hidden
 <div id="container">
@@ -280,7 +285,7 @@ To make channel value calculations work in relative colors, all origin color cha
 - Channel values originally specified as a `<percentage>` resolve to a `<number>` appropriate for the output color function.
 - Channel values originally specified as a {{cssxref("&lt;hue&gt;")}} angle resolve to a number of degrees in the range 0–360.
 
-Check the different color function pages for the specifics of what their origin channel values resolve to.
+Check the different [color function pages](/en-US/docs/Web/CSS/CSS_colors#functions) for the specifics of what their origin channel values resolve to.
 
 ## Checking for browser support
 
@@ -290,7 +295,7 @@ For example:
 
 ```css
 @supports (color: hsl(from white h s l)) {
-  /* safe to use relative color syntax */
+  /* safe to use hsl() relative color syntax */
 }
 ```
 
@@ -300,7 +305,7 @@ For example:
 
 ### Color palette generator
 
-This example creates a basic color palette generator, which allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palettes are as follows:
+This example allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palette choices are as follows:
 
 - **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). To put it technically, the two colors would be base color, and base color with hue channel + 180 degrees.
 - **Triadic**: Includes three colors equal distances apart around the color wheel. To put it technically, the three colors would be base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
@@ -312,7 +317,7 @@ This example creates a basic color palette generator, which allows you to choose
 The full HTML is included below for reference. The most interesting parts are:
 
 - The `--base-color` custom property stored as an inline style on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (full red) so we can show a color palette based on it when the example first loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was stripping it out from there during rendering.
-- The base color picker, created using a [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
+- The base color picker, created using an [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
 - The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio) controls that allow you to choose a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette and generate the right number of child `<div>`s inside it to display the colors for that palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g. `.comp :nth-child(1)`) so they can have the correct colors applied to them.
 - The aforementioned `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note how an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.
 
@@ -543,11 +548,9 @@ fieldset {
 
 In the example CSS you'll notice {{cssxref("@supports")}} blocks being used to provide different {{cssxref("background-color")}} values to browsers that support a different variant of the relative color syntax. These are required because Safari's initial implementation was based on an older version of the spec in which origin color channel values resolved to {{cssxref("&lt;number&gt;")}}s or other unit types depending on the context. This meant that values sometimes required units when performing additions and subtractions, which created confusion. In newer implementations, origin color channel values always resolve to an equivalent {{cssxref("&lt;number&gt;")}} value, which means calculations are always done with unitless values.
 
-Also note how the support test in each case is done using a simple declaration — `color: lch(from red l c calc(h + 90deg))` for example — rather than the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
+Note how the support test in each case is done using a simple declaration — `color: lch(from red l c calc(h + 90deg))` for example — rather than the actual value that we need to vary for other browsers. When testing complex values like these, you should use the simplest possible declaration that still contains the syntactic difference you want to test for.
 
-In the cases above, testing for a custom property with a specific value didn't work — the test came back as positive regardless of what value the custom property was given. A custom property value only becomes invalid when that custom property is then assigned to be the value (or part of the value) of a regular CSS property.
-
-The support test also didn't seem to work when the value of the declaration being tested contained custom properties, hence `var(--base-color)` being replaced by the `red` keyword in each support test.
+Including the custom property didn't work — the test came back as positive regardless of what value the custom property was given, hence `var(--base-color)` being replaced by the `red` keyword in each support test. A custom property value only becomes invalid when that custom property is then assigned to be the value (or part of the value) of a regular CSS property.
 
 #### JavaScript
 
@@ -609,7 +612,7 @@ The output is as follows. This starts to show the power of relative CSS colors �
 
 ### Live UI color scheme updater
 
-This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control. When its value is changed, JavaScript is used to set the `--hue` custom property value to the new slider value.
+This example shows a card containing a heading and text, but with a twist — below the card is a slider ([`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range)) control. When its value is changed, JavaScript is used to set a `--hue` custom property value to the new slider value.
 
 This in turn adjusts the color scheme for the entire UI:
 
@@ -658,11 +661,11 @@ The HTML for the example is shown below.
 
 #### CSS
 
-In the CSS, first of all note the colors set for the color scheme inside the `main` ruleset:
+In the CSS, first of all you should note the relative [`lch()`](/en-US/docs/Web/CSS/color_value/lch) colors set for the color scheme inside the `main` ruleset:
 
-- `--base-color`: The base color is a relative color — it uses the [`lch()`](/en-US/docs/Web/CSS/color_value/lch) function to take `red` (although any full color would do) and adjust its hue channel to the value set in the `--hue` custom property.
-- `--complementary-color`: A complementary color 180 degrees around the color wheel from `--base-color`. This is achieved by creating a relative color with 180 added to the hue channel.
-- `--bg-color`: A much lighter variant of `--base-color`, intended to be used as a background. This is achieved by creating a relative color with 40 added to the lightness channel.
+- `--base-color`: The base color takes an origin color of `red` (although any full color would do) and adjusts its hue value to the value set in the `--hue` custom property.
+- `--bg-color`: A much lighter variant of `--base-color`, intended to be used as a background. This is created by taking an origin color of `--base-color` and adding 40 to its lightness value.
+- `--complementary-color`: A complementary color 180 degrees around the color wheel from `--base-color`. This is created by taking an origin color of `--base-color` and adding 180 to its hue value.
 
 Now have a look at the rest of the CSS and take note of all the places where these colors are used. This includes [backgrounds](/en-US/docs/Web/CSS/background), [borders](/en-US/docs/Web/CSS/border), [`text-shadow`](/en-US/docs/Web/CSS/text-shadow), and even the [`accent-color`](/en-US/docs/Web/CSS/accent-color) of the slider.
 

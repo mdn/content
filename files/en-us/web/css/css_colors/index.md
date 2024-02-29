@@ -39,7 +39,7 @@ To see the code for this color syntax converter, [view the source on GitHub](htt
 
 ### Functions
 
-- Absolute color functions, including:
+- Color functions:
   - [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) and its `rgba()` alias
   - [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl) and its `hsla()` alias
   - [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb)
