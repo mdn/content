@@ -123,11 +123,21 @@ To copy all CSS style sheets from the originating window, loop through all style
 // ...
 ```
 
-## Target styles at the document when in Picture-in-Picture mode
+## Target styles when in Picture-in-Picture mode
 
-The {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features)'s `picture-in-picture` value allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
+The {{cssxref("@media/display-mode", "display-mode")}} [media feature](/en-US/docs/Web/CSS/@media#media_features)'s `picture-in-picture` value allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode. Basic usage looks like so:
 
-In our demo, we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature to create light and dark color schemes that are applied based on the user's preference, only when the app is being shown in Picture-in-Picture mode.
+```css
+@media (display-mode: picture-in-picture) {
+  body {
+    background: red;
+  }
+}
+```
+
+This snippet will turn the background of the document `<body>` red, only when it is displayed in Picture-in-Picture mode.
+
+In [our demo](https://mdn.github.io/dom-examples/document-picture-in-picture/), we combine the `display-mode: picture-in-picture` value with the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature to create light and dark color schemes that are applied based on the user's color scheme preference, only when the app is being shown in Picture-in-Picture mode.
 
 ```css
 @media (display-mode: picture-in-picture) and (prefers-color-scheme: light) {
