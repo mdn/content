@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.12.tgz#04b07124c9a8c07b658aa0626a86e757c6f61d1c"
   integrity sha512-/AHFqy6OeNHS2NNZGFVRgQh+pnW8iAoV3d1fiO9b2PuQ3HzZpC30MrMrHtq1uOGy1/zcK4uPQEyI31jkM0NNAA==
 
-"@mdn/yari@2.40.0":
-  version "2.40.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.40.0.tgz#70336fa466c849b77ef59b8729677ac4a1dc5931"
-  integrity sha512-mYL9Y27lLGwGJSYsMZANEcIAk+HdxgIKE9KHuQ9yusm/Mujp6J/sDTemPeUZp8t88dS8Vqx/0AvPJM0tr9holQ==
+"@mdn/yari@2.41.0":
+  version "2.41.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.41.0.tgz#d71a01e7dfc55fb0a8a2d39f8ef2ee2d60f116bd"
+  integrity sha512-kURpUFMEyO/O1DRq5s1G8rrSDbIYWAgOUUpgSGDsTFSSwIB4yJqRnElHEx27Az7iphbSsPNKN0LUSqgRIg9S6Q==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -911,7 +911,7 @@
     md5-file "^5.0.0"
     mdast-util-from-markdown "^2.0.0"
     mdast-util-phrasing "^4.1.0"
-    mdn-data "^2.4.1"
+    mdn-data "^2.4.2"
     open "^10.0.4"
     open-editor "^4.1.1"
     openai "^4.28.0"
@@ -5745,7 +5745,7 @@ mdn-data@2.0.30:
   resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.30.tgz"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
 
-mdn-data@^2.4.1:
+mdn-data@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.4.2.tgz#0120cb4818913a0117dfa26a0c21dfa818c36948"
   integrity sha512-idPW/pIOG+kFB36OahZHGCXZaaKIp5aYbbgRS/NACMbCpSJTTbW+T9XmMLMzvs27vnRhUO1xrd++gAGv7lm1gA==
