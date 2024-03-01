@@ -74,7 +74,7 @@ The relative color uses the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) funct
 > **Note:** As mentioned above, when calculating a relative color the first thing the browser does is to convert the provided origin color (`red` in the above example) into a value in a color space compatible with the color function being used (`rgb()`). This is done so that the browser is able to calculate the output color from the origin color. In addition, the output color's computed value will match this same representation.
 >
 > - In the case of sRGB color functions ([`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb)) the browser always converts the origin color into a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) representation behind the scenes.
-> - In the case of non-sRGB color functions, the browser always converts the origin color into the same function type as the output color type, provided of course the two are not of the saqme type already. For example, if a [`lab()`](/en-US/docs/Web/CSS/color_value/lab) output color type is being used, the origin color is converted to a `lab()` type.
+> - In the case of non-sRGB color functions, the browser always converts the origin color into the same function type as the output color type, provided of course the two are not of the same type already. For example, if a [`lab()`](/en-US/docs/Web/CSS/color_value/lab) output color type is being used, the origin color is converted to a `lab()` type.
 
 These five lines all produce an equivalent output color:
 
