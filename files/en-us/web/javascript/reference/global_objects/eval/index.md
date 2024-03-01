@@ -162,7 +162,7 @@ Indirect eval can be seen as if the code is evaluated within a separate `<script
   new Ctor(); // [Function: Ctor]
   ```
 
-### Never use eval()!
+### Never use direct eval()!
 
 Using direct `eval()` suffers from multiple problems:
 
