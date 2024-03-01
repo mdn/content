@@ -8,7 +8,7 @@ browser-compat: api.AudioNode.connect
 
 {{ APIRef("Web Audio API") }}
 
-The `connect()` method of the {{domxref("AudioNode")}} interface lets
+The `connect()` method of the {{ domxref("AudioNode") }} interface lets
 you connect one of the node's outputs to a target, which may be either another
 `AudioNode` (thereby directing the sound data to the specified node) or an
 {{domxref("AudioParam")}}, so that the node's output data is automatically used to
