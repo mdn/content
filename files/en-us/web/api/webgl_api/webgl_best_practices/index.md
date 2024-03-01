@@ -560,7 +560,7 @@ async function getBufferSubDataAsync(
   gl.getBufferSubData(target, srcByteOffset, dstBuffer, dstOffset, length);
   gl.bindBuffer(target, null);
 
-  return dest;
+  return dstBuffer;
 }
 
 async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
