@@ -9,7 +9,7 @@ browser-compat: css.properties.field-sizing
 
 The **`field-sizing`** [CSS](/en-US/docs/Web/CSS) property sets the sizing behavior of elements that by default are given a default preferred size — i.e. form control elements. `field-sizing` enables this behavior to be overridden so that controls are instead sized to fit their contents.
 
-This property is typically used to create text [inputs](/en-US/docs/Web/HTML/Element/input) and {{htmlelement("textarea")}}s that grow to fit their content as more text is entered.
+This property is typically used to create text [inputs](/en-US/docs/Web/HTML/Element/input) and {{htmlelement("textarea")}}s that shrinkwrap their content and grow as more text is entered.
 
 ## Syntax
 
@@ -44,7 +44,7 @@ Specifically, this property affects the following elements:
   - Controls with [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attributes set will be rendered large enough to display the placeholder text.
 - [`file`](/en-US/docs/Web/HTML/Element/input/file) inputs: Direct text input is not possible, but the filename display changes as the user selects a new file to upload, which will change the control size if `field-sizing: content` is set.
 - {{htmlelement("textarea")}} controls: It is worth noting that `<textarea>` elements with `field-sizing: content` set behave much like single-line text controls do, with the following additions:
-  - If `<textarea>`s are unable to grow due to a width constraint, they will start to grow in height to display additional content. When a height constraint is then reached, they will then start to show a scrollbar to allow all the content to be viewed.
+  - If `<textarea>`s are unable to grow due to a width constraint, they will start to grow in height to display additional rows of content. When a height constraint is then reached, they will then start to show a scrollbar to allow all the content to be viewed.
   - [`rows`](/en-US/docs/Web/HTML/Element/textarea#cols) and [`cols`](/en-US/docs/Web/HTML/Element/textarea#cols) attributes modify the default preferred size of a `<textarea>`, so as such do not have any effect on `<textarea>` elements with `field-sizing: content` set.
 - {{htmlelement("select")}} controls: These behave a bit differently to what you might expect with `field-sizing: content` set. The effect depends on the type of select control you are creating:
   - Regular drop-down select boxes will change width to always fit the displayed option value, as new values are selected. (By default, the drop-down would be sized large enough to display the longest option value.)
@@ -66,55 +66,168 @@ It is also useful to combine these properties with form attributes like [`maxlen
 
 ## Examples
 
-### Showing and hiding empty table cells
+### Growing/shrinking text fields
+
+This example illustrates the effect of `field-sizing: content` on single- and multi-line text fields — they change size as text is added and removed, in effect shrinkwrapping the contents, until an lower or upper size limit is reached.
 
 #### HTML
 
+Our HTML contains three form fields with associated {{htmlelement("label")}}s — `<input>`s of type [`text`](/en-US/docs/Web/HTML/Element/input/text) and [`email`](/en-US/docs/Web/HTML/Element/input/email) respectively, and a {{htmlelement("textarea")}}.
+
 ```html
-<table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
-</table>
-<br />
-<table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
-</table>
+<div>
+  <label for="text">Enter name:</label>
+  <input type="text" id="text" maxlength="50" />
+</div>
+<div>
+  <label for="email">Enter email:</label>
+  <input type="email" id="email" maxlength="50" placeholder="e.g. a@b.com" />
+</div>
+<div>
+  <label for="textarea">Enter comment:</label>
+  <textarea id="textarea" maxlength="400">This is a comment.</textarea>
+</div>
 ```
+
+Note how:
+
+- The fields have a [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxlength) attribute set, which works usefully alongside `field-sizing: content` — the size of the field will stop increasing when the character limit is reached.
+- The `<textarea>`'s `maxlength` is bigger than that of the other two fields. The result is that the `<textarea>` will grow in the inline direction until the edge of the {{cssxref("min-width")}} constraint is reached, then start to add new lines in the block direction until the `maxlength` limit is reached.
+- The `email` input has a placeholder set. This causes the field to render big enough to show the entire placeholder. Once the field is focused and the user starts typing, the field changes size to the {{cssxref("min-width")}} set in the CSS. The `text` field, which doesn't have a placeholder, renders initially at the `min-width`.
 
 #### CSS
 
+In the CSS, we set `field-sizing: content` on the three form fields, along with a {{cssxref("min-width")}} and {{cssxref("min-width")}} to constrain the input size. It is worth reiterating that, if no minimum width is set on the field, they will only be rendered as big as the text cursor.
+
+We also give the `<label>`s some rudimentary styling so that they sit neatly next to the fields.
+
+```css hidden
+body {
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+div {
+  margin-bottom: 20px;
+  display: flex;
+}
+```
+
 ```css
-.table_1 {
-  empty-cells: show;
+input,
+textarea {
+  field-sizing: content;
+  min-width: 50px;
+  max-width: 350px;
 }
 
-.table_2 {
-  empty-cells: hide;
-}
-
-td,
-th {
-  border: 1px solid gray;
-  padding: 0.5rem;
+label {
+  width: 150px;
+  margin-right: 20px;
+  text-align: right;
 }
 ```
 
 #### Result
 
-{{ EmbedLiveSample('Showing_and_hiding_empty_table_cells', '100%', '200') }}
+The output looks like this. Try entering and removing text in a supporting browser to get a feel of the effects of `field-sizing: content`.
+
+{{ EmbedLiveSample('Growing/shrinking text fields', '100%', '200') }}
+
+### Controlling select element display
+
+This example illustrates the effect of `field-sizing: content` on {{htmlelement("select")}} elements, both drop-down menu types and multiline listbox types.
+
+#### HTML
+
+Our HTML contains two sets of `<select>` elements — one that will have `field-sizing: content` applied to it, and one that won't — so you can see the difference (the effect is a bit less obvious than on text fields). Each set contains one drop-down menu type and multiline listbox type (with the [`multiple`](/en-US/docs/Web/HTML/Element/select#multiple) attribute set).
+
+```html
+<div class="field-sizing">
+  <h2>With field-sizing: content</h2>
+  <select>
+    <option>Bananas</option>
+    <option>Strawberries</option>
+    <option selected>Apples</option>
+    <option>Raspberries</option>
+    <option>Pomegranate</option>
+  </select>
+  <select multiple>
+    <option>Bananas</option>
+    <option>Strawberries</option>
+    <option>Apples</option>
+    <option>Raspberries</option>
+    <option>Pomegranate</option>
+  </select>
+</div>
+<div>
+  <h2>Without field-sizing: content</h2>
+  <select>
+    <option>Bananas</option>
+    <option>Strawberries</option>
+    <option selected>Apples</option>
+    <option>Raspberries</option>
+    <option>Pomegranate</option>
+  </select>
+  <select multiple>
+    <option>Bananas</option>
+    <option>Strawberries</option>
+    <option>Apples</option>
+    <option>Raspberries</option>
+    <option>Pomegranate</option>
+  </select>
+</div>
+```
+
+#### CSS
+
+In the CSS, we set `field-sizing: content` on the first set of `<select>` elements only.
+
+```css hidden
+body {
+  box-sizing: border-box;
+  display: flex;
+  gap: 20px;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-align: center;
+  flex: 1 0 100%;
+}
+
+div {
+  margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+select {
+  valign: top;
+}
+```
+
+```css
+.field-sizing select {
+  field-sizing: content;
+}
+```
+
+#### Result
+
+The output looks like this.
+
+{{ EmbedLiveSample('Controlling select element display', '100%', '150') }}
+
+Note the effects of `field-sizing: content`:
+
+- The drop-down menu always fits the size of the displayed option, changing size as different options are selected. Without `field-sizing: content`, the size is fixed as big as the longest option.
+- The multi-select list box displays all of the options at once. Without `field-sizing: content`, the user has to scroll the box to view all the options.
 
 ## Specifications
 
