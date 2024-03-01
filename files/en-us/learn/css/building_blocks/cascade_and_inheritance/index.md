@@ -190,7 +190,7 @@ The following table shows a few isolated examples to get you in the mood. Try go
 | `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |
 | `li > a[href*="en-US"] > .inline-warning` | 0           | 2       | 2        | 0-2-2             |
 | `#identifier`                             | 1           | 0       | 0        | 1-0-0             |
-| `button:not(#mainBtn, .cta`)              | 1           | 0       | 1        | 1-0-1             |
+| `button:not(#mainBtn, .cta)`              | 1           | 1       | 1        | 1-1-1             |
 
 Before we move on, let's look at an example in action.
 
