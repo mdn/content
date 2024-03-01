@@ -68,4 +68,4 @@ These features are newly shipped in Firefox 125 but are disabled by default. To 
 
 ## Older versions
 
-{{Firefox_for_developers(124)}}
+{{Firefox_for_developers}}
