@@ -7,9 +7,17 @@ browser-compat: api.RTCStatsReport.type_codec
 
 {{DefaultAPISidebar("WebRTC")}}
 
-The **`RTCCodecStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) ... <!-- TBD -->
+The **`RTCCodecStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides statistics about a codec that is being used by RTP streams being sent or received by the associated {{domxref("RTCPeerConnection")}} object.
 
 The report can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCPeerConnection.getStats()")}} until you find an entry with the [`type`](#type) of `codec`.
+
+The codec statistics can be correlated to the inbound or outbound stream statistics (both local and remote) by matching their `codecId` property to the codec's `id`.
+For example, if [`RTCInboundRtpStreamStats.codecId`](/en-US/docs/Web/API/RTCInboundRtpStreamStats#codecid) matches a [`RTCCodecStats.id`](#id) in the same report, then we know that the codec is being used on this peer connection's inbound stream.
+If no stream `codecId` references a codec statistic then that codec statistic object is deleted — if the codec is used again the statistics object will be recreated with the same `id`.
+
+Codec objects may be referenced by multiple RTP streams in media sections using the same transport.
+In fact user agents are expected to coalesce information into a single "codec" entry per payload type per transport (unless [sdpFmtpLine](#sdpfmtpline) is different when sending or receiving, in which case a different codec will be needed for encoding and decoding).
+Note that other transports will use their own, different, `RTCCodecStats` objects.
 
 ## Instance properties
 
