@@ -9,7 +9,7 @@ browser-compat: webextensions.api.storage.StorageArea.onChanged
 
 Fires when one or more items in a storage area change, returning details for the keys that changed. Compared to {{WebExtAPIRef("storage.onChanged")}}, this event enables you to listen for changes in one of the storage areas: `local`, `managed`, `session`, and `sync`.
 
-> **Note:** In Firefox, the information returned includes all keys within the storage area. Also, receiving a callback is possible when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+> **Note:** In Firefox, the information returned includes all keys within the storage area. Also, the callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
 
 ## Syntax
 
