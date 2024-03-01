@@ -95,7 +95,8 @@ article p:first-child::first-line {
   font-weight: bold;
 }
 ```
-> **Note:** `:hover::first-line` and `::first-line:hover` are two different selectors. The former applies the styles of the rule to the first line whenever any part of the element is hovered over. However,  the latter applies the styles of the rule whenever only the first-line is hovered over. But it is **important** to note that `::first-line:hover` is much less supported and its use is discouraged at the moment even if it is valid according to the W3C specification. (You may check it's correctness by going to [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator)).
+
+> **Note:** `:hover::first-line` and `::first-line:hover` are two different selectors. The former applies the styles of the rule to the first line whenever any part of the element is hovered over. However, the latter applies the styles of the rule whenever only the first-line is hovered over. But it is **important** to note that `::first-line:hover` is much less supported and its use is discouraged at the moment even if it is valid according to the W3C specification. (You may check it's correctness by going to [W3 CSS Validator](https://jigsaw.w3.org/css-validator/validator)).
 
 ## Generating content with ::before and ::after
 
