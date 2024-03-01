@@ -6,7 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **color space** is an organization of colors with respect to an underlying colorimetric model. A color model defines how the color components relate to a color space. Graphically, a point in a three-dimensional grid or cube represents a color. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
+**Color spaces** are named organizations of colors for underlying color models. A color model defines how color components relate to a color space. Color spaces are three-dimensional grids or represents a color. Each dimension (or axis) corresponds to a different channel. Colors can be expressed in multiple color spaces, or transformed from one color space to another, while still looking the same.
+
+Color spaces categorize and define specific ranges of colors. Each color space is defined by a mathematical model and associated rule set. Each color space has a defined gamut, which refers to the specific range of colors it can represent. These rules enable consistent and reproducible color representation across different devices and software.
 
 The _sRGB_ color space (standard red, green, blue) was created for the web, but we are no longer limited to this color space. In addition to several defined color spaces, CSS Color level 5 enables defining custom color spaces.
 
@@ -18,9 +20,15 @@ Color spaces are either rectangular or polar. Rectangular color spaces include `
 
 ### `sRGB` color spaces
 
-sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors, including {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness).
+sRGB, or "Standard RGB", is the underlying color space for {{Glossary("RGB")}} colors. sRGB is primarily used for displaying colors on computer screens, including laptops and smartphones. sRGB color spaces define Red, Green, Blue color channel values that, combined, create various hues. This works well for representing colors on your screens, but doesn't directly correspond to human perception.
 
-The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb).Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
+CSS `<color>` values in the sRGB color spaces include {{cssxref("hex-color")}}, {{cssxref("named-color")}}, {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}} (hue, saturation, lightness), {{cssxref("color_value/hwb", "hwb()")}} (hue, whiteness, blackness).
+
+The HSV (hue, saturation, and value) color space, and its synonym HSB (hue, saturation, and brightness), are represented in CSS as [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb). Named colors are simply keywords mapped to specific hex values. Converting these various color notations to sRGB is straightforward mathematically. Note that {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} can be any color, it is not restricted to sRGB.
+
+- `srgb` color space
+
+  - : The sRGB color space, or "Standard RGB", is the standard RGB (red, green, blue) color space. It was created to be used on monitors, printers, and the Web. It is the most widely used color space and is supported by most operating systems, software programs, monitors, and printers. sRGB is based on `r`, `g`, and `b`, with in gamut values ranging from `0` to `1`. The whitepoint is D65.
 
 - `srgb-linear` color space
 
